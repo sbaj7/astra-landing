@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra - Medical Intelligence Workspace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Light mode colors */
+            --bg-primary: #FAF6F1;
+            --bg-surface: #FEFEFE;
+            --text-primary: #2A2A2A;
+            --text-secondary: #5A6169;
+            --button-primary: #2D3843;
+            --button-secondary: #D8DCE1;
+            --cta-color: #495A6B;
+            --accent-blue: #4A6B7D;
+            --success-color: #12B76A;
+            --gray-primary: #8B8B8B;
+            --border-light: #E5E7EB;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #121417;
+                --bg-surface: #1C1F23;
+                --text-primary: #F9FAFB;
+                --text-secondary: #A0AAB4;
+                --button-primary: #3A4A58;
+                --button-secondary: #38424D;
+                --cta-color: #9BA8B3;
+                --accent-blue: #8FA5B5;
+                --success-color: #32D583;
+                --gray-primary: #8B8B8B;
+                --border-light: #374151;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation - Simple and clean */
+        nav {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav {
+                background-color: rgba(18, 20, 23, 0.95);
+            }
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hero logo */
+        .hero-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 32px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .logo {
+            height: 32px;
+            width: auto;
+        }
+
+        /* Hero Section - Large, centered */
+        .hero {
+            padding: 80px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 80px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 4vw, 28px);
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 48px;
+            font-style: italic;
+            letter-spacing: -0.01em;
+        }
+
+        /* Content sections */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .section h3 {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 600;
+            margin-bottom: 24px;
+            margin-top: 48px;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .section em {
+            color: var(--accent-blue);
+            font-style: italic;
+        }
+
+        .section strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Pain points list */
+        .pain-points {
+            margin: 32px 0;
+        }
+
+        .pain-points ol {
+            list-style: none;
+            counter-reset: pain-counter;
+        }
+
+        .pain-points li {
+            counter-increment: pain-counter;
+            margin-bottom: 20px;
+            padding-left: 48px;
+            position: relative;
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .pain-points li::before {
+            content: counter(pain-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent-blue);
+            color: var(--bg-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* Feature sections */
+        .feature-section {
+            margin: 48px 0;
+        }
+
+        .feature-section h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .feature-section p {
+            margin-bottom: 16px;
+        }
+
+        /* Tech list */
+        .tech-list {
+            margin: 32px 0;
+        }
+
+        .tech-list ul {
+            list-style: none;
+        }
+
+        .tech-list li {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .tech-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Security grid */
+        .security-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .security-item {
+            padding: 20px;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .security-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .security-item span {
+            color: var(--text-secondary);
+        }
+
+        /* Limitations list */
+        .limitations ul {
+            margin: 24px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .limitations li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .limitations li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            color: #F59E0B;
+        }
+
+        /* Roadmap list */
+        .roadmap ul {
+            margin: 24px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .roadmap li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .roadmap li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background-color: var(--border-light);
+            margin: 64px 0;
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 64px 0;
+            text-align: center;
+        }
+
+        .contact h3 {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .contact a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Quote/tagline */
+        .tagline {
+            text-align: center;
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 64px 0;
+            padding: 32px;
+            background-color: var(--bg-surface);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 8px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav-container {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .section {
+                margin-bottom: 60px;
+            }
+
+            .pain-points li {
+                padding-left: 40px;
+                font-size: 16px;
+            }
+
+            .pain-points li::before {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .tech-list li {
+                font-size: 16px;
+            }
+
+            .security-items {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="logo.png" alt="Astra" class="logo">
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="logo.png" alt="Astra Logo" class="hero-logo">
+            <h1>Astra</h1>
+            <p class="hero-subtitle">A unified medical intelligence workspace for bedside decision‑making</p>
+        </section>
+
+        <!-- Clinical Rationale -->
+        <section class="section">
+            <h2>Clinical Rationale</h2>
+            <p>Busy clinicians encounter four persistent pain‑points at the bedside:</p>
+            <div class="pain-points">
+                <ol>
+                    <li><strong>Evidence retrieval</strong> — "What does the most relevant guideline or RCT say for <em>this</em> patient?"</li>
+                    <li><strong>Diagnostic reasoning</strong> — weighing pre‑test probability, likelihood ratios, and competing differentials in real time.</li>
+                    <li><strong>Therapeutic planning</strong> — translating evidence into concise, actionable orders the team can follow.</li>
+                    <li><strong>Documentation</strong> — producing a note that stands up to attending‑level scrutiny.</li>
+                </ol>
+            </div>
+            <p>Astra brings these steps together in a unified interface backed by retrieval‑augmented language models and structured citation checks.</p>
+        </section>
+
+        <!-- What You Can Do Today -->
+        <section class="section">
+            <h2>What You Can Do Today</h2>
+            
+            <div class="feature-section">
+                <h4>Search</h4>
+                <p>Pose PICO‑style questions like <em>"For septic shock in adults, does early vasopressin improve mortality?"</em> Astra returns a succinct synthesis of landmark trials and systematic reviews with inline PubMed IDs.</p>
+            </div>
+
+            <div class="feature-section">
+                <h4>Reason</h4>
+                <p>Feed an undifferentiated presentation (e.g., dyspnea in the ED). Astra outputs a Bayesian differential with pre‑/post‑test probabilities, recommended next tests, and a problem‑oriented Plan referencing seminal studies (ARDSnet, PROSEVA).</p>
+            </div>
+
+            <div class="feature-section">
+                <h4>Write</h4>
+                <p>Convert a bedside impression—such as a post‑op Day 2 update—into a structured Assessment & Plan that includes suggested orders, monitoring parameters, and follow‑up labs.</p>
+            </div>
+        </section>
+
+        <!-- Under the Hood -->
+        <section class="section">
+            <h2>Under the Hood</h2>
+            <div class="tech-list">
+                <ul>
+                    <li><strong>Retrieval‑augmented reasoning</strong> — Queries are decomposed into PICO elements, matched against ~500 embedded landmark trials using cosine similarity, then fed into transformer models tuned for clinical tasks.</li>
+                    <li><strong>Evidence linker</strong> — Every recommendation must cite a verifiable PMID or DOI; responses fail validation if a citation cannot be matched.</li>
+                    <li><strong>Bayesian engine</strong> — Likelihood ratios and prevalence estimates are converted into post‑test probabilities inline.</li>
+                    <li><strong>Data & auth</strong> — Chat history and embeddings reside in an encrypted relational store with row‑level security; all API calls are gated by OpenID‑Connect SSO tokens.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Security & Compliance -->
+        <section class="section">
+            <h2>Security & Compliance</h2>
+            <div class="security-items">
+                <div class="security-item">
+                    <strong>Transport</strong>
+                    <span>TLS 1.3 on every hop</span>
+                </div>
+                <div class="security-item">
+                    <strong>Storage</strong>
+                    <span>AES‑256 encryption at rest; daily encrypted backups</span>
+                </div>
+                <div class="security-item">
+                    <strong>Access</strong>
+                    <span>Role‑based policies, row‑level security</span>
+                </div>
+                <div class="security-item">
+                    <strong>Runtime</strong>
+                    <span>Isolated server‑side execution; secrets never leave the server</span>
+                </div>
+                <div class="security-item">
+                    <strong>Audit</strong>
+                    <span>Immutable logs retained ≥ 30 days</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Limitations -->
+        <section class="section">
+            <h2>Current Limitations</h2>
+            <div class="limitations">
+                <ul>
+                    <li>Ultra‑rare adverse effects and local formulary nuances may be missing—<strong>verify critical orders</strong>.</li>
+                    <li>The literature index refreshes every few hours; very recent pre‑prints may not appear immediately.</li>
+                    <li>Astra supplements clinical judgment; it does not override institutional policy.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section class="section">
+            <h2>Roadmap</h2>
+            <div class="roadmap">
+                <ul>
+                    <li>Bidirectional EHR connector for one‑click note insertion and order drafts.</li>
+                    <li>Real‑time drug–drug interaction checker within the Plan.</li>
+                    <li>Practice‑gap analytics derived from de‑identified usage trends.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Tagline -->
+        <div class="tagline">
+            Astra exists to lighten cognitive load: faster evidence, clearer reasoning, and notes that withstand peer review.
+        </div>
+
+        <!-- Contact -->
+        <div class="contact">
+            <h3>Business & Contact</h3>
+            <p><strong>Astraeus Intelligence LLC</strong></p>
+            <p>254 Chapman Rd, Ste 208 #22873</p>
+            <p>Newark, Delaware 19702</p>
+            <p><a href="mailto:support@astramd.org">support@astramd.org</a></p>
+        </div>
+    </div>
+</body>
+</html>
