@@ -157,7 +157,7 @@ export const renderMarkdown = (raw = '') => {
       if (match) {
         const number = match[1];
         const text = match[2];
-        result.push(`<div class="numbered-item"><span class="number">${number}.</span> <span class="content">${processInline(text)}</span></div>`);
+        result.push(`<div class="numbered-item"><span class="number">${number}.</span><span class="content">${processInline(text)}</span></div>`);
       }
       i++;
       continue;
@@ -1174,14 +1174,14 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
-const response = await fetch(process.env.REACT_APP_API_URL, {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${process.env.REACT_APP_AUTH_TOKEN}`,
-    'Content-Type': 'application/json',
-    'apikey': process.env.REACT_APP_API_KEY,
-    'Accept': 'text/event-stream'
-  },
+      const response = await fetch('https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8',
+          'Content-Type': 'application/json',
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8',
+          'Accept': 'text/event-stream'
+        },
         body: JSON.stringify({
           query: queryToSend,
           isClinical: false,
@@ -1800,9 +1800,10 @@ const response = await fetch(process.env.REACT_APP_API_URL, {
           color: ${theme.accentSoftBlue} !important;
           cursor: pointer;
           font-weight: 600;
-          padding: 2px 4px;
+          padding: 0;
           border-radius: 4px;
           transition: all 0.2s ease;
+          margin: 0;
         }
         
         .md sup.md-citation:hover {
