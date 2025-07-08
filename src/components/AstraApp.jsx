@@ -961,6 +961,7 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
+      paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
@@ -983,7 +984,7 @@ const InputBar = ({
             resize: 'none',
             border: 'none',
             outline: 'none',
-            fontSize: '14px',
+            fontSize: '16px',
             lineHeight: '1.5',
             backgroundColor: 'transparent',
             color: theme.textPrimary,
@@ -1543,6 +1544,7 @@ const AstraApp = () => {
             maxWidth: '900px',   
             margin: '0 auto',    
             padding: '0 24px',   
+            paddingBottom: 'max(24px, env(safe-area-inset-bottom))',
             boxSizing: 'border-box',
             width: '100%',
           }}
