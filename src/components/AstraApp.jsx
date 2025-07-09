@@ -1175,14 +1175,14 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
-      const response = await fetch('https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api', {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8',
-          'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8',
-          'Accept': 'text/event-stream'
-        },
+const response = await fetch(import.meta.env.VITE_API_URL, {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+    'Content-Type': 'application/json',
+    'apikey': import.meta.env.VITE_API_KEY,
+    'Accept': 'text/event-stream'
+  },
         body: JSON.stringify({
           query: queryToSend,
           isClinical: false,
@@ -1544,7 +1544,6 @@ const AstraApp = () => {
             maxWidth: '900px',   
             margin: '0 auto',    
             padding: '0 24px',   
-            paddingBottom: 'max(24px, env(safe-area-inset-bottom))',
             boxSizing: 'border-box',
             width: '100%',
           }}
