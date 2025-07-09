@@ -548,17 +548,17 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
-      padding: isMobile ? '20px 16px' : '32px 16px',
-      height: '100%',
-      gap: isMobile ? '20px' : '24px'
+      justifyContent: isMobile ? 'flex-start' : 'center',
+      padding: isMobile ? '40px 0 20px' : '32px 16px',
+      minHeight: isMobile ? 'auto' : '100%',
+      gap: isMobile ? '24px' : '24px'
     }}>
       <div style={{ textAlign: 'center' }}>
         {/* Custom four-pointed star logo */}
         <div style={{
           width: isMobile ? '32px' : '36px',
           height: isMobile ? '32px' : '36px',
-          margin: isMobile ? '0 auto 12px' : '0 auto 16px',
+          margin: isMobile ? '0 auto 16px' : '0 auto 16px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -591,10 +591,10 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: isMobile ? '8px' : '6px',
+        gap: isMobile ? '10px' : '6px',
         width: '100%',
         maxWidth: isMobile ? '100%' : '448px',
-        padding: isMobile ? '0 16px' : '0 32px'
+        padding: '0'
       }}>
         {queries.map((query, index) => (
           <button
@@ -602,7 +602,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
             onClick={() => onSampleTapped(query)}
             style={{
               width: '100%',
-              padding: isMobile ? '12px 20px' : '10px 20px',
+              padding: isMobile ? '14px 20px' : '10px 20px',
               borderRadius: '50px',
               fontSize: isMobile ? '14px' : '12px',
               fontWeight: '500',
@@ -613,7 +613,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
               color: `${theme.grayPrimary}70`,
               cursor: 'pointer',
               transition: 'all 0.2s ease',
-              minHeight: isMobile ? '44px' : 'auto'
+              minHeight: isMobile ? '48px' : 'auto'
             }}
           >
             {query}
@@ -1129,11 +1129,11 @@ const InputBar = ({
             padding: isMobile ? '12px 16px' : '6px',
             borderRadius: isMobile ? '12px' : '6px',
             resize: 'none',
-            border: isMobile ? `2px solid ${theme.textSecondary}20` : 'none',
+            border: 'none',
             outline: 'none',
             fontSize: isMobile ? '16px' : '16px', // 16px prevents zoom on iOS
             lineHeight: '1.5',
-            backgroundColor: isMobile ? theme.backgroundPrimary : 'transparent',
+            backgroundColor: 'transparent',
             color: theme.textPrimary,
             height: `${textareaHeight}px`,
             minHeight: isMobile ? '44px' : '8px',
@@ -1328,14 +1328,12 @@ const AstraApp = () => {
 
     try {
       // Note: You'll need to replace these with your actual API endpoints
-const response = await fetch(import.meta.env.VITE_API_URL, {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
-    'Content-Type': 'application/json',
-    'apikey': import.meta.env.VITE_API_KEY,
-    'Accept': 'text/event-stream'
-  },
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'text/event-stream'
+        },
         body: JSON.stringify({
           query: queryToSend,
           isClinical: false,
@@ -1646,8 +1644,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             zIndex:0,
             flex: 1,
             overflowY: 'auto',
+            overflowX: 'hidden',
             padding: isMobile ? '0 20px' : '0 16px',
-            WebkitOverflowScrolling: 'touch' // Smooth scrolling on iOS
+            WebkitOverflowScrolling: 'touch', // Smooth scrolling on iOS
+            display: 'flex',
+            flexDirection: 'column'
           }}
           onClick={() => {
             if (speechRecognition.isRecording) {
@@ -1658,7 +1659,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           <div style={{
             maxWidth: '900px',
             margin: '0 auto',
-            padding: isMobile ? '20px 0' : '16px 0'
+            padding: isMobile ? '0' : '16px 0',
+            width: '100%',
+            flex: messages.length === 0 && !isLoading && !isStreaming ? 1 : 'none',
+            display: 'flex',
+            flexDirection: 'column'
           }}>
             {/* Empty State */}
             {messages.length === 0 && !isLoading && !isStreaming && (
