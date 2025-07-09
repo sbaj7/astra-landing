@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Mic, Send, Square, Copy, Check, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
+import { Mic, Send, Square, Copy, Check, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink, Menu } from 'lucide-react';
 
 // Original color system (unchanged)
 const colors = {
@@ -44,6 +44,60 @@ const sampleQueries = {
     "Severe aortic stenosis (78-yo) awaiting elective TAVR; optimize preload, cardiac work-up",
     "Metastatic colon cancer with bowel obstruction; comfort-care path, morphine PCA, PC consult"
   ]
+};
+
+// Mobile detection hook
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLandscape, setIsLandscape] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const landscape = window.innerWidth > window.innerHeight;
+      setIsMobile(mobile);
+      setIsLandscape(landscape);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    window.addEventListener('orientationchange', () => {
+      setTimeout(checkMobile, 100); // Delay for orientation change
+    });
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('orientationchange', checkMobile);
+    };
+  }, []);
+
+  return { isMobile, isLandscape };
+};
+
+// Viewport height hook for mobile browsers
+const useViewportHeight = () => {
+  const [viewportHeight, setViewportHeight] = useState('100vh');
+
+  useEffect(() => {
+    const updateHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      setViewportHeight(`${window.innerHeight}px`);
+    };
+
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    window.addEventListener('orientationchange', () => {
+      setTimeout(updateHeight, 100);
+    });
+
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+      window.removeEventListener('orientationchange', updateHeight);
+    };
+  }, []);
+
+  return viewportHeight;
 };
 
 const useTheme = () => {
@@ -229,7 +283,7 @@ const processInline = (text) => {
 };
 
 // Citation overlay component (enhanced but same appearance)
-const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
+const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme, isMobile }) => {
   if (!isPresented || !citation) return null;
 
   const handleBackdropClick = (e) => {
@@ -254,23 +308,25 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
         bottom: 0,
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: isMobile ? 'flex-end' : 'center',
         justifyContent: 'center',
         zIndex: 1000,
-        padding: '20px'
+        padding: isMobile ? '0' : '20px'
       }}
       onClick={handleBackdropClick}
     >
       <div
         style={{
           backgroundColor: theme.backgroundSurface,
-          borderRadius: '16px',
+          borderRadius: isMobile ? '16px 16px 0 0' : '16px',
           padding: '24px',
-          maxWidth: '500px',
+          maxWidth: isMobile ? '100%' : '500px',
           width: '100%',
-          maxHeight: '80vh',
+          maxHeight: isMobile ? '80vh' : '80vh',
           overflow: 'auto',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+          transform: isMobile ? 'translateY(0)' : 'translateY(0)',
+          animation: isMobile ? 'slideUp 0.3s ease-out' : 'none'
         }}
       >
         <div style={{
@@ -300,7 +356,12 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
               border: 'none',
               cursor: 'pointer',
               color: theme.textSecondary,
-              padding: '4px'
+              padding: '4px',
+              minHeight: '44px',
+              minWidth: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
             }}
           >
             <X size={20} />
@@ -342,7 +403,8 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
               fontSize: '14px',
               fontWeight: '500',
               width: '100%',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              minHeight: '44px'
             }}
           >
             <ExternalLink size={16} />
@@ -354,7 +416,7 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
   );
 };
 
-const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
+const ToolbarView = ({ onNewChat, onToggleSidebar, theme, isMobile }) => {
   const [newChatCooldown, setNewChatCooldown] = useState(false);
 
   const handleNewChat = () => {
@@ -366,38 +428,41 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
 
   return (
     <div style={{
-      height: '52px',
+      height: isMobile ? '60px' : '52px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '0 16px',
+      padding: isMobile ? '0 20px' : '0 16px',
       backgroundColor: theme.backgroundSurface,
       borderBottomLeftRadius: '20px',
       borderBottomRightRadius: '20px',
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
-      zIndex: 10
+      zIndex: 10,
+      paddingTop: isMobile ? 'env(safe-area-inset-top)' : '0'
     }}>
       <button
         onClick={onToggleSidebar}
         style={{
-          padding: '8px',
+          padding: isMobile ? '12px' : '8px',
           borderRadius: '8px',
           border: 'none',
           backgroundColor: 'transparent',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          minHeight: '44px',
+          minWidth: '44px'
         }}
       >
-        <Stethoscope size={18} color={theme.textPrimary} />
+        {isMobile ? <Menu size={20} color={theme.textPrimary} /> : <Stethoscope size={18} color={theme.textPrimary} />}
       </button>
 
       <h1 style={{
         color: theme.textPrimary,
         fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-        fontSize: '28px',
+        fontSize: isMobile ? '32px' : '28px',
         margin: 0,
         fontWeight: 'normal',
         transform: 'translateY(-2px)'
@@ -409,7 +474,7 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
         onClick={handleNewChat}
         disabled={newChatCooldown}
         style={{
-          padding: '8px',
+          padding: isMobile ? '12px' : '8px',
           borderRadius: '8px',
           border: 'none',
           backgroundColor: 'transparent',
@@ -417,16 +482,18 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
           opacity: newChatCooldown ? 0.5 : 1,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          minHeight: '44px',
+          minWidth: '44px'
         }}
       >
-        <Edit3 size={18} color={theme.textPrimary} />
+        <Edit3 size={isMobile ? 20 : 18} color={theme.textPrimary} />
       </button>
     </div>
   );
 };
 
-const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
+const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }) => {
   const modes = [
     { key: 'search', title: 'Research', icon: Search },
     { key: 'reason', title: 'DDx', icon: Sparkles },
@@ -434,7 +501,11 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
   ];
 
   return (
-    <div style={{ display: 'flex', gap: '6px' }}>
+    <div style={{ 
+      display: 'flex', 
+      gap: isMobile ? '8px' : '6px',
+      flexWrap: isMobile ? 'wrap' : 'nowrap'
+    }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = currentMode === key;
         return (
@@ -446,19 +517,21 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
-              padding: '6px 10px',
+              padding: isMobile ? '8px 12px' : '6px 10px',
               borderRadius: '50px',
               border: `1px solid ${theme.textSecondary}50`,
               backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
               color: isSelected ? '#ffffff' : theme.textPrimary,
-              fontSize: '12px',
+              fontSize: isMobile ? '14px' : '12px',
               fontWeight: '500',
               cursor: 'pointer',
               transition: 'all 0.2s ease',
-              opacity: isDisabled ? 0.5 : 1
+              opacity: isDisabled ? 0.5 : 1,
+              minHeight: isMobile ? '44px' : 'auto',
+              whiteSpace: 'nowrap'
             }}
           >
-            <Icon size={10} />
+            <Icon size={isMobile ? 12 : 10} />
             <span>{title}</span>
           </button>
         );
@@ -467,7 +540,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
   );
 };
 
-const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
+const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
   const queries = sampleQueries[currentMode] || sampleQueries.search;
 
   return (
@@ -476,23 +549,23 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '32px 16px',
+      padding: isMobile ? '20px 16px' : '32px 16px',
       height: '100%',
-      gap: '24px'
+      gap: isMobile ? '20px' : '24px'
     }}>
       <div style={{ textAlign: 'center' }}>
         {/* Custom four-pointed star logo */}
         <div style={{
-          width: '36px',
-          height: '36px',
-          margin: '0 auto 16px',
+          width: isMobile ? '32px' : '36px',
+          height: isMobile ? '32px' : '36px',
+          margin: isMobile ? '0 auto 12px' : '0 auto 16px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
         }}>
           <svg 
-            width="36" 
-            height="36" 
+            width={isMobile ? "32" : "36"} 
+            height={isMobile ? "32" : "36"} 
             viewBox="0 0 36 36" 
             fill="none"
           >
@@ -505,10 +578,10 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         <h2 style={{
           color: `${theme.grayPrimary}60`,
           fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-          fontSize: '36px',
+          fontSize: isMobile ? '28px' : '36px',
           lineHeight: '1.1',
           margin: 0,
-          maxWidth: '220px',
+          maxWidth: isMobile ? '280px' : '220px',
           fontWeight: '300'
         }}>
           Uncertainty ends here.
@@ -518,10 +591,10 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '6px',
+        gap: isMobile ? '8px' : '6px',
         width: '100%',
-        maxWidth: '448px',
-        padding: '0 32px'
+        maxWidth: isMobile ? '100%' : '448px',
+        padding: isMobile ? '0 16px' : '0 32px'
       }}>
         {queries.map((query, index) => (
           <button
@@ -529,9 +602,9 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
             onClick={() => onSampleTapped(query)}
             style={{
               width: '100%',
-              padding: '10px 20px',
+              padding: isMobile ? '12px 20px' : '10px 20px',
               borderRadius: '50px',
-              fontSize: '12px',
+              fontSize: isMobile ? '14px' : '12px',
               fontWeight: '500',
               textAlign: 'center',
               lineHeight: '1.4',
@@ -539,7 +612,8 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
               border: `0.5px solid ${theme.grayPrimary}20`,
               color: `${theme.grayPrimary}70`,
               cursor: 'pointer',
-              transition: 'all 0.2s ease'
+              transition: 'all 0.2s ease',
+              minHeight: isMobile ? '44px' : 'auto'
             }}
           >
             {query}
@@ -550,7 +624,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
   );
 };
 
-const MessageBubble = ({ message, theme, onTapCitation }) => {
+const MessageBubble = ({ message, theme, onTapCitation, isMobile }) => {
   const [showCopied, setShowCopied] = useState(false);
   const containerRef = useRef(null);
 
@@ -593,7 +667,7 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
     };
 
     return (
-      <div style={{ width: '100%', marginBottom: '16px' }}>
+      <div style={{ width: '100%', marginBottom: isMobile ? '20px' : '16px' }}>
         <div style={{
           display: 'flex',
           backgroundColor: `${theme.accentSoftBlue}0D`,
@@ -606,13 +680,13 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
           }} />
           <div style={{
             flex: 1,
-            padding: '10px 12px',
+            padding: isMobile ? '12px 16px' : '10px 12px',
             display: 'flex',
             flexDirection: 'column',
             gap: '4px'
           }}>
             <div style={{
-              fontSize: '11px',
+              fontSize: isMobile ? '12px' : '11px',
               fontWeight: '500',
               textTransform: 'uppercase',
               letterSpacing: '0.5px',
@@ -621,8 +695,9 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
               {getQueryLabel()}
             </div>
             <div style={{
-              fontSize: '14px',
-              color: theme.textPrimary
+              fontSize: isMobile ? '16px' : '14px',
+              color: theme.textPrimary,
+              lineHeight: '1.5'
             }}>
               {message.content}
             </div>
@@ -634,10 +709,10 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
 
   // Assistant message - use streaming style for completed messages too
   return (
-    <div style={{ width: '100%', marginBottom: '16px', position: 'relative' }}>
+    <div style={{ width: '100%', marginBottom: isMobile ? '20px' : '16px', position: 'relative' }}>
       <div 
         style={{
-          padding: '16px',
+          padding: isMobile ? '16px' : '16px',
           borderRadius: '12px',
           backgroundColor: theme.backgroundSurface,
           border: `1px solid ${theme.accentSoftBlue}33`
@@ -652,7 +727,7 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
             marginBottom: '8px'
           }}>
             <span style={{
-              fontSize: '11px',
+              fontSize: isMobile ? '12px' : '11px',
               fontWeight: '500',
               textTransform: 'uppercase',
               letterSpacing: '0.5px',
@@ -667,7 +742,7 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
           ref={containerRef} 
           className="md"
           style={{
-            fontSize: '14px',
+            fontSize: isMobile ? '16px' : '14px',
             lineHeight: '1.6',
             color: theme.textPrimary
           }}
@@ -678,13 +753,16 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
           onClick={handleCopy}
           style={{
             position: 'absolute',
-            top: '8px',
-            right: '8px',
+            top: isMobile ? '12px' : '8px',
+            right: isMobile ? '12px' : '8px',
             background: 'transparent',
             border: 'none',
             cursor: 'pointer',
             color: theme.textSecondary,
-            fontSize: '13px'
+            fontSize: isMobile ? '14px' : '13px',
+            minHeight: isMobile ? '44px' : 'auto',
+            minWidth: isMobile ? '44px' : 'auto',
+            padding: isMobile ? '8px' : '4px'
           }}
         >
           {showCopied ? 'Copied' : 'Copy'}
@@ -694,14 +772,14 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
   );
 };
 
-const StreamingResponse = ({ content, theme }) => {
+const StreamingResponse = ({ content, theme, isMobile }) => {
   return (
     <div style={{
-      padding: '16px',
+      padding: isMobile ? '16px' : '16px',
       borderRadius: '12px',
       backgroundColor: theme.backgroundSurface,
       border: `1px solid ${theme.accentSoftBlue}33`,
-      marginBottom: '16px'
+      marginBottom: isMobile ? '20px' : '16px'
     }}>
       <div style={{
         display: 'flex',
@@ -710,7 +788,7 @@ const StreamingResponse = ({ content, theme }) => {
         marginBottom: '8px'
       }}>
         <span style={{
-          fontSize: '11px',
+          fontSize: isMobile ? '12px' : '11px',
           fontWeight: '500',
           textTransform: 'uppercase',
           letterSpacing: '0.5px',
@@ -738,7 +816,7 @@ const StreamingResponse = ({ content, theme }) => {
       <div 
         className="md"
         style={{
-          fontSize: '14px',
+          fontSize: isMobile ? '16px' : '14px',
           lineHeight: '1.6',
           color: theme.textPrimary
         }}
@@ -750,13 +828,13 @@ const StreamingResponse = ({ content, theme }) => {
   );
 };
 
-const LoadingIndicator = ({ theme }) => {
+const LoadingIndicator = ({ theme, isMobile }) => {
   return (
     <div style={{
-      padding: '16px',
+      padding: isMobile ? '16px' : '16px',
       borderRadius: '12px',
       backgroundColor: `${theme.backgroundSurface}80`,
-      marginBottom: '16px'
+      marginBottom: isMobile ? '20px' : '16px'
     }}>
       <div style={{
         display: 'flex',
@@ -764,7 +842,7 @@ const LoadingIndicator = ({ theme }) => {
         justifyContent: 'space-between'
       }}>
         <span style={{
-          fontSize: '11px',
+          fontSize: isMobile ? '12px' : '11px',
           fontWeight: '500',
           textTransform: 'uppercase',
           letterSpacing: '0.5px',
@@ -791,7 +869,7 @@ const LoadingIndicator = ({ theme }) => {
   );
 };
 
-const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
+const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme, isMobile }) => {
   if (!isOpen) return null;
 
   return (
@@ -806,17 +884,22 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
     }}>
       <div
         style={{
-          flex: 1,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)'
+          flex: isMobile ? 0 : 1,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          width: isMobile ? '0' : 'auto'
         }}
         onClick={onClose}
       />
       <div style={{
-        width: '320px',
+        width: isMobile ? '100%' : '320px',
         height: '100%',
-        padding: '24px',
+        padding: isMobile ? '24px 20px' : '24px',
+        paddingTop: isMobile ? 'calc(env(safe-area-inset-top) + 24px)' : '24px',
+        paddingBottom: isMobile ? 'calc(env(safe-area-inset-bottom) + 24px)' : '24px',
         overflowY: 'auto',
-        backgroundColor: theme.backgroundSurface
+        backgroundColor: theme.backgroundSurface,
+        transform: isMobile && !isOpen ? 'translateX(100%)' : 'translateX(0)',
+        transition: 'transform 0.3s ease-out'
       }}>
         <div style={{
           display: 'flex',
@@ -825,57 +908,89 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
           marginBottom: '24px'
         }}>
           <h2 style={{
-            fontSize: '18px',
+            fontSize: isMobile ? '20px' : '18px',
             fontWeight: '600',
             color: theme.textPrimary,
             margin: 0
           }}>
             Chat History
           </h2>
-          <button
-            onClick={onNewChat}
-            style={{
-              padding: '8px',
-              borderRadius: '8px',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer'
-            }}
-          >
-            <Edit3 size={16} color={theme.textPrimary} />
-          </button>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button
+              onClick={onNewChat}
+              style={{
+                padding: '8px',
+                borderRadius: '8px',
+                border: 'none',
+                backgroundColor: 'transparent',
+                cursor: 'pointer',
+                minHeight: '44px',
+                minWidth: '44px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Edit3 size={16} color={theme.textPrimary} />
+            </button>
+            {isMobile && (
+              <button
+                onClick={onClose}
+                style={{
+                  padding: '8px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer',
+                  minHeight: '44px',
+                  minWidth: '44px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <X size={16} color={theme.textPrimary} />
+              </button>
+            )}
+          </div>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '12px' : '8px' }}>
           {chatHistory.map((chat) => (
             <div key={chat.id} style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between'
+              justifyContent: 'space-between',
+              gap: '8px'
             }}>
               <button
                 onClick={() => onSelectChat(chat)}
                 style={{
                   flex: 1,
-                  padding: '12px',
+                  padding: isMobile ? '16px 12px' : '12px',
                   borderRadius: '8px',
                   textAlign: 'left',
                   backgroundColor: `${theme.textSecondary}0A`,
                   border: 'none',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  minHeight: isMobile ? '60px' : 'auto'
                 }}
               >
                 <div style={{
-                  fontSize: '14px',
+                  fontSize: isMobile ? '16px' : '14px',
                   fontWeight: '500',
                   color: theme.textPrimary,
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
-                  textOverflow: 'ellipsis'
+                  textOverflow: 'ellipsis',
+                  marginBottom: '4px'
                 }}>
                   {chat.title}
                 </div>
-                <div style={{ fontSize: '12px', color: theme.textSecondary }}>
+                <div style={{ 
+                  fontSize: isMobile ? '14px' : '12px', 
+                  color: theme.textSecondary 
+                }}>
                   {new Date(chat.timestamp).toLocaleDateString()}
                 </div>
               </button>
@@ -886,7 +1001,12 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
                   borderRadius: '8px',
                   border: 'none',
                   backgroundColor: 'transparent',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  minHeight: '44px',
+                  minWidth: '44px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
               >
                 <Square size={12} color={theme.errorColor} />
@@ -909,20 +1029,46 @@ const InputBar = ({
   isStreaming,
   isLoading,
   speechRecognition,
-  theme
+  theme,
+  isMobile
 }) => {
   const textareaRef = useRef(null);
-  const [textareaHeight, setTextareaHeight] = useState(32);
+  const [textareaHeight, setTextareaHeight] = useState(isMobile ? 44 : 32);
+  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
+
+  // Handle virtual keyboard on mobile
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleResize = () => {
+      // Detect if keyboard is open on mobile
+      const viewportHeight = window.visualViewport?.height || window.innerHeight;
+      const windowHeight = window.innerHeight;
+      const keyboardVisible = viewportHeight < windowHeight * 0.8;
+      setIsKeyboardVisible(keyboardVisible);
+    };
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', handleResize);
+      return () => window.visualViewport.removeEventListener('resize', handleResize);
+    } else {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [isMobile]);
 
   const adjustTextareaHeight = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea) return;
 
-    textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 64);
+    const minHeight = isMobile ? 44 : 32;
+    const maxHeight = isMobile ? 120 : 64;
+    
+    textarea.style.height = `${minHeight}px`;
+    const scrollHeight = Math.min(textarea.scrollHeight, maxHeight);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     adjustTextareaHeight();
@@ -960,15 +1106,16 @@ const InputBar = ({
 
   return (
     <div style={{
-      padding: '16px',
-      paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+      padding: isMobile ? '16px 20px' : '16px',
+      paddingBottom: isMobile ? 'max(16px, env(safe-area-inset-bottom))' : 'max(16px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
-      boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)'
+      boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)',
+      position: isKeyboardVisible && isMobile ? 'static' : 'relative'
     }}>
       {/* Text Input Area */}
-      <div style={{ position: 'relative', marginBottom: '0px' }}>
+      <div style={{ position: 'relative', marginBottom: isMobile ? '12px' : '0px' }}>
         <textarea
           ref={textareaRef}
           value={query}
@@ -979,18 +1126,18 @@ const InputBar = ({
           disabled={isDisabled}
           style={{
             width: '100%',
-            padding: '6px',
-            borderRadius: '6px',
+            padding: isMobile ? '12px 16px' : '6px',
+            borderRadius: isMobile ? '12px' : '6px',
             resize: 'none',
-            border: 'none',
+            border: isMobile ? `2px solid ${theme.textSecondary}20` : 'none',
             outline: 'none',
-            fontSize: '16px',
+            fontSize: isMobile ? '16px' : '16px', // 16px prevents zoom on iOS
             lineHeight: '1.5',
-            backgroundColor: 'transparent',
+            backgroundColor: isMobile ? theme.backgroundPrimary : 'transparent',
             color: theme.textPrimary,
             height: `${textareaHeight}px`,
-            minHeight: '8px',
-            maxHeight: '88px',
+            minHeight: isMobile ? '44px' : '8px',
+            maxHeight: isMobile ? '120px' : '88px',
             fontFamily: 'inherit',
             boxSizing: 'border-box'
           }}
@@ -999,13 +1146,14 @@ const InputBar = ({
         {speechRecognition.isRecording && (
           <div style={{
             position: 'absolute',
-            right: '12px',
-            top: '0px',
+            right: isMobile ? '16px' : '12px',
+            top: isMobile ? '12px' : '0px',
             display: 'flex',
             alignItems: 'center',
-            gap: '4px'
+            gap: '4px',
+            pointerEvents: 'none'
           }}>
-            <span style={{ fontSize: '12px', color: theme.accentSoftBlue }}>
+            <span style={{ fontSize: isMobile ? '14px' : '12px', color: theme.accentSoftBlue }}>
               Listening
             </span>
             <div style={{ display: 'flex', gap: '2px' }}>
@@ -1031,22 +1179,24 @@ const InputBar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '0px'
+        marginBottom: isMobile ? '12px' : '0px',
+        gap: isMobile ? '12px' : '8px'
       }}>
         <ModeSwitcher
           currentMode={currentMode}
           onModeChange={onModeChange}
           isDisabled={isDisabled}
           theme={theme}
+          isMobile={isMobile}
         />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '12px' : '8px' }}>
           {/* Microphone Button */}
           <button
             onClick={speechRecognition.toggleRecording}
             disabled={!speechRecognition.isAvailable || isDisabled}
             style={{
-              padding: '8px',
+              padding: isMobile ? '12px' : '8px',
               borderRadius: '50%',
               border: 'none',
               backgroundColor: 'transparent',
@@ -1056,13 +1206,15 @@ const InputBar = ({
               opacity: (!speechRecognition.isAvailable || isDisabled) ? 0.5 : 1,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              minHeight: '44px',
+              minWidth: '44px'
             }}
           >
             {speechRecognition.isRecording ? (
-              <Square size={28} fill="currentColor" />
+              <Square size={isMobile ? 24 : 28} fill="currentColor" />
             ) : (
-              <Mic size={28} />
+              <Mic size={isMobile ? 24 : 28} />
             )}
           </button>
 
@@ -1071,7 +1223,7 @@ const InputBar = ({
             onClick={isStreaming ? onStop : onSend}
             disabled={!isStreaming && !query.trim()}
             style={{
-              padding: '8px',
+              padding: isMobile ? '12px' : '8px',
               borderRadius: '50%',
               border: 'none',
               backgroundColor: 'transparent',
@@ -1080,13 +1232,15 @@ const InputBar = ({
               opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              minHeight: '44px',
+              minWidth: '44px'
             }}
           >
             {isStreaming ? (
-              <Square size={28} fill="currentColor" />
+              <Square size={isMobile ? 24 : 28} fill="currentColor" />
             ) : (
-              <Send size={28} />
+              <Send size={isMobile ? 24 : 28} />
             )}
           </button>
         </div>
@@ -1095,9 +1249,10 @@ const InputBar = ({
       {/* Disclaimer */}
       <div style={{ textAlign: 'center' }}>
         <p style={{
-          fontSize: '12px',
+          fontSize: isMobile ? '14px' : '12px',
           color: theme.textSecondary,
-          margin: 0
+          margin: 0,
+          lineHeight: '1.4'
         }}>
           Astra can make mistakes. Check critical info.
         </p>
@@ -1109,6 +1264,8 @@ const InputBar = ({
 const AstraApp = () => {
   const { colors: theme } = useTheme();
   const speechRecognition = useSpeechRecognition();
+  const { isMobile, isLandscape } = useIsMobile();
+  const viewportHeight = useViewportHeight();
 
   // App state
   const [messages, setMessages] = useState([]);
@@ -1126,11 +1283,6 @@ const AstraApp = () => {
 
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
-
-  // Auto-scroll removed - let users control scrolling
-  // useEffect(() => {
-  //   if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  // }, [messages, isLoading, isStreaming, streamingContent]);
 
   const resetChat = () => {
     // Abort any ongoing request
@@ -1175,6 +1327,7 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
+      // Note: You'll need to replace these with your actual API endpoints
 const response = await fetch(import.meta.env.VITE_API_URL, {
   method: 'POST',
   headers: {
@@ -1461,18 +1614,20 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
   return (
     <div style={{
-      height: '100vh',
+      height: viewportHeight,
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      position: 'relative'
     }}>
       {/* Toolbar */}
       <ToolbarView
         onNewChat={resetChat}
         onToggleSidebar={() => setShowSidebar(true)}
         theme={theme}
+        isMobile={isMobile}
       />
 
       {/* Main Content */}
@@ -1480,7 +1635,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        position: 'relative'
       }}>
         {/* Conversation Area */}
         <div
@@ -1490,7 +1646,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             zIndex:0,
             flex: 1,
             overflowY: 'auto',
-            padding: '0 16px'
+            padding: isMobile ? '0 20px' : '0 16px',
+            WebkitOverflowScrolling: 'touch' // Smooth scrolling on iOS
           }}
           onClick={() => {
             if (speechRecognition.isRecording) {
@@ -1501,7 +1658,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           <div style={{
             maxWidth: '900px',
             margin: '0 auto',
-            padding: '16px 0'
+            padding: isMobile ? '20px 0' : '16px 0'
           }}>
             {/* Empty State */}
             {messages.length === 0 && !isLoading && !isStreaming && (
@@ -1509,6 +1666,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
                 currentMode={currentMode}
                 onSampleTapped={handleSampleTapped}
                 theme={theme}
+                isMobile={isMobile}
               />
             )}
 
@@ -1518,6 +1676,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
                 key={message.id}
                 message={message}
                 theme={theme}
+                isMobile={isMobile}
                 onTapCitation={(citation) => {
                   setSelectedCitation(citation);
                   setShowCitationOverlay(true);
@@ -1526,13 +1685,14 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             ))}
 
             {/* Loading Indicator */}
-            {isLoading && <LoadingIndicator theme={theme} />}
+            {isLoading && <LoadingIndicator theme={theme} isMobile={isMobile} />}
 
             {/* Streaming Response */}
             {isStreaming && (
               <StreamingResponse
                 content={streamingContent}
                 theme={theme}
+                isMobile={isMobile}
               />
             )}
           </div>
@@ -1543,7 +1703,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           style={{
             maxWidth: '900px',   
             margin: '0 auto',    
-            padding: '0 24px',   
+            padding: isMobile ? '0' : '0 24px',   
             boxSizing: 'border-box',
             width: '100%',
           }}
@@ -1559,6 +1719,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             isLoading={isLoading}
             speechRecognition={speechRecognition}
             theme={theme}
+            isMobile={isMobile}
           />
         </div>
       </div>
@@ -1575,6 +1736,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           setShowSidebar(false);
         }}
         theme={theme}
+        isMobile={isMobile}
       />
 
       {/* Citation Overlay */}
@@ -1584,6 +1746,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           isPresented={showCitationOverlay}
           onDismiss={() => setShowCitationOverlay(false)}
           theme={theme}
+          isMobile={isMobile}
         />
       )}
 
@@ -1597,13 +1760,19 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
           overflow: hidden;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -webkit-tap-highlight-color: transparent;
         }
         #root {
           height: 100vh;
+          height: calc(var(--vh, 1vh) * 100);
           width: 100vw;
         }
+        
+        /* Mobile-optimized scrollbars */
         ::-webkit-scrollbar {
-          width: 6px;
+          width: ${isMobile ? '2px' : '6px'};
         }
         ::-webkit-scrollbar-track {
           background: transparent;
@@ -1619,6 +1788,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           scrollbar-width: thin;
           scrollbar-color: ${theme.textSecondary}40 transparent;
         }
+        
+        /* Mobile input optimizations */
         textarea::placeholder {
           color: ${theme.textSecondary};
           opacity: 1;
@@ -1630,6 +1801,15 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           outline: none;
           resize: none;
           background: transparent;
+          -webkit-appearance: none;
+          -webkit-border-radius: 0;
+        }
+        
+        /* Button touch targets */
+        button {
+          -webkit-appearance: none;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
         }
         button:not(:disabled):hover {
           transform: translateY(-1px);
@@ -1637,6 +1817,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         button:not(:disabled):active {
           transform: translateY(0);
         }
+        
+        /* Animations */
         @keyframes bounce {
           0%, 60%, 100% {
             transform: translateY(0);
@@ -1659,10 +1841,22 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           0%, 50% { opacity: 1; }
           51%, 100% { opacity: 0; }
         }
+        @keyframes slideUp {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+        
+        /* Focus styles */
         button:focus-visible, textarea:focus-visible {
           outline: 2px solid ${theme.accentSoftBlue};
           outline-offset: 2px;
         }
+        
+        /* Typography */
         h1, h2, h3, strong, em, code, ul, ol, li {
           color: ${theme.textPrimary} !important;
         }
@@ -1672,9 +1866,10 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         sup {
           color: ${theme.accentSoftBlue} !important;
         }
-        /* Markdown Styling - Ultra compact like the images */
+        
+        /* Markdown Styling - Mobile optimized */
         .md {
-          line-height: 1.5;
+          line-height: ${isMobile ? '1.6' : '1.5'};
         }
         
         .md h1, .md h2, .md h3, 
@@ -1684,34 +1879,34 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         }
         
         .md h1 { 
-          margin: 0.5rem 0 0.25rem; 
-          font-size: 1.5rem; 
+          margin: ${isMobile ? '0.6rem 0 0.3rem' : '0.5rem 0 0.25rem'}; 
+          font-size: ${isMobile ? '1.6rem' : '1.5rem'}; 
           font-weight: 700; 
         }
         
         .md h2 { 
-          margin: 0.4rem 0 0.2rem; 
-          font-size: 1.25rem; 
+          margin: ${isMobile ? '0.5rem 0 0.25rem' : '0.4rem 0 0.2rem'}; 
+          font-size: ${isMobile ? '1.35rem' : '1.25rem'}; 
           font-weight: 600; 
         }
         
         .md h3 { 
-          margin: 0.3rem 0 0.15rem; 
-          font-size: 1.1rem; 
+          margin: ${isMobile ? '0.4rem 0 0.2rem' : '0.3rem 0 0.15rem'}; 
+          font-size: ${isMobile ? '1.2rem' : '1.1rem'}; 
           font-weight: 600; 
         }
         
         .md p { 
-          margin: 0.15rem 0; 
-          line-height: 1.4; 
+          margin: ${isMobile ? '0.2rem 0' : '0.15rem 0'}; 
+          line-height: ${isMobile ? '1.5' : '1.4'}; 
         }
         
-        /* Custom numbered items - very compact with proper alignment */
+        /* Custom numbered items - mobile optimized */
         .md .numbered-item {
-          margin: 0.25rem 0;
+          margin: ${isMobile ? '0.3rem 0' : '0.25rem 0'};
           display: flex;
           align-items: baseline;
-          gap: 0.25rem;
+          gap: ${isMobile ? '0.5rem' : '0.25rem'};
         }
         
         .md .numbered-item .number {
@@ -1722,24 +1917,24 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         
         .md .numbered-item .content {
           flex: 1;
-          line-height: 1.4;
+          line-height: ${isMobile ? '1.5' : '1.4'};
         }
         
         .md ul { 
-          margin: 0.1rem 0 0.1rem 1.25rem; 
+          margin: ${isMobile ? '0.2rem 0 0.2rem 1.5rem' : '0.1rem 0 0.1rem 1.25rem'}; 
           padding-left: 0;
           list-style-type: disc;
           list-style-position: outside;
         }
         
         .md li { 
-          margin: 0.05rem 0; 
-          line-height: 1.3;
+          margin: ${isMobile ? '0.1rem 0' : '0.05rem 0'}; 
+          line-height: ${isMobile ? '1.4' : '1.3'};
           padding-left: 0;
         }
         
         .md ul ul, .md ol ol, .md ul ol, .md ol ul { 
-          margin: 0.1rem 0; 
+          margin: ${isMobile ? '0.15rem 0' : '0.1rem 0'}; 
         }
         
         .md strong { 
@@ -1753,16 +1948,17 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         .md pre {
           background-color: ${theme.textSecondary}15 !important;
           border-radius: 8px;
-          padding: 12px;
-          margin: 0.5rem 0;
+          padding: ${isMobile ? '16px' : '12px'};
+          margin: ${isMobile ? '0.6rem 0' : '0.5rem 0'};
           overflow-x: auto;
+          font-size: ${isMobile ? '14px' : '13px'};
         }
         
         .md code {
           background-color: ${theme.textSecondary}15 !important;
           border-radius: 4px;
-          padding: 2px 6px;
-          font-size: 0.9em;
+          padding: ${isMobile ? '3px 8px' : '2px 6px'};
+          font-size: ${isMobile ? '0.9em' : '0.9em'};
           font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
         }
         
@@ -1773,8 +1969,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         }
         
         .md blockquote {
-          margin: 0.2rem 0;
-          padding-left: 0.75rem;
+          margin: ${isMobile ? '0.3rem 0' : '0.2rem 0'};
+          padding-left: ${isMobile ? '1rem' : '0.75rem'};
           border-left: 3px solid ${theme.accentSoftBlue};
           font-style: italic;
         }
@@ -1783,7 +1979,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           border: none;
           height: 1px;
           background-color: ${theme.textSecondary}40;
-          margin: 1rem 0;
+          margin: ${isMobile ? '1.5rem 0' : '1rem 0'};
         }
         
         .md a {
@@ -1801,10 +1997,15 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           color: ${theme.accentSoftBlue} !important;
           cursor: pointer;
           font-weight: 600;
-          padding: 0;
+          padding: ${isMobile ? '2px 4px' : '0'};
           border-radius: 4px;
           transition: all 0.2s ease;
           margin: 0;
+          min-height: ${isMobile ? '24px' : 'auto'};
+          min-width: ${isMobile ? '24px' : 'auto'};
+          display: ${isMobile ? 'inline-flex' : 'inline'};
+          align-items: ${isMobile ? 'center' : 'baseline'};
+          justify-content: ${isMobile ? 'center' : 'flex-start'};
         }
         
         .md sup.md-citation:hover {
@@ -1814,6 +2015,33 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         
         .md br {
           line-height: 0.3;
+        }
+        
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+          /* Prevent zoom on focus */
+          input, textarea, select {
+            font-size: 16px !important;
+          }
+          
+          /* Optimize touch targets */
+          button {
+            min-height: 44px;
+            min-width: 44px;
+          }
+          
+          /* Smooth scrolling */
+          * {
+            -webkit-overflow-scrolling: touch;
+          }
+        }
+        
+        /* Landscape mobile optimizations */
+        @media (max-width: 768px) and (orientation: landscape) {
+          .md h1 { font-size: 1.4rem; margin: 0.4rem 0 0.2rem; }
+          .md h2 { font-size: 1.2rem; margin: 0.3rem 0 0.15rem; }
+          .md h3 { font-size: 1.1rem; margin: 0.25rem 0 0.1rem; }
+          .md p { margin: 0.1rem 0; }
         }
       `}</style>
     </div>
