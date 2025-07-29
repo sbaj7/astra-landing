@@ -964,8 +964,8 @@ const InputBar = ({
 
   return (
     <div style={{
-      padding: '16px',
-      paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+      padding: '16px 16px 8px 16px',
+      paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
