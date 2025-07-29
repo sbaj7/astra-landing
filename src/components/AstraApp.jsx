@@ -966,8 +966,8 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
-      // MOBILE FIX: Increase safe area support for bottom input bar
-      paddingBottom: 'max(32px, env(safe-area-inset-bottom))',
+      // MOBILE FIX: Add bottom padding for iOS home indicator specifically
+      paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
