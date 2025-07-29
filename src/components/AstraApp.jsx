@@ -966,8 +966,8 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
-      // MOBILE FIX: Add bottom padding for iOS home indicator specifically
-      paddingBottom: 'calc(16px + env(safe-area-inset-bottom))',
+      // MOBILE FIX: Use larger bottom padding to ensure visibility above home indicator
+      paddingBottom: 'calc(16px + 34px)', // 34px is typical iOS home indicator height
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
@@ -1463,8 +1463,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
   return (
     <div style={{
-      // MOBILE FIX: Use regular viewport height instead of dynamic to eliminate extra space
-      height: '100vh',
+      // MOBILE FIX: Use viewport units that account for mobile browsers
+      height: '100svh', // Small viewport height - excludes browser UI
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary,
