@@ -983,7 +983,7 @@ const InputBar = ({
           disabled={isDisabled}
           style={{
             width: '100%',
-            padding: '8px 16px',
+            padding: '4px 8px',
             borderRadius: '12px',
             resize: 'none',
             border: `none`,
