@@ -377,8 +377,8 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
       zIndex: 10,
-      // MOBILE FIX: Safe area support for iOS notches/status bar
-      paddingTop: 'max(12px, env(safe-area-inset-top))',
+      // MOBILE FIX: Remove extra safe area padding to reduce headspace
+      paddingTop: '12px',
       minHeight: '52px'
     }}>
       <button
@@ -758,7 +758,7 @@ const LoadingIndicator = ({ theme }) => {
     <div style={{
       padding: '16px',
       borderRadius: '12px',
-      backgroundColor: `${theme.backgroundSurface}80`,
+      backgroundColor: 'transparent',
       marginBottom: '16px'
     }}>
       <div style={{
@@ -966,8 +966,8 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
-      // MOBILE FIX: Safe area support for bottom input bar
-      paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
+      // MOBILE FIX: Increase safe area support for bottom input bar
+      paddingBottom: 'max(32px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundPrimary,
       borderTopLeftRadius: '0px',
       borderTopRightRadius: '0px',
