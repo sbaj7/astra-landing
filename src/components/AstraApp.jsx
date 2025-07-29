@@ -450,7 +450,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
               gap: '4px',
               padding: '6px 10px',
               borderRadius: '50px',
-              border: 'none',
+              border: `1px solid ${theme.textSecondary}50`,
               backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
               color: isSelected ? '#ffffff' : theme.textPrimary,
               fontSize: '12px',
