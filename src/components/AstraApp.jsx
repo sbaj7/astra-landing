@@ -1036,7 +1036,7 @@ const InputBar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '-4px'
+        marginBottom: '-8px'
       }}>
         <ModeSwitcher
           currentMode={currentMode}
