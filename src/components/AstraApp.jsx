@@ -1098,7 +1098,7 @@ const InputBar = ({
       </div>
 
       {/* Disclaimer */}
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', marginTop: '8px' }}>
         <p style={{
           fontSize: '12px',
           color: theme.textSecondary,
