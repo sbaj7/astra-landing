@@ -1559,7 +1559,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             flexShrink: 0,
             maxWidth: '900px',   
             margin: '0 auto',    
-            padding: '0 16px',   
+            padding: '0',   
             boxSizing: 'border-box',
             width: '100%',
           }}
