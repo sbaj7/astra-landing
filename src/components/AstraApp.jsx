@@ -476,7 +476,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       justifyContent: 'center',
       padding: '32px 0',
       height: '100%',
