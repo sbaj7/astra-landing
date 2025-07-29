@@ -478,7 +478,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '32px 0',
+      padding: '32px 16px',
       height: '100%',
       gap: '24px'
     }}>
@@ -523,7 +523,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         gap: '6px',
         width: '100%',
         maxWidth: '448px',
-        padding: '0'
+        padding: '0 32px'
       }}>
         {queries.map((query, index) => (
           <button
