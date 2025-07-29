@@ -994,7 +994,7 @@ const InputBar = ({
             backgroundColor: theme.backgroundSurface,
             color: theme.textPrimary,
             height: `${textareaHeight}px`,
-            minHeight: '44px',
+            minHeight: '40px',
             maxHeight: '120px',
             fontFamily: 'inherit',
             boxSizing: 'border-box'
