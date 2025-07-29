@@ -917,14 +917,14 @@ const InputBar = ({
   theme
 }) => {
   const textareaRef = useRef(null);
-  const [textareaHeight, setTextareaHeight] = useState(32);
+  const [textareaHeight, setTextareaHeight] = useState(44);
 
   const adjustTextareaHeight = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea) return;
 
-    textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 64);
+    textarea.style.height = '44px';
+    const scrollHeight = Math.min(textarea.scrollHeight, 120);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
   }, []);
@@ -968,13 +968,13 @@ const InputBar = ({
       padding: '16px',
       // MOBILE FIX: Safe area support for bottom input bar
       paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
-      backgroundColor: theme.backgroundSurface,
-      borderTopLeftRadius: '20px',
-      borderTopRightRadius: '20px',
-      boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)'
+      backgroundColor: theme.backgroundPrimary,
+      borderTopLeftRadius: '0px',
+      borderTopRightRadius: '0px',
+      boxShadow: 'none'
     }}>
       {/* Text Input Area */}
-      <div style={{ position: 'relative', marginBottom: '0px' }}>
+      <div style={{ position: 'relative', marginBottom: '12px' }}>
         <textarea
           ref={textareaRef}
           value={query}
@@ -985,19 +985,19 @@ const InputBar = ({
           disabled={isDisabled}
           style={{
             width: '100%',
-            padding: '6px',
-            borderRadius: '6px',
+            padding: '12px 16px',
+            borderRadius: '12px',
             resize: 'none',
-            border: 'none',
+            border: `1px solid ${theme.textSecondary}20`,
             outline: 'none',
             // MOBILE FIX: Prevent zoom on input focus
             fontSize: '16px',
             lineHeight: '1.5',
-            backgroundColor: 'transparent',
+            backgroundColor: theme.backgroundSurface,
             color: theme.textPrimary,
             height: `${textareaHeight}px`,
-            minHeight: '8px',
-            maxHeight: '88px',
+            minHeight: '44px',
+            maxHeight: '120px',
             fontFamily: 'inherit',
             boxSizing: 'border-box'
           }}
@@ -1006,8 +1006,9 @@ const InputBar = ({
         {speechRecognition.isRecording && (
           <div style={{
             position: 'absolute',
-            right: '12px',
-            top: '0px',
+            right: '20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
             display: 'flex',
             alignItems: 'center',
             gap: '4px'
@@ -1038,7 +1039,7 @@ const InputBar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '0px'
+        marginBottom: '12px'
       }}>
         <ModeSwitcher
           currentMode={currentMode}
@@ -1556,11 +1557,9 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           style={{
             // MOBILE FIX: Prevent input bar from shrinking
             flexShrink: 0,
-            maxWidth: '900px',   
-            margin: '0 auto',    
-            padding: '0 24px',   
-            boxSizing: 'border-box',
             width: '100%',
+            padding: '0 16px',   
+            boxSizing: 'border-box'
           }}
         >
           <InputBar
