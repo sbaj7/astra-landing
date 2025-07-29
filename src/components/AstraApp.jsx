@@ -523,7 +523,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         gap: '6px',
         width: '100%',
         maxWidth: '448px',
-        padding: '0 32px'
+        padding: '0'
       }}>
         {queries.map((query, index) => (
           <button
@@ -964,7 +964,7 @@ const InputBar = ({
 
   return (
     <div style={{
-      padding: '16px 16px 8px 16px',
+      padding: '8px 16px 4px 16px',
       paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
@@ -983,7 +983,7 @@ const InputBar = ({
           disabled={isDisabled}
           style={{
             width: '100%',
-            padding: '12px 16px',
+            padding: '8px 16px',
             borderRadius: '12px',
             resize: 'none',
             border: `none`,
@@ -1036,7 +1036,7 @@ const InputBar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '0px'
+        marginBottom: '-4px'
       }}>
         <ModeSwitcher
           currentMode={currentMode}
