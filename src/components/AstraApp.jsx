@@ -377,8 +377,8 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
       zIndex: 10,
-      // MOBILE FIX: Remove extra safe area padding to reduce headspace
-      paddingTop: '12px',
+      // MOBILE FIX: Remove ALL top padding to eliminate headspace
+      paddingTop: '0px',
       minHeight: '52px'
     }}>
       <button
@@ -403,7 +403,7 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
         fontSize: '28px',
         margin: 0,
         fontWeight: 'normal',
-        transform: 'translateY(-2px)'
+        transform: 'translateY(0px)'
       }}>
         Astra
       </h1>
@@ -917,14 +917,14 @@ const InputBar = ({
   theme
 }) => {
   const textareaRef = useRef(null);
-  const [textareaHeight, setTextareaHeight] = useState(44);
+  const [textareaHeight, setTextareaHeight] = useState(32);
 
   const adjustTextareaHeight = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea) return;
 
-    textarea.style.height = '44px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 120);
+    textarea.style.height = '32px';
+    const scrollHeight = Math.min(textarea.scrollHeight, 88);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
   }, []);
@@ -968,13 +968,13 @@ const InputBar = ({
       padding: '16px',
       // MOBILE FIX: Increase safe area support for bottom input bar
       paddingBottom: 'max(32px, env(safe-area-inset-bottom))',
-      backgroundColor: theme.backgroundPrimary,
-      borderTopLeftRadius: '0px',
-      borderTopRightRadius: '0px',
-      boxShadow: 'none'
+      backgroundColor: theme.backgroundSurface,
+      borderTopLeftRadius: '20px',
+      borderTopRightRadius: '20px',
+      boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)'
     }}>
       {/* Text Input Area */}
-      <div style={{ position: 'relative', marginBottom: '12px' }}>
+      <div style={{ position: 'relative', marginBottom: '0px' }}>
         <textarea
           ref={textareaRef}
           value={query}
@@ -1006,9 +1006,8 @@ const InputBar = ({
         {speechRecognition.isRecording && (
           <div style={{
             position: 'absolute',
-            right: '20px',
-            top: '50%',
-            transform: 'translateY(-50%)',
+            right: '12px',
+            top: '0px',
             display: 'flex',
             alignItems: 'center',
             gap: '4px'
@@ -1039,7 +1038,7 @@ const InputBar = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginBottom: '12px'
+        marginBottom: '0px'
       }}>
         <ModeSwitcher
           currentMode={currentMode}
@@ -1557,9 +1556,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           style={{
             // MOBILE FIX: Prevent input bar from shrinking
             flexShrink: 0,
+            maxWidth: '900px',   
+            margin: '0 auto',    
+            padding: '0 24px',   
+            boxSizing: 'border-box',
             width: '100%',
-            padding: '0 16px',   
-            boxSizing: 'border-box'
           }}
         >
           <InputBar
