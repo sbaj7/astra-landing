@@ -965,7 +965,7 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
-      // MOBILE FIX: Remove bottom padding since container handles safe area
+      paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
