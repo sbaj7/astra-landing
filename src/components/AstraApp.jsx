@@ -972,7 +972,7 @@ const InputBar = ({
       boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)'
     }}>
       {/* Text Input Area */}
-      <div style={{ position: 'relative', marginBottom: '0px' }}>
+      <div style={{ position: 'relative', marginBottom: '0px', border: 'none', outline: 'none' }}>
         <textarea
           ref={textareaRef}
           value={query}
