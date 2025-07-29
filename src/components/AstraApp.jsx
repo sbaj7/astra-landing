@@ -923,7 +923,7 @@ const InputBar = ({
     if (!textarea) return;
 
     textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 88);
+    const scrollHeight = Math.min(textarea.scrollHeight, 64);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
   }, []);
