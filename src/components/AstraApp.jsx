@@ -986,7 +986,7 @@ const InputBar = ({
             padding: '12px 16px',
             borderRadius: '12px',
             resize: 'none',
-            border: `1px solid ${theme.textSecondary}20`,
+            border: `none`,
             outline: 'none',
             // MOBILE FIX: Prevent zoom on input focus
             fontSize: '16px',
