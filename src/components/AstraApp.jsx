@@ -377,8 +377,7 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
       zIndex: 10,
-      // MOBILE FIX: Remove ALL top padding to eliminate headspace
-      paddingTop: '0px',
+      // MOBILE FIX: Remove padding since container handles safe area
       minHeight: '52px'
     }}>
       <button
@@ -966,8 +965,7 @@ const InputBar = ({
   return (
     <div style={{
       padding: '16px',
-      // MOBILE FIX: Use larger bottom padding to ensure visibility above home indicator
-      paddingBottom: 'calc(16px + 34px)', // 34px is typical iOS home indicator height
+      // MOBILE FIX: Remove bottom padding since container handles safe area
       backgroundColor: theme.backgroundSurface,
       borderTopLeftRadius: '20px',
       borderTopRightRadius: '20px',
@@ -1463,13 +1461,17 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
   return (
     <div style={{
-      // MOBILE FIX: Use viewport units that account for mobile browsers
-      height: '100svh', // Small viewport height - excludes browser UI
+      // MOBILE FIX: Professional approach - use both vh and dvh
+      height: '100vh',
+      height: '100dvh',
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      // Add safe area insets to the container
+      paddingTop: 'env(safe-area-inset-top)',
+      paddingBottom: 'env(safe-area-inset-bottom)'
     }}>
       {/* Toolbar */}
       <ToolbarView
