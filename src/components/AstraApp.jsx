@@ -376,7 +376,10 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       borderBottomRightRadius: '20px',
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
-      zIndex: 10
+      zIndex: 10,
+      // Mobile safe area fix
+      paddingTop: 'max(12px, env(safe-area-inset-top))',
+      minHeight: '52px'
     }}>
       <button
         onClick={onToggleSidebar}
@@ -791,114 +794,6 @@ const LoadingIndicator = ({ theme }) => {
   );
 };
 
-const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      zIndex: 50,
-      display: 'flex'
-    }}>
-      <div
-        style={{
-          flex: 1,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)'
-        }}
-        onClick={onClose}
-      />
-      <div style={{
-        width: '320px',
-        height: '100%',
-        padding: '24px',
-        overflowY: 'auto',
-        backgroundColor: theme.backgroundSurface
-      }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '24px'
-        }}>
-          <h2 style={{
-            fontSize: '18px',
-            fontWeight: '600',
-            color: theme.textPrimary,
-            margin: 0
-          }}>
-            Chat History
-          </h2>
-          <button
-            onClick={onNewChat}
-            style={{
-              padding: '8px',
-              borderRadius: '8px',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer'
-            }}
-          >
-            <Edit3 size={16} color={theme.textPrimary} />
-          </button>
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          {chatHistory.map((chat) => (
-            <div key={chat.id} style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between'
-            }}>
-              <button
-                onClick={() => onSelectChat(chat)}
-                style={{
-                  flex: 1,
-                  padding: '12px',
-                  borderRadius: '8px',
-                  textAlign: 'left',
-                  backgroundColor: `${theme.textSecondary}0A`,
-                  border: 'none',
-                  cursor: 'pointer'
-                }}
-              >
-                <div style={{
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: theme.textPrimary,
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
-                }}>
-                  {chat.title}
-                </div>
-                <div style={{ fontSize: '12px', color: theme.textSecondary }}>
-                  {new Date(chat.timestamp).toLocaleDateString()}
-                </div>
-              </button>
-              <button
-                onClick={() => onDeleteChat(chat)}
-                style={{
-                  padding: '8px',
-                  borderRadius: '8px',
-                  border: 'none',
-                  backgroundColor: 'transparent',
-                  cursor: 'pointer'
-                }}
-              >
-                <Square size={12} color={theme.errorColor} />
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const InputBar = ({
   query,
   setQuery,
@@ -1126,11 +1021,6 @@ const AstraApp = () => {
 
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
-
-  // Auto-scroll removed - let users control scrolling
-  // useEffect(() => {
-  //   if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-  // }, [messages, isLoading, isStreaming, streamingContent]);
 
   const resetChat = () => {
     // Abort any ongoing request
@@ -1462,6 +1352,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
   return (
     <div style={{
       height: '100vh',
+      height: '100dvh', // Use dynamic viewport height for mobile
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary,
@@ -1480,7 +1371,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        minHeight: 0 // Important for flex shrinking
       }}>
         {/* Conversation Area */}
         <div
@@ -1490,7 +1382,10 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
             zIndex:0,
             flex: 1,
             overflowY: 'auto',
-            padding: '0 16px'
+            padding: '0 16px',
+            minHeight: 0, // Important for flex shrinking
+            // Add momentum scrolling for iOS
+            WebkitOverflowScrolling: 'touch'
           }}
           onClick={() => {
             if (speechRecognition.isRecording) {
@@ -1501,7 +1396,10 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           <div style={{
             maxWidth: '900px',
             margin: '0 auto',
-            padding: '16px 0'
+            padding: '16px 0',
+            minHeight: '100%',
+            display: 'flex',
+            flexDirection: 'column'
           }}>
             {/* Empty State */}
             {messages.length === 0 && !isLoading && !isStreaming && (
@@ -1541,6 +1439,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         {/* Input Bar */}
         <div
           style={{
+            flexShrink: 0, // Prevent input bar from shrinking
             maxWidth: '900px',   
             margin: '0 auto',    
             padding: '0 24px',   
@@ -1592,16 +1491,41 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         * {
           box-sizing: border-box;
         }
+        html {
+          /* Prevent zoom on focus for iOS */
+          -webkit-text-size-adjust: 100%;
+        }
         body {
           margin: 0;
           padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
           overflow: hidden;
+          /* Support for dynamic viewport */
+          height: 100vh;
+          height: 100dvh;
         }
         #root {
           height: 100vh;
+          height: 100dvh;
           width: 100vw;
         }
+        
+        /* Enhanced mobile viewport support */
+        @supports (height: 100dvh) {
+          body, #root {
+            height: 100dvh;
+          }
+        }
+        
+        /* Prevent overscroll bounce on iOS */
+        html, body {
+          position: fixed;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+        }
+        
+        /* Custom scrollbars */
         ::-webkit-scrollbar {
           width: 6px;
         }
@@ -1619,6 +1543,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           scrollbar-width: thin;
           scrollbar-color: ${theme.textSecondary}40 transparent;
         }
+        
+        /* Input styling */
         textarea::placeholder {
           color: ${theme.textSecondary};
           opacity: 1;
@@ -1630,13 +1556,19 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           outline: none;
           resize: none;
           background: transparent;
+          /* Prevent zoom on focus for iOS */
+          font-size: 16px;
         }
+        
+        /* Button interactions */
         button:not(:disabled):hover {
           transform: translateY(-1px);
         }
         button:not(:disabled):active {
           transform: translateY(0);
         }
+        
+        /* Animations */
         @keyframes bounce {
           0%, 60%, 100% {
             transform: translateY(0);
@@ -1659,10 +1591,14 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           0%, 50% { opacity: 1; }
           51%, 100% { opacity: 0; }
         }
+        
+        /* Accessibility */
         button:focus-visible, textarea:focus-visible {
           outline: 2px solid ${theme.accentSoftBlue};
           outline-offset: 2px;
         }
+        
+        /* Markdown styling */
         h1, h2, h3, strong, em, code, ul, ol, li {
           color: ${theme.textPrimary} !important;
         }
@@ -1672,7 +1608,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         sup {
           color: ${theme.accentSoftBlue} !important;
         }
-        /* Markdown Styling - Ultra compact like the images */
+        
         .md {
           line-height: 1.5;
         }
@@ -1706,7 +1642,6 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           line-height: 1.4; 
         }
         
-        /* Custom numbered items - very compact with proper alignment */
         .md .numbered-item {
           margin: 0.25rem 0;
           display: flex;
@@ -1821,3 +1756,107 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 };
 
 export default AstraApp;
+
+const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      zIndex: 50,
+      display: 'flex'
+    }}>
+      <div
+        style={{
+          flex: 1,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)'
+        }}
+        onClick={onClose}
+      />
+      <div style={{
+        width: '320px',
+        height: '100%',
+        padding: '24px',
+        paddingTop: 'max(24px, env(safe-area-inset-top))',
+        overflowY: 'auto',
+        backgroundColor: theme.backgroundSurface
+      }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: '24px'
+        }}>
+          <h2 style={{
+            fontSize: '18px',
+            fontWeight: '600',
+            color: theme.textPrimary,
+            margin: 0
+          }}>
+            Chat History
+          </h2>
+          <button
+            onClick={onNewChat}
+            style={{
+              padding: '8px',
+              borderRadius: '8px',
+              border: 'none',
+              backgroundColor: 'transparent',
+              cursor: 'pointer'
+            }}
+          >
+            <Edit3 size={16} color={theme.textPrimary} />
+          </button>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {chatHistory.map((chat) => (
+            <div key={chat.id} style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between'
+            }}>
+              <button
+                onClick={() => onSelectChat(chat)}
+                style={{
+                  flex: 1,
+                  padding: '12px',
+                  borderRadius: '8px',
+                  textAlign: 'left',
+                  backgroundColor: `${theme.textSecondary}0A`,
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
+              >
+                <div style={{
+                  fontSize: '14px',
+                  fontWeight: '500',
+                  color: theme.textPrimary,
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis'
+                }}>
+                  {chat.title}
+                </div>
+                <div style={{ fontSize: '12px', color: theme.textSecondary }}>
+                  {new Date(chat.timestamp).toLocaleDateString()}
+                </div>
+              </button>
+              <button
+                onClick={() => onDeleteChat(chat)}
+                style={{
+                  padding: '8px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: 'transparent',
+                  cursor: 'pointer'
+                }}
+              >
+                <Square size={12} color={theme.errorColor} />
+              </button>
+            </div>
+          ))}
