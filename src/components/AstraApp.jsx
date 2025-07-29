@@ -1463,9 +1463,8 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
   return (
     <div style={{
-      // MOBILE FIX: Use dynamic viewport height instead of regular viewport height
+      // MOBILE FIX: Use regular viewport height instead of dynamic to eliminate extra space
       height: '100vh',
-      height: '100dvh',
       display: 'flex',
       flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary,
@@ -1616,20 +1615,18 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
           overflow: hidden;
-          /* MOBILE FIX: Support for dynamic viewport */
+          /* MOBILE FIX: Use regular viewport height */
           height: 100vh;
-          height: 100dvh;
         }
         #root {
           height: 100vh;
-          height: 100dvh;
           width: 100vw;
         }
         
-        /* MOBILE FIX: Enhanced mobile viewport support */
-        @supports (height: 100dvh) {
+        /* MOBILE FIX: Remove enhanced mobile viewport support that was adding space */
+        @supports (height: 100vh) {
           body, #root {
-            height: 100dvh;
+            height: 100vh;
           }
         }
         
