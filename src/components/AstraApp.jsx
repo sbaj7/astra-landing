@@ -1165,7 +1165,7 @@ const InputBar = ({
             {isStreaming ? (
               <Square size={28} fill="currentColor" />
             ) : (
-              <Send size={28} />
+              <ArrowUp size={28} />
             )}
           </button>
         </div>
