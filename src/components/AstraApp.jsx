@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Mic, Send, Square, Copy, Check, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
+import { Mic, ArrowUp, Square, Copy, Check, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
 
 // Original color system (unchanged)
 const colors = {
