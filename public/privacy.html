@@ -27,23 +27,23 @@
       <h1>Privacy Policy</h1>
       <p class="muted">Effective date: <strong>2025-08-04</strong></p>
       <p class="card small">
-        This Privacy Policy explains how <strong>Astra</strong> (“we,” “us,” “our”) collects, uses, and protects information when you use the Astra application and website (the “Service”).
+        This Privacy Policy explains how <strong>Astra</strong> collects, uses, and protects information when you use the Astra application and website (the “Service”).
         By using the Service, you agree to this Policy.
       </p>
     </header>
 
-    <h2>1) Who we are & contact</h2>
+    <h2>1) Who we are</h2>
     <p>
-      Controller: <strong>[Your Company or Developer Name]</strong><br>
-      Contact: <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a><br>
-      Address: [Company Address, City, State/Province, Country]
+      Controller: <strong>Astraeus Intelligence LLC</strong><br>
+      Address: 254 Chapman Rd, Ste 208 #22873, Newark, Delaware 19702, USA<br>
+      Contact: <a href="mailto:sandi@astramd.org">sandi@astramd.org</a>
     </p>
 
     <h2>2) Information we collect</h2>
     <ul>
       <li><strong>Account data</strong> (if you sign in): name, email, authentication identifiers.</li>
       <li><strong>Content you provide</strong>: prompts, notes, uploads, feedback, and settings.</li>
-      <li><strong>Usage data</strong>: feature interactions, timestamps, device/OS, app version, coarse region/IP (for security and rate-limiting).</li>
+      <li><strong>Usage data</strong>: feature interactions, timestamps, device/OS, app version, coarse IP/region for security and rate-limiting.</li>
       <li><strong>Diagnostics (optional)</strong>: crash reports and performance metrics if you opt in.</li>
     </ul>
 
@@ -57,35 +57,41 @@
     <ul>
       <li>Provide core features (Research, DDx, A&amp;P) and generate responses with citations.</li>
       <li>Maintain security, prevent abuse, and debug issues.</li>
-      <li>Improve quality and user experience (aggregated, de-identified where possible).</li>
+      <li>Improve quality and user experience (aggregated or de-identified where possible).</li>
       <li>Comply with legal obligations and enforce terms.</li>
     </ul>
 
     <h2>4) Processors / third-party services</h2>
     <p>We use service providers acting under contracts that restrict their use of data to our instructions:</p>
     <ul>
-      <li><strong>Model inference:</strong> [OpenAI / Anthropic / Google] (as configured).</li>
-      <li><strong>Search/Retrieval (Research):</strong> [Perplexity / Tavily / custom] for fetching sources.</li>
-      <li><strong>Storage/Database:</strong> [Supabase / Postgres] for accounts and saved conversations.</li>
-      <li><strong>Analytics/Crash (optional):</strong> [Sentry / PostHog / Firebase] with IP redaction where supported.</li>
+      <li><strong>Model inference:</strong> OpenAI, Inc. (and other providers if you enable them).</li>
+      <li><strong>Search/Retrieval (Research):</strong> Perplexity/Tavily or equivalent services to fetch public sources you request.</li>
+      <li><strong>Storage/Database:</strong> Supabase (Postgres) for accounts and saved conversations.</li>
+      <li><strong>Analytics/Crash (optional):</strong> Sentry/PostHog/Firebase with IP redaction where supported.</li>
     </ul>
-    <p class="small muted">Vendors and regions may change as our stack evolves; material changes will be reflected here.</p>
 
-    <h2>5) Data retention</h2>
+    <h2>5) Security</h2>
     <ul>
-      <li><strong>Conversations:</strong> kept until you delete them (or auto-purged after <em>[X]</em> days if your org enforces this).</li>
-      <li><strong>Logs:</strong> security/diagnostic logs kept up to <em>[30–90]</em> days unless legally required longer.</li>
-      <li>You may request deletion of your account and content (see Rights below).</li>
+      <li>TLS for data in transit; AES-256 encryption at rest for stored data.</li>
+      <li>Role-based access, least privilege, and audit logging for administrative access.</li>
+      <li>Secrets managed via environment variables and key management services where supported.</li>
     </ul>
 
-    <h2>6) Your choices</h2>
+    <h2>6) Data retention</h2>
+    <ul>
+      <li><strong>Conversations:</strong> kept until you delete them (or auto-purged after an organization-set period).</li>
+      <li><strong>Logs:</strong> security/diagnostic logs retained up to 30–90 days unless legally required longer.</li>
+      <li>You may request deletion of your account and content at any time (see Rights).</li>
+    </ul>
+
+    <h2>7) Your choices</h2>
     <ul>
       <li>Disable saving conversation history.</li>
       <li>Toggle analytics/crash sharing.</li>
       <li>Export or delete conversations and your account.</li>
     </ul>
 
-    <h2>7) Legal bases & your rights</h2>
+    <h2>8) Legal bases & your rights</h2>
     <p>
       If you are in the EEA/UK, we process data under GDPR bases including performance of a contract, legitimate interests (security and improvement), and consent where required (analytics).
       You may request access, correction, deletion, restriction, objection, or portability by contacting us.
@@ -94,24 +100,17 @@
       If you are in California, we do not sell or share personal information for cross-context behavioral advertising. You have CPRA rights to know, delete, correct, and limit use of sensitive personal information.
     </p>
 
-    <h2>8) Security</h2>
-    <ul>
-      <li>TLS for data in transit; encryption at rest for stored data.</li>
-      <li>Role-based access, least privilege, and audit logging for admin access.</li>
-      <li>Secrets managed via environment variables and KMS where supported.</li>
-    </ul>
-
     <h2>9) Data residency & transfers</h2>
-    <p>Data may be processed in the United States and other countries where our providers operate. Where required, we rely on appropriate transfer mechanisms (e.g., SCCs).</p>
+    <p>Data may be processed in the United States and other countries where our providers operate. Where required, we rely on appropriate transfer mechanisms (e.g., Standard Contractual Clauses).</p>
 
     <h2>10) Children’s privacy</h2>
     <p>Astra is not intended for children under 13 or for unsupervised use by minors. We do not knowingly collect data from children.</p>
 
     <h2>11) Changes to this Policy</h2>
-    <p>We may update this Policy from time to time. Changes take effect when posted here with an updated “Effective date.” Material changes may be announced in-app or by email.</p>
+    <p>We may update this Policy from time to time. Changes take effect when posted here with an updated effective date. Material changes may be announced in-app or by email.</p>
 
     <div class="footer small">
-      <strong>Contact:</strong> <a href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a>
+      <strong>Contact:</strong> <a href="mailto:sandi@astramd.org">sandi@astramd.org</a>
     </div>
   </main>
 </body>
