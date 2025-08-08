@@ -323,7 +323,7 @@ const ensureListAtDepth = (depth, type) => {
         const depth = depthFromIndent(m[1]);
         const content = m[3];
 
-        ensureListAtDepth(depth, 'ul');
+        ensureListAtDepth(depth +1 , 'ul');
         out.push(`<li>${processInline(content)}`);
         // don't close </li> yet — we might attach auto-subpoints
         lastOpenedLiIndex = out.length - 1;
@@ -377,7 +377,7 @@ const ensureListAtDepth = (depth, type) => {
         const depth = depthFromIndent(m[1]);
         const content = m[3];
 
-        ensureListAtDepth(depth, 'ol');
+        ensureListAtDepth(depth +1 , 'ol');
         out.push(`<li>${processInline(content)}`);
         lastOpenedLiIndex = out.length - 1;
         lastLiDepth = depth;
