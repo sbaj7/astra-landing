@@ -134,7 +134,6 @@ export const renderMarkdown = (raw = '') => {
     
     // Skip empty lines but add spacing
     if (!line.trim()) {
-      // Only add line break if we're not at the start and previous wasn't a break
       if (result.length > 0 && result[result.length - 1] !== '<br>') {
         result.push('<br>');
       }
@@ -146,15 +145,11 @@ export const renderMarkdown = (raw = '') => {
     if (line.includes('|')) {
       const tableLines = [];
       let j = i;
-      
-      // Collect all consecutive table lines
       while (j < lines.length && lines[j].includes('|')) {
         tableLines.push(lines[j]);
         j++;
       }
-      
       if (tableLines.length >= 2) {
-        // Process as table
         result.push(processTable(tableLines));
         i = j;
         continue;
@@ -170,7 +165,7 @@ export const renderMarkdown = (raw = '') => {
       continue;
     }
     
-    // Numbered items (don't use <ol> to avoid browser renumbering)
+    // Numbered items (custom block)
     if (line.match(/^\d+\.\s/)) {
       const match = line.match(/^(\d+)\.\s+(.*)$/);
       if (match) {
@@ -214,7 +209,9 @@ export const renderMarkdown = (raw = '') => {
       result.push('<pre><code>');
       i++;
       while (i < lines.length && !lines[i].match(/^```/)) {
-        result.push(lines[i]);
+        // escape HTML inside code block
+        const safe = lines[i].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        result.push(safe);
         i++;
       }
       result.push('</code></pre>');
@@ -232,170 +229,136 @@ export const renderMarkdown = (raw = '') => {
   return result.join('\n');
 };
 
-// Process markdown tables
+// Process markdown tables (alignment-aware + responsive wrapper)
 const processTable = (tableLines) => {
   if (tableLines.length < 2) return '';
-  
-  const result = ['<table class="md-table">'];
-  
-  // Process each line
-  tableLines.forEach((line, index) => {
-    // Skip separator lines (lines with only |, -, :, and spaces)
-    if (line.match(/^\s*\|[\s\-:|]*\|\s*$/)) {
-      return;
-    }
-    
-    // Split by | and clean up cells
-    const cells = line.split('|')
-      .map(cell => cell.trim())
-      .filter((cell, i, arr) => {
-        // Remove empty cells at start/end (from leading/trailing |)
-        if (i === 0 || i === arr.length - 1) {
-          return cell !== '';
-        }
-        return true;
-      });
-    
-    if (cells.length === 0) return;
-    
-    // First non-separator line is header
-    const isHeader = index === 0;
-    const tag = isHeader ? 'th' : 'td';
-    const rowTag = isHeader ? 'thead' : (index === 1 ? 'tbody' : '');
-    
-    if (rowTag) {
-      result.push(`<${rowTag}>`);
-    }
-    
-    result.push('<tr>');
-    cells.forEach(cell => {
-      result.push(`<${tag}>${processInline(cell)}</${tag}>`);
-    });
-    result.push('</tr>');
-    
-    if (rowTag && rowTag === 'thead') {
-      result.push('</thead>');
-    }
-  });
-  
-  // Close tbody if it was opened
-  if (tableLines.length > 2) {
-    result.push('</tbody>');
-  }
-  
-  result.push('</table>');
-  return result.join('\n');
+
+  const parseCells = (line) =>
+    line.split('|')
+      .map(c => c.trim())
+      .filter((c, i, arr) => !(i === 0 && c === '') && !(i === arr.length - 1 && c === ''));
+
+  const header = tableLines[0];
+  const alignRowIdx = tableLines.findIndex((l) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l));
+  const alignRow = alignRowIdx >= 0 ? tableLines[alignRowIdx] : null;
+
+  const align = alignRow
+    ? parseCells(alignRow).map(a => {
+        const left = a.startsWith(':');
+        const right = a.endsWith(':');
+        if (left && right) return 'center';
+        if (right) return 'right';
+        if (left) return 'left';
+        return 'left';
+      })
+    : [];
+
+  const headCells = parseCells(header);
+
+  const bodyLines = tableLines
+    .filter((l, i) => i !== 0 && i !== alignRowIdx)
+    .filter(l => l.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(l));
+
+  const rowToHtml = (line, tag) => {
+    const cells = parseCells(line);
+    const tds = cells.map((cell, idx) => {
+      const a = align[idx] || 'left';
+      return `<${tag} class="md-td align-${a}">${processInline(cell)}</${tag}>`;
+    }).join('');
+    return `<tr>${tds}</tr>`;
+  };
+
+  const thead = `<thead><tr>${
+    headCells.map((cell, idx) => {
+      const a = align[idx] || 'left';
+      return `<th class="md-th align-${a}">${processInline(cell)}</th>`;
+    }).join('')
+  }</tr></thead>`;
+
+  const tbody = `<tbody>${
+    bodyLines.map(line => rowToHtml(line, 'td')).join('')
+  }</tbody>`;
+
+  return [
+    '<div class="md-table-wrap">',
+    '<table class="md-table">',
+    thead,
+    tbody,
+    '</table>',
+    '</div>'
+  ].join('');
 };
 
-// Process inline formatting (keep this the same)
+// Process inline formatting
 const processInline = (text) => {
   return text
+    // escape angle brackets first
+    .replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
     // Bold
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Italic
-    .replace(/\*([^*]+?)\*/g, '<em>$1</em>')
+    // Italic (avoid bold conflicts)
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
     // Code
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
     // Citations
     .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>');
 };
 
-// Citation overlay component (enhanced but same appearance)
+// Citation overlay component (unchanged visuals)
 const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
   if (!isPresented || !citation) return null;
 
   const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onDismiss();
-    }
+    if (e.target === e.currentTarget) onDismiss();
   };
 
   const handleVisitLink = () => {
-    if (citation.url) {
-      window.open(citation.url, '_blank', 'noopener,noreferrer');
-    }
+    if (citation.url) window.open(citation.url, '_blank', 'noopener,noreferrer');
   };
 
   return (
     <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 1000,
-        padding: '20px'
-      }}
+      role="dialog"
+      aria-modal="true"
       onClick={handleBackdropClick}
+      style={{
+        position: 'fixed', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px'
+      }}
     >
       <div
         style={{
-          backgroundColor: theme.backgroundSurface,
-          borderRadius: '16px',
-          padding: '24px',
-          maxWidth: '500px',
-          width: '100%',
-          maxHeight: '80vh',
-          overflow: 'auto',
+          backgroundColor: theme.backgroundSurface, borderRadius: '16px', padding: '24px',
+          maxWidth: '500px', width: '100%', maxHeight: '80vh', overflow: 'auto',
           boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
         }}
       >
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-          marginBottom: '16px'
-        }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
           <div style={{
-            backgroundColor: theme.accentSoftBlue,
-            color: 'white',
-            borderRadius: '50%',
-            width: '24px',
-            height: '24px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '12px',
-            fontWeight: 'bold'
+            backgroundColor: theme.accentSoftBlue, color: 'white', borderRadius: '50%',
+            width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: '12px', fontWeight: 'bold'
           }}>
             {citation.number}
           </div>
           <button
             onClick={onDismiss}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: theme.textSecondary,
-              padding: '4px'
-            }}
+            aria-label="Close"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', color: theme.textSecondary, padding: '4px' }}
           >
             <X size={20} />
           </button>
         </div>
 
         <div style={{ marginBottom: '16px' }}>
-          <h3 style={{
-            margin: '0 0 8px 0',
-            fontSize: '18px',
-            fontWeight: '600',
-            color: theme.textPrimary,
-            lineHeight: '1.4'
-          }}>
+          <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '600', color: theme.textPrimary, lineHeight: '1.4' }}>
             {citation.title}
           </h3>
-          <p style={{
-            margin: 0,
-            fontSize: '14px',
-            color: theme.textSecondary
-          }}>
+          <p style={{ margin: 0, fontSize: '14px', color: theme.textSecondary }}>
             {citation.authors}
           </p>
         </div>
@@ -404,19 +367,9 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
           <button
             onClick={handleVisitLink}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '12px 16px',
-              backgroundColor: theme.accentSoftBlue,
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '500',
-              width: '100%',
-              justifyContent: 'center'
+              display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 16px',
+              backgroundColor: theme.accentSoftBlue, color: 'white', border: 'none', borderRadius: '8px',
+              cursor: 'pointer', fontSize: '14px', fontWeight: '500', width: '100%', justifyContent: 'center'
             }}
           >
             <ExternalLink size={16} />
@@ -451,20 +404,14 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
       position: 'relative',
       zIndex: 10,
-      // MOBILE FIX: Remove padding since container handles safe area
       minHeight: '52px'
     }}>
       <button
         onClick={onToggleSidebar}
+        aria-label="Open sidebar"
         style={{
-          padding: '8px',
-          borderRadius: '8px',
-          border: 'none',
-          backgroundColor: 'transparent',
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent',
+          cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}
       >
         <Stethoscope size={18} color={theme.textPrimary} />
@@ -475,8 +422,7 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
         fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
         fontSize: '28px',
         margin: 0,
-        fontWeight: 'normal',
-        transform: 'translateY(0px)'
+        fontWeight: 'normal'
       }}>
         Astra
       </h1>
@@ -484,16 +430,10 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       <button
         onClick={handleNewChat}
         disabled={newChatCooldown}
+        aria-label="New chat"
         style={{
-          padding: '8px',
-          borderRadius: '8px',
-          border: 'none',
-          backgroundColor: 'transparent',
-          cursor: 'pointer',
-          opacity: newChatCooldown ? 0.5 : 1,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent',
+          cursor: 'pointer', opacity: newChatCooldown ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}
       >
         <Edit3 size={18} color={theme.textPrimary} />
@@ -518,6 +458,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
             key={key}
             onClick={() => onModeChange(key)}
             disabled={isDisabled}
+            aria-pressed={isSelected}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -548,34 +489,15 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
 
   return (
     <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '32px 16px',
-      height: '100%',
-      gap: '24px'
+      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+      padding: '32px 16px', height: '100%', gap: '24px'
     }}>
       <div style={{ textAlign: 'center' }}>
-        {/* Custom four-pointed star logo */}
         <div style={{
-          width: '36px',
-          height: '36px',
-          margin: '0 auto 16px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          width: '36px', height: '36px', margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
-          <svg 
-            width="36" 
-            height="36" 
-            viewBox="0 0 36 36" 
-            fill="none"
-          >
-            <path 
-              d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" 
-              fill={`${theme.grayPrimary}40`}
-            />
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={`${theme.grayPrimary}40`} />
           </svg>
         </div>
         <h2 style={{
@@ -591,31 +513,15 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         </h2>
       </div>
 
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '6px',
-        width: '100%',
-        maxWidth: '448px',
-        padding: '0 32px'
-      }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%', maxWidth: '448px', padding: '0 32px' }}>
         {queries.map((query, index) => (
           <button
             key={index}
             onClick={() => onSampleTapped(query)}
             style={{
-              width: '100%',
-              padding: '10px 20px',
-              borderRadius: '50px',
-              fontSize: '12px',
-              fontWeight: '500',
-              textAlign: 'center',
-              lineHeight: '1.4',
-              backgroundColor: `${theme.grayPrimary}08`,
-              border: `0.5px solid ${theme.grayPrimary}20`,
-              color: `${theme.grayPrimary}70`,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
+              width: '100%', padding: '10px 20px', borderRadius: '50px', fontSize: '12px', fontWeight: '500', textAlign: 'center',
+              lineHeight: '1.4', backgroundColor: `${theme.grayPrimary}08`, border: `0.5px solid ${theme.grayPrimary}20`,
+              color: `${theme.grayPrimary}70`, cursor: 'pointer', transition: 'all 0.2s ease'
             }}
           >
             {query}
@@ -631,14 +537,13 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
   const containerRef = useRef(null);
 
   const handleCopy = async () => {
-    if (message.content) {
-      try {
-        await navigator.clipboard.writeText(message.content);
-        setShowCopied(true);
-        setTimeout(() => setShowCopied(false), 2000);
-      } catch (err) {
-        console.error('Failed to copy text:', err);
-      }
+    if (!message.content) return;
+    try {
+      await navigator.clipboard.writeText(message.content);
+      setShowCopied(true);
+      setTimeout(() => setShowCopied(false), 1600);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
     }
   };
 
@@ -648,17 +553,12 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
       if (target.tagName === 'SUP' && target.dataset.citation) {
         const number = parseInt(target.dataset.citation, 10);
         const citation = message.citations?.find(c => c.number === number);
-        if (citation && onTapCitation) {
-          onTapCitation(citation);
-        }
+        if (citation && onTapCitation) onTapCitation(citation);
       }
     };
-
     const container = containerRef.current;
     if (container) container.addEventListener('click', handler);
-    return () => {
-      if (container) container.removeEventListener('click', handler);
-    };
+    return () => { if (container) container.removeEventListener('click', handler); };
   }, [message.citations, onTapCitation]);
 
   if (message.role === 'user') {
@@ -670,36 +570,13 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
 
     return (
       <div style={{ width: '100%', marginBottom: '16px' }}>
-        <div style={{
-          display: 'flex',
-          backgroundColor: `${theme.accentSoftBlue}0D`,
-          borderRadius: '6px'
-        }}>
-          <div style={{
-            width: '3px',
-            backgroundColor: theme.accentSoftBlue,
-            flexShrink: 0
-          }} />
-          <div style={{
-            flex: 1,
-            padding: '10px 12px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '4px'
-          }}>
-            <div style={{
-              fontSize: '11px',
-              fontWeight: '500',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              color: theme.textSecondary
-            }}>
+        <div style={{ display: 'flex', backgroundColor: `${theme.accentSoftBlue}0D`, borderRadius: '6px' }}>
+          <div style={{ width: '3px', backgroundColor: theme.accentSoftBlue, flexShrink: 0 }} />
+          <div style={{ flex: 1, padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
               {getQueryLabel()}
             </div>
-            <div style={{
-              fontSize: '14px',
-              color: theme.textPrimary
-            }}>
+            <div style={{ fontSize: '14px', color: theme.textPrimary }}>
               {message.content}
             </div>
           </div>
@@ -708,32 +585,15 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
     );
   }
 
-  // Assistant message - use streaming style for completed messages too
   return (
     <div style={{ width: '100%', marginBottom: '16px', position: 'relative' }}>
-      <div 
-        style={{
-          padding: '16px',
-          borderRadius: '12px',
-          backgroundColor: theme.backgroundSurface,
-          border: `1px solid ${theme.accentSoftBlue}33`
-        }}
-      >
-        {/* Show "Response:" header for streaming-completed messages */}
+      <div style={{
+        padding: '16px', borderRadius: '12px', backgroundColor: theme.backgroundSurface,
+        border: `1px solid ${theme.accentSoftBlue}33`
+      }}>
         {message.isStreamingComplete && (
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginBottom: '8px'
-          }}>
-            <span style={{
-              fontSize: '11px',
-              fontWeight: '500',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              color: theme.textSecondary
-            }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+            <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
               Response:
             </span>
           </div>
@@ -742,25 +602,16 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
         <div 
           ref={containerRef} 
           className="md"
-          style={{
-            fontSize: '14px',
-            lineHeight: '1.6',
-            color: theme.textPrimary
-          }}
+          style={{ fontSize: '14px', lineHeight: '1.6', color: theme.textPrimary }}
           dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }} 
         />
 
         <button
           onClick={handleCopy}
+          aria-label="Copy message"
           style={{
-            position: 'absolute',
-            top: '8px',
-            right: '8px',
-            background: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            color: theme.textSecondary,
-            fontSize: '13px'
+            position: 'absolute', top: '8px', right: '8px', background: 'transparent', border: 'none',
+            cursor: 'pointer', color: theme.textSecondary, fontSize: '13px'
           }}
         >
           {showCopied ? 'Copied' : 'Copy'}
@@ -779,19 +630,8 @@ const StreamingResponse = ({ content, theme }) => {
       border: `1px solid ${theme.accentSoftBlue}33`,
       marginBottom: '16px'
     }}>
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: '8px'
-      }}>
-        <span style={{
-          fontSize: '11px',
-          fontWeight: '500',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-          color: theme.textSecondary
-        }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+        <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
           Response:
         </span>
         {!content && (
@@ -800,11 +640,8 @@ const StreamingResponse = ({ content, theme }) => {
               <div
                 key={i}
                 style={{
-                  width: '4px',
-                  height: '4px',
-                  borderRadius: '50%',
-                  backgroundColor: theme.accentSoftBlue,
-                  animation: `bounce 0.6s infinite ${i * 0.2}s`
+                  width: '4px', height: '4px', borderRadius: '50%',
+                  backgroundColor: theme.accentSoftBlue, animation: `bounce 0.6s infinite ${i * 0.2}s`
                 }}
               />
             ))}
@@ -813,13 +650,9 @@ const StreamingResponse = ({ content, theme }) => {
       </div>
       <div 
         className="md"
-        style={{
-          fontSize: '14px',
-          lineHeight: '1.6',
-          color: theme.textPrimary
-        }}
+        style={{ fontSize: '14px', lineHeight: '1.6', color: theme.textPrimary }}
         dangerouslySetInnerHTML={{ 
-          __html: content ? renderMarkdown(content) + '<span style="color: #4A6B7D; animation: blink 1s infinite;">▍</span>' : ''
+          __html: content ? renderMarkdown(content) + '<span class="cursor">▍</span>' : ''
         }}
       />
     </div>
@@ -828,24 +661,9 @@ const StreamingResponse = ({ content, theme }) => {
 
 const LoadingIndicator = ({ theme }) => {
   return (
-    <div style={{
-      padding: '16px',
-      borderRadius: '12px',
-      backgroundColor: 'transparent',
-      marginBottom: '16px'
-    }}>
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-      }}>
-        <span style={{
-          fontSize: '11px',
-          fontWeight: '500',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-          color: theme.textSecondary
-        }}>
+    <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: 'transparent', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
           Thinking...
         </span>
         <div style={{ display: 'flex', gap: '4px' }}>
@@ -853,11 +671,8 @@ const LoadingIndicator = ({ theme }) => {
             <div
               key={i}
               style={{
-                width: '4px',
-                height: '4px',
-                borderRadius: '50%',
-                backgroundColor: theme.textSecondary,
-                animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms`
+                width: '4px', height: '4px', borderRadius: '50%',
+                backgroundColor: theme.textSecondary, animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms`
               }}
             />
           ))}
@@ -871,54 +686,21 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
   if (!isOpen) return null;
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      zIndex: 50,
-      display: 'flex'
-    }}>
-      <div
-        style={{
-          flex: 1,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)'
-        }}
-        onClick={onClose}
-      />
+    <div style={{ position: 'fixed', inset: 0, zIndex: 50, display: 'flex' }}>
+      <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
       <div style={{
-        width: '320px',
-        height: '100%',
-        padding: '24px',
-        // MOBILE FIX: Safe area support for sidebar
-        paddingTop: 'max(24px, env(safe-area-inset-top))',
-        overflowY: 'auto',
+        width: '320px', height: '100%', padding: '24px',
+        paddingTop: 'max(24px, env(safe-area-inset-top))', overflowY: 'auto',
         backgroundColor: theme.backgroundSurface
       }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '24px'
-        }}>
-          <h2 style={{
-            fontSize: '18px',
-            fontWeight: '600',
-            color: theme.textPrimary,
-            margin: 0
-          }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
+          <h2 style={{ fontSize: '18px', fontWeight: '600', color: theme.textPrimary, margin: 0 }}>
             Chat History
           </h2>
           <button
             onClick={onNewChat}
-            style={{
-              padding: '8px',
-              borderRadius: '8px',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer'
-            }}
+            aria-label="New chat"
+            style={{ padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}
           >
             <Edit3 size={16} color={theme.textPrimary} />
           </button>
@@ -926,30 +708,16 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           {chatHistory.map((chat) => (
-            <div key={chat.id} style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between'
-            }}>
+            <div key={chat.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <button
                 onClick={() => onSelectChat(chat)}
                 style={{
-                  flex: 1,
-                  padding: '12px',
-                  borderRadius: '8px',
-                  textAlign: 'left',
-                  backgroundColor: `${theme.textSecondary}0A`,
-                  border: 'none',
-                  cursor: 'pointer'
+                  flex: 1, padding: '12px', borderRadius: '8px', textAlign: 'left',
+                  backgroundColor: `${theme.textSecondary}0A`, border: 'none', cursor: 'pointer'
                 }}
               >
                 <div style={{
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: theme.textPrimary,
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
+                  fontSize: '14px', fontWeight: '500', color: theme.textPrimary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
                 }}>
                   {chat.title}
                 </div>
@@ -959,13 +727,8 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
               </button>
               <button
                 onClick={() => onDeleteChat(chat)}
-                style={{
-                  padding: '8px',
-                  borderRadius: '8px',
-                  border: 'none',
-                  backgroundColor: 'transparent',
-                  cursor: 'pointer'
-                }}
+                aria-label="Delete chat"
+                style={{ padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}
               >
                 <Square size={12} color={theme.errorColor} />
               </button>
@@ -997,7 +760,7 @@ const InputBar = ({
     if (!textarea) return;
 
     textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 64);
+    const scrollHeight = Math.min(textarea.scrollHeight, 120);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
   }, []);
@@ -1023,16 +786,11 @@ const InputBar = ({
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      if (query.trim()) {
-        onSend();
-      }
+      if (query.trim()) onSend();
     }
   };
 
-  const handlePaste = (e) => {
-    // Allow default paste behavior
-    // The textarea will automatically handle the paste
-  };
+  const handlePaste = () => {};
 
   const isDisabled = isStreaming || isLoading;
 
@@ -1062,7 +820,6 @@ const InputBar = ({
             resize: 'none',
             border: `none`,
             outline: 'none',
-            // MOBILE FIX: Prevent zoom on input focus
             fontSize: '16px',
             lineHeight: '1.5',
             backgroundColor: theme.backgroundSurface,
@@ -1077,12 +834,7 @@ const InputBar = ({
 
         {speechRecognition.isRecording && (
           <div style={{
-            position: 'absolute',
-            right: '12px',
-            top: '0px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px'
+            position: 'absolute', right: '12px', top: '0px', display: 'flex', alignItems: 'center', gap: '4px'
           }}>
             <span style={{ fontSize: '12px', color: theme.accentSoftBlue }}>
               Listening
@@ -1092,11 +844,8 @@ const InputBar = ({
                 <div
                   key={i}
                   style={{
-                    width: '4px',
-                    height: '4px',
-                    borderRadius: '50%',
-                    backgroundColor: theme.accentSoftBlue,
-                    animation: `pulse 1.5s ease-in-out infinite ${i * 0.15}s`
+                    width: '4px', height: '4px', borderRadius: '50%',
+                    backgroundColor: theme.accentSoftBlue, animation: `pulse 1.5s ease-in-out infinite ${i * 0.15}s`
                   }}
                 />
               ))}
@@ -1106,12 +855,7 @@ const InputBar = ({
       </div>
 
       {/* Controls Row */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginTop: '-8px'
-      }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '-8px' }}>
         <ModeSwitcher
           currentMode={currentMode}
           onModeChange={onModeChange}
@@ -1124,6 +868,8 @@ const InputBar = ({
           <button
             onClick={speechRecognition.toggleRecording}
             disabled={!speechRecognition.isAvailable || isDisabled}
+            aria-pressed={speechRecognition.isRecording}
+            aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
             style={{
               padding: '8px',
               borderRadius: '50%',
@@ -1149,6 +895,7 @@ const InputBar = ({
           <button
             onClick={isStreaming ? onStop : onSend}
             disabled={!isStreaming && !query.trim()}
+            aria-label={isStreaming ? 'Stop response' : 'Send'}
             style={{
               padding: '8px',
               borderRadius: '50%',
@@ -1173,11 +920,7 @@ const InputBar = ({
 
       {/* Disclaimer */}
       <div style={{ textAlign: 'center', marginTop: '0px' }}>
-        <p style={{
-          fontSize: '12px',
-          color: theme.textSecondary,
-          margin: 0
-        }}>
+        <p style={{ fontSize: '12px', color: theme.textSecondary, margin: 0 }}>
           Astra can make mistakes. Check critical info.
         </p>
       </div>
@@ -1207,19 +950,13 @@ const AstraApp = () => {
   const abortControllerRef = useRef(null);
 
   const resetChat = () => {
-    // Abort any ongoing request
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-    
+    if (abortControllerRef.current) abortControllerRef.current.abort();
     setMessages([]);
     setQuery('');
     setIsStreaming(false);
     setIsLoading(false);
     setStreamingContent('');
-    if (speechRecognition.isRecording) {
-      speechRecognition.toggleRecording();
-    }
+    if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
   };
 
@@ -1240,23 +977,20 @@ const AstraApp = () => {
     setQuery('');
     setIsLoading(true);
 
-    if (speechRecognition.isRecording) {
-      speechRecognition.toggleRecording();
-    }
+    if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
 
-    // Create abort controller for this request
     abortControllerRef.current = new AbortController();
 
     try {
-const response = await fetch(import.meta.env.VITE_API_URL, {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
-    'Content-Type': 'application/json',
-    'apikey': import.meta.env.VITE_API_KEY,
-    'Accept': 'text/event-stream'
-  },
+      const response = await fetch(import.meta.env.VITE_API_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+          'Content-Type': 'application/json',
+          'apikey': import.meta.env.VITE_API_KEY,
+          'Accept': 'text/event-stream'
+        },
         body: JSON.stringify({
           query: queryToSend,
           isClinical: false,
@@ -1268,12 +1002,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         signal: abortControllerRef.current.signal
       });
 
-      console.log(`🚀 Sending ${currentMode} query: ${queryToSend}`);
-      console.log(`📡 Response status: ${response.status}`);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       setIsLoading(false);
       setIsStreaming(true);
@@ -1289,18 +1018,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         try {
           while (true) {
             const { done, value } = await reader.read();
-            
-            if (done) {
-              console.log('✅ Stream completed');
-              break;
-            }
+            if (done) break;
 
             const chunk = decoder.decode(value, { stream: true });
-            console.log(`📥 Received chunk: ${chunk.substring(0, 100)}...`);
-            
             buffer += chunk;
             
-            // Process buffer for complete lines
             const lines = buffer.split(/\r?\n/);
             const endsWithNewline = buffer.endsWith('\n') || buffer.endsWith('\r\n');
 
@@ -1310,7 +1032,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
                   processStreamLine(line.trim(), collectedCitations, (content) => {
                     finalContent += content;
                     setStreamingContent(finalContent);
-                  });
+                  }, currentMode);
                 }
               });
               buffer = '';
@@ -1320,14 +1042,13 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
                   processStreamLine(line.trim(), collectedCitations, (content) => {
                     finalContent += content;
                     setStreamingContent(finalContent);
-                  });
+                  }, currentMode);
                 }
               });
               buffer = lines[lines.length - 1] || '';
             }
           }
 
-          // Create final assistant message to preserve the content
           if (finalContent.trim()) {
             const assistantMessage = {
               id: Date.now() + 1,
@@ -1335,12 +1056,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
               content: finalContent.trim(),
               citations: collectedCitations,
               timestamp: new Date(),
-              isStreamingComplete: true // Flag to show this was from streaming
+              isStreamingComplete: true
             };
 
             setMessages(prev => [...prev, assistantMessage]);
             
-            // Save to chat history
             const chatSession = {
               id: Date.now() + 2,
               title: userMessage.content.slice(0, 50) + (userMessage.content.length > 50 ? '...' : ''),
@@ -1353,18 +1073,11 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
           setIsStreaming(false);
           setStreamingContent('');
-
         } catch (streamError) {
-          if (streamError.name === 'AbortError') {
-            console.log('🛑 Request aborted');
-            return;
-          }
-          
-          console.error('❌ Stream reading error:', streamError);
+          if (streamError.name === 'AbortError') return;
+          console.error('Stream reading error:', streamError);
           setIsStreaming(false);
           setIsLoading(false);
-          
-          // Add error message
           const errorMessage = {
             id: Date.now() + 1,
             role: 'assistant',
@@ -1376,16 +1089,10 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
       }
 
     } catch (error) {
-      if (error.name === 'AbortError') {
-        console.log('🛑 Request aborted');
-        return;
-      }
-      
-      console.error('❌ Request failed:', error);
+      if (error.name === 'AbortError') return;
+      console.error('Request failed:', error);
       setIsLoading(false);
       setIsStreaming(false);
-      
-      // Add error message
       const errorMessage = {
         id: Date.now() + 1,
         role: 'assistant',
@@ -1399,34 +1106,18 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
   };
 
   // Helper function to process stream lines
-  const processStreamLine = (line, citations, onContent) => {
-    if (!line.startsWith('data:')) {
-      console.log(`🔍 Skipping non-data line: ${line.substring(0, 50)}`);
-      return;
-    }
+  const processStreamLine = (line, citations, onContent, currentModeSnapshot) => {
+    if (!line.startsWith('data:')) return;
 
     const payload = line.substring(5).trim();
-    
-    if (payload === '[DONE]') {
-      console.log('✅ Received [DONE] marker');
-      return;
-    }
-
-    if (!payload) {
-      console.log('⚠️ Empty payload, continuing...');
-      return;
-    }
+    if (payload === '[DONE]' || !payload) return;
 
     try {
       const json = JSON.parse(payload);
 
-      // Handle citations (only for search mode)
-      if (currentMode === 'search' && citations.length === 0) {
+      if (currentModeSnapshot === 'search' && citations.length === 0) {
         if (json.citations && Array.isArray(json.citations)) {
-          console.log(`📚 Processing ${json.citations.length} citations`);
-          
           if (typeof json.citations[0] === 'object') {
-            // Structured citations
             json.citations.forEach(citationDict => {
               if (citationDict.number && citationDict.title && citationDict.url) {
                 citations.push({
@@ -1438,7 +1129,6 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
               }
             });
           } else {
-            // URL array fallback
             json.citations.forEach((urlString, i) => {
               try {
                 const url = new URL(urlString);
@@ -1448,56 +1138,34 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
                   url: urlString,
                   authors: url.hostname || 'Unknown'
                 });
-              } catch (e) {
-                console.warn('Invalid URL in citations:', urlString);
-              }
+              } catch {}
             });
           }
-          console.log(`✅ Collected ${citations.length} citations`);
         }
       }
 
-      // Extract content
       let content = null;
-      
-      if (json.choices?.[0]?.delta?.content) {
-        content = json.choices[0].delta.content;
-      } else if (json.choices?.[0]?.message?.content) {
-        content = json.choices[0].message.content;
-      } else if (json.content) {
-        content = json.content;
-      } else if (json.text) {
-        content = json.text;
-      }
+      if (json.choices?.[0]?.delta?.content) content = json.choices[0].delta.content;
+      else if (json.choices?.[0]?.message?.content) content = json.choices[0].message.content;
+      else if (json.content) content = json.content;
+      else if (json.text) content = json.text;
 
-      if (content && content.length > 0) {
-        console.log(`📝 Extracted content: ${content.substring(0, 50)}...`);
-        onContent(content);
-      }
-
-    } catch (error) {
-      console.log(`❌ JSON parsing error: ${error}`);
-    }
+      if (content && content.length > 0) onContent(content);
+    } catch {}
   };
 
-  // Helper function to extract title from URL
   const extractTitle = (url) => {
     const hostname = url.hostname?.toLowerCase() || '';
-    
     if (hostname.includes('pubmed')) return 'PubMed';
     if (hostname.includes('pmc')) return 'PMC Article';
     if (hostname.includes('dynamed')) return 'DynaMed';
     if (hostname.includes('heart.org')) return 'American Heart Association';
     if (hostname.includes('wikipedia')) return 'Wikipedia';
-    
     return url.hostname || 'External Link';
   };
 
   const handleStop = () => {
-    if (abortControllerRef.current) {
-      abortControllerRef.current.abort();
-    }
-    
+    if (abortControllerRef.current) abortControllerRef.current.abort();
     if (isStreaming) {
       setIsStreaming(false);
       if (streamingContent) {
@@ -1535,7 +1203,6 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
   return (
     <div style={{
-      // MOBILE FIX: Professional approach - use both vh and dvh
       height: '100vh',
       height: '100dvh',
       display: 'flex',
@@ -1543,7 +1210,6 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
       backgroundColor: theme.backgroundPrimary,
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
       overflow: 'hidden',
-      // Add safe area insets to the container
       paddingTop: 'env(safe-area-inset-top)',
       paddingBottom: 'env(safe-area-inset-bottom)'
     }}>
@@ -1555,52 +1221,24 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
       />
 
       {/* Main Content */}
-      <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        overflow: 'hidden',
-        // MOBILE FIX: Important for flex shrinking on mobile
-        minHeight: 0
-      }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: 0 }}>
         {/* Conversation Area */}
         <div
           ref={scrollRef}
           style={{
-            position:'relative', 
-            zIndex:0,
-            flex: 1,
-            overflowY: 'auto',
-            padding: '0 16px',
-            // MOBILE FIX: Important for flex shrinking and smooth scrolling
-            minHeight: 0,
-            WebkitOverflowScrolling: 'touch'
+            position:'relative', zIndex:0, flex: 1, overflowY: 'auto', padding: '0 16px',
+            minHeight: 0, WebkitOverflowScrolling: 'touch'
           }}
-          onClick={() => {
-            if (speechRecognition.isRecording) {
-              speechRecognition.toggleRecording();
-            }
-          }}
+          onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
         >
           <div style={{
-            maxWidth: '900px',
-            margin: '0 auto',
-            padding: '16px 0',
-            // MOBILE FIX: Ensure proper layout
-            minHeight: '100%',
-            display: 'flex',
-            flexDirection: 'column'
+            maxWidth: '900px', margin: '0 auto', padding: '16px 0', minHeight: '100%',
+            display: 'flex', flexDirection: 'column'
           }}>
-            {/* Empty State */}
             {messages.length === 0 && !isLoading && !isStreaming && (
-              <EmptyState
-                currentMode={currentMode}
-                onSampleTapped={handleSampleTapped}
-                theme={theme}
-              />
+              <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} />
             )}
 
-            {/* Messages */}
             {messages.map((message) => (
               <MessageBubble
                 key={message.id}
@@ -1613,31 +1251,16 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
               />
             ))}
 
-            {/* Loading Indicator */}
             {isLoading && <LoadingIndicator theme={theme} />}
 
-            {/* Streaming Response */}
             {isStreaming && (
-              <StreamingResponse
-                content={streamingContent}
-                theme={theme}
-              />
+              <StreamingResponse content={streamingContent} theme={theme} />
             )}
           </div>
         </div>
 
         {/* Input Bar */}
-        <div
-          style={{
-            // MOBILE FIX: Prevent input bar from shrinking
-            flexShrink: 0,
-            maxWidth: '900px',   
-            margin: '0 auto',    
-            padding: '0 16px',  
-            boxSizing: 'border-box',
-            width: '100%',
-          }}
-        >
+        <div style={{ flexShrink: 0, maxWidth: '900px', margin: '0 auto', padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
           <InputBar
             query={query}
             setQuery={setQuery}
@@ -1660,10 +1283,7 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
         chatHistory={chatHistory}
         onSelectChat={loadChatSession}
         onDeleteChat={deleteChatSession}
-        onNewChat={() => {
-          resetChat();
-          setShowSidebar(false);
-        }}
+        onNewChat={() => { resetChat(); setShowSidebar(false); }}
         theme={theme}
       />
 
@@ -1679,201 +1299,93 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
 
       {/* Global Styles */}
       <style jsx global>{`
-        * {
-          box-sizing: border-box;
-        }
-        html {
-          /* MOBILE FIX: Prevent zoom on focus for iOS */
-          -webkit-text-size-adjust: 100%;
-        }
+        * { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
         body {
-          margin: 0;
-          padding: 0;
+          margin: 0; padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-          overflow: hidden;
-          /* MOBILE FIX: Use regular viewport height */
-          height: 100vh;
+          overflow: hidden; height: 100vh;
         }
-        #root {
-          height: 100vh;
-          width: 100vw;
-        }
-        
-        /* MOBILE FIX: Remove enhanced mobile viewport support that was adding space */
-        @supports (height: 100vh) {
-          body, #root {
-            height: 100vh;
-          }
-        }
-        
-        /* MOBILE FIX: Prevent overscroll bounce on iOS */
-        html, body {
-          position: fixed;
-          overflow: hidden;
-          width: 100%;
-          height: 100%;
-        }
-        
+        #root { height: 100vh; width: 100vw; }
+        @supports (height: 100vh) { body, #root { height: 100vh; } }
+        html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
+
         /* Custom scrollbars */
-        ::-webkit-scrollbar {
-          width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: ${theme.textSecondary}40;
-          border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: ${theme.textSecondary}60;
-        }
-        * {
-          scrollbar-width: thin;
-          scrollbar-color: ${theme.textSecondary}40 transparent;
-        }
-        
-        /* Input styling */
-        textarea::placeholder {
-          color: ${theme.textSecondary};
-          opacity: 1;
-        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
+        * { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
+
+        textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
         textarea {
-          font-family: inherit;
-          line-height: inherit;
-          border: none;
-          outline: none;
-          resize: none;
-          background: transparent;
-          /* MOBILE FIX: Prevent zoom on focus for iOS */
-          font-size: 16px;
+          font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px;
         }
-        
-        /* Button interactions */
-        button:not(:disabled):hover {
-          transform: translateY(-1px);
-        }
-        button:not(:disabled):active {
-          transform: translateY(0);
-        }
-        
-        /* Animations */
+
+        button:not(:disabled):hover { transform: translateY(-1px); }
+        button:not(:disabled):active { transform: translateY(0); }
+
         @keyframes bounce {
-          0%, 60%, 100% {
-            transform: translateY(0);
-          }
-          30% {
-            transform: translateY(-4px);
-          }
+          0%, 60%, 100% { transform: translateY(0); }
+          30% { transform: translateY(-4px); }
         }
         @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 0.5;
-            transform: scale(0.8);
-          }
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(0.8); }
         }
-        @keyframes blink {
-          0%, 50% { opacity: 1; }
-          51%, 100% { opacity: 0; }
+        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+          * { animation: none !important; transition: none !important; }
         }
-        
-        /* Accessibility */
+        .cursor { color: #4A6B7D; animation: blink 1s infinite; }
+
+        /* Accessibility focus */
         button:focus-visible, textarea:focus-visible {
           outline: 2px solid ${theme.accentSoftBlue};
           outline-offset: 2px;
         }
-        
-        /* Markdown styling */
-        h1, h2, h3, strong, em, code, ul, ol, li {
-          color: ${theme.textPrimary} !important;
-        }
-        pre {
-          background-color: ${theme.textSecondary}15 !important;
-        }
-        sup {
-          color: ${theme.accentSoftBlue} !important;
-        }
-        
-        .md {
-          line-height: 1.5;
-        }
-        
-        .md h1, .md h2, .md h3, 
-        .md strong, .md em, .md code, 
-        .md ul, .md ol, .md li {
-          color: ${theme.textPrimary} !important;
-        }
-        
-        .md h1 { 
-          margin: 0.5rem 0 0.25rem; 
-          font-size: 1.5rem; 
-          font-weight: 700; 
-        }
-        
-        .md h2 { 
-          margin: 0.4rem 0 0.2rem; 
-          font-size: 1.25rem; 
-          font-weight: 600; 
-        }
-        
-        .md h3 { 
-          margin: 0.3rem 0 0.15rem; 
-          font-size: 1.1rem; 
-          font-weight: 600; 
-        }
-        
-        .md p { 
-          margin: 0.15rem 0; 
-          line-height: 1.4; 
-        }
-        
+
+        /* Typography + markdown */
+        .md { line-height: 1.5; }
+        h1, h2, h3, strong, em, code, ul, ol, li { color: ${theme.textPrimary} !important; }
+        pre { background-color: ${theme.textSecondary}15 !important; }
+        sup { color: ${theme.accentSoftBlue} !important; }
+
+        .md h1 { margin: 0.6rem 0 0.3rem; font-size: 1.5rem; font-weight: 700; }
+        .md h2 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
+        .md h3 { margin: 0.4rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
+        .md p  { margin: 0.2rem 0; line-height: 1.45; }
+
         .md .numbered-item {
-          margin: 0.25rem 0;
-          display: flex;
-          align-items: baseline;
-          gap: 0.25rem;
+          margin: 0.22rem 0; display: flex; align-items: baseline; gap: 0.25rem;
         }
-        
-        .md .numbered-item .number {
-          font-weight: 600;
-          flex-shrink: 0;
-          min-width: auto;
-        }
-        
-        .md .numbered-item .content {
-          flex: 1;
-          line-height: 1.4;
-        }
-        
-        .md ul { 
-          margin: 0.1rem 0 0.1rem 1.25rem; 
-          padding-left: 0;
-          list-style-type: disc;
+        .md .numbered-item .number { font-weight: 600; flex-shrink: 0; min-width: auto; }
+        .md .numbered-item .content { flex: 1; line-height: 1.4; }
+
+        /* ---- LISTS: hanging indents + clean rhythm ---- */
+        .md ul, .md ol {
+          margin: 0.35rem 0 0.35rem 0;
+          padding-left: 1.35rem;
           list-style-position: outside;
         }
-        
-        .md li { 
-          margin: 0.05rem 0; 
-          line-height: 1.3;
-          padding-left: 0;
+        .md ul ul, .md ol ol, .md ul ol, .md ol ul {
+          margin: 0.25rem 0;
+          padding-left: 1.15rem;
         }
-        
-        .md ul ul, .md ol ol, .md ul ol, .md ol ul { 
-          margin: 0.1rem 0; 
+        .md li {
+          margin: 0.12rem 0;
+          line-height: 1.45;
+          padding-left: 0.15rem;
+          text-indent: 0;
         }
-        
-        .md strong { 
-          font-weight: 600; 
+        .md li::marker {
+          color: ${theme.accentSoftBlue};
+          font-weight: 600;
         }
-        
-        .md em { 
-          font-style: italic; 
-        }
-        
+
+        /* Inline code + blocks */
         .md pre {
           background-color: ${theme.textSecondary}15 !important;
           border-radius: 8px;
@@ -1881,7 +1393,6 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           margin: 0.5rem 0;
           overflow-x: auto;
         }
-        
         .md code {
           background-color: ${theme.textSecondary}15 !important;
           border-radius: 4px;
@@ -1889,38 +1400,27 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           font-size: 0.9em;
           font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
         }
-        
-        .md pre code {
-          background: none !important;
-          border: none;
-          padding: 0;
-        }
-        
+        .md pre code { background: none !important; border: none; padding: 0; }
+
         .md blockquote {
           margin: 0.2rem 0;
           padding-left: 0.75rem;
           border-left: 3px solid ${theme.accentSoftBlue};
           font-style: italic;
         }
-        
+
         .md hr {
-          border: none;
-          height: 1px;
-          background-color: ${theme.textSecondary}40;
-          margin: 1rem 0;
+          border: none; height: 1px; background-color: ${theme.textSecondary}40; margin: 1rem 0;
         }
-        
+
         .md a {
           color: ${theme.accentSoftBlue} !important;
           text-decoration: none;
           border-bottom: 1px solid transparent;
           transition: border-color 0.2s ease;
         }
-        
-        .md a:hover {
-          border-bottom-color: ${theme.accentSoftBlue};
-        }
-        
+        .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+
         .md sup.md-citation {
           color: ${theme.accentSoftBlue} !important;
           cursor: pointer;
@@ -1930,14 +1430,69 @@ const response = await fetch(import.meta.env.VITE_API_URL, {
           transition: all 0.2s ease;
           margin: 0;
         }
-        
         .md sup.md-citation:hover {
           background-color: ${theme.accentSoftBlue}20;
           transform: translateY(-1px);
         }
-        
-        .md br {
-          line-height: 0.3;
+        .md br { line-height: 0.3; }
+
+        /* ---- TABLES: responsive, sticky header, zebra, soft borders ---- */
+        .md-table-wrap {
+          width: 100%;
+          overflow: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 0.5rem 0 0.75rem;
+          border-radius: 10px;
+          box-shadow: 0 1px 0 ${theme.textSecondary}1A inset;
+          background: ${theme.backgroundSurface};
+        }
+        .md-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          font-size: 13.5px;
+          line-height: 1.45;
+          color: ${theme.textPrimary};
+          overflow: hidden;
+        }
+        .md-table thead th {
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          text-align: left;
+          padding: 10px 12px;
+          background: linear-gradient(0deg, ${theme.textSecondary}10, ${theme.textSecondary}18);
+          color: ${theme.textPrimary};
+          font-weight: 600;
+          border-bottom: 1px solid ${theme.textSecondary}30;
+          white-space: nowrap;
+        }
+        .md-table tbody td {
+          padding: 10px 12px;
+          vertical-align: middle;
+          border-bottom: 1px solid ${theme.textSecondary}20;
+          background: ${theme.backgroundSurface};
+          max-width: 420px;
+          word-wrap: break-word;
+          overflow-wrap: anywhere;
+        }
+        .md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}08; }
+        .md-table tbody tr:hover td { background: ${theme.accentSoftBlue}12; }
+
+        .md-table thead th:first-child { border-top-left-radius: 10px; }
+        .md-table thead th:last-child  { border-top-right-radius: 10px; }
+        .md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+        .md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 10px; }
+
+        .md-table .align-left  { text-align: left; }
+        .md-table .align-center{ text-align: center; }
+        .md-table .align-right { text-align: right; }
+
+        .md-table code { white-space: nowrap; max-width: 100%; display: inline-block; }
+
+        @media (max-width: 520px) {
+          .md-table thead th, .md-table tbody td { padding: 8px 10px; }
+          .md-table { font-size: 13px; }
         }
       `}</style>
     </div>
