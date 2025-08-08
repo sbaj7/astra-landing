@@ -193,8 +193,9 @@ export const renderMarkdown = (raw = '') => {
   const out = [];
   const listStack = []; // stack of list types and depths
 
-  // Improved regex patterns
-  const bulletRE = /^(\s*)([\*\+\-•–])\s+(.*)$/;
+  // Improved regex patterns - separate dash handling
+  const bulletRE = /^(\s*)([\*\+•–])\s+(.*)$/;  // bullets but NOT dash
+  const dashRE = /^(\s*)-\s+(.*)$/;             // dash only
   const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
   const codeFence = /^```/;
 
@@ -246,15 +247,11 @@ export const renderMarkdown = (raw = '') => {
   };
 
   const handleListItem = (line, depth, content, listType) => {
-    // Handle special case: dash lines should be treated as sub-items if they have no indent
-    const isDashLine = line.match(/^\s*-\s+/);
-    const effectiveDepth = isDashLine && depth === 0 ? 1 : depth;
-    
     // Close deeper lists
-    closeListsToDepth(effectiveDepth + 1);
+    closeListsToDepth(depth + 1);
     
     // Open lists up to our depth
-    openListAtDepth(effectiveDepth + 1, listType);
+    openListAtDepth(depth + 1, listType);
     
     // Add the list item
     out.push(`<li>${processInline(content)}</li>`);
@@ -313,12 +310,24 @@ export const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Handle bullet points
+    // Handle bullet points (excluding dashes)
     const bulletMatch = line.match(bulletRE);
     if (bulletMatch) {
       const [, whitespace, bullet, content] = bulletMatch;
       const depth = getDepth(whitespace);
       handleListItem(line, depth, content, 'ul');
+      i++;
+      continue;
+    }
+
+    // Handle dash lines as sub-bullets
+    const dashMatch = line.match(dashRE);
+    if (dashMatch) {
+      const [, whitespace, content] = dashMatch;
+      const baseDepth = getDepth(whitespace);
+      // Force dashes to be at least depth 1 (sub-bullets)
+      const effectiveDepth = Math.max(1, baseDepth);
+      handleListItem(line, effectiveDepth, content, 'ul');
       i++;
       continue;
     }
