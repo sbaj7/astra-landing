@@ -1037,7 +1037,6 @@ const AstraApp = () => {
         .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
         .md sup.md-citation { color: ${theme.accentSoftBlue} !important; cursor: pointer; font-weight: 600; padding: 0; border-radius: 4px; transition: all .2s ease; margin: 0; }
         .md sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; transform: translateY(-1px); }
-        .md br { line-height: 0.3; }
         /* Lists: spacing + indentation */
 .md ol,
 .md ul {
