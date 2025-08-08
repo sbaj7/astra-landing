@@ -131,10 +131,10 @@ const useSpeechRecognition = () => {
 };
 
 /* =========================
-   MARKDOWN via LIBRARIES
+   MARKDOWN via LIBRARIES (ChatGPT-ish)
    ========================= */
 
-/** Rehype plugin: turn text like "[12]" into <sup class="md-citation" data-citation="12">[12]</sup> */
+/** Rehype plugin: turn "[12]" into <sup class="md-citation" data-citation="12">[12]</sup> */
 function rehypeBracketCitations() {
   return (tree) => {
     visit(tree, 'text', (node, index, parent) => {
@@ -165,6 +165,7 @@ function rehypeBracketCitations() {
   };
 }
 
+/** Sanitize schema allowing list attrs + citations */
 const sanitizeSchema = {
   tagNames: [
     'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
@@ -179,13 +180,22 @@ const sanitizeSchema = {
     td: ['align'],
     table: ['className'],
     h1: ['id'], h2: ['id'], h3: ['id'],
-    // ✅ keep ordered list numbering correct
-    ol: ['start', 'reversed', 'type']
+    ol: ['start','reversed','type'] // keep correct numbering
   },
   clobberPrefix: 'md-',
   protocols: { href: ['http', 'https', 'mailto', 'tel'] }
 };
 
+// keep plugin arrays stable between renders for perf
+const remarkPlugins = [remarkGfm, remarkMath];
+const rehypePlugins = [
+  rehypeSlug,
+  [rehypeAutolinkHeadings, { behavior: 'append' }],
+  rehypeHighlight,
+  rehypeBracketCitations,
+  // rehypeKatex, // enable if you installed katex
+  [rehypeSanitize, sanitizeSchema]
+];
 
 /* =========================
    CITATION OVERLAY
@@ -370,7 +380,10 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
   );
 };
 
-const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
+/* =========================
+   MARKDOWN BLOCK (Tailwind Typography)
+   ========================= */
+const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -378,8 +391,7 @@ const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
       const t = e.target;
       if (t.tagName === 'SUP' && t.dataset.citation) {
         const number = parseInt(t.dataset.citation, 10);
-        // onTapCitation is wired in MessageBubble with message.citations lookup
-        if (onTapCitation) onTapCitation(number);
+        onTapCitation?.(number);
       }
     };
     const el = containerRef.current;
@@ -388,20 +400,14 @@ const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
   }, [onTapCitation]);
 
   return (
-    <div ref={containerRef} className="md" style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}>
+    <div
+      ref={containerRef}
+      className={`markdown-body prose max-w-none ${invert ? 'prose-invert' : 'prose-neutral'}`}
+      style={{ color: theme.textPrimary }}
+    >
       <ReactMarkdown
-        remarkPlugins={[
-          remarkGfm,
-          remarkMath
-        ]}
-        rehypePlugins={[
-          rehypeSlug,
-          [rehypeAutolinkHeadings, { behavior: 'append' }],
-          rehypeHighlight,
-          rehypeBracketCitations,
-          // rehypeKatex, // enable if you installed katex
-          [rehypeSanitize, sanitizeSchema]
-        ]}
+        remarkPlugins={remarkPlugins}
+        rehypePlugins={rehypePlugins}
         components={{
           a: ({ node, ...props }) => {
             const href = props.href || '';
@@ -409,6 +415,7 @@ const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
             return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
           },
           table: ({ node, ...props }) => <table {...props} className="md-table" />,
+          ol: ({ node, ...props }) => <ol start={node?.start} {...props} />,
         }}
       >
         {markdown || ''}
@@ -417,7 +424,7 @@ const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
   );
 };
 
-const MessageBubble = ({ message, theme, onTapCitation }) => {
+const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
   const [showCopied, setShowCopied] = useState(false);
   const handleCopy = async () => {
     if (!message.content) return;
@@ -457,6 +464,7 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
         <MarkdownBlock
           markdown={message.content}
           theme={theme}
+          invert={invertMarkdown}
           onTapCitation={(num) => {
             const citation = message.citations?.find((c) => c.number === num);
             if (citation && onTapCitation) onTapCitation(citation);
@@ -474,21 +482,14 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
   );
 };
 
-const StreamingResponse = ({ content, theme }) => (
+/* Streaming shell that renders only after first token */
+const StreamingResponse = ({ content, theme, invert = false }) => (
   <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33`, marginBottom: 16 }}>
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
       <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
-      {!content && (
-        <div style={{ display: 'flex', gap: 2 }}>
-          {[0, 1, 2].map((i) => (
-            <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.accentSoftBlue, animation: `bounce 0.6s infinite ${i * 0.2}s` }} />
-          ))}
-        </div>
-      )}
     </div>
-    {/* While streaming, render incrementally and add a blinking cursor */}
-    <div className="md" style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}>
-      <MarkdownBlock markdown={content || ''} theme={theme} onTapCitation={() => {}} />
+    <div>
+      <MarkdownBlock markdown={content || ''} theme={theme} invert={invert} onTapCitation={() => {}} />
       {content ? <span style={{ color: '#4A6B7D', animation: 'blink 1s infinite' }}>▍</span> : null}
     </div>
   </div>
@@ -549,7 +550,7 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
 };
 
 /* =========================
-   INPUT BAR
+   INPUT BAR (reports its height)
    ========================= */
 const InputBar = ({
   query,
@@ -561,10 +562,21 @@ const InputBar = ({
   isStreaming,
   isLoading,
   speechRecognition,
-  theme
+  theme,
+  onHeightChange
 }) => {
+  const containerRef = useRef(null);
   const textareaRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const ro = new ResizeObserver((entries) => {
+      for (const e of entries) onHeightChange?.(e.contentRect.height);
+    });
+    ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, [onHeightChange]);
 
   const adjustTextareaHeight = useCallback(() => {
     const textarea = textareaRef.current;
@@ -592,7 +604,10 @@ const InputBar = ({
   const isDisabled = isStreaming || isLoading;
 
   return (
-    <div style={{ padding: '8px 16px 4px 16px', paddingBottom: 'max(8px, env(safe-area-inset-bottom))', backgroundColor: theme.backgroundSurface, borderTopLeftRadius: 20, borderTopRightRadius: 20, boxShadow: '0 -2px 8px rgba(0,0,0,0.1)' }}>
+    <div
+      ref={containerRef}
+      style={{ padding: '8px 16px 4px 16px', paddingBottom: 'max(8px, env(safe-area-inset-bottom))', backgroundColor: theme.backgroundSurface, borderTopLeftRadius: 20, borderTopRightRadius: 20, boxShadow: '0 -2px 8px rgba(0,0,0,0.1)' }}
+    >
       <div style={{ position: 'relative', marginBottom: 0, border: 'none', outline: 'none' }}>
         <textarea
           ref={textareaRef}
@@ -665,15 +680,18 @@ const InputBar = ({
    APP
    ========================= */
 const AstraApp = () => {
-  const { colors: theme } = useTheme();
+  const { colors: theme, isDark } = useTheme();
   const speechRecognition = useSpeechRecognition();
 
   const [messages, setMessages] = useState([]);
   const [query, setQuery] = useState('');
   const [currentMode, setCurrentMode] = useState('search');
+
   const [isStreaming, setIsStreaming] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [hasFirstToken, setHasFirstToken] = useState(false);
   const [streamingContent, setStreamingContent] = useState('');
+
   const [showSidebar, setShowSidebar] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
 
@@ -682,6 +700,13 @@ const AstraApp = () => {
 
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
+  const [inputBarHeight, setInputBarHeight] = useState(0);
+
+  const scrollToBottom = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+  }, []);
 
   const resetChat = () => {
     if (abortControllerRef.current) abortControllerRef.current.abort();
@@ -689,6 +714,7 @@ const AstraApp = () => {
     setQuery('');
     setIsStreaming(false);
     setIsLoading(false);
+    setHasFirstToken(false);
     setStreamingContent('');
     if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
@@ -771,6 +797,9 @@ const AstraApp = () => {
     const queryToSend = query.trim();
     setQuery('');
     setIsLoading(true);
+    setIsStreaming(true);
+    setHasFirstToken(false);
+    setStreamingContent('');
 
     if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
@@ -799,15 +828,18 @@ const AstraApp = () => {
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-      setIsLoading(false);
-      setIsStreaming(true);
-      setStreamingContent('');
-
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
       let buffer = '';
       let collectedCitations = [];
       let finalContent = '';
+      let rafId = null;
+
+      const flush = () => {
+        rafId = null;
+        setStreamingContent(finalContent);
+        scrollToBottom();
+      };
 
       if (reader) {
         try {
@@ -823,9 +855,14 @@ const AstraApp = () => {
 
             const handleLine = (line) => {
               if (!line.trim()) return;
-              processStreamLine(line.trim(), collectedCitations, (content) => {
-                finalContent += content;
-                setStreamingContent(finalContent);
+              processStreamLine(line.trim(), collectedCitations, (delta) => {
+                const wasEmpty = finalContent.length === 0;
+                finalContent += delta;
+                if (wasEmpty) {
+                  setHasFirstToken(true);
+                  setIsLoading(false);
+                }
+                if (!rafId) rafId = requestAnimationFrame(flush);
               });
             };
 
@@ -862,6 +899,7 @@ const AstraApp = () => {
 
           setIsStreaming(false);
           setStreamingContent('');
+          setHasFirstToken(false);
         } catch (streamErr) {
           if (streamErr.name === 'AbortError') return;
           setIsStreaming(false);
@@ -873,6 +911,7 @@ const AstraApp = () => {
       if (error.name === 'AbortError') return;
       setIsLoading(false);
       setIsStreaming(false);
+      setHasFirstToken(false);
       setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
     } finally {
       abortControllerRef.current = null;
@@ -888,6 +927,7 @@ const AstraApp = () => {
         setMessages(prev => [...prev, assistantMessage]);
       }
       setStreamingContent('');
+      setHasFirstToken(false);
     }
   };
 
@@ -901,6 +941,7 @@ const AstraApp = () => {
     setQuery('');
     setIsStreaming(false);
     setIsLoading(false);
+    setHasFirstToken(false);
     setStreamingContent('');
     setShowSidebar(false);
   };
@@ -908,6 +949,14 @@ const AstraApp = () => {
   const deleteChatSession = (session) => {
     setChatHistory(prev => prev.filter(chat => chat.id !== session.id));
   };
+
+  useEffect(() => {
+    if (isStreaming) scrollToBottom();
+  }, [streamingContent, isStreaming, scrollToBottom]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages.length, scrollToBottom]);
 
   return (
     <div style={{
@@ -923,7 +972,17 @@ const AstraApp = () => {
         {/* Conversation */}
         <div
           ref={scrollRef}
-          style={{ position:'relative', zIndex:0, flex: 1, overflowY: 'auto', padding: '0 16px', minHeight: 0, WebkitOverflowScrolling: 'touch' }}
+          style={{
+            position:'relative',
+            zIndex:0,
+            flex: 1,
+            overflowY: 'auto',
+            padding: '0 16px',
+            paddingBottom: inputBarHeight + 16,  // prevent bottom clipping
+            scrollPaddingBottom: inputBarHeight + 16,
+            minHeight: 0,
+            WebkitOverflowScrolling: 'touch'
+          }}
           onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
         >
           <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -936,12 +995,13 @@ const AstraApp = () => {
                 key={message.id}
                 message={message}
                 theme={theme}
+                invertMarkdown={isDark}
                 onTapCitation={(citation) => { setSelectedCitation(citation); setShowCitationOverlay(true); }}
               />
             ))}
 
             {isLoading && <LoadingIndicator theme={theme} />}
-            {isStreaming && <StreamingResponse content={streamingContent} theme={theme} />}
+            {isStreaming && hasFirstToken && <StreamingResponse content={streamingContent} theme={theme} invert={isDark} />}
           </div>
         </div>
 
@@ -958,6 +1018,7 @@ const AstraApp = () => {
             isLoading={isLoading}
             speechRecognition={speechRecognition}
             theme={theme}
+            onHeightChange={setInputBarHeight}
           />
         </div>
       </div>
@@ -983,7 +1044,7 @@ const AstraApp = () => {
         />
       )}
 
-      {/* Global Styles for markdown & animations */}
+      {/* Global Styles (minimal) */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -1011,88 +1072,11 @@ const AstraApp = () => {
         @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
         @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
 
-        .md { line-height: 1.5; }
-        .md h1, .md h2, .md h3, .md strong, .md em, .md code, .md ul, .md ol, .md li { color: ${theme.textPrimary} !important; }
-        .md h1 { margin: 0.5rem 0 0.25rem; font-size: 1.5rem; font-weight: 700; }
-        .md h2 { margin: 0.4rem 0 0.2rem; font-size: 1.25rem; font-weight: 600; }
-        .md h3 { margin: 0.3rem 0 0.15rem; font-size: 1.1rem; font-weight: 600; }
-        .md p { margin: 0.15rem 0; line-height: 1.4; }
-
-        .md .numbered-item { margin: 0.25rem 0; display: flex; align-items: baseline; gap: 0.25rem; }
-        .md .numbered-item .number { font-weight: 600; flex-shrink: 0; }
-        .md .numbered-item .content { flex: 1; line-height: 1.4; }
-
-        .md ul { margin: 0.1rem 0 0.1rem 1.25rem; padding-left: 0; list-style-type: disc; list-style-position: outside; }
-        .md li { margin: 0.05rem 0; line-height: 1.3; padding-left: 0; }
-        .md ul ul, .md ol ol, .md ul ol, .md ol ul { margin: 0.1rem 0; }
-
-        .md pre { background-color: ${theme.textSecondary}15 !important; border-radius: 8px; padding: 12px; margin: 0.5rem 0; overflow-x: auto; }
-        .md code { background-color: ${theme.textSecondary}15 !important; border-radius: 4px; padding: 2px 6px; font-size: 0.9em; font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace; }
-        .md pre code { background: none !important; border: none; padding: 0; }
-
-        .md blockquote { margin: 0.2rem 0; padding-left: 0.75rem; border-left: 3px solid ${theme.accentSoftBlue}; font-style: italic; }
-        .md hr { border: none; height: 1px; background-color: ${theme.textSecondary}40; margin: 1rem 0; }
-
-        .md a { color: ${theme.accentSoftBlue} !important; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
-        .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
-        .md sup.md-citation { color: ${theme.accentSoftBlue} !important; cursor: pointer; font-weight: 600; padding: 0; border-radius: 4px; transition: all .2s ease; margin: 0; }
-        .md sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; transform: translateY(-1px); }
-        /* Lists: spacing + indentation */
-.md ol,
-.md ul {
-  margin: 0.25rem 0 0.25rem 1.25rem;
-  padding-left: 1.25rem;
-}
-
-.md li {
-  margin: 0.15rem 0;
-  line-height: 1.35;
-}
-
-.md li > ol,
-.md li > ul {
-  margin: 0.2rem 0 0.2rem 1rem;
-  padding-left: 1rem;
-}
-
-/* Make sure ordered lists keep decimal style consistently */
-.md ol { list-style: decimal; }
-.md ul { list-style: disc; }
-/* Tables */
-.md table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0.5rem 0 0.75rem;
-  border-radius: 8px;
-  overflow: hidden; /* keeps rounded corners on thead background */
-}
-
-.md thead th {
-  background: ${theme.textSecondary}15;
-  color: ${theme.textPrimary};
-  font-weight: 600;
-  text-align: left;
-}
-
-.md th,
-.md td {
-  padding: 8px 10px;
-  border-bottom: 1px solid ${theme.textSecondary}25;
-  vertical-align: top;
-}
-
-.md tbody tr:nth-child(even) td {
-  background: ${theme.textSecondary}08;
-}
-
-.md table .align-center { text-align: center; }
-.md table .align-right  { text-align: right;  }
-.md thead th {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
+        /* Link & citation tint to match brand */
+        .markdown-body a { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+        .markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+        .markdown-body sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; transition: all .2s ease; }
+        .markdown-body sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; transform: translateY(-1px); }
       `
         }}
       />
