@@ -1,6 +1,22 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
 
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
+import { visit } from 'unist-util-visit';
+
+import 'katex/dist/katex.min.css';
+// Optional: add a highlight.js theme globally if you want code colors
+// import 'highlight.js/styles/github.css';
+
+const CHAT_ENDPOINT = '/api/chat';
+
 /* =========================
    THEME
    ========================= */
@@ -121,227 +137,130 @@ const useSpeechRecognition = () => {
 };
 
 /* =========================
-   MARKDOWN RENDERING - COMPLETELY REWRITTEN
+   ROBUST MARKDOWN (react-markdown + remark/rehype)
    ========================= */
 
-// --- helpers ---
-const escapeHTML = (s = '') =>
-  s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
-   .replace(/</g, '&lt;')
-   .replace(/>/g, '&gt;');
+// Convert bare "[12]" into <sup class="md-citation" data-citation="12">[12]</sup>
+function rehypeBracketedCitations() {
+  return (tree) => {
+    visit(tree, 'text', (node, index, parent) => {
+      if (!parent || typeof node.value !== 'string') return;
+      const value = node.value;
+      const re = /\[(\d+)\]/g;
 
-const processInline = (text = '') => (
-  escapeHTML(text)
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>')
-);
+      let m;
+      let last = 0;
+      const parts = [];
 
-// Enhanced table processing
-const processTable = (tableLines) => {
-  const parseCells = (line) =>
-    line.split('|')
-      .map(c => c.trim())
-      .filter((c, i, arr) => !(i === 0 && c === '') && !(i === arr.length - 1 && c === ''));
-
-  const header = tableLines[0];
-  const alignRowIdx = tableLines.findIndex((l) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l));
-  const alignRow = alignRowIdx >= 0 ? tableLines[alignRowIdx] : null;
-
-  const align = alignRow
-    ? parseCells(alignRow).map(a => {
-        const left = a.startsWith(':'), right = a.endsWith(':');
-        if (left && right) return 'center';
-        if (right) return 'right';
-        return 'left';
-      })
-    : [];
-
-  const headCells = parseCells(header);
-
-  const bodyLines = tableLines
-    .filter((l, i) => i !== 0 && i !== alignRowIdx)
-    .filter(l => l.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(l));
-
-  const rowToHtml = (line, tag) => {
-    const cells = parseCells(line);
-    const tds = cells.map((cell, idx) => {
-      const a = align[idx] || 'left';
-      return `<${tag} class="md-td align-${a}">${processInline(cell)}</${tag}>`;
-    }).join('');
-    return `<tr>${tds}</tr>`;
-  };
-
-  const thead = `<thead><tr>${
-    headCells.map((cell, idx) => {
-      const a = align[idx] || 'left';
-      return `<th class="md-th align-${a}">${processInline(cell)}</th>`;
-    }).join('')
-  }</tr></thead>`;
-
-  const tbody = `<tbody>${bodyLines.map(line => rowToHtml(line, 'td')).join('')}</tbody>`;
-
-  return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
-};
-
-export const renderMarkdown = (raw = '') => {
-  if (!raw) return '';
-
-  const lines = raw.split('\n');
-  const out = [];
-
-  // Simple regex patterns
-  const bulletRE = /^(\s*)([\*\+\-•–])\s+(.*)$/;   // All bullets including dash
-  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
-  const codeFence = /^```/;
-
-  const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
-  const depthFromIndent = (s) => Math.floor(tabsToSpaces(s).length / 2);
-
-  const isTableStart = (i) =>
-    (lines[i] || '').includes('|') &&
-    /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(lines[i + 1] || '');
-
-  const readTable = (i) => {
-    const tbl = [lines[i], lines[i + 1]];
-    let j = i + 2;
-    while (j < lines.length && lines[j].includes('|')) { 
-      tbl.push(lines[j]); 
-      j++; 
-    }
-    return { block: tbl, next: j };
-  };
-
-  let listDepth = 0;
-
-  const openList = (depth, type = 'ul') => {
-    while (listDepth < depth) {
-      out.push('<ul>');
-      listDepth++;
-    }
-    while (listDepth > depth) {
-      out.push('</ul>');
-      listDepth--;
-    }
-  };
-
-  const closeAllLists = () => {
-    while (listDepth > 0) {
-      out.push('</ul>');
-      listDepth--;
-    }
-  };
-
-  let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
-
-    // Handle empty lines
-    if (!line.trim()) {
-      closeAllLists();
-      i++;
-      continue;
-    }
-
-    // Handle code fences
-    if (codeFence.test(line)) {
-      closeAllLists();
-      const buf = [];
-      i++;
-      while (i < lines.length && !codeFence.test(lines[i])) {
-        buf.push(escapeHTML(lines[i]));
-        i++;
+      while ((m = re.exec(value))) {
+        const start = m.index;
+        if (start > last) parts.push({ type: 'text', value: value.slice(last, start) });
+        parts.push({
+          type: 'element',
+          tagName: 'sup',
+          properties: { className: ['md-citation'], 'data-citation': m[1] },
+          children: [{ type: 'text', value: `[${m[1]}]` }]
+        });
+        last = re.lastIndex;
       }
-      out.push(`<pre><code>${buf.join('\n')}</code></pre>`);
-      i++;
-      continue;
-    }
 
-    // Handle tables
-    if (isTableStart(i)) {
-      closeAllLists();
-      const { block, next } = readTable(i);
-      out.push(processTable(block));
-      i = next;
-      continue;
-    }
+      if (!parts.length) return;
+      if (last < value.length) parts.push({ type: 'text', value: value.slice(last) });
 
-    // Handle blockquotes
-    const blockquoteMatch = line.match(/^\s*>\s+(.*)$/);
-    if (blockquoteMatch) {
-      closeAllLists();
-      out.push(`<blockquote>${processInline(blockquoteMatch[1])}</blockquote>`);
-      i++;
-      continue;
-    }
+      parent.children.splice(index, 1, ...parts);
+      return index + parts.length;
+    });
+  };
+}
 
-    // Handle headers
-    const headerMatch = line.match(/^(#{1,6})\s+(.*)$/);
-    if (headerMatch) {
-      closeAllLists();
-      const level = headerMatch[1].length;
-      out.push(`<h${level}>${processInline(headerMatch[2])}</h${level}>`);
-      i++;
-      continue;
-    }
-
-    // Handle list items (bullets and dashes)
-    const bulletMatch = line.match(bulletRE);
-    if (bulletMatch) {
-      const [, whitespace, bullet, content] = bulletMatch;
-      let depth = depthFromIndent(whitespace);
-      
-      // CRITICAL FIX: If it's a dash with no indentation, make it depth 1
-      if (bullet === '-' && depth === 0) {
-        depth = 1;
-      } else {
-        depth = depth + 1; // Normal bullets start at depth 1
-      }
-      
-      openList(depth);
-      out.push(`<li>${processInline(content)}</li>`);
-      i++;
-      continue;
-    }
-
-    // Handle numbered lists
-    const numberMatch = line.match(numberRE);
-    if (numberMatch) {
-      const [, whitespace, number, content] = numberMatch;
-      const depth = depthFromIndent(whitespace) + 1;
-      
-      // For numbered lists, we need to use <ol>
-      while (listDepth < depth) {
-        out.push(listDepth === 0 ? '<ol>' : '<ul>');
-        listDepth++;
-      }
-      while (listDepth > depth) {
-        out.push('</ul>');
-        listDepth--;
-      }
-      
-      out.push(`<li>${processInline(content)}</li>`);
-      i++;
-      continue;
-    }
-
-    // Handle paragraphs
-    closeAllLists();
-    out.push(`<p>${processInline(line.trim())}</p>`);
-    i++;
+// Sanitize but allow the attributes we use
+const sanitizeSchema = {
+  ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    sup: [
+      ...(defaultSchema.attributes?.sup || []),
+      'className',
+      ['data-citation']
+    ],
+    a: [
+      ...(defaultSchema.attributes?.a || []),
+      'target',
+      'rel'
+    ],
+    table: [ ...(defaultSchema.attributes?.table || []), 'className' ],
+    thead: [ ...(defaultSchema.attributes?.thead || []), 'className' ],
+    tbody: [ ...(defaultSchema.attributes?.tbody || []), 'className' ],
+    tr: [ ...(defaultSchema.attributes?.tr || []), 'className' ],
+    th: [ ...(defaultSchema.attributes?.th || []), 'className', 'align' ],
+    td: [ ...(defaultSchema.attributes?.td || []), 'className', 'align' ],
+    code: [ ...(defaultSchema.attributes?.code || []), 'className' ],
+    span: [ ...(defaultSchema.attributes?.span || []), 'className' ]
   }
-
-  closeAllLists();
-  return out.join('\n');
 };
+
+function Markdown({ text, onCitationClick, className = 'md' }) {
+  const remarkPlugins = [remarkGfm, remarkMath];
+  const rehypePlugins = [
+    rehypeBracketedCitations,
+    rehypeSlug,
+    [rehypeAutolinkHeadings, { behavior: 'append' }],
+    rehypeHighlight,
+    [rehypeSanitize, sanitizeSchema],
+    rehypeKatex
+  ];
+
+  return (
+    <ReactMarkdown
+      className={className}
+      remarkPlugins={remarkPlugins}
+      rehypePlugins={rehypePlugins}
+      components={{
+        table: ({ node, ...props }) => (
+          <div className="md-table-wrap">
+            <table className="md-table" {...props} />
+          </div>
+        ),
+        th: ({ node, ...props }) => <th className="md-th" {...props} />,
+        td: ({ node, ...props }) => <td className="md-td" {...props} />,
+        a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
+        sup: ({ node, ...props }) => {
+          const n = Number(node?.properties?.['data-citation']);
+          const clickable =
+            node?.properties?.className?.includes?.('md-citation') && !Number.isNaN(n);
+          return (
+            <sup
+              {...props}
+              role={clickable ? 'button' : undefined}
+              tabIndex={clickable ? 0 : undefined}
+              onKeyDown={clickable ? (e) => { if (e.key === 'Enter' || e.key === ' ') onCitationClick?.(n); } : undefined}
+              onClick={clickable && onCitationClick ? () => onCitationClick(n) : undefined}
+              style={clickable ? { cursor: 'pointer' } : undefined}
+            />
+          );
+        }
+      }}
+    >
+      {text || ''}
+    </ReactMarkdown>
+  );
+}
 
 /* =========================
    CITATION OVERLAY
    ========================= */
 const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isPresented) return;
+    const onKey = (e) => { if (e.key === 'Escape') onDismiss(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isPresented, onDismiss]);
+
   if (!isPresented || !citation) return null;
+
   const handleBackdropClick = (e) => { if (e.target === e.currentTarget) onDismiss(); };
   const handleVisitLink = () => { if (citation.url) window.open(citation.url, '_blank', 'noopener,noreferrer'); };
 
@@ -350,6 +269,7 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
       role="dialog"
       aria-modal="true"
       onClick={handleBackdropClick}
+      ref={containerRef}
       style={{
         position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)',
         display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20
@@ -519,21 +439,6 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
 };
 
 const MessageBubble = ({ message, theme, onTapCitation }) => {
-  const containerRef = useRef(null);
-  useEffect(() => {
-    const handler = (e) => {
-      const t = e.target;
-      if (t.tagName === 'SUP' && t.dataset.citation) {
-        const number = parseInt(t.dataset.citation, 10);
-        const citation = message.citations?.find(c => c.number === number);
-        if (citation && onTapCitation) onTapCitation(citation);
-      }
-    };
-    const el = containerRef.current;
-    if (el) el.addEventListener('click', handler);
-    return () => { if (el) el.removeEventListener('click', handler); };
-  }, [message.citations, onTapCitation]);
-
   if (message.role === 'user') {
     const getLabel = () => message.wasInWriteMode ? 'Write Request:' : (message.wasInReasonMode ? 'Reason Request:' : 'Search Query:');
     return (
@@ -559,12 +464,15 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
             <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-        <div
-          ref={containerRef}
-          className="md"
-          style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
-          dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }}
+
+        <Markdown
+          text={message.content}
+          onCitationClick={(n) => {
+            const citation = message.citations?.find(c => c.number === n);
+            if (citation && onTapCitation) onTapCitation(citation);
+          }}
         />
+
         <button
           onClick={async () => {
             try { await navigator.clipboard.writeText(message.content || ''); } catch {}
@@ -591,11 +499,7 @@ const StreamingResponse = ({ content, theme }) => (
         </div>
       )}
     </div>
-    <div
-      className="md"
-      style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
-      dangerouslySetInnerHTML={{ __html: content ? renderMarkdown(content) + '<span class="cursor">▍</span>' : '' }}
-    />
+    <Markdown text={content ? content + ' ▍' : ''} />
   </div>
 );
 
@@ -797,53 +701,16 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   font-style: italic;
 }
 
-/* Lists: Perfect nested indentation */
-.md ul, .md ol { 
-  margin: 0.75rem 0; 
-  padding-left: 0;
-  list-style: none;
+/* ✅ Lists: native browser list logic (fixes nesting) */
+.md ul, .md ol {
+  margin: 0.75rem 0 0.75rem 1.25rem;
+  padding-left: 1rem;
 }
-
-.md li { 
-  margin: 0.25rem 0; 
-  line-height: 1.6; 
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.md ul li::before {
-  content: "•";
-  color: ${theme.accentSoftBlue};
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.md ol {
-  counter-reset: list-counter;
-}
-
-.md ol li {
-  counter-increment: list-counter;
-}
-
-.md ol li::before {
-  content: counter(list-counter) ".";
-  color: ${theme.accentSoftBlue};
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-width: 1.2rem;
-}
-
-/* Nested lists with proper indentation */
-.md ul ul, .md ol ol, .md ul ol, .md ol ul { 
-  margin: 0.25rem 0;
-  padding-left: 1.5rem;
-}
-
+.md li { margin: 0.25rem 0; }
+.md ol { list-style: decimal; }
+.md ul { list-style: disc; }
+.md ul ul { list-style: circle; }
+.md ul ul ul { list-style: square; }
 .md li p { margin: 0.25rem 0; }
 
 /* BEAUTIFUL TABLES */
@@ -860,7 +727,6 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
     0 4px 16px -4px rgba(0,0,0,0.1);
   border: 1px solid ${theme.textSecondary}08;
 }
-
 .md-table {
   width: 100%;
   border-collapse: separate;
@@ -870,18 +736,13 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   color: ${theme.textPrimary};
   background: ${theme.backgroundSurface};
 }
-
 .md-table thead th {
   position: sticky;
   top: 0;
   z-index: 10;
   text-align: left;
   padding: 16px 20px;
-  background: linear-gradient(
-    135deg, 
-    ${theme.textSecondary}15 0%, 
-    ${theme.textSecondary}08 100%
-  );
+  background: linear-gradient(135deg, ${theme.textSecondary}15 0%, ${theme.textSecondary}08 100%);
   backdrop-filter: saturate(150%) blur(12px);
   -webkit-backdrop-filter: saturate(150%) blur(12px);
   color: ${theme.textPrimary};
@@ -892,7 +753,6 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   border-bottom: 2px solid ${theme.accentSoftBlue}25;
   white-space: nowrap;
 }
-
 .md-table tbody td {
   padding: 14px 20px;
   vertical-align: top;
@@ -902,75 +762,35 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   overflow-wrap: break-word;
   transition: background-color 0.2s ease;
 }
-
-.md-table tbody tr:nth-child(even) td { 
-  background: ${theme.textSecondary}04; 
-}
-
+.md-table tbody tr:nth-child(even) td { background: ${theme.textSecondary}04; }
 .md-table tbody tr:hover td { 
   background: ${theme.accentSoftBlue}08; 
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-
 .md-table thead th:first-child { border-top-left-radius: 16px; }
 .md-table thead th:last-child  { border-top-right-radius: 16px; }
 .md-table tbody tr:last-child td { border-bottom: none; }
 .md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 16px; }
 .md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 16px; }
-
 .md-table .align-left { text-align: left; }
 .md-table .align-center { text-align: center; }
 .md-table .align-right { text-align: right; }
-
-.md-table code { 
-  white-space: nowrap; 
-  background: ${theme.textSecondary}10;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-.md-table strong {
-  color: ${theme.textPrimary};
-  font-weight: 600;
-}
-
-.md-table em {
-  color: ${theme.textSecondary};
-  font-style: italic;
-}
+.md-table code { white-space: nowrap; background: ${theme.textSecondary}10; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+.md-table strong { color: ${theme.textPrimary}; font-weight: 600; }
+.md-table em { color: ${theme.textSecondary}; font-style: italic; }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .md-table-wrap {
-    margin: 1rem -16px;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
-  
-  .md-table thead th, .md-table tbody td { 
-    padding: 12px 16px; 
-    font-size: 13px;
-  }
-  
+  .md-table-wrap { margin: 1rem -16px; border-radius: 0; border-left: none; border-right: none; }
+  .md-table thead th, .md-table tbody td { padding: 12px 16px; font-size: 13px; }
   .md-table thead th:first-child,
-  .md-table tbody tr:last-child td:first-child { 
-    border-radius: 0; 
-  }
-  
+  .md-table tbody tr:last-child td:first-child { border-radius: 0; }
   .md-table thead th:last-child,
-  .md-table tbody tr:last-child td:last-child  { 
-    border-radius: 0; 
-  }
+  .md-table tbody tr:last-child td:last-child  { border-radius: 0; }
 }
-
 @media (max-width: 520px) {
-  .md-table thead th, .md-table tbody td { 
-    padding: 10px 12px; 
-    font-size: 12px;
-  }
+  .md-table thead th, .md-table tbody td { padding: 10px 12px; font-size: 12px; }
 }
 
 /* Horizontal rule */
@@ -1043,7 +863,7 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
-      const response = await fetch('/api/mock-response', {
+      const response = await fetch(CHAT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -1054,56 +874,91 @@ const AstraApp = () => {
         signal: abortControllerRef.current.signal
       });
 
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       setIsLoading(false);
       setIsStreaming(true);
       setStreamingContent('');
 
-      // Mock streaming response for demo
-      const mockContent = `## Key trial findings
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error('No readable stream');
+      const decoder = new TextDecoder();
+      const isSSE = (response.headers.get('content-type') || '').includes('text/event-stream');
 
-• NEJM multicenter RCT (n = 1,563; "Early Restrictive vs Liberal"):
-- Restrictive arm received ≈2.1 L less fluid over the 24-hour protocol period.
-- Restrictive group initiated vasopressors earlier and more often; they had longer vasopressor duration.
-- No significant difference in death before discharge home by day 90 (14.0% restrictive vs 14.9% liberal; difference −0.9 percentage points; P = 0.61). Serious adverse events similar. [3]
+      let full = '';
+      let buffer = '';
 
-• CLASSIC trial (ICU patients with septic shock after initial resuscitation):
-- Restrictive approach reduced additional ICU fluid volumes (median ~1.8 L vs ~3.8 L in usual care).
-- No difference in 90-day mortality (42.3% restrictive vs 42.1% usual care; RR 1.00). No difference in serious adverse events.
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
 
-| Trial | Population | Fluid Difference | Mortality Outcome |
-|-------|------------|------------------|-------------------|
-| NEJM | Early septic shock | 2.1L less | 14.0% vs 14.9% |
-| CLASSIC | ICU after resuscitation | 1.8L vs 3.8L | 42.3% vs 42.1% |`;
+        buffer += decoder.decode(value, { stream: true });
 
-      // Simulate streaming
-      let currentIndex = 0;
-      const streamInterval = setInterval(() => {
-        if (currentIndex < mockContent.length) {
-          const chunk = mockContent.slice(0, currentIndex + 10);
-          setStreamingContent(chunk);
-          currentIndex += 10;
-        } else {
-          clearInterval(streamInterval);
-          setIsStreaming(false);
-          
-          const assistantMessage = {
-            id: Date.now() + 1,
-            role: 'assistant',
-            content: mockContent,
-            citations: [
-              { number: 3, title: 'Early Restrictive vs Liberal Fluid Management', url: 'https://example.com', authors: 'NEJM Study Group' }
-            ],
-            timestamp: new Date(),
-            isStreamingComplete: true
-          };
+        // Process by lines to handle partial chunks
+        const lines = buffer.split(/\r?\n/);
+        buffer = lines.pop() || '';
 
-          setMessages(prev => [...prev, assistantMessage]);
-          setStreamingContent('');
+        for (const raw of lines) {
+          const line = raw.trim();
+          if (!line) continue;
+
+          let piece = '';
+
+          if (isSSE) {
+            // Expect lines like: "data: {...}" or "data: [DONE]"
+            if (!line.startsWith('data:')) continue;
+            const data = line.slice(5).trim();
+            if (data === '[DONE]') continue;
+
+            try {
+              const evt = JSON.parse(data);
+              // OpenAI-ish or generic
+              piece =
+                evt?.choices?.[0]?.delta?.content ??
+                evt?.delta ??
+                evt?.text ??
+                evt?.content ??
+                '';
+            } catch {
+              // if server sometimes sends plain text inside data:
+              piece = data;
+            }
+          } else {
+            // JSONL or plain text per line
+            try {
+              const obj = JSON.parse(line);
+              piece =
+                obj?.delta ??
+                obj?.text ??
+                obj?.choices?.[0]?.delta?.content ??
+                obj?.content ??
+                '';
+            } catch {
+              piece = line;
+            }
+          }
+
+          if (piece) {
+            full += piece;
+            setStreamingContent(full);
+          }
         }
-      }, 50);
+      }
 
+      setIsStreaming(false);
+
+      const assistantMessage = {
+        id: Date.now() + 1,
+        role: 'assistant',
+        content: full,
+        // If your backend also streams citations, stitch them here
+        citations: undefined,
+        timestamp: new Date(),
+        isStreamingComplete: true
+      };
+
+      setMessages(prev => [...prev, assistantMessage]);
+      setStreamingContent('');
     } catch (error) {
       if (error.name === 'AbortError') return;
       setIsLoading(false);
@@ -1124,7 +979,7 @@ const AstraApp = () => {
     if (isStreaming) {
       setIsStreaming(false);
       if (streamingContent) {
-        const assistantMessage = { id: Date.now(), role: 'assistant', content: streamingContent, timestamp: new Date() };
+        const assistantMessage = { id: Date.now(), role: 'assistant', content: streamingContent, timestamp: new Date(), isStreamingComplete: true };
         setMessages(prev => [...prev, assistantMessage]);
       }
       setStreamingContent('');
