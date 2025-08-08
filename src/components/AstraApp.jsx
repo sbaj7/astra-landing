@@ -217,34 +217,37 @@ export const renderMarkdown = (raw = '') => {
     s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
   const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
-  const depthFromIndent = (s) => Math.floor(tabsToSpaces(s).length / 2); // 2 spaces per level
-
+const depthFromIndent = (s) => {
+  const spaces = s.replace(/\t/g, '    '); // convert tabs to 4 spaces
+  if (spaces.length === 0) return 0;
+  return Math.floor(spaces.length / 4); // 4 spaces per level
+};
   const closeListsTo = (level) => {
     while (listStack.length > level) {
       out.push(`</${listStack.pop()}>`);
     }
   };
 
-  const ensureListAtDepth = (depth, type) => {
-    // close extra levels
-    while (listStack.length > depth + 1) {
-      out.push(`</${listStack.pop()}>`);
-    }
-    // open missing parents as <ul>
-    while (listStack.length < depth) {
-      out.push('<ul>');
-      listStack.push('ul');
-    }
-    // open or switch list at target depth
-    if (listStack.length === depth) {
-      out.push(`<${type}>`);
-      listStack.push(type);
-    } else if (listStack[depth] !== type) {
-      out.push(`</${listStack.pop()}>`);
-      out.push(`<${type}>`);
-      listStack.push(type);
-    }
-  };
+const ensureListAtDepth = (depth, type) => {
+  // Close extra levels
+  while (listStack.length > depth) {
+    out.push(`</${listStack.pop()}>`);
+  }
+  // Open missing parents as <ul>
+  while (listStack.length < depth) {
+    out.push('<ul>');
+    listStack.push('ul');
+  }
+  // Open or switch list at target depth
+  if (listStack.length === depth) {
+    out.push(`<${type}>`);
+    listStack.push(type);
+  } else if (listStack[depth - 1] !== type) {
+    out.push(`</${listStack.pop()}>`);
+    out.push(`<${type}>`);
+    listStack.push(type);
+  }
+};
 
   const emitParagraph = (text) => out.push(`<p>${processInline(text.trim())}</p>`);
 
