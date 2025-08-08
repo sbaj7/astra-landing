@@ -178,7 +178,7 @@ export const renderMarkdown = (raw = '') => {
     }
     
     // Unordered lists (bullets) - group consecutive items
-    if (line.match(/^[•*+\-]\s/)) {
+    if (line.match(/^[•*+\-–]\s/)) {
       result.push('<ul>');
       while (i < lines.length && lines[i].match(/^[•*+\-]\s/)) {
         const text = lines[i].replace(/^[•*+\-]\s+/, '');
