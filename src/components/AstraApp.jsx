@@ -136,240 +136,317 @@ const useSpeechRecognition = () => {
 };
 
 /* =========================
-   MARKDOWN PROCESSOR
+   MARKDOWN RENDERING
+   - Beautiful tables (alignment-aware)
+   - Proper bullets (supports en dash) + **nested sub-bullets**
    ========================= */
-const escapeHTML = (str = '') =>
-  str.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
-     .replace(/</g, '&lt;')
-     .replace(/>/g, '&gt;');
 
-const processInlineElements = (text = '') => (
+// --- helpers ---
+const escapeHTML = (s = '') =>
+  s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
+   .replace(/</g, '&lt;')
+   .replace(/>/g, '&gt;');
+
+const processInline = (text = '') => (
   escapeHTML(text)
-    // Bold text
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Italic text (avoid conflicting with bold)
     .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
-    // Inline code
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Links
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    // Citations
     .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>')
 );
 
+// alignment-aware, responsive table
 const processTable = (tableLines) => {
   const parseCells = (line) =>
     line.split('|')
-        .map(cell => cell.trim())
-        .filter((cell, index, array) => 
-          !(index === 0 && cell === '') && 
-          !(index === array.length - 1 && cell === '')
-        );
+      .map(c => c.trim())
+      .filter((c, i, arr) => !(i === 0 && c === '') && !(i === arr.length - 1 && c === ''));
 
-  const headerLine = tableLines[0];
-  const alignmentLineIndex = tableLines.findIndex(line => 
-    /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(line)
-  );
-  
-  const alignmentLine = alignmentLineIndex >= 0 ? tableLines[alignmentLineIndex] : null;
-  
-  const alignments = alignmentLine
-    ? parseCells(alignmentLine).map(alignment => {
-        const hasLeftColon = alignment.startsWith(':');
-        const hasRightColon = alignment.endsWith(':');
-        if (hasLeftColon && hasRightColon) return 'center';
-        if (hasRightColon) return 'right';
+  const header = tableLines[0];
+  const alignRowIdx = tableLines.findIndex((l) => /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l));
+  const alignRow = alignRowIdx >= 0 ? tableLines[alignRowIdx] : null;
+
+  const align = alignRow
+    ? parseCells(alignRow).map(a => {
+        const left = a.startsWith(':'), right = a.endsWith(':');
+        if (left && right) return 'center';
+        if (right) return 'right';
         return 'left';
       })
     : [];
 
-  const headerCells = parseCells(headerLine);
-  
-  const bodyLines = tableLines
-    .filter((line, index) => index !== 0 && index !== alignmentLineIndex)
-    .filter(line => line.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(line));
+  const headCells = parseCells(header);
 
-  const createTableRow = (line, cellTag) => {
+  const bodyLines = tableLines
+    .filter((l, i) => i !== 0 && i !== alignRowIdx)
+    .filter(l => l.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(l));
+
+  const rowToHtml = (line, tag) => {
     const cells = parseCells(line);
-    const cellsHTML = cells.map((cell, index) => {
-      const alignment = alignments[index] || 'left';
-      return `<${cellTag} class="md-td align-${alignment}">${processInlineElements(cell)}</${cellTag}>`;
+    const tds = cells.map((cell, idx) => {
+      const a = align[idx] || 'left';
+      return `<${tag} class="md-td align-${a}">${processInline(cell)}</${tag}>`;
     }).join('');
-    return `<tr>${cellsHTML}</tr>`;
+    return `<tr>${tds}</tr>`;
   };
 
-  const theadHTML = `<thead><tr>${
-    headerCells.map((cell, index) => {
-      const alignment = alignments[index] || 'left';
-      return `<th class="md-th align-${alignment}">${processInlineElements(cell)}</th>`;
+  const thead = `<thead><tr>${
+    headCells.map((cell, idx) => {
+      const a = align[idx] || 'left';
+      return `<th class="md-th align-${a}">${processInline(cell)}</th>`;
     }).join('')
   }</tr></thead>`;
 
-  const tbodyHTML = `<tbody>${bodyLines.map(line => createTableRow(line, 'td')).join('')}</tbody>`;
+  const tbody = `<tbody>${bodyLines.map(line => rowToHtml(line, 'td')).join('')}</tbody>`;
 
-  return `<div class="md-table-wrap"><table class="md-table">${theadHTML}${tbodyHTML}</table></div>`;
+  return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
 };
 
-export const renderMarkdown = (rawText = '') => {
-  if (!rawText) return '';
+export const renderMarkdown = (raw = '') => {
+  if (!raw) return '';
 
-  const lines = rawText.split('\n');
-  const output = [];
+  const lines = raw.split('\n');
+  const out = [];
 
-  // Regex patterns
-  const bulletListPattern = /^(\s*)([\*\+\-•–])\s+(.*)$/;
-  const numberedListPattern = /^(\s*)(\d+)\.\s+(.*)$/;
-  const codeFencePattern = /^```/;
+  const listStack = [];            // stack of 'ul' | 'ol'
+  let lastOpenedLiIndex = -1;      // index in out[] where the last <li> started
+  let lastLiDepth = -1;            // depth of last <li>
 
-  const convertTabsToSpaces = (str) => str.replace(/\t/g, '    ');
-  const calculateDepth = (str) => Math.floor(convertTabsToSpaces(str).length / 2);
+  const bulletRE  = /^(\s*)([\*\+\-•–])\s+(.*)$/;   // bullets (incl. en dash)
+  const numberRE  = /^(\s*)(\d+)\.\s+(.*)$/;        // ordered "1. ..."
+  const codeFence = /^```/;
 
-  const isTableStartLine = (index) =>
-    (lines[index] || '').includes('|') &&
-    /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(lines[index + 1] || '');
+  const tableStart = (i) =>
+    (lines[i] || '').includes('|') &&
+    /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(lines[i + 1] || '');
 
-  const extractTableBlock = (startIndex) => {
-    const tableLines = [lines[startIndex], lines[startIndex + 1]];
-    let currentIndex = startIndex + 2;
-    
-    while (currentIndex < lines.length && lines[currentIndex].includes('|')) {
-      tableLines.push(lines[currentIndex]);
-      currentIndex++;
-    }
-    
-    return { block: tableLines, nextIndex: currentIndex };
+  const readTable = (i) => {
+    const tbl = [lines[i], lines[i + 1]];
+    let j = i + 2;
+    while (j < lines.length && lines[j].includes('|')) { tbl.push(lines[j]); j++; }
+    return { block: tbl, next: j };
   };
 
-  let currentListDepth = 0;
+  const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
+  const depthFromIndent = (s) => Math.floor(tabsToSpaces(s).length / 2); // 2 spaces per level
 
-  const adjustListDepth = (targetDepth) => {
-    while (currentListDepth < targetDepth) {
-      output.push('<ul>');
-      currentListDepth++;
-    }
-    while (currentListDepth > targetDepth) {
-      output.push('</ul>');
-      currentListDepth--;
+  const closeListsTo = (level) => {
+    while (listStack.length > level) {
+      out.push(`</${listStack.pop()}>`);
     }
   };
 
-  const closeAllLists = () => {
-    while (currentListDepth > 0) {
-      output.push('</ul>');
-      currentListDepth--;
+  const ensureListAtDepth = (depth, type) => {
+    // close extra levels
+    while (listStack.length > depth + 1) {
+      out.push(`</${listStack.pop()}>`);
+    }
+    // open missing parents as <ul>
+    while (listStack.length < depth) {
+      out.push('<ul>');
+      listStack.push('ul');
+    }
+    // open or switch list at target depth
+    if (listStack.length === depth) {
+      out.push(`<${type}>`);
+      listStack.push(type);
+    } else if (listStack[depth] !== type) {
+      out.push(`</${listStack.pop()}>`);
+      out.push(`<${type}>`);
+      listStack.push(type);
     }
   };
 
-  let lineIndex = 0;
-  
-  while (lineIndex < lines.length) {
-    const currentLine = lines[lineIndex];
+  const emitParagraph = (text) => out.push(`<p>${processInline(text.trim())}</p>`);
 
-    // Handle empty lines
-    if (!currentLine.trim()) {
-      closeAllLists();
-      lineIndex++;
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // blank line → close all lists
+    if (!line.trim()) {
+      closeListsTo(0);
+      lastOpenedLiIndex = -1;
+      lastLiDepth = -1;
+      i++;
       continue;
     }
 
-    // Handle code blocks
-    if (codeFencePattern.test(currentLine)) {
-      closeAllLists();
-      const codeLines = [];
-      lineIndex++;
-      
-      while (lineIndex < lines.length && !codeFencePattern.test(lines[lineIndex])) {
-        codeLines.push(escapeHTML(lines[lineIndex]));
-        lineIndex++;
+    // fenced code
+    if (codeFence.test(line)) {
+      closeListsTo(0);
+      const buf = [];
+      i++;
+      while (i < lines.length && !codeFence.test(lines[i])) {
+        buf.push(escapeHTML(lines[i]));
+        i++;
       }
-      
-      output.push(`<pre><code>${codeLines.join('\n')}</code></pre>`);
-      lineIndex++;
+      out.push(`<pre><code>${buf.join('\n')}</code></pre>`);
+      i++; // skip closing ```
       continue;
     }
 
-    // Handle tables
-    if (isTableStartLine(lineIndex)) {
-      closeAllLists();
-      const { block, nextIndex } = extractTableBlock(lineIndex);
-      output.push(processTable(block));
-      lineIndex = nextIndex;
+    // tables
+    if (tableStart(i)) {
+      closeListsTo(0);
+      const { block, next } = readTable(i);
+      out.push(processTable(block));
+      lastOpenedLiIndex = -1;
+      lastLiDepth = -1;
+      i = next;
       continue;
     }
 
-    // Handle blockquotes
-    const blockquoteMatch = currentLine.match(/^\s*>\s+(.*)$/);
-    if (blockquoteMatch) {
-      closeAllLists();
-      output.push(`<blockquote>${processInlineElements(blockquoteMatch[1])}</blockquote>`);
-      lineIndex++;
-      continue;
-    }
-
-    // Handle headers
-    const headerMatch = currentLine.match(/^(#{1,6})\s+(.*)$/);
-    if (headerMatch) {
-      closeAllLists();
-      const level = headerMatch[1].length;
-      output.push(`<h${level}>${processInlineElements(headerMatch[2])}</h${level}>`);
-      lineIndex++;
-      continue;
-    }
-
-    // Handle bullet lists
-    const bulletMatch = currentLine.match(bulletListPattern);
-    if (bulletMatch) {
-      const [, whitespace, bullet, content] = bulletMatch;
-      let depth = calculateDepth(whitespace);
-      
-      // Special handling for dashes at root level
-      if (bullet === '-' && depth === 0) {
-        depth = 1;
-      } else {
-        depth = depth + 1;
+    // blockquote
+    {
+      const m = line.match(/^\s*>\s+(.*)$/);
+      if (m) {
+        closeListsTo(0);
+        out.push(`<blockquote>${processInline(m[1])}</blockquote>`);
+        lastOpenedLiIndex = -1;
+        lastLiDepth = -1;
+        i++;
+        continue;
       }
-      
-      adjustListDepth(depth);
-      output.push(`<li>${processInlineElements(content)}</li>`);
-      lineIndex++;
-      continue;
     }
 
-    // Handle numbered lists
-    const numberedMatch = currentLine.match(numberedListPattern);
-    if (numberedMatch) {
-      const [, whitespace, , content] = numberedMatch;
-      const depth = calculateDepth(whitespace) + 1;
-      
-      // Use ordered list for first level, unordered for nested
-      while (currentListDepth < depth) {
-        output.push(currentListDepth === 0 ? '<ol>' : '<ul>');
-        currentListDepth++;
+    // headers
+    {
+      const m = line.match(/^(#{1,3})\s+(.*)$/);
+      if (m) {
+        closeListsTo(0);
+        const level = m[1].length;
+        out.push(`<h${level}>${processInline(m[2])}</h${level}>`);
+        lastOpenedLiIndex = -1;
+        lastLiDepth = -1;
+        i++;
+        continue;
       }
-      while (currentListDepth > depth) {
-        output.push('</ul>');
-        currentListDepth--;
-      }
-      
-      output.push(`<li>${processInlineElements(content)}</li>`);
-      lineIndex++;
-      continue;
     }
 
-    // Handle regular paragraphs
-    closeAllLists();
-    output.push(`<p>${processInlineElements(currentLine.trim())}</p>`);
-    lineIndex++;
+    // unordered bullet
+    {
+      const m = line.match(bulletRE);
+      if (m) {
+        const depth = depthFromIndent(m[1]);
+        const content = m[3];
+
+        ensureListAtDepth(depth, 'ul');
+        out.push(`<li>${processInline(content)}`);
+        // don't close </li> yet — we might attach auto-subpoints
+        lastOpenedLiIndex = out.length - 1;
+        lastLiDepth = depth;
+
+        // lookahead: auto-nest any immediate next lines that start with a dash/en-dash and NO extra indent
+        let j = i + 1;
+        const subpoints = [];
+        while (j < lines.length) {
+          const nxt = lines[j];
+          if (!nxt.trim()) break;
+          // stop if next is a table, header, quote, code, or a "proper" list item with indent
+          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
+
+          const dash = nxt.match(/^\s*[–-]\s+(.*)$/); // exactly your "– something" lines
+          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
+
+          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
+            subpoints.push(dash[1]);
+            j++;
+            continue;
+          }
+          if (properBullet) break; // next proper list item; stop
+          break; // anything else → stop
+        }
+
+        if (subpoints.length) {
+          out.push('<ul>');
+          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
+          out.push('</ul>');
+          i = j; // consumed the subpoint lines
+        } else {
+          i++; // just the one bullet
+        }
+
+        out.push('</li>');
+        continue;
+      }
+    }
+
+    // ordered bullet
+    {
+      const m = line.match(numberRE);
+      if (m) {
+        const depth = depthFromIndent(m[1]);
+        const content = m[3];
+
+        ensureListAtDepth(depth, 'ol');
+        out.push(`<li>${processInline(content)}`);
+        lastOpenedLiIndex = out.length - 1;
+        lastLiDepth = depth;
+
+        // same auto-subpoint behavior for dashes under numbered lines
+        let j = i + 1;
+        const subpoints = [];
+        while (j < lines.length) {
+          const nxt = lines[j];
+          if (!nxt.trim()) break;
+          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
+
+          const dash = nxt.match(/^\s*[–-]\s+(.*)$/);
+          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
+
+          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
+            subpoints.push(dash[1]);
+            j++;
+            continue;
+          }
+          if (properBullet) break;
+          break;
+        }
+
+        if (subpoints.length) {
+          out.push('<ul>');
+          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
+          out.push('</ul>');
+          i = j;
+        } else {
+          i++;
+        }
+
+        out.push('</li>');
+        continue;
+      }
+    }
+
+    // paragraph
+    closeListsTo(0);
+    emitParagraph(line);
+    i++;
   }
 
-  closeAllLists();
-  return output.join('\n');
+  // close any dangling lists
+  closeListsTo(0);
+  return out.join('\n');
 };
 
 /* =========================
    CITATION MODAL
    ========================= */
 const CitationModal = ({ citation, isOpen, onClose, theme }) => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen || !citation) return null;
 
   const handleBackdropClick = (e) => {
@@ -387,6 +464,7 @@ const CitationModal = ({ citation, isOpen, onClose, theme }) => {
       role="dialog"
       aria-modal="true"
       onClick={handleBackdropClick}
+      ref={containerRef}
       style={{
         position: 'fixed',
         inset: 0,
@@ -691,7 +769,7 @@ const EmptyState = ({ currentMode, onSampleSelect, theme }) => {
 
 const MessageBubble = ({ message, theme, onCitationClick }) => {
   const containerRef = useRef(null);
-
+  
   useEffect(() => {
     const handleClick = (e) => {
       const target = e.target;
