@@ -1546,61 +1546,70 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: queryToSend,
+          mode: currentMode,
+          stream: true
+        }),
+        signal: abortControllerRef.current.signal
+      });
+
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       setIsLoading(false);
       setIsStreaming(true);
       setStreamingContent('');
 
-      // Mock streaming response
-      const mockContent = `## Key trial findings
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error('Response body is not readable');
 
-• NEJM multicenter RCT (n = 1,563; "Early Restrictive vs Liberal"):
-- Restrictive arm received ≈2.1 L less fluid over the 24-hour protocol period.
-- Restrictive group initiated vasopressors earlier and more often; they had longer vasopressor duration.
-- No significant difference in death before discharge home by day 90 (14.0% restrictive vs 14.9% liberal; difference −0.9 percentage points; P = 0.61). Serious adverse events similar. [3]
+      let fullContent = '';
+      let citations = [];
 
-• CLASSIC trial (ICU patients with septic shock after initial resuscitation):
-- Restrictive approach reduced additional ICU fluid volumes (median ~1.8 L vs ~3.8 L in usual care).
-- No difference in 90-day mortality (42.3% restrictive vs 42.1% usual care; RR 1.00). No difference in serious adverse events.
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-| Trial | Population | Fluid Difference | Mortality Outcome |
-|-------|------------|------------------|-------------------|
-| NEJM | Early septic shock | 2.1L less | 14.0% vs 14.9% |
-| CLASSIC | ICU after resuscitation | 1.8L vs 3.8L | 42.3% vs 42.1% |`;
+        const chunk = new TextDecoder().decode(value);
+        const lines = chunk.split('\n');
 
-      // Simulate streaming
-      let currentIndex = 0;
-      const streamInterval = setInterval(() => {
-        if (currentIndex < mockContent.length) {
-          const chunk = mockContent.slice(0, currentIndex + 10);
-          setStreamingContent(chunk);
-          currentIndex += 10;
-        } else {
-          clearInterval(streamInterval);
-          setIsStreaming(false);
-          
-          const assistantMessage = {
-            id: Date.now() + 1,
-            role: 'assistant',
-            content: mockContent,
-            citations: [
-              {
-                number: 3,
-                title: 'Early Restrictive vs Liberal Fluid Management',
-                url: 'https://example.com',
-                authors: 'NEJM Study Group'
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              
+              if (data.content) {
+                fullContent += data.content;
+                setStreamingContent(fullContent);
               }
-            ],
-            timestamp: new Date(),
-            isStreamingComplete: true
-          };
-
-          setMessages(prev => [...prev, assistantMessage]);
-          setStreamingContent('');
+              
+              if (data.citations) {
+                citations = data.citations;
+              }
+              
+              if (data.done) {
+                setIsStreaming(false);
+                const assistantMessage = {
+                  id: Date.now() + 1,
+                  role: 'assistant',
+                  content: fullContent,
+                  citations: citations,
+                  timestamp: new Date(),
+                  isStreamingComplete: true
+                };
+                setMessages(prev => [...prev, assistantMessage]);
+                setStreamingContent('');
+                return;
+              }
+            } catch (parseError) {
+              console.warn('Failed to parse SSE data:', parseError);
+            }
+          }
         }
-      }, 50);
+      }
 
     } catch (error) {
       if (error.name === 'AbortError') return;
