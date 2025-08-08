@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Mic, ArrowUp, Square, Copy, Check, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
+import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
 
-// Original color system (unchanged)
+/* =========================
+   THEME
+   ========================= */
 const colors = {
   light: {
     backgroundPrimary: '#FAFAF9',
@@ -25,6 +27,21 @@ const colors = {
   }
 };
 
+const useTheme = () => {
+  const [isDark, setIsDark] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mq.matches);
+    const handler = e => setIsDark(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  return { colors: isDark ? colors.dark : colors.light, isDark };
+};
+
+/* =========================
+   SAMPLE QUERIES
+   ========================= */
 const sampleQueries = {
   search: [
     "Antithrombotic strategy in AF post-TAVI multicenter RCT outcomes",
@@ -46,22 +63,9 @@ const sampleQueries = {
   ]
 };
 
-const useTheme = () => {
-  const [isDark, setIsDark] = useState(false);
-  
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDark(mediaQuery.matches);
-    
-    const handler = (e) => setIsDark(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
-  
-  return { colors: isDark ? colors.dark : colors.light, isDark };
-};
-
-// Enhanced speech recognition with better error handling
+/* =========================
+   SPEECH RECOGNITION
+   ========================= */
 const useSpeechRecognition = () => {
   const [isRecording, setIsRecording] = useState(false);
   const [recognizedText, setRecognizedText] = useState('');
@@ -77,7 +81,7 @@ const useSpeechRecognition = () => {
       recognitionRef.current.continuous = true;
       recognitionRef.current.interimResults = true;
       recognitionRef.current.lang = 'en-US';
-      
+
       recognitionRef.current.onresult = (event) => {
         let text = '';
         for (let i = 0; i < event.results.length; i++) {
@@ -87,10 +91,7 @@ const useSpeechRecognition = () => {
         setError(null);
       };
 
-      recognitionRef.current.onend = () => {
-        setIsRecording(false);
-      };
-
+      recognitionRef.current.onend = () => setIsRecording(false);
       recognitionRef.current.onerror = (event) => {
         setError(event.error);
         setIsRecording(false);
@@ -100,7 +101,6 @@ const useSpeechRecognition = () => {
 
   const toggleRecording = useCallback(async () => {
     if (!isAvailable) return;
-    
     try {
       if (isRecording) {
         recognitionRef.current?.stop();
@@ -120,119 +120,33 @@ const useSpeechRecognition = () => {
   return { isRecording, recognizedText, isAvailable, toggleRecording, setRecognizedText, error };
 };
 
-// Proper markdown renderer with correct list handling and table support
-export const renderMarkdown = (raw = '') => {
-  if (!raw) return '';
-  
-  // Split into lines and process
-  const lines = raw.split('\n');
-  const result = [];
-  let i = 0;
-  
-  while (i < lines.length) {
-    const line = lines[i];
-    
-    // Skip empty lines but add spacing
-    if (!line.trim()) {
-      if (result.length > 0 && result[result.length - 1] !== '<br>') {
-        result.push('<br>');
-      }
-      i++;
-      continue;
-    }
-    
-    // Tables - check if current line looks like a table
-    if (line.includes('|')) {
-      const tableLines = [];
-      let j = i;
-      while (j < lines.length && lines[j].includes('|')) {
-        tableLines.push(lines[j]);
-        j++;
-      }
-      if (tableLines.length >= 2) {
-        result.push(processTable(tableLines));
-        i = j;
-        continue;
-      }
-    }
-    
-    // Headers
-    if (line.match(/^#{1,3}\s/)) {
-      const level = line.match(/^(#{1,3})/)[1].length;
-      const text = line.replace(/^#{1,3}\s+/, '');
-      result.push(`<h${level}>${processInline(text)}</h${level}>`);
-      i++;
-      continue;
-    }
-    
-    // Numbered items (custom block)
-    if (line.match(/^\d+\.\s/)) {
-      const match = line.match(/^(\d+)\.\s+(.*)$/);
-      if (match) {
-        const number = match[1];
-        const text = match[2];
-        result.push(`<div class="numbered-item"><span class="number">${number}.</span><span class="content">${processInline(text)}</span></div>`);
-      }
-      i++;
-      continue;
-    }
-    
-    // Unordered lists (bullets) - group consecutive items
-    if (line.match(/^[•*+\-–]\s/)) {
-      result.push('<ul>');
-      while (i < lines.length && lines[i].match(/^[•*+\-]\s/)) {
-        const text = lines[i].replace(/^[•*+\-]\s+/, '');
-        result.push(`<li>${processInline(text)}</li>`);
-        i++;
-      }
-      result.push('</ul>');
-      continue;
-    }
-    
-    // Blockquotes
-    if (line.match(/^>\s/)) {
-      const text = line.replace(/^>\s+/, '');
-      result.push(`<blockquote>${processInline(text)}</blockquote>`);
-      i++;
-      continue;
-    }
-    
-    // Horizontal rules
-    if (line.match(/^---+$/)) {
-      result.push('<hr>');
-      i++;
-      continue;
-    }
-    
-    // Code blocks
-    if (line.match(/^```/)) {
-      result.push('<pre><code>');
-      i++;
-      while (i < lines.length && !lines[i].match(/^```/)) {
-        // escape HTML inside code block
-        const safe = lines[i].replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        result.push(safe);
-        i++;
-      }
-      result.push('</code></pre>');
-      i++;
-      continue;
-    }
-    
-    // Regular paragraphs
-    if (line.trim()) {
-      result.push(`<p>${processInline(line.trim())}</p>`);
-    }
-    i++;
-  }
-  
-  return result.join('\n');
+/* =========================
+   MARKDOWN RENDERING
+   - Beautiful tables
+   - Proper bullets (supports en dash) + nested sub-bullets
+   ========================= */
+
+// Escape HTML (safe)
+const escapeHTML = (s) =>
+  s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Inline formatting
+const processInline = (text) => {
+  return escapeHTML(text)
+    // Bold
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    // Italic (avoid bold conflicts)
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+    // Code
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // Links
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    // Citations [1]
+    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>');
 };
 
-// Process markdown tables (alignment-aware + responsive wrapper)
+// Alignment-aware, responsive table
 const processTable = (tableLines) => {
-  if (tableLines.length < 2) return '';
-
   const parseCells = (line) =>
     line.split('|')
       .map(c => c.trim())
@@ -254,7 +168,6 @@ const processTable = (tableLines) => {
     : [];
 
   const headCells = parseCells(header);
-
   const bodyLines = tableLines
     .filter((l, i) => i !== 0 && i !== alignRowIdx)
     .filter(l => l.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(l));
@@ -275,50 +188,166 @@ const processTable = (tableLines) => {
     }).join('')
   }</tr></thead>`;
 
-  const tbody = `<tbody>${
-    bodyLines.map(line => rowToHtml(line, 'td')).join('')
-  }</tbody>`;
+  const tbody = `<tbody>${bodyLines.map(line => rowToHtml(line, 'td')).join('')}</tbody>`;
 
-  return [
-    '<div class="md-table-wrap">',
-    '<table class="md-table">',
-    thead,
-    tbody,
-    '</table>',
-    '</div>'
-  ].join('');
+  return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
 };
 
-// Process inline formatting
-const processInline = (text) => {
-  return text
-    // escape angle brackets first
-    .replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    // Bold
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Italic (avoid bold conflicts)
-    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
-    // Code
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    // Citations
-    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>');
+// Smart list parser with nesting support
+const renderMarkdown = (raw = '') => {
+  if (!raw) return '';
+
+  const lines = raw.split('\n');
+  const out = [];
+  const listStack = []; // track open <ul> levels (length === depth)
+
+  const closeListsTo = (level) => {
+    while (listStack.length > level) {
+      out.push('</ul>');
+      listStack.pop();
+    }
+  };
+
+  // Helper: detect table start (MD header row + alignment row)
+  const isTableStart = (idx) => {
+    const l0 = lines[idx] || '';
+    const l1 = lines[idx + 1] || '';
+    return l0.includes('|') && /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l1);
+  };
+
+  // Read a table block
+  const readTable = (idx) => {
+    const tbl = [lines[idx], lines[idx + 1]];
+    let j = idx + 2;
+    while (j < lines.length && lines[j].includes('|')) {
+      tbl.push(lines[j]);
+      j++;
+    }
+    return { block: tbl, next: j };
+  };
+
+  // Compute list depth from leading spaces (2 spaces = one level)
+  const bulletRE = /^(\s*)([•*+\-–])\s+(.*)$/; // includes en dash
+  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
+
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Blank line -> close lists
+    if (!line.trim()) {
+      closeListsTo(0);
+      i++;
+      continue;
+    }
+
+    // Tables
+    if (isTableStart(i)) {
+      closeListsTo(0);
+      const { block, next } = readTable(i);
+      out.push(processTable(block));
+      i = next;
+      continue;
+    }
+
+    // Code block ```
+    if (/^```/.test(line)) {
+      closeListsTo(0);
+      const buf = [];
+      i++;
+      while (i < lines.length && !/^```/.test(lines[i])) {
+        buf.push(escapeHTML(lines[i]));
+        i++;
+      }
+      out.push(`<pre><code>${buf.join('\n')}</code></pre>`);
+      i++; // skip closing ```
+      continue;
+    }
+
+    // Headers #,##,###
+    const h = line.match(/^(#{1,3})\s+(.*)$/);
+    if (h) {
+      closeListsTo(0);
+      const level = h[1].length;
+      out.push(`<h${level}>${processInline(h[2])}</h${level}>`);
+      i++;
+      continue;
+    }
+
+    // Blockquote
+    const bq = line.match(/^\s*>\s+(.*)$/);
+    if (bq) {
+      closeListsTo(0);
+      out.push(`<blockquote>${processInline(bq[1])}</blockquote>`);
+      i++;
+      continue;
+    }
+
+    // Horizontal rule
+    if (/^\s*---+\s*$/.test(line)) {
+      closeListsTo(0);
+      out.push('<hr>');
+      i++;
+      continue;
+    }
+
+    // BULLETED list item (supports en dash and nesting by indent)
+    const mBullet = line.match(bulletRE);
+    if (mBullet) {
+      const indent = mBullet[1].replace(/\t/g, '    ');
+      const depth = Math.floor(indent.length / 2); // every 2 spaces -> new level
+      const content = mBullet[3];
+
+      // Open/close stacks to match depth
+      if (listStack.length === 0) {
+        out.push('<ul>');
+        listStack.push('ul');
+      }
+      if (depth > listStack.length - 1) {
+        // Open missing levels
+        for (let k = listStack.length - 1; k < depth; k++) {
+          out.push('<ul>');
+          listStack.push('ul');
+        }
+      } else if (depth < listStack.length - 1) {
+        closeListsTo(depth + 1);
+      }
+
+      out.push(`<li>${processInline(content)}</li>`);
+      i++;
+      continue;
+    }
+
+    // NUMBERED item (kept as custom "numbered-item")
+    const mNum = line.match(numberRE);
+    if (mNum) {
+      closeListsTo(0);
+      const num = mNum[2];
+      const txt = mNum[3];
+      out.push(`<div class="numbered-item"><span class="number">${num}.</span><span class="content">${processInline(txt)}</span></div>`);
+      i++;
+      continue;
+    }
+
+    // Paragraph default
+    closeListsTo(0);
+    out.push(`<p>${processInline(line.trim())}</p>`);
+    i++;
+  }
+
+  // Close any remaining lists
+  closeListsTo(0);
+
+  return out.join('\n');
 };
 
-// Citation overlay component (unchanged visuals)
+/* =========================
+   CITATION OVERLAY
+   ========================= */
 const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
   if (!isPresented || !citation) return null;
-
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) onDismiss();
-  };
-
-  const handleVisitLink = () => {
-    if (citation.url) window.open(citation.url, '_blank', 'noopener,noreferrer');
-  };
+  const handleBackdropClick = (e) => { if (e.target === e.currentTarget) onDismiss(); };
+  const handleVisitLink = () => { if (citation.url) window.open(citation.url, '_blank', 'noopener,noreferrer'); };
 
   return (
     <div
@@ -326,50 +355,43 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
       aria-modal="true"
       onClick={handleBackdropClick}
       style={{
-        position: 'fixed', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px'
+        position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20
       }}
     >
       <div
         style={{
-          backgroundColor: theme.backgroundSurface, borderRadius: '16px', padding: '24px',
-          maxWidth: '500px', width: '100%', maxHeight: '80vh', overflow: 'auto',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+          backgroundColor: theme.backgroundSurface, borderRadius: 16, padding: 24,
+          maxWidth: 500, width: '100%', maxHeight: '80vh', overflow: 'auto',
+          boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
           <div style={{
             backgroundColor: theme.accentSoftBlue, color: 'white', borderRadius: '50%',
-            width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '12px', fontWeight: 'bold'
+            width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700
           }}>
             {citation.number}
           </div>
-          <button
-            onClick={onDismiss}
-            aria-label="Close"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: theme.textSecondary, padding: '4px' }}
-          >
+          <button onClick={onDismiss} aria-label="Close" style={{ background: 'none', border: 'none', cursor: 'pointer', color: theme.textSecondary, padding: 4 }}>
             <X size={20} />
           </button>
         </div>
 
-        <div style={{ marginBottom: '16px' }}>
-          <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', fontWeight: '600', color: theme.textPrimary, lineHeight: '1.4' }}>
+        <div style={{ marginBottom: 16 }}>
+          <h3 style={{ margin: '0 0 8px', fontSize: 18, fontWeight: 600, color: theme.textPrimary, lineHeight: 1.4 }}>
             {citation.title}
           </h3>
-          <p style={{ margin: 0, fontSize: '14px', color: theme.textSecondary }}>
-            {citation.authors}
-          </p>
+          <p style={{ margin: 0, fontSize: 14, color: theme.textSecondary }}>{citation.authors}</p>
         </div>
 
         {citation.url && (
           <button
             onClick={handleVisitLink}
             style={{
-              display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 16px',
-              backgroundColor: theme.accentSoftBlue, color: 'white', border: 'none', borderRadius: '8px',
-              cursor: 'pointer', fontSize: '14px', fontWeight: '500', width: '100%', justifyContent: 'center'
+              display: 'flex', alignItems: 'center', gap: 8, padding: '12px 16px',
+              backgroundColor: theme.accentSoftBlue, color: 'white', border: 'none', borderRadius: 8,
+              cursor: 'pointer', fontSize: 14, fontWeight: 500, width: '100%', justifyContent: 'center'
             }}
           >
             <ExternalLink size={16} />
@@ -381,38 +403,29 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
   );
 };
 
+/* =========================
+   UI PARTS (Toolbar, Etc.)
+   ========================= */
 const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
-  const [newChatCooldown, setNewChatCooldown] = useState(false);
-
+  const [cooldown, setCooldown] = useState(false);
   const handleNewChat = () => {
-    if (newChatCooldown) return;
-    setNewChatCooldown(true);
+    if (cooldown) return;
+    setCooldown(true);
     onNewChat();
-    setTimeout(() => setNewChatCooldown(false), 300);
+    setTimeout(() => setCooldown(false), 300);
   };
 
   return (
     <div style={{
-      height: '52px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      padding: '0 16px',
-      backgroundColor: theme.backgroundSurface,
-      borderBottomLeftRadius: '20px',
-      borderBottomRightRadius: '20px',
-      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-      position: 'relative',
-      zIndex: 10,
-      minHeight: '52px'
+      height: 52, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      padding: '0 16px', backgroundColor: theme.backgroundSurface,
+      borderBottomLeftRadius: 20, borderBottomRightRadius: 20,
+      boxShadow: '0 2px 8px rgba(0,0,0,0.1)', position: 'relative', zIndex: 10, minHeight: 52
     }}>
       <button
         onClick={onToggleSidebar}
         aria-label="Open sidebar"
-        style={{
-          padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent',
-          cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center'
-        }}
+        style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
         <Stethoscope size={18} color={theme.textPrimary} />
       </button>
@@ -420,21 +433,16 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       <h1 style={{
         color: theme.textPrimary,
         fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-        fontSize: '28px',
-        margin: 0,
-        fontWeight: 'normal'
+        fontSize: 28, margin: 0, fontWeight: 400
       }}>
         Astra
       </h1>
 
       <button
         onClick={handleNewChat}
-        disabled={newChatCooldown}
+        disabled={cooldown}
         aria-label="New chat"
-        style={{
-          padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent',
-          cursor: 'pointer', opacity: newChatCooldown ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center'
-        }}
+        style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer', opacity: cooldown ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
         <Edit3 size={18} color={theme.textPrimary} />
       </button>
@@ -450,7 +458,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
   ];
 
   return (
-    <div style={{ display: 'flex', gap: '6px' }}>
+    <div style={{ display: 'flex', gap: 6 }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = currentMode === key;
         return (
@@ -460,18 +468,11 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
             disabled={isDisabled}
             aria-pressed={isSelected}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '4px',
-              padding: '6px 10px',
-              borderRadius: '50px',
+              display: 'flex', alignItems: 'center', gap: 4, padding: '6px 10px', borderRadius: 50,
               border: `1px solid ${theme.textSecondary}50`,
               backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
-              color: isSelected ? '#ffffff' : theme.textPrimary,
-              fontSize: '12px',
-              fontWeight: '500',
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
+              color: isSelected ? '#fff' : theme.textPrimary,
+              fontSize: 12, fontWeight: 500, cursor: 'pointer', transition: 'all .2s ease',
               opacity: isDisabled ? 0.5 : 1
             }}
           >
@@ -486,16 +487,10 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
 
 const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
   const queries = sampleQueries[currentMode] || sampleQueries.search;
-
   return (
-    <div style={{
-      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-      padding: '32px 16px', height: '100%', gap: '24px'
-    }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px 16px', height: '100%', gap: 24 }}>
       <div style={{ textAlign: 'center' }}>
-        <div style={{
-          width: '36px', height: '36px', margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center'
-        }}>
+        <div style={{ width: 36, height: 36, margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
             <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={`${theme.grayPrimary}40`} />
           </svg>
@@ -503,28 +498,24 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         <h2 style={{
           color: `${theme.grayPrimary}60`,
           fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-          fontSize: '36px',
-          lineHeight: '1.1',
-          margin: 0,
-          maxWidth: '220px',
-          fontWeight: '300'
+          fontSize: 36, lineHeight: 1.1, margin: 0, maxWidth: 220, fontWeight: 300
         }}>
           Uncertainty ends here.
         </h2>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', width: '100%', maxWidth: '448px', padding: '0 32px' }}>
-        {queries.map((query, index) => (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: '100%', maxWidth: 448, padding: '0 32px' }}>
+        {queries.map((q, i) => (
           <button
-            key={index}
-            onClick={() => onSampleTapped(query)}
+            key={i}
+            onClick={() => onSampleTapped(q)}
             style={{
-              width: '100%', padding: '10px 20px', borderRadius: '50px', fontSize: '12px', fontWeight: '500', textAlign: 'center',
-              lineHeight: '1.4', backgroundColor: `${theme.grayPrimary}08`, border: `0.5px solid ${theme.grayPrimary}20`,
-              color: `${theme.grayPrimary}70`, cursor: 'pointer', transition: 'all 0.2s ease'
+              width: '100%', padding: '10px 20px', borderRadius: 50, fontSize: 12, fontWeight: 500, textAlign: 'center',
+              lineHeight: 1.4, backgroundColor: `${theme.grayPrimary}08`, border: `0.5px solid ${theme.grayPrimary}20`,
+              color: `${theme.grayPrimary}70`, cursor: 'pointer', transition: 'all .2s ease'
             }}
           >
-            {query}
+            {q}
           </button>
         ))}
       </div>
@@ -533,52 +524,30 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
 };
 
 const MessageBubble = ({ message, theme, onTapCitation }) => {
-  const [showCopied, setShowCopied] = useState(false);
   const containerRef = useRef(null);
-
-  const handleCopy = async () => {
-    if (!message.content) return;
-    try {
-      await navigator.clipboard.writeText(message.content);
-      setShowCopied(true);
-      setTimeout(() => setShowCopied(false), 1600);
-    } catch (err) {
-      console.error('Failed to copy text:', err);
-    }
-  };
-
   useEffect(() => {
     const handler = (e) => {
-      const target = e.target;
-      if (target.tagName === 'SUP' && target.dataset.citation) {
-        const number = parseInt(target.dataset.citation, 10);
+      const t = e.target;
+      if (t.tagName === 'SUP' && t.dataset.citation) {
+        const number = parseInt(t.dataset.citation, 10);
         const citation = message.citations?.find(c => c.number === number);
         if (citation && onTapCitation) onTapCitation(citation);
       }
     };
-    const container = containerRef.current;
-    if (container) container.addEventListener('click', handler);
-    return () => { if (container) container.removeEventListener('click', handler); };
+    const el = containerRef.current;
+    if (el) el.addEventListener('click', handler);
+    return () => { if (el) el.removeEventListener('click', handler); };
   }, [message.citations, onTapCitation]);
 
   if (message.role === 'user') {
-    const getQueryLabel = () => {
-      if (message.wasInWriteMode) return 'Write Request:';
-      if (message.wasInReasonMode) return 'Reason Request:';
-      return 'Search Query:';
-    };
-
+    const getLabel = () => message.wasInWriteMode ? 'Write Request:' : (message.wasInReasonMode ? 'Reason Request:' : 'Search Query:');
     return (
-      <div style={{ width: '100%', marginBottom: '16px' }}>
-        <div style={{ display: 'flex', backgroundColor: `${theme.accentSoftBlue}0D`, borderRadius: '6px' }}>
-          <div style={{ width: '3px', backgroundColor: theme.accentSoftBlue, flexShrink: 0 }} />
-          <div style={{ flex: 1, padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-            <div style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
-              {getQueryLabel()}
-            </div>
-            <div style={{ fontSize: '14px', color: theme.textPrimary }}>
-              {message.content}
-            </div>
+      <div style={{ width: '100%', marginBottom: 16 }}>
+        <div style={{ display: 'flex', backgroundColor: `${theme.accentSoftBlue}0D`, borderRadius: 6 }}>
+          <div style={{ width: 3, backgroundColor: theme.accentSoftBlue, flexShrink: 0 }} />
+          <div style={{ flex: 1, padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <div style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>{getLabel()}</div>
+            <div style={{ fontSize: 14, color: theme.textPrimary }}>{message.content}</div>
           </div>
         </div>
       </div>
@@ -586,150 +555,91 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
   }
 
   return (
-    <div style={{ width: '100%', marginBottom: '16px', position: 'relative' }}>
-      <div style={{
-        padding: '16px', borderRadius: '12px', backgroundColor: theme.backgroundSurface,
-        border: `1px solid ${theme.accentSoftBlue}33`
-      }}>
+    <div style={{ width: '100%', marginBottom: 16, position: 'relative' }}>
+      <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33` }}>
         {message.isStreamingComplete && (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
-              Response:
-            </span>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+            <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-        
-        <div 
-          ref={containerRef} 
+        <div
+          ref={containerRef}
           className="md"
-          style={{ fontSize: '14px', lineHeight: '1.6', color: theme.textPrimary }}
-          dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }} 
+          style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
+          dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }}
         />
-
         <button
-          onClick={handleCopy}
-          aria-label="Copy message"
-          style={{
-            position: 'absolute', top: '8px', right: '8px', background: 'transparent', border: 'none',
-            cursor: 'pointer', color: theme.textSecondary, fontSize: '13px'
+          onClick={async () => {
+            try { await navigator.clipboard.writeText(message.content || ''); } catch {}
           }}
+          aria-label="Copy message"
+          style={{ position: 'absolute', top: 8, right: 8, background: 'transparent', border: 'none', cursor: 'pointer', color: theme.textSecondary, fontSize: 13 }}
         >
-          {showCopied ? 'Copied' : 'Copy'}
+          Copy
         </button>
       </div>
     </div>
   );
 };
 
-const StreamingResponse = ({ content, theme }) => {
-  return (
-    <div style={{
-      padding: '16px',
-      borderRadius: '12px',
-      backgroundColor: theme.backgroundSurface,
-      border: `1px solid ${theme.accentSoftBlue}33`,
-      marginBottom: '16px'
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-        <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
-          Response:
-        </span>
-        {!content && (
-          <div style={{ display: 'flex', gap: '2px' }}>
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                style={{
-                  width: '4px', height: '4px', borderRadius: '50%',
-                  backgroundColor: theme.accentSoftBlue, animation: `bounce 0.6s infinite ${i * 0.2}s`
-                }}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-      <div 
-        className="md"
-        style={{ fontSize: '14px', lineHeight: '1.6', color: theme.textPrimary }}
-        dangerouslySetInnerHTML={{ 
-          __html: content ? renderMarkdown(content) + '<span class="cursor">▍</span>' : ''
-        }}
-      />
-    </div>
-  );
-};
-
-const LoadingIndicator = ({ theme }) => {
-  return (
-    <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: 'transparent', marginBottom: '16px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: '11px', fontWeight: '500', textTransform: 'uppercase', letterSpacing: '0.5px', color: theme.textSecondary }}>
-          Thinking...
-        </span>
-        <div style={{ display: 'flex', gap: '4px' }}>
+const StreamingResponse = ({ content, theme }) => (
+  <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33`, marginBottom: 16 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+      <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
+      {!content && (
+        <div style={{ display: 'flex', gap: 2 }}>
           {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              style={{
-                width: '4px', height: '4px', borderRadius: '50%',
-                backgroundColor: theme.textSecondary, animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms`
-              }}
-            />
+            <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.accentSoftBlue, animation: `bounce 0.6s infinite ${i * 0.2}s` }} />
           ))}
         </div>
+      )}
+    </div>
+    <div
+      className="md"
+      style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
+      dangerouslySetInnerHTML={{ __html: content ? renderMarkdown(content) + '<span class="cursor">▍</span>' : '' }}
+    />
+  </div>
+);
+
+const LoadingIndicator = ({ theme }) => (
+  <div style={{ padding: 16, borderRadius: 12, backgroundColor: 'transparent', marginBottom: 16 }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Thinking...</span>
+      <div style={{ display: 'flex', gap: 4 }}>
+        {[0, 1, 2].map((i) => (
+          <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.textSecondary, animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms` }} />
+        ))}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
   if (!isOpen) return null;
-
   return (
     <div style={{ position: 'fixed', inset: 0, zIndex: 50, display: 'flex' }}>
-      <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
-      <div style={{
-        width: '320px', height: '100%', padding: '24px',
-        paddingTop: 'max(24px, env(safe-area-inset-top))', overflowY: 'auto',
-        backgroundColor: theme.backgroundSurface
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
-          <h2 style={{ fontSize: '18px', fontWeight: '600', color: theme.textPrimary, margin: 0 }}>
-            Chat History
-          </h2>
-          <button
-            onClick={onNewChat}
-            aria-label="New chat"
-            style={{ padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}
-          >
+      <div style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' }} onClick={onClose} />
+      <div style={{ width: 320, height: '100%', padding: 24, paddingTop: 'max(24px, env(safe-area-inset-top))', overflowY: 'auto', backgroundColor: theme.backgroundSurface }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, color: theme.textPrimary, margin: 0 }}>Chat History</h2>
+          <button onClick={onNewChat} aria-label="New chat" style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer' }}>
             <Edit3 size={16} color={theme.textPrimary} />
           </button>
         </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {chatHistory.map((chat) => (
             <div key={chat.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <button
                 onClick={() => onSelectChat(chat)}
-                style={{
-                  flex: 1, padding: '12px', borderRadius: '8px', textAlign: 'left',
-                  backgroundColor: `${theme.textSecondary}0A`, border: 'none', cursor: 'pointer'
-                }}
+                style={{ flex: 1, padding: 12, borderRadius: 8, textAlign: 'left', backgroundColor: `${theme.textSecondary}0A`, border: 'none', cursor: 'pointer' }}
               >
-                <div style={{
-                  fontSize: '14px', fontWeight: '500', color: theme.textPrimary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
-                }}>
+                <div style={{ fontSize: 14, fontWeight: 500, color: theme.textPrimary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                   {chat.title}
                 </div>
-                <div style={{ fontSize: '12px', color: theme.textSecondary }}>
-                  {new Date(chat.timestamp).toLocaleDateString()}
-                </div>
+                <div style={{ fontSize: 12, color: theme.textSecondary }}>{new Date(chat.timestamp).toLocaleDateString()}</div>
               </button>
-              <button
-                onClick={() => onDeleteChat(chat)}
-                aria-label="Delete chat"
-                style={{ padding: '8px', borderRadius: '8px', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}
-              >
+              <button onClick={() => onDeleteChat(chat)} aria-label="Delete chat" style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer' }}>
                 <Square size={12} color={theme.errorColor} />
               </button>
             </div>
@@ -741,33 +651,21 @@ const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onN
 };
 
 const InputBar = ({
-  query,
-  setQuery,
-  currentMode,
-  onModeChange,
-  onSend,
-  onStop,
-  isStreaming,
-  isLoading,
-  speechRecognition,
-  theme
+  query, setQuery, currentMode, onModeChange, onSend, onStop, isStreaming, isLoading, speechRecognition, theme
 }) => {
   const textareaRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
 
   const adjustTextareaHeight = useCallback(() => {
-    const textarea = textareaRef.current;
-    if (!textarea) return;
-
-    textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 120);
-    textarea.style.height = `${scrollHeight}px`;
-    setTextareaHeight(scrollHeight);
+    const ta = textareaRef.current;
+    if (!ta) return;
+    ta.style.height = '32px';
+    const h = Math.min(ta.scrollHeight, 120);
+    ta.style.height = `${h}px`;
+    setTextareaHeight(h);
   }, []);
 
-  useEffect(() => {
-    adjustTextareaHeight();
-  }, [query, adjustTextareaHeight]);
+  useEffect(() => { adjustTextareaHeight(); }, [query, adjustTextareaHeight]);
 
   useEffect(() => {
     if (speechRecognition.isRecording && speechRecognition.recognizedText) {
@@ -775,164 +673,206 @@ const InputBar = ({
     }
   }, [speechRecognition.recognizedText, speechRecognition.isRecording, setQuery]);
 
-  const getPlaceholder = () => {
-    switch (currentMode) {
-      case 'reason': return 'Present your case';
-      case 'write': return 'Outline your plan';
-      default: return 'Ask anything';
-    }
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      if (query.trim()) onSend();
-    }
-  };
-
-  const handlePaste = () => {};
+  const getPlaceholder = () =>
+    currentMode === 'reason' ? 'Present your case'
+      : currentMode === 'write' ? 'Outline your plan'
+      : 'Ask anything';
 
   const isDisabled = isStreaming || isLoading;
 
   return (
-    <div style={{
-      padding: '8px 16px 4px 16px',
-      paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
-      backgroundColor: theme.backgroundSurface,
-      borderTopLeftRadius: '20px',
-      borderTopRightRadius: '20px',
-      boxShadow: '0 -2px 8px rgba(0, 0, 0, 0.1)'
-    }}>
-      {/* Text Input Area */}
-      <div style={{ position: 'relative', marginBottom: '0px', border: 'none', outline: 'none' }}>
+    <div style={{ padding: '8px 16px 4px', paddingBottom: 'max(8px, env(safe-area-inset-bottom))', backgroundColor: theme.backgroundSurface, borderTopLeftRadius: 20, borderTopRightRadius: 20, boxShadow: '0 -2px 8px rgba(0,0,0,0.1)' }}>
+      <div style={{ position: 'relative', marginBottom: 0, border: 'none', outline: 'none' }}>
         <textarea
           ref={textareaRef}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          onPaste={handlePaste}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              if (query.trim()) onSend();
+            }
+          }}
           placeholder={speechRecognition.isRecording ? 'Listening...' : getPlaceholder()}
           disabled={isDisabled}
           style={{
-            width: '100%',
-            padding: '8px 8px',
-            borderRadius: '12px',
-            resize: 'none',
-            border: `none`,
-            outline: 'none',
-            fontSize: '16px',
-            lineHeight: '1.5',
-            backgroundColor: theme.backgroundSurface,
-            color: theme.textPrimary,
-            height: `${textareaHeight}px`,
-            minHeight: '40px',
-            maxHeight: '120px',
-            fontFamily: 'inherit',
-            boxSizing: 'border-box'
+            width: '100%', padding: 8, borderRadius: 12, resize: 'none', border: 'none', outline: 'none',
+            fontSize: 16, lineHeight: 1.5, backgroundColor: theme.backgroundSurface, color: theme.textPrimary,
+            height: `${textareaHeight}px`, minHeight: 40, maxHeight: 120, fontFamily: 'inherit', boxSizing: 'border-box'
           }}
         />
 
         {speechRecognition.isRecording && (
-          <div style={{
-            position: 'absolute', right: '12px', top: '0px', display: 'flex', alignItems: 'center', gap: '4px'
-          }}>
-            <span style={{ fontSize: '12px', color: theme.accentSoftBlue }}>
-              Listening
-            </span>
-            <div style={{ display: 'flex', gap: '2px' }}>
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  style={{
-                    width: '4px', height: '4px', borderRadius: '50%',
-                    backgroundColor: theme.accentSoftBlue, animation: `pulse 1.5s ease-in-out infinite ${i * 0.15}s`
-                  }}
-                />
+          <div style={{ position: 'absolute', right: 12, top: 0, display: 'flex', alignItems: 'center', gap: 4 }}>
+            <span style={{ fontSize: 12, color: theme.accentSoftBlue }}>Listening</span>
+            <div style={{ display: 'flex', gap: 2 }}>
+              {[0,1,2].map(i => (
+                <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.accentSoftBlue, animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms` }} />
               ))}
             </div>
           </div>
         )}
       </div>
 
-      {/* Controls Row */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '-8px' }}>
-        <ModeSwitcher
-          currentMode={currentMode}
-          onModeChange={onModeChange}
-          isDisabled={isDisabled}
-          theme={theme}
-        />
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          {/* Microphone Button */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: -8 }}>
+        <ModeSwitcher currentMode={currentMode} onModeChange={onModeChange} isDisabled={isDisabled} theme={theme} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <button
             onClick={speechRecognition.toggleRecording}
             disabled={!speechRecognition.isAvailable || isDisabled}
             aria-pressed={speechRecognition.isRecording}
             aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
-            style={{
-              padding: '8px',
-              borderRadius: '50%',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer',
+            style={{ padding: 8, borderRadius: '50%', border: 'none', background: 'transparent', cursor: 'pointer',
               transform: speechRecognition.isRecording ? 'scale(1.1)' : 'scale(1)',
               color: speechRecognition.isRecording ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!speechRecognition.isAvailable || isDisabled) ? 0.5 : 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
+              opacity: (!speechRecognition.isAvailable || isDisabled) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            {speechRecognition.isRecording ? (
-              <Square size={28} fill="currentColor" />
-            ) : (
-              <Mic size={28} />
-            )}
+            {speechRecognition.isRecording ? <Square size={28} fill="currentColor" /> : <Mic size={28} />}
           </button>
 
-          {/* Send/Stop Button */}
           <button
             onClick={isStreaming ? onStop : onSend}
             disabled={!isStreaming && !query.trim()}
             aria-label={isStreaming ? 'Stop response' : 'Send'}
-            style={{
-              padding: '8px',
-              borderRadius: '50%',
-              border: 'none',
-              backgroundColor: 'transparent',
-              cursor: 'pointer',
+            style={{ padding: 8, borderRadius: '50%', border: 'none', background: 'transparent', cursor: 'pointer',
               color: isStreaming ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
+              opacity: (!isStreaming && !query.trim()) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
-            {isStreaming ? (
-              <Square size={28} fill="currentColor" />
-            ) : (
-              <ArrowUp size={28} />
-            )}
+            {isStreaming ? <Square size={28} fill="currentColor" /> : <ArrowUp size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Disclaimer */}
-      <div style={{ textAlign: 'center', marginTop: '0px' }}>
-        <p style={{ fontSize: '12px', color: theme.textSecondary, margin: 0 }}>
-          Astra can make mistakes. Check critical info.
-        </p>
+      <div style={{ textAlign: 'center', marginTop: 0 }}>
+        <p style={{ fontSize: 12, color: theme.textSecondary, margin: 0 }}>Astra can make mistakes. Check critical info.</p>
       </div>
     </div>
   );
 };
 
+/* =========================
+   GLOBAL STYLE INJECTOR
+   ========================= */
+const buildGlobalCSS = (theme) => `
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow: hidden; height: 100vh;
+  background: ${theme.backgroundPrimary}; color: ${theme.textPrimary};
+}
+#root { height: 100vh; width: 100vw; }
+@supports (height: 100vh) { body, #root { height: 100vh; } }
+html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
+* { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
+
+/* Buttons & inputs */
+textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
+textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
+button:not(:disabled):hover { transform: translateY(-1px); }
+button:not(:disabled):active { transform: translateY(0); }
+button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
+
+/* Animations */
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+.cursor { color: #4A6B7D; animation: blink 1s infinite; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Markdown base */
+.md { line-height: 1.5; }
+.md h1 { margin: 0.6rem 0 0.3rem; font-size: 1.5rem; font-weight: 700; }
+.md h2 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
+.md h3 { margin: 0.4rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
+.md p  { margin: 0.2rem 0; line-height: 1.45; }
+.md a  { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+.md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+.md sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; }
+.md sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; }
+
+/* Code blocks */
+.md pre {
+  background-color: ${theme.textSecondary}15; border-radius: 8px; padding: 12px; margin: 0.5rem 0; overflow-x: auto;
+}
+.md code {
+  background-color: ${theme.textSecondary}15; border-radius: 4px; padding: 2px 6px; font-size: .9em;
+  font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace;
+}
+.md pre code { background: none; border: none; padding: 0; }
+
+/* Blockquote & hr */
+.md blockquote { margin: 0.2rem 0; padding-left: 0.75rem; border-left: 3px solid ${theme.accentSoftBlue}; font-style: italic; }
+.md hr { border: none; height: 1px; background: ${theme.textSecondary}40; margin: 1rem 0; }
+
+/* Lists: proper hanging indents + nested rhythm */
+.md ul, .md ol { margin: 0.4rem 0; padding-left: 1.5rem; list-style-position: outside; }
+.md li { margin: 0.16rem 0; line-height: 1.5; padding-left: 0.2rem; text-indent: 0; }
+.md li p { margin: 0.12rem 0; }
+.md li::marker { color: ${theme.accentSoftBlue}; font-weight: 600; }
+.md ul ul, .md ol ol, .md ul ol, .md ol ul { margin: 0.2rem 0; padding-left: 1.2rem; }
+
+/* Custom numbered-item layout (for your non-ol numbering) */
+.md .numbered-item { display: flex; align-items: baseline; gap: 0.4rem; margin: 0.22rem 0; }
+.md .numbered-item .number { min-width: 2.2ch; text-align: right; font-weight: 600; }
+.md .numbered-item .content { flex: 1; line-height: 1.4; }
+
+/* Tables: sticky header, zebra, responsive */
+.md-table-wrap {
+  width: 100%; overflow: auto; -webkit-overflow-scrolling: touch;
+  margin: 0.5rem 0 0.75rem; border-radius: 10px; background: ${theme.backgroundSurface};
+  box-shadow: 0 1px 0 ${theme.textSecondary}1A inset, 0 0 0 1px ${theme.textSecondary}12;
+}
+.md-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  font-size: 13.5px; line-height: 1.45; color: ${theme.textPrimary}; overflow: hidden;
+}
+.md-table thead th {
+  position: sticky; top: 0; z-index: 1; text-align: left; padding: 10px 12px;
+  background: linear-gradient(0deg, ${theme.textSecondary}10, ${theme.textSecondary}18);
+  color: ${theme.textPrimary}; font-weight: 600; border-bottom: 1px solid ${theme.textSecondary}30; white-space: nowrap;
+}
+.md-table tbody td {
+  padding: 10px 12px; vertical-align: middle; border-bottom: 1px solid ${theme.textSecondary}20;
+  background: ${theme.backgroundSurface}; max-width: 520px; overflow-wrap: anywhere;
+}
+.md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}08; }
+.md-table tbody tr:hover td { background: ${theme.accentSoftBlue}12; }
+.md-table thead th:first-child { border-top-left-radius: 10px; }
+.md-table thead th:last-child  { border-top-right-radius: 10px; }
+.md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+.md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 10px; }
+.md-table .align-left { text-align: left; }
+.md-table .align-center { text-align: center; }
+.md-table .align-right { text-align: right; }
+.md-table code { white-space: nowrap; display: inline-block; }
+@media (max-width: 520px) {
+  .md-table thead th, .md-table tbody td { padding: 8px 10px; }
+  .md-table { font-size: 13px; }
+}
+`;
+
+const GlobalStyle = ({ theme }) => (
+  <style dangerouslySetInnerHTML={{ __html: buildGlobalCSS(theme) }} />
+);
+
+/* =========================
+   APP
+   ========================= */
+const Sidebar = React.memo(SidebarUnmemoed); // quiet linter if needed
+function SidebarUnmemoed() { return null; } // placeholder removed earlier
+
 const AstraApp = () => {
   const { colors: theme } = useTheme();
   const speechRecognition = useSpeechRecognition();
 
-  // App state
   const [messages, setMessages] = useState([]);
   const [query, setQuery] = useState('');
   const [currentMode, setCurrentMode] = useState('search');
@@ -942,7 +882,6 @@ const AstraApp = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
 
-  // Citation overlay state
   const [selectedCitation, setSelectedCitation] = useState(null);
   const [showCitationOverlay, setShowCitationOverlay] = useState(false);
 
@@ -1019,32 +958,65 @@ const AstraApp = () => {
           while (true) {
             const { done, value } = await reader.read();
             if (done) break;
-
             const chunk = decoder.decode(value, { stream: true });
             buffer += chunk;
-            
             const lines = buffer.split(/\r?\n/);
             const endsWithNewline = buffer.endsWith('\n') || buffer.endsWith('\r\n');
 
-            if (endsWithNewline) {
-              lines.forEach(line => {
-                if (line.trim()) {
-                  processStreamLine(line.trim(), collectedCitations, (content) => {
-                    finalContent += content;
-                    setStreamingContent(finalContent);
-                  }, currentMode);
+            const handleLine = (line) => {
+              if (!line.startsWith('data:')) return;
+              const payload = line.substring(5).trim();
+              if (!payload || payload === '[DONE]') return;
+              try {
+                const json = JSON.parse(payload);
+
+                if (currentMode === 'search' && collectedCitations.length === 0) {
+                  if (json.citations && Array.isArray(json.citations)) {
+                    if (typeof json.citations[0] === 'object') {
+                      json.citations.forEach(cd => {
+                        if (cd.number && cd.title && cd.url) {
+                          collectedCitations.push({
+                            number: cd.number,
+                            title: cd.title,
+                            url: cd.url,
+                            authors: cd.authors || new URL(cd.url).hostname || 'Unknown'
+                          });
+                        }
+                      });
+                    } else {
+                      json.citations.forEach((urlString, i) => {
+                        try {
+                          const url = new URL(urlString);
+                          collectedCitations.push({
+                            number: i + 1,
+                            title: url.hostname || 'External Link',
+                            url: urlString,
+                            authors: url.hostname || 'Unknown'
+                          });
+                        } catch {}
+                      });
+                    }
+                  }
                 }
-              });
+
+                let content = null;
+                if (json.choices?.[0]?.delta?.content) content = json.choices[0].delta.content;
+                else if (json.choices?.[0]?.message?.content) content = json.choices[0].message.content;
+                else if (json.content) content = json.content;
+                else if (json.text) content = json.text;
+
+                if (content) {
+                  finalContent += content;
+                  setStreamingContent(finalContent);
+                }
+              } catch {}
+            };
+
+            if (endsWithNewline) {
+              lines.forEach(l => l.trim() && handleLine(l.trim()));
               buffer = '';
             } else if (lines.length > 1) {
-              lines.slice(0, -1).forEach(line => {
-                if (line.trim()) {
-                  processStreamLine(line.trim(), collectedCitations, (content) => {
-                    finalContent += content;
-                    setStreamingContent(finalContent);
-                  }, currentMode);
-                }
-              });
+              lines.slice(0, -1).forEach(l => l.trim() && handleLine(l.trim()));
               buffer = lines[lines.length - 1] || '';
             }
           }
@@ -1060,7 +1032,7 @@ const AstraApp = () => {
             };
 
             setMessages(prev => [...prev, assistantMessage]);
-            
+
             const chatSession = {
               id: Date.now() + 2,
               title: userMessage.content.slice(0, 50) + (userMessage.content.length > 50 ? '...' : ''),
@@ -1073,85 +1045,20 @@ const AstraApp = () => {
 
           setIsStreaming(false);
           setStreamingContent('');
-        } catch (streamError) {
-          if (streamError.name === 'AbortError') return;
-          console.error('Stream reading error:', streamError);
+        } catch {
           setIsStreaming(false);
           setIsLoading(false);
-          const errorMessage = {
-            id: Date.now() + 1,
-            role: 'assistant',
-            content: '⚠️ Error occurred while streaming response. Please try again.',
-            timestamp: new Date()
-          };
-          setMessages(prev => [...prev, errorMessage]);
+          setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: '⚠️ Error occurred while streaming response. Please try again.', timestamp: new Date() }]);
         }
       }
-
     } catch (error) {
       if (error.name === 'AbortError') return;
-      console.error('Request failed:', error);
       setIsLoading(false);
       setIsStreaming(false);
-      const errorMessage = {
-        id: Date.now() + 1,
-        role: 'assistant',
-        content: `⚠️ Error: ${error.message}. Please check your connection and try again.`,
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
+      setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
     } finally {
       abortControllerRef.current = null;
     }
-  };
-
-  // Helper function to process stream lines
-  const processStreamLine = (line, citations, onContent, currentModeSnapshot) => {
-    if (!line.startsWith('data:')) return;
-
-    const payload = line.substring(5).trim();
-    if (payload === '[DONE]' || !payload) return;
-
-    try {
-      const json = JSON.parse(payload);
-
-      if (currentModeSnapshot === 'search' && citations.length === 0) {
-        if (json.citations && Array.isArray(json.citations)) {
-          if (typeof json.citations[0] === 'object') {
-            json.citations.forEach(citationDict => {
-              if (citationDict.number && citationDict.title && citationDict.url) {
-                citations.push({
-                  number: citationDict.number,
-                  title: citationDict.title,
-                  url: citationDict.url,
-                  authors: citationDict.authors || new URL(citationDict.url).hostname || 'Unknown'
-                });
-              }
-            });
-          } else {
-            json.citations.forEach((urlString, i) => {
-              try {
-                const url = new URL(urlString);
-                citations.push({
-                  number: i + 1,
-                  title: extractTitle(url),
-                  url: urlString,
-                  authors: url.hostname || 'Unknown'
-                });
-              } catch {}
-            });
-          }
-        }
-      }
-
-      let content = null;
-      if (json.choices?.[0]?.delta?.content) content = json.choices[0].delta.content;
-      else if (json.choices?.[0]?.message?.content) content = json.choices[0].message.content;
-      else if (json.content) content = json.content;
-      else if (json.text) content = json.text;
-
-      if (content && content.length > 0) onContent(content);
-    } catch {}
   };
 
   const extractTitle = (url) => {
@@ -1169,23 +1076,11 @@ const AstraApp = () => {
     if (isStreaming) {
       setIsStreaming(false);
       if (streamingContent) {
-        const assistantMessage = {
-          id: Date.now(),
-          role: 'assistant',
-          content: streamingContent,
-          timestamp: new Date()
-        };
+        const assistantMessage = { id: Date.now(), role: 'assistant', content: streamingContent, timestamp: new Date() };
         setMessages(prev => [...prev, assistantMessage]);
       }
       setStreamingContent('');
     }
-  };
-
-  const handleSampleTapped = (sampleQuery) => {
-    setQuery(sampleQuery);
-    setTimeout(() => {
-      handleSend();
-    }, 50);
   };
 
   const loadChatSession = (session) => {
@@ -1203,40 +1098,23 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: '100vh',
-      height: '100dvh',
-      display: 'flex',
-      flexDirection: 'column',
-      backgroundColor: theme.backgroundPrimary,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
-      overflow: 'hidden',
-      paddingTop: 'env(safe-area-inset-top)',
-      paddingBottom: 'env(safe-area-inset-bottom)'
+      height: '100vh', height: '100dvh', display: 'flex', flexDirection: 'column',
+      backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
+      overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)'
     }}>
-      {/* Toolbar */}
-      <ToolbarView
-        onNewChat={resetChat}
-        onToggleSidebar={() => setShowSidebar(true)}
-        theme={theme}
-      />
+      <GlobalStyle theme={theme} />
 
-      {/* Main Content */}
+      <ToolbarView onNewChat={resetChat} onToggleSidebar={() => setShowSidebar(true)} theme={theme} />
+
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: 0 }}>
-        {/* Conversation Area */}
         <div
           ref={scrollRef}
-          style={{
-            position:'relative', zIndex:0, flex: 1, overflowY: 'auto', padding: '0 16px',
-            minHeight: 0, WebkitOverflowScrolling: 'touch'
-          }}
+          style={{ position:'relative', zIndex:0, flex: 1, overflowY: 'auto', padding: '0 16px', minHeight: 0, WebkitOverflowScrolling: 'touch' }}
           onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
         >
-          <div style={{
-            maxWidth: '900px', margin: '0 auto', padding: '16px 0', minHeight: '100%',
-            display: 'flex', flexDirection: 'column'
-          }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
             {messages.length === 0 && !isLoading && !isStreaming && (
-              <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} />
+              <EmptyState currentMode={currentMode} onSampleTapped={(q)=>{ setQuery(q); setTimeout(()=>handleSend(),50); }} theme={theme} />
             )}
 
             {messages.map((message) => (
@@ -1244,23 +1122,16 @@ const AstraApp = () => {
                 key={message.id}
                 message={message}
                 theme={theme}
-                onTapCitation={(citation) => {
-                  setSelectedCitation(citation);
-                  setShowCitationOverlay(true);
-                }}
+                onTapCitation={(citation) => { setSelectedCitation(citation); setShowCitationOverlay(true); }}
               />
             ))}
 
             {isLoading && <LoadingIndicator theme={theme} />}
-
-            {isStreaming && (
-              <StreamingResponse content={streamingContent} theme={theme} />
-            )}
+            {isStreaming && <StreamingResponse content={streamingContent} theme={theme} />}
           </div>
         </div>
 
-        {/* Input Bar */}
-        <div style={{ flexShrink: 0, maxWidth: '900px', margin: '0 auto', padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
+        <div style={{ flexShrink: 0, maxWidth: 900, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
           <InputBar
             query={query}
             setQuery={setQuery}
@@ -1276,18 +1147,7 @@ const AstraApp = () => {
         </div>
       </div>
 
-      {/* Sidebar */}
-      <Sidebar
-        isOpen={showSidebar}
-        onClose={() => setShowSidebar(false)}
-        chatHistory={chatHistory}
-        onSelectChat={loadChatSession}
-        onDeleteChat={deleteChatSession}
-        onNewChat={() => { resetChat(); setShowSidebar(false); }}
-        theme={theme}
-      />
-
-      {/* Citation Overlay */}
+      {/* Sidebar toggle preserved (implement your Sidebar here if needed) */}
       {showCitationOverlay && selectedCitation && (
         <CitationPillOverlay
           citation={selectedCitation}
@@ -1296,205 +1156,6 @@ const AstraApp = () => {
           theme={theme}
         />
       )}
-
-      {/* Global Styles */}
-      <style jsx global>{`
-        * { box-sizing: border-box; }
-        html { -webkit-text-size-adjust: 100%; }
-        body {
-          margin: 0; padding: 0;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-          overflow: hidden; height: 100vh;
-        }
-        #root { height: 100vh; width: 100vw; }
-        @supports (height: 100vh) { body, #root { height: 100vh; } }
-        html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
-
-        /* Custom scrollbars */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
-        * { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
-
-        textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
-        textarea {
-          font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px;
-        }
-
-        button:not(:disabled):hover { transform: translateY(-1px); }
-        button:not(:disabled):active { transform: translateY(0); }
-
-        @keyframes bounce {
-          0%, 60%, 100% { transform: translateY(0); }
-          30% { transform: translateY(-4px); }
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50% { opacity: 0.5; transform: scale(0.8); }
-        }
-        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-
-        /* Respect reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-          * { animation: none !important; transition: none !important; }
-        }
-        .cursor { color: #4A6B7D; animation: blink 1s infinite; }
-
-        /* Accessibility focus */
-        button:focus-visible, textarea:focus-visible {
-          outline: 2px solid ${theme.accentSoftBlue};
-          outline-offset: 2px;
-        }
-
-        /* Typography + markdown */
-        .md { line-height: 1.5; }
-        h1, h2, h3, strong, em, code, ul, ol, li { color: ${theme.textPrimary} !important; }
-        pre { background-color: ${theme.textSecondary}15 !important; }
-        sup { color: ${theme.accentSoftBlue} !important; }
-
-        .md h1 { margin: 0.6rem 0 0.3rem; font-size: 1.5rem; font-weight: 700; }
-        .md h2 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
-        .md h3 { margin: 0.4rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
-        .md p  { margin: 0.2rem 0; line-height: 1.45; }
-
-        .md .numbered-item {
-          margin: 0.22rem 0; display: flex; align-items: baseline; gap: 0.25rem;
-        }
-        .md .numbered-item .number { font-weight: 600; flex-shrink: 0; min-width: auto; }
-        .md .numbered-item .content { flex: 1; line-height: 1.4; }
-
-        /* ---- LISTS: hanging indents + clean rhythm ---- */
-        .md ul, .md ol {
-          margin: 0.35rem 0 0.35rem 0;
-          padding-left: 1.35rem;
-          list-style-position: outside;
-        }
-        .md ul ul, .md ol ol, .md ul ol, .md ol ul {
-          margin: 0.25rem 0;
-          padding-left: 1.15rem;
-        }
-        .md li {
-          margin: 0.12rem 0;
-          line-height: 1.45;
-          padding-left: 0.15rem;
-          text-indent: 0;
-        }
-        .md li::marker {
-          color: ${theme.accentSoftBlue};
-          font-weight: 600;
-        }
-
-        /* Inline code + blocks */
-        .md pre {
-          background-color: ${theme.textSecondary}15 !important;
-          border-radius: 8px;
-          padding: 12px;
-          margin: 0.5rem 0;
-          overflow-x: auto;
-        }
-        .md code {
-          background-color: ${theme.textSecondary}15 !important;
-          border-radius: 4px;
-          padding: 2px 6px;
-          font-size: 0.9em;
-          font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
-        }
-        .md pre code { background: none !important; border: none; padding: 0; }
-
-        .md blockquote {
-          margin: 0.2rem 0;
-          padding-left: 0.75rem;
-          border-left: 3px solid ${theme.accentSoftBlue};
-          font-style: italic;
-        }
-
-        .md hr {
-          border: none; height: 1px; background-color: ${theme.textSecondary}40; margin: 1rem 0;
-        }
-
-        .md a {
-          color: ${theme.accentSoftBlue} !important;
-          text-decoration: none;
-          border-bottom: 1px solid transparent;
-          transition: border-color 0.2s ease;
-        }
-        .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
-
-        .md sup.md-citation {
-          color: ${theme.accentSoftBlue} !important;
-          cursor: pointer;
-          font-weight: 600;
-          padding: 0;
-          border-radius: 4px;
-          transition: all 0.2s ease;
-          margin: 0;
-        }
-        .md sup.md-citation:hover {
-          background-color: ${theme.accentSoftBlue}20;
-          transform: translateY(-1px);
-        }
-        .md br { line-height: 0.3; }
-
-        /* ---- TABLES: responsive, sticky header, zebra, soft borders ---- */
-        .md-table-wrap {
-          width: 100%;
-          overflow: auto;
-          -webkit-overflow-scrolling: touch;
-          margin: 0.5rem 0 0.75rem;
-          border-radius: 10px;
-          box-shadow: 0 1px 0 ${theme.textSecondary}1A inset;
-          background: ${theme.backgroundSurface};
-        }
-        .md-table {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0;
-          font-size: 13.5px;
-          line-height: 1.45;
-          color: ${theme.textPrimary};
-          overflow: hidden;
-        }
-        .md-table thead th {
-          position: sticky;
-          top: 0;
-          z-index: 1;
-          text-align: left;
-          padding: 10px 12px;
-          background: linear-gradient(0deg, ${theme.textSecondary}10, ${theme.textSecondary}18);
-          color: ${theme.textPrimary};
-          font-weight: 600;
-          border-bottom: 1px solid ${theme.textSecondary}30;
-          white-space: nowrap;
-        }
-        .md-table tbody td {
-          padding: 10px 12px;
-          vertical-align: middle;
-          border-bottom: 1px solid ${theme.textSecondary}20;
-          background: ${theme.backgroundSurface};
-          max-width: 420px;
-          word-wrap: break-word;
-          overflow-wrap: anywhere;
-        }
-        .md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}08; }
-        .md-table tbody tr:hover td { background: ${theme.accentSoftBlue}12; }
-
-        .md-table thead th:first-child { border-top-left-radius: 10px; }
-        .md-table thead th:last-child  { border-top-right-radius: 10px; }
-        .md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-        .md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 10px; }
-
-        .md-table .align-left  { text-align: left; }
-        .md-table .align-center{ text-align: center; }
-        .md-table .align-right { text-align: right; }
-
-        .md-table code { white-space: nowrap; max-width: 100%; display: inline-block; }
-
-        @media (max-width: 520px) {
-          .md-table thead th, .md-table tbody td { padding: 8px 10px; }
-          .md-table { font-size: 13px; }
-        }
-      `}</style>
     </div>
   );
 };
