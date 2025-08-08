@@ -165,7 +165,6 @@ function rehypeBracketCitations() {
   };
 }
 
-/** Sanitize schema allowing the elements/styles we use */
 const sanitizeSchema = {
   tagNames: [
     'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
@@ -178,11 +177,15 @@ const sanitizeSchema = {
     span: ['className','style'],
     th: ['align'],
     td: ['align'],
-    h1: ['id'], h2: ['id'], h3: ['id'], table: ['className']
+    table: ['className'],
+    h1: ['id'], h2: ['id'], h3: ['id'],
+    // ✅ keep ordered list numbering correct
+    ol: ['start', 'reversed', 'type']
   },
   clobberPrefix: 'md-',
   protocols: { href: ['http', 'https', 'mailto', 'tel'] }
 };
+
 
 /* =========================
    CITATION OVERLAY
@@ -1035,6 +1038,62 @@ const AstraApp = () => {
         .md sup.md-citation { color: ${theme.accentSoftBlue} !important; cursor: pointer; font-weight: 600; padding: 0; border-radius: 4px; transition: all .2s ease; margin: 0; }
         .md sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; transform: translateY(-1px); }
         .md br { line-height: 0.3; }
+        /* Lists: spacing + indentation */
+.md ol,
+.md ul {
+  margin: 0.25rem 0 0.25rem 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.md li {
+  margin: 0.15rem 0;
+  line-height: 1.35;
+}
+
+.md li > ol,
+.md li > ul {
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding-left: 1rem;
+}
+
+/* Make sure ordered lists keep decimal style consistently */
+.md ol { list-style: decimal; }
+.md ul { list-style: disc; }
+/* Tables */
+.md table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0 0.75rem;
+  border-radius: 8px;
+  overflow: hidden; /* keeps rounded corners on thead background */
+}
+
+.md thead th {
+  background: ${theme.textSecondary}15;
+  color: ${theme.textPrimary};
+  font-weight: 600;
+  text-align: left;
+}
+
+.md th,
+.md td {
+  padding: 8px 10px;
+  border-bottom: 1px solid ${theme.textSecondary}25;
+  vertical-align: top;
+}
+
+.md tbody tr:nth-child(even) td {
+  background: ${theme.textSecondary}08;
+}
+
+.md table .align-center { text-align: center; }
+.md table .align-right  { text-align: right;  }
+.md thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
       `
         }}
       />
