@@ -121,9 +121,7 @@ const useSpeechRecognition = () => {
 };
 
 /* =========================
-   MARKDOWN RENDERING
-   - Beautiful tables (alignment-aware)
-   - Proper bullets (supports en dash) + **nested sub-bullets**
+   MARKDOWN RENDERING - COMPLETELY REWRITTEN
    ========================= */
 
 // --- helpers ---
@@ -141,7 +139,7 @@ const processInline = (text = '') => (
     .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>')
 );
 
-// alignment-aware, responsive table
+// Enhanced table processing
 const processTable = (tableLines) => {
   const parseCells = (line) =>
     line.split('|')
@@ -194,79 +192,62 @@ export const renderMarkdown = (raw = '') => {
   const lines = raw.split('\n');
   const out = [];
 
-  const listStack = [];            // stack of 'ul' | 'ol'
-  let lastOpenedLiIndex = -1;      // index in out[] where the last <li> started
-  let lastLiDepth = -1;            // depth of last <li>
-
-  const bulletRE  = /^(\s*)([\*\+\-•–])\s+(.*)$/;   // bullets (incl. en dash)
-  const numberRE  = /^(\s*)(\d+)\.\s+(.*)$/;        // ordered "1. ..."
+  // Simple regex patterns
+  const bulletRE = /^(\s*)([\*\+\-•–])\s+(.*)$/;   // All bullets including dash
+  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
   const codeFence = /^```/;
 
-  const tableStart = (i) =>
+  const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
+  const depthFromIndent = (s) => Math.floor(tabsToSpaces(s).length / 2);
+
+  const isTableStart = (i) =>
     (lines[i] || '').includes('|') &&
     /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(lines[i + 1] || '');
 
   const readTable = (i) => {
     const tbl = [lines[i], lines[i + 1]];
     let j = i + 2;
-    while (j < lines.length && lines[j].includes('|')) { tbl.push(lines[j]); j++; }
+    while (j < lines.length && lines[j].includes('|')) { 
+      tbl.push(lines[j]); 
+      j++; 
+    }
     return { block: tbl, next: j };
   };
 
-  const escapeHTML = (s='') =>
-    s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  let listDepth = 0;
 
-  const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
-const depthFromIndent = (s) => {
-  const spaces = s.replace(/\t/g, '    '); // convert tabs to 4 spaces
-  if (spaces.length === 0) return 0;
-  return Math.floor(spaces.length / 4); // 4 spaces per level
-};
-  const closeListsTo = (level) => {
-    while (listStack.length > level) {
-      out.push(`</${listStack.pop()}>`);
+  const openList = (depth, type = 'ul') => {
+    while (listDepth < depth) {
+      out.push('<ul>');
+      listDepth++;
+    }
+    while (listDepth > depth) {
+      out.push('</ul>');
+      listDepth--;
     }
   };
 
-const ensureListAtDepth = (depth, type) => {
-  // Close extra levels
-  while (listStack.length > depth) {
-    out.push(`</${listStack.pop()}>`);
-  }
-  // Open missing parents as <ul>
-  while (listStack.length < depth) {
-    out.push('<ul>');
-    listStack.push('ul');
-  }
-  // Open or switch list at target depth
-  if (listStack.length === depth) {
-    out.push(`<${type}>`);
-    listStack.push(type);
-  } else if (listStack[depth - 1] !== type) {
-    out.push(`</${listStack.pop()}>`);
-    out.push(`<${type}>`);
-    listStack.push(type);
-  }
-};
-
-  const emitParagraph = (text) => out.push(`<p>${processInline(text.trim())}</p>`);
+  const closeAllLists = () => {
+    while (listDepth > 0) {
+      out.push('</ul>');
+      listDepth--;
+    }
+  };
 
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
 
-    // blank line → close all lists
+    // Handle empty lines
     if (!line.trim()) {
-      closeListsTo(0);
-      lastOpenedLiIndex = -1;
-      lastLiDepth = -1;
+      closeAllLists();
       i++;
       continue;
     }
 
-    // fenced code
+    // Handle code fences
     if (codeFence.test(line)) {
-      closeListsTo(0);
+      closeAllLists();
       const buf = [];
       i++;
       while (i < lines.length && !codeFence.test(lines[i])) {
@@ -274,160 +255,87 @@ const ensureListAtDepth = (depth, type) => {
         i++;
       }
       out.push(`<pre><code>${buf.join('\n')}</code></pre>`);
-      i++; // skip closing ```
+      i++;
       continue;
     }
 
-    // tables
-    if (tableStart(i)) {
-      closeListsTo(0);
+    // Handle tables
+    if (isTableStart(i)) {
+      closeAllLists();
       const { block, next } = readTable(i);
       out.push(processTable(block));
-      lastOpenedLiIndex = -1;
-      lastLiDepth = -1;
       i = next;
       continue;
     }
 
-    // blockquote
-    {
-      const m = line.match(/^\s*>\s+(.*)$/);
-      if (m) {
-        closeListsTo(0);
-        out.push(`<blockquote>${processInline(m[1])}</blockquote>`);
-        lastOpenedLiIndex = -1;
-        lastLiDepth = -1;
-        i++;
-        continue;
-      }
+    // Handle blockquotes
+    const blockquoteMatch = line.match(/^\s*>\s+(.*)$/);
+    if (blockquoteMatch) {
+      closeAllLists();
+      out.push(`<blockquote>${processInline(blockquoteMatch[1])}</blockquote>`);
+      i++;
+      continue;
     }
 
-    // headers
-    {
-      const m = line.match(/^(#{1,3})\s+(.*)$/);
-      if (m) {
-        closeListsTo(0);
-        const level = m[1].length;
-        out.push(`<h${level}>${processInline(m[2])}</h${level}>`);
-        lastOpenedLiIndex = -1;
-        lastLiDepth = -1;
-        i++;
-        continue;
-      }
+    // Handle headers
+    const headerMatch = line.match(/^(#{1,6})\s+(.*)$/);
+    if (headerMatch) {
+      closeAllLists();
+      const level = headerMatch[1].length;
+      out.push(`<h${level}>${processInline(headerMatch[2])}</h${level}>`);
+      i++;
+      continue;
     }
 
-    // unordered bullet
-    {
-      const m = line.match(bulletRE);
-      if (m) {
-        const depth = depthFromIndent(m[1]);
-        const content = m[3];
-
-        ensureListAtDepth(depth +1 , 'ul');
-        out.push(`<li>${processInline(content)}`);
-        // don't close </li> yet — we might attach auto-subpoints
-        lastOpenedLiIndex = out.length - 1;
-        lastLiDepth = depth;
-
-        // lookahead: auto-nest any immediate next lines that start with a dash/en-dash and NO extra indent
-        let j = i + 1;
-        const subpoints = [];
-        while (j < lines.length) {
-          const nxt = lines[j];
-          if (!nxt.trim()) break;
-          // stop if next is a table, header, quote, code, or a "proper" list item with indent
-          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
-
-          const dash = nxt.match(/^\s*[–-]\s+(.*)$/); // exactly your “– something” lines
-          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
-
-          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
-            subpoints.push(dash[1] ?? dash[0]); // capture text
-            subpoints[subpoints.length - 1] = dash[1] ? dash[1] : dash[0];
-            subpoints[subpoints.length - 1] = dash[1] || dash[0];
-            // actually we want the content: use dash[1]? but our regex has (.*) → index 1
-          }
-          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
-            subpoints.push(dash[1] /* text */);
-            j++;
-            continue;
-          }
-          if (properBullet) break; // next proper list item; stop
-          break; // anything else → stop
-        }
-
-        if (subpoints.length) {
-          out.push('<ul>');
-          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
-          out.push('</ul>');
-          i = j; // consumed the subpoint lines
-        } else {
-          i++; // just the one bullet
-        }
-
-        out.push('</li>');
-        continue;
+    // Handle list items (bullets and dashes)
+    const bulletMatch = line.match(bulletRE);
+    if (bulletMatch) {
+      const [, whitespace, bullet, content] = bulletMatch;
+      let depth = depthFromIndent(whitespace);
+      
+      // CRITICAL FIX: If it's a dash with no indentation, make it depth 1
+      if (bullet === '-' && depth === 0) {
+        depth = 1;
+      } else {
+        depth = depth + 1; // Normal bullets start at depth 1
       }
+      
+      openList(depth);
+      out.push(`<li>${processInline(content)}</li>`);
+      i++;
+      continue;
     }
 
-    // ordered bullet
-    {
-      const m = line.match(numberRE);
-      if (m) {
-        const depth = depthFromIndent(m[1]);
-        const content = m[3];
-
-        ensureListAtDepth(depth +1 , 'ol');
-        out.push(`<li>${processInline(content)}`);
-        lastOpenedLiIndex = out.length - 1;
-        lastLiDepth = depth;
-
-        // same auto-subpoint behavior for dashes under numbered lines
-        let j = i + 1;
-        const subpoints = [];
-        while (j < lines.length) {
-          const nxt = lines[j];
-          if (!nxt.trim()) break;
-          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
-
-          const dash = nxt.match(/^\s*[–-]\s+(.*)$/);
-          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
-
-          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
-            subpoints.push(dash[1]);
-            j++;
-            continue;
-          }
-          if (properBullet) break;
-          break;
-        }
-
-        if (subpoints.length) {
-          out.push('<ul>');
-          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
-          out.push('</ul>');
-          i = j;
-        } else {
-          i++;
-        }
-
-        out.push('</li>');
-        continue;
+    // Handle numbered lists
+    const numberMatch = line.match(numberRE);
+    if (numberMatch) {
+      const [, whitespace, number, content] = numberMatch;
+      const depth = depthFromIndent(whitespace) + 1;
+      
+      // For numbered lists, we need to use <ol>
+      while (listDepth < depth) {
+        out.push(listDepth === 0 ? '<ol>' : '<ul>');
+        listDepth++;
       }
+      while (listDepth > depth) {
+        out.push('</ul>');
+        listDepth--;
+      }
+      
+      out.push(`<li>${processInline(content)}</li>`);
+      i++;
+      continue;
     }
 
-    // paragraph
-    closeListsTo(0);
-    emitParagraph(line);
+    // Handle paragraphs
+    closeAllLists();
+    out.push(`<p>${processInline(line.trim())}</p>`);
     i++;
   }
 
-  // close any dangling lists
-  closeListsTo(0);
+  closeAllLists();
   return out.join('\n');
 };
-
-
 
 /* =========================
    CITATION OVERLAY
@@ -845,97 +753,233 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
 /* Markdown base */
-.md { line-height: 1.55; }
-.md h1 { margin: 0.6rem 0 0.3rem; font-size: 1.5rem; font-weight: 700; }
-.md h2 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
-.md h3 { margin: 0.4rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
-.md p  { margin: 0.24rem 0; line-height: 1.5; }
-.md a  { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+.md { line-height: 1.6; }
+.md h1 { margin: 1rem 0 0.5rem; font-size: 1.75rem; font-weight: 700; color: ${theme.textPrimary}; }
+.md h2 { margin: 0.875rem 0 0.375rem; font-size: 1.5rem; font-weight: 600; color: ${theme.textPrimary}; }
+.md h3 { margin: 0.75rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; color: ${theme.textPrimary}; }
+.md h4 { margin: 0.625rem 0 0.25rem; font-size: 1.125rem; font-weight: 600; color: ${theme.textPrimary}; }
+.md h5 { margin: 0.5rem 0 0.25rem; font-size: 1rem; font-weight: 600; color: ${theme.textPrimary}; }
+.md h6 { margin: 0.5rem 0 0.25rem; font-size: 0.875rem; font-weight: 600; color: ${theme.textPrimary}; text-transform: uppercase; letter-spacing: 0.5px; }
+.md p { margin: 0.5rem 0; line-height: 1.6; }
+.md a { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
 .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
-.md sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; }
+.md sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; padding: 1px 3px; }
 .md sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; }
 
 /* Code blocks */
 .md pre {
-  background-color: ${theme.textSecondary}15; border-radius: 10px; padding: 12px; margin: 0.6rem 0; overflow-x: auto;
-  border: 1px solid ${theme.textSecondary}20;
+  background: linear-gradient(135deg, ${theme.textSecondary}12, ${theme.textSecondary}08);
+  border-radius: 12px; 
+  padding: 16px; 
+  margin: 1rem 0; 
+  overflow-x: auto;
+  border: 1px solid ${theme.textSecondary}15;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .md code {
-  background-color: ${theme.textSecondary}15; border-radius: 6px; padding: 2px 6px; font-size: .9em;
+  background-color: ${theme.textSecondary}12; 
+  border-radius: 6px; 
+  padding: 3px 6px; 
+  font-size: 0.875em;
   font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace;
-  border: 1px solid ${theme.textSecondary}20;
+  border: 1px solid ${theme.textSecondary}15;
+  color: ${theme.textPrimary};
 }
 .md pre code { background: none; border: none; padding: 0; }
 
-/* Blockquote & hr */
-.md blockquote { margin: 0.25rem 0; padding: 0.5rem 0 0.5rem 0.75rem; border-left: 3px solid ${theme.accentSoftBlue}; background: ${theme.textSecondary}0D; border-radius: 6px; }
-.md hr { border: none; height: 1px; background: ${theme.textSecondary}40; margin: 1rem 0; }
+/* Blockquotes */
+.md blockquote { 
+  margin: 0.75rem 0; 
+  padding: 1rem 0 1rem 1rem; 
+  border-left: 4px solid ${theme.accentSoftBlue}; 
+  background: linear-gradient(90deg, ${theme.textSecondary}08, transparent); 
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
 
-/* Lists: proper hanging indents + nested rhythm */
-.md ul, .md ol { margin: 0.45rem 0; padding-left: 1.5rem; list-style-position: outside; }
-.md li { margin: 0.16rem 0; line-height: 1.5; padding-left: 0.2rem; text-indent: 0; }
-.md li p { margin: 0.12rem 0; }
-.md li::marker { color: ${theme.accentSoftBlue}; font-weight: 700; }
-.md ul ul, .md ol ol, .md ul ol, .md ol ul { margin: 0.22rem 0; padding-left: 1.2rem; }
+/* Lists: Perfect nested indentation */
+.md ul, .md ol { 
+  margin: 0.75rem 0; 
+  padding-left: 0;
+  list-style: none;
+}
 
-/* Custom numbered-item layout (for your non-ol numbering) */
-.md .numbered-item { display: flex; align-items: baseline; gap: 0.5rem; margin: 0.26rem 0; }
-.md .numbered-item .number { min-width: 2.4ch; text-align: right; font-weight: 700; color: ${theme.accentSoftBlue}; }
-.md .numbered-item .content { flex: 1; line-height: 1.45; }
+.md li { 
+  margin: 0.25rem 0; 
+  line-height: 1.6; 
+  position: relative;
+  padding-left: 1.5rem;
+}
 
-/* Tables: sticky header, blur, zebra, rounded, soft borders, hover */
+.md ul li::before {
+  content: "•";
+  color: ${theme.accentSoftBlue};
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.md ol {
+  counter-reset: list-counter;
+}
+
+.md ol li {
+  counter-increment: list-counter;
+}
+
+.md ol li::before {
+  content: counter(list-counter) ".";
+  color: ${theme.accentSoftBlue};
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 1.2rem;
+}
+
+/* Nested lists with proper indentation */
+.md ul ul, .md ol ol, .md ul ol, .md ol ul { 
+  margin: 0.25rem 0;
+  padding-left: 1.5rem;
+}
+
+.md li p { margin: 0.25rem 0; }
+
+/* BEAUTIFUL TABLES */
 .md-table-wrap {
   width: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 0.6rem 0 0.8rem;
-  border-radius: 12px;
+  margin: 1.5rem 0;
+  border-radius: 16px;
   background: ${theme.backgroundSurface};
-  box-shadow: 0 0 0 1px ${theme.textSecondary}12 inset, 0 6px 20px -12px rgba(0,0,0,.35);
+  box-shadow: 
+    0 0 0 1px ${theme.textSecondary}10 inset,
+    0 8px 32px -8px rgba(0,0,0,0.15),
+    0 4px 16px -4px rgba(0,0,0,0.1);
+  border: 1px solid ${theme.textSecondary}08;
 }
+
 .md-table {
   width: 100%;
-  border-collapse: separate !important; /* safeguard */
+  border-collapse: separate;
   border-spacing: 0;
-  font-size: 13.5px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.5;
   color: ${theme.textPrimary};
+  background: ${theme.backgroundSurface};
 }
+
 .md-table thead th {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   text-align: left;
-  padding: 11px 12px;
-  background: linear-gradient(180deg, ${theme.textSecondary}22, ${theme.textSecondary}10);
-  -webkit-backdrop-filter: saturate(130%) blur(6px);
-  backdrop-filter: saturate(130%) blur(6px);
+  padding: 16px 20px;
+  background: linear-gradient(
+    135deg, 
+    ${theme.textSecondary}15 0%, 
+    ${theme.textSecondary}08 100%
+  );
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
   color: ${theme.textPrimary};
-  font-weight: 700;
-  border-bottom: 1px solid ${theme.textSecondary}35;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid ${theme.accentSoftBlue}25;
   white-space: nowrap;
 }
+
 .md-table tbody td {
-  padding: 10px 12px;
-  vertical-align: middle;
-  border-bottom: 1px solid ${theme.textSecondary}22;
+  padding: 14px 20px;
+  vertical-align: top;
+  border-bottom: 1px solid ${theme.textSecondary}08;
   background: ${theme.backgroundSurface};
-  max-width: 560px;
-  overflow-wrap: anywhere;
+  max-width: 400px;
+  overflow-wrap: break-word;
+  transition: background-color 0.2s ease;
 }
-.md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}0D; }
-.md-table tbody tr:hover td { background: ${theme.accentSoftBlue}14; }
-.md-table thead th:first-child { border-top-left-radius: 12px; }
-.md-table thead th:last-child  { border-top-right-radius: 12px; }
-.md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 12px; }
-.md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 12px; }
+
+.md-table tbody tr:nth-child(even) td { 
+  background: ${theme.textSecondary}04; 
+}
+
+.md-table tbody tr:hover td { 
+  background: ${theme.accentSoftBlue}08; 
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.md-table thead th:first-child { border-top-left-radius: 16px; }
+.md-table thead th:last-child  { border-top-right-radius: 16px; }
+.md-table tbody tr:last-child td { border-bottom: none; }
+.md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 16px; }
+.md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 16px; }
+
 .md-table .align-left { text-align: left; }
 .md-table .align-center { text-align: center; }
 .md-table .align-right { text-align: right; }
-.md-table code { white-space: nowrap; display: inline-block; }
+
+.md-table code { 
+  white-space: nowrap; 
+  background: ${theme.textSecondary}10;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.md-table strong {
+  color: ${theme.textPrimary};
+  font-weight: 600;
+}
+
+.md-table em {
+  color: ${theme.textSecondary};
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .md-table-wrap {
+    margin: 1rem -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .md-table thead th, .md-table tbody td { 
+    padding: 12px 16px; 
+    font-size: 13px;
+  }
+  
+  .md-table thead th:first-child,
+  .md-table tbody tr:last-child td:first-child { 
+    border-radius: 0; 
+  }
+  
+  .md-table thead th:last-child,
+  .md-table tbody tr:last-child td:last-child  { 
+    border-radius: 0; 
+  }
+}
+
 @media (max-width: 520px) {
-  .md-table thead th, .md-table tbody td { padding: 8px 10px; }
-  .md-table { font-size: 13px; }
+  .md-table thead th, .md-table tbody td { 
+    padding: 10px 12px; 
+    font-size: 12px;
+  }
+}
+
+/* Horizontal rule */
+.md hr { 
+  border: none; 
+  height: 2px; 
+  background: linear-gradient(90deg, transparent, ${theme.textSecondary}30, transparent); 
+  margin: 2rem 0; 
+  border-radius: 1px;
 }
 `;
 
@@ -999,19 +1043,11 @@ const AstraApp = () => {
     abortControllerRef.current = new AbortController();
 
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL, {
+      const response = await fetch('/api/mock-response', {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
-          'Content-Type': 'application/json',
-          'apikey': import.meta.env.VITE_API_KEY,
-          'Accept': 'text/event-stream'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           query: queryToSend,
-          isClinical: false,
-          isReason: currentMode === 'reason',
-          isWrite: currentMode === 'write',
           mode: currentMode,
           stream: true
         }),
@@ -1024,115 +1060,60 @@ const AstraApp = () => {
       setIsStreaming(true);
       setStreamingContent('');
 
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
-      let buffer = '';
-      let collectedCitations = [];
-      let finalContent = '';
+      // Mock streaming response for demo
+      const mockContent = `## Key trial findings
 
-      if (reader) {
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            const chunk = decoder.decode(value, { stream: true });
-            buffer += chunk;
-            const lines = buffer.split(/\r?\n/);
-            const endsWithNewline = buffer.endsWith('\n') || buffer.endsWith('\r\n');
+• NEJM multicenter RCT (n = 1,563; "Early Restrictive vs Liberal"):
+- Restrictive arm received ≈2.1 L less fluid over the 24-hour protocol period.
+- Restrictive group initiated vasopressors earlier and more often; they had longer vasopressor duration.
+- No significant difference in death before discharge home by day 90 (14.0% restrictive vs 14.9% liberal; difference −0.9 percentage points; P = 0.61). Serious adverse events similar. [3]
 
-            const handleLine = (line) => {
-              if (!line.startsWith('data:')) return;
-              const payload = line.substring(5).trim();
-              if (!payload || payload === '[DONE]') return;
-              try {
-                const json = JSON.parse(payload);
+• CLASSIC trial (ICU patients with septic shock after initial resuscitation):
+- Restrictive approach reduced additional ICU fluid volumes (median ~1.8 L vs ~3.8 L in usual care).
+- No difference in 90-day mortality (42.3% restrictive vs 42.1% usual care; RR 1.00). No difference in serious adverse events.
 
-                if (currentMode === 'search' && collectedCitations.length === 0) {
-                  if (json.citations && Array.isArray(json.citations)) {
-                    if (typeof json.citations[0] === 'object') {
-                      json.citations.forEach(cd => {
-                        if (cd.number && cd.title && cd.url) {
-                          collectedCitations.push({
-                            number: cd.number,
-                            title: cd.title,
-                            url: cd.url,
-                            authors: cd.authors || new URL(cd.url).hostname || 'Unknown'
-                          });
-                        }
-                      });
-                    } else {
-                      json.citations.forEach((urlString, i) => {
-                        try {
-                          const url = new URL(urlString);
-                          collectedCitations.push({
-                            number: i + 1,
-                            title: url.hostname || 'External Link',
-                            url: urlString,
-                            authors: url.hostname || 'Unknown'
-                          });
-                        } catch {}
-                      });
-                    }
-                  }
-                }
+| Trial | Population | Fluid Difference | Mortality Outcome |
+|-------|------------|------------------|-------------------|
+| NEJM | Early septic shock | 2.1L less | 14.0% vs 14.9% |
+| CLASSIC | ICU after resuscitation | 1.8L vs 3.8L | 42.3% vs 42.1% |`;
 
-                let content = null;
-                if (json.choices?.[0]?.delta?.content) content = json.choices[0].delta.content;
-                else if (json.choices?.[0]?.message?.content) content = json.choices[0].message.content;
-                else if (json.content) content = json.content;
-                else if (json.text) content = json.text;
-
-                if (content) {
-                  finalContent += content;
-                  setStreamingContent(finalContent);
-                }
-              } catch {}
-            };
-
-            if (endsWithNewline) {
-              lines.forEach(l => l.trim() && handleLine(l.trim()));
-              buffer = '';
-            } else if (lines.length > 1) {
-              lines.slice(0, -1).forEach(l => l.trim() && handleLine(l.trim()));
-              buffer = lines[lines.length - 1] || '';
-            }
-          }
-
-          if (finalContent.trim()) {
-            const assistantMessage = {
-              id: Date.now() + 1,
-              role: 'assistant',
-              content: finalContent.trim(),
-              citations: collectedCitations,
-              timestamp: new Date(),
-              isStreamingComplete: true
-            };
-
-            setMessages(prev => [...prev, assistantMessage]);
-
-            const chatSession = {
-              id: Date.now() + 2,
-              title: userMessage.content.slice(0, 50) + (userMessage.content.length > 50 ? '...' : ''),
-              messages: [...messages, userMessage, assistantMessage],
-              timestamp: new Date(),
-              wasInClinicalMode: false
-            };
-            setChatHistory(prev => [chatSession, ...prev]);
-          }
-
+      // Simulate streaming
+      let currentIndex = 0;
+      const streamInterval = setInterval(() => {
+        if (currentIndex < mockContent.length) {
+          const chunk = mockContent.slice(0, currentIndex + 10);
+          setStreamingContent(chunk);
+          currentIndex += 10;
+        } else {
+          clearInterval(streamInterval);
           setIsStreaming(false);
+          
+          const assistantMessage = {
+            id: Date.now() + 1,
+            role: 'assistant',
+            content: mockContent,
+            citations: [
+              { number: 3, title: 'Early Restrictive vs Liberal Fluid Management', url: 'https://example.com', authors: 'NEJM Study Group' }
+            ],
+            timestamp: new Date(),
+            isStreamingComplete: true
+          };
+
+          setMessages(prev => [...prev, assistantMessage]);
           setStreamingContent('');
-        } catch {
-          setIsStreaming(false);
-          setIsLoading(false);
-          setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: '⚠️ Error occurred while streaming response. Please try again.', timestamp: new Date() }]);
         }
-      }
+      }, 50);
+
     } catch (error) {
       if (error.name === 'AbortError') return;
       setIsLoading(false);
       setIsStreaming(false);
-      setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
+      setMessages(prev => [...prev, { 
+        id: Date.now() + 1, 
+        role: 'assistant', 
+        content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, 
+        timestamp: new Date() 
+      }]);
     } finally {
       abortControllerRef.current = null;
     }
