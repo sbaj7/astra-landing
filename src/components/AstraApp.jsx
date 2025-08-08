@@ -44,22 +44,22 @@ const useTheme = () => {
    ========================= */
 const sampleQueries = {
   search: [
-    "Antithrombotic strategy in AF post-TAVI multicenter RCT outcomes",
-    "Restrictive vs liberal fluid resuscitation in early septic shock multicenter RCT outcomes",
-    "Short-course antibiotics for uncomplicated gram-negative bacteremia systematic review update",
-    "Deprescribing polypharmacy in stage-4 CKD consensus guidance"
+    'Antithrombotic strategy in AF post-TAVI multicenter RCT outcomes',
+    'Restrictive vs liberal fluid resuscitation in early septic shock multicenter RCT outcomes',
+    'Short-course antibiotics for uncomplicated gram-negative bacteremia systematic review update',
+    'Deprescribing polypharmacy in stage-4 CKD consensus guidance'
   ],
   reason: [
-    "32-yo male marathoner collapses mid-race, ECG QTc 520 ms, syncope episode",
-    "68-yo female 2-week painless jaundice, 10-lb weight loss, palpable gallbladder",
-    "26-yo female 3 days postpartum with sudden dyspnea, pleuritic pain, SpO₂ 88 %",
-    "52-yo male with uncontrolled diabetes, orbital pain, black nasal eschar, fever"
+    '32-yo male marathoner collapses mid-race, ECG QTc 520 ms, syncope episode',
+    '68-yo female 2-week painless jaundice, 10-lb weight loss, palpable gallbladder',
+    '26-yo female 3 days postpartum with sudden dyspnea, pleuritic pain, SpO₂ 88 %',
+    '52-yo male with uncontrolled diabetes, orbital pain, black nasal eschar, fever'
   ],
   write: [
-    "NSTEMI day 2 post-PCI in CICU, heparin stopped, on DAPT, telemetry monitoring",
-    "HFrEF decompensation on IV furosemide drip, net −2 L goal, BMP and weight daily",
-    "Severe aortic stenosis (78-yo) awaiting elective TAVR; optimize preload, cardiac work-up",
-    "Metastatic colon cancer with bowel obstruction; comfort-care path, morphine PCA, PC consult"
+    'NSTEMI day 2 post-PCI in CICU, heparin stopped, on DAPT, telemetry monitoring',
+    'HFrEF decompensation on IV furosemide drip, net −2 L goal, BMP and weight daily',
+    'Severe aortic stenosis (78-yo) awaiting elective TAVR; optimize preload, cardiac work-up',
+    'Metastatic colon cancer with bowel obstruction; comfort-care path, morphine PCA, PC consult'
   ]
 };
 
@@ -122,11 +122,11 @@ const useSpeechRecognition = () => {
 
 /* =========================
    MARKDOWN RENDERING
-   - Beautiful tables
-   - Proper bullets (supports en dash) + nested sub-bullets
+   - Beautiful tables (alignment-aware)
+   - Proper bullets (supports en dash) + **nested sub-bullets**
    ========================= */
 
-// Escape HTML (safe)
+// Escape HTML safely
 const escapeHTML = (s) =>
   s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -193,13 +193,13 @@ const processTable = (tableLines) => {
   return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
 };
 
-// Smart list parser with nesting support
-const renderMarkdown = (raw = '') => {
+// Smart list parser with nesting (2 spaces = one level)
+export const renderMarkdown = (raw = '') => {
   if (!raw) return '';
 
   const lines = raw.split('\n');
   const out = [];
-  const listStack = []; // track open <ul> levels (length === depth)
+  const listStack = []; // each item === 'ul'
 
   const closeListsTo = (level) => {
     while (listStack.length > level) {
@@ -208,17 +208,17 @@ const renderMarkdown = (raw = '') => {
     }
   };
 
-  // Helper: detect table start (MD header row + alignment row)
-  const isTableStart = (idx) => {
-    const l0 = lines[idx] || '';
-    const l1 = lines[idx + 1] || '';
+  const bulletRE = /^(\s*)([•*+\-–])\s+(.*)$/; // includes en dash
+  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
+  const isTableStart = (i) => {
+    const l0 = lines[i] || '';
+    const l1 = lines[i + 1] || '';
     return l0.includes('|') && /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l1);
   };
 
-  // Read a table block
-  const readTable = (idx) => {
-    const tbl = [lines[idx], lines[idx + 1]];
-    let j = idx + 2;
+  const readTable = (i) => {
+    const tbl = [lines[i], lines[i + 1]];
+    let j = i + 2;
     while (j < lines.length && lines[j].includes('|')) {
       tbl.push(lines[j]);
       j++;
@@ -226,22 +226,18 @@ const renderMarkdown = (raw = '') => {
     return { block: tbl, next: j };
   };
 
-  // Compute list depth from leading spaces (2 spaces = one level)
-  const bulletRE = /^(\s*)([•*+\-–])\s+(.*)$/; // includes en dash
-  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
-
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
 
-    // Blank line -> close lists
+    // Blank line → close lists
     if (!line.trim()) {
       closeListsTo(0);
       i++;
       continue;
     }
 
-    // Tables
+    // Table
     if (isTableStart(i)) {
       closeListsTo(0);
       const { block, next } = readTable(i);
@@ -250,7 +246,7 @@ const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Code block ```
+    // Code block
     if (/^```/.test(line)) {
       closeListsTo(0);
       const buf = [];
@@ -264,7 +260,7 @@ const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Headers #,##,###
+    // Headers
     const h = line.match(/^(#{1,3})\s+(.*)$/);
     if (h) {
       closeListsTo(0);
@@ -291,26 +287,24 @@ const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // BULLETED list item (supports en dash and nesting by indent)
+    // BULLET (supports en dash) with nesting
     const mBullet = line.match(bulletRE);
     if (mBullet) {
-      const indent = mBullet[1].replace(/\t/g, '    ');
-      const depth = Math.floor(indent.length / 2); // every 2 spaces -> new level
+      const indentSpaces = mBullet[1].replace(/\t/g, '    ').length;
+      const depth = Math.floor(indentSpaces / 2); // every 2 spaces is a new level
       const content = mBullet[3];
 
-      // Open/close stacks to match depth
-      if (listStack.length === 0) {
-        out.push('<ul>');
-        listStack.push('ul');
-      }
+      // open/close lists to the right depth
       if (depth > listStack.length - 1) {
-        // Open missing levels
-        for (let k = listStack.length - 1; k < depth; k++) {
+        for (let k = listStack.length; k <= depth; k++) {
           out.push('<ul>');
           listStack.push('ul');
         }
       } else if (depth < listStack.length - 1) {
         closeListsTo(depth + 1);
+      } else if (listStack.length === 0) {
+        out.push('<ul>');
+        listStack.push('ul');
       }
 
       out.push(`<li>${processInline(content)}</li>`);
@@ -318,7 +312,7 @@ const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // NUMBERED item (kept as custom "numbered-item")
+    // NUMBERED item (kept as your custom layout to avoid browser renumbering)
     const mNum = line.match(numberRE);
     if (mNum) {
       closeListsTo(0);
@@ -329,15 +323,13 @@ const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Paragraph default
+    // Paragraph
     closeListsTo(0);
     out.push(`<p>${processInline(line.trim())}</p>`);
     i++;
   }
 
-  // Close any remaining lists
   closeListsTo(0);
-
   return out.join('\n');
 };
 
@@ -404,7 +396,7 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
 };
 
 /* =========================
-   UI PARTS (Toolbar, Etc.)
+   UI PARTS
    ========================= */
 const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
   const [cooldown, setCooldown] = useState(false);
@@ -456,7 +448,6 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
     { key: 'reason', title: 'DDx', icon: Sparkles },
     { key: 'write', title: 'A&P', icon: FileText }
   ];
-
   return (
     <div style={{ display: 'flex', gap: 6 }}>
       {modes.map(({ key, title, icon: Icon }) => {
@@ -546,7 +537,9 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
         <div style={{ display: 'flex', backgroundColor: `${theme.accentSoftBlue}0D`, borderRadius: 6 }}>
           <div style={{ width: 3, backgroundColor: theme.accentSoftBlue, flexShrink: 0 }} />
           <div style={{ flex: 1, padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>{getLabel()}</div>
+            <div style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>
+              {getLabel()}
+            </div>
             <div style={{ fontSize: 14, color: theme.textPrimary }}>{message.content}</div>
           </div>
         </div>
@@ -615,41 +608,9 @@ const LoadingIndicator = ({ theme }) => (
   </div>
 );
 
-const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
-  if (!isOpen) return null;
-  return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 50, display: 'flex' }}>
-      <div style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' }} onClick={onClose} />
-      <div style={{ width: 320, height: '100%', padding: 24, paddingTop: 'max(24px, env(safe-area-inset-top))', overflowY: 'auto', backgroundColor: theme.backgroundSurface }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
-          <h2 style={{ fontSize: 18, fontWeight: 600, color: theme.textPrimary, margin: 0 }}>Chat History</h2>
-          <button onClick={onNewChat} aria-label="New chat" style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer' }}>
-            <Edit3 size={16} color={theme.textPrimary} />
-          </button>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {chatHistory.map((chat) => (
-            <div key={chat.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <button
-                onClick={() => onSelectChat(chat)}
-                style={{ flex: 1, padding: 12, borderRadius: 8, textAlign: 'left', backgroundColor: `${theme.textSecondary}0A`, border: 'none', cursor: 'pointer' }}
-              >
-                <div style={{ fontSize: 14, fontWeight: 500, color: theme.textPrimary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                  {chat.title}
-                </div>
-                <div style={{ fontSize: 12, color: theme.textSecondary }}>{new Date(chat.timestamp).toLocaleDateString()}</div>
-              </button>
-              <button onClick={() => onDeleteChat(chat)} aria-label="Delete chat" style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer' }}>
-                <Square size={12} color={theme.errorColor} />
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
+/* =========================
+   INPUT BAR
+   ========================= */
 const InputBar = ({
   query, setQuery, currentMode, onModeChange, onSend, onStop, isStreaming, isLoading, speechRecognition, theme
 }) => {
@@ -715,17 +676,17 @@ const InputBar = ({
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: -8 }}>
-        <ModeSwitcher currentMode={currentMode} onModeChange={onModeChange} isDisabled={isDisabled} theme={theme} />
+        <ModeSwitcher currentMode={currentMode} onModeChange={onModeChange} isDisabled={isStreaming || isLoading} theme={theme} />
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <button
             onClick={speechRecognition.toggleRecording}
-            disabled={!speechRecognition.isAvailable || isDisabled}
+            disabled={!speechRecognition.isAvailable || isStreaming || isLoading}
             aria-pressed={speechRecognition.isRecording}
             aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
             style={{ padding: 8, borderRadius: '50%', border: 'none', background: 'transparent', cursor: 'pointer',
               transform: speechRecognition.isRecording ? 'scale(1.1)' : 'scale(1)',
               color: speechRecognition.isRecording ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!speechRecognition.isAvailable || isDisabled) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              opacity: (!speechRecognition.isAvailable || isStreaming || isLoading) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           >
             {speechRecognition.isRecording ? <Square size={28} fill="currentColor" /> : <Mic size={28} />}
           </button>
@@ -788,11 +749,11 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
 /* Markdown base */
-.md { line-height: 1.5; }
+.md { line-height: 1.55; }
 .md h1 { margin: 0.6rem 0 0.3rem; font-size: 1.5rem; font-weight: 700; }
 .md h2 { margin: 0.5rem 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
 .md h3 { margin: 0.4rem 0 0.2rem; font-size: 1.1rem; font-weight: 600; }
-.md p  { margin: 0.2rem 0; line-height: 1.45; }
+.md p  { margin: 0.24rem 0; line-height: 1.5; }
 .md a  { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
 .md a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
 .md sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; }
@@ -800,55 +761,78 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 
 /* Code blocks */
 .md pre {
-  background-color: ${theme.textSecondary}15; border-radius: 8px; padding: 12px; margin: 0.5rem 0; overflow-x: auto;
+  background-color: ${theme.textSecondary}15; border-radius: 10px; padding: 12px; margin: 0.6rem 0; overflow-x: auto;
+  border: 1px solid ${theme.textSecondary}20;
 }
 .md code {
-  background-color: ${theme.textSecondary}15; border-radius: 4px; padding: 2px 6px; font-size: .9em;
+  background-color: ${theme.textSecondary}15; border-radius: 6px; padding: 2px 6px; font-size: .9em;
   font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace;
+  border: 1px solid ${theme.textSecondary}20;
 }
 .md pre code { background: none; border: none; padding: 0; }
 
 /* Blockquote & hr */
-.md blockquote { margin: 0.2rem 0; padding-left: 0.75rem; border-left: 3px solid ${theme.accentSoftBlue}; font-style: italic; }
+.md blockquote { margin: 0.25rem 0; padding: 0.5rem 0 0.5rem 0.75rem; border-left: 3px solid ${theme.accentSoftBlue}; background: ${theme.textSecondary}0D; border-radius: 6px; }
 .md hr { border: none; height: 1px; background: ${theme.textSecondary}40; margin: 1rem 0; }
 
 /* Lists: proper hanging indents + nested rhythm */
-.md ul, .md ol { margin: 0.4rem 0; padding-left: 1.5rem; list-style-position: outside; }
+.md ul, .md ol { margin: 0.45rem 0; padding-left: 1.5rem; list-style-position: outside; }
 .md li { margin: 0.16rem 0; line-height: 1.5; padding-left: 0.2rem; text-indent: 0; }
 .md li p { margin: 0.12rem 0; }
-.md li::marker { color: ${theme.accentSoftBlue}; font-weight: 600; }
-.md ul ul, .md ol ol, .md ul ol, .md ol ul { margin: 0.2rem 0; padding-left: 1.2rem; }
+.md li::marker { color: ${theme.accentSoftBlue}; font-weight: 700; }
+.md ul ul, .md ol ol, .md ul ol, .md ol ul { margin: 0.22rem 0; padding-left: 1.2rem; }
 
 /* Custom numbered-item layout (for your non-ol numbering) */
-.md .numbered-item { display: flex; align-items: baseline; gap: 0.4rem; margin: 0.22rem 0; }
-.md .numbered-item .number { min-width: 2.2ch; text-align: right; font-weight: 600; }
-.md .numbered-item .content { flex: 1; line-height: 1.4; }
+.md .numbered-item { display: flex; align-items: baseline; gap: 0.5rem; margin: 0.26rem 0; }
+.md .numbered-item .number { min-width: 2.4ch; text-align: right; font-weight: 700; color: ${theme.accentSoftBlue}; }
+.md .numbered-item .content { flex: 1; line-height: 1.45; }
 
-/* Tables: sticky header, zebra, responsive */
+/* Tables: sticky header, blur, zebra, rounded, soft borders, hover */
 .md-table-wrap {
-  width: 100%; overflow: auto; -webkit-overflow-scrolling: touch;
-  margin: 0.5rem 0 0.75rem; border-radius: 10px; background: ${theme.backgroundSurface};
-  box-shadow: 0 1px 0 ${theme.textSecondary}1A inset, 0 0 0 1px ${theme.textSecondary}12;
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.6rem 0 0.8rem;
+  border-radius: 12px;
+  background: ${theme.backgroundSurface};
+  box-shadow: 0 0 0 1px ${theme.textSecondary}12 inset, 0 6px 20px -12px rgba(0,0,0,.35);
 }
 .md-table {
-  width: 100%; border-collapse: separate; border-spacing: 0;
-  font-size: 13.5px; line-height: 1.45; color: ${theme.textPrimary}; overflow: hidden;
+  width: 100%;
+  border-collapse: separate !important; /* safeguard */
+  border-spacing: 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: ${theme.textPrimary};
 }
 .md-table thead th {
-  position: sticky; top: 0; z-index: 1; text-align: left; padding: 10px 12px;
-  background: linear-gradient(0deg, ${theme.textSecondary}10, ${theme.textSecondary}18);
-  color: ${theme.textPrimary}; font-weight: 600; border-bottom: 1px solid ${theme.textSecondary}30; white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  text-align: left;
+  padding: 11px 12px;
+  background: linear-gradient(180deg, ${theme.textSecondary}22, ${theme.textSecondary}10);
+  -webkit-backdrop-filter: saturate(130%) blur(6px);
+  backdrop-filter: saturate(130%) blur(6px);
+  color: ${theme.textPrimary};
+  font-weight: 700;
+  border-bottom: 1px solid ${theme.textSecondary}35;
+  white-space: nowrap;
 }
 .md-table tbody td {
-  padding: 10px 12px; vertical-align: middle; border-bottom: 1px solid ${theme.textSecondary}20;
-  background: ${theme.backgroundSurface}; max-width: 520px; overflow-wrap: anywhere;
+  padding: 10px 12px;
+  vertical-align: middle;
+  border-bottom: 1px solid ${theme.textSecondary}22;
+  background: ${theme.backgroundSurface};
+  max-width: 560px;
+  overflow-wrap: anywhere;
 }
-.md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}08; }
-.md-table tbody tr:hover td { background: ${theme.accentSoftBlue}12; }
-.md-table thead th:first-child { border-top-left-radius: 10px; }
-.md-table thead th:last-child  { border-top-right-radius: 10px; }
-.md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-.md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 10px; }
+.md-table tbody tr:nth-child(odd) td { background: ${theme.textSecondary}0D; }
+.md-table tbody tr:hover td { background: ${theme.accentSoftBlue}14; }
+.md-table thead th:first-child { border-top-left-radius: 12px; }
+.md-table thead th:last-child  { border-top-right-radius: 12px; }
+.md-table tbody tr:last-child td:first-child { border-bottom-left-radius: 12px; }
+.md-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 12px; }
 .md-table .align-left { text-align: left; }
 .md-table .align-center { text-align: center; }
 .md-table .align-right { text-align: right; }
@@ -866,9 +850,6 @@ const GlobalStyle = ({ theme }) => (
 /* =========================
    APP
    ========================= */
-const Sidebar = React.memo(SidebarUnmemoed); // quiet linter if needed
-function SidebarUnmemoed() { return null; } // placeholder removed earlier
-
 const AstraApp = () => {
   const { colors: theme } = useTheme();
   const speechRecognition = useSpeechRecognition();
@@ -1061,16 +1042,6 @@ const AstraApp = () => {
     }
   };
 
-  const extractTitle = (url) => {
-    const hostname = url.hostname?.toLowerCase() || '';
-    if (hostname.includes('pubmed')) return 'PubMed';
-    if (hostname.includes('pmc')) return 'PMC Article';
-    if (hostname.includes('dynamed')) return 'DynaMed';
-    if (hostname.includes('heart.org')) return 'American Heart Association';
-    if (hostname.includes('wikipedia')) return 'Wikipedia';
-    return url.hostname || 'External Link';
-  };
-
   const handleStop = () => {
     if (abortControllerRef.current) abortControllerRef.current.abort();
     if (isStreaming) {
@@ -1147,7 +1118,6 @@ const AstraApp = () => {
         </div>
       </div>
 
-      {/* Sidebar toggle preserved (implement your Sidebar here if needed) */}
       {showCitationOverlay && selectedCitation && (
         <CitationPillOverlay
           citation={selectedCitation}
