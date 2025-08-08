@@ -1,23 +1,15 @@
-/* 1) Load Tailwind layers */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 2) (Optional) KaTeX if you use rehype-katex */
-// @import 'katex/dist/katex.min.css';
+/* Optional: KaTeX if you actually enabled rehype-katex */
+/* @import 'katex/dist/katex.min.css'; */
 
-/* 3) Basic app-level resets */
 html, body, #root {
   height: 100%;
 }
 
 body {
   margin: 0;
-  background-color: #0b0c0e; /* or remove and let your theme control it */
   font-family: system-ui, sans-serif;
-}
-
-/* 4) Brand link styles (optional) */
-a {
-  text-decoration: none;
 }
