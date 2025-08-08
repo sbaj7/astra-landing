@@ -1,6 +1,19 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
 
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeHighlight from 'rehype-highlight';
+// import rehypeKatex from 'rehype-katex'; // <-- requires `katex` package + CSS
+import rehypeSanitize from 'rehype-sanitize';
+import { visit } from 'unist-util-visit';
+
+// If you enable KaTeX, also:
+// import 'katex/dist/katex.min.css';
+
 /* =========================
    THEME
    ========================= */
@@ -14,7 +27,7 @@ const colors = {
     errorColor: '#D92D20',
     successColor: '#12B76A',
     grayPrimary: '#8B8B8B'
-  }, // it worked before
+  },
   dark: {
     backgroundPrimary: '#121417',
     backgroundSurface: '#1C1F23',
@@ -118,152 +131,57 @@ const useSpeechRecognition = () => {
 };
 
 /* =========================
-   MARKDOWN RENDERING (tables + bullets + numbered items)
+   MARKDOWN via LIBRARIES
    ========================= */
-export const renderMarkdown = (raw = '') => {
-  if (!raw) return '';
-  const lines = raw.split('\n');
-  const result = [];
-  let i = 0;
 
-  while (i < lines.length) {
-    const line = lines[i];
-
-    if (!line.trim()) {
-      if (result.length > 0 && result[result.length - 1] !== '<br>') {
-        result.push('<br>');
+/** Rehype plugin: turn text like "[12]" into <sup class="md-citation" data-citation="12">[12]</sup> */
+function rehypeBracketCitations() {
+  return (tree) => {
+    visit(tree, 'text', (node, index, parent) => {
+      if (!parent || typeof node.value !== 'string') return;
+      const regex = /\[(\d+)]/g;
+      const parts = [];
+      let lastIndex = 0;
+      let match;
+      while ((match = regex.exec(node.value)) !== null) {
+        const before = node.value.slice(lastIndex, match.index);
+        if (before) parts.push({ type: 'text', value: before });
+        const num = match[1];
+        parts.push({
+          type: 'element',
+          tagName: 'sup',
+          properties: { className: ['md-citation'], 'data-citation': num },
+          children: [{ type: 'text', value: `[${num}]` }]
+        });
+        lastIndex = match.index + match[0].length;
       }
-      i++;
-      continue;
-    }
-
-    // Table: consecutive lines with pipes
-    if (line.includes('|')) {
-      const tableLines = [];
-      let j = i;
-      while (j < lines.length && lines[j].includes('|')) {
-        tableLines.push(lines[j]);
-        j++;
+      const after = node.value.slice(lastIndex);
+      if (parts.length) {
+        if (after) parts.push({ type: 'text', value: after });
+        parent.children.splice(index, 1, ...parts);
+        return index + parts.length;
       }
-      if (tableLines.length >= 2) {
-        result.push(processTable(tableLines));
-        i = j;
-        continue;
-      }
-    }
+    });
+  };
+}
 
-    // Headers
-    if (/^#{1,3}\s/.test(line)) {
-      const level = line.match(/^(#{1,3})/)[1].length;
-      const text = line.replace(/^#{1,3}\s+/, '');
-      result.push(`<h${level}>${processInline(text)}</h${level}>`);
-      i++;
-      continue;
-    }
-
-    // Numbered item (no <ol> so numbers stay as-authored)
-    if (/^\d+\.\s/.test(line)) {
-      const m = line.match(/^(\d+)\.\s+(.*)$/);
-      if (m) {
-        const number = m[1];
-        const text = m[2];
-        result.push(
-          `<div class="numbered-item"><span class="number">${number}.</span><span class="content">${processInline(text)}</span></div>`
-        );
-      }
-      i++;
-      continue;
-    }
-
-    // Bulleted list (single-level grouping)
-    if (/^[•*+\-]\s/.test(line)) {
-      result.push('<ul>');
-      while (i < lines.length && /^[•*+\-]\s/.test(lines[i])) {
-        const text = lines[i].replace(/^[•*+\-]\s+/, '');
-        result.push(`<li>${processInline(text)}</li>`);
-        i++;
-      }
-      result.push('</ul>');
-      continue;
-    }
-
-    // Blockquote
-    if (/^>\s/.test(line)) {
-      const text = line.replace(/^>\s+/, '');
-      result.push(`<blockquote>${processInline(text)}</blockquote>`);
-      i++;
-      continue;
-    }
-
-    // Horizontal rule
-    if (/^---+$/.test(line)) {
-      result.push('<hr>');
-      i++;
-      continue;
-    }
-
-    // Code block
-    if (/^```/.test(line)) {
-      result.push('<pre><code>');
-      i++;
-      while (i < lines.length && !/^```/.test(lines[i])) {
-        result.push(lines[i]);
-        i++;
-      }
-      result.push('</code></pre>');
-      i++;
-      continue;
-    }
-
-    // Paragraph
-    result.push(`<p>${processInline(line.trim())}</p>`);
-    i++;
-  }
-
-  return result.join('\n');
-};
-
-const processTable = (tableLines) => {
-  if (tableLines.length < 2) return '';
-  const result = ['<table class="md-table">'];
-
-  tableLines.forEach((line, index) => {
-    // skip pure divider rows like |---|:---:|
-    if (/^\s*\|[\s\-:|]*\|\s*$/.test(line)) return;
-
-    const cells = line
-      .split('|')
-      .map((c) => c.trim())
-      .filter((cell, i, arr) => {
-        if (i === 0 || i === arr.length - 1) return cell !== '';
-        return true;
-      });
-
-    if (cells.length === 0) return;
-
-    const isHeader = index === 0;
-    const tag = isHeader ? 'th' : 'td';
-    const sectionTag = isHeader ? 'thead' : index === 1 ? 'tbody' : '';
-
-    if (sectionTag) result.push(`<${sectionTag}>`);
-    result.push('<tr>');
-    cells.forEach((cell) => result.push(`<${tag}>${processInline(cell)}</${tag}>`));
-    result.push('</tr>');
-    if (sectionTag === 'thead') result.push('</thead>');
-  });
-
-  if (tableLines.length > 2) result.push('</tbody>');
-  result.push('</table>');
-  return result.join('\n');
-};
-
-const processInline = (text) => {
-  return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+?)\*/g, '<em>$1</em>')
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>');
+/** Sanitize schema allowing the elements/styles we use */
+const sanitizeSchema = {
+  tagNames: [
+    'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
+    'h1','h2','h3','table','thead','tbody','tr','th','td','sup','span','br'
+  ],
+  attributes: {
+    a: ['href','title','target','rel'],
+    code: ['className'],
+    sup: ['data-citation','className'],
+    span: ['className','style'],
+    th: ['align'],
+    td: ['align'],
+    h1: ['id'], h2: ['id'], h3: ['id'], table: ['className']
+  },
+  clobberPrefix: 'md-',
+  protocols: { href: ['http', 'https', 'mailto', 'tel'] }
 };
 
 /* =========================
@@ -449,10 +367,55 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
   );
 };
 
-const MessageBubble = ({ message, theme, onTapCitation }) => {
-  const [showCopied, setShowCopied] = useState(false);
+const MarkdownBlock = ({ markdown, theme, onTapCitation }) => {
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    const handler = (e) => {
+      const t = e.target;
+      if (t.tagName === 'SUP' && t.dataset.citation) {
+        const number = parseInt(t.dataset.citation, 10);
+        // onTapCitation is wired in MessageBubble with message.citations lookup
+        if (onTapCitation) onTapCitation(number);
+      }
+    };
+    const el = containerRef.current;
+    if (el) el.addEventListener('click', handler);
+    return () => { if (el) el.removeEventListener('click', handler); };
+  }, [onTapCitation]);
+
+  return (
+    <div ref={containerRef} className="md" style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}>
+      <ReactMarkdown
+        remarkPlugins={[
+          remarkGfm,
+          remarkMath
+        ]}
+        rehypePlugins={[
+          rehypeSlug,
+          [rehypeAutolinkHeadings, { behavior: 'append' }],
+          rehypeHighlight,
+          rehypeBracketCitations,
+          // rehypeKatex, // enable if you installed katex
+          [rehypeSanitize, sanitizeSchema]
+        ]}
+        components={{
+          a: ({ node, ...props }) => {
+            const href = props.href || '';
+            const isExternal = /^https?:\/\//i.test(href);
+            return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
+          },
+          table: ({ node, ...props }) => <table {...props} className="md-table" />,
+        }}
+      >
+        {markdown || ''}
+      </ReactMarkdown>
+    </div>
+  );
+};
+
+const MessageBubble = ({ message, theme, onTapCitation }) => {
+  const [showCopied, setShowCopied] = useState(false);
   const handleCopy = async () => {
     if (!message.content) return;
     try {
@@ -461,20 +424,6 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
       setTimeout(() => setShowCopied(false), 1500);
     } catch {}
   };
-
-  useEffect(() => {
-    const handler = (e) => {
-      const t = e.target;
-      if (t.tagName === 'SUP' && t.dataset.citation) {
-        const number = parseInt(t.dataset.citation, 10);
-        const citation = message.citations?.find((c) => c.number === number);
-        if (citation && onTapCitation) onTapCitation(citation);
-      }
-    };
-    const el = containerRef.current;
-    if (el) el.addEventListener('click', handler);
-    return () => { if (el) el.removeEventListener('click', handler); };
-  }, [message.citations, onTapCitation]);
 
   if (message.role === 'user') {
     const getLabel = () => message.wasInWriteMode ? 'Write Request:' : (message.wasInReasonMode ? 'Reason Request:' : 'Search Query:');
@@ -493,6 +442,7 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
     );
   }
 
+  // assistant message
   return (
     <div style={{ width: '100%', marginBottom: 16, position: 'relative' }}>
       <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33` }}>
@@ -501,11 +451,13 @@ const MessageBubble = ({ message, theme, onTapCitation }) => {
             <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-        <div
-          ref={containerRef}
-          className="md"
-          style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
-          dangerouslySetInnerHTML={{ __html: renderMarkdown(message.content) }}
+        <MarkdownBlock
+          markdown={message.content}
+          theme={theme}
+          onTapCitation={(num) => {
+            const citation = message.citations?.find((c) => c.number === num);
+            if (citation && onTapCitation) onTapCitation(citation);
+          }}
         />
         <button
           onClick={handleCopy}
@@ -531,11 +483,11 @@ const StreamingResponse = ({ content, theme }) => (
         </div>
       )}
     </div>
-    <div
-      className="md"
-      style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}
-      dangerouslySetInnerHTML={{ __html: content ? renderMarkdown(content) + '<span style="color: #4A6B7D; animation: blink 1s infinite;">▍</span>' : '' }}
-    />
+    {/* While streaming, render incrementally and add a blinking cursor */}
+    <div className="md" style={{ fontSize: 14, lineHeight: 1.6, color: theme.textPrimary }}>
+      <MarkdownBlock markdown={content || ''} theme={theme} onTapCitation={() => {}} />
+      {content ? <span style={{ color: '#4A6B7D', animation: 'blink 1s infinite' }}>▍</span> : null}
+    </div>
   </div>
 );
 
