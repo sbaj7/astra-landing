@@ -10,10 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "dompurify": "^3.2.6",
     "lucide-react": "^0.522.0",
-    "markdown-it": "^14.1.0",
-    "marked": "^16.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
@@ -25,10 +22,12 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "katex": "^0.16.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
