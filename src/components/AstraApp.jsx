@@ -188,17 +188,18 @@ const processTable = (tableLines) => {
   return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
 };
 
-// --- FIXED: robust renderer with true nested lists (bullets + ordered) ---
 export const renderMarkdown = (raw = '') => {
   if (!raw) return '';
+
   const lines = raw.split('\n');
   const out = [];
 
-  // list stack stores the open list types at each depth: 'ul' | 'ol'
-  const listStack = [];
+  const listStack = [];            // stack of 'ul' | 'ol'
+  let lastOpenedLiIndex = -1;      // index in out[] where the last <li> started
+  let lastLiDepth = -1;            // depth of last <li>
 
-  const bulletRE  = /^(\s*)([*+\-•–])\s+(.*)$/;     // bullets (incl. en dash)
-  const numberRE  = /^(\s*)(\d+)\.\s+(.*)$/;        // ordered (1. ...)
+  const bulletRE  = /^(\s*)([\*\+\-•–])\s+(.*)$/;   // bullets (incl. en dash)
+  const numberRE  = /^(\s*)(\d+)\.\s+(.*)$/;        // ordered "1. ..."
   const codeFence = /^```/;
 
   const tableStart = (i) =>
@@ -212,43 +213,40 @@ export const renderMarkdown = (raw = '') => {
     return { block: tbl, next: j };
   };
 
+  const escapeHTML = (s='') =>
+    s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
   const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
-  const depthFromIndent = (s) => {
-    const spaces = tabsToSpaces(s).length;
-    return Math.floor(spaces / 2); // 2 spaces per level
-  };
+  const depthFromIndent = (s) => Math.floor(tabsToSpaces(s).length / 2); // 2 spaces per level
 
   const closeListsTo = (level) => {
-    // level is number of open lists to keep
     while (listStack.length > level) {
-      const type = listStack.pop();
-      out.push(`</${type}>`);
+      out.push(`</${listStack.pop()}>`);
     }
   };
 
-  // ensure there is an open list at "depth" with the given "type"
   const ensureListAtDepth = (depth, type) => {
-    // keep only parents strictly above target depth
+    // close extra levels
     while (listStack.length > depth + 1) {
-      const t = listStack.pop();
-      out.push(`</${t}>`);
+      out.push(`</${listStack.pop()}>`);
     }
-    // open intermediate levels as <ul> if user jumps multiple depths
+    // open missing parents as <ul>
     while (listStack.length < depth) {
       out.push('<ul>');
       listStack.push('ul');
     }
-    // handle the target level itself
+    // open or switch list at target depth
     if (listStack.length === depth) {
       out.push(`<${type}>`);
       listStack.push(type);
     } else if (listStack[depth] !== type) {
-      // switch list type at this depth
       out.push(`</${listStack.pop()}>`);
       out.push(`<${type}>`);
       listStack.push(type);
     }
   };
+
+  const emitParagraph = (text) => out.push(`<p>${processInline(text.trim())}</p>`);
 
   let i = 0;
   while (i < lines.length) {
@@ -257,11 +255,13 @@ export const renderMarkdown = (raw = '') => {
     // blank line → close all lists
     if (!line.trim()) {
       closeListsTo(0);
+      lastOpenedLiIndex = -1;
+      lastLiDepth = -1;
       i++;
       continue;
     }
 
-    // fenced code blocks
+    // fenced code
     if (codeFence.test(line)) {
       closeListsTo(0);
       const buf = [];
@@ -280,62 +280,150 @@ export const renderMarkdown = (raw = '') => {
       closeListsTo(0);
       const { block, next } = readTable(i);
       out.push(processTable(block));
+      lastOpenedLiIndex = -1;
+      lastLiDepth = -1;
       i = next;
       continue;
     }
 
     // blockquote
-    const bq = line.match(/^\s*>\s+(.*)$/);
-    if (bq) {
-      closeListsTo(0);
-      out.push(`<blockquote>${processInline(bq[1])}</blockquote>`);
-      i++;
-      continue;
+    {
+      const m = line.match(/^\s*>\s+(.*)$/);
+      if (m) {
+        closeListsTo(0);
+        out.push(`<blockquote>${processInline(m[1])}</blockquote>`);
+        lastOpenedLiIndex = -1;
+        lastLiDepth = -1;
+        i++;
+        continue;
+      }
     }
 
     // headers
-    const hd = line.match(/^(#{1,3})\s+(.*)$/);
-    if (hd) {
-      closeListsTo(0);
-      const level = hd[1].length;
-      out.push(`<h${level}>${processInline(hd[2])}</h${level}>`);
-      i++;
-      continue;
+    {
+      const m = line.match(/^(#{1,3})\s+(.*)$/);
+      if (m) {
+        closeListsTo(0);
+        const level = m[1].length;
+        out.push(`<h${level}>${processInline(m[2])}</h${level}>`);
+        lastOpenedLiIndex = -1;
+        lastLiDepth = -1;
+        i++;
+        continue;
+      }
     }
 
-    // unordered list item
-    const mb = line.match(bulletRE);
-    if (mb) {
-      const depth = depthFromIndent(mb[1]);
-      const content = mb[3];
-      ensureListAtDepth(depth, 'ul');
-      out.push(`<li>${processInline(content)}</li>`);
-      i++;
-      continue;
+    // unordered bullet
+    {
+      const m = line.match(bulletRE);
+      if (m) {
+        const depth = depthFromIndent(m[1]);
+        const content = m[3];
+
+        ensureListAtDepth(depth, 'ul');
+        out.push(`<li>${processInline(content)}`);
+        // don't close </li> yet — we might attach auto-subpoints
+        lastOpenedLiIndex = out.length - 1;
+        lastLiDepth = depth;
+
+        // lookahead: auto-nest any immediate next lines that start with a dash/en-dash and NO extra indent
+        let j = i + 1;
+        const subpoints = [];
+        while (j < lines.length) {
+          const nxt = lines[j];
+          if (!nxt.trim()) break;
+          // stop if next is a table, header, quote, code, or a "proper" list item with indent
+          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
+
+          const dash = nxt.match(/^\s*[–-]\s+(.*)$/); // exactly your “– something” lines
+          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
+
+          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
+            subpoints.push(dash[1] ?? dash[0]); // capture text
+            subpoints[subpoints.length - 1] = dash[1] ? dash[1] : dash[0];
+            subpoints[subpoints.length - 1] = dash[1] || dash[0];
+            // actually we want the content: use dash[1]? but our regex has (.*) → index 1
+          }
+          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
+            subpoints.push(dash[1] /* text */);
+            j++;
+            continue;
+          }
+          if (properBullet) break; // next proper list item; stop
+          break; // anything else → stop
+        }
+
+        if (subpoints.length) {
+          out.push('<ul>');
+          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
+          out.push('</ul>');
+          i = j; // consumed the subpoint lines
+        } else {
+          i++; // just the one bullet
+        }
+
+        out.push('</li>');
+        continue;
+      }
     }
 
-    // ordered list item
-    const mn = line.match(numberRE);
-    if (mn) {
-      const depth = depthFromIndent(mn[1]);
-      const content = mn[3];
-      ensureListAtDepth(depth, 'ol');
-      out.push(`<li>${processInline(content)}</li>`);
-      i++;
-      continue;
+    // ordered bullet
+    {
+      const m = line.match(numberRE);
+      if (m) {
+        const depth = depthFromIndent(m[1]);
+        const content = m[3];
+
+        ensureListAtDepth(depth, 'ol');
+        out.push(`<li>${processInline(content)}`);
+        lastOpenedLiIndex = out.length - 1;
+        lastLiDepth = depth;
+
+        // same auto-subpoint behavior for dashes under numbered lines
+        let j = i + 1;
+        const subpoints = [];
+        while (j < lines.length) {
+          const nxt = lines[j];
+          if (!nxt.trim()) break;
+          if (codeFence.test(nxt) || tableStart(j) || /^(#{1,3})\s+/.test(nxt) || /^\s*>\s+/.test(nxt)) break;
+
+          const dash = nxt.match(/^\s*[–-]\s+(.*)$/);
+          const properBullet = nxt.match(bulletRE) || nxt.match(numberRE);
+
+          if (dash && depthFromIndent(nxt.match(/^(\s*)/)[1]) === depth) {
+            subpoints.push(dash[1]);
+            j++;
+            continue;
+          }
+          if (properBullet) break;
+          break;
+        }
+
+        if (subpoints.length) {
+          out.push('<ul>');
+          for (const t of subpoints) out.push(`<li>${processInline(t)}</li>`);
+          out.push('</ul>');
+          i = j;
+        } else {
+          i++;
+        }
+
+        out.push('</li>');
+        continue;
+      }
     }
 
     // paragraph
     closeListsTo(0);
-    out.push(`<p>${processInline(line.trim())}</p>`);
+    emitParagraph(line);
     i++;
   }
 
   // close any dangling lists
   closeListsTo(0);
-
   return out.join('\n');
 };
+
 
 
 /* =========================
