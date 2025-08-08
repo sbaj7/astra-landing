@@ -1045,41 +1045,209 @@ const AstraApp = () => {
       )}
 
       {/* Global Styles (minimal) */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        * { box-sizing: border-box; }
-        html { -webkit-text-size-adjust: 100%; }
-        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; overflow: hidden; height: 100vh; }
-        #root { height: 100vh; width: 100vw; }
-        @supports (height: 100vh) { body, #root { height: 100vh; } }
-        html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
+<style
+  dangerouslySetInnerHTML={{
+    __html: `
+/* ===== App chrome (unchanged) ===== */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; overflow: hidden; height: 100vh; }
+#root { height: 100vh; width: 100vw; }
+@supports (height: 100vh) { body, #root { height: 100vh; } }
+html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
 
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
-        * { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
+* { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
 
-        textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
-        textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
+textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
+textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
 
-        button:not(:disabled):hover { transform: translateY(-1px); }
-        button:not(:disabled):active { transform: translateY(0); }
-        button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
+button:not(:disabled):hover { transform: translateY(-1px); }
+button:not(:disabled):active { transform: translateY(0); }
+button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
 
-        @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
-        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
-        @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
 
-        /* Link & citation tint to match brand */
-        .markdown-body a { color: ${theme.accentSoftBlue}; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
-        .markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
-        .markdown-body sup.md-citation { color: ${theme.accentSoftBlue}; cursor: pointer; font-weight: 600; border-radius: 4px; transition: all .2s ease; }
-        .markdown-body sup.md-citation:hover { background-color: ${theme.accentSoftBlue}20; transform: translateY(-1px); }
-      `
-        }}
-      />
+/* ===== Markdown: make it look sane inside bubbles ===== */
+.markdown-body {
+  color: ${theme.textPrimary};
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* prevent first/last child margins from leaking out of the bubble */
+.markdown-body > :first-child { margin-top: 0; }
+.markdown-body > :last-child  { margin-bottom: 0; }
+
+/* Headings */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  color: ${theme.textPrimary};
+  margin: 0.6rem 0 0.25rem;
+  line-height: 1.25;
+}
+.markdown-body h1 { font-size: 1.5rem; font-weight: 700; }
+.markdown-body h2 { font-size: 1.25rem; font-weight: 600; }
+.markdown-body h3 { font-size: 1.1rem;  font-weight: 600; }
+
+/* Paragraphs */
+.markdown-body p { margin: 0.25rem 0; line-height: 1.55; }
+
+/* Horizontal rule */
+.markdown-body hr {
+  border: none;
+  height: 1px;
+  background-color: ${theme.textSecondary}40;
+  margin: 1rem 0;
+}
+
+/* Blockquotes */
+.markdown-body blockquote {
+  margin: 0.4rem 0;
+  padding: 0.2rem 0.75rem;
+  border-left: 3px solid ${theme.accentSoftBlue};
+  color: ${theme.textSecondary};
+  background: ${theme.textSecondary}10;
+  border-radius: 4px;
+}
+
+/* Links + citation pills */
+.markdown-body a {
+  color: ${theme.accentSoftBlue};
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease;
+  word-break: break-word;
+}
+.markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+
+.markdown-body sup.md-citation {
+  color: ${theme.accentSoftBlue};
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+.markdown-body sup.md-citation:hover {
+  background-color: ${theme.accentSoftBlue}20;
+  transform: translateY(-1px);
+}
+
+/* Images */
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Code */
+.markdown-body code {
+  background-color: ${theme.textSecondary}15;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace;
+}
+.markdown-body pre {
+  background-color: ${theme.textSecondary}15;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0.6rem 0;
+  overflow-x: auto;
+}
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* ===== Lists: proper indent + nesting + task lists ===== */
+.markdown-body ol,
+.markdown-body ul {
+  margin: 0.25rem 0 0.25rem 0;   /* vertical rhythm */
+  padding-left: 1.5rem;          /* base indent for top-level lists */
+  list-style-position: outside;
+}
+
+.markdown-body li {
+  margin: 0.15rem 0;             /* space between items */
+  line-height: 1.5;
+}
+
+/* Nested lists get extra indent and tighter vertical spacing */
+.markdown-body li > ol,
+.markdown-body li > ul {
+  margin: 0.15rem 0 0.15rem 0;
+  padding-left: 1.25rem;
+}
+
+/* Ensure ordered lists keep decimal and respect "start" */
+.markdown-body ol { list-style-type: decimal; }
+
+/* GFM task lists */
+.markdown-body ul.contains-task-list { list-style: none; padding-left: 1.5rem; }
+.markdown-body li.task-list-item { list-style: none; }
+.markdown-body li.task-list-item > input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: translateY(1px);
+}
+
+/* When code blocks appear in lists, keep spacing tidy */
+.markdown-body li pre { margin-top: 0.25rem; }
+
+/* Optional: slightly smaller indent for very deep nests */
+.markdown-body ul ul ul,
+.markdown-body ol ol ol { padding-left: 1rem; }
+
+/* ===== Tables: full width, zebra, header bg, borders, rounded ===== */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0 0.75rem;
+  border-radius: 8px;
+  overflow: hidden; /* keep rounded corners */
+  background: ${theme.backgroundSurface};
+}
+
+.markdown-body thead th {
+  background: ${theme.textSecondary}15;
+  color: ${theme.textPrimary};
+  font-weight: 600;
+  text-align: left;
+}
+
+.markdown-body th,
+.markdown-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid ${theme.textSecondary}25;
+  vertical-align: top;
+}
+
+.markdown-body tbody tr:nth-child(even) td {
+  background: ${theme.textSecondary}08;
+}
+
+/* Table alignment classes from remark/rehype */
+.markdown-body th.align-center,
+.markdown-body td.align-center { text-align: center; }
+.markdown-body th.align-right,
+.markdown-body td.align-right  { text-align: right; }
+
+/* ===== Streaming caret ===== */
+.streaming-caret {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: ${theme.accentSoftBlue};
+}
+`
+  }}
+/>
+
     </div>
   );
 };
