@@ -194,6 +194,7 @@ const processTable = (tableLines) => {
 };
 
 // Smart list parser with nesting (2 spaces = one level)
+// Smart list parser with nesting (2 spaces = one level)
 export const renderMarkdown = (raw = '') => {
   if (!raw) return '';
 
@@ -210,6 +211,7 @@ export const renderMarkdown = (raw = '') => {
 
   const bulletRE = /^(\s*)([•*+\-–])\s+(.*)$/; // includes en dash
   const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
+
   const isTableStart = (i) => {
     const l0 = lines[i] || '';
     const l1 = lines[i + 1] || '';
@@ -294,7 +296,6 @@ export const renderMarkdown = (raw = '') => {
       const depth = Math.floor(indentSpaces / 2); // every 2 spaces is a new level
       const content = mBullet[3];
 
-      // open/close lists to the right depth
       if (depth > listStack.length - 1) {
         for (let k = listStack.length; k <= depth; k++) {
           out.push('<ul>');
@@ -312,77 +313,86 @@ export const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // NUMBERED item (kept as your custom layout to avoid browser renumbering)
-// NUMBERED item (supports sub-bullets that follow)
-const mNum = line.match(numberRE);
-if (mNum) {
-  // close any open bullet stacks first
-  closeListsTo(0);
+    // NUMBERED item (supports sub-bullets that follow)
+    const mNum = line.match(numberRE);
+    if (mNum) {
+      closeListsTo(0);
 
-  const num = mNum[2];
-  const txt = mNum[3];
+      const num = mNum[2];
+      const txt = mNum[3];
 
-  // Render the visible number line
-  out.push(
-    `<div class="numbered-item"><span class="number">${num}.</span><span class="content">${processInline(txt)}</span></div>`
-  );
+      // Render the visible number line
+      out.push(
+        `<div class="numbered-item"><span class="number">${num}.</span><span class="content">${processInline(txt)}</span></div>`
+      );
 
-  // ---- Collect immediate sub-bullets after this number line ----
-  let j = i + 1;
-  const subLines = [];
-  const subBulletRE = /^(\s*)([•*+\-–])\s+(.*)$/;   // includes en dash
-  const plainDashRE = /^(\s*)-\s+(.*)$/;           // safety for plain '-' bullets
+      // Collect immediate sub-bullets after this number line
+      let j = i + 1;
+      const subLines = [];
+      const subBulletRE = /^(\s*)([•*+\-–])\s+(.*)$/;
+      const plainDashRE = /^(\s*)-\s+(.*)$/;
 
-  while (
-    j < lines.length &&
-    (subBulletRE.test(lines[j]) || plainDashRE.test(lines[j]))
-  ) {
-    subLines.push(lines[j]);
-    j++;
-  }
-
-  if (subLines.length > 0) {
-    // Build a nested <ul> structure from collected bullet lines
-    const sub = [];
-    const localStack = [];
-    const closeLocalTo = (lvl) => {
-      while (localStack.length > lvl) {
-        sub.push('</ul>');
-        localStack.pop();
+      while (
+        j < lines.length &&
+        (subBulletRE.test(lines[j]) || plainDashRE.test(lines[j]))
+      ) {
+        subLines.push(lines[j]);
+        j++;
       }
-    };
 
-    for (const L of subLines) {
-      const mb = L.match(subBulletRE) || L.match(plainDashRE);
-      const spaces = (mb[1] || '').replace(/\t/g, '    ').length;
-      const depth = Math.floor(spaces / 2); // every 2 spaces = one level
-      const content = mb[3] || mb[2];       // group 3 for subBulletRE, 2 for plainDashRE
+      if (subLines.length > 0) {
+        // Build a nested <ul> structure from collected bullet lines
+        const sub = [];
+        const localStack = [];
+        const closeLocalTo = (lvl) => {
+          while (localStack.length > lvl) {
+            sub.push('</ul>');
+            localStack.pop();
+          }
+        };
 
-      if (depth > localStack.length - 1) {
-        for (let k = localStack.length; k <= depth; k++) {
-          sub.push('<ul>');
-          localStack.push('ul');
+        for (const L of subLines) {
+          const mb = L.match(subBulletRE) || L.match(plainDashRE);
+          const spaces = (mb[1] || '').replace(/\t/g, '    ').length;
+          const depth = Math.floor(spaces / 2);
+          const content = mb[3] || mb[2];
+
+          if (depth > localStack.length - 1) {
+            for (let k = localStack.length; k <= depth; k++) {
+              sub.push('<ul>');
+              localStack.push('ul');
+            }
+          } else if (depth < localStack.length - 1) {
+            closeLocalTo(depth + 1);
+          } else if (localStack.length === 0) {
+            sub.push('<ul>');
+            localStack.push('ul');
+          }
+
+        sub.push(`<li>${processInline(content)}</li>`);
         }
-      } else if (depth < localStack.length - 1) {
-        closeLocalTo(depth + 1);
-      } else if (localStack.length === 0) {
-        sub.push('<ul>');
-        localStack.push('ul');
+
+        closeLocalTo(0);
+        out.push(sub.join(''));
+        i = j; // consumed the sub-bullets
+        continue;
       }
 
-      sub.push(`<li>${processInline(content)}</li>`);
+      // No sub-bullets: advance
+      i++;
+      continue;
     }
 
-    closeLocalTo(0);
-    out.push(sub.join(''));
-    i = j; // we consumed the sub-bullets
-    continue;
+    // Paragraph fallback
+    out.push(`<p>${processInline(line.trim())}</p>`);
+    i++;
   }
 
-  // No sub-bullets: just advance
-  i++;
-  continue;
-}
+  // Make sure any open lists are closed
+  closeListsTo(0);
+  return out.join('\n');
+};
+
 
 
 /* =========================
