@@ -126,26 +126,22 @@ const useSpeechRecognition = () => {
    - Proper bullets (supports en dash) + **nested sub-bullets**
    ========================= */
 
-// Escape HTML safely
-const escapeHTML = (s) =>
-  s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// --- helpers ---
+const escapeHTML = (s = '') =>
+  s.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;')
+   .replace(/</g, '&lt;')
+   .replace(/>/g, '&gt;');
 
-// Inline formatting
-const processInline = (text) => {
-  return escapeHTML(text)
-    // Bold
+const processInline = (text = '') => (
+  escapeHTML(text)
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    // Italic (avoid bold conflicts)
     .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
-    // Code
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Links
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    // Citations [1]
-    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>');
-};
+    .replace(/\[(\d+)]/g, '<sup data-citation="$1" class="md-citation">[$1]</sup>')
+);
 
-// Alignment-aware, responsive table
+// alignment-aware, responsive table
 const processTable = (tableLines) => {
   const parseCells = (line) =>
     line.split('|')
@@ -158,16 +154,15 @@ const processTable = (tableLines) => {
 
   const align = alignRow
     ? parseCells(alignRow).map(a => {
-        const left = a.startsWith(':');
-        const right = a.endsWith(':');
+        const left = a.startsWith(':'), right = a.endsWith(':');
         if (left && right) return 'center';
         if (right) return 'right';
-        if (left) return 'left';
         return 'left';
       })
     : [];
 
   const headCells = parseCells(header);
+
   const bodyLines = tableLines
     .filter((l, i) => i !== 0 && i !== alignRowIdx)
     .filter(l => l.trim().length > 0 && !/^\s*\|[\s\-:|]*\|\s*$/.test(l));
@@ -193,67 +188,85 @@ const processTable = (tableLines) => {
   return `<div class="md-table-wrap"><table class="md-table">${thead}${tbody}</table></div>`;
 };
 
-// Smart list parser with nesting (2 spaces = one level)
-// Smart list parser with nesting (2 spaces = one level)
+// --- FIXED: robust renderer with true nested lists (bullets + ordered) ---
 export const renderMarkdown = (raw = '') => {
   if (!raw) return '';
-
   const lines = raw.split('\n');
   const out = [];
-  const listStack = []; // each item === 'ul'
 
-  const closeListsTo = (level) => {
-    while (listStack.length > level) {
-      out.push('</ul>');
-      listStack.pop();
-    }
-  };
+  // list stack stores the open list types at each depth: 'ul' | 'ol'
+  const listStack = [];
 
-  const bulletRE = /^(\s*)([•*+\-–])\s+(.*)$/; // includes en dash
-  const numberRE = /^(\s*)(\d+)\.\s+(.*)$/;
+  const bulletRE  = /^(\s*)([*+\-•–])\s+(.*)$/;     // bullets (incl. en dash)
+  const numberRE  = /^(\s*)(\d+)\.\s+(.*)$/;        // ordered (1. ...)
+  const codeFence = /^```/;
 
-  const isTableStart = (i) => {
-    const l0 = lines[i] || '';
-    const l1 = lines[i + 1] || '';
-    return l0.includes('|') && /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(l1);
-  };
+  const tableStart = (i) =>
+    (lines[i] || '').includes('|') &&
+    /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(lines[i + 1] || '');
 
   const readTable = (i) => {
     const tbl = [lines[i], lines[i + 1]];
     let j = i + 2;
-    while (j < lines.length && lines[j].includes('|')) {
-      tbl.push(lines[j]);
-      j++;
-    }
+    while (j < lines.length && lines[j].includes('|')) { tbl.push(lines[j]); j++; }
     return { block: tbl, next: j };
+  };
+
+  const tabsToSpaces = (s) => s.replace(/\t/g, '    ');
+  const depthFromIndent = (s) => {
+    const spaces = tabsToSpaces(s).length;
+    return Math.floor(spaces / 2); // 2 spaces per level
+  };
+
+  const closeListsTo = (level) => {
+    // level is number of open lists to keep
+    while (listStack.length > level) {
+      const type = listStack.pop();
+      out.push(`</${type}>`);
+    }
+  };
+
+  // ensure there is an open list at "depth" with the given "type"
+  const ensureListAtDepth = (depth, type) => {
+    // keep only parents strictly above target depth
+    while (listStack.length > depth + 1) {
+      const t = listStack.pop();
+      out.push(`</${t}>`);
+    }
+    // open intermediate levels as <ul> if user jumps multiple depths
+    while (listStack.length < depth) {
+      out.push('<ul>');
+      listStack.push('ul');
+    }
+    // handle the target level itself
+    if (listStack.length === depth) {
+      out.push(`<${type}>`);
+      listStack.push(type);
+    } else if (listStack[depth] !== type) {
+      // switch list type at this depth
+      out.push(`</${listStack.pop()}>`);
+      out.push(`<${type}>`);
+      listStack.push(type);
+    }
   };
 
   let i = 0;
   while (i < lines.length) {
     const line = lines[i];
 
-    // Blank line → close lists
+    // blank line → close all lists
     if (!line.trim()) {
       closeListsTo(0);
       i++;
       continue;
     }
 
-    // Table
-    if (isTableStart(i)) {
-      closeListsTo(0);
-      const { block, next } = readTable(i);
-      out.push(processTable(block));
-      i = next;
-      continue;
-    }
-
-    // Code block
-    if (/^```/.test(line)) {
+    // fenced code blocks
+    if (codeFence.test(line)) {
       closeListsTo(0);
       const buf = [];
       i++;
-      while (i < lines.length && !/^```/.test(lines[i])) {
+      while (i < lines.length && !codeFence.test(lines[i])) {
         buf.push(escapeHTML(lines[i]));
         i++;
       }
@@ -262,17 +275,16 @@ export const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Headers
-    const h = line.match(/^(#{1,3})\s+(.*)$/);
-    if (h) {
+    // tables
+    if (tableStart(i)) {
       closeListsTo(0);
-      const level = h[1].length;
-      out.push(`<h${level}>${processInline(h[2])}</h${level}>`);
-      i++;
+      const { block, next } = readTable(i);
+      out.push(processTable(block));
+      i = next;
       continue;
     }
 
-    // Blockquote
+    // blockquote
     const bq = line.match(/^\s*>\s+(.*)$/);
     if (bq) {
       closeListsTo(0);
@@ -281,118 +293,49 @@ export const renderMarkdown = (raw = '') => {
       continue;
     }
 
-    // Horizontal rule
-    if (/^\s*---+\s*$/.test(line)) {
+    // headers
+    const hd = line.match(/^(#{1,3})\s+(.*)$/);
+    if (hd) {
       closeListsTo(0);
-      out.push('<hr>');
+      const level = hd[1].length;
+      out.push(`<h${level}>${processInline(hd[2])}</h${level}>`);
       i++;
       continue;
     }
 
-    // BULLET (supports en dash) with nesting
-    const mBullet = line.match(bulletRE);
-    if (mBullet) {
-      const indentSpaces = mBullet[1].replace(/\t/g, '    ').length;
-      const depth = Math.floor(indentSpaces / 2); // every 2 spaces is a new level
-      const content = mBullet[3];
-
-      if (depth > listStack.length - 1) {
-        for (let k = listStack.length; k <= depth; k++) {
-          out.push('<ul>');
-          listStack.push('ul');
-        }
-      } else if (depth < listStack.length - 1) {
-        closeListsTo(depth + 1);
-      } else if (listStack.length === 0) {
-        out.push('<ul>');
-        listStack.push('ul');
-      }
-
+    // unordered list item
+    const mb = line.match(bulletRE);
+    if (mb) {
+      const depth = depthFromIndent(mb[1]);
+      const content = mb[3];
+      ensureListAtDepth(depth, 'ul');
       out.push(`<li>${processInline(content)}</li>`);
       i++;
       continue;
     }
 
-    // NUMBERED item (supports sub-bullets that follow)
-    const mNum = line.match(numberRE);
-    if (mNum) {
-      closeListsTo(0);
-
-      const num = mNum[2];
-      const txt = mNum[3];
-
-      // Render the visible number line
-      out.push(
-        `<div class="numbered-item"><span class="number">${num}.</span><span class="content">${processInline(txt)}</span></div>`
-      );
-
-      // Collect immediate sub-bullets after this number line
-      let j = i + 1;
-      const subLines = [];
-      const subBulletRE = /^(\s*)([•*+\-–])\s+(.*)$/;
-      const plainDashRE = /^(\s*)-\s+(.*)$/;
-
-      while (
-        j < lines.length &&
-        (subBulletRE.test(lines[j]) || plainDashRE.test(lines[j]))
-      ) {
-        subLines.push(lines[j]);
-        j++;
-      }
-
-      if (subLines.length > 0) {
-        // Build a nested <ul> structure from collected bullet lines
-        const sub = [];
-        const localStack = [];
-        const closeLocalTo = (lvl) => {
-          while (localStack.length > lvl) {
-            sub.push('</ul>');
-            localStack.pop();
-          }
-        };
-
-        for (const L of subLines) {
-          const mb = L.match(subBulletRE) || L.match(plainDashRE);
-          const spaces = (mb[1] || '').replace(/\t/g, '    ').length;
-          const depth = Math.floor(spaces / 2);
-          const content = mb[3] || mb[2];
-
-          if (depth > localStack.length - 1) {
-            for (let k = localStack.length; k <= depth; k++) {
-              sub.push('<ul>');
-              localStack.push('ul');
-            }
-          } else if (depth < localStack.length - 1) {
-            closeLocalTo(depth + 1);
-          } else if (localStack.length === 0) {
-            sub.push('<ul>');
-            localStack.push('ul');
-          }
-
-        sub.push(`<li>${processInline(content)}</li>`);
-        }
-
-        closeLocalTo(0);
-        out.push(sub.join(''));
-        i = j; // consumed the sub-bullets
-        continue;
-      }
-
-      // No sub-bullets: advance
+    // ordered list item
+    const mn = line.match(numberRE);
+    if (mn) {
+      const depth = depthFromIndent(mn[1]);
+      const content = mn[3];
+      ensureListAtDepth(depth, 'ol');
+      out.push(`<li>${processInline(content)}</li>`);
       i++;
       continue;
     }
 
-    // Paragraph fallback
+    // paragraph
+    closeListsTo(0);
     out.push(`<p>${processInline(line.trim())}</p>`);
     i++;
   }
 
-  // Make sure any open lists are closed
+  // close any dangling lists
   closeListsTo(0);
+
   return out.join('\n');
 };
-
 
 
 /* =========================
