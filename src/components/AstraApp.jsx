@@ -149,29 +149,49 @@ async function renderMermaidWithRepair(id, rawCode, themeName) {
     // Light debounce to avoid multiple renders during ReactMarkdown layout
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(async () => {
-      try {
-const { svg } = await renderMermaidWithRepair(
-  idRef.current,
-  code,
-  isDark ? 'dark' : 'default'
-        );
+  let cancelled = false;
+  try {
+    // Let layout fully settle to avoid a no-op render on first frame
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
-        if (ref.current) {
-          ref.current.innerHTML = svg || '';
-          const svgEl = ref.current.querySelector('svg');
-          if (svgEl) {
-            svgEl.style.maxWidth = '100%';
-            svgEl.style.height = 'auto';
-            svgEl.style.display = 'block';
-            svgEl.style.margin = '0 auto';
-          }
-        }
-        setIsLoading(false);
-      } catch (err) {
-        setError(err?.message || 'Render failed');
-        setIsLoading(false);
+    if (typeof mermaid === 'undefined') throw new Error('Mermaid not available');
+
+    const { svg } = await renderMermaidWithRepair(
+      idRef.current,
+      code,
+      isDark ? 'dark' : 'default'
+    );
+
+    if (cancelled) return;
+
+    if (!svg || !svg.trim()) {
+      // No silent blanks: show code so you can see what failed
+      setError('No SVG returned (check diagram syntax)');
+      if (ref.current) {
+        ref.current.innerHTML =
+          `<pre style="text-align:left;white-space:pre-wrap;margin:0">${code
+            .replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
       }
-    }, 60);
+      return;
+    }
+
+    if (ref.current) {
+      ref.current.innerHTML = svg;
+      const svgEl = ref.current.querySelector('svg');
+      if (svgEl) {
+        svgEl.style.maxWidth = '100%';
+        svgEl.style.height = 'auto';
+        svgEl.style.display = 'block';
+        svgEl.style.margin = '0 auto';
+      }
+    }
+  } catch (err) {
+    if (!cancelled) setError(err?.message || 'Render failed');
+  } finally {
+    if (!cancelled) setIsLoading(false);  // ← ALWAYS stop loading
+  }
+}, 60);
+
 
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
@@ -930,15 +950,16 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
             <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-        <MarkdownBlock
-          markdown={message.content}
-          theme={theme}
-          invert={invertMarkdown}
-          onTapCitation={(num) => {
-            const citation = message.citations?.find((c) => c.number === num);
-            if (citation && onTapCitation) onTapCitation(citation);
-          }}
-        />
+<MarkdownBlock
+  markdown={message.content}
+  theme={theme}
+  invert={invertMarkdown}
+  isStreaming={false}   // ← add this line
+  onTapCitation={(num) => {
+    const citation = message.citations?.find((c) => c.number === num);
+    if (citation && onTapCitation) onTapCitation(citation);
+  }}
+/>
         <button
           onClick={handleCopy}
           aria-label="Copy message"
