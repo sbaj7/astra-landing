@@ -61,7 +61,7 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
 
 initializeMermaid();
 
-onst MermaidDiagram = ({ children, theme, isDark = false }) => {
+const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
   const [error, setError] = useState(null);
 
