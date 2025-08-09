@@ -448,10 +448,12 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
     while (i < lines.length) {
       const line = lines[i].trim();
       
-      // Check if this line starts a Mermaid diagram
+      // IMPROVED: Check if this line starts a Mermaid diagram
       if (line.startsWith('flowchart ') || 
           line.startsWith('graph ') ||
-          /^[A-Z]\[.*\]\s*-->/.test(line)) {
+          /^[A-Z]\[.*\]\s*-->/.test(line) ||           // A[...] -->
+          /^[A-Z]\{.*\}\s*-->/.test(line) ||           // A{...} -->
+          /^[A-Z]\s*-->\s*[A-Z]/.test(line)) {         // A --> B
         
         // Found start of Mermaid - collect all related lines
         const mermaidLines = [];
@@ -463,19 +465,26 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
           // Stop if we hit an empty line followed by non-Mermaid content
           if (currentLine === '' && j < lines.length - 1) {
             const nextLine = lines[j + 1].trim();
-            if (nextLine && !nextLine.includes('-->') && !/^[A-Z]\s*-->/.test(nextLine)) {
+            if (nextLine && 
+                !nextLine.includes('-->') && 
+                !/^[A-Z]\s*-->/.test(nextLine) &&
+                !/^[A-Z]\[/.test(nextLine) &&
+                !/^[A-Z]\{/.test(nextLine) &&
+                !nextLine.startsWith('flowchart') &&
+                !nextLine.startsWith('graph')) {
               break;
             }
           }
           
-          // Stop if line doesn't look like Mermaid
+          // IMPROVED: Stop if line doesn't look like Mermaid
           if (currentLine && 
               !currentLine.startsWith('flowchart') &&
               !currentLine.startsWith('graph') &&
               !currentLine.includes('-->') &&
               !/^[A-Z]\[/.test(currentLine) &&
               !/^[A-Z]\{/.test(currentLine) &&
-              !/^[A-Z]\s*-->/.test(currentLine)) {
+              !/^[A-Z]\s*-->/.test(currentLine) &&
+              !/-->\s*[A-Z]/.test(currentLine)) {        // Added this pattern
             break;
           }
           
@@ -485,6 +494,7 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
         
         // Wrap in mermaid code block
         if (mermaidLines.length > 0) {
+          console.log('🎯 WRAPPING MERMAID:', mermaidLines);
           result.push('```mermaid');
           result.push(...mermaidLines);
           result.push('```');
@@ -499,6 +509,7 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
     }
     
     processed = result.join('\n');
+    console.log('🔧 PROCESSED:', processed);
   }
   
   // Rest of your existing processing...
