@@ -302,6 +302,37 @@ function rehypeBracketCitations() {
   };
 }
 
+/** 
+ * Custom remark plugin to handle line breaks without requiring remark-breaks
+ * Converts single newlines to hard breaks
+ */
+function remarkCustomBreaks() {
+  return (tree) => {
+    visit(tree, 'text', (node, index, parent) => {
+      if (!parent || typeof node.value !== 'string') return;
+      
+      // Split text on newlines and create break nodes
+      const parts = node.value.split(/\r?\n/);
+      if (parts.length <= 1) return; // No newlines found
+      
+      const newNodes = [];
+      for (let i = 0; i < parts.length; i++) {
+        if (parts[i]) {
+          newNodes.push({ type: 'text', value: parts[i] });
+        }
+        if (i < parts.length - 1) {
+          newNodes.push({ type: 'break' });
+        }
+      }
+      
+      if (newNodes.length > 1) {
+        parent.children.splice(index, 1, ...newNodes);
+        return index + newNodes.length;
+      }
+    });
+  };
+}
+
 // Add this function after your preprocessMarkdown function (around line 260)
 
 const fixMermaidContent = (content) => {
