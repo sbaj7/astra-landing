@@ -1164,7 +1164,6 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
 @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
 
-/* ===== Markdown: make it look sane inside bubbles ===== */
 .markdown-body {
   color: ${theme.textPrimary};
   line-height: 1.6;
@@ -1261,39 +1260,71 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 .markdown-body ol,
 .markdown-body ul {
   margin: 0.25rem 0 0.25rem 0;   /* vertical rhythm */
-  padding-left: 1.5rem;          /* base indent for top-level lists */
+  padding-left: 0;               /* reset padding, let list items handle it */
   list-style-position: outside;
 }
 
-.markdown-body li {
-  margin: 0.15rem 0;             /* space between items */
+/* Top-level list items */
+.markdown-body > ol > li,
+.markdown-body > ul > li {
+  margin: 0.15rem 0;
+  margin-left: 1.5rem;           /* indent for top level */
+  padding-left: 0.25rem;
   line-height: 1.5;
 }
 
-/* Nested lists get extra indent and tighter vertical spacing */
+/* Second-level nested items */
+.markdown-body ol li ol li,
+.markdown-body ul li ul li,
+.markdown-body ol li ul li,
+.markdown-body ul li ol li {
+  margin: 0.1rem 0;
+  margin-left: 1.75rem;          /* deeper indent for nested */
+  padding-left: 0.25rem;
+}
+
+/* Third-level nested items */
+.markdown-body ol li ol li ol li,
+.markdown-body ul li ul li ul li,
+.markdown-body ol li ul li ol li,
+.markdown-body ul li ol li ul li {
+  margin: 0.1rem 0;
+  margin-left: 2rem;             /* even deeper indent */
+  padding-left: 0.25rem;
+}
+
+/* Generic nested lists (fallback) */
 .markdown-body li > ol,
 .markdown-body li > ul {
   margin: 0.15rem 0 0.15rem 0;
-  padding-left: 1.25rem;
+  padding-left: 0;
 }
 
 /* Ensure ordered lists keep decimal and respect "start" */
 .markdown-body ol { list-style-type: decimal; }
+.markdown-body ul { list-style-type: disc; }
+
+/* Nested list markers */
+.markdown-body ul ul { list-style-type: circle; }
+.markdown-body ul ul ul { list-style-type: square; }
 
 /* GFM task lists */
-.markdown-body ul.contains-task-list { list-style: none; padding-left: 1.5rem; }
-.markdown-body li.task-list-item { list-style: none; }
+.markdown-body ul.contains-task-list { 
+  list-style: none; 
+  padding-left: 0;
+}
+.markdown-body li.task-list-item { 
+  list-style: none;
+  margin-left: 1.5rem;
+}
 .markdown-body li.task-list-item > input[type="checkbox"] {
   margin-right: 0.5rem;
+  margin-left: -1.25rem;
   transform: translateY(1px);
 }
 
 /* When code blocks appear in lists, keep spacing tidy */
 .markdown-body li pre { margin-top: 0.25rem; }
-
-/* Optional: slightly smaller indent for very deep nests */
-.markdown-body ul ul ul,
-.markdown-body ol ol ol { padding-left: 1rem; }
 
 /* ===== Tables: full width, zebra, header bg, borders, rounded ===== */
 .markdown-body table {
