@@ -436,22 +436,79 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
   if (!markdown) return '';
   
   console.log('🔧 PREPROCESSING MARKDOWN', { isStreaming });
-  console.log('Input:', markdown.substring(0, 200) + '...');
   
-  // Only apply mermaid fix AFTER streaming is complete to avoid conflicts
-  let processed = isStreaming ? markdown : fixMermaidContent(markdown);
+  // Simple Mermaid wrapper - detect flowchart/graph lines and wrap them
+  let processed = markdown;
   
-  // Then apply the existing empty line processing
+  if (!isStreaming) {
+    const lines = processed.split('\n');
+    const result = [];
+    let i = 0;
+    
+    while (i < lines.length) {
+      const line = lines[i].trim();
+      
+      // Check if this line starts a Mermaid diagram
+      if (line.startsWith('flowchart ') || 
+          line.startsWith('graph ') ||
+          /^[A-Z]\[.*\]\s*-->/.test(line)) {
+        
+        // Found start of Mermaid - collect all related lines
+        const mermaidLines = [];
+        let j = i;
+        
+        while (j < lines.length) {
+          const currentLine = lines[j].trim();
+          
+          // Stop if we hit an empty line followed by non-Mermaid content
+          if (currentLine === '' && j < lines.length - 1) {
+            const nextLine = lines[j + 1].trim();
+            if (nextLine && !nextLine.includes('-->') && !/^[A-Z]\s*-->/.test(nextLine)) {
+              break;
+            }
+          }
+          
+          // Stop if line doesn't look like Mermaid
+          if (currentLine && 
+              !currentLine.startsWith('flowchart') &&
+              !currentLine.startsWith('graph') &&
+              !currentLine.includes('-->') &&
+              !/^[A-Z]\[/.test(currentLine) &&
+              !/^[A-Z]\{/.test(currentLine) &&
+              !/^[A-Z]\s*-->/.test(currentLine)) {
+            break;
+          }
+          
+          if (currentLine) mermaidLines.push(currentLine);
+          j++;
+        }
+        
+        // Wrap in mermaid code block
+        if (mermaidLines.length > 0) {
+          result.push('```mermaid');
+          result.push(...mermaidLines);
+          result.push('```');
+          result.push(''); // Add spacing
+          i = j;
+          continue;
+        }
+      }
+      
+      result.push(lines[i]);
+      i++;
+    }
+    
+    processed = result.join('\n');
+  }
+  
+  // Rest of your existing processing...
   const lines = processed.split('\n');
   const processedLines = [];
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
-    // Add the current line
     processedLines.push(line);
     
-    // Look ahead to count consecutive empty lines
     let emptyLineCount = 0;
     let j = i + 1;
     while (j < lines.length && lines[j].trim() === '') {
@@ -459,24 +516,17 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
       j++;
     }
     
-    // If we have 2 or more empty lines, preserve them as visible spacing
     if (emptyLineCount >= 2) {
-      // Add the first empty line normally (for paragraph break)
       processedLines.push('');
-      
-      // Add additional empty lines as non-breaking spaces to preserve visual spacing
       for (let k = 1; k < emptyLineCount; k++) {
         processedLines.push('&nbsp;');
       }
-      
-      // Skip the empty lines we've already processed
       i = j - 1;
     }
   }
   
   const final = processedLines.join('\n');
   console.log('🔧 PREPROCESSING COMPLETE');
-  console.log('Output:', final.substring(0, 200) + '...');
   
   return final;
 };
