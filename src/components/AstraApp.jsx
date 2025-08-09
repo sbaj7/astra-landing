@@ -72,50 +72,61 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
 
 function autoFixMermaid(raw) {
   if (!raw) return raw;
+  let code = raw.replace(/\r\n?/g, '\n');
 
-  // 1. Basic cleaning and splitting into lines
-  const lines = raw.replace(/\r\n?/g, '\n').split('\n');
-  const cleanedLines = [];
-
-  // 2. Process each line individually
-  for (const line of lines) {
-    let processedLine = line.trim();
-    if (!processedLine) continue;
-
-    if (processedLine.toLowerCase().startsWith('flowchart') || processedLine.toLowerCase().startsWith('graph')) {
-      cleanedLines.push(processedLine);
-      continue;
-    }
-
-    // 3. Sanitize node definitions by escaping special characters
-    const nodeMatch = processedLine.match(/^(\s*)(\w+)(\[|\{)(.*)(\]|\})/);
-    if (nodeMatch) {
-      const id = nodeMatch[2];
-      const shape = nodeMatch[3] === '[' ? 'rect' : 'rhombus';
-      let text = nodeMatch[4];
-
-      // CORRECT WAY: Escape all special characters to preserve them
-      text = text
+  // =================================================================
+  // Part 1: Sanitize Node Definitions (e.g., A["..."])
+  // This part is already correct and handles text inside nodes.
+  // =================================================================
+  code = code.replace(
+    /(\w+[\[\{])(.*?)([\]\}])/g, // Non-greedy match for robustness
+    (match, start, content, end) => {
+      const cleanedContent = content
         .replace(/"/g, '&quot;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/\(/g, '&#40;') // Escape (
-        .replace(/\)/g, '&#41;') // Escape )
-        .replace(/\[/g, '&#91;') // Escape [
-        .replace(/\]/g, '&#93;') // Escape ]
-        .replace(/\{/g, '&#123;') // Escape {
-        .replace(/\}/g, '&#125;'); // Escape }
-
-      // Rebuild the node with clean, safe text
-      const shapeChars = shape === 'rect' ? ['[', ']'] : ['{', '}'];
-      processedLine = `${id}${shapeChars[0]}"${text.trim()}"${shapeChars[1]}`;
+        .replace(/\(/g, '&#40;')
+        .replace(/\)/g, '&#41;')
+        .replace(/\[/g, '&#91;')
+        .replace(/\]/g, '&#93;')
+        .replace(/\{/g, '&#123;')
+        .replace(/\}/g, '&#125;');
+      return `${start}"${cleanedContent.trim()}"${end}`;
     }
+  );
 
-    cleanedLines.push(processedLine);
-  }
+  // =================================================================
+  // Part 2: Sanitize Edge Labels (e.g., -->|"..."|)
+  // This is the NEW, crucial fix for the errors you are seeing now.
+  // =================================================================
+  code = code.replace(
+    /\|([^|]*)\|/g, // Find all text between two pipe characters
+    (match, labelText) => {
+      const sanitizedLabel = labelText
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\(/g, '&#40;')
+        .replace(/\)/g, '&#41;')
+        .replace(/\[/g, '&#91;')
+        .replace(/\]/g, '&#93;')
+        .replace(/\{/g, '&#123;')
+        .replace(/\}/g, '&#125;');
+      return `|${sanitizedLabel.trim()}|`;
+    }
+  );
 
-  // 4. Re-join and return the fully cleaned diagram string
-  return cleanedLines.join('\n');
+  // --- Other structural rules remain for overall stability ---
+  code = code.replace(
+    /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
+    '$1\n'
+  );
+  code = code.replace(
+    /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
+    '$1\n$2'
+  );
+
+  return code;
 }
 
    // Try to render, progressively repairing common authoring mistakes.
