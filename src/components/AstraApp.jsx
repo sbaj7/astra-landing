@@ -302,49 +302,6 @@ function rehypeBracketCitations() {
   };
 }
 
-/** 
- * Preprocess markdown to handle multiple empty lines 
- * This converts sequences of empty lines into visible spacing
- */
-const preprocessMarkdown = (markdown) => {
-  if (!markdown) return '';
-  
-  // Split into lines and process
-  const lines = markdown.split('\n');
-  const processedLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    // Add the current line
-    processedLines.push(line);
-    
-    // Look ahead to count consecutive empty lines
-    let emptyLineCount = 0;
-    let j = i + 1;
-    while (j < lines.length && lines[j].trim() === '') {
-      emptyLineCount++;
-      j++;
-    }
-    
-    // If we have 2 or more empty lines, preserve them as visible spacing
-    if (emptyLineCount >= 2) {
-      // Add the first empty line normally (for paragraph break)
-      processedLines.push('');
-      
-      // Add additional empty lines as non-breaking spaces to preserve visual spacing
-      for (let k = 1; k < emptyLineCount; k++) {
-        processedLines.push('&nbsp;');
-      }
-      
-      // Skip the empty lines we've already processed
-      i = j - 1;
-    }
-  }
-  
-  return processedLines.join('\n');
-};
-
 // Add this function after your preprocessMarkdown function (around line 260)
 
 const fixMermaidContent = (content) => {
