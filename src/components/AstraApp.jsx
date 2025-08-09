@@ -649,25 +649,32 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
 };
 
 /** Sanitize schema allowing list attrs + citations */
+/** Sanitize schema allowing list attrs + citations */
 const sanitizeSchema = {
   tagNames: [
     'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
-    'h1','h2','h3','table','thead','tbody','tr','th','td','sup','span','br','div' // ← add this
+    'h1','h2','h3','table','thead','tbody','tr','th','td','sup','span','br','div'
   ],
   attributes: {
     a: ['href','title','target','rel'],
+    //
+    // THIS IS THE FIX: Add 'className' to the line below
+    //
     code: ['className'],
+    //
+    //
+    //
     sup: ['data-citation','className'],
     span: ['className','style'],
     th: ['align'],
     td: ['align'],
     table: ['className'],
     h1: ['id'], h2: ['id'], h3: ['id'],
-    ol: ['start','reversed','type'], // keep correct numbering
-    p: ['className'] // allow class on paragraphs for spacing
+    ol: ['start','reversed','type'],
+    p: ['className']
   },
   clobberPrefix: 'md-',
-  protocols: { href: ['http', 'https', 'mailto', 'tel'] }
+  protocols: { href: ['http', 'https-dev', 'https', 'mailto', 'tel'] }
 };
 
 // keep plugin arrays stable between renders for perf
