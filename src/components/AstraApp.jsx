@@ -143,6 +143,84 @@ function autoFixMermaid(raw) {
   return code;
 }
 
+   // Try to render, progressively repairing common authoring mistakes.
+async function renderMermaidWithRepair(id, rawCode, themeName) {
+  const tryRender = (src) =>
+    mermaid.render(id, src, undefined, { theme: themeName });
+
+  // Helpers — very small, targeted repairs that hit the errors you’re seeing.
+  const closeDanglingLabel = (s) =>
+    s.replace(
+      /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
+      (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
+    );
+
+  const addMissingEdgeTargets = (s) => {
+    const lines = s.split("\n");
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
+      if (!m) continue;
+
+      // look ahead for the next node id; if none, make a self-loop
+      let target = null;
+      for (let j = i + 1; j < lines.length; j++) {
+        const t = lines[j].trim();
+        if (!t) continue;
+        const idm = t.match(/^([\w.-]+)\s*(?:\[|\(|\{|<|[-=]{1,2}>|$)/);
+        if (idm) target = idm[1];
+        break;
+      }
+      const src = (lines[i].match(/^\s*([\w.-]+)/) || [, "X"])[1];
+      lines[i] = target ? `${m[1]} ${target}` : `${src} --> ${src}`;
+    }
+    return lines.join("\n");
+  };
+
+  // If label text is placed between edge and node without pipes, wrap it.
+  const wrapNakedLabels = (s) => {
+    return s.replace(
+      /^(\s*[\w.-]+\s*[-=]{1,2}>)(\s+)(.+)$/gm,
+      (full, left, _sp, rhs) => {
+        // if already has |label|, bail
+        if (/^\s*\|.*\|\s+/.test(rhs)) return full;
+        // if rhs starts with a node id/shape immediately, it's not a label
+        if (/^\s*[\w.-]+\s*(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?(\s*;.*)?$/.test(rhs))
+          return full;
+        // split into label + final node on the same line
+        const m = rhs.match(/^(.+?)\s+([\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)\s*$/);
+        if (!m) return full;
+        const label = m[1].replace(/\n+/g, " ").trim();
+        const node = m[2];
+        return `${left} |${label.replace(/</g,"&lt;").replace(/>/g,"&gt;")}| ${node}`;
+      }
+    );
+  };
+
+  // pipeline of attempts (from least to most invasive)
+  const attempts = [
+    { why: "raw",         fix: (s) => s },
+    { why: "autoFix",     fix: (s) => autoFixMermaid(s) },
+    { why: "closePipe",   fix: (s) => closeDanglingLabel(s) },
+    { why: "addTargets",  fix: (s) => addMissingEdgeTargets(s) },
+    { why: "wrapLabels",  fix: (s) => wrapNakedLabels(closeDanglingLabel(s)) },
+  ];
+
+  let lastErr;
+  let src = String(rawCode || "");
+  for (const step of attempts) {
+    try {
+      const candidate = step.fix(src);
+      const out = await tryRender(candidate);
+      return out; // success → { svg, bindFunctions }
+    } catch (e) {
+      lastErr = e;
+      // keep going; next step will try to repair
+      src = typeof e._source === "string" ? e._source : src;
+    }
+  }
+  throw lastErr || new Error("Mermaid render failed");
+}
+
 
 
   useEffect(() => {
