@@ -61,27 +61,18 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
 
 initializeMermaid();
 
-const MermaidDiagram = ({ children, theme, isDark = false }) => {
+onst MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
-  const idRef = useRef(`mermaid-${Math.random().toString(36).substr(2, 9)}`);
-  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const debounceRef = useRef(null);
 
   // This is the powerful sanitizer we built. It cleans all text content.
   const autoFixMermaid = (raw) => {
     if (!raw || typeof raw !== 'string') return '';
     let code = raw.trim();
 
-    // Force-wrap with ```mermaid if it's just raw flowchart code
-    if (code.startsWith('flowchart') || code.startsWith('graph')) {
-      code = '```mermaid\n' + code + '\n```';
-    }
-
+    // This function now only returns the raw, cleaned inner content of the diagram.
     const contentMatch = code.match(/```mermaid\n([\s\S]*?)\n```/);
-    if (!contentMatch || !contentMatch[1]) return code; // Return original if not a valid block
-
-    let diagramContent = contentMatch[1];
+    let diagramContent = (contentMatch && contentMatch[1]) ? contentMatch[1] : code;
 
     const sanitizeText = (text) => {
       return text
@@ -110,124 +101,37 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         return `${arrow}|${sanitizeText(content)}|`;
       }
     );
-    // Return only the inner, cleaned content for the repair pipeline
+    
     return diagramContent;
   };
-
-  // This is the multi-step repair pipeline, now with our sanitizer as the first step.
-  async function renderMermaidWithRepair(id, rawCode, themeName) {
-    const tryRender = (src) => mermaid.render(id, src, undefined, { theme: themeName });
-
-    const closeDanglingLabel = (s) => s.replace(/^(.+-->\s*\|[^\n|]*)(\n|$)/gm, (m, pre, end) => /\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`);
-    const addMissingEdgeTargets = (s) => {
-      const lines = s.split("\n");
-      for (let i = 0; i < lines.length; i++) {
-        const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
-        if (!m) continue;
-        let target = null;
-        for (let j = i + 1; j < lines.length; j++) {
-          const t = lines[j].trim();
-          if (!t) continue;
-          const idm = t.match(/^([\w.-]+)/);
-          if (idm) target = idm[1];
-          break;
-        }
-        const src = (lines[i].match(/^\s*([\w.-]+)/) || [, "X"])[1];
-        lines[i] = target ? `${m[1]} ${target}` : `${src} --> ${src}`;
-      }
-      return lines.join("\n");
-    };
-
-    // The pipeline of attempts, starting with our aggressive sanitizer.
-    const attempts = [
-      { why: "aggressive-sanitize", fix: (s) => autoFixMermaid(s) },
-      { why: "close-pipe",          fix: (s) => closeDanglingLabel(s) },
-      { why: "add-targets",         fix: (s) => addMissingEdgeTargets(s) },
-    ];
-
-    let lastErr;
-    let src = String(rawCode || "");
-
-    for (const step of attempts) {
-      try {
-        const candidate = step.fix(src);
-        if (!candidate || !candidate.trim()) continue; // Skip empty results
-        const out = await tryRender(candidate);
-        return out; // Success!
-      } catch (e) {
-        lastErr = e;
-        src = typeof e._source === "string" ? e._source : src;
-      }
-    }
-    throw lastErr || new Error("Mermaid render failed after all attempts.");
-  }
 
   useEffect(() => {
     const code = String(children || '').trim();
     const themeName = isDark ? 'dark' : 'default';
 
-    if (!code) {
-      setIsLoading(false);
-      setError('Empty diagram');
+    if (!code || !ref.current) {
       return;
     }
 
-    setIsLoading(true);
-    setError(null);
+    // Clean the code first
+    const fixedCode = autoFixMermaid(code);
 
-    if (debounceRef.current) clearTimeout(debounceRef.current);
+    // Use a unique ID for each render to prevent conflicts
+    const renderId = `mermaid-graph-${Math.random().toString(36).substr(2, 9)}`;
 
-    debounceRef.current = setTimeout(async () => {
-      try {
-        await new Promise(r => requestAnimationFrame(r));
-        if (typeof mermaid === 'undefined') throw new Error('Mermaid not available');
-        
-        mermaid.initialize({
-            startOnLoad: false,
-            securityLevel: 'loose',
-            flowchart: { useMaxWidth: true, htmlLabels: true },
-            theme: themeName
-        });
-
-        const { svg } = await renderMermaidWithRepair(idRef.current, code, themeName);
-
+    try {
+      // Use the render callback, which is more reliable for React
+      mermaid.render(renderId, fixedCode, (svgGraph) => {
         if (ref.current) {
-          ref.current.innerHTML = svg;
-          const svgEl = ref.current.querySelector('svg');
-          if (svgEl) {
-            svgEl.style.maxWidth = '100%';
-            svgEl.style.height = 'auto';
-            svgEl.style.display = 'block';
-            svgEl.style.margin = '0 auto';
-          }
+          ref.current.innerHTML = svgGraph;
+          setError(null);
         }
-      } catch (err) {
-        setError(err?.message || 'Render failed');
-      } finally {
-        setIsLoading(false);
-      }
-    }, 60);
-
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
-  }, [children, isDark]);
-
-  if (isLoading) {
-    return (
-      <div style={{
-        margin: '1rem 0',
-        padding: '1.25rem',
-        background: theme.backgroundSurface,
-        borderRadius: 8,
-        border: `1px solid ${theme.textSecondary}25`,
-        color: theme.textSecondary,
-        textAlign: 'center'
-      }}>
-        Rendering diagram...
-      </div>
-    );
-  }
+      }, ref.current);
+    } catch (e) {
+      console.error("Mermaid render error:", e);
+      setError(e.message);
+    }
+  }, [children, isDark, theme]);
 
   if (error) {
     return (
@@ -828,35 +732,28 @@ const processStreamingContentForMermaid = (content) => {
    MARKDOWN BLOCK (Tailwind Typography)
    ========================= */
 const markdownComponents = {
-  a: ({ node, ...props }) => {
-    const href = props.href || '';
-    const isExternal = /^https?:\/\//i.test(href);
-    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
-  },
-  code: ({ node, inline, className, children, ...props }) => {
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match ? match[1] : '';
+  a: ({ node, ...props }) => {
+    const href = props.href || '';
+    const isExternal = /^https?:\/\//i.test(href);
+    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
+  },
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
 
-    if (!inline && language === 'mermaid') {
-      const rawCode = String(children);
-      
-      // Ensure the code is wrapped for our sanitizer to find it,
-      // as sometimes ReactMarkdown only passes the inner content.
-      const wrappedCode = rawCode.trim().startsWith('flowchart') || rawCode.trim().startsWith('graph') 
-        ? `${rawCode}` // It's raw content, pass it to the component to be sanitized
-        : rawCode;
-        
-      return <MermaidDiagram {...props}>{wrappedCode}</MermaidDiagram>;
-    }
-    
-    return <code className={className} {...props}>{children}</code>;
-  },
-  p: ({ node, children, ...props }) => {
-    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
-      return <div style={{ height: '1.5em' }} {...props} />;
-    }
-    return <p {...props}>{children}</p>;
-  },
+    if (!inline && language === 'mermaid') {
+      const rawCode = String(children);
+      return <MermaidDiagram {...props}>{rawCode}</MermaidDiagram>;
+    }
+    
+    return <code className={className} {...props}>{children}</code>;
+  },
+  p: ({ node, children, ...props }) => {
+    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
+      return <div style={{ height: '1.5em' }} {...props} />;
+    }
+    return <p {...props}>{children}</p>;
+  },
 };
 
 // Update your MarkdownBlock to use the components and pass theme/isDark
