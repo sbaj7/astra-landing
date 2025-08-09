@@ -117,14 +117,11 @@ if (targetId) {
     }
     code = lines.join('\n');
 
-    code = code.replace(
-      /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
-      (m, p1, label, p3) => {
-        if (/^\s*(?:[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>))\s*$/.test(label)) return m;
-        const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-        return `${p1}|${clean}|${p3 || ''}`;
-      }
-    );
+code = code.replace(
+  /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
+  (m, p1, label, p3) => { ... }
+);
+
 
     code = code.replace(
       /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
