@@ -41,171 +41,138 @@ const colors = {
     grayPrimary: '#8B8B8B'
   }
 };
-// Initialize mermaid - add this right after your theme setup
+
 let mermaidInitialized = false;
 
-// Initialize mermaid - simplified and more reliable
-const initializeMermaid = (isDark = false) => {
+const initializeMermaid = (/* isDark ignored for global init */) => {
+  if (mermaidInitialized) return; // ← only once, ever
   try {
     mermaid.initialize({
       startOnLoad: false,
-      theme: isDark ? 'dark' : 'default',
       securityLevel: 'loose',
-      flowchart: {
-        useMaxWidth: true,
-        htmlLabels: true
-      }
+      flowchart: { useMaxWidth: true, htmlLabels: true }
+      // DO NOT set theme here; we’ll pass theme at render time
     });
-    console.log('Mermaid initialized with theme:', isDark ? 'dark' : 'default');
+    mermaidInitialized = true;
   } catch (err) {
     console.error('Mermaid initialization failed:', err);
   }
 };
 
+initializeMermaid();
+
 // Mermaid component - simplified and more reliable
 const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
-  const [id] = useState(() => `mermaid-${Math.random().toString(36).substr(2, 9)}`);
+  const idRef = useRef(`mermaid-${Math.random().toString(36).substr(2, 9)}`);
+  const lastCodeRef = useRef('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const debounceRef = useRef(null);
 
   useEffect(() => {
-    const renderMermaid = async () => {
-      console.log('=== MERMAID RENDER START ===');
-      
-      if (!ref.current) {
-        console.log('No ref.current');
-        setIsLoading(false);
-        return;
-      }
-      
-      if (!children) {
-        console.log('No children');
-        setIsLoading(false);
-        return;
-      }
-      
-      if (typeof mermaid === 'undefined') {
-        console.error('Mermaid not available');
-        setError('Mermaid library not loaded');
-        setIsLoading(false);
-        return;
-      }
-      
-      const code = String(children).trim();
-      console.log('Rendering code:', code);
-      
+    const code = String(children || '').trim();
+    if (!code) {
+      setIsLoading(false);
+      setError('Empty diagram');
+      return;
+    }
+
+    // No global re-init here. initializeMermaid() already ran at module load.
+
+    // Skip if code unchanged
+    if (code === lastCodeRef.current) {
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+    lastCodeRef.current = code;
+
+    // Light debounce to avoid multiple renders during ReactMarkdown layout
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(async () => {
       try {
-        setIsLoading(true);
-        setError(null);
-        
-        // Always re-initialize mermaid
-        initializeMermaid(isDark);
-        
-        // Clear container
-        ref.current.innerHTML = '';
-        
-        // Give mermaid time to initialize
-        await new Promise(resolve => setTimeout(resolve, 100));
-        
-        // Render
-        console.log('Calling mermaid.render...');
-        const result = await mermaid.render(id, code);
-        
-        if (!result || !result.svg) {
-          throw new Error('No SVG returned');
-        }
-        
-        console.log('Mermaid render success, SVG length:', result.svg.length);
-        
-        // Insert SVG
+        const { svg } = await mermaid.render(
+          idRef.current,
+          code,
+          undefined,
+          { theme: isDark ? 'dark' : 'default' } // ← theme per render, no re-init
+        );
+
         if (ref.current) {
-          ref.current.innerHTML = result.svg;
-          
-          // Style SVG
-          const svg = ref.current.querySelector('svg');
-          if (svg) {
-            svg.style.maxWidth = '100%';
-            svg.style.height = 'auto';
-            svg.style.display = 'block';
-            svg.style.margin = '0 auto';
-            console.log('SVG inserted and styled');
+          ref.current.innerHTML = svg || '';
+          const svgEl = ref.current.querySelector('svg');
+          if (svgEl) {
+            svgEl.style.maxWidth = '100%';
+            svgEl.style.height = 'auto';
+            svgEl.style.display = 'block';
+            svgEl.style.margin = '0 auto';
           }
         }
-        
         setIsLoading(false);
-        console.log('=== MERMAID RENDER SUCCESS ===');
-        
       } catch (err) {
-        console.error('=== MERMAID RENDER ERROR ===');
-        console.error('Error:', err);
-        console.error('Code that failed:', code);
-        
-        setError(err.message);
+        setError(err?.message || 'Render failed');
         setIsLoading(false);
-        
-        if (ref.current) {
-          ref.current.innerHTML = `
-            <div style="
-              color: ${theme.errorColor}; 
-              padding: 16px; 
-              border: 1px solid ${theme.errorColor}; 
-              border-radius: 8px; 
-              background: ${theme.errorColor}15;
-              font-family: monospace;
-              font-size: 12px;
-            ">
-              <strong>Mermaid Error:</strong><br/>
-              ${err.message}<br/><br/>
-              <details>
-                <summary>Code</summary>
-                <pre style="margin-top: 8px; font-size: 11px; white-space: pre-wrap;">${code}</pre>
-              </details>
-            </div>
-          `;
-        }
       }
-    };
+    }, 60);
 
-    // Longer delay to ensure everything is ready
-    const timer = setTimeout(renderMermaid, 200);
-    return () => clearTimeout(timer);
-  }, [children, id, theme, isDark]);
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, [children, isDark]);
+
   if (isLoading) {
     return (
-      <div style={{ 
-        margin: '1rem 0', 
-        padding: '2rem',
-        textAlign: 'center',
+      <div style={{
+        margin: '1rem 0',
+        padding: '1.25rem',
         background: theme.backgroundSurface,
-        borderRadius: '8px',
+        borderRadius: 8,
         border: `1px solid ${theme.textSecondary}25`,
-        color: theme.textSecondary
+        color: theme.textSecondary,
+        textAlign: 'center'
       }}>
         Rendering diagram...
-        <div style={{ fontSize: '12px', marginTop: '8px', opacity: 0.7 }}>
-          {children ? 'Content loaded' : 'No content'} | {typeof mermaid !== 'undefined' ? 'Mermaid ready' : 'Mermaid missing'}
-        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{
+        color: theme.errorColor,
+        padding: 12,
+        border: `1px solid ${theme.errorColor}`,
+        borderRadius: 8,
+        background: `${theme.errorColor}15`,
+        fontFamily: 'monospace',
+        fontSize: 12,
+        whiteSpace: 'pre-wrap'
+      }}>
+        <strong>Mermaid Error:</strong> {error}
       </div>
     );
   }
 
   return (
-    <div 
-      ref={ref} 
-      style={{ 
-        margin: '1rem 0', 
+    <div
+      ref={ref}
+      style={{
+        margin: '1rem 0',
         padding: '1rem',
         background: theme.backgroundSurface,
-        borderRadius: '8px',
+        borderRadius: 8,
         border: `1px solid ${theme.textSecondary}25`,
         overflow: 'auto',
         textAlign: 'center',
-        minHeight: '60px'
-      }} 
+        minHeight: 60
+      }}
     />
   );
 };
+
 
 
 const sampleQueries = {
@@ -523,7 +490,7 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
 const sanitizeSchema = {
   tagNames: [
     'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
-    'h1','h2','h3','table','thead','tbody','tr','th','td','sup','span','br'
+    'h1','h2','h3','table','thead','tbody','tr','th','td','sup','span','br','div' // ← add this
   ],
   attributes: {
     a: ['href','title','target','rel'],
@@ -824,28 +791,35 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStrea
 
 const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
-  // Create components with theme passed through
-  const componentsWithTheme = {
-    ...markdownComponents,
-    code: ({ node, inline, className, children, ...props }) => {
-      const match = /language-(\w+)/.exec(className || '');
-      const language = match ? match[1] : '';
-      
-      if (!inline && language === 'mermaid') {
-        const code = String(children).replace(/\n$/, '');
+const componentsWithTheme = {
+  ...markdownComponents,
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
+
+    if (!inline && language === 'mermaid') {
+      const code = String(children).replace(/\n$/, '');
+
+      // ⛔ During streaming, DO NOT invoke Mermaid – show the code block as-is
+      if (isStreaming) {
         return (
-          <MermaidDiagram 
-            theme={theme}
-            isDark={invert}
-          >
-            {code}
-          </MermaidDiagram>
+          <pre className={className}>
+            <code {...props}>{code}</code>
+          </pre>
         );
       }
-      
-      return <code className={className} {...props}>{children}</code>;
+
+      // ✅ Final: render the diagram
+      return (
+        <MermaidDiagram theme={theme} isDark={invert}>
+          {code}
+        </MermaidDiagram>
+      );
     }
-  };
+
+    return <code className={className} {...props}>{children}</code>;
+  }
+};
 
   return (
     <div
