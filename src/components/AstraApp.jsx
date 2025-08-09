@@ -1256,70 +1256,58 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   padding: 0;
 }
 
-/* ===== Lists: proper indent + nesting + task lists ===== */
+/* ===== Lists: fix ALL sublist indentation ===== */
 .markdown-body ol,
 .markdown-body ul {
-  margin: 0.25rem 0 0.25rem 0;   /* vertical rhythm */
-  padding-left: 0;               /* reset padding, let list items handle it */
+  margin: 0.25rem 0;
+  padding-left: 1.5rem;
   list-style-position: outside;
 }
 
-/* Top-level list items */
-.markdown-body > ol > li,
-.markdown-body > ul > li {
-  margin: 0.15rem 0;
-  margin-left: 1.5rem;           /* indent for top level */
-  padding-left: 0.25rem;
+.markdown-body li {
+  margin: 0.1rem 0;
   line-height: 1.5;
 }
 
-/* Second-level nested items */
-.markdown-body ol li ol li,
-.markdown-body ul li ul li,
-.markdown-body ol li ul li,
-.markdown-body ul li ol li {
-  margin: 0.1rem 0;
-  margin-left: 1.75rem;          /* deeper indent for nested */
-  padding-left: 0.25rem;
-}
-
-/* Third-level nested items */
-.markdown-body ol li ol li ol li,
-.markdown-body ul li ul li ul li,
-.markdown-body ol li ul li ol li,
-.markdown-body ul li ol li ul li {
-  margin: 0.1rem 0;
-  margin-left: 2rem;             /* even deeper indent */
-  padding-left: 0.25rem;
-}
-
-/* Generic nested lists (fallback) */
+/* ALL possible nested list combinations get more indentation */
 .markdown-body li > ol,
-.markdown-body li > ul {
-  margin: 0.15rem 0 0.15rem 0;
-  padding-left: 0;
+.markdown-body li > ul,
+.markdown-body ol li > ol,
+.markdown-body ol li > ul,
+.markdown-body ul li > ol,
+.markdown-body ul li > ul {
+  margin: 0.1rem 0;
+  padding-left: 2.5rem;
 }
 
-/* Ensure ordered lists keep decimal and respect "start" */
-.markdown-body ol { list-style-type: decimal; }
-.markdown-body ul { list-style-type: disc; }
+/* Third level nesting */
+.markdown-body li li > ol,
+.markdown-body li li > ul {
+  padding-left: 2.5rem;
+}
 
-/* Nested list markers */
+/* Fourth level nesting */
+.markdown-body li li li > ol,
+.markdown-body li li li > ul {
+  padding-left: 2.5rem;
+}
+
+/* Keep everything else the same */
+.markdown-body ul { list-style-type: disc; }
+.markdown-body ol { list-style-type: decimal; }
 .markdown-body ul ul { list-style-type: circle; }
 .markdown-body ul ul ul { list-style-type: square; }
 
 /* GFM task lists */
 .markdown-body ul.contains-task-list { 
-  list-style: none; 
-  padding-left: 0;
+  list-style: none;
+  padding-left: 1.5rem;
 }
 .markdown-body li.task-list-item { 
   list-style: none;
-  margin-left: 1.5rem;
 }
 .markdown-body li.task-list-item > input[type="checkbox"] {
   margin-right: 0.5rem;
-  margin-left: -1.25rem;
   transform: translateY(1px);
 }
 
