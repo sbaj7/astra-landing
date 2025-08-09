@@ -171,40 +171,6 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     const timer = setTimeout(renderMermaid, 200);
     return () => clearTimeout(timer);
   }, [children, id, theme, isDark]);
-
-  if (isLoading) {
-    return (
-      <div style={{ 
-        margin: '1rem 0', 
-        padding: '1rem',
-        textAlign: 'center',
-        background: theme.backgroundSurface,
-        borderRadius: '8px',
-        border: `1px solid ${theme.textSecondary}25`,
-        color: theme.textSecondary,
-        fontSize: '14px'
-      }}>
-        Rendering mermaid diagram...
-      </div>
-    );
-  }
-
-  return (
-    <div 
-      ref={ref} 
-      style={{ 
-        margin: '1rem 0', 
-        padding: '1rem',
-        background: theme.backgroundSurface,
-        borderRadius: '8px',
-        border: `1px solid ${theme.textSecondary}25`,
-        overflow: 'auto',
-        textAlign: 'center',
-        minHeight: '60px'
-      }} 
-    />
-  );
-};
   if (isLoading) {
     return (
       <div style={{ 
