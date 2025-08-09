@@ -72,9 +72,18 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
    
 function autoFixMermaid(raw) {
   if (!raw) return raw;
-
-  // normalize EOLs
+     // normalize EOLs
   let code = raw.replace(/\r\n?/g, '\n');
+
+  code = code.replace(
+    /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
+    '$1\n'
+  );
+
+  code = code.replace(
+    /([}\]\)>])\s{2,}([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
+    '$1\n$2'
+  );
 
   // PASS 0: fix "labeled edge with no RHS node" by looking ahead
   // Example broken:  B -->|No (shock/hypotension)|
