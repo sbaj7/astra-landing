@@ -74,6 +74,19 @@ function autoFixMermaid(raw) {
   if (!raw) return raw;
   let code = raw.replace(/\r\n?/g, '\n');
 
+  // =================================================================
+  // NEW RULE: Clean node text by removing nested delimiters.
+  // This fixes errors like `A[Text [...]]` -> `A[Text]`
+  // It handles both [] and {} node shapes.
+  code = code.replace(
+    /(\w+[\[\{])([^\]\}]+)([\]\}])/g,
+    (match, start, content, end) => {
+      const cleanedContent = content.replace(/[\[\]\{\}]/g, ''); // Remove stray brackets/braces
+      return `${start}"${cleanedContent.trim()}"${end}`; // Return with quotes for safety
+    }
+  );
+  // =================================================================
+
   // 0) Close a single opening label pipe at end-of-line
   //    e.g. "B -->|Unstable (hypotension, shock)"  => "B -->|Unstable (hypotension, shock)|"
   code = code.replace(/(^\s*[\w.-]+\s*[-=]{1,2}>\s*\|[^\n|]*)(?=\n|$)/gm, '$1|');
@@ -84,8 +97,7 @@ function autoFixMermaid(raw) {
     '$1\n'
   );
 
-  // 2) Break "...}B -->" (or "]B -->", ")B -->", ">B -->") onto a new line
-  //    Accepts optional label with or without the closing pipe
+  // 2) Break "...}B -->" (or "]B -->", etc.) onto a new line
   code = code.replace(
     /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
     '$1\n$2'
@@ -97,7 +109,6 @@ function autoFixMermaid(raw) {
     const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)\s*$/);
     if (!m) continue;
 
-    // Find next non-empty line and grab a plausible id
     let j = i + 1, target = null;
     while (j < lines.length) {
       const t = lines[j].trim();
