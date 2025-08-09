@@ -61,129 +61,104 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
 
 initializeMermaid();
 
-// Mermaid component - simplified and more reliable
 const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
   const idRef = useRef(`mermaid-${Math.random().toString(36).substr(2, 9)}`);
   const lastCodeRef = useRef('');
+  const lastThemeRef = useRef(isDark ? 'dark' : 'default'); // ← track last theme
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const debounceRef = useRef(null);
-   
-function autoFixMermaid(raw) {
-  if (!raw) return raw;
-     // normalize EOLs
-  let code = raw.replace(/\r\n?/g, '\n');
 
-  code = code.replace(
-    /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
-    '$1\n'
-  );
+  function autoFixMermaid(raw) {
+    if (!raw) return raw;
+    let code = raw.replace(/\r\n?/g, '\n');
 
-  code = code.replace(
-    /([}\]\)>])\s{2,}([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
-    '$1\n$2'
-  );
+    code = code.replace(
+      /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
+      '$1\n'
+    );
 
-  // PASS 0: fix "labeled edge with no RHS node" by looking ahead
-  // Example broken:  B -->|No (shock/hypotension)|
-  // Next line starts: C --> D[...]
-  // We can attach the next line's first identifier ("C") as the RHS.
-  const lines = code.split('\n');
-  for (let i = 0; i < lines.length; i++) {
-    const ln = lines[i];
+    code = code.replace(
+      /([}\]\)>])\s{2,}([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
+      '$1\n$2'
+    );
 
-    // edge with optional label and NO rhs node
-    const m = ln.match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
-    if (!m) continue;
+    const lines = code.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const ln = lines[i];
+      const m = ln.match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
+      if (!m) continue;
 
-    // find next non-empty line and pull its leading identifier
-    let j = i + 1;
-    let targetId = null;
-    while (j < lines.length) {
-      const nxt = lines[j].trim();
-      if (nxt) {
-        const idm = nxt.match(/^([\w.-]+)/);
-        if (idm) targetId = idm[1];
-        break;
+      let j = i + 1;
+      let targetId = null;
+      while (j < lines.length) {
+        const nxt = lines[j].trim();
+        if (nxt) {
+          const idm = nxt.match(/^([\w.-]+)/);
+          if (idm) targetId = idm[1];
+          break;
+        }
+        j++;
       }
-      j++;
-    }
 
-    // If we found something that looks like an id, attach it
-    if (targetId) {
-      lines[i] = m[1] + ' ' + targetId;
-    } else {
-      // As a last resort, drop the label and make it a self loop to avoid a parser crash
-      // (rare, but better than a hard error)
-      const src = (ln.match(/^\s*([\w.-]+)/) || [,'X'])[1];
-      lines[i] = `${src} --> ${src}`;
+      if (targetId) {
+        lines[i] = m[1] + ' ' + targetId;
+      } else {
+        const src = (ln.match(/^\s*([\w.-]+)/) || [,'X'])[1];
+        lines[i] = `${src} --> ${src}`;
+      }
     }
+    code = lines.join('\n');
+
+    code = code.replace(
+      /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
+      (m, p1, label, p3) => {
+        if (/^\s*(?:[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>))\s*$/.test(label)) return m;
+        const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+        return `${p1}|${clean}|${p3 || ''}`;
+      }
+    );
+
+    code = code.replace(
+      /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
+      (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
+    );
+
+    code = code.replace(/\|([^|]*)\|/g, (_, lbl) => {
+      const safe = lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ');
+      return `|${safe}|`;
+    });
+
+    code = code.replace(/^(\s*[\w.-]+)([.,;:])(\s*[\[\({<])/gm, '$1$3');
+
+    return code;
   }
-  code = lines.join('\n');
 
-  // PASS 1: ensure labels are wrapped in pipes when text appears between arrow and target
-  code = code.replace(
-    /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
-    (m, p1, label, p3) => {
-      // looks like a node? leave it
-      if (/^\s*(?:[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>))\s*$/.test(label)) return m;
-      const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-      return `${p1}|${clean}|${p3 || ''}`;
-    }
-  );
-
-  // PASS 2: close unbalanced label pipes at EOL
-  code = code.replace(
-    /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
-    (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
-  );
-
-  // PASS 3: escape < and > **inside** labels only; collapse newlines in labels
-  code = code.replace(/\|([^|]*)\|/g, (_, lbl) => {
-    const safe = lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ');
-    return `|${safe}|`;
-  });
-
-  // PASS 4: trim accidental punctuation after a node id before opening a shape
-  code = code.replace(/^(\s*[\w.-]+)([.,;:])(\s*[\[\({<])/gm, '$1$3');
-
-  return code;
-}
-
-
-async function renderMermaidWithRepair(id, rawCode, themeName) {
-  // First attempt
-  try {
-    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
-  } catch (e1) {
-    // One repair pass, then retry once
-    const repaired = autoFixMermaid(rawCode);
-    if (repaired !== rawCode) {
-      try {
+  async function renderMermaidWithRepair(id, rawCode, themeName) {
+    try {
+      return await mermaid.render(id, rawCode, undefined, { theme: themeName });
+    } catch (e1) {
+      const repaired = autoFixMermaid(rawCode);
+      if (repaired !== rawCode) {
         return await mermaid.render(id, repaired, undefined, { theme: themeName });
-      } catch (e2) {
-        // propagate second error
-        throw e2;
       }
+      throw e1;
     }
-    throw e1;
   }
-}
-
 
   useEffect(() => {
     const code = String(children || '').trim();
+    const themeName = isDark ? 'dark' : 'default';
+
     if (!code) {
       setIsLoading(false);
       setError('Empty diagram');
       return;
     }
 
-    // No global re-init here. initializeMermaid() already ran at module load.
-
-    // Skip if code unchanged
-    if (code === lastCodeRef.current) {
+    // skip only if BOTH code and theme are unchanged
+    if (code === lastCodeRef.current && lastThemeRef.current === themeName) {
       setIsLoading(false);
       return;
     }
@@ -191,56 +166,62 @@ async function renderMermaidWithRepair(id, rawCode, themeName) {
     setIsLoading(true);
     setError(null);
     lastCodeRef.current = code;
+    lastThemeRef.current = themeName;
 
-    // Light debounce to avoid multiple renders during ReactMarkdown layout
     if (debounceRef.current) clearTimeout(debounceRef.current);
+
+    let cancelled = false; // ← shared with cleanup
     debounceRef.current = setTimeout(async () => {
-  let cancelled = false;
-  try {
-    // Let layout fully settle to avoid a no-op render on first frame
-    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+      try {
+        // ensure layout is ready
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
 
-    if (typeof mermaid === 'undefined') throw new Error('Mermaid not available');
+        if (typeof mermaid === 'undefined') throw new Error('Mermaid not available');
 
-    const { svg } = await renderMermaidWithRepair(
-      idRef.current,
-      code,
-      isDark ? 'dark' : 'default'
-    );
+        // some mermaid builds ignore per-render theme; (re)init with theme only when needed
+        try {
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            flowchart: { useMaxWidth: true, htmlLabels: true },
+            theme: themeName
+          });
+        } catch {}
 
-    if (cancelled) return;
+        const { svg } = await renderMermaidWithRepair(idRef.current, code, themeName);
 
-    if (!svg || !svg.trim()) {
-      // No silent blanks: show code so you can see what failed
-      setError('No SVG returned (check diagram syntax)');
-      if (ref.current) {
-        ref.current.innerHTML =
-          `<pre style="text-align:left;white-space:pre-wrap;margin:0">${code
-            .replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
+        if (cancelled) return;
+
+        if (!svg || !svg.trim()) {
+          setError('No SVG returned (check diagram syntax)');
+          if (ref.current) {
+            ref.current.innerHTML =
+              `<pre style="text-align:left;white-space:pre-wrap;margin:0">${code
+                .replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>`;
+          }
+          return;
+        }
+
+        if (ref.current) {
+          ref.current.innerHTML = svg;
+          const svgEl = ref.current.querySelector('svg');
+          if (svgEl) {
+            svgEl.style.maxWidth = '100%';
+            svgEl.style.height = 'auto';
+            svgEl.style.display = 'block';
+            svgEl.style.margin = '0 auto';
+          }
+        }
+      } catch (err) {
+        if (!cancelled) setError(err?.message || 'Render failed');
+      } finally {
+        if (!cancelled) setIsLoading(false);
       }
-      return;
-    }
-
-    if (ref.current) {
-      ref.current.innerHTML = svg;
-      const svgEl = ref.current.querySelector('svg');
-      if (svgEl) {
-        svgEl.style.maxWidth = '100%';
-        svgEl.style.height = 'auto';
-        svgEl.style.display = 'block';
-        svgEl.style.margin = '0 auto';
-      }
-    }
-  } catch (err) {
-    if (!cancelled) setError(err?.message || 'Render failed');
-  } finally {
-    if (!cancelled) setIsLoading(false);  // ← ALWAYS stop loading
-  }
-}, 60);
-
+    }, 60);
 
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
+      cancelled = true; // ← stop late state updates
     };
   }, [children, isDark]);
 
@@ -293,6 +274,7 @@ async function renderMermaidWithRepair(id, rawCode, themeName) {
     />
   );
 };
+
 
 
 
