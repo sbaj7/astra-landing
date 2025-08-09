@@ -70,41 +70,78 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const [error, setError] = useState(null);
   const debounceRef = useRef(null);
    
-   // --- Add inside MermaidDiagram (above useEffect) ---
 function autoFixMermaid(raw) {
   if (!raw) return raw;
+
+  // normalize EOLs
   let code = raw.replace(/\r\n?/g, '\n');
 
-  // 1) Ensure labels are delimited with pipes on lines that look like: A --> some text B
-  //    If there is text between arrow and target without pipes, wrap it as |text|
+  // PASS 0: fix "labeled edge with no RHS node" by looking ahead
+  // Example broken:  B -->|No (shock/hypotension)|
+  // Next line starts: C --> D[...]
+  // We can attach the next line's first identifier ("C") as the RHS.
+  const lines = code.split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const ln = lines[i];
+
+    // edge with optional label and NO rhs node
+    const m = ln.match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
+    if (!m) continue;
+
+    // find next non-empty line and pull its leading identifier
+    let j = i + 1;
+    let targetId = null;
+    while (j < lines.length) {
+      const nxt = lines[j].trim();
+      if (nxt) {
+        const idm = nxt.match(/^([\w.-]+)/);
+        if (idm) targetId = idm[1];
+        break;
+      }
+      j++;
+    }
+
+    // If we found something that looks like an id, attach it
+    if (targetId) {
+      lines[i] = m[1] + ' ' + targetId;
+    } else {
+      // As a last resort, drop the label and make it a self loop to avoid a parser crash
+      // (rare, but better than a hard error)
+      const src = (ln.match(/^\s*([\w.-]+)/) || [,'X'])[1];
+      lines[i] = `${src} --> ${src}`;
+    }
+  }
+  code = lines.join('\n');
+
+  // PASS 1: ensure labels are wrapped in pipes when text appears between arrow and target
   code = code.replace(
     /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
     (m, p1, label, p3) => {
-      // ignore if label obviously looks like a node already
+      // looks like a node? leave it
       if (/^\s*(?:[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>))\s*$/.test(label)) return m;
-      // collapse newlines & extra spaces inside label
       const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
-      return `${p1}|${clean}|${p3}`;
+      return `${p1}|${clean}|${p3 || ''}`;
     }
   );
 
-  // 2) Close any unbalanced label pipes on the same line
+  // PASS 2: close unbalanced label pipes at EOL
   code = code.replace(
     /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
     (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
   );
 
-  // 3) Escape < and > **inside** labels only (leave arrows alone)
+  // PASS 3: escape < and > **inside** labels only; collapse newlines in labels
   code = code.replace(/\|([^|]*)\|/g, (_, lbl) => {
     const safe = lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ');
     return `|${safe}|`;
   });
 
-  // 4) Remove accidental trailing punctuation right after node ids (common streaming artifact)
+  // PASS 4: trim accidental punctuation after a node id before opening a shape
   code = code.replace(/^(\s*[\w.-]+)([.,;:])(\s*[\[\({<])/gm, '$1$3');
 
   return code;
 }
+
 
 async function renderMermaidWithRepair(id, rawCode, themeName) {
   // First attempt
