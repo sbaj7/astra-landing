@@ -69,6 +69,62 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const debounceRef = useRef(null);
+   
+   // --- Add inside MermaidDiagram (above useEffect) ---
+function autoFixMermaid(raw) {
+  if (!raw) return raw;
+  let code = raw.replace(/\r\n?/g, '\n');
+
+  // 1) Ensure labels are delimited with pipes on lines that look like: A --> some text B
+  //    If there is text between arrow and target without pipes, wrap it as |text|
+  code = code.replace(
+    /^(\s*[\w.-]+\s*[-=]{1,2}>\s*)([^|\n][^\n]*?)(\s+[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)/gm,
+    (m, p1, label, p3) => {
+      // ignore if label obviously looks like a node already
+      if (/^\s*(?:[\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>))\s*$/.test(label)) return m;
+      // collapse newlines & extra spaces inside label
+      const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ').trim();
+      return `${p1}|${clean}|${p3}`;
+    }
+  );
+
+  // 2) Close any unbalanced label pipes on the same line
+  code = code.replace(
+    /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
+    (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
+  );
+
+  // 3) Escape < and > **inside** labels only (leave arrows alone)
+  code = code.replace(/\|([^|]*)\|/g, (_, lbl) => {
+    const safe = lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ');
+    return `|${safe}|`;
+  });
+
+  // 4) Remove accidental trailing punctuation right after node ids (common streaming artifact)
+  code = code.replace(/^(\s*[\w.-]+)([.,;:])(\s*[\[\({<])/gm, '$1$3');
+
+  return code;
+}
+
+async function renderMermaidWithRepair(id, rawCode, themeName) {
+  // First attempt
+  try {
+    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
+  } catch (e1) {
+    // One repair pass, then retry once
+    const repaired = autoFixMermaid(rawCode);
+    if (repaired !== rawCode) {
+      try {
+        return await mermaid.render(id, repaired, undefined, { theme: themeName });
+      } catch (e2) {
+        // propagate second error
+        throw e2;
+      }
+    }
+    throw e1;
+  }
+}
+
 
   useEffect(() => {
     const code = String(children || '').trim();
@@ -94,11 +150,10 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(async () => {
       try {
-        const { svg } = await mermaid.render(
-          idRef.current,
-          code,
-          undefined,
-          { theme: isDark ? 'dark' : 'default' } // ← theme per render, no re-init
+const { svg } = await renderMermaidWithRepair(
+  idRef.current,
+  code,
+  isDark ? 'dark' : 'default'
         );
 
         if (ref.current) {
