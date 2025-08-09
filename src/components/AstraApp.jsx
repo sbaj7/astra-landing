@@ -74,98 +74,57 @@ function autoFixMermaid(raw) {
   if (!raw) return raw;
   let code = raw.replace(/\r\n?/g, '\n');
 
-  // Ensure newline after header like "flowchart TD"
+  // 0) Close a single opening label pipe at end-of-line
+  //    e.g. "B -->|Unstable (hypotension, shock)"  => "B -->|Unstable (hypotension, shock)|"
+  code = code.replace(/(^\s*[\w.-]+\s*[-=]{1,2}>\s*\|[^\n|]*)(?=\n|$)/gm, '$1|');
+
+  // 1) Ensure newline after "flowchart TD" or "graph LR"
   code = code.replace(
     /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
     '$1\n'
   );
 
-  // Put an edge on a new line after a closing shape: "...}] B -->"
+  // 2) Break "...}B -->" (or "]B -->", ")B -->", ">B -->") onto a new line
+  //    Accepts optional label with or without the closing pipe
   code = code.replace(
-    /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
+    /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
     '$1\n$2'
   );
 
-  let lines = code.split('\n');
-
-  // PASS 0: edge with (optional) label but NO RHS node → borrow next line's first id, else self-loop
+  // 3) Edge line with no RHS: borrow next line's first id, else self-loop
+  const lines = code.split('\n');
   for (let i = 0; i < lines.length; i++) {
-    const onlyEdge = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
-    if (!onlyEdge) continue;
+    const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)\s*$/);
+    if (!m) continue;
 
-    // Find next non-empty line and accept an identifier that looks like a node/edge start
-    let j = i + 1, targetId = null;
+    // Find next non-empty line and grab a plausible id
+    let j = i + 1, target = null;
     while (j < lines.length) {
-      const nxt = lines[j].trim();
-      if (nxt) {
-        const idm = nxt.match(/^([\w.-]+)\s*(?:\[|\(|\{|<|[-=]{1,2}>|$)/);
-        if (idm) targetId = idm[1];
+      const t = lines[j].trim();
+      if (t) {
+        const idm = t.match(/^([\w.-]+)/);
+        if (idm) target = idm[1];
         break;
       }
       j++;
     }
 
     const src = (lines[i].match(/^\s*([\w.-]+)/) || [, 'X'])[1];
-    lines[i] = targetId ? (onlyEdge[1] + ' ' + targetId) : `${src} --> ${src}`;
+    lines[i] = target ? `${m[1]} ${target}` : `${src} --> ${src}`;
   }
-
-  // PASS 1 (SAFE): wrap a label ONLY if (a) no existing |...| and (b) there is a trailing target node on the SAME line.
-  lines = lines.map((ln) => {
-    if (!/[-=]{1,2}>/.test(ln)) return ln;       // not an edge
-    if (/-->\s*\|/.test(ln)) return ln;          // already labeled
-
-    const start = ln.match(/^(\s*[\w.-]+\s*[-=]{1,2}>)(\s+)(.*)$/);
-    if (!start) return ln;
-
-    const rhs = start[3];
-
-    // If RHS begins with a node id (w/ or w/o shape), it's not a label
-    if (/^\s*[\w.-]+\s*(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?(\s*;.*)?$/.test(rhs)) return ln;
-
-    // Split "label ... targetNode" at the final node on the line
-    const m2 = rhs.match(/^(.+?)\s+([\w.-]+(?:\[[^\]]*\]|\([^)]+\)|\{[^}]*\}|<[^>]*>)?)\s*$/);
-    if (!m2) return ln;
-
-    const label = m2[1].trim();
-    const target = m2[2];
-    if (!label) return ln;
-
-    const clean = label.replace(/\n+/g, ' ').replace(/\s{2,}/g, ' ');
-    return `${start[1]} |${clean}| ${target}`;
-  });
-
   code = lines.join('\n');
 
-  // PASS 2: close a single opening pipe at EOL
-  code = code.replace(
-    /^(.+-->\s*\|[^\n|]*)(\n|$)/gm,
-    (m, pre, end) => (/\|[^|]*\|/.test(pre) ? m : `${pre}|${end}`)
+  // 4) Escape angle brackets inside labels + collapse newlines inside labels
+  code = code.replace(/\|([^|]*)\|/g, (_, lbl) =>
+    `|${lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ')}|`
   );
 
-  // PASS 3: escape < and > inside labels only; squash newlines in labels
-  code = code.replace(/\|([^|]*)\|/g, (_, lbl) => {
-    const safe = lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ');
-    return `|${safe}|`;
-  });
-
-  // PASS 4: remove accidental punctuation *between* id and opening shape
-  code = code.replace(/^(\s*[\w.-]+)([.,;:])(\s*[\[\({<])/gm, '$1$3');
+  // 5) Remove stray punctuation between id and shape opener, e.g. "A:[text]" → "A[text]"
+  code = code.replace(/^(\s*[\w.-]+)[.,;:](\s*[\[\({<])/gm, '$1$2');
 
   return code;
 }
-async function renderMermaidWithRepair(id, rawCode, themeName) {
-  try {
-    // try as-is
-    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
-  } catch (e1) {
-    // repair then retry
-    const repaired = autoFixMermaid(rawCode);
-    if (repaired !== rawCode) {
-      return await mermaid.render(id, repaired, undefined, { theme: themeName });
-    }
-    throw e1;
-  }
-}
+
 
 
   useEffect(() => {
