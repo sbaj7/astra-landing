@@ -4,6 +4,7 @@ import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
+import remarkBreaks from 'remark-breaks';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
@@ -165,6 +166,49 @@ function rehypeBracketCitations() {
   };
 }
 
+/** 
+ * Preprocess markdown to handle multiple empty lines 
+ * This converts sequences of empty lines into visible spacing
+ */
+const preprocessMarkdown = (markdown) => {
+  if (!markdown) return '';
+  
+  // Split into lines and process
+  const lines = markdown.split('\n');
+  const processedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Add the current line
+    processedLines.push(line);
+    
+    // Look ahead to count consecutive empty lines
+    let emptyLineCount = 0;
+    let j = i + 1;
+    while (j < lines.length && lines[j].trim() === '') {
+      emptyLineCount++;
+      j++;
+    }
+    
+    // If we have 2 or more empty lines, preserve them as visible spacing
+    if (emptyLineCount >= 2) {
+      // Add the first empty line normally (for paragraph break)
+      processedLines.push('');
+      
+      // Add additional empty lines as non-breaking spaces to preserve visual spacing
+      for (let k = 1; k < emptyLineCount; k++) {
+        processedLines.push('&nbsp;');
+      }
+      
+      // Skip the empty lines we've already processed
+      i = j - 1;
+    }
+  }
+  
+  return processedLines.join('\n');
+};
+
 /** Sanitize schema allowing list attrs + citations */
 const sanitizeSchema = {
   tagNames: [
@@ -180,14 +224,15 @@ const sanitizeSchema = {
     td: ['align'],
     table: ['className'],
     h1: ['id'], h2: ['id'], h3: ['id'],
-    ol: ['start','reversed','type'] // keep correct numbering
+    ol: ['start','reversed','type'], // keep correct numbering
+    p: ['className'] // allow class on paragraphs for spacing
   },
   clobberPrefix: 'md-',
   protocols: { href: ['http', 'https', 'mailto', 'tel'] }
 };
 
 // keep plugin arrays stable between renders for perf
-const remarkPlugins = [remarkGfm, remarkMath];
+const remarkPlugins = [remarkGfm, remarkMath, remarkBreaks];
 const rehypePlugins = [
   rehypeSlug,
   [rehypeAutolinkHeadings, { behavior: 'append' }],
@@ -399,6 +444,9 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
     return () => { if (el) el.removeEventListener('click', handler); };
   }, [onTapCitation]);
 
+  // Preprocess markdown to handle multiple empty lines
+  const processedMarkdown = preprocessMarkdown(markdown);
+
   return (
     <div
       ref={containerRef}
@@ -416,9 +464,16 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
           },
           table: ({ node, ...props }) => <table {...props} className="md-table" />,
           ol: ({ node, ...props }) => <ol start={node?.start} {...props} />,
+          p: ({ node, children, ...props }) => {
+            // Handle paragraphs that are just &nbsp; for spacing
+            if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
+              return <div style={{ height: '1.5em' }} {...props} />;
+            }
+            return <p {...props}>{children}</p>;
+          },
         }}
       >
-        {markdown || ''}
+        {processedMarkdown || ''}
       </ReactMarkdown>
     </div>
   );
@@ -702,11 +757,14 @@ const AstraApp = () => {
   const abortControllerRef = useRef(null);
   const [inputBarHeight, setInputBarHeight] = useState(0);
 
+  // Add scroll bump function for new user requests
   const scrollToBottom = useCallback(() => {
     const el = scrollRef.current;
     if (!el) return;
     el.scrollTop = el.scrollHeight;
   }, []);
+
+  // Removed all scrollToBottom functionality - no more autoscroll!
 
   const resetChat = () => {
     if (abortControllerRef.current) abortControllerRef.current.abort();
@@ -801,6 +859,9 @@ const AstraApp = () => {
     setHasFirstToken(false);
     setStreamingContent('');
 
+    // Scroll bump when user sends a new request
+    setTimeout(scrollToBottom, 100);
+
     if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
 
@@ -838,7 +899,7 @@ const AstraApp = () => {
       const flush = () => {
         rafId = null;
         setStreamingContent(finalContent);
-        scrollToBottom();
+        // Removed scrollToBottom() call here
       };
 
       if (reader) {
@@ -933,7 +994,11 @@ const AstraApp = () => {
 
   const handleSampleTapped = (sampleQuery) => {
     setQuery(sampleQuery);
-    setTimeout(handleSend, 50);
+    // Scroll bump when sample is tapped
+    setTimeout(() => {
+      handleSend();
+      setTimeout(scrollToBottom, 100);
+    }, 50);
   };
 
   const loadChatSession = (session) => {
@@ -950,13 +1015,7 @@ const AstraApp = () => {
     setChatHistory(prev => prev.filter(chat => chat.id !== session.id));
   };
 
-  useEffect(() => {
-    if (isStreaming) scrollToBottom();
-  }, [streamingContent, isStreaming, scrollToBottom]);
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages.length, scrollToBottom]);
+  // Removed all useEffect hooks that called scrollToBottom
 
   return (
     <div style={{
