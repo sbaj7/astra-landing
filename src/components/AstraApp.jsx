@@ -72,75 +72,50 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
 
 function autoFixMermaid(raw) {
   if (!raw) return raw;
-  let code = raw.replace(/\r\n?/g, '\n');
 
-  // =================================================================
-  // ULTIMATE RULE: Clean and escape all common special characters inside nodes.
-  // This is the most critical fix for AI-generated code.
-  code = code.replace(
-    /(\w+[\[\{])(.*?)([\]\}])/g, // Use non-greedy match (.*?) for robustness
-    (match, start, content, end) => {
-      // Escape quotes first, then other special characters
-      const cleanedContent = content
-        .replace(/"/g, '&quot;')     // <-- CRITICAL: Escape quotation marks
-        .replace(/[\[\]\{\}]/g, '')    // Remove stray brackets/braces
-        .replace(/\(/g, '&#40;')     // Escape opening parenthesis
-        .replace(/\)/g, '&#41;');    // Escape closing parenthesis
+  // 1. Basic cleaning and splitting into lines
+  const lines = raw.replace(/\r\n?/g, '\n').split('\n');
+  const cleanedLines = [];
 
-      // Return the cleaned content wrapped in quotes for maximum safety
-      return `${start}"${cleanedContent.trim()}"${end}`;
-    }
-  );
-  // =================================================================
+  // 2. Process each line individually
+  for (const line of lines) {
+    let processedLine = line.trim();
+    if (!processedLine) continue;
 
-  // --- All other rules remain the same ---
-
-  // Close a single opening label pipe at end-of-line
-  code = code.replace(/(^\s*[\w.-]+\s*[-=]{1,2}>\s*\|[^\n|]*)(?=\n|$)/gm, '$1|');
-
-  // Ensure newline after "flowchart TD" or "graph LR"
-  code = code.replace(
-    /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
-    '$1\n'
-  );
-
-  // Break "...}B -->" (or "]B -->", etc.) onto a new line
-  code = code.replace(
-    /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
-    '$1\n$2'
-  );
-
-  // Edge line with no RHS: borrow next line's first id, else self-loop
-  const lines = code.split('\n');
-  for (let i = 0; i < lines.length; i++) {
-    const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)\s*$/);
-    if (!m) continue;
-
-    let j = i + 1, target = null;
-    while (j < lines.length) {
-      const t = lines[j].trim();
-      if (t) {
-        const idm = t.match(/^([\w.-]+)/);
-        if (idm) target = idm[1];
-        break;
-      }
-      j++;
+    if (processedLine.toLowerCase().startsWith('flowchart') || processedLine.toLowerCase().startsWith('graph')) {
+      cleanedLines.push(processedLine);
+      continue;
     }
 
-    const src = (lines[i].match(/^\s*([\w.-]+)/) || [, 'X'])[1];
-    lines[i] = target ? `${m[1]} ${target}` : `${src} --> ${src}`;
+    // 3. Sanitize node definitions by escaping special characters
+    const nodeMatch = processedLine.match(/^(\s*)(\w+)(\[|\{)(.*)(\]|\})/);
+    if (nodeMatch) {
+      const id = nodeMatch[2];
+      const shape = nodeMatch[3] === '[' ? 'rect' : 'rhombus';
+      let text = nodeMatch[4];
+
+      // CORRECT WAY: Escape all special characters to preserve them
+      text = text
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\(/g, '&#40;') // Escape (
+        .replace(/\)/g, '&#41;') // Escape )
+        .replace(/\[/g, '&#91;') // Escape [
+        .replace(/\]/g, '&#93;') // Escape ]
+        .replace(/\{/g, '&#123;') // Escape {
+        .replace(/\}/g, '&#125;'); // Escape }
+
+      // Rebuild the node with clean, safe text
+      const shapeChars = shape === 'rect' ? ['[', ']'] : ['{', '}'];
+      processedLine = `${id}${shapeChars[0]}"${text.trim()}"${shapeChars[1]}`;
+    }
+
+    cleanedLines.push(processedLine);
   }
-  code = lines.join('\n');
 
-  // Escape angle brackets inside labels + collapse newlines inside labels
-  code = code.replace(/\|([^|]*)\|/g, (_, lbl) =>
-    `|${lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ')}|`
-  );
-
-  // Remove stray punctuation between id and shape opener
-  code = code.replace(/^(\s*[\w.-]+)[.,;:](\s*[\[\({<])/gm, '$1$2');
-
-  return code;
+  // 4. Re-join and return the fully cleaned diagram string
+  return cleanedLines.join('\n');
 }
 
    // Try to render, progressively repairing common authoring mistakes.
