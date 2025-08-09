@@ -153,6 +153,19 @@ function autoFixMermaid(raw) {
 
   return code;
 }
+async function renderMermaidWithRepair(id, rawCode, themeName) {
+  try {
+    // try as-is
+    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
+  } catch (e1) {
+    // repair then retry
+    const repaired = autoFixMermaid(rawCode);
+    if (repaired !== rawCode) {
+      return await mermaid.render(id, repaired, undefined, { theme: themeName });
+    }
+    throw e1;
+  }
+}
 
 
   useEffect(() => {
