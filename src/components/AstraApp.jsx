@@ -82,68 +82,81 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const renderMermaid = async () => {
-      if (!ref.current || !children) return;
+  const renderMermaid = async () => {
+    if (!ref.current || !children) {
+      setIsLoading(false);
+      return;
+    }
+    
+    setIsLoading(true);
+    setError(null);
+    
+    const code = typeof children === 'string' ? children : String(children);
+    console.log('Rendering Mermaid code:', code);
+    
+    try {
+      // Force re-initialize
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: isDark ? 'dark' : 'base',
+        securityLevel: 'loose',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true
+        }
+      });
       
-      setIsLoading(true);
-      setError(null);
+      // Clear existing content
+      ref.current.innerHTML = '';
       
-      const code = typeof children === 'string' ? children : String(children);
+      // Small delay to ensure initialization
+      await new Promise(resolve => setTimeout(resolve, 100));
       
-      try {
-        // Initialize mermaid with current theme
-        initializeMermaid(isDark);
+      // Render with better error handling
+      const result = await mermaid.render(id, code);
+      
+      if (ref.current && result.svg) {
+        ref.current.innerHTML = result.svg;
         
-        // Clear any existing content
-        ref.current.innerHTML = '';
-        
-        // Render the diagram
-        const { svg } = await mermaid.render(id, code);
-        
-        if (ref.current) {
-          ref.current.innerHTML = svg;
-          
-          // Style the SVG
-          const svgElement = ref.current.querySelector('svg');
-          if (svgElement) {
-            svgElement.style.maxWidth = '100%';
-            svgElement.style.height = 'auto';
-            svgElement.style.display = 'block';
-            svgElement.style.margin = '0 auto';
-          }
+        const svgElement = ref.current.querySelector('svg');
+        if (svgElement) {
+          svgElement.style.maxWidth = '100%';
+          svgElement.style.height = 'auto';
+          svgElement.style.display = 'block';
+          svgElement.style.margin = '0 auto';
         }
         
+        console.log('Mermaid rendered successfully');
         setIsLoading(false);
-      } catch (err) {
-        console.error('Mermaid rendering error:', err);
-        setError(err.message);
-        setIsLoading(false);
-        
-        if (ref.current) {
-          ref.current.innerHTML = `
-            <div style="
-              color: ${theme.errorColor}; 
-              padding: 16px; 
-              border: 1px solid ${theme.errorColor}; 
-              border-radius: 8px; 
-              background: ${theme.errorColor}15;
-              font-family: monospace;
-              font-size: 14px;
-            ">
-              <strong>Mermaid Error:</strong><br/>
-              ${err.message}<br/><br/>
-              <details>
-                <summary>Debug Info</summary>
-                <pre style="margin-top: 8px; font-size: 12px;">${code}</pre>
-              </details>
-            </div>
-          `;
-        }
+      } else {
+        throw new Error('No SVG content returned');
       }
-    };
+      
+    } catch (err) {
+      console.error('Mermaid error details:', err);
+      setError(err.message);
+      setIsLoading(false);
+      
+      // Show error in the component
+      if (ref.current) {
+        ref.current.innerHTML = `
+          <div style="color: red; padding: 16px; border: 1px solid red; border-radius: 8px;">
+            <strong>Mermaid Error:</strong> ${err.message}<br/>
+            <details style="margin-top: 8px;">
+              <summary>Code</summary>
+              <pre style="font-size: 12px; margin-top: 4px;">${code}</pre>
+            </details>
+          </div>
+        `;
+      }
+    }
+  };
 
-    renderMermaid();
-  }, [children, id, theme, isDark]);
+  // Add timeout to ensure component is ready
+  const timer = setTimeout(renderMermaid, 50);
+  return () => clearTimeout(timer);
+  
+}, [children, id, theme, isDark]);
 
   if (isLoading) {
     return (
