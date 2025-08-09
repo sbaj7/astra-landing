@@ -477,12 +477,14 @@ const fixMermaidContent = (content) => {
   return finalContent;
 };
 
-// Update your preprocessMarkdown function to use this fix
-const preprocessMarkdown = (markdown) => {
+const preprocessMarkdown = (markdown, isStreaming = false) => {
   if (!markdown) return '';
   
-  // First apply the mermaid fix
-  let processed = fixMermaidContent(markdown);
+  console.log('🔧 PREPROCESSING MARKDOWN', { isStreaming });
+  console.log('Input:', markdown.substring(0, 200) + '...');
+  
+  // Only apply mermaid fix AFTER streaming is complete to avoid conflicts
+  let processed = isStreaming ? markdown : fixMermaidContent(markdown);
   
   // Then apply the existing empty line processing
   const lines = processed.split('\n');
@@ -517,7 +519,11 @@ const preprocessMarkdown = (markdown) => {
     }
   }
   
-  return processedLines.join('\n');
+  const final = processedLines.join('\n');
+  console.log('🔧 PREPROCESSING COMPLETE');
+  console.log('Output:', final.substring(0, 200) + '...');
+  
+  return final;
 };
 
 /** Sanitize schema allowing list attrs + citations */
@@ -807,8 +813,8 @@ const markdownComponents = {
 };
 
 // Update your MarkdownBlock to use the components and pass theme/isDark
-const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
-  const containerRef = useRef(null);
+const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStreaming = false }) => {
+   const containerRef = useRef(null);
 
   useEffect(() => {
     const handler = (e) => {
@@ -823,8 +829,8 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
     return () => { if (el) el.removeEventListener('click', handler); };
   }, [onTapCitation]);
 
-  const processedMarkdown = preprocessMarkdown(markdown);
-
+const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
+   
   // Create components with theme passed through
   const componentsWithTheme = {
     ...markdownComponents,
@@ -953,11 +959,12 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
       </div>
       
       <div>
-        <MarkdownBlock 
-          markdown={content || ''} 
-          theme={theme} 
-          invert={invert} 
-          onTapCitation={() => {}} 
+<MarkdownBlock 
+  markdown={content || ''} 
+  theme={theme} 
+  invert={invert} 
+  onTapCitation={() => {}} 
+  isStreaming={true}
         />
         {content ? (
           <span style={{ 
