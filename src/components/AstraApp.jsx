@@ -489,6 +489,7 @@ const rehypePlugins = [
   rehypeSlug,
   [rehypeAutolinkHeadings, { behavior: 'append' }],
   rehypeHighlight,
+  rehypeRaw,
   rehypeBracketCitations,
   // rehypeKatex, // enable if you installed katex
   [rehypeSanitize, sanitizeSchema]
