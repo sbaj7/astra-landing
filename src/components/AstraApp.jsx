@@ -11,6 +11,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeSanitize from 'rehype-sanitize';
 import { visit } from 'unist-util-visit';
 import mermaid from 'mermaid';
+import rehypeRaw from 'rehype-raw';
 
 // If you enable KaTeX, also:
 // import 'katex/dist/katex.min.css';
