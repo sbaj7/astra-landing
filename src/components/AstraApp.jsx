@@ -44,37 +44,25 @@ const colors = {
 // Initialize mermaid - add this right after your theme setup
 let mermaidInitialized = false;
 
+// Initialize mermaid - simplified and more reliable
 const initializeMermaid = (isDark = false) => {
-  if (!mermaidInitialized) {
+  try {
     mermaid.initialize({
       startOnLoad: false,
-      theme: isDark ? 'dark' : 'base',
-      securityLevel: 'loose', // Allow HTML in labels
+      theme: isDark ? 'dark' : 'default',
+      securityLevel: 'loose',
       flowchart: {
         useMaxWidth: true,
         htmlLabels: true
-      },
-      themeVariables: isDark ? {
-        primaryColor: '#8FA5B5',
-        primaryTextColor: '#F9FAFB',
-        primaryBorderColor: '#A0AAB4',
-        lineColor: '#A0AAB4',
-        background: '#1C1F23',
-        mainBkg: '#1C1F23',
-      } : {
-        primaryColor: '#4A6B7D',
-        primaryTextColor: '#2A2A2A',
-        primaryBorderColor: '#8B8B8B',
-        lineColor: '#5A6169',
-        background: '#FEFEFE',
-        mainBkg: '#FEFEFE',
       }
     });
-    mermaidInitialized = true;
+    console.log('Mermaid initialized with theme:', isDark ? 'dark' : 'default');
+  } catch (err) {
+    console.error('Mermaid initialization failed:', err);
   }
 };
 
-// Mermaid component
+// Mermaid component - simplified and more reliable
 const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
   const [id] = useState(() => `mermaid-${Math.random().toString(36).substr(2, 9)}`);
@@ -83,71 +71,76 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
 
   useEffect(() => {
     const renderMermaid = async () => {
-      console.log('MermaidDiagram render attempt:', { 
-        hasRef: !!ref.current, 
-        hasChildren: !!children, 
-        hasMermaid: typeof mermaid !== 'undefined',
-        children: typeof children === 'string' ? children.substring(0, 100) + '...' : children
-      });
+      console.log('=== MERMAID RENDER START ===');
       
-      if (!ref.current || !children) {
-        console.log('Missing ref or children, aborting render');
+      if (!ref.current) {
+        console.log('No ref.current');
+        setIsLoading(false);
+        return;
+      }
+      
+      if (!children) {
+        console.log('No children');
         setIsLoading(false);
         return;
       }
       
       if (typeof mermaid === 'undefined') {
-        console.error('Mermaid library not available');
+        console.error('Mermaid not available');
         setError('Mermaid library not loaded');
         setIsLoading(false);
         return;
       }
       
-      setIsLoading(true);
-      setError(null);
-      
-      const code = typeof children === 'string' ? children : String(children);
-      console.log('About to render mermaid code:', code);
+      const code = String(children).trim();
+      console.log('Rendering code:', code);
       
       try {
-        // Initialize mermaid with current theme
+        setIsLoading(true);
+        setError(null);
+        
+        // Always re-initialize mermaid
         initializeMermaid(isDark);
         
-        // Clear any existing content
+        // Clear container
         ref.current.innerHTML = '';
         
-        // Small delay to ensure mermaid is initialized
-        await new Promise(resolve => setTimeout(resolve, 50));
+        // Give mermaid time to initialize
+        await new Promise(resolve => setTimeout(resolve, 100));
         
-        // Render the diagram
-        console.log('Calling mermaid.render with id:', id);
-        const { svg } = await mermaid.render(id, code);
+        // Render
+        console.log('Calling mermaid.render...');
+        const result = await mermaid.render(id, code);
         
-        if (!svg) {
-          throw new Error('No SVG returned from mermaid render');
+        if (!result || !result.svg) {
+          throw new Error('No SVG returned');
         }
         
-        console.log('Mermaid render successful, SVG length:', svg.length);
+        console.log('Mermaid render success, SVG length:', result.svg.length);
         
+        // Insert SVG
         if (ref.current) {
-          ref.current.innerHTML = svg;
+          ref.current.innerHTML = result.svg;
           
-          // Style the SVG
-          const svgElement = ref.current.querySelector('svg');
-          if (svgElement) {
-            svgElement.style.maxWidth = '100%';
-            svgElement.style.height = 'auto';
-            svgElement.style.display = 'block';
-            svgElement.style.margin = '0 auto';
-            console.log('SVG styled and inserted successfully');
-          } else {
-            console.warn('No SVG element found after inserting HTML');
+          // Style SVG
+          const svg = ref.current.querySelector('svg');
+          if (svg) {
+            svg.style.maxWidth = '100%';
+            svg.style.height = 'auto';
+            svg.style.display = 'block';
+            svg.style.margin = '0 auto';
+            console.log('SVG inserted and styled');
           }
         }
         
         setIsLoading(false);
+        console.log('=== MERMAID RENDER SUCCESS ===');
+        
       } catch (err) {
-        console.error('Mermaid rendering error:', err);
+        console.error('=== MERMAID RENDER ERROR ===');
+        console.error('Error:', err);
+        console.error('Code that failed:', code);
+        
         setError(err.message);
         setIsLoading(false);
         
@@ -160,13 +153,13 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
               border-radius: 8px; 
               background: ${theme.errorColor}15;
               font-family: monospace;
-              font-size: 14px;
+              font-size: 12px;
             ">
               <strong>Mermaid Error:</strong><br/>
               ${err.message}<br/><br/>
               <details>
-                <summary>Debug Info</summary>
-                <pre style="margin-top: 8px; font-size: 12px;">${code}</pre>
+                <summary>Code</summary>
+                <pre style="margin-top: 8px; font-size: 11px; white-space: pre-wrap;">${code}</pre>
               </details>
             </div>
           `;
@@ -174,10 +167,44 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
       }
     };
 
-    const timer = setTimeout(renderMermaid, 100);
+    // Longer delay to ensure everything is ready
+    const timer = setTimeout(renderMermaid, 200);
     return () => clearTimeout(timer);
   }, [children, id, theme, isDark]);
 
+  if (isLoading) {
+    return (
+      <div style={{ 
+        margin: '1rem 0', 
+        padding: '1rem',
+        textAlign: 'center',
+        background: theme.backgroundSurface,
+        borderRadius: '8px',
+        border: `1px solid ${theme.textSecondary}25`,
+        color: theme.textSecondary,
+        fontSize: '14px'
+      }}>
+        Rendering mermaid diagram...
+      </div>
+    );
+  }
+
+  return (
+    <div 
+      ref={ref} 
+      style={{ 
+        margin: '1rem 0', 
+        padding: '1rem',
+        background: theme.backgroundSurface,
+        borderRadius: '8px',
+        border: `1px solid ${theme.textSecondary}25`,
+        overflow: 'auto',
+        textAlign: 'center',
+        minHeight: '60px'
+      }} 
+    />
+  );
+};
   if (isLoading) {
     return (
       <div style={{ 
