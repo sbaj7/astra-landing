@@ -75,35 +75,42 @@ function autoFixMermaid(raw) {
   let code = raw.replace(/\r\n?/g, '\n');
 
   // =================================================================
-  // NEW RULE: Clean node text by removing nested delimiters.
-  // This fixes errors like `A[Text [...]]` -> `A[Text]`
-  // It handles both [] and {} node shapes.
+  // ULTIMATE RULE: Clean and escape all common special characters inside nodes.
+  // This is the most critical fix for AI-generated code.
   code = code.replace(
-    /(\w+[\[\{])([^\]\}]+)([\]\}])/g,
+    /(\w+[\[\{])(.*?)([\]\}])/g, // Use non-greedy match (.*?) for robustness
     (match, start, content, end) => {
-      const cleanedContent = content.replace(/[\[\]\{\}]/g, ''); // Remove stray brackets/braces
-      return `${start}"${cleanedContent.trim()}"${end}`; // Return with quotes for safety
+      // Escape quotes first, then other special characters
+      const cleanedContent = content
+        .replace(/"/g, '&quot;')     // <-- CRITICAL: Escape quotation marks
+        .replace(/[\[\]\{\}]/g, '')    // Remove stray brackets/braces
+        .replace(/\(/g, '&#40;')     // Escape opening parenthesis
+        .replace(/\)/g, '&#41;');    // Escape closing parenthesis
+
+      // Return the cleaned content wrapped in quotes for maximum safety
+      return `${start}"${cleanedContent.trim()}"${end}`;
     }
   );
   // =================================================================
 
-  // 0) Close a single opening label pipe at end-of-line
-  //    e.g. "B -->|Unstable (hypotension, shock)"  => "B -->|Unstable (hypotension, shock)|"
+  // --- All other rules remain the same ---
+
+  // Close a single opening label pipe at end-of-line
   code = code.replace(/(^\s*[\w.-]+\s*[-=]{1,2}>\s*\|[^\n|]*)(?=\n|$)/gm, '$1|');
 
-  // 1) Ensure newline after "flowchart TD" or "graph LR"
+  // Ensure newline after "flowchart TD" or "graph LR"
   code = code.replace(
     /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
     '$1\n'
   );
 
-  // 2) Break "...}B -->" (or "]B -->", etc.) onto a new line
+  // Break "...}B -->" (or "]B -->", etc.) onto a new line
   code = code.replace(
     /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
     '$1\n$2'
   );
 
-  // 3) Edge line with no RHS: borrow next line's first id, else self-loop
+  // Edge line with no RHS: borrow next line's first id, else self-loop
   const lines = code.split('\n');
   for (let i = 0; i < lines.length; i++) {
     const m = lines[i].match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)\s*$/);
@@ -125,29 +132,15 @@ function autoFixMermaid(raw) {
   }
   code = lines.join('\n');
 
-  // 4) Escape angle brackets inside labels + collapse newlines inside labels
+  // Escape angle brackets inside labels + collapse newlines inside labels
   code = code.replace(/\|([^|]*)\|/g, (_, lbl) =>
     `|${lbl.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n+/g, ' ')}|`
   );
 
-  // 5) Remove stray punctuation between id and shape opener, e.g. "A:[text]" → "A[text]"
+  // Remove stray punctuation between id and shape opener
   code = code.replace(/^(\s*[\w.-]+)[.,;:](\s*[\[\({<])/gm, '$1$2');
 
   return code;
-}
-// Minimal shim that you are already calling from useEffect.
-async function renderMermaidWithRepair(id, rawCode, themeName) {
-  try {
-    // fast path
-    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
-  } catch (e1) {
-    // try once with your fixer
-    const repaired = autoFixMermaid(rawCode);
-    if (repaired && repaired !== rawCode) {
-      return await mermaid.render(id, repaired, undefined, { theme: themeName });
-    }
-    throw e1;
-  }
 }
 
 
