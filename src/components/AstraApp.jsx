@@ -181,9 +181,8 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
       try {
         await new Promise(r => requestAnimationFrame(r));
         if (typeof mermaid === 'undefined') throw new Error('Mermaid not available');
-        
-        // Initialize with theme for this render pass
-        mermaid.initialize({
+        
+        mermaid.initialize({
             startOnLoad: false,
             securityLevel: 'loose',
             flowchart: { useMaxWidth: true, htmlLabels: true },
@@ -216,7 +215,15 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
 
   if (isLoading) {
     return (
-      <div style={{...}}>
+      <div style={{
+        margin: '1rem 0',
+        padding: '1.25rem',
+        background: theme.backgroundSurface,
+        borderRadius: 8,
+        border: `1px solid ${theme.textSecondary}25`,
+        color: theme.textSecondary,
+        textAlign: 'center'
+      }}>
         Rendering diagram...
       </div>
     );
@@ -224,7 +231,16 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
 
   if (error) {
     return (
-      <div style={{...}}>
+      <div style={{
+        color: theme.errorColor,
+        padding: 12,
+        border: `1px solid ${theme.errorColor}`,
+        borderRadius: 8,
+        background: `${theme.errorColor}15`,
+        fontFamily: 'monospace',
+        fontSize: 12,
+        whiteSpace: 'pre-wrap'
+      }}>
         <strong>Mermaid Error:</strong> {error}
         <pre style={{marginTop: '8px', whiteSpace: 'pre-wrap', wordBreak: 'break-all'}}>{String(children)}</pre>
       </div>
@@ -247,7 +263,6 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     />
   );
 };
-
 
 
 
