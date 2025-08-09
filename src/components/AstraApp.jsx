@@ -82,81 +82,101 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-  const renderMermaid = async () => {
-    if (!ref.current || !children) {
-      setIsLoading(false);
-      return;
-    }
-    
-    setIsLoading(true);
-    setError(null);
-    
-    const code = typeof children === 'string' ? children : String(children);
-    console.log('Rendering Mermaid code:', code);
-    
-    try {
-      // Force re-initialize
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: isDark ? 'dark' : 'base',
-        securityLevel: 'loose',
-        flowchart: {
-          useMaxWidth: true,
-          htmlLabels: true
-        }
+    const renderMermaid = async () => {
+      console.log('MermaidDiagram render attempt:', { 
+        hasRef: !!ref.current, 
+        hasChildren: !!children, 
+        hasMermaid: typeof mermaid !== 'undefined',
+        children: typeof children === 'string' ? children.substring(0, 100) + '...' : children
       });
       
-      // Clear existing content
-      ref.current.innerHTML = '';
+      if (!ref.current || !children) {
+        console.log('Missing ref or children, aborting render');
+        setIsLoading(false);
+        return;
+      }
       
-      // Small delay to ensure initialization
-      await new Promise(resolve => setTimeout(resolve, 100));
+      if (typeof mermaid === 'undefined') {
+        console.error('Mermaid library not available');
+        setError('Mermaid library not loaded');
+        setIsLoading(false);
+        return;
+      }
       
-      // Render with better error handling
-      const result = await mermaid.render(id, code);
+      setIsLoading(true);
+      setError(null);
       
-      if (ref.current && result.svg) {
-        ref.current.innerHTML = result.svg;
+      const code = typeof children === 'string' ? children : String(children);
+      console.log('About to render mermaid code:', code);
+      
+      try {
+        // Initialize mermaid with current theme
+        initializeMermaid(isDark);
         
-        const svgElement = ref.current.querySelector('svg');
-        if (svgElement) {
-          svgElement.style.maxWidth = '100%';
-          svgElement.style.height = 'auto';
-          svgElement.style.display = 'block';
-          svgElement.style.margin = '0 auto';
+        // Clear any existing content
+        ref.current.innerHTML = '';
+        
+        // Small delay to ensure mermaid is initialized
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        // Render the diagram
+        console.log('Calling mermaid.render with id:', id);
+        const { svg } = await mermaid.render(id, code);
+        
+        if (!svg) {
+          throw new Error('No SVG returned from mermaid render');
         }
         
-        console.log('Mermaid rendered successfully');
+        console.log('Mermaid render successful, SVG length:', svg.length);
+        
+        if (ref.current) {
+          ref.current.innerHTML = svg;
+          
+          // Style the SVG
+          const svgElement = ref.current.querySelector('svg');
+          if (svgElement) {
+            svgElement.style.maxWidth = '100%';
+            svgElement.style.height = 'auto';
+            svgElement.style.display = 'block';
+            svgElement.style.margin = '0 auto';
+            console.log('SVG styled and inserted successfully');
+          } else {
+            console.warn('No SVG element found after inserting HTML');
+          }
+        }
+        
         setIsLoading(false);
-      } else {
-        throw new Error('No SVG content returned');
+      } catch (err) {
+        console.error('Mermaid rendering error:', err);
+        setError(err.message);
+        setIsLoading(false);
+        
+        if (ref.current) {
+          ref.current.innerHTML = `
+            <div style="
+              color: ${theme.errorColor}; 
+              padding: 16px; 
+              border: 1px solid ${theme.errorColor}; 
+              border-radius: 8px; 
+              background: ${theme.errorColor}15;
+              font-family: monospace;
+              font-size: 14px;
+            ">
+              <strong>Mermaid Error:</strong><br/>
+              ${err.message}<br/><br/>
+              <details>
+                <summary>Debug Info</summary>
+                <pre style="margin-top: 8px; font-size: 12px;">${code}</pre>
+              </details>
+            </div>
+          `;
+        }
       }
-      
-    } catch (err) {
-      console.error('Mermaid error details:', err);
-      setError(err.message);
-      setIsLoading(false);
-      
-      // Show error in the component
-      if (ref.current) {
-        ref.current.innerHTML = `
-          <div style="color: red; padding: 16px; border: 1px solid red; border-radius: 8px;">
-            <strong>Mermaid Error:</strong> ${err.message}<br/>
-            <details style="margin-top: 8px;">
-              <summary>Code</summary>
-              <pre style="font-size: 12px; margin-top: 4px;">${code}</pre>
-            </details>
-          </div>
-        `;
-      }
-    }
-  };
+    };
 
-  // Add timeout to ensure component is ready
-  const timer = setTimeout(renderMermaid, 50);
-  return () => clearTimeout(timer);
-  
-}, [children, id, theme, isDark]);
+    const timer = setTimeout(renderMermaid, 100);
+    return () => clearTimeout(timer);
+  }, [children, id, theme, isDark]);
 
   if (isLoading) {
     return (
@@ -170,6 +190,9 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         color: theme.textSecondary
       }}>
         Rendering diagram...
+        <div style={{ fontSize: '12px', marginTop: '8px', opacity: 0.7 }}>
+          {children ? 'Content loaded' : 'No content'} | {typeof mermaid !== 'undefined' ? 'Mermaid ready' : 'Mermaid missing'}
+        </div>
       </div>
     );
   }
@@ -184,7 +207,8 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         borderRadius: '8px',
         border: `1px solid ${theme.textSecondary}25`,
         overflow: 'auto',
-        textAlign: 'center'
+        textAlign: 'center',
+        minHeight: '60px'
       }} 
     />
   );
