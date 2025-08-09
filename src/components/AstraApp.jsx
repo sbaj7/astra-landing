@@ -79,7 +79,6 @@ function autoFixMermaid(raw) {
   let code = raw.trim();
 
   // 2. Force-wrap the code if it's not already wrapped
-  // This is the new, critical fix for the "nothing renders" issue.
   if (!code.startsWith('```mermaid')) {
     code = '```mermaid\n' + code.replace(/`/g, '') + '\n```';
   }
