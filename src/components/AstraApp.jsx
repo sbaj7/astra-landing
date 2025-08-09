@@ -433,113 +433,32 @@ const fixMermaidContent = (content) => {
 };
 
 const preprocessMarkdown = (markdown, isStreaming = false) => {
-  if (!markdown) return '';
-  
-  console.log('🔧 PREPROCESSING MARKDOWN', { isStreaming });
-  
-  // Simple Mermaid wrapper - detect flowchart/graph lines and wrap them
-  let processed = markdown;
-  
-  if (!isStreaming) {
-    const lines = processed.split('\n');
-    const result = [];
-    let i = 0;
-    
-    while (i < lines.length) {
-      const line = lines[i].trim();
-      
-      // IMPROVED: Check if this line starts a Mermaid diagram
-      if (line.startsWith('flowchart ') || 
-          line.startsWith('graph ') ||
-          /^[A-Z]\[.*\]\s*-->/.test(line) ||           // A[...] -->
-          /^[A-Z]\{.*\}\s*-->/.test(line) ||           // A{...} -->
-          /^[A-Z]\s*-->\s*[A-Z]/.test(line)) {         // A --> B
-        
-        // Found start of Mermaid - collect all related lines
-        const mermaidLines = [];
-        let j = i;
-        
-        while (j < lines.length) {
-          const currentLine = lines[j].trim();
-          
-          // Stop if we hit an empty line followed by non-Mermaid content
-          if (currentLine === '' && j < lines.length - 1) {
-            const nextLine = lines[j + 1].trim();
-            if (nextLine && 
-                !nextLine.includes('-->') && 
-                !/^[A-Z]\s*-->/.test(nextLine) &&
-                !/^[A-Z]\[/.test(nextLine) &&
-                !/^[A-Z]\{/.test(nextLine) &&
-                !nextLine.startsWith('flowchart') &&
-                !nextLine.startsWith('graph')) {
-              break;
-            }
-          }
-          
-          // IMPROVED: Stop if line doesn't look like Mermaid
-          if (currentLine && 
-              !currentLine.startsWith('flowchart') &&
-              !currentLine.startsWith('graph') &&
-              !currentLine.includes('-->') &&
-              !/^[A-Z]\[/.test(currentLine) &&
-              !/^[A-Z]\{/.test(currentLine) &&
-              !/^[A-Z]\s*-->/.test(currentLine) &&
-              !/-->\s*[A-Z]/.test(currentLine)) {        // Added this pattern
-            break;
-          }
-          
-          if (currentLine) mermaidLines.push(currentLine);
-          j++;
-        }
-        
-        // Wrap in mermaid code block
-        if (mermaidLines.length > 0) {
-          console.log('🎯 WRAPPING MERMAID:', mermaidLines);
-          result.push('```mermaid');
-          result.push(...mermaidLines);
-          result.push('```');
-          result.push(''); // Add spacing
-          i = j;
-          continue;
-        }
-      }
-      
-      result.push(lines[i]);
-      i++;
-    }
-    
-    processed = result.join('\n');
-    console.log('🔧 PROCESSED:', processed);
-  }
-  
-  // Rest of your existing processing...
-  const lines = processed.split('\n');
-  const processedLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    processedLines.push(line);
-    
-    let emptyLineCount = 0;
-    let j = i + 1;
-    while (j < lines.length && lines[j].trim() === '') {
-      emptyLineCount++;
-      j++;
-    }
-    
-    if (emptyLineCount >= 2) {
-      processedLines.push('');
-      for (let k = 1; k < emptyLineCount; k++) {
-        processedLines.push('&nbsp;');
-      }
-      i = j - 1;
-    }
-  }
-  
-  const final = processedLines.join('\n');
-  console.log('🔧 PREPROCESSING COMPLETE');
-  
-  return final;
+ if (!markdown) return '';
+ 
+ const lines = markdown.split('\n');
+ const processedLines = [];
+ 
+ for (let i = 0; i < lines.length; i++) {
+   const line = lines[i];
+   processedLines.push(line);
+   
+   let emptyLineCount = 0;
+   let j = i + 1;
+   while (j < lines.length && lines[j].trim() === '') {
+     emptyLineCount++;
+     j++;
+   }
+   
+   if (emptyLineCount >= 2) {
+     processedLines.push('');
+     for (let k = 1; k < emptyLineCount; k++) {
+       processedLines.push('&nbsp;');
+     }
+     i = j - 1;
+   }
+ }
+ 
+ return processedLines.join('\n');
 };
 
 /** Sanitize schema allowing list attrs + citations */
