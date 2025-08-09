@@ -4,7 +4,6 @@ import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
-import remarkBreaks from 'remark-breaks';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
@@ -167,6 +166,37 @@ function rehypeBracketCitations() {
 }
 
 /** 
+ * Custom remark plugin to handle line breaks without requiring remark-breaks
+ * Converts single newlines to hard breaks
+ */
+function remarkCustomBreaks() {
+  return (tree) => {
+    visit(tree, 'text', (node, index, parent) => {
+      if (!parent || typeof node.value !== 'string') return;
+      
+      // Split text on newlines and create break nodes
+      const parts = node.value.split(/\r?\n/);
+      if (parts.length <= 1) return; // No newlines found
+      
+      const newNodes = [];
+      for (let i = 0; i < parts.length; i++) {
+        if (parts[i]) {
+          newNodes.push({ type: 'text', value: parts[i] });
+        }
+        if (i < parts.length - 1) {
+          newNodes.push({ type: 'break' });
+        }
+      }
+      
+      if (newNodes.length > 1) {
+        parent.children.splice(index, 1, ...newNodes);
+        return index + newNodes.length;
+      }
+    });
+  };
+}
+
+/** 
  * Preprocess markdown to handle multiple empty lines 
  * This converts sequences of empty lines into visible spacing
  */
@@ -232,7 +262,7 @@ const sanitizeSchema = {
 };
 
 // keep plugin arrays stable between renders for perf
-const remarkPlugins = [remarkGfm, remarkMath, remarkBreaks];
+const remarkPlugins = [remarkGfm, remarkMath, remarkCustomBreaks];
 const rehypePlugins = [
   rehypeSlug,
   [rehypeAutolinkHeadings, { behavior: 'append' }],
