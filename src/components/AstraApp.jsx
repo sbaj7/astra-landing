@@ -777,32 +777,32 @@ const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
 const componentsWithTheme = {
   ...markdownComponents,
-  code: ({ node, inline, className, children, ...props }) => {
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match ? match[1] : '';
+code: ({ node, inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || '');
+  const language = match ? match[1] : '';
 
-    if (!inline && language === 'mermaid') {
-      const code = String(children).replace(/\n$/, '');
+  if (!inline && language === 'mermaid') {
+    const code = String(children).replace(/\n$/, '');
 
-      // ⛔ During streaming, DO NOT invoke Mermaid – show the code block as-is
-      if (isStreaming) {
-        return (
-          <pre className={className}>
-            <code {...props}>{code}</code>
-          </pre>
-        );
-      }
-
-      // ✅ Final: render the diagram
+    // ✅ Only show as code block if actively streaming AND content is incomplete
+    if (isStreaming && !code.includes('flowchart') && !code.includes('graph')) {
       return (
-        <MermaidDiagram theme={theme} isDark={invert}>
-          {code}
-        </MermaidDiagram>
+        <pre className={className}>
+          <code {...props}>{code}</code>
+        </pre>
       );
     }
 
-    return <code className={className} {...props}>{children}</code>;
+    // ✅ Otherwise, render the diagram
+    return (
+      <MermaidDiagram theme={theme} isDark={invert}>
+        {code}
+      </MermaidDiagram>
+    );
   }
+
+  return <code className={className} {...props}>{children}</code>;
+}
 };
 
   return (
@@ -863,7 +863,7 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
   markdown={message.content}
   theme={theme}
   invert={invertMarkdown}
-  isStreaming={false}   // ← add this line
+  isStreaming={false}   // ← change this to: isStreaming={!message.isStreamingComplete}
   onTapCitation={(num) => {
     const citation = message.citations?.find((c) => c.number === num);
     if (citation && onTapCitation) onTapCitation(citation);
@@ -916,7 +916,7 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
   theme={theme} 
   invert={invert} 
   onTapCitation={() => {}} 
-  isStreaming={true}
+  isStreaming={!content.includes('```mermaid')}  // ← change this line
         />
         {content ? (
           <span style={{ 
