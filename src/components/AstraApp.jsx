@@ -124,6 +124,20 @@ function autoFixMermaid(raw) {
 
   return code;
 }
+// Minimal shim that you are already calling from useEffect.
+async function renderMermaidWithRepair(id, rawCode, themeName) {
+  try {
+    // fast path
+    return await mermaid.render(id, rawCode, undefined, { theme: themeName });
+  } catch (e1) {
+    // try once with your fixer
+    const repaired = autoFixMermaid(rawCode);
+    if (repaired && repaired !== rawCode) {
+      return await mermaid.render(id, repaired, undefined, { theme: themeName });
+    }
+    throw e1;
+  }
+}
 
 
 
