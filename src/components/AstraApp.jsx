@@ -19,109 +19,142 @@ import mermaid from 'mermaid';
    THEME
    ========================= */
 
-// Initialize mermaid with theme support - add this near your theme setup
-const initializeMermaid = (isDark) => {
-  mermaid.initialize({
-    startOnLoad: false,
-    theme: isDark ? 'dark' : 'base',
-    themeVariables: isDark ? {
-      primaryColor: '#8FA5B5',
-      primaryTextColor: '#F9FAFB',
-      primaryBorderColor: '#A0AAB4',
-      lineColor: '#A0AAB4',
-      background: '#1C1F23',
-      mainBkg: '#1C1F23',
-    } : {
-      primaryColor: '#4A6B7D',
-      primaryTextColor: '#2A2A2A',
-      primaryBorderColor: '#8B8B8B',
-      lineColor: '#5A6169',
-      background: '#FEFEFE',
-      mainBkg: '#FEFEFE',
-    }
-  });
+// Initialize mermaid - add this right after your theme setup
+let mermaidInitialized = false;
+
+const initializeMermaid = (isDark = false) => {
+  if (!mermaidInitialized) {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: isDark ? 'dark' : 'base',
+      securityLevel: 'loose', // Allow HTML in labels
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+      },
+      themeVariables: isDark ? {
+        primaryColor: '#8FA5B5',
+        primaryTextColor: '#F9FAFB',
+        primaryBorderColor: '#A0AAB4',
+        lineColor: '#A0AAB4',
+        background: '#1C1F23',
+        mainBkg: '#1C1F23',
+      } : {
+        primaryColor: '#4A6B7D',
+        primaryTextColor: '#2A2A2A',
+        primaryBorderColor: '#8B8B8B',
+        lineColor: '#5A6169',
+        background: '#FEFEFE',
+        mainBkg: '#FEFEFE',
+      }
+    });
+    mermaidInitialized = true;
+  }
 };
 
-// Mermaid component for ReactMarkdown
-const MermaidDiagram = ({ children, theme, isDark }) => {
+// Mermaid component
+const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
   const [id] = useState(() => `mermaid-${Math.random().toString(36).substr(2, 9)}`);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (ref.current && children) {
-      const code = typeof children === 'string' ? children : children.props?.children || '';
+    const renderMermaid = async () => {
+      if (!ref.current || !children) return;
       
-      // Re-initialize mermaid with current theme
-      initializeMermaid(isDark);
+      setIsLoading(true);
+      setError(null);
+      
+      const code = typeof children === 'string' ? children : String(children);
       
       try {
-        mermaid.render(id, code).then(({ svg }) => {
-          if (ref.current) {
-            ref.current.innerHTML = svg;
-            
-            // Apply theme-specific styles to the SVG
-            const svgElement = ref.current.querySelector('svg');
-            if (svgElement) {
-              svgElement.style.backgroundColor = 'transparent';
-              svgElement.style.maxWidth = '100%';
-              svgElement.style.height = 'auto';
-            }
-          }
-        }).catch(err => {
-          console.error('Mermaid rendering error:', err);
-          if (ref.current) {
-            ref.current.innerHTML = `<div style="color: ${theme.errorColor}; padding: 12px; border: 1px solid ${theme.errorColor}; border-radius: 6px; background: ${theme.errorColor}15;">
-              <strong>Mermaid Error:</strong> ${err.message}
-            </div>`;
-          }
-        });
-      } catch (err) {
+        // Initialize mermaid with current theme
+        initializeMermaid(isDark);
+        
+        // Clear any existing content
+        ref.current.innerHTML = '';
+        
+        // Render the diagram
+        const { svg } = await mermaid.render(id, code);
+        
         if (ref.current) {
-          ref.current.innerHTML = `<div style="color: ${theme.errorColor}; padding: 12px; border: 1px solid ${theme.errorColor}; border-radius: 6px; background: ${theme.errorColor}15;">
-            <strong>Mermaid Error:</strong> ${err.message}
-          </div>`;
+          ref.current.innerHTML = svg;
+          
+          // Style the SVG
+          const svgElement = ref.current.querySelector('svg');
+          if (svgElement) {
+            svgElement.style.maxWidth = '100%';
+            svgElement.style.height = 'auto';
+            svgElement.style.display = 'block';
+            svgElement.style.margin = '0 auto';
+          }
+        }
+        
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Mermaid rendering error:', err);
+        setError(err.message);
+        setIsLoading(false);
+        
+        if (ref.current) {
+          ref.current.innerHTML = `
+            <div style="
+              color: ${theme.errorColor}; 
+              padding: 16px; 
+              border: 1px solid ${theme.errorColor}; 
+              border-radius: 8px; 
+              background: ${theme.errorColor}15;
+              font-family: monospace;
+              font-size: 14px;
+            ">
+              <strong>Mermaid Error:</strong><br/>
+              ${err.message}<br/><br/>
+              <details>
+                <summary>Debug Info</summary>
+                <pre style="margin-top: 8px; font-size: 12px;">${code}</pre>
+              </details>
+            </div>
+          `;
         }
       }
-    }
+    };
+
+    renderMermaid();
   }, [children, id, theme, isDark]);
+
+  if (isLoading) {
+    return (
+      <div style={{ 
+        margin: '1rem 0', 
+        padding: '2rem',
+        textAlign: 'center',
+        background: theme.backgroundSurface,
+        borderRadius: '8px',
+        border: `1px solid ${theme.textSecondary}25`,
+        color: theme.textSecondary
+      }}>
+        Rendering diagram...
+      </div>
+    );
+  }
 
   return (
     <div 
       ref={ref} 
       style={{ 
         margin: '1rem 0', 
-        textAlign: 'center',
-        background: theme.backgroundSurface,
         padding: '1rem',
+        background: theme.backgroundSurface,
         borderRadius: '8px',
         border: `1px solid ${theme.textSecondary}25`,
-        overflow: 'auto'
+        overflow: 'auto',
+        textAlign: 'center'
       }} 
     />
   );
 };
-const colors = {
-  light: {
-    backgroundPrimary: '#FAFAF9',
-    backgroundSurface: '#FEFEFE',
-    textPrimary: '#2A2A2A',
-    textSecondary: '#5A6169',
-    accentSoftBlue: '#4A6B7D',
-    errorColor: '#D92D20',
-    successColor: '#12B76A',
-    grayPrimary: '#8B8B8B'
-  },
-  dark: {
-    backgroundPrimary: '#121417',
-    backgroundSurface: '#1C1F23',
-    textPrimary: '#F9FAFB',
-    textSecondary: '#A0AAB4',
-    accentSoftBlue: '#8FA5B5',
-    errorColor: '#F97066',
-    successColor: '#32D583',
-    grayPrimary: '#8B8B8B'
-  }
-};
+
 
 const sampleQueries = {
   search: [
@@ -564,9 +597,52 @@ const processStreamingContentForMermaid = (content) => {
 /* =========================
    MARKDOWN BLOCK (Tailwind Typography)
    ========================= */
+// CRITICAL: Update your MarkdownBlock component's ReactMarkdown components prop
+const markdownComponents = {
+  a: ({ node, ...props }) => {
+    const href = props.href || '';
+    const isExternal = /^https?:\/\//i.test(href);
+    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
+  },
+  table: ({ node, ...props }) => <table {...props} className="md-table" />,
+  ol: ({ node, ...props }) => <ol start={node?.start} {...props} />,
+  
+  // THIS IS THE KEY PART - Make sure this is exactly right
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
+    
+    // Debug logging
+    console.log('Code block detected:', { inline, language, className, children });
+    
+    if (!inline && language === 'mermaid') {
+      const code = String(children).replace(/\n$/, '');
+      console.log('Rendering mermaid:', code);
+      
+      return (
+        <MermaidDiagram 
+          theme={props.theme} // Make sure theme is passed
+          isDark={props.isDark} // Make sure isDark is passed
+        >
+          {code}
+        </MermaidDiagram>
+      );
+    }
+    
+    return <code className={className} {...props}>{children}</code>;
+  },
+  
+  p: ({ node, children, ...props }) => {
+    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
+      return <div style={{ height: '1.5em' }} {...props} />;
+    }
+    return <p {...props}>{children}</p>;
+  },
+};
+
+// Update your MarkdownBlock to use the components and pass theme/isDark
 const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
   const containerRef = useRef(null);
-  const { isDark } = useTheme(); // You'll need to pass this or get it from context
 
   useEffect(() => {
     const handler = (e) => {
@@ -583,6 +659,29 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
 
   const processedMarkdown = preprocessMarkdown(markdown);
 
+  // Create components with theme passed through
+  const componentsWithTheme = {
+    ...markdownComponents,
+    code: ({ node, inline, className, children, ...props }) => {
+      const match = /language-(\w+)/.exec(className || '');
+      const language = match ? match[1] : '';
+      
+      if (!inline && language === 'mermaid') {
+        const code = String(children).replace(/\n$/, '');
+        return (
+          <MermaidDiagram 
+            theme={theme}
+            isDark={invert}
+          >
+            {code}
+          </MermaidDiagram>
+        );
+      }
+      
+      return <code className={className} {...props}>{children}</code>;
+    }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -592,39 +691,7 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
       <ReactMarkdown
         remarkPlugins={remarkPlugins}
         rehypePlugins={rehypePlugins}
-        components={{
-          a: ({ node, ...props }) => {
-            const href = props.href || '';
-            const isExternal = /^https?:\/\//i.test(href);
-            return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
-          },
-          table: ({ node, ...props }) => <table {...props} className="md-table" />,
-          ol: ({ node, ...props }) => <ol start={node?.start} {...props} />,
-          // Add Mermaid support for code blocks
-          code: ({ node, inline, className, children, ...props }) => {
-            const match = /language-(\w+)/.exec(className || '');
-            const language = match ? match[1] : '';
-            
-            if (!inline && language === 'mermaid') {
-              return (
-                <MermaidDiagram 
-                  theme={theme} 
-                  isDark={invert}
-                >
-                  {String(children).replace(/\n$/, '')}
-                </MermaidDiagram>
-              );
-            }
-            
-            return <code className={className} {...props}>{children}</code>;
-          },
-          p: ({ node, children, ...props }) => {
-            if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
-              return <div style={{ height: '1.5em' }} {...props} />;
-            }
-            return <p {...props}>{children}</p>;
-          },
-        }}
+        components={componentsWithTheme}
       >
         {processedMarkdown || ''}
       </ReactMarkdown>
