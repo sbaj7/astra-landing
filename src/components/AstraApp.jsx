@@ -376,6 +376,133 @@ const preprocessMarkdown = (markdown) => {
   return processedLines.join('\n');
 };
 
+// Add this function after your preprocessMarkdown function (around line 260)
+
+const fixMermaidContent = (content) => {
+  if (!content) return content;
+  
+  // Pattern to detect mermaid diagrams that aren't wrapped in code blocks
+  const lines = content.split('\n');
+  const result = [];
+  let inMermaidBlock = false;
+  let mermaidLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    
+    // Check if this line starts a mermaid diagram
+    if (!inMermaidBlock && (
+      trimmed.startsWith('flowchart ') ||
+      trimmed.startsWith('graph ') ||
+      trimmed.startsWith('sequenceDiagram') ||
+      trimmed.startsWith('classDiagram') ||
+      trimmed.startsWith('stateDiagram') ||
+      trimmed.startsWith('pie ') ||
+      trimmed.startsWith('journey') ||
+      trimmed.startsWith('gitgraph') ||
+      trimmed.startsWith('erDiagram') ||
+      trimmed.startsWith('mindmap') ||
+      trimmed.startsWith('timeline')
+    )) {
+      // Check if it's already in a code block
+      const recentLines = result.slice(-5).join('\n');
+      if (!recentLines.includes('```mermaid') && !recentLines.includes('```')) {
+        inMermaidBlock = true;
+        mermaidLines = [trimmed];
+        continue;
+      }
+    }
+    
+    // If we're in a mermaid block, check if we should continue or end
+    if (inMermaidBlock) {
+      // Continue if the line looks like mermaid syntax
+      if (trimmed === '' || 
+          /^[A-Z]\s*-->/.test(trimmed) ||
+          /^[A-Z]\s*--[A-Z]/.test(trimmed) ||
+          /^[A-Z]\s*\{/.test(trimmed) ||
+          /^[A-Z]\s*\[/.test(trimmed) ||
+          /^\s*[A-Z]\s*-->/.test(trimmed) ||
+          /^\s*[A-Z]\s*--/.test(trimmed) ||
+          trimmed.includes('-->') ||
+          trimmed.includes('[') && trimmed.includes(']') ||
+          trimmed.includes('{') && trimmed.includes('}')) {
+        
+        if (trimmed !== '') {
+          mermaidLines.push(trimmed);
+        }
+      } else {
+        // End of mermaid block
+        inMermaidBlock = false;
+        result.push('```mermaid');
+        result.push(...mermaidLines);
+        result.push('```');
+        result.push('');
+        
+        // Add the current line if it's not empty
+        if (trimmed !== '') {
+          result.push(line);
+        }
+        mermaidLines = [];
+      }
+    } else {
+      result.push(line);
+    }
+  }
+  
+  // Handle case where mermaid block extends to end of content
+  if (inMermaidBlock && mermaidLines.length > 0) {
+    result.push('```mermaid');
+    result.push(...mermaidLines);
+    result.push('```');
+  }
+  
+  return result.join('\n');
+};
+
+// Update your preprocessMarkdown function to use this fix
+const preprocessMarkdown = (markdown) => {
+  if (!markdown) return '';
+  
+  // First apply the mermaid fix
+  let processed = fixMermaidContent(markdown);
+  
+  // Then apply the existing empty line processing
+  const lines = processed.split('\n');
+  const processedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    // Add the current line
+    processedLines.push(line);
+    
+    // Look ahead to count consecutive empty lines
+    let emptyLineCount = 0;
+    let j = i + 1;
+    while (j < lines.length && lines[j].trim() === '') {
+      emptyLineCount++;
+      j++;
+    }
+    
+    // If we have 2 or more empty lines, preserve them as visible spacing
+    if (emptyLineCount >= 2) {
+      // Add the first empty line normally (for paragraph break)
+      processedLines.push('');
+      
+      // Add additional empty lines as non-breaking spaces to preserve visual spacing
+      for (let k = 1; k < emptyLineCount; k++) {
+        processedLines.push('&nbsp;');
+      }
+      
+      // Skip the empty lines we've already processed
+      i = j - 1;
+    }
+  }
+  
+  return processedLines.join('\n');
+};
+
 /** Sanitize schema allowing list attrs + citations */
 const sanitizeSchema = {
   tagNames: [
