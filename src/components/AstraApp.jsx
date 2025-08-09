@@ -1019,7 +1019,7 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: '100vh', height: '100dvh', display: 'flex', flexDirection: 'column',
+      height: '100dvh', display: 'flex', flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
       overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)'
     }}>
@@ -1064,21 +1064,23 @@ const AstraApp = () => {
           </div>
         </div>
 
-        {/* Input */}
-        <div style={{ flexShrink: 0, maxWidth: 900, margin: '0 auto', padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
-          <InputBar
-            query={query}
-            setQuery={setQuery}
-            currentMode={currentMode}
-            onModeChange={setCurrentMode}
-            onSend={handleSend}
-            onStop={handleStop}
-            isStreaming={isStreaming}
-            isLoading={isLoading}
-            speechRecognition={speechRecognition}
-            theme={theme}
-            onHeightChange={setInputBarHeight}
-          />
+        {/* Input - matching width container */}
+        <div style={{ flexShrink: 0, padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
+          <div style={{ maxWidth: 900, margin: '0 auto', width: '100%' }}>
+            <InputBar
+              query={query}
+              setQuery={setQuery}
+              currentMode={currentMode}
+              onModeChange={setCurrentMode}
+              onSend={handleSend}
+              onStop={handleStop}
+              isStreaming={isStreaming}
+              isLoading={isLoading}
+              speechRecognition={speechRecognition}
+              theme={theme}
+              onHeightChange={setInputBarHeight}
+            />
+          </div>
         </div>
       </div>
 
