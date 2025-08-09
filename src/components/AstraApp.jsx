@@ -372,9 +372,11 @@ function remarkCustomBreaks() {
 }
 
 // Add this function after your preprocessMarkdown function (around line 260)
-
 const fixMermaidContent = (content) => {
   if (!content) return content;
+  
+  console.log('=== FIXING MERMAID CONTENT ===');
+  console.log('Original content:', content);
   
   // Pattern to detect mermaid diagrams that aren't wrapped in code blocks
   const lines = content.split('\n');
@@ -386,23 +388,35 @@ const fixMermaidContent = (content) => {
     const line = lines[i];
     const trimmed = line.trim();
     
-    // Check if this line starts a mermaid diagram
-    if (!inMermaidBlock && (
+    console.log(`Line ${i}: "${trimmed}" (inMermaidBlock: ${inMermaidBlock})`);
+    
+    // Check if this line starts a mermaid diagram - more comprehensive detection
+    const isMermaidStart = !inMermaidBlock && (
+      // Flowchart patterns
+      /^flowchart\s+(TD|LR|TB|BT|RL)/.test(trimmed) ||
+      /^graph\s+(TD|LR|TB|BT|RL)/.test(trimmed) ||
+      // Other diagram types
+      trimmed === 'sequenceDiagram' ||
+      trimmed === 'classDiagram' ||
+      trimmed === 'stateDiagram' ||
+      trimmed === 'stateDiagram-v2' ||
+      trimmed === 'erDiagram' ||
+      trimmed === 'journey' ||
+      trimmed === 'gantt' ||
+      trimmed === 'pie' ||
+      trimmed === 'gitGraph' ||
+      trimmed === 'mindmap' ||
+      trimmed === 'timeline' ||
+      // Catch any remaining flowchart/graph variations
       trimmed.startsWith('flowchart ') ||
-      trimmed.startsWith('graph ') ||
-      trimmed.startsWith('sequenceDiagram') ||
-      trimmed.startsWith('classDiagram') ||
-      trimmed.startsWith('stateDiagram') ||
-      trimmed.startsWith('pie ') ||
-      trimmed.startsWith('journey') ||
-      trimmed.startsWith('gitgraph') ||
-      trimmed.startsWith('erDiagram') ||
-      trimmed.startsWith('mindmap') ||
-      trimmed.startsWith('timeline')
-    )) {
+      trimmed.startsWith('graph ')
+    );
+    
+    if (isMermaidStart) {
       // Check if it's already in a code block
       const recentLines = result.slice(-5).join('\n');
       if (!recentLines.includes('```mermaid') && !recentLines.includes('```')) {
+        console.log('🎯 DETECTED MERMAID START:', trimmed);
         inMermaidBlock = true;
         mermaidLines = [trimmed];
         continue;
@@ -424,10 +438,12 @@ const fixMermaidContent = (content) => {
           trimmed.includes('{') && trimmed.includes('}')) {
         
         if (trimmed !== '') {
+          console.log('📝 Adding mermaid line:', trimmed);
           mermaidLines.push(trimmed);
         }
       } else {
         // End of mermaid block
+        console.log('🏁 ENDING MERMAID BLOCK, collected lines:', mermaidLines);
         inMermaidBlock = false;
         result.push('```mermaid');
         result.push(...mermaidLines);
@@ -447,12 +463,18 @@ const fixMermaidContent = (content) => {
   
   // Handle case where mermaid block extends to end of content
   if (inMermaidBlock && mermaidLines.length > 0) {
+    console.log('🏁 ENDING MERMAID BLOCK AT EOF, collected lines:', mermaidLines);
     result.push('```mermaid');
     result.push(...mermaidLines);
     result.push('```');
   }
   
-  return result.join('\n');
+  const finalContent = result.join('\n');
+  console.log('=== FIXED CONTENT ===');
+  console.log(finalContent);
+  console.log('======================');
+  
+  return finalContent;
 };
 
 // Update your preprocessMarkdown function to use this fix
