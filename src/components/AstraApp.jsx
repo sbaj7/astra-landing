@@ -79,10 +79,12 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
       '$1\n'
     );
 
-    code = code.replace(
-      /([}\]\)>])\s{2,}([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
-      '$1\n$2'
-    );
+// BEFORE you do other passes new lines
+code = code.replace(
+  /([}\]\)>])\s*([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)/g,
+  '$1\n$2'
+);
+
 
     const lines = code.split('\n');
     for (let i = 0; i < lines.length; i++) {
@@ -90,24 +92,28 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
       const m = ln.match(/^(\s*[\w.-]+\s*[-=]{1,2}>\s*(?:\|[^|]*\|\s*)?)$/);
       if (!m) continue;
 
-      let j = i + 1;
-      let targetId = null;
-      while (j < lines.length) {
-        const nxt = lines[j].trim();
-        if (nxt) {
-          const idm = nxt.match(/^([\w.-]+)/);
-          if (idm) targetId = idm[1];
-          break;
-        }
-        j++;
-      }
+// if it looks like the start of a node/edge, otherwise don't use it
+let j = i + 1;
+let targetId = null;
+while (j < lines.length) {
+  const nxt = lines[j].trim();
+  if (nxt) {
+    // id + (shape opener) or id + edge → counts as a valid RHS anchor
+    const idm = nxt.match(/^([\w.-]+)\s*(?:\[|\(|\{|<|[-=]{1,2}>)/);
+    if (idm) targetId = idm[1];
+    break;
+  }
+  j++;
+}
 
-      if (targetId) {
-        lines[i] = m[1] + ' ' + targetId;
-      } else {
-        const src = (ln.match(/^\s*([\w.-]+)/) || [,'X'])[1];
-        lines[i] = `${src} --> ${src}`;
-      }
+if (targetId) {
+  lines[i] = m[1] + ' ' + targetId;    // e.g., B -->|label| C
+} else {
+  // safer fallback than borrowing “PS:” etc. → self-loop avoids parser crash
+  const src = (ln.match(/^\s*([\w.-]+)/) || [,'X'])[1];
+  lines[i] = `${src} --> ${src}`;
+}
+
     }
     code = lines.join('\n');
 
