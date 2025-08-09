@@ -71,62 +71,60 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const debounceRef = useRef(null);
 
 function autoFixMermaid(raw) {
-  if (!raw) return raw;
-  let code = raw.replace(/\r\n?/g, '\n');
+  // 1. Check for valid input
+  if (!raw || typeof raw !== 'string' || raw.trim().length === 0) {
+    return ''; // Return empty string if input is invalid
+  }
 
-  // =================================================================
-  // Part 1: Sanitize Node Definitions (e.g., A["..."])
-  // This part is already correct and handles text inside nodes.
-  // =================================================================
-  code = code.replace(
-    /(\w+[\[\{])(.*?)([\]\}])/g, // Non-greedy match for robustness
-    (match, start, content, end) => {
-      const cleanedContent = content
-        .replace(/"/g, '&quot;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\(/g, '&#40;')
-        .replace(/\)/g, '&#41;')
-        .replace(/\[/g, '&#91;')
-        .replace(/\]/g, '&#93;')
-        .replace(/\{/g, '&#123;')
-        .replace(/\}/g, '&#125;');
-      return `${start}"${cleanedContent.trim()}"${end}`;
+  let code = raw.trim();
+
+  // 2. Force-wrap the code if it's not already wrapped
+  // This is the new, critical fix for the "nothing renders" issue.
+  if (!code.startsWith('```mermaid')) {
+    code = '```mermaid\n' + code.replace(/`/g, '') + '\n```';
+  }
+
+  // 3. Extract the diagram content for cleaning
+  const contentMatch = code.match(/```mermaid\n([\s\S]*?)\n```/);
+  if (!contentMatch || !contentMatch[1]) {
+    return ''; // Return empty if content is missing
+  }
+
+  let diagramContent = contentMatch[1];
+
+  // 4. Sanitize all text content within the diagram
+  const sanitizeText = (text) => {
+    return text
+      .trim()
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\(/g, '&#40;')
+      .replace(/\)/g, '&#41;')
+      .replace(/\[/g, '&#91;')
+      .replace(/\]/g, '&#93;')
+      .replace(/\{/g, '&#123;')
+      .replace(/\}/g, '&#125;');
+  };
+
+  // --- Sanitize Nodes ---
+  diagramContent = diagramContent.replace(
+    /^(\s*)(\w+)(\[|\{)(.*?)(\]|\})/gm,
+    (match, prefix, id, open, content, close) => {
+      return `${prefix}${id}${open}"${sanitizeText(content)}"${close}`;
     }
   );
 
-  // =================================================================
-  // Part 2: Sanitize Edge Labels (e.g., -->|"..."|)
-  // This is the NEW, crucial fix for the errors you are seeing now.
-  // =================================================================
-  code = code.replace(
-    /\|([^|]*)\|/g, // Find all text between two pipe characters
-    (match, labelText) => {
-      const sanitizedLabel = labelText
-        .replace(/"/g, '&quot;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\(/g, '&#40;')
-        .replace(/\)/g, '&#41;')
-        .replace(/\[/g, '&#91;')
-        .replace(/\]/g, '&#93;')
-        .replace(/\{/g, '&#123;')
-        .replace(/\}/g, '&#125;');
-      return `|${sanitizedLabel.trim()}|`;
+  // --- Sanitize Edge Labels ---
+  diagramContent = diagramContent.replace(
+    /(-->|---) *\|(.*?)\|/g,
+    (match, arrow, content) => {
+      return `${arrow}|${sanitizeText(content)}|`;
     }
   );
 
-  // --- Other structural rules remain for overall stability ---
-  code = code.replace(
-    /^((?:flowchart|graph)\s+[A-Za-z-]+)\s+(?=[\w.[{(<])/m,
-    '$1\n'
-  );
-  code = code.replace(
-    /([}\]\)>])\s+([\w.-]+\s*[-=]{1,2}>\s*(?:\|[^\n|]*\|?)?)/g,
-    '$1\n$2'
-  );
-
-  return code;
+  // 5. Return the fully reconstructed, clean, and wrapped diagram
+  return '```mermaid\n' + diagramContent + '\n```';
 }
 
    // Try to render, progressively repairing common authoring mistakes.
