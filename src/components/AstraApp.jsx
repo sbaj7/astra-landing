@@ -1174,21 +1174,24 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 .markdown-body > :first-child { margin-top: 0; }
 .markdown-body > :last-child  { margin-bottom: 0; }
 
-/* Headings */
+/* Headings with more space below */
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
   color: ${theme.textPrimary};
-  margin: 0.6rem 0 0.25rem;
+  margin: 0.8rem 0 0.6rem;  /* Changed from 0.6rem 0 0.25rem */
   line-height: 1.25;
 }
+
 .markdown-body h1 { font-size: 1.5rem; font-weight: 700; }
 .markdown-body h2 { font-size: 1.25rem; font-weight: 600; }
 .markdown-body h3 { font-size: 1.1rem;  font-weight: 600; }
 
-/* Paragraphs */
-.markdown-body p { margin: 0.25rem 0; line-height: 1.55; }
-
+/* Paragraphs with more breathing room */
+.markdown-body p { 
+  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
+  line-height: 1.6;  /* Increased from 1.55 */
+}
 /* Horizontal rule */
 .markdown-body hr {
   border: none;
@@ -1256,17 +1259,18 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   padding: 0;
 }
 
-/* ===== Lists: fix ALL sublist indentation ===== */
+/* Lists themselves with more space */
 .markdown-body ol,
 .markdown-body ul {
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
   padding-left: 1.5rem;
   list-style-position: outside;
 }
 
+/* List items with more space */
 .markdown-body li {
-  margin: 0.1rem 0;
-  line-height: 1.5;
+  margin: 0.25rem 0;  /* Changed from 0.1rem to 0.25rem */
+  line-height: 1.6;   /* Increased from 1.5 */
 }
 
 /* ALL possible nested list combinations get more indentation */
