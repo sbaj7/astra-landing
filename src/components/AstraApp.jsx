@@ -10,6 +10,7 @@ import rehypeHighlight from 'rehype-highlight';
 // import rehypeKatex from 'rehype-katex'; // <-- requires `katex` package + CSS
 import rehypeSanitize from 'rehype-sanitize';
 import { visit } from 'unist-util-visit';
+import mermaid from 'mermaid';
 
 // If you enable KaTeX, also:
 // import 'katex/dist/katex.min.css';
@@ -17,6 +18,88 @@ import { visit } from 'unist-util-visit';
 /* =========================
    THEME
    ========================= */
+
+// Initialize mermaid with theme support - add this near your theme setup
+const initializeMermaid = (isDark) => {
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: isDark ? 'dark' : 'base',
+    themeVariables: isDark ? {
+      primaryColor: '#8FA5B5',
+      primaryTextColor: '#F9FAFB',
+      primaryBorderColor: '#A0AAB4',
+      lineColor: '#A0AAB4',
+      background: '#1C1F23',
+      mainBkg: '#1C1F23',
+    } : {
+      primaryColor: '#4A6B7D',
+      primaryTextColor: '#2A2A2A',
+      primaryBorderColor: '#8B8B8B',
+      lineColor: '#5A6169',
+      background: '#FEFEFE',
+      mainBkg: '#FEFEFE',
+    }
+  });
+};
+
+// Mermaid component for ReactMarkdown
+const MermaidDiagram = ({ children, theme, isDark }) => {
+  const ref = useRef(null);
+  const [id] = useState(() => `mermaid-${Math.random().toString(36).substr(2, 9)}`);
+
+  useEffect(() => {
+    if (ref.current && children) {
+      const code = typeof children === 'string' ? children : children.props?.children || '';
+      
+      // Re-initialize mermaid with current theme
+      initializeMermaid(isDark);
+      
+      try {
+        mermaid.render(id, code).then(({ svg }) => {
+          if (ref.current) {
+            ref.current.innerHTML = svg;
+            
+            // Apply theme-specific styles to the SVG
+            const svgElement = ref.current.querySelector('svg');
+            if (svgElement) {
+              svgElement.style.backgroundColor = 'transparent';
+              svgElement.style.maxWidth = '100%';
+              svgElement.style.height = 'auto';
+            }
+          }
+        }).catch(err => {
+          console.error('Mermaid rendering error:', err);
+          if (ref.current) {
+            ref.current.innerHTML = `<div style="color: ${theme.errorColor}; padding: 12px; border: 1px solid ${theme.errorColor}; border-radius: 6px; background: ${theme.errorColor}15;">
+              <strong>Mermaid Error:</strong> ${err.message}
+            </div>`;
+          }
+        });
+      } catch (err) {
+        if (ref.current) {
+          ref.current.innerHTML = `<div style="color: ${theme.errorColor}; padding: 12px; border: 1px solid ${theme.errorColor}; border-radius: 6px; background: ${theme.errorColor}15;">
+            <strong>Mermaid Error:</strong> ${err.message}
+          </div>`;
+        }
+      }
+    }
+  }, [children, id, theme, isDark]);
+
+  return (
+    <div 
+      ref={ref} 
+      style={{ 
+        margin: '1rem 0', 
+        textAlign: 'center',
+        background: theme.backgroundSurface,
+        padding: '1rem',
+        borderRadius: '8px',
+        border: `1px solid ${theme.textSecondary}25`,
+        overflow: 'auto'
+      }} 
+    />
+  );
+};
 const colors = {
   light: {
     backgroundPrimary: '#FAFAF9',
@@ -455,11 +538,35 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
   );
 };
 
+// Optional: Enhanced streaming support for live Mermaid rendering
+const processStreamingContentForMermaid = (content) => {
+  // Check if we have complete Mermaid blocks
+  const mermaidRegex = /```mermaid\n([\s\S]*?)\n```/g;
+  const matches = [];
+  let match;
+  
+  while ((match = mermaidRegex.exec(content)) !== null) {
+    matches.push({
+      start: match.index,
+      end: match.index + match[0].length,
+      content: match[1].trim(),
+      fullMatch: match[0]
+    });
+  }
+  
+  return {
+    hasCompleteMermaid: matches.length > 0,
+    mermaidBlocks: matches,
+    content
+  };
+};
+
 /* =========================
    MARKDOWN BLOCK (Tailwind Typography)
    ========================= */
 const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
   const containerRef = useRef(null);
+  const { isDark } = useTheme(); // You'll need to pass this or get it from context
 
   useEffect(() => {
     const handler = (e) => {
@@ -474,7 +581,6 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
     return () => { if (el) el.removeEventListener('click', handler); };
   }, [onTapCitation]);
 
-  // Preprocess markdown to handle multiple empty lines
   const processedMarkdown = preprocessMarkdown(markdown);
 
   return (
@@ -494,8 +600,25 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation }) => {
           },
           table: ({ node, ...props }) => <table {...props} className="md-table" />,
           ol: ({ node, ...props }) => <ol start={node?.start} {...props} />,
+          // Add Mermaid support for code blocks
+          code: ({ node, inline, className, children, ...props }) => {
+            const match = /language-(\w+)/.exec(className || '');
+            const language = match ? match[1] : '';
+            
+            if (!inline && language === 'mermaid') {
+              return (
+                <MermaidDiagram 
+                  theme={theme} 
+                  isDark={invert}
+                >
+                  {String(children).replace(/\n$/, '')}
+                </MermaidDiagram>
+              );
+            }
+            
+            return <code className={className} {...props}>{children}</code>;
+          },
           p: ({ node, children, ...props }) => {
-            // Handle paragraphs that are just &nbsp; for spacing
             if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
               return <div style={{ height: '1.5em' }} {...props} />;
             }
@@ -568,17 +691,53 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
 };
 
 /* Streaming shell that renders only after first token */
-const StreamingResponse = ({ content, theme, invert = false }) => (
-  <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33`, marginBottom: 16 }}>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-      <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
+const StreamingResponse = ({ content, theme, invert = false }) => {
+  const mermaidInfo = processStreamingContentForMermaid(content);
+  
+  return (
+    <div style={{ 
+      padding: 16, 
+      borderRadius: 12, 
+      backgroundColor: theme.backgroundSurface, 
+      border: `1px solid ${theme.accentSoftBlue}33`, 
+      marginBottom: 16 
+    }}>
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between', 
+        marginBottom: 8 
+      }}>
+        <span style={{ 
+          fontSize: 11, 
+          fontWeight: 500, 
+          textTransform: 'uppercase', 
+          letterSpacing: .5, 
+          color: theme.textSecondary 
+        }}>
+          Response:
+        </span>
+      </div>
+      
+      <div>
+        <MarkdownBlock 
+          markdown={content || ''} 
+          theme={theme} 
+          invert={invert} 
+          onTapCitation={() => {}} 
+        />
+        {content ? (
+          <span style={{ 
+            color: '#4A6B7D', 
+            animation: 'blink 1s infinite' 
+          }}>
+            ▍
+          </span>
+        ) : null}
+      </div>
     </div>
-    <div>
-      <MarkdownBlock markdown={content || ''} theme={theme} invert={invert} onTapCitation={() => {}} />
-      {content ? <span style={{ color: '#4A6B7D', animation: 'blink 1s infinite' }}>▍</span> : null}
-    </div>
-  </div>
-);
+  );
+};
 
 const LoadingIndicator = ({ theme }) => (
   <div style={{ padding: 16, borderRadius: 12, backgroundColor: 'transparent', marginBottom: 16 }}>
