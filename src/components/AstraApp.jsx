@@ -18,7 +18,28 @@ import mermaid from 'mermaid';
 /* =========================
    THEME
    ========================= */
-
+const colors = {
+  light: {
+    backgroundPrimary: '#FAFAF9',
+    backgroundSurface: '#FEFEFE',
+    textPrimary: '#2A2A2A',
+    textSecondary: '#5A6169',
+    accentSoftBlue: '#4A6B7D',
+    errorColor: '#D92D20',
+    successColor: '#12B76A',
+    grayPrimary: '#8B8B8B'
+  },
+  dark: {
+    backgroundPrimary: '#121417',
+    backgroundSurface: '#1C1F23',
+    textPrimary: '#F9FAFB',
+    textSecondary: '#A0AAB4',
+    accentSoftBlue: '#8FA5B5',
+    errorColor: '#F97066',
+    successColor: '#32D583',
+    grayPrimary: '#8B8B8B'
+  }
+};
 // Initialize mermaid - add this right after your theme setup
 let mermaidInitialized = false;
 
