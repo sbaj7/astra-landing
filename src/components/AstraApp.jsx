@@ -62,80 +62,41 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
 initializeMermaid();
 
 const MermaidDiagram = ({ children, theme, isDark = false }) => {
-  const ref = useRef(null);
-  const [error, setError] = useState(null);
+  const ref = useRef(null);
+  const [error, setError] = useState(null);
 
-  // This is the powerful sanitizer we built. It cleans all text content.
-  const autoFixMermaid = (raw) => {
-    if (!raw || typeof raw !== 'string') return '';
-    let code = raw.trim();
-
-    // This function now only returns the raw, cleaned inner content of the diagram.
-    const contentMatch = code.match(/```mermaid\n([\s\S]*?)\n```/);
-    let diagramContent = (contentMatch && contentMatch[1]) ? contentMatch[1] : code;
-
-    const sanitizeText = (text) => {
-      return text
-        .trim()
-        .replace(/"/g, '&quot;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/\(/g, '&#40;')
-        .replace(/\)/g, '&#41;')
-        .replace(/\[/g, '&#91;')
-        .replace(/\]/g, '&#93;')
-        .replace(/\{/g, '&#123;')
-        .replace(/\}/g, '&#125;');
-    };
-
-    diagramContent = diagramContent.replace(
-      /^(\s*)(\w+)(\[|\{)(.*?)(\]|\})/gm,
-      (match, prefix, id, open, content, close) => {
-        return `${prefix}${id}${open}"${sanitizeText(content)}"${close}`;
-      }
-    );
-
-    diagramContent = diagramContent.replace(
-      /(-->|---) *\|(.*?)\|/g,
-      (match, arrow, content) => {
-        return `${arrow}|${sanitizeText(content)}|`;
-      }
-    );
-    
-    return diagramContent;
-  };
-
-  useEffect(() => {
-    const code = String(children || '').trim();
-    const themeName = isDark ? 'dark' : 'default';
-
-    if (!code || !ref.current) {
-      return;
-    }
+  useEffect(() => {
+    const code = String(children || '').trim();
+    
+    if (!code || !ref.current) {
+      return;
+    }
 
     // Clean the code first
-    const fixedCode = autoFixMermaid(code);
+    const cleanCode = code.replace(/```mermaid\n?/, '').replace(/\n?```$/, '').trim();
+    
+    // Use a unique ID for each render
+    const renderId = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-    // Use a unique ID for each render to prevent conflicts
-    const renderId = `mermaid-graph-${Math.random().toString(36).substr(2, 9)}`;
-
-    try {
-      // Use the render callback, which is more reliable for React
-      mermaid.render(renderId, fixedCode, (svgGraph) => {
-        if (ref.current) {
-          ref.current.innerHTML = svgGraph;
+    try {
+      mermaid.render(renderId, cleanCode).then((result) => {
+        if (ref.current) {
+          ref.current.innerHTML = result.svg;
           setError(null);
-        }
-      }, ref.current);
-    } catch (e) {
-      console.error("Mermaid render error:", e);
-      setError(e.message);
-    }
-  }, [children, isDark, theme]);
+        }
+      }).catch((e) => {
+        console.error("Mermaid render error:", e);
+        setError(e.message);
+      });
+    } catch (e) {
+      console.error("Mermaid render error:", e);
+      setError(e.message);
+    }
+  }, [children, isDark]);
 
-  if (error) {
-    return (
-      <div style={{
+  if (error) {
+    return (
+      <div style={{
         color: theme.errorColor,
         padding: 12,
         border: `1px solid ${theme.errorColor}`,
@@ -145,29 +106,28 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         fontSize: 12,
         whiteSpace: 'pre-wrap'
       }}>
-        <strong>Mermaid Error:</strong> {error}
-        <pre style={{marginTop: '8px', whiteSpace: 'pre-wrap', wordBreak: 'break-all'}}>{String(children)}</pre>
-      </div>
-    );
-  }
+        <strong>Mermaid Error:</strong> {error}
+        <pre style={{marginTop: '8px'}}>{String(children)}</pre>
+      </div>
+    );
+  }
 
-  return (
-    <div
-      ref={ref}
-      style={{
-        margin: '1rem 0',
-        padding: '1rem',
-        background: theme.backgroundSurface,
-        borderRadius: 8,
-        border: `1px solid ${theme.textSecondary}25`,
-        overflow: 'auto',
-        textAlign: 'center',
-        minHeight: 60
-      }}
-    />
-  );
+  return (
+    <div
+      ref={ref}
+      style={{
+        margin: '1rem 0',
+        padding: '1rem',
+        background: theme.backgroundSurface,
+        borderRadius: 8,
+        border: `1px solid ${theme.textSecondary}25`,
+        overflow: 'auto',
+        textAlign: 'center',
+        minHeight: 60
+      }}
+    />
+  );
 };
-
 
 
 const sampleQueries = {
