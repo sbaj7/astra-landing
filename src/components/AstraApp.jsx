@@ -716,7 +716,7 @@ const markdownComponents = {
 
 // Update your MarkdownBlock to use the components and pass theme/isDark
 const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStreaming = false }) => {
-   const containerRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const handler = (e) => {
@@ -730,6 +730,61 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStrea
     if (el) el.addEventListener('click', handler);
     return () => { if (el) el.removeEventListener('click', handler); };
   }, [onTapCitation]);
+
+  const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
+
+  const componentsWithTheme = {
+    ...markdownComponents,
+    code: ({ node, inline, className, children, ...props }) => {
+      const match = /language-(\w+)/.exec(className || '');
+      const language = match ? match[1] : '';
+
+      if (!inline && language === 'mermaid') {
+        const code = String(children).replace(/\n$/, '');
+
+        // Block mermaid while streaming
+        if (isStreaming) {
+          return (
+            <div style={{
+              margin: '1rem 0',
+              padding: '2rem',
+              background: theme.backgroundSurface,
+              borderRadius: 8,
+              border: `1px solid ${theme.textSecondary}25`,
+              textAlign: 'center',
+              color: theme.textSecondary,
+              fontSize: 14
+            }}>
+              Diagram will appear when response is complete...
+            </div>
+          );
+        }
+
+        return (
+          <MermaidDiagram theme={theme} isDark={invert}>
+            {code}
+          </MermaidDiagram>
+        );
+      }
+
+      return <code className={className} {...props}>{children}</code>;
+    }
+  };
+
+  // ✅ RETURN + CLOSE FUNCTION
+  return (
+    <div ref={containerRef} className="markdown-body">
+      <ReactMarkdown
+        remarkPlugins={remarkPlugins}
+        rehypePlugins={rehypePlugins}
+        components={componentsWithTheme}
+      >
+        {processedMarkdown}
+      </ReactMarkdown>
+    </div>
+  );
+};
+
 
 const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
