@@ -787,50 +787,6 @@ const componentsWithTheme = {
   }
 };
 
-// 3. FIND your existing CSS section and ADD these lines to it:
-// Look for this part in your code:
-/*
-<style
-  dangerouslySetInnerHTML={{
-    __html: `
-/* ===== App chrome (unchanged) ===== */
-*/
-
-// ADD these lines AFTER "/* ===== Streaming caret ===== */" and BEFORE the closing backtick:
-
-/* ===== Mermaid diagram fixes ===== */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node .label {
-  font-size: 12px !important;
-  font-family: inherit !important;
-}
-
-// So the end of your CSS should look like this:
-/* ===== Streaming caret ===== */
-.streaming-caret {
-  display: inline-block;
-  animation: blink 1s infinite;
-  color: ${theme.accentSoftBlue};
-}
-
-/* ===== Mermaid diagram fixes ===== */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node .label {
-  font-size: 12px !important;
-  font-family: inherit !important;
-}
-`
-  }}
-/>
-
 const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
   const [showCopied, setShowCopied] = useState(false);
   const handleCopy = async () => {
