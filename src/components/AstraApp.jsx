@@ -79,13 +79,6 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     // Use a unique ID for each render
     const renderId = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-    // Add DOM safety check
-    if (typeof document === 'undefined' || !document.createElementNS) {
-      setError('Canvas environment - diagram will render in browser');
-      setIsLoading(false);
-      return;
-    }
-
     try {
       mermaid.render(renderId, cleanCode).then((result) => {
         if (ref.current) {
@@ -108,19 +101,17 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   if (error) {
     return (
       <div style={{
-        color: theme.textSecondary,
+        color: theme.errorColor,
         padding: 12,
-        border: `1px solid ${theme.textSecondary}40`,
+        border: `1px solid ${theme.errorColor}`,
         borderRadius: 8,
-        background: theme.backgroundSurface,
+        background: `${theme.errorColor}15`,
         fontFamily: 'monospace',
         fontSize: 12,
-        whiteSpace: 'pre-wrap',
-        textAlign: 'center'
+        whiteSpace: 'pre-wrap'
       }}>
-        Mermaid Diagram
-        <br />
-        <small style={{ opacity: 0.7 }}>Preview in browser</small>
+        <strong>Mermaid Error:</strong> {error}
+        <pre style={{marginTop: '8px'}}>{String(children)}</pre>
       </div>
     );
   }
@@ -135,8 +126,7 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         border: `1px solid ${theme.textSecondary}25`,
         overflow: 'auto',
         textAlign: 'center',
-        minHeight: 60,
-        position: 'relative'
+        minHeight: 60
       }}
     >
       {isLoading && (
@@ -144,7 +134,7 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
           color: theme.textSecondary,
           fontSize: 14
         }}>
-          Rendering diagram...
+          Loading diagram...
         </div>
       )}
       <div
@@ -157,7 +147,6 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     </div>
   );
 };
-
 
 const sampleQueries = {
   search: [
@@ -746,45 +735,49 @@ const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
 const componentsWithTheme = {
   ...markdownComponents,
-  code: ({ node, inline, className, children, ...props }) => {
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match ? match[1] : '';
+code: ({ node, inline, className, children, ...props }) => {
+  const match = /language-(\w+)/.exec(className || '');
+  const language = match ? match[1] : '';
 
-    if (!inline && language === 'mermaid') {
-      const code = String(children).replace(/\n$/, '');
+  if (!inline && language === 'mermaid') {
+    const code = String(children).replace(/\n$/, '');
 
-      // Simple streaming check - only show loading if incomplete
-      if (isStreaming) {
-        const hasStart = /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram)/m.test(code);
-        const hasMinContent = code.split('\n').length > 1;
-        
-        if (!hasStart || !hasMinContent) {
-          return (
-            <div style={{
-              margin: '1rem 0',
-              padding: '1rem',
-              background: theme.backgroundSurface,
-              borderRadius: 8,
-              border: `1px solid ${theme.textSecondary}25`,
-              textAlign: 'center',
-              color: theme.textSecondary,
-              fontSize: 14
-            }}>
-              ⏳ Building diagram...
-            </div>
-          );
-        }
-      }
-
+    // ✅ Only show as code block if actively streaming AND content is incomplete
+    if (isStreaming && !code.includes('flowchart') && !code.includes('graph')) {
       return (
-        <MermaidDiagram theme={theme} isDark={invert}>
-          {code}
-        </MermaidDiagram>
+        <pre className={className}>
+          <code {...props}>{code}</code>
+        </pre>
       );
     }
 
-    return <code className={className} {...props}>{children}</code>;
+    // ✅ Otherwise, render the diagram
+    return (
+      <MermaidDiagram theme={theme} isDark={invert}>
+        {code}
+      </MermaidDiagram>
+    );
   }
+
+  return <code className={className} {...props}>{children}</code>;
+}
+};
+
+  return (
+    <div
+      ref={containerRef}
+      className={`markdown-body prose max-w-none ${invert ? 'prose-invert' : 'prose-neutral'}`}
+      style={{ color: theme.textPrimary }}
+    >
+      <ReactMarkdown
+        remarkPlugins={remarkPlugins}
+        rehypePlugins={rehypePlugins}
+        components={componentsWithTheme}
+      >
+        {processedMarkdown || ''}
+      </ReactMarkdown>
+    </div>
+  );
 };
 
 const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
@@ -848,6 +841,8 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
 
 /* Streaming shell that renders only after first token */
 const StreamingResponse = ({ content, theme, invert = false }) => {
+  const mermaidInfo = processStreamingContentForMermaid(content);
+  
   return (
     <div style={{ 
       padding: 16, 
@@ -874,12 +869,12 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
       </div>
       
       <div>
-        <MarkdownBlock 
-          markdown={content || ''} 
-          theme={theme} 
-          invert={invert} 
-          onTapCitation={() => {}} 
-          isStreaming={true}
+<MarkdownBlock 
+  markdown={content || ''} 
+  theme={theme} 
+  invert={invert} 
+  onTapCitation={() => {}} 
+  isStreaming={!content.includes('```mermaid')}  // ← change this line
         />
         {content ? (
           <span style={{ 
@@ -893,18 +888,6 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
     </div>
   );
 };
-
-// ADD this CSS to your existing style block (add it inside the dangerouslySetInnerHTML):
-/* Mermaid diagram responsive fix */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node .label {
-  font-size: 12px !important;
-  font-family: inherit !important;
-}
 
 const LoadingIndicator = ({ theme }) => (
   <div style={{ padding: 16, borderRadius: 12, backgroundColor: 'transparent', marginBottom: 16 }}>
@@ -1684,35 +1667,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   animation: blink 1s infinite;
   color: ${theme.accentSoftBlue};
 }
-/* ===== Mermaid diagram fixes ===== */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node .label {
-  font-size: 12px !important;
-  font-family: inherit !important;
-}
-
-// So the end of your CSS should look like this:
-/* ===== Streaming caret ===== */
-.streaming-caret {
-  display: inline-block;
-  animation: blink 1s infinite;
-  color: ${theme.accentSoftBlue};
-}
-
-/* ===== Mermaid diagram fixes ===== */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node .label {
-  font-size: 12px !important;
-  font-family: inherit !important;
-}
+.mermaid svg { max-width: 100% !important; height: auto !important; }
 `
   }}
 />
