@@ -735,50 +735,43 @@ const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
 const componentsWithTheme = {
   ...markdownComponents,
-code: ({ node, inline, className, children, ...props }) => {
-  const match = /language-(\w+)/.exec(className || '');
-  const language = match ? match[1] : '';
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
 
-  if (!inline && language === 'mermaid') {
-    const code = String(children).replace(/\n$/, '');
+    if (!inline && language === 'mermaid') {
+      const code = String(children).replace(/\n$/, '');
 
-    // ✅ Only show as code block if actively streaming AND content is incomplete
-    if (isStreaming && !code.includes('flowchart') && !code.includes('graph')) {
+      // BLOCK ALL mermaid rendering during streaming - show placeholder instead
+      if (isStreaming) {
+        return (
+          <div style={{
+            margin: '1rem 0',
+            padding: '2rem',
+            background: theme.backgroundSurface,
+            borderRadius: 8,
+            border: `1px solid ${theme.textSecondary}25`,
+            textAlign: 'center',
+            color: theme.textSecondary,
+            fontSize: 14
+          }}>
+            Diagram will appear when response is complete...
+          </div>
+        );
+      }
+
+      // ONLY render actual diagram when streaming is done
       return (
-        <pre className={className}>
-          <code {...props}>{code}</code>
-        </pre>
+        <MermaidDiagram theme={theme} isDark={invert}>
+          {code}
+        </MermaidDiagram>
       );
     }
 
-    // ✅ Otherwise, render the diagram
-    return (
-      <MermaidDiagram theme={theme} isDark={invert}>
-        {code}
-      </MermaidDiagram>
-    );
+    return <code className={className} {...props}>{children}</code>;
   }
-
-  return <code className={className} {...props}>{children}</code>;
-}
 };
 
-  return (
-    <div
-      ref={containerRef}
-      className={`markdown-body prose max-w-none ${invert ? 'prose-invert' : 'prose-neutral'}`}
-      style={{ color: theme.textPrimary }}
-    >
-      <ReactMarkdown
-        remarkPlugins={remarkPlugins}
-        rehypePlugins={rehypePlugins}
-        components={componentsWithTheme}
-      >
-        {processedMarkdown || ''}
-      </ReactMarkdown>
-    </div>
-  );
-};
 
 const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
   const [showCopied, setShowCopied] = useState(false);
@@ -841,8 +834,6 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
 
 /* Streaming shell that renders only after first token */
 const StreamingResponse = ({ content, theme, invert = false }) => {
-  const mermaidInfo = processStreamingContentForMermaid(content);
-  
   return (
     <div style={{ 
       padding: 16, 
@@ -869,12 +860,12 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
       </div>
       
       <div>
-<MarkdownBlock 
-  markdown={content || ''} 
-  theme={theme} 
-  invert={invert} 
-  onTapCitation={() => {}} 
-  isStreaming={!content.includes('```mermaid')}  // ← change this line
+        <MarkdownBlock 
+          markdown={content || ''} 
+          theme={theme} 
+          invert={invert} 
+          onTapCitation={() => {}} 
+          isStreaming={true}  // ALWAYS true = always block mermaid
         />
         {content ? (
           <span style={{ 
@@ -1667,7 +1658,13 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   animation: blink 1s infinite;
   color: ${theme.accentSoftBlue};
 }
-.mermaid svg { max-width: 100% !important; height: auto !important; }
+.mermaid svg { 
+  max-width: 100% !important; 
+  height: auto !important; 
+}
+.mermaid .node .label { 
+  font-size: 12px !important; 
+}
 `
   }}
 />
