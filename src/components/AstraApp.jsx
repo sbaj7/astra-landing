@@ -51,7 +51,7 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
       startOnLoad: false,
       securityLevel: 'loose',
       flowchart: { useMaxWidth: true, htmlLabels: true }
-      // DO NOT set theme here; we'll pass theme at render time
+      // DO NOT set theme here; we’ll pass theme at render time
     });
     mermaidInitialized = true;
   } catch (err) {
@@ -61,7 +61,6 @@ const initializeMermaid = (/* isDark ignored for global init */) => {
 
 initializeMermaid();
 
-// Updated MermaidDiagram component with loading state and better error handling
 const MermaidDiagram = ({ children, theme, isDark = false }) => {
   const ref = useRef(null);
   const [error, setError] = useState(null);
@@ -80,26 +79,15 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
     // Use a unique ID for each render
     const renderId = `mermaid-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
-    // Set loading state
-    setIsLoading(true);
-    setError(null);
+    // Add DOM safety check
+    if (typeof document === 'undefined' || !document.createElementNS) {
+      setError('Canvas environment - diagram will render in browser');
+      setIsLoading(false);
+      return;
+    }
 
     try {
-      mermaid.render(renderId, cleanCode, {
-        theme: isDark ? 'dark' : 'base',
-        themeVariables: {
-          primaryColor: theme.accentSoftBlue,
-          primaryTextColor: theme.textPrimary,
-          primaryBorderColor: theme.textSecondary,
-          lineColor: theme.textSecondary,
-          secondaryColor: theme.backgroundSurface,
-          tertiaryColor: theme.backgroundPrimary,
-          background: theme.backgroundSurface,
-          mainBkg: theme.backgroundSurface,
-          secondaryBkg: theme.backgroundPrimary,
-          tertiaryBkg: theme.backgroundPrimary
-        }
-      }).then((result) => {
+      mermaid.render(renderId, cleanCode).then((result) => {
         if (ref.current) {
           ref.current.innerHTML = result.svg;
           setError(null);
@@ -115,22 +103,24 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
       setError(e.message);
       setIsLoading(false);
     }
-  }, [children, isDark, theme]);
+  }, [children, isDark]);
 
   if (error) {
     return (
       <div style={{
-        color: theme.errorColor,
+        color: theme.textSecondary,
         padding: 12,
-        border: `1px solid ${theme.errorColor}`,
+        border: `1px solid ${theme.textSecondary}40`,
         borderRadius: 8,
-        background: `${theme.errorColor}15`,
+        background: theme.backgroundSurface,
         fontFamily: 'monospace',
         fontSize: 12,
-        whiteSpace: 'pre-wrap'
+        whiteSpace: 'pre-wrap',
+        textAlign: 'center'
       }}>
-        <strong>Mermaid Error:</strong> {error}
-        <pre style={{marginTop: '8px'}}>{String(children)}</pre>
+        Mermaid Diagram
+        <br />
+        <small style={{ opacity: 0.7 }}>Preview in browser</small>
       </div>
     );
   }
@@ -145,16 +135,12 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
         border: `1px solid ${theme.textSecondary}25`,
         overflow: 'auto',
         textAlign: 'center',
-        minHeight: isLoading ? 120 : 60,
+        minHeight: 60,
         position: 'relative'
       }}
     >
       {isLoading && (
         <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
           color: theme.textSecondary,
           fontSize: 14
         }}>
@@ -172,34 +158,6 @@ const MermaidDiagram = ({ children, theme, isDark = false }) => {
   );
 };
 
-// Function to detect complete Mermaid blocks
-const detectCompleteMermaidBlock = (content) => {
-  // Look for complete mermaid blocks
-  const mermaidRegex = /```mermaid\n([\s\S]*?)\n```/g;
-  const matches = [];
-  let match;
-  
-  while ((match = mermaidRegex.exec(content)) !== null) {
-    const diagramContent = match[1].trim();
-    // Check if the diagram seems complete (has start and some content)
-    const hasStart = /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|gitGraph|mindmap|timeline)/m.test(diagramContent);
-    const hasContent = diagramContent.split('\n').length > 1;
-    
-    matches.push({
-      start: match.index,
-      end: match.index + match[0].length,
-      content: diagramContent,
-      fullMatch: match[0],
-      isComplete: hasStart && hasContent
-    });
-  }
-  
-  return {
-    hasCompleteMermaid: matches.some(m => m.isComplete),
-    mermaidBlocks: matches,
-    content
-  };
-};
 
 const sampleQueries = {
   search: [
@@ -357,6 +315,112 @@ function remarkCustomBreaks() {
   };
 }
 
+// Add this function after your preprocessMarkdown function (around line 260)
+const fixMermaidContent = (content) => {
+  if (!content) return content;
+  
+  console.log('=== FIXING MERMAID CONTENT ===');
+  console.log('Original content:', content);
+  
+  // Pattern to detect mermaid diagrams that aren't wrapped in code blocks
+  const lines = content.split('\n');
+  const result = [];
+  let inMermaidBlock = false;
+  let mermaidLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+    
+    console.log(`Line ${i}: "${trimmed}" (inMermaidBlock: ${inMermaidBlock})`);
+    
+    // Check if this line starts a mermaid diagram - more comprehensive detection
+    const isMermaidStart = !inMermaidBlock && (
+      // Flowchart patterns
+      /^flowchart\s+(TD|LR|TB|BT|RL)/.test(trimmed) ||
+      /^graph\s+(TD|LR|TB|BT|RL)/.test(trimmed) ||
+      // Other diagram types
+      trimmed === 'sequenceDiagram' ||
+      trimmed === 'classDiagram' ||
+      trimmed === 'stateDiagram' ||
+      trimmed === 'stateDiagram-v2' ||
+      trimmed === 'erDiagram' ||
+      trimmed === 'journey' ||
+      trimmed === 'gantt' ||
+      trimmed === 'pie' ||
+      trimmed === 'gitGraph' ||
+      trimmed === 'mindmap' ||
+      trimmed === 'timeline' ||
+      // Catch any remaining flowchart/graph variations
+      trimmed.startsWith('flowchart ') ||
+      trimmed.startsWith('graph ')
+    );
+    
+    if (isMermaidStart) {
+      // Check if it's already in a code block
+      const recentLines = result.slice(-5).join('\n');
+      if (!recentLines.includes('```mermaid') && !recentLines.includes('```')) {
+        console.log('🎯 DETECTED MERMAID START:', trimmed);
+        inMermaidBlock = true;
+        mermaidLines = [trimmed];
+        continue;
+      }
+    }
+    
+    // If we're in a mermaid block, check if we should continue or end
+    if (inMermaidBlock) {
+      // Continue if the line looks like mermaid syntax
+      if (trimmed === '' || 
+          /^[A-Z]\s*-->/.test(trimmed) ||
+          /^[A-Z]\s*--[A-Z]/.test(trimmed) ||
+          /^[A-Z]\s*\{/.test(trimmed) ||
+          /^[A-Z]\s*\[/.test(trimmed) ||
+          /^\s*[A-Z]\s*-->/.test(trimmed) ||
+          /^\s*[A-Z]\s*--/.test(trimmed) ||
+          trimmed.includes('-->') ||
+          trimmed.includes('[') && trimmed.includes(']') ||
+          trimmed.includes('{') && trimmed.includes('}')) {
+        
+        if (trimmed !== '') {
+          console.log('📝 Adding mermaid line:', trimmed);
+          mermaidLines.push(trimmed);
+        }
+      } else {
+        // End of mermaid block
+        console.log('🏁 ENDING MERMAID BLOCK, collected lines:', mermaidLines);
+        inMermaidBlock = false;
+        result.push('```mermaid');
+        result.push(...mermaidLines);
+        result.push('```');
+        result.push('');
+        
+        // Add the current line if it's not empty
+        if (trimmed !== '') {
+          result.push(line);
+        }
+        mermaidLines = [];
+      }
+    } else {
+      result.push(line);
+    }
+  }
+  
+  // Handle case where mermaid block extends to end of content
+  if (inMermaidBlock && mermaidLines.length > 0) {
+    console.log('🏁 ENDING MERMAID BLOCK AT EOF, collected lines:', mermaidLines);
+    result.push('```mermaid');
+    result.push(...mermaidLines);
+    result.push('```');
+  }
+  
+  const finalContent = result.join('\n');
+  console.log('=== FIXED CONTENT ===');
+  console.log(finalContent);
+  console.log('======================');
+  
+  return finalContent;
+};
+
 const preprocessMarkdown = (markdown, isStreaming = false) => {
  if (!markdown) return '';
  
@@ -387,6 +451,7 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
 };
 
 /** Sanitize schema allowing list attrs + citations */
+/** Sanitize schema allowing list attrs + citations */
 const sanitizeSchema = {
   tagNames: [
     'a','p','strong','em','code','pre','blockquote','ul','ol','li','hr',
@@ -394,7 +459,13 @@ const sanitizeSchema = {
   ],
   attributes: {
     a: ['href','title','target','rel'],
+    //
+    // THIS IS THE FIX: Add 'className' to the line below
+    //
     code: ['className'],
+    //
+    //
+    //
     sup: ['data-citation','className'],
     span: ['className','style'],
     th: ['align'],
@@ -627,25 +698,36 @@ const processStreamingContentForMermaid = (content) => {
 };
 
 /* =========================
-   MARKDOWN BLOCK (Updated with streaming Mermaid handling)
+   MARKDOWN BLOCK (Tailwind Typography)
    ========================= */
 const markdownComponents = {
-  a: ({ node, ...props }) => {
-    const href = props.href || '';
-    const isExternal = /^https?:\/\//i.test(href);
-    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
-  },
-  p: ({ node, children, ...props }) => {
-    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
-      return <div style={{ height: '1.5em' }} {...props} />;
-    }
-    return <p {...props}>{children}</p>;
-  },
+  a: ({ node, ...props }) => {
+    const href = props.href || '';
+    const isExternal = /^https?:\/\//i.test(href);
+    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
+  },
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
+
+    if (!inline && language === 'mermaid') {
+      const rawCode = String(children);
+      return <MermaidDiagram {...props}>{rawCode}</MermaidDiagram>;
+    }
+    
+    return <code className={className} {...props}>{children}</code>;
+  },
+  p: ({ node, children, ...props }) => {
+    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
+      return <div style={{ height: '1.5em' }} {...props} />;
+    }
+    return <p {...props}>{children}</p>;
+  },
 };
 
 // Update your MarkdownBlock to use the components and pass theme/isDark
 const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStreaming = false }) => {
-  const containerRef = useRef(null);
+   const containerRef = useRef(null);
 
   useEffect(() => {
     const handler = (e) => {
@@ -660,82 +742,49 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStrea
     return () => { if (el) el.removeEventListener('click', handler); };
   }, [onTapCitation]);
 
-  const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
+const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
    
-  const componentsWithTheme = {
-    ...markdownComponents,
-    code: ({ node, inline, className, children, ...props }) => {
-      const match = /language-(\w+)/.exec(className || '');
-      const language = match ? match[1] : '';
+const componentsWithTheme = {
+  ...markdownComponents,
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
 
-      if (!inline && language === 'mermaid') {
-        const code = String(children).replace(/\n$/, '');
+    if (!inline && language === 'mermaid') {
+      const code = String(children).replace(/\n$/, '');
 
-        // During streaming, be more conservative about rendering
-        if (isStreaming) {
-          const hasStart = /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|gitGraph|mindmap|timeline)/m.test(code);
-          const hasMultipleLines = code.split('\n').length > 2;
-          const looksComplete = !code.endsWith('-->') && !code.match(/-->\s*$/);
-          
-          if (!hasStart || !hasMultipleLines || !looksComplete) {
-            return (
-              <div style={{
-                margin: '1rem 0',
-                padding: '1rem',
-                background: theme.backgroundSurface,
-                borderRadius: 8,
-                border: `1px solid ${theme.textSecondary}25`,
-                minHeight: 80
-              }}>
-                <div style={{ 
-                  fontSize: 12, 
-                  color: theme.textSecondary, 
-                  marginBottom: 8,
-                  textAlign: 'center'
-                }}>
-                  ⏳ Building diagram...
-                </div>
-                <pre style={{ 
-                  margin: 0, 
-                  fontSize: 11, 
-                  color: theme.textSecondary,
-                  opacity: 0.7,
-                  textAlign: 'left'
-                }}>
-                  <code>{code}</code>
-                </pre>
-              </div>
-            );
-          }
+      // Simple streaming check - only show loading if incomplete
+      if (isStreaming) {
+        const hasStart = /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram)/m.test(code);
+        const hasMinContent = code.split('\n').length > 1;
+        
+        if (!hasStart || !hasMinContent) {
+          return (
+            <div style={{
+              margin: '1rem 0',
+              padding: '1rem',
+              background: theme.backgroundSurface,
+              borderRadius: 8,
+              border: `1px solid ${theme.textSecondary}25`,
+              textAlign: 'center',
+              color: theme.textSecondary,
+              fontSize: 14
+            }}>
+              Building diagram...
+            </div>
+          );
         }
-
-        // Render the actual diagram
-        return (
-          <MermaidDiagram theme={theme} isDark={invert}>
-            {code}
-          </MermaidDiagram>
-        );
       }
 
-      return <code className={className} {...props}>{children}</code>;
+      return (
+        <MermaidDiagram theme={theme} isDark={invert}>
+          {code}
+        </MermaidDiagram>
+      );
     }
-  };
 
-  return (
-    <div
-      ref={containerRef}
-      className={`markdown-body prose max-w-none ${invert ? 'prose-invert' : 'prose-neutral'}`}
-      style={{ color: theme.textPrimary }}
-    >
-      <ReactMarkdown
-        remarkPlugins={remarkPlugins}
-        rehypePlugins={rehypePlugins}
-        components={componentsWithTheme}
-      >
-        {processedMarkdown || ''}
-      </ReactMarkdown>
-    </div>
-  );
+    return <code className={className} {...props}>{children}</code>;
+  }
 };
 
 const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
@@ -775,16 +824,16 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
             <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-        <MarkdownBlock
-          markdown={message.content}
-          theme={theme}
-          invert={invertMarkdown}
-          isStreaming={!message.isStreamingComplete}
-          onTapCitation={(num) => {
-            const citation = message.citations?.find((c) => c.number === num);
-            if (citation && onTapCitation) onTapCitation(citation);
-          }}
-        />
+<MarkdownBlock
+  markdown={message.content}
+  theme={theme}
+  invert={invertMarkdown}
+  isStreaming={false}   // ← change this to: isStreaming={!message.isStreamingComplete}
+  onTapCitation={(num) => {
+    const citation = message.citations?.find((c) => c.number === num);
+    if (citation && onTapCitation) onTapCitation(citation);
+  }}
+/>
         <button
           onClick={handleCopy}
           aria-label="Copy message"
@@ -844,6 +893,18 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
     </div>
   );
 };
+
+// ADD this CSS to your existing style block (add it inside the dangerouslySetInnerHTML):
+/* Mermaid diagram responsive fix */
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.mermaid .node .label {
+  font-size: 12px !important;
+  font-family: inherit !important;
+}
 
 const LoadingIndicator = ({ theme }) => (
   <div style={{ padding: 16, borderRadius: 12, backgroundColor: 'transparent', marginBottom: 16 }}>
@@ -1059,6 +1120,8 @@ const AstraApp = () => {
     el.scrollTop = el.scrollHeight;
   }, []);
 
+  // Removed all scrollToBottom functionality - no more autoscroll!
+
   const resetChat = () => {
     if (abortControllerRef.current) abortControllerRef.current.abort();
     setMessages([]);
@@ -1192,6 +1255,7 @@ const AstraApp = () => {
       const flush = () => {
         rafId = null;
         setStreamingContent(finalContent);
+        // Removed scrollToBottom() call here
       };
 
       if (reader) {
@@ -1307,6 +1371,8 @@ const AstraApp = () => {
     setChatHistory(prev => prev.filter(chat => chat.id !== session.id));
   };
 
+  // Removed all useEffect hooks that called scrollToBottom
+
   return (
     <div style={{
       height: '100dvh', display: 'flex', flexDirection: 'column',
@@ -1395,10 +1461,10 @@ const AstraApp = () => {
         />
       )}
 
-      {/* Global Styles with Mermaid fixes */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
+      {/* Global Styles (minimal) */}
+<style
+  dangerouslySetInnerHTML={{
+    __html: `
 /* ===== App chrome (unchanged) ===== */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -1439,7 +1505,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 .markdown-body h2,
 .markdown-body h3 {
   color: ${theme.textPrimary};
-  margin: 0.8rem 0 0.6rem;
+  margin: 0.8rem 0 0.6rem;  /* Changed from 0.6rem 0 0.25rem */
   line-height: 1.25;
 }
 
@@ -1449,10 +1515,9 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 
 /* Paragraphs with more breathing room */
 .markdown-body p { 
-  margin: 0.5rem 0;
-  line-height: 1.6;
+  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
+  line-height: 1.6;  /* Increased from 1.55 */
 }
-
 /* Horizontal rule */
 .markdown-body hr {
   border: none;
@@ -1523,15 +1588,15 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 /* Lists themselves with more space */
 .markdown-body ol,
 .markdown-body ul {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
   padding-left: 1.5rem;
   list-style-position: outside;
 }
 
 /* List items with more space */
 .markdown-body li {
-  margin: 0.25rem 0;
-  line-height: 1.6;
+  margin: 0.25rem 0;  /* Changed from 0.1rem to 0.25rem */
+  line-height: 1.6;   /* Increased from 1.5 */
 }
 
 /* ALL possible nested list combinations get more indentation */
@@ -1585,7 +1650,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   width: 100%;
   margin: 0.5rem 0 0.75rem;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* keep rounded corners */
   background: ${theme.backgroundSurface};
 }
 
@@ -1613,37 +1678,6 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 .markdown-body th.align-right,
 .markdown-body td.align-right  { text-align: right; }
 
-/* ===== Mermaid diagram fixes ===== */
-.mermaid svg {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-.mermaid .node rect,
-.mermaid .node circle,
-.mermaid .node ellipse,
-.mermaid .node polygon {
-  stroke-width: 2px;
-}
-
-.mermaid .node .label {
-  color: ${theme.textPrimary} !important;
-  font-family: inherit !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-}
-
-.mermaid .edgeLabel {
-  background-color: ${theme.backgroundSurface} !important;
-  color: ${theme.textPrimary} !important;
-  font-size: 11px !important;
-}
-
-.mermaid .cluster rect {
-  stroke: ${theme.textSecondary} !important;
-  fill: ${theme.backgroundPrimary} !important;
-}
-
 /* ===== Streaming caret ===== */
 .streaming-caret {
   display: inline-block;
@@ -1651,8 +1685,8 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   color: ${theme.accentSoftBlue};
 }
 `
-        }}
-      />
+  }}
+/>
 
     </div>
   );
