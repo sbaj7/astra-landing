@@ -74,7 +74,9 @@ const GrowingTextView = ({
         maxWidth: `${maxWidth}px`,
         height: `${height}px`,
         wordWrap: 'break-word',
-        whiteSpace: 'pre-wrap'
+        whiteSpace: 'pre-wrap',
+        userSelect: 'text',
+        caretColor: 'auto'
       }}
     />
   );

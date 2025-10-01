@@ -1,5 +1,27 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Mic, ArrowUp, Square, Edit3, Sparkles, FileText, Search, Stethoscope, X, ExternalLink } from 'lucide-react';
+import {
+  Mic,
+  ArrowUp,
+  Square,
+  Edit3,
+  Sparkles,
+  FileText,
+  Search,
+  Stethoscope,
+  X,
+  ExternalLink,
+  User,
+  Settings,
+  CreditCard,
+  LogOut,
+  MessageSquare
+} from 'lucide-react';
+import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
+import PaywallModal from './Auth/PaywallModal';
+import BillingModal from './BillingModal.jsx';
+import ProfileModal from './ProfileModal.jsx';
+import SettingsModal from './SettingsModal.jsx';
+import authService from '../services/authService';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -529,8 +551,21 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
 /* =========================
    UI PARTS
    ========================= */
-const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
+const ToolbarView = ({
+  onNewChat,
+  onToggleSidebar,
+  theme,
+  chatLimit
+}) => {
   const [newChatCooldown, setNewChatCooldown] = useState(false);
+  const {
+    signIn,
+    isAuthenticated,
+    isLoading: authStateLoading
+  } = useSupabaseAuth();
+
+  const isLoggedIn = !!isAuthenticated;
+
   const handleNewChat = () => {
     if (newChatCooldown) return;
     setNewChatCooldown(true);
@@ -538,9 +573,17 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
     setTimeout(() => setNewChatCooldown(false), 300);
   };
 
+  const handleLogin = async (mode = 'signIn') => {
+    try {
+      await signIn({ mode });
+    } catch (error) {
+      console.error('Supabase sign-in failed', error);
+    }
+  };
+
   return (
     <div style={{
-      height: 52, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center',
       padding: '0 16px', backgroundColor: theme.backgroundSurface,
       borderBottomLeftRadius: 20, borderBottomRightRadius: 20,
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)', position: 'relative', zIndex: 10, minHeight: 52
@@ -548,7 +591,18 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
       <button
         onClick={onToggleSidebar}
         aria-label="Open sidebar"
-        style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{
+          position: 'absolute',
+          left: '16px',
+          padding: 8,
+          borderRadius: 8,
+          border: 'none',
+          background: 'transparent',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
       >
         <Stethoscope size={18} color={theme.textPrimary} />
       </button>
@@ -561,14 +615,68 @@ const ToolbarView = ({ onNewChat, onToggleSidebar, theme }) => {
         Astra
       </h1>
 
-      <button
-        onClick={handleNewChat}
-        disabled={newChatCooldown}
-        aria-label="New chat"
-        style={{ padding: 8, borderRadius: 8, border: 'none', background: 'transparent', cursor: 'pointer', opacity: newChatCooldown ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-      >
-        <Edit3 size={18} color={theme.textPrimary} />
-      </button>
+      <div style={{
+        position: 'absolute',
+        right: '16px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px'
+      }}>
+        {/* Chat Counter for Anonymous Users */}
+        {!isLoggedIn && !authStateLoading && (
+          <span style={{
+            color: theme.textPrimary,
+            fontSize: '14px',
+            fontWeight: '500'
+          }}>
+            {chatLimit.remaining} free left
+          </span>
+        )}
+
+        {/* Sign Up Button */}
+        {!isLoggedIn && !authStateLoading && (
+          <button
+            onClick={() => handleLogin('signUp')}
+            style={{
+              padding: '8px 16px',
+              borderRadius: '20px',
+              border: 'none',
+              backgroundColor: 'rgba(255, 255, 255, 0.2)',
+              color: theme.textPrimary,
+              fontSize: '14px',
+              fontWeight: '500',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              backdropFilter: 'blur(10px)'
+            }}
+          >
+            Sign Up
+          </button>
+        )}
+
+        {/* New Chat Button */}
+        <button
+          onClick={handleNewChat}
+          disabled={newChatCooldown}
+          aria-label="New chat"
+          style={{
+            padding: 8,
+            borderRadius: 8,
+            border: 'none',
+            background: 'transparent',
+            cursor: 'pointer',
+            opacity: newChatCooldown ? 0.5 : 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Edit3 size={18} color={theme.textPrimary} />
+        </button>
+
+      </div>
     </div>
   );
 };
@@ -884,46 +992,342 @@ const LoadingIndicator = ({ theme }) => (
   </div>
 );
 
-const Sidebar = ({ isOpen, onClose, chatHistory, onSelectChat, onDeleteChat, onNewChat, theme }) => {
+const Sidebar = ({
+  isOpen,
+  onClose,
+  chatHistory,
+  onSelectChat,
+  onDeleteChat,
+  onNewChat,
+  onShowProfile,
+  onShowSettings,
+  onShowBilling,
+  onShowLogout,
+  theme,
+  user,
+  subscription,
+  isAuthenticated,
+  profile,
+  onAuthPrompt
+}) => {
   if (!isOpen) return null;
+
+  const planLabel = subscription?.plan_key ? `${subscription.plan_key.replace(/(^|\s)(\w)/g, (m, p1, p2) => `${p1}${p2.toUpperCase()}`)} plan` : 'Free plan';
+  const userName = user?.name || profile?.full_name || user?.email || profile?.email || 'Account';
+  const isLoggedIn = !!isAuthenticated;
+
+  const userInitials = () => {
+    if (profile?.full_name) {
+      return profile.full_name
+        .split(' ')
+        .filter(Boolean)
+        .map(part => part[0])
+        .join('')
+        .toUpperCase()
+        .slice(0, 2);
+    }
+    if (user?.name) {
+      return user.name
+        .split(' ')
+        .filter(Boolean)
+        .map(part => part[0])
+        .join('')
+        .toUpperCase()
+        .slice(0, 2);
+    }
+    if (user?.email) {
+      return user.email.slice(0, 2).toUpperCase();
+    }
+    return 'U';
+  };
+
+  const requestAuth = (mode = 'signIn') => {
+    onAuthPrompt?.(mode);
+  };
+
+  const performAuthedAction = (action, mode = 'signIn') => {
+    if (!isLoggedIn) {
+      requestAuth(mode);
+      onClose();
+      return;
+    }
+    action?.();
+    onClose();
+  };
+
+  const renderChatItem = (chat) => (
+    <div
+      key={chat.id}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+        padding: '8px 10px',
+        borderRadius: 10,
+        backgroundColor: `${theme.textSecondary}08`,
+        cursor: 'pointer'
+      }}
+      onClick={() => onSelectChat(chat)}
+    >
+      <span style={{
+        flex: 1,
+        fontSize: 13,
+        color: theme.textPrimary,
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+      }}>
+        {chat.displayTitle || chat.title || 'Untitled'}
+      </span>
+      <button
+        onClick={(event) => {
+          event.stopPropagation();
+          onDeleteChat(chat);
+        }}
+        style={{
+          border: 'none',
+          background: 'transparent',
+          color: `${theme.textSecondary}AA`,
+          cursor: 'pointer'
+        }}
+        aria-label="Delete chat"
+      >
+        <Square size={12} />
+      </button>
+    </div>
+  );
+
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 50, display: 'flex' }}>
-      <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
-      <div style={{ width: 320, height: '100%', padding: 24, paddingTop: 'max(24px, env(safe-area-inset-top))', overflowY: 'auto', backgroundColor: theme.backgroundSurface }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
-          <h2 style={{ fontSize: 18, fontWeight: 600, color: theme.textPrimary, margin: 0 }}>Chat History</h2>
-          <button onClick={onNewChat} style={{ padding: 8, borderRadius: 8, border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
-            <Edit3 size={16} color={theme.textPrimary} />
-          </button>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 60, display: 'flex' }}>
+      <aside
+        style={{
+          width: 320,
+          maxWidth: '92vw',
+          height: '100%',
+          backgroundColor: `${theme.backgroundSurface}`,
+          color: theme.textPrimary,
+          display: 'flex',
+          flexDirection: 'column',
+          boxShadow: '0 0 48px rgba(0,0,0,0.35)'
+        }}
+      >
+        <div style={{ padding: '24px 20px 12px', display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div style={{ width: 10, height: 10, borderRadius: '50%', backgroundColor: theme.accentSoftBlue }} />
+          <span style={{ fontSize: 18, fontWeight: 600 }}>Astra</span>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {chatHistory.map((chat) => (
-            <div key={chat.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <button
-                onClick={() => onSelectChat(chat)}
-                style={{ flex: 1, padding: 12, borderRadius: 8, textAlign: 'left', backgroundColor: `${theme.textSecondary}0A`, border: 'none', cursor: 'pointer' }}
+        <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <button
+            onClick={() => { onNewChat(); onClose(); }}
+            style={{
+              border: 'none',
+              borderRadius: 999,
+              padding: '10px 16px',
+              backgroundColor: theme.accentSoftBlue,
+              color: '#fff',
+              fontSize: 14,
+              fontWeight: 600,
+              textAlign: 'left',
+              cursor: 'pointer'
+            }}
+          >
+            + New chat
+          </button>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <SidebarNavItem icon={MessageSquare} label="Chats" active theme={theme} />
+          </div>
+        </div>
+
+        <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {chatHistory.length === 0 && (
+            <div style={{
+              padding: '24px 18px',
+              borderRadius: 16,
+              backgroundColor: `${theme.textSecondary}10`,
+              textAlign: 'center',
+              color: theme.textSecondary,
+              fontSize: 13,
+              lineHeight: 1.4
+            }}>
+              <strong style={{ display: 'block', marginBottom: 8, color: theme.textPrimary }}>No chats yet</strong>
+              Start a conversation to see your chat history here
+            </div>
+          )}
+
+          {chatHistory.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {chatHistory.map(renderChatItem)}
+            </div>
+          )}
+        </div>
+
+        <div
+          style={{
+            padding: '16px 20px',
+            borderTop: `1px solid ${theme.textSecondary}15`,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 10
+          }}
+        >
+          {isLoggedIn ? (
+            <>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  cursor: 'pointer'
+                }}
+                onClick={() => performAuthedAction(onShowProfile)}
               >
-                <div style={{ fontSize: 14, fontWeight: 500, color: theme.textPrimary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                  {chat.title}
+                <div
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: '50%',
+                    backgroundColor: `${theme.textSecondary}20`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: theme.textPrimary
+                  }}
+                >
+                  {userInitials()}
                 </div>
-                <div style={{ fontSize: 12, color: theme.textSecondary }}>
-                  {new Date(chat.timestamp).toLocaleDateString()}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <span style={{ fontSize: 13, fontWeight: 600 }}>{userName}</span>
+                  <span style={{ fontSize: 12, color: theme.textSecondary }}>{planLabel}</span>
                 </div>
+              </div>
+
+              <SidebarAction
+                icon={User}
+                label="Profile"
+                theme={theme}
+                onClick={() => performAuthedAction(onShowProfile)}
+              />
+
+              <SidebarAction
+                icon={Settings}
+                label="Settings"
+                theme={theme}
+                onClick={() => performAuthedAction(onShowSettings)}
+              />
+
+              <SidebarAction
+                icon={CreditCard}
+                label="Billing & Plans"
+                theme={theme}
+                onClick={() => performAuthedAction(onShowBilling, 'signUp')}
+              />
+
+              <div style={{ height: 1, backgroundColor: `${theme.textSecondary}20` }} />
+
+              <SidebarAction
+                icon={LogOut}
+                label="Log out"
+                theme={theme}
+                isDestructive
+                onClick={() => performAuthedAction(onShowLogout)}
+              />
+            </>
+          ) : (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+                padding: '8px 0'
+              }}
+            >
+              <div style={{ fontSize: 13, color: theme.textSecondary, lineHeight: 1.5 }}>
+                Create a free Astra account to sync chats, manage billing, and update your profile.
+              </div>
+              <button
+                onClick={() => { requestAuth('signUp'); onClose(); }}
+                style={{
+                  border: 'none',
+                  borderRadius: 999,
+                  padding: '10px 16px',
+                  backgroundColor: theme.accentSoftBlue,
+                  color: '#fff',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  cursor: 'pointer'
+                }}
+              >
+                Sign up for free
               </button>
               <button
-                onClick={() => onDeleteChat(chat)}
-                style={{ padding: 8, borderRadius: 8, border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}
+                onClick={() => { requestAuth('signIn'); onClose(); }}
+                style={{
+                  borderRadius: 999,
+                  padding: '10px 16px',
+                  background: 'transparent',
+                  border: `1px solid ${theme.textSecondary}40`,
+                  color: theme.textPrimary,
+                  fontSize: 14,
+                  fontWeight: 600,
+                  cursor: 'pointer'
+                }}
               >
-                <Square size={12} color={theme.errorColor} />
+                Already have an account? Sign in
               </button>
             </div>
-          ))}
+          )}
         </div>
-      </div>
+      </aside>
+      <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
     </div>
   );
 };
+
+const SidebarNavItem = ({ icon: Icon, label, active = false, theme }) => (
+  <div
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      padding: '8px 12px',
+      borderRadius: 12,
+      backgroundColor: active ? `${theme.textSecondary}15` : 'transparent',
+      color: active ? theme.textPrimary : theme.textSecondary,
+      fontSize: 13,
+      fontWeight: active ? 600 : 500
+    }}
+  >
+    <Icon size={16} />
+    {label}
+  </div>
+);
+
+const SidebarAction = ({ icon: Icon, label, theme, onClick, isDestructive = false }) => (
+  <button
+    onClick={onClick}
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      padding: '10px 12px',
+      width: '100%',
+      borderRadius: 12,
+      border: 'none',
+      backgroundColor: `${theme.textSecondary}08`,
+      color: isDestructive ? theme.errorColor : theme.textPrimary,
+      fontSize: 13,
+      fontWeight: 600,
+      cursor: 'pointer',
+      textAlign: 'left'
+    }}
+  >
+    <Icon size={16} />
+    {label}
+  </button>
+);
 
 /* =========================
    INPUT BAR (reports its height)
@@ -964,6 +1368,22 @@ const InputBar = ({
   }, []);
 
   useEffect(() => { adjustTextareaHeight(); }, [query, adjustTextareaHeight]);
+
+  useEffect(() => {
+    const handlePointerDown = (event) => {
+      const textarea = textareaRef.current;
+      if (!textarea) return;
+      if (event.target instanceof Node && textarea.contains(event.target)) {
+        return;
+      }
+      textarea.blur();
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, []);
 
   useEffect(() => {
     if (speechRecognition.isRecording && speechRecognition.recognizedText) {
@@ -1052,12 +1472,75 @@ const InputBar = ({
   );
 };
 
+const parseSessionMessages = (rawMessages) => {
+  if (Array.isArray(rawMessages)) return rawMessages;
+  if (typeof rawMessages === 'string') {
+    try {
+      const parsed = JSON.parse(rawMessages);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      console.warn('Failed to parse stored messages JSON:', error);
+      return [];
+    }
+  }
+  if (rawMessages && typeof rawMessages === 'object') {
+    return Array.isArray(rawMessages) ? rawMessages : [];
+  }
+  return [];
+};
+
+const MAX_TITLE_LENGTH = 36;
+
+const sanitizeTitleText = (text) => text?.replace(/\s+/g, ' ').trim() || '';
+
+const createChatTitle = (source, fallback = 'Conversation') => {
+  const sanitizedSource = sanitizeTitleText(source);
+  if (!sanitizedSource) return fallback;
+
+  const sentenceFragment = sanitizedSource.split(/(?<=[.!?])\s+/)[0] || sanitizedSource;
+  const words = sentenceFragment.split(' ').slice(0, 6).join(' ').trim() || sanitizedSource.split(' ').slice(0, 6).join(' ').trim();
+  const candidate = sanitizeTitleText(words || sentenceFragment || sanitizedSource);
+
+  if (!candidate) return fallback;
+  if (candidate.length <= MAX_TITLE_LENGTH) return candidate;
+  return `${candidate.slice(0, MAX_TITLE_LENGTH - 1).trim()}…`;
+};
+
+const normalizeSessionForHistory = (session) => {
+  if (!session) return null;
+  const messages = parseSessionMessages(session.messages);
+  const mode = session.mode || 'search';
+  const sourceTitle = sanitizeTitleText(session.title) || createChatTitle(messages[0]?.content);
+  const displayTitle = createChatTitle(sourceTitle);
+
+  return {
+    id: session.id || `session-${session.created_at || Date.now()}`,
+    title: sourceTitle,
+    displayTitle,
+    messages,
+    timestamp: session.created_at || new Date().toISOString(),
+    mode,
+    wasInClinicalMode: mode === 'reason',
+    wasInReasonMode: mode === 'reason',
+    wasInWriteMode: mode === 'write'
+  };
+};
+
 /* =========================
    APP
    ========================= */
 const AstraApp = () => {
   const { colors: theme, isDark } = useTheme();
   const speechRecognition = useSpeechRecognition();
+
+  // Supabase auth
+  const {
+    user,
+    isAuthenticated,
+    isLoading: authLoading,
+    signOut,
+    signIn
+  } = useSupabaseAuth();
 
   const [messages, setMessages] = useState([]);
   const [query, setQuery] = useState('');
@@ -1074,9 +1557,320 @@ const AstraApp = () => {
   const [selectedCitation, setSelectedCitation] = useState(null);
   const [showCitationOverlay, setShowCitationOverlay] = useState(false);
 
+  // Auth-related state
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [chatLimit, setChatLimit] = useState(() => {
+    // Initialize from cache if available and not expired
+    const cached = authService.getCachedAnonymousLimitState();
+    if (cached && cached.reset_at) {
+      const resetTime = new Date(cached.reset_at);
+      if (resetTime > new Date()) {
+        return {
+          remaining: cached.remaining,
+          used: cached.used,
+          resetAt: cached.reset_at
+        };
+      }
+    }
+    // Default state if no valid cache
+    return { remaining: 10, used: 0, resetAt: null };
+  });
+  const [showBilling, setShowBilling] = useState(false);
+  const [subscriptionInfo, setSubscriptionInfo] = useState(null);
+  const [isBillingLoading, setIsBillingLoading] = useState(false);
+  const [isBillingAction, setIsBillingAction] = useState(false);
+  const [billingError, setBillingError] = useState('');
+  const [billingStatus, setBillingStatus] = useState(null);
+  const [showProfile, setShowProfile] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [appSettings, setAppSettings] = useState({
+    syncSystem: true,
+    forceDark: false,
+    language: 'en-US',
+    requireLogin: true,
+    phiMode: false
+  });
+  const [accountProfile, setAccountProfile] = useState(null);
+  const [isProfileSaving, setIsProfileSaving] = useState(false);
+  const [profileError, setProfileError] = useState('');
+  const [profileSuccess, setProfileSuccess] = useState('');
+
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
   const [inputBarHeight, setInputBarHeight] = useState(0);
+
+  const refreshProfile = useCallback(async () => {
+    if (authLoading) return;
+    if (!isAuthenticated || !user) {
+      setAccountProfile(null);
+      return;
+    }
+
+    try {
+      const supabaseUser = await authService.syncUserWithSupabase(user);
+      setAccountProfile(supabaseUser);
+    } catch (error) {
+      console.error('Failed to sync account profile:', error);
+    }
+  }, [authLoading, isAuthenticated, user]);
+
+  const refreshChatHistory = useCallback(async () => {
+    if (authLoading) return;
+    if (!isAuthenticated || !user) {
+      setChatHistory([]);
+      return;
+    }
+
+    try {
+      const sessions = await authService.getChatSessions(user, 20);
+      if (!Array.isArray(sessions)) return;
+      const normalized = sessions
+        .map(normalizeSessionForHistory)
+        .filter(Boolean);
+      setChatHistory(normalized);
+    } catch (error) {
+      console.error('Failed to load chat history:', error);
+    }
+  }, [authLoading, isAuthenticated, user]);
+
+  const refreshSubscription = useCallback(async (showSpinner = false) => {
+    if (authLoading) return;
+    if (!isAuthenticated || !user) {
+      setSubscriptionInfo(null);
+      return;
+    }
+
+    try {
+      setBillingError('');
+      if (showSpinner) setIsBillingLoading(true);
+      const result = await authService.getSubscriptionStatus(user);
+      setSubscriptionInfo(result?.subscription || null);
+    } catch (error) {
+      console.error('Failed to load subscription details:', error);
+      setBillingError(error.message || 'Unable to load subscription details');
+    } finally {
+      if (showSpinner) setIsBillingLoading(false);
+    }
+  }, [authLoading, isAuthenticated, user]);
+
+  // Sync user with Supabase when authenticated
+  useEffect(() => {
+    refreshProfile();
+  }, [refreshProfile]);
+
+  useEffect(() => {
+    if (authLoading) return;
+    refreshChatHistory();
+  }, [authLoading, refreshChatHistory]);
+
+  useEffect(() => {
+    if (!showBilling) return;
+    refreshSubscription(true);
+  }, [showBilling, refreshSubscription]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('billing');
+    if (!status) return;
+
+    setBillingStatus(status);
+    if (isAuthenticated && user) {
+      refreshSubscription();
+    }
+
+    params.delete('billing');
+    const query = params.toString();
+    const newUrl = `${window.location.origin}${window.location.pathname}${query ? `?${query}` : ''}`;
+    window.history.replaceState({}, '', newUrl);
+  }, [isAuthenticated, user, refreshSubscription]);
+
+  useEffect(() => {
+    if (!profileSuccess) return;
+    const timer = setTimeout(() => setProfileSuccess(''), 2500);
+    return () => clearTimeout(timer);
+  }, [profileSuccess]);
+
+  // Initialize chat limits from localStorage for anonymous users
+  useEffect(() => {
+    if (isAuthenticated) {
+      // Reset chat limits for authenticated users (they don't have limits)
+      setChatLimit({ remaining: 10, used: 0, resetAt: null });
+      return;
+    }
+
+    // For anonymous users, check and sync with localStorage
+    const cached = authService.getCachedAnonymousLimitState();
+    if (cached && cached.reset_at) {
+      const resetTime = new Date(cached.reset_at);
+      if (resetTime > new Date()) {
+        // Valid cached limit found
+        setChatLimit({
+          remaining: cached.remaining,
+          used: cached.used,
+          resetAt: cached.reset_at
+        });
+        return;
+      } else {
+        // Cached limit has expired, clear it
+        authService.setCachedAnonymousLimitState({ used: 0, reset_at: authService.getDefaultAnonymousResetTimestamp() });
+      }
+    }
+
+    // No valid cache or expired - initialize fresh limit
+    const resetAt = authService.getDefaultAnonymousResetTimestamp();
+    setChatLimit({ remaining: 10, used: 0, resetAt });
+    authService.setCachedAnonymousLimitState({ used: 0, reset_at: resetAt });
+  }, [isAuthenticated]);
+
+  // Update chat limit for authenticated users only (anonymous users use localStorage only)
+  const updateChatLimit = useCallback(async () => {
+    if (isAuthenticated) {
+      // For authenticated users, they don't have limits - set unlimited
+      setChatLimit({ remaining: 999, used: 0, resetAt: null });
+    }
+    // For anonymous users, do nothing - localStorage is the single source of truth
+  }, [isAuthenticated]);
+
+  // Initialize chat limit only for authenticated users (removed for anonymous users)
+  useEffect(() => {
+    if (isAuthenticated) {
+      updateChatLimit();
+    }
+    // For anonymous users, initialization is handled by the dedicated useEffect above
+  }, [isAuthenticated, updateChatLimit]);
+
+  const handleOpenBilling = useCallback(() => {
+    if (!isAuthenticated) {
+      setShowPaywall(true);
+      return;
+    }
+    setBillingError('');
+    setShowBilling(true);
+  }, [isAuthenticated]);
+
+  const handleOpenProfile = useCallback(() => {
+    if (!isAuthenticated) {
+      setShowPaywall(true);
+      return;
+    }
+    setProfileError('');
+    setProfileSuccess('');
+    refreshProfile();
+    setShowProfile(true);
+  }, [isAuthenticated, refreshProfile]);
+
+  const handleOpenSettings = useCallback(() => {
+    setShowSettings(true);
+  }, []);
+
+  const handleSettingChange = useCallback((key, value) => {
+    setAppSettings((prev) => ({ ...prev, [key]: value }));
+  }, []);
+
+  const handleCheckoutPlan = useCallback(async (planId) => {
+    if (!isAuthenticated || !user) {
+      setShowBilling(false);
+      setShowPaywall(true);
+      return;
+    }
+
+    try {
+      setBillingError('');
+      setBillingStatus(null);
+      setIsBillingAction(true);
+      const result = await authService.createCheckoutSession(planId, user, window.location.origin);
+      if (result?.url) {
+        window.location.href = result.url;
+      }
+    } catch (error) {
+      console.error('Failed to start checkout:', error);
+      setBillingError(error.message || 'Unable to start checkout. Please try again.');
+    } finally {
+      setIsBillingAction(false);
+    }
+  }, [isAuthenticated, user]);
+
+  const handleManageSubscription = useCallback(async () => {
+    if (!isAuthenticated || !user) {
+      setShowBilling(false);
+      setShowPaywall(true);
+      return;
+    }
+
+    try {
+      setBillingError('');
+      setIsBillingAction(true);
+      const result = await authService.createPortalSession(user, window.location.origin);
+      if (result?.url) {
+        window.location.href = result.url;
+      }
+    } catch (error) {
+      console.error('Failed to open billing portal:', error);
+      setBillingError(error.message || 'Unable to open billing portal. Please try again.');
+    } finally {
+      setIsBillingAction(false);
+    }
+  }, [isAuthenticated, user]);
+
+  const handleCloseBilling = useCallback(() => {
+    setShowBilling(false);
+    setBillingError('');
+  }, []);
+
+  const handleCloseProfile = useCallback(() => {
+    setShowProfile(false);
+    setProfileError('');
+    setProfileSuccess('');
+  }, []);
+
+  const handleCloseSettings = useCallback(() => {
+    setShowSettings(false);
+  }, []);
+
+  const handleAuthLogout = useCallback(async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error('Supabase sign-out failed', error);
+    }
+  }, [signOut]);
+
+  const handleAuthPrompt = useCallback(
+    (mode = 'signIn') => {
+      signIn({ mode }).catch((error) => {
+        console.error('Supabase sign-in prompt failed', error);
+      });
+    },
+    [signIn]
+  );
+
+  const handleUpdateProfile = useCallback(async (profileUpdates) => {
+    if (!isAuthenticated || !user) {
+      setShowPaywall(true);
+      return;
+    }
+
+    try {
+      setProfileError('');
+      setProfileSuccess('');
+      setIsProfileSaving(true);
+      const response = await authService.updateUserProfile(user, profileUpdates);
+      const updatedUser = response?.user || response;
+      if (updatedUser) {
+        setAccountProfile(updatedUser);
+        setProfileSuccess('Profile updated');
+        refreshProfile();
+      } else {
+        setProfileError('Profile update failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Failed to update profile:', error);
+      setProfileError(error.message || 'Unable to update profile');
+    } finally {
+      setIsProfileSaving(false);
+    }
+  }, [isAuthenticated, user, refreshProfile]);
 
   // Add scroll bump function for new user requests
   const scrollToBottom = useCallback(() => {
@@ -1163,6 +1957,32 @@ const AstraApp = () => {
   const handleSend = async () => {
     if (!query.trim() || isLoading || isStreaming) return;
 
+    // Check authentication and limits for anonymous users
+  if (!isAuthenticated) {
+    // Check current limit
+    if (chatLimit.remaining <= 0) {
+      setShowPaywall(true);
+      return;
+    }
+
+    // Immediately decrement the counter (optimistic update)
+    setChatLimit(prev => {
+      const resetAt = prev.resetAt || authService.getDefaultAnonymousResetTimestamp();
+      const nextUsed = Math.min(10, (prev.used || 0) + 1);
+      const nextRemaining = Math.max(0, 10 - nextUsed);
+      const nextState = {
+        remaining: nextRemaining,
+        used: nextUsed,
+        resetAt
+      };
+      authService.setCachedAnonymousLimitState({ used: nextUsed, reset_at: resetAt });
+      if (nextRemaining <= 0) {
+        setShowPaywall(true);
+      }
+      return nextState;
+    });
+  }
+
     const userMessage = {
       id: Date.now(),
       role: 'user',
@@ -1187,6 +2007,7 @@ const AstraApp = () => {
     speechRecognition.setRecognizedText('');
 
     abortControllerRef.current = new AbortController();
+    let pendingChatSession = null;
 
     try {
       const response = await fetch(import.meta.env.VITE_API_URL, {
@@ -1269,19 +2090,49 @@ const AstraApp = () => {
 
             setMessages(prev => [...prev, assistantMessage]);
 
+            const generatedTitle = createChatTitle(userMessage.content);
             const chatSession = {
-              id: Date.now() + 2,
-              title: userMessage.content.slice(0, 50) + (userMessage.content.length > 50 ? '...' : ''),
+              id: `local-${Date.now()}`,
+              title: generatedTitle,
+              displayTitle: generatedTitle,
               messages: [...messages, userMessage, assistantMessage],
               timestamp: new Date(),
               wasInClinicalMode: false
             };
+            pendingChatSession = chatSession;
             setChatHistory(prev => [chatSession, ...prev]);
           }
 
           setIsStreaming(false);
           setStreamingContent('');
           setHasFirstToken(false);
+
+          // Handle usage tracking and session saving
+          if (!isAuthenticated) {
+            // For anonymous users, usage is already tracked in localStorage
+            // No need for backend sync - localStorage is the single source of truth
+            console.log('Anonymous usage tracked locally via localStorage');
+          }
+
+          // Save chat session
+          if (messages.length > 0) {
+            const chatTitle = createChatTitle(userMessage.content);
+            const allMessages = [...messages, userMessage, { role: 'assistant', content: finalContent.trim() }];
+            const saveResult = await authService.saveChatSession(chatTitle, allMessages, currentMode, user);
+
+            if (saveResult?.session) {
+              const normalized = normalizeSessionForHistory(saveResult.session);
+              if (normalized) {
+                setChatHistory(prev => {
+                  const withoutTemp = prev.filter(chat => chat.id !== pendingChatSession?.id && chat.id !== normalized.id);
+                  return [normalized, ...withoutTemp];
+                });
+              }
+            } else if (isAuthenticated) {
+              refreshChatHistory();
+            }
+          }
+
         } catch (streamErr) {
           if (streamErr.name === 'AbortError') return;
           setIsStreaming(false);
@@ -1295,6 +2146,15 @@ const AstraApp = () => {
       setIsStreaming(false);
       setHasFirstToken(false);
       setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
+
+      // Revert optimistic update if API call failed
+      if (!isAuthenticated) {
+        setChatLimit(prev => ({
+          ...prev,
+          remaining: prev.remaining + 1,
+          used: Math.max(0, prev.used - 1)
+        }));
+      }
     } finally {
       abortControllerRef.current = null;
     }
@@ -1332,9 +2192,29 @@ const AstraApp = () => {
     setShowSidebar(false);
   };
 
-  const deleteChatSession = (session) => {
-    setChatHistory(prev => prev.filter(chat => chat.id !== session.id));
-  };
+  const deleteChatSession = useCallback(async (session) => {
+    if (!session) return;
+    const sessionId = session.id;
+    const isLocalOnly = !sessionId || String(sessionId).startsWith('local-');
+
+    setChatHistory(prev => prev.filter(chat => chat.id !== sessionId));
+
+    if (isLocalOnly) return;
+
+    try {
+      await authService.deleteChatSession(sessionId, user);
+      if (isAuthenticated) {
+        await refreshChatHistory();
+      }
+    } catch (error) {
+      console.error('Failed to delete chat session:', error);
+      if (isAuthenticated) {
+        await refreshChatHistory();
+      } else {
+        setChatHistory(prev => [session, ...prev]);
+      }
+    }
+  }, [isAuthenticated, refreshChatHistory, user]);
 
   // Removed all useEffect hooks that called scrollToBottom
 
@@ -1342,10 +2222,16 @@ const AstraApp = () => {
     <div style={{
       height: '100dvh', display: 'flex', flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
-      overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)'
+      overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)',
+      userSelect: 'none', outline: 'none'
     }}>
       {/* Toolbar */}
-      <ToolbarView onNewChat={resetChat} onToggleSidebar={() => setShowSidebar(true)} theme={theme} />
+      <ToolbarView
+        onNewChat={resetChat}
+        onToggleSidebar={() => setShowSidebar(true)}
+        theme={theme}
+        chatLimit={chatLimit}
+      />
 
       {/* Main */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden', minHeight: 0 }}>
@@ -1361,9 +2247,13 @@ const AstraApp = () => {
             paddingBottom: inputBarHeight + 16,  // prevent bottom clipping
             scrollPaddingBottom: inputBarHeight + 16,
             minHeight: 0,
-            WebkitOverflowScrolling: 'touch'
+            WebkitOverflowScrolling: 'touch',
+            userSelect: 'none',
+            outline: 'none'
           }}
           onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
+          onMouseDown={(e) => e.preventDefault()}
+          tabIndex={-1}
         >
           <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
             {messages.length === 0 && !isLoading && !isStreaming && (
@@ -1405,6 +2295,49 @@ const AstraApp = () => {
         </div>
       </div>
 
+      {/* Paywall Modal */}
+      <PaywallModal
+        isOpen={showPaywall}
+        onClose={() => setShowPaywall(false)}
+        theme={theme}
+        chatLimit={chatLimit}
+      />
+
+      <BillingModal
+        isOpen={showBilling}
+        onClose={handleCloseBilling}
+        theme={theme}
+        subscription={subscriptionInfo}
+        isLoading={isBillingLoading}
+        onSelectPlan={handleCheckoutPlan}
+        onManageSubscription={handleManageSubscription}
+        billingStatus={billingStatus}
+        error={billingError}
+        isProcessing={isBillingAction}
+      />
+
+      <ProfileModal
+        isOpen={showProfile}
+        onClose={handleCloseProfile}
+        theme={theme}
+        user={user}
+        profile={accountProfile}
+        subscription={subscriptionInfo}
+        onManageSubscription={isAuthenticated ? handleManageSubscription : undefined}
+        onUpdateProfile={handleUpdateProfile}
+        isSaving={isProfileSaving}
+        error={profileError}
+        successMessage={profileSuccess}
+      />
+
+      <SettingsModal
+        isOpen={showSettings}
+        onClose={handleCloseSettings}
+        theme={theme}
+        settings={appSettings}
+        onSettingChange={handleSettingChange}
+      />
+
       {/* Sidebar */}
       <Sidebar
         isOpen={showSidebar}
@@ -1412,8 +2345,17 @@ const AstraApp = () => {
         chatHistory={chatHistory}
         onSelectChat={loadChatSession}
         onDeleteChat={deleteChatSession}
-        onNewChat={() => { resetChat(); setShowSidebar(false); }}
+        onNewChat={resetChat}
+        onShowProfile={handleOpenProfile}
+        onShowSettings={handleOpenSettings}
+        onShowBilling={handleOpenBilling}
+        onShowLogout={handleAuthLogout}
         theme={theme}
+        user={user}
+        subscription={subscriptionInfo}
+        isAuthenticated={isAuthenticated}
+        profile={accountProfile}
+        onAuthPrompt={handleAuthPrompt}
       />
 
       {/* Citations */}
@@ -1652,7 +2594,6 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 `
   }}
 />
-
     </div>
   );
 };

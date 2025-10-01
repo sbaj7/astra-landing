@@ -2,11 +2,46 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Prevent text selection and cursor on non-input elements */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* Hide cursor/caret by default */
+  caret-color: transparent;
+}
+
+/* Allow text selection and cursor only on input elements */
+input,
+textarea,
+[contenteditable="true"],
+[contenteditable=""] {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  caret-color: auto;
+}
+
+/* Prevent focus outline on non-input clickable elements */
+button,
+div[onclick],
+span[onclick],
+[role="button"] {
+  outline: none;
+}
+
+/* Ensure text elements don't show cursor when clicked */
+p, span, div, h1, h2, h3, h4, h5, h6, label {
+  cursor: default;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   overflow: hidden;
+  /* Additional protection against text selection */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #root {
