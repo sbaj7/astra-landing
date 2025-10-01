@@ -1,9 +1,29 @@
 import Cookies from 'js-cookie';
+import supabase from './supabaseClient.js';
 
 // API configuration for production Supabase
 const AUTH_API_URL = 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/auth-management';
-const BILLING_API_URL = (import.meta?.env?.VITE_BILLING_API_URL) || `${import.meta?.env?.VITE_SUPABASE_URL || 'https://shwitfgtpfszjjoczbxp.supabase.co'}/functions/v1/billing`;
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8';
+
+const PLAN_PRICE_IDS = {
+  starter: import.meta.env.VITE_STRIPE_STARTER_PRICE_ID,
+  professional: import.meta.env.VITE_STRIPE_PRO_PRICE_ID,
+  enterprise: import.meta.env.VITE_STRIPE_ENTERPRISE_PRICE_ID
+};
+
+const PRICE_TO_PLAN = Object.fromEntries(
+  Object.entries(PLAN_PRICE_IDS)
+    .filter(([, priceId]) => Boolean(priceId))
+    .map(([planKey, priceId]) => [priceId, planKey])
+);
+
+const getPlanPriceId = (planKey) => {
+  const priceId = PLAN_PRICE_IDS[planKey];
+  if (!priceId) {
+    throw new Error(`Missing Stripe price id for plan "${planKey}". Ensure VITE_STRIPE_${planKey?.toUpperCase?.() || planKey}_PRICE_ID is set.`);
+  }
+  return priceId;
+};
 
 console.log('🔧 Auth Service: Production mode');
 
@@ -140,32 +160,6 @@ class AuthService {
       avatar_url: metadata.avatar_url || metadata.picture || null,
       metadata
     };
-  }
-
-  async callBillingAPI(action, data = {}) {
-    if (!BILLING_API_URL) {
-      throw new Error('Billing API is not configured');
-    }
-
-    try {
-      const response = await fetch(BILLING_API_URL, {
-        method: 'POST',
-        headers: this.getAuthHeaders(),
-        body: JSON.stringify({
-          action,
-          ...data
-        })
-      });
-
-      const payload = await response.json();
-      if (!response.ok) {
-        throw new Error(payload?.error || 'Billing API error');
-      }
-      return payload;
-    } catch (error) {
-      console.error('Billing API call failed:', error);
-      throw error;
-    }
   }
 
   getOrCreateAnonymousId() {
@@ -354,52 +348,96 @@ class AuthService {
     return `${minutes}m`;
   }
 
-  async createCheckoutSession(plan, supabaseUser, returnUrl) {
+  async createCheckoutSession(planKey, supabaseUser, returnUrl) {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    return await this.callBillingAPI('create_checkout_session', {
-      plan,
-      return_url: returnUrl,
-      supabase_user: normalizedUser,
-      auth0_user: {
-        sub: normalizedUser.id,
-        email: normalizedUser.email,
-        name: normalizedUser.full_name,
-        picture: normalizedUser.avatar_url
-      }
+    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
+    if (!syncedUser?.id) {
+      throw new Error('Failed to sync Supabase user for billing');
+    }
+
+    const priceId = getPlanPriceId(planKey);
+    const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
+
+    const { data, error } = await supabase.rpc('create_checkout_session', {
+      p_user_id: syncedUser.id,
+      p_price_id: priceId,
+      p_success_url: `${baseReturnUrl}?billing=success`,
+      p_cancel_url: `${baseReturnUrl}?billing=cancelled`
     });
+
+    if (error) {
+      console.error('create_checkout_session RPC failed:', error);
+      throw new Error(error.message || 'Unable to start checkout');
+    }
+
+    return data;
   }
 
   async createPortalSession(supabaseUser, returnUrl) {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    return await this.callBillingAPI('create_portal_session', {
-      return_url: returnUrl,
-      supabase_user: normalizedUser,
-      auth0_user: {
-        sub: normalizedUser.id,
-        email: normalizedUser.email,
-        name: normalizedUser.full_name,
-        picture: normalizedUser.avatar_url
-      }
+    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
+    if (!syncedUser?.id) {
+      throw new Error('Failed to sync Supabase user for billing');
+    }
+
+    const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
+
+    const { data, error } = await supabase.rpc('create_portal_session', {
+      p_user_id: syncedUser.id,
+      p_return_url: baseReturnUrl
     });
+
+    if (error) {
+      console.error('create_portal_session RPC failed:', error);
+      throw new Error(error.message || 'Unable to open billing portal');
+    }
+
+    return data;
   }
 
   async getSubscriptionStatus(supabaseUser) {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    return await this.callBillingAPI('get_subscription', {
-      supabase_user: normalizedUser,
-      auth0_user: {
-        sub: normalizedUser.id,
-        email: normalizedUser.email,
-        name: normalizedUser.full_name,
-        picture: normalizedUser.avatar_url
-      }
+    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
+    if (!syncedUser?.id) {
+      throw new Error('Failed to sync Supabase user for billing');
+    }
+
+    const { data, error } = await supabase.rpc('get_user_subscription', {
+      p_user_id: syncedUser.id
     });
+
+    if (error) {
+      console.error('get_user_subscription RPC failed:', error);
+      throw new Error(error.message || 'Unable to load subscription status');
+    }
+
+    const record = Array.isArray(data) ? data[0] : data;
+    if (!record) {
+      return { subscription: null };
+    }
+
+    const priceId = record.price_id || null;
+    const planKey = priceId ? PRICE_TO_PLAN[priceId] || null : null;
+    const currentPeriodEndSeconds = record.current_period_end
+      ? Math.floor(new Date(record.current_period_end).getTime() / 1000)
+      : null;
+
+    return {
+      subscription: {
+        id: record.id,
+        status: record.status,
+        current_period_end: currentPeriodEndSeconds,
+        current_period_start: record.current_period_start,
+        price_id: priceId,
+        plan_key: planKey
+      }
+    };
   }
 
   async updateUserProfile(supabaseUser, updates = {}) {
