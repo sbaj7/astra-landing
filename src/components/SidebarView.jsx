@@ -83,7 +83,7 @@ const SidebarView = ({
   onDismiss,
   chatHistory, 
   onSelectChat, 
-  onDeleteChat, 
+  onRequestDeleteChat, 
   onNewChat, 
   theme 
 }) => {
@@ -91,7 +91,7 @@ const SidebarView = ({
 
   const handleClearHistory = () => {
     if (chatHistory && chatHistory.length > 0) {
-      chatHistory.forEach(session => onDeleteChat(session));
+      chatHistory.forEach(session => onRequestDeleteChat?.(session));
     }
     onDismiss();
   };

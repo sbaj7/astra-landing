@@ -22,6 +22,7 @@ import BillingModal from './BillingModal.jsx';
 import BillingSuccessOverlay from './BillingSuccessOverlay.jsx';
 import ProfileModal from './ProfileModal.jsx';
 import SettingsModal from './SettingsModal.jsx';
+import DeleteChatModal from './DeleteChatModal.jsx';
 import authService from '../services/authService';
 import useIsMobile from '../hooks/useIsMobile.js';
 
@@ -1027,7 +1028,7 @@ const Sidebar = ({
   onClose,
   chatHistory,
   onSelectChat,
-  onDeleteChat,
+  onRequestDeleteChat,
   onNewChat,
   onShowProfile,
   onShowSettings,
@@ -1098,7 +1099,7 @@ const Sidebar = ({
         backgroundColor: `${theme.textSecondary}08`,
         cursor: 'pointer'
       }}
-      onClick={() => onSelectChat(chat)}
+        onClick={() => onSelectChat(chat)}
     >
       <span style={{
         flex: 1,
@@ -1113,7 +1114,7 @@ const Sidebar = ({
       <button
         onClick={(event) => {
           event.stopPropagation();
-          onDeleteChat(chat);
+          onRequestDeleteChat?.(chat);
         }}
         style={{
           border: 'none',
@@ -1452,7 +1453,9 @@ const InputBar = ({
     <div
       ref={containerRef}
       style={{
-        padding: isMobile ? '12px 12px 8px 12px' : '8px 16px 4px 16px',
+        paddingTop: isMobile ? 12 : 8,
+        paddingRight: isMobile ? 12 : 16,
+        paddingLeft: isMobile ? 12 : 16,
         paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
         backgroundColor: theme.backgroundSurface,
         borderTopLeftRadius: 20,
@@ -1678,6 +1681,8 @@ const AstraApp = () => {
   const [billingWelcomePlan, setBillingWelcomePlan] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [showDeleteChatModal, setShowDeleteChatModal] = useState(false);
+  const [chatPendingDeletion, setChatPendingDeletion] = useState(null);
   const [appSettings, setAppSettings] = useState({
     syncSystem: true,
     forceDark: false,
@@ -1936,6 +1941,18 @@ const AstraApp = () => {
 
   const handleCloseSettings = useCallback(() => {
     setShowSettings(false);
+  }, []);
+
+  const handleRequestDeleteChat = useCallback((session) => {
+    if (!session) return;
+    setChatPendingDeletion(session);
+    setShowDeleteChatModal(true);
+    setShowSidebar(false);
+  }, []);
+
+  const handleCancelDeleteChat = useCallback(() => {
+    setShowDeleteChatModal(false);
+    setChatPendingDeletion(null);
   }, []);
 
   const handleAuthLogout = useCallback(async () => {
@@ -2329,6 +2346,16 @@ const AstraApp = () => {
     }
   }, [isAuthenticated, refreshChatHistory, user]);
 
+  const handleConfirmDeleteChat = useCallback(async () => {
+    if (!chatPendingDeletion) return;
+    try {
+      await deleteChatSession(chatPendingDeletion);
+    } finally {
+      setShowDeleteChatModal(false);
+      setChatPendingDeletion(null);
+    }
+  }, [chatPendingDeletion, deleteChatSession]);
+
   // Removed all useEffect hooks that called scrollToBottom
 
   return (
@@ -2353,12 +2380,14 @@ const AstraApp = () => {
         <div
           ref={scrollRef}
           style={{
-            position:'relative',
-            zIndex:0,
+            position: 'relative',
+            zIndex: 0,
             flex: 1,
             overflowY: 'auto',
-            padding: isMobile ? '0 12px' : '0 16px',
-            paddingBottom: inputBarHeight + (isMobile ? 12 : 16),  // prevent bottom clipping
+            paddingTop: 0,
+            paddingRight: isMobile ? 12 : 16,
+            paddingLeft: isMobile ? 12 : 16,
+            paddingBottom: inputBarHeight + (isMobile ? 12 : 16), // prevent bottom clipping
             scrollPaddingBottom: inputBarHeight + (isMobile ? 12 : 16),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -2463,13 +2492,21 @@ const AstraApp = () => {
         onSettingChange={handleSettingChange}
       />
 
+      <DeleteChatModal
+        isOpen={showDeleteChatModal}
+        onConfirm={handleConfirmDeleteChat}
+        onCancel={handleCancelDeleteChat}
+        chat={chatPendingDeletion}
+        theme={theme}
+      />
+
       {/* Sidebar */}
       <Sidebar
         isOpen={showSidebar}
         onClose={() => setShowSidebar(false)}
         chatHistory={chatHistory}
         onSelectChat={loadChatSession}
-        onDeleteChat={deleteChatSession}
+        onRequestDeleteChat={handleRequestDeleteChat}
         onNewChat={resetChat}
         onShowProfile={handleOpenProfile}
         onShowSettings={handleOpenSettings}
