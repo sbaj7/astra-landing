@@ -3,12 +3,12 @@ import supabase from './supabaseClient.js';
 
 // API configuration for production Supabase
 const AUTH_API_URL = 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/auth-management';
+const BILLING_API_URL = (import.meta?.env?.VITE_BILLING_API_URL) || 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/billing-supabase';
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8';
 
 const PLAN_PRICE_IDS = {
-  starter: import.meta.env.VITE_STRIPE_STARTER_PRICE_ID,
-  professional: import.meta.env.VITE_STRIPE_PRO_PRICE_ID,
-  enterprise: import.meta.env.VITE_STRIPE_ENTERPRISE_PRICE_ID
+  plus: import.meta.env.VITE_STRIPE_PLUS_PRICE_ID,
+  pro: import.meta.env.VITE_STRIPE_PRO_PRICE_ID
 };
 
 const PRICE_TO_PLAN = Object.fromEntries(
@@ -26,6 +26,25 @@ const getPlanPriceId = (planKey) => {
 };
 
 console.log('🔧 Auth Service: Production mode');
+
+// Helper function to validate and ensure UUID format
+const validateAndFormatUserId = (userId) => {
+  if (!userId) return null;
+
+  const userIdStr = String(userId).trim();
+
+  // Check if it's already a valid UUID format (36 chars with hyphens)
+  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+  if (uuidRegex.test(userIdStr)) {
+    return userIdStr;
+  }
+
+  // If it's a Supabase auth user ID, it should already be UUID format
+  // Log for debugging what we're getting
+  console.warn('🚨 User ID not in UUID format:', userIdStr, 'Length:', userIdStr.length);
+
+  return userIdStr; // Return as-is and let the database handle it
+};
 
 class AuthService {
   constructor() {
@@ -214,6 +233,36 @@ class AuthService {
     }
   }
 
+  async callBillingAPI(action, data = {}) {
+    if (!BILLING_API_URL) {
+      throw new Error('Billing API is not configured');
+    }
+
+    console.log(`💳 Calling Billing API: ${action}`, BILLING_API_URL);
+
+    try {
+      const response = await fetch(BILLING_API_URL, {
+        method: 'POST',
+        headers: this.getAuthHeaders(),
+        body: JSON.stringify({
+          action,
+          ...data
+        })
+      });
+
+      const payload = await response.json();
+      console.log(`📥 Billing Response from ${action}:`, response.status, payload);
+
+      if (!response.ok) {
+        throw new Error(payload?.error || 'Billing API error');
+      }
+      return payload;
+    } catch (error) {
+      console.error('💳 Billing API call failed:', error);
+      throw error;
+    }
+  }
+
   async checkAnonymousLimit() {
     return await this.callAuthAPI('check-limit', {
       anonymous_id: this.anonymousId
@@ -352,92 +401,40 @@ class AuthService {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
-    if (!syncedUser?.id) {
-      throw new Error('Failed to sync Supabase user for billing');
-    }
+    console.log('💳 Creating checkout session for plan:', planKey);
 
-    const priceId = getPlanPriceId(planKey);
     const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
 
-    const { data, error } = await supabase.rpc('create_checkout_session', {
-      p_user_id: syncedUser.id,
-      p_price_id: priceId,
-      p_success_url: `${baseReturnUrl}?billing=success`,
-      p_cancel_url: `${baseReturnUrl}?billing=cancelled`
+    return await this.callBillingAPI('create_checkout_session', {
+      supabase_user: normalizedUser,
+      planKey: planKey,
+      return_url: baseReturnUrl
     });
-
-    if (error) {
-      console.error('create_checkout_session RPC failed:', error);
-      throw new Error(error.message || 'Unable to start checkout');
-    }
-
-    return data;
   }
 
   async createPortalSession(supabaseUser, returnUrl) {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
-    if (!syncedUser?.id) {
-      throw new Error('Failed to sync Supabase user for billing');
-    }
+    console.log('🚪 Creating portal session for user');
 
     const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
 
-    const { data, error } = await supabase.rpc('create_portal_session', {
-      p_user_id: syncedUser.id,
-      p_return_url: baseReturnUrl
+    return await this.callBillingAPI('create_portal_session', {
+      supabase_user: normalizedUser,
+      return_url: baseReturnUrl
     });
-
-    if (error) {
-      console.error('create_portal_session RPC failed:', error);
-      throw new Error(error.message || 'Unable to open billing portal');
-    }
-
-    return data;
   }
 
   async getSubscriptionStatus(supabaseUser) {
     const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
     if (!normalizedUser) throw new Error('Supabase user required for billing');
 
-    const syncedUser = await this.syncUserWithSupabase(supabaseUser);
-    if (!syncedUser?.id) {
-      throw new Error('Failed to sync Supabase user for billing');
-    }
+    console.log('📊 Getting subscription status for user');
 
-    const { data, error } = await supabase.rpc('get_user_subscription', {
-      p_user_id: syncedUser.id
+    return await this.callBillingAPI('get_subscription', {
+      supabase_user: normalizedUser
     });
-
-    if (error) {
-      console.error('get_user_subscription RPC failed:', error);
-      throw new Error(error.message || 'Unable to load subscription status');
-    }
-
-    const record = Array.isArray(data) ? data[0] : data;
-    if (!record) {
-      return { subscription: null };
-    }
-
-    const priceId = record.price_id || null;
-    const planKey = priceId ? PRICE_TO_PLAN[priceId] || null : null;
-    const currentPeriodEndSeconds = record.current_period_end
-      ? Math.floor(new Date(record.current_period_end).getTime() / 1000)
-      : null;
-
-    return {
-      subscription: {
-        id: record.id,
-        status: record.status,
-        current_period_end: currentPeriodEndSeconds,
-        current_period_start: record.current_period_start,
-        price_id: priceId,
-        plan_key: planKey
-      }
-    };
   }
 
   async updateUserProfile(supabaseUser, updates = {}) {

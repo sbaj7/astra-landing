@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSupabaseAuth } from './SupabaseAuthProvider.jsx';
 import { X, Zap, Shield, Clock } from 'lucide-react';
 import authService from '../../services/authService';
+import useIsMobile from '../../hooks/useIsMobile.js';
 
 const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
   const { signIn } = useSupabaseAuth();
   const [timeRemaining, setTimeRemaining] = useState('');
   const [authMessage, setAuthMessage] = useState('');
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (isOpen && chatLimit?.resetAt) {
@@ -60,7 +62,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '16px'
+      padding: isMobile ? '12px' : '16px'
     }}>
       {/* Backdrop */}
       <div
@@ -77,11 +79,11 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
       <div style={{
         position: 'relative',
         width: '100%',
-        maxWidth: '420px',
+        maxWidth: isMobile ? '100%' : '420px',
         backgroundColor: theme.backgroundSurface,
         borderRadius: '20px',
         boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        padding: '32px',
+        padding: isMobile ? '24px' : '32px',
         border: `1px solid ${theme.backgroundPrimary}`,
         fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif'
       }}>
@@ -90,9 +92,9 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
           onClick={onClose}
           style={{
             position: 'absolute',
-            top: '16px',
-            right: '16px',
-            padding: '8px',
+            top: isMobile ? '12px' : '16px',
+            right: isMobile ? '12px' : '16px',
+            padding: isMobile ? '6px' : '8px',
             borderRadius: '8px',
             border: 'none',
             background: 'transparent',
@@ -118,8 +120,8 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
         <div style={{ textAlign: 'center' }}>
           {/* Icon */}
           <div style={{
-            width: '64px',
-            height: '64px',
+            width: isMobile ? '56px' : '64px',
+            height: isMobile ? '56px' : '64px',
             margin: '0 auto 24px',
             borderRadius: '50%',
             backgroundColor: `${theme.accentSoftBlue}20`,
@@ -127,12 +129,12 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Zap size={28} color={theme.accentSoftBlue} />
+            <Zap size={isMobile ? 24 : 28} color={theme.accentSoftBlue} />
           </div>
 
           {/* Title */}
           <h3 style={{
-            fontSize: '24px',
+            fontSize: isMobile ? '22px' : '24px',
             fontWeight: '600',
             color: theme.textPrimary,
             margin: '0 0 12px 0',
@@ -143,7 +145,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
 
           {/* Description */}
           <p style={{
-            fontSize: '16px',
+            fontSize: isMobile ? '15px' : '16px',
             color: theme.textSecondary,
             margin: '0 0 16px 0',
             lineHeight: '1.5'
@@ -162,14 +164,14 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
               textAlign: 'center'
             }}>
               <div style={{
-                fontSize: '14px',
+                fontSize: isMobile ? '13px' : '14px',
                 color: theme.textSecondary,
                 marginBottom: '4px'
               }}>
                 Free chats reset in:
               </div>
               <div style={{
-                fontSize: '20px',
+                fontSize: isMobile ? '18px' : '20px',
                 fontWeight: '600',
                 color: theme.accentSoftBlue,
                 fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif'
@@ -188,20 +190,20 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
             textAlign: 'left'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Zap size={20} color={theme.accentSoftBlue} />
-              <span style={{ fontSize: '14px', color: theme.textPrimary }}>
+              <Zap size={isMobile ? 18 : 20} color={theme.accentSoftBlue} />
+              <span style={{ fontSize: isMobile ? '13px' : '14px', color: theme.textPrimary }}>
                 Unlimited medical consultations
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Shield size={20} color={theme.accentSoftBlue} />
-              <span style={{ fontSize: '14px', color: theme.textPrimary }}>
+              <Shield size={isMobile ? 18 : 20} color={theme.accentSoftBlue} />
+              <span style={{ fontSize: isMobile ? '13px' : '14px', color: theme.textPrimary }}>
                 Secure chat history & sessions
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Clock size={20} color={theme.accentSoftBlue} />
-              <span style={{ fontSize: '14px', color: theme.textPrimary }}>
+              <Clock size={isMobile ? 18 : 20} color={theme.accentSoftBlue} />
+              <span style={{ fontSize: isMobile ? '13px' : '14px', color: theme.textPrimary }}>
                 24/7 access to AI medical research
               </span>
             </div>
@@ -218,12 +220,12 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
               onClick={handleSignUp}
               style={{
                 width: '100%',
-                padding: '14px 24px',
+                padding: isMobile ? '12px 20px' : '14px 24px',
                 borderRadius: '12px',
                 border: 'none',
                 backgroundColor: theme.accentSoftBlue,
                 color: '#FFFFFF',
-                fontSize: '16px',
+                fontSize: isMobile ? '15px' : '16px',
                 fontWeight: '600',
                 cursor: 'pointer',
                 transition: 'all 0.2s',
@@ -246,12 +248,12 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
               onClick={handleSignIn}
               style={{
                 width: '100%',
-                padding: '14px 24px',
+                padding: isMobile ? '12px 20px' : '14px 24px',
                 borderRadius: '12px',
                 border: `1px solid ${theme.backgroundPrimary}`,
                 backgroundColor: 'transparent',
                 color: theme.textPrimary,
-                fontSize: '16px',
+                fontSize: isMobile ? '15px' : '16px',
                 fontWeight: '500',
                 cursor: 'pointer',
                 transition: 'all 0.2s'
@@ -269,7 +271,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
 
           {authMessage && (
             <p style={{
-              fontSize: '12px',
+              fontSize: isMobile ? '11px' : '12px',
               color: theme.accentSoftBlue,
               margin: 0,
               marginBottom: '16px'
@@ -280,7 +282,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
 
           {/* Fine print */}
           <p style={{
-            fontSize: '12px',
+            fontSize: isMobile ? '11px' : '12px',
             color: theme.textSecondary,
             margin: 0,
             lineHeight: '1.4'

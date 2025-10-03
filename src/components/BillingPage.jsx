@@ -3,6 +3,7 @@ import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import BillingModal from './BillingModal.jsx';
 import authService from '../services/authService';
 import { useTheme } from './Themes+Styles.jsx';
+import useIsMobile from '../hooks/useIsMobile.js';
 
 const getBillingStatusFromLocation = () => {
   if (typeof window === 'undefined') return null;
@@ -12,6 +13,7 @@ const getBillingStatusFromLocation = () => {
 const BillingPage = () => {
   const { user, isAuthenticated, isLoading } = useSupabaseAuth();
   const { colors: theme } = useTheme();
+  const isMobile = useIsMobile();
   const [subscription, setSubscription] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -108,6 +110,7 @@ const BillingPage = () => {
         billingStatus={billingStatus}
         error={error}
         isProcessing={isProcessing}
+        isMobile={isMobile}
       />
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Mail, CalendarDays, ExternalLink, Briefcase, Building2, Stethoscope } from 'lucide-react';
+import useIsMobile from '../hooks/useIsMobile.js';
 
 const formatDate = (dateString) => {
   if (!dateString) return null;
@@ -82,6 +83,8 @@ const ProfileModal = ({
 }) => {
   if (!isOpen) return null;
 
+  const isMobile = useIsMobile();
+
   const profileDetails = React.useMemo(
     () => (profile?.metadata && typeof profile.metadata === 'object' ? profile.metadata.profile || {} : {}),
     [profile]
@@ -153,7 +156,7 @@ const ProfileModal = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 24,
+        padding: isMobile ? 16 : 24,
         backgroundColor: 'rgba(0,0,0,0.45)'
       }}
       aria-modal="true"
@@ -164,10 +167,10 @@ const ProfileModal = ({
         style={{
           position: 'relative',
           width: '100%',
-          maxWidth: 520,
+          maxWidth: isMobile ? '100%' : 520,
           backgroundColor: theme.backgroundSurface,
-          borderRadius: 24,
-          padding: 32,
+          borderRadius: isMobile ? 20 : 24,
+          padding: isMobile ? 24 : 32,
           boxShadow: '0 25px 50px -20px rgba(15,23,42,0.35)',
           border: `1px solid ${theme.textSecondary}20`
         }}
@@ -177,10 +180,10 @@ const ProfileModal = ({
           aria-label="Close profile"
           style={{
             position: 'absolute',
-            top: 20,
-            right: 20,
-            width: 32,
-            height: 32,
+            top: isMobile ? 12 : 20,
+            right: isMobile ? 12 : 20,
+            width: isMobile ? 30 : 32,
+            height: isMobile ? 30 : 32,
             borderRadius: '50%',
             border: 'none',
             backgroundColor: `${theme.textSecondary}10`,
@@ -195,11 +198,11 @@ const ProfileModal = ({
         </button>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+          <div style={{ display: 'flex', alignItems: isMobile ? 'flex-start' : 'center', gap: 20, flexDirection: isMobile ? 'column' : 'row' }}>
             <div
               style={{
-                width: 72,
-                height: 72,
+                width: isMobile ? 64 : 72,
+                height: isMobile ? 64 : 72,
                 borderRadius: '50%',
                 backgroundColor: theme.accentSoftBlue,
                 backgroundImage: user?.picture ? `url(${user.picture})` : undefined,
@@ -209,15 +212,15 @@ const ProfileModal = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
-                fontSize: 28,
+                fontSize: isMobile ? 24 : 28,
                 fontWeight: 600
               }}
             >
               {!user?.picture ? initials : null}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <h2 style={{ margin: 0, fontSize: 24, color: theme.textPrimary }}>{trimmedFullName || user?.name || 'User'}</h2>
-              <span style={{ fontSize: 14, color: theme.textSecondary }}>{user?.email || 'No email on file'}</span>
+              <h2 style={{ margin: 0, fontSize: isMobile ? 20 : 24, color: theme.textPrimary }}>{trimmedFullName || user?.name || 'User'}</h2>
+              <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>{user?.email || 'No email on file'}</span>
             </div>
           </div>
 
@@ -282,12 +285,12 @@ const ProfileModal = ({
               </div>
             )}
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'stretch' : 'flex-end' }}>
               <button
                 type="submit"
                 disabled={!hasChanges || isSaving}
                 style={{
-                  padding: '10px 18px',
+                  padding: isMobile ? '10px 16px' : '10px 18px',
                   borderRadius: 999,
                   border: 'none',
                   backgroundColor: (!hasChanges || isSaving) ? `${theme.textSecondary}35` : theme.accentSoftBlue,

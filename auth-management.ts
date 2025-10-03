@@ -7,6 +7,54 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
 };
 
+type SubscriptionSnapshot = {
+  id: string | null;
+  status: string | null;
+  plan_key: string | null;
+  price_id: string | null;
+  current_period_end: number | null;
+  current_period_start: number | null;
+  cancel_at_period_end: boolean;
+  synced_at: string | null;
+};
+
+function extractSubscriptionMetadata(metadata: unknown): SubscriptionSnapshot | null {
+  if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) {
+    return null;
+  }
+  const subscription = (metadata as Record<string, any>).subscription;
+  if (!subscription || typeof subscription !== "object" || Array.isArray(subscription)) {
+    return null;
+  }
+
+  const planKey = typeof subscription.plan_key === "string" ? subscription.plan_key : null;
+  const status = typeof subscription.status === "string" ? subscription.status : null;
+
+  return {
+    id: typeof subscription.id === "string" ? subscription.id : null,
+    status,
+    plan_key: planKey,
+    price_id: typeof subscription.price_id === "string" ? subscription.price_id : null,
+    current_period_end: typeof subscription.current_period_end === "number" ? subscription.current_period_end : null,
+    current_period_start: typeof subscription.current_period_start === "number" ? subscription.current_period_start : null,
+    cancel_at_period_end: Boolean(subscription.cancel_at_period_end),
+    synced_at: typeof subscription.synced_at === "string" ? subscription.synced_at : null
+  };
+}
+
+function attachSubscriptionFields(user: any) {
+  if (!user) {
+    return null;
+  }
+  const subscription = extractSubscriptionMetadata(user.metadata);
+  return {
+    ...user,
+    subscription,
+    subscription_plan: subscription?.plan_key ?? null,
+    subscription_status: subscription?.status ?? null
+  };
+}
+
 serve(async (req)=>{
   if (req.method === "OPTIONS") {
     return new Response("ok", {
@@ -240,8 +288,9 @@ async function handleIncrementUsage(body, supabase) {
     }).eq("anonymous_id", anonymous_id);
     await supabase.from("anonymous_limits").delete().eq("anonymous_id", anonymous_id);
   }
+  const responseUser = attachSubscriptionFields(targetUser);
   return new Response(JSON.stringify({
-    user: targetUser
+    user: responseUser
   }), {
     status: 200,
     headers: {
@@ -481,8 +530,9 @@ async function handleDeleteSession(body, supabase) {
       }
     });
   }
+  const responseUser = attachSubscriptionFields(updatedUser);
   return new Response(JSON.stringify({
-    user: updatedUser
+    user: responseUser
   }), {
     status: 200,
     headers: {

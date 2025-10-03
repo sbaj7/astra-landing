@@ -1,21 +1,24 @@
 import React from 'react';
 import { X, Monitor, Moon, Globe, ShieldCheck } from 'lucide-react';
+import useIsMobile from '../hooks/useIsMobile.js';
 
-const ToggleRow = ({ label, description, value, onChange, theme, disabled }) => (
+const ToggleRow = ({ label, description, value, onChange, theme, disabled, isMobile }) => (
   <div
     style={{
       display: 'flex',
+      flexDirection: isMobile ? 'column' : 'row',
       justifyContent: 'space-between',
-      alignItems: 'center',
+      alignItems: isMobile ? 'flex-start' : 'center',
+      gap: isMobile ? 12 : 0,
       padding: '14px 0',
       borderBottom: `1px solid ${theme.textSecondary}15`
     }}
   >
-    <div style={{ maxWidth: '70%' }}>
+    <div style={{ maxWidth: isMobile ? '100%' : '70%' }}>
       <div style={{ fontSize: 15, fontWeight: 600, color: theme.textPrimary }}>{label}</div>
-      <div style={{ fontSize: 13, color: theme.textSecondary, marginTop: 4 }}>{description}</div>
+      <div style={{ fontSize: 13, color: theme.textSecondary, marginTop: 4, lineHeight: 1.5 }}>{description}</div>
     </div>
-    <label style={{ position: 'relative', display: 'inline-block', width: 48, height: 24 }}>
+    <label style={{ position: 'relative', display: 'inline-block', width: 48, height: 24, alignSelf: isMobile ? 'flex-end' : 'center' }}>
       <input
         type="checkbox"
         checked={value}
@@ -85,6 +88,8 @@ const SettingsModal = ({
 }) => {
   if (!isOpen) return null;
 
+  const isMobile = useIsMobile();
+
   const handleChange = (key) => (value) => {
     onSettingChange?.(key, value);
   };
@@ -98,7 +103,7 @@ const SettingsModal = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 24,
+        padding: isMobile ? 16 : 24,
         backgroundColor: 'rgba(0,0,0,0.45)'
       }}
       aria-modal="true"
@@ -109,12 +114,12 @@ const SettingsModal = ({
         style={{
           position: 'relative',
           width: '100%',
-          maxWidth: 640,
+          maxWidth: isMobile ? '100%' : 640,
           maxHeight: '95vh',
           overflowY: 'auto',
           backgroundColor: theme.backgroundSurface,
-          borderRadius: 24,
-          padding: '32px 36px',
+          borderRadius: isMobile ? 20 : 24,
+          padding: isMobile ? '24px 24px' : '32px 36px',
           boxShadow: '0 25px 60px -20px rgba(15,23,42,0.35)',
           border: `1px solid ${theme.textSecondary}20`
         }}
@@ -124,10 +129,10 @@ const SettingsModal = ({
           aria-label="Close settings"
           style={{
             position: 'absolute',
-            top: 20,
-            right: 20,
-            width: 32,
-            height: 32,
+            top: isMobile ? 12 : 20,
+            right: isMobile ? 12 : 20,
+            width: isMobile ? 30 : 32,
+            height: isMobile ? 30 : 32,
             borderRadius: '50%',
             border: 'none',
             backgroundColor: `${theme.textSecondary}10`,
@@ -143,8 +148,8 @@ const SettingsModal = ({
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           <div>
-            <h2 style={{ margin: 0, fontSize: 24, color: theme.textPrimary }}>Settings</h2>
-            <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6 }}>
+            <h2 style={{ margin: 0, fontSize: isMobile ? 22 : 24, color: theme.textPrimary }}>Settings</h2>
+            <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6, fontSize: isMobile ? 13 : 14 }}>
               Personalise Astra to match your practice and workflow. More controls are coming soon.
             </p>
           </div>
@@ -158,6 +163,7 @@ const SettingsModal = ({
                 onChange={handleChange('syncSystem')}
                 theme={theme}
                 disabled
+                isMobile={isMobile}
               />
               <ToggleRow
                 label="Use dark mode"
@@ -166,12 +172,13 @@ const SettingsModal = ({
                 onChange={handleChange('forceDark')}
                 theme={theme}
                 disabled
+                isMobile={isMobile}
               />
             </SettingsSection>
 
             <SettingsSection icon={Globe} title="Language" theme={theme}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <span style={{ fontSize: 14, color: theme.textSecondary }}>Primary language</span>
+                <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>Primary language</span>
                 <select
                   value={settings?.language || 'en-US'}
                   onChange={(event) => handleChange('language')(event.target.value)}
@@ -182,7 +189,7 @@ const SettingsModal = ({
                     border: `1px solid ${theme.textSecondary}25`,
                     backgroundColor: theme.backgroundPrimary,
                     color: theme.textPrimary,
-                    fontSize: 14
+                    fontSize: isMobile ? 13 : 14
                   }}
                 >
                   <option value="en-US">English (US)</option>
@@ -199,6 +206,7 @@ const SettingsModal = ({
                 onChange={handleChange('requireLogin')}
                 theme={theme}
                 disabled
+                isMobile={isMobile}
               />
               <ToggleRow
                 label="Enable PHI mode"
@@ -207,6 +215,7 @@ const SettingsModal = ({
                 onChange={handleChange('phiMode')}
                 theme={theme}
                 disabled
+                isMobile={isMobile}
               />
             </SettingsSection>
           </div>

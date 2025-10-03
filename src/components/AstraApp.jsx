@@ -19,9 +19,11 @@ import {
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal';
 import BillingModal from './BillingModal.jsx';
+import BillingSuccessOverlay from './BillingSuccessOverlay.jsx';
 import ProfileModal from './ProfileModal.jsx';
 import SettingsModal from './SettingsModal.jsx';
 import authService from '../services/authService';
+import useIsMobile from '../hooks/useIsMobile.js';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -555,7 +557,8 @@ const ToolbarView = ({
   onNewChat,
   onToggleSidebar,
   theme,
-  chatLimit
+  chatLimit,
+  isMobile
 }) => {
   const [newChatCooldown, setNewChatCooldown] = useState(false);
   const {
@@ -583,18 +586,26 @@ const ToolbarView = ({
 
   return (
     <div style={{
-      height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center',
-      padding: '0 16px', backgroundColor: theme.backgroundSurface,
-      borderBottomLeftRadius: 20, borderBottomRightRadius: 20,
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)', position: 'relative', zIndex: 10, minHeight: 52
+      height: isMobile ? 56 : 52,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: `0 ${isMobile ? 12 : 16}px`,
+      backgroundColor: theme.backgroundSurface,
+      borderBottomLeftRadius: 20,
+      borderBottomRightRadius: 20,
+      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      position: 'relative',
+      zIndex: 10,
+      minHeight: isMobile ? 56 : 52
     }}>
       <button
         onClick={onToggleSidebar}
         aria-label="Open sidebar"
         style={{
           position: 'absolute',
-          left: '16px',
-          padding: 8,
+          left: isMobile ? 12 : 16,
+          padding: isMobile ? 6 : 8,
           borderRadius: 8,
           border: 'none',
           background: 'transparent',
@@ -610,23 +621,25 @@ const ToolbarView = ({
       <h1 style={{
         color: theme.textPrimary,
         fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-        fontSize: 28, margin: 0, fontWeight: 400
+        fontSize: isMobile ? 24 : 28,
+        margin: 0,
+        fontWeight: 400
       }}>
         Astra
       </h1>
 
       <div style={{
         position: 'absolute',
-        right: '16px',
+        right: isMobile ? 12 : 16,
         display: 'flex',
         alignItems: 'center',
-        gap: '12px'
+        gap: isMobile ? 8 : 12
       }}>
         {/* Chat Counter for Anonymous Users */}
         {!isLoggedIn && !authStateLoading && (
           <span style={{
             color: theme.textPrimary,
-            fontSize: '14px',
+            fontSize: isMobile ? '12px' : '14px',
             fontWeight: '500'
           }}>
             {chatLimit.remaining} free left
@@ -638,12 +651,12 @@ const ToolbarView = ({
           <button
             onClick={() => handleLogin('signUp')}
             style={{
-              padding: '8px 16px',
+              padding: isMobile ? '6px 12px' : '8px 16px',
               borderRadius: '20px',
               border: 'none',
               backgroundColor: 'rgba(255, 255, 255, 0.2)',
               color: theme.textPrimary,
-              fontSize: '14px',
+              fontSize: isMobile ? '12px' : '14px',
               fontWeight: '500',
               cursor: 'pointer',
               display: 'flex',
@@ -662,7 +675,7 @@ const ToolbarView = ({
           disabled={newChatCooldown}
           aria-label="New chat"
           style={{
-            padding: 8,
+            padding: isMobile ? 6 : 8,
             borderRadius: 8,
             border: 'none',
             background: 'transparent',
@@ -681,14 +694,14 @@ const ToolbarView = ({
   );
 };
 
-const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
+const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }) => {
   const modes = [
     { key: 'search', title: 'Research', icon: Search },
     { key: 'reason', title: 'DDx', icon: Sparkles },
     { key: 'write', title: 'A&P', icon: FileText }
   ];
   return (
-    <div style={{ display: 'flex', gap: 6 }}>
+    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: isMobile ? 'wrap' : 'nowrap' }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = currentMode === key;
         return (
@@ -698,11 +711,18 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
             disabled={isDisabled}
             aria-pressed={isSelected}
             style={{
-              display: 'flex', alignItems: 'center', gap: 4, padding: '6px 10px', borderRadius: 50,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4,
+              padding: isMobile ? '5px 10px' : '6px 10px',
+              borderRadius: 50,
               border: `1px solid ${theme.textSecondary}50`,
               backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
               color: isSelected ? '#fff' : theme.textPrimary,
-              fontSize: 12, fontWeight: 500, cursor: 'pointer', transition: 'all .2s ease',
+              fontSize: isMobile ? 11 : 12,
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all .2s ease',
               opacity: isDisabled ? 0.5 : 1
             }}
           >
@@ -715,11 +735,11 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme }) => {
   );
 };
 
-const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
+const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
   const queries = sampleQueries[currentMode] || sampleQueries.search;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '32px 16px', height: '100%', gap: 24 }}>
-      <div style={{ textAlign: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '24px 12px' : '32px 16px', height: '100%', gap: isMobile ? 20 : 24 }}>
+      <div style={{ textAlign: 'center', width: '100%' }}>
         <div style={{ width: 36, height: 36, margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
             <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={`${theme.grayPrimary}40`} />
@@ -728,19 +748,29 @@ const EmptyState = ({ currentMode, onSampleTapped, theme }) => {
         <h2 style={{
           color: `${theme.grayPrimary}60`,
           fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-          fontSize: 36, lineHeight: 1.1, margin: 0, maxWidth: 220, fontWeight: 300
+          fontSize: isMobile ? 28 : 36,
+          lineHeight: 1.1,
+          margin: 0,
+          maxWidth: isMobile ? 200 : 220,
+          fontWeight: 300,
+          marginInline: 'auto'
         }}>
           Uncertainty ends here.
         </h2>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: '100%', maxWidth: 448, padding: '0 32px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: '100%', maxWidth: 448, padding: isMobile ? '0 12px' : '0 32px' }}>
         {queries.map((q, i) => (
           <button
             key={i}
             onClick={() => onSampleTapped(q)}
             style={{
-              width: '100%', padding: '10px 20px', borderRadius: 50, fontSize: 12, fontWeight: 500, textAlign: 'center',
+              width: '100%',
+              padding: isMobile ? '9px 16px' : '10px 20px',
+              borderRadius: 50,
+              fontSize: isMobile ? 11 : 12,
+              fontWeight: 500,
+              textAlign: 'center',
               lineHeight: 1.4, backgroundColor: `${theme.grayPrimary}08`, border: `0.5px solid ${theme.grayPrimary}20`,
               color: `${theme.grayPrimary}70`, cursor: 'pointer', transition: 'all .2s ease'
             }}
@@ -1008,7 +1038,8 @@ const Sidebar = ({
   subscription,
   isAuthenticated,
   profile,
-  onAuthPrompt
+  onAuthPrompt,
+  isMobile
 }) => {
   if (!isOpen) return null;
 
@@ -1098,11 +1129,11 @@ const Sidebar = ({
   );
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 60, display: 'flex' }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: 60, display: 'flex', flexDirection: 'row' }}>
       <aside
         style={{
-          width: 320,
-          maxWidth: '92vw',
+          width: isMobile ? '100vw' : 320,
+          maxWidth: isMobile ? '100vw' : '92vw',
           height: '100%',
           backgroundColor: `${theme.backgroundSurface}`,
           color: theme.textPrimary,
@@ -1111,18 +1142,33 @@ const Sidebar = ({
           boxShadow: '0 0 48px rgba(0,0,0,0.35)'
         }}
       >
-        <div style={{ padding: '24px 20px 12px', display: 'flex', alignItems: 'center', gap: 10 }}>
+        <div style={{ padding: isMobile ? '20px 18px 10px' : '24px 20px 12px', display: 'flex', alignItems: 'center', gap: 10, justifyContent: 'space-between' }}>
           <div style={{ width: 10, height: 10, borderRadius: '50%', backgroundColor: theme.accentSoftBlue }} />
           <span style={{ fontSize: 18, fontWeight: 600 }}>Astra</span>
+          {isMobile && (
+            <button
+              onClick={onClose}
+              aria-label="Close menu"
+              style={{
+                border: 'none',
+                background: 'transparent',
+                color: theme.textSecondary,
+                cursor: 'pointer',
+                padding: 4
+              }}
+            >
+              <X size={18} />
+            </button>
+          )}
         </div>
 
-        <div style={{ padding: '0 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ padding: isMobile ? '0 18px' : '0 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
           <button
             onClick={() => { onNewChat(); onClose(); }}
             style={{
               border: 'none',
               borderRadius: 999,
-              padding: '10px 16px',
+              padding: isMobile ? '10px 14px' : '10px 16px',
               backgroundColor: theme.accentSoftBlue,
               color: '#fff',
               fontSize: 14,
@@ -1139,7 +1185,7 @@ const Sidebar = ({
           </div>
         </div>
 
-        <div style={{ flex: 1, overflowY: 'auto', padding: '16px 20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <div style={{ flex: 1, overflowY: 'auto', padding: isMobile ? '16px 18px 24px' : '16px 20px 24px', display: 'flex', flexDirection: 'column', gap: 10 }}>
           {chatHistory.length === 0 && (
             <div style={{
               padding: '24px 18px',
@@ -1164,7 +1210,7 @@ const Sidebar = ({
 
         <div
           style={{
-            padding: '16px 20px',
+            padding: isMobile ? '16px 18px' : '16px 20px',
             borderTop: `1px solid ${theme.textSecondary}15`,
             display: 'flex',
             flexDirection: 'column',
@@ -1281,7 +1327,9 @@ const Sidebar = ({
           )}
         </div>
       </aside>
-      <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
+      {!isMobile && (
+        <div style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} onClick={onClose} />
+      )}
     </div>
   );
 };
@@ -1343,7 +1391,8 @@ const InputBar = ({
   isLoading,
   speechRecognition,
   theme,
-  onHeightChange
+  onHeightChange,
+  isMobile
 }) => {
   const containerRef = useRef(null);
   const textareaRef = useRef(null);
@@ -1402,7 +1451,14 @@ const InputBar = ({
   return (
     <div
       ref={containerRef}
-      style={{ padding: '8px 16px 4px 16px', paddingBottom: 'max(8px, env(safe-area-inset-bottom))', backgroundColor: theme.backgroundSurface, borderTopLeftRadius: 20, borderTopRightRadius: 20, boxShadow: '0 -2px 8px rgba(0,0,0,0.1)' }}
+      style={{
+        padding: isMobile ? '12px 12px 8px 12px' : '8px 16px 4px 16px',
+        paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
+        backgroundColor: theme.backgroundSurface,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        boxShadow: '0 -2px 8px rgba(0,0,0,0.1)'
+      }}
     >
       <div style={{ position: 'relative', marginBottom: 0, border: 'none', outline: 'none' }}>
         <textarea
@@ -1418,9 +1474,21 @@ const InputBar = ({
           placeholder={getPlaceholder()}
           disabled={isDisabled}
           style={{
-            width: '100%', padding: '8px 8px', borderRadius: 12, resize: 'none', border: 'none', outline: 'none',
-            fontSize: 16, lineHeight: 1.5, backgroundColor: theme.backgroundSurface, color: theme.textPrimary,
-            height: `${textareaHeight}px`, minHeight: 40, maxHeight: 120, fontFamily: 'inherit', boxSizing: 'border-box'
+            width: '100%',
+            padding: isMobile ? '8px 10px' : '8px 12px',
+            borderRadius: 12,
+            resize: 'none',
+            border: 'none',
+            outline: 'none',
+            fontSize: isMobile ? 15 : 16,
+            lineHeight: 1.5,
+            backgroundColor: theme.backgroundSurface,
+            color: theme.textPrimary,
+            height: `${textareaHeight}px`,
+            minHeight: isMobile ? 36 : 40,
+            maxHeight: isMobile ? 100 : 120,
+            fontFamily: 'inherit',
+            boxSizing: 'border-box'
           }}
         />
 
@@ -1436,37 +1504,61 @@ const InputBar = ({
         )}
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: -8 }}>
-        <ModeSwitcher currentMode={currentMode} onModeChange={onModeChange} isDisabled={isStreaming || isLoading} theme={theme} />
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: -8, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 8 : 0 }}>
+        <ModeSwitcher
+          currentMode={currentMode}
+          onModeChange={onModeChange}
+          isDisabled={isStreaming || isLoading}
+          theme={theme}
+          isMobile={isMobile}
+        />
+        <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 6 : 8, marginLeft: isMobile ? 'auto' : 0 }}>
           <button
             onClick={speechRecognition.toggleRecording}
             disabled={!speechRecognition.isAvailable || isStreaming || isLoading}
             aria-pressed={speechRecognition.isRecording}
             aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
-            style={{ padding: 8, borderRadius: '50%', border: 'none', background: 'transparent', cursor: 'pointer',
+            style={{
+              padding: isMobile ? 6 : 8,
+              borderRadius: '50%',
+              border: 'none',
+              background: 'transparent',
+              cursor: 'pointer',
               transform: speechRecognition.isRecording ? 'scale(1.1)' : 'scale(1)',
               color: speechRecognition.isRecording ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!speechRecognition.isAvailable || isStreaming || isLoading) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              opacity: (!speechRecognition.isAvailable || isStreaming || isLoading) ? 0.5 : 1,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            {speechRecognition.isRecording ? <Square size={28} fill="currentColor" /> : <Mic size={28} />}
+            {speechRecognition.isRecording ? <Square size={isMobile ? 24 : 28} fill="currentColor" /> : <Mic size={isMobile ? 24 : 28} />}
           </button>
 
           <button
             onClick={isStreaming ? onStop : onSend}
             disabled={!isStreaming && !query.trim()}
             aria-label={isStreaming ? 'Stop response' : 'Send'}
-            style={{ padding: 8, borderRadius: '50%', border: 'none', background: 'transparent', cursor: 'pointer',
+            style={{
+              padding: isMobile ? 6 : 8,
+              borderRadius: '50%',
+              border: 'none',
+              background: 'transparent',
+              cursor: 'pointer',
               color: isStreaming ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!isStreaming && !query.trim()) ? 0.5 : 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
           >
-            {isStreaming ? <Square size={28} fill="currentColor" /> : <ArrowUp size={28} />}
+            {isStreaming ? <Square size={isMobile ? 24 : 28} fill="currentColor" /> : <ArrowUp size={isMobile ? 24 : 28} />}
           </button>
         </div>
       </div>
 
       <div style={{ textAlign: 'center', marginTop: 0 }}>
-        <p style={{ fontSize: 12, color: theme.textSecondary, margin: 0 }}>Astra can make mistakes. Check critical info.</p>
+        <p style={{ fontSize: isMobile ? 11 : 12, color: theme.textSecondary, margin: 0 }}>Astra can make mistakes. Check critical info.</p>
       </div>
     </div>
   );
@@ -1532,6 +1624,7 @@ const normalizeSessionForHistory = (session) => {
 const AstraApp = () => {
   const { colors: theme, isDark } = useTheme();
   const speechRecognition = useSpeechRecognition();
+  const isMobile = useIsMobile();
 
   // Supabase auth
   const {
@@ -1581,6 +1674,8 @@ const AstraApp = () => {
   const [isBillingAction, setIsBillingAction] = useState(false);
   const [billingError, setBillingError] = useState('');
   const [billingStatus, setBillingStatus] = useState(null);
+  const [showBillingWelcome, setShowBillingWelcome] = useState(false);
+  const [billingWelcomePlan, setBillingWelcomePlan] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [appSettings, setAppSettings] = useState({
@@ -1684,6 +1779,16 @@ const AstraApp = () => {
     const newUrl = `${window.location.origin}${window.location.pathname}${query ? `?${query}` : ''}`;
     window.history.replaceState({}, '', newUrl);
   }, [isAuthenticated, user, refreshSubscription]);
+
+  useEffect(() => {
+    if (billingStatus !== 'success') return;
+    const planKey = subscriptionInfo?.plan_key;
+    if (!planKey) return;
+
+    setBillingWelcomePlan(planKey);
+    setShowBillingWelcome(true);
+    setBillingStatus(null);
+  }, [billingStatus, subscriptionInfo]);
 
   useEffect(() => {
     if (!profileSuccess) return;
@@ -1816,6 +1921,11 @@ const AstraApp = () => {
   const handleCloseBilling = useCallback(() => {
     setShowBilling(false);
     setBillingError('');
+  }, []);
+
+  const handleCloseBillingWelcome = useCallback(() => {
+    setShowBillingWelcome(false);
+    setBillingWelcomePlan(null);
   }, []);
 
   const handleCloseProfile = useCallback(() => {
@@ -2078,11 +2188,14 @@ const AstraApp = () => {
             }
           }
 
-          if (finalContent.trim()) {
+          const trimmedAssistantContent = finalContent.trim();
+          let persistedMessages = null;
+
+          if (trimmedAssistantContent) {
             const assistantMessage = {
               id: Date.now() + 1,
               role: 'assistant',
-              content: finalContent.trim(),
+              content: trimmedAssistantContent,
               citations: collectedCitations,
               timestamp: new Date(),
               isStreamingComplete: true
@@ -2091,11 +2204,12 @@ const AstraApp = () => {
             setMessages(prev => [...prev, assistantMessage]);
 
             const generatedTitle = createChatTitle(userMessage.content);
+            persistedMessages = [...messages, userMessage, { role: 'assistant', content: trimmedAssistantContent }];
             const chatSession = {
               id: `local-${Date.now()}`,
               title: generatedTitle,
               displayTitle: generatedTitle,
-              messages: [...messages, userMessage, assistantMessage],
+              messages: persistedMessages,
               timestamp: new Date(),
               wasInClinicalMode: false
             };
@@ -2103,9 +2217,9 @@ const AstraApp = () => {
             setChatHistory(prev => [chatSession, ...prev]);
           }
 
-          setIsStreaming(false);
-          setStreamingContent('');
-          setHasFirstToken(false);
+            setIsStreaming(false);
+            setStreamingContent('');
+            setHasFirstToken(false);
 
           // Handle usage tracking and session saving
           if (!isAuthenticated) {
@@ -2115,10 +2229,9 @@ const AstraApp = () => {
           }
 
           // Save chat session
-          if (messages.length > 0) {
+          if (persistedMessages && persistedMessages.length > 0) {
             const chatTitle = createChatTitle(userMessage.content);
-            const allMessages = [...messages, userMessage, { role: 'assistant', content: finalContent.trim() }];
-            const saveResult = await authService.saveChatSession(chatTitle, allMessages, currentMode, user);
+            const saveResult = await authService.saveChatSession(chatTitle, persistedMessages, currentMode, user);
 
             if (saveResult?.session) {
               const normalized = normalizeSessionForHistory(saveResult.session);
@@ -2231,6 +2344,7 @@ const AstraApp = () => {
         onToggleSidebar={() => setShowSidebar(true)}
         theme={theme}
         chatLimit={chatLimit}
+        isMobile={isMobile}
       />
 
       {/* Main */}
@@ -2243,9 +2357,9 @@ const AstraApp = () => {
             zIndex:0,
             flex: 1,
             overflowY: 'auto',
-            padding: '0 16px',
-            paddingBottom: inputBarHeight + 16,  // prevent bottom clipping
-            scrollPaddingBottom: inputBarHeight + 16,
+            padding: isMobile ? '0 12px' : '0 16px',
+            paddingBottom: inputBarHeight + (isMobile ? 12 : 16),  // prevent bottom clipping
+            scrollPaddingBottom: inputBarHeight + (isMobile ? 12 : 16),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
             userSelect: 'none',
@@ -2255,9 +2369,9 @@ const AstraApp = () => {
           onMouseDown={(e) => e.preventDefault()}
           tabIndex={-1}
         >
-          <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
+          <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
             {messages.length === 0 && !isLoading && !isStreaming && (
-              <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} />
+              <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} isMobile={isMobile} />
             )}
 
             {messages.map((message) => (
@@ -2276,8 +2390,8 @@ const AstraApp = () => {
         </div>
 
         {/* Input - matching width container */}
-        <div style={{ flexShrink: 0, padding: '0 16px', boxSizing: 'border-box', width: '100%' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto', width: '100%' }}>
+        <div style={{ flexShrink: 0, padding: isMobile ? '0 12px' : '0 16px', boxSizing: 'border-box', width: '100%' }}>
+          <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%' }}>
             <InputBar
               query={query}
               setQuery={setQuery}
@@ -2290,6 +2404,7 @@ const AstraApp = () => {
               speechRecognition={speechRecognition}
               theme={theme}
               onHeightChange={setInputBarHeight}
+              isMobile={isMobile}
             />
           </div>
         </div>
@@ -2314,7 +2429,17 @@ const AstraApp = () => {
         billingStatus={billingStatus}
         error={billingError}
         isProcessing={isBillingAction}
+        isMobile={isMobile}
       />
+
+      {showBillingWelcome && billingWelcomePlan && (
+        <BillingSuccessOverlay
+          planKey={billingWelcomePlan}
+          onClose={handleCloseBillingWelcome}
+          theme={theme}
+          isMobile={isMobile}
+        />
+      )}
 
       <ProfileModal
         isOpen={showProfile}
@@ -2356,6 +2481,7 @@ const AstraApp = () => {
         isAuthenticated={isAuthenticated}
         profile={accountProfile}
         onAuthPrompt={handleAuthPrompt}
+        isMobile={isMobile}
       />
 
       {/* Citations */}

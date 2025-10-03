@@ -3,29 +3,30 @@ import { X, Check, Loader2, ExternalLink } from 'lucide-react';
 
 const plans = [
   {
-    id: 'starter',
-    name: 'Starter',
-    price: '$29',
+    id: 'plus',
+    name: 'Plus',
+    price: '$30',
     cadence: 'per month',
-    description: 'For individual clinicians who need deeper research support.',
+    description: 'For individual clinicians who need enhanced clinical support.',
     features: [
       'Unlimited research chats',
-      'Priority access to reasoning mode',
-      'Save & export encounters',
-      'Email support'
+      'A&P clinical note rewriting',
+      'Chat history sync across devices',
+      'Priority email support'
     ]
   },
   {
-    id: 'professional',
-    name: 'Professional',
-    price: '$79',
+    id: 'pro',
+    name: 'Pro',
+    price: '$70',
     cadence: 'per month',
-    description: 'For teams and power users who need collaborative tooling.',
+    description: 'For advanced practitioners who need comprehensive clinical tools.',
     features: [
-      'Everything in Starter',
-      'Team workspaces (up to 5 seats)',
-      'One-click guideline search',
-      'Premium evidence packs & pathways'
+      'Everything in Plus',
+      'Priority reasoning mode access',
+      'Advanced clinical evidence packs',
+      'Premium diagnostic pathways',
+      'Priority support & consultation'
     ]
   }
 ];
@@ -73,7 +74,8 @@ const BillingModal = ({
   onManageSubscription,
   billingStatus,
   error,
-  isProcessing
+  isProcessing,
+  isMobile = false
 }) => {
   if (!isOpen) return null;
 
@@ -90,7 +92,7 @@ const BillingModal = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 24,
+        padding: isMobile ? 16 : 24,
         backgroundColor: 'rgba(0,0,0,0.5)'
       }}
       role="dialog"
@@ -109,12 +111,12 @@ const BillingModal = ({
         style={{
           position: 'relative',
           width: '100%',
-          maxWidth: 900,
+          maxWidth: isMobile ? '100%' : 900,
           maxHeight: '95vh',
           overflowY: 'auto',
           backgroundColor: theme.backgroundSurface,
-          borderRadius: 24,
-          padding: '32px 36px 40px',
+          borderRadius: isMobile ? 20 : 24,
+          padding: isMobile ? '24px 20px 28px' : '32px 36px 40px',
           boxShadow: '0 30px 60px -15px rgba(15,23,42,0.35)',
           border: `1px solid ${theme.textSecondary}1f`
         }}
@@ -123,10 +125,10 @@ const BillingModal = ({
           onClick={onClose}
           style={{
             position: 'absolute',
-            top: 20,
-            right: 20,
-            width: 36,
-            height: 36,
+            top: isMobile ? 12 : 20,
+            right: isMobile ? 12 : 20,
+            width: isMobile ? 32 : 36,
+            height: isMobile ? 32 : 36,
             borderRadius: '50%',
             border: 'none',
             backgroundColor: `${theme.textSecondary}15`,
@@ -143,8 +145,8 @@ const BillingModal = ({
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginBottom: 32 }}>
           <div>
-            <h2 style={{ margin: 0, fontSize: 28, fontWeight: 600, color: theme.textPrimary }}>Billing & plans</h2>
-            <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6 }}>
+            <h2 style={{ margin: 0, fontSize: isMobile ? 24 : 28, fontWeight: 600, color: theme.textPrimary }}>Billing & plans</h2>
+            <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6, fontSize: isMobile ? 13 : 14 }}>
               Upgrade to unlock unlimited chats, reasoning mode, and premium medical evidence packs.
             </p>
           </div>
@@ -186,8 +188,8 @@ const BillingModal = ({
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: 20
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(260px, 1fr))',
+              gap: isMobile ? 16 : 20
             }}
           >
             {plans.map((plan) => {
@@ -197,31 +199,31 @@ const BillingModal = ({
                   key={plan.id}
                   style={{
                     borderRadius: 20,
-                    padding: '24px 24px 28px',
+                    padding: isMobile ? '20px 18px 24px' : '24px 24px 28px',
                     backgroundColor: `${theme.backgroundPrimary}F2`,
                     border: `1px solid ${isActive ? theme.accentSoftBlue : theme.textSecondary}25`,
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: 18,
+                    gap: isMobile ? 16 : 18,
                     position: 'relative'
                   }}
                 >
                   {isActive && <Badge label="Current plan" theme={theme} />}
 
                   <div>
-                    <h3 style={{ fontSize: 20, margin: 0, color: theme.textPrimary }}>{plan.name}</h3>
-                    <p style={{ margin: '6px 0 0', color: theme.textSecondary }}>{plan.description}</p>
+                    <h3 style={{ fontSize: isMobile ? 18 : 20, margin: 0, color: theme.textPrimary }}>{plan.name}</h3>
+                    <p style={{ margin: '6px 0 0', color: theme.textSecondary, fontSize: isMobile ? 13 : 14 }}>{plan.description}</p>
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-                    <span style={{ fontSize: 30, fontWeight: 700, color: theme.textPrimary }}>{plan.price}</span>
-                    <span style={{ fontSize: 14, color: theme.textSecondary }}>{plan.cadence}</span>
+                    <span style={{ fontSize: isMobile ? 26 : 30, fontWeight: 700, color: theme.textPrimary }}>{plan.price}</span>
+                    <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>{plan.cadence}</span>
                   </div>
 
-                  <ul style={{ listStyle: 'none', padding: 0, margin: '8px 0 0', display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: '8px 0 0', display: 'flex', flexDirection: 'column', gap: isMobile ? 8 : 10 }}>
                     {plan.features.map((feature) => (
-                      <li key={feature} style={{ display: 'flex', gap: 10, alignItems: 'center', color: theme.textSecondary }}>
-                        <Check size={16} color={theme.accentSoftBlue} />
+                      <li key={feature} style={{ display: 'flex', gap: 10, alignItems: 'center', color: theme.textSecondary, fontSize: isMobile ? 13 : 14 }}>
+                        <Check size={isMobile ? 14 : 16} color={theme.accentSoftBlue} />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -232,7 +234,7 @@ const BillingModal = ({
                     disabled={isLoading || isProcessing || isActive}
                     style={{
                       marginTop: 'auto',
-                      padding: '12px 16px',
+                      padding: isMobile ? '11px 14px' : '12px 16px',
                       borderRadius: 999,
                       border: 'none',
                       backgroundColor: isActive ? `${theme.accentSoftBlue}30` : theme.accentSoftBlue,
@@ -266,8 +268,8 @@ const BillingModal = ({
           {isSubscribed && (
             <div
               style={{
-                marginTop: 24,
-                padding: '18px 20px',
+                marginTop: isMobile ? 20 : 24,
+                padding: isMobile ? '16px 18px' : '18px 20px',
                 borderRadius: 16,
                 backgroundColor: `${theme.textSecondary}10`,
                 display: 'flex',
@@ -277,7 +279,7 @@ const BillingModal = ({
                 flexWrap: 'wrap'
               }}
             >
-              <div style={{ color: theme.textSecondary, fontSize: 14 }}>
+              <div style={{ color: theme.textSecondary, fontSize: isMobile ? 13 : 14 }}>
                 {renewalDate
                   ? `Renews automatically on ${renewalDate}.`
                   : 'Your subscription renews automatically.'}
@@ -286,7 +288,7 @@ const BillingModal = ({
                 onClick={onManageSubscription}
                 disabled={isLoading || isProcessing}
                 style={{
-                  padding: '10px 16px',
+                  padding: isMobile ? '9px 14px' : '10px 16px',
                   borderRadius: 999,
                   border: `1px solid ${theme.accentSoftBlue}`,
                   backgroundColor: 'transparent',
@@ -295,11 +297,12 @@ const BillingModal = ({
                   fontWeight: 600,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: 8
+                  gap: 8,
+                  fontSize: isMobile ? 13 : 14
                 }}
               >
                 Manage subscription
-                <ExternalLink size={16} />
+                <ExternalLink size={isMobile ? 14 : 16} />
               </button>
             </div>
           )}
