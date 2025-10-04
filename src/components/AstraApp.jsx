@@ -17,7 +17,8 @@ import {
   MessageSquare,
   ClipboardList,
   Copy,
-  Check
+  Check,
+  Info
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal';
@@ -29,6 +30,7 @@ import DeleteChatModal from './DeleteChatModal.jsx';
 import authService from '../services/authService';
 import useIsMobile from '../hooks/useIsMobile.js';
 import ReferencesView from './ReferencesView.jsx';
+import AboutView from './AboutView.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -1171,6 +1173,7 @@ const Sidebar = ({
   onShowSettings,
   onShowBilling,
   onShowLogout,
+  onShowAbout,
   theme,
   user,
   subscription,
@@ -1410,6 +1413,16 @@ const Sidebar = ({
               />
 
               <SidebarAction
+                icon={Info}
+                label="About Astra"
+                theme={theme}
+                onClick={() => {
+                  onShowAbout?.();
+                  onClose();
+                }}
+              />
+
+              <SidebarAction
                 icon={CreditCard}
                 label="Billing & Plans"
                 theme={theme}
@@ -1468,6 +1481,16 @@ const Sidebar = ({
               >
                 Already have an account? Sign in
               </button>
+
+              <SidebarAction
+                icon={Info}
+                label="About Astra"
+                theme={theme}
+                onClick={() => {
+                  onShowAbout?.();
+                  onClose();
+                }}
+              />
             </div>
           )}
         </div>
@@ -1798,6 +1821,7 @@ const AstraApp = () => {
 
   const [citationSheetCitations, setCitationSheetCitations] = useState([]);
   const [showCitationSheet, setShowCitationSheet] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   // Auth-related state
   const [showPaywall, setShowPaywall] = useState(false);
@@ -2166,6 +2190,14 @@ const AstraApp = () => {
 
   const handleOpenSettings = useCallback(() => {
     setShowSettings(true);
+  }, []);
+
+  const handleOpenAbout = useCallback(() => {
+    setShowAbout(true);
+  }, []);
+
+  const handleCloseAbout = useCallback(() => {
+    setShowAbout(false);
   }, []);
 
   const handleSettingChange = useCallback((key, value) => {
@@ -2895,6 +2927,7 @@ const AstraApp = () => {
         onShowSettings={handleOpenSettings}
         onShowBilling={handleOpenBilling}
         onShowLogout={handleAuthLogout}
+        onShowAbout={handleOpenAbout}
         theme={theme}
         user={user}
         subscription={subscriptionInfo}
@@ -2910,6 +2943,14 @@ const AstraApp = () => {
           citations={sortedCitationSheet}
           isPresented={showCitationSheet}
           onDismiss={() => setShowCitationSheet(false)}
+          theme={theme}
+        />
+      )}
+
+      {showAbout && (
+        <AboutView
+          isPresented={showAbout}
+          onDismiss={handleCloseAbout}
           theme={theme}
         />
       )}
