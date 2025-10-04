@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Mail, CalendarDays, ExternalLink, Briefcase, Building2, Stethoscope } from 'lucide-react';
+import { X, Mail, CalendarDays, ExternalLink, Clock } from 'lucide-react';
 import useIsMobile from '../hooks/useIsMobile.js';
 
 const formatDate = (dateString) => {
@@ -16,35 +16,43 @@ const formatDate = (dateString) => {
   }
 };
 
-const ProfileRow = ({ icon: Icon, label, value, theme }) => (
+const toTitleCase = (value) =>
+  value
+    ? value
+        .toString()
+        .replace(/[_-]/g, ' ')
+        .replace(/\w\S*/g, (text) => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase())
+    : '';
+
+const InfoChip = ({ icon: Icon, label, value, theme }) => (
   <div
     style={{
       display: 'flex',
       alignItems: 'center',
-      gap: 12,
-      padding: '10px 12px',
+      gap: 10,
+      padding: '8px 12px',
       borderRadius: 12,
-      backgroundColor: `${theme.textSecondary}10`
+      backgroundColor: `${theme.textSecondary}10`,
+      minWidth: 0
     }}
   >
-    <div
-      style={{
-        width: 36,
-        height: 36,
-        borderRadius: '50%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: `${theme.textSecondary}15`
-      }}
-    >
-      <Icon size={18} color={theme.accentSoftBlue} />
-    </div>
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <span style={{ fontSize: 12, color: theme.textSecondary, textTransform: 'uppercase', letterSpacing: '.05em' }}>
+    <Icon size={16} color={theme.accentSoftBlue} />
+    <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+      <span style={{ fontSize: 11, color: theme.textSecondary, textTransform: 'uppercase', letterSpacing: '.05em' }}>
         {label}
       </span>
-      <span style={{ fontSize: 14, color: theme.textPrimary }}>{value || '—'}</span>
+      <span
+        style={{
+          fontSize: 13,
+          color: theme.textPrimary,
+          fontWeight: 600,
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis'
+        }}
+      >
+        {value || '—'}
+      </span>
     </div>
   </div>
 );
@@ -57,7 +65,7 @@ const InputField = ({ label, value, onChange, placeholder, theme }) => (
       onChange={(event) => onChange(event.target.value)}
       placeholder={placeholder}
       style={{
-        padding: '10px 12px',
+        padding: '8px 12px',
         borderRadius: 12,
         border: `1px solid ${theme.textSecondary}25`,
         backgroundColor: theme.backgroundPrimary,
@@ -75,14 +83,11 @@ const ProfileModal = ({
   user,
   profile,
   subscription,
-  onManageSubscription,
   onUpdateProfile,
   isSaving,
   error,
   successMessage
 }) => {
-  if (!isOpen) return null;
-
   const isMobile = useIsMobile();
 
   const profileDetails = React.useMemo(
@@ -120,7 +125,47 @@ const ProfileModal = ({
   }, [fullName, user?.name, user?.email]);
 
   const joinedDate = formatDate(profile?.created_at || user?.updated_at);
-  const nextBilling = subscription?.current_period_end ? formatDate(subscription.current_period_end * 1000) : null;
+
+  const subscriptionSnapshot = React.useMemo(() => {
+    if (subscription && typeof subscription === 'object') {
+      return subscription;
+    }
+    if (profile?.subscription && typeof profile.subscription === 'object') {
+      return profile.subscription;
+    }
+    if (profile?.metadata && typeof profile.metadata === 'object') {
+      const metadataSubscription = profile.metadata.subscription;
+      if (metadataSubscription && typeof metadataSubscription === 'object') {
+        return metadataSubscription;
+      }
+    }
+    return null;
+  }, [profile, subscription]);
+
+  const planKey = subscriptionSnapshot?.plan_key || profile?.subscription_plan || null;
+  const normalizedPlanKey = typeof planKey === 'string' ? planKey.toLowerCase() : null;
+  const planLabel = normalizedPlanKey ? `${toTitleCase(normalizedPlanKey)} plan` : 'Free plan';
+  const planStatus = subscriptionSnapshot?.status || profile?.subscription_status || null;
+  const planStatusLabel = planStatus ? toTitleCase(planStatus) : null;
+  const isPaidPlan = normalizedPlanKey ? normalizedPlanKey !== 'free' : false;
+
+  const nextBillingTimestamp = (() => {
+    if (typeof subscriptionSnapshot?.current_period_end === 'number') {
+      return subscriptionSnapshot.current_period_end * 1000;
+    }
+    if (typeof profile?.subscription?.current_period_end === 'number') {
+      return profile.subscription.current_period_end * 1000;
+    }
+    if (profile?.metadata && typeof profile.metadata === 'object') {
+      const nested = profile.metadata.subscription;
+      if (nested && typeof nested.current_period_end === 'number') {
+        return nested.current_period_end * 1000;
+      }
+    }
+    return null;
+  })();
+
+  const nextBilling = nextBillingTimestamp ? formatDate(nextBillingTimestamp) : null;
 
   const trimmedFullName = fullName.trim();
   const trimmedOrg = organization.trim();
@@ -146,6 +191,10 @@ const ProfileModal = ({
       }
     });
   };
+
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div
@@ -197,62 +246,114 @@ const ProfileModal = ({
           <X size={18} />
         </button>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <div style={{ display: 'flex', alignItems: isMobile ? 'flex-start' : 'center', gap: 20, flexDirection: isMobile ? 'column' : 'row' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              alignItems: isMobile ? 'flex-start' : 'center',
+              justifyContent: 'space-between',
+              gap: isMobile ? 16 : 20
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+              <div
+                style={{
+                  width: isMobile ? 60 : 68,
+                  height: isMobile ? 60 : 68,
+                  borderRadius: '50%',
+                  backgroundColor: theme.accentSoftBlue,
+                  backgroundImage: user?.picture ? `url(${user.picture})` : undefined,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#fff',
+                  fontSize: isMobile ? 22 : 26,
+                  fontWeight: 600
+                }}
+              >
+                {!user?.picture ? initials : null}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <h2 style={{ margin: 0, fontSize: isMobile ? 19 : 23, color: theme.textPrimary }}>{trimmedFullName || user?.name || 'User'}</h2>
+                <span style={{ fontSize: 13, color: theme.textSecondary }}>{user?.email || 'No email on file'}</span>
+              </div>
+            </div>
+
             <div
               style={{
-                width: isMobile ? 64 : 72,
-                height: isMobile ? 64 : 72,
-                borderRadius: '50%',
-                backgroundColor: theme.accentSoftBlue,
-                backgroundImage: user?.picture ? `url(${user.picture})` : undefined,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#fff',
-                fontSize: isMobile ? 24 : 28,
-                fontWeight: 600
+                justifyContent: isMobile ? 'flex-start' : 'flex-end',
+                width: isMobile ? '100%' : 'auto'
               }}
             >
-              {!user?.picture ? initials : null}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-              <h2 style={{ margin: 0, fontSize: isMobile ? 20 : 24, color: theme.textPrimary }}>{trimmedFullName || user?.name || 'User'}</h2>
-              <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>{user?.email || 'No email on file'}</span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '6px 12px',
+                  borderRadius: 999,
+                  backgroundColor: isPaidPlan ? `${theme.accentSoftBlue}18` : `${theme.textSecondary}15`,
+                  color: isPaidPlan ? theme.accentSoftBlue : theme.textSecondary,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  letterSpacing: '.05em'
+                }}
+              >
+                {planLabel}
+              </span>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            <InputField
-              label="Display name"
-              value={fullName}
-              onChange={setFullName}
-              placeholder="How should Astra reference you?"
-              theme={theme}
-            />
-            <InputField
-              label="Organization"
-              value={organization}
-              onChange={setOrganization}
-              placeholder="e.g. Mass General Hospital"
-              theme={theme}
-            />
-            <InputField
-              label="Clinical role"
-              value={role}
-              onChange={setRole}
-              placeholder="e.g. Hospitalist"
-              theme={theme}
-            />
-            <InputField
-              label="Primary specialty"
-              value={specialty}
-              onChange={setSpecialty}
-              placeholder="e.g. Cardiology"
-              theme={theme}
-            />
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <div
+              style={{
+                display: 'grid',
+                gap: isMobile ? 12 : 16,
+                gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, minmax(0, 1fr))'
+              }}
+            >
+              <div style={{ gridColumn: '1 / -1' }}>
+                <InputField
+                  label="Display name"
+                  value={fullName}
+                  onChange={setFullName}
+                  placeholder="How should Astra reference you?"
+                  theme={theme}
+                />
+              </div>
+              <div>
+                <InputField
+                  label="Organization"
+                  value={organization}
+                  onChange={setOrganization}
+                  placeholder="e.g. Mass General Hospital"
+                  theme={theme}
+                />
+              </div>
+              <div>
+                <InputField
+                  label="Clinical role"
+                  value={role}
+                  onChange={setRole}
+                  placeholder="e.g. Hospitalist"
+                  theme={theme}
+                />
+              </div>
+              <div>
+                <InputField
+                  label="Primary specialty"
+                  value={specialty}
+                  onChange={setSpecialty}
+                  placeholder="e.g. Cardiology"
+                  theme={theme}
+                />
+              </div>
+            </div>
 
             {(error || successMessage) && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -305,93 +406,25 @@ const ProfileModal = ({
             </div>
           </form>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <ProfileRow
-              icon={Mail}
-              label="Email"
-              value={user?.email}
-              theme={theme}
-            />
-            <ProfileRow
-              icon={CalendarDays}
-              label="Member since"
-              value={joinedDate}
-              theme={theme}
-            />
-            <ProfileRow
-              icon={Building2}
-              label="Organization"
-              value={trimmedOrg || '—'}
-              theme={theme}
-            />
-            <ProfileRow
-              icon={Briefcase}
-              label="Clinical role"
-              value={trimmedRole || '—'}
-              theme={theme}
-            />
-            <ProfileRow
-              icon={Stethoscope}
-              label="Primary specialty"
-              value={trimmedSpecialty || '—'}
-              theme={theme}
-            />
-            {subscription?.status && (
-              <ProfileRow
-                icon={ExternalLink}
-                label="Subscription"
-                value={`${subscription.plan_key ? subscription.plan_key.charAt(0).toUpperCase() + subscription.plan_key.slice(1) : 'Active'} • ${subscription.status}`}
-                theme={theme}
-              />
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 12
+            }}
+          >
+            <InfoChip icon={Mail} label="Email" value={user?.email || 'No email'} theme={theme} />
+            {joinedDate && (
+              <InfoChip icon={CalendarDays} label="Member since" value={joinedDate} theme={theme} />
+            )}
+            <InfoChip icon={ExternalLink} label="Plan" value={planLabel} theme={theme} />
+            {planStatusLabel && (
+              <InfoChip icon={ExternalLink} label="Status" value={planStatusLabel} theme={theme} />
+            )}
+            {nextBilling && (
+              <InfoChip icon={Clock} label="Next renewal" value={nextBilling} theme={theme} />
             )}
           </div>
-
-          {subscription && (
-            <div
-              style={{
-                padding: '12px 16px',
-                borderRadius: 16,
-                backgroundColor: `${theme.accentSoftBlue}15`,
-                color: theme.textPrimary,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 4
-              }}
-            >
-              <span style={{ fontSize: 14, fontWeight: 600 }}>
-                {subscription.plan_key ? `${subscription.plan_key.replace(/(^|\s)(\w)/g, (match, p1, p2) => `${p1}${p2.toUpperCase()}`)} plan` : 'Active subscription'}
-              </span>
-              <span style={{ fontSize: 13, color: theme.textSecondary }}>
-                {subscription.status === 'trialing'
-                  ? 'Currently in trial period'
-                  : `Renews ${nextBilling || 'automatically'}.`}
-              </span>
-            </div>
-          )}
-
-          {onManageSubscription && (
-            <button
-              type="button"
-              onClick={onManageSubscription}
-              disabled={isSaving}
-              style={{
-                alignSelf: 'flex-start',
-                padding: '10px 16px',
-                borderRadius: 999,
-                border: `1px solid ${theme.accentSoftBlue}`,
-                background: 'transparent',
-                color: theme.accentSoftBlue,
-                fontWeight: 600,
-                cursor: isSaving ? 'not-allowed' : 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8
-              }}
-            >
-              Manage subscription
-              <ExternalLink size={16} />
-            </button>
-          )}
         </div>
       </div>
     </div>

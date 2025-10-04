@@ -26,6 +26,41 @@ import DeleteChatModal from './DeleteChatModal.jsx';
 import authService from '../services/authService';
 import useIsMobile from '../hooks/useIsMobile.js';
 
+const DEFAULT_APP_SETTINGS = {
+  theme: 'system',
+  accentColor: 'nightfall',
+  language: 'auto',
+  spokenLanguage: 'auto'
+};
+
+const ACCENT_COLOR_MAP = {
+  nightfall: {
+    light: '#4A6B7D',
+    dark: '#8FA5B5'
+  },
+  glacier: {
+    light: '#2563EB',
+    dark: '#93C5FD'
+  },
+  meadow: {
+    light: '#059669',
+    dark: '#34D399'
+  },
+  ember: {
+    light: '#EA580C',
+    dark: '#FB923C'
+  },
+  rose: {
+    light: '#DB2777',
+    dark: '#F472B6'
+  }
+};
+
+const ALLOWED_THEME_VALUES = new Set(['system', 'light', 'dark']);
+const ALLOWED_ACCENT_VALUES = new Set(Object.keys(ACCENT_COLOR_MAP));
+const ALLOWED_LANGUAGE_VALUES = new Set(['auto', 'en-US', 'en-GB', 'es-ES', 'fr-FR']);
+const ALLOWED_SPOKEN_LANGUAGE_VALUES = new Set(['auto', 'en', 'es', 'fr', 'de']);
+
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
@@ -177,16 +212,46 @@ const sampleQueries = {
   ]
 };
 
-const useTheme = () => {
-  const [isDark, setIsDark] = useState(false);
+const useTheme = (settings) => {
+  const getSystemPreference = () => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return false;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  };
+
+  const [systemDark, setSystemDark] = useState(getSystemPreference);
+
   useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return undefined;
+    }
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDark(mediaQuery.matches);
-    const handler = (e) => setIsDark(e.matches);
+    const handler = (event) => setSystemDark(event.matches);
     mediaQuery.addEventListener('change', handler);
+    setSystemDark(mediaQuery.matches);
     return () => mediaQuery.removeEventListener('change', handler);
   }, []);
-  return { colors: isDark ? colors.dark : colors.light, isDark };
+
+  const themePreference = settings?.theme;
+  const isDark = themePreference === 'dark'
+    ? true
+    : themePreference === 'light'
+      ? false
+      : systemDark;
+
+  const accentKey = settings?.accentColor && ALLOWED_ACCENT_VALUES.has(settings.accentColor)
+    ? settings.accentColor
+    : DEFAULT_APP_SETTINGS.accentColor;
+  const accentPalette = ACCENT_COLOR_MAP[accentKey] || ACCENT_COLOR_MAP[DEFAULT_APP_SETTINGS.accentColor];
+
+  const baseColors = isDark ? colors.dark : colors.light;
+  const themedColors = {
+    ...baseColors,
+    accentSoftBlue: isDark ? accentPalette.dark : accentPalette.light
+  };
+
+  return { colors: themedColors, isDark };
 };
 
 /* =========================
@@ -1046,7 +1111,14 @@ const Sidebar = ({
 }) => {
   if (!isOpen) return null;
 
-  const planLabel = subscription?.plan_key ? `${subscription.plan_key.replace(/(^|\s)(\w)/g, (m, p1, p2) => `${p1}${p2.toUpperCase()}`)} plan` : 'Free plan';
+  const currentPlanKey = subscription?.plan_key
+    || profile?.subscription_plan
+    || profile?.subscription?.plan_key
+    || null;
+
+  const planLabel = currentPlanKey
+    ? `${currentPlanKey.replace(/(^|\s)(\w)/g, (match, p1, p2) => `${p1}${p2.toUpperCase()}`)} plan`
+    : 'Free plan';
   const userName = user?.name || profile?.full_name || user?.email || profile?.email || 'Account';
   const isLoggedIn = !!isAuthenticated;
 
@@ -1126,7 +1198,7 @@ const Sidebar = ({
         }}
         aria-label="Delete chat"
       >
-        <Square size={12} />
+        <X size={12} />
       </button>
     </div>
   );
@@ -1627,7 +1699,8 @@ const normalizeSessionForHistory = (session) => {
    APP
    ========================= */
 const AstraApp = () => {
-  const { colors: theme, isDark } = useTheme();
+  const [appSettings, setAppSettings] = useState(DEFAULT_APP_SETTINGS);
+  const { colors: theme, isDark } = useTheme(appSettings);
   const speechRecognition = useSpeechRecognition();
   const isMobile = useIsMobile();
 
@@ -1685,21 +1758,105 @@ const AstraApp = () => {
   const [showSettings, setShowSettings] = useState(false);
   const [showDeleteChatModal, setShowDeleteChatModal] = useState(false);
   const [chatPendingDeletion, setChatPendingDeletion] = useState(null);
-  const [appSettings, setAppSettings] = useState({
-    syncSystem: true,
-    forceDark: false,
-    language: 'en-US',
-    requireLogin: true,
-    phiMode: false
-  });
   const [accountProfile, setAccountProfile] = useState(null);
   const [isProfileSaving, setIsProfileSaving] = useState(false);
   const [profileError, setProfileError] = useState('');
   const [profileSuccess, setProfileSuccess] = useState('');
+  const [hasLoadedSubscription, setHasLoadedSubscription] = useState(false);
+  const [settingsSyncState, setSettingsSyncState] = useState('idle');
+  const [settingsSyncError, setSettingsSyncError] = useState('');
 
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
   const [inputBarHeight, setInputBarHeight] = useState(0);
+  const settingsPersistRef = useRef({ timeoutId: null, pending: null });
+  const settingsStatusResetRef = useRef(null);
+
+  const sanitizeSettings = useCallback((rawSettings) => {
+    const result = { ...DEFAULT_APP_SETTINGS };
+    if (!rawSettings || typeof rawSettings !== 'object') {
+      return result;
+    }
+
+    if (ALLOWED_THEME_VALUES.has(rawSettings.theme)) {
+      result.theme = rawSettings.theme;
+    }
+    if (ALLOWED_ACCENT_VALUES.has(rawSettings.accentColor)) {
+      result.accentColor = rawSettings.accentColor;
+    }
+    if (ALLOWED_LANGUAGE_VALUES.has(rawSettings.language)) {
+      result.language = rawSettings.language;
+    }
+    if (ALLOWED_SPOKEN_LANGUAGE_VALUES.has(rawSettings.spokenLanguage)) {
+      result.spokenLanguage = rawSettings.spokenLanguage;
+    }
+
+    return result;
+  }, []);
+
+  const areSettingsEqual = useCallback((left, right) => {
+    if (left === right) return true;
+    if (!left || !right) return false;
+    return (
+      left.theme === right.theme &&
+      left.accentColor === right.accentColor &&
+      left.language === right.language &&
+      left.spokenLanguage === right.spokenLanguage
+    );
+  }, []);
+
+  const scheduleSettingsPersist = useCallback((nextSettings) => {
+    if (!isAuthenticated || !user) {
+      return;
+    }
+
+    if (settingsPersistRef.current.timeoutId) {
+      clearTimeout(settingsPersistRef.current.timeoutId);
+    }
+
+    if (settingsStatusResetRef.current) {
+      clearTimeout(settingsStatusResetRef.current);
+      settingsStatusResetRef.current = null;
+    }
+
+    settingsPersistRef.current.pending = nextSettings;
+    setSettingsSyncState('saving');
+    setSettingsSyncError('');
+
+    settingsPersistRef.current.timeoutId = setTimeout(async () => {
+      settingsPersistRef.current.timeoutId = null;
+      const payload = settingsPersistRef.current.pending;
+      try {
+        const response = await authService.updateUserProfile(user, {
+          settings: payload
+        });
+
+        if (response?.user) {
+          setAccountProfile(response.user);
+        } else {
+          setAccountProfile((prevProfile) => {
+            if (!prevProfile) return prevProfile;
+            const nextMetadata = {
+              ...(typeof prevProfile.metadata === 'object' && prevProfile.metadata ? prevProfile.metadata : {}),
+              settings: payload
+            };
+            return { ...prevProfile, metadata: nextMetadata };
+          });
+        }
+
+        setSettingsSyncState('saved');
+        settingsStatusResetRef.current = setTimeout(() => {
+          setSettingsSyncState('idle');
+          setSettingsSyncError('');
+          settingsStatusResetRef.current = null;
+        }, 2000);
+      } catch (error) {
+        console.error('Failed to persist settings:', error);
+        setSettingsSyncState('error');
+        setSettingsSyncError(error.message || 'Unable to save settings');
+      }
+    }, 450);
+  }, [isAuthenticated, user]);
 
   const refreshProfile = useCallback(async () => {
     if (authLoading) return;
@@ -1715,6 +1872,17 @@ const AstraApp = () => {
       console.error('Failed to sync account profile:', error);
     }
   }, [authLoading, isAuthenticated, user]);
+
+  useEffect(() => {
+    if (!accountProfile || !accountProfile.metadata) {
+      setAppSettings((prev) => (areSettingsEqual(prev, DEFAULT_APP_SETTINGS) ? prev : DEFAULT_APP_SETTINGS));
+      setHasLoadedSubscription(false);
+      return;
+    }
+
+    const storedSettings = sanitizeSettings(accountProfile.metadata.settings);
+    setAppSettings((prev) => (areSettingsEqual(prev, storedSettings) ? prev : storedSettings));
+  }, [accountProfile, sanitizeSettings, areSettingsEqual]);
 
   const refreshChatHistory = useCallback(async () => {
     if (authLoading) return;
@@ -1747,6 +1915,7 @@ const AstraApp = () => {
       if (showSpinner) setIsBillingLoading(true);
       const result = await authService.getSubscriptionStatus(user);
       setSubscriptionInfo(result?.subscription || null);
+      setHasLoadedSubscription(true);
     } catch (error) {
       console.error('Failed to load subscription details:', error);
       setBillingError(error.message || 'Unable to load subscription details');
@@ -1769,6 +1938,26 @@ const AstraApp = () => {
     if (!showBilling) return;
     refreshSubscription(true);
   }, [showBilling, refreshSubscription]);
+
+  useEffect(() => {
+    if (!isAuthenticated || !user) return;
+    if (hasLoadedSubscription) return;
+
+    let cancelled = false;
+
+    (async () => {
+      try {
+        await refreshSubscription();
+        if (!cancelled) setHasLoadedSubscription(true);
+      } catch (error) {
+        console.error('Failed to refresh subscription for account:', error);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthenticated, user, hasLoadedSubscription, refreshSubscription]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -1852,6 +2041,38 @@ const AstraApp = () => {
     // For anonymous users, initialization is handled by the dedicated useEffect above
   }, [isAuthenticated, updateChatLimit]);
 
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setHasLoadedSubscription(false);
+    }
+  }, [isAuthenticated]);
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      if (settingsPersistRef.current.timeoutId) {
+        clearTimeout(settingsPersistRef.current.timeoutId);
+        settingsPersistRef.current.timeoutId = null;
+      }
+      if (settingsStatusResetRef.current) {
+        clearTimeout(settingsStatusResetRef.current);
+        settingsStatusResetRef.current = null;
+      }
+      setSettingsSyncState('idle');
+      setSettingsSyncError('');
+    }
+  }, [isAuthenticated]);
+
+  useEffect(() => () => {
+    if (settingsPersistRef.current.timeoutId) {
+      clearTimeout(settingsPersistRef.current.timeoutId);
+      settingsPersistRef.current.timeoutId = null;
+    }
+    if (settingsStatusResetRef.current) {
+      clearTimeout(settingsStatusResetRef.current);
+      settingsStatusResetRef.current = null;
+    }
+  }, []);
+
   const handleOpenBilling = useCallback(() => {
     if (!isAuthenticated) {
       setShowPaywall(true);
@@ -1877,8 +2098,28 @@ const AstraApp = () => {
   }, []);
 
   const handleSettingChange = useCallback((key, value) => {
-    setAppSettings((prev) => ({ ...prev, [key]: value }));
-  }, []);
+    setAppSettings((prev) => {
+      const merged = { ...prev, [key]: value };
+      const sanitized = sanitizeSettings(merged);
+
+      if (areSettingsEqual(prev, sanitized)) {
+        return prev;
+      }
+
+      scheduleSettingsPersist(sanitized);
+
+      setAccountProfile((prevProfile) => {
+        if (!prevProfile) return prevProfile;
+        const nextMetadata = {
+          ...(typeof prevProfile.metadata === 'object' && prevProfile.metadata ? prevProfile.metadata : {}),
+          settings: sanitized
+        };
+        return { ...prevProfile, metadata: nextMetadata };
+      });
+
+      return sanitized;
+    });
+  }, [sanitizeSettings, areSettingsEqual, scheduleSettingsPersist]);
 
   const handleCheckoutPlan = useCallback(async (planId) => {
     if (!isAuthenticated || !user) {
@@ -2501,7 +2742,6 @@ const AstraApp = () => {
         user={user}
         profile={accountProfile}
         subscription={subscriptionInfo}
-        onManageSubscription={isAuthenticated ? handleManageSubscription : undefined}
         onUpdateProfile={handleUpdateProfile}
         isSaving={isProfileSaving}
         error={profileError}
@@ -2514,6 +2754,8 @@ const AstraApp = () => {
         theme={theme}
         settings={appSettings}
         onSettingChange={handleSettingChange}
+        syncState={settingsSyncState}
+        syncError={settingsSyncError}
       />
 
       <DeleteChatModal

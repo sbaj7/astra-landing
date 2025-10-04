@@ -194,6 +194,26 @@ const BillingModal = ({
           >
             {plans.map((plan) => {
               const isActive = activePlanId === plan.id;
+              const isDowngradeOption = subscription?.plan_key === 'pro' && plan.id !== 'pro';
+              const buttonBackground = isActive
+                ? `${theme.accentSoftBlue}30`
+                : isDowngradeOption
+                  ? theme.errorColor
+                  : theme.accentSoftBlue;
+              const buttonColor = isActive ? theme.textPrimary : '#fff';
+              const buttonLabel = isActive
+                ? 'Selected'
+                : isLoading || isProcessing
+                  ? (
+                    <>
+                      <Loader2 size={16} style={{ animation: 'billing-spin 1s linear infinite' }} />
+                      Processing…
+                    </>
+                  )
+                  : isDowngradeOption
+                    ? 'Downgrade'
+                    : 'Upgrade';
+
               return (
                 <div
                   key={plan.id}
@@ -237,8 +257,8 @@ const BillingModal = ({
                       padding: isMobile ? '11px 14px' : '12px 16px',
                       borderRadius: 999,
                       border: 'none',
-                      backgroundColor: isActive ? `${theme.accentSoftBlue}30` : theme.accentSoftBlue,
-                      color: isActive ? theme.textPrimary : '#fff',
+                      backgroundColor: buttonBackground,
+                      color: buttonColor,
                       cursor: isActive ? 'default' : 'pointer',
                       fontWeight: 600,
                       fontSize: 14,
@@ -249,16 +269,7 @@ const BillingModal = ({
                       transition: 'all .2s ease'
                     }}
                   >
-                    {isActive
-                      ? 'Selected'
-                      : isLoading || isProcessing
-                        ? (
-                          <>
-                            <Loader2 size={16} style={{ animation: 'billing-spin 1s linear infinite' }} />
-                            Processing…
-                          </>
-                        )
-                        : 'Upgrade'}
+                    {buttonLabel}
                   </button>
                 </div>
               );

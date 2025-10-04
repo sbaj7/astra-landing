@@ -32,6 +32,22 @@ const PLAN_BY_PRICE_ID: Record<string, string> = {
   [PRICE_IDS.pro]: "pro"
 };
 
+const ACTIVE_SUBSCRIPTION_STATUSES = new Set<Stripe.Subscription.Status>([
+  "trialing",
+  "active",
+  "past_due"
+]);
+
+function deriveSubscriptionStatus(
+  planKey: string | null,
+  subscription: Stripe.Subscription | null
+): string {
+  if (planKey && subscription && ACTIVE_SUBSCRIPTION_STATUSES.has(subscription.status)) {
+    return planKey;
+  }
+  return "free";
+}
+
 // Supabase configuration
 const supabaseUrl = Deno.env.get("SUPABASE_URL");
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -57,6 +73,7 @@ type AuthUserRecord = {
   email?: string | null;
   full_name?: string | null;
   metadata?: Record<string, any> | null;
+  subscription_status?: string | null;
 };
 
 type HandlerResponse = {
@@ -129,6 +146,7 @@ async function ensureAuthUserRecord(
       email: supabaseUser.email || "",
       full_name: normalizeFullName(supabaseUser),
       metadata,
+      subscription_status: "free",
       created_at: now,
       updated_at: now
     })
@@ -298,6 +316,11 @@ async function syncSubscriptionMetadata(
   const additional: Record<string, any> = {};
   if (supabaseUser.email && supabaseUser.email !== authUser.email) {
     additional.email = supabaseUser.email;
+  }
+
+  const nextSubscriptionStatus = deriveSubscriptionStatus(planKey, subscription);
+  if (authUser.subscription_status !== nextSubscriptionStatus) {
+    additional.subscription_status = nextSubscriptionStatus;
   }
 
   return await persistAuthUserMetadata(supabaseClient, authUser, metadata, additional);

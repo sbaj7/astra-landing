@@ -47,12 +47,39 @@ function attachSubscriptionFields(user: any) {
     return null;
   }
   const subscription = extractSubscriptionMetadata(user.metadata);
+  const columnPlan =
+    typeof user.subscription_status === "string" && user.subscription_status.trim().length > 0
+      ? user.subscription_status.trim()
+      : null;
+  const subscriptionPlan = subscription?.plan_key ?? columnPlan;
   return {
     ...user,
     subscription,
-    subscription_plan: subscription?.plan_key ?? null,
-    subscription_status: subscription?.status ?? null
+    subscription_plan: subscriptionPlan,
+    subscription_status: subscription?.status ?? null,
+    subscription_tier: columnPlan
   };
+}
+
+const ALLOWED_SETTING_KEYS = new Set(['theme', 'accentColor', 'language', 'spokenLanguage']);
+
+function sanitizeSettings(settings: unknown) {
+  if (!settings || typeof settings !== 'object' || Array.isArray(settings)) {
+    return null;
+  }
+
+  const result: Record<string, string> = {};
+  for (const key of ALLOWED_SETTING_KEYS) {
+    const rawValue = (settings as Record<string, unknown>)[key];
+    if (typeof rawValue === 'string') {
+      const trimmed = rawValue.trim();
+      if (trimmed.length > 0) {
+        result[key] = trimmed;
+      }
+    }
+  }
+
+  return Object.keys(result).length > 0 ? result : null;
 }
 
 serve(async (req)=>{
@@ -262,7 +289,8 @@ async function handleIncrementUsage(body, supabase) {
         app_metadata: appMetadata,
         auth_provider: primaryProvider,
         auth_providers: identitySummaries,
-        first_login: now
+        first_login: now,
+        ...(incomingSettings && Object.keys(incomingSettings).length > 0 ? { settings: incomingSettings } : {})
       },
       created_at: now,
       updated_at: now
@@ -449,7 +477,7 @@ async function handleDeleteSession(body, supabase) {
   });
 }
 /* -------------------------------------------------------------------------- */ /*  Profile updates                                                           */ /* -------------------------------------------------------------------------- */ async function handleUpdateProfile(body, supabase) {
-  const { supabase_user, full_name, profile } = body;
+  const { supabase_user, full_name, profile, settings } = body;
   if (!supabase_user?.id) {
     return new Response(JSON.stringify({
       error: "supabase_user required"
@@ -488,12 +516,18 @@ async function handleDeleteSession(body, supabase) {
   }
   const baseMetadata = existingUser?.metadata && typeof existingUser.metadata === "object" ? existingUser.metadata : {};
   const existingProfile = baseMetadata.profile && typeof baseMetadata.profile === "object" ? baseMetadata.profile : {};
+  const existingSettings = sanitizeSettings(baseMetadata.settings) || {};
   const mergedProfile = {
     ...existingProfile,
     ...Object.fromEntries(Object.entries(profileUpdates).map(([key, value])=>[
         key,
         typeof value === "string" ? value.trim() : value
       ]))
+  };
+  const incomingSettings = sanitizeSettings(settings);
+  const mergedSettings = {
+    ...existingSettings,
+    ...(incomingSettings || {})
   };
   const nextMetadata = {
     ...baseMetadata,
@@ -502,8 +536,12 @@ async function handleDeleteSession(body, supabase) {
     avatar_url: supabase_user.avatar_url || incomingMetadata.avatar_url || baseMetadata.avatar_url || null,
     app_metadata: appMetadata,
     auth_provider: primaryProvider,
-    auth_providers: identitySummaries
+    auth_providers: identitySummaries,
+    settings: mergedSettings
   };
+  if (Object.keys(mergedSettings).length === 0) {
+    delete nextMetadata.settings;
+  }
   const normalizedFullName = typeof full_name === "string" && full_name.trim() || existingUser?.full_name || incomingMetadata.full_name || incomingMetadata.name || supabase_user.email || "User";
   const payload = {
     auth0_id: supabase_user.id,

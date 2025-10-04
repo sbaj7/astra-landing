@@ -1,98 +1,199 @@
 import React from 'react';
-import { X, Monitor, Moon, Globe, ShieldCheck } from 'lucide-react';
+import { X, Sun, Moon } from 'lucide-react';
 import useIsMobile from '../hooks/useIsMobile.js';
 
-const ToggleRow = ({ label, description, value, onChange, theme, disabled, isMobile }) => (
+const accentColorOptions = [
+  { value: 'nightfall', label: 'Nightfall', swatch: '#4A6B7D' },
+  { value: 'glacier', label: 'Glacier', swatch: '#2563EB' },
+  { value: 'meadow', label: 'Meadow', swatch: '#059669' },
+  { value: 'ember', label: 'Ember', swatch: '#EA580C' },
+  { value: 'rose', label: 'Rose', swatch: '#DB2777' }
+];
+
+const languageOptions = [
+  { value: 'auto', label: 'Auto-detect' },
+  { value: 'en-US', label: 'English (US)' },
+  { value: 'en-GB', label: 'English (UK)' },
+  { value: 'es-ES', label: 'Spanish' },
+  { value: 'fr-FR', label: 'French' }
+];
+
+const spokenLanguageOptions = [
+  { value: 'auto', label: 'Auto-detect' },
+  { value: 'en', label: 'English' },
+  { value: 'es', label: 'Spanish' },
+  { value: 'fr', label: 'French' },
+  { value: 'de', label: 'German' }
+];
+
+const SettingRow = ({ label, helperText, children, theme, compact }) => (
   <div
     style={{
       display: 'flex',
-      flexDirection: isMobile ? 'column' : 'row',
-      justifyContent: 'space-between',
-      alignItems: isMobile ? 'flex-start' : 'center',
-      gap: isMobile ? 12 : 0,
-      padding: '14px 0',
-      borderBottom: `1px solid ${theme.textSecondary}15`
+      flexDirection: 'column',
+      gap: compact ? 4 : 6,
+      padding: compact ? '10px 0' : '14px 0',
+      borderBottom: `1px solid ${theme.textSecondary}18`
     }}
   >
-    <div style={{ maxWidth: isMobile ? '100%' : '70%' }}>
-      <div style={{ fontSize: 15, fontWeight: 600, color: theme.textPrimary }}>{label}</div>
-      <div style={{ fontSize: 13, color: theme.textSecondary, marginTop: 4, lineHeight: 1.5 }}>{description}</div>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+      <span style={{ fontSize: 14, fontWeight: 600, color: theme.textPrimary }}>{label}</span>
+      {children}
     </div>
-    <label style={{ position: 'relative', display: 'inline-block', width: 48, height: 24, alignSelf: isMobile ? 'flex-end' : 'center' }}>
-      <input
-        type="checkbox"
-        checked={value}
-        onChange={(event) => onChange?.(event.target.checked)}
-        disabled={disabled}
-        style={{ opacity: 0, width: 0, height: 0 }}
-      />
-      <span
-        style={{
-          position: 'absolute',
-          cursor: disabled ? 'not-allowed' : 'pointer',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: value ? theme.accentSoftBlue : `${theme.textSecondary}30`,
-          transition: '.2s',
-          borderRadius: 999
-        }}
-      />
-      <span
-        style={{
-          position: 'absolute',
-          content: "''",
-          height: 20,
-          width: 20,
-          left: value ? 26 : 4,
-          bottom: 2,
-          backgroundColor: '#fff',
-          transition: '.2s',
-          borderRadius: '50%',
-          boxShadow: '0 1px 3px rgba(15,23,42,0.2)'
-        }}
-      />
-    </label>
+    {helperText && (
+      <span style={{ fontSize: 11, color: theme.textSecondary, lineHeight: 1.4 }}>{helperText}</span>
+    )}
   </div>
 );
 
-const SettingsSection = ({ icon: Icon, title, children, theme }) => (
-  <section style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+const SelectControl = ({ value, options, onChange, theme }) => (
+  <div style={{ position: 'relative', minWidth: 150 }}>
+    <select
+      value={value}
+      onChange={(event) => onChange?.(event.target.value)}
+      style={{
+        width: '100%',
+        padding: '6px 32px 6px 12px',
+        borderRadius: 12,
+        border: `1px solid ${theme.textSecondary}30`,
+        backgroundColor: theme.backgroundPrimary,
+        color: theme.textPrimary,
+        fontSize: 13,
+        cursor: 'pointer',
+        appearance: 'none'
+      }}
+    >
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>{option.label}</option>
+      ))}
+    </select>
+    <span style={{
+      position: 'absolute',
+      right: 12,
+      top: '50%',
+      transform: 'translateY(-50%)',
+      pointerEvents: 'none',
+      color: theme.textSecondary
+    }}>▾</span>
+  </div>
+);
+
+const ThemeToggle = ({ value, onChange, theme }) => {
+  const mode = value === 'light' || value === 'dark' ? value : 'system';
+  const isDark = mode === 'dark';
+  const isSystem = mode === 'system';
+
+  const handleToggle = () => {
+    const next = isDark ? 'light' : 'dark';
+    onChange?.(next);
+  };
+
+  const handleSystem = () => onChange?.('system');
+
+  return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-      <div
+      <button
+        onClick={handleToggle}
+        aria-label={`Toggle theme (${mode})`}
         style={{
-          width: 32,
-          height: 32,
+          width: 44,
+          height: 44,
           borderRadius: '50%',
-          backgroundColor: `${theme.accentSoftBlue}20`,
+          border: `1px solid ${theme.textSecondary}25`,
+          background: `${theme.accentSoftBlue}25`,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          cursor: 'pointer',
+          overflow: 'hidden'
         }}
       >
-        <Icon size={16} color={theme.accentSoftBlue} />
-      </div>
-      <h3 style={{ margin: 0, fontSize: 16, color: theme.textPrimary }}>{title}</h3>
+        <div
+          style={{
+            width: 28,
+            height: 28,
+            borderRadius: '50%',
+            background: theme.backgroundPrimary,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'transform 0.45s ease',
+            transform: isDark ? 'rotate(200deg)' : 'rotate(0deg)'
+          }}
+        >
+          <Sun
+            size={17}
+            color={theme.textSecondary}
+            style={{
+              position: 'absolute',
+              opacity: isDark ? 0 : 1,
+              transition: 'opacity 0.25s ease'
+            }}
+          />
+          <Moon
+            size={15}
+            color={theme.textSecondary}
+            style={{
+              position: 'absolute',
+              opacity: isDark ? 1 : 0,
+              transition: 'opacity 0.25s ease'
+            }}
+          />
+        </div>
+      </button>
+      <button
+        onClick={handleSystem}
+        style={{
+          padding: '6px 12px',
+          borderRadius: 999,
+          border: `1px solid ${isSystem ? theme.accentSoftBlue : theme.textSecondary}30`,
+          backgroundColor: isSystem ? `${theme.accentSoftBlue}18` : 'transparent',
+          color: isSystem ? theme.accentSoftBlue : theme.textSecondary,
+          fontSize: 12,
+          fontWeight: 600,
+          cursor: 'pointer'
+        }}
+      >
+        Auto
+      </button>
     </div>
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>{children}</div>
-  </section>
-);
+  );
+};
 
 const SettingsModal = ({
   isOpen,
   onClose,
   theme,
   settings,
-  onSettingChange
+  onSettingChange,
+  syncState = 'idle',
+  syncError = ''
 }) => {
-  if (!isOpen) return null;
-
   const isMobile = useIsMobile();
+
+  if (!isOpen) return null;
 
   const handleChange = (key) => (value) => {
     onSettingChange?.(key, value);
   };
+
+  const accentSelection = accentColorOptions.find((option) => option.value === settings?.accentColor) || accentColorOptions[0];
+
+  const statusMessage =
+    syncState === 'saving'
+      ? 'Saving…'
+      : syncState === 'saved'
+        ? 'Saved'
+        : syncState === 'error'
+          ? syncError || 'Unable to save settings'
+          : '';
+
+  const statusColor =
+    syncState === 'error'
+      ? theme.errorColor
+      : syncState === 'saved'
+        ? theme.successColor
+        : theme.textSecondary;
 
   return (
     <div
@@ -114,12 +215,12 @@ const SettingsModal = ({
         style={{
           position: 'relative',
           width: '100%',
-          maxWidth: isMobile ? '100%' : 640,
+          maxWidth: isMobile ? '100%' : 540,
           maxHeight: '95vh',
           overflowY: 'auto',
           backgroundColor: theme.backgroundSurface,
           borderRadius: isMobile ? 20 : 24,
-          padding: isMobile ? '24px 24px' : '32px 36px',
+          padding: isMobile ? '20px 18px' : '28px 28px',
           boxShadow: '0 25px 60px -20px rgba(15,23,42,0.35)',
           border: `1px solid ${theme.textSecondary}20`
         }}
@@ -146,79 +247,65 @@ const SettingsModal = ({
           <X size={18} />
         </button>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <div>
-            <h2 style={{ margin: 0, fontSize: isMobile ? 22 : 24, color: theme.textPrimary }}>Settings</h2>
-            <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6, fontSize: isMobile ? 13 : 14 }}>
-              Personalise Astra to match your practice and workflow. More controls are coming soon.
-            </p>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+            <h2 style={{ margin: 0, fontSize: isMobile ? 20 : 22, color: theme.textPrimary }}>General</h2>
+            {statusMessage && (
+              <span style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>
+                {statusMessage}
+              </span>
+            )}
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-            <SettingsSection icon={Monitor} title="Appearance" theme={theme}>
-              <ToggleRow
-                label="Sync with system"
-                description="Automatically match your device’s light or dark appearance."
-                value={settings?.syncSystem ?? true}
-                onChange={handleChange('syncSystem')}
-                theme={theme}
-                disabled
-                isMobile={isMobile}
-              />
-              <ToggleRow
-                label="Use dark mode"
-                description="Force Astra to stay in dark mode at all times."
-                value={settings?.forceDark ?? false}
-                onChange={handleChange('forceDark')}
-                theme={theme}
-                disabled
-                isMobile={isMobile}
-              />
-            </SettingsSection>
+          <SettingRow label="Theme" theme={theme} compact>
+            <ThemeToggle
+              value={settings?.theme || 'system'}
+              onChange={handleChange('theme')}
+              theme={theme}
+            />
+          </SettingRow>
 
-            <SettingsSection icon={Globe} title="Language" theme={theme}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>Primary language</span>
-                <select
-                  value={settings?.language || 'en-US'}
-                  onChange={(event) => handleChange('language')(event.target.value)}
-                  disabled
-                  style={{
-                    padding: '10px 12px',
-                    borderRadius: 12,
-                    border: `1px solid ${theme.textSecondary}25`,
-                    backgroundColor: theme.backgroundPrimary,
-                    color: theme.textPrimary,
-                    fontSize: isMobile ? 13 : 14
-                  }}
-                >
-                  <option value="en-US">English (US)</option>
-                </select>
-                <span style={{ fontSize: 12, color: theme.textSecondary }}>More languages coming soon.</span>
-              </div>
-            </SettingsSection>
+          <SettingRow label="Accent color" theme={theme}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <span
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: '50%',
+                  backgroundColor: accentSelection.swatch,
+                  border: '1px solid rgba(148, 163, 184, 0.4)'
+                }}
+              />
+              <SelectControl
+                value={accentSelection.value}
+                options={accentColorOptions.map((option) => ({ value: option.value, label: option.label }))}
+                onChange={(value) => handleChange('accentColor')(value)}
+                theme={theme}
+              />
+            </div>
+          </SettingRow>
 
-            <SettingsSection icon={ShieldCheck} title="Security" theme={theme}>
-              <ToggleRow
-                label="Require login at launch"
-                description="When enabled, Astra will prompt for sign-in each time you open the app."
-                value={settings?.requireLogin ?? true}
-                onChange={handleChange('requireLogin')}
-                theme={theme}
-                disabled
-                isMobile={isMobile}
-              />
-              <ToggleRow
-                label="Enable PHI mode"
-                description="Restrict outputs to HIPAA-compliant responses. Available on enterprise plans."
-                value={settings?.phiMode ?? false}
-                onChange={handleChange('phiMode')}
-                theme={theme}
-                disabled
-                isMobile={isMobile}
-              />
-            </SettingsSection>
-          </div>
+          <SettingRow label="Language" theme={theme}>
+            <SelectControl
+              value={settings?.language || 'auto'}
+              options={languageOptions}
+              onChange={handleChange('language')}
+              theme={theme}
+            />
+          </SettingRow>
+
+          <SettingRow
+            label="Spoken language"
+            helperText="For best results, pick the language you mainly speak. If it isn't listed, auto-detect typically works well."
+            theme={theme}
+          >
+            <SelectControl
+              value={settings?.spokenLanguage || 'auto'}
+              options={spokenLanguageOptions}
+              onChange={handleChange('spokenLanguage')}
+              theme={theme}
+            />
+          </SettingRow>
         </div>
       </div>
     </div>
