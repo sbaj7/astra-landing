@@ -14,7 +14,10 @@ import {
   Settings,
   CreditCard,
   LogOut,
-  MessageSquare
+  MessageSquare,
+  ClipboardList,
+  Copy,
+  Check
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal';
@@ -25,6 +28,7 @@ import SettingsModal from './SettingsModal.jsx';
 import DeleteChatModal from './DeleteChatModal.jsx';
 import authService from '../services/authService';
 import useIsMobile from '../hooks/useIsMobile.js';
+import ReferencesView from './ReferencesView.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -554,70 +558,6 @@ const rehypePlugins = [
 ];
 
 /* =========================
-   CITATION OVERLAY
-   ========================= */
-const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
-  if (!isPresented || !citation) return null;
-  const handleBackdropClick = (e) => { if (e.target === e.currentTarget) onDismiss(); };
-  const handleVisitLink = () => { if (citation.url) window.open(citation.url, '_blank', 'noopener,noreferrer'); };
-
-  return (
-    <div
-      onClick={handleBackdropClick}
-      style={{
-        position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.5)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: 20
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: theme.backgroundSurface, borderRadius: 16, padding: 24,
-          maxWidth: 500, width: '100%', maxHeight: '80vh', overflow: 'auto',
-          boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-          <div style={{
-            backgroundColor: theme.accentSoftBlue, color: 'white', borderRadius: '50%',
-            width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700
-          }}>
-            {citation.number}
-          </div>
-          <button
-            onClick={onDismiss}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: theme.textSecondary, padding: 4 }}
-            aria-label="Close"
-          >
-            <X size={20} />
-          </button>
-        </div>
-
-        <div style={{ marginBottom: 16 }}>
-          <h3 style={{ margin: '0 0 8px', fontSize: 18, fontWeight: 600, color: theme.textPrimary, lineHeight: 1.4 }}>
-            {citation.title}
-          </h3>
-          <p style={{ margin: 0, fontSize: 14, color: theme.textSecondary }}>{citation.authors}</p>
-        </div>
-
-        {citation.url && (
-          <button
-            onClick={handleVisitLink}
-            style={{
-              display: 'flex', alignItems: 'center', gap: 8, padding: '12px 16px',
-              backgroundColor: theme.accentSoftBlue, color: 'white', border: 'none', borderRadius: 8,
-              cursor: 'pointer', fontSize: 14, fontWeight: 500, width: '100%', justifyContent: 'center'
-            }}
-          >
-            <ExternalLink size={16} />
-            Visit Source
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-/* =========================
    UI PARTS
    ========================= */
 const ToolbarView = ({
@@ -879,32 +819,62 @@ const processStreamingContentForMermaid = (content) => {
    MARKDOWN BLOCK (Tailwind Typography)
    ========================= */
 const markdownComponents = {
-  a: ({ node, ...props }) => {
-    const href = props.href || '';
-    const isExternal = /^https?:\/\//i.test(href);
-    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
-  },
-  code: ({ node, inline, className, children, ...props }) => {
-    const match = /language-(\w+)/.exec(className || '');
-    const language = match ? match[1] : '';
+  a: ({ node, ...props }) => {
+    const href = props.href || '';
+    const isExternal = /^https?:\/\//i.test(href);
+    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined} />;
+  },
+  code: ({ node, inline, className, children, ...props }) => {
+    const match = /language-(\w+)/.exec(className || '');
+    const language = match ? match[1] : '';
 
-    if (!inline && language === 'mermaid') {
-      const rawCode = String(children);
-      return <MermaidDiagram {...props}>{rawCode}</MermaidDiagram>;
-    }
-    
-    return <code className={className} {...props}>{children}</code>;
-  },
-  p: ({ node, children, ...props }) => {
-    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
-      return <div style={{ height: '1.5em' }} {...props} />;
-    }
-    return <p {...props}>{children}</p>;
-  },
+    if (!inline && language === 'mermaid') {
+      const rawCode = String(children);
+      return <MermaidDiagram {...props}>{rawCode}</MermaidDiagram>;
+    }
+    
+    return <code className={className} {...props}>{children}</code>;
+  },
+  p: ({ node, children, ...props }) => {
+    if (children && children.length === 1 && typeof children[0] === 'string' && children[0] === '\u00A0') {
+      return <div style={{ height: '1.5em' }} {...props} />;
+    }
+    return <p {...props}>{children}</p>;
+  },
 };
 
 // Update your MarkdownBlock to use the components and pass theme/isDark
-const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStreaming = false }) => {
+const buildTooltipText = (citation) => {
+  if (!citation) return '';
+
+  const addUnique = (acc, value) => {
+    if (!value) return acc;
+    const normalized = String(value).trim();
+    if (!normalized) return acc;
+    if (acc.some((entry) => entry.toLowerCase() === normalized.toLowerCase())) return acc;
+    acc.push(normalized);
+    return acc;
+  };
+
+  const segments = [];
+  addUnique(segments, citation.title);
+  addUnique(
+    segments,
+    citation.journal || citation.publisher || citation.source || citation.hostname
+  );
+  addUnique(segments, citation.year);
+
+  if (citation.authors) {
+    const normalizedAuthors = citation.authors.trim();
+    if (normalizedAuthors && !segments.some((entry) => entry.toLowerCase() === normalizedAuthors.toLowerCase())) {
+      segments.push(normalizedAuthors);
+    }
+  }
+
+  return segments.join(' • ');
+};
+
+const MarkdownBlock = ({ markdown, theme, invert = false, onOpenCitation, isStreaming = false, citations = [] }) => {
    const containerRef = useRef(null);
 
   useEffect(() => {
@@ -912,45 +882,88 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onTapCitation, isStrea
       const t = e.target;
       if (t.tagName === 'SUP' && t.dataset.citation) {
         const number = parseInt(t.dataset.citation, 10);
-        onTapCitation?.(number);
+        onOpenCitation?.(number);
       }
     };
     const el = containerRef.current;
     if (el) el.addEventListener('click', handler);
     return () => { if (el) el.removeEventListener('click', handler); };
-  }, [onTapCitation]);
+  }, [onOpenCitation]);
 
-const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
-   
-const componentsWithTheme = {
-  ...markdownComponents,
-code: ({ node, inline, className, children, ...props }) => {
-  const match = /language-(\w+)/.exec(className || '');
-  const language = match ? match[1] : '';
+  useEffect(() => {
+    if (typeof window === 'undefined') return () => {};
+    const el = containerRef.current;
+    if (!el || !Array.isArray(citations)) return () => {};
 
-  if (!inline && language === 'mermaid') {
-    const code = String(children).replace(/\n$/, '');
+    const map = new Map(citations.map((c) => [String(c?.number ?? ''), c]));
+    const supNodes = Array.from(el.querySelectorAll('sup.md-citation'));
 
-    // ✅ Only show as code block if actively streaming AND content is incomplete
-    if (isStreaming && !code.includes('flowchart') && !code.includes('graph')) {
-      return (
-        <pre className={className}>
-          <code {...props}>{code}</code>
-        </pre>
-      );
+    supNodes.forEach((sup) => {
+      const num = sup.dataset.citation;
+      if (!num) return;
+      const citation = map.get(num);
+      const tooltip = buildTooltipText(citation);
+      if (tooltip) {
+        sup.setAttribute('data-tooltip', tooltip);
+      } else {
+        sup.removeAttribute('data-tooltip');
+      }
+    });
+
+    const updatePositions = () => {
+      const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 0;
+      supNodes.forEach((sup) => {
+        const rect = sup.getBoundingClientRect();
+        let position = 'center';
+        if (rect.left < 80) position = 'left';
+        else if (viewportWidth - rect.right < 80) position = 'right';
+
+        if (position === 'center') sup.removeAttribute('data-tooltip-pos');
+        else sup.setAttribute('data-tooltip-pos', position);
+      });
+    };
+
+    updatePositions();
+    const rafId = window.requestAnimationFrame(updatePositions);
+    window.addEventListener('resize', updatePositions);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener('resize', updatePositions);
+    };
+  }, [citations, markdown]);
+
+  const processedMarkdown = preprocessMarkdown(markdown, isStreaming);
+
+  const componentsWithTheme = {
+    ...markdownComponents,
+    code: ({ node, inline, className, children, ...props }) => {
+      const match = /language-(\w+)/.exec(className || '');
+      const language = match ? match[1] : '';
+
+      if (!inline && language === 'mermaid') {
+        const code = String(children).replace(/\n$/, '');
+
+        // ✅ Only show as code block if actively streaming AND content is incomplete
+        if (isStreaming && !code.includes('flowchart') && !code.includes('graph')) {
+          return (
+            <pre className={className}>
+              <code {...props}>{code}</code>
+            </pre>
+          );
+        }
+
+        // ✅ Otherwise, render the diagram
+        return (
+          <MermaidDiagram theme={theme} isDark={invert}>
+            {code}
+          </MermaidDiagram>
+        );
+      }
+
+      return <code className={className} {...props}>{children}</code>;
     }
-
-    // ✅ Otherwise, render the diagram
-    return (
-      <MermaidDiagram theme={theme} isDark={invert}>
-        {code}
-      </MermaidDiagram>
-    );
-  }
-
-  return <code className={className} {...props}>{children}</code>;
-}
-};
+  };
 
   return (
     <div
@@ -969,7 +982,7 @@ code: ({ node, inline, className, children, ...props }) => {
   );
 };
 
-const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
+const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
   const [showCopied, setShowCopied] = useState(false);
   const handleCopy = async () => {
     if (!message.content) return;
@@ -998,6 +1011,8 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
   }
 
   // assistant message
+  const citationCount = Array.isArray(message.citations) ? message.citations.length : 0;
+
   return (
     <div style={{ width: '100%', marginBottom: 16, position: 'relative' }}>
       <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33` }}>
@@ -1006,22 +1021,68 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
             <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
           </div>
         )}
-<MarkdownBlock
-  markdown={message.content}
-  theme={theme}
-  invert={invertMarkdown}
-  isStreaming={false}   // ← change this to: isStreaming={!message.isStreamingComplete}
-  onTapCitation={(num) => {
-    const citation = message.citations?.find((c) => c.number === num);
-    if (citation && onTapCitation) onTapCitation(citation);
-  }}
-/>
+        <MarkdownBlock
+          markdown={message.content}
+          theme={theme}
+          invert={invertMarkdown}
+          isStreaming={!message.isStreamingComplete}
+          citations={message.citations}
+          onOpenCitation={(num) => {
+            const citation = message.citations?.find((c) => c.number === num);
+            if (!citation || !citation.url) return;
+            if (citation.url.startsWith('http://') || citation.url.startsWith('https://')) {
+              window.open(citation.url, '_blank', 'noopener,noreferrer');
+            }
+          }}
+        />
+        {citationCount > 0 && (
+          <div style={{ marginTop: 16 }}>
+            <button
+              onClick={() => onShowCitations?.(message.citations)}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '10px 16px',
+                borderRadius: 999,
+                border: `1px solid ${theme.accentSoftBlue}55`,
+                backgroundColor: `${theme.accentSoftBlue}18`,
+                color: theme.accentSoftBlue,
+                fontSize: 13,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'background-color .2s ease, transform .2s ease'
+              }}
+            >
+              <ClipboardList size={16} />
+              <span>{`${citationCount} ${citationCount === 1 ? 'Citation' : 'Citations'}`}</span>
+            </button>
+          </div>
+        )}
         <button
           onClick={handleCopy}
           aria-label="Copy message"
-          style={{ position: 'absolute', top: 8, right: 8, background: 'transparent', border: 'none', cursor: 'pointer', color: theme.textSecondary, fontSize: 13 }}
+          style={{
+            position: 'absolute',
+            top: 8,
+            right: 8,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '6px 12px',
+            borderRadius: 999,
+            border: 'none',
+            backgroundColor: showCopied ? theme.accentSoftBlue : `${theme.textSecondary}20`,
+            color: showCopied ? '#fff' : theme.textPrimary,
+            fontSize: 12,
+            fontWeight: 600,
+            cursor: 'pointer',
+            boxShadow: '0 6px 14px rgba(0,0,0,0.12)',
+            transition: 'background-color .2s ease, transform .2s ease, color .2s ease'
+          }}
         >
-          {showCopied ? 'Copied' : 'Copy'}
+          {showCopied ? <Check size={14} /> : <Copy size={14} />}
+          <span>{showCopied ? 'Copied' : 'Copy'}</span>
         </button>
       </div>
     </div>
@@ -1029,9 +1090,17 @@ const MessageBubble = ({ message, theme, invertMarkdown, onTapCitation }) => {
 };
 
 /* Streaming shell that renders only after first token */
-const StreamingResponse = ({ content, theme, invert = false }) => {
-  const mermaidInfo = processStreamingContentForMermaid(content);
-  
+const StreamingResponse = ({ content, theme, invert = false, citations = [] }) => {
+  const mermaidInfo = React.useMemo(() => processStreamingContentForMermaid(content), [content]);
+  const isStillStreaming = !mermaidInfo.hasCompleteMermaid;
+  const handleOpenCitation = React.useCallback((num) => {
+    const citation = citations.find((c) => c.number === num);
+    if (!citation?.url) return;
+    if (citation.url.startsWith('http://') || citation.url.startsWith('https://')) {
+      window.open(citation.url, '_blank', 'noopener,noreferrer');
+    }
+  }, [citations]);
+
   return (
     <div style={{ 
       padding: 16, 
@@ -1058,12 +1127,13 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
       </div>
       
       <div>
-<MarkdownBlock 
-  markdown={content || ''} 
-  theme={theme} 
-  invert={invert} 
-  onTapCitation={() => {}} 
-  isStreaming={!content.includes('```mermaid')}  // ← change this line
+        <MarkdownBlock 
+          markdown={content || ''} 
+          theme={theme} 
+          invert={invert} 
+          onOpenCitation={handleOpenCitation}
+          citations={citations}
+          isStreaming={isStillStreaming}
         />
         {content ? (
           <span style={{ 
@@ -1721,12 +1791,13 @@ const AstraApp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasFirstToken, setHasFirstToken] = useState(false);
   const [streamingContent, setStreamingContent] = useState('');
+  const [streamingCitations, setStreamingCitations] = useState([]);
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
 
-  const [selectedCitation, setSelectedCitation] = useState(null);
-  const [showCitationOverlay, setShowCitationOverlay] = useState(false);
+  const [citationSheetCitations, setCitationSheetCitations] = useState([]);
+  const [showCitationSheet, setShowCitationSheet] = useState(false);
 
   // Auth-related state
   const [showPaywall, setShowPaywall] = useState(false);
@@ -2259,11 +2330,12 @@ const AstraApp = () => {
     setIsLoading(false);
     setHasFirstToken(false);
     setStreamingContent('');
+    setStreamingCitations([]);
     if (speechRecognition.isRecording) speechRecognition.toggleRecording();
     speechRecognition.setRecognizedText('');
   };
 
-  const processStreamLine = (line, citations, onContent) => {
+  const processStreamLine = (line, citations, onContent, onCitationsUpdate) => {
     if (!line.startsWith('data:')) return;
     const payload = line.substring(5).trim();
     if (payload === '[DONE]') return;
@@ -2276,15 +2348,44 @@ const AstraApp = () => {
       if (currentMode === 'search' && citations.length === 0) {
         if (Array.isArray(json.citations) && json.citations.length) {
           if (typeof json.citations[0] === 'object') {
-            json.citations.forEach(cd => {
-              if (cd.number && cd.title && cd.url) {
-                citations.push({
-                  number: cd.number,
-                  title: cd.title,
-                  url: cd.url,
-                  authors: cd.authors || (() => { try { return new URL(cd.url).hostname; } catch { return 'Unknown'; } })()
-                });
+            json.citations.forEach((rawCitation, index) => {
+              if (!rawCitation || !rawCitation.url) return;
+
+              let parsedUrl;
+              try {
+                parsedUrl = new URL(rawCitation.url);
+              } catch {
+                parsedUrl = null;
               }
+
+              const hostname = rawCitation.hostname || (parsedUrl ? parsedUrl.hostname : '');
+              const publicationDate = rawCitation.publicationDate || rawCitation.publishedAt || rawCitation.publication_date || rawCitation.date;
+              const derivedYear = (() => {
+                if (rawCitation.year) return String(rawCitation.year);
+                if (!publicationDate) return null;
+                const maybeYear = new Date(publicationDate).getFullYear();
+                return Number.isNaN(maybeYear) ? null : String(maybeYear);
+              })();
+              const summary = rawCitation.summary || rawCitation.description || rawCitation.abstract || rawCitation.snippet || rawCitation.excerpt;
+              const venue = rawCitation.journal || rawCitation.source || rawCitation.publisher;
+              const number = rawCitation.number ?? index + 1;
+
+              const normalizedCitation = {
+                ...rawCitation,
+                number,
+                title: rawCitation.title || (parsedUrl ? extractTitle(parsedUrl) : 'Untitled'),
+                url: rawCitation.url,
+                authors: rawCitation.authors || rawCitation.author || rawCitation.primaryAuthor || venue || hostname || 'Unknown source',
+                hostname,
+                publicationDate: publicationDate,
+                year: derivedYear || (rawCitation.year ? String(rawCitation.year) : undefined),
+                journal: venue,
+                summary,
+                doi: rawCitation.doi || rawCitation.DOI
+              };
+
+              citations.push(normalizedCitation);
+              onCitationsUpdate?.([...citations]);
             });
           } else {
             json.citations.forEach((urlString, i) => {
@@ -2294,8 +2395,10 @@ const AstraApp = () => {
                   number: i + 1,
                   title: extractTitle(url),
                   url: urlString,
-                  authors: url.hostname || 'Unknown'
+                  authors: url.hostname || 'Unknown',
+                  hostname: url.hostname
                 });
+                onCitationsUpdate?.([...citations]);
               } catch {}
             });
           }
@@ -2369,6 +2472,7 @@ const AstraApp = () => {
     setIsStreaming(true);
     setHasFirstToken(false);
     setStreamingContent('');
+    setStreamingCitations([]);
 
     // Scroll bump when user sends a new request
     setTimeout(scrollToBottom, 100);
@@ -2436,7 +2540,7 @@ const AstraApp = () => {
                   setIsLoading(false);
                 }
                 if (!rafId) rafId = requestAnimationFrame(flush);
-              });
+              }, (updated) => setStreamingCitations(updated));
             };
 
             if (endsWithNewline) {
@@ -2480,6 +2584,7 @@ const AstraApp = () => {
             setIsStreaming(false);
             setStreamingContent('');
             setHasFirstToken(false);
+            setStreamingCitations([]);
 
           // Handle usage tracking and session saving
           if (!isAuthenticated) {
@@ -2510,6 +2615,7 @@ const AstraApp = () => {
           if (streamErr.name === 'AbortError') return;
           setIsStreaming(false);
           setIsLoading(false);
+          setStreamingCitations([]);
           setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: '⚠️ Error occurred while streaming response. Please try again.', timestamp: new Date() }]);
         }
       }
@@ -2518,6 +2624,7 @@ const AstraApp = () => {
       setIsLoading(false);
       setIsStreaming(false);
       setHasFirstToken(false);
+      setStreamingCitations([]);
       setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
 
       // Revert optimistic update if API call failed
@@ -2538,11 +2645,19 @@ const AstraApp = () => {
     if (isStreaming) {
       setIsStreaming(false);
       if (streamingContent) {
-        const assistantMessage = { id: Date.now(), role: 'assistant', content: streamingContent, timestamp: new Date() };
+        const assistantMessage = {
+          id: Date.now(),
+          role: 'assistant',
+          content: streamingContent,
+          citations: streamingCitations,
+          timestamp: new Date(),
+          isStreamingComplete: true
+        };
         setMessages(prev => [...prev, assistantMessage]);
       }
       setStreamingContent('');
       setHasFirstToken(false);
+      setStreamingCitations([]);
     }
   };
 
@@ -2601,6 +2716,10 @@ const AstraApp = () => {
 
   // Removed all useEffect hooks that called scrollToBottom
 
+  const sortedCitationSheet = Array.isArray(citationSheetCitations)
+    ? [...citationSheetCitations].sort((a, b) => (a?.number ?? 0) - (b?.number ?? 0))
+    : [];
+
   return (
     <div style={{
       height: '100dvh', display: 'flex', flexDirection: 'column',
@@ -2641,7 +2760,7 @@ const AstraApp = () => {
           onMouseDown={(e) => e.preventDefault()}
           tabIndex={-1}
         >
-          <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
+          <div style={{ maxWidth: isMobile ? '100%' : 855, margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
             {messages.length === 0 && !isLoading && !isStreaming && (
               <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} isMobile={isMobile} />
             )}
@@ -2652,12 +2771,23 @@ const AstraApp = () => {
                 message={message}
                 theme={theme}
                 invertMarkdown={isDark}
-                onTapCitation={(citation) => { setSelectedCitation(citation); setShowCitationOverlay(true); }}
+                onShowCitations={(citations) => {
+                  if (!Array.isArray(citations) || citations.length === 0) return;
+                  setCitationSheetCitations(citations);
+                  setShowCitationSheet(true);
+                }}
               />
             ))}
 
             {isLoading && <LoadingIndicator theme={theme} />}
-            {isStreaming && hasFirstToken && <StreamingResponse content={streamingContent} theme={theme} invert={isDark} />}
+            {isStreaming && hasFirstToken && (
+              <StreamingResponse
+                content={streamingContent}
+                theme={theme}
+                invert={isDark}
+                citations={streamingCitations}
+              />
+            )}
           </div>
         </div>
 
@@ -2673,19 +2803,6 @@ const AstraApp = () => {
 }}>
   
   <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%', position: 'relative', zIndex: 2 }}>
-    {/* Subtle blur fade overlay - extended with full rounding */}
-<div style={{
-  position: 'absolute',
-  top: -15,
-  left: 0,
-  right: 0,
-  height: 35,
-  background: `linear-gradient(to bottom, transparent, ${theme.backgroundSurface})`,
-  pointerEvents: 'none',
-  zIndex: 1,
-  clipPath: 'ellipse(100% 50% at 50% 0%), ellipse(100% 150% at 50% 100%)'
-}} />
-    
     <InputBar
       query={query}
       setQuery={setQuery}
@@ -2788,11 +2905,11 @@ const AstraApp = () => {
       />
 
       {/* Citations */}
-      {showCitationOverlay && selectedCitation && (
-        <CitationPillOverlay
-          citation={selectedCitation}
-          isPresented={showCitationOverlay}
-          onDismiss={() => setShowCitationOverlay(false)}
+      {showCitationSheet && sortedCitationSheet.length > 0 && (
+        <ReferencesView
+          citations={sortedCitationSheet}
+          isPresented={showCitationSheet}
+          onDismiss={() => setShowCitationSheet(false)}
           theme={theme}
         />
       )}
@@ -2888,10 +3005,79 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   font-weight: 600;
   border-radius: 4px;
   transition: all .2s ease;
+  position: relative;
 }
 .markdown-body sup.md-citation:hover {
   background-color: ${theme.accentSoftBlue}20;
   transform: translateY(-1px);
+}
+.markdown-body sup.md-citation[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  background-color: ${theme.backgroundSurface};
+  color: ${theme.textPrimary};
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: normal;
+  max-width: 240px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 5;
+}
+.markdown-body sup.md-citation[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color: ${theme.backgroundSurface} transparent transparent transparent;
+  opacity: 0;
+  transition: opacity .15s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::after {
+  left: 50%;
+  transform: translate(-50%, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::before {
+  left: 50%;
+  transform: translate(-50%, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]::after {
+  left: 0;
+  transform: translate(0, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]::before {
+  left: 6px;
+  transform: translate(0, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]::after {
+  right: 0;
+  transform: translate(0, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]::before {
+  right: 6px;
+  transform: translate(0, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip]:hover::after,
+.markdown-body sup.md-citation[data-tooltip]:hover::before {
+  opacity: 1;
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"]):hover::after {
+  transform: translate(-50%, -120%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]:hover::after {
+  transform: translate(0, -120%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]:hover::after {
+  transform: translate(0, -120%);
 }
 
 /* Images */
