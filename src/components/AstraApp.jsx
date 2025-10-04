@@ -38,6 +38,7 @@ import { visit } from 'unist-util-visit';
 import mermaid from 'mermaid';
 import rehypeRaw from 'rehype-raw';
 
+
 // If you enable KaTeX, also:
 // import 'katex/dist/katex.min.css';
 
@@ -619,15 +620,17 @@ const ToolbarView = ({
         <Stethoscope size={18} color={theme.textPrimary} />
       </button>
 
-      <h1 style={{
-        color: theme.textPrimary,
-        fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-        fontSize: isMobile ? 24 : 28,
-        margin: 0,
-        fontWeight: 400
-      }}>
-        Astra
-      </h1>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+  <h1 style={{
+    color: theme.textPrimary,
+    fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
+    fontSize: isMobile ? 24 : 28,
+    margin: 0,
+    fontWeight: 400
+  }}>
+    Astra
+  </h1>
+      </div>
 
       <div style={{
         position: 'absolute',
@@ -1002,7 +1005,6 @@ const StreamingResponse = ({ content, theme, invert = false }) => {
             color: '#4A6B7D', 
             animation: 'blink 1s infinite' 
           }}>
-            ▍
           </span>
         ) : null}
       </div>
@@ -2418,25 +2420,47 @@ const AstraApp = () => {
           </div>
         </div>
 
-        {/* Input - matching width container */}
-        <div style={{ flexShrink: 0, padding: isMobile ? '0 12px' : '0 16px', boxSizing: 'border-box', width: '100%' }}>
-          <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%' }}>
-            <InputBar
-              query={query}
-              setQuery={setQuery}
-              currentMode={currentMode}
-              onModeChange={setCurrentMode}
-              onSend={handleSend}
-              onStop={handleStop}
-              isStreaming={isStreaming}
-              isLoading={isLoading}
-              speechRecognition={speechRecognition}
-              theme={theme}
-              onHeightChange={setInputBarHeight}
-              isMobile={isMobile}
-            />
-          </div>
-        </div>
+        
+{/* Input - matching width container */}
+<div style={{
+  flexShrink: 0,
+  padding: isMobile ? '0 12px' : '0 16px',
+  boxSizing: 'border-box',
+  width: '100%',
+  position: 'relative',
+  backgroundColor: theme.backgroundPrimary
+}}>
+  
+  <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%', position: 'relative', zIndex: 2 }}>
+    {/* Subtle blur fade overlay - extended with full rounding */}
+<div style={{
+  position: 'absolute',
+  top: -15,
+  left: 0,
+  right: 0,
+  height: 35,
+  background: `linear-gradient(to bottom, transparent, ${theme.backgroundSurface})`,
+  pointerEvents: 'none',
+  zIndex: 1,
+  clipPath: 'ellipse(100% 50% at 50% 0%), ellipse(100% 150% at 50% 100%)'
+}} />
+    
+    <InputBar
+      query={query}
+      setQuery={setQuery}
+      currentMode={currentMode}
+      onModeChange={setCurrentMode}
+      onSend={handleSend}
+      onStop={handleStop}
+      isStreaming={isStreaming}
+      isLoading={isLoading}
+      speechRecognition={speechRecognition}
+      theme={theme}
+      onHeightChange={setInputBarHeight}
+      isMobile={isMobile}
+    />
+  </div>
+</div>
       </div>
 
       {/* Paywall Modal */}
