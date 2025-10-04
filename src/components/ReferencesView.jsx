@@ -1,129 +1,192 @@
 import React from 'react';
 import { X, ExternalLink } from 'lucide-react';
 
+const isHttpUrl = (url) => typeof url === 'string' && (url.startsWith('http://') || url.startsWith('https://'));
+
+const getHost = (url) => {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return '';
+  }
+};
+
 const ReferencesView = ({ citations, isPresented, onDismiss, theme }) => {
-  const handleLinkClick = (url) => {
-    // Safely open only valid HTTP(S) URLs
-    if (url.startsWith('http://') || url.startsWith('https://')) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } else {
-      console.warn('Invalid URL scheme:', url);
-    }
-  };
-
-  const getDisplayUrl = (url) => {
-    try {
-      const urlObj = new URL(url);
-      return urlObj.hostname || url;
-    } catch {
-      return 'Invalid URL';
-    }
-  };
-
   if (!isPresented) return null;
 
+  const handleCitationClick = (citation) => {
+    if (!citation?.url) return;
+    if (isHttpUrl(citation.url)) {
+      window.open(citation.url, '_blank', 'noopener,noreferrer');
+      onDismiss?.();
+    }
+  };
+
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+    <div
       onClick={onDismiss}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 60,
+        backgroundColor: 'rgba(0,0,0,0.45)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-end',
+        padding: '0 16px 16px'
+      }}
     >
-      <div 
-        className="w-full max-w-2xl h-5/6 rounded-xl overflow-hidden shadow-2xl"
-        style={{ backgroundColor: theme.backgroundSurface }}
+      <div
         onClick={(e) => e.stopPropagation()}
+        style={{
+          width: '100%',
+          maxWidth: 520,
+          backgroundColor: theme.backgroundSurface,
+          borderRadius: 28,
+          boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
+          display: 'flex',
+          flexDirection: 'column',
+          maxHeight: '72vh',
+          overflow: 'hidden'
+        }}
       >
-        {/* Header */}
-        <div 
-          className="flex items-center justify-between p-4 border-b"
-          style={{ borderColor: `${theme.textSecondary}20` }}
-        >
+        <div style={{ position: 'relative', padding: '18px 24px 6px' }}>
+          <div
+            style={{
+              width: 44,
+              height: 4,
+              borderRadius: 999,
+              backgroundColor: `${theme.textSecondary}40`,
+              margin: '0 auto 14px'
+            }}
+          />
           <button
             onClick={onDismiss}
-            className="flex items-center justify-center w-9 h-9 rounded-full"
-            style={{ backgroundColor: `${theme.textSecondary}33` }}
+            style={{
+              position: 'absolute',
+              top: 18,
+              right: 20,
+              border: 'none',
+              background: 'transparent',
+              cursor: 'pointer',
+              color: theme.textSecondary,
+              width: 32,
+              height: 32,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            aria-label="Dismiss citations"
           >
-            <X size={18} color={theme.textPrimary} />
+            <X size={18} />
           </button>
-
-          <h1 
-            className="text-xl font-bold"
-            style={{ color: theme.textPrimary }}
+          <h1
+            style={{
+              margin: 0,
+              textAlign: 'center',
+              fontSize: 18,
+              fontWeight: 600,
+              color: theme.textPrimary
+            }}
           >
-            Sources
+            Citations
           </h1>
-
-          <div className="w-9" /> {/* Spacer for alignment */}
         </div>
 
-        {/* Sources list */}
-        <div className="overflow-y-auto h-full">
-          <div className="divide-y" style={{ borderColor: `${theme.textSecondary}20` }}>
-            {citations.map((citation) => (
-              <div key={citation.id} className="p-4">
-                <div className="flex items-start space-x-3">
-                  {/* Citation number */}
-                  <div 
-                    className="flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold flex-shrink-0"
-                    style={{ backgroundColor: `${theme.textSecondary}33`, color: theme.textPrimary }}
+        <div style={{ overflowY: 'auto', padding: '4px 0 16px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {citations.map((citation) => {
+              const key = citation.id || `${citation.number}-${citation.url || citation.title}`;
+              const host = getHost(citation.url);
+              const isClickable = isHttpUrl(citation.url);
+
+              return (
+                <button
+                  key={key}
+                  disabled={!isClickable}
+                  onClick={() => handleCitationClick(citation)}
+                  style={{
+                    padding: '14px 22px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 14,
+                    background: 'transparent',
+                    border: 'none',
+                    textAlign: 'left',
+                    cursor: isClickable ? 'pointer' : 'default',
+                    opacity: isClickable ? 1 : 0.6
+                  }}
+                >
+                  <span
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: 32,
+                      height: 32,
+                      borderRadius: '50%',
+                      backgroundColor: `${theme.accentSoftBlue}22`,
+                      color: theme.accentSoftBlue,
+                      fontSize: 13,
+                      fontWeight: 600
+                    }}
                   >
-                    {citation.number}
-                  </div>
+                    {citation.number ?? '•'}
+                  </span>
 
-                  {/* Citation content */}
-                  <div className="flex-1 min-w-0 space-y-1">
-                    <h3 
-                      className="text-lg font-semibold leading-tight"
-                      style={{ color: theme.textPrimary }}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: 10
+                      }}
                     >
-                      {citation.title}
-                    </h3>
-
-                    <p 
-                      className="text-sm"
-                      style={{ color: theme.textSecondary }}
-                    >
-                      {citation.authors}
-                    </p>
-
-                    {/* URL link */}
-                    {(citation.url.startsWith('http://') || citation.url.startsWith('https://')) ? (
-                      <button
-                        onClick={() => handleLinkClick(citation.url)}
-                        className="flex items-center space-x-1 text-sm hover:underline"
-                        style={{ color: theme.accentSoftBlue }}
+                      <span
+                        style={{
+                          fontSize: 15,
+                          fontWeight: 600,
+                          color: theme.textPrimary,
+                          lineHeight: 1.35,
+                          display: 'block'
+                        }}
                       >
-                        <ExternalLink size={12} />
-                        <span>{getDisplayUrl(citation.url)}</span>
-                      </button>
-                    ) : (
-                      <span 
-                        className="text-xs"
-                        style={{ color: theme.textSecondary }}
+                        {citation.title || 'Untitled source'}
+                      </span>
+                      {isClickable && <ExternalLink size={16} color={theme.accentSoftBlue} />}
+                    </div>
+
+                    {host && (
+                      <span
+                        style={{
+                          display: 'block',
+                          marginTop: 4,
+                          fontSize: 12,
+                          color: theme.textSecondary
+                        }}
                       >
-                        Tap to view
+                        {host}
                       </span>
                     )}
                   </div>
-                </div>
-              </div>
-            ))}
+                </button>
+              );
+            })}
 
-            {/* Empty state */}
             {citations.length === 0 && (
-              <div className="flex flex-col items-center justify-center py-12">
-                <p 
-                  className="text-lg font-medium"
-                  style={{ color: theme.textSecondary }}
-                >
-                  No sources available
-                </p>
-                <p 
-                  className="text-sm mt-1"
-                  style={{ color: theme.textSecondary }}
-                >
-                  Citations will appear here when available
-                </p>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '48px 24px',
+                  color: theme.textSecondary
+                }}
+              >
+                <p style={{ margin: 0, fontSize: 16, fontWeight: 600 }}>No sources available</p>
+                <p style={{ margin: '6px 0 0', fontSize: 13 }}>Citations will appear when Astra cites references.</p>
               </div>
             )}
           </div>
