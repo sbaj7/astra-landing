@@ -9,6 +9,23 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
   const [timeRemaining, setTimeRemaining] = useState('');
   const [authMessage, setAuthMessage] = useState('');
   const isMobile = useIsMobile();
+  const normalizedPlan = (chatLimit?.plan || 'guest').toLowerCase();
+  const inferredLimit = typeof chatLimit?.limit === 'number'
+    ? chatLimit.limit
+    : typeof chatLimit?.used === 'number' && typeof chatLimit?.remaining === 'number'
+      ? chatLimit.used + chatLimit.remaining
+      : normalizedPlan === 'plus'
+        ? 50
+        : normalizedPlan === 'free'
+          ? 10
+          : 5;
+  const planCopyLookup = {
+    guest: 'your guest allowance',
+    free: 'your member plan',
+    plus: 'your Plus plan',
+    pro: 'your Pro plan'
+  };
+  const planCopy = planCopyLookup[normalizedPlan] || 'your plan';
 
   useEffect(() => {
     if (isOpen && chatLimit?.resetAt) {
@@ -150,7 +167,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit }) => {
             margin: '0 0 16px 0',
             lineHeight: '1.5'
           }}>
-            You've used all 10 of your free chats for today. You can wait for the reset or create an account for unlimited access.
+            You've used all {inferredLimit} chats included with {planCopy} today. You can wait for the reset or upgrade your plan for more conversations.
           </p>
 
           {/* Countdown Timer */}

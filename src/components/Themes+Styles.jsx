@@ -38,7 +38,7 @@ const rgbToHex = (r, g, b, a = 255) => {
 };
 
 // MARK: - Color System (matching Swift exactly)
-const colorDefinitions = {
+export const colorDefinitions = {
   light: {
     backgroundPrimary: "#FAFAF9",
     backgroundSurface: "#FEFEFE",

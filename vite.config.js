@@ -3,5 +3,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // Remove the custom define - Vite handles env vars automatically
+  build: {
+    manifest: true,
+    outDir: 'dist',
+    emptyOutDir: true
+  }
 })

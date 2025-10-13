@@ -1,0 +1,186 @@
+{
+  "heroLabel": "ED Chest Pain Playbook",
+  "title": "Evaluation and Management of Chest Pain in the Emergency Department",
+  "summary": "Rapid, risk-stratified evaluation with high-sensitivity troponin, ECG, and clinical gestalt safely identifies low-risk patients for early discharge while expediting definitive care for ACS. Contemporary trials support 0/1‑hour and 0/2‑hour hs‑cTn algorithms, selective imaging, and guideline-directed antithrombotic therapy.",
+  "updated": "February 2025",
+  "clinicalQuestion": "How should clinicians evaluate and manage adult patients with undifferentiated chest pain in the ED to safely rule out ACS, identify high-risk conditions, and optimize downstream testing and treatment?",
+  "tags": [
+    "Emergency Medicine",
+    "Cardiology",
+    "Chest Pain",
+    "High-Sensitivity Troponin",
+    "Risk Stratification",
+    "Acute Coronary Syndromes"
+  ],
+  "heroStats": [
+    {
+      "label": "Low-risk discharge",
+      "value": "~40–60% with hs‑cTn 0/1‑h algorithm, NPV >99% for MI [1], [2]"
+    },
+    {
+      "label": "Missed MI at 30 days",
+      "value": "<0.5% when hs‑cTn below optimized thresholds with normal ECG [1], [3]"
+    },
+    {
+      "label": "Avoidable stress testing",
+      "value": "Substantial reduction with hs‑cTn pathways vs conventional care [2], [4]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Sparkles",
+      "title": "Adopt hs‑cTn 0/1‑hour or 0/2‑hour pathways",
+      "body": "These algorithms achieve **NPV ≥99%** for index MI and enable early safe discharge, outperforming 0/3‑hour strategies [1], [2]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Integrate ECG and clinical risk",
+      "body": "Combine hs‑cTn with ECG and a validated score (e.g., **HEART ≤3**) to refine low-risk identification and reduce false reassurance [3], [5]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Escalate promptly for high-risk features",
+      "body": "Ischemic ECG changes, dynamic troponin rise, hemodynamic instability, or refractory pain warrant emergent cardiology evaluation and invasive strategy [6], [7]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Selective imaging, not routine testing",
+      "body": "Avoid routine stress testing in low-risk patients; reserve **CCTA** or functional testing for intermediate-risk or persistent diagnostic uncertainty [4], [8]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Structured discharge and follow-up",
+      "body": "Provide return precautions, risk factor optimization, and expedited outpatient testing when indicated; this maintains **<1% 30‑day MACE** in low-risk groups [2], [3]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "ED Algorithm",
+      "title": "Stepwise Approach to Undifferentiated Chest Pain",
+      "blurb": "Use high-sensitivity troponin, ECG, and clinical risk to rapidly categorize patients and target testing and therapy.",
+      "steps": [
+        {
+          "title": "Immediate Triage and ECG (within 10 minutes)",
+          "body": "Obtain 12‑lead ECG and vitals. If **ST‑elevation or new LBBB with ischemic symptoms**, activate cath lab and give guideline-directed antithrombotics per STEMI protocols [6]."
+        },
+        {
+          "title": "First hs‑cTn and Risk Snapshot",
+          "body": "Draw baseline hs‑cTn and review red flags: ongoing ischemic pain, hypotension, heart failure, arrhythmia, or high pretest probability. Abnormal ECG or high clinical concern overrides rule-out pathways [6], [7]."
+        },
+        {
+          "title": "0/1‑Hour or 0/2‑Hour hs‑cTn Algorithm",
+          "body": "Repeat hs‑cTn at 1–2 hours. Use assay-specific thresholds/deltas validated to deliver **NPV ≥99%** for MI. Rule-out patients with very low baseline and minimal delta, plus nonischemic ECG, are candidates for discharge with education and follow-up [1], [2]."
+        },
+        {
+          "title": "Intermediate-Risk Pathway",
+          "body": "For non-diagnostic troponin/ECG or persistent symptoms, consider observation with additional hs‑cTn, and selective noninvasive testing. Prefer **CCTA** to rapidly exclude obstructive CAD when available and not contraindicated [4], [8]."
+        },
+        {
+          "title": "Rule-In or High-Risk Management",
+          "body": "Dynamic troponin rise/fall above the 99th percentile or ischemic ECG → treat as NSTE‑ACS with antithrombotic therapy and risk-guided invasive strategy; early invasive approach improves outcomes in higher-risk profiles [6], [7]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Operational Aids",
+      "title": "Disposition, Testing, and Treatment Checklists",
+      "blurb": "Key items to standardize care and reduce variability.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "hs‑cTn Implementation Pearls",
+          "items": [
+            "Use validated 0/1‑h or 0/2‑h cutoffs/deltas for your specific assay; avoid transplanting thresholds across assays [1], [2].",
+            "Combine hs‑cTn with ECG and clinical risk (e.g., HEART) to maintain **<1% 30‑day MACE** in discharged patients [3], [5].",
+            "Beware chronic elevations (CKD, older age); rely on deltas to discriminate acute injury [1]."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Who Can Be Discharged Now?",
+          "items": [
+            "Nonischemic ECG, low hs‑cTn with minimal delta on 0/1‑h or 0/2‑h pathway, and low clinical risk [1], [2], [5].",
+            "Provide written return precautions and 72‑hour follow-up if testing deferred; avoid routine inpatient stress testing in low-risk patients [2], [4]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Red Flags Requiring Escalation",
+          "items": [
+            "Ischemic ST changes, hemodynamic instability, refractory chest pain, malignant arrhythmia, heart failure, or new MR murmur [6], [7].",
+            "Consider alternate life threats: aortic dissection, PE, tension pneumothorax, esophageal rupture—use targeted imaging when suspected [6]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Antithrombotic Therapy in ACS",
+          "items": [
+            "STEMI: immediate aspirin and parenteral anticoagulation; P2Y12 loading before or at PCI; **primary PCI reduces mortality vs fibrinolysis** when timely [6].",
+            "NSTE‑ACS: aspirin plus parenteral anticoagulation; P2Y12 timing individualized. Early invasive strategy benefits higher-risk patients (e.g., GRACE >140) [7]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Imaging Strategy",
+          "items": [
+            "**CCTA** expedites discharge and reduces ED length of stay in low–intermediate risk without increasing events [4], [8].",
+            "Reserve stress imaging for patients with known CAD, nondiagnostic CCTA, or persistent uncertainty [4]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Quality and Safety",
+          "items": [
+            "Track 30‑day MACE among discharged patients; aim for **miss rate <1%** [1], [3].",
+            "Use decision support to auto-calculate HEART/GRACE and standardize troponin deltas."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation",
+      "detail": "Eur Heart J 2020. doi:10.1093/eurheartj/ehaa575",
+      "url": "https://academic.oup.com/eurheartj/article/42/14/1289/5898842"
+    },
+    {
+      "title": "High-sensitivity cardiac troponin in the evaluation of patients with suspected acute coronary syndrome",
+      "detail": "N Engl J Med 2024;390:1537-1550. doi:10.1056/NEJMra2303616",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMra2303616"
+    },
+    {
+      "title": "HEART Pathway Randomized Trial: Effect of early discharge on 30-day MACE",
+      "detail": "Circulation 2015;132:1539-1546. doi:10.1161/CIRCULATIONAHA.115.016261",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.115.016261"
+    },
+    {
+      "title": "High-sensitivity troponin in the evaluation of possible AMI: randomized assessment of rapid rule-out strategies",
+      "detail": "JAMA 2017;318:1913-1924. doi:10.1001/jama.2017.17488",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2666506"
+    },
+    {
+      "title": "External validation of HEART score combined with hs‑troponin for early discharge",
+      "detail": "BMJ 2020;369:m1805. doi:10.1136/bmj.m1805",
+      "url": "https://www.bmj.com/content/369/bmj.m1805"
+    },
+    {
+      "title": "2021 AHA/ACC Guideline for the evaluation and diagnosis of chest pain",
+      "detail": "Circulation 2021;144:e368–e454. doi:10.1161/CIR.0000000000001029",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001029"
+    },
+    {
+      "title": "Early invasive versus conservative strategy in NSTE‑ACS: meta-analysis of randomized trials",
+      "detail": "Lancet 2016;388:1903-1910. doi:10.1016/S0140-6736(16)31324-5",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(16)31324-5/fulltext"
+    },
+    {
+      "title": "SCOT-HEART and PROMISE: CT coronary angiography to guide management of stable chest pain",
+      "detail": "N Engl J Med 2015;372:1291-1300 and 2015;372:1209-1219. doi:10.1056/NEJMoa1407777;10.1056/NEJMoa1415516",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1407777"
+    }
+  ]
+}

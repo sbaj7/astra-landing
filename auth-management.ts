@@ -82,6 +82,139 @@ function sanitizeSettings(settings: unknown) {
   return Object.keys(result).length > 0 ? result : null;
 }
 
+const ACTIVE_SUBSCRIPTION_STATUSES = new Set(['trialing', 'active', 'past_due']);
+const PLAN_LIMITS: Record<string, number | null> = {
+  free: 10,
+  plus: 50,
+  pro: null
+};
+const DEFAULT_LIMIT_RESET_MS = 24 * 60 * 60 * 1000;
+const ANONYMOUS_PLAN_LIMIT = 5;
+
+function getNextResetTimestamp(): string {
+  return new Date(Date.now() + DEFAULT_LIMIT_RESET_MS).toISOString();
+}
+
+function normalizePlanKey(planKey: unknown): string {
+  if (typeof planKey !== 'string') return 'free';
+  const normalized = planKey.trim().toLowerCase();
+  if (normalized === 'plus' || normalized === 'pro') {
+    return normalized;
+  }
+  return 'free';
+}
+
+function deriveUserPlan(user: any) {
+  const enriched = attachSubscriptionFields(user) ?? user ?? {};
+  const rawPlan = enriched?.subscription_plan ?? enriched?.subscription_tier ?? enriched?.subscription_status ?? 'free';
+  const planKey = normalizePlanKey(rawPlan);
+  const rawStatus = typeof enriched?.subscription_status === 'string' ? enriched.subscription_status : enriched?.subscription?.status;
+  const isActive = rawStatus ? ACTIVE_SUBSCRIPTION_STATUSES.has(String(rawStatus).toLowerCase()) : true;
+  if (!isActive) {
+    return {
+      plan: 'free',
+      limit: PLAN_LIMITS.free,
+      isUnlimited: false
+    };
+  }
+  const limit = PLAN_LIMITS[planKey] ?? PLAN_LIMITS.free;
+  return {
+    plan: planKey,
+    limit,
+    isUnlimited: limit === null
+  };
+}
+
+async function ensureAuthUserRecord(
+  supabase: ReturnType<typeof createClient>,
+  {
+    supabase_user,
+    user_id
+  }: {
+    supabase_user?: any;
+    user_id?: string;
+  }
+) {
+  if (user_id) {
+    const { data, error } = await supabase.from("auth_users").select("*").eq("id", user_id).maybeSingle();
+    if (error && error.code !== "PGRST116") {
+      throw error;
+    }
+    if (data) {
+      return data;
+    }
+  }
+
+  const authId = supabase_user?.id;
+  if (!authId) {
+    return null;
+  }
+
+  const { data: existing, error } = await supabase.from("auth_users").select("*").eq("auth0_id", authId).maybeSingle();
+  if (error && error.code !== "PGRST116") {
+    throw error;
+  }
+  if (existing) {
+    return existing;
+  }
+
+  const now = new Date().toISOString();
+  const incomingMetadata = typeof supabase_user.metadata === "object" && supabase_user.metadata !== null ? supabase_user.metadata : {};
+  const incomingSettings = sanitizeSettings(incomingMetadata?.settings);
+  const appMetadata = typeof supabase_user.app_metadata === "object" && supabase_user.app_metadata !== null ? supabase_user.app_metadata : {};
+  const identities = Array.isArray(supabase_user.identities) ? supabase_user.identities : [];
+  const identitySummaries = identities.map((identity) => ({
+    provider: identity?.provider || identity?.identity_provider || null,
+    identity_id: identity?.id || identity?.identity_id || null,
+    email: identity?.email || identity?.identity_data?.email || null,
+    last_sign_in_at: identity?.last_sign_in_at || identity?.last_signin_at || null
+  }));
+  const primaryProvider =
+    appMetadata?.provider ||
+    identitySummaries.find((item) => !!item.provider)?.provider ||
+    (supabase_user.email ? "email" : "unknown");
+
+  const metadata: Record<string, any> = {
+    avatar_url: supabase_user.avatar_url || incomingMetadata.avatar_url || null,
+    supabase_profile: incomingMetadata,
+    app_metadata: appMetadata,
+    auth_provider: primaryProvider,
+    auth_providers: identitySummaries
+  };
+  if (incomingSettings) {
+    metadata.settings = incomingSettings;
+  }
+
+  const normalizedFullName =
+    supabase_user.full_name ||
+    incomingMetadata.full_name ||
+    incomingMetadata.name ||
+    supabase_user.email ||
+    "User";
+
+  const insertPayload = {
+    auth0_id: authId,
+    email: supabase_user.email || "",
+    full_name: normalizedFullName,
+    metadata,
+    subscription_status: "free",
+    created_at: now,
+    updated_at: now
+  };
+
+  const { data: createdUser, error: insertError } = await supabase
+    .from("auth_users")
+    .insert(insertPayload)
+    .select()
+    .single();
+
+  if (insertError) {
+    throw insertError;
+  }
+
+  return createdUser;
+}
+
 serve(async (req)=>{
   if (req.method === "OPTIONS") {
     return new Response("ok", {
@@ -144,8 +277,27 @@ serve(async (req)=>{
     });
   }
 });
-/* -------------------------------------------------------------------------- */ /*  Anonymous chat limit                                                      */ /* -------------------------------------------------------------------------- */ async function handleCheckLimit(body, supabase) {
-  const { anonymous_id } = body;
+/* -------------------------------------------------------------------------- */ /*  Usage limits                                                              */ /* -------------------------------------------------------------------------- */
+async function handleCheckLimit(body: any, supabase: ReturnType<typeof createClient>) {
+  const { anonymous_id, supabase_user, user_id } = body ?? {};
+
+  if (supabase_user?.id || user_id) {
+    try {
+      return await handleAuthenticatedLimitCheck(supabase, { supabase_user, user_id });
+    } catch (error) {
+      console.error("Failed to check authenticated user limit:", error);
+      return new Response(JSON.stringify({
+        error: "Unable to determine usage limit"
+      }), {
+        status: 500,
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "application/json"
+        }
+      });
+    }
+  }
+
   if (!anonymous_id) {
     return new Response(JSON.stringify({
       error: "anonymous_id required"
@@ -157,26 +309,38 @@ serve(async (req)=>{
       }
     });
   }
-  let { data: limitRecord } = await supabase.from("anonymous_limits").select("*").eq("anonymous_id", anonymous_id).single();
+
+  let { data: limitRecord } = await supabase
+    .from("anonymous_limits")
+    .select("*")
+    .eq("anonymous_id", anonymous_id)
+    .single();
+
   const now = new Date();
   if (!limitRecord) {
     const newRecord = {
       anonymous_id,
       chats_used: 0,
-      reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
+      reset_at: getNextResetTimestamp(),
       updated_at: now.toISOString()
     };
     const { data } = await supabase.from("anonymous_limits").insert(newRecord).select().single();
     limitRecord = data ?? newRecord;
   }
+
   const resetTime = new Date(limitRecord.reset_at);
-  if (resetTime < now) {
-    const nextReset = new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
-    const { data } = await supabase.from("anonymous_limits").update({
-      chats_used: 0,
-      reset_at: nextReset,
-      updated_at: now.toISOString()
-    }).eq("anonymous_id", anonymous_id).select().single();
+  if (Number.isNaN(resetTime.getTime()) || resetTime <= now) {
+    const nextReset = getNextResetTimestamp();
+    const { data } = await supabase
+      .from("anonymous_limits")
+      .update({
+        chats_used: 0,
+        reset_at: nextReset,
+        updated_at: now.toISOString()
+      })
+      .eq("anonymous_id", anonymous_id)
+      .select()
+      .single();
     limitRecord = data ?? {
       anonymous_id,
       chats_used: 0,
@@ -184,10 +348,17 @@ serve(async (req)=>{
       updated_at: now.toISOString()
     };
   }
+
+  const used = limitRecord.chats_used ?? 0;
+  const remaining = Math.max(0, ANONYMOUS_PLAN_LIMIT - used);
+
   return new Response(JSON.stringify({
-    remaining: Math.max(0, 10 - (limitRecord.chats_used ?? 0)),
-    used: limitRecord.chats_used ?? 0,
-    reset_at: limitRecord.reset_at
+    plan: "guest",
+    limit: ANONYMOUS_PLAN_LIMIT,
+    remaining,
+    used,
+    reset_at: limitRecord.reset_at,
+    is_unlimited: false
   }), {
     status: 200,
     headers: {
@@ -196,8 +367,274 @@ serve(async (req)=>{
     }
   });
 }
-async function handleIncrementUsage(body, supabase) {
-  const { anonymous_id } = body;
+
+async function handleAuthenticatedLimitCheck(
+  supabase: ReturnType<typeof createClient>,
+  {
+    supabase_user,
+    user_id
+  }: {
+    supabase_user?: any;
+    user_id?: string;
+  }
+) {
+  const now = new Date();
+  const authUser = await ensureAuthUserRecord(supabase, { supabase_user, user_id });
+
+  if (!authUser) {
+    return new Response(JSON.stringify({
+      error: "user context required"
+    }), {
+      status: 400,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const planInfo = deriveUserPlan(authUser);
+
+  if (planInfo.isUnlimited) {
+    return new Response(JSON.stringify({
+      plan: planInfo.plan,
+      limit: null,
+      remaining: null,
+      used: null,
+      reset_at: null,
+      is_unlimited: true
+    }), {
+      status: 200,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  let { data: limitRecord } = await supabase
+    .from("user_limits")
+    .select("*")
+    .eq("user_id", authUser.id)
+    .single();
+
+  if (!limitRecord) {
+    const newRecord = {
+      user_id: authUser.id,
+      chats_used: 0,
+      reset_at: getNextResetTimestamp(),
+      updated_at: now.toISOString()
+    };
+    const { data } = await supabase.from("user_limits").insert(newRecord).select().single();
+    limitRecord = data ?? newRecord;
+  }
+
+  const resetTime = new Date(limitRecord.reset_at);
+  if (Number.isNaN(resetTime.getTime()) || resetTime <= now) {
+    const nextReset = getNextResetTimestamp();
+    const { data } = await supabase
+      .from("user_limits")
+      .update({
+        chats_used: 0,
+        reset_at: nextReset,
+        updated_at: now.toISOString()
+      })
+      .eq("user_id", authUser.id)
+      .select()
+      .single();
+    limitRecord = data ?? {
+      user_id: authUser.id,
+      chats_used: 0,
+      reset_at: nextReset,
+      updated_at: now.toISOString()
+    };
+  }
+
+  const used = limitRecord.chats_used ?? 0;
+  const limit = typeof planInfo.limit === "number" ? planInfo.limit : PLAN_LIMITS.free;
+  const remaining = Math.max(0, limit - used);
+
+  return new Response(JSON.stringify({
+    plan: planInfo.plan,
+    limit,
+    remaining,
+    used,
+    reset_at: limitRecord.reset_at,
+    is_unlimited: false
+  }), {
+    status: 200,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json"
+    }
+  });
+}
+
+async function handleAuthenticatedIncrementUsage(
+  supabase: ReturnType<typeof createClient>,
+  {
+    supabase_user,
+    user_id
+  }: {
+    supabase_user?: any;
+    user_id?: string;
+  }
+) {
+  const now = new Date();
+  const authUser = await ensureAuthUserRecord(supabase, { supabase_user, user_id });
+
+  if (!authUser) {
+    return new Response(JSON.stringify({
+      error: "user context required"
+    }), {
+      status: 400,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const planInfo = deriveUserPlan(authUser);
+
+  if (planInfo.isUnlimited) {
+    return new Response(JSON.stringify({
+      success: true,
+      plan: planInfo.plan,
+      is_unlimited: true
+    }), {
+      status: 200,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const limit = typeof planInfo.limit === "number" ? planInfo.limit : PLAN_LIMITS.free;
+
+  let { data: record } = await supabase
+    .from("user_limits")
+    .select("*")
+    .eq("user_id", authUser.id)
+    .single();
+
+  if (!record) {
+    const newRecord = {
+      user_id: authUser.id,
+      chats_used: 1,
+      reset_at: getNextResetTimestamp(),
+      updated_at: now.toISOString()
+    };
+    const { data } = await supabase.from("user_limits").insert(newRecord).select().single();
+    record = data ?? newRecord;
+    const remainingAfterInsert = Math.max(0, limit - (record.chats_used ?? 1));
+    return new Response(JSON.stringify({
+      success: true,
+      plan: planInfo.plan,
+      used: record.chats_used ?? 1,
+      remaining: remainingAfterInsert,
+      limit,
+      reset_at: record.reset_at,
+      is_unlimited: false
+    }), {
+      status: 200,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const resetTime = new Date(record.reset_at);
+  let currentUsed = record.chats_used ?? 0;
+  if (Number.isNaN(resetTime.getTime()) || resetTime <= now) {
+    const nextReset = getNextResetTimestamp();
+    currentUsed = 0;
+    const { data } = await supabase
+      .from("user_limits")
+      .update({
+        chats_used: 0,
+        reset_at: nextReset,
+        updated_at: now.toISOString()
+      })
+      .eq("user_id", authUser.id)
+      .select()
+      .single();
+    record = data ?? {
+      user_id: authUser.id,
+      chats_used: 0,
+      reset_at: nextReset,
+      updated_at: now.toISOString()
+    };
+  }
+
+  if (currentUsed >= limit) {
+    return new Response(JSON.stringify({
+      error: "Chat limit reached",
+      plan: planInfo.plan,
+      limit,
+      used: currentUsed,
+      remaining: 0
+    }), {
+      status: 429,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const nextUsed = currentUsed + 1;
+  const { data: updatedRecord } = await supabase
+    .from("user_limits")
+    .update({
+      chats_used: nextUsed,
+      updated_at: now.toISOString()
+    })
+    .eq("user_id", authUser.id)
+    .select()
+    .single();
+
+  const finalRecord = updatedRecord ?? { ...record, chats_used: nextUsed };
+  const remaining = Math.max(0, limit - nextUsed);
+
+  return new Response(JSON.stringify({
+    success: true,
+    plan: planInfo.plan,
+    used: finalRecord.chats_used ?? nextUsed,
+    remaining,
+    limit,
+    reset_at: finalRecord.reset_at,
+    is_unlimited: false
+  }), {
+    status: 200,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json"
+    }
+  });
+}
+async function handleIncrementUsage(body: any, supabase: ReturnType<typeof createClient>) {
+  const { anonymous_id, supabase_user, user_id } = body ?? {};
+
+  if (supabase_user?.id || user_id) {
+    try {
+      return await handleAuthenticatedIncrementUsage(supabase, { supabase_user, user_id });
+    } catch (error) {
+      console.error("Failed to increment authenticated usage:", error);
+      return new Response(JSON.stringify({
+        error: "Unable to record usage"
+      }), {
+        status: 500,
+        headers: {
+          ...corsHeaders,
+          "Content-Type": "application/json"
+        }
+      });
+    }
+  }
+
   if (!anonymous_id) {
     return new Response(JSON.stringify({
       error: "anonymous_id required"
@@ -209,23 +646,105 @@ async function handleIncrementUsage(body, supabase) {
       }
     });
   }
+
   const now = new Date();
-  const { data: record } = await supabase.from("anonymous_limits").select("*").eq("anonymous_id", anonymous_id).single();
+  const { data: existingRecord } = await supabase
+    .from("anonymous_limits")
+    .select("*")
+    .eq("anonymous_id", anonymous_id)
+    .single();
+  let record = existingRecord ?? null;
+
   if (!record) {
-    await supabase.from("anonymous_limits").insert({
+    const resetAt = getNextResetTimestamp();
+    const { data: inserted } = await supabase.from("anonymous_limits").insert({
       anonymous_id,
       chats_used: 1,
-      reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
+      reset_at: resetAt,
       updated_at: now.toISOString()
+    }).select().single();
+    const created = inserted ?? {
+      anonymous_id,
+      chats_used: 1,
+      reset_at: resetAt,
+      updated_at: now.toISOString()
+    };
+    return new Response(JSON.stringify({
+      success: true,
+      plan: "guest",
+      used: created.chats_used ?? 1,
+      remaining: Math.max(0, ANONYMOUS_PLAN_LIMIT - (created.chats_used ?? 1)),
+      limit: ANONYMOUS_PLAN_LIMIT,
+      reset_at: created.reset_at,
+      is_unlimited: false
+    }), {
+      status: 200,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
     });
-  } else {
-    await supabase.from("anonymous_limits").update({
-      chats_used: (record.chats_used || 0) + 1,
-      updated_at: now.toISOString()
-    }).eq("id", record.id);
   }
+
+  const resetTime = new Date(record.reset_at);
+  if (Number.isNaN(resetTime.getTime()) || resetTime <= now) {
+    const nextReset = getNextResetTimestamp();
+    const { data } = await supabase
+      .from("anonymous_limits")
+      .update({
+        chats_used: 0,
+        reset_at: nextReset,
+        updated_at: now.toISOString()
+      })
+      .eq("id", record.id)
+      .select()
+      .single();
+    record = data ?? {
+      ...record,
+      chats_used: 0,
+      reset_at: nextReset,
+      updated_at: now.toISOString()
+    };
+  }
+
+  const currentUsed = record.chats_used ?? 0;
+  if (currentUsed >= ANONYMOUS_PLAN_LIMIT) {
+    return new Response(JSON.stringify({
+      error: "Chat limit reached",
+      plan: "guest",
+      limit: ANONYMOUS_PLAN_LIMIT,
+      used: currentUsed,
+      remaining: 0
+    }), {
+      status: 429,
+      headers: {
+        ...corsHeaders,
+        "Content-Type": "application/json"
+      }
+    });
+  }
+
+  const nextUsed = currentUsed + 1;
+  const { data: updatedRecord } = await supabase
+    .from("anonymous_limits")
+    .update({
+      chats_used: nextUsed,
+      updated_at: now.toISOString()
+    })
+    .eq("id", record.id)
+    .select()
+    .single();
+
+  const finalRecord = updatedRecord ?? { ...record, chats_used: nextUsed };
+
   return new Response(JSON.stringify({
-    success: true
+    success: true,
+    plan: "guest",
+    used: finalRecord.chats_used ?? nextUsed,
+    remaining: Math.max(0, ANONYMOUS_PLAN_LIMIT - (finalRecord.chats_used ?? nextUsed)),
+    limit: ANONYMOUS_PLAN_LIMIT,
+    reset_at: finalRecord.reset_at,
+    is_unlimited: false
   }), {
     status: 200,
     headers: {
@@ -249,6 +768,7 @@ async function handleIncrementUsage(body, supabase) {
   }
   const now = new Date().toISOString();
   const incomingMetadata = typeof supabase_user.metadata === "object" && supabase_user.metadata !== null ? supabase_user.metadata : {};
+  const incomingSettings = sanitizeSettings(incomingMetadata?.settings);
   const appMetadata = typeof supabase_user.app_metadata === "object" && supabase_user.app_metadata !== null ? supabase_user.app_metadata : {};
   const identities = Array.isArray(supabase_user.identities) ? supabase_user.identities : [];
   const identitySummaries = identities.map((identity) => ({
@@ -271,6 +791,12 @@ async function handleIncrementUsage(body, supabase) {
       auth_provider: primaryProvider,
       auth_providers: identitySummaries
     };
+    if (incomingSettings && Object.keys(incomingSettings).length > 0) {
+      nextMetadata.settings = {
+        ...(typeof nextMetadata.settings === "object" && nextMetadata.settings !== null ? nextMetadata.settings : {}),
+        ...incomingSettings
+      };
+    }
     const { data: updatedUser } = await supabase.from("auth_users").update({
       updated_at: now,
       email: supabase_user.email || existingUser.email,

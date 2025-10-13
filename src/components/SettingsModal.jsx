@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Sun, Moon } from 'lucide-react';
+import { X, Sun, Moon, RefreshCw } from 'lucide-react';
 import useIsMobile from '../hooks/useIsMobile.js';
 
 const accentColorOptions = [
@@ -90,6 +90,8 @@ const ThemeToggle = ({ value, onChange, theme }) => {
 
   const handleSystem = () => onChange?.('system');
 
+  const canRefreshUsage = typeof onRefreshUsage === 'function';
+
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
       <button
@@ -167,7 +169,9 @@ const SettingsModal = ({
   settings,
   onSettingChange,
   syncState = 'idle',
-  syncError = ''
+  syncError = '',
+  chatLimit,
+  onRefreshUsage
 }) => {
   const isMobile = useIsMobile();
 
@@ -194,6 +198,37 @@ const SettingsModal = ({
       : syncState === 'saved'
         ? theme.successColor
         : theme.textSecondary;
+
+  const usagePlan = chatLimit?.plan || 'guest';
+  const usageLimit = typeof chatLimit?.limit === 'number' ? chatLimit.limit : null;
+  const usageUsed = typeof chatLimit?.used === 'number' ? chatLimit.used : null;
+  const usageRemaining =
+    chatLimit?.isUnlimited ? null : typeof chatLimit?.remaining === 'number' ? chatLimit.remaining : null;
+  const usageProgress = chatLimit?.isUnlimited
+    ? 100
+    : usageLimit && usageLimit > 0
+      ? Math.min(100, Math.round(((usageUsed || 0) / usageLimit) * 100))
+      : 0;
+  const usageLabel = chatLimit?.isUnlimited
+    ? 'Unlimited chats'
+    : usageLimit
+      ? `${Math.max(usageLimit - (usageUsed || 0), 0)} chats remaining`
+      : 'Usage data unavailable';
+  const canRefreshUsage = typeof onRefreshUsage === 'function';
+  const formatResetCountdown = (resetAt) => {
+    if (!resetAt) return null;
+    const resetTime = new Date(resetAt);
+    if (Number.isNaN(resetTime.getTime())) return null;
+    const diff = resetTime.getTime() - Date.now();
+    if (diff <= 0) return 'less than 1 minute';
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    if (hours >= 1) {
+      return `${hours}h ${minutes}m`;
+    }
+    return `${minutes}m`;
+  };
+  const resetCountdown = !chatLimit?.isUnlimited ? formatResetCountdown(chatLimit?.resetAt) : null;
 
   return (
     <div
@@ -248,6 +283,88 @@ const SettingsModal = ({
         </button>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+          <section
+            style={{
+              padding: isMobile ? '18px 16px' : '22px 20px',
+              borderRadius: 20,
+              background: `${theme.accentSoftBlue}12`,
+              border: `1px solid ${theme.accentSoftBlue}24`,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 12
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+              <div>
+                <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 19, color: theme.textPrimary }}>Daily Usage</h3>
+                <p style={{ margin: '6px 0 0 0', fontSize: 13, color: theme.textSecondary }}>
+                  Plan: {usagePlan.charAt(0).toUpperCase() + usagePlan.slice(1)}
+                </p>
+              </div>
+              <button
+                onClick={canRefreshUsage ? onRefreshUsage : undefined}
+                type="button"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '6px 12px',
+                  borderRadius: 999,
+                  border: `1px solid ${theme.accentSoftBlue}40`,
+                  background: `${theme.accentSoftBlue}18`,
+                  color: theme.accentSoftBlue,
+                  fontSize: 12,
+                  fontWeight: 600,
+                  cursor: canRefreshUsage ? 'pointer' : 'not-allowed',
+                  opacity: canRefreshUsage ? 1 : 0.6
+                }}
+                disabled={!canRefreshUsage}
+              >
+                <RefreshCw size={14} />
+                Refresh
+              </button>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  height: 10,
+                  borderRadius: 999,
+                  background: `${theme.textSecondary}18`,
+                  overflow: 'hidden'
+                }}
+              >
+                <div
+                  style={{
+                    width: `${usageProgress}%`,
+                    height: '100%',
+                    background: chatLimit?.isUnlimited ? `${theme.accentSoftBlue}70` : theme.accentSoftBlue,
+                    transition: 'width 0.3s ease'
+                  }}
+                />
+              </div>
+              <div style={{ marginTop: 8, fontSize: 12, color: theme.textSecondary, display: 'flex', justifyContent: 'space-between' }}>
+                <span>
+                  {chatLimit?.isUnlimited
+                    ? 'Unlimited usage'
+                    : usageLimit !== null && usageUsed !== null
+                      ? `Used ${Math.min(usageUsed, usageLimit)} of ${usageLimit}`
+                      : 'Usage unavailable'}
+                </span>
+                {!chatLimit?.isUnlimited && usageRemaining !== null && (
+                  <span>{usageRemaining} left</span>
+                )}
+              </div>
+              <div style={{ marginTop: 6, fontSize: 12, color: theme.textSecondary }}>
+                {chatLimit?.isUnlimited
+                  ? 'No reset window for unlimited usage.'
+                  : resetCountdown
+                    ? `Resets in ${resetCountdown}`
+                    : 'Reset time pending…'}
+              </div>
+            </div>
+          </section>
+
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
             <h2 style={{ margin: 0, fontSize: isMobile ? 20 : 22, color: theme.textPrimary }}>General</h2>
             {statusMessage && (

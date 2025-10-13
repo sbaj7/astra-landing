@@ -1,0 +1,174 @@
+{
+  "heroLabel": "Perioperative Cardiology",
+  "title": "Perioperative Management of Patients With Coronary Stents",
+  "summary": "Time-sensitive surgery after PCI requires balancing stent thrombosis risk against bleeding. Prioritize delaying elective surgery, continuing aspirin, and tailoring P2Y12 interruption/resumption based on stent type, time from PCI, and procedural bleeding risk, with bridging only in select very high thrombotic risk cases.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should antiplatelet therapy and timing of noncardiac surgery be managed in adults with prior PCI and intracoronary stents?",
+  "tags": [
+    "perioperative",
+    "antiplatelet",
+    "PCI",
+    "stent",
+    "bleeding risk",
+    "anesthesia",
+    "cardiology"
+  ],
+  "heroStats": [
+    {
+      "label": "Early surgery risk",
+      "value": "Stent thrombosis ↑ if surgery <30 days post-PCI [1], [2]"
+    },
+    {
+      "label": "Aspirin strategy",
+      "value": "Continue for most surgeries; stop ~7 days only for very high bleeding risk [3]"
+    },
+    {
+      "label": "P2Y12 interruption",
+      "value": "Clopidogrel 5 days, ticagrelor 3–5 days, prasugrel 7 days before surgery [3]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "ShieldCheck",
+      "title": "Delay elective surgery when possible",
+      "body": "After DES for chronic coronary disease, defer ≥6 months; ≥12 months after ACS PCI; consider ≥3 months if surgical urgency outweighs thrombotic risk [3]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Continue aspirin perioperatively",
+      "body": "Continuation reduces ischemic events with small bleeding trade-off; stop only when bleeding consequences are catastrophic (e.g., intracranial) [3], [4]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Plan P2Y12 pause and prompt restart",
+      "body": "Hold P2Y12 per agent half-life and procedure bleeding risk; resume 24–48 hours post-op once hemostasis secured; consider loading dose for high thrombotic risk [3]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Bridging only for very high risk",
+      "body": "Short-acting IV cangrelor can bridge within 3–7 days pre-op when recent PCI or complex stenting and surgery cannot be delayed; stop 1–2 hours before incision and restart early post-op [5], [6]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Algorithm",
+      "title": "Stepwise Approach to Surgery After Coronary Stenting",
+      "blurb": "Use time from PCI, clinical context (ACS vs stable CAD), and procedural bleeding risk to guide antiplatelet management.",
+      "steps": [
+        {
+          "title": "1) Confirm stent details and PCI indication",
+          "body": "Identify stent type (DES vs BMS), date of implantation, and whether PCI followed ACS. Complex PCI (e.g., long lesions, bifurcation, left main) and prior stent thrombosis elevate thrombotic risk [3]."
+        },
+        {
+          "title": "2) Classify surgical bleeding risk",
+          "body": "High bleeding risk procedures (intracranial, intramedullary spine, posterior eye, major cancer resections) often necessitate P2Y12 interruption and sometimes aspirin cessation; low/moderate risk procedures usually proceed on aspirin [3], [4]."
+        },
+        {
+          "title": "3) Optimize surgery timing",
+          "body": "Elective surgery: delay ≥6 months after DES for chronic coronary disease; ≥12 months after ACS. If surgery cannot be delayed, ≥3 months may be acceptable with careful planning; within 30 days of PCI carries highest thrombosis risk and should be avoided if possible [1], [2], [3]."
+        },
+        {
+          "title": "4) Manage antiplatelet therapy",
+          "body": "Aspirin: continue for most surgeries; consider stopping 7 days prior only when bleeding risk is prohibitive. P2Y12: stop clopidogrel 5 days, ticagrelor 3–5 days, prasugrel 7 days before high-bleeding-risk procedures; continue for low bleeding risk. Restart 24–48 hours post-op once hemostasis is secure; consider re-loading in high-risk patients [3], [4]."
+        },
+        {
+          "title": "5) Consider bridging in exceptional cases",
+          "body": "In very high thrombotic risk when P2Y12 must be interrupted (e.g., surgery <1–3 months after complex DES), use IV cangrelor bridging with cessation 1–2 hours pre-incision and early post-op restart; evidence supports preserved platelet inhibition with manageable bleeding profiles [5], [6]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Practice Aids",
+      "title": "Operative Planning and Medication Checklist",
+      "blurb": "Coordinate among cardiology, anesthesia, and surgery; document risk trade-offs and restart plans.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "ClipboardList",
+          "title": "Preoperative essentials",
+          "items": [
+            "Confirm stent type, implantation date, PCI indication, and complexity [3]",
+            "Assess surgery bleeding risk and consequences of bleeding [3], [4]",
+            "Review current antiplatelets, adherence, and prior bleeding",
+            "Optimize anemia and blood pressure; ensure PPI if GI risk on DAPT [3]"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Timing rules of thumb",
+          "items": [
+            "Avoid surgery within 30 days of PCI if possible [1], [2]",
+            "After DES for chronic CAD: target ≥6 months; consider ≥3 months if urgent [3]",
+            "After ACS PCI: delay ≥12 months when feasible [3]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When to hold antiplatelets",
+          "items": [
+            "High bleeding risk procedures: hold P2Y12 as per agent (clopidogrel 5 d, ticagrelor 3–5 d, prasugrel 7 d) [3]",
+            "Hold aspirin 7 d only if bleeding consequences are catastrophic (e.g., intracranial) [3], [4]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "When to continue",
+          "items": [
+            "Continue aspirin for most surgeries [3], [4]",
+            "Continue DAPT for very low bleeding risk procedures within early post-PCI windows after multidisciplinary discussion [3]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Bridging considerations",
+          "items": [
+            "Consider IV cangrelor when surgery cannot be delayed and P2Y12 must be stopped, especially <3 months after complex DES [5], [6]",
+            "Stop cangrelor 1–2 h pre-incision; restart post-op once hemostasis achieved [5], [6]"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Postoperative restart",
+          "items": [
+            "Resume aspirin promptly if held [3], [4]",
+            "Restart P2Y12 24–48 h post-op; consider loading dose (e.g., clopidogrel 300–600 mg, ticagrelor 180 mg) in high thrombotic risk [3]"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Timing of Noncardiac Surgery After Coronary Stent Implantation",
+      "detail": "JAMA 2012;308:2366–2372. doi:10.1001/jama.2012.168446",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/1468250"
+    },
+    {
+      "title": "Association of Noncardiac Surgery With Adverse Cardiac Events After Stent Implantation",
+      "detail": "Circulation 2012;126:1355–1363. doi:10.1161/CIRCULATIONAHA.112.105262",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.112.105262"
+    },
+    {
+      "title": "2024 AHA/ACC Perioperative Cardiovascular Management Guideline",
+      "detail": "Circulation 2024;150:e000–e000. doi:10.1161/CIR.0000000000001207",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001207"
+    },
+    {
+      "title": "POISE-2: Aspirin in patients undergoing noncardiac surgery",
+      "detail": "NEJM 2014;370:1494–1503. doi:10.1056/NEJMoa1401105",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1401105"
+    },
+    {
+      "title": "BRIDGE trial: Cangrelor as a bridge in patients on thienopyridines awaiting CABG",
+      "detail": "JAMA 2012;307:265–274. doi:10.1001/jama.2011.2002",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/1105082"
+    },
+    {
+      "title": "Cangrelor perioperative bridging case series and protocols",
+      "detail": "JACC 2017;69:1860–1861. doi:10.1016/j.jacc.2017.01.042",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.01.042"
+    }
+  ]
+}

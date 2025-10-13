@@ -21,30 +21,43 @@ const styles = {
   },
   card: (t) => ({
     width: '100%', maxWidth: 480,
-    borderRadius: 24,
-    background: t.backgroundSurface,
+    borderRadius: 22,
+    background: `${t.backgroundSurface}F6`,
     color: t.textPrimary,
-    boxShadow: '0 12px 32px rgba(0,0,0,.2)',
-    padding: 20,
-    display: 'flex', flexDirection: 'column', gap: 20,
+    boxShadow: '0 18px 30px rgba(15, 23, 42, 0.12)',
+    padding: '18px 22px',
+    display: 'flex', flexDirection: 'column', gap: 18,
     transition: 'transform .3s ease, opacity .3s ease',
+    borderBottom: `1px solid ${t.textSecondary}16`,
   }),
   handle: {
     alignSelf: 'center', width: 40, height: 4, borderRadius: 2,
     background: 'rgba(128,128,128,.5)',
   },
-  headerRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
+  headerRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 },
   badge: (t) => ({
     background: t.accentSoftBlue, color: '#fff',
     fontSize: 12, fontWeight: 700, padding: '2px 6px', borderRadius: 9999,
   }),
-  linkMeta: { display: 'flex', alignItems: 'flex-start', gap: 12 },
-  favicon: { width: 20, height: 20, borderRadius: 4, flexShrink: 0 },
-  footerRow: { display: 'flex', gap: 12 },
+  linkMeta: { display: 'flex', alignItems: 'flex-start', gap: 16 },
+  faviconWrapper: (t) => ({
+    width: 40,
+    height: 40,
+    borderRadius: '50%',
+    backgroundColor: `${t.textSecondary}12`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    flexShrink: 0
+  }),
+  favicon: { width: 24, height: 24 },
+  footerRow: { display: 'flex', gap: 12, marginTop: 8 },
   primaryBtn: (t) => ({
     flex: 1, background: t.accentSoftBlue, color: '#fff',
     border: 'none', borderRadius: 9999, padding: '10px 0',
     fontSize: 14, fontWeight: 500, cursor: 'pointer',
+    transition: 'all 0.2s ease',
   }),
   secondaryBtn: (t, copied) => ({
     flex: 1, background: 'transparent',
@@ -52,6 +65,7 @@ const styles = {
     border: `1px solid ${copied ? t.successColor : 'rgba(128,128,128,.4)'}`,
     borderRadius: 9999, padding: '10px 0', fontSize: 14, fontWeight: 500,
     cursor: 'pointer',
+    transition: 'all 0.2s ease',
   }),
 };
 
@@ -60,19 +74,21 @@ const styles = {
 // -----------------------------
 const buildFallbackMeta = (citation) => {
   try {
-    const u = new URL(citation.url);
+    const parsed = new URL(citation.url);
+    const host = citation.host || citation.hostname || parsed.host;
     return {
       title: citation.title || 'Untitled',
-      description: citation.authors || '',
-      host: u.host,
-      faviconURL: `https://${u.host}/favicon.ico`,
+      description: citation.summary || citation.snippet || citation.authors || '',
+      host,
+      faviconURL: citation.faviconUrl || `https://${host}/favicon.ico`,
     };
   } catch {
+    const host = citation.host || citation.hostname || 'external link';
     return {
       title: citation.title || 'Untitled',
-      description: citation.authors || '',
-      host: 'external link',
-      faviconURL: '',
+      description: citation.summary || citation.snippet || citation.authors || '',
+      host,
+      faviconURL: citation.faviconUrl || '',
     };
   }
 };
@@ -88,6 +104,17 @@ const CitationPillOverlay = ({ citation, isPresented, onDismiss, theme }) => {
   // ------- fetch preview data (if API route exists) -------
 useEffect(() => {
   if (!isPresented) return;
+
+  if (citation?.summary || citation?.snippet) {
+    setLoading(false);
+    setMeta(prev => ({
+      title: citation.title || prev.title,
+      description: citation.summary || citation.snippet || prev.description,
+      host: citation.host || citation.hostname || prev.host,
+      faviconURL: citation.faviconUrl || prev.faviconURL
+    }));
+    return () => {};
+  }
 
   let alive = true;
 
@@ -137,13 +164,16 @@ useEffect(() => {
 
   // pick a description, fall back to a 1-sentence auto-summary if needed
 const summaryText = React.useMemo(() => {
+  if (citation?.summary) {
+    return citation.summary.length > 220 ? `${citation.summary.slice(0, 217)}…` : citation.summary;
+  }
   if (meta?.description?.trim()) return meta.description.trim();
 
   // Fallback: first 160 characters of title
   if (meta?.title) return meta.title.slice(0, 160) + '…';
 
   return 'No summary available for this source.';
-}, [meta]);
+}, [meta, citation]);
 
 
 
@@ -178,30 +208,61 @@ const summaryText = React.useMemo(() => {
         ) : (
           <>
             <div style={styles.linkMeta}>
-              {meta.faviconURL && <img src={meta.faviconURL} alt="favicon" style={styles.favicon} onError={(e) => (e.currentTarget.style.display = 'none')} />}
+              <div style={styles.faviconWrapper(theme)}>
+                {meta.faviconURL ? (
+                  <img
+                    src={meta.faviconURL}
+                    alt="favicon"
+                    style={styles.favicon}
+                    onError={(e) => (e.currentTarget.style.display = 'none')}
+                  />
+                ) : null}
+              </div>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 16, fontWeight: 600, marginBottom: 2 }}>{meta.title}</div>
-                <div style={{ fontSize: 12, color: theme.textSecondary, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                <h4 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: theme.textPrimary, marginBottom: 6 }}>
+                  {meta.title}
+                </h4>
+                {citation?.detail && (
+                  <p style={{ margin: '6px 0 0', fontSize: 12.5, color: theme.textSecondary }}>
+                    {citation.detail}
+                  </p>
+                )}
+                <div style={{
+                  fontSize: 12,
+                  color: theme.accentSoftBlue,
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  marginTop: 8
+                }}>
                   {meta.host}
                 </div>
               </div>
             </div>
-{summaryText && (
-  <div
-    style={{
-      fontSize: 14,
-      color: theme.textSecondary,
-      lineHeight: 1.35,
-      maxHeight: 48, // ~2 lines
-      overflow: 'hidden',
-      textOverflow: 'ellipsis'
-    }}
-  >
-    {summaryText}
-  </div>
-)}
+            {summaryText && (
+              <div
+                style={{
+                  fontSize: 14,
+                  color: theme.textSecondary,
+                  lineHeight: 1.5,
+                }}
+              >
+                {summaryText}
+              </div>
+            )}
 
-
+            {(citation?.authors || citation?.journal || citation?.source || citation?.publisher || citation?.year || citation?.doi) && (
+              <div style={{ fontSize: 12, color: theme.textSecondary, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {citation?.authors && <span>{citation.authors}</span>}
+                {(citation?.journal || citation?.source || citation?.publisher || citation?.hostname || citation?.year || citation?.doi) && (
+                  <span>
+                    {[citation?.journal || citation?.source || citation?.publisher || citation?.hostname, citation?.year, citation?.doi ? `doi:${citation.doi}` : null]
+                      .filter(Boolean)
+                      .join(' • ')}
+                  </span>
+                )}
+              </div>
+            )}
           </>
         )}
 

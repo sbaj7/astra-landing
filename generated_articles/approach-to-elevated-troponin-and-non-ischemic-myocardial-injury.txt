@@ -1,0 +1,209 @@
+{
+  "heroLabel": "Cardiology Playbook",
+  "title": "Approach to Elevated Troponin and Non‑Ischemic Myocardial Injury",
+  "summary": "Elevated troponin indicates myocardial injury, not etiology. Distinguish acute myocardial infarction (MI) from acute/chronic non‑ischemic injury using symptoms, ECG, serial high‑sensitivity assays, and imaging. Management targets the cause (e.g., tachyarrhythmia, sepsis, myocarditis) rather than universal ACS therapy, which may harm when ischemia is absent.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should clinicians evaluate and manage patients with elevated troponin when type 1 MI is uncertain or unlikely?",
+  "tags": [
+    "cardiology",
+    "emergency medicine",
+    "critical care",
+    "diagnostics",
+    "biomarkers"
+  ],
+  "heroStats": [
+    {
+      "label": "hs‑cTn rule‑out at 1–2 h",
+      "value": "NPV >99% for MI with ESC 0/1‑h or 0/2‑h pathways [1], [2]"
+    },
+    {
+      "label": "Type 2 MI mortality",
+      "value": "Higher 1‑yr mortality vs type 1 MI (adjusted HR ~1.5) [3]"
+    },
+    {
+      "label": "Myocarditis imaging",
+      "value": "CMR Lake Louise criteria sensitivity ~87%, specificity ~96% [4]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Sparkles",
+      "title": "Troponin ≠ MI",
+      "body": "High‑sensitivity troponin detects myocardial injury; **MI requires ischemia evidence** (symptoms, ECG, imaging) plus rise/fall in troponin [5]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Rapid Algorithms",
+      "body": "Use **0/1‑h or 0/2‑h hs‑cTn** strategies with clinical assessment to safely rule out MI and reduce unnecessary admissions [1], [2]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Avoid Routine Antithrombotics",
+      "body": "In non‑ischemic injury or type 2 MI, **treat the trigger**; routine heparin, P2Y12 inhibitors, or cath may be harmful without plaque rupture [6], [7]."
+    },
+    {
+      "icon": "Activity",
+      "title": "ECG and Imaging Guide Etiology",
+      "body": "New ST‑changes or regional wall‑motion abnormalities favor type 1 MI; diffuse ST‑elevation/PR‑depression suggests pericarditis; **CMR clarifies myocarditis/takotsubo** [4], [8]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Prognosis Matters",
+      "body": "Elevated troponin in sepsis, PE, CKD, or HF predicts **higher mortality**; address underlying disease and optimize cardioprotection [3], [9], [10]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Diagnostic Workflow",
+      "title": "Structured Approach to Elevated Troponin",
+      "blurb": "Differentiate acute MI, type 2 MI, and non‑ischemic myocardial injury using clinical context, ECG, serial hs‑cTn, and targeted imaging.",
+      "steps": [
+        {
+          "title": "Confirm an Acute Pattern",
+          "body": "Obtain baseline and repeat hs‑cTn at 1–2 h. **A rising/falling pattern plus ischemic evidence** supports acute MI; stable elevation suggests chronic injury (e.g., CKD) [1], [2], [5]. Use assay‑specific absolute deltas over relative change."
+        },
+        {
+          "title": "Assess Ischemia Probability",
+          "body": "Integrate symptoms, risk factors, and ECG. **Typical ischemic symptoms or new ischemic ECG changes** increase pretest probability; atypical features (viral prodrome, pleuritic pain) point to non‑ischemic causes [5], [8]."
+        },
+        {
+          "title": "Apply Rapid Algorithms",
+          "body": "Use validated ESC **0/1‑h or 0/2‑h hs‑cTn** pathways for rule‑out/rule‑in. NPVs exceed **99%** for MI with appropriate cutoffs; combine with clinical judgment to avoid missed MI [1], [2]."
+        },
+        {
+          "title": "Targeted Imaging",
+          "body": "If uncertainty persists: bedside echo for regional wall‑motion abnormalities; if non‑ischemic suspected, **CMR** within 7 days improves diagnostic yield for myocarditis or takotsubo [4], [8]. Consider CT‑CA for low‑to‑intermediate risk chest pain without clear ECG changes [11]."
+        },
+        {
+          "title": "Classify the Etiology",
+          "body": "Use the **Fourth Universal Definition of MI** framework: type 1 MI (plaque rupture), type 2 MI (supply‑demand mismatch), or non‑ischemic myocardial injury (e.g., myocarditis, renal failure, sepsis) [5]."
+        },
+        {
+          "title": "Manage the Cause",
+          "body": "For type 1 MI: guideline‑directed ACS therapy. For type 2 MI or injury: **correct triggers** (hypoxemia, anemia, tachyarrhythmia, sepsis), optimize BP/O2, treat infection/PE, and avoid routine dual antiplatelet/anticoagulation unless another indication exists [6], [7], [9], [10]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Bedside Aids",
+      "title": "Practical Checklists",
+      "blurb": "Concise actions to reduce missed MI and overtreatment of non‑ischemic injury.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Clock",
+          "title": "Serial Testing",
+          "items": [
+            "Repeat hs‑cTn at 1–2 h; use absolute deltas per assay [1], [2]",
+            "Obtain 12‑lead ECG at presentation and with symptoms",
+            "Trend vitals and oxygenation to identify supply–demand mismatch"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Key Labs",
+          "items": [
+            "CBC (anemia), CMP (renal/hepatic), lactate",
+            "CRP/viral testing when myocarditis suspected",
+            "BNP/NT‑proBNP for HF context; D‑dimer if PE pretest warrants"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "When to Image",
+          "items": [
+            "POCUS/echo for wall‑motion, effusion, LV dysfunction",
+            "CMR within 7 days if myocarditis/takotsubo likely [4], [8]",
+            "CT‑coronary angiography for low–intermediate risk without clear ischemia [11]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Avoid Harm",
+          "items": [
+            "Do not default to heparin or DAPT without type 1 MI features [6], [7]",
+            "Avoid unnecessary catheterization in clear non‑ischemic injury",
+            "Dose‑adjust renally cleared drugs in CKD with chronic troponin elevation"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Prognostic Actions",
+          "items": [
+            "Optimize guideline‑directed therapy for CAD/HF if present",
+            "Address triggers: control rate/rhythm, treat hypoxemia/sepsis, correct anemia",
+            "Arrange follow‑up; elevated troponin in sepsis/PE/CKD predicts worse outcomes [3], [9], [10]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Documentation Pearls",
+          "items": [
+            "State: acute vs chronic injury; MI type per Universal Definition [5]",
+            "Record delta troponin values and ECG/imaging corroboration",
+            "Specify identified trigger and treatment plan"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "ESC 0/1‑hour algorithm with high‑sensitivity troponin in suspected ACS",
+      "detail": "JAMA 2016;316:1274‑1284. doi:10.1001/jama.2016.12700",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2552195"
+    },
+    {
+      "title": "High‑sensitivity cardiac troponin in the evaluation of patients with suspected acute coronary syndrome",
+      "detail": "NEJM 2020;382:2529‑2540. doi:10.1056/NEJMra1915524",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMra1915524"
+    },
+    {
+      "title": "Prognosis of type 2 myocardial infarction compared with type 1 MI: meta‑analysis",
+      "detail": "Heart 2019;105:122‑129. doi:10.1136/heartjnl-2018-313252",
+      "url": "https://heart.bmj.com/content/105/2/122"
+    },
+    {
+      "title": "Updated Lake Louise Criteria for myocarditis by CMR",
+      "detail": "JACC 2018;72:3158‑3176. doi:10.1016/j.jacc.2018.10.032",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2018.10.032"
+    },
+    {
+      "title": "Fourth Universal Definition of Myocardial Infarction (2018)",
+      "detail": "Circulation 2018;138:e618‑e651. doi:10.1161/CIR.0000000000000617",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000617"
+    },
+    {
+      "title": "Management of type 2 myocardial infarction and acute non‑ischemic myocardial injury",
+      "detail": "NEJM 2024;391:1181‑1193. doi:10.1056/NEJMcp2310532",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp2310532"
+    },
+    {
+      "title": "Antithrombotic therapy in type 2 MI: systematic review",
+      "detail": "Circulation 2020;141:1308‑1317. doi:10.1161/CIRCULATIONAHA.119.044232",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.119.044232"
+    },
+    {
+      "title": "Takotsubo syndrome: diagnostic criteria and outcomes",
+      "detail": "NEJM 2015;373:929‑938. doi:10.1056/NEJMra1410481",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMra1410481"
+    },
+    {
+      "title": "Troponin elevation in sepsis and outcomes: meta‑analysis",
+      "detail": "Intensive Care Med 2019;45:1333‑1345. doi:10.1007/s00134-019-05625-3",
+      "url": "https://link.springer.com/article/10.1007/s00134-019-05625-3"
+    },
+    {
+      "title": "Troponin elevation in pulmonary embolism and mortality",
+      "detail": "Circulation 2003;107:2545‑2547. doi:10.1161/01.CIR.0000068311.28492.5F",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000068311.28492.5F"
+    },
+    {
+      "title": "CT coronary angiography for evaluation of chest pain",
+      "detail": "NEJM 2022;386:1591‑1602. doi:10.1056/NEJMoa2200973",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2200973"
+    }
+  ]
+}

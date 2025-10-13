@@ -1,0 +1,178 @@
+{
+  "heroLabel": "Acute PE Playbook",
+  "title": "Early Inpatient Management of Acute Pulmonary Embolism",
+  "summary": "Rapid risk stratification, prompt anticoagulation, and selective escalation to thrombolysis or catheter-based therapy reduce early mortality and decompensation in acute PE. Use PESI/sPESI plus imaging/biomarkers to classify risk, initiate anticoagulation within hours, and reserve advanced reperfusion for high-risk or deteriorating intermediate-high–risk patients.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the key early inpatient steps to risk-stratify and treat adults with acute pulmonary embolism to minimize short-term mortality and hemodynamic collapse?",
+  "tags": [
+    "pulmonary embolism",
+    "anticoagulation",
+    "thrombolysis",
+    "catheter-directed therapy",
+    "risk stratification",
+    "inpatient care"
+  ],
+  "heroStats": [
+    {
+      "label": "High-risk PE mortality (in-hospital) with shock",
+      "value": "~15–25% [1]"
+    },
+    {
+      "label": "Intermediate-high risk hemodynamic decompensation at 7 days",
+      "value": "~5–10% [2]"
+    },
+    {
+      "label": "Reduction in RV dysfunction with catheter-directed thrombolysis",
+      "value": "RV/LV ratio ↓ ~0.3–0.4 by 48h [3], [4]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Risk-stratify immediately",
+      "body": "Combine clinical scores (PESI/sPESI), RV imaging (CT or echo), and myocardial injury (troponin/BNP) to define low, intermediate-low, intermediate-high, or high risk. **Escalate monitoring** for intermediate-high or higher [1], [2]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Anticoagulate early",
+      "body": "Start parenteral anticoagulation without delay in most patients; DOACs are preferred once stable and no procedures anticipated. **Heparin infusion** favored if thrombolysis/catheter therapy is possible [1], [2]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Reserve reperfusion for the right patients",
+      "body": "Give **systemic thrombolysis** for high-risk PE with shock unless contraindicated; consider **catheter-directed therapy** when bleeding risk is high or shock persists despite anticoagulation [1], [3], [4]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Set monitoring and goals",
+      "body": "Continuous telemetry, frequent vitals, and early echocardiography for intermediate-high risk. Targets: **MAP ≥65 mmHg, improving RV metrics, adequate oxygenation** [1], [2]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "First 6–24 Hours",
+      "title": "Early Inpatient Workflow",
+      "blurb": "Time-sensitive actions prioritize hemodynamic stabilization, risk classification, and appropriate anticoagulation, with rapid consultation for potential reperfusion.",
+      "steps": [
+        {
+          "title": "Stabilize and triage",
+          "body": "Assess airway, breathing, and circulation. Provide oxygen to maintain SpO2 ≥92%; consider HFNC or NIV if needed. For hypotension, start norepinephrine to target **MAP ≥65 mmHg**; avoid excessive fluids (≤500 mL bolus) to limit RV strain [1], [2]."
+        },
+        {
+          "title": "Risk stratify",
+          "body": "Calculate **PESI/sPESI**, obtain troponin and BNP/NT‑proBNP, and review RV strain on CTPA (RV/LV ≥1) or point-of-care echo. Define: Low (sPESI 0, no RV injury), Intermediate-low (one between RV strain or biomarker), Intermediate-high (both positive), High-risk (hypotension/shock) [1], [2]."
+        },
+        {
+          "title": "Start anticoagulation",
+          "body": "Initiate anticoagulation promptly unless absolute contraindications. Use **UFH infusion** if potential thrombolysis/procedure; **LMWH/DOAC** if stable without planned procedures. Transition to DOACs (apixaban, rivaroxaban) once stable and creatinine appropriate [1], [2]."
+        },
+        {
+          "title": "Select reperfusion strategy when indicated",
+          "body": "High-risk PE: **systemic thrombolysis** (e.g., alteplase 100 mg over 2 h) unless contraindicated; consider reduced-dose regimens to mitigate bleeding in select cases (evidence mixed). Intermediate-high risk without shock: avoid routine systemic lysis due to bleeding risk; consider **catheter-directed thrombolysis or thrombectomy** for clinical deterioration or severe RV dysfunction despite anticoagulation [1], [3], [4]."
+        },
+        {
+          "title": "Escalate monitoring",
+          "body": "Admit intermediate-high and high-risk patients to step-down/ICU with telemetry. Repeat echo within 24–48 h if RV strain persists/worsens. Engage a **PE Response Team (PERT)** for multidisciplinary decision-making [1], [2]."
+        },
+        {
+          "title": "Plan early transitions",
+          "body": "Once stable, transition to oral anticoagulation, define duration (provoked 3 months; unprovoked/ongoing risk ≥3 months and reassess), and schedule follow-up for symptom reassessment and RV recovery. Screen for contraindications to DOACs and drug interactions [1], [2]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Clinical Checklists",
+      "title": "Key Orders, Red Flags, and Procedural Considerations",
+      "blurb": "Use these lists to avoid delays and align therapy with risk.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "ClipboardList",
+          "title": "Initial Orders",
+          "items": [
+            "Telemetry; continuous pulse oximetry; strict I/Os",
+            "Labs: CBC, CMP, troponin, BNP/NT‑proBNP, coagulation panel, pregnancy test if applicable",
+            "Imaging: CTPA review for RV/LV ratio; baseline echocardiogram if intermediate-high/high risk",
+            "Anticoagulation: start UFH infusion if reperfusion considered; otherwise LMWH or DOAC per renal function",
+            "Vasopressors for shock: norepinephrine first-line; avoid large fluid boluses",
+            "Analgesia and cautious anxiolysis to limit tachycardia"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Red Flags for Reperfusion",
+          "items": [
+            "Persistent hypotension (SBP <90 mmHg or MAP <65 mmHg) or escalating pressors",
+            "Worsening hypoxemia or rising lactate",
+            "Progressive RV dilation/dysfunction (RV/LV ≥1 or TAPSE decline) or rising troponin/BNP",
+            "Cardiac arrest or recurrent syncope",
+            "Contraindication to anticoagulation with ongoing large clot burden"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Thrombolysis Pearls",
+          "items": [
+            "Indicated for high-risk PE with shock; benefits in mortality are most plausible in profound instability",
+            "Major bleeding risk significant; **ICH ~2–3%** with full-dose lysis; avoid in absolute contraindications [1], [2]",
+            "Avoid routine lysis in intermediate-risk due to **no mortality benefit and increased major bleeding** in trials [2]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Catheter-Directed Therapy",
+          "items": [
+            "Consider for high-risk PE with high bleeding risk, failed lysis, or intermediate-high risk with clinical deterioration",
+            "Ultrasound-assisted thrombolysis reduces RV/LV ratio by **~0.3–0.4 at 24–48 h** with low ICH rates, but **no proven mortality benefit**; evidence is growing [3], [4]",
+            "Use UFH and coordinate with interventional team; obtain baseline fibrinogen if lytics are infused"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Anticoagulant Selection",
+          "items": [
+            "UFH: preferred when procedures/lysis likely or in severe renal impairment",
+            "LMWH: predictable, lower HIT risk; preferred in cancer-associated thrombosis",
+            "DOACs: apixaban/rivaroxaban for most hemodynamically stable patients once no procedure anticipated; check renal function and interactions",
+            "Warfarin: reserve for antiphospholipid syndrome or cost/contraindications to DOACs"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Disposition & Follow-up",
+          "items": [
+            "Low-risk (sPESI 0, no RV injury): consider early discharge pathways once stable",
+            "Intermediate-low: inpatient observation 24–48 h; step-down if improving",
+            "Intermediate-high/high-risk: ICU/step-down with repeat echo in 24–48 h",
+            "Plan anticoagulation duration (provoked 3 months; unprovoked ≥3 months and reassess; cancer: at least 6 months)",
+            "Schedule follow-up within 2–6 weeks; screen for chronic thromboembolic disease if dyspnea persists"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism (with 2021/2023 updates)",
+      "detail": "Eur Heart J 2019;40:3453–3555. doi:10.1093/eurheartj/ehz405",
+      "url": "https://academic.oup.com/eurheartj/article/40/42/3453/5556136"
+    },
+    {
+      "title": "PEITHO Trial: Fibrinolysis for intermediate-risk PE",
+      "detail": "N Engl J Med 2014;370:1402–1411. doi:10.1056/NEJMoa1302097",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1302097"
+    },
+    {
+      "title": "ULTIMA Trial: Ultrasound-assisted catheter-directed thrombolysis vs heparin",
+      "detail": "Circulation 2014;129:479–486. doi:10.1161/CIRCULATIONAHA.113.005544",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.113.005544"
+    },
+    {
+      "title": "SEATTLE II Study: Catheter-directed thrombolysis in massive/submassive PE",
+      "detail": "JACC Cardiovasc Interv 2015;8:1382–1392. doi:10.1016/j.jcin.2015.04.020",
+      "url": "https://www.jacc.org/doi/10.1016/j.jcin.2015.04.020"
+    }
+  ]
+}

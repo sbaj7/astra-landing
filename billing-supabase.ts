@@ -20,17 +20,50 @@ const stripe = new Stripe(stripeSecretKey, {
   apiVersion: "2024-04-10"
 });
 
-// Price ID mapping for your plans
-const PRICE_IDS = {
-  plus: "price_1SE9M8G09pqeBTCI5Mob7OU8",      // $30 Plus tier
-  pro: "price_1SE9MHG09pqeBTCIEOlxQ97F"        // $70 Pro tier
+type PlanKey = "plus" | "pro";
+
+function readFirstNonEmptyEnv(keys: string[]): string | undefined {
+  for (const key of keys) {
+    if (!key) continue;
+    const value = Deno.env.get(key);
+    if (value && value.trim().length > 0) {
+      return value.trim();
+    }
+  }
+  return undefined;
+}
+
+const priceIdCandidates: Record<PlanKey, string[]> = {
+  plus: ["STRIPE_PLUS_PRICE_ID", "STRIPE_STARTER_PRICE_ID", "VITE_STRIPE_PLUS_PRICE_ID"],
+  pro: ["STRIPE_PRO_PRICE_ID", "VITE_STRIPE_PRO_PRICE_ID"]
 };
 
+const resolvedPriceIds = Object.fromEntries(
+  (Object.entries(priceIdCandidates) as [PlanKey, string[]][]).map(([plan, envKeys]) => [
+    plan,
+    readFirstNonEmptyEnv(envKeys)
+  ])
+) as Record<PlanKey, string | undefined>;
+
+const missingPlanIds = (Object.entries(resolvedPriceIds) as [PlanKey, string | undefined][]).filter(
+  ([, value]) => !value
+);
+
+if (missingPlanIds.length > 0) {
+  const missingPlans = missingPlanIds.map(([plan]) => plan).join(", ");
+  throw new Error(
+    `Missing Stripe price IDs for plan(s): ${missingPlans}. ` +
+      `Set STRIPE_<PLAN>_PRICE_ID environment variables for the billing function (e.g. STRIPE_PLUS_PRICE_ID).`
+  );
+}
+
+// Price ID mapping for your plans (validated above)
+const PRICE_IDS = resolvedPriceIds as Record<PlanKey, string>;
+
 // Reverse mapping for subscription lookups
-const PLAN_BY_PRICE_ID: Record<string, string> = {
-  [PRICE_IDS.plus]: "plus",
-  [PRICE_IDS.pro]: "pro"
-};
+const PLAN_BY_PRICE_ID = Object.fromEntries(
+  (Object.entries(PRICE_IDS) as [PlanKey, string][]).map(([plan, priceId]) => [priceId, plan])
+) as Record<string, PlanKey>;
 
 const ACTIVE_SUBSCRIPTION_STATUSES = new Set<Stripe.Subscription.Status>([
   "trialing",
@@ -39,7 +72,7 @@ const ACTIVE_SUBSCRIPTION_STATUSES = new Set<Stripe.Subscription.Status>([
 ]);
 
 function deriveSubscriptionStatus(
-  planKey: string | null,
+  planKey: PlanKey | null,
   subscription: Stripe.Subscription | null
 ): string {
   if (planKey && subscription && ACTIVE_SUBSCRIPTION_STATUSES.has(subscription.status)) {
@@ -94,12 +127,12 @@ function cloneMetadata(metadata: unknown): Record<string, any> {
   return isRecord(metadata) ? { ...metadata } : {};
 }
 
-function normalizePlanKeyInput(value: unknown): string | undefined {
+function normalizePlanKeyInput(value: unknown): PlanKey | undefined {
   if (typeof value !== "string") {
     return undefined;
   }
   const normalized = value.trim().toLowerCase();
-  return normalized.length > 0 ? normalized : undefined;
+  return normalized === "plus" || normalized === "pro" ? (normalized as PlanKey) : undefined;
 }
 
 function normalizeFullName(supabaseUser: SupabaseUser): string {
@@ -288,7 +321,7 @@ async function syncSubscriptionMetadata(
   authUser: AuthUserRecord,
   customer: Stripe.Customer,
   subscription: Stripe.Subscription | null,
-  planKey: string | null,
+  planKey: PlanKey | null,
   priceId: string | null
 ): Promise<AuthUserRecord> {
   const metadata = cloneMetadata(authUser.metadata);
@@ -403,18 +436,18 @@ serve(async (req) => {
 async function createCheckoutSession(
   supabaseUser: SupabaseUser,
   authUser: AuthUserRecord,
-  planKey: string | undefined,
+  planKey: PlanKey | undefined,
   returnUrl: string | undefined,
   supabaseClient: SupabaseClient
 ): Promise<HandlerResponse> {
-  if (!planKey || !PRICE_IDS[planKey as keyof typeof PRICE_IDS]) {
+  if (!planKey || !PRICE_IDS[planKey]) {
     return {
       status: 400,
       body: { error: `Invalid plan: ${planKey}. Must be 'plus' or 'pro'` }
     };
   }
 
-  const priceId = PRICE_IDS[planKey as keyof typeof PRICE_IDS];
+  const priceId = PRICE_IDS[planKey];
   const baseReturnUrl = returnUrl || DEFAULT_RETURN_URL;
 
   try {

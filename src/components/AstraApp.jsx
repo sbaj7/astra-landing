@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
   Mic,
   ArrowUp,
@@ -22,6 +22,8 @@ import {
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal';
+import PromoModal from './PromoModal.jsx';
+const APP_STORE_URL = 'https://apps.apple.com/us/app/astra-md/id6749516660';
 import BillingModal from './BillingModal.jsx';
 import BillingSuccessOverlay from './BillingSuccessOverlay.jsx';
 import ProfileModal from './ProfileModal.jsx';
@@ -216,6 +218,295 @@ const sampleQueries = {
     "Severe aortic stenosis (78-yo) awaiting elective TAVR; optimize preload, cardiac work-up",
     "Metastatic colon cancer with bowel obstruction; comfort-care path, morphine PCA, PC consult"
   ]
+};
+
+const extractTitle = (url) => {
+  const hostname = url.hostname?.toLowerCase() || '';
+  if (hostname.includes('pubmed')) return 'PubMed';
+  if (hostname.includes('pmc')) return 'PMC Article';
+  if (hostname.includes('dynamed')) return 'DynaMed';
+  if (hostname.includes('heart.org')) return 'American Heart Association';
+  if (hostname.includes('wikipedia')) return 'Wikipedia';
+  return url.hostname || 'External Link';
+};
+
+const buildDisplayUrl = (parsedUrl) => {
+  if (!parsedUrl) return '';
+  const path = parsedUrl.pathname && parsedUrl.pathname !== '/' ? parsedUrl.pathname : '';
+  const cleanPath = path.length > 60 ? `${path.slice(0, 57)}…` : path;
+  return cleanPath || parsedUrl.hostname;
+};
+
+const buildFaviconUrl = (host) => {
+  if (!host) return '';
+  return `https://www.google.com/s2/favicons?sz=128&domain=${host}`;
+};
+
+const truncateSnippet = (snippet) => {
+  if (!snippet || typeof snippet !== 'string') return '';
+  const condensed = snippet.replace(/\s+/g, ' ').trim();
+  if (condensed.length <= 220) return condensed;
+  return `${condensed.slice(0, 217)}…`;
+};
+
+const normalizeCitationObject = (rawCitation, index = 0) => {
+  if (!rawCitation || !rawCitation.url) return null;
+
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(rawCitation.url);
+  } catch {
+    return null;
+  }
+
+  const host = (rawCitation.host || rawCitation.hostname || parsedUrl.hostname || '').trim();
+  const publicationDate = rawCitation.publishedAt || rawCitation.publicationDate || rawCitation.published_at || rawCitation.publication_date || rawCitation.date || '';
+  const derivedYear = (() => {
+    if (rawCitation.year) return String(rawCitation.year);
+    if (!publicationDate) return null;
+    const maybeYear = new Date(publicationDate).getFullYear();
+    return Number.isNaN(maybeYear) ? null : String(maybeYear);
+  })();
+  const snippet = truncateSnippet(
+    rawCitation.snippet ||
+      rawCitation.summary ||
+      rawCitation.description ||
+      rawCitation.abstract ||
+      rawCitation.excerpt ||
+      rawCitation.content
+  );
+  const venue = rawCitation.journal || rawCitation.source || rawCitation.publisher;
+  const number = rawCitation.number ?? index + 1;
+  const title = rawCitation.title || extractTitle(parsedUrl);
+  const authors = rawCitation.authors || rawCitation.author || rawCitation.primaryAuthor || venue || host || 'Unknown source';
+  const faviconUrl = rawCitation.faviconUrl || rawCitation.favicon || buildFaviconUrl(host);
+
+  return {
+    ...rawCitation,
+    number,
+    title,
+    url: rawCitation.url,
+    authors,
+    host,
+    hostname: host,
+    displayUrl: rawCitation.displayUrl || buildDisplayUrl(parsedUrl),
+    faviconUrl,
+    snippet,
+    summary: rawCitation.summary || snippet,
+    publishedAt: publicationDate || undefined,
+    publicationDate: publicationDate || undefined,
+    year: derivedYear || (rawCitation.year ? String(rawCitation.year) : undefined),
+    journal: venue,
+    doi: rawCitation.doi || rawCitation.DOI || undefined,
+    score: rawCitation.score ?? rawCitation.relevance ?? undefined
+  };
+};
+
+const normalizeCitationUrl = (urlString, index = 0) => {
+  if (!urlString || typeof urlString !== 'string') return null;
+
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(urlString);
+  } catch {
+    return null;
+  }
+
+  const host = parsedUrl.hostname || '';
+
+  return {
+    number: index + 1,
+    title: extractTitle(parsedUrl),
+    url: urlString,
+    authors: host || 'External source',
+    host,
+    hostname: host,
+    displayUrl: buildDisplayUrl(parsedUrl),
+    faviconUrl: buildFaviconUrl(host),
+    snippet: '',
+    summary: '',
+    publishedAt: undefined,
+    publicationDate: undefined,
+    year: undefined,
+    journal: undefined,
+    doi: undefined,
+    score: undefined
+  };
+};
+
+const buildInlineCitations = (content = '', citationsArray = []) => {
+  if (!content || !Array.isArray(citationsArray) || citationsArray.length === 0) {
+    return [];
+  }
+
+  const available = new Set(
+    citationsArray
+      .map((c) => {
+        const num = c?.number;
+        return Number.isFinite(num) ? String(num) : null;
+      })
+      .filter(Boolean)
+  );
+
+  const inline = [];
+  const regex = /\[(\d+)]/g;
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const numberStr = match[1];
+    if (!available.has(numberStr)) continue;
+    inline.push({
+      sourceNumber: Number.parseInt(numberStr, 10),
+      startIndex: match.index,
+      endIndex: match.index + match[0].length
+    });
+  }
+
+  return inline;
+};
+
+const normalizeCitationForPersistence = (citation) => {
+  if (!citation || !citation.url) return null;
+
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(citation.url);
+  } catch {
+    parsedUrl = null;
+  }
+
+  const host = (citation.host || citation.hostname || parsedUrl?.hostname || '').trim();
+  const displayUrl = citation.displayUrl || (parsedUrl ? buildDisplayUrl(parsedUrl) : '');
+  const faviconUrl = citation.faviconUrl || buildFaviconUrl(host || parsedUrl?.hostname);
+  const snippet = truncateSnippet(citation.snippet || citation.summary || '');
+  const publishedAt = citation.publishedAt || citation.publicationDate || '';
+  const year = citation.year || (publishedAt
+    ? (() => {
+        const maybe = new Date(publishedAt);
+        return Number.isNaN(maybe.getTime()) ? undefined : String(maybe.getFullYear());
+      })()
+    : undefined);
+
+  const parsedNumber = Number.parseInt(citation.number, 10);
+
+  return {
+    number: Number.isNaN(parsedNumber) ? citation.number : parsedNumber,
+    title: citation.title || (parsedUrl ? extractTitle(parsedUrl) : 'Untitled'),
+    url: citation.url,
+    authors: citation.authors || host || 'Unknown source',
+    host,
+    hostname: host,
+    displayUrl,
+    faviconUrl,
+    snippet,
+    summary: snippet,
+    publishedAt,
+    publicationDate: publishedAt,
+    year,
+    journal: citation.journal || citation.source || citation.publisher || undefined,
+    doi: citation.doi || undefined,
+    score: citation.score ?? undefined
+  };
+};
+
+const serializeMessageForPersistence = (message) => {
+  if (!message || typeof message !== 'object') {
+    return { role: 'assistant', content: '' };
+  }
+
+  const base = {
+    role: message.role,
+    content: message.content ?? ''
+  };
+
+  if (message.wasInClinicalMode !== undefined) {
+    base.wasInClinicalMode = message.wasInClinicalMode;
+  }
+  if (message.wasInReasonMode !== undefined) {
+    base.wasInReasonMode = message.wasInReasonMode;
+  }
+  if (message.wasInWriteMode !== undefined) {
+    base.wasInWriteMode = message.wasInWriteMode;
+  }
+
+  if (message.timestamp) {
+    base.timestamp = message.timestamp instanceof Date ? message.timestamp.toISOString() : message.timestamp;
+  }
+
+  if (message.isStreamingComplete) {
+    base.isStreamingComplete = true;
+  }
+
+  const normalizedCitations = Array.isArray(message.citations)
+    ? message.citations.map(normalizeCitationForPersistence).filter(Boolean)
+    : [];
+
+  if (normalizedCitations.length) {
+    base.citations = normalizedCitations;
+  }
+
+  const inline = Array.isArray(message.inlineCitations) && message.inlineCitations.length
+    ? message.inlineCitations
+    : buildInlineCitations(base.content, normalizedCitations);
+
+  if (inline.length) {
+    base.inlineCitations = inline;
+  }
+
+  return base;
+};
+
+const hydrateStoredMessage = (storedMessage, index = 0) => {
+  if (!storedMessage || typeof storedMessage !== 'object') return null;
+
+  const role = storedMessage.role || 'assistant';
+  const content = storedMessage.content || '';
+
+  const normalizedCitations = Array.isArray(storedMessage.citations)
+    ? storedMessage.citations.map(normalizeCitationForPersistence).filter(Boolean)
+    : [];
+
+  const inlineFromStore = Array.isArray(storedMessage.inlineCitations)
+    ? storedMessage.inlineCitations
+        .map((inline) => {
+          if (!inline) return null;
+          const sourceNumber = Number.parseInt(inline.sourceNumber ?? inline.number ?? inline.citation, 10);
+          const startIndex = typeof inline.startIndex === 'number' ? inline.startIndex : Number.parseInt(inline.startIndex, 10);
+          const endIndex = typeof inline.endIndex === 'number' ? inline.endIndex : Number.parseInt(inline.endIndex, 10);
+          if (Number.isNaN(sourceNumber) || Number.isNaN(startIndex) || Number.isNaN(endIndex)) {
+            return null;
+          }
+          return {
+            sourceNumber,
+            startIndex,
+            endIndex
+          };
+        })
+        .filter(Boolean)
+    : [];
+
+  const inline = inlineFromStore.length ? inlineFromStore : buildInlineCitations(content, normalizedCitations);
+
+  const isComplete = storedMessage.isStreamingComplete !== undefined
+    ? !!storedMessage.isStreamingComplete
+    : role === 'assistant';
+
+  const hydrated = {
+    id: storedMessage.id || Date.now() + index,
+    role,
+    content,
+    citations: normalizedCitations,
+    inlineCitations: inline,
+    wasInClinicalMode: storedMessage.wasInClinicalMode,
+    wasInReasonMode: storedMessage.wasInReasonMode,
+    wasInWriteMode: storedMessage.wasInWriteMode,
+    timestamp: storedMessage.timestamp ? new Date(storedMessage.timestamp) : new Date()
+  };
+
+  if (isComplete) {
+    hydrated.isStreamingComplete = true;
+  }
+
+  return hydrated;
 };
 
 const useTheme = (settings) => {
@@ -641,19 +932,21 @@ const ToolbarView = ({
 
       <div style={{
         position: 'absolute',
-        right: isMobile ? 12 : 16,
+        left: isMobile ? 'auto' : 'auto',
+        right: isMobile ? 8 : 16,
         display: 'flex',
         alignItems: 'center',
-        gap: isMobile ? 8 : 12
+        gap: isMobile ? 6 : 12
       }}>
         {/* Chat Counter for Anonymous Users */}
         {!isLoggedIn && !authStateLoading && (
           <span style={{
             color: theme.textPrimary,
-            fontSize: isMobile ? '12px' : '14px',
-            fontWeight: '500'
+            fontSize: isMobile ? '11px' : '14px',
+            fontWeight: '500',
+            whiteSpace: 'nowrap'
           }}>
-            {chatLimit.remaining} free left
+            {chatLimit.remaining} left
           </span>
         )}
 
@@ -662,18 +955,19 @@ const ToolbarView = ({
           <button
             onClick={() => handleLogin('signUp')}
             style={{
-              padding: isMobile ? '6px 12px' : '8px 16px',
+              padding: isMobile ? '5px 10px' : '8px 16px',
               borderRadius: '20px',
               border: 'none',
               backgroundColor: 'rgba(255, 255, 255, 0.2)',
               color: theme.textPrimary,
-              fontSize: isMobile ? '12px' : '14px',
+              fontSize: isMobile ? '11px' : '14px',
               fontWeight: '500',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
-              backdropFilter: 'blur(10px)'
+              backdropFilter: 'blur(10px)',
+              whiteSpace: 'nowrap'
             }}
           >
             Sign Up
@@ -686,7 +980,7 @@ const ToolbarView = ({
           disabled={newChatCooldown}
           aria-label="New chat"
           style={{
-            padding: isMobile ? 6 : 8,
+            padding: isMobile ? 5 : 8,
             borderRadius: 8,
             border: 'none',
             background: 'transparent',
@@ -697,7 +991,7 @@ const ToolbarView = ({
             justifyContent: 'center'
           }}
         >
-          <Edit3 size={18} color={theme.textPrimary} />
+          <Edit3 size={isMobile ? 16 : 18} color={theme.textPrimary} />
         </button>
 
       </div>
@@ -712,7 +1006,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
     { key: 'write', title: 'A&P', icon: FileText }
   ];
   return (
-    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: isMobile ? 'wrap' : 'nowrap' }}>
+    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: 'nowrap' }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = currentMode === key;
         return (
@@ -749,41 +1043,89 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
   const queries = sampleQueries[currentMode] || sampleQueries.search;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '24px 12px' : '32px 16px', height: '100%', gap: isMobile ? 20 : 24 }}>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: isMobile ? '48px 12px' : '64px 16px',
+      height: '100%',
+      gap: isMobile ? 32 : 40
+    }}>
       <div style={{ textAlign: 'center', width: '100%' }}>
-        <div style={{ width: 36, height: 36, margin: '0 auto 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={`${theme.grayPrimary}40`} />
+        <div style={{
+          width: isMobile ? 48 : 56,
+          height: isMobile ? 48 : 56,
+          margin: '0 auto 24px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
+        }}>
+          <svg width={isMobile ? 48 : 56} height={isMobile ? 48 : 56} viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={`${theme.textSecondary}30`} />
           </svg>
         </div>
         <h2 style={{
-          color: `${theme.grayPrimary}60`,
+          color: `${theme.textSecondary}90`,
           fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-          fontSize: isMobile ? 28 : 36,
-          lineHeight: 1.1,
+          fontSize: isMobile ? 32 : 42,
+          lineHeight: 1.2,
           margin: 0,
-          maxWidth: isMobile ? 200 : 220,
-          fontWeight: 300,
-          marginInline: 'auto'
+          maxWidth: isMobile ? 280 : 360,
+          fontWeight: 400,
+          marginInline: 'auto',
+          letterSpacing: '-0.02em',
+          animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s backwards'
         }}>
           Uncertainty ends here.
         </h2>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, width: '100%', maxWidth: 448, padding: isMobile ? '0 12px' : '0 32px' }}>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: isMobile ? 10 : 12,
+        width: '100%',
+        maxWidth: 560,
+        padding: isMobile ? '0 8px' : '0 16px'
+      }}>
         {queries.map((q, i) => (
           <button
             key={i}
             onClick={() => onSampleTapped(q)}
             style={{
               width: '100%',
-              padding: isMobile ? '9px 16px' : '10px 20px',
-              borderRadius: 50,
-              fontSize: isMobile ? 11 : 12,
-              fontWeight: 500,
-              textAlign: 'center',
-              lineHeight: 1.4, backgroundColor: `${theme.grayPrimary}08`, border: `0.5px solid ${theme.grayPrimary}20`,
-              color: `${theme.grayPrimary}70`, cursor: 'pointer', transition: 'all .2s ease'
+              padding: isMobile ? '14px 20px' : '16px 24px',
+              borderRadius: isMobile ? 16 : 20,
+              fontSize: isMobile ? 14 : 15,
+              fontWeight: 450,
+              textAlign: 'left',
+              lineHeight: 1.5,
+              backgroundColor: `${theme.backgroundSurface}F5`,
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              border: `1px solid ${theme.textSecondary}15`,
+              color: `${theme.textSecondary}85`,
+              cursor: 'pointer',
+              transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
+              letterSpacing: '-0.014em',
+              WebkitFontSmoothing: 'antialiased',
+              animation: `fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 + i * 0.08}s backwards`
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = `${theme.accentSoftBlue}08`;
+              e.currentTarget.style.borderColor = `${theme.accentSoftBlue}25`;
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.08)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = `${theme.backgroundSurface}F5`;
+              e.currentTarget.style.borderColor = `${theme.textSecondary}15`;
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
             }}
           >
             {q}
@@ -984,7 +1326,7 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onOpenCitation, isStre
   );
 };
 
-const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
+const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobile }) => {
   const [showCopied, setShowCopied] = useState(false);
   const handleCopy = async () => {
     if (!message.content) return;
@@ -996,17 +1338,25 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
   };
 
   if (message.role === 'user') {
-    const getLabel = () => message.wasInWriteMode ? 'Write Request:' : (message.wasInReasonMode ? 'Reason Request:' : 'Search Query:');
     return (
-      <div style={{ width: '100%', marginBottom: 16 }}>
-        <div style={{ display: 'flex', backgroundColor: `${theme.accentSoftBlue}0D`, borderRadius: 6 }}>
-          <div style={{ width: 3, backgroundColor: theme.accentSoftBlue, flexShrink: 0 }} />
-          <div style={{ flex: 1, padding: '10px 12px', display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <div style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>
-              {getLabel()}
-            </div>
-            <div style={{ fontSize: 14, color: theme.textPrimary }}>{message.content}</div>
-          </div>
+      <div style={{
+        width: '100%',
+        marginBottom: isMobile ? 24 : 32,
+        paddingLeft: isMobile ? 0 : 8,
+        paddingRight: isMobile ? 0 : 8
+      }}>
+        <div style={{
+          fontSize: isMobile ? 21 : 24,
+          color: theme.textPrimary,
+          fontFamily: 'Georgia, "Times New Roman", Charter, serif',
+          fontWeight: 500,
+          letterSpacing: '-0.015em',
+          lineHeight: 1.4,
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
+          wordWrap: 'break-word'
+        }}>
+          {message.content}
         </div>
       </div>
     );
@@ -1016,13 +1366,17 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
   const citationCount = Array.isArray(message.citations) ? message.citations.length : 0;
 
   return (
-    <div style={{ width: '100%', marginBottom: 16, position: 'relative' }}>
-      <div style={{ padding: 16, borderRadius: 12, backgroundColor: theme.backgroundSurface, border: `1px solid ${theme.accentSoftBlue}33` }}>
-        {message.isStreamingComplete && (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-            <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Response:</span>
-          </div>
-        )}
+    <div style={{
+      width: '100%',
+      marginBottom: isMobile ? 32 : 40,
+      position: 'relative',
+      paddingLeft: isMobile ? 0 : 8,
+      paddingRight: isMobile ? 0 : 8
+    }}>
+      <div style={{
+        position: 'relative',
+        animation: 'fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+      }}>
         <MarkdownBlock
           markdown={message.content}
           theme={theme}
@@ -1038,22 +1392,32 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
           }}
         />
         {citationCount > 0 && (
-          <div style={{ marginTop: 16 }}>
+          <div style={{ marginTop: 20, paddingTop: 16, borderTop: `1px solid ${theme.textSecondary}10` }}>
             <button
               onClick={() => onShowCitations?.(message.citations)}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: 8,
-                padding: '10px 16px',
+                padding: '10px 18px',
                 borderRadius: 999,
-                border: `1px solid ${theme.accentSoftBlue}55`,
-                backgroundColor: `${theme.accentSoftBlue}18`,
+                border: `1px solid ${theme.accentSoftBlue}30`,
+                backgroundColor: `${theme.accentSoftBlue}10`,
                 color: theme.accentSoftBlue,
-                fontSize: 13,
-                fontWeight: 600,
+                fontSize: 14,
+                fontWeight: 500,
                 cursor: 'pointer',
-                transition: 'background-color .2s ease, transform .2s ease'
+                transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                letterSpacing: '-0.011em'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = `${theme.accentSoftBlue}18`;
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = `${theme.accentSoftBlue}10`;
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <ClipboardList size={16} />
@@ -1066,25 +1430,31 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
           aria-label="Copy message"
           style={{
             position: 'absolute',
-            top: 8,
-            right: 8,
+            top: -8,
+            right: 0,
             display: 'inline-flex',
             alignItems: 'center',
-            gap: 6,
-            padding: '6px 12px',
-            borderRadius: 999,
-            border: 'none',
-            backgroundColor: showCopied ? theme.accentSoftBlue : `${theme.textSecondary}20`,
-            color: showCopied ? '#fff' : theme.textPrimary,
-            fontSize: 12,
-            fontWeight: 600,
+            justifyContent: 'center',
+            padding: 8,
+            borderRadius: '50%',
+            border: `1px solid ${theme.textSecondary}15`,
+            backgroundColor: showCopied ? theme.accentSoftBlue : theme.backgroundSurface,
+            color: showCopied ? '#fff' : theme.textSecondary,
             cursor: 'pointer',
-            boxShadow: '0 6px 14px rgba(0,0,0,0.12)',
-            transition: 'background-color .2s ease, transform .2s ease, color .2s ease'
+            boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+            opacity: 0.7
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.opacity = '1';
+            e.currentTarget.style.transform = 'scale(1.05)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.opacity = '0.7';
+            e.currentTarget.style.transform = 'scale(1)';
           }}
         >
-          {showCopied ? <Check size={14} /> : <Copy size={14} />}
-          <span>{showCopied ? 'Copied' : 'Copy'}</span>
+          {showCopied ? <Check size={16} /> : <Copy size={16} />}
         </button>
       </div>
     </div>
@@ -1092,7 +1462,7 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations }) => {
 };
 
 /* Streaming shell that renders only after first token */
-const StreamingResponse = ({ content, theme, invert = false, citations = [] }) => {
+const StreamingResponse = ({ content, theme, invert = false, citations = [], isMobile }) => {
   const mermaidInfo = React.useMemo(() => processStreamingContentForMermaid(content), [content]);
   const isStillStreaming = !mermaidInfo.hasCompleteMermaid;
   const handleOpenCitation = React.useCallback((num) => {
@@ -1104,59 +1474,63 @@ const StreamingResponse = ({ content, theme, invert = false, citations = [] }) =
   }, [citations]);
 
   return (
-    <div style={{ 
-      padding: 16, 
-      borderRadius: 12, 
-      backgroundColor: theme.backgroundSurface, 
-      border: `1px solid ${theme.accentSoftBlue}33`, 
-      marginBottom: 16 
+    <div style={{
+      marginBottom: isMobile ? 32 : 40,
+      paddingLeft: isMobile ? 0 : 8,
+      paddingRight: isMobile ? 0 : 8,
+      animation: 'fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     }}>
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between', 
-        marginBottom: 8 
-      }}>
-        <span style={{ 
-          fontSize: 11, 
-          fontWeight: 500, 
-          textTransform: 'uppercase', 
-          letterSpacing: .5, 
-          color: theme.textSecondary 
-        }}>
-          Response:
-        </span>
-      </div>
-      
       <div>
-        <MarkdownBlock 
-          markdown={content || ''} 
-          theme={theme} 
-          invert={invert} 
+        <MarkdownBlock
+          markdown={content || ''}
+          theme={theme}
+          invert={invert}
           onOpenCitation={handleOpenCitation}
           citations={citations}
           isStreaming={isStillStreaming}
         />
-        {content ? (
-          <span style={{ 
-            color: '#4A6B7D', 
-            animation: 'blink 1s infinite' 
-          }}>
-          </span>
-        ) : null}
       </div>
     </div>
   );
 };
 
-const LoadingIndicator = ({ theme }) => (
-  <div style={{ padding: 16, borderRadius: 12, backgroundColor: 'transparent', marginBottom: 16 }}>
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <span style={{ fontSize: 11, fontWeight: 500, textTransform: 'uppercase', letterSpacing: .5, color: theme.textSecondary }}>Thinking...</span>
-      <div style={{ display: 'flex', gap: 4 }}>
-        {[0, 1, 2].map((i) => (
-          <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.textSecondary, animation: `pulse 1.5s ease-in-out infinite ${i * 150}ms` }} />
-        ))}
+const LoadingIndicator = ({ theme, isMobile }) => (
+  <div style={{
+    paddingLeft: isMobile ? 0 : 8,
+    paddingRight: isMobile ? 0 : 8,
+    marginBottom: isMobile ? 24 : 32,
+    animation: 'fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 6,
+        padding: '12px 16px',
+        backgroundColor: `${theme.accentSoftBlue}12`,
+        borderRadius: 20,
+        border: `1px solid ${theme.accentSoftBlue}20`
+      }}>
+        <div style={{ display: 'flex', gap: 4 }}>
+          {[0, 1, 2].map((i) => (
+            <div key={i} style={{
+              width: 6,
+              height: 6,
+              borderRadius: '50%',
+              backgroundColor: theme.accentSoftBlue,
+              animation: `elasticPulse 1.4s ease-in-out infinite ${i * 0.15}s`
+            }} />
+          ))}
+        </div>
+        <span style={{
+          fontSize: isMobile ? 15 : 16,
+          fontWeight: 500,
+          color: theme.accentSoftBlue,
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          letterSpacing: '-0.015em'
+        }}>
+          Thinking
+        </span>
       </div>
     </div>
   </div>
@@ -1367,6 +1741,36 @@ const Sidebar = ({
         >
           {isLoggedIn ? (
             <>
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  padding: '10px 12px',
+                  borderRadius: 14,
+                  backgroundColor: `${theme.accentSoftBlue}15`,
+                  border: `1px solid ${theme.accentSoftBlue}25`,
+                  textDecoration: 'none'
+                }}
+              >
+                <img
+                  src="/apple-touch-icon.png"
+                  alt="Astra MD iOS"
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 10
+                  }}
+                />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: theme.textPrimary }}>Astra MD for iOS</span>
+                  <span style={{ fontSize: 12, color: theme.textSecondary }}>Download the mobile app</span>
+                </div>
+              </a>
+
               <div
                 style={{
                   display: 'flex',
@@ -1578,11 +1982,13 @@ const InputBar = ({
   const adjustTextareaHeight = useCallback(() => {
     const textarea = textareaRef.current;
     if (!textarea) return;
-    textarea.style.height = '32px';
-    const scrollHeight = Math.min(textarea.scrollHeight, 64);
+    const minHeight = 24;
+    const maxHeight = isMobile ? 100 : 120;
+    textarea.style.height = `${minHeight}px`;
+    const scrollHeight = Math.min(textarea.scrollHeight, maxHeight);
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => { adjustTextareaHeight(); }, [query, adjustTextareaHeight]);
 
@@ -1620,115 +2026,164 @@ const InputBar = ({
     <div
       ref={containerRef}
       style={{
-        paddingTop: isMobile ? 12 : 8,
-        paddingRight: isMobile ? 12 : 16,
-        paddingLeft: isMobile ? 12 : 16,
-        paddingBottom: 'max(8px, env(safe-area-inset-bottom))',
-        backgroundColor: theme.backgroundSurface,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        boxShadow: '0 -2px 8px rgba(0,0,0,0.1)'
+        paddingTop: 0,
+        paddingRight: isMobile ? 16 : 24,
+        paddingLeft: isMobile ? 16 : 24,
+        paddingBottom: isMobile ? 'max(16px, env(safe-area-inset-bottom))' : 20,
+        backgroundColor: 'transparent',
+        marginTop: isMobile ? -20 : -24,
+        pointerEvents: 'auto'
       }}
     >
-      <div style={{ position: 'relative', marginBottom: 0, border: 'none', outline: 'none' }}>
-        <textarea
-          ref={textareaRef}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-              e.preventDefault();
-              if (query.trim()) onSend();
-            }
-          }}
-          placeholder={getPlaceholder()}
-          disabled={isDisabled}
-          style={{
-            width: '100%',
-            padding: isMobile ? '8px 10px' : '8px 12px',
-            borderRadius: 12,
-            resize: 'none',
-            border: 'none',
-            outline: 'none',
-            fontSize: isMobile ? 15 : 16,
-            lineHeight: 1.5,
-            backgroundColor: theme.backgroundSurface,
-            color: theme.textPrimary,
-            height: `${textareaHeight}px`,
-            minHeight: isMobile ? 36 : 40,
-            maxHeight: isMobile ? 100 : 120,
-            fontFamily: 'inherit',
-            boxSizing: 'border-box'
-          }}
-        />
+      <div style={{
+        position: 'relative',
+        backgroundColor: `${theme.backgroundSurface}F5`,
+        borderRadius: isMobile ? 22 : 28,
+        border: `1px solid ${theme.textSecondary}25`,
+        boxShadow: `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
+        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        overflow: 'visible',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)'
+      }}>
+        {/* Input Row */}
+        <div style={{
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          gap: isMobile ? 8 : 10,
+          padding: isMobile ? '10px 10px 4px 10px' : '12px 12px 6px 12px'
+        }}>
+          <textarea
+            ref={textareaRef}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                if (query.trim()) onSend();
+              }
+            }}
+            placeholder={getPlaceholder()}
+            disabled={isDisabled}
+            style={{
+              flex: 1,
+              padding: '8px 10px',
+              resize: 'none',
+              border: 'none',
+              outline: 'none',
+              fontSize: isMobile ? 16 : 17,
+              lineHeight: 1.4,
+              backgroundColor: 'transparent',
+              color: theme.textPrimary,
+              height: `${textareaHeight}px`,
+              minHeight: 24,
+              maxHeight: isMobile ? 100 : 120,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+              boxSizing: 'border-box',
+              fontWeight: 400,
+              letterSpacing: '-0.011em'
+            }}
+          />
 
-        {speechRecognition.isRecording && (
-          <div style={{ position: 'absolute', right: 12, top: 0, display: 'flex', alignItems: 'center', gap: 4 }}>
-            <span style={{ fontSize: 12, color: theme.accentSoftBlue }}>Listening</span>
-            <div style={{ display: 'flex', gap: 2 }}>
-              {[0,1,2].map(i => (
-                <div key={i} style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: theme.accentSoftBlue, animation: `pulse 1.5s ease-in-out infinite ${i * 0.15}s` }} />
-              ))}
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 4 : 6, paddingBottom: 2 }}>
+            {speechRecognition.isAvailable && (
+              <button
+                onClick={speechRecognition.toggleRecording}
+                disabled={!speechRecognition.isAvailable || isStreaming || isLoading}
+                aria-pressed={speechRecognition.isRecording}
+                aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
+                style={{
+                  padding: isMobile ? 8 : 10,
+                  borderRadius: '50%',
+                  border: 'none',
+                  backgroundColor: speechRecognition.isRecording ? `${theme.errorColor}15` : 'transparent',
+                  cursor: 'pointer',
+                  color: speechRecognition.isRecording ? theme.errorColor : theme.textSecondary,
+                  opacity: (!speechRecognition.isAvailable || isStreaming || isLoading) ? 0.4 : 0.7,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.opacity = speechRecognition.isRecording ? '1' : '0.7'; }}
+              >
+                {speechRecognition.isRecording ? <Square size={isMobile ? 18 : 20} fill="currentColor" /> : <Mic size={isMobile ? 18 : 20} />}
+              </button>
+            )}
+
+            <button
+              onClick={isStreaming ? onStop : onSend}
+              disabled={!isStreaming && !query.trim()}
+              aria-label={isStreaming ? 'Stop response' : 'Send'}
+              style={{
+                padding: isMobile ? 8 : 10,
+                borderRadius: '50%',
+                border: 'none',
+                backgroundColor: (isStreaming || query.trim()) ? theme.accentSoftBlue : `${theme.textSecondary}20`,
+                cursor: 'pointer',
+                color: '#fff',
+                opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                boxShadow: (isStreaming || query.trim()) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none'
+              }}
+              onMouseEnter={(e) => {
+                if (isStreaming || query.trim()) {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(74, 107, 125, 0.4)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = (isStreaming || query.trim()) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none';
+              }}
+            >
+              {isStreaming ? <Square size={isMobile ? 18 : 20} fill="currentColor" /> : <ArrowUp size={isMobile ? 18 : 20} />}
+            </button>
           </div>
-        )}
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: -8, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 8 : 0 }}>
-        <ModeSwitcher
-          currentMode={currentMode}
-          onModeChange={onModeChange}
-          isDisabled={isStreaming || isLoading}
-          theme={theme}
-          isMobile={isMobile}
-        />
-        <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 6 : 8, marginLeft: isMobile ? 'auto' : 0 }}>
-          <button
-            onClick={speechRecognition.toggleRecording}
-            disabled={!speechRecognition.isAvailable || isStreaming || isLoading}
-            aria-pressed={speechRecognition.isRecording}
-            aria-label={speechRecognition.isRecording ? 'Stop recording' : 'Start recording'}
-            style={{
-              padding: isMobile ? 6 : 8,
-              borderRadius: '50%',
-              border: 'none',
-              background: 'transparent',
-              cursor: 'pointer',
-              transform: speechRecognition.isRecording ? 'scale(1.1)' : 'scale(1)',
-              color: speechRecognition.isRecording ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!speechRecognition.isAvailable || isStreaming || isLoading) ? 0.5 : 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            {speechRecognition.isRecording ? <Square size={isMobile ? 24 : 28} fill="currentColor" /> : <Mic size={isMobile ? 24 : 28} />}
-          </button>
-
-          <button
-            onClick={isStreaming ? onStop : onSend}
-            disabled={!isStreaming && !query.trim()}
-            aria-label={isStreaming ? 'Stop response' : 'Send'}
-            style={{
-              padding: isMobile ? 6 : 8,
-              borderRadius: '50%',
-              border: 'none',
-              background: 'transparent',
-              cursor: 'pointer',
-              color: isStreaming ? theme.errorColor : theme.accentSoftBlue,
-              opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            {isStreaming ? <Square size={isMobile ? 24 : 28} fill="currentColor" /> : <ArrowUp size={isMobile ? 24 : 28} />}
-          </button>
         </div>
-      </div>
 
-      <div style={{ textAlign: 'center', marginTop: 0 }}>
-        <p style={{ fontSize: isMobile ? 11 : 12, color: theme.textSecondary, margin: 0 }}>Astra can make mistakes. Check critical info.</p>
+        {/* Mode Switcher Row - Bottom */}
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingTop: 0,
+          paddingBottom: isMobile ? 10 : 14,
+          paddingLeft: isMobile ? 12 : 16,
+          paddingRight: isMobile ? 12 : 16,
+          gap: isMobile ? 6 : 12
+        }}>
+          <div style={{ flexShrink: 0 }}>
+            <ModeSwitcher
+              currentMode={currentMode}
+              onModeChange={onModeChange}
+              isDisabled={isStreaming || isLoading}
+              theme={theme}
+              isMobile={isMobile}
+            />
+          </div>
+          <p style={{
+            fontSize: isMobile ? 10 : 11,
+            color: theme.textSecondary,
+            margin: 0,
+            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+            fontWeight: 400,
+            opacity: 0.5,
+            lineHeight: 1.2,
+            whiteSpace: 'nowrap',
+            marginLeft: 'auto',
+            textAlign: 'center',
+            width: '100%'
+          }}>
+            Astra can make mistakes.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -1770,23 +2225,406 @@ const createChatTitle = (source, fallback = 'Conversation') => {
 
 const normalizeSessionForHistory = (session) => {
   if (!session) return null;
-  const messages = parseSessionMessages(session.messages);
+  const rawMessages = parseSessionMessages(session.messages);
+  let messages = rawMessages
+    .map((msg, idx) => hydrateStoredMessage(msg, idx))
+    .filter(Boolean);
+
+  if (messages.length === 0) {
+    messages = rawMessages
+      .map((msg, idx) => {
+        if (!msg || typeof msg !== 'object') return null;
+        const role = msg.role || 'user';
+        const content = typeof msg.content === 'string' ? msg.content : '';
+        return {
+          id: msg.id || Date.now() + idx,
+          role,
+          content,
+          citations: Array.isArray(msg.citations) ? msg.citations : [],
+          inlineCitations: Array.isArray(msg.inlineCitations) ? msg.inlineCitations : [],
+          timestamp: msg.timestamp ? new Date(msg.timestamp) : new Date(),
+          isStreamingComplete: role === 'assistant'
+        };
+      })
+      .filter(Boolean);
+  }
+
+  if (messages.length === 0) {
+    const fallbackContentRaw = typeof session.messages === 'string' ? session.messages.trim() : '';
+    const fallbackContent = fallbackContentRaw && fallbackContentRaw !== '[object Object]'
+      ? fallbackContentRaw
+      : (typeof session.title === 'string' ? session.title : 'Saved conversation');
+
+    messages = [{
+      id: session.id || `session-${Date.now()}`,
+      role: 'assistant',
+      content: fallbackContent,
+      citations: [],
+      inlineCitations: [],
+      timestamp: session.created_at ? new Date(session.created_at) : new Date(),
+      isStreamingComplete: true
+    }];
+  }
+
+  if (messages.length === 0) return null;
   const mode = session.mode || 'search';
   const sourceTitle = sanitizeTitleText(session.title) || createChatTitle(messages[0]?.content);
   const displayTitle = createChatTitle(sourceTitle);
+  const createdAt = session.created_at ? new Date(session.created_at) : new Date();
+  const updatedAt = session.updated_at ? new Date(session.updated_at) : createdAt;
 
   return {
     id: session.id || `session-${session.created_at || Date.now()}`,
     title: sourceTitle,
     displayTitle,
     messages,
-    timestamp: session.created_at || new Date().toISOString(),
+    createdAt,
+    updatedAt,
+    timestamp: updatedAt,
     mode,
     wasInClinicalMode: mode === 'reason',
     wasInReasonMode: mode === 'reason',
     wasInWriteMode: mode === 'write'
   };
 };
+
+const GlobalChromeStyles = ({ theme }) => (
+  <style
+    dangerouslySetInnerHTML={{
+      __html: `
+/* ===== App chrome (unchanged) ===== */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; overflow: hidden; height: 100vh; }
+#root { height: 100vh; width: 100vw; }
+@supports (height: 100vh) { body, #root { height: 100vh; } }
+html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
+* { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
+
+textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
+textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
+
+button:not(:disabled):hover { transform: translateY(-1px); }
+button:not(:disabled):active { transform: translateY(0); }
+button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
+
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes elasticPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+.markdown-body {
+  color: ${theme.textPrimary};
+  line-height: 1.75;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.014em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* prevent first/last child margins from leaking out of the bubble */
+.markdown-body > :first-child { margin-top: 0; }
+.markdown-body > :last-child  { margin-bottom: 0; }
+
+/* Headings with more space below */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  color: ${theme.textPrimary};
+  margin: 1.5em 0 0.75em;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+.markdown-body h1 { font-size: 2em; font-weight: 700; }
+.markdown-body h2 { font-size: 1.5em; font-weight: 650; }
+.markdown-body h3 { font-size: 1.25em;  font-weight: 600; }
+
+/* Paragraphs with more breathing room */
+.markdown-body p {
+  margin: 0.85em 0;
+  line-height: 1.7;
+}
+/* Horizontal rule */
+.markdown-body hr {
+  border: none;
+  height: 1px;
+  background-color: ${theme.textSecondary}40;
+  margin: 1rem 0;
+}
+
+/* Blockquotes */
+.markdown-body blockquote {
+  margin: 0.4rem 0;
+  padding: 0.2rem 0.75rem;
+  border-left: 3px solid ${theme.accentSoftBlue};
+  color: ${theme.textSecondary};
+  background: ${theme.textSecondary}10;
+  border-radius: 4px;
+}
+
+/* Links + citation pills */
+.markdown-body a {
+  color: ${theme.accentSoftBlue};
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease;
+  word-break: break-word;
+}
+.markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+
+.markdown-body sup.md-citation {
+  color: ${theme.accentSoftBlue};
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all .2s ease;
+  position: relative;
+}
+.markdown-body sup.md-citation:hover {
+  background-color: ${theme.accentSoftBlue}20;
+  transform: translateY(-1px);
+}
+.markdown-body sup.md-citation[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  background-color: ${theme.backgroundSurface};
+  color: ${theme.textPrimary};
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: normal;
+  max-width: 240px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 5;
+}
+.markdown-body sup.md-citation[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-color: ${theme.backgroundSurface} transparent transparent transparent;
+  opacity: 0;
+  transition: opacity .15s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::after {
+  left: 50%;
+  transform: translate(-50%, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::before {
+  left: 50%;
+  transform: translate(-50%, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]::after {
+  left: 0;
+  transform: translate(0, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]::before {
+  left: 6px;
+  transform: translate(0, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]::after {
+  right: 0;
+  transform: translate(0, -105%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]::before {
+  right: 6px;
+  transform: translate(0, -95%);
+}
+.markdown-body sup.md-citation[data-tooltip]:hover::after,
+.markdown-body sup.md-citation[data-tooltip]:hover::before {
+  opacity: 1;
+}
+.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"]):hover::after {
+  transform: translate(-50%, -120%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="left"]:hover::after {
+  transform: translate(0, -120%);
+}
+.markdown-body sup.md-citation[data-tooltip-pos="right"]:hover::after {
+  transform: translate(0, -120%);
+}
+
+/* Images */
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Code */
+.markdown-body code {
+  background-color: ${theme.textSecondary}12;
+  border-radius: 6px;
+  padding: 3px 7px;
+  font-size: 0.92em;
+  font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.markdown-body pre {
+  background-color: ${theme.textSecondary}10;
+  border: 1px solid ${theme.textSecondary}15;
+  borderRadius: 12px;
+  padding: 16px;
+  margin: 1em 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+/* Lists themselves with more space */
+.markdown-body ol,
+.markdown-body ul {
+  margin: 0.75em 0;
+  padding-left: 1.75em;
+  list-style-position: outside;
+}
+
+/* List items with more space */
+.markdown-body li {
+  margin: 0.4em 0;
+  line-height: 1.7;
+}
+
+.markdown-body ul > li {
+  list-style-type: disc;
+}
+
+.markdown-body ol > li {
+  list-style-type: decimal;
+}
+
+/* ALL possible nested list combinations get more indentation */
+.markdown-body li > ol,
+.markdown-body li > ul,
+.markdown-body ol li > ol,
+.markdown-body ol li > ul,
+.markdown-body ul li > ol,
+.markdown-body ul li > ul {
+  margin: 0.1rem 0;
+  padding-left: 2.5rem;
+}
+
+/* Third level nesting */
+.markdown-body li li > ol,
+.markdown-body li li > ul {
+  padding-left: 2.5rem;
+}
+
+/* Fourth level nesting */
+.markdown-body li li li > ol,
+.markdown-body li li li > ul {
+  padding-left: 2.5rem;
+}
+
+/* Keep everything else the same */
+.markdown-body ul { list-style-type: disc; }
+.markdown-body ol { list-style-type: decimal; }
+.markdown-body ul ul { list-style-type: circle; }
+.markdown-body ul ul ul { list-style-type: square; }
+
+/* GFM task lists */
+.markdown-body ul.contains-task-list { 
+  list-style: none;
+  padding-left: 1.5rem;
+}
+.markdown-body li.task-list-item { 
+  list-style: none;
+}
+.markdown-body li.task-list-item > input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: translateY(1px);
+}
+
+/* When code blocks appear in lists, keep spacing tidy */
+.markdown-body li pre { margin-top: 0.25rem; }
+
+/* ===== Tables: full width, zebra, header bg, borders, rounded ===== */
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5rem 0 0.75rem;
+  border-radius: 8px;
+  overflow: hidden; /* keep rounded corners */
+  background: ${theme.backgroundSurface};
+}
+
+.markdown-body thead th {
+  background: ${theme.textSecondary}15;
+  color: ${theme.textPrimary};
+  font-weight: 600;
+  text-align: left;
+}
+
+.markdown-body th,
+.markdown-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid ${theme.textSecondary}25;
+  vertical-align: top;
+}
+
+.markdown-body tbody tr:nth-child(even) td {
+  background: ${theme.textSecondary}08;
+}
+
+/* Table alignment classes from remark/rehype */
+.markdown-body th.align-center,
+.markdown-body td.align-center { text-align: center; }
+.markdown-body th.align-right,
+.markdown-body td.align-right  { text-align: right; }
+
+/* ===== Streaming caret ===== */
+.streaming-caret {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: ${theme.accentSoftBlue};
+}
+`
+    }}
+  />
+);
 
 /* =========================
    APP
@@ -1822,11 +2660,11 @@ const AstraApp = () => {
   const [citationSheetCitations, setCitationSheetCitations] = useState([]);
   const [showCitationSheet, setShowCitationSheet] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showPromoModal, setShowPromoModal] = useState(false);
 
   // Auth-related state
   const [showPaywall, setShowPaywall] = useState(false);
   const [chatLimit, setChatLimit] = useState(() => {
-    // Initialize from cache if available and not expired
     const cached = authService.getCachedAnonymousLimitState();
     if (cached && cached.reset_at) {
       const resetTime = new Date(cached.reset_at);
@@ -1834,12 +2672,14 @@ const AstraApp = () => {
         return {
           remaining: cached.remaining,
           used: cached.used,
-          resetAt: cached.reset_at
+          resetAt: cached.reset_at,
+          plan: 'guest',
+          limit: 5,
+          isUnlimited: false
         };
       }
     }
-    // Default state if no valid cache
-    return { remaining: 10, used: 0, resetAt: null };
+    return { remaining: 5, used: 0, resetAt: null, plan: 'guest', limit: 5, isUnlimited: false };
   });
   const [showBilling, setShowBilling] = useState(false);
   const [subscriptionInfo, setSubscriptionInfo] = useState(null);
@@ -1860,6 +2700,14 @@ const AstraApp = () => {
   const [hasLoadedSubscription, setHasLoadedSubscription] = useState(false);
   const [settingsSyncState, setSettingsSyncState] = useState('idle');
   const [settingsSyncError, setSettingsSyncError] = useState('');
+
+  const promoStorageKey = useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    if (isAuthenticated && user?.id) {
+      return `astra_promo_dismissed_${user.id}`;
+    }
+    return null;
+  }, [isAuthenticated, user?.id]);
 
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
@@ -1981,14 +2829,14 @@ const AstraApp = () => {
 
   const refreshChatHistory = useCallback(async () => {
     if (authLoading) return;
-    if (!isAuthenticated || !user) {
-      setChatHistory([]);
-      return;
-    }
 
     try {
-      const sessions = await authService.getChatSessions(user, 20);
-      if (!Array.isArray(sessions)) return;
+      const supabaseUser = isAuthenticated && user ? user : null;
+      const sessions = await authService.getChatSessions(supabaseUser, 20);
+      if (!Array.isArray(sessions)) {
+        return;
+      }
+
       const normalized = sessions
         .map(normalizeSessionForHistory)
         .filter(Boolean);
@@ -2027,7 +2875,7 @@ const AstraApp = () => {
   useEffect(() => {
     if (authLoading) return;
     refreshChatHistory();
-  }, [authLoading, refreshChatHistory]);
+  }, [authLoading, isAuthenticated, user, refreshChatHistory]);
 
   useEffect(() => {
     if (!showBilling) return;
@@ -2071,15 +2919,39 @@ const AstraApp = () => {
     window.history.replaceState({}, '', newUrl);
   }, [isAuthenticated, user, refreshSubscription]);
 
+  const updateChatLimit = useCallback(async () => {
+    if (!isAuthenticated || !user) return;
+    try {
+      const limit = await authService.checkUsageLimit(user);
+      setChatLimit({
+        remaining: limit?.is_unlimited ? null : limit?.remaining ?? limit?.limit ?? 0,
+        used: limit?.used ?? 0,
+        resetAt: limit?.reset_at ?? null,
+        plan: limit?.plan || 'free',
+        limit: typeof limit?.limit === 'number' ? limit.limit : null,
+        isUnlimited: Boolean(limit?.is_unlimited)
+      });
+    } catch (error) {
+      console.error('Failed to refresh authenticated chat limit:', error);
+      setChatLimit((prev) => ({
+        ...prev,
+        plan: 'free',
+        limit: 10,
+        isUnlimited: false
+      }));
+    }
+  }, [isAuthenticated, user]);
+
   useEffect(() => {
     if (billingStatus !== 'success') return;
     const planKey = subscriptionInfo?.plan_key;
     if (!planKey) return;
 
+    updateChatLimit();
     setBillingWelcomePlan(planKey);
     setShowBillingWelcome(true);
     setBillingStatus(null);
-  }, [billingStatus, subscriptionInfo]);
+  }, [billingStatus, subscriptionInfo, updateChatLimit]);
 
   useEffect(() => {
     if (!profileSuccess) return;
@@ -2087,54 +2959,48 @@ const AstraApp = () => {
     return () => clearTimeout(timer);
   }, [profileSuccess]);
 
+  useEffect(() => {
+    if (authLoading) return;
+    if (typeof window === 'undefined') return;
+
+    if (isAuthenticated && user?.id) {
+      const dismissed = promoStorageKey ? localStorage.getItem(promoStorageKey) : null;
+      setShowPromoModal(!dismissed);
+    } else {
+      setShowPromoModal(true);
+    }
+  }, [authLoading, isAuthenticated, user?.id, promoStorageKey]);
+
   // Initialize chat limits from localStorage for anonymous users
   useEffect(() => {
-    if (isAuthenticated) {
-      // Reset chat limits for authenticated users (they don't have limits)
-      setChatLimit({ remaining: 10, used: 0, resetAt: null });
-      return;
-    }
+    if (isAuthenticated) return;
 
-    // For anonymous users, check and sync with localStorage
     const cached = authService.getCachedAnonymousLimitState();
     if (cached && cached.reset_at) {
       const resetTime = new Date(cached.reset_at);
       if (resetTime > new Date()) {
-        // Valid cached limit found
         setChatLimit({
           remaining: cached.remaining,
           used: cached.used,
-          resetAt: cached.reset_at
+          resetAt: cached.reset_at,
+          plan: 'guest',
+          limit: 5,
+          isUnlimited: false
         });
         return;
-      } else {
-        // Cached limit has expired, clear it
-        authService.setCachedAnonymousLimitState({ used: 0, reset_at: authService.getDefaultAnonymousResetTimestamp() });
       }
+      authService.setCachedAnonymousLimitState({ used: 0, reset_at: authService.getDefaultAnonymousResetTimestamp() });
     }
 
-    // No valid cache or expired - initialize fresh limit
     const resetAt = authService.getDefaultAnonymousResetTimestamp();
-    setChatLimit({ remaining: 10, used: 0, resetAt });
+    setChatLimit({ remaining: 5, used: 0, resetAt, plan: 'guest', limit: 5, isUnlimited: false });
     authService.setCachedAnonymousLimitState({ used: 0, reset_at: resetAt });
   }, [isAuthenticated]);
 
-  // Update chat limit for authenticated users only (anonymous users use localStorage only)
-  const updateChatLimit = useCallback(async () => {
-    if (isAuthenticated) {
-      // For authenticated users, they don't have limits - set unlimited
-      setChatLimit({ remaining: 999, used: 0, resetAt: null });
-    }
-    // For anonymous users, do nothing - localStorage is the single source of truth
-  }, [isAuthenticated]);
-
-  // Initialize chat limit only for authenticated users (removed for anonymous users)
   useEffect(() => {
-    if (isAuthenticated) {
-      updateChatLimit();
-    }
-    // For anonymous users, initialization is handled by the dedicated useEffect above
-  }, [isAuthenticated, updateChatLimit]);
+    if (!isAuthenticated || !user) return;
+    updateChatLimit();
+  }, [isAuthenticated, user, updateChatLimit]);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -2199,6 +3065,13 @@ const AstraApp = () => {
   const handleCloseAbout = useCallback(() => {
     setShowAbout(false);
   }, []);
+
+  const handlePromoClose = useCallback(() => {
+    setShowPromoModal(false);
+    if (typeof window !== 'undefined' && promoStorageKey) {
+      localStorage.setItem(promoStorageKey, '1');
+    }
+  }, [promoStorageKey]);
 
   const handleSettingChange = useCallback((key, value) => {
     setAppSettings((prev) => {
@@ -2381,57 +3254,19 @@ const AstraApp = () => {
         if (Array.isArray(json.citations) && json.citations.length) {
           if (typeof json.citations[0] === 'object') {
             json.citations.forEach((rawCitation, index) => {
-              if (!rawCitation || !rawCitation.url) return;
-
-              let parsedUrl;
-              try {
-                parsedUrl = new URL(rawCitation.url);
-              } catch {
-                parsedUrl = null;
+              const normalizedCitation = normalizeCitationObject(rawCitation, index);
+              if (normalizedCitation) {
+                citations.push(normalizedCitation);
+                onCitationsUpdate?.([...citations]);
               }
-
-              const hostname = rawCitation.hostname || (parsedUrl ? parsedUrl.hostname : '');
-              const publicationDate = rawCitation.publicationDate || rawCitation.publishedAt || rawCitation.publication_date || rawCitation.date;
-              const derivedYear = (() => {
-                if (rawCitation.year) return String(rawCitation.year);
-                if (!publicationDate) return null;
-                const maybeYear = new Date(publicationDate).getFullYear();
-                return Number.isNaN(maybeYear) ? null : String(maybeYear);
-              })();
-              const summary = rawCitation.summary || rawCitation.description || rawCitation.abstract || rawCitation.snippet || rawCitation.excerpt;
-              const venue = rawCitation.journal || rawCitation.source || rawCitation.publisher;
-              const number = rawCitation.number ?? index + 1;
-
-              const normalizedCitation = {
-                ...rawCitation,
-                number,
-                title: rawCitation.title || (parsedUrl ? extractTitle(parsedUrl) : 'Untitled'),
-                url: rawCitation.url,
-                authors: rawCitation.authors || rawCitation.author || rawCitation.primaryAuthor || venue || hostname || 'Unknown source',
-                hostname,
-                publicationDate: publicationDate,
-                year: derivedYear || (rawCitation.year ? String(rawCitation.year) : undefined),
-                journal: venue,
-                summary,
-                doi: rawCitation.doi || rawCitation.DOI
-              };
-
-              citations.push(normalizedCitation);
-              onCitationsUpdate?.([...citations]);
             });
           } else {
             json.citations.forEach((urlString, i) => {
-              try {
-                const url = new URL(urlString);
-                citations.push({
-                  number: i + 1,
-                  title: extractTitle(url),
-                  url: urlString,
-                  authors: url.hostname || 'Unknown',
-                  hostname: url.hostname
-                });
+              const normalizedCitation = normalizeCitationUrl(urlString, i);
+              if (normalizedCitation) {
+                citations.push(normalizedCitation);
                 onCitationsUpdate?.([...citations]);
-              } catch {}
+              }
             });
           }
         }
@@ -2449,56 +3284,92 @@ const AstraApp = () => {
     }
   };
 
-  const extractTitle = (url) => {
-    const hostname = url.hostname?.toLowerCase() || '';
-    if (hostname.includes('pubmed')) return 'PubMed';
-    if (hostname.includes('pmc')) return 'PMC Article';
-    if (hostname.includes('dynamed')) return 'DynaMed';
-    if (hostname.includes('heart.org')) return 'American Heart Association';
-    if (hostname.includes('wikipedia')) return 'Wikipedia';
-    return url.hostname || 'External Link';
-  };
-
   const handleSend = async () => {
-    if (!query.trim() || isLoading || isStreaming) return;
+    const trimmedQuery = query.trim();
+    if (!trimmedQuery || isLoading || isStreaming) return;
 
-    // Check authentication and limits for anonymous users
-  if (!isAuthenticated) {
-    // Check current limit
-    if (chatLimit.remaining <= 0) {
-      setShowPaywall(true);
-      return;
-    }
-
-    // Immediately decrement the counter (optimistic update)
-    setChatLimit(prev => {
-      const resetAt = prev.resetAt || authService.getDefaultAnonymousResetTimestamp();
-      const nextUsed = Math.min(10, (prev.used || 0) + 1);
-      const nextRemaining = Math.max(0, 10 - nextUsed);
-      const nextState = {
-        remaining: nextRemaining,
-        used: nextUsed,
-        resetAt
-      };
-      authService.setCachedAnonymousLimitState({ used: nextUsed, reset_at: resetAt });
-      if (nextRemaining <= 0) {
+    if (!isAuthenticated) {
+      if (chatLimit.remaining <= 0) {
         setShowPaywall(true);
+        return;
       }
-      return nextState;
-    });
-  }
+
+      setChatLimit(prev => {
+        const resetAt = prev.resetAt || authService.getDefaultAnonymousResetTimestamp();
+        const nextUsed = Math.min(5, (prev.used || 0) + 1);
+        const nextRemaining = Math.max(0, 5 - nextUsed);
+        const nextState = {
+          remaining: nextRemaining,
+          used: nextUsed,
+          resetAt,
+          plan: 'guest',
+          limit: 5,
+          isUnlimited: false
+        };
+        authService.setCachedAnonymousLimitState({ used: nextUsed, reset_at: resetAt });
+        if (nextRemaining <= 0) {
+          setShowPaywall(true);
+        }
+        return nextState;
+      });
+
+      // Fire and forget remote tracking; ignore errors for offline mode
+      authService.incrementAnonymousUsage().catch((error) => {
+        console.warn('Failed to record anonymous usage remotely', error);
+      });
+    } else {
+      const isUnlimited = Boolean(chatLimit.isUnlimited);
+      if (!isUnlimited && typeof chatLimit.remaining === 'number' && chatLimit.remaining <= 0) {
+        setShowPaywall(true);
+        return;
+      }
+
+      try {
+        const result = await authService.incrementUsage(user);
+        if (result?.is_unlimited) {
+          setChatLimit({
+            remaining: null,
+            used: result?.used ?? chatLimit.used ?? 0,
+            resetAt: null,
+            plan: result?.plan || 'pro',
+            limit: null,
+            isUnlimited: true
+          });
+        } else if (result) {
+          setChatLimit(prev => ({
+            remaining: typeof result.remaining === 'number' ? result.remaining : prev.remaining ?? 0,
+            used: typeof result.used === 'number' ? result.used : (prev.used || 0) + 1,
+            resetAt: result.reset_at || prev.resetAt || null,
+            plan: result.plan || prev.plan || 'free',
+            limit: typeof result.limit === 'number' ? result.limit : prev.limit ?? 10,
+            isUnlimited: Boolean(result.is_unlimited)
+          }));
+        }
+      } catch (error) {
+        if (error?.code === 'LIMIT_REACHED' || error?.status === 429) {
+          setChatLimit(prev => ({
+            ...prev,
+            remaining: 0,
+            isUnlimited: false
+          }));
+          setShowPaywall(true);
+          return;
+        }
+        console.error('Failed to record usage for authenticated user:', error);
+      }
+    }
 
     const userMessage = {
       id: Date.now(),
       role: 'user',
-      content: query.trim(),
+      content: trimmedQuery,
       wasInReasonMode: currentMode === 'reason',
       wasInWriteMode: currentMode === 'write',
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    const queryToSend = query.trim();
+    const queryToSend = trimmedQuery;
     setQuery('');
     setIsLoading(true);
     setIsStreaming(true);
@@ -2588,11 +3459,13 @@ const AstraApp = () => {
           let persistedMessages = null;
 
           if (trimmedAssistantContent) {
+            const inlineCitations = buildInlineCitations(trimmedAssistantContent, collectedCitations);
             const assistantMessage = {
               id: Date.now() + 1,
               role: 'assistant',
               content: trimmedAssistantContent,
               citations: collectedCitations,
+              inlineCitations,
               timestamp: new Date(),
               isStreamingComplete: true
             };
@@ -2600,12 +3473,21 @@ const AstraApp = () => {
             setMessages(prev => [...prev, assistantMessage]);
 
             const generatedTitle = createChatTitle(userMessage.content);
-            persistedMessages = [...messages, userMessage, { role: 'assistant', content: trimmedAssistantContent }];
+            const allMessagesForPersistence = [...messages, userMessage, assistantMessage];
+            persistedMessages = allMessagesForPersistence.map(serializeMessageForPersistence);
+            const historyMessages = allMessagesForPersistence.map((msg, idx) => ({
+              ...msg,
+              id: msg.id || Date.now() + idx,
+              isStreamingComplete: msg.role === 'assistant' ? true : msg.isStreamingComplete
+            }));
+
             const chatSession = {
               id: `local-${Date.now()}`,
               title: generatedTitle,
               displayTitle: generatedTitle,
-              messages: persistedMessages,
+              messages: historyMessages,
+              createdAt: new Date(),
+              updatedAt: new Date(),
               timestamp: new Date(),
               wasInClinicalMode: false
             };
@@ -2628,18 +3510,22 @@ const AstraApp = () => {
           // Save chat session
           if (persistedMessages && persistedMessages.length > 0) {
             const chatTitle = createChatTitle(userMessage.content);
-            const saveResult = await authService.saveChatSession(chatTitle, persistedMessages, currentMode, user);
+            try {
+              const saveResult = await authService.saveChatSession(chatTitle, persistedMessages, currentMode, user);
 
-            if (saveResult?.session) {
-              const normalized = normalizeSessionForHistory(saveResult.session);
-              if (normalized) {
-                setChatHistory(prev => {
-                  const withoutTemp = prev.filter(chat => chat.id !== pendingChatSession?.id && chat.id !== normalized.id);
-                  return [normalized, ...withoutTemp];
-                });
+              if (saveResult?.session) {
+                const normalized = normalizeSessionForHistory(saveResult.session);
+                if (normalized) {
+                  setChatHistory(prev => {
+                    const withoutTemp = prev.filter(chat => chat.id !== pendingChatSession?.id && chat.id !== normalized.id);
+                    return [normalized, ...withoutTemp];
+                  });
+                }
+              } else if (isAuthenticated) {
+                refreshChatHistory();
               }
-            } else if (isAuthenticated) {
-              refreshChatHistory();
+            } catch (saveError) {
+              console.error('Failed to persist chat session:', saveError);
             }
           }
 
@@ -2677,11 +3563,13 @@ const AstraApp = () => {
     if (isStreaming) {
       setIsStreaming(false);
       if (streamingContent) {
+        const inlineCitations = buildInlineCitations(streamingContent, streamingCitations);
         const assistantMessage = {
           id: Date.now(),
           role: 'assistant',
           content: streamingContent,
           citations: streamingCitations,
+          inlineCitations,
           timestamp: new Date(),
           isStreamingComplete: true
         };
@@ -2703,7 +3591,13 @@ const AstraApp = () => {
   };
 
   const loadChatSession = (session) => {
-    setMessages(session.messages);
+    if (!session) return;
+    const hydrated = Array.isArray(session.messages)
+      ? session.messages
+          .map((msg, idx) => hydrateStoredMessage(msg, idx))
+          .filter(Boolean)
+      : [];
+    setMessages(hydrated);
     setQuery('');
     setIsStreaming(false);
     setIsLoading(false);
@@ -2781,8 +3675,8 @@ const AstraApp = () => {
             paddingTop: 0,
             paddingRight: isMobile ? 12 : 16,
             paddingLeft: isMobile ? 12 : 16,
-            paddingBottom: inputBarHeight + (isMobile ? 12 : 16), // prevent bottom clipping
-            scrollPaddingBottom: inputBarHeight + (isMobile ? 12 : 16),
+            paddingBottom: inputBarHeight - (isMobile ? 20 : 24), // extra space for text to run around input
+            scrollPaddingBottom: inputBarHeight - (isMobile ? 20 : 24),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
             userSelect: 'none',
@@ -2803,6 +3697,7 @@ const AstraApp = () => {
                 message={message}
                 theme={theme}
                 invertMarkdown={isDark}
+                isMobile={isMobile}
                 onShowCitations={(citations) => {
                   if (!Array.isArray(citations) || citations.length === 0) return;
                   setCitationSheetCitations(citations);
@@ -2811,9 +3706,10 @@ const AstraApp = () => {
               />
             ))}
 
-            {isLoading && <LoadingIndicator theme={theme} />}
+            {isLoading && <LoadingIndicator theme={theme} isMobile={isMobile} />}
             {isStreaming && hasFirstToken && (
               <StreamingResponse
+                isMobile={isMobile}
                 content={streamingContent}
                 theme={theme}
                 invert={isDark}
@@ -2826,14 +3722,17 @@ const AstraApp = () => {
         
 {/* Input - matching width container */}
 <div style={{
-  flexShrink: 0,
+  position: 'fixed',
+  bottom: 0,
+  left: 0,
+  right: 0,
   padding: isMobile ? '0 12px' : '0 16px',
   boxSizing: 'border-box',
   width: '100%',
-  position: 'relative',
-  backgroundColor: theme.backgroundPrimary
+  zIndex: 10,
+  pointerEvents: 'none'
 }}>
-  
+
   <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%', position: 'relative', zIndex: 2 }}>
     <InputBar
       query={query}
@@ -2854,6 +3753,14 @@ const AstraApp = () => {
       </div>
 
       {/* Paywall Modal */}
+      <PromoModal
+        isOpen={showPromoModal}
+        onClose={handlePromoClose}
+        theme={theme}
+        isAuthenticated={isAuthenticated}
+      />
+
+      {/* Daily limit paywall */}
       <PaywallModal
         isOpen={showPaywall}
         onClose={() => setShowPaywall(false)}
@@ -2905,6 +3812,8 @@ const AstraApp = () => {
         onSettingChange={handleSettingChange}
         syncState={settingsSyncState}
         syncError={settingsSyncError}
+        chatLimit={chatLimit}
+        onRefreshUsage={updateChatLimit}
       />
 
       <DeleteChatModal
@@ -2955,301 +3864,7 @@ const AstraApp = () => {
         />
       )}
 
-      {/* Global Styles (minimal) */}
-<style
-  dangerouslySetInnerHTML={{
-    __html: `
-/* ===== App chrome (unchanged) ===== */
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; overflow: hidden; height: 100vh; }
-#root { height: 100vh; width: 100vw; }
-@supports (height: 100vh) { body, #root { height: 100vh; } }
-html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
-
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: ${theme.textSecondary}40; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: ${theme.textSecondary}60; }
-* { scrollbar-width: thin; scrollbar-color: ${theme.textSecondary}40 transparent; }
-
-textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
-textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
-
-button:not(:disabled):hover { transform: translateY(-1px); }
-button:not(:disabled):active { transform: translateY(0); }
-button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
-
-@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
-@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
-@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-
-.markdown-body {
-  color: ${theme.textPrimary};
-  line-height: 1.6;
-  font-size: 14px;
-}
-
-/* prevent first/last child margins from leaking out of the bubble */
-.markdown-body > :first-child { margin-top: 0; }
-.markdown-body > :last-child  { margin-bottom: 0; }
-
-/* Headings with more space below */
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3 {
-  color: ${theme.textPrimary};
-  margin: 0.8rem 0 0.6rem;  /* Changed from 0.6rem 0 0.25rem */
-  line-height: 1.25;
-}
-
-.markdown-body h1 { font-size: 1.5rem; font-weight: 700; }
-.markdown-body h2 { font-size: 1.25rem; font-weight: 600; }
-.markdown-body h3 { font-size: 1.1rem;  font-weight: 600; }
-
-/* Paragraphs with more breathing room */
-.markdown-body p { 
-  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
-  line-height: 1.6;  /* Increased from 1.55 */
-}
-/* Horizontal rule */
-.markdown-body hr {
-  border: none;
-  height: 1px;
-  background-color: ${theme.textSecondary}40;
-  margin: 1rem 0;
-}
-
-/* Blockquotes */
-.markdown-body blockquote {
-  margin: 0.4rem 0;
-  padding: 0.2rem 0.75rem;
-  border-left: 3px solid ${theme.accentSoftBlue};
-  color: ${theme.textSecondary};
-  background: ${theme.textSecondary}10;
-  border-radius: 4px;
-}
-
-/* Links + citation pills */
-.markdown-body a {
-  color: ${theme.accentSoftBlue};
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color .2s ease;
-  word-break: break-word;
-}
-.markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
-
-.markdown-body sup.md-citation {
-  color: ${theme.accentSoftBlue};
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: all .2s ease;
-  position: relative;
-}
-.markdown-body sup.md-citation:hover {
-  background-color: ${theme.accentSoftBlue}20;
-  transform: translateY(-1px);
-}
-.markdown-body sup.md-citation[data-tooltip]::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 0;
-  background-color: ${theme.backgroundSurface};
-  color: ${theme.textPrimary};
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 11px;
-  font-weight: 500;
-  white-space: normal;
-  max-width: 240px;
-  line-height: 1.4;
-  opacity: 0;
-  pointer-events: none;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
-  transition: opacity .15s ease, transform .15s ease;
-  z-index: 5;
-}
-.markdown-body sup.md-citation[data-tooltip]::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  border-width: 6px;
-  border-style: solid;
-  border-color: ${theme.backgroundSurface} transparent transparent transparent;
-  opacity: 0;
-  transition: opacity .15s ease;
-  pointer-events: none;
-  z-index: 5;
-}
-.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::after {
-  left: 50%;
-  transform: translate(-50%, -105%);
-}
-.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"])::before {
-  left: 50%;
-  transform: translate(-50%, -95%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="left"]::after {
-  left: 0;
-  transform: translate(0, -105%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="left"]::before {
-  left: 6px;
-  transform: translate(0, -95%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="right"]::after {
-  right: 0;
-  transform: translate(0, -105%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="right"]::before {
-  right: 6px;
-  transform: translate(0, -95%);
-}
-.markdown-body sup.md-citation[data-tooltip]:hover::after,
-.markdown-body sup.md-citation[data-tooltip]:hover::before {
-  opacity: 1;
-}
-.markdown-body sup.md-citation[data-tooltip]:not([data-tooltip-pos="left"]):not([data-tooltip-pos="right"]):hover::after {
-  transform: translate(-50%, -120%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="left"]:hover::after {
-  transform: translate(0, -120%);
-}
-.markdown-body sup.md-citation[data-tooltip-pos="right"]:hover::after {
-  transform: translate(0, -120%);
-}
-
-/* Images */
-.markdown-body img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* Code */
-.markdown-body code {
-  background-color: ${theme.textSecondary}15;
-  border-radius: 4px;
-  padding: 2px 6px;
-  font-size: 0.9em;
-  font-family: 'SF Mono','Monaco','Cascadia Code','Roboto Mono',monospace;
-}
-.markdown-body pre {
-  background-color: ${theme.textSecondary}15;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 0.6rem 0;
-  overflow-x: auto;
-}
-.markdown-body pre code {
-  background: transparent;
-  padding: 0;
-}
-
-/* Lists themselves with more space */
-.markdown-body ol,
-.markdown-body ul {
-  margin: 0.5rem 0;  /* Changed from 0.25rem to 0.5rem */
-  padding-left: 1.5rem;
-  list-style-position: outside;
-}
-
-/* List items with more space */
-.markdown-body li {
-  margin: 0.25rem 0;  /* Changed from 0.1rem to 0.25rem */
-  line-height: 1.6;   /* Increased from 1.5 */
-}
-
-/* ALL possible nested list combinations get more indentation */
-.markdown-body li > ol,
-.markdown-body li > ul,
-.markdown-body ol li > ol,
-.markdown-body ol li > ul,
-.markdown-body ul li > ol,
-.markdown-body ul li > ul {
-  margin: 0.1rem 0;
-  padding-left: 2.5rem;
-}
-
-/* Third level nesting */
-.markdown-body li li > ol,
-.markdown-body li li > ul {
-  padding-left: 2.5rem;
-}
-
-/* Fourth level nesting */
-.markdown-body li li li > ol,
-.markdown-body li li li > ul {
-  padding-left: 2.5rem;
-}
-
-/* Keep everything else the same */
-.markdown-body ul { list-style-type: disc; }
-.markdown-body ol { list-style-type: decimal; }
-.markdown-body ul ul { list-style-type: circle; }
-.markdown-body ul ul ul { list-style-type: square; }
-
-/* GFM task lists */
-.markdown-body ul.contains-task-list { 
-  list-style: none;
-  padding-left: 1.5rem;
-}
-.markdown-body li.task-list-item { 
-  list-style: none;
-}
-.markdown-body li.task-list-item > input[type="checkbox"] {
-  margin-right: 0.5rem;
-  transform: translateY(1px);
-}
-
-/* When code blocks appear in lists, keep spacing tidy */
-.markdown-body li pre { margin-top: 0.25rem; }
-
-/* ===== Tables: full width, zebra, header bg, borders, rounded ===== */
-.markdown-body table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0.5rem 0 0.75rem;
-  border-radius: 8px;
-  overflow: hidden; /* keep rounded corners */
-  background: ${theme.backgroundSurface};
-}
-
-.markdown-body thead th {
-  background: ${theme.textSecondary}15;
-  color: ${theme.textPrimary};
-  font-weight: 600;
-  text-align: left;
-}
-
-.markdown-body th,
-.markdown-body td {
-  padding: 10px 12px;
-  border-bottom: 1px solid ${theme.textSecondary}25;
-  vertical-align: top;
-}
-
-.markdown-body tbody tr:nth-child(even) td {
-  background: ${theme.textSecondary}08;
-}
-
-/* Table alignment classes from remark/rehype */
-.markdown-body th.align-center,
-.markdown-body td.align-center { text-align: center; }
-.markdown-body th.align-right,
-.markdown-body td.align-right  { text-align: right; }
-
-/* ===== Streaming caret ===== */
-.streaming-caret {
-  display: inline-block;
-  animation: blink 1s infinite;
-  color: ${theme.accentSoftBlue};
-}
-`
-  }}
-/>
+      <GlobalChromeStyles theme={theme} />
     </div>
   );
 };

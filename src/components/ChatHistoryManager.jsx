@@ -265,7 +265,18 @@ class ChatClient {
         number: citation.number,
         title: citation.title,
         url: citation.url,
-        authors: citation.authors
+        authors: citation.authors,
+        host: citation.host || citation.hostname,
+        displayUrl: citation.displayUrl,
+        faviconUrl: citation.faviconUrl,
+        snippet: citation.snippet || citation.summary,
+        summary: citation.summary || citation.snippet,
+        publishedAt: citation.publishedAt || citation.publicationDate,
+        publicationDate: citation.publicationDate || citation.publishedAt,
+        year: citation.year,
+        journal: citation.journal,
+        doi: citation.doi,
+        score: citation.score
       }));
     }
 
@@ -319,7 +330,19 @@ class ChatClient {
         number: citationDict.number,
         title: citationDict.title,
         url: citationDict.url,
-        authors: citationDict.authors
+        authors: citationDict.authors,
+        host: citationDict.host || citationDict.hostname,
+        hostname: citationDict.host || citationDict.hostname,
+        displayUrl: citationDict.displayUrl,
+        faviconUrl: citationDict.faviconUrl,
+        snippet: citationDict.snippet || citationDict.summary,
+        summary: citationDict.summary || citationDict.snippet,
+        publishedAt: citationDict.publishedAt || citationDict.publicationDate,
+        publicationDate: citationDict.publicationDate || citationDict.publishedAt,
+        year: citationDict.year,
+        journal: citationDict.journal,
+        doi: citationDict.doi,
+        score: citationDict.score
       }));
     } else {
       message.citations = [];

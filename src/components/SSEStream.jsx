@@ -1,9 +1,38 @@
+const buildFaviconUrl = (host) => {
+  if (!host) return '';
+  try {
+    const hostname = host.replace(/^https?:\/\//, '');
+    return `https://www.google.com/s2/favicons?sz=128&domain=${hostname}`;
+  } catch {
+    return '';
+  }
+};
+
 class Citation {
-  constructor(number, title, url, authors) {
+  constructor({
+    number,
+    title,
+    url,
+    authors,
+    host,
+    displayUrl,
+    faviconUrl,
+    snippet,
+    publishedAt,
+    score
+  }) {
     this.number = number;
     this.title = title;
     this.url = url;
-    this.authors = authors;
+    this.host = host;
+    this.hostname = host;
+    this.displayUrl = displayUrl;
+    this.faviconUrl = faviconUrl;
+    this.snippet = snippet;
+    this.summary = snippet;
+    this.publishedAt = publishedAt;
+    this.score = score;
+    this.authors = authors || host;
   }
 }
 
@@ -122,42 +151,33 @@ class SSEStream {
       return;
     }
 
-    if (!payload) {
-      console.log('⚠️ Empty payload, continuing...');
-      return;
-    }
-
-    try {
-      const json = JSON.parse(payload);
-
-      // Handle Tavily citations properly
-      if (this.shouldCollectCitations && this.collectedCitations.length === 0) {
-        // Try structured citations first (from Tavily via backend)
-        if (json.citations && Array.isArray(json.citations)) {
-          console.log(`📚 Processing ${json.citations.length} structured Tavily citations`);
-          this.collectedCitations = json.citations.map(citationDict => {
-            if (typeof citationDict === 'object' && citationDict.number && citationDict.title && citationDict.url) {
-              const authors = citationDict.authors || new URL(citationDict.url).hostname || 'Unknown';
-              return new Citation(citationDict.number, citationDict.title, citationDict.url, authors);
-            }
-            return null;
-          }).filter(Boolean);
-          console.log(`✅ Collected ${this.collectedCitations.length} structured citations`);
-        }
-        // Fallback to simple URL array
-        else if (Array.isArray(json.citations)) {
-          console.log(`📚 Processing ${json.citations.length} URL citations (fallback)`);
-          this.collectedCitations = json.citations.map((urlString, i) => {
-            try {
-              const url = new URL(urlString);
-              return new Citation(i + 1, this.extractTitle(url), urlString, url.hostname || 'Unknown');
-            } catch {
-              return null;
-            }
-          }).filter(Boolean);
-          console.log(`✅ Collected ${this.collectedCitations.length} URL citations`);
-        }
+      if (!payload) {
+        console.log('⚠️ Empty payload, continuing...');
+        return;
       }
+
+      try {
+        const json = JSON.parse(payload);
+
+        // Handle Tavily citations properly
+        if (this.shouldCollectCitations && this.collectedCitations.length === 0) {
+          // Try structured citations first (from Tavily via backend)
+          if (json.citations && Array.isArray(json.citations)) {
+            console.log(`📚 Processing ${json.citations.length} structured Tavily citations`);
+            this.collectedCitations = json.citations
+              .map((citationDict) => this.normalizeCitationFromObject(citationDict))
+              .filter(Boolean);
+            console.log(`✅ Collected ${this.collectedCitations.length} structured citations`);
+          }
+          // Fallback to simple URL array
+          else if (Array.isArray(json.citations)) {
+            console.log(`📚 Processing ${json.citations.length} URL citations (fallback)`);
+            this.collectedCitations = json.citations
+              .map((urlString, i) => this.normalizeCitationFromUrl(urlString, i))
+              .filter(Boolean);
+            console.log(`✅ Collected ${this.collectedCitations.length} URL citations`);
+          }
+        }
 
       // Extract streaming content
       let content = null;
@@ -251,6 +271,90 @@ class SSEStream {
       return 'Wikipedia';
     }
     return url.hostname || 'External Link';
+  }
+
+  normalizeCitationFromObject(citationDict) {
+    if (!citationDict || typeof citationDict !== 'object') {
+      return null;
+    }
+
+    const urlString = citationDict.url || citationDict.source;
+    if (!urlString) {
+      return null;
+    }
+
+    let parsedUrl;
+    try {
+      parsedUrl = new URL(urlString);
+    } catch {
+      return null;
+    }
+
+    const host = (citationDict.host || parsedUrl.hostname || '').trim();
+    const displayUrl = this.buildDisplayUrl(parsedUrl);
+    const snippetSource = citationDict.snippet || citationDict.summary || citationDict.content || citationDict.raw_content || '';
+    const snippet = this.truncateSnippet(snippetSource);
+    const publishedAt = citationDict.publishedAt || citationDict.published_date || citationDict.published_at || '';
+    const score = typeof citationDict.score === 'number' ? citationDict.score : citationDict.relevance;
+    const number = typeof citationDict.number === 'number' ? citationDict.number : this.collectedCitations.length + 1;
+    const title = citationDict.title || this.extractTitle(parsedUrl);
+    const authors = citationDict.authors || citationDict.source || host || 'Unknown';
+    const faviconUrl = citationDict.favicon || buildFaviconUrl(host || parsedUrl.hostname);
+
+    return new Citation({
+      number,
+      title,
+      url: urlString,
+      authors,
+      host: host || parsedUrl.hostname,
+      displayUrl,
+      faviconUrl,
+      snippet,
+      publishedAt,
+      score
+    });
+  }
+
+  normalizeCitationFromUrl(urlString, index) {
+    if (!urlString || typeof urlString !== 'string') {
+      return null;
+    }
+
+    let parsedUrl;
+    try {
+      parsedUrl = new URL(urlString);
+    } catch {
+      return null;
+    }
+
+    const host = parsedUrl.hostname || 'Unknown';
+
+    return new Citation({
+      number: index + 1,
+      title: this.extractTitle(parsedUrl),
+      url: urlString,
+      authors: host,
+      host,
+      displayUrl: this.buildDisplayUrl(parsedUrl),
+      faviconUrl: buildFaviconUrl(host),
+      snippet: '',
+      publishedAt: '',
+      score: null
+    });
+  }
+
+  buildDisplayUrl(url) {
+    if (!url) return '';
+    const pathname = url.pathname && url.pathname !== '/' ? url.pathname : '';
+    const displayPath = pathname.length > 60 ? `${pathname.slice(0, 57)}…` : pathname;
+    return displayPath || url.hostname;
+  }
+
+  truncateSnippet(snippet) {
+    if (!snippet || typeof snippet !== 'string') return '';
+    const condensed = snippet.replace(/\s+/g, ' ').trim();
+    if (condensed.length <= 220) return condensed;
+    return `${condensed.slice(0, 217)}…`;
   }
 
   cancel() {

@@ -68,9 +68,9 @@ class AuthService {
     if (typeof limit.used === 'number' && Number.isFinite(limit.used)) {
       used = limit.used;
     } else if (typeof limit.remaining === 'number' && Number.isFinite(limit.remaining)) {
-      used = 10 - limit.remaining;
+      used = 5 - limit.remaining;
     }
-    used = Math.max(0, Math.min(10, Math.floor(used)));
+    used = Math.max(0, Math.min(5, Math.floor(used)));
 
     let resetAt = typeof limit.reset_at === 'string' ? limit.reset_at : null;
     const resetTime = resetAt ? new Date(resetAt) : null;
@@ -80,7 +80,7 @@ class AuthService {
 
     return {
       used,
-      remaining: Math.max(0, 10 - used),
+      remaining: Math.max(0, 5 - used),
       reset_at: resetAt
     };
   }
@@ -127,8 +127,22 @@ class AuthService {
     const resetAt = cached?.reset_at && new Date(cached.reset_at) > new Date()
       ? cached.reset_at
       : this.getDefaultAnonymousResetTimestamp();
-    const nextUsed = Math.min(10, (cached?.used || 0) + 1);
+    const nextUsed = Math.min(5, (cached?.used || 0) + 1);
     return this._setAnonymousLimitCache({ used: nextUsed, reset_at: resetAt });
+  }
+
+  buildUsagePayload(supabaseUser = this.currentSupabaseUser) {
+    if (supabaseUser && supabaseUser.id) {
+      const payload = {
+        supabase_user: supabaseUser
+      };
+      const normalizedId = validateAndFormatUserId(this.cachedSupabaseProfile?.id);
+      if (normalizedId) {
+        payload.user_id = normalizedId;
+      }
+      return payload;
+    }
+    return { anonymous_id: this.anonymousId };
   }
 
   getCachedAnonymousLimitState() {
@@ -213,12 +227,15 @@ class AuthService {
         } catch (e) {
           errorDetails = { error: responseText };
         }
-        throw new Error(`API error: ${response.status} - ${JSON.stringify(errorDetails)}`);
+        const error = new Error(`API error: ${response.status} - ${JSON.stringify(errorDetails)}`);
+        error.status = response.status;
+        error.details = errorDetails;
+        throw error;
       }
 
       try {
         const payload = JSON.parse(responseText);
-        if (endpoint === 'check-limit') {
+        if (endpoint === 'check-limit' && data?.anonymous_id) {
           this._setAnonymousLimitCache(payload);
         }
         return payload;
@@ -263,16 +280,30 @@ class AuthService {
     }
   }
 
+  async checkUsageLimit(supabaseUser = this.currentSupabaseUser) {
+    const payload = this.buildUsagePayload(supabaseUser);
+    const result = await this.callAuthAPI('check-limit', payload);
+    return result;
+  }
+
+  async incrementUsage(supabaseUser = this.currentSupabaseUser) {
+    const payload = this.buildUsagePayload(supabaseUser);
+    try {
+      return await this.callAuthAPI('increment-usage', payload);
+    } catch (error) {
+      if (error?.status === 429) {
+        error.code = 'LIMIT_REACHED';
+      }
+      throw error;
+    }
+  }
+
   async checkAnonymousLimit() {
-    return await this.callAuthAPI('check-limit', {
-      anonymous_id: this.anonymousId
-    });
+    return await this.checkUsageLimit(null);
   }
 
   async incrementAnonymousUsage() {
-    return await this.callAuthAPI('increment-usage', {
-      anonymous_id: this.anonymousId
-    });
+    return await this.incrementUsage(null);
   }
 
   async syncUserWithSupabase(supabaseUser = this.currentSupabaseUser) {
@@ -369,15 +400,36 @@ class AuthService {
     }
 
     if (endpoint === 'check-limit') {
+      if (data?.supabase_user?.id || data?.user_id) {
+        return {
+          plan: 'free',
+          limit: 10,
+          remaining: 10,
+          used: 0,
+          reset_at: this.getDefaultAnonymousResetTimestamp(),
+          is_unlimited: false
+        };
+      }
       const cached = this._getAnonymousLimitCache();
       if (cached) return cached;
       const fresh = this._setAnonymousLimitCache({ used: 0, reset_at: this.getDefaultAnonymousResetTimestamp() });
-      return fresh || { used: 0, remaining: 10, reset_at: this.getDefaultAnonymousResetTimestamp() };
+      return fresh || { used: 0, remaining: 5, reset_at: this.getDefaultAnonymousResetTimestamp(), plan: 'guest', limit: 5, is_unlimited: false };
     }
 
     if (endpoint === 'increment-usage') {
+      if (data?.supabase_user?.id || data?.user_id) {
+        return {
+          success: true,
+          plan: 'free',
+          limit: 10,
+          remaining: Math.max(0, 9),
+          used: 1,
+          reset_at: this.getDefaultAnonymousResetTimestamp(),
+          is_unlimited: false
+        };
+      }
       const updated = this._bumpAnonymousLimitCache();
-      return updated || { used: 1, remaining: 9, reset_at: this.getDefaultAnonymousResetTimestamp() };
+      return updated || { used: 1, remaining: 4, reset_at: this.getDefaultAnonymousResetTimestamp(), plan: 'guest', limit: 5, is_unlimited: false };
     }
 
     return {};

@@ -12,7 +12,7 @@ const AuthButton = ({ onAuthRequired }) => {
     signOut
   } = useSupabaseAuth();
 
-  const [chatLimit, setChatLimit] = useState({ remaining: 10, used: 0 });
+  const [chatLimit, setChatLimit] = useState({ remaining: 5, used: 0 });
   const [notice, setNotice] = useState('');
 
   // Update chat limit counter
@@ -78,15 +78,15 @@ const AuthButton = ({ onAuthRequired }) => {
   }
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex items-center space-x-2 sm:space-x-4">
       {/* Chat Counter for Anonymous Users */}
       {!isAuthenticated && (
-        <div className="flex items-center space-x-2 bg-blue-50 px-3 py-1 rounded-full">
-          <span className="text-sm font-medium text-blue-800">
-            {chatLimit.remaining} free chats left
+        <div className="flex items-center space-x-1 sm:space-x-2 bg-blue-50 px-2 sm:px-3 py-1 rounded-full">
+          <span className="text-xs sm:text-sm font-medium text-blue-800 whitespace-nowrap">
+            {chatLimit.remaining} free chats
           </span>
           {chatLimit.remaining <= 3 && chatLimit.remaining > 0 && (
-            <span className="text-xs text-orange-600 font-medium">
+            <span className="hidden sm:inline text-xs text-orange-600 font-medium whitespace-nowrap">
               (Sign up for unlimited)
             </span>
           )}
@@ -94,7 +94,7 @@ const AuthButton = ({ onAuthRequired }) => {
       )}
 
       {!isAuthenticated && notice && (
-        <span className="text-xs text-blue-700">{notice}</span>
+        <span className="hidden sm:inline text-xs text-blue-700">{notice}</span>
       )}
 
       {isAuthenticated ? (
@@ -132,9 +132,9 @@ const AuthButton = ({ onAuthRequired }) => {
       ) : (
         <button
           onClick={handleLogin}
-          className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+          className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors whitespace-nowrap"
         >
-          <LogIn className="w-4 h-4" />
+          <LogIn className="w-3 h-3 sm:w-4 sm:h-4" />
           <span>Sign In</span>
         </button>
       )}
