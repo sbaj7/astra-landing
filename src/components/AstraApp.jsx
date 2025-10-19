@@ -1937,6 +1937,7 @@ const InputBar = ({
   const containerRef = useRef(null);
   const textareaRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
+  const isExtraSmall = useIsMobile(420);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -2144,10 +2145,12 @@ const InputBar = ({
             fontWeight: 400,
             opacity: 0.5,
             lineHeight: 1.2,
-            whiteSpace: 'nowrap',
+            whiteSpace: isExtraSmall ? 'normal' : 'nowrap',
             marginLeft: 'auto',
-            textAlign: 'center',
-            width: '100%'
+            textAlign: isExtraSmall ? 'center' : 'right',
+            width: isExtraSmall ? '100%' : 'auto',
+            marginTop: isExtraSmall ? 4 : 0,
+            flexShrink: 0
           }}>
             Astra can make mistakes.
           </p>
