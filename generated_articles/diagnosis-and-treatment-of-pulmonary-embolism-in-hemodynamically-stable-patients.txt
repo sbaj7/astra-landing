@@ -1,0 +1,211 @@
+{
+  "heroLabel": "Evidence Brief",
+  "title": "Diagnosis and Treatment of Pulmonary Embolism in Hemodynamically Stable Patients",
+  "summary": "For hemodynamically stable PE, prioritize validated diagnostic pathways (age-adjusted D-dimer, YEARS/PERC), confirm with CTPA or V/Q when indicated, and perform formal risk stratification (PESI/sPESI plus RV injury biomarkers/imaging). Most patients receive prompt anticoagulation with DOACs and may be managed as outpatients if low risk and socially suitable. Escalation (systemic thrombolysis or catheter-directed therapy) is generally reserved for clinical deterioration or selected intermediate-high risk with close monitoring.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What is the optimal diagnostic approach and evidence-based treatment strategy for acute pulmonary embolism in hemodynamically stable adults?",
+  "tags": [
+    "Pulmonary Embolism",
+    "VTE",
+    "Diagnostics",
+    "Anticoagulation",
+    "Outpatient Care",
+    "Risk Stratification"
+  ],
+  "heroStats": [
+    {
+      "label": "Low-risk PE outpatient eligibility",
+      "value": "≈30–50% with structured risk tools [2], [11]"
+    },
+    {
+      "label": "Intermediate-high risk early adverse events",
+      "value": "Higher with positive RV strain and troponin/BNP; drives monitoring/escalation decisions [7], [5], [8]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Start with pretest probability",
+      "body": "Use Wells/Geneva or PERC/YEARS. **Avoid imaging when PERC negative and low risk**; use **age-adjusted D-dimer** in non-high risk patients [7], [8]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Confirm diagnosis efficiently",
+      "body": "For positive D-dimer or moderate/high pretest probability, obtain **CTPA**; V/Q preferred in contrast allergy, pregnancy, or severe CKD [7], [8]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Risk stratify all stable PE",
+      "body": "Combine **PESI/sPESI** with **RV assessment (echo/CT)** and **troponin/BNP** to classify low, intermediate-low, or intermediate-high risk [7], [5], [8]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Treat promptly with anticoagulation",
+      "body": "Initiate **DOAC-first** when feasible. Consider **outpatient care** for low-risk patients with good supports. **Avoid routine thrombolysis** in stable PE; reserve for **deterioration** [2], [11], [12], [13], [7]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Escalate selectively",
+      "body": "In intermediate-high risk with RV injury and worsening status, consider **rescue systemic thrombolysis** or **catheter-directed therapy** after multidisciplinary discussion [7], [4], [12], [13]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Diagnostic Pathway",
+      "title": "From Suspicion to Confirmation in Stable PE",
+      "blurb": "A structured diagnostic algorithm reduces unnecessary imaging while maintaining safety.",
+      "steps": [
+        {
+          "title": "Assess clinical pretest probability",
+          "body": "Classify as low, intermediate, or high using Wells or Geneva; apply **PERC** in very low-risk patients to forgo testing if all criteria negative. In non-high risk, use **age-adjusted D-dimer** to rule out PE without imaging when negative [7], [8]."
+        },
+        {
+          "title": "Select imaging when indicated",
+          "body": "If D-dimer positive or pretest probability high, obtain **CTPA**. Use **V/Q scan** if iodinated contrast is contraindicated or to minimize radiation in selected populations. Evaluate RV-to-LV ratio on CTPA as part of risk assessment [7], [8]."
+        },
+        {
+          "title": "Baseline labs and cardiac biomarkers",
+          "body": "Obtain **troponin** and **BNP/NT-proBNP** to detect myocardial injury/strain. Positive biomarkers contribute to **intermediate-high risk** designation when paired with RV dysfunction [7], [5], [8]."
+        },
+        {
+          "title": "Initial echocardiography",
+          "body": "Not required to diagnose PE in all stable patients, but helpful for **risk stratification**; RV dilation/dysfunction supports intermediate-high risk and closer monitoring [7], [5], [8]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Therapeutic Strategy",
+      "title": "Treatment of Hemodynamically Stable PE",
+      "blurb": "Anticoagulation is the cornerstone; escalation is tailored to risk and clinical trajectory.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Anticoagulation (default)",
+          "items": [
+            "Initiate promptly once diagnostic probability is high and bleeding risk acceptable; do not await definitive imaging if delay is expected and suspicion strong [7], [8].",
+            "Preferred: **DOACs** (apixaban, rivaroxaban) as **monotherapy regimens**; dabigatran/edoxaban after parenteral lead-in. LMWH preferred in active cancer or pregnancy [7], [8], [11].",
+            "UFH reserved for anticipated procedures, high bleeding risk, or severe renal impairment; enables rapid reversal if escalation needed [7], [11].",
+            "Typical duration: **3 months minimum**; extend if unprovoked PE or persistent risk factors with low bleeding risk [7], [11]."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Risk Stratification and Monitoring",
+          "items": [
+            "Low risk: **PESI I–II or sPESI 0**, normal biomarkers, no RV dysfunction → consider same-day/early discharge with rapid follow-up [2], [11].",
+            "Intermediate-low risk: Elevated PESI/sPESI with either biomarkers OR RV changes → admit or observe; no routine lysis [7], [5], [8].",
+            "Intermediate-high risk: Elevated PESI/sPESI with BOTH positive biomarkers AND RV dysfunction → monitored setting; prepare for **rescue reperfusion** if deterioration [7], [5], [13]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When to Escalate",
+          "items": [
+            "Do NOT use routine systemic thrombolysis in stable PE; **no mortality benefit and higher major bleeding/ICH** in intermediate-risk cohorts; consider only for **hemodynamic decompensation** (rescue) [7], [12], [13].",
+            "Catheter-directed therapies: consider for deterioration or contraindication to systemic thrombolysis; can improve RV function and symptoms with potentially lower bleeding, but **lack definitive mortality benefit**; individualize via PE response team [4], [7], [12]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Outpatient Management Criteria",
+          "items": [
+            "Clinical: No hypoxemia at rest, stable comorbidities, adequate pain control, good mobility.",
+            "Risk tools: **sPESI 0** and no RV dysfunction/biomarker elevation.",
+            "Social: Reliable follow-up within 48–72 hours, medication access/adherence, home support.",
+            "Evidence supports safety and effectiveness of outpatient management in selected low-risk patients [2], [11]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Special Considerations",
+          "items": [
+            "Cancer-associated PE: favor **LMWH or DOACs**; balance GI/GU bleeding risks.",
+            "Pregnancy/postpartum: prefer **LMWH**; avoid DOACs; consult obstetrics.",
+            "Recent surgery or high bleeding risk: avoid thrombolysis; consider IVC filter only if **absolute contraindication to anticoagulation** or recurrent PE despite adequate therapy [7], [13].",
+            "Subsegmental PE: if isolated without DVT and patient low risk, shared decision-making regarding surveillance vs anticoagulation; ensure **bilateral leg ultrasound** if contemplating surveillance [7]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Follow-up and Secondary Prevention",
+          "items": [
+            "Reassess at 2 weeks for symptoms, adherence, and bleeding.",
+            "At 3 months: determine **duration** (stop vs extend) based on provocation and bleeding risk.",
+            "Educate on recurrence signs; address modifiable risks (immobility, estrogen therapy).",
+            "Screen for chronic thromboembolic disease if **persistent dyspnea** beyond 3 months; consider V/Q scan [7], [8]."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Pulmonary Embolism (clinical review)",
+      "detail": "NEJM 2024–2025; DOI not provided in abstract portal",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp2116489"
+    },
+    {
+      "title": "Ambulatory management of pulmonary embolism",
+      "detail": "Thromb Res 2010; no DOI listed",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783622066715"
+    },
+    {
+      "title": "Treating Acute PE: Outpatient or Inpatient?",
+      "detail": "Respir Med 2008; abstract only",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384808003356"
+    },
+    {
+      "title": "Endovascular Therapy for Acute Pulmonary Embolism",
+      "detail": "JAHA 2025; doi available on journal page",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.125.044367"
+    },
+    {
+      "title": "Risk stratification and outcomes in hemodynamically stable PE",
+      "detail": "Thromb Res 2009; BOVA study",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783622172144"
+    },
+    {
+      "title": "Contemporary Management and Outcomes of High-Risk PE",
+      "detail": "JACC 2024; registry analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109723079810"
+    },
+    {
+      "title": "2019 ESC Guidelines for PE diagnosis and management",
+      "detail": "Eur Heart J 2020; guideline statement",
+      "url": "https://academic.oup.com/eurheartj/article/41/4/543/5556136"
+    },
+    {
+      "title": "Update based on revised ESC 2019 guidelines",
+      "detail": "TH Open 2024; narrative update",
+      "url": "https://www.thieme-connect.com/products/ejournals/pdf/10.1055/s-0044-1779011.pdf"
+    },
+    {
+      "title": "Association between thrombolysis and prognosis in stable PE (registry)",
+      "detail": "Chest 2002; multicenter registry",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)44727-6/fulltext"
+    },
+    {
+      "title": "Management of massive and nonmassive PE",
+      "detail": "World J Emerg Med 2012; review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3542486/"
+    },
+    {
+      "title": "Management of pulmonary embolism at a large academic center",
+      "detail": "J Community Hosp Intern Med Perspect 2018; practice patterns",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6442875/"
+    },
+    {
+      "title": "Current Management of Acute PE",
+      "detail": "Curr Cardiol Rev 2019; comprehensive review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7184035/"
+    },
+    {
+      "title": "Recent advances in PE management",
+      "detail": "F1000Res 2016; expert review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4775716/"
+    }
+  ]
+}

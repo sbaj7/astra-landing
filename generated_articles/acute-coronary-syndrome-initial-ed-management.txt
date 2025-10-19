@@ -1,0 +1,207 @@
+{
+  "heroLabel": "ACS Playbook",
+  "title": "Acute Coronary Syndrome: Initial ED Management",
+  "summary": "Rapid, protocolized ACS care reduces mortality. Prioritize ECG within 10 minutes, dual antiplatelet therapy, prompt reperfusion for STEMI, early invasive strategy for high-risk NSTE-ACS, and guideline-directed anticoagulation. Integrate beta-blockers, statins, and secondary prevention while avoiding routine oxygen without hypoxemia.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the evidence-based first-hour management steps for suspected acute coronary syndrome in the emergency setting?",
+  "tags": [
+    "Cardiology",
+    "Emergency Medicine",
+    "Acute Coronary Syndrome",
+    "STEMI",
+    "NSTE-ACS"
+  ],
+  "heroStats": [
+    {
+      "label": "Door-to-ECG",
+      "value": "≤10 min"
+    },
+    {
+      "label": "STEMI reperfusion",
+      "value": "PCI ≤90 min (FMC-to-device) or fibrinolysis ≤30 min"
+    },
+    {
+      "label": "Aspirin benefit",
+      "value": "RR death 0.77 (95% CI 0.71–0.84) in suspected MI"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Sparkles",
+      "title": "Time-critical diagnosis",
+      "body": "Obtain and interpret a 12‑lead ECG within 10 minutes; repeat serially with ongoing pain or high risk."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Immediate antiplatelet loading",
+      "body": "Chewable aspirin promptly, add a P2Y12 inhibitor aligned with planned invasive vs. fibrinolysis strategy."
+    },
+    {
+      "icon": "Activity",
+      "title": "Reperfusion now",
+      "body": "Activate cath lab for STEMI without delay; use fibrinolysis if PCI cannot meet guideline time targets."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Anticoagulation and safety",
+      "body": "Start parenteral anticoagulation tailored to strategy; avoid routine oxygen unless SpO2 <90–92%."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Secondary prevention begins early",
+      "body": "High-intensity statin and beta-blocker initiation when stable; consider SGLT2i post-MI with HF risk."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "First Hour Actions",
+      "title": "Stabilize, Diagnose, Reperfuse",
+      "blurb": "Apply a parallel-process algorithm: assess, acquire ECG, start antithrombotics, plan reperfusion, and mitigate complications.",
+      "steps": [
+        {
+          "title": "Triage and ECG",
+          "body": "Airway, breathing, circulation; place on monitor, IV access, pulse oximetry. Obtain 12‑lead ECG within 10 minutes and repeat at 15–30 minute intervals if suspicion persists. Early identification of STEMI triggers immediate cath lab activation."
+        },
+        {
+          "title": "Analgesia and Oxygen",
+          "body": "Provide nitrates for persistent ischemic pain if SBP >100 mmHg and no RV infarct or PDE5 inhibitor use. Use fentanyl or morphine sparingly if severe pain despite nitrates. Avoid routine oxygen; administer only if SpO2 <90–92% or respiratory distress given neutral/harm signal with liberal oxygen."
+        },
+        {
+          "title": "Antiplatelet Therapy",
+          "body": "Give chewable aspirin 162–325 mg immediately, then 81 mg daily. Add a P2Y12 inhibitor: ticagrelor 180 mg (preferred NSTE-ACS) or prasugrel 60 mg (PCI-intended, no prior stroke/TIA), or clopidogrel 300–600 mg (fibrinolysis, or high bleeding risk). Avoid prasugrel before anatomy known in NSTE-ACS."
+        },
+        {
+          "title": "Anticoagulation",
+          "body": "Start parenteral anticoagulation: UFH bolus/infusion (weight-based) for primary PCI; enoxaparin for NSTE-ACS or fibrinolysis; bivalirudin as alternative in PCI with high bleeding risk. Adjust dosing in CKD and elderly to reduce bleeding."
+        },
+        {
+          "title": "Reperfusion Strategy",
+          "body": "For STEMI: primary PCI if first medical contact-to-device ≤90 minutes (≤120 minutes if transfer); otherwise give fibrinolysis within 30 minutes if no contraindication, followed by early angiography. For NSTE-ACS: early invasive strategy (≤24 hours) for elevated troponin, dynamic ST changes, or GRACE >140; immediate angiography for refractory ischemia or instability."
+        },
+        {
+          "title": "Adjuncts and Secondary Prevention",
+          "body": "Initiate high-intensity statin (e.g., atorvastatin 80 mg) as early as possible. Begin beta-blocker within 24 hours if no heart failure, shock, bradycardia, or severe asthma. Consider ACEi/ARB within 24 hours especially if LVEF ≤40% or anterior MI. Arrange cardiac rehab and smoking cessation."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Key Evidence and Nuances",
+      "title": "What the Trials Say",
+      "blurb": "Contemporary RCTs and meta-analyses informing initial management choices.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Aspirin and DAPT",
+          "items": [
+            "Early aspirin reduces vascular death in suspected MI: **RR 0.77 (95% CI 0.71–0.84)** [1].",
+            "Ticagrelor vs clopidogrel in ACS: **PLATO** reduced CV death/MI/stroke (**HR 0.84, 95% CI 0.77–0.92**) with similar major bleeding; ↑ non-CABG bleeding [2].",
+            "Prasugrel vs clopidogrel in PCI: **TRITON‑TIMI 38** reduced ischemic events (**HR 0.81, 95% CI 0.73–0.90**) but ↑ major bleeding; avoid in prior stroke/TIA [3].",
+            "Pre-treatment in NSTE-ACS: **ISAR‑REACT 5** favored prasugrel over ticagrelor (**HR 0.81, 95% CI 0.66–1.00**), but external validity debated; guidelines caution against routine pre‑treatment before anatomy [4]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Reperfusion Timing",
+          "items": [
+            "Primary PCI superior to fibrinolysis for STEMI in contemporary meta-analyses for death, reinfarction, and stroke when timely [5].",
+            "Fibrinolysis acceptable if PCI delay expected; **STREAM** in early presenters showed similar mortality with more intracranial hemorrhage in elderly—dose-adjusted tenecteplase mitigates risk [6]."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Oxygen and Analgesia",
+          "items": [
+            "Routine oxygen in normoxemic MI offers no benefit: **DETO2X‑AMI** showed **HR 0.97 (95% CI 0.79–1.21)** for 1‑yr mortality [7].",
+            "Opioids may delay P2Y12 absorption; use lowest effective dose and consider IV antiplatelet (cangrelor) if needed for immediate platelet inhibition in PCI candidates [8]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Anticoagulation",
+          "items": [
+            "Bivalirudin vs heparin in primary PCI: mixed results; mortality/bleeding benefits offset by ↑ stent thrombosis without prolonged infusion; selection based on bleeding risk [9].",
+            "Enoxaparin vs UFH in fibrinolysis for STEMI: **ExTRACT‑TIMI 25** reduced death/MI (**HR 0.83, 95% CI 0.77–0.90**) with ↑ nonfatal bleeding; net clinical benefit favored enoxaparin [10]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Early Invasive in NSTE-ACS",
+          "items": [
+            "Early invasive (≤24 h) reduces recurrent ischemia and may reduce death/MI in high-risk groups; **TIMACS** favored early strategy in **GRACE >140** (**HR 0.65, 95% CI 0.48–0.89**) [11].",
+            "High-sensitivity troponin and dynamic ST changes guide urgency; immediate angiography for hemodynamic or electrical instability."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Who NOT to treat aggressively",
+          "items": [
+            "Avoid fibrinolysis with absolute contraindications (ICH history, recent stroke, active bleeding).",
+            "Avoid prasugrel in prior stroke/TIA or age ≥75/weight <60 kg unless compelling benefit.",
+            "Hold beta-blockers in acute decompensated HF, shock, bradycardia, or severe asthma."
+          ]
+        }
+      ],
+      "maxWidth": 900
+    }
+  ],
+  "references": [
+    {
+      "title": "Randomised trial of intravenous streptokinase, oral aspirin, both, or neither among 17,187 cases of suspected acute myocardial infarction: ISIS-2",
+      "detail": "Lancet 1988;2:349–360. doi:10.1016/S0140-6736(88)92833-4",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(88)92833-4/fulltext"
+    },
+    {
+      "title": "Ticagrelor versus clopidogrel in patients with acute coronary syndromes (PLATO)",
+      "detail": "N Engl J Med 2009;361:1045–1057. doi:10.1056/NEJMoa0904327",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0904327"
+    },
+    {
+      "title": "Prasugrel versus clopidogrel in patients with acute coronary syndromes (TRITON‑TIMI 38)",
+      "detail": "N Engl J Med 2007;357:2001–2015. doi:10.1056/NEJMoa0706482",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0706482"
+    },
+    {
+      "title": "Ticagrelor or prasugrel in patients with acute coronary syndromes (ISAR‑REACT 5)",
+      "detail": "N Engl J Med 2019;381:1524–1534. doi:10.1056/NEJMoa1908973",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1908973"
+    },
+    {
+      "title": "Primary angioplasty versus intravenous thrombolysis for acute myocardial infarction: meta-analysis of randomized trials",
+      "detail": "Lancet 2003;361:13–20. doi:10.1016/S0140-6736(03)12113-7",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140673603121137/fulltext"
+    },
+    {
+      "title": "STREAM: Early fibrinolysis vs. primary PCI in STEMI patients presenting early",
+      "detail": "N Engl J Med 2013;368:1379–1387. doi:10.1056/NEJMoa1301092",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1301092"
+    },
+    {
+      "title": "DETO2X‑AMI: Oxygen therapy in suspected acute myocardial infarction",
+      "detail": "N Engl J Med 2017;377:1240–1249. doi:10.1056/NEJMoa1706222",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1706222"
+    },
+    {
+      "title": "Pharmacodynamic effects of morphine on oral P2Y12 inhibitors (IMPRESSION) and cangrelor bridge strategy",
+      "detail": "Eur Heart J 2015;36:1890–1898. doi:10.1093/eurheartj/ehv113",
+      "url": "https://academic.oup.com/eurheartj/article/36/27/1890/2293365"
+    },
+    {
+      "title": "Bivalirudin versus heparin during primary PCI for ST-segment elevation myocardial infarction (HEAT-PPCI and meta-analyses)",
+      "detail": "Lancet 2014;384:1849–1858. doi:10.1016/S0140-6736(14)60924-7",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)60924-7/fulltext"
+    },
+    {
+      "title": "ExTRACT‑TIMI 25: Enoxaparin vs unfractionated heparin with fibrinolysis for STEMI",
+      "detail": "N Engl J Med 2006;354:1477–1488. doi:10.1056/NEJMoa060898",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa060898"
+    },
+    {
+      "title": "TIMACS: Early vs delayed invasive strategy in NSTE-ACS",
+      "detail": "N Engl J Med 2009;360:2165–2175. doi:10.1056/NEJMoa0807986",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0807986"
+    }
+  ]
+}

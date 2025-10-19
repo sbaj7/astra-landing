@@ -1,0 +1,336 @@
+{
+  "heroLabel": "Adult Seizure Care Pathway",
+  "title": "Seizure management in adults: initial evaluation and long-term treatment",
+  "summary": "Evidence-based approach to adult seizures, integrating initial assessment, risk-stratification, treatment initiation, and long-term management. Highlights AAN/AES guidance for a first unprovoked seizure, workup essentials (EEG, MRI), when to start anti-seizure medications, and counseling on safety and prognosis.",
+  "updated": "October 2025",
+  "clinicalQuestion": "In adults with suspected seizures, how should clinicians perform the initial evaluation and implement long-term treatment strategies, including decisions to initiate anti-seizure medications after a first unprovoked seizure and ongoing management?",
+  "tags": [
+    "Neurology",
+    "Emergency Medicine",
+    "Epilepsy",
+    "Internal Medicine",
+    "Primary Care"
+  ],
+  "heroStats": [
+    {
+      "label": "2-year recurrence risk after first unprovoked seizure",
+      "value": "\u2248 21\u201345% overall; higher with EEG/MRI abnormalities"
+    },
+    {
+      "label": "Effect of immediate ASM after first seizure",
+      "value": "Reduces absolute recurrence risk by \u2248 35% within 2 years"
+    },
+    {
+      "label": "Imaging yield",
+      "value": "Epilepsy-protocol MRI detects structural etiologies > CT"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Rapidly distinguish provoked vs unprovoked",
+      "body": "Identify reversible precipitants (glucose, Na, Ca, renal/hepatic failure, drugs, alcohol withdrawal) and rule out mimics (syncope, PNES). Provoked events shift management toward treating the cause and often no long-term ASM."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Order EEG and epilepsy-protocol MRI early",
+      "body": "EEG within 24\u201348 hours and high-resolution MRI improve etiologic yield and recurrence risk prediction, guiding ASM initiation decisions."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Shared decision-making on ASM after first unprovoked seizure",
+      "body": "Immediate ASM lowers short-term recurrence (absolute reduction \u2248 35%) but does not clearly change long-term remission; weigh risks, lifestyle, and driving."
+    },
+    {
+      "icon": "Activity",
+      "title": "Safety first: driving and injury prevention",
+      "body": "Counsel on driving restrictions per jurisdiction, water/heights precautions, and seizure first-aid for caregivers."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Tailor long-term regimen to syndrome and comorbidities",
+      "body": "Select ASM based on seizure type, reproductive plans, drug interactions, and comorbidities; reassess after 2 years seizure-free for taper candidacy."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Initial Assessment",
+      "title": "Approach to the first suspected seizure in adults",
+      "blurb": "Combine targeted history, exam, and high-yield tests to confirm seizure, classify type, and uncover causes and recurrence risk.",
+      "steps": [
+        {
+          "title": "Confirm an epileptic event and identify mimics",
+          "body": "Elicit eyewitness account: abrupt loss of awareness, tonic\u2013clonic activity, tongue biting (lateral), postictal confusion. Screen for syncope (prodromal lightheadedness, pallor), TIA, migraine aura, and psychogenic nonepileptic seizures. Examine for focal deficits and trauma. [3], [5]"
+        },
+        {
+          "title": "Differentiate provoked vs unprovoked",
+          "body": "Check **glucose, electrolytes (Na, Ca, Mg), renal/hepatic function**, pregnancy test, tox screen as indicated; assess alcohol/benzodiazepine withdrawal and acute structural insults. Treat precipitants promptly; chronic ASM may be unnecessary for purely provoked seizures. [5]"
+        },
+        {
+          "title": "Order urgent neuroimaging when indicated",
+          "body": "If focal deficits, persistent altered mental status, fever, trauma, anticoagulation, malignancy, or immunosuppression, obtain emergent CT. For most patients, **epilepsy-protocol MRI** is preferred for etiologic definition. [5]"
+        },
+        {
+          "title": "Obtain EEG within 24\u201348 hours",
+          "body": "An interictal **epileptiform discharge** substantially increases recurrence risk and influences ASM decision. Consider sleep-deprived or ambulatory EEG if initial study is normal but suspicion remains high. [5], [7]"
+        },
+        {
+          "title": "Lumbar puncture and additional tests when warranted",
+          "body": "Perform LP if fever/meningismus/immunosuppression suggests CNS infection or subarachnoid hemorrhage. Tailor workup to context (autoimmune panels, metabolic tests). [5]"
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Treatment Decisions",
+      "title": "Starting anti-seizure medication (ASM) after a first unprovoked seizure",
+      "blurb": "Balance recurrence risk reduction against adverse effects and patient priorities.",
+      "steps": [
+        {
+          "title": "Estimate recurrence risk",
+          "body": "Baseline 2-year recurrence risk \u2248 21\u201345% after a first unprovoked seizure. Risk is higher with: **epileptiform EEG**, **structural MRI lesion**, **prior brain insult**, or **nocturnal seizure**. [1], [7]"
+        },
+        {
+          "title": "Discuss benefits and limits of immediate ASM",
+          "body": "Immediate therapy **reduces absolute recurrence by \u2248 35% within 2 years** but does **not clearly improve long-term remission** or quality of life; adverse effects occur in a minority and are usually mild, reversible. Shared decision-making is essential. [1], [7]"
+        },
+        {
+          "title": "When to favor starting ASM",
+          "body": "Consider ASM when high risk (EEG/MRI abnormalities, neurologic deficit, prior stroke/TBI, strong patient preference, safety-critical occupation, frequent seizures). Deferring ASM is reasonable for low-risk patients with robust safety plans. [1], [7]"
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Medication Selection",
+      "title": "First-line ASMs by seizure type and key considerations",
+      "blurb": "Choose the simplest effective monotherapy; consider interactions, comorbidities, and reproductive plans.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Focal onset",
+          "items": [
+            "Preferred: **Levetiracetam**, **Lamotrigine**, **Lacosamide**.",
+            "If polypharmacy/CYP interactions a concern: **Levetiracetam** (minimal interactions).",
+            "If mood disorder: **Lamotrigine** may be beneficial.",
+            "Avoid sodium-channel agents if conduction disease or significant hyponatremia risk."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Generalized tonic\u2013clonic (idiopathic generalized epilepsy suspected)",
+          "items": [
+            "Preferred: **Valproate** (highest efficacy), alternatives: **Levetiracetam**, **Lamotrigine**.",
+            "Avoid: **Carbamazepine**, **Oxcarbazepine**, **Phenytoin** in generalized epilepsies (may worsen absence/myoclonus).",
+            "In people who can become pregnant: favor **Levetiracetam** or **Lamotrigine** over valproate due to teratogenicity."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Absence and myoclonic",
+          "items": [
+            "Absence: **Ethosuximide** or **Valproate**; **Lamotrigine** as alternative.",
+            "Myoclonic: **Valproate**; alternatives: **Levetiracetam**, **Topiramate**.",
+            "Avoid narrow-spectrum sodium-channel monotherapies."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Special populations",
+          "items": [
+            "**Pregnancy potential**: Avoid **Valproate** when possible; use **Folic acid \u22650.4\u20134 mg/day**; plan preconception.",
+            "**Older adults**: Start low, go slow; prefer **Lamotrigine**, **Levetiracetam**; watch hyponatremia with **Carbamazepine/Oxcarbazepine**.",
+            "**Renal/hepatic disease**: Adjust **Levetiracetam** for renal function; avoid **Valproate** in hepatic dysfunction."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Status epilepticus (convulsive) \u2013 brief adult algorithm",
+          "items": [
+            "0\u20135 min: **Stabilize** (ABC), check glucose, thiamine/glucose as indicated.",
+            "5\u201310 min: **Benzodiazepine**: lorazepam IV, diazepam IV, or midazolam IM/IN.",
+            "10\u201330 min: **Second-line**: fosphenytoin/phenytoin, levetiracetam, or valproate.",
+            ">30 min: **Refractory**: anesthetic infusion (propofol, midazolam) with EEG monitoring; address causes."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Monitoring & Safety",
+      "title": "Follow-up, counseling, and de-escalation",
+      "blurb": "Proactive counseling reduces harm and improves adherence.",
+      "layout": "column",
+      "cards": [
+        {
+          "icon": "ClipboardList",
+          "title": "Follow-up and tests",
+          "items": [
+            "EEG within 24\u201348 h; consider repeat/sleep-deprived if initial normal but suspicion persists.",
+            "Epilepsy-protocol MRI when feasible, even if CT done acutely.",
+            "Drug levels when indicated (e.g., phenytoin, valproate); check sodium with carbamazepine/oxcarbazepine.",
+            "Screen mood/cognition; address adherence and interactions."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Safety counseling",
+          "items": [
+            "**Driving restrictions** per jurisdiction after a first seizure; document counseling.",
+            "Water safety: showers over baths; supervised swimming; avoid heights/open flames; use helmets as appropriate.",
+            "Sleep hygiene, limit alcohol, avoid triggers (sleep deprivation, missed doses, interacting drugs).",
+            "Educate household on seizure first aid; consider rescue med for clusters if recurrent."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Tapering and long-term outcomes",
+          "items": [
+            "Consider taper after **\u22652 years seizure-free** with normal exam/EEG and low-risk etiology; taper slowly over months.",
+            "Relapse risk post-taper is higher with focal lesions, abnormal EEG, juvenile myoclonic epilepsy, or short seizure-free interval.",
+            "Long-term remission likelihood is more related to syndrome/etiology than immediate ASM after the first seizure."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Documentation",
+      "title": "Key elements to document",
+      "blurb": "Clear documentation supports safety, legal requirements, and continuity of care.",
+      "steps": [
+        {
+          "title": "Seizure description and classification",
+          "body": "Onset (focal vs generalized), awareness, motor features, duration, postictal state, and triggers."
+        },
+        {
+          "title": "Risk discussion and shared decision",
+          "body": "Record recurrence risk factors, benefits/risks of ASM, patient preferences, and plan for driving/work."
+        },
+        {
+          "title": "Follow-up and alarms",
+          "body": "EEG/MRI referrals, lab monitoring plan, return precautions (prolonged seizures, status, injuries), and safety counseling provided."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Management of an Unprovoked First Seizure in Adults",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.aan.com%2FGuidelines%2Fhome%2FGuidelineDetail%2F687&token=IQxLzDq4doJGUgaZgeIY0zoLkf7tdJW526aiBOCMGJKugQOilow7ieegBBgaXkfyNQn2%2FbvxhQCZ7BjUMhZ%2BMA%3D%3D&TOPIC_ID=113971",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 2,
+      "title": "Initial treatment of epilepsy in adults - UpToDate",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/initial-treatment-of-epilepsy-in-adults",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 3,
+      "title": "First seizure presentations in adults: beyond assessment ...",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/90/9/1039",
+      "authors": "jnnp.bmj.com"
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of the first seizure in adults",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-and-management-of-the-first-seizure-in-adults",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and Management of First-Time Seizure in Adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34619775/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 6,
+      "title": "Management of an unprovoked first seizure in adults ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25901057/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 7,
+      "title": "Management of an Unprovoked First Seizure in Adults ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4527147/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 8,
+      "title": "Treatment of status epilepticus in adults: guidelines of the ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17239099/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "Management of an Unprovoked First Seizure in Adults",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.aan.com%2FGuidelines%2Fhome%2FGuidelineDetail%2F687&token=IQxLzDq4doJGUgaZgeIY0zoLkf7tdJW526aiBOCMGJKugQOilow7ieegBBgaXkfyNQn2%2FbvxhQCZ7BjUMhZ%2BMA%3D%3D&TOPIC_ID=113971",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 2,
+      "title": "Initial treatment of epilepsy in adults - UpToDate",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/initial-treatment-of-epilepsy-in-adults",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 3,
+      "title": "First seizure presentations in adults: beyond assessment ...",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/90/9/1039",
+      "authors": "jnnp.bmj.com"
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of the first seizure in adults",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-and-management-of-the-first-seizure-in-adults",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and Management of First-Time Seizure in Adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34619775/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 6,
+      "title": "Management of an unprovoked first seizure in adults ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25901057/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 7,
+      "title": "Management of an Unprovoked First Seizure in Adults ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4527147/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 8,
+      "title": "Treatment of status epilepticus in adults: guidelines of the ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17239099/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "seizure-management-in-adults-initial-evaluation-and-long-term-treatment"
+}

@@ -1,0 +1,211 @@
+{
+  "heroLabel": "ED/ICU Quick Protocol",
+  "title": "Meningitis and Encephalitis: Empiric Coverage and Adjunctive Therapy",
+  "summary": "Bacterial meningitis and encephalitis are medical emergencies. Initiate diagnostics and empiric antimicrobials immediately, with early dexamethasone in suspected pneumococcal meningitis. Add acyclovir when encephalitis is possible. Tailor therapy by age, immune status, exposure risks, and local resistance patterns. Early treatment within 1 hour reduces mortality and poor outcomes.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What empiric antimicrobial regimens and adjunctive therapies should be initiated for suspected bacterial meningitis and encephalitis in adults, and what timing and outcome data support these choices?",
+  "tags": [
+    "Infectious Diseases",
+    "Neurology",
+    "Emergency Medicine",
+    "Critical Care",
+    "Antimicrobial Stewardship"
+  ],
+  "heroStats": [
+    {
+      "label": "Time-to-antibiotics",
+      "value": "Initiate within 1 hour for suspected bacterial meningitis"
+    },
+    {
+      "label": "Outcome impact",
+      "value": "Each hour of delay ↑ unfavorable outcome by ~10–30%"
+    },
+    {
+      "label": "Steroid timing",
+      "value": "Give dexamethasone before or with first antibiotic dose"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Immediate Actions",
+      "body": "Stabilize ABCs, obtain blood cultures, start empiric antimicrobials and dexamethasone without delay when bacterial meningitis is suspected."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Imaging vs LP",
+      "body": "Do not delay antibiotics for imaging. If LP is delayed for safety, treat first and LP as soon as feasible."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Add Acyclovir",
+      "body": "If encephalitis is on the differential, add IV acyclovir pending HSV/VZV PCR."
+    },
+    {
+      "icon": "Activity",
+      "title": "Tight Glucose & Electrolytes",
+      "body": "Monitor and correct hypoglycemia, hyponatremia (SIADH), and seizures early."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "De-escalation",
+      "body": "Refine therapy rapidly using CSF profile, Gram stain/PCR panels, culture, and clinical evolution."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Protocol",
+      "title": "Initial Evaluation and Time-Critical Therapy",
+      "blurb": "Prompt antimicrobial therapy and steroids save lives; diagnostics should proceed in parallel.",
+      "steps": [
+        {
+          "title": "Stabilize and Draw Cultures",
+          "body": "Secure airway/breathing/circulation. Obtain two sets of blood cultures before antimicrobials when feasible, but do not delay treatment."
+        },
+        {
+          "title": "Immediate Empiric Therapy",
+          "body": "Start antimicrobials within 1 hour for suspected bacterial meningitis; within 6 hours for suspected encephalitis if clinically safe. Each hour of delay increases unfavorable outcomes by approximately **10–30%** [6]."
+        },
+        {
+          "title": "Dexamethasone",
+          "body": "Administer dexamethasone before or with the first antibiotic dose in suspected pneumococcal meningitis to reduce mortality and neurologic sequelae; underused despite benefit [2], [3]."
+        },
+        {
+          "title": "Lumbar Puncture and Imaging",
+          "body": "Perform LP promptly unless signs of mass effect or herniation risk. If imaging is required, do not delay empiric therapy; treat first and image/LP as soon as possible [6]."
+        },
+        {
+          "title": "Add Acyclovir if Encephalitis Possible",
+          "body": "Start IV acyclovir empirically for suspected viral encephalitis while obtaining CSF HSV/VZV PCR; delay worsens outcomes [4], [6]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Therapy",
+      "title": "Empiric Antimicrobial Coverage",
+      "blurb": "Regimens should cover likely pathogens by age, immune status, and local resistance. Adjust for allergies and renal function.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "ShieldCheck",
+          "title": "Adults <50 years (Immunocompetent) – Suspected Bacterial Meningitis",
+          "items": [
+            "Ceftriaxone 2 g IV q12h (or cefotaxime 2 g IV q4–6h) + vancomycin dosed to trough/AUC for penicillin- and cephalosporin-resistant Streptococcus pneumoniae",
+            "Add dexamethasone 10 mg IV q6h x 4 days started before/with first antibiotic dose if pneumococcal disease suspected [2], [3].",
+            "If encephalitis cannot be excluded: add acyclovir 10 mg/kg IV q8h [4], [6]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Adults ≥50 years or with Alcoholism, Pregnancy, or Significant Comorbidity",
+          "items": [
+            "Ceftriaxone 2 g IV q12h (or cefotaxime) + vancomycin + ampicillin 2 g IV q4h for Listeria coverage.",
+            "Dexamethasone as above when pneumococcus suspected [2], [3].",
+            "Add acyclovir if encephalitis features present [4], [6]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Immunocompromised (e.g., transplant, lymphoma, high-dose steroids)",
+          "items": [
+            "Vancomycin + cefepime 2 g IV q8–12h (or meropenem 2 g IV q8h) + ampicillin for Listeria.",
+            "Consider TMP–SMX if sulfa-sensitive Listeria and penicillin allergy; consider anti-fungal/anti-TB based on risk and CSF profile [4], [6], [8].",
+            "Add acyclovir if encephalitis suspected."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Severe Beta-lactam Allergy",
+          "items": [
+            "Vancomycin + moxifloxacin 400 mg IV daily ± aztreonam 2 g IV q6–8h for Gram-negative coverage.",
+            "For Listeria: TMP–SMX 5 mg/kg (TMP) IV q6–8h.",
+            "Consult ID early for individualized regimens."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Suspected Viral Encephalitis",
+          "items": [
+            "Acyclovir 10 mg/kg IV q8h with aggressive IV hydration; adjust for renal function.",
+            "If tick exposure or seasonality suggests: add doxycycline 100 mg IV/PO q12h empirically for rickettsial illness pending tests.",
+            "Stop acyclovir if HSV/VZV PCR negative and alternative diagnosis established [4], [6]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Diagnostics to Guide De-escalation",
+          "items": [
+            "CSF opening pressure, cell count & differential, protein, CSF glucose with paired serum glucose, Gram stain/culture, multiplex PCR when available [6].",
+            "Blood cultures, serum/CSF PCR for HSV/VZV/enteroviruses; TB NAAT if suspected; HIV testing.",
+            "Neuroimaging if focal deficits, papilledema, immunocompromise, or seizures."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Timing and Outcomes",
+          "items": [
+            "Begin antibiotics within 1 hour of arrival for suspected bacterial meningitis; do not delay for imaging or LP [6].",
+            "Each hour of delay increases odds of poor outcome by roughly **10–30%** [6].",
+            "Steroids reduce mortality and neurologic sequelae in pneumococcal meningitis when given early; underutilized in practice [2], [3]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Adjunctive Measures",
+          "items": [
+            "Seizure management and prophylaxis for status epilepticus risk.",
+            "ICP management: head elevation, analgesia/sedation, hyperosmolar therapy as indicated; neurosurgical consult for obstructive hydrocephalus.",
+            "Electrolyte correction (SIADH-related hyponatremia), strict glucose control, DVT prophylaxis when safe."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Tuberculous or Chronic Meningitis Considerations",
+          "items": [
+            "If TB meningitis suspected, start empiric anti-TB therapy immediately (RIPE + adjunctive steroids) without waiting for culture/NAAT due to slow growth and high morbidity [8].",
+            "Obtain CSF AFB smear/culture, NAAT, and imaging for basal meningeal enhancement."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Management of infectious meningitis/encephalitis",
+      "detail": "Eur J Anaesthesiol Suppl. 1998. doi: N/A",
+      "url": "https://journals.lww.com/ejanaesthesiology/fulltext/1998/01001/management_of_infectious_meningitis_encephalitis.60.aspx"
+    },
+    {
+      "title": "Community-acquired acute meningitis and encephalitis: a practical approach",
+      "detail": "Med J Aust. 2018. doi: 10.5694/mja17.01073",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30309300/"
+    },
+    {
+      "title": "Epidemiology of meningitis and encephalitis in the United States",
+      "detail": "Clin Infect Dis. 2017. doi: 10.1093/cid/cix386",
+      "url": "https://academic.oup.com/cid/article/65/3/359/3737650"
+    },
+    {
+      "title": "The Management of Encephalitis: Clinical Practice Guidelines by the IDSA",
+      "detail": "Clin Infect Dis. 2008. doi: 10.1086/589747",
+      "url": "https://academic.oup.com/cid/article/47/3/303/313455"
+    },
+    {
+      "title": "Commonly encountered CNS infections",
+      "detail": "Pract Neurol. 2023. doi: 10.1136/practneurol-2022-003693",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10201400/"
+    },
+    {
+      "title": "Does duration of empiric therapy influence outcomes in CNS infections?",
+      "detail": "Open Forum Infect Dis. 2025. doi: N/A",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12048797/"
+    },
+    {
+      "title": "Evaluation and Treatment of Chronic Meningitis",
+      "detail": "Semin Neurol. 2014. doi: 10.1055/s-0034-1390409",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4212414/"
+    }
+  ]
+}

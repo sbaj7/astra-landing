@@ -1,0 +1,238 @@
+{
+  "heroLabel": "ICU Best Practices",
+  "title": "Mechanical Ventilation: Lung‑Protective Settings and Evidence‑Based Weaning",
+  "summary": "Prioritize low tidal volume ventilation with constraints on plateau and driving pressures, judicious PEEP titration, and early, protocolized liberation. Evidence from landmark trials and contemporary syntheses supports strategies that reduce ventilator‑induced lung injury and improve clinical outcomes in ARDS. Apply structured daily readiness assessments, spontaneous breathing trials, and sedation minimization to accelerate safe weaning.",
+  "updated": "February 2025",
+  "clinicalQuestion": "What lung‑protective ventilator settings and weaning protocols improve outcomes and minimize ventilator‑induced lung injury in adults with acute respiratory failure/ARDS?",
+  "tags": [
+    "ARDS",
+    "Ventilator-Induced Lung Injury",
+    "Driving Pressure",
+    "PEEP",
+    "Weaning",
+    "SBT",
+    "ICU Protocols"
+  ],
+  "heroStats": [
+    {
+      "label": "Tidal Volume Target",
+      "value": "≈ 6 mL/kg PBW (4–8 range) [7]"
+    },
+    {
+      "label": "Plateau Pressure",
+      "value": "Keep ≤ 30 cm H2O [7]"
+    },
+    {
+      "label": "Driving Pressure",
+      "value": "Aim ≤ 14–15 cm H2O when feasible [5]"
+    },
+    {
+      "label": "FiO2/SpO2",
+      "value": "SpO2 88–95% with FiO2 minimization [6]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "ShieldCheck",
+      "title": "Lung‑Protective Core",
+      "body": "Use **low tidal volumes (~6 mL/kg PBW)** with **plateau ≤30 cm H2O** and **driving pressure minimization**; these strategies reduce VILI and improve outcomes in ARDS [5], [7]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Pressure Targets that Matter",
+      "body": "**Driving pressure (ΔP = Pplat − PEEP)** correlates with mortality; reducing ΔP within lung‑protective ventilation is associated with better survival signals [5]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Readiness and SBTs",
+      "body": "Daily **weaning readiness checks** followed by **spontaneous breathing trials (SBT)** using low‑support methods shorten ventilation duration and complications when paired with sedation‑light strategies [6]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Personalization and Monitoring",
+      "body": "When available, consider **recruitability assessment** to individualize PEEP; avoid injurious overdistension or derecruitment [7]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Early Application Beyond ICU",
+      "body": "Initiating **lung‑protective settings in the ED** lowers pulmonary complications downstream, supporting early protocolization [6]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Initial Setup",
+      "title": "Lung‑Protective Ventilation: Practical Implementation",
+      "blurb": "Align settings to minimize mechanical stress and strain while meeting gas exchange goals. Emphasize low VT, pressure limits, and cautious PEEP titration.",
+      "steps": [
+        {
+          "title": "Set Mode and Tidal Volume",
+          "body": "Choose volume‑assist control (or pressure‑targeted equivalent ensuring consistent low VT). Target **~6 mL/kg PBW (allow 4–8)**; adjust based on compliance and PaCO2/pH, tolerating permissive hypercapnia if pH ≥7.20 [7]."
+        },
+        {
+          "title": "Limit Pressures",
+          "body": "Measure plateau pressure with an inspiratory hold; keep **Pplat ≤30 cm H2O**. Track **driving pressure (ΔP)** and aim to keep **ΔP ≤14–15 cm H2O** by lowering VT or optimizing PEEP when safe [5], [7]."
+        },
+        {
+          "title": "PEEP and FiO2",
+          "body": "Use ARDS‑style PEEP/FiO2 tables as a starting point; escalate PEEP judiciously to improve oxygenation while avoiding overdistension. Target **SpO2 88–95%** and minimize FiO2 as soon as feasible [6], [7]."
+        },
+        {
+          "title": "Recruitment and Personalization",
+          "body": "Avoid routine aggressive recruitment maneuvers. Consider **recruitability‑guided** approaches (e.g., R/I ratio, imaging/EIT) to tailor PEEP in selected patients; evidence favors selective rather than universal recruitment [7]."
+        },
+        {
+          "title": "Synchrony and Sedation",
+          "body": "Use light sedation and address patient–ventilator asynchrony with trigger/cycle adjustments or short courses of neuromuscular blockade if severe; minimize exposure to avoid delayed weaning [7]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Daily Care",
+      "title": "Weaning Readiness and Spontaneous Breathing Trials",
+      "blurb": "Protocolized assessments shorten ventilation and reduce complications when paired with sedation minimization and early oxygen weaning.",
+      "layout": "grid",
+      "maxWidth": 900,
+      "cards": [
+        {
+          "icon": "ClipboardList",
+          "title": "Readiness to Wean: Daily Screen",
+          "items": [
+            "Hemodynamic stability (no escalating vasopressors)",
+            "Improving or stable gas exchange: SpO2 ≥88–90% on FiO2 ≤0.40–0.50 and PEEP ≤8 cm H2O",
+            "Adequate mental status and cough; manageable secretions",
+            "No active procedures or immediate need for deep sedation",
+            "Low ventilator demands: RR <35, VT adequate, acceptable pH"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "SBT Methods",
+          "items": [
+            "T‑piece or minimal support (PS 0–5 cm H2O, PEEP 0–5) for 30–120 minutes",
+            "Pass if: RR <35, SpO2 ≥88–90%, HR and BP stable, no distress, pH acceptable",
+            "If fail: identify reversible causes (fluid overload, bronchospasm, excessive sedation), treat, retry in 24 hours"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Sedation Strategy",
+          "items": [
+            "Daily sedation interruption or light‑sedation targets",
+            "Analgesia‑first approach; avoid benzodiazepines when possible",
+            "Assess delirium and address reversible factors"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Post‑SBT Extubation Readiness",
+          "items": [
+            "Airway protection: strong cough, manageable secretions",
+            "Cuff‑leak test in high‑risk laryngeal edema",
+            "Plan for post‑extubation support (HFNC/NIV) in high‑risk patients"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Safety and VILI Prevention",
+          "items": [
+            "Avoid VT creep: re‑confirm PBW and set hard VT alarms",
+            "Reassess Pplat and ΔP after any setting change",
+            "Early FiO2 weaning to limit oxygen toxicity [6]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When to Re‑Evaluate Strategy",
+          "items": [
+            "Pplat >30 or ΔP rising despite low VT",
+            "Worsening oxygenation despite higher PEEP",
+            "Marked asynchrony or dynamic hyperinflation"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Evidence Signals",
+      "title": "What the Literature Supports",
+      "blurb": "Synthesis of high‑value findings to guide bedside decisions.",
+      "layout": "column",
+      "cards": [
+        {
+          "icon": "ShieldCheck",
+          "title": "Low VT and Pressure Limits",
+          "items": [
+            "The ARDS low‑VT strategy is foundational: **~6 mL/kg PBW, Pplat ≤30 cm H2O**; consistently reduces VILI and improves survival signals in ARDS [7]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Driving Pressure Matters",
+          "items": [
+            "Across trials of lung‑protective ventilation, **lower ΔP** is associated with improved survival; aim to minimize ΔP by adjusting VT/PEEP within safe limits [5]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Early, Protocolized Care",
+          "items": [
+            "ED‑initiated lung‑protective bundles (low VT, appropriate PEEP, rapid FiO2 weaning) reduce pulmonary complications after ICU admission [6]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Personalized PEEP and Recruitment",
+          "items": [
+            "Use recruitability assessment to avoid injurious overdistension; evidence favors **selective** recruitment over routine maneuvers [7]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Mechanical Power and VILI",
+          "items": [
+            "High mechanical power components (VT, RR, pressures, flow) contribute to VILI; strategies that reduce power may mitigate injury, though implementation challenges remain [1], [2]."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Understanding ventilator‑induced lung injury: The role of mechanical power",
+      "detail": "Chest Clinics 2025. doi: see journal site",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0883944124003897"
+    },
+    {
+      "title": "Mechanical ventilation to minimize progression of lung injury",
+      "detail": "Am J Respir Crit Care Med 2016. doi: see journal site",
+      "url": "https://www.atsjournals.org/doi/10.1164/rccm.201605-1081CP"
+    },
+    {
+      "title": "Clinical and physiologic complications of mechanical ventilation",
+      "detail": "UpToDate 2025. doi: not applicable",
+      "url": "https://www.uptodate.com/contents/physiologic-and-pathophysiologic-consequences-of-mechanical-ventilation"
+    },
+    {
+      "title": "Ventilatory strategies for lung protection",
+      "detail": "Nurs Crit Care 2010. doi: see PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20378369/"
+    },
+    {
+      "title": "Optimizing Mechanical Ventilation Strategies in ARDS",
+      "detail": "Peer‑reviewed review. 2023. doi: see PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12317819/"
+    },
+    {
+      "title": "Lung‑protective ventilation initiated in the emergency department",
+      "detail": "BMJ Open 2016 protocol with ED bundle outcomes discussion. doi: 10.1136/bmjopen-2015-010991",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5573637/"
+    },
+    {
+      "title": "Future directions of lung‑protective ventilation strategies in ARDS",
+      "detail": "J Intensive Care 2024. doi: see PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10761614/"
+    }
+  ]
+}

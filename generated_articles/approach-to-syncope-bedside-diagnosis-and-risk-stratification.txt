@@ -1,0 +1,251 @@
+{
+  "heroLabel": "ED + Inpatient",
+  "title": "Approach to Syncope: Bedside Diagnosis and Risk Stratification",
+  "summary": "A focused bedside pathway for syncope prioritizes early identification of cardiac and other high-risk causes using history, exam, orthostatics, and 12‑lead ECG, followed by targeted testing. Use validated short-term risk tools to support—but not replace—clinical judgment, and reserve admission or expedited workup for high-risk features.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should clinicians rapidly evaluate syncope at the bedside and stratify short-term risk to guide disposition and testing?",
+  "tags": [
+    "Syncope",
+    "Emergency Medicine",
+    "Cardiology",
+    "Risk Stratification",
+    "Guidelines"
+  ],
+  "heroStats": [
+    {
+      "label": "Serious condition within 30 days",
+      "value": "≈10% among ED syncope presentations [8]"
+    },
+    {
+      "label": "Yield of history/ECG",
+      "value": "History, exam, ECG identify most diagnoses; further tests are selective [4], [8], [10]"
+    },
+    {
+      "label": "Key high-risk markers",
+      "value": "Abnormal ECG, CHF/structural heart disease, age ≥60, exertional syncope, dyspnea, anemia [6], [7], [8]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Start with the basics",
+      "body": "A detailed history, focused exam (including orthostatics), and a 12‑lead ECG make or break the diagnosis; most other tests are discretionary [4], [8], [10]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Rapidly flag high risk",
+      "body": "Look for structural heart disease, abnormal ECG, exertional or supine syncope, dyspnea, hypotension, anemia, and family history of sudden death—these warrant admission or expedited workup [6], [7], [8]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Use risk tools wisely",
+      "body": "Validated ED scores can assist short-term risk estimation, but must complement clinical judgment and guideline-directed assessment [2], [3], [8], [14]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Target testing to the likely cause",
+      "body": "Reflex/orthostatic patterns need orthostatics and triggers; suspected cardiac syncope needs continuous monitoring, troponin as clinically indicated, echocardiography, and possibly ambulatory monitoring [4], [8], [10]."
+    },
+    {
+      "icon": "AlertTriangle",
+      "title": "Avoid low-yield routine tests",
+      "body": "Neuroimaging, carotid ultrasound, and extensive labs rarely change management without focal deficits or specific indications [8], [10]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Bedside Flow",
+      "title": "Stepwise Bedside Diagnostic Approach",
+      "blurb": "Identify life-threatening causes, assign short-term risk, and align testing with pretest probability.",
+      "steps": [
+        {
+          "title": "Immediate safety and rapid triage",
+          "body": "Check vitals, glucose, oxygenation, and establish IV access if unstable. Initiate continuous cardiac monitoring for any concerning features (e.g., palpitations before syncope, exertional/supine syncope, known heart disease) [8], [10]."
+        },
+        {
+          "title": "Focused history",
+          "body": "Characterize prodrome (nausea, warmth), triggers (standing, micturition, pain), context (exertion, supine), and recovery. Elicit cardiac history (CHF, CAD, valvular disease), medications (diuretics, vasodilators, QT‑prolonging agents), and family history of sudden cardiac death. History is the highest-yield diagnostic tool [4], [15]."
+        },
+        {
+          "title": "Physical examination with orthostatics",
+          "body": "Assess murmurs (aortic stenosis, HCM), signs of heart failure, volume status, and perform orthostatic BP/HR. Orthostatic hypotension or reflex syncope often have clear bedside signatures [4], [8], [10]."
+        },
+        {
+          "title": "12‑lead ECG for all",
+          "body": "Identify conduction disease (AV block), ischemia, pre-excitation, Brugada pattern, QT prolongation, epsilon waves, or arrhythmias. An abnormal ECG is a strong predictor of adverse outcomes and cardiac syncope [7], [8], [10]."
+        },
+        {
+          "title": "Assign short‑term risk",
+          "body": "Combine clinical red flags with a validated ED score when helpful. High-risk features drive admission/monitoring; low-risk uncomplicated reflex/orthostatic cases can often be discharged with follow-up [2], [6], [7], [8], [14]."
+        },
+        {
+          "title": "Targeted testing",
+          "body": "Reserve labs (Hgb, electrolytes, troponin) for clinical indication (e.g., dyspnea, GI bleed, ACS concern). Use echocardiography when structural heart disease is suspected. Consider ambulatory rhythm monitoring for unexplained episodes with concerning features [4], [8], [10]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "At-a-Glance",
+      "title": "High-Risk Features, Disposition, and Diagnostic Tools",
+      "blurb": "Use this grid to align risk with actions.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "AlertTriangle",
+          "title": "High-Risk Red Flags (Admit/Monitor)",
+          "items": [
+            "Abnormal ECG (ischemia, high-grade AV block, ventricular arrhythmia, QTc prolongation, Brugada pattern) [7], [8]",
+            "Known structural heart disease or CHF; prior ventricular arrhythmias [7], [8], [10]",
+            "Syncope during exertion or while supine; minimal prodrome [6], [8]",
+            "Severe hypotension, persistent bradycardia, or recurrent events in 24–48h [8], [10]",
+            "Dyspnea, chest pain, new murmur; concern for PE, ACS, aortic stenosis, HCM [6], [8]",
+            "Anemia (Hct <30%), active bleeding, or significant volume depletion [6]",
+            "Age ≥60, cerebrovascular disease, hypertension; family history of sudden death <50y [6], [8]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Low-Risk Features (Often Safe Discharge)",
+          "items": [
+            "Typical reflex (vasovagal) syncope: triggers (pain, emotion, prolonged standing), prodrome (nausea, warmth), rapid recovery, normal ECG [4], [8], [10]",
+            "Orthostatic hypotension with clear cause (dehydration, medications, autonomic failure), improves with fluids/med changes [4], [8]",
+            "No heart disease, normal vitals/ECG, normal exam, reliable follow-up [8], [10]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Validated ED Risk Scores (Use as Adjuncts)",
+          "items": [
+            "Tools synthesize clinical variables to predict 7–30 day serious outcomes; performance varies by population and age [2], [3], [14].",
+            "Older adults may need conservative thresholds; multi-tool combinations and bedside ultrasound are being explored but need more evidence [9], [14].",
+            "Always integrate with guideline-directed evaluation and clinician gestalt [8]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Targeted Diagnostic Tests",
+          "items": [
+            "ECG for all; continuous monitoring if high-risk or unexplained [8], [10]",
+            "Echocardiography if murmur/structural disease suspected or abnormal ECG [4], [8]",
+            "Ambulatory rhythm monitoring (patch/loop recorder) for unexplained recurrent episodes or concerning symptoms [8], [10]",
+            "Tilt-table testing for suspected reflex syncope when diagnosis remains uncertain and results would change management [8]",
+            "Labs (Hgb, electrolytes, creatinine, troponin) only when clinically indicated; avoid routine panels [8], [10]",
+            "Avoid routine neuroimaging or carotid ultrasound without focal deficits or alternate neurologic concern [8], [10]"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Key Short-Term Outcomes to Prevent",
+          "items": [
+            "Death, life-threatening arrhythmia, myocardial infarction, PE, major hemorrhage, procedural intervention, or recurrent syncope with injury within 7–30 days [2], [8]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Modifiable Contributors",
+          "items": [
+            "Medication review: diuretics, vasodilators, negative chronotropes, QT‑prolonging agents [4], [8]",
+            "Volume depletion, anemia, electrolyte disturbances [6], [8]",
+            "Counsel on hydration, salt (if appropriate), physical counterpressure maneuvers for reflex syncope [8]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Evidence Signals",
+      "title": "What Drives Risk? What Adds Yield?",
+      "blurb": "Synthesize data points into actionable bedside heuristics.",
+      "layout": "column",
+      "cards": [
+        {
+          "icon": "Activity",
+          "title": "Predictors of Adverse Outcomes",
+          "items": [
+            "Abnormal ECG and history of CHF/structural heart disease strongly predict serious events; classic predictors include age ≥45, CHF, ventricular arrhythmias, and abnormal ECG—each independently increases risk [7].",
+            "Composite minor risk markers include **age >60**, dyspnea, anemia (Hct <0.30), hypertension, cerebrovascular disease, and family history of sudden death—each informs disposition and monitoring level [6].",
+            "Population data show syncope carries trauma risk; reflex syncope in youth may cluster in families, while older age and cardiometabolic comorbidity increase risk burden [1], [5], [8]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Diagnostic Yield Principles",
+          "items": [
+            "History, exam, and ECG drive the majority of diagnoses; routine broad testing is low yield and may distract from targeted evaluation [4], [8], [10].",
+            "Echocardiography and ambulatory monitoring have higher yield when pretest probability of cardiac syncope is elevated (abnormal ECG, structural disease, exertional syncope) [4], [8].",
+            "In older adults, applying multiple risk tools or adding point-of-care ultrasound may help, but evidence remains limited and heterogeneous [9], [14]."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Risk Factors for Syncope Associated With Injury and Comorbidity",
+      "detail": "JAMA Network Open, 2021, doi: see journal site",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2777893"
+    },
+    {
+      "title": "Syncope risk stratification in the ED",
+      "detail": "Internal and Emergency Medicine, 2014, doi: see journal site",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1566070214000587"
+    },
+    {
+      "title": "Stepwise evaluation of syncope: a prospective population study",
+      "detail": "International Journal of Cardiology, 2008, doi: see journal site",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167527307010352"
+    },
+    {
+      "title": "Selecting appropriate diagnostic tools for evaluating syncope",
+      "detail": "Radiologic Clinics of North America, 2013, doi: see journal site",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0033062012002101"
+    },
+    {
+      "title": "Demographic factors and syncope risk",
+      "detail": "Scientific Reports, 2023, doi: see journal site",
+      "url": "https://www.nature.com/articles/s41598-023-49722-w"
+    },
+    {
+      "title": "Syncope (Review)",
+      "detail": "Circulation, 2013, doi: see journal site",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.112.138396"
+    },
+    {
+      "title": "Current evaluation and management of syncope",
+      "detail": "Circulation, 2002, doi: see journal site",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.0000031168.96232.ba"
+    },
+    {
+      "title": "2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Syncope",
+      "detail": "Circulation, 2017, doi: see journal site",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000498"
+    },
+    {
+      "title": "Assessing the predictive value of combining risk scoring with bedside ultrasound",
+      "detail": "American Journal of Emergency Medicine, 2024, doi: see journal site",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467924000775"
+    },
+    {
+      "title": "AHA/ACCF Scientific Statement on the Evaluation of Syncope",
+      "detail": "Circulation, 2006, doi: see journal site",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.105.170274"
+    },
+    {
+      "title": "Evidence-based CDS tool for syncope (MISSION app)",
+      "detail": "JMIR Human Factors, 2021, doi: see journal site",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8663445/"
+    },
+    {
+      "title": "Application of five risk stratification tools in older syncope patients",
+      "detail": "Clinical Interventions in Aging, 2024, doi: see journal site",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10775749/"
+    },
+    {
+      "title": "Syncope: a clinically guided diagnostic algorithm",
+      "detail": "Neurologic Clinics, 2004, doi: see journal site",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15480936/"
+    }
+  ]
+}

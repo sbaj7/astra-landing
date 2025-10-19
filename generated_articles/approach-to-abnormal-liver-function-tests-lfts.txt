@@ -1,0 +1,262 @@
+{
+  "heroLabel": "Hepatology | Practical Pathway",
+  "title": "Approach to Abnormal Liver Function Tests (LFTs)",
+  "summary": "A pattern-based, stepwise evaluation of abnormal liver blood tests emphasizing urgency triage, common etiologies, targeted diagnostics, and initial management. Focus on distinguishing hepatocellular vs cholestatic injury, ruling out life-threatening causes, and avoiding indiscriminate testing while ensuring timely follow-up.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What is an evidence-based, clinically efficient approach to evaluating and managing abnormal liver function tests in adults?",
+  "tags": [
+    "Hepatology",
+    "Primary Care",
+    "Emergency Medicine",
+    "Diagnostics",
+    "NAFLD",
+    "Drug-induced liver injury"
+  ],
+  "heroStats": [
+    {
+      "label": "Most common outpatient causes",
+      "value": "NAFLD, alcohol, medications/supplements [10], [7]"
+    },
+    {
+      "label": "Pattern recognition",
+      "value": "Hepatocellular vs cholestatic guides testing [5], [7], [8]"
+    },
+    {
+      "label": "Testing strategy",
+      "value": "Focused, tiered over indiscriminate panels [6], [11]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "AlertTriangle",
+      "title": "Identify emergencies first",
+      "body": "Red flags (jaundice, coagulopathy, encephalopathy, sepsis, severe RUQ pain) mandate urgent evaluation for acute liver failure, biliary obstruction, or cholangitis [7], [1]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Classify the pattern",
+      "body": "Calculate R ratio: (ALT/ULN) ÷ (ALP/ULN). R ≥5 hepatocellular; R ≤2 cholestatic; 2<R<5 mixed. Pattern directs labs and imaging [5], [8]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Repeat and confirm",
+      "body": "Verify abnormal results, review prior values, and repeat in 2–4 weeks when clinically stable to avoid over-testing and false positives [6], [11]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Targeted first-line tests",
+      "body": "History-driven labs (viral hepatitis, alcohol, metabolic, autoimmune) and ultrasound for cholestasis or steatosis streamline work-up [7], [8], [6]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Treat reversible causes",
+      "body": "Alcohol abstinence, stop culprit drugs/supplements, vaccinate (HAV/HBV), manage NAFLD with weight loss and metabolic control; escalate when high-risk features present [10], [7], [1]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Foundation",
+      "title": "Stepwise Approach",
+      "blurb": "A concise pathway from triage to targeted diagnostics and initial management.",
+      "steps": [
+        {
+          "title": "1) Triage for severity and stability",
+          "body": "Assess for encephalopathy, INR ≥1.5, bilirubin ≥3 mg/dL, rapidly rising aminotransferases, hypotension, or sepsis. **Presence of jaundice + systemic toxicity** raises concern for **acute liver failure** or **ascending cholangitis**; initiate emergent evaluation, resuscitation, and specialty consultation [7], [1]."
+        },
+        {
+          "title": "2) Confirm abnormality and define pattern",
+          "body": "Repeat AST, ALT, ALP, GGT, bilirubin (total/direct), albumin, INR; review prior results. Determine **R ratio** to classify hepatocellular, cholestatic, or mixed injury. **Pattern recognition** is central to narrowing differential and ordering the right tests [5], [8]."
+        },
+        {
+          "title": "3) Focused history and exam",
+          "body": "Alcohol use (quantity, pattern), medications and **herbals/supplements**, viral risks (travel, exposures), metabolic syndrome, autoimmune history, pruritus, RUQ pain, heart failure symptoms. Incidental mild elevations are common; context determines urgency and depth of work-up [10], [7]."
+        },
+        {
+          "title": "4) Initial targeted tests",
+          "body": "Hepatocellular pattern: HAV IgM (if acute), HBsAg, anti-HBc IgM/total, HCV Ab with reflex RNA, acetaminophen level, pregnancy test (when relevant), CK (muscle source), ferritin and transferrin saturation, autoimmune panel (ANA, ASMA, IgG) when persistent. Cholestatic pattern: fractionated bilirubin, GGT, right-upper-quadrant ultrasound for ductal dilation; if dilated or cholangitis suspected, **urgent ERCP** consideration. Mixed pattern: combine approaches [7], [8], [6]."
+        },
+        {
+          "title": "5) Imaging strategy",
+          "body": "Ultrasound is first-line for suspected biliary disease or steatosis. **No ductal dilation but persistent cholestasis**: consider MRCP for intrahepatic cholestasis or PSC; CT if mass suspected. Use ultrasound in ED to rapidly identify obstruction or steatosis when labs are abnormal [9], [7]."
+        },
+        {
+          "title": "6) Management of common etiologies",
+          "body": "Alcohol-related: strict abstinence, withdrawal management, nutrition; consider corticosteroids only for severe alcoholic hepatitis (specialist-guided) [1]. NAFLD: **≥7–10% weight loss** target, optimize diabetes, lipids, blood pressure; screen for advanced fibrosis (FIB-4, elastography) [10]. DILI: stop the offending agent; report severe cases; consider N-acetylcysteine for suspected acetaminophen toxicity. Viral hepatitis: treat per guidelines; counsel transmission prevention [7], [8]."
+        },
+        {
+          "title": "7) When to refer or escalate",
+          "body": "Immediate referral: acute liver failure, cholangitis/obstruction, bilirubin >3 mg/dL with coagulopathy, AST/ALT >1000 U/L, suspected autoimmune hepatitis with jaundice, or uncertain diagnosis with worsening labs. Refer for elastography or hepatology when **persistent elevation >6 months**, **FIB-4 ≥1.3 (≥2.0 if age >65)**, platelets low, or imaging suggests advanced fibrosis [7], [6], [8]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Bedside",
+      "title": "Pattern-Based Differential and First Tests",
+      "blurb": "Use pattern recognition to guide targeted, high-yield diagnostics and avoid unnecessary testing.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Hepatocellular (R ≥5)",
+          "items": [
+            "Common: NAFLD, alcohol, viral hepatitis, DILI, ischemic hepatitis, autoimmune hepatitis [7], [8], [10]",
+            "Key tests: HBV (HBsAg, anti-HBc), HCV Ab→RNA, HAV IgM (if acute), acetaminophen level, CK, ferritin/TSat, ANA/ASMA/IgG [7], [8]",
+            "Consider: Wilson disease (younger patients), hemochromatosis (TSat ≥45%), thyroid disease, celiac if persistent",
+            "Imaging: Ultrasound for steatosis, vascular flow if ischemic suspected"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Cholestatic (R ≤2)",
+          "items": [
+            "Common: Gallstones, malignancy, PSC, PBC, DILI (e.g., cholestatic), sepsis-associated cholestasis [7], [8]",
+            "Key tests: Fractionated bilirubin, GGT, antimitochondrial antibody (AMA), ultrasound for ductal dilation; MRCP if nondiagnostic [7]",
+            "Urgent: Cholangitis signs → antibiotics + biliary decompression (ERCP) [7]",
+            "Consider IgG4 if pancreatobiliary involvement suspected"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Mixed (2<R<5)",
+          "items": [
+            "Consider: DILI, alcoholic hepatitis, obstructive processes with secondary hepatocellular injury, infiltrative disease [8]",
+            "Approach: Combine hepatocellular and cholestatic testing; image early with ultrasound ± MRCP"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "When to repeat vs. pursue immediately",
+          "items": [
+            "Mild asymptomatic elevation (<2× ULN) without red flags → repeat in 2–4 weeks while removing potential offenders [6], [11]",
+            "≥3× ULN, symptoms, jaundice, or coagulopathy → full work-up now [7]",
+            "Transient rises common with intercurrent illness, strenuous exercise, or muscle injury (check CK) [8]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Initial Management Pearls",
+          "items": [
+            "**Stop hepatotoxic agents/supplements**; review OTCs and herbals [7], [8]",
+            "**Alcohol abstinence** and withdrawal prevention; provide nutrition in suspected alcoholic hepatitis [1]",
+            "**Vaccinate** against HAV/HBV if non-immune and at risk [7]",
+            "NAFLD: diet, exercise, weight loss, treat metabolic syndrome; consider noninvasive fibrosis staging [10]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Avoid over-testing",
+          "items": [
+            "Use a **tiered, risk-driven** algorithm rather than exhaustive panels initially [6], [11]",
+            "Escalate to second-line tests (A1AT phenotype, ceruloplasmin, IgG4, celiac serologies) only when indicated by pattern or persistence [7], [8]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Operations",
+      "title": "ED-Focused Considerations",
+      "blurb": "Stabilize, rule out time-sensitive disease, and defer nonurgent etiologies.",
+      "layout": "column",
+      "cards": [
+        {
+          "icon": "AlertTriangle",
+          "title": "Immediate actions",
+          "items": [
+            "Assess airway, mental status, glucose; check INR, bilirubin, ammonia (context), lactate",
+            "Broad-spectrum antibiotics if cholangitis suspected; obtain blood cultures [1], [7]",
+            "Bedside RUQ ultrasound for obstruction/stone; early GI for ERCP if indicated [9]",
+            "Consider N-acetylcysteine for acetaminophen toxicity or indeterminate acute liver failure [7]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "ED disposition",
+          "items": [
+            "Admit: ALF, cholangitis, biliary obstruction with cholestasis, severe alcoholic hepatitis, AST/ALT >1000 with systemic illness [1], [7]",
+            "Outpatient follow-up: Mild asymptomatic elevations; provide explicit follow-up in 2–4 weeks [6], [11]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Quality",
+      "title": "Documentation and Follow-up",
+      "blurb": "Close-loop follow-up prevents missed progressive liver disease.",
+      "steps": [
+        {
+          "title": "Clear plan",
+          "body": "Document suspected etiology, tests ordered, and repeat timeline. Educate on **alcohol abstinence**, **acetaminophen limits**, and **avoidance of new supplements**."
+        },
+        {
+          "title": "Risk stratify fibrosis",
+          "body": "Calculate FIB-4 using age, AST, ALT, platelets; **FIB-4 ≥1.3 (≥2.0 if >65)** warrants elastography or hepatology referral in NAFLD or unexplained elevations [10], [6]."
+        },
+        {
+          "title": "Reassess persistently abnormal LFTs",
+          "body": "If abnormal >6 months or worsening, broaden evaluation (autoimmune, metabolic, infiltrative) and consider liver biopsy after noninvasive work-up [7], [8]."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Elevated Liver Enzymes: Emergency Department–Focused Management",
+      "detail": "Ann Emerg Med. 2017. PMID: 27889359",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27889359/"
+    },
+    {
+      "title": "Laboratory tests and diagnostic procedures in evaluation of liver disease",
+      "detail": "Am J Med. 1985.",
+      "url": "https://www.sciencedirect.com/science/article/pii/0002934385900130"
+    },
+    {
+      "title": "EVALUATION OF ABNORMAL LIVER FUNCTION TESTS",
+      "detail": "Surg Clin North Am. 2005.",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025712505704727"
+    },
+    {
+      "title": "Liver Function Test - overview",
+      "detail": "Elsevier Topic Page.",
+      "url": "https://www.sciencedirect.com/topics/neuroscience/liver-function-test"
+    },
+    {
+      "title": "Approach to the Patient with Abnormal Liver Tests",
+      "detail": "Wiley Hepatology Handbook chapter. 2013.",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118748626.ch1"
+    },
+    {
+      "title": "Abnormal Liver Blood Tests: Primary Care Approach",
+      "detail": "Dig Dis. 2022.",
+      "url": "https://karger.com/ddi/article/40/2/215/827825/Abnormal-Liver-Blood-Tests-Primary-Care-Approach"
+    },
+    {
+      "title": "Evaluation of liver dysfunction",
+      "detail": "BMJ Best Practice Topic. 2024.",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1122"
+    },
+    {
+      "title": "Approach to Elevated Liver Enzymes",
+      "detail": "Clin Liver Dis (Hoboken). 2023. PMID: 37516508",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37516508/"
+    },
+    {
+      "title": "Elevated Liver Enzymes: ED-Focused Management (topic + linked studies)",
+      "detail": "PubMed landing page. 2017. PMID: 27889359",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27889359/"
+    },
+    {
+      "title": "Management of non-alcoholic fatty liver disease",
+      "detail": "World J Gastroenterol. 2023. PMC10187607",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10187607/"
+    },
+    {
+      "title": "Extensive vs focused testing for elevated liver enzymes",
+      "detail": "J Hepatol. 2016. PMID: 27717864",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27717864/"
+    }
+  ]
+}

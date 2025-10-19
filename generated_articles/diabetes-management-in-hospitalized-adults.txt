@@ -1,0 +1,161 @@
+{
+  "heroLabel": "Inpatient Glycemic Care",
+  "title": "Diabetes Management in Hospitalized Adults",
+  "summary": "Hospital hyperglycemia is common and linked to worse outcomes. Use basal–bolus–correction insulin for most noncritically ill patients, avoid sliding-scale monotherapy, and target 140–180 mg/dL for the majority. In the ICU, use IV insulin with similar targets. Prioritize hypoglycemia prevention, medication reconciliation, and discharge planning.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are safe and effective glycemic targets and treatment strategies for adults with diabetes or stress hyperglycemia during hospitalization?",
+  "tags": [
+    "hospital medicine",
+    "endocrinology",
+    "diabetes",
+    "insulin therapy",
+    "perioperative",
+    "ICU"
+  ],
+  "heroStats": [
+    {
+      "label": "Recommended inpatient target (most adults)",
+      "value": "140–180 mg/dL [1]"
+    },
+    {
+      "label": "Hypoglycemia threshold",
+      "value": "<70 mg/dL (clinically significant) [1]"
+    },
+    {
+      "label": "Preferred regimen (non-ICU)",
+      "value": "Basal–bolus–correction insulin over sliding scale alone [1]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "ShieldCheck",
+      "title": "Set safe targets",
+      "body": "Aim for glucose 140–180 mg/dL for most hospitalized adults; consider 110–140 mg/dL for select stable patients if hypoglycemia risk is low [1]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Choose the right regimen",
+      "body": "Use scheduled basal–bolus with correction for noncritically ill patients; in the ICU, use IV insulin protocols with frequent monitoring [1]."
+    },
+    {
+      "icon": "AlertTriangle",
+      "title": "Prevent hypoglycemia",
+      "body": "Hold or reduce prandial insulin when NPO, reassess basal dosing daily, match insulin to nutrition, and adjust after any hypoglycemia episode [1]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Transitions and discharge",
+      "body": "Reconcile home medications, create a clear insulin and monitoring plan, and educate patients before discharge to reduce readmissions [1]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Getting Started",
+      "title": "Initial Assessment and Targets",
+      "blurb": "Establish safe glucose goals, identify risk, and plan monitoring.",
+      "steps": [
+        {
+          "title": "Assess status and risks",
+          "body": "Determine critical vs noncritical illness, nutrition status (oral, enteral, parenteral, NPO), renal/hepatic function, steroid use, and hypoglycemia history. Identify type 1 diabetes — these patients require basal insulin at all times to prevent ketoacidosis [1]."
+        },
+        {
+          "title": "Set glucose targets",
+          "body": "For most adults, target 140–180 mg/dL. Consider 110–140 mg/dL if achievable without hypoglycemia in stable patients. Avoid targets <110 mg/dL due to increased hypoglycemia risk [1]."
+        },
+        {
+          "title": "Plan monitoring",
+          "body": "Non-ICU: check before meals and at bedtime (or q6h if NPO). ICU/on insulin infusion: hourly to q2–4h per protocol. Increase frequency after nutrition changes or steroids [1]."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Therapy",
+      "title": "Choosing and Adjusting Inpatient Regimens",
+      "blurb": "Match insulin strategy to setting and nutrition.",
+      "steps": [
+        {
+          "title": "Non-ICU: Basal–bolus–correction",
+          "body": "Start total daily dose ~0.3–0.5 units/kg/day (lower if elderly, CKD, underweight; higher with steroids or obesity). Give ~50% basal and ~50% prandial divided TID with correction scale. Avoid sliding-scale insulin alone as it leads to glycemic variability and higher risk of hypo/hyperglycemia [1]."
+        },
+        {
+          "title": "ICU: IV insulin infusion",
+          "body": "Use validated IV insulin protocols with frequent glucose checks targeting 140–180 mg/dL. Transition to subcutaneous insulin once stable and eating, overlapping basal insulin 1–2 hours before stopping the infusion to avoid rebound hyperglycemia [1]."
+        },
+        {
+          "title": "Special nutrition cases",
+          "body": "NPO: continue basal (reduce 20–30% if needed) and use correction insulin q6h. Enteral feeds: use NPH q6–8h or basal with scheduled correction; have dextrose backup if feeds interrupted. Parenteral nutrition: consider basal plus regular insulin in the PN bag with close monitoring [1]."
+        },
+        {
+          "title": "Glucocorticoids",
+          "body": "Anticipate afternoon/evening hyperglycemia with intermediate/long-acting steroids. Use NPH timed to steroid dosing or increase daytime prandial/correction insulin; titrate daily as steroid dose changes [1]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Safety",
+      "title": "Preventing and Managing Hypoglycemia",
+      "blurb": "Use protocols and rapid response steps to minimize harm.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "AlertTriangle",
+          "title": "Risk reduction",
+          "items": [
+            "Match prandial insulin to actual carbohydrate intake or hold when NPO [1]",
+            "Reduce basal dose in renal/hepatic impairment or poor intake [1]",
+            "Coordinate insulin with procedures, anesthesia, and feed changes [1]",
+            "Standardize order sets and nursing protocols for insulin adjustments [1]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Recognition and treatment",
+          "items": [
+            "Treat BG <70 mg/dL promptly with oral glucose if awake or IV dextrose/glucagon if not [1]",
+            "Recheck in 15 minutes; repeat until >80–100 mg/dL and stable [1]",
+            "Document event root causes (missed meal, renal function change, overbasalization) and adjust regimen [1]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Post-event adjustments",
+          "items": [
+            "Decrease basal by 10–20% after any clinically significant hypoglycemia [1]",
+            "Tighten correction scale and review prandial dosing strategy [1]",
+            "Implement hypoglycemia precautions on transfer and at discharge [1]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Transitions",
+      "title": "Perioperative and Discharge Considerations",
+      "blurb": "Plan for procedures and safe handoffs.",
+      "steps": [
+        {
+          "title": "Perioperative management",
+          "body": "Hold prandial insulin while NPO; give ~60–80% of usual basal the night before or morning of surgery. Use IV insulin for long or hemodynamically unstable cases; target 140–180 mg/dL intraoperatively and post-op [1]."
+        },
+        {
+          "title": "Home medications",
+          "body": "Pause most oral/GLP-1 agents during acute illness; metformin is typically held with hemodynamic instability or contrast exposure and resumed when stable and eGFR adequate. Restart outpatient agents at discharge when appropriate and safe [1]."
+        },
+        {
+          "title": "Discharge planning",
+          "body": "Provide a simplified insulin plan, supplies, clear correction instructions, and SMBG schedule. Communicate A1c results and medication changes to outpatient clinicians; arrange close follow-up within 1–4 weeks [1]."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Management of Hyperglycemia in Hospitalized Adult Patients in Non-Critical Care Settings: An Endocrine Society Clinical Practice Guideline",
+      "detail": "J Clin Endocrinol Metab 2012 97(1):16-38 doi:10.1210/jc.2011-2098",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22223765/"
+    }
+  ]
+}
