@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
+import { getBaseUrl } from './siteConfig.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,8 +12,6 @@ const DIST_DIR = path.join(PROJECT_ROOT, 'dist');
 const ARTICLES_DIR = path.join(PROJECT_ROOT, 'generated_articles');
 const MANIFEST_FILE = path.join(DIST_DIR, '.vite', 'manifest.json');
 const ARTICLES_MANIFEST_FILE = path.join(ARTICLES_DIR, 'index.json');
-
-const baseUrl = process.env.PRERENDER_BASE_URL || 'https://example.com';
 
 async function loadViteAssets() {
   const manifestRaw = await fs.readFile(MANIFEST_FILE, 'utf8');
@@ -46,7 +45,8 @@ async function renderArticles() {
   });
 
   const { renderArticleDocument } = await vite.ssrLoadModule('/src/prerender/renderArticleDocument.js');
-  
+
+  const baseUrl = getBaseUrl();
   const assets = await loadViteAssets();
   const articlesManifest = await loadArticlesManifest();
 

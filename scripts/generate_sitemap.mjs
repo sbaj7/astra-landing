@@ -1,14 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getBaseUrl } from './siteConfig.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.join(__dirname, '..', 'dist');
 const ARTICLES_MANIFEST_FILE = path.join(__dirname, '..', 'generated_articles', 'index.json');
-
-const baseUrl = process.env.PRERENDER_BASE_URL || 'https://example.com';
 
 const normalizeBaseUrl = (input) => input.endsWith('/') ? input.slice(0, -1) : input;
 
@@ -19,6 +18,7 @@ async function buildSitemap() {
     throw new Error('generated_articles/index.json must be an array');
   }
 
+  const baseUrl = getBaseUrl();
   const normalizedBase = normalizeBaseUrl(baseUrl);
   const urls = manifest.map((entry) => {
     if (!entry?.slug) return null;
