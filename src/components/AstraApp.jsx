@@ -3616,12 +3616,9 @@ const AstraApp = () => {
           bottom: 0,
           left: 0,
           right: 0,
-          padding: isMobile ? '0 12px 12px' : '0 16px',
-          paddingBottom: isMobile ? 'max(12px, env(safe-area-inset-bottom))' : '16px',
+          padding: isMobile ? '0 12px' : '0 16px',
           boxSizing: 'border-box',
           width: '100%',
-          maxHeight: isMobile ? '50vh' : 'auto',
-          overflowY: isMobile ? 'auto' : 'visible',
           zIndex: 10,
           pointerEvents: 'none'
         }}>
@@ -3643,6 +3640,7 @@ const AstraApp = () => {
             />
           </div>
         </div>
+
 
       </div>
 
