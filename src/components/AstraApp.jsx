@@ -1652,7 +1652,7 @@ const Sidebar = ({
     <div style={{ position: 'fixed', inset: 0, zIndex: 60, display: 'flex', flexDirection: 'row' }}>
       <aside
         style={{
-          width: isMobile ? '100vw' : 320,
+          width: isMobile ? '100vw' : 380,
           maxWidth: isMobile ? '100vw' : '92vw',
           height: '100%',
           backgroundColor: `${theme.backgroundSurface}`,
@@ -2896,17 +2896,15 @@ const AstraApp = () => {
     return () => clearTimeout(timer);
   }, [profileSuccess]);
 
-  // Instagram browser fix
+  // Instagram browser fix - allow scrolling since their bars cover content
   useEffect(() => {
     const isInstagram = /Instagram/i.test(navigator.userAgent);
     
     if (isInstagram && isMobile) {
-      // Instagram UI: top bar ~44px + bottom bar ~49px = 93px
-      const instagramBars = 93;
-      const visibleHeight = window.screen.height - instagramBars;
-      document.documentElement.style.setProperty('--app-height', `${visibleHeight}px`);
-    } else {
-      document.documentElement.style.setProperty('--app-height', '100vh');
+      // Allow body to scroll on Instagram
+      document.body.style.position = 'relative';
+      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'auto';
     }
   }, [isMobile]);
 
@@ -3552,10 +3550,10 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: 'var(--app-height, 100dvh)', display: 'flex', flexDirection: 'column',
+      height: '100dvh', display: 'flex', flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
       overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)',
-      userSelect: 'none', outline: 'none'
+      outline: 'none'
     }}>
       {/* Toolbar */}
       <ToolbarView
@@ -3583,11 +3581,9 @@ const AstraApp = () => {
             scrollPaddingBottom: inputBarHeight - (isMobile ? 20 : 24),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
-            userSelect: 'none',
             outline: 'none'
           }}
           onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
-          onMouseDown={(e) => e.preventDefault()}
           tabIndex={-1}
         >
           <div style={{ maxWidth: isMobile ? '100%' : 855, margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
