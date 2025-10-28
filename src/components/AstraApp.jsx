@@ -2896,15 +2896,24 @@ const AstraApp = () => {
     return () => clearTimeout(timer);
   }, [profileSuccess]);
 
-  // Instagram browser fix for bottom input bar
+  // Instagram browser fix - use actual innerHeight instead of viewport units
   useEffect(() => {
-    const isInstagram = /instagram/i.test(navigator.userAgent);
-    const needsFix = isInstagram && window.innerHeight === window.screen.height;
+    const isInstagram = /Instagram/i.test(navigator.userAgent);
     
-    if (needsFix && isMobile) {
-      document.documentElement.style.setProperty('--instagram-offset', '60px');
+    if (isInstagram && isMobile) {
+      // Instagram browser: set height using actual innerHeight in pixels
+      const setInstagramHeight = () => {
+        const height = window.innerHeight;
+        document.documentElement.style.setProperty('--app-height', `${height}px`);
+      };
+      
+      setInstagramHeight();
+      window.addEventListener('resize', setInstagramHeight);
+      
+      return () => window.removeEventListener('resize', setInstagramHeight);
     } else {
-      document.documentElement.style.setProperty('--instagram-offset', '0px');
+      // Other browsers: use normal viewport units
+      document.documentElement.style.setProperty('--app-height', '100vh');
     }
   }, [isMobile]);
 
@@ -3550,7 +3559,10 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: '100vh', display: 'flex', flexDirection: 'column',
+      height: 'var(--app-height, 100vh)',
+      minHeight: 'var(--app-height, 100vh)',
+      display: 'flex', 
+      flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
       overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)',
       userSelect: 'none', outline: 'none'
@@ -3577,7 +3589,7 @@ const AstraApp = () => {
             paddingTop: 0,
             paddingRight: isMobile ? 12 : 16,
             paddingLeft: isMobile ? 12 : 16,
-            paddingBottom: inputBarHeight - (isMobile ? 20 : 24), // extra space for text to run around input
+            paddingBottom: inputBarHeight - (isMobile ? 20 : 24),
             scrollPaddingBottom: inputBarHeight - (isMobile ? 20 : 24),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
@@ -3625,7 +3637,7 @@ const AstraApp = () => {
 {/* Input - matching width container */}
 <div style={{
   position: 'fixed',
-  bottom: 'var(--instagram-offset, 0)',
+  bottom: 0,
   left: 0,
   right: 0,
   padding: isMobile ? '0 12px' : '0 16px',
