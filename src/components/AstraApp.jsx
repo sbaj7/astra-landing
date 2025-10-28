@@ -2896,6 +2896,18 @@ const AstraApp = () => {
     return () => clearTimeout(timer);
   }, [profileSuccess]);
 
+  // Instagram browser fix for bottom input bar
+  useEffect(() => {
+    const isInstagram = /instagram/i.test(navigator.userAgent);
+    const needsFix = isInstagram && window.innerHeight === window.screen.height;
+    
+    if (needsFix && isMobile) {
+      document.documentElement.style.setProperty('--instagram-offset', '60px');
+    } else {
+      document.documentElement.style.setProperty('--instagram-offset', '0px');
+    }
+  }, [isMobile]);
+
   // Initialize chat limits from localStorage for anonymous users
   useEffect(() => {
     if (isAuthenticated) {
@@ -3538,7 +3550,7 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: '100dvh', display: 'flex', flexDirection: 'column',
+      height: '100vh', display: 'flex', flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
       overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)',
       userSelect: 'none', outline: 'none'
@@ -3610,38 +3622,36 @@ const AstraApp = () => {
         </div>
 
         
-        {/* Input - matching width container */}
-        <div style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          padding: isMobile ? '0 12px' : '0 16px',
-          boxSizing: 'border-box',
-          width: '100%',
-          zIndex: 10,
-          pointerEvents: 'none'
-        }}>
+{/* Input - matching width container */}
+<div style={{
+  position: 'fixed',
+  bottom: 'var(--instagram-offset, 0)',
+  left: 0,
+  right: 0,
+  padding: isMobile ? '0 12px' : '0 16px',
+  boxSizing: 'border-box',
+  width: '100%',
+  zIndex: 10,
+  pointerEvents: 'none'
+}}>
 
-          <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%', position: 'relative', zIndex: 2 }}>
-            <InputBar
-              query={query}
-              setQuery={setQuery}
-              currentMode={currentMode}
-              onModeChange={setCurrentMode}
-              onSend={handleSend}
-              onStop={handleStop}
-              isStreaming={isStreaming}
-              isLoading={isLoading}
-              speechRecognition={speechRecognition}
-              theme={theme}
-              onHeightChange={setInputBarHeight}
-              isMobile={isMobile}
-            />
-          </div>
-        </div>
-
-
+  <div style={{ maxWidth: isMobile ? '100%' : 900, margin: '0 auto', width: '100%', position: 'relative', zIndex: 2 }}>
+    <InputBar
+      query={query}
+      setQuery={setQuery}
+      currentMode={currentMode}
+      onModeChange={setCurrentMode}
+      onSend={handleSend}
+      onStop={handleStop}
+      isStreaming={isStreaming}
+      isLoading={isLoading}
+      speechRecognition={speechRecognition}
+      theme={theme}
+      onHeightChange={setInputBarHeight}
+      isMobile={isMobile}
+    />
+  </div>
+</div>
       </div>
 
       {/* Paywall Modal */}
