@@ -2896,23 +2896,16 @@ const AstraApp = () => {
     return () => clearTimeout(timer);
   }, [profileSuccess]);
 
-  // Instagram browser fix - use actual innerHeight instead of viewport units
+  // Instagram browser fix
   useEffect(() => {
     const isInstagram = /Instagram/i.test(navigator.userAgent);
     
     if (isInstagram && isMobile) {
-      // Instagram browser: set height using actual innerHeight in pixels
-      const setInstagramHeight = () => {
-        const height = window.innerHeight;
-        document.documentElement.style.setProperty('--app-height', `${height}px`);
-      };
-      
-      setInstagramHeight();
-      window.addEventListener('resize', setInstagramHeight);
-      
-      return () => window.removeEventListener('resize', setInstagramHeight);
+      // Instagram UI: top bar ~44px + bottom bar ~49px = 93px
+      const instagramBars = 93;
+      const visibleHeight = window.screen.height - instagramBars;
+      document.documentElement.style.setProperty('--app-height', `${visibleHeight}px`);
     } else {
-      // Other browsers: use normal viewport units
       document.documentElement.style.setProperty('--app-height', '100vh');
     }
   }, [isMobile]);
@@ -3559,10 +3552,7 @@ const AstraApp = () => {
 
   return (
     <div style={{
-      height: 'var(--app-height, 100vh)',
-      minHeight: 'var(--app-height, 100vh)',
-      display: 'flex', 
-      flexDirection: 'column',
+      height: 'var(--app-height, 100dvh)', display: 'flex', flexDirection: 'column',
       backgroundColor: theme.backgroundPrimary, fontFamily: '-apple-system, BlinkMacSystemFont,"Segoe UI","Roboto",sans-serif',
       overflow: 'hidden', paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)',
       userSelect: 'none', outline: 'none'
@@ -3589,7 +3579,7 @@ const AstraApp = () => {
             paddingTop: 0,
             paddingRight: isMobile ? 12 : 16,
             paddingLeft: isMobile ? 12 : 16,
-            paddingBottom: inputBarHeight - (isMobile ? 20 : 24),
+            paddingBottom: inputBarHeight - (isMobile ? 20 : 24), // extra space for text to run around input
             scrollPaddingBottom: inputBarHeight - (isMobile ? 20 : 24),
             minHeight: 0,
             WebkitOverflowScrolling: 'touch',
