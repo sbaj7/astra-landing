@@ -1045,7 +1045,7 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       padding: isMobile ? '48px 12px' : '64px 16px',
       height: '100%',
       gap: isMobile ? 32 : 40
@@ -1129,6 +1129,130 @@ const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
             {q}
           </button>
         ))}
+      </div>
+
+      {/* Landing Information Section */}
+      <div style={{
+        width: '100%',
+        maxWidth: 680,
+        padding: isMobile ? '32px 16px 0' : '48px 24px 0',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: isMobile ? 32 : 40,
+        animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s backwards'
+      }}>
+        {/* Core Value Proposition */}
+        <div style={{
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 16
+        }}>
+          <p style={{
+            margin: 0,
+            fontSize: isMobile ? 16 : 18,
+            lineHeight: 1.65,
+            color: theme.textPrimary,
+            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+            fontWeight: 500,
+            maxWidth: 600,
+            marginInline: 'auto',
+            letterSpacing: '-0.01em'
+          }}>
+            Astra blends retrieval-augmented reasoning with structured citation checks—distilling landmark trials, guidelines, and clinical heuristics into one workspace.
+          </p>
+        </div>
+
+        {/* Stats Grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(4, 1fr)',
+          gap: isMobile ? 12 : 16,
+          width: '100%'
+        }}>
+          {[
+            { value: '500+', label: 'Landmark trials' },
+            { value: '<3s', label: 'Model latency' },
+            { value: '2.5M+', label: 'Articles indexed' },
+            { value: '3', label: 'Clinical modes' }
+          ].map((stat, i) => (
+            <div
+              key={i}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 6,
+                padding: isMobile ? '14px 12px' : '16px 14px',
+                borderRadius: isMobile ? 14 : 16,
+                background: `${theme.accentSoftBlue}08`,
+                border: `1px solid ${theme.accentSoftBlue}20`,
+                textAlign: 'center'
+              }}
+            >
+              <span style={{
+                fontSize: isMobile ? 22 : 26,
+                fontWeight: 700,
+                color: theme.textPrimary,
+                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif'
+              }}>
+                {stat.value}
+              </span>
+              <span style={{
+                fontSize: isMobile ? 11 : 12,
+                color: theme.textSecondary,
+                lineHeight: 1.4
+              }}>
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Key Features */}
+        <div style={{
+          display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
+          gap: isMobile ? 16 : 20,
+          width: '100%'
+        }}>
+          {[
+            { title: 'Built for clinicians', desc: 'Designed alongside practicing physicians for real clinical workflows' },
+            { title: 'Always cited', desc: 'Every recommendation backed by verifiable trials and guidelines' },
+            { title: 'Save hours daily', desc: 'Literature review, differential diagnosis, and note writing in one place' }
+          ].map((feature, i) => (
+            <div
+              key={i}
+              style={{
+                flex: 1,
+                padding: isMobile ? '16px' : '18px 20px',
+                borderRadius: isMobile ? 16 : 18,
+                background: `${theme.backgroundSurface}F8`,
+                border: `1px solid ${theme.textSecondary}12`,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 6,
+                textAlign: 'center'
+              }}
+            >
+              <h4 style={{
+                margin: 0,
+                fontSize: isMobile ? 14 : 15,
+                fontWeight: 600,
+                color: theme.textPrimary
+              }}>
+                {feature.title}
+              </h4>
+              <p style={{
+                margin: 0,
+                fontSize: isMobile ? 12 : 13,
+                lineHeight: 1.5,
+                color: `${theme.textSecondary}CC`
+              }}>
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
