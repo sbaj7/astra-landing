@@ -21,13 +21,13 @@ import {
   Info
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
-import PaywallModal from './Auth/PaywallModal';
+import PaywallModal from './Auth/PaywallModal.jsx';
 import BillingModal from './BillingModal.jsx';
 import BillingSuccessOverlay from './BillingSuccessOverlay.jsx';
 import ProfileModal from './ProfileModal.jsx';
 import SettingsModal from './SettingsModal.jsx';
 import DeleteChatModal from './DeleteChatModal.jsx';
-import authService from '../services/authService';
+import authService from '../services/authService.js';
 import useIsMobile from '../hooks/useIsMobile.js';
 import ReferencesView from './ReferencesView.jsx';
 import AboutView from './AboutView.jsx';
