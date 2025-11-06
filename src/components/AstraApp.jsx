@@ -3512,8 +3512,8 @@ const AstraApp = () => {
       const json = JSON.parse(payload);
 
       // Citations only once for search mode
-      if (currentMode === 'search' && citations.length === 0) {
-        if (Array.isArray(json.citations) && json.citations.length) {
+if ((currentMode === 'search' || currentMode === 'literature-review') && citations.length === 0) {
+  if (Array.isArray(json.citations) && json.citations.length) {
           if (typeof json.citations[0] === 'object') {
             json.citations.forEach((rawCitation, index) => {
               const normalizedCitation = normalizeCitationObject(rawCitation, index);
