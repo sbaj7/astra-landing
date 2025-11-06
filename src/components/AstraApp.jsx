@@ -998,45 +998,235 @@ const ToolbarView = ({
 };
 
 const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }) => {
+  const [showLitReviewMenu, setShowLitReviewMenu] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    if (!showLitReviewMenu) return;
+    
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setShowLitReviewMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLitReviewMenu]);
+
   const modes = [
     { key: 'search', title: 'Research', icon: Search },
     { key: 'reason', title: 'DDx', icon: Sparkles },
     { key: 'write', title: 'A&P', icon: FileText }
   ];
+
+  const isLitReviewMode = currentMode === 'literature-review';
+  const displayMode = isLitReviewMode ? 'search' : currentMode;
+
   return (
-    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: 'nowrap' }}>
+    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: 'nowrap', position: 'relative' }}>
       {modes.map(({ key, title, icon: Icon }) => {
-        const isSelected = currentMode === key;
+        const isSelected = displayMode === key;
+        const isResearch = key === 'search';
+        
         return (
-          <button
-            key={key}
-            onClick={() => onModeChange(key)}
-            disabled={isDisabled}
-            aria-pressed={isSelected}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 4,
-              padding: isMobile ? '5px 10px' : '6px 10px',
-              borderRadius: 50,
-              border: `1px solid ${theme.textSecondary}50`,
-              backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
-              color: isSelected ? '#fff' : theme.textPrimary,
-              fontSize: isMobile ? 11 : 12,
-              fontWeight: 500,
-              cursor: 'pointer',
-              transition: 'all .2s ease',
-              opacity: isDisabled ? 0.5 : 1
-            }}
-          >
-            <Icon size={10} />
-            <span>{title}</span>
-          </button>
+          <div key={key} style={{ position: 'relative', display: 'flex' }} ref={isResearch ? menuRef : null}>
+            <button
+              onClick={() => {
+                if (isResearch && isLitReviewMode) {
+                  // If in lit review mode, just switch back to regular search
+                  onModeChange('search');
+                } else {
+                  onModeChange(key);
+                }
+              }}
+              disabled={isDisabled}
+              aria-pressed={isSelected}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 4,
+                padding: isMobile ? '5px 10px' : '6px 10px',
+                paddingRight: isResearch ? (isMobile ? '4px' : '5px') : (isMobile ? '10px' : '10px'),
+                borderRadius: 50,
+                border: `1px solid ${theme.textSecondary}50`,
+                backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
+                color: isSelected ? '#fff' : theme.textPrimary,
+                fontSize: isMobile ? 11 : 12,
+                fontWeight: 500,
+                cursor: 'pointer',
+                transition: 'all .2s ease',
+                opacity: isDisabled ? 0.5 : 1
+              }}
+            >
+              <Icon size={10} />
+              <span>{isLitReviewMode && isResearch ? 'Lit Review' : title}</span>
+              {isResearch && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (!isDisabled) {
+                      setShowLitReviewMenu(!showLitReviewMenu);
+                    }
+                  }}
+                  disabled={isDisabled}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '2px',
+                    marginLeft: '2px',
+                    border: 'none',
+                    background: 'transparent',
+                    color: 'inherit',
+                    cursor: 'pointer',
+                    borderRadius: '50%',
+                    transition: 'background-color .2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = isSelected ? 'rgba(255,255,255,0.15)' : `${theme.textSecondary}15`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                  }}
+                >
+                  <svg 
+                    width="8" 
+                    height="8" 
+                    viewBox="0 0 8 8" 
+                    fill="none"
+                    style={{
+                      transform: showLitReviewMenu ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform .2s ease'
+                    }}
+                  >
+                    <path 
+                      d="M1 2.5L4 5.5L7 2.5" 
+                      stroke="currentColor" 
+                      strokeWidth="1.5" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              )}
+            </button>
+
+            {/* Literature Review Dropdown */}
+            {isResearch && showLitReviewMenu && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: 0,
+                  marginTop: 6,
+                  backgroundColor: theme.backgroundSurface,
+                  border: `1px solid ${theme.textSecondary}25`,
+                  borderRadius: 12,
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+                  padding: '6px',
+                  minWidth: 160,
+                  zIndex: 50,
+                  animation: 'fadeInUp 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+              >
+                <button
+                  onClick={() => {
+                    onModeChange('search');
+                    setShowLitReviewMenu(false);
+                  }}
+                  disabled={isDisabled}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 8,
+                    padding: '8px 12px',
+                    border: 'none',
+                    background: !isLitReviewMode ? `${theme.accentSoftBlue}15` : 'transparent',
+                    color: theme.textPrimary,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    cursor: 'pointer',
+                    borderRadius: 8,
+                    textAlign: 'left',
+                    transition: 'background-color .15s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (isLitReviewMode) {
+                      e.currentTarget.style.backgroundColor = `${theme.textSecondary}08`;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (isLitReviewMode) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  <span>Quick Research</span>
+                  {!isLitReviewMode && (
+                    <Check size={14} color={theme.accentSoftBlue} />
+                  )}
+                </button>
+
+                <button
+                  onClick={() => {
+                    onModeChange('literature-review');
+                    setShowLitReviewMenu(false);
+                  }}
+                  disabled={isDisabled}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 8,
+                    padding: '8px 12px',
+                    border: 'none',
+                    background: isLitReviewMode ? `${theme.accentSoftBlue}15` : 'transparent',
+                    color: theme.textPrimary,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    cursor: 'pointer',
+                    borderRadius: 8,
+                    textAlign: 'left',
+                    transition: 'background-color .15s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isLitReviewMode) {
+                      e.currentTarget.style.backgroundColor = `${theme.textSecondary}08`;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isLitReviewMode) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <span>Literature Review</span>
+                    <span style={{ 
+                      fontSize: 11, 
+                      color: theme.textSecondary,
+                      fontWeight: 400 
+                    }}>
+                      50 sources • ~90s
+                    </span>
+                  </div>
+                  {isLitReviewMode && (
+                    <Check size={14} color={theme.accentSoftBlue} />
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
         );
       })}
     </div>
   );
 };
+
 
 const EmptyState = ({ currentMode, onSampleTapped, theme, isMobile }) => {
   const queries = sampleQueries[currentMode] || sampleQueries.search;
