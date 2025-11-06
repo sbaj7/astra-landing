@@ -1096,7 +1096,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                     viewBox="0 0 8 8" 
                     fill="none"
                     style={{
-                      transform: showLitReviewMenu ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transform: showLitReviewMenu ? 'rotate(0deg)' : 'rotate(180deg)',
                       transition: 'transform .2s ease'
                     }}
                   >
@@ -1117,17 +1117,17 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
               <div
                 style={{
                   position: 'absolute',
-                  top: '100%',
+                  bottom: '100%',
                   left: 0,
-                  marginTop: 6,
+                  marginBottom: 6,
                   backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}25`,
                   borderRadius: 12,
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+                  boxShadow: '0 -8px 24px rgba(0,0,0,0.15)',
                   padding: '6px',
                   minWidth: 160,
                   zIndex: 50,
-                  animation: 'fadeInUp 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                  animation: 'fadeInDown 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
                 }}
               >
                 <button
