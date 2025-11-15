@@ -1,0 +1,402 @@
+{
+  "heroLabel": "HIV Care Playbook",
+  "title": "HIV Infection: Initial Evaluation and Antiretroviral Therapy",
+  "summary": "Immediate, comprehensive baseline evaluation paired with same-day initiation of a guideline-concordant INSTI-based regimen optimizes outcomes. Monitor virologic suppression and safety closely, address comorbidities and coinfections, and provide prevention and partner services.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the key elements of the initial evaluation for adults with newly diagnosed HIV and how should antiretroviral therapy (ART) be selected and initiated?",
+  "tags": [
+    "HIV",
+    "ART",
+    "Integrase inhibitors",
+    "Initial evaluation",
+    "Opportunistic infections",
+    "Prevention",
+    "Guidelines"
+  ],
+  "heroStats": [
+    {
+      "label": "ART Start",
+      "value": "Start same day when possible [3], [6]"
+    },
+    {
+      "label": "Primary Goal",
+      "value": "HIV-1 RNA <200 copies/mL by 3\u20136 months [3]"
+    },
+    {
+      "label": "Public Health",
+      "value": "U=U when RNA <200 copies/mL [6]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Confirm Diagnosis and Stage",
+      "body": "Confirm HIV with approved algorithm, obtain baseline CD4 count and HIV-1 RNA, and rapidly stage disease to guide OI prophylaxis and urgency of ART [3], [6]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Start ART Immediately",
+      "body": "Initiate an INSTI-based regimen on the same day as diagnosis when feasible; adjust after baseline labs/genotype return [3], [6]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Prevent Infections",
+      "body": "Screen for HBV/HCV, syphilis and STIs; provide OI prophylaxis by CD4 thresholds; vaccinate per HIV schedules [3], [4], [6]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Monitor and Optimize",
+      "body": "Check HIV RNA at 2\u20134 weeks and every 4\u20138 weeks until suppressed; monitor safety labs and drug\u2013drug interactions; address adherence and barriers [3], [6]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Partner Services and Prevention",
+      "body": "Offer partner notification, PrEP/PEP for partners, and risk-reduction counseling per public health guidance [4], [6]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Initial Workup",
+      "title": "Baseline Evaluation and Rapid ART",
+      "blurb": "A structured intake captures disease stage, comorbidities, transmission risk, and immediate treatment needs while enabling rapid ART initiation.",
+      "steps": [
+        {
+          "title": "Confirm HIV and Assess Stage",
+          "body": "Confirm diagnosis per standard algorithm; obtain CD4 cell count and plasma HIV-1 RNA to determine immune status and urgency of OI prophylaxis. Perform focused history, physical exam, TB symptom screen, pregnancy status, mental health, substance use, and social determinants affecting adherence [3], [6]."
+        },
+        {
+          "title": "Baseline Laboratories",
+          "body": "Order: HIV-1 RNA, CD4, CBC, CMP (including AST/ALT, creatinine), urinalysis if TDF use considered, HLA-B*57:01 if abacavir possible, fasting lipids/glucose or A1c, pregnancy test, HAV/HBV serologies (HBsAg, anti-HBs, anti-HBc), anti-HCV Ab with RNA reflex, syphilis, GC/CT NAATs by exposure sites, toxoplasma IgG (if indicated), TB testing (IGRA/PPD), G6PD (if dapsone possible). Obtain baseline resistance genotype (RT, PR; add integrase if prior exposure risk) before or at ART start; do not delay ART pending results unless concerns for transmitted INSTI resistance or cryptococcal/TB meningitis [3], [6]."
+        },
+        {
+          "title": "Immediate Prevention and Public Health",
+          "body": "Provide counseling on condom use and risk reduction; offer partner notification and linkage to public health services; discuss U=U once viral load is durably suppressed. For recent exposures in partners (<72 hours), offer PEP; offer PrEP to HIV-negative partners [4], [6]."
+        },
+        {
+          "title": "Initiate ART Same Day",
+          "body": "Begin a recommended INSTI-based regimen at diagnosis when possible. Modify when genotype/serologies return (e.g., HBV coinfection requires dual HBV-active agents). Defer only in select CNS OIs where short delay may be indicated (e.g., cryptococcal meningitis) [3], [6]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Regimens and Follow-up",
+      "title": "First-Line ART, Special Situations, and Monitoring",
+      "blurb": "Preferred initial regimens emphasize high potency, high barrier to resistance, and favorable tolerability profiles.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "ShieldCheck",
+          "title": "Preferred Initial Regimens (Adults)",
+          "items": [
+            "Bictegravir/tenofovir alafenamide/emtricitabine (BIC/TAF/FTC): once daily; high barrier; active vs HBV with TAF/FTC [6].",
+            "Dolutegravir + tenofovir (TAF or TDF) + emtricitabine or lamivudine (DTG + TAF/TDF + FTC/3TC) [6].",
+            "Dolutegravir/lamivudine (DTG/3TC): use if HIV RNA <500,000 copies/mL, no HBV coinfection, and genotype/HBV results known; avoid if baseline resistance or unknown HBV status [6]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When to Avoid or Modify",
+          "items": [
+            "HBV coinfection: ensure two HBV-active drugs (e.g., TAF or TDF + FTC/3TC); avoid 3TC or FTC alone without tenofovir [6].",
+            "Pregnancy or planning: use guideline-supported regimens with established safety; confirm drug\u2013drug interactions [6].",
+            "Severe renal disease: prefer TAF over TDF or use non\u2013tenofovir backbones as indicated [6].",
+            "Active opportunistic CNS infections (e.g., cryptococcal meningitis): consider short delay in ART initiation per OI-specific guidance [3], [6]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Monitoring After ART Start",
+          "items": [
+            "HIV-1 RNA at 2\u20134 weeks after initiation, then every 4\u20138 weeks until <200 copies/mL; once suppressed, every 3\u20136 months [3], [6].",
+            "CD4 count every 3\u20136 months until >200\u2013300 cells/\u00b5L and stable; then less frequently [3], [6].",
+            "Safety: CBC, CMP at baseline and 2\u20138 weeks post-start, then per regimen; monitor renal function (TDF) and lipids (TAF/boosted regimens) [3], [6].",
+            "Adherence/support: assess at each visit; address side effects, access, mental health, housing, and substance use barriers [3], [6]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Opportunistic Infection Prophylaxis",
+          "items": [
+            "Pneumocystis jirovecii: if CD4 <200 cells/\u00b5L, start TMP-SMX; discontinue once CD4 >200 for \u22653 months on ART [3].",
+            "Toxoplasma gondii: if CD4 <100 and toxo IgG+, TMP-SMX DS daily [3].",
+            "Mycobacterium avium complex: if CD4 <50 and not promptly starting ART, azithromycin weekly; stop when CD4 >100 for \u22653 months [3].",
+            "TB: screen all; treat latent TB infection if indicated; coordinate timing with ART in active TB [3], [6]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Vaccination and Health Maintenance",
+          "items": [
+            "Administer inactivated vaccines per schedule: influenza annually, COVID-19, PCV followed by PPSV23 as indicated, Tdap, HPV (through age thresholds), hepatitis A/B if nonimmune [3], [6].",
+            "Avoid live vaccines when CD4 is low; consider when immune reconstitution achieved per guidelines [3], [6].",
+            "Screen for cervical cancer; age- and sex-appropriate cancer screening; cardiovascular risk management given ART-associated and HIV-related risks [1], [3]."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "If Virologic Failure or Incomplete Response",
+          "items": [
+            "Confirm adherence, interactions, and proper dosing first; repeat HIV RNA in 2\u20134 weeks [3].",
+            "Obtain resistance testing while on failing regimen or within 4 weeks of discontinuation [3].",
+            "Construct a new regimen with \u22652, preferably \u22653 fully active agents, prioritizing high-barrier drugs (e.g., DTG, BIC, boosted DRV) [6]."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Evidence Signals",
+      "title": "Efficacy, Long-Term Outcomes, and Special Populations",
+      "blurb": "Potent ART achieves high suppression and improves survival; attention to aging, comorbidities, and regimen safety is essential.",
+      "steps": [
+        {
+          "title": "Therapeutic Success with Contemporary ART",
+          "body": "Modern regimens achieve high therapeutic success at 48 weeks, with reports of **~84% success and no virologic failures** in selected cohorts, alongside high treatment satisfaction, indicating robust short-term efficacy and tolerability [2]."
+        },
+        {
+          "title": "Benefits of Early ART",
+          "body": "Early initiation reduces transmission and improves clinical outcomes, reinforcing the public health and individual benefits of same-day ART; consolidated global guidance endorses rapid start and streamlined monitoring [6]."
+        },
+        {
+          "title": "Aging with HIV",
+          "body": "Older adults often have **slower CD4 recovery** but **equal or better virologic suppression**, necessitating vigilance for comorbidity management and drug interactions while maintaining potent ART [9]."
+        },
+        {
+          "title": "Cardiometabolic Considerations",
+          "body": "HIV and certain ART exposures have been linked with increased cardiovascular risk; integrated risk assessment and modification are recommended during routine care [1]."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "HIV infection | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrdp201535",
+      "authors": "www.nature.com"
+    },
+    {
+      "number": 2,
+      "title": "Redefining therapeutic success in HIV patients: an expert view",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jac/article/76/10/2501/6291134",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 3,
+      "title": "Initial evaluation of adults with HIV - UpToDate",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/initial-evaluation-of-adults-with-hiv",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 4,
+      "title": "HIV - STI Treatment Guidelines",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/hiv.htm",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 5,
+      "title": "Global HIV, Hepatitis and STIs Programmes - Guidelines",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/guidelines/hiv-guidelines",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 6,
+      "title": "Consolidated guidelines on HIV prevention, testing ...",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/9789240031593",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 7,
+      "title": "Long-term effectiveness of potent antiretroviral therapy in ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/when-to-initiate-antiretroviral-therapy-in-persons-with-hiv/abstract-text/16054937/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 8,
+      "title": "Efficacy and safety of three antiretroviral therapy regimens ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/treatment-of-hiv-2-infection/abstract-text/38740027/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 9,
+      "title": "Antiretroviral Treatment Efficacy and Safety in Older HIV ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.1670",
+      "authors": "accpjournals.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 10,
+      "title": "Effectiveness of potent antiretroviral therapy on time to ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/hiv-related-lymphomas-epidemiology-risk-factors-and-pathobiology/abstract-text/9809730/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 11,
+      "title": "Management of HIV-infected patients in the intensive care ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s00134-020-05945-3",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 12,
+      "title": "Systematic review protocol of the effectiveness of HIV ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/12/5/e056929",
+      "authors": "bmjopen.bmj.com"
+    },
+    {
+      "number": 13,
+      "title": "HIV 101: Fundamentals of Antiretroviral Therapy - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6892619/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 14,
+      "title": "Economic evaluation of initial antiretroviral therapy for HIV ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3794870/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 15,
+      "title": "CLINICAL GUIDELINES: HIV DIAGNOSIS",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK374310/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 16,
+      "title": "EXECUTIVE SUMMARY - Consolidated Guidelines on HIV ...",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK572727/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "HIV infection | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrdp201535",
+      "authors": "www.nature.com"
+    },
+    {
+      "number": 2,
+      "title": "Redefining therapeutic success in HIV patients: an expert view",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jac/article/76/10/2501/6291134",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 3,
+      "title": "Initial evaluation of adults with HIV - UpToDate",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/initial-evaluation-of-adults-with-hiv",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 4,
+      "title": "HIV - STI Treatment Guidelines",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/hiv.htm",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 5,
+      "title": "Global HIV, Hepatitis and STIs Programmes - Guidelines",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/teams/global-hiv-hepatitis-and-stis-programmes/guidelines/hiv-guidelines",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 6,
+      "title": "Consolidated guidelines on HIV prevention, testing ...",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/9789240031593",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 7,
+      "title": "Long-term effectiveness of potent antiretroviral therapy in ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/when-to-initiate-antiretroviral-therapy-in-persons-with-hiv/abstract-text/16054937/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 8,
+      "title": "Efficacy and safety of three antiretroviral therapy regimens ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/treatment-of-hiv-2-infection/abstract-text/38740027/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 9,
+      "title": "Antiretroviral Treatment Efficacy and Safety in Older HIV ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.1670",
+      "authors": "accpjournals.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 10,
+      "title": "Effectiveness of potent antiretroviral therapy on time to ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/hiv-related-lymphomas-epidemiology-risk-factors-and-pathobiology/abstract-text/9809730/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 11,
+      "title": "Management of HIV-infected patients in the intensive care ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s00134-020-05945-3",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 12,
+      "title": "Systematic review protocol of the effectiveness of HIV ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/12/5/e056929",
+      "authors": "bmjopen.bmj.com"
+    },
+    {
+      "number": 13,
+      "title": "HIV 101: Fundamentals of Antiretroviral Therapy - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6892619/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 14,
+      "title": "Economic evaluation of initial antiretroviral therapy for HIV ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3794870/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 15,
+      "title": "CLINICAL GUIDELINES: HIV DIAGNOSIS",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK374310/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 16,
+      "title": "EXECUTIVE SUMMARY - Consolidated Guidelines on HIV ...",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK572727/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "hiv-infection-initial-evaluation-and-antiretroviral-therapy"
+}

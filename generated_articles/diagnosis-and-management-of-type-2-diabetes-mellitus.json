@@ -1,0 +1,312 @@
+{
+  "heroLabel": "Type 2 Diabetes Care Pathway",
+  "title": "Diagnosis and Management of Type 2 Diabetes Mellitus",
+  "summary": "**Comprehensive, guideline-aligned** approach to diagnosing and managing type 2 diabetes mellitus (T2DM) across primary and specialty care, integrating **diagnostic thresholds**, **risk stratification**, **glycemic targets**, and **therapeutic sequencing** with attention to comorbidities, complications, and patient-centered care.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the current best practices for diagnosing and managing type 2 diabetes mellitus, including glycemic targets and treatment sequencing?",
+  "tags": [
+    "Type 2 Diabetes",
+    "Diagnosis",
+    "Management",
+    "Guidelines",
+    "Glycemic Targets",
+    "Cardiorenal Protection"
+  ],
+  "heroStats": [
+    {
+      "label": "Diagnostic A1C",
+      "value": "\u22656.5% (two tests or one with symptoms) [5]"
+    },
+    {
+      "label": "FPG Diagnostic",
+      "value": "\u2265126 mg/dL (7.0 mmol/L) [5]"
+    },
+    {
+      "label": "2-h OGTT Diagnostic",
+      "value": "\u2265200 mg/dL (11.1 mmol/L) [5]"
+    },
+    {
+      "label": "Random Glucose + Symptoms",
+      "value": "\u2265200 mg/dL (11.1 mmol/L) [5]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Confirm the Diagnosis",
+      "body": "**Use A1C, FPG, or 2-h OGTT with confirmatory testing**; OGTT detects more cases and is useful when index of suspicion is high [5]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Risk Stratify",
+      "body": "Screen and stage **cardiovascular, kidney, and eye disease** at baseline; follow WHO HEARTS\u2013D for primary care workflows [1], and CDC clinical guidance for complication screening [4]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Set A1C Targets",
+      "body": "**Most adults: A1C 6.5\u20137%**; individualize upward (e.g., **7\u20138%**) for older/frail patients or high hypoglycemia risk; acknowledge ACP vs. ADA/AACE differences [10]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Cardiorenal Protection",
+      "body": "Prioritize **SGLT2 inhibitors and GLP-1 receptor agonists** in established ASCVD, CKD, or HF regardless of baseline A1C for organ protection (per major guidelines synthesized in NICE and HEARTS\u2013D care pathways) [1], [2]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Lifestyle First, Always",
+      "body": "**Medical nutrition therapy, weight management, and physical activity** are foundational at every stage; reinforce behavioral support and self-management education [2], [4]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Clinical Approach",
+      "title": "Diagnosis, Staging, and Initial Management",
+      "blurb": "Follow a structured pathway that confirms diabetes, identifies comorbidities, and starts patient-centered therapy with clear targets.",
+      "steps": [
+        {
+          "title": "1) Establish the Diagnosis",
+          "body": "- Use any of the following on two separate days (or once with classic symptoms/hyperglycemic crisis): **A1C \u22656.5%**, **FPG \u2265126 mg/dL (7.0 mmol/L)**, **2-h OGTT \u2265200 mg/dL (11.1 mmol/L)**, or **random glucose \u2265200 mg/dL with symptoms**; OGTT detects more cases in high-risk contexts [5]."
+        },
+        {
+          "title": "2) Baseline Staging and Safety",
+          "body": "- Assess BP, BMI, lipids, eGFR, UACR, liver enzymes; screen for retinopathy and neuropathy; evaluate CVD history and heart failure. Integrate **WHO HEARTS\u2013D** primary care workflows and CDC complication screening checklists [1], [4]."
+        },
+        {
+          "title": "3) Set Individualized Targets",
+          "body": "- For most adults: **A1C 6.5\u20137%** with fasting/premeal **80\u2013130 mg/dL** and postprandial **<180 mg/dL** (per guideline consensus). Consider **7\u20138%** for older adults, limited life expectancy, or high hypoglycemia risk; note ACP\u2019s higher target stance vs. ADA/AACE joint response emphasizing benefits of tighter control in selected patients [10]."
+        },
+        {
+          "title": "4) Foundational Lifestyle and Education",
+          "body": "- Initiate **medical nutrition therapy**, weight reduction if overweight, **150+ min/week** moderate aerobic plus resistance training, and smoking cessation. Provide DSMES and psychosocial support; CDC resources facilitate structured plans [2], [4]."
+        },
+        {
+          "title": "5) Pharmacotherapy Initiation",
+          "body": "- Start **metformin** (if eGFR \u226530 mL/min/1.73 m\u00b2) unless contraindicated. If **ASCVD/CKD/HF** present, prioritize **SGLT2 inhibitor or GLP-1 RA** early for organ protection regardless of baseline A1C; align with NICE and HEARTS\u2013D principles [1], [2]."
+        },
+        {
+          "title": "6) Intensify to Reach Targets",
+          "body": "- Reassess every 3 months. If above target on metformin: add **SGLT2i or GLP-1 RA**; in cost/contraindication contexts consider **DPP-4i**, **TZD**, or **sulfonylurea** (mind hypoglycemia/weight). Start **basal insulin** if symptomatic hyperglycemia, A1C \u226510%, or catabolic features. NICE provides stepped care and safety guidance [2]."
+        },
+        {
+          "title": "7) Longitudinal Complication Prevention",
+          "body": "- Optimize BP, statin therapy, ACEi/ARB for albuminuria, antiplatelets if indicated; schedule annual eye/foot exams, UACR/eGFR, and vaccinations. Use HEARTS\u2013D monitoring and quality metrics to drive outcomes [1], [4]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Operational Tools",
+      "title": "Diagnostic Criteria, Targets, and Treatment Sequencing",
+      "blurb": "Key thresholds and choices that drive safe, effective care in clinic.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Diagnostic Criteria [5]",
+          "items": [
+            "**A1C \u22656.5%** (NGSP-certified method; confirm if asymptomatic).",
+            "**FPG \u2265126 mg/dL (7.0 mmol/L)** after \u22658 h fast.",
+            "**2-h OGTT \u2265200 mg/dL (11.1 mmol/L)** with 75-g glucose; detects more diabetes than A1C/FPG in some settings.",
+            "**Random glucose \u2265200 mg/dL (11.1 mmol/L)** with classic symptoms or hyperglycemic crisis."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Follow-up and Monitoring [1], [2], [4]",
+          "items": [
+            "A1C every **3 months** until stable, then **6 months**.",
+            "UACR and eGFR at least **annually** (more often if CKD).",
+            "Dilated eye exam at diagnosis and **annually**.",
+            "Foot exam every visit for high-risk; otherwise **annually**.",
+            "BP, weight/BMI, lifestyle review each visit; lipids **annually**."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Cardiorenal Protection First [1], [2]",
+          "items": [
+            "Established **ASCVD**: prefer **GLP-1 RA** or **SGLT2i** with proven CV benefit.",
+            "**CKD (eGFR \u226520\u201325)** or albuminuria: **SGLT2i** to slow CKD; add **GLP-1 RA** if A1C above goal.",
+            "**Heart failure (HFrEF/HFpEF)**: **SGLT2i** to reduce HF hospitalization.",
+            "Continue organ-protective agents even if A1C at goal, barring intolerance."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Lifestyle and Self-Management [2], [4]",
+          "items": [
+            "**Weight loss** (5\u201310%+) improves glycemia and CV risk.",
+            "Dietary patterns: Mediterranean, DASH, low-carbohydrate\u2014tailor to patient.",
+            "Physical activity: **\u2265150 min/week** moderate + resistance 2\u20133 days/week.",
+            "DSMES, hypoglycemia education, sick-day rules, and vaccination."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Glycemic Targets and Individualization [10]",
+          "items": [
+            "**Most adults:** A1C **6.5\u20137%**.",
+            "**Older/frail/comorbid:** consider **7\u20138%** (ACP position), balancing hypoglycemia and treatment burden.",
+            "Tighter targets when safely achievable with low hypoglycemia risk and access to agents with CV/renal benefit."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When to Use/Advance Insulin [2]",
+          "items": [
+            "A1C **\u226510%**, random glucose **\u2265300 mg/dL**, symptomatic hyperglycemia, or catabolic features (weight loss, ketosis).",
+            "Start **basal insulin**; add mealtime insulin if needed.",
+            "Continue metformin and organ-protective agents unless contraindicated."
+          ]
+        }
+      ],
+      "maxWidth": 1100
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "HEARTS D: diagnosis and management of type 2 diabetes",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/who-ucn-ncd-20.1",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 2,
+      "title": "Type 2 diabetes in adults: management | Guidance",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng28",
+      "authors": "www.nice.org.uk"
+    },
+    {
+      "number": 3,
+      "title": "Treatment of type 2 diabetes mellitus in the older patient",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/treatment-of-type-2-diabetes-mellitus-in-the-older-patient",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 4,
+      "title": "Clinical Guidance for Diabetes",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/diabetes/hcp/clinical-guidance/index.html",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 5,
+      "title": "2. Diagnosis and Classification of Diabetes: Standards of Care ...",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S27/157566/2-Diagnosis-and-Classification-of-Diabetes",
+      "authors": "diabetesjournals.org"
+    },
+    {
+      "number": 6,
+      "title": "Coping With a Type 2 Diabetes Diagnosis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/diabetes/signs-symptoms/coping-with-type-2-diagnosis.html",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 7,
+      "title": "Type II Diabetes Mellitus Update: Diagnosis and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3748479/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and management of type 2 diabetes mellitus in ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39911238/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 9,
+      "title": "Current antihyperglycemic treatment guidelines and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20206727/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Management of type 2 diabetes: consensus ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7048113/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "HEARTS D: diagnosis and management of type 2 diabetes",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/who-ucn-ncd-20.1",
+      "authors": "www.who.int"
+    },
+    {
+      "number": 2,
+      "title": "Type 2 diabetes in adults: management | Guidance",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng28",
+      "authors": "www.nice.org.uk"
+    },
+    {
+      "number": 3,
+      "title": "Treatment of type 2 diabetes mellitus in the older patient",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/treatment-of-type-2-diabetes-mellitus-in-the-older-patient",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 4,
+      "title": "Clinical Guidance for Diabetes",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/diabetes/hcp/clinical-guidance/index.html",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 5,
+      "title": "2. Diagnosis and Classification of Diabetes: Standards of Care ...",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S27/157566/2-Diagnosis-and-Classification-of-Diabetes",
+      "authors": "diabetesjournals.org"
+    },
+    {
+      "number": 6,
+      "title": "Coping With a Type 2 Diabetes Diagnosis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/diabetes/signs-symptoms/coping-with-type-2-diagnosis.html",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 7,
+      "title": "Type II Diabetes Mellitus Update: Diagnosis and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3748479/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and management of type 2 diabetes mellitus in ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39911238/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 9,
+      "title": "Current antihyperglycemic treatment guidelines and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20206727/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Management of type 2 diabetes: consensus ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7048113/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "diagnosis-and-management-of-type-2-diabetes-mellitus"
+}

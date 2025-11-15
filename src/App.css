@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Prevent text selection and cursor on non-input elements */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* Hide cursor/caret by default */
+  caret-color: transparent;
+}
+
+/* Allow text selection and cursor only on input elements */
+input,
+textarea,
+[contenteditable="true"],
+[contenteditable=""] {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  caret-color: auto;
+}
+
+/* Allow text selection in message content and markdown */
+.markdown-body,
+.markdown-body *,
+.message-content,
+.message-content * {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  cursor: text;
+}
+
+/* Prevent focus outline on non-input clickable elements */
+button,
+div[onclick],
+span[onclick],
+[role="button"] {
+  outline: none;
+}
+
+/* Ensure text elements don't show cursor when clicked */
+p, span, div, h1, h2, h3, h4, h5, h6, label {
+  cursor: default;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow: hidden;
+  /* Additional protection against text selection */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+sup.article-citation {
+  cursor: pointer;
+  color: inherit;
+  font-weight: 600;
+}
+
+sup.article-citation:hover {
+  text-decoration: underline;
+}
+
+sup.article-citation a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+sup.article-citation a:hover {
+  text-decoration: underline;
+}

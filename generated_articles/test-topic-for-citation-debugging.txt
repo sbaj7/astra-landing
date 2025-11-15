@@ -1,0 +1,133 @@
+{
+  "heroLabel": "Evidence Brief",
+  "title": "Test topic for citation debugging",
+  "summary": "Concise, evidence-based synthesis with strictly ordered numeric in-text citations [1], [2], [3]. Emphasizes trial-grade outcomes and contemporary data integrity.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should citations be formatted and integrated to ensure numerically ordered, contemporary, trial-centric evidence presentation?",
+  "tags": [
+    "Methodology",
+    "Evidence Synthesis",
+    "Trials",
+    "Citation Standards"
+  ],
+  "heroStats": [
+    {
+      "label": "Citation Order",
+      "value": "Always [1], [2], [3]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Sparkles",
+      "title": "Strict Numeric Ordering",
+      "body": "Present in-text citations in ascending order without grouping, e.g., [1], [2], [3]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Trial-Centric Evidence",
+      "body": "Prioritize contemporary RCTs and high-impact journals; state effect sizes with CIs and absolute risks."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Transparency",
+      "body": "Report population, intervention, comparator, outcomes, and timing with key quantitative results."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Workflow",
+      "title": "Apply Numeric, Trial-First Citations",
+      "blurb": "Embed effect sizes, avoid grouped brackets, and ensure clarity.",
+      "steps": [
+        {
+          "title": "Prioritize RCTs and authoritative syntheses",
+          "body": "Lead with recent randomized trials and definitive meta-analyses from top-tier journals. Include absolute risks, relative measures, and CIs to anchor clinical relevance [1]."
+        },
+        {
+          "title": "Maintain strict citation order",
+          "body": "Insert citations in ascending order of appearance. Do not use grouped forms; list each citation discretely as [1], [2], [3]."
+        },
+        {
+          "title": "Quantify key outcomes",
+          "body": "State primary endpoints and major safety outcomes with effect sizes (e.g., **RR**, **HR**, **ARR**, **NNT**) and 95% CIs to convey precision [2]."
+        },
+        {
+          "title": "Synthesize when evidence is mixed",
+          "body": "When results conflict, highlight heterogeneity, methodologic differences, and grade the certainty while preserving citation order [1], [3]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Quality Guardrails",
+      "title": "Citation and Reporting Checklist",
+      "blurb": "Ensure consistency, precision, and clinical utility.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "ClipboardList",
+          "title": "Formatting",
+          "items": [
+            "Use discrete numeric brackets in order: [1], [2], [3]",
+            "Avoid grouped formats or ranges",
+            "Match in-text order with reference list order"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Quantitative Rigor",
+          "items": [
+            "Report effect size with 95% CI and absolute risk",
+            "State primary endpoint timing and population",
+            "Include safety signals with rates and CIs"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Evidence Priority",
+          "items": [
+            "Top-tier RCTs and contemporary meta-analyses first",
+            "Second: high-quality cohorts with adjustment",
+            "Note when evidence is limited or mixed"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Common Pitfalls",
+          "items": [
+            "Do not reorder citations retroactively",
+            "Do not use doi.org links in references",
+            "Avoid ambiguous outcomes without denominators"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Currency",
+          "items": [
+            "Prefer data from the last 5–7 years when available",
+            "Flag practice-changing interim analyses",
+            "Update when guideline-shifting trials publish"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "The randomized clinical trial: Upholding standards of design and reporting",
+      "detail": "NEJM 2020; doi:10.1056/NEJMra1907787",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMra1907787"
+    },
+    {
+      "title": "CONSORT 2010 statement: updated guidelines for reporting parallel group randomized trials",
+      "detail": "BMJ 2010; doi:10.1136/bmj.c332",
+      "url": "https://www.bmj.com/content/340/bmj.c332"
+    },
+    {
+      "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews",
+      "detail": "BMJ 2021; doi:10.1136/bmj.n71",
+      "url": "https://www.bmj.com/content/372/bmj.n71"
+    }
+  ]
+}

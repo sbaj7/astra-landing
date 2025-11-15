@@ -1,0 +1,172 @@
+{
+  "heroLabel": "Perioperative ID Guidance",
+  "title": "Antimicrobial Prophylaxis for Surgery in Immunocompromised Patients",
+  "summary": "Immunocompromised status alone is not a blanket indication for broader-spectrum or prolonged surgical antimicrobial prophylaxis. Core principles remain: select an agent targeted to expected flora, dose/infuse correctly, and discontinue within 24 hours for most procedures. Limited, procedure-specific evidence suggests no routine benefit to extended or postoperative antibiotics, with potential harm from resistance and C. difficile. Individualize for neutropenia, transplant recipients, mucosal-breaching dental procedures, and the presence of prosthetic material.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What is the evidence-based approach to perioperative antimicrobial prophylaxis in immunocompromised surgical patients?",
+  "tags": [
+    "Surgical Site Infection",
+    "Transplant",
+    "Oncology",
+    "HIV",
+    "ICU",
+    "Antibiotic Stewardship"
+  ],
+  "heroStats": [
+    {
+      "label": "Prolonged prophylaxis appropriateness issues",
+      "value": "Up to 40% inappropriate prescriptions in audits [9]"
+    },
+    {
+      "label": "Dental procedures in chemo/transplant",
+      "value": "Randomized data support targeted prophylaxis when mucosa is breached [11]"
+    },
+    {
+      "label": "ICU prophylaxis practice",
+      "value": "Two-thirds of prophylaxis courses were SAP or for immunocompromised hosts in a single-center study [12]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "ShieldCheck",
+      "title": "Immunocompromised ≠ automatic broadening",
+      "body": "Use standard, procedure-specific prophylaxis; broaden only for prior MDRO colonization, severe beta-lactam allergy, or local epidemiology. Overuse increases adverse events and resistance [9], [12]."
+    },
+    {
+      "icon": "Clock",
+      "title": "Timing and duration are decisive",
+      "body": "Administer within 60 minutes before incision (120 minutes for vancomycin/fluoroquinolones), redose by intraoperative half-life and blood loss, and stop within 24 hours in most cases; extended courses do not reduce SSIs and increase harms [9]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Procedure-specific evidence in immunocompromise is sparse",
+      "body": "Dental procedures with mucosal trauma in chemotherapy or transplant patients show benefit from targeted prophylaxis in RCTs, but routine postoperative antibiotics after dermatologic surgery do not reduce infections despite immunosuppression [11], [6], [8]."
+    },
+    {
+      "icon": "Activity",
+      "title": "ICU and drains: selective signals",
+      "body": "Antibiotic prophylaxis for chest drain insertion in non-ICU settings reduces empyema (RR 0.25, 95% CI 0.13–0.49) and pneumonia (RR 0.41, 95% CI 0.24–0.71); extrapolation to immunocompromised ICU patients requires caution [12]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Stratify by type of immunosuppression",
+      "body": "Neutropenia, solid organ or stem cell transplant, high-dose steroids, and biologics carry different risks. Align prophylaxis with expected flora for the surgery plus individualized risk factors rather than immunosuppression alone [1], [10]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Clinical approach",
+      "title": "Stepwise Strategy for Perioperative Prophylaxis in Immunocompromised Hosts",
+      "blurb": "Apply standard surgical prophylaxis principles, then layer patient-specific risk adjustments supported by evidence.",
+      "steps": [
+        {
+          "title": "Define the immunocompromised state and risks",
+          "body": "Characterize neutropenia depth/duration, transplant status and time post-transplant, active chemotherapy, high-dose steroids or biologics, HIV with low CD4, and colonization with MDROs. This stratification informs whether deviations from standard prophylaxis are warranted [1], [5], [10]."
+        },
+        {
+          "title": "Choose procedure-specific agents",
+          "body": "Select narrow-spectrum agents covering expected flora (e.g., cefazolin for clean-contaminated general surgery). Reserve broader agents for specific indications (enteric contamination, biliary sepsis, prior ESBL/CRE colonization) rather than immunosuppression alone [9], [12]."
+        },
+        {
+          "title": "Optimize timing, dosing, and redosing",
+          "body": "Administer within the optimal window before incision, ensure weight-based dosing, and redose intraoperatively based on agent half-life and blood loss. These measures have the largest effect on SSI reduction across populations, including immunocompromised patients [9]."
+        },
+        {
+          "title": "Limit duration",
+          "body": "Discontinue within 24 hours for most operations; prolonged postoperative prophylaxis shows no benefit and increases adverse outcomes, including C. difficile and resistance, even in higher-risk hosts [9]."
+        },
+        {
+          "title": "Address special procedures and sites",
+          "body": "For dental procedures with mucosal trauma in chemotherapy or transplant recipients, targeted prophylaxis reduces bacteremia-related complications in RCT data [11]. In dermatologic surgery, routine postoperative antibiotics do not lower SSI rates despite immunosuppression status [6], [8]. Chest drains may benefit from prophylaxis in selected settings, though data derive from non-ICU cohorts [12]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Bedside aids",
+      "title": "When to Modify Standard Prophylaxis",
+      "blurb": "Use this checklist to identify situations that justify deviating from standard surgical prophylaxis pathways.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "AlertTriangle",
+          "title": "Escalate Spectrum",
+          "items": [
+            "Documented colonization or recent infection with MRSA, ESBL, CRE, or VRE; add or substitute agents accordingly [9], [12]",
+            "Severe beta-lactam allergy; use vancomycin plus gram-negative coverage aligned to procedure [9]",
+            "Gross contamination or breach into infected fields (e.g., perforation); manage as treatment, not prophylaxis [9]"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Extend or Add Doses (Intraoperative)",
+          "items": [
+            "Prolonged operations exceeding 2 half-lives of the agent; redose intraoperatively [9]",
+            "Excessive blood loss (>1500 mL); redose accordingly [9]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Special Populations",
+          "items": [
+            "Chemotherapy or transplant patients undergoing dental procedures with mucosal trauma: consider prophylaxis per RCT data [11]",
+            "Dermatologic surgery: do not use routine postoperative antibiotics despite immunosuppression; no benefit demonstrated [6], [8]",
+            "ICU patients with chest drain insertion: prophylaxis may reduce empyema/pneumonia in non-ICU data; individualize in immunocompromised ICU patients [12]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "De-escalation and Stewardship",
+          "items": [
+            "Stop prophylaxis within 24 hours for most procedures; longer duration is rarely indicated [9]",
+            "Avoid substituting therapeutic regimens for prophylaxis without evidence of infection [9]",
+            "Monitor local SSI rates and resistance patterns; update pathways regularly [12]"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "A network for advancing prevention and treatment trials among immunocompromised patients",
+      "detail": "JAMA Network Open 2024",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2837934"
+    },
+    {
+      "title": "Antimicrobial prophylaxis in adults",
+      "detail": "Mayo Clin Proc 2000",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10630764/"
+    },
+    {
+      "title": "Surgical antimicrobial prophylaxis",
+      "detail": "Aust Prescr 2017",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5768598/"
+    },
+    {
+      "title": "Antibiotic prophylaxis in the ICU: to be or not to be?",
+      "detail": "Crit Care 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7224040/"
+    },
+    {
+      "title": "Randomized study of prophylaxis in dental procedures in immunocompromised patients",
+      "detail": "Spec Care Dentist 2011",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21098476/"
+    },
+    {
+      "title": "Surgical site infections after dermatologic surgery in immunosuppressed patients",
+      "detail": "Dermatol Surg 2018",
+      "url": "https://journals.lww.com/dermatologicsurgery/Abstract/2018/12000/Surgical_Site_Infections_After_Dermatologic.7.aspx"
+    },
+    {
+      "title": "Antibiotic use and SSI in Mohs surgery: immunosuppression not associated with higher infection rate",
+      "detail": "UpToDate citation to PubMed abstract 2022",
+      "url": "https://www.uptodate.com/contents/mohs-surgery/abstract-text/36449868/pubmed"
+    },
+    {
+      "title": "Infection control and the immunocompromised host",
+      "detail": "Saudi J Kidney Dis Transpl 2005",
+      "url": "https://journals.lww.com/sjkd/fulltext/2005/16040/infection_control_and_the_immunocompromised_host.9.aspx"
+    }
+  ]
+}
