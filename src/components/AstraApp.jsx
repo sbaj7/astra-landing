@@ -3706,14 +3706,35 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   margin: 1rem 0;
 }
 
-/* Blockquotes */
+/* Blockquotes - Clean modern design */
 .markdown-body blockquote {
-  margin: 0.4rem 0;
-  padding: 0.2rem 0.75rem;
-  border-left: 3px solid ${theme.accentSoftBlue};
-  color: ${theme.textSecondary};
-  background: ${theme.textSecondary}10;
-  border-radius: 4px;
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border: none;
+  background: ${theme.accentSoftBlue}08;
+  border-radius: 12px;
+  border-left: 4px solid ${theme.accentSoftBlue};
+  font-size: 0.98em;
+  color: ${theme.textPrimary};
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.markdown-body blockquote:hover {
+  background: ${theme.accentSoftBlue}0C;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left-color: ${theme.accentSoftBlue};
+}
+
+.markdown-body blockquote p {
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.markdown-body blockquote p:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 
 /* Links + citation pills */
