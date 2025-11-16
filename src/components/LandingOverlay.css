@@ -56,7 +56,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 15vh 1.5rem 0;
+  padding: 10vh 1.5rem 0;
 }
 
 .landing-gradient-orb {
@@ -100,13 +100,28 @@
   text-align: center;
 }
 
+/* Logo */
+.landing-logo {
+  opacity: 0;
+  transition: opacity 700ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+}
+
+.landing-logo--visible {
+  opacity: 1;
+}
+
+.landing-logo img {
+  transform: translateZ(0);
+  will-change: auto;
+}
+
 /* Inline Stats */
 .landing-stats-inline {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   max-width: 40rem;
-  margin: 4rem auto 0;
+  margin: 2.5rem auto 0;
   text-align: center;
   opacity: 0;
   transform: translateY(1rem);
@@ -657,7 +672,7 @@
 /* Mode Card */
 .landing-mode-card {
   padding: 2.5rem 2rem;
-  border-radius: 1.25rem;
+  border-radius: 12px;
   background-color: #fafafa;
   border: none;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -946,4 +961,313 @@
 
 .landing-overlay--dark .landing-final-cta-subtitle {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Case Walkthrough */
+.landing-case {
+  position: relative;
+  padding: 6rem 1.5rem;
+}
+
+.landing-case-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .landing-case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.landing-case-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  overflow-y: auto;
+  aspect-ratio: 1 / 1;
+  max-height: 560px;
+}
+
+.landing-overlay--dark .landing-case-card {
+  background: #16181f;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.landing-case-card--highlight {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  justify-self: center;
+  grid-column: 1 / -1;
+  max-width: 640px;
+}
+
+.landing-overlay--dark .landing-case-card--highlight {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.landing-case-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  background: linear-gradient(180deg, rgba(74, 107, 125, 0.95) 0%, rgba(74, 107, 125, 0.9) 100%);
+  color: #ffffff;
+  font-weight: 590;
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+.landing-overlay--dark .landing-case-chip {
+  background: linear-gradient(180deg, rgba(143, 165, 181, 0.95) 0%, rgba(143, 165, 181, 0.9) 100%);
+  color: #ffffff;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.landing-case-text {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.landing-overlay--dark .landing-case-text {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.landing-case-text--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-case-text--muted {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.landing-overlay--dark .landing-case-text--muted {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.landing-case-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  color: rgba(0, 0, 0, 0.75);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.landing-case-list li {
+  line-height: 1.5;
+}
+
+.landing-overlay--dark .landing-case-list {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.landing-case-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+.landing-case-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.landing-overlay--dark .landing-case-title {
+  color: #f5f5f5;
+}
+
+@media (min-width: 640px) {
+  .landing-case-title {
+    font-size: 3rem;
+  }
+}
+
+.landing-case-grid--three {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  overflow: visible;
+}
+
+@media (min-width: 900px) {
+  .landing-case-grid--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.landing-case-minihead {
+  font-weight: 700;
+  margin: 0.35rem 0 0.5rem;
+  color: #0f172a;
+}
+
+.landing-overlay--dark .landing-case-minihead {
+  color: #f5f5f5;
+}
+
+.landing-case-snippet-placeholder {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.95rem;
+}
+
+.landing-overlay--dark .landing-case-snippet-placeholder {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* inline markdown styling for research snippet */
+.landing-case-snippet.markdown-body {
+  color: #2a2a2a;
+  line-height: 1.75;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: -0.014em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body {
+  color: #f5f5f5;
+}
+
+.landing-case-snippet.markdown-body > :first-child { margin-top: 0; }
+.landing-case-snippet.markdown-body > :last-child { margin-bottom: 0; }
+
+.landing-case-snippet.markdown-body p {
+  margin: 0.85em 0;
+  line-height: 1.7;
+}
+
+.landing-case-snippet.markdown-body h1,
+.landing-case-snippet.markdown-body h2,
+.landing-case-snippet.markdown-body h3 {
+  color: #2a2a2a;
+  margin: 1.5em 0 0.75em;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body h1,
+.landing-overlay--dark .landing-case-snippet.markdown-body h2,
+.landing-overlay--dark .landing-case-snippet.markdown-body h3 {
+  color: #f5f5f5;
+}
+
+.landing-case-snippet.markdown-body h1 { font-size: 2em; font-weight: 700; }
+.landing-case-snippet.markdown-body h2 { font-size: 1.5em; font-weight: 650; }
+.landing-case-snippet.markdown-body h3 { font-size: 1.25em; font-weight: 600; }
+
+.landing-case-snippet.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 0.75rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fefefe;
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body table {
+  background: #16181f;
+}
+
+.landing-case-snippet.markdown-body th,
+.landing-case-snippet.markdown-body td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(90, 97, 105, 0.15);
+  vertical-align: top;
+}
+
+.landing-case-snippet.markdown-body thead th {
+  background: #5a616915;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.landing-case-snippet.markdown-body tbody tr:nth-child(even) td {
+  background: #5a616908;
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body th,
+.landing-overlay--dark .landing-case-snippet.markdown-body td {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body thead th {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.landing-case-snippet.markdown-body hr {
+  border: none;
+  height: 1px;
+  background: #5a616940;
+  margin: 1rem 0;
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body hr {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.landing-case-snippet.markdown-body blockquote {
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  border: none;
+  background: #4a6b7d08;
+  border-radius: 12px;
+  border-left: 4px solid #4a6b7d;
+  font-size: 0.98em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.landing-overlay--dark .landing-case-snippet.markdown-body blockquote {
+  background: rgba(74, 107, 125, 0.14);
+}
+
+.landing-case-snippet.markdown-body sup.md-citation {
+  color: #4a6b7d;
+  font-weight: 600;
+}
+
+.landing-case-snippet.markdown-body a {
+  color: #4a6b7d;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.landing-case-snippet.markdown-body a:hover {
+  border-bottom-color: #4a6b7d;
 }
