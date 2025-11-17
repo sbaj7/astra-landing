@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, ChevronDown, Search, Sparkles, FileText, ArrowUp } from 'lucide-react';
-import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import { useTheme } from './Themes+Styles.jsx';
 import './LandingOverlay.css';
 
@@ -8,7 +7,6 @@ const LandingOverlay = ({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [selectedMode, setSelectedMode] = useState(null);
-  const { user, signIn } = useSupabaseAuth();
   const { theme } = useTheme();
   const containerRef = useRef(null);
 
@@ -36,9 +34,6 @@ const LandingOverlay = ({ onClose }) => {
   };
 
   const handleGetStarted = () => {
-    if (!user) {
-      signIn();
-    }
     handleClose();
   };
 
