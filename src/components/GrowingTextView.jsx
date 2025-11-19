@@ -1,16 +1,16 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 
-const GrowingTextView = ({ 
-  text, 
-  setText, 
-  height, 
-  setHeight, 
-  maxWidth, 
-  maxHeight = 88, 
+const GrowingTextView = ({
+  text,
+  setText,
+  height,
+  setHeight,
+  maxWidth,
+  maxHeight = 88,
   onReturn = null,
   placeholder = "",
   disabled = false,
-  theme 
+  theme
 }) => {
   const textareaRef = useRef(null);
   const minHeight = 44;
@@ -21,19 +21,19 @@ const GrowingTextView = ({
 
     // Reset height to recalculate
     textarea.style.height = `${minHeight}px`;
-    
+
     // Calculate new height based on scroll height
     const scrollHeight = textarea.scrollHeight;
     const newHeight = Math.max(minHeight, Math.min(scrollHeight, maxHeight));
-    
+
     // Enable scrolling if content exceeds max height
     textarea.style.overflowY = scrollHeight > maxHeight ? 'auto' : 'hidden';
-    
+
     // Update height
     if (Math.abs(height - newHeight) > 0.5) {
       setHeight(newHeight);
     }
-    
+
     textarea.style.height = `${newHeight}px`;
   }, [height, setHeight, maxHeight, minHeight]);
 
@@ -66,12 +66,12 @@ const GrowingTextView = ({
       style={{
         backgroundColor: 'transparent',
         color: theme?.textPrimary || '#000',
-        fontSize: '14px',
-        lineHeight: '1.4',
-        padding: '12px 8px 6px 8px',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif',
+        fontSize: '16px',
+        lineHeight: '1.5',
+        padding: '10px 0',
+        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
         minHeight: `${minHeight}px`,
-        maxWidth: `${maxWidth}px`,
+        width: '100%',
         height: `${height}px`,
         wordWrap: 'break-word',
         whiteSpace: 'pre-wrap',
