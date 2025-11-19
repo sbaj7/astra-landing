@@ -159,8 +159,8 @@
 }
 
 .auth-modal-input:focus {
-  border-color: #10a37f;
-  box-shadow: 0 0 0 3px rgba(16, 163, 127, 0.1);
+  border-color: #4A6B7D;
+  box-shadow: 0 0 0 3px rgba(74, 107, 125, 0.1);
 }
 
 .auth-modal-input:disabled {
@@ -185,8 +185,8 @@
 }
 
 .dark-mode .auth-modal-input:focus {
-  border-color: #10a37f;
-  box-shadow: 0 0 0 3px rgba(16, 163, 127, 0.15);
+  border-color: #4A6B7D;
+  box-shadow: 0 0 0 3px rgba(74, 107, 125, 0.15);
 }
 
 /* Email Display (Step 2) */
@@ -357,7 +357,7 @@
   padding: 0 24px;
   border-radius: 6px;
   border: none;
-  background: #10a37f;
+  background: #4A6B7D;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -370,8 +370,8 @@
 }
 
 .auth-modal-primary:hover:not(:disabled) {
-  background: #0e8c6d;
-  box-shadow: 0 2px 8px rgba(16, 163, 127, 0.25);
+  background: #3A5A6C;
+  box-shadow: 0 2px 8px rgba(74, 107, 125, 0.25);
 }
 
 .auth-modal-primary:active:not(:disabled) {
@@ -548,7 +548,7 @@
 .auth-modal-oauth-button:focus-visible,
 .auth-modal-link:focus-visible,
 .auth-modal-close:focus-visible {
-  outline: 2px solid #10a37f;
+  outline: 2px solid #4A6B7D;
   outline-offset: 2px;
 }
 

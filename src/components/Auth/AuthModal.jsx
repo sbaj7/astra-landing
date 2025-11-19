@@ -288,9 +288,6 @@ const AuthModal = ({
         {currentStep === 1 && (
           <>
             <h2 className="auth-modal-title">Log in or sign up</h2>
-            <p className="auth-modal-subtitle">
-              You'll get smarter responses and can upload files, images, and more.
-            </p>
 
             {error && <div className="auth-modal-alert auth-modal-alert-error">{error}</div>}
             {message && <div className="auth-modal-alert auth-modal-alert-success">{message}</div>}
