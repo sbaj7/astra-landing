@@ -2215,7 +2215,7 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
   if (differentials.length === 0) return null;
 
   return (
-    <div style={{ marginTop: isMobile ? 24 : 32, marginBottom: isMobile ? 24 : 32 }}>
+    <div>
       {/* Minimal header with subtle divider */}
       <div style={{
         marginBottom: isMobile ? 18 : 24,
@@ -2345,7 +2345,7 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
                           marginTop: isMobile ? 8 : 9
                         }} />
                         <span style={{
-                          fontSize: isMobile ? 14 : 15,
+                          fontSize: isMobile ? 15 : 16,
                           lineHeight: 1.6,
                           color: theme.textPrimary,
                           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
@@ -2396,7 +2396,7 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
                           marginTop: isMobile ? 8 : 9
                         }} />
                         <span style={{
-                          fontSize: isMobile ? 14 : 15,
+                          fontSize: isMobile ? 15 : 16,
                           lineHeight: 1.6,
                           color: theme.textPrimary,
                           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
@@ -2646,22 +2646,95 @@ const MarkdownBlock = ({ markdown, theme, invert = false, onOpenCitation, isStre
             </ReactMarkdown>
           )}
 
-          <DifferentialDiagnosisRenderer
-            content={diffSection}
-            theme={theme}
-            isDark={invert}
-            isStreaming={isStreaming}
-          />
+          {/* Container for differential pills and content pill side-by-side */}
+          <div style={{
+            display: 'flex',
+            flexDirection: window.innerWidth < 1024 ? 'column' : 'row',
+            gap: 32,
+            alignItems: 'flex-start',
+            marginTop: 32,
+            marginBottom: 32,
+            maxWidth: '100%',
+            width: '100%'
+          }}>
+            {/* Differential pills - always takes up exactly half width */}
+            <div style={{
+              flex: '1',
+              minWidth: 0,
+              width: '100%',
+              maxWidth: window.innerWidth >= 1024 ? 'calc(50% - 16px)' : '100%'
+            }}>
+              <DifferentialDiagnosisRenderer
+                content={diffSection}
+                theme={theme}
+                isDark={invert}
+                isStreaming={isStreaming}
+              />
+            </div>
 
-          {afterDiff && (
-            <ReactMarkdown
-              remarkPlugins={remarkPlugins}
-              rehypePlugins={rehypePlugins}
-              components={componentsWithTheme}
-            >
-              {preprocessMarkdown(afterDiff, isStreaming) || ''}
-            </ReactMarkdown>
-          )}
+            {/* Content pill or empty spacer - always present to maintain layout */}
+            {afterDiff ? (
+              <div style={{
+                flex: '1',
+                minWidth: 0,
+                width: '100%',
+                maxWidth: window.innerWidth >= 1024 ? 'calc(50% - 16px)' : '100%',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                {/* Title header matching differential style */}
+                <div style={{
+                  marginBottom: window.innerWidth < 768 ? 18 : 24,
+                  paddingBottom: window.innerWidth < 768 ? 12 : 16,
+                  borderBottom: `1px solid ${invert ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)'}`,
+                  marginTop: 0,
+                  paddingTop: 0
+                }}>
+                  <h2 style={{
+                    fontSize: window.innerWidth < 768 ? 20 : 24,
+                    fontWeight: 600,
+                    margin: 0,
+                    padding: 0,
+                    color: theme.textPrimary,
+                    letterSpacing: '-0.02em',
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif'
+                  }}>
+                    Clinical Reasoning
+                  </h2>
+                </div>
+
+                {/* Content with same pill styling as differentials */}
+                <div
+                  className="clinical-reasoning-content"
+                  style={{
+                    background: invert ? 'rgba(255, 255, 255, 0.03)' : 'rgba(255, 255, 255, 0.8)',
+                    backdropFilter: 'blur(20px)',
+                    WebkitBackdropFilter: 'blur(20px)',
+                    border: `1px solid ${invert ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0, 0, 0, 0.06)'}`,
+                    borderRadius: window.innerWidth < 768 ? 14 : 18,
+                    padding: window.innerWidth < 768 ? 18 : 24,
+                    boxShadow: invert
+                      ? '0 4px 16px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3)'
+                      : '0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)'
+                  }}>
+                  <ReactMarkdown
+                    remarkPlugins={remarkPlugins}
+                    rehypePlugins={rehypePlugins}
+                    components={componentsWithTheme}
+                  >
+                    {preprocessMarkdown(afterDiff, isStreaming) || ''}
+                  </ReactMarkdown>
+                </div>
+              </div>
+            ) : (
+              <div style={{
+                flex: '1',
+                minWidth: 0,
+                width: '100%',
+                maxWidth: window.innerWidth >= 1024 ? 'calc(50% - 16px)' : '100%'
+              }} />
+            )}
+          </div>
         </>
       ) : (
         <ReactMarkdown
@@ -2687,10 +2760,15 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobi
     } catch {}
   };
 
+  // Check if this message contains differential diagnosis
+  const hasDifferentialDiagnosis = message.role === 'assistant' && /##\s*Differential\s+Diagnosis/i.test(message.content || '');
+  const messageMaxWidth = isMobile ? '100%' : (hasDifferentialDiagnosis ? 1400 : 855);
+
   if (message.role === 'user') {
     return (
       <div style={{
         width: '100%',
+        maxWidth: messageMaxWidth,
         marginBottom: isMobile ? 24 : 32,
         paddingLeft: isMobile ? 0 : 8,
         paddingRight: isMobile ? 0 : 8
@@ -2720,6 +2798,7 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobi
   return (
     <div style={{
       width: '100%',
+      maxWidth: messageMaxWidth,
       marginBottom: isMobile ? 32 : 40,
       position: 'relative',
       paddingLeft: isMobile ? 0 : 8,
@@ -2825,8 +2904,14 @@ const StreamingResponse = ({ content, theme, invert = false, citations = [], isM
     }
   }, [citations]);
 
+  // Check if streaming content contains differential diagnosis
+  const hasDifferentialDiagnosis = /##\s*Differential\s+Diagnosis/i.test(content || '');
+  const messageMaxWidth = isMobile ? '100%' : (hasDifferentialDiagnosis ? 1400 : 855);
+
   return (
     <div style={{
+      width: '100%',
+      maxWidth: messageMaxWidth,
       marginBottom: isMobile ? 32 : 40,
       paddingLeft: isMobile ? 0 : 8,
       paddingRight: isMobile ? 0 : 8,
@@ -5091,7 +5176,7 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
           onClick={() => { if (speechRecognition.isRecording) speechRecognition.toggleRecording(); }}
           tabIndex={-1}
         >
-          <div style={{ maxWidth: isMobile ? '100%' : 855, margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
+          <div style={{ maxWidth: '100%', margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
             {messages.length === 0 && !isLoading && !isStreaming && (
               <EmptyState currentMode={currentMode} onSampleTapped={handleSampleTapped} theme={theme} isMobile={isMobile} />
             )}

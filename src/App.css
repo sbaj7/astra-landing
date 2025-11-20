@@ -80,3 +80,24 @@ sup.article-citation a {
 sup.article-citation a:hover {
   text-decoration: underline;
 }
+
+/* Slide in from right animation for DDx content pill */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Remove top margin from first element in clinical reasoning pill */
+.clinical-reasoning-content > *:first-child {
+  margin-top: 0 !important;
+}
+
+.clinical-reasoning-content > * > *:first-child {
+  margin-top: 0 !important;
+}
