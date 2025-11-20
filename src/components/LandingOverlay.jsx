@@ -12,14 +12,10 @@ const ModeSwitcher = ({ currentMode, onModeChange, theme, isMobile }) => {
   ];
 
   return (
-    <div className="no-scrollbar" style={{
+    <div style={{
       display: 'flex',
       gap: isMobile ? 4 : 6,
-      flexWrap: 'nowrap',
-      position: 'relative',
-      overflowX: 'auto',
-      maxWidth: '100%',
-      paddingRight: 4
+      flexWrap: 'nowrap'
     }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = currentMode === key;
@@ -27,6 +23,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, theme, isMobile }) => {
           <div key={key} style={{ position: 'relative', display: 'flex' }}>
             <button
               onClick={() => onModeChange(key)}
+              aria-pressed={isSelected}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -42,11 +39,10 @@ const ModeSwitcher = ({ currentMode, onModeChange, theme, isMobile }) => {
                 fontSize: isMobile ? 11 : 12,
                 fontWeight: 500,
                 cursor: 'pointer',
-                transition: 'all .2s ease',
-                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                transition: 'all .2s ease'
               }}
             >
-              <Icon size={10} strokeWidth={2.2} />
+              <Icon size={10} />
               <span>{title}</span>
             </button>
           </div>
@@ -171,11 +167,15 @@ const LandingOverlay = ({ onClose }) => {
           </p>
         </div>
 
-        <div className="landing-demo-container">
+        <div className="landing-demo-container" style={{
+          overflow: 'visible'
+        }}>
           <div style={{
-            maxWidth: '48rem',
+            maxWidth: isMobile ? 'calc(100vw - 24px)' : '48rem',
             margin: '0 auto',
-            width: '100%'
+            width: '100%',
+            padding: isMobile ? '0 12px' : '0',
+            overflow: 'visible'
           }}>
             <div style={{
               position: 'relative',
@@ -183,80 +183,94 @@ const LandingOverlay = ({ onClose }) => {
               borderRadius: isMobile ? 22 : 28,
               border: `1px solid ${theme.textSecondary}25`,
               boxShadow: `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
-              overflow: 'hidden',
+              overflow: 'visible',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
-              display: 'flex',
-              flexDirection: 'column',
-              marginTop: 24
+              width: '100%',
+              maxWidth: '100%'
             }}>
-              {/* Top Row: Input and Send Button */}
+              {/* Input Row */}
               <div style={{
-                display: 'flex',
-                alignItems: 'flex-end',
-                padding: isMobile ? '12px 12px 6px 12px' : '12px 16px 6px 16px',
-                gap: 10
-              }}>
-                <div style={{ flex: 1, display: 'flex' }}>
-                  <GrowingTextView
-                    text={
-                      selectedMode === 'search' ? 'What are the platelet thresholds for anticoagulation in cancer-associated PE?' :
-                        selectedMode === 'reason' ? '72M post-op day 3 right hemicolectomy, new hypoxia and tachycardia...' :
-                          'Draft an admission note for this patient focusing on the PE management plan.'
-                    }
-                    setText={() => { }}
-                    height={demoHeight}
-                    setHeight={setDemoHeight}
-                    theme={theme}
-                    disabled={true}
-                    style={{ width: '100%' }}
-                  />
-                </div>
-                <button
-                  disabled
-                  style={{
-                    flexShrink: 0,
-                    width: isMobile ? 32 : 36,
-                    height: isMobile ? 32 : 36,
-                    borderRadius: '50%',
-                    border: 'none',
-                    backgroundColor: `${theme.textSecondary}20`,
-                    cursor: 'not-allowed',
-                    color: '#fff',
-                    opacity: 0.5,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: 2
-                  }}
-                >
-                  <ArrowUp size={isMobile ? 18 : 20} />
-                </button>
-              </div>
-
-              {/* Bottom Row: Mode Switcher and Disclaimer */}
-              <div style={{
+                position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: isMobile ? '0 12px 10px 12px' : '0 16px 14px 16px',
-                gap: 12,
-                flexWrap: 'wrap'
+                gap: isMobile ? 8 : 10,
+                padding: isMobile ? '10px 10px 4px 10px' : '12px 12px 6px 12px'
               }}>
-                <ModeSwitcher
-                  currentMode={selectedMode}
-                  onModeChange={setSelectedMode}
-                  theme={theme}
-                  isMobile={isMobile}
-                />
+                <div style={{
+                  flex: 1,
+                  padding: '8px 10px',
+                  fontSize: isMobile ? 16 : 17,
+                  lineHeight: 1.4,
+                  color: theme.textPrimary,
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+                  fontWeight: 400,
+                  letterSpacing: '-0.011em',
+                  minHeight: 24,
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  {selectedMode === 'search' ? 'What are the platelet thresholds for anticoagulation in cancer-associated PE?' :
+                    selectedMode === 'reason' ? '72M post-op day 3 right hemicolectomy, new hypoxia and tachycardia...' :
+                      'Draft an admission note for this patient focusing on the PE management plan.'}
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 4 : 6, paddingBottom: 2 }}>
+                  <button
+                    disabled
+                    aria-label="Send"
+                    style={{
+                      padding: isMobile ? 8 : 10,
+                      borderRadius: '50%',
+                      border: 'none',
+                      backgroundColor: `${theme.textSecondary}20`,
+                      cursor: 'not-allowed',
+                      color: '#fff',
+                      opacity: 0.5,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }}
+                  >
+                    <ArrowUp size={isMobile ? 18 : 20} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Mode Switcher Row - Bottom */}
+              <div style={{
+                display: 'flex',
+                flexWrap: 'nowrap',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                paddingTop: 0,
+                paddingBottom: isMobile ? 10 : 14,
+                paddingLeft: isMobile ? 12 : 16,
+                paddingRight: isMobile ? 12 : 16,
+                gap: isMobile ? 8 : 12
+              }}>
+                <div style={{ flexShrink: 0 }}>
+                  <ModeSwitcher
+                    currentMode={selectedMode}
+                    onModeChange={setSelectedMode}
+                    theme={theme}
+                    isMobile={isMobile}
+                  />
+                </div>
                 <p style={{
                   fontSize: isMobile ? 10 : 11,
                   color: theme.textSecondary,
                   margin: 0,
                   fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                  fontWeight: 400,
                   opacity: 0.5,
-                  whiteSpace: 'nowrap',
-                  marginLeft: 'auto'
+                  lineHeight: 1.3,
+                  whiteSpace: isMobile ? 'normal' : 'nowrap',
+                  marginLeft: 'auto',
+                  textAlign: 'right',
+                  maxWidth: isMobile ? '90px' : 'none',
+                  flexShrink: 1
                 }}>
                   Astra can make mistakes.
                 </p>
