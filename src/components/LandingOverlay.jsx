@@ -497,28 +497,6 @@ const LandingOverlay = ({ onClose }) => {
               </div>
 
               <div className="landing-ap-section">
-                <div className="landing-ap-section-title">Diagnoses</div>
-                <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
-                  <li>
-                    <strong>Acute pulmonary embolism with acute cor pulmonale</strong>
-                    <span className="landing-icd-tag">I26.09</span>
-                  </li>
-                  <li>
-                    <strong>Postprocedural hemorrhage of a digestive system organ</strong>
-                    <span className="landing-icd-tag">K91.840</span>
-                  </li>
-                  <li>
-                    <strong>Acute kidney injury, unspecified</strong>
-                    <span className="landing-icd-tag">N17.9</span>
-                  </li>
-                  <li>
-                    <strong>Thrombocytopenia, unspecified</strong>
-                    <span className="landing-icd-tag">D69.6</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="landing-ap-section">
                 <div className="landing-ap-section-title">Plan</div>
                 <p><strong>Pulmonary Embolism</strong></p>
                 <ul>
@@ -531,6 +509,28 @@ const LandingOverlay = ({ onClose }) => {
                   <li>Consult General Surgery for urgent evaluation (re-exploration vs. IR drainage).</li>
                   <li>Start Piperacillin-Tazobactam 3.375g IV q6h (renally adjusted).</li>
                   <li>Transfuse 1 unit pRBCs (Hb &lt; 8 with active cardiac demand).</li>
+                </ul>
+              </div>
+
+              <div className="landing-ap-section">
+                <div className="landing-ap-section-title">Diagnoses</div>
+                <ul className="landing-diagnoses-list" style={{ listStyle: 'none', paddingLeft: 0, margin: 0 }}>
+                  <li style={{ marginBottom: 8 }}>
+                    <strong>Acute pulmonary embolism with acute cor pulmonale</strong>
+                    <span className="landing-icd-tag">I26.09</span>
+                  </li>
+                  <li style={{ marginBottom: 8 }}>
+                    <strong>Postprocedural hemorrhage of a digestive system organ</strong>
+                    <span className="landing-icd-tag">K91.840</span>
+                  </li>
+                  <li style={{ marginBottom: 8 }}>
+                    <strong>Acute kidney injury, unspecified</strong>
+                    <span className="landing-icd-tag">N17.9</span>
+                  </li>
+                  <li style={{ marginBottom: 8 }}>
+                    <strong>Thrombocytopenia, unspecified</strong>
+                    <span className="landing-icd-tag">D69.6</span>
+                  </li>
                 </ul>
               </div>
             </div>

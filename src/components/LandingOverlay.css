@@ -681,6 +681,15 @@
   font-weight: 400;
 }
 
+/* Remove dashes from diagnoses list only */
+.landing-diagnoses-list li {
+  padding-left: 0 !important;
+}
+
+.landing-diagnoses-list li::before {
+  content: none !important;
+}
+
 .landing-icd-tag {
   display: inline-flex;
   align-items: center;
