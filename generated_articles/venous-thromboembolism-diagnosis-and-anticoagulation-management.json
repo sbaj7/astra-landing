@@ -15,42 +15,42 @@
   "heroStats": [
     {
       "label": "First-line therapy",
-      "value": "DOACs preferred over VKAs for most non-cancer VTE [5], [7]"
+      "value": "DOACs preferred over VKAs for most non-cancer VTE [1], [2]"
     },
     {
       "label": "Initial treatment window",
-      "value": "At least 3 months for all confirmed VTE [5], [7]"
+      "value": "At least 3 months for all confirmed VTE [1], [2]"
     },
     {
       "label": "Imaging",
-      "value": "Compression US for DVT; CTPA/VQ for PE per pretest probability [4], [9]"
+      "value": "Compression US for DVT; CTPA/VQ for PE per pretest probability [3], [4]"
     }
   ],
   "keyMoments": [
     {
       "icon": "Stethoscope",
       "title": "Stratify pretest probability before testing",
-      "body": "Use validated scores to guide D-dimer vs imaging. Age-adjust D-dimer in outpatients to reduce false positives [4]."
+      "body": "Use validated scores to guide D-dimer vs imaging. Age-adjust D-dimer in outpatients to reduce false positives [3]."
     },
     {
       "icon": "Sparkles",
       "title": "Start anticoagulation when PE/DVT probability is high",
-      "body": "If imaging will be delayed and bleeding risk is acceptable, initiate parenteral anticoagulation while awaiting confirmation [4]."
+      "body": "If imaging will be delayed and bleeding risk is acceptable, initiate parenteral anticoagulation while awaiting confirmation [3]."
     },
     {
       "icon": "ShieldCheck",
       "title": "Prefer DOACs for initial and long-term therapy",
-      "body": "Apixaban, rivaroxaban, dabigatran, edoxaban reduce recurrent VTE with favorable bleeding vs warfarin in most patients [5], [7], [11], [12]."
+      "body": "Apixaban, rivaroxaban, dabigatran, edoxaban reduce recurrent VTE with favorable bleeding vs warfarin in most patients [1], [2], [5], [6]."
     },
     {
       "icon": "Activity",
       "title": "Reassess at 3 months for extended therapy",
-      "body": "Balance recurrence risk (unprovoked, male sex, persistent risk factors) against bleeding risk; consider reduced-dose DOAC for extended prevention [5], [7]."
+      "body": "Balance recurrence risk (unprovoked, male sex, persistent risk factors) against bleeding risk; consider reduced-dose DOAC for extended prevention [1], [2]."
     },
     {
       "icon": "ClipboardList",
       "title": "Confirm suspected recurrence objectively",
-      "body": "Compare current with prior imaging to differentiate acute from chronic thrombosis; verify adherence before escalating therapy [2]."
+      "body": "Compare current with prior imaging to differentiate acute from chronic thrombosis; verify adherence before escalating therapy [7]."
     }
   ],
   "sections": [
@@ -62,19 +62,19 @@
       "steps": [
         {
           "title": "Estimate pretest probability",
-          "body": "Use Wells/YEARS for PE and Wells for DVT to classify probability. In low/intermediate PE probability, apply D-dimer with age adjustment (age \u00d7 10 ng/mL FEU for >50 years) to safely rule out without imaging [4]."
+          "body": "Use Wells/YEARS for PE and Wells for DVT to classify probability. In low/intermediate PE probability, apply D-dimer with age adjustment (age × 10 ng/mL FEU for >50 years) to safely rule out without imaging [3]."
         },
         {
           "title": "Select first-line tests",
-          "body": "For suspected DVT: perform compression duplex ultrasonography of the symptomatic limb; it detects proximal thrombosis noninvasively [9]. For suspected PE: obtain CTPA as the test of choice; use V/Q scanning when CTPA is contraindicated (contrast allergy, pregnancy, severe renal dysfunction) [4]."
+          "body": "For suspected DVT: perform compression duplex ultrasonography of the symptomatic limb; it detects proximal thrombosis noninvasively [4]. For suspected PE: obtain CTPA as the test of choice; use V/Q scanning when CTPA is contraindicated (contrast allergy, pregnancy, severe renal dysfunction) [3]."
         },
         {
           "title": "When to start empiric anticoagulation",
-          "body": "If clinical probability is high and imaging will be delayed, start therapeutic anticoagulation after bleeding risk assessment and necessary labs (CBC, creatinine, LFTs) [4]."
+          "body": "If clinical probability is high and imaging will be delayed, start therapeutic anticoagulation after bleeding risk assessment and necessary labs (CBC, creatinine, LFTs) [3]."
         },
         {
           "title": "Ancillary testing",
-          "body": "Avoid routine thrombophilia testing during acute VTE. Consider targeted testing only when it will change management (e.g., suspected antiphospholipid syndrome) and after completion of acute phase [7]."
+          "body": "Avoid routine thrombophilia testing during acute VTE. Consider targeted testing only when it will change management (e.g., suspected antiphospholipid syndrome) and after completion of acute phase [2]."
         }
       ]
     },
@@ -89,54 +89,54 @@
           "icon": "TestTube2",
           "title": "DOAC options (adult, typical renal function)",
           "items": [
-            "Apixaban: 10 mg BID \u00d7 7 days, then 5 mg BID; extended prevention 2.5 mg BID after \u22656 months [5], [7].",
-            "Rivaroxaban: 15 mg BID \u00d7 21 days, then 20 mg daily with food; extended 10 mg daily after \u22656 months [5], [7].",
-            "Dabigatran: 150 mg BID after 5\u201310 days parenteral lead-in [7].",
-            "Edoxaban: 60 mg daily (reduce to 30 mg if CrCl 15\u201350 mL/min or weight \u226460 kg) after 5\u201310 days parenteral lead-in [7]."
+            "Apixaban: 10 mg BID × 7 days, then 5 mg BID; extended prevention 2.5 mg BID after ≥6 months [1], [2].",
+            "Rivaroxaban: 15 mg BID × 21 days, then 20 mg daily with food; extended 10 mg daily after ≥6 months [1], [2].",
+            "Dabigatran: 150 mg BID after 5–10 days parenteral lead-in [2].",
+            "Edoxaban: 60 mg daily (reduce to 30 mg if CrCl 15–50 mL/min or weight ≤60 kg) after 5–10 days parenteral lead-in [2]."
           ]
         },
         {
           "icon": "Clock",
           "title": "Treatment phases",
           "items": [
-            "Initial: first 5\u201321 days; rapid full-dose anticoagulation.",
-            "Primary treatment: complete 3 months for all confirmed VTE [5], [7].",
-            "Extended: beyond 3 months for unprovoked or persistent risk factors; consider reduced-dose DOAC to lower bleeding risk while maintaining protection [5], [7]."
+            "Initial: first 5–21 days; rapid full-dose anticoagulation.",
+            "Primary treatment: complete 3 months for all confirmed VTE [1], [2].",
+            "Extended: beyond 3 months for unprovoked or persistent risk factors; consider reduced-dose DOAC to lower bleeding risk while maintaining protection [1], [2]."
           ]
         },
         {
           "icon": "ShieldCheck",
           "title": "When warfarin or heparin is preferred",
           "items": [
-            "Antiphospholipid syndrome: warfarin (INR 2\u20133) preferred over DOACs [7].",
-            "Severe renal failure (CrCl <15\u201330 mL/min depending on agent), extremes of body weight, or cost barriers.",
-            "Pregnancy: use LMWH; avoid DOACs [7]."
+            "Antiphospholipid syndrome: warfarin (INR 2–3) preferred over DOACs [2].",
+            "Severe renal failure (CrCl <15–30 mL/min depending on agent), extremes of body weight, or cost barriers.",
+            "Pregnancy: use LMWH; avoid DOACs [2]."
           ]
         },
         {
           "icon": "AlertTriangle",
           "title": "High bleeding risk strategies",
           "items": [
-            "Choose apixaban or reduced-dose regimens for extended therapy when appropriate [5], [7].",
+            "Choose apixaban or reduced-dose regimens for extended therapy when appropriate [1], [2].",
             "Gastroprotection with PPIs for GI bleed risk; avoid dual antiplatelet therapy unless clearly indicated.",
-            "IVC filter only if acute VTE with absolute contraindication to anticoagulation; remove when anticoagulation becomes feasible [5]."
+            "IVC filter only if acute VTE with absolute contraindication to anticoagulation; remove when anticoagulation becomes feasible [1]."
           ]
         },
         {
           "icon": "Activity",
           "title": "Cancer-associated VTE",
           "items": [
-            "DOACs (apixaban, rivaroxaban, edoxaban) or LMWH are effective; individualize by bleeding risk (e.g., GI/GU cancer) and drug\u2013drug interactions [8].",
-            "Continue anticoagulation for at least 3\u20136 months and as long as cancer is active or anticancer therapy continues [8]."
+            "DOACs (apixaban, rivaroxaban, edoxaban) or LMWH are effective; individualize by bleeding risk (e.g., GI/GU cancer) and drug–drug interactions [8].",
+            "Continue anticoagulation for at least 3–6 months and as long as cancer is active or anticancer therapy continues [8]."
           ]
         },
         {
           "icon": "ClipboardList",
           "title": "Recurrent VTE on anticoagulation",
           "items": [
-            "Confirm true recurrence by comparing prior and current imaging; residual thrombosis is common [2].",
-            "Assess adherence, drug interactions, dosing errors, and absorption issues first [2].",
-            "If confirmed on DOAC with good adherence, switch to therapeutic LMWH or increase intensity per specialist guidance [2]."
+            "Confirm true recurrence by comparing prior and current imaging; residual thrombosis is common [7].",
+            "Assess adherence, drug interactions, dosing errors, and absorption issues first [7].",
+            "If confirmed on DOAC with good adherence, switch to therapeutic LMWH or increase intensity per specialist guidance [7]."
           ]
         }
       ]
@@ -152,15 +152,15 @@
           "icon": "ShieldCheck",
           "title": "Favor extended anticoagulation",
           "items": [
-            "Unprovoked proximal DVT or PE, male sex, persistent risk factors (e.g., active cancer, antiphospholipid antibodies) [5], [7].",
-            "Low to moderate bleeding risk: continue indefinitely with periodic reassessment; consider reduced-dose apixaban 2.5 mg BID or rivaroxaban 10 mg daily after 6\u201312 months [5], [7]."
+            "Unprovoked proximal DVT or PE, male sex, persistent risk factors (e.g., active cancer, antiphospholipid antibodies) [1], [2].",
+            "Low to moderate bleeding risk: continue indefinitely with periodic reassessment; consider reduced-dose apixaban 2.5 mg BID or rivaroxaban 10 mg daily after 6–12 months [1], [2]."
           ]
         },
         {
           "icon": "AlertTriangle",
           "title": "Favor stopping at 3 months",
           "items": [
-            "VTE provoked by a major transient risk factor (e.g., surgery with anesthesia >30 min, major trauma, immobilization) and high bleeding risk [5], [7].",
+            "VTE provoked by a major transient risk factor (e.g., surgery with anesthesia >30 min, major trauma, immobilization) and high bleeding risk [1], [2].",
             "Reassess if new risk factors emerge."
           ]
         },
@@ -168,7 +168,7 @@
           "icon": "TestTube2",
           "title": "Elderly and frail",
           "items": [
-            "Extended therapy can be appropriate; weigh falls, polypharmacy, renal function; apixaban often has lower major bleeding rates in older adults [13].",
+            "Extended therapy can be appropriate; weigh falls, polypharmacy, renal function; apixaban often has lower major bleeding rates in older adults [9].",
             "Use creatinine-based dose adjustments and periodic monitoring."
           ]
         }
@@ -185,15 +185,15 @@
           "icon": "Activity",
           "title": "Post-thrombotic and post-PE syndromes",
           "items": [
-            "Assess for chronic leg pain/edema and exertional dyspnea; significant QoL impact and rare progression to CTEPH [1].",
-            "Encourage ambulation; use compression for persistent symptoms after proximal DVT; consider referral for CTEPH evaluation if dyspnea persists \u22653 months post-PE [1]."
+            "Assess for chronic leg pain/edema and exertional dyspnea; significant QoL impact and rare progression to CTEPH [10].",
+            "Encourage ambulation; use compression for persistent symptoms after proximal DVT; consider referral for CTEPH evaluation if dyspnea persists ≥3 months post-PE [10]."
           ]
         },
         {
           "icon": "ClipboardList",
           "title": "Patient-centered care",
           "items": [
-            "Shared decision-making on duration and agent choice, integrating bleeding risk, lifestyle, and preferences [1], [5].",
+            "Shared decision-making on duration and agent choice, integrating bleeding risk, lifestyle, and preferences [10], [1].",
             "Education on adherence, recognition of bleeding and recurrence signs, and drug interactions."
           ]
         }
@@ -203,52 +203,52 @@
   "references": [
     {
       "number": 1,
-      "title": "Basics of diagnosis and treatment of venous ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/pii/S1538783625000522",
-      "authors": "www.sciencedirect.com"
-    },
-    {
-      "number": 2,
-      "title": "Management of suspected and confirmed recurrent venous ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/pii/S004938481930283X",
-      "authors": "www.sciencedirect.com"
-    },
-    {
-      "number": 3,
-      "title": "Venous Thromboembolism Page - Hematology.org",
-      "detail": "www.uptodate.com",
-      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.hematology.org%2Feducation%2Fclinicians%2Fguidelines-and-quality-care%2Fclinical-practice-guidelines%2Fvenous-thromboembolism-guidelines&token=Zv5ci2w4s1NR0qWsiezSEEskf7jAEIRYNUAS39A5XwlvVq5OLLJ71aIzGfPGEeh2soKnj5FyYMJZAcVDIhYW0nKuIt5AhtXfWd1bCnSysaLMuOR3I%2FyLFejdjrgc2lrJO877Yxnc0f0YU0BXLgrPwg%3D%3D&TOPIC_ID=113663",
-      "authors": "www.uptodate.com"
-    },
-    {
-      "number": 4,
-      "title": "Overview | Venous thromboembolic diseases: diagnosis, ...",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/ng158",
-      "authors": "www.nice.org.uk"
-    },
-    {
-      "number": 5,
       "title": "CHEST releases new guidelines for antithrombotic therapy ...",
       "detail": "www.chestnet.org",
       "url": "https://www.chestnet.org/newsroom/press-releases/2021/08/chest-releases-new-guidelines-for-antithrombotic-therapy-for-vte-disease",
       "authors": "www.chestnet.org"
     },
     {
-      "number": 6,
-      "title": "American Society of Hematology 2019 guidelines for ...",
-      "detail": "www.uptodate.com",
-      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fashpublications.org%2Fbloodadvances%2Farticle%2F3%2F23%2F3898%2F429211%2FAmerican-Society-of-Hematology-2019-guidelines-for&token=Qxvc0TRfTz5DH6MRrF9moDzad7TbiqOybiySG4jIO%2FMavRPCTGuXeqTG9%2B6jxw3bwngyKx7mb8WWSEikD3OZJ%2BCZgCjR1ft6U6i%2B%2B2LRRCADGWv1iXBr%2Bl%2FKwclIeQdI%2BEG7Mf3b4TqENj391BYykg%3D%3D&TOPIC_ID=113663",
-      "authors": "www.uptodate.com"
-    },
-    {
-      "number": 7,
+      "number": 2,
       "title": "American Society of Hematology 2018 guidelines for ...",
       "detail": "www.uptodate.com",
       "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fashpublications.org%2Fbloodadvances%2Farticle%2F2%2F22%2F3257%2F16107%2FAmerican-Society-of-Hematology-2018-guidelines-for&token=%2BYa%2FH4rsacIDPw2GCDj%2FAf5gjeIH30uwzFPUL%2ByGBMMvq3aHQsA6j92fqX0OeY%2Bs9vwGXmmK%2By2K3JdIM0si8t%2BiphHSKl9FG6X9385D7N3YZEfCl1MNVRiQktJVq0lYyisayiA3YV9wUN0s9Y7YGA%3D%3D&TOPIC_ID=113663",
       "authors": "www.uptodate.com"
+    },
+    {
+      "number": 3,
+      "title": "Overview | Venous thromboembolic diseases: diagnosis, ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng158",
+      "authors": "www.nice.org.uk"
+    },
+    {
+      "number": 4,
+      "title": "Testing and Diagnosis for Venous Thromboembolism",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/blood-clots/testing-diagnosis/index.html",
+      "authors": "www.cdc.gov"
+    },
+    {
+      "number": 5,
+      "title": "Efficacy and safety of anticoagulants on venous ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11750681/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 6,
+      "title": "Novel Anticoagulant Therapy of Venous Thromboembolism",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5579781/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 7,
+      "title": "Management of suspected and confirmed recurrent venous ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S004938481930283X",
+      "authors": "www.sciencedirect.com"
     },
     {
       "number": 8,
@@ -259,38 +259,38 @@
     },
     {
       "number": 9,
-      "title": "Testing and Diagnosis for Venous Thromboembolism",
-      "detail": "www.cdc.gov",
-      "url": "https://www.cdc.gov/blood-clots/testing-diagnosis/index.html",
-      "authors": "www.cdc.gov"
-    },
-    {
-      "number": 10,
-      "title": "Anticoagulation Therapy for Venous Thromboembolism",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1435637/",
-      "authors": "pmc.ncbi.nlm.nih.gov"
-    },
-    {
-      "number": 11,
-      "title": "Efficacy and safety of anticoagulants on venous ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11750681/",
-      "authors": "pmc.ncbi.nlm.nih.gov"
-    },
-    {
-      "number": 12,
-      "title": "Novel Anticoagulant Therapy of Venous Thromboembolism",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5579781/",
-      "authors": "pmc.ncbi.nlm.nih.gov"
-    },
-    {
-      "number": 13,
       "title": "Efficacy and safety of anticoagulant treatment in elderly ...",
       "detail": "pubmed.ncbi.nlm.nih.gov",
       "url": "https://pubmed.ncbi.nlm.nih.gov/40664090/",
       "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Basics of diagnosis and treatment of venous ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783625000522",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 11,
+      "title": "Venous Thromboembolism Page - Hematology.org",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.hematology.org%2Feducation%2Fclinicians%2Fguidelines-and-quality-care%2Fclinical-practice-guidelines%2Fvenous-thromboembolism-guidelines&token=Zv5ci2w4s1NR0qWsiezSEEskf7jAEIRYNUAS39A5XwlvVq5OLLJ71aIzGfPGEeh2soKnj5FyYMJZAcVDIhYW0nKuIt5AhtXfWd1bCnSysaLMuOR3I%2FyLFejdjrgc2lrJO877Yxnc0f0YU0BXLgrPwg%3D%3D&TOPIC_ID=113663",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 12,
+      "title": "American Society of Hematology 2019 guidelines for ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fashpublications.org%2Fbloodadvances%2Farticle%2F3%2F23%2F3898%2F429211%2FAmerican-Society-of-Hematology-2019-guidelines-for&token=Qxvc0TRfTz5DH6MRrF9moDzad7TbiqOybiySG4jIO%2FMavRPCTGuXeqTG9%2B6jxw3bwngyKx7mb8WWSEikD3OZJ%2BCZgCjR1ft6U6i%2B%2B2LRRCADGWv1iXBr%2Bl%2FKwclIeQdI%2BEG7Mf3b4TqENj391BYykg%3D%3D&TOPIC_ID=113663",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 13,
+      "title": "Anticoagulation Therapy for Venous Thromboembolism",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1435637/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
     }
   ],
   "citations": [

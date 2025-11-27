@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ClinicalArticleView from './ClinicalArticleView.jsx';
+import { reorderArticleCitations } from '../utils/reorderArticleCitations.js';
 
 const resolveSupabaseUrl = () => {
   return (
@@ -23,7 +24,9 @@ const RemoteArticleView = ({
         })()
       : null;
 
-  const [article, setArticle] = useState(preloadedArticle);
+  const [article, setArticle] = useState(
+    preloadedArticle ? reorderArticleCitations(preloadedArticle) : null
+  );
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(!preloadedArticle);
   const hasPreloaded = Boolean(preloadedArticle);
@@ -36,6 +39,7 @@ const RemoteArticleView = ({
     }
 
     if (hasPreloaded) {
+      setArticle(reorderArticleCitations(preloadedArticle));
       setIsLoading(false);
       if (typeof window !== 'undefined' && window.__PRERENDERED_ARTICLE__?.slug === slug) {
         delete window.__PRERENDERED_ARTICLE__;
@@ -45,11 +49,20 @@ const RemoteArticleView = ({
 
     const supabaseUrl = resolveSupabaseUrl();
     const path = objectPath || `${bucket}/${slug}/article.json`;
-    const url = `${supabaseUrl}/storage/v1/object/public/${path}`;
+    const supabaseArticleUrl = `${supabaseUrl}/storage/v1/object/public/${path}`;
+    const localArticleUrl = `/generated_articles/${slug}.json`;
 
     let isCancelled = false;
 
-    fetch(url)
+    // Try Supabase first, then local fallback
+    fetch(supabaseArticleUrl)
+      .then((response) => {
+        if (!response.ok) {
+          console.log(`⚠️ Supabase article fetch failed, trying local: ${localArticleUrl}`);
+          return fetch(localArticleUrl);
+        }
+        return response;
+      })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Unable to load article (status ${response.status})`);
@@ -58,7 +71,7 @@ const RemoteArticleView = ({
       })
       .then((data) => {
         if (isCancelled) return;
-        setArticle(data);
+        setArticle(reorderArticleCitations(data));
         setError(null);
       })
       .catch((err) => {

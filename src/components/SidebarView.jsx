@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { X, Plus, Info, Trash2 } from 'lucide-react';
+import { X, Plus, Info, Trash2, BookOpen } from 'lucide-react';
 import AboutView from './AboutView';
+import ClinicalArticlesModal from './ClinicalArticlesModal';
 
 // Helper function for relative time formatting
 const timeAgo = (date) => {
   const now = new Date();
   const diffInSeconds = Math.floor((now - date) / 1000);
-  
+
   if (diffInSeconds < 60) {
     return 'Just now';
   } else if (diffInSeconds < 3600) {
@@ -30,11 +31,11 @@ const PopupMenuItem = ({ icon: Icon, title, isDestructive = false, onClick, them
       onClick={onClick}
       className="flex items-center w-full px-4 py-3 space-x-3 hover:bg-opacity-5 hover:bg-gray-500 transition-colors"
     >
-      <Icon 
-        size={16} 
-        color={isDestructive ? theme.errorColor : theme.textPrimary} 
+      <Icon
+        size={16}
+        color={isDestructive ? theme.errorColor : theme.textPrimary}
       />
-      <span 
+      <span
         className="text-base font-medium"
         style={{ color: isDestructive ? theme.errorColor : theme.textPrimary }}
       >
@@ -52,21 +53,21 @@ const PopupChatRow = ({ session, onSelect, theme }) => {
       className="flex items-center w-full px-4 py-2 space-x-2.5 hover:bg-opacity-5 hover:bg-gray-500 transition-colors"
     >
       {/* Mode indicator */}
-      <div 
+      <div
         className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-        style={{ 
-          backgroundColor: session.wasInClinicalMode ? '#a855f7' : theme.accentSoftBlue 
+        style={{
+          backgroundColor: session.wasInClinicalMode ? '#a855f7' : theme.accentSoftBlue
         }}
       />
-      
+
       <div className="flex-1 min-w-0 text-left">
-        <div 
+        <div
           className="text-sm font-medium truncate"
           style={{ color: theme.textPrimary }}
         >
           {session.title}
         </div>
-        <div 
+        <div
           className="text-xs"
           style={{ color: theme.textSecondary }}
         >
@@ -78,16 +79,18 @@ const PopupChatRow = ({ session, onSelect, theme }) => {
 };
 
 // Main Sidebar Component
-const SidebarView = ({ 
-  isPresented, 
+const SidebarView = ({
+  isPresented,
   onDismiss,
-  chatHistory, 
-  onSelectChat, 
-  onRequestDeleteChat, 
-  onNewChat, 
-  theme 
+  chatHistory,
+  onSelectChat,
+  onRequestDeleteChat,
+  onNewChat,
+  onSelectArticle,
+  theme
 }) => {
   const [showAbout, setShowAbout] = useState(false);
+  const [showClinicalArticles, setShowClinicalArticles] = useState(false);
 
   const handleClearHistory = () => {
     if (chatHistory && chatHistory.length > 0) {
@@ -110,7 +113,7 @@ const SidebarView = ({
 
   return (
     <>
-      <div 
+      <div
         className="fixed inset-0 z-40"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
         onClick={onDismiss}
@@ -120,7 +123,7 @@ const SidebarView = ({
           <div className="flex flex-col pt-16 pl-4">
             <div
               className="w-65 rounded-2xl shadow-2xl transform transition-all duration-300"
-              style={{ 
+              style={{
                 backgroundColor: theme.backgroundSurface,
                 transform: isPresented ? 'scale(1)' : 'scale(0.9)',
                 opacity: isPresented ? 1 : 0
@@ -130,13 +133,13 @@ const SidebarView = ({
               {/* Header */}
               <div className="px-4 pt-4 pb-2">
                 <div className="flex items-center justify-between">
-                  <h2 
+                  <h2
                     className="text-lg font-bold"
                     style={{ color: theme.textPrimary }}
                   >
                     Astra
                   </h2>
-                  
+
                   <button
                     onClick={onDismiss}
                     className="flex items-center justify-center w-6 h-6 rounded-full"
@@ -145,8 +148,8 @@ const SidebarView = ({
                     <X size={12} color={theme.textSecondary} />
                   </button>
                 </div>
-                
-                <p 
+
+                <p
                   className="text-sm mt-2"
                   style={{ color: theme.textSecondary }}
                 >
@@ -154,7 +157,7 @@ const SidebarView = ({
                 </p>
               </div>
 
-              <div 
+              <div
                 className="mx-4 border-t"
                 style={{ borderColor: `${theme.textSecondary}20` }}
               />
@@ -167,14 +170,21 @@ const SidebarView = ({
                   onClick={handleNewChat}
                   theme={theme}
                 />
-                
+
+                <PopupMenuItem
+                  icon={BookOpen}
+                  title="Clinical Articles"
+                  onClick={() => setShowClinicalArticles(true)}
+                  theme={theme}
+                />
+
                 <PopupMenuItem
                   icon={Info}
                   title="About"
                   onClick={() => setShowAbout(true)}
                   theme={theme}
                 />
-                
+
                 {chatHistory && chatHistory.length > 0 && (
                   <PopupMenuItem
                     icon={Trash2}
@@ -189,21 +199,21 @@ const SidebarView = ({
               {/* Recent chats */}
               {chatHistory && chatHistory.length > 0 && (
                 <>
-                  <div 
+                  <div
                     className="mx-4 border-t"
                     style={{ borderColor: `${theme.textSecondary}20` }}
                   />
-                  
+
                   <div className="py-2">
                     <div className="px-4 py-2">
-                      <h3 
+                      <h3
                         className="text-sm font-semibold"
                         style={{ color: theme.textPrimary }}
                       >
                         Recent
                       </h3>
                     </div>
-                    
+
                     <div className="max-h-50 overflow-y-auto">
                       {chatHistory.slice(0, 5).map((session) => (
                         <PopupChatRow
@@ -222,13 +232,27 @@ const SidebarView = ({
               <div className="h-2" />
             </div>
           </div>
-          
+
           <div className="flex-1" onClick={onDismiss} />
         </div>
       </div>
 
       {/* About View Modal */}
-      <AboutView 
+      <AboutView
         isPresented={showAbout}
         onDismiss={() => setShowAbout(false)}
         theme={theme}
+      />
+
+      {/* Clinical Articles Modal */}
+      <ClinicalArticlesModal
+        isPresented={showClinicalArticles}
+        onDismiss={() => setShowClinicalArticles(false)}
+        onSelectArticle={onSelectArticle}
+        theme={theme}
+      />
+    </>
+  );
+};
+
+export default SidebarView;

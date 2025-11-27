@@ -18,7 +18,8 @@ import {
   ClipboardList,
   Copy,
   Check,
-  Info
+  Info,
+  BookOpen
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal.jsx';
@@ -31,6 +32,8 @@ import authService from '../services/authService.js';
 import useIsMobile from '../hooks/useIsMobile.js';
 import ReferencesView from './ReferencesView.jsx';
 import AboutView from './AboutView.jsx';
+import ClinicalArticlesModal from './ClinicalArticlesModal.jsx';
+import RemoteArticleView from './RemoteArticleView.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -2985,6 +2988,7 @@ const Sidebar = ({
   onShowBilling,
   onShowLogout,
   onShowAbout,
+  onShowClinicalArticles,
   theme,
   user,
   subscription,
@@ -3224,6 +3228,16 @@ const Sidebar = ({
               />
 
               <SidebarAction
+                icon={BookOpen}
+                label="Clinical Articles"
+                theme={theme}
+                onClick={() => {
+                  onShowClinicalArticles?.();
+                  onClose();
+                }}
+              />
+
+              <SidebarAction
                 icon={Info}
                 label="About Astra"
                 theme={theme}
@@ -3292,6 +3306,16 @@ const Sidebar = ({
               >
                 Already have an account? Sign in
               </button>
+
+              <SidebarAction
+                icon={BookOpen}
+                label="Clinical Articles"
+                theme={theme}
+                onClick={() => {
+                  onShowClinicalArticles?.();
+                  onClose();
+                }}
+              />
 
               <SidebarAction
                 icon={Info}
@@ -4091,6 +4115,8 @@ const AstraApp = () => {
   const [citationSheetCitations, setCitationSheetCitations] = useState([]);
   const [showCitationSheet, setShowCitationSheet] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showClinicalArticles, setShowClinicalArticles] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState(null);
 
   // Auth-related state
   const [showPaywall, setShowPaywall] = useState(false);
@@ -4559,6 +4585,24 @@ const AstraApp = () => {
 
   const handleCloseAbout = useCallback(() => {
     setShowAbout(false);
+  }, []);
+
+  const handleOpenClinicalArticles = useCallback(() => {
+    setShowClinicalArticles(true);
+  }, []);
+
+  const handleCloseClinicalArticles = useCallback(() => {
+    setShowClinicalArticles(false);
+  }, []);
+
+  const handleSelectArticle = useCallback((article) => {
+    setSelectedArticle(article);
+    setShowClinicalArticles(false);
+    setShowSidebar(false);
+  }, []);
+
+  const handleCloseArticle = useCallback(() => {
+    setSelectedArticle(null);
   }, []);
 
   const handleSettingChange = useCallback((key, value) => {
@@ -5336,6 +5380,7 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
         onShowBilling={handleOpenBilling}
         onShowLogout={handleAuthLogout}
         onShowAbout={handleOpenAbout}
+        onShowClinicalArticles={handleOpenClinicalArticles}
         theme={theme}
         user={user}
         subscription={subscriptionInfo}
@@ -5361,6 +5406,35 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
           onDismiss={handleCloseAbout}
           theme={theme}
         />
+      )}
+
+      {/* Clinical Articles Modal */}
+      {showClinicalArticles && (
+        <ClinicalArticlesModal
+          isPresented={showClinicalArticles}
+          onDismiss={handleCloseClinicalArticles}
+          onSelectArticle={handleSelectArticle}
+          theme={theme}
+        />
+      )}
+
+      {/* Selected Article View */}
+      {selectedArticle && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 100,
+            backgroundColor: theme.backgroundPrimary,
+            overflowY: 'auto'
+          }}
+        >
+          <RemoteArticleView
+            slug={selectedArticle.slug}
+            theme={theme}
+            onBack={handleCloseArticle}
+          />
+        </div>
       )}
 
       <GlobalChromeStyles theme={theme} />

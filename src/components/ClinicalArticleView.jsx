@@ -6,6 +6,8 @@ import {
   Pill,
   ChevronRight
 } from 'lucide-react';
+import ReferencesView from './ReferencesView.jsx';
+import { reorderArticleCitations } from '../utils/reorderArticleCitations.js';
 
 const TYPOGRAPHY_REPLACEMENTS = [
   [/â€“/g, '–'],
@@ -193,10 +195,8 @@ const applyCitations = (html, citations = []) =>
     const citation = citations.find((item) => String(item.number) === number);
     const tooltipText = buildCitationTooltip(citation);
     const tooltipAttr = tooltipText ? ` data-tooltip="${escapeAttribute(tooltipText)}"` : '';
-    const directHref = citation?.url ? escapeAttribute(citation.url) : `#ref-${number}`;
-    const externalAttrs = citation?.url ? ' target="_blank" rel="noopener noreferrer"' : '';
 
-    return `<sup class="md-citation" data-citation="${number}" data-reference="ref-${number}"${tooltipAttr}><a href="${directHref}"${externalAttrs} aria-label="Reference ${number}">[${number}]</a></sup>`;
+    return `<sup class="md-citation" data-citation="${number}" data-reference="ref-${number}"${tooltipAttr}>[${number}]</sup>`;
   });
 
 const buildHtml = (text = '', citations = []) => {
@@ -621,13 +621,15 @@ const buildMarkdownStyles = (theme) => `
   color: ${theme.accentSoftBlue};
   cursor: pointer;
   font-weight: 600;
+  padding: 1px 3px;
   border-radius: 4px;
   transition: all .15s ease;
   position: relative;
+  line-height: 1;
 }
 
 .markdown-body sup.md-citation:hover {
-  background-color: ${theme.accentSoftBlue}20;
+  background-color: ${theme.accentSoftBlue}18;
   transform: translateY(-1px);
 }
 
@@ -643,10 +645,10 @@ const buildMarkdownStyles = (theme) => `
 .markdown-body sup.md-citation[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: calc(100% + 12px);
+  top: calc(100% + 14px);
   left: 50%;
-  transform: translate(-50%, 0);
-  background-color: ${theme.backgroundSurface};
+  transform: translate(-50%, 6px);
+  background-color: ${theme.backgroundSurface}F5;
   color: ${theme.textPrimary};
   padding: 10px 14px;
   border-radius: 12px;
@@ -657,31 +659,33 @@ const buildMarkdownStyles = (theme) => `
   min-width: 180px;
   line-height: 1.5;
   text-align: left;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+  border: 1px solid ${theme.textSecondary}1F;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(6px);
   opacity: 0;
   pointer-events: none;
   transition: opacity .15s ease, transform .15s ease;
-  z-index: 5;
+  z-index: 10;
 }
 
 .markdown-body sup.md-citation[data-tooltip]::before {
   content: '';
   position: absolute;
-  bottom: 100%;
+  top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  border-width: 7px;
+  border-width: 6px;
   border-style: solid;
-  border-color: ${theme.backgroundSurface} transparent transparent transparent;
+  border-color: transparent transparent ${theme.backgroundSurface}F5 transparent;
   opacity: 0;
   transition: opacity .15s ease;
   pointer-events: none;
-  z-index: 5;
+  z-index: 11;
 }
 
 .markdown-body sup.md-citation[data-tooltip]:hover::after {
   opacity: 1;
-  transform: translate(-50%, -8px);
+  transform: translate(-50%, 0);
 }
 
 .markdown-body sup.md-citation[data-tooltip]:hover::before {
@@ -695,6 +699,11 @@ const MarkdownStyles = ({ theme }) => (
 
 const ClinicalArticleView = ({ article, theme, onBack }) => {
   if (!article) return null;
+
+  const [showReferences, setShowReferences] = React.useState(false);
+
+  // Reorder citations by appearance before rendering
+  const reorderedArticle = React.useMemo(() => reorderArticleCitations(article), [article]);
 
   const {
     heroLabel = 'Clinical article',
@@ -710,7 +719,7 @@ const ClinicalArticleView = ({ article, theme, onBack }) => {
     slug,
     createdAt,
     updatedAt
-  } = article;
+  } = reorderedArticle;
 
   const enrichedReferences = Array.isArray(references)
     ? references.map((reference, index) => normalizeReference(reference, index))
@@ -844,6 +853,29 @@ const ClinicalArticleView = ({ article, theme, onBack }) => {
       }
     };
   }, [title, summary, tags, slug, createdAt, updatedAt, enrichedReferences]);
+
+  // Handle citation clicks to open references view
+  React.useEffect(() => {
+    const handleCitationClick = (e) => {
+      const citationEl = e.target.closest('.md-citation');
+      if (!citationEl) return;
+
+      e.preventDefault();
+      const number = Number.parseInt(citationEl.dataset.citation, 10);
+      const citation = citations.find((item) => Number.parseInt(item.number, 10) === number);
+
+      if (citation?.url) {
+        window.open(citation.url, '_blank', 'noopener,noreferrer');
+        return;
+      }
+
+      // Fallback: show references list if no direct URL is present.
+      setShowReferences(true);
+    };
+
+    document.addEventListener('click', handleCitationClick);
+    return () => document.removeEventListener('click', handleCitationClick);
+  }, [citations]);
 
   return (
     <div
@@ -1025,6 +1057,13 @@ const ClinicalArticleView = ({ article, theme, onBack }) => {
           </section>
         )}
       </div>
+
+      <ReferencesView
+        citations={citations}
+        isPresented={showReferences}
+        onDismiss={() => setShowReferences(false)}
+        theme={theme}
+      />
     </div>
   );
 };

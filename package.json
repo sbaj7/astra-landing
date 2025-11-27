@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender_articles.mjs && node scripts/generate_sitemap.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "renumber-citations": "node scripts/renumber_citations.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
