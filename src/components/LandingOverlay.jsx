@@ -331,6 +331,22 @@ const PerformanceFigures = ({ theme, isMobile }) => {
                 <span>25%</span>
                 <span>0%</span>
               </div>
+              <div className="landing-logo-container">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.03))' }}>
+                  <path d="M60 5C29.6243 5 5 29.6243 5 60C5 90.3757 29.6243 115 60 115C90.3757 115 115 90.3757 115 60C115 29.6243 90.3757 5 60 5ZM60 105C35.1472 105 15 84.8528 15 60C15 35.1472 35.1472 15 60 15C84.8528 15 105 35.1472 105 60C105 84.8528 84.8528 105 60 105Z" fill="url(#paint0_linear)" />
+                  <path d="M60 25C40.67 25 25 40.67 25 60C25 79.33 40.67 95 60 95C79.33 95 95 79.33 95 60C95 40.67 79.33 25 60 25ZM60 85C46.1929 85 35 73.8071 35 60C35 46.1929 46.1929 35 60 35C73.8071 35 85 46.1929 85 60C85 73.8071 73.8071 85 60 85Z" fill="url(#paint1_linear)" />
+                  <defs>
+                    <linearGradient id="paint0_linear" x1="60" y1="5" x2="60" y2="115" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#4A6B7D" />
+                      <stop offset="1" stopColor="#2D3843" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="60" y1="25" x2="60" y2="95" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#8FA5B5" />
+                      <stop offset="1" stopColor="#4A6B7D" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
               {/* Chart area */}
               <div className="bayesian-plot">
                 {/* Decision threshold line */}
