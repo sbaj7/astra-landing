@@ -1,9 +1,490 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, ChevronDown, Search, Sparkles, FileText, ArrowRight, Activity, BookOpen, Stethoscope, ArrowUp } from 'lucide-react';
+import { X, ChevronDown, Search, Sparkles, FileText, ArrowRight, Activity, BookOpen, Stethoscope, ArrowUp, TrendingUp, Zap, Brain, BarChart3, Mic, Volume2, Clock, CheckCircle } from 'lucide-react';
 import { useTheme } from './Themes+Styles.jsx';
-import GrowingTextView from './GrowingTextView.jsx';
 import './LandingOverlay.css';
 
+// ============================================
+// PERFORMANCE FIGURES COMPONENT
+// ============================================
+const PerformanceFigures = ({ theme, isMobile }) => {
+  const [activeTab, setActiveTab] = useState('speed');
+  const [animatedValues, setAnimatedValues] = useState({});
+  const figuresRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (figuresRef.current) {
+      observer.observe(figuresRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Animate numbers when visible
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const targets = {
+      speed: 18.9,
+      compression: 81,
+      accuracy: 94,
+      sources: 31
+    };
+
+    const duration = 2000;
+    const steps = 60;
+    const interval = duration / steps;
+
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      setAnimatedValues({
+        speed: (targets.speed * eased).toFixed(1),
+        compression: Math.round(targets.compression * eased),
+        accuracy: Math.round(targets.accuracy * eased),
+        sources: Math.round(targets.sources * eased)
+      });
+
+      if (step >= steps) clearInterval(timer);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [isVisible]);
+
+  const tabs = [
+    { key: 'speed', label: 'Retrieval Speed', icon: Zap },
+    { key: 'compression', label: 'DDx Compression', icon: Brain },
+    { key: 'heatmap', label: 'Query Distribution', icon: BarChart3 },
+    { key: 'bayesian', label: 'Bayesian Update', icon: TrendingUp },
+    { key: 'pipeline', label: 'Reasoning Flow', icon: ArrowRight }
+  ];
+
+  // Heatmap data
+  const heatmapData = {
+    categories: ['Cardiology', 'Pulmonology', 'Nephrology', 'Neurology', 'ID', 'Endocrine', 'GI', 'Heme/Onc'],
+    queryTypes: ['DDx', 'Guidelines', 'Pharmacology', 'Management', 'Evidence'],
+    values: [
+      [92, 88, 76, 85, 71],
+      [78, 82, 45, 68, 65],
+      [65, 71, 82, 74, 58],
+      [84, 69, 52, 91, 73],
+      [71, 94, 68, 42, 89],
+      [58, 85, 71, 78, 62],
+      [69, 74, 55, 61, 67],
+      [62, 68, 88, 72, 81],
+    ]
+  };
+
+  const getHeatColor = (value, isDark = false) => {
+    // Create a gradient from light to dark blue
+    const intensity = value / 100;
+    if (isDark) {
+      // Dark mode: from muted to bright
+      const r = Math.round(58 + intensity * (143 - 58));
+      const g = Math.round(74 + intensity * (165 - 74));
+      const b = Math.round(88 + intensity * (181 - 88));
+      return `rgb(${r}, ${g}, ${b})`;
+    } else {
+      // Light mode: from very light blue-gray to deep blue
+      const r = Math.round(220 - intensity * 175);
+      const g = Math.round(225 - intensity * 135);
+      const b = Math.round(230 - intensity * 105);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+  };
+
+  const isDarkMode = theme.backgroundPrimary === "#121417";
+
+  // Speed comparison data
+  const speedData = [
+    { name: 'PubMed', time: 342, color: theme.textSecondary + '60' },
+    { name: 'Google Scholar', time: 245, color: theme.textSecondary + '60' },
+    { name: 'UpToDate', time: 156, color: theme.textSecondary + '60' },
+    { name: 'DynaMed', time: 128, color: theme.textSecondary + '60' },
+    { name: 'Astra', time: 18, color: theme.accentSoftBlue }
+  ];
+
+  // Compression data
+  const compressionData = [
+    { condition: 'Chest Pain', before: 47, after: 8 },
+    { condition: 'Dyspnea', before: 52, after: 11 },
+    { condition: 'AKI', before: 38, after: 7 },
+    { condition: 'AMS', before: 61, after: 12 },
+    { condition: 'Fever + Rash', before: 44, after: 9 },
+    { condition: 'Syncope', before: 35, after: 6 }
+  ];
+
+  // Bayesian update data
+  const bayesianData = [
+    { feature: 'Base Rate', probability: 0.05 },
+    { feature: '+ Chest Pain (atypical)', probability: 0.12 },
+    { feature: '+ Age > 65', probability: 0.18 },
+    { feature: '+ HTN + DM', probability: 0.31 },
+    { feature: '+ Dynamic ST Depression', probability: 0.65 },
+    { feature: '+ Positive Troponin', probability: 0.98 }
+  ];
+
+  // Pipeline stages
+  const pipelineStages = [
+    { name: 'Input', items: ['Chief Complaint', 'Vitals', 'Labs', 'History', 'Exam'] },
+    { name: 'Processing', items: ['Feature Extraction', 'Pattern Recognition', 'Evidence Retrieval'] },
+    { name: 'Reasoning', items: ['Differential Generation', 'Bayesian Weighting', 'Risk Stratification'] },
+    { name: 'Output', items: ['Ranked Differential', 'Guideline-Aligned Plan', 'Cited Evidence'] }
+  ];
+
+  return (
+    <div ref={figuresRef} className="performance-figures-container">
+      {/* Stat Cards Row */}
+      <div className="perf-stats-row">
+        <div className={`perf-stat-card ${isVisible ? 'animate-in' : ''}`} style={{ animationDelay: '0.1s' }}>
+          <div className="perf-stat-value" style={{ color: theme.accentSoftBlue }}>
+            {animatedValues.speed || '0.0'}×
+          </div>
+          <div className="perf-stat-label">Faster than PubMed</div>
+        </div>
+        <div className={`perf-stat-card ${isVisible ? 'animate-in' : ''}`} style={{ animationDelay: '0.2s' }}>
+          <div className="perf-stat-value" style={{ color: theme.accentSoftBlue }}>
+            {animatedValues.compression || '0'}%
+          </div>
+          <div className="perf-stat-label">DDx Compression</div>
+        </div>
+        <div className={`perf-stat-card ${isVisible ? 'animate-in' : ''}`} style={{ animationDelay: '0.3s' }}>
+          <div className="perf-stat-value" style={{ color: theme.accentSoftBlue }}>
+            {animatedValues.accuracy || '0'}%
+          </div>
+          <div className="perf-stat-label">Citation Accuracy</div>
+        </div>
+        <div className={`perf-stat-card ${isVisible ? 'animate-in' : ''}`} style={{ animationDelay: '0.4s' }}>
+          <div className="perf-stat-value" style={{ color: theme.accentSoftBlue }}>
+            {animatedValues.sources || '0'}M+
+          </div>
+          <div className="perf-stat-label">Sources Indexed</div>
+        </div>
+      </div>
+
+      {/* Tab Switcher */}
+      <div className="perf-tabs">
+        {tabs.map(({ key, label, icon: Icon }) => (
+          <button
+            key={key}
+            onClick={() => setActiveTab(key)}
+            className={`perf-tab ${activeTab === key ? 'active' : ''}`}
+            style={{
+              background: activeTab === key ? theme.accentSoftBlue : 'transparent',
+              color: activeTab === key ? '#fff' : theme.textSecondary,
+              borderColor: activeTab === key ? 'transparent' : theme.textSecondary + '30'
+            }}
+          >
+            <Icon size={14} />
+            <span>{label}</span>
+          </button>
+        ))}
+      </div>
+
+      {/* Tab Content */}
+      <div className="perf-content">
+        {/* Speed Chart */}
+        {activeTab === 'speed' && (
+          <div className="perf-chart-container speed-chart">
+            <div className="chart-title">Time to First Relevant Citation (seconds)</div>
+            <div className="speed-bars">
+              {speedData.map((item, idx) => (
+                <div key={item.name} className="speed-bar-row" style={{ animationDelay: `${idx * 0.1}s` }}>
+                  <div className="speed-bar-label">{item.name}</div>
+                  <div className="speed-bar-track">
+                    <div
+                      className={`speed-bar-fill ${isVisible ? 'animate' : ''}`}
+                      style={{
+                        '--target-width': `${(item.time / 350) * 100}%`,
+                        background: item.color,
+                        animationDelay: `${0.5 + idx * 0.1}s`
+                      }}
+                    />
+                  </div>
+                  <div className="speed-bar-value" style={{ color: item.name === 'Astra' ? theme.accentSoftBlue : theme.textSecondary }}>
+                    {item.time}s
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="chart-annotation">
+              <span className="annotation-highlight" style={{ color: theme.accentSoftBlue }}>18.9× faster</span>
+              <span className="annotation-text">than traditional PubMed searches</span>
+            </div>
+          </div>
+        )}
+
+        {/* Compression Chart */}
+        {activeTab === 'compression' && (
+          <div className="perf-chart-container compression-chart">
+            <div className="chart-title">Differential Diagnosis Count: Before vs After</div>
+            <div className="compression-grid">
+              {compressionData.map((item, idx) => (
+                <div key={item.condition} className="compression-row" style={{ animationDelay: `${idx * 0.08}s` }}>
+                  <div className="compression-label">{item.condition}</div>
+                  <div className="compression-bars">
+                    <div className="compression-bar-group">
+                      <div
+                        className={`compression-bar before ${isVisible ? 'animate' : ''}`}
+                        style={{
+                          '--target-width': `${(item.before / 65) * 100}%`,
+                          background: theme.textSecondary + '40',
+                          animationDelay: `${0.3 + idx * 0.08}s`
+                        }}
+                      >
+                        <span className="bar-value">{item.before}</span>
+                      </div>
+                      <div
+                        className={`compression-bar after ${isVisible ? 'animate' : ''}`}
+                        style={{
+                          '--target-width': `${(item.after / 65) * 100}%`,
+                          background: theme.accentSoftBlue,
+                          animationDelay: `${0.5 + idx * 0.08}s`
+                        }}
+                      >
+                        <span className="bar-value">{item.after}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="compression-legend">
+              <div className="legend-item">
+                <div className="legend-dot" style={{ background: theme.textSecondary + '40' }} />
+                <span>Traditional Search</span>
+              </div>
+              <div className="legend-item">
+                <div className="legend-dot" style={{ background: theme.accentSoftBlue }} />
+                <span>Astra Output</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Heatmap */}
+        {activeTab === 'heatmap' && (
+          <div className="perf-chart-container heatmap-chart">
+            <div className="chart-title">Clinical Query Distribution (queries/100 sessions)</div>
+            <div className="heatmap-container">
+              {/* Column Headers */}
+              <div className="heatmap-grid-header">
+                <div className="heatmap-corner-cell" />
+                {heatmapData.queryTypes.map((type, i) => (
+                  <div key={i} className="heatmap-col-header">{type}</div>
+                ))}
+              </div>
+              {/* Data Rows */}
+              {heatmapData.categories.map((category, rowIdx) => (
+                <div key={rowIdx} className="heatmap-grid-row">
+                  <div className="heatmap-row-header">{category}</div>
+                  {heatmapData.values[rowIdx].map((value, colIdx) => (
+                    <div
+                      key={colIdx}
+                      className={`heatmap-data-cell ${isVisible ? 'animate' : ''}`}
+                      style={{
+                        background: getHeatColor(value, isDarkMode),
+                        animationDelay: `${(rowIdx * 5 + colIdx) * 0.03}s`
+                      }}
+                    >
+                      <span className="heatmap-cell-value">{value}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            {/* Legend */}
+            <div className="heatmap-legend-bar">
+              <span>Low</span>
+              <div className="heatmap-gradient-bar" />
+              <span>High</span>
+              <span className="heatmap-unit">(queries/100 sessions)</span>
+            </div>
+          </div>
+        )}
+
+        {/* Bayesian Update Chart */}
+        {activeTab === 'bayesian' && (
+          <div className="perf-chart-container bayesian-chart">
+            <div className="chart-title">Sequential Bayesian Probability Update for NSTEMI Diagnosis</div>
+            <div className="bayesian-scenario">
+              <strong>Clinical Scenario:</strong> Posterior probability of NSTEMI with sequential evidence integration
+            </div>
+            <div className="bayesian-chart-area">
+              {/* Y-axis labels */}
+              <div className="bayesian-y-axis">
+                <span>100%</span>
+                <span>75%</span>
+                <span>50%</span>
+                <span>25%</span>
+                <span>0%</span>
+              </div>
+              {/* Chart area */}
+              <div className="bayesian-plot">
+                {/* Decision threshold line */}
+                <div className="bayesian-threshold" style={{ bottom: '50%' }}>
+                  <span className="threshold-label">Decision Threshold</span>
+                </div>
+                {/* Area fill */}
+                <svg className="bayesian-svg" viewBox="0 0 600 200" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="bayesGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor={theme.accentSoftBlue} stopOpacity="0.4" />
+                      <stop offset="100%" stopColor={theme.accentSoftBlue} stopOpacity="0.05" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    className={`bayesian-area ${isVisible ? 'animate' : ''}`}
+                    d={`M 0 ${200 - bayesianData[0].probability * 200} 
+                        L 0 ${200 - bayesianData[0].probability * 200}
+                        L 100 ${200 - bayesianData[0].probability * 200}
+                        L 100 ${200 - bayesianData[1].probability * 200}
+                        L 200 ${200 - bayesianData[1].probability * 200}
+                        L 200 ${200 - bayesianData[2].probability * 200}
+                        L 300 ${200 - bayesianData[2].probability * 200}
+                        L 300 ${200 - bayesianData[3].probability * 200}
+                        L 400 ${200 - bayesianData[3].probability * 200}
+                        L 400 ${200 - bayesianData[4].probability * 200}
+                        L 500 ${200 - bayesianData[4].probability * 200}
+                        L 500 ${200 - bayesianData[5].probability * 200}
+                        L 600 ${200 - bayesianData[5].probability * 200}
+                        L 600 200
+                        L 0 200 Z`}
+                    fill="url(#bayesGradient)"
+                  />
+                  <path
+                    className={`bayesian-line ${isVisible ? 'animate' : ''}`}
+                    d={`M 0 ${200 - bayesianData[0].probability * 200} 
+                        L 100 ${200 - bayesianData[0].probability * 200}
+                        L 100 ${200 - bayesianData[1].probability * 200}
+                        L 200 ${200 - bayesianData[1].probability * 200}
+                        L 200 ${200 - bayesianData[2].probability * 200}
+                        L 300 ${200 - bayesianData[2].probability * 200}
+                        L 300 ${200 - bayesianData[3].probability * 200}
+                        L 400 ${200 - bayesianData[3].probability * 200}
+                        L 400 ${200 - bayesianData[4].probability * 200}
+                        L 500 ${200 - bayesianData[4].probability * 200}
+                        L 500 ${200 - bayesianData[5].probability * 200}
+                        L 600 ${200 - bayesianData[5].probability * 200}`}
+                    fill="none"
+                    stroke={theme.accentSoftBlue}
+                    strokeWidth="3"
+                  />
+                  {/* Data points */}
+                  {bayesianData.map((d, i) => (
+                    <circle
+                      key={i}
+                      className={`bayesian-dot ${isVisible ? 'animate' : ''}`}
+                      cx={i * 100 + 50}
+                      cy={200 - d.probability * 200}
+                      r="6"
+                      fill={theme.accentSoftBlue}
+                      stroke="#fff"
+                      strokeWidth="2"
+                      style={{ animationDelay: `${0.3 + i * 0.1}s` }}
+                    />
+                  ))}
+                </svg>
+                {/* X-axis labels */}
+                <div className="bayesian-x-axis">
+                  {bayesianData.map((d, i) => (
+                    <div key={i} className="bayesian-x-label">{d.feature}</div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {/* Likelihood ratios */}
+            <div className="bayesian-stats">
+              <div className="bayesian-stat">
+                <span className="stat-label">LR+ (Troponin):</span>
+                <span className="stat-value">8.4</span>
+              </div>
+              <div className="bayesian-stat">
+                <span className="stat-label">LR+ (ECG):</span>
+                <span className="stat-value">4.2</span>
+              </div>
+              <div className="bayesian-stat">
+                <span className="stat-label">Post-test Probability:</span>
+                <span className="stat-value" style={{ color: theme.accentSoftBlue }}>91%</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Pipeline Flow Diagram */}
+        {activeTab === 'pipeline' && (
+          <div className="perf-chart-container pipeline-chart">
+            <div className="chart-title">Clinical Reasoning Pipeline Architecture</div>
+            <div className="pipeline-flow">
+              {pipelineStages.map((stage, stageIdx) => (
+                <React.Fragment key={stageIdx}>
+                  <div className={`pipeline-stage ${isVisible ? 'animate' : ''}`} style={{ animationDelay: `${stageIdx * 0.15}s` }}>
+                    <div className="pipeline-stage-header" style={{ background: theme.accentSoftBlue }}>
+                      {stage.name}
+                    </div>
+                    <div className="pipeline-stage-items">
+                      {stage.items.map((item, itemIdx) => (
+                        <div
+                          key={itemIdx}
+                          className={`pipeline-item ${isVisible ? 'animate' : ''}`}
+                          style={{ animationDelay: `${stageIdx * 0.15 + itemIdx * 0.05}s` }}
+                        >
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  {stageIdx < pipelineStages.length - 1 && (
+                    <div className={`pipeline-arrow ${isVisible ? 'animate' : ''}`} style={{ animationDelay: `${stageIdx * 0.15 + 0.1}s` }}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke={theme.textSecondary} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+            {/* Pipeline metrics */}
+            <div className="pipeline-metrics">
+              <div className={`pipeline-metric ${isVisible ? 'animate' : ''}`} style={{ animationDelay: '0.6s' }}>
+                <div className="metric-value" style={{ color: theme.accentSoftBlue }}>12</div>
+                <div className="metric-label">Input Features</div>
+              </div>
+              <div className={`pipeline-metric ${isVisible ? 'animate' : ''}`} style={{ animationDelay: '0.7s' }}>
+                <div className="metric-value" style={{ color: theme.accentSoftBlue }}>31M+</div>
+                <div className="metric-label">Sources Indexed</div>
+              </div>
+              <div className={`pipeline-metric ${isVisible ? 'animate' : ''}`} style={{ animationDelay: '0.8s' }}>
+                <div className="metric-value" style={{ color: theme.accentSoftBlue }}>6.2s</div>
+                <div className="metric-label">End-to-End Latency</div>
+              </div>
+              <div className={`pipeline-metric ${isVisible ? 'animate' : ''}`} style={{ animationDelay: '0.9s' }}>
+                <div className="metric-value" style={{ color: theme.accentSoftBlue }}>94%</div>
+                <div className="metric-label">Citation Accuracy</div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// ============================================
+// MODE SWITCHER COMPONENT
+// ============================================
 const ModeSwitcher = ({ currentMode, onModeChange, theme, isMobile }) => {
   const modes = [
     { key: 'search', title: 'Research', icon: Search },
@@ -52,11 +533,12 @@ const ModeSwitcher = ({ currentMode, onModeChange, theme, isMobile }) => {
   );
 };
 
+// ============================================
+// MAIN LANDING OVERLAY COMPONENT
+// ============================================
 const LandingOverlay = ({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedMode, setSelectedMode] = useState('reason');
-  const [demoText, setDemoText] = useState('');
-  const [demoHeight, setDemoHeight] = useState(44);
   const { isDark, colors: theme } = useTheme();
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -69,12 +551,10 @@ const LandingOverlay = ({ onClose }) => {
   }, []);
 
   useEffect(() => {
-    // Trigger entrance animation
     const timer = setTimeout(() => setIsVisible(true), 50);
     return () => clearTimeout(timer);
   }, []);
 
-  // Scroll Animation Observer
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -88,11 +568,11 @@ const LandingOverlay = ({ onClose }) => {
     elements.forEach(el => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [isVisible]); // Re-run when visible to ensure elements exist
+  }, [isVisible]);
 
   const handleClose = () => {
     setIsVisible(false);
-    setTimeout(onClose, 600); // Match CSS transition duration
+    setTimeout(onClose, 600);
   };
 
   const scrollToDemo = () => {
@@ -107,14 +587,14 @@ const LandingOverlay = ({ onClose }) => {
       ref={containerRef}
       className={`landing-overlay ${isVisible ? 'landing-overlay--visible' : ''}`}
     >
-      {/* Close button */}
       <button onClick={handleClose} className="landing-close-btn" aria-label="Close">
         <X size={24} strokeWidth={2} />
       </button>
 
-      {/* Hero Section */}
-      <section className="landing-hero">
+      {/* ========== HERO SECTION ========== */}
+      <section className="landing-hero landing-hero-compact">
         <div className="landing-gradient-orb" />
+        <div className="landing-gradient-orb-secondary" />
 
         <div className="landing-logo-container">
           <img
@@ -158,7 +638,7 @@ const LandingOverlay = ({ onClose }) => {
         </div>
       </section>
 
-      {/* Demo / Problem Section */}
+      {/* ========== DEMO SECTION ========== */}
       <section id="landing-demo" className="landing-section reveal-on-scroll">
         <div className="landing-section-header">
           <h2 className="landing-section-title">Built for the full clinical chain.</h2>
@@ -167,9 +647,7 @@ const LandingOverlay = ({ onClose }) => {
           </p>
         </div>
 
-        <div className="landing-demo-container" style={{
-          overflow: 'visible'
-        }}>
+        <div className="landing-demo-container" style={{ overflow: 'visible' }}>
           <div style={{
             maxWidth: isMobile ? 'calc(100vw - 24px)' : '48rem',
             margin: '0 auto',
@@ -189,7 +667,6 @@ const LandingOverlay = ({ onClose }) => {
               width: '100%',
               maxWidth: '100%'
             }}>
-              {/* Input Row */}
               <div style={{
                 position: 'relative',
                 display: 'flex',
@@ -210,9 +687,9 @@ const LandingOverlay = ({ onClose }) => {
                   display: 'flex',
                   alignItems: 'center'
                 }}>
-                  {selectedMode === 'search' ? 'What are the platelet thresholds for anticoagulation in cancer-associated PE?' :
-                    selectedMode === 'reason' ? '72M post-op day 3 right hemicolectomy, new hypoxia and tachycardia...' :
-                      'Draft an admission note for this patient focusing on the PE management plan.'}
+                  {selectedMode === 'search' ? 'Antithrombotic strategy in AF post-TAVI multicenter RCT outcomes' :
+                    selectedMode === 'reason' ? '32-yo male marathoner collapses mid-race, ECG QTc 520 ms, syncope episode' :
+                      'NSTEMI day 2 post-PCI in CICU, heparin stopped, on DAPT, telemetry monitoring'}
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 4 : 6, paddingBottom: 2 }}>
@@ -238,7 +715,6 @@ const LandingOverlay = ({ onClose }) => {
                 </div>
               </div>
 
-              {/* Mode Switcher Row - Bottom */}
               <div style={{
                 display: 'flex',
                 flexWrap: 'nowrap',
@@ -280,7 +756,171 @@ const LandingOverlay = ({ onClose }) => {
         </div>
       </section>
 
-      {/* Case Walkthrough Section */}
+      {/* ========== CASE WALKTHROUGH SECTION ========== */}
+
+
+      {/* ========== SUMMARY SECTION ========== */}
+      <section className="landing-section reveal-on-scroll">
+        <div className="landing-section-header">
+          <h2 className="landing-section-title">Modes for every clinical workflow.</h2>
+          <p className="landing-section-desc">
+            Specialized tools for the distinct phases of clinical work.
+          </p>
+        </div>
+
+        <div className="modes-grid">
+          {/* Research Card */}
+          <div className="mode-card">
+            <div className="mode-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+              <Search size={24} color={theme.accentSoftBlue} />
+            </div>
+            <h3 className="mode-title">Research</h3>
+            <p className="mode-desc">
+              Whitelisted LLM search. Top journals only. No hallucinations, just evidence.
+            </p>
+          </div>
+
+          {/* DDx Card */}
+          <div className="mode-card">
+            <div className="mode-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+              <Sparkles size={24} color={theme.accentSoftBlue} />
+            </div>
+            <h3 className="mode-title">DDx</h3>
+            <p className="mode-desc">
+              Advanced robust clinical reasoning. Differentials + Next Steps.
+            </p>
+          </div>
+
+          {/* A&P Card */}
+          <div className="mode-card">
+            <div className="mode-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+              <FileText size={24} color={theme.accentSoftBlue} />
+            </div>
+            <h3 className="mode-title">A&P</h3>
+            <p className="mode-desc">
+              Notes with ICD codes & Landmark Trials built in.
+            </p>
+          </div>
+        </div>
+
+        <div className="modes-footer">
+          <p>Plus 55+ related modes including Letters of Medical Necessity, Disability Certifications, and more...</p>
+        </div>
+      </section>
+
+      {/* ========== VOICE & TRANSCRIPTION SECTION ========== */}
+      <section className="landing-section reveal-on-scroll">
+        <div className="landing-section-header">
+          <div className="section-badge">
+            <Mic size={14} />
+            <span>Voice-First</span>
+          </div>
+          <h2 className="landing-section-title">Speak naturally. Get structured notes.</h2>
+          <p className="landing-section-desc">
+            Record patient encounters directly in Astra. Our transcription engine captures the conversation
+            and transforms it into structured clinical documentation—ready for your review.
+          </p>
+        </div>
+
+        <div className="transcription-demo">
+          <div className="transcription-flow">
+            {/* Step 1: Record */}
+            <div className="transcription-step reveal-on-scroll delay-100">
+              <div className="step-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+                <Mic size={28} color={theme.accentSoftBlue} />
+              </div>
+              <div className="step-number">1</div>
+              <h4 className="step-title">Record</h4>
+              <p className="step-desc">Tap to record during the patient encounter. Works with any conversation style.</p>
+            </div>
+
+            <div className="transcription-connector">
+              <div className="connector-line" />
+            </div>
+
+            {/* Step 2: Transcribe */}
+            <div className="transcription-step reveal-on-scroll delay-200">
+              <div className="step-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+                <Volume2 size={28} color={theme.accentSoftBlue} />
+              </div>
+              <div className="step-number">2</div>
+              <h4 className="step-title">Transcribe</h4>
+              <p className="step-desc">Medical-grade speech recognition with clinical terminology awareness.</p>
+            </div>
+
+            <div className="transcription-connector">
+              <div className="connector-line" />
+            </div>
+
+            {/* Step 3: Structure */}
+            <div className="transcription-step reveal-on-scroll delay-300">
+              <div className="step-icon" style={{ background: `${theme.accentSoftBlue}15` }}>
+                <FileText size={28} color={theme.accentSoftBlue} />
+              </div>
+              <div className="step-number">3</div>
+              <h4 className="step-title">Structure</h4>
+              <p className="step-desc">Auto-generates SOAP notes, H&Ps, or specialty-specific formats.</p>
+            </div>
+
+            <div className="transcription-connector">
+              <div className="connector-line" />
+            </div>
+
+            {/* Step 4: Review */}
+            <div className="transcription-step reveal-on-scroll delay-400">
+              <div className="step-icon" style={{ background: `${theme.successColor}15` }}>
+                <CheckCircle size={28} color={theme.successColor} />
+              </div>
+              <div className="step-number">4</div>
+              <h4 className="step-title">Review & Sign</h4>
+              <p className="step-desc">Edit if needed, then export directly to your EMR or clipboard.</p>
+            </div>
+          </div>
+
+          {/* Transcription Stats */}
+          <div className="transcription-stats">
+            <div className="transcription-stat">
+              <Clock size={18} color={theme.accentSoftBlue} />
+              <div className="stat-content">
+                <span className="stat-value">~2 min</span>
+                <span className="stat-label">Average note completion</span>
+              </div>
+            </div>
+            <div className="transcription-stat">
+              <CheckCircle size={18} color={theme.successColor} />
+              <div className="stat-content">
+                <span className="stat-value">98.5%</span>
+                <span className="stat-label">Transcription accuracy</span>
+              </div>
+            </div>
+            <div className="transcription-stat">
+              <FileText size={18} color={theme.accentSoftBlue} />
+              <div className="stat-content">
+                <span className="stat-value">12+</span>
+                <span className="stat-label">Note templates</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========== PERFORMANCE METRICS SECTION ========== */}
+      <section className="landing-section reveal-on-scroll">
+        <div className="landing-section-header">
+          <div className="section-badge">
+            <TrendingUp size={14} />
+            <span>Performance</span>
+          </div>
+          <h2 className="landing-section-title">Measurable clinical advantage.</h2>
+          <p className="landing-section-desc">
+            Validated performance metrics across evidence retrieval, differential compression, and citation accuracy.
+          </p>
+        </div>
+
+        <PerformanceFigures theme={theme} isMobile={isMobile} />
+      </section>
+
+      {/* ========== CASE WALKTHROUGH SECTION ========== */}
       <section className="landing-section">
         <div className="landing-section-header reveal-on-scroll">
           <h2 className="landing-section-title">Walk through a case</h2>
@@ -292,8 +932,7 @@ const LandingOverlay = ({ onClose }) => {
         </div>
 
         <div className="landing-case-grid">
-
-          {/* Research Card (Full Width) */}
+          {/* Research Card */}
           <div className="landing-glass-card landing-case-item-research reveal-on-scroll delay-100">
             <div className="landing-card-header">
               <div className="landing-card-icon">
@@ -318,7 +957,7 @@ const LandingOverlay = ({ onClose }) => {
                   <tr>
                     <td><strong>&gt; 50</strong></td>
                     <td><strong>Full‑dose acceptable</strong> if bleeding risk manageable</td>
-                    <td><strong>Falanga 2023</strong>: “In patients with platelet count &gt;50 000/µL, full therapeutic dose anticoagulation should be considered.”</td>
+                    <td><strong>Falanga 2023</strong>: "In patients with platelet count &gt;50 000/µL, full therapeutic dose anticoagulation should be considered."</td>
                   </tr>
                   <tr>
                     <td><strong>50–70</strong></td>
@@ -328,7 +967,7 @@ const LandingOverlay = ({ onClose }) => {
                   <tr>
                     <td><strong>25–50</strong></td>
                     <td><strong>Dose‑reduced LMWH</strong> or transfusion support</td>
-                    <td><strong>Blood Advances</strong>: “Limited duration of full‑dose anticoagulation with platelet transfusion support for the first 4 weeks...”</td>
+                    <td><strong>Blood Advances</strong>: "Limited duration of full‑dose anticoagulation with platelet transfusion support for the first 4 weeks..."</td>
                   </tr>
                   <tr>
                     <td><strong>&lt; 25</strong></td>
@@ -347,7 +986,7 @@ const LandingOverlay = ({ onClose }) => {
             </div>
           </div>
 
-          {/* DDx Card (Half Width) */}
+          {/* DDx Card */}
           <div className="landing-glass-card landing-case-item-ddx reveal-on-scroll delay-200">
             <div className="landing-card-header">
               <div className="landing-card-icon">
@@ -392,12 +1031,6 @@ const LandingOverlay = ({ onClose }) => {
                   prob: '~15–25%',
                   supporting: ['New hypoxemia', 'Immobilization'],
                   against: ['CT shows PE, not pneumonia']
-                },
-                {
-                  name: 'Thrombocytopenia (Non-HIT)',
-                  prob: '~60–70%',
-                  supporting: ['Recent chemo', 'Consumption'],
-                  against: ['No clear heparin exposure history for HIT']
                 }
               ].map((item, i) => (
                 <div key={i} className="landing-ddx-item">
@@ -424,7 +1057,7 @@ const LandingOverlay = ({ onClose }) => {
             </div>
           </div>
 
-          {/* Management Card (Half Width) */}
+          {/* Management Card */}
           <div className="landing-glass-card landing-case-item-management reveal-on-scroll delay-200">
             <div className="landing-card-header">
               <div className="landing-card-icon">
@@ -478,7 +1111,7 @@ const LandingOverlay = ({ onClose }) => {
             </div>
           </div>
 
-          {/* Assessment & Plan Card (Full Width) */}
+          {/* Assessment & Plan Card */}
           <div className="landing-glass-card landing-case-item-research reveal-on-scroll delay-300">
             <div className="landing-card-header">
               <div className="landing-card-icon">
@@ -538,9 +1171,9 @@ const LandingOverlay = ({ onClose }) => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* ========== FINAL CTA ========== */}
       <section className="landing-section reveal-on-scroll" style={{ textAlign: 'center', paddingBottom: 120 }}>
-        <h2 className="landing-section-title">Ready to upgrade your practice?</h2>
+        <h2 className="landing-section-title">Ready to upgrade how you practice?</h2>
         <div className="landing-cta-wrapper" style={{ animationDelay: '0s', opacity: 1, transform: 'none', marginTop: 40 }}>
           <button onClick={handleClose} className="landing-cta-btn">
             <span>Start Using Astra</span>
