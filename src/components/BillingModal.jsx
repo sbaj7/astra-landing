@@ -5,11 +5,11 @@ const plans = [
   {
     id: 'plus',
     name: 'Plus',
-    price: '$30',
+    price: '$20',
     cadence: 'per month',
     description: 'For individual clinicians who need enhanced clinical support.',
     features: [
-      'Unlimited research chats',
+      'Rate limited research chats',
       'A&P clinical note rewriting',
       'Chat history sync across devices',
       'Priority email support'
@@ -18,11 +18,11 @@ const plans = [
   {
     id: 'pro',
     name: 'Pro',
-    price: '$70',
+    price: '$50',
     cadence: 'per month',
     description: 'For advanced practitioners who need comprehensive clinical tools.',
     features: [
-      'Everything in Plus',
+      'Everything in Plus, unlimited',
       'Priority reasoning mode access',
       'Advanced clinical evidence packs',
       'Premium diagnostic pathways',
