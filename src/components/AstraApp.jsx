@@ -40,6 +40,7 @@ import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
 import { ImagePreviewStrip } from './ImagePreviewStrip.jsx';
 import CameraCapture from './CameraCapture.jsx';
 import { processPdfToImages } from '../utils/pdfUtils.js';
+import ImageLightbox from './ImageLightbox.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -2814,8 +2815,10 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobi
                   maxHeight: '120px',
                   borderRadius: '8px',
                   objectFit: 'cover',
-                  border: `1px solid ${theme.borderLight}`
+                  border: `1px solid ${theme.borderLight}`,
+                  cursor: 'pointer'
                 }}
+                onClick={() => setLightboxImage(img.data)}
               />
             ))}
           </div>
@@ -4554,6 +4557,7 @@ const AstraApp = () => {
 
   // Auth-related state
   const [showPaywall, setShowPaywall] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState(null);
   const [chatLimit, setChatLimit] = useState(() => {
     // Initialize from cache if available and not expired
     const cached = authService.getCachedAnonymousLimitState();
@@ -5486,6 +5490,25 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
             };
             pendingChatSession = chatSession;
             setChatHistory(prev => [chatSession, ...prev]);
+          }
+
+          // Check for image quality issues in Vision API responses
+          if (imagesToSend && imagesToSend.length > 0 && trimmedAssistantContent) {
+            const qualityIndicators = [
+              'blurry', 'unclear', 'low resolution', 'hard to see',
+              'cannot make out', 'cannot clearly see', 'difficult to read',
+              'image quality', 'too dark', 'too bright', 'out of focus',
+              'partially visible', 'not visible', 'obscured'
+            ];
+
+            const responseLower = trimmedAssistantContent.toLowerCase();
+            const hasQualityIssue = qualityIndicators.some(
+              indicator => responseLower.includes(indicator)
+            );
+
+            if (hasQualityIssue) {
+              setImageError('Tip: The image quality may affect analysis accuracy. Consider uploading a clearer image if needed.');
+            }
           }
 
             setIsStreaming(false);
