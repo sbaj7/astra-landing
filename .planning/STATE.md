@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Healthcare professionals can analyze medical images and documents through AI-powered vision capabilities
-**Current focus:** Phase 6 - Vision API Backend COMPLETE, ready for Phase 7
+**Current focus:** Phase 7 - Mode Integration IN PROGRESS (Plan 1 complete, Plan 2 pending)
 
 ## Current Position
 
-Phase: 6 of 8 (Vision API Backend) - COMPLETE
-Plan: 2 of 2 in current phase - COMPLETE
-Status: Phase 06 complete, ready for Phase 07 (Mode Integration)
-Last activity: 2026-01-20 - Phase 06 verified and complete
+Phase: 7 of 8 (Mode Integration)
+Plan: 1 of 2 in current phase - COMPLETE
+Status: Phase 07 in progress - Vision API routing complete, user message image display pending
+Last activity: 2026-01-20 - Completed 07-01-PLAN.md (Vision API Mode Integration)
 
-Progress: [████████░░] 79%
+Progress: [█████████░] 92%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 2.5 min
-- Total execution time: 28 min
+- Total execution time: 30 min
 
 **By Phase:**
 
@@ -33,10 +33,11 @@ Progress: [████████░░] 79%
 | 04-camera-capture | 2 | 4 min | 2 min |
 | 05-pdf-support | 2 | 6 min | 3 min |
 | 06-vision-api-backend | 2 | 4 min | 2 min |
+| 07-mode-integration | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (2 min), 05-02 (4 min), 06-01 (2 min), 06-02 (2 min)
-- Trend: Fast execution
+- Last 5 plans: 05-02 (4 min), 06-01 (2 min), 06-02 (2 min), 07-01 (2 min)
+- Trend: Fast execution (2 min average)
 
 *Updated after each plan completion*
 
@@ -83,6 +84,9 @@ Recent decisions affecting current work:
 - Return Response object directly: Let caller handle streaming (06-02)
 - apikey header for Supabase auth: Matches existing Edge Function patterns (06-02)
 - Comprehensive .env.example: Document all environment variables (06-02)
+- Capture selectedImages before clearAllImages(): Preserve data for async request (07-01)
+- Conditional routing based on imagesToSend.length: Determines Vision vs Chat API path (07-01)
+- Reuse existing streaming handler: Vision API returns same SSE format as Chat API (07-01)
 
 ### Pending Todos
 
@@ -95,5 +99,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-20
-Stopped at: Completed 06-02-PLAN.md (Frontend Vision Integration)
+Stopped at: Completed 07-01-PLAN.md (Vision API Mode Integration)
 Resume file: None
