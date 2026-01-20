@@ -21,7 +21,8 @@ import {
   Info,
   BookOpen,
   Image,
-  Camera
+  Camera,
+  Plus
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal.jsx';
@@ -3887,7 +3888,7 @@ const InputBar = ({
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
-              <Image size={isMobile ? 18 : 20} />
+              <Plus size={isMobile ? 18 : 20} />
             </button>
 
             {/* Hidden file input */}

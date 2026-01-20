@@ -1898,6 +1898,13 @@ serve(async (req)=>{
   }
   try {
     const { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [] } = body;
+
+    // Debug logging for images
+    console.log(`📨 Request received - mode: ${mode}, images: ${images?.length || 0}, query length: ${query?.length || 0}`);
+    if (images && images.length > 0) {
+      console.log(`🖼️ Images present: ${images.length} image(s), first image data length: ${images[0]?.data?.length || 'no data'}`);
+    }
+
     if (!query) {
       return new Response(JSON.stringify({
         error: "Query is required"
@@ -2377,10 +2384,22 @@ serve(async (req)=>{
         });
       }
 
+      // Use vision-specific system prompt that explicitly enables image analysis
+      const visionSystemPrompt = `You are an expert medical imaging analyst and clinical assistant. You have the ability to analyze medical images including X-rays, CT scans, MRIs, ultrasounds, photographs of skin conditions, and other clinical imagery.
+
+When analyzing images:
+1. Describe what you observe in the image with clinical accuracy
+2. Identify anatomical structures visible in the image
+3. Note any abnormalities, pathology, or findings of clinical significance
+4. Provide relevant differential diagnoses when appropriate
+5. Suggest appropriate follow-up or additional imaging if warranted
+
+Use professional medical terminology while remaining clear. If the image quality is poor or certain findings are uncertain, note this explicitly. Always provide your analysis with appropriate clinical context.`;
+
       const visionMessages = [
         {
           role: "system",
-          content: messages.find((m) => m.role === "system")?.content || "You are a helpful medical assistant. Analyze the provided image(s) and respond to the user's question."
+          content: visionSystemPrompt
         },
         {
           role: "user",
