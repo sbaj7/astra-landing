@@ -39,6 +39,7 @@ import RemoteArticleView from './RemoteArticleView.jsx';
 import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
 import { ImagePreviewStrip } from './ImagePreviewStrip.jsx';
 import CameraCapture from './CameraCapture.jsx';
+import { processPdfToImages } from '../utils/pdfUtils.js';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -3410,13 +3411,16 @@ const InputBar = ({
   isDragActive,
   onSetDragActive,
   imageError,
-  onClearError
+  onClearError,
+  onSetError
 }) => {
   const containerRef = useRef(null);
   const textareaRef = useRef(null);
   const fileInputRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
   const [showCamera, setShowCamera] = useState(false);
+  const [isPdfProcessing, setIsPdfProcessing] = useState(false);
+  const [pdfProgress, setPdfProgress] = useState(null); // { current: 1, total: 5 }
   const isExtraSmall = useIsMobile(420);
 
   useEffect(() => {
@@ -3439,11 +3443,72 @@ const InputBar = ({
     setTextareaHeight(scrollHeight);
   }, [isMobile]);
 
-  const handleFileSelect = (event) => {
+  const handleFileSelect = async (event) => {
     const files = event.target.files;
-    if (files && files.length > 0) {
-      onAddImages(files);
+    if (!files || files.length === 0) {
+      event.target.value = '';
+      return;
     }
+
+    // Separate PDFs from images
+    const pdfFiles = [];
+    const imageFiles = [];
+    for (const file of files) {
+      if (file.type === 'application/pdf') {
+        pdfFiles.push(file);
+      } else {
+        imageFiles.push(file);
+      }
+    }
+
+    // Process images first (if any)
+    if (imageFiles.length > 0) {
+      await onAddImages(imageFiles);
+    }
+
+    // Process PDFs (if any)
+    for (const pdfFile of pdfFiles) {
+      // Check available slots before processing
+      const availableSlots = MAX_IMAGES - (selectedImages?.length || 0);
+      if (availableSlots <= 0) {
+        onClearError?.();
+        setTimeout(() => {
+          onSetDragActive?.(false);
+          // Use onAddImages to trigger the error through validation
+          onAddImages([pdfFile]);
+        }, 0);
+        break;
+      }
+
+      setIsPdfProcessing(true);
+      setPdfProgress(null);
+
+      try {
+        const onProgress = (current, total) => setPdfProgress({ current, total });
+        const convertedImages = await processPdfToImages(pdfFile, availableSlots, onProgress);
+
+        if (convertedImages.length > 0) {
+          await onAddImages(convertedImages);
+        }
+      } catch (error) {
+        console.error('PDF processing error:', error);
+        // Provide user-friendly error messages
+        let errorMessage = 'Failed to process PDF';
+        if (error.name === 'PasswordException' || error.message?.includes('password')) {
+          errorMessage = 'PDF is password protected';
+        } else if (error.message?.includes('Invalid PDF') || error.message?.includes('corrupt')) {
+          errorMessage = 'Could not read PDF file';
+        } else if (error.message) {
+          errorMessage = `Failed to process PDF: ${error.message}`;
+        }
+        // Display error using the existing error mechanism
+        onSetError?.(errorMessage);
+      } finally {
+        setIsPdfProcessing(false);
+        setPdfProgress(null);
+      }
+    }
+
     // Reset input to allow selecting same file again
     event.target.value = '';
   };
@@ -3620,6 +3685,37 @@ const InputBar = ({
             >
               <X size={14} />
             </button>
+          </div>
+        )}
+
+        {/* PDF Processing Indicator */}
+        {isPdfProcessing && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              padding: isMobile ? '8px 10px' : '10px 12px',
+              backgroundColor: `${theme.accentSoftBlue}10`,
+              borderBottom: `1px solid ${theme.accentSoftBlue}20`,
+              color: theme.textSecondary,
+              fontSize: isMobile ? 12 : 13,
+              fontWeight: 500,
+              lineHeight: 1.4
+            }}
+          >
+            <span
+              style={{
+                width: 12,
+                height: 12,
+                borderRadius: '50%',
+                backgroundColor: theme.accentSoftBlue,
+                animation: 'pulse 1.5s ease-in-out infinite'
+              }}
+            />
+            <span>
+              Processing PDF{pdfProgress ? `: page ${pdfProgress.current} of ${pdfProgress.total}` : '...'}
+            </span>
           </div>
         )}
 
@@ -5535,6 +5631,7 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
       onSetDragActive={setIsDragActive}
       imageError={imageError}
       onClearError={clearImageError}
+      onSetError={setImageError}
     />
   </div>
 </div>
