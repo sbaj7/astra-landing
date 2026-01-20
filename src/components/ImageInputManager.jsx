@@ -3,6 +3,7 @@ import imageCompression from 'browser-image-compression';
 
 // Image validation constants
 export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+export const ALLOWED_PDF_TYPE = 'application/pdf';
 export const MAX_FILE_SIZE = 3.75 * 1024 * 1024; // 3.75MB (accounts for ~33% base64 increase to stay under 5MB API limit)
 export const MAX_IMAGES = 5;
 
@@ -30,9 +31,10 @@ export const validateImageFile = (file) => {
   }
 
   // Only validate type here - size is checked after compression attempt
-  if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
+  // PDFs are allowed through but processed separately in AstraApp
+  if (!ALLOWED_IMAGE_TYPES.includes(file.type) && file.type !== ALLOWED_PDF_TYPE) {
     const typeName = file.type || 'unknown';
-    errors.push(`Invalid file type: ${typeName}. Allowed types: JPEG, PNG, GIF, WebP`);
+    errors.push(`Invalid file type: ${typeName}. Allowed types: JPEG, PNG, GIF, WebP, PDF`);
   }
 
   return {
