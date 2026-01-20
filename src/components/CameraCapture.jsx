@@ -34,11 +34,13 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
       setError(null);
     } catch (err) {
       if (err.name === 'NotAllowedError') {
-        setError('Camera permission denied. Please allow camera access.');
+        setError('To take photos, please allow camera access in your browser settings.');
       } else if (err.name === 'NotFoundError') {
-        setError('No camera found on this device.');
+        setError('No camera was found on this device.');
+      } else if (err.name === 'NotReadableError') {
+        setError('Camera is being used by another app. Please close other apps and try again.');
       } else {
-        setError('Could not access camera. Please try again.');
+        setError('Could not access the camera. Please try again.');
       }
     }
   };
@@ -137,19 +139,77 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
       {error ? (
         <div
           style={{
-            padding: 24,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            padding: 40,
             textAlign: 'center',
-            color: '#fff'
+            color: 'white'
           }}
         >
-          <Camera size={48} style={{ marginBottom: 16, opacity: 0.5 }} />
+          <CameraOff size={64} style={{ opacity: 0.7, marginBottom: 24 }} />
+          <h3 style={{
+            fontSize: 20,
+            fontWeight: 600,
+            marginBottom: 12,
+            color: 'white'
+          }}>
+            Camera Access Required
+          </h3>
           <p style={{
             fontSize: 16,
-            lineHeight: 1.5,
-            margin: 0
+            opacity: 0.8,
+            marginBottom: 24,
+            maxWidth: 280,
+            lineHeight: 1.5
           }}>
             {error}
           </p>
+          <p style={{
+            fontSize: 14,
+            opacity: 0.6,
+            marginBottom: 32,
+            maxWidth: 280,
+            lineHeight: 1.6
+          }}>
+            <strong>iOS:</strong> Settings &rarr; Safari &rarr; Camera &rarr; Allow
+            <br />
+            <strong>Android:</strong> Tap lock icon in address bar
+          </p>
+          <div style={{ display: 'flex', gap: 12 }}>
+            <button
+              onClick={() => startCamera(facingMode)}
+              style={{
+                padding: '12px 24px',
+                borderRadius: 8,
+                border: 'none',
+                backgroundColor: 'white',
+                color: '#1a1a1a',
+                fontSize: 16,
+                fontWeight: 500,
+                cursor: 'pointer'
+              }}
+            >
+              Try Again
+            </button>
+            <button
+              onClick={handleClose}
+              style={{
+                padding: '12px 24px',
+                borderRadius: 8,
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                backgroundColor: 'transparent',
+                color: 'white',
+                fontSize: 16,
+                fontWeight: 500,
+                cursor: 'pointer'
+              }}
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       ) : (
         <video
