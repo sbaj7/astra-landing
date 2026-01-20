@@ -16,7 +16,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 4: Camera Capture** - Mobile device camera integration
 - [x] **Phase 5: PDF Support** - PDF document upload and page rendering
 - [x] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
-- [ ] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
+- [x] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
 - [ ] **Phase 8: Chat Display and Polish** - Image display, lightbox, limits, and quality feedback
 
 ## Phase Details
@@ -122,8 +122,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 07-01-PLAN.md — Core Vision API integration in handleSend with abort support
-- [ ] 07-02-PLAN.md — Image display in user messages and persistence handling
+- [x] 07-01-PLAN.md — Core Vision API integration in handleSend with abort support
+- [x] 07-02-PLAN.md — Image display in user messages and persistence handling
 
 ### Phase 8: Chat Display and Polish
 **Goal**: Images display properly in chat with lightbox, limits integration, and quality feedback
@@ -157,7 +157,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 4. Camera Capture | 2/2 | Complete | 2026-01-20 |
 | 5. PDF Support | 2/2 | Complete | 2026-01-20 |
 | 6. Vision API Backend | 2/2 | Complete | 2026-01-20 |
-| 7. Mode Integration | 0/2 | Not started | - |
+| 7. Mode Integration | 2/2 | Complete | 2026-01-20 |
 | 8. Chat Display and Polish | 0/4 | Not started | - |
 
 ---

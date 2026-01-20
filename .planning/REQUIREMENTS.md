@@ -39,11 +39,11 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Vision API Integration
 
 - [x] **VIS-01**: Images are sent to OpenAI Vision API for analysis
-- [ ] **VIS-02**: Image analysis works in search mode
-- [ ] **VIS-03**: Image analysis works in reason mode
-- [ ] **VIS-04**: Image analysis works in write mode
-- [ ] **VIS-05**: Image analysis works in standard chat mode
-- [ ] **VIS-06**: User sees streaming response during analysis
+- [x] **VIS-02**: Image analysis works in search mode
+- [x] **VIS-03**: Image analysis works in reason mode
+- [x] **VIS-04**: Image analysis works in write mode
+- [x] **VIS-05**: Image analysis works in standard chat mode
+- [x] **VIS-06**: User sees streaming response during analysis
 - [ ] **VIS-07**: User sees feedback when image quality is insufficient
 
 ### Chat Display
@@ -119,11 +119,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PDF-02 | Phase 5 | Complete |
 | PDF-03 | Phase 5 | Complete |
 | VIS-01 | Phase 6 | Complete |
-| VIS-02 | Phase 7 | Pending |
-| VIS-03 | Phase 7 | Pending |
-| VIS-04 | Phase 7 | Pending |
-| VIS-05 | Phase 7 | Pending |
-| VIS-06 | Phase 7 | Pending |
+| VIS-02 | Phase 7 | Complete |
+| VIS-03 | Phase 7 | Complete |
+| VIS-04 | Phase 7 | Complete |
+| VIS-05 | Phase 7 | Complete |
+| VIS-06 | Phase 7 | Complete |
 | VIS-07 | Phase 8 | Pending |
 | DISP-01 | Phase 8 | Pending |
 | DISP-02 | Phase 8 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 6 completion*
+*Last updated: 2026-01-20 after Phase 7 completion*
