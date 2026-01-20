@@ -20,7 +20,8 @@ import {
   Check,
   Info,
   BookOpen,
-  Image
+  Image,
+  Camera
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal.jsx';
@@ -37,6 +38,7 @@ import ClinicalArticlesModal from './ClinicalArticlesModal.jsx';
 import RemoteArticleView from './RemoteArticleView.jsx';
 import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
 import { ImagePreviewStrip } from './ImagePreviewStrip.jsx';
+import CameraCapture from './CameraCapture.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -3414,6 +3416,7 @@ const InputBar = ({
   const textareaRef = useRef(null);
   const fileInputRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
+  const [showCamera, setShowCamera] = useState(false);
   const isExtraSmall = useIsMobile(420);
 
   useEffect(() => {
@@ -3443,6 +3446,12 @@ const InputBar = ({
     }
     // Reset input to allow selecting same file again
     event.target.value = '';
+  };
+
+  const handleCameraCapture = async (file) => {
+    if (file) {
+      await onAddImages([file]);
+    }
   };
 
   // Drag and drop handlers
@@ -3529,6 +3538,7 @@ const InputBar = ({
   const isDisabled = isStreaming || isLoading;
 
   return (
+    <>
     <div
       ref={containerRef}
       onDragEnter={handleDragEnter}
@@ -3696,6 +3706,40 @@ const InputBar = ({
               style={{ display: 'none' }}
             />
 
+            {/* Camera Capture Button - Mobile Only */}
+            {isMobile && (
+              <button
+                onClick={() => setShowCamera(true)}
+                disabled={isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)}
+                aria-label="Take photo"
+                style={{
+                  padding: isMobile ? 8 : 10,
+                  borderRadius: '50%',
+                  border: 'none',
+                  backgroundColor: 'transparent',
+                  cursor: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
+                  color: theme.textSecondary,
+                  opacity: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isDisabled && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
+                    e.currentTarget.style.opacity = '1';
+                    e.currentTarget.style.backgroundColor = `${theme.textSecondary}10`;
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.opacity = (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+              >
+                <Camera size={isMobile ? 18 : 20} />
+              </button>
+            )}
+
             {speechRecognition.isAvailable && (
               <button
                 onClick={speechRecognition.toggleRecording}
@@ -3797,6 +3841,14 @@ const InputBar = ({
         </div>
       </div>
     </div>
+
+    {/* Camera Capture Modal */}
+    <CameraCapture
+      isOpen={showCamera}
+      onCapture={handleCameraCapture}
+      onClose={() => setShowCamera(false)}
+    />
+    </>
   );
 };
 
