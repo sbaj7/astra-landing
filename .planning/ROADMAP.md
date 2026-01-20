@@ -13,7 +13,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 1: Image Upload Foundation** - Basic upload UI with click, drag-drop, preview, and validation
 - [x] **Phase 2: Image Compression** - Client-side compression pipeline for API size limits
 - [x] **Phase 3: Multi-Image Support** - Attach up to 5 images per message
-- [ ] **Phase 4: Camera Capture** - Mobile device camera integration
+- [x] **Phase 4: Camera Capture** - Mobile device camera integration
 - [ ] **Phase 5: PDF Support** - PDF document upload and page rendering
 - [ ] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
 - [ ] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
@@ -77,8 +77,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 04-01-PLAN.md — Create CameraCapture modal component with video preview and capture, add camera button to InputBar
-- [ ] 04-02-PLAN.md — Add camera switching and permission denied error UI with platform guidance
+- [x] 04-01-PLAN.md — Create CameraCapture modal component with video preview and capture, add camera button to InputBar
+- [x] 04-02-PLAN.md — Add camera switching and permission denied error UI with platform guidance
 
 ### Phase 5: PDF Support
 **Goal**: Users can upload PDF documents for visual analysis
@@ -156,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 1. Image Upload Foundation | 3/3 | Complete | 2026-01-20 |
 | 2. Image Compression | 1/1 | Complete | 2026-01-20 |
 | 3. Multi-Image Support | 1/1 | Complete | 2026-01-20 |
-| 4. Camera Capture | 0/2 | Not started | - |
+| 4. Camera Capture | 2/2 | Complete | 2026-01-20 |
 | 5. PDF Support | 0/2 | Not started | - |
 | 6. Vision API Backend | 0/2 | Not started | - |
 | 7. Mode Integration | 0/5 | Not started | - |
