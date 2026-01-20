@@ -2782,6 +2782,44 @@ const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobi
         paddingLeft: isMobile ? 0 : 8,
         paddingRight: isMobile ? 0 : 8
       }}>
+        {/* Display images in user message (current session only) */}
+        {message.images && message.images.length > 0 && (
+          <div style={{
+            display: 'flex',
+            gap: '8px',
+            marginBottom: message.content ? '12px' : 0,
+            flexWrap: 'wrap'
+          }}>
+            {message.images.map((img, idx) => (
+              <img
+                key={img.id || idx}
+                src={img.data}
+                alt={`Attached image ${idx + 1}`}
+                style={{
+                  maxWidth: '120px',
+                  maxHeight: '120px',
+                  borderRadius: '8px',
+                  objectFit: 'cover',
+                  border: `1px solid ${theme.borderLight}`
+                }}
+              />
+            ))}
+          </div>
+        )}
+        {/* Placeholder for reloaded sessions where images were attached */}
+        {message.hadImages && !message.images && (
+          <div style={{
+            padding: '8px 12px',
+            backgroundColor: `${theme.textSecondary}10`,
+            borderRadius: '8px',
+            fontSize: '13px',
+            color: theme.textSecondary,
+            fontStyle: 'italic',
+            marginBottom: message.content ? '12px' : 0
+          }}>
+            [{message.imageCount || 1} image{message.imageCount !== 1 ? 's' : ''} attached]
+          </div>
+        )}
         <div
           className="message-content"
           style={{
