@@ -19,7 +19,8 @@ import {
   Copy,
   Check,
   Info,
-  BookOpen
+  BookOpen,
+  Image
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal.jsx';
@@ -34,6 +35,8 @@ import ReferencesView from './ReferencesView.jsx';
 import AboutView from './AboutView.jsx';
 import ClinicalArticlesModal from './ClinicalArticlesModal.jsx';
 import RemoteArticleView from './RemoteArticleView.jsx';
+import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
+import { ImagePreviewStrip } from './ImagePreviewStrip.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -3395,10 +3398,16 @@ const InputBar = ({
   speechRecognition,
   theme,
   onHeightChange,
-  isMobile
+  isMobile,
+  // Image upload props
+  selectedImages,
+  onAddImages,
+  onRemoveImage,
+  onClearImages
 }) => {
   const containerRef = useRef(null);
   const textareaRef = useRef(null);
+  const fileInputRef = useRef(null);
   const [textareaHeight, setTextareaHeight] = useState(32);
   const isExtraSmall = useIsMobile(420);
 
@@ -3421,6 +3430,15 @@ const InputBar = ({
     textarea.style.height = `${scrollHeight}px`;
     setTextareaHeight(scrollHeight);
   }, [isMobile]);
+
+  const handleFileSelect = (event) => {
+    const files = event.target.files;
+    if (files && files.length > 0) {
+      onAddImages(files);
+    }
+    // Reset input to allow selecting same file again
+    event.target.value = '';
+  };
 
   useEffect(() => { adjustTextareaHeight(); }, [query, adjustTextareaHeight]);
 
@@ -3478,6 +3496,16 @@ const InputBar = ({
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)'
       }}>
+        {/* Image Preview Strip - shows above input when images selected */}
+        {selectedImages && selectedImages.length > 0 && (
+          <ImagePreviewStrip
+            images={selectedImages}
+            onRemove={onRemoveImage}
+            theme={theme}
+            isMobile={isMobile}
+          />
+        )}
+
         {/* Input Row */}
         <div style={{
           position: 'relative',
@@ -3519,6 +3547,48 @@ const InputBar = ({
           />
 
           <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 4 : 6, paddingBottom: 2 }}>
+            {/* Image Upload Button */}
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              disabled={isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)}
+              aria-label="Attach images"
+              style={{
+                padding: isMobile ? 8 : 10,
+                borderRadius: '50%',
+                border: 'none',
+                backgroundColor: 'transparent',
+                cursor: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
+                color: theme.textSecondary,
+                opacity: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
+              onMouseEnter={(e) => {
+                if (!isDisabled && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
+                  e.currentTarget.style.opacity = '1';
+                  e.currentTarget.style.backgroundColor = `${theme.textSecondary}10`;
+                }
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+            >
+              <Image size={isMobile ? 18 : 20} />
+            </button>
+
+            {/* Hidden file input */}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/jpeg,image/png,image/gif,image/webp"
+              multiple
+              onChange={handleFileSelect}
+              style={{ display: 'none' }}
+            />
+
             {speechRecognition.isAvailable && (
               <button
                 onClick={speechRecognition.toggleRecording}
@@ -3547,31 +3617,31 @@ const InputBar = ({
 
             <button
               onClick={isStreaming ? onStop : onSend}
-              disabled={!isStreaming && !query.trim()}
+              disabled={!isStreaming && !query.trim() && (!selectedImages || selectedImages.length === 0)}
               aria-label={isStreaming ? 'Stop response' : 'Send'}
               style={{
                 padding: isMobile ? 8 : 10,
                 borderRadius: '50%',
                 border: 'none',
-                backgroundColor: (isStreaming || query.trim()) ? theme.accentSoftBlue : `${theme.textSecondary}20`,
+                backgroundColor: (isStreaming || query.trim() || (selectedImages && selectedImages.length > 0)) ? theme.accentSoftBlue : `${theme.textSecondary}20`,
                 cursor: 'pointer',
                 color: '#fff',
-                opacity: (!isStreaming && !query.trim()) ? 0.5 : 1,
+                opacity: (!isStreaming && !query.trim() && (!selectedImages || selectedImages.length === 0)) ? 0.5 : 1,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
-                boxShadow: (isStreaming || query.trim()) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none'
+                boxShadow: (isStreaming || query.trim() || (selectedImages && selectedImages.length > 0)) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none'
               }}
               onMouseEnter={(e) => {
-                if (isStreaming || query.trim()) {
+                if (isStreaming || query.trim() || (selectedImages && selectedImages.length > 0)) {
                   e.currentTarget.style.transform = 'scale(1.05)';
                   e.currentTarget.style.boxShadow = '0 4px 12px rgba(74, 107, 125, 0.4)';
                 }
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = (isStreaming || query.trim()) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none';
+                e.currentTarget.style.boxShadow = (isStreaming || query.trim() || (selectedImages && selectedImages.length > 0)) ? '0 2px 8px rgba(74, 107, 125, 0.3)' : 'none';
               }}
             >
               {isStreaming ? <Square size={isMobile ? 18 : 20} fill="currentColor" /> : <ArrowUp size={isMobile ? 18 : 20} />}
