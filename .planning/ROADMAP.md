@@ -17,7 +17,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 5: PDF Support** - PDF document upload and page rendering
 - [x] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
 - [x] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
-- [ ] **Phase 8: Chat Display and Polish** - Image lightbox and quality feedback
+- [x] **Phase 8: Chat Display and Polish** - Image lightbox and quality feedback
 
 ## Phase Details
 
@@ -139,8 +139,8 @@ Note: DISP-01, DISP-02, LIM-01, LIM-02 were completed in Phase 7:
 - LIM-01/LIM-02: Limits integration via existing handleSend flow (verified working)
 
 Plans:
-- [ ] 08-01-PLAN.md — Create ImageLightbox component and integrate click-to-expand
-- [ ] 08-02-PLAN.md — Add quality feedback detection for image analysis responses
+- [x] 08-01-PLAN.md — Create ImageLightbox component and integrate click-to-expand
+- [x] 08-02-PLAN.md — Add quality feedback detection for image analysis responses
 
 ## Progress
 
@@ -156,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 5. PDF Support | 2/2 | Complete | 2026-01-20 |
 | 6. Vision API Backend | 2/2 | Complete | 2026-01-20 |
 | 7. Mode Integration | 2/2 | Complete | 2026-01-20 |
-| 8. Chat Display and Polish | 0/2 | Not started | - |
+| 8. Chat Display and Polish | 2/2 | Complete | 2026-01-20 |
 
 ---
 *Roadmap created: 2026-01-19*

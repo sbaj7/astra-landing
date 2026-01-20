@@ -9,12 +9,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Image Upload
 
-- [ ] **UPLD-01**: User can click upload button to select images from device
-- [ ] **UPLD-02**: User can drag and drop images onto the input area
-- [ ] **UPLD-03**: User sees preview thumbnail of selected image before sending
-- [ ] **UPLD-04**: User can remove a selected image before sending
-- [ ] **UPLD-05**: User sees clear error message for invalid file types
-- [ ] **UPLD-06**: User sees clear error message when file exceeds size limit
+- [x] **UPLD-01**: User can click upload button to select images from device
+- [x] **UPLD-02**: User can drag and drop images onto the input area
+- [x] **UPLD-03**: User sees preview thumbnail of selected image before sending
+- [x] **UPLD-04**: User can remove a selected image before sending
+- [x] **UPLD-05**: User sees clear error message for invalid file types
+- [x] **UPLD-06**: User sees clear error message when file exceeds size limit
 - [x] **UPLD-07**: Images are compressed client-side before upload (target 1MB)
 
 ### Multi-Image Support
@@ -44,18 +44,18 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **VIS-04**: Image analysis works in write mode
 - [x] **VIS-05**: Image analysis works in standard chat mode
 - [x] **VIS-06**: User sees streaming response during analysis
-- [ ] **VIS-07**: User sees feedback when image quality is insufficient
+- [x] **VIS-07**: User sees feedback when image quality is insufficient
 
 ### Chat Display
 
-- [ ] **DISP-01**: User's uploaded images display in chat conversation
-- [ ] **DISP-02**: Images are responsive and fit within chat bubble
-- [ ] **DISP-03**: User can tap/click image to view in full-size lightbox
+- [x] **DISP-01**: User's uploaded images display in chat conversation
+- [x] **DISP-02**: Images are responsive and fit within chat bubble
+- [x] **DISP-03**: User can tap/click image to view in full-size lightbox
 
 ### Usage Limits
 
-- [ ] **LIM-01**: Image analysis counts against existing chat limits
-- [ ] **LIM-02**: User sees remaining limit after image analysis
+- [x] **LIM-01**: Image analysis counts against existing chat limits
+- [x] **LIM-02**: User sees remaining limit after image analysis
 
 ## v2 Requirements
 
@@ -124,12 +124,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VIS-04 | Phase 7 | Complete |
 | VIS-05 | Phase 7 | Complete |
 | VIS-06 | Phase 7 | Complete |
-| VIS-07 | Phase 8 | Pending |
-| DISP-01 | Phase 8 | Pending |
-| DISP-02 | Phase 8 | Pending |
-| DISP-03 | Phase 8 | Pending |
-| LIM-01 | Phase 8 | Pending |
-| LIM-02 | Phase 8 | Pending |
+| VIS-07 | Phase 8 | Complete |
+| DISP-01 | Phase 7 | Complete |
+| DISP-02 | Phase 7 | Complete |
+| DISP-03 | Phase 8 | Complete |
+| LIM-01 | Phase 7 | Complete |
+| LIM-02 | Phase 7 | Complete |
 
 **Coverage:**
 - v1 requirements: 26 total
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 7 completion*
+*Last updated: 2026-01-20 after Phase 8 completion*
