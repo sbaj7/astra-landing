@@ -119,14 +119,11 @@ Plans:
   3. Image analysis works correctly in write mode
   4. Image analysis works correctly in standard chat mode
   5. User sees streaming response during image analysis (not blocked until complete)
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 07-01: Search mode image integration
-- [ ] 07-02: Reason mode image integration
-- [ ] 07-03: Write mode image integration
-- [ ] 07-04: Standard chat image integration
-- [ ] 07-05: SSE streaming with image payloads
+- [ ] 07-01-PLAN.md — Core Vision API integration in handleSend with abort support
+- [ ] 07-02-PLAN.md — Image display in user messages and persistence handling
 
 ### Phase 8: Chat Display and Polish
 **Goal**: Images display properly in chat with lightbox, limits integration, and quality feedback
@@ -160,7 +157,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 4. Camera Capture | 2/2 | Complete | 2026-01-20 |
 | 5. PDF Support | 2/2 | Complete | 2026-01-20 |
 | 6. Vision API Backend | 2/2 | Complete | 2026-01-20 |
-| 7. Mode Integration | 0/5 | Not started | - |
+| 7. Mode Integration | 0/2 | Not started | - |
 | 8. Chat Display and Polish | 0/4 | Not started | - |
 
 ---
