@@ -25,10 +25,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Camera Capture
 
-- [ ] **CAM-01**: User can capture photo using device camera on mobile
-- [ ] **CAM-02**: User sees appropriate message when camera permission is denied
-- [ ] **CAM-03**: User can switch between front and back camera
-- [ ] **CAM-04**: Camera captures correct orientation (EXIF handling)
+- [x] **CAM-01**: User can capture photo using device camera on mobile
+- [x] **CAM-02**: User sees appropriate message when camera permission is denied
+- [x] **CAM-03**: User can switch between front and back camera
+- [x] **CAM-04**: Camera captures correct orientation (EXIF handling)
 
 ### PDF Support
 
@@ -111,10 +111,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MULT-01 | Phase 3 | Complete |
 | MULT-02 | Phase 3 | Complete |
 | MULT-03 | Phase 3 | Complete |
-| CAM-01 | Phase 4 | Pending |
-| CAM-02 | Phase 4 | Pending |
-| CAM-03 | Phase 4 | Pending |
-| CAM-04 | Phase 4 | Pending |
+| CAM-01 | Phase 4 | Complete |
+| CAM-02 | Phase 4 | Complete |
+| CAM-03 | Phase 4 | Complete |
+| CAM-04 | Phase 4 | Complete |
 | PDF-01 | Phase 5 | Pending |
 | PDF-02 | Phase 5 | Pending |
 | PDF-03 | Phase 5 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 3 completion*
+*Last updated: 2026-01-20 after Phase 4 completion*
