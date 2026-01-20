@@ -3541,21 +3541,64 @@ const InputBar = ({
     }
   };
 
-  const handleDrop = (e) => {
+  const handleDrop = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     onSetDragActive(false);
 
-    // Filter for image files from the dropped items
-    const files = Array.from(e.dataTransfer.files).filter(file =>
-      file.type.startsWith('image/')
-    );
+    // Separate images and PDFs from dropped items
+    const imageFiles = [];
+    const pdfFiles = [];
+    for (const file of e.dataTransfer.files) {
+      if (file.type.startsWith('image/')) {
+        imageFiles.push(file);
+      } else if (file.type === 'application/pdf') {
+        pdfFiles.push(file);
+      }
+    }
 
-    if (files.length > 0) {
-      onAddImages(files);
-    } else if (e.dataTransfer.files.length > 0) {
-      // User dropped non-image files - this error will be caught by validation
-      // but let's provide immediate feedback
+    // Process images first
+    if (imageFiles.length > 0) {
+      await onAddImages(imageFiles);
+    }
+
+    // Process PDFs
+    for (const pdfFile of pdfFiles) {
+      const availableSlots = MAX_IMAGES - (selectedImages?.length || 0);
+      if (availableSlots <= 0) {
+        onSetError?.(`Maximum ${MAX_IMAGES} images already attached`);
+        break;
+      }
+
+      setIsPdfProcessing(true);
+      setPdfProgress(null);
+
+      try {
+        const onProgress = (current, total) => setPdfProgress({ current, total });
+        const convertedImages = await processPdfToImages(pdfFile, availableSlots, onProgress);
+
+        if (convertedImages.length > 0) {
+          await onAddImages(convertedImages);
+        }
+      } catch (error) {
+        console.error('PDF processing error:', error);
+        let errorMessage = 'Failed to process PDF';
+        if (error.name === 'PasswordException' || error.message?.includes('password')) {
+          errorMessage = 'PDF is password protected';
+        } else if (error.message?.includes('Invalid PDF') || error.message?.includes('corrupt')) {
+          errorMessage = 'Could not read PDF file';
+        } else if (error.message) {
+          errorMessage = `Failed to process PDF: ${error.message}`;
+        }
+        onSetError?.(errorMessage);
+      } finally {
+        setIsPdfProcessing(false);
+        setPdfProgress(null);
+      }
+    }
+
+    // If neither images nor PDFs, pass through for validation error
+    if (imageFiles.length === 0 && pdfFiles.length === 0 && e.dataTransfer.files.length > 0) {
       onAddImages(e.dataTransfer.files);
     }
   };
@@ -3763,29 +3806,29 @@ const InputBar = ({
             {/* Image Upload Button */}
             <button
               onClick={() => fileInputRef.current?.click()}
-              disabled={isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)}
-              aria-label="Attach images"
+              disabled={isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)}
+              aria-label="Attach images or PDF"
               style={{
                 padding: isMobile ? 8 : 10,
                 borderRadius: '50%',
                 border: 'none',
                 backgroundColor: 'transparent',
-                cursor: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
+                cursor: (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
                 color: theme.textSecondary,
-                opacity: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
+                opacity: (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
               }}
               onMouseEnter={(e) => {
-                if (!isDisabled && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
+                if (!isDisabled && !isPdfProcessing && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
                   e.currentTarget.style.opacity = '1';
                   e.currentTarget.style.backgroundColor = `${theme.textSecondary}10`;
                 }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
+                e.currentTarget.style.opacity = (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
             >
@@ -3799,6 +3842,7 @@ const InputBar = ({
               accept="image/jpeg,image/png,image/gif,image/webp,application/pdf"
               multiple
               onChange={handleFileSelect}
+              disabled={isPdfProcessing}
               style={{ display: 'none' }}
             />
 
@@ -3806,29 +3850,29 @@ const InputBar = ({
             {isMobile && (
               <button
                 onClick={() => setShowCamera(true)}
-                disabled={isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)}
+                disabled={isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)}
                 aria-label="Take photo"
                 style={{
                   padding: isMobile ? 8 : 10,
                   borderRadius: '50%',
                   border: 'none',
                   backgroundColor: 'transparent',
-                  cursor: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
+                  cursor: (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 'not-allowed' : 'pointer',
                   color: theme.textSecondary,
-                  opacity: (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
+                  opacity: (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? 0.4 : 0.7,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
                 }}
                 onMouseEnter={(e) => {
-                  if (!isDisabled && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
+                  if (!isDisabled && !isPdfProcessing && !(selectedImages && selectedImages.length >= MAX_IMAGES)) {
                     e.currentTarget.style.opacity = '1';
                     e.currentTarget.style.backgroundColor = `${theme.textSecondary}10`;
                   }
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = (isDisabled || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
+                  e.currentTarget.style.opacity = (isDisabled || isPdfProcessing || (selectedImages && selectedImages.length >= MAX_IMAGES)) ? '0.4' : '0.7';
                   e.currentTarget.style.backgroundColor = 'transparent';
                 }}
               >
