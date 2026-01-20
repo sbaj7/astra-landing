@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Healthcare professionals can analyze medical images and documents through AI-powered vision capabilities
-**Current focus:** Phase 5 - PDF Support COMPLETE, ready for Phase 6
+**Current focus:** Phase 6 - Vision API Backend IN PROGRESS
 
 ## Current Position
 
-Phase: 5 of 8 (PDF Support) - COMPLETE
-Plan: 2 of 2 in current phase - COMPLETE
-Status: Phase 05 complete, ready for Phase 06 (Vision API Backend)
-Last activity: 2026-01-20 - Phase 05 verified and complete
+Phase: 6 of 8 (Vision API Backend) - IN PROGRESS
+Plan: 1 of 2 in current phase - COMPLETE
+Status: Plan 06-01 complete, ready for 06-02
+Last activity: 2026-01-20 - Completed 06-01-PLAN.md (Vision API Edge Function)
 
-Progress: [███████░░░] 64%
+Progress: [████████░░] 71%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 2.7 min
-- Total execution time: 24 min
+- Total plans completed: 10
+- Average duration: 2.6 min
+- Total execution time: 26 min
 
 **By Phase:**
 
@@ -32,9 +32,10 @@ Progress: [███████░░░] 64%
 | 03-multi-image-support | 1 | 1 min | 1 min |
 | 04-camera-capture | 2 | 4 min | 2 min |
 | 05-pdf-support | 2 | 6 min | 3 min |
+| 06-vision-api-backend | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (2 min), 04-02 (2 min), 05-01 (2 min), 05-02 (4 min)
+- Last 5 plans: 04-02 (2 min), 05-01 (2 min), 05-02 (4 min), 06-01 (2 min)
 - Trend: Fast execution
 
 *Updated after each plan completion*
@@ -76,6 +77,9 @@ Recent decisions affecting current work:
 - Separate PDF and image processing: Detect PDFs by MIME type, process separately (05-02)
 - Progress indicator for PDF: Shows 'Processing PDF: page X of Y' during conversion (05-02)
 - Disable buttons during PDF processing: Prevents concurrent PDF operations (05-02)
+- detail: auto for Vision API: Let OpenAI decide based on image size (06-01)
+- gpt-4o-mini model: Cost-effective vision with good quality (06-01)
+- Forward stream directly: No server-side buffering for immediate response (06-01)
 
 ### Pending Todos
 
@@ -88,5 +92,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-20
-Stopped at: Completed 05-02-PLAN.md (PDF Integration & UI Feedback)
+Stopped at: Completed 06-01-PLAN.md (Vision API Edge Function)
 Resume file: None
