@@ -5932,6 +5932,13 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
         </div>
       )}
 
+      {/* Image Lightbox */}
+      <ImageLightbox
+        imageUrl={lightboxImage}
+        onClose={() => setLightboxImage(null)}
+        theme={theme}
+      />
+
       <GlobalChromeStyles theme={theme} />
     </div>
   );
