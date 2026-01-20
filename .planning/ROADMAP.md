@@ -11,7 +11,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Image Upload Foundation** - Basic upload UI with click, drag-drop, preview, and validation
-- [ ] **Phase 2: Image Compression** - Client-side compression pipeline for API size limits
+- [x] **Phase 2: Image Compression** - Client-side compression pipeline for API size limits
 - [ ] **Phase 3: Multi-Image Support** - Attach up to 5 images per message
 - [ ] **Phase 4: Camera Capture** - Mobile device camera integration
 - [ ] **Phase 5: PDF Support** - PDF document upload and page rendering
@@ -49,7 +49,7 @@ Plans:
 **Plans**: 1 plan in 1 wave
 
 Plans:
-- [ ] 02-01-PLAN.md — Install browser-image-compression, create compression utility, integrate into addImages flow
+- [x] 02-01-PLAN.md — Install browser-image-compression, create compression utility, integrate into addImages flow
 
 ### Phase 3: Multi-Image Support
 **Goal**: Users can attach multiple images (up to 5) per message
