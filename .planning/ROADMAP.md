@@ -100,13 +100,14 @@ Plans:
 **Requirements**: VIS-01
 **Success Criteria** (what must be TRUE):
   1. Supabase Edge Function accepts base64-encoded images
-  2. Edge Function forwards images to OpenAI Vision API
-  3. API response is returned to client
-**Plans**: TBD
+  2. Edge Function forwards images to OpenAI Vision API with gpt-4o-mini
+  3. Streaming SSE response is returned to client
+  4. Mode-specific default prompts are used when no text provided
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 06-01: Vision API Edge Function
-- [ ] 06-02: Base64 payload handling and API integration
+- [ ] 06-01-PLAN.md — Create Vision API Edge Function with multimodal message construction, SSE streaming, and error handling
+- [ ] 06-02-PLAN.md — Add sendVisionRequest to authService.js and document VITE_VISION_API_URL
 
 ### Phase 7: Mode Integration
 **Goal**: Image analysis works across all chat modes with streaming responses
