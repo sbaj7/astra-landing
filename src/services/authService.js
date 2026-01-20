@@ -852,46 +852,4 @@ class AuthService {
 
 const authService = new AuthService();
 
-/**
- * Send images to Vision API for analysis
- * @param {Object} params
- * @param {string} params.query - User's text query (can be empty)
- * @param {Array<{data: string, type: string}>} params.images - Images with base64 data URLs and MIME types
- * @param {string} params.mode - Chat mode (search, reason, write, standard)
- * @param {AbortSignal} [params.signal] - Optional abort signal for cancellation
- * @returns {Promise<Response>} - Fetch Response object with streaming body
- */
-export async function sendVisionRequest({ query, images, mode, signal }) {
-  const url = import.meta.env.VITE_VISION_API_URL;
-
-  if (!url) {
-    throw new Error('VITE_VISION_API_URL not configured');
-  }
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'apikey': import.meta.env.VITE_SUPABASE_ANON_KEY,
-      'Accept': 'text/event-stream'
-    },
-    body: JSON.stringify({
-      query: query || '',
-      images: images.map(img => ({
-        data: img.data,
-        type: img.type
-      })),
-      mode: mode || 'standard'
-    }),
-    signal
-  });
-
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-    throw new Error(errorData.error || `Vision API error: ${response.status}`);
-  }
-
-  return response;
-}
-
 export default authService;

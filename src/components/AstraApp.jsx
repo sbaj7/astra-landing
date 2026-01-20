@@ -30,7 +30,7 @@ import BillingSuccessOverlay from './BillingSuccessOverlay.jsx';
 import ProfileModal from './ProfileModal.jsx';
 import SettingsModal from './SettingsModal.jsx';
 import DeleteChatModal from './DeleteChatModal.jsx';
-import authService, { sendVisionRequest } from '../services/authService.js';
+import authService from '../services/authService.js';
 import useIsMobile from '../hooks/useIsMobile.js';
 import ReferencesView from './ReferencesView.jsx';
 import AboutView from './AboutView.jsx';
@@ -5362,40 +5362,35 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
     let pendingChatSession = null;
 
     try {
-      let response;
+      // Build request body - include images when present
+      const requestBody = {
+        query: queryToSend,
+        isClinical: false,
+        isReason: currentMode === 'reason',
+        isWrite: currentMode === 'write',
+        mode: currentMode,
+        stream: true
+      };
 
+      // Add images to request if present
       if (imagesToSend.length > 0) {
-        // Route to Vision API when images are attached
-        response = await sendVisionRequest({
-          query: queryToSend,
-          images: imagesToSend.map(img => ({
-            data: img.data,
-            type: img.type
-          })),
-          mode: currentMode,
-          signal: abortControllerRef.current.signal
-        });
-      } else {
-        // Existing chat API path (unchanged)
-        response = await fetch(import.meta.env.VITE_API_URL, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
-            'Content-Type': 'application/json',
-            'apikey': import.meta.env.VITE_API_KEY,
-            'Accept': 'text/event-stream'
-          },
-          body: JSON.stringify({
-            query: queryToSend,
-            isClinical: false,
-            isReason: currentMode === 'reason',
-            isWrite: currentMode === 'write',
-            mode: currentMode,
-            stream: true
-          }),
-          signal: abortControllerRef.current.signal
-        });
+        requestBody.images = imagesToSend.map(img => ({
+          data: img.data,
+          type: img.type
+        }));
       }
+
+      const response = await fetch(import.meta.env.VITE_API_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+          'Content-Type': 'application/json',
+          'apikey': import.meta.env.VITE_API_KEY,
+          'Accept': 'text/event-stream'
+        },
+        body: JSON.stringify(requestBody),
+        signal: abortControllerRef.current.signal
+      });
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
