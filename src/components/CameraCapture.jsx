@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Camera, X } from 'lucide-react';
+import { Camera, X, SwitchCamera, CameraOff } from 'lucide-react';
 
 /**
  * CameraCapture - Full-screen camera modal for mobile photo capture
@@ -41,6 +41,12 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
         setError('Could not access camera. Please try again.');
       }
     }
+  };
+
+  const switchCamera = async () => {
+    const newFacingMode = facingMode === 'environment' ? 'user' : 'environment';
+    setFacingMode(newFacingMode);
+    await startCamera(newFacingMode);
   };
 
   const capturePhoto = () => {
@@ -154,7 +160,8 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            transform: facingMode === 'user' ? 'scaleX(-1)' : 'none'
           }}
         />
       )}
@@ -197,6 +204,32 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
               backgroundColor: '#fff'
             }}
           />
+        </button>
+      )}
+
+      {/* Camera Switch Button */}
+      {!error && (
+        <button
+          onClick={switchCamera}
+          aria-label={facingMode === 'environment' ? 'Switch to front camera' : 'Switch to back camera'}
+          style={{
+            position: 'absolute',
+            bottom: 'max(52px, calc(env(safe-area-inset-bottom) + 36px))',
+            right: 24,
+            width: 50,
+            height: 50,
+            borderRadius: '50%',
+            border: '2px solid rgba(255, 255, 255, 0.5)',
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease'
+          }}
+        >
+          <SwitchCamera size={24} />
         </button>
       )}
     </div>
