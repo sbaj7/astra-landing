@@ -594,6 +594,12 @@ const hydrateStoredMessage = (storedMessage, index = 0) => {
     hydrated.isStreamingComplete = true;
   }
 
+  // Restore image metadata for placeholder display
+  if (storedMessage.hadImages) {
+    hydrated.hadImages = true;
+    hydrated.imageCount = storedMessage.imageCount || 1;
+  }
+
   return hydrated;
 };
 
