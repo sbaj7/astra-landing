@@ -123,8 +123,11 @@ class ImageInputManager {
 // React hook to use ImageInputManager
 export const useImageInputManager = () => {
   const [state, setState] = useState({
-    selectedImage: null,
-    isPickerPresented: false
+    selectedImages: [],
+    selectedImage: null, // Backward compatibility
+    isPickerPresented: false,
+    isDragActive: false,
+    error: null
   });
 
   const managerRef = useRef(null);
@@ -135,16 +138,100 @@ export const useImageInputManager = () => {
     }
 
     const unsubscribe = managerRef.current.subscribe(setState);
-    
-    // Initialize state
+
+    // Initialize state from manager
     setState({
-      selectedImage: managerRef.current.selectedImage,
-      isPickerPresented: managerRef.current.isPickerPresented
+      selectedImages: managerRef.current.selectedImages,
+      selectedImage: managerRef.current.selectedImages[0] || null,
+      isPickerPresented: managerRef.current.isPickerPresented,
+      isDragActive: managerRef.current.isDragActive,
+      error: managerRef.current.error
     });
 
     return unsubscribe;
   }, []);
 
+  // NEW: Add multiple images with validation
+  const addImages = React.useCallback((files) => {
+    const manager = managerRef.current;
+    if (!manager) return { added: [], rejected: [] };
+
+    const added = [];
+    const rejected = [];
+    const filesToProcess = Array.from(files);
+
+    for (const file of filesToProcess) {
+      // Validate file
+      const validation = validateImageFile(file);
+      if (!validation.valid) {
+        rejected.push({ file, errors: validation.errors });
+        continue;
+      }
+
+      // Check limit
+      if (manager.selectedImages.length + added.length >= MAX_IMAGES) {
+        rejected.push({ file, errors: [`Maximum ${MAX_IMAGES} images allowed`] });
+        continue;
+      }
+
+      // Read as base64 for API compatibility
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const imageObj = {
+            id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+            data: e.target.result,
+            file: file,
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            width: img.width,
+            height: img.height
+          };
+          manager.addImage(imageObj);
+        };
+        img.onerror = () => {
+          manager.setError(`Failed to load image: ${file.name}`);
+        };
+        img.src = e.target.result;
+      };
+      reader.onerror = () => {
+        manager.setError(`Failed to read file: ${file.name}`);
+      };
+      reader.readAsDataURL(file);
+      added.push(file);
+    }
+
+    // Set error for first rejection if any
+    if (rejected.length > 0 && added.length === 0) {
+      manager.setError(rejected[0].errors[0]);
+    }
+
+    return { added, rejected };
+  }, []);
+
+  const removeImage = React.useCallback((index) => {
+    managerRef.current?.removeImage(index);
+  }, []);
+
+  const clearAllImages = React.useCallback(() => {
+    managerRef.current?.clearAllImages();
+  }, []);
+
+  const setIsDragActive = React.useCallback((active) => {
+    managerRef.current?.setIsDragActive(active);
+  }, []);
+
+  const setError = React.useCallback((error) => {
+    managerRef.current?.setError(error);
+  }, []);
+
+  const clearError = React.useCallback(() => {
+    managerRef.current?.clearError();
+  }, []);
+
+  // Backward compatibility
   const setSelectedImage = React.useCallback((image) => {
     managerRef.current?.setSelectedImage(image);
   }, []);
@@ -158,6 +245,17 @@ export const useImageInputManager = () => {
   }, []);
 
   return {
+    // New multi-image API
+    selectedImages: state.selectedImages,
+    isDragActive: state.isDragActive,
+    error: state.error,
+    addImages,
+    removeImage,
+    clearAllImages,
+    setIsDragActive,
+    setError,
+    clearError,
+    // Backward compatibility
     selectedImage: state.selectedImage,
     isPickerPresented: state.isPickerPresented,
     setSelectedImage,
