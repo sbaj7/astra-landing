@@ -19,9 +19,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Multi-Image Support
 
-- [ ] **MULT-01**: User can attach up to 5 images per message
-- [ ] **MULT-02**: User sees image count indicator (e.g., "3/5 images")
-- [ ] **MULT-03**: User can remove individual images from multi-image selection
+- [x] **MULT-01**: User can attach up to 5 images per message
+- [x] **MULT-02**: User sees image count indicator (e.g., "3/5 images")
+- [x] **MULT-03**: User can remove individual images from multi-image selection
 
 ### Camera Capture
 
@@ -108,9 +108,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UPLD-05 | Phase 1 | Complete |
 | UPLD-06 | Phase 1 | Complete |
 | UPLD-07 | Phase 2 | Complete |
-| MULT-01 | Phase 3 | Pending |
-| MULT-02 | Phase 3 | Pending |
-| MULT-03 | Phase 3 | Pending |
+| MULT-01 | Phase 3 | Complete |
+| MULT-02 | Phase 3 | Complete |
+| MULT-03 | Phase 3 | Complete |
 | CAM-01 | Phase 4 | Pending |
 | CAM-02 | Phase 4 | Pending |
 | CAM-03 | Phase 4 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 2 completion*
+*Last updated: 2026-01-20 after Phase 3 completion*
