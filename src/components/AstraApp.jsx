@@ -4281,6 +4281,8 @@ const AstraApp = () => {
     addImages,
     removeImage,
     clearAllImages,
+    isDragActive,
+    setIsDragActive,
     error: imageError,
     setError: setImageError,
     clearError: clearImageError
@@ -5475,6 +5477,11 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
       onAddImages={addImages}
       onRemoveImage={removeImage}
       onClearImages={clearAllImages}
+      // Drag and error props
+      isDragActive={isDragActive}
+      onSetDragActive={setIsDragActive}
+      imageError={imageError}
+      onClearError={clearImageError}
     />
   </div>
 </div>
