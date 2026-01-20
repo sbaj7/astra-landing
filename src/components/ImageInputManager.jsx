@@ -1,9 +1,20 @@
 import React, { useState, useRef } from 'react';
+import imageCompression from 'browser-image-compression';
 
 // Image validation constants
 export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 export const MAX_FILE_SIZE = 3.75 * 1024 * 1024; // 3.75MB (accounts for ~33% base64 increase to stay under 5MB API limit)
 export const MAX_IMAGES = 5;
+
+// Compression settings
+export const COMPRESSION_THRESHOLD = 1 * 1024 * 1024; // 1MB - compress files larger than this
+export const COMPRESSION_OPTIONS = {
+  maxSizeMB: 1,
+  maxWidthOrHeight: 1920,
+  useWebWorker: true,
+  maxIteration: 10,
+  initialQuality: 0.8
+};
 
 /**
  * Validates a file for image upload
@@ -33,6 +44,37 @@ export const validateImageFile = (file) => {
     errors
   };
 };
+
+/**
+ * Compress image if needed, returning the smaller of original/compressed
+ * Skips GIFs (to preserve animation) and files already under threshold
+ * @param {File} file - Original image file
+ * @returns {Promise<File>} - Compressed file or original if smaller/skipped
+ */
+export async function compressImageIfNeeded(file) {
+  // Skip if already under threshold
+  if (file.size <= COMPRESSION_THRESHOLD) {
+    return file;
+  }
+
+  // Skip GIFs (compression breaks animation)
+  if (file.type === 'image/gif') {
+    return file;
+  }
+
+  try {
+    const compressedFile = await imageCompression(file, COMPRESSION_OPTIONS);
+
+    // Log compression results for debugging
+    console.log(`Compression: ${(file.size/1024/1024).toFixed(2)}MB -> ${(compressedFile.size/1024/1024).toFixed(2)}MB`);
+
+    // Use smaller of the two (compression can sometimes increase size)
+    return compressedFile.size < file.size ? compressedFile : file;
+  } catch (error) {
+    console.warn('Compression failed, using original:', error);
+    return file; // Graceful fallback
+  }
+}
 
 class ImageInputManager {
   constructor() {
