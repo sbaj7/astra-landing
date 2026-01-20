@@ -88,11 +88,11 @@ Plans:
   1. User can select PDF files in the file picker
   2. PDF pages are converted to images for Vision API processing
   3. User sees loading indicator during PDF page rendering
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 05-01: PDF.js integration and page rendering
-- [ ] 05-02: Loading state and progress indication
+- [ ] 05-01-PLAN.md — Install pdfjs-dist, configure worker, create processPdfToImages utility
+- [ ] 05-02-PLAN.md — Update file input to accept PDFs, add loading indicator, handle edge cases
 
 ### Phase 6: Vision API Backend
 **Goal**: Backend infrastructure for sending images to OpenAI Vision API
