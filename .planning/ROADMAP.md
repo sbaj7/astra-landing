@@ -17,7 +17,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 5: PDF Support** - PDF document upload and page rendering
 - [x] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
 - [x] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
-- [ ] **Phase 8: Chat Display and Polish** - Image display, lightbox, limits, and quality feedback
+- [ ] **Phase 8: Chat Display and Polish** - Image lightbox and quality feedback
 
 ## Phase Details
 
@@ -126,23 +126,21 @@ Plans:
 - [x] 07-02-PLAN.md — Image display in user messages and persistence handling
 
 ### Phase 8: Chat Display and Polish
-**Goal**: Images display properly in chat with lightbox, limits integration, and quality feedback
+**Goal**: Full-size image lightbox and quality feedback for better user experience
 **Depends on**: Phase 7
-**Requirements**: DISP-01, DISP-02, DISP-03, VIS-07, LIM-01, LIM-02
+**Requirements**: DISP-03, VIS-07
 **Success Criteria** (what must be TRUE):
-  1. User's uploaded images display inline within their chat messages
-  2. Images are responsive and fit within chat bubble without overflow
-  3. User can tap/click image to view full-size in lightbox overlay
-  4. User sees feedback message when image quality is insufficient for analysis
-  5. Image analysis counts against user's existing chat limits
-  6. User sees updated remaining limit count after image analysis
-**Plans**: TBD
+  1. User can tap/click image to view full-size in lightbox overlay
+  2. User sees feedback message when image quality is insufficient for analysis
+**Plans**: 2 plans in 1 wave
+
+Note: DISP-01, DISP-02, LIM-01, LIM-02 were completed in Phase 7:
+- DISP-01/DISP-02: Image display in user messages (07-02-PLAN.md)
+- LIM-01/LIM-02: Limits integration via existing handleSend flow (verified working)
 
 Plans:
-- [ ] 08-01: Chat message image display component
-- [ ] 08-02: Full-size lightbox overlay
-- [ ] 08-03: Quality feedback messaging
-- [ ] 08-04: Usage limits integration
+- [ ] 08-01-PLAN.md — Create ImageLightbox component and integrate click-to-expand
+- [ ] 08-02-PLAN.md — Add quality feedback detection for image analysis responses
 
 ## Progress
 
@@ -158,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 5. PDF Support | 2/2 | Complete | 2026-01-20 |
 | 6. Vision API Backend | 2/2 | Complete | 2026-01-20 |
 | 7. Mode Integration | 2/2 | Complete | 2026-01-20 |
-| 8. Chat Display and Polish | 0/4 | Not started | - |
+| 8. Chat Display and Polish | 0/2 | Not started | - |
 
 ---
 *Roadmap created: 2026-01-19*
