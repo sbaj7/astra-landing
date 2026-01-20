@@ -2,6 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 /**
+ * Image count indicator showing current/max images
+ * Displays a pill-shaped badge with visual distinction at limit
+ */
+const ImageCountIndicator = ({ count, max, theme }) => {
+  const isAtLimit = count === max;
+
+  return (
+    <div
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: isAtLimit
+          ? `${theme.accentSoftBlue}20`
+          : `${theme.textSecondary}10`,
+        color: isAtLimit
+          ? theme.accentSoftBlue
+          : theme.textSecondary,
+        fontSize: 12,
+        fontWeight: 500,
+        padding: '4px 10px',
+        borderRadius: 12,
+        whiteSpace: 'nowrap',
+        flexShrink: 0
+      }}
+      aria-label={`${count} of ${max} images attached`}
+    >
+      {count}/{max}
+    </div>
+  );
+};
+
+/**
  * Individual image thumbnail with remove button
  */
 const ImageThumbnail = ({ image, onRemove, theme }) => {
@@ -121,7 +154,7 @@ const ImageThumbnail = ({ image, onRemove, theme }) => {
  * Horizontal strip of image previews with removal buttons
  * Displays above the text input in InputBar
  */
-export const ImagePreviewStrip = ({ images, onRemove, theme, isMobile }) => {
+export const ImagePreviewStrip = ({ images, onRemove, theme, isMobile, maxImages }) => {
   if (!images || images.length === 0) {
     return null;
   }
@@ -150,6 +183,13 @@ export const ImagePreviewStrip = ({ images, onRemove, theme, isMobile }) => {
           theme={theme}
         />
       ))}
+      {maxImages && (
+        <ImageCountIndicator
+          count={images.length}
+          max={maxImages}
+          theme={theme}
+        />
+      )}
     </div>
   );
 };
