@@ -532,6 +532,14 @@ const serializeMessageForPersistence = (message) => {
     base.inlineCitations = inline;
   }
 
+  // Strip image data for persistence but preserve flag that images were attached
+  // HIPAA-friendly: no image data persisted, only metadata for placeholder display
+  if (message.images && message.images.length > 0) {
+    base.hadImages = true;
+    base.imageCount = message.images.length;
+    // Explicitly do NOT include base.images - no image data persisted
+  }
+
   return base;
 };
 
