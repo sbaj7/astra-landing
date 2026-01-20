@@ -3510,6 +3510,16 @@ const InputBar = ({
     }
   }, [speechRecognition.recognizedText, speechRecognition.isRecording, setQuery]);
 
+  // Auto-dismiss error after 5 seconds
+  useEffect(() => {
+    if (imageError) {
+      const timer = setTimeout(() => {
+        onClearError?.();
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [imageError, onClearError]);
+
   const getPlaceholder = () => (
     speechRecognition.isRecording ? 'Listening...' :
     currentMode === 'reason' ? 'Present your case' :
@@ -3558,6 +3568,48 @@ const InputBar = ({
             theme={theme}
             isMobile={isMobile}
           />
+        )}
+
+        {/* Error Message Display */}
+        {imageError && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 8,
+              padding: isMobile ? '8px 10px' : '10px 12px',
+              backgroundColor: `${theme.errorColor}10`,
+              borderBottom: `1px solid ${theme.errorColor}20`,
+              color: theme.errorColor,
+              fontSize: isMobile ? 12 : 13,
+              fontWeight: 500,
+              lineHeight: 1.4
+            }}
+            role="alert"
+          >
+            <span style={{ flex: 1 }}>{imageError}</span>
+            <button
+              onClick={onClearError}
+              aria-label="Dismiss error"
+              style={{
+                padding: 4,
+                borderRadius: 4,
+                border: 'none',
+                backgroundColor: 'transparent',
+                color: theme.errorColor,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                opacity: 0.7,
+                transition: 'opacity 0.15s ease'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; }}
+            >
+              <X size={14} />
+            </button>
+          </div>
         )}
 
         {/* Input Row */}
