@@ -10,7 +10,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Image Upload Foundation** - Basic upload UI with click, drag-drop, preview, and validation
+- [x] **Phase 1: Image Upload Foundation** - Basic upload UI with click, drag-drop, preview, and validation
 - [ ] **Phase 2: Image Compression** - Client-side compression pipeline for API size limits
 - [ ] **Phase 3: Multi-Image Support** - Attach up to 5 images per message
 - [ ] **Phase 4: Camera Capture** - Mobile device camera integration
@@ -34,9 +34,9 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 **Plans**: 3 plans in 3 waves
 
 Plans:
-- [ ] 01-01-PLAN.md — Extend ImageInputManager for multi-image state and validation
-- [ ] 01-02-PLAN.md — Add upload button to InputBar and create ImagePreviewStrip
-- [ ] 01-03-PLAN.md — Add drag-and-drop handlers and error display
+- [x] 01-01-PLAN.md — Extend ImageInputManager for multi-image state and validation
+- [x] 01-02-PLAN.md — Add upload button to InputBar and create ImagePreviewStrip
+- [x] 01-03-PLAN.md — Add drag-and-drop handlers and error display
 
 ### Phase 2: Image Compression
 **Goal**: Images are automatically compressed client-side to meet API size limits
@@ -155,7 +155,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Image Upload Foundation | 0/3 | Planned | - |
+| 1. Image Upload Foundation | 3/3 | Complete | 2026-01-20 |
 | 2. Image Compression | 0/1 | Not started | - |
 | 3. Multi-Image Support | 0/2 | Not started | - |
 | 4. Camera Capture | 0/3 | Not started | - |
