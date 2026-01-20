@@ -105,3 +105,8 @@ sup.md-citation a:hover {
 .clinical-reasoning-content > * > *:first-child {
   margin-top: 0 !important;
 }
+
+/* Hide scrollbar for image preview strip */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
