@@ -36,23 +36,66 @@ export const validateImageFile = (file) => {
 
 class ImageInputManager {
   constructor() {
-    this.selectedImage = null;
+    this.selectedImages = []; // Changed from selectedImage
     this.isPickerPresented = false;
+    this.isDragActive = false;  // NEW: for drag-drop visual feedback
+    this.error = null;          // NEW: for validation error display
     this.listeners = new Set();
   }
 
+  addImage(image) {
+    if (this.selectedImages.length >= MAX_IMAGES) {
+      this.setError(`Maximum ${MAX_IMAGES} images allowed`);
+      return false;
+    }
+    this.selectedImages = [...this.selectedImages, image];
+    this.error = null; // Clear error on successful add
+    this.notifyListeners();
+    return true;
+  }
+
+  removeImage(index) {
+    if (index >= 0 && index < this.selectedImages.length) {
+      this.selectedImages = this.selectedImages.filter((_, i) => i !== index);
+      this.notifyListeners();
+    }
+  }
+
+  clearAllImages() {
+    this.selectedImages = [];
+    this.error = null;
+    this.notifyListeners();
+  }
+
+  // Keep for backward compatibility but mark deprecated
   setSelectedImage(image) {
-    this.selectedImage = image;
+    console.warn('setSelectedImage is deprecated, use addImage instead');
+    this.selectedImages = image ? [image] : [];
+    this.notifyListeners();
+  }
+
+  clearSelectedImage() {
+    console.warn('clearSelectedImage is deprecated, use clearAllImages instead');
+    this.clearAllImages();
+  }
+
+  setIsDragActive(active) {
+    this.isDragActive = active;
+    this.notifyListeners();
+  }
+
+  setError(errorMessage) {
+    this.error = errorMessage;
+    this.notifyListeners();
+  }
+
+  clearError() {
+    this.error = null;
     this.notifyListeners();
   }
 
   setIsPickerPresented(isPresented) {
     this.isPickerPresented = isPresented;
-    this.notifyListeners();
-  }
-
-  clearSelectedImage() {
-    this.selectedImage = null;
     this.notifyListeners();
   }
 
@@ -67,8 +110,11 @@ class ImageInputManager {
   notifyListeners() {
     this.listeners.forEach(callback => {
       callback({
-        selectedImage: this.selectedImage,
-        isPickerPresented: this.isPickerPresented
+        selectedImages: this.selectedImages,
+        selectedImage: this.selectedImages[0] || null, // Backward compatibility
+        isPickerPresented: this.isPickerPresented,
+        isDragActive: this.isDragActive,
+        error: this.error
       });
     });
   }
