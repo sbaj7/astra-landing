@@ -17,7 +17,7 @@ export const COMPRESSION_OPTIONS = {
 };
 
 /**
- * Validates a file for image upload
+ * Validates a file for image upload (type only - size is checked after compression)
  * @param {File} file - The file to validate
  * @returns {{ valid: boolean, errors: string[] }}
  */
@@ -29,14 +29,10 @@ export const validateImageFile = (file) => {
     return { valid: false, errors };
   }
 
+  // Only validate type here - size is checked after compression attempt
   if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
     const typeName = file.type || 'unknown';
     errors.push(`Invalid file type: ${typeName}. Allowed types: JPEG, PNG, GIF, WebP`);
-  }
-
-  if (file.size > MAX_FILE_SIZE) {
-    const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
-    errors.push(`File too large: ${sizeMB}MB. Maximum size: 3.75MB`);
   }
 
   return {
@@ -193,8 +189,8 @@ export const useImageInputManager = () => {
     return unsubscribe;
   }, []);
 
-  // NEW: Add multiple images with validation
-  const addImages = React.useCallback((files) => {
+  // Add multiple images with validation and automatic compression
+  const addImages = React.useCallback(async (files) => {
     const manager = managerRef.current;
     if (!manager) return { added: [], rejected: [] };
 
@@ -203,7 +199,7 @@ export const useImageInputManager = () => {
     const filesToProcess = Array.from(files);
 
     for (const file of filesToProcess) {
-      // Validate file
+      // Validate type only (size checked after compression)
       const validation = validateImageFile(file);
       if (!validation.valid) {
         rejected.push({ file, errors: validation.errors });
@@ -216,33 +212,56 @@ export const useImageInputManager = () => {
         continue;
       }
 
-      // Read as base64 for API compatibility
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const img = new Image();
-        img.onload = () => {
-          const imageObj = {
-            id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            data: e.target.result,
-            file: file,
-            name: file.name,
-            size: file.size,
-            type: file.type,
-            width: img.width,
-            height: img.height
+      try {
+        // Compress if needed (transparent to user)
+        const processedFile = await compressImageIfNeeded(file);
+
+        // Now check size AFTER compression
+        if (processedFile.size > MAX_FILE_SIZE) {
+          const sizeMB = (processedFile.size / (1024 * 1024)).toFixed(1);
+          rejected.push({
+            file,
+            errors: [`Image still too large after compression: ${sizeMB}MB. Maximum: 3.75MB`]
+          });
+          continue;
+        }
+
+        // Read and create image object
+        await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const img = new Image();
+            img.onload = () => {
+              const imageObj = {
+                id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+                data: e.target.result,
+                file: processedFile, // Use processed (possibly compressed) file
+                name: file.name, // Keep original name
+                size: processedFile.size, // Use processed size
+                type: processedFile.type,
+                width: img.width,
+                height: img.height,
+                originalSize: file.size, // Track original for debugging/UI
+                wasCompressed: processedFile !== file
+              };
+              manager.addImage(imageObj);
+              resolve();
+            };
+            img.onerror = () => {
+              reject(new Error(`Failed to load image: ${file.name}`));
+            };
+            img.src = e.target.result;
           };
-          manager.addImage(imageObj);
-        };
-        img.onerror = () => {
-          manager.setError(`Failed to load image: ${file.name}`);
-        };
-        img.src = e.target.result;
-      };
-      reader.onerror = () => {
-        manager.setError(`Failed to read file: ${file.name}`);
-      };
-      reader.readAsDataURL(file);
-      added.push(file);
+          reader.onerror = () => {
+            reject(new Error(`Failed to read file: ${file.name}`));
+          };
+          reader.readAsDataURL(processedFile);
+        });
+
+        added.push(file);
+      } catch (error) {
+        rejected.push({ file, errors: [error.message] });
+      }
     }
 
     // Set error for first rejection if any
