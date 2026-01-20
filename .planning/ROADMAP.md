@@ -60,11 +60,10 @@ Plans:
   2. User sees image count indicator showing current/max (e.g., "3/5 images")
   3. User can remove individual images from the multi-image selection
   4. Upload button is disabled when 5 images are attached
-**Plans**: TBD
+**Plans**: 1 plan in 1 wave
 
 Plans:
-- [ ] 03-01: Multi-image state management
-- [ ] 03-02: Image count indicator and limit enforcement
+- [ ] 03-01-PLAN.md — Add image count indicator to ImagePreviewStrip (MULT-01 and MULT-03 already complete from Phase 1)
 
 ### Phase 4: Camera Capture
 **Goal**: Mobile users can capture photos directly using device camera
@@ -157,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 |-------|----------------|--------|-----------|
 | 1. Image Upload Foundation | 3/3 | Complete | 2026-01-20 |
 | 2. Image Compression | 1/1 | Complete | 2026-01-20 |
-| 3. Multi-Image Support | 0/2 | Not started | - |
+| 3. Multi-Image Support | 0/1 | Not started | - |
 | 4. Camera Capture | 0/3 | Not started | - |
 | 5. PDF Support | 0/2 | Not started | - |
 | 6. Vision API Backend | 0/2 | Not started | - |
