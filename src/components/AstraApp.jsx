@@ -5268,10 +5268,19 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
       });
     }
 
+    // Capture images before clearing for both display and API request
+    const imagesToSend = selectedImages ? [...selectedImages] : [];
+
     const userMessage = {
       id: Date.now(),
       role: 'user',
       content: query.trim(),
+      // Include images for display in chat (will be stripped on persistence)
+      images: imagesToSend.length > 0 ? imagesToSend.map(img => ({
+        id: img.id,
+        data: img.data,
+        type: img.type
+      })) : undefined,
       wasInReasonMode: currentMode === 'reason',
       wasInWriteMode: currentMode === 'write',
       timestamp: new Date()
@@ -5279,7 +5288,6 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
 
     setMessages(prev => [...prev, userMessage]);
     const queryToSend = query.trim();
-    const imagesToSend = selectedImages ? [...selectedImages] : [];
     setQuery('');
     clearAllImages(); // Clear images after sending
     setIsLoading(true);
