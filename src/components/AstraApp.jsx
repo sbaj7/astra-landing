@@ -4169,6 +4169,17 @@ const AstraApp = () => {
     signIn
   } = useSupabaseAuth();
 
+  // Image upload state management
+  const {
+    selectedImages,
+    addImages,
+    removeImage,
+    clearAllImages,
+    error: imageError,
+    setError: setImageError,
+    clearError: clearImageError
+  } = useImageInputManager();
+
   const [messages, setMessages] = useState([]);
   const [query, setQuery] = useState('');
   const [currentMode, setCurrentMode] = useState('search');
@@ -4887,7 +4898,8 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
   };
 
   const handleSend = async () => {
-    if (!query.trim() || isLoading || isStreaming) return;
+    // Allow sending if there's text OR images (or both)
+    if ((!query.trim() && (!selectedImages || selectedImages.length === 0)) || isLoading || isStreaming) return;
 
     // Check if user has active subscription (for authenticated users)
     const subscriptionStatus = accountProfile?.subscription_status;
@@ -4967,6 +4979,7 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
     setMessages(prev => [...prev, userMessage]);
     const queryToSend = query.trim();
     setQuery('');
+    clearAllImages(); // Clear images after sending
     setIsLoading(true);
     setIsStreaming(true);
     setHasFirstToken(false);
@@ -5351,6 +5364,11 @@ if ((currentMode === 'search' || currentMode === 'literature-review') && citatio
       theme={theme}
       onHeightChange={setInputBarHeight}
       isMobile={isMobile}
+      // Image upload props
+      selectedImages={selectedImages}
+      onAddImages={addImages}
+      onRemoveImage={removeImage}
+      onClearImages={clearAllImages}
     />
   </div>
 </div>
