@@ -1,5 +1,39 @@
 import React, { useState, useRef } from 'react';
 
+// Image validation constants
+export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+export const MAX_FILE_SIZE = 3.75 * 1024 * 1024; // 3.75MB (accounts for ~33% base64 increase to stay under 5MB API limit)
+export const MAX_IMAGES = 5;
+
+/**
+ * Validates a file for image upload
+ * @param {File} file - The file to validate
+ * @returns {{ valid: boolean, errors: string[] }}
+ */
+export const validateImageFile = (file) => {
+  const errors = [];
+
+  if (!file) {
+    errors.push('No file provided');
+    return { valid: false, errors };
+  }
+
+  if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
+    const typeName = file.type || 'unknown';
+    errors.push(`Invalid file type: ${typeName}. Allowed types: JPEG, PNG, GIF, WebP`);
+  }
+
+  if (file.size > MAX_FILE_SIZE) {
+    const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+    errors.push(`File too large: ${sizeMB}MB. Maximum size: 3.75MB`);
+  }
+
+  return {
+    valid: errors.length === 0,
+    errors
+  };
+};
+
 class ImageInputManager {
   constructor() {
     this.selectedImage = null;
