@@ -858,9 +858,10 @@ const authService = new AuthService();
  * @param {string} params.query - User's text query (can be empty)
  * @param {Array<{data: string, type: string}>} params.images - Images with base64 data URLs and MIME types
  * @param {string} params.mode - Chat mode (search, reason, write, standard)
+ * @param {AbortSignal} [params.signal] - Optional abort signal for cancellation
  * @returns {Promise<Response>} - Fetch Response object with streaming body
  */
-export async function sendVisionRequest({ query, images, mode }) {
+export async function sendVisionRequest({ query, images, mode, signal }) {
   const url = import.meta.env.VITE_VISION_API_URL;
 
   if (!url) {
@@ -881,7 +882,8 @@ export async function sendVisionRequest({ query, images, mode }) {
         type: img.type
       })),
       mode: mode || 'standard'
-    })
+    }),
+    signal
   });
 
   if (!response.ok) {
