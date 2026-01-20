@@ -51,6 +51,11 @@ const CameraCapture = ({ isOpen, onCapture, onClose }) => {
     await startCamera(newFacingMode);
   };
 
+  // Note: Captured images are passed to addImages() which uses browser-image-compression.
+  // browser-image-compression automatically handles EXIF orientation during compression,
+  // so images display correctly regardless of device orientation when captured.
+  // Additionally, canvas.toBlob() from video stream produces correctly-oriented images
+  // because the video stream is already orientation-corrected by the browser.
   const capturePhoto = () => {
     const video = videoRef.current;
     if (!video) return;
