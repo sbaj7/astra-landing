@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Healthcare professionals can analyze medical images and documents through AI-powered vision capabilities
-**Current focus:** Phase 7 - Mode Integration IN PROGRESS (Plan 1 complete, Plan 2 pending)
+**Current focus:** Phase 7 - Mode Integration COMPLETE. Ready for Phase 8 (Polish).
 
 ## Current Position
 
-Phase: 7 of 8 (Mode Integration)
-Plan: 1 of 2 in current phase - COMPLETE
-Status: Phase 07 in progress - Vision API routing complete, user message image display pending
-Last activity: 2026-01-20 - Completed 07-01-PLAN.md (Vision API Mode Integration)
+Phase: 7 of 8 (Mode Integration) - COMPLETE
+Plan: 2 of 2 in current phase - COMPLETE
+Status: Phase 07 complete - Vision API integration and user message image display done
+Last activity: 2026-01-20 - Completed 07-02-PLAN.md (User Message Image Display)
 
-Progress: [█████████░] 92%
+Progress: [██████████] 100% (through Phase 7)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
+- Total plans completed: 13
 - Average duration: 2.5 min
-- Total execution time: 30 min
+- Total execution time: 32 min
 
 **By Phase:**
 
@@ -33,10 +33,10 @@ Progress: [█████████░] 92%
 | 04-camera-capture | 2 | 4 min | 2 min |
 | 05-pdf-support | 2 | 6 min | 3 min |
 | 06-vision-api-backend | 2 | 4 min | 2 min |
-| 07-mode-integration | 1 | 2 min | 2 min |
+| 07-mode-integration | 2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-02 (4 min), 06-01 (2 min), 06-02 (2 min), 07-01 (2 min)
+- Last 5 plans: 06-01 (2 min), 06-02 (2 min), 07-01 (2 min), 07-02 (2 min)
 - Trend: Fast execution (2 min average)
 
 *Updated after each plan completion*
@@ -87,6 +87,9 @@ Recent decisions affecting current work:
 - Capture selectedImages before clearAllImages(): Preserve data for async request (07-01)
 - Conditional routing based on imagesToSend.length: Determines Vision vs Chat API path (07-01)
 - Reuse existing streaming handler: Vision API returns same SSE format as Chat API (07-01)
+- Display images above text in user messages: Natural visual hierarchy (07-02)
+- 120px max dimension thumbnails: Balance between visibility and space (07-02)
+- hadImages + imageCount metadata: HIPAA-friendly persistence, no base64 data stored (07-02)
 
 ### Pending Todos
 
@@ -99,5 +102,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-20
-Stopped at: Completed 07-01-PLAN.md (Vision API Mode Integration)
+Stopped at: Completed 07-02-PLAN.md (User Message Image Display)
 Resume file: None
