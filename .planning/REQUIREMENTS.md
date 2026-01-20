@@ -15,7 +15,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **UPLD-04**: User can remove a selected image before sending
 - [ ] **UPLD-05**: User sees clear error message for invalid file types
 - [ ] **UPLD-06**: User sees clear error message when file exceeds size limit
-- [ ] **UPLD-07**: Images are compressed client-side before upload (target 1MB)
+- [x] **UPLD-07**: Images are compressed client-side before upload (target 1MB)
 
 ### Multi-Image Support
 
@@ -107,7 +107,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UPLD-04 | Phase 1 | Complete |
 | UPLD-05 | Phase 1 | Complete |
 | UPLD-06 | Phase 1 | Complete |
-| UPLD-07 | Phase 2 | Pending |
+| UPLD-07 | Phase 2 | Complete |
 | MULT-01 | Phase 3 | Pending |
 | MULT-02 | Phase 3 | Pending |
 | MULT-03 | Phase 3 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-19 after roadmap creation*
+*Last updated: 2026-01-20 after Phase 2 completion*
