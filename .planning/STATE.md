@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-01-19)
 
 **Core value:** Healthcare professionals can analyze medical images and documents through AI-powered vision capabilities
-**Current focus:** Phase 4 - Camera Capture COMPLETE, ready for Phase 5
+**Current focus:** Phase 5 - PDF Support (Plan 1 of 2 complete)
 
 ## Current Position
 
-Phase: 4 of 8 (Camera Capture) - COMPLETE
-Plan: 2 of 2 in current phase - COMPLETE
-Status: Phase 04 complete, ready for Phase 05 (PDF Support)
-Last activity: 2026-01-20 - Completed 04-02-PLAN.md
+Phase: 5 of 8 (PDF Support)
+Plan: 1 of 2 in current phase
+Status: In progress
+Last activity: 2026-01-20 - Completed 05-01-PLAN.md
 
-Progress: [█████░░░░░] 50%
+Progress: [██████░░░░] 57%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 2.6 min
-- Total execution time: 18 min
+- Total plans completed: 8
+- Average duration: 2.5 min
+- Total execution time: 20 min
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [█████░░░░░] 50%
 | 02-image-compression | 1 | 4 min | 4 min |
 | 03-multi-image-support | 1 | 1 min | 1 min |
 | 04-camera-capture | 2 | 4 min | 2 min |
+| 05-pdf-support | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (4 min), 03-01 (1 min), 04-01 (2 min), 04-02 (2 min)
+- Last 5 plans: 03-01 (1 min), 04-01 (2 min), 04-02 (2 min), 05-01 (2 min)
 - Trend: Very fast execution
 
 *Updated after each plan completion*
@@ -68,6 +69,10 @@ Recent decisions affecting current work:
 - Mirror front camera preview only: scaleX(-1) on preview, captured image stays unmirrored (04-02)
 - Platform-specific permission guidance: iOS Settings path, Android lock icon (04-02)
 - NotReadableError handling: Detect camera-in-use by another app (04-02)
+- Static worker path /pdf.worker.min.mjs: Avoid Vite file hashing issues (05-01)
+- Scale 2.0 for PDF rendering: Good text readability in rendered images (05-01)
+- JPEG quality 0.85 for PDF pages: Balance of quality and file size (05-01)
+- canvas.toBlob() over toDataURL(): Memory efficiency for large images (05-01)
 
 ### Pending Todos
 
@@ -80,5 +85,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-01-20
-Stopped at: Completed 04-02-PLAN.md (Camera Switch & Permissions) - Phase 4 COMPLETE
+Stopped at: Completed 05-01-PLAN.md (PDF Library & Processing Utility)
 Resume file: None
