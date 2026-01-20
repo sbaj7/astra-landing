@@ -15,6 +15,168 @@ OUTPUT RULES (STRICT)
 - Never wrap the entire answer in triple backticks.
 - Keep lines under 120 chars and avoid trailing spaces.
 `;
+
+// ============================================
+// MULTI-TURN CONVERSATION UTILITIES
+// ============================================
+const HISTORY_TOKEN_BUDGET = 8000;
+const MAX_HISTORY_MESSAGES = 20;
+
+function estimateTokens(text: string): number {
+  // Rough estimate: ~4 characters per token for English text
+  return Math.ceil((text || '').length / 4);
+}
+
+function truncateHistory(
+  history: Array<{role: string; content: string}>,
+  systemPrompt: string,
+  currentQuery: string,
+  maxTokens: number = HISTORY_TOKEN_BUDGET
+): Array<{role: string; content: string}> {
+  if (!history?.length) return [];
+
+  // Limit message count first
+  let trimmed = history.slice(-MAX_HISTORY_MESSAGES);
+
+  // Reserve tokens for system prompt + current query
+  const reserved = estimateTokens(systemPrompt) + estimateTokens(currentQuery);
+  const available = maxTokens - reserved;
+  if (available <= 0) return [];
+
+  // Keep most recent messages that fit within token budget
+  const result: Array<{role: string; content: string}> = [];
+  let total = 0;
+  for (let i = trimmed.length - 1; i >= 0; i--) {
+    const tokens = estimateTokens(trimmed[i].content);
+    if (total + tokens <= available) {
+      result.unshift(trimmed[i]);
+      total += tokens;
+    } else {
+      break;
+    }
+  }
+  return result;
+}
+
+function buildChatMessages(
+  systemPrompt: string,
+  query: string,
+  history: Array<{role: string; content: string}>,
+  contextualInfo?: string,
+  images?: Array<{data: string; type: string}>
+): Array<any> {
+  const messages: Array<any> = [{ role: "system", content: systemPrompt }];
+
+  // Add truncated history
+  const truncatedHistory = truncateHistory(history, systemPrompt, query);
+  messages.push(...truncatedHistory);
+
+  // Build current user message
+  const userPrompt = contextualInfo
+    ? `${contextualInfo}---\n\nBased on the above, answer: ${query}`
+    : query;
+
+  if (images && images.length > 0) {
+    // Multimodal format for vision
+    const content: Array<any> = [{ type: "text", text: userPrompt }];
+    for (const img of images) {
+      content.push({
+        type: "image_url",
+        image_url: { url: img.data, detail: "auto" }
+      });
+    }
+    messages.push({ role: "user", content });
+  } else {
+    messages.push({ role: "user", content: userPrompt });
+  }
+
+  return messages;
+}
+
+// ============================================
+// QUERY REWRITING FOR PRONOUN RESOLUTION
+// ============================================
+async function rewriteQueryWithContext(
+  query: string,
+  history: Array<{role: string; content: string}>
+): Promise<string> {
+  // Skip if no history
+  if (!history?.length) return query;
+
+  // Quick check for potential references/pronouns that need resolution
+  const hasReferences = /\b(it|its|this|that|these|those|the same|above|previous|them|they|their|the condition|the disease|the medication|the treatment|the drug|the patient)\b/i.test(query);
+  if (!hasReferences) return query;
+
+  console.log(`🔍 Query has references, attempting rewrite with ${history.length} history messages`);
+
+  try {
+    // Get recent history context (last 4 messages)
+    const recentHistory = history.slice(-4);
+    const historyContext = recentHistory.map(m =>
+      `${m.role}: ${(m.content || '').slice(0, 200)}`
+    ).join('\n');
+
+    console.log(`📝 History context prepared (${historyContext.length} chars)`);
+
+    const openaiKey = Deno.env.get("OPENAI_API_KEY");
+    if (!openaiKey) {
+      console.log(`⚠️ No OPENAI_API_KEY found, skipping rewrite`);
+      return query;
+    }
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${openaiKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          {
+            role: "system",
+            content: `You resolve pronoun and reference expressions in medical queries based on conversation history.
+Given a query and recent conversation, rewrite the query to be fully self-contained by replacing pronouns (it, this, that, them, etc.) with the specific medical terms they refer to.
+Only output the rewritten query, nothing else.
+If the query is already self-contained or you cannot determine what the references point to, return the original query unchanged.
+
+Examples:
+- "What are the treatment options for it?" → "What are the treatment options for hypertension?" (if hypertension was discussed)
+- "Tell me more about this condition" → "Tell me more about diabetes mellitus" (if diabetes was discussed)
+- "What are the side effects?" → "What are the side effects of metformin?" (if metformin was discussed)`
+          },
+          {
+            role: "user",
+            content: `Recent conversation:\n${historyContext}\n\nQuery to rewrite: "${query}"`
+          }
+        ],
+        max_tokens: 150,
+        temperature: 0
+      })
+    });
+
+    console.log(`📡 Rewrite API response status: ${response.status}`);
+
+    if (!response.ok) {
+      console.log(`⚠️ Query rewrite API failed: ${response.status}`);
+      return query;
+    }
+
+    const data = await response.json();
+    const rewritten = data.choices?.[0]?.message?.content?.trim();
+
+    if (rewritten && rewritten !== query) {
+      console.log(`🔄 Query rewritten: "${query}" → "${rewritten}"`);
+      return rewritten;
+    }
+    console.log(`ℹ️ Query unchanged after rewrite attempt`);
+    return query;
+  } catch (err) {
+    console.log(`⚠️ Query rewrite error: ${err}`);
+    return query; // Fallback to original on any error
+  }
+}
+
 const trustedDomains = [
   // High-Impact General Medicine
   "nejm.org",
@@ -1897,7 +2059,7 @@ serve(async (req)=>{
     });
   }
   try {
-    const { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [] } = body;
+    const { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], history = [] } = body;
 
     // Debug logging for images
     console.log(`📨 Request received - mode: ${mode}, images: ${images?.length || 0}, query length: ${query?.length || 0}`);
@@ -1954,7 +2116,7 @@ serve(async (req)=>{
         }
       ];
       // 5) Call model (same as regular search)
-      const model = "gpt-5.1";
+      const model = "gpt-4o";
       const finalInstructions = messages.find((m)=>m.role === "system")?.content || "";
       const finalInput = messages.filter((m)=>m.role !== "system").map((m)=>m.content).join("\n\n") || "";
       const requestBody = {
@@ -2273,25 +2435,21 @@ serve(async (req)=>{
       if (icdHints) contextSegments.push(icdHints);
       if (retrievedTrials) contextSegments.push(`Contextual studies:\n\n${retrievedTrials}`);
       const userPrompt = contextSegments.length ? `${contextSegments.join("\n\n")}\n\n---\n\n${query}` : query;
-      messages = [
-        {
-          role: "system",
-          content: systemPrompt
-        },
-        {
-          role: "user",
-          content: userPrompt
-        }
-      ];
+      // Build messages with conversation history for multi-turn support
+      messages = buildChatMessages(systemPrompt, userPrompt, history);
     } else {
       systemPrompt = getResearchRole();
+
+      // Rewrite query to resolve pronouns/references using conversation history
+      const searchQuery = await rewriteQueryWithContext(query, history);
+
       let queryPlan;
       if (!wantsRawSearch) {
         try {
-          queryPlan = await planSearchQueries(query);
+          queryPlan = await planSearchQueries(searchQuery);
         } catch  {
           queryPlan = {
-            primaryQuery: query,
+            primaryQuery: searchQuery,
             secondaryQueries: [],
             searchFocus: "fallback"
           };
@@ -2299,7 +2457,7 @@ serve(async (req)=>{
       }
       let searchResults = null;
       try {
-        searchResults = wantsRawSearch ? await simpleRawSearch(query) : await searchWithTavily(queryPlan);
+        searchResults = wantsRawSearch ? await simpleRawSearch(searchQuery) : await searchWithTavily(queryPlan);
       } catch  {}
       let contextualInfo = "";
       if (searchResults && searchResults.results) {
@@ -2334,30 +2492,22 @@ serve(async (req)=>{
         }
       }
       const userPrompt = contextualInfo ? `${contextualInfo}---\n\nBased on the above search results, answer: ${query}` : query;
-      messages = [
-        {
-          role: "system",
-          content: systemPrompt
-        },
-        {
-          role: "user",
-          content: userPrompt
-        }
-      ];
+      // Build messages with conversation history for multi-turn support
+      messages = buildChatMessages(systemPrompt, userPrompt, history);
     }
-    // Model selection
+    // Model selection - using valid OpenAI model names
     let model;
-    if (isReason || mode === "reason") model = "gpt-5.1";
-    else if (isWrite || mode === "write") model = "gpt-5-nano";
+    if (isReason || mode === "reason") model = "gpt-4o";
+    else if (isWrite || mode === "write") model = "gpt-4o-mini";
     else if (mode === "prior-auth-appeal" || mode === "medical-necessity" || mode === "disability-fmla" || mode === "dme" || mode === "peer-to-peer" || mode === "specialty-referral") {
-      model = "gpt-5-nano"; // Use nano for letter writing modes
+      model = "gpt-4o-mini"; // Use mini for letter writing modes
     } else if (mode === "psychiatry" || mode === "procedure-note" || mode === "dermatology" || mode === "emergency-medicine" || mode === "neurology" || mode === "ophthalmology" || specialtyModes.includes(mode)) {
-      model = "gpt-5-nano"; // Use nano for specialty note writing modes
+      model = "gpt-4o-mini"; // Use mini for specialty note writing modes
     } else if (mode === "next-steps" || mode === "disposition" || mode === "dispo" || mode === "differential") {
-      model = "gpt-5.1"; // Use full model for clinical reasoning modes
+      model = "gpt-4o"; // Use full model for clinical reasoning modes
     } else if (mode === "orders") {
-      model = "gpt-5-nano"; // Use nano for structured order writing
-    } else model = "gpt-5.1";
+      model = "gpt-4o-mini"; // Use mini for structured order writing
+    } else model = "gpt-4o";
 
     // ============================================
     // IMAGE HANDLING - Use Chat Completions API when images present
@@ -2503,25 +2653,19 @@ Use professional medical terminology while remaining clear. If the image quality
         });
       }
     }
-    const finalInstructions = messages.find((m)=>m.role === "system")?.content || "";
-    const finalInput = messages.filter((m)=>m.role !== "system").map((m)=>m.content).join("\n\n") || "";
-    // Determine reasoning effort based on mode
-    let reasoningEffort = "low"; // Default for clinical modes
-    if (!shouldUseClinical) {
-      // Research mode - use none for speed
-      reasoningEffort = "none";
-    }
-    const requestBody = {
+    // ============================================
+    // CHAT COMPLETIONS API - Multi-turn support
+    // ============================================
+    console.log(`💬 Sending to Chat Completions API - model: ${model}, messages: ${messages.length}, history in request: ${history?.length || 0}`);
+
+    const requestBody: any = {
       model,
-      instructions: finalInstructions,
-      input: finalInput,
-      reasoning: {
-        effort: reasoningEffort
-      },
-      max_output_tokens: 5000
+      messages,
+      max_tokens: isReason ? 8000 : 4096,
+      stream
     };
-    if (stream) requestBody.stream = true;
-    const upstream = await fetch("https://api.openai.com/v1/responses", {
+
+    const upstream = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
@@ -2529,8 +2673,10 @@ Use professional medical terminology while remaining clear. If the image quality
       },
       body: JSON.stringify(requestBody)
     });
+
     if (!upstream.ok) {
       const errorText = await upstream.text();
+      console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
       return new Response(JSON.stringify({
         error: `OpenAI API error: ${upstream.status} - ${errorText}`
       }), {
@@ -2541,73 +2687,68 @@ Use professional medical terminology while remaining clear. If the image quality
         }
       });
     }
+
     if (stream) {
+      // Stream Chat Completions response to client
       const upstreamReader = upstream.body?.getReader();
       const encoder = new TextEncoder();
       const decoder = new TextDecoder();
+
       const sse = new ReadableStream({
-        start (controller) {
+        start(controller) {
+          // Send citations first if available
           if (citationsArray.length > 0) {
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({
               citations: citationsArray
             })}\n\n`));
           }
         },
-        async pull (controller) {
+        async pull(controller) {
           if (!upstreamReader) {
             controller.close();
             return;
           }
           let buffer = "";
           try {
-            while(true){
+            while (true) {
               const { value, done } = await upstreamReader.read();
               if (done) break;
-              buffer += decoder.decode(value, {
-                stream: true
-              });
-              let sepIndex;
-              while((sepIndex = buffer.indexOf("\n\n")) !== -1){
-                const block = buffer.slice(0, sepIndex).trim();
-                buffer = buffer.slice(sepIndex + 2);
-                if (!block) continue;
-                let eventType = "";
-                let dataJson = "";
-                for (const line of block.split("\n")){
-                  if (line.startsWith("event:")) eventType = line.slice(6).trim();
-                  else if (line.startsWith("data:")) dataJson = line.slice(5).trim();
-                }
-                if (!dataJson) continue;
-                if (eventType === "response.output_text.delta") {
-                  const payload = JSON.parse(dataJson);
-                  const out = {
-                    choices: [
-                      {
-                        delta: {
-                          content: payload.delta
-                        }
-                      }
-                    ]
-                  };
-                  controller.enqueue(encoder.encode(`data: ${JSON.stringify(out)}\n\n`));
-                } else if (eventType === "response.error") {
-                  controller.enqueue(encoder.encode(`data: ${dataJson}\n\n`));
-                } else if (eventType === "response.completed") {
-                  controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
+              buffer += decoder.decode(value, { stream: true });
+
+              const lines = buffer.split("\n");
+              buffer = lines.pop() || "";
+
+              for (const line of lines) {
+                const trimmed = line.trim();
+                if (!trimmed || !trimmed.startsWith("data:")) continue;
+                const dataStr = trimmed.slice(5).trim();
+                if (dataStr === "[DONE]") {
+                  controller.enqueue(encoder.encode("data: [DONE]\n\n"));
                   controller.close();
                   return;
                 }
+                try {
+                  const parsed = JSON.parse(dataStr);
+                  const delta = parsed.choices?.[0]?.delta?.content;
+                  if (delta) {
+                    const out = { choices: [{ delta: { content: delta } }] };
+                    controller.enqueue(encoder.encode(`data: ${JSON.stringify(out)}\n\n`));
+                  }
+                } catch {
+                  // Ignore parse errors for malformed chunks
+                }
               }
             }
-            controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
+            controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             controller.close();
           } catch (err) {
             controller.error(err);
-          } finally{
+          } finally {
             upstreamReader?.releaseLock();
           }
         }
       });
+
       return new Response(sse, {
         status: 200,
         headers: {
@@ -2619,26 +2760,18 @@ Use professional medical terminology while remaining clear. If the image quality
         }
       });
     } else {
+      // Non-streaming response
       const data = await upstream.json();
-      const legacy = {
+      const response: any = {
         id: data.id,
         object: "chat.completion",
-        created: data.created_at,
+        created: data.created,
         model: data.model,
-        choices: [
-          {
-            index: 0,
-            finish_reason: "stop",
-            message: {
-              role: "assistant",
-              content: data.output_text || ""
-            }
-          }
-        ],
-        usage: data.usage || undefined
+        choices: data.choices,
+        usage: data.usage
       };
-      if (citationsArray.length > 0) legacy.citations = citationsArray;
-      return new Response(JSON.stringify(legacy), {
+      if (citationsArray.length > 0) response.citations = citationsArray;
+      return new Response(JSON.stringify(response), {
         status: 200,
         headers: {
           ...corsHeaders,
