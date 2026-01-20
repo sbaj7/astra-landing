@@ -3403,7 +3403,12 @@ const InputBar = ({
   selectedImages,
   onAddImages,
   onRemoveImage,
-  onClearImages
+  onClearImages,
+  // Drag state props
+  isDragActive,
+  onSetDragActive,
+  imageError,
+  onClearError
 }) => {
   const containerRef = useRef(null);
   const textareaRef = useRef(null);
@@ -3438,6 +3443,47 @@ const InputBar = ({
     }
     // Reset input to allow selecting same file again
     event.target.value = '';
+  };
+
+  // Drag and drop handlers
+  const handleDragEnter = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onSetDragActive(true);
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault(); // Required to allow drop
+    e.stopPropagation();
+  };
+
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    // Only deactivate if leaving the container entirely
+    // Check if relatedTarget is outside the container to prevent flickering
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      onSetDragActive(false);
+    }
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onSetDragActive(false);
+
+    // Filter for image files from the dropped items
+    const files = Array.from(e.dataTransfer.files).filter(file =>
+      file.type.startsWith('image/')
+    );
+
+    if (files.length > 0) {
+      onAddImages(files);
+    } else if (e.dataTransfer.files.length > 0) {
+      // User dropped non-image files - this error will be caught by validation
+      // but let's provide immediate feedback
+      onAddImages(e.dataTransfer.files);
+    }
   };
 
   useEffect(() => { adjustTextareaHeight(); }, [query, adjustTextareaHeight]);
@@ -3475,6 +3521,10 @@ const InputBar = ({
   return (
     <div
       ref={containerRef}
+      onDragEnter={handleDragEnter}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
       style={{
         paddingTop: 0,
         paddingRight: isMobile ? 16 : 24,
@@ -3489,9 +3539,13 @@ const InputBar = ({
         position: 'relative',
         backgroundColor: `${theme.backgroundSurface}F5`,
         borderRadius: isMobile ? 22 : 28,
-        border: `1px solid ${theme.textSecondary}25`,
-        boxShadow: `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        border: isDragActive
+          ? `2px dashed ${theme.accentSoftBlue}`
+          : `1px solid ${theme.textSecondary}25`,
+        boxShadow: isDragActive
+          ? `0 0 0 4px ${theme.accentSoftBlue}20, 0 8px 32px rgba(0,0,0,0.12)`
+          : `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
+        transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         overflow: 'visible',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)'
