@@ -15,7 +15,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 3: Multi-Image Support** - Attach up to 5 images per message
 - [x] **Phase 4: Camera Capture** - Mobile device camera integration
 - [x] **Phase 5: PDF Support** - PDF document upload and page rendering
-- [ ] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
+- [x] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
 - [ ] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
 - [ ] **Phase 8: Chat Display and Polish** - Image display, lightbox, limits, and quality feedback
 
@@ -106,8 +106,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 06-01-PLAN.md — Create Vision API Edge Function with multimodal message construction, SSE streaming, and error handling
-- [ ] 06-02-PLAN.md — Add sendVisionRequest to authService.js and document VITE_VISION_API_URL
+- [x] 06-01-PLAN.md — Create Vision API Edge Function with multimodal message construction, SSE streaming, and error handling
+- [x] 06-02-PLAN.md — Add sendVisionRequest to authService.js and document VITE_VISION_API_URL
 
 ### Phase 7: Mode Integration
 **Goal**: Image analysis works across all chat modes with streaming responses
@@ -159,7 +159,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 3. Multi-Image Support | 1/1 | Complete | 2026-01-20 |
 | 4. Camera Capture | 2/2 | Complete | 2026-01-20 |
 | 5. PDF Support | 2/2 | Complete | 2026-01-20 |
-| 6. Vision API Backend | 0/2 | Not started | - |
+| 6. Vision API Backend | 2/2 | Complete | 2026-01-20 |
 | 7. Mode Integration | 0/5 | Not started | - |
 | 8. Chat Display and Polish | 0/4 | Not started | - |
 

@@ -38,7 +38,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Vision API Integration
 
-- [ ] **VIS-01**: Images are sent to OpenAI Vision API for analysis
+- [x] **VIS-01**: Images are sent to OpenAI Vision API for analysis
 - [ ] **VIS-02**: Image analysis works in search mode
 - [ ] **VIS-03**: Image analysis works in reason mode
 - [ ] **VIS-04**: Image analysis works in write mode
@@ -118,7 +118,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PDF-01 | Phase 5 | Complete |
 | PDF-02 | Phase 5 | Complete |
 | PDF-03 | Phase 5 | Complete |
-| VIS-01 | Phase 6 | Pending |
+| VIS-01 | Phase 6 | Complete |
 | VIS-02 | Phase 7 | Pending |
 | VIS-03 | Phase 7 | Pending |
 | VIS-04 | Phase 7 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 5 completion*
+*Last updated: 2026-01-20 after Phase 6 completion*
