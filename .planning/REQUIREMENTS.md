@@ -32,9 +32,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### PDF Support
 
-- [ ] **PDF-01**: User can upload PDF documents
-- [ ] **PDF-02**: PDF pages are converted to images for Vision API analysis
-- [ ] **PDF-03**: User sees loading indicator during PDF processing
+- [x] **PDF-01**: User can upload PDF documents
+- [x] **PDF-02**: PDF pages are converted to images for Vision API analysis
+- [x] **PDF-03**: User sees loading indicator during PDF processing
 
 ### Vision API Integration
 
@@ -115,9 +115,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CAM-02 | Phase 4 | Complete |
 | CAM-03 | Phase 4 | Complete |
 | CAM-04 | Phase 4 | Complete |
-| PDF-01 | Phase 5 | Pending |
-| PDF-02 | Phase 5 | Pending |
-| PDF-03 | Phase 5 | Pending |
+| PDF-01 | Phase 5 | Complete |
+| PDF-02 | Phase 5 | Complete |
+| PDF-03 | Phase 5 | Complete |
 | VIS-01 | Phase 6 | Pending |
 | VIS-02 | Phase 7 | Pending |
 | VIS-03 | Phase 7 | Pending |
@@ -138,4 +138,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-01-19*
-*Last updated: 2026-01-20 after Phase 4 completion*
+*Last updated: 2026-01-20 after Phase 5 completion*

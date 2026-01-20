@@ -14,7 +14,7 @@ This roadmap delivers AI-powered image analysis capabilities to Astra MD, enabli
 - [x] **Phase 2: Image Compression** - Client-side compression pipeline for API size limits
 - [x] **Phase 3: Multi-Image Support** - Attach up to 5 images per message
 - [x] **Phase 4: Camera Capture** - Mobile device camera integration
-- [ ] **Phase 5: PDF Support** - PDF document upload and page rendering
+- [x] **Phase 5: PDF Support** - PDF document upload and page rendering
 - [ ] **Phase 6: Vision API Backend** - Edge function for OpenAI Vision API
 - [ ] **Phase 7: Mode Integration** - Vision analysis across all chat modes with streaming
 - [ ] **Phase 8: Chat Display and Polish** - Image display, lightbox, limits, and quality feedback
@@ -91,8 +91,8 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 05-01-PLAN.md — Install pdfjs-dist, configure worker, create processPdfToImages utility
-- [ ] 05-02-PLAN.md — Update file input to accept PDFs, add loading indicator, handle edge cases
+- [x] 05-01-PLAN.md — Install pdfjs-dist, configure worker, create processPdfToImages utility
+- [x] 05-02-PLAN.md — Update file input to accept PDFs, add loading indicator, handle edge cases
 
 ### Phase 6: Vision API Backend
 **Goal**: Backend infrastructure for sending images to OpenAI Vision API
@@ -157,7 +157,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 2. Image Compression | 1/1 | Complete | 2026-01-20 |
 | 3. Multi-Image Support | 1/1 | Complete | 2026-01-20 |
 | 4. Camera Capture | 2/2 | Complete | 2026-01-20 |
-| 5. PDF Support | 0/2 | Not started | - |
+| 5. PDF Support | 2/2 | Complete | 2026-01-20 |
 | 6. Vision API Backend | 0/2 | Not started | - |
 | 7. Mode Integration | 0/5 | Not started | - |
 | 8. Chat Display and Polish | 0/4 | Not started | - |
