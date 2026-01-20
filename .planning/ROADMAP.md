@@ -46,10 +46,10 @@ Plans:
   1. Large images (>1MB) are automatically compressed before upload
   2. Compression happens transparently without user intervention
   3. Image quality remains acceptable after compression
-**Plans**: TBD
+**Plans**: 1 plan in 1 wave
 
 Plans:
-- [ ] 02-01: Compression pipeline with browser-image-compression
+- [ ] 02-01-PLAN.md — Install browser-image-compression, create compression utility, integrate into addImages flow
 
 ### Phase 3: Multi-Image Support
 **Goal**: Users can attach multiple images (up to 5) per message
@@ -156,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Image Upload Foundation | 3/3 | Complete | 2026-01-20 |
-| 2. Image Compression | 0/1 | Not started | - |
+| 2. Image Compression | 0/1 | Planned | - |
 | 3. Multi-Image Support | 0/2 | Not started | - |
 | 4. Camera Capture | 0/3 | Not started | - |
 | 5. PDF Support | 0/2 | Not started | - |
