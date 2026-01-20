@@ -3567,6 +3567,7 @@ const InputBar = ({
             onRemove={onRemoveImage}
             theme={theme}
             isMobile={isMobile}
+            maxImages={MAX_IMAGES}
           />
         )}
 
