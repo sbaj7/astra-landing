@@ -74,12 +74,11 @@ Plans:
   2. User sees helpful message when camera permission is denied
   3. User can switch between front and back camera
   4. Captured images display with correct orientation regardless of device position
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 04-01: Camera capture integration with getUserMedia
-- [ ] 04-02: Permission handling and error states
-- [ ] 04-03: Camera switching and EXIF orientation handling
+- [ ] 04-01-PLAN.md — Create CameraCapture modal component with video preview and capture, add camera button to InputBar
+- [ ] 04-02-PLAN.md — Add camera switching and permission denied error UI with platform guidance
 
 ### Phase 5: PDF Support
 **Goal**: Users can upload PDF documents for visual analysis
@@ -157,7 +156,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 1. Image Upload Foundation | 3/3 | Complete | 2026-01-20 |
 | 2. Image Compression | 1/1 | Complete | 2026-01-20 |
 | 3. Multi-Image Support | 1/1 | Complete | 2026-01-20 |
-| 4. Camera Capture | 0/3 | Not started | - |
+| 4. Camera Capture | 0/2 | Not started | - |
 | 5. PDF Support | 0/2 | Not started | - |
 | 6. Vision API Backend | 0/2 | Not started | - |
 | 7. Mode Integration | 0/5 | Not started | - |
