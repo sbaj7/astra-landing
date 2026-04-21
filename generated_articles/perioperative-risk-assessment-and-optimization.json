@@ -1,0 +1,392 @@
+{
+  "heroLabel": "Perioperative Medicine",
+  "title": "Perioperative Risk Assessment and Optimization",
+  "summary": "Evidence-based framework to stratify perioperative risk, identify modifiable factors, and deliver targeted prehabilitation and optimization to reduce complications, LOS, and readmissions. Integrates cardiac, pulmonary, hematologic, metabolic, functional, and procedural risks, mapped to pragmatic interventions and Enhanced Recovery principles.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should clinicians systematically assess and optimize perioperative risk to improve surgical outcomes across noncardiac procedures?",
+  "tags": [
+    "Preoperative Evaluation",
+    "Cardiac Risk",
+    "Prehabilitation",
+    "Anemia",
+    "Glycemic Control",
+    "ERAS",
+    "Shared Decision-Making"
+  ],
+  "heroStats": [
+    {
+      "label": "Annual noncardiac surgeries (US)",
+      "value": "≈27 million [1]"
+    },
+    {
+      "label": "Postoperative MI burden",
+      "value": "≈50,000 events/year; CV complications ≈1–5% in vascular surgery [1]"
+    },
+    {
+      "label": "ERAS impact",
+      "value": "Shorter LOS, less pain/analgesia, faster bowel recovery [2]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Start with procedural risk + patient risk",
+      "body": "Combine surgery-specific risk and patient comorbidity burden using validated indices and guideline-driven algorithms to trigger further testing and optimization [3], [1]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Optimize modifiable risks early",
+      "body": "Proactively treat anemia, malnutrition, hyperglycemia, smoking, and deconditioning to lower complications and enhance resilience before surgery [4], [5], [6], [7]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Prehabilitation pays dividends",
+      "body": "Structured exercise, nutrition, and psychosocial conditioning improve functional capacity and recovery trajectory, especially in higher-risk patients [6], [8]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Use standardized pathways",
+      "body": "Enhanced Recovery pathways reduce LOS and opioid needs and accelerate GI recovery; embed risk assessment and optimization within ERAS timelines [2]."
+    },
+    {
+      "icon": "AlertTriangle",
+      "title": "Close gaps in knowledge",
+      "body": "Internists report gaps in procedure-specific risk, bleeding, and thrombosis assessment—highlighting the need for standardized tools and education [9]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Structured Approach",
+      "title": "Five-Step Perioperative Risk and Optimization Workflow",
+      "blurb": "Integrates guideline-concordant assessment with pragmatic, time-bound interventions.",
+      "steps": [
+        {
+          "title": "1) Define surgical risk and urgency",
+          "body": "Classify procedural risk (low, intermediate, high) and urgency (elective to emergent). High-risk categories (e.g., major vascular) confer higher MACE and warrant intensive evaluation and optimization before proceeding when feasible [3], [1]."
+        },
+        {
+          "title": "2) Assess patient baseline risk",
+          "body": "Take focused history (prior CAD, HF, stroke, diabetes, CKD, COPD), medications (antiplatelet/anticoagulant), frailty, and functional capacity. Use validated indices and prospective methods to identify safety risks and hotspots for failure [10], [11], [12], [1]."
+        },
+        {
+          "title": "3) Targeted testing only if results change management",
+          "body": "Follow ACC/AHA-style principles: reserve noninvasive testing for poor functional capacity with elevated surgical risk if it will alter therapy. Routine testing without indication increases cost and delays without benefit [3], [1]."
+        },
+        {
+          "title": "4) Optimize modifiable risks with prehabilitation",
+          "body": "Institute time-bound optimization bundles: anemia detection/treatment, glycemic control, smoking cessation, pulmonary conditioning, nutrition, exercise, and psychosocial support. Early initiation (≥2–4 weeks) yields better outcomes [4], [5], [6], [8], [7]."
+        },
+        {
+          "title": "5) Implement ERAS-aligned perioperative plan",
+          "body": "Standardize analgesia, fluids, PONV prophylaxis, thromboembolism prophylaxis, early feeding/mobilization, and catheter minimization. ERAS reduces LOS and analgesic needs and accelerates bowel recovery [2]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "What to Measure and Modify",
+      "title": "Risk Domains, Metrics, and Optimization Tactics",
+      "blurb": "Align assessments with evidence-based interventions that demonstrably improve outcomes.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Activity",
+          "title": "Cardiovascular",
+          "items": [
+            "Estimate MACE risk with clinical indices; consider stress testing only if results change management [3], [12], [1].",
+            "Continue beta-blockers if already prescribed; avoid new initiation on day of surgery; consider initiation weeks prior in select high-risk patients [3], [1].",
+            "Optimize HF: volume status, guideline-directed medical therapy; decompensation is a reason to defer if elective [3], [1].",
+            "Perioperative antiplatelet/anticoagulant plan individualized to stent type/timing and bleeding risk; coordinate with proceduralist [3], [1]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Anemia and Hematinics",
+          "items": [
+            "Screen CBC, ferritin/TSAT in moderate–high-risk surgery or expected blood loss; anemia is common and prognostic [4], [7].",
+            "Treat iron deficiency with IV iron when time-limited; consider ESA selectively; transfuse based on symptoms and thresholds per procedure [4], [7].",
+            "Set cell-sparing strategies: antifibrinolytics, restrictive transfusion triggers where appropriate [4], [7]."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Metabolic and Glycemic",
+          "items": [
+            "Optimize diabetes: target preop A1c where feasible; maintain intraop/postop glucose generally 140–180 mg/dL to reduce infection and complications [5], [7].",
+            "Adjust SGLT2 inhibitors (hold preop to reduce euglycemic DKA risk) and metformin (hold on day of surgery for renal/hemodynamic considerations) [5], [7]."
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Prehabilitation and Function",
+          "items": [
+            "Assess functional capacity; if poor (<4 METs) and elevated surgical risk, consider cardiopulmonary exercise testing when it changes care [3], [6].",
+            "Implement multimodal prehabilitation: aerobic/resistance training, inspiratory muscle training, and behavioral coaching—improves resilience and recovery [6], [8]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Pulmonary",
+          "items": [
+            "Identify COPD/asthma, OSA; optimize bronchodilators/inhaled steroids; smoking cessation ≥4 weeks (earlier is better) [5], [7].",
+            "Use incentive spirometry education, inspiratory muscle training; plan postoperative pulmonary hygiene and early mobilization [6], [7]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Nutrition and Frailty",
+          "items": [
+            "Screen for malnutrition and frailty; initiate protein-rich supplementation and vitamin D if deficient [6], [7].",
+            "Address sarcopenia with resistance training; plan early postoperative feeding via ERAS [2], [7]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Thrombosis and Bleeding",
+          "items": [
+            "Estimate procedural bleeding risk and patient thrombosis risk; map to perioperative anticoagulant/antiplatelet strategy with bridging only when clear net benefit [3], [9].",
+            "Standardize VTE prophylaxis per risk; implement TXA for high-blood-loss procedures as appropriate [4], [2]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Systems and Safety",
+          "items": [
+            "Use prospective hazard identification (checklists, failure mode and effects analysis) to preempt errors across the pathway [10], [11].",
+            "Embed ERAS order sets: multimodal analgesia, PONV prophylaxis, euvolemic fluid therapy, early mobilization, catheter/line minimization [2]."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Evidence Signals",
+      "title": "Strength of Evidence and Outcomes",
+      "blurb": "Where data are robust versus evolving.",
+      "steps": [
+        {
+          "title": "ERAS benefits are consistent",
+          "body": "Across specialties, ERAS is associated with shorter length of stay and decreased postoperative pain/analgesia with faster GI recovery—signal consistent and clinically meaningful [2]."
+        },
+        {
+          "title": "Risk modification is necessary but heterogeneous",
+          "body": "Preoperative optimization of comorbidities is essential; effect sizes vary by domain and timing. Programs targeting anemia, glycemia, and smoking show favorable associations with fewer complications and transfusions [4], [5], [7]."
+        },
+        {
+          "title": "Prehabilitation is promising",
+          "body": "Multimodal prehabilitation improves functional capacity and recovery metrics; growing evidence supports implementation, particularly in high-risk cohorts [6], [8]."
+        },
+        {
+          "title": "Cardiac risk tools guide, not dictate",
+          "body": "Validated indices and guideline algorithms help select testing and perioperative therapy, reducing unnecessary investigations and delays [3], [12], [1]."
+        },
+        {
+          "title": "Knowledge gaps persist",
+          "body": "Clinicians variably assess procedure-specific cardiac, bleeding, and thrombotic risk; targeted education and standardized tools can close gaps [9]."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cardiac Risk Assessment - StatPearls",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537146/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 2,
+      "title": "Perioperative Pathways: Enhanced Recovery After Surgery",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.acog.org%2Fclinical%2Fclinical-guidance%2Fcommittee-opinion%2Farticles%2F2018%2F09%2Fperioperative-pathways-enhanced-recovery-after-surgery&token=hctEpqIoC%2B%2Fk7mTRPc%2BVynA%2BNuFyXq19fq0uswP7EPo%2FXGMhheh4s25skbcdm1kcj8XEWPAmuavyQQZNncNldAE4ONZ2aLR%2BMrF93lwMtm94l%2BcF%2B%2BMiahEWDj3cZNRMPxpU8yZ0G%2BnXJVCT4IInha8AtSQsFLDSFqHlsS1NKKs%3D&TOPIC_ID=122843",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 3,
+      "title": "Evaluation of cardiac risk prior to noncardiac surgery",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-of-cardiac-risk-prior-to-noncardiac-surgery",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 4,
+      "title": "Risk modification and preoperative optimization of vascular ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1472029924002509?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 5,
+      "title": "Patient Preoperative Optimization: How to Do It and How ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883540325003778",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 6,
+      "title": "Prehabilitation Strategies: Enhancing Surgical Resilience ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2161831325000286",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 7,
+      "title": "Update on preoperative evaluation and optimisation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10034939/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 8,
+      "title": "Patient optimisation before surgery: a clear and present ...",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.14502",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 9,
+      "title": "Preoperative risk assessment and optimization integrating ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11727565",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Prospective methods for identifying perioperative risk ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjsopen/article/4/2/197/6061314",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 11,
+      "title": "Prospective methods for identifying perioperative risk ...",
+      "detail": "bjssjournals.onlinelibrary.wiley.com",
+      "url": "https://bjssjournals.onlinelibrary.wiley.com/doi/abs/10.1002/bjs5.50246",
+      "authors": "bjssjournals.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 12,
+      "title": "A Systematic Review of Perioperative Cardiac Risk ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/perioperative-management-of-heart-failure-in-patients-undergoing-noncardiac-surgery/abstract-text/31202481/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 13,
+      "title": "A systematic review of neurological airway respiratory ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/pan.14846",
+      "authors": "onlinelibrary.wiley.com"
+    },
+    {
+      "number": 14,
+      "title": "The Impact of Preoperative Risk Factors on Unplanned ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12300345/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "Risk modification and preoperative optimization of vascular ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1472029924002509?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 2,
+      "title": "Patient Preoperative Optimization: How to Do It and How ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883540325003778",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 3,
+      "title": "Prehabilitation Strategies: Enhancing Surgical Resilience ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2161831325000286",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 4,
+      "title": "Prospective methods for identifying perioperative risk ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjsopen/article/4/2/197/6061314",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 5,
+      "title": "A systematic review of neurological airway respiratory ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/pan.14846",
+      "authors": "onlinelibrary.wiley.com"
+    },
+    {
+      "number": 6,
+      "title": "Perioperative Pathways: Enhanced Recovery After Surgery",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Fwww.acog.org%2Fclinical%2Fclinical-guidance%2Fcommittee-opinion%2Farticles%2F2018%2F09%2Fperioperative-pathways-enhanced-recovery-after-surgery&token=hctEpqIoC%2B%2Fk7mTRPc%2BVynA%2BNuFyXq19fq0uswP7EPo%2FXGMhheh4s25skbcdm1kcj8XEWPAmuavyQQZNncNldAE4ONZ2aLR%2BMrF93lwMtm94l%2BcF%2B%2BMiahEWDj3cZNRMPxpU8yZ0G%2BnXJVCT4IInha8AtSQsFLDSFqHlsS1NKKs%3D&TOPIC_ID=122843",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 7,
+      "title": "Patient optimisation before surgery: a clear and present ...",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.14502",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 8,
+      "title": "Prospective methods for identifying perioperative risk ...",
+      "detail": "bjssjournals.onlinelibrary.wiley.com",
+      "url": "https://bjssjournals.onlinelibrary.wiley.com/doi/abs/10.1002/bjs5.50246",
+      "authors": "bjssjournals.onlinelibrary.wiley.com"
+    },
+    {
+      "number": 9,
+      "title": "Evaluation of cardiac risk prior to noncardiac surgery",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-of-cardiac-risk-prior-to-noncardiac-surgery",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 10,
+      "title": "A Systematic Review of Perioperative Cardiac Risk ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/perioperative-management-of-heart-failure-in-patients-undergoing-noncardiac-surgery/abstract-text/31202481/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 11,
+      "title": "Preoperative risk assessment and optimization integrating ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/PMC11727565",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 12,
+      "title": "Cardiac Risk Assessment - StatPearls",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK537146/",
+      "authors": "www.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 13,
+      "title": "Update on preoperative evaluation and optimisation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10034939/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 14,
+      "title": "The Impact of Preoperative Risk Factors on Unplanned ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12300345/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "perioperative-risk-assessment-and-optimization"
+}

@@ -1,0 +1,259 @@
+{
+  "heroLabel": "Precision Oncology",
+  "title": "Genetic Testing and Targeted Therapy in Solid Tumors",
+  "summary": "Comprehensive genomic profiling (CGP) in advanced solid tumors increases identification of actionable alterations and facilitates matched targeted therapy, improving clinical trial matching and enabling tumor-agnostic strategies. Evidence supports first-line integration of CGP in many metastatic settings, utilization of basket and umbrella trial designs, and broader panels to expand therapeutic opportunities. Real-world data linkage refines prognostic gene discovery and outcomes benchmarking.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should genetic testing be integrated into the care pathway of patients with advanced solid tumors to optimize selection of targeted therapies and clinical trial options?",
+  "tags": [
+    "Genomics",
+    "Targeted Therapy",
+    "Basket Trials",
+    "Umbrella Trials",
+    "Comprehensive Genomic Profiling",
+    "Precision Medicine",
+    "Solid Tumors"
+  ],
+  "heroStats": [
+    {
+      "label": "Actionable findings with CGP",
+      "value": "Increased detection of targetable alterations vs limited panels [1], [6]"
+    },
+    {
+      "label": "Trial enablement",
+      "value": "Basket/umbrella designs endorsed by FDA guidance [2]"
+    },
+    {
+      "label": "Data-driven insights",
+      "value": "Genomic–RWD integration identifies prognostic genes [5]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Sparkles",
+      "title": "First-line CGP can guide therapy in advanced disease",
+      "body": "A large cohort supports early CGP to identify clinically actionable variants, increase matched therapy use, and inform trial enrollment [1]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Adaptive trial designs accelerate access",
+      "body": "Basket and umbrella trials efficiently test molecularly targeted agents across histologies or subtypes, with regulatory guidance supporting their use [2]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Broader panels expand opportunities",
+      "body": "Broad panels identify more actionable alterations than limited assays, increasing chances for matched therapy or trial assignment [6]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Linking genomics to outcomes",
+      "body": "Integration of genomic profiles with real‑world clinical data enables survival analyses to prioritize cancer genes and refine precision oncology strategies [5]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Recharacterizing diagnoses",
+      "body": "Comprehensive profiling can reclassify tumor entities and refine precision treatment strategies, particularly in challenging tumors like CNS cancers [3], [4]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Clinical Pathway",
+      "title": "Implementing Genetic Testing to Drive Targeted Therapy",
+      "blurb": "Operational steps to integrate comprehensive genomic profiling and translate findings into clinical action.",
+      "steps": [
+        {
+          "title": "Select the right test and timing",
+          "body": "Prioritize first‑line comprehensive genomic profiling (tumor and/or plasma) in metastatic/recurrent solid tumors where targeted options exist. Evidence supports early profiling to maximize matched therapy opportunities [1]."
+        },
+        {
+          "title": "Maximize sample quality",
+          "body": "Ensure adequate tumor cellularity and recent biopsy; consider reflex liquid biopsy for low-yield tissue or to detect resistance mechanisms. Re-biopsy upon progression to capture emergent drivers."
+        },
+        {
+          "title": "Interpret and tier alterations",
+          "body": "Use standardized actionability tiers and consider tumor‑agnostic biomarkers (e.g., MSI‑H, TMB‑high, NTRK fusions) alongside histology‑specific drivers. Broader panels increase detection of clinically actionable variants [6]."
+        },
+        {
+          "title": "Match to therapy or trial",
+          "body": "Prioritize FDA‑approved targeted agents when on‑label; otherwise, pursue molecularly matched trials (basket/umbrella). FDA guidance supports these designs for efficient evaluation of biomarker‑defined cohorts [2]."
+        },
+        {
+          "title": "Leverage data integration",
+          "body": "Incorporate real‑world outcomes linked to genomics to refine prognostic expectations and therapy selection where randomized evidence is lacking [5]."
+        },
+        {
+          "title": "Reassess and adapt",
+          "body": "At progression, repeat profiling to identify resistance mutations or pathway bypass; consider trial enrollment targeting acquired mechanisms."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Actionable Biomarkers",
+      "title": "High‑Value Targets and Clinical Signals in Solid Tumors",
+      "blurb": "Representative examples where genetic testing directly informs targeted therapy or trial selection.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "TestTube2",
+          "title": "Tumor-agnostic markers",
+          "items": [
+            "NTRK fusions → TRK inhibitors; durable responses across histologies",
+            "MSI‑H/dMMR → immune checkpoint inhibitors",
+            "TMB‑high → ICI consideration (context‑dependent)",
+            "RET, BRAF V600E in multiple histologies → matched inhibitors via basket trials [2]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Common histology‑specific drivers",
+          "items": [
+            "NSCLC: EGFR, ALK, ROS1, BRAF V600E, METex14, RET, NTRK, KRAS G12C, HER2",
+            "Breast: ERBB2 amplification/mutations, PIK3CA, ESR1, BRCA1/2 (PARP)",
+            "CRC: RAS WT for anti‑EGFR, BRAF V600E (combo targeted), MSI‑H",
+            "Melanoma: BRAF V600, KIT subsets",
+            "GIST: KIT/PDGFRA",
+            "Cholangiocarcinoma: IDH1, FGFR2 fusions",
+            "Prostate: HRR genes (PARP), MSI‑H"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Brain and rare tumors",
+          "items": [
+            "CGP can recharacterize diagnoses and identify actionable alterations in CNS tumors; supports biomarker‑stratified trials [4]",
+            "Reclassification via CGP can alter management trajectories [3]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Pitfalls and limitations",
+          "items": [
+            "Low tumor purity/old blocks reduce sensitivity; consider liquid biopsy",
+            "Variants of uncertain significance are common—avoid overinterpretation",
+            "Not all detected alterations are druggable; evidence strength varies",
+            "Access and turnaround times can delay decisions; plan early"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Trial design essentials",
+          "items": [
+            "Basket trials: same drug across histologies sharing a biomarker; efficient for rare alterations [2]",
+            "Umbrella trials: multiple drugs within one histology stratified by biomarkers [2]",
+            "Master protocols can accelerate signal detection and regulatory pathways"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "When to order CGP",
+          "items": [
+            "At diagnosis of metastatic/recurrent disease with potential targeted options [1]",
+            "At progression to identify resistance mechanisms",
+            "When standard options are exhausted to enable trial matching, including NCI‑MATCH‑style approaches [12]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Evidence Signals",
+      "title": "What the Evidence Suggests",
+      "blurb": "Strength and directionality of current evidence across key domains.",
+      "layout": "column",
+      "cards": [
+        {
+          "icon": "ShieldCheck",
+          "title": "First-line CGP utility",
+          "items": [
+            "Cohort data show increased identification of actionable drivers and treatment guidance when CGP is used up‑front in advanced solid tumors [1]",
+            "Real‑world genomic–outcome linkage strengthens prognostic and therapeutic inference [5]"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Broad vs limited panels",
+          "items": [
+            "Broader panels yield more actionable findings and matched therapy opportunities than limited assays, especially for rare fusions or alterations [6]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Trial enablement and design",
+          "items": [
+            "Regulatory‑endorsed basket/umbrella designs efficiently evaluate targeted agents in biomarker‑defined populations, expediting access [2]",
+            "NCI‑MATCH framework demonstrates feasibility of genotype‑directed therapy assignment across solid tumors [12]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Reclassification and CNS impact",
+          "items": [
+            "CGP can recharacterize tumor diagnoses and guide precision strategies, notably in neuro‑oncology where histology alone is insufficient [3], [4]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Practice Integration",
+      "title": "Operational Tips for Clinics",
+      "blurb": "Key steps to streamline precision oncology workflows.",
+      "steps": [
+        {
+          "title": "Build a testing algorithm",
+          "body": "Default to CGP for advanced disease; add liquid biopsy reflex. Define histology‑specific minimal markers if CGP unavailable."
+        },
+        {
+          "title": "Create a molecular tumor board",
+          "body": "Standardize interpretation, tier evidence, and align on actionable thresholds; track outcomes to build a local learning system [5]."
+        },
+        {
+          "title": "Map trials and access",
+          "body": "Maintain real‑time lists of basket/umbrella trials and molecular eligibility; preauthorize common targeted agents and testing."
+        },
+        {
+          "title": "Close the loop",
+          "body": "Document biomarker, actionability, therapy decision, response, and subsequent resistance findings to inform future care."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "First-line genomic profiling in advanced solid tumors",
+      "detail": "JAMA Network Open 2023",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2807341"
+    },
+    {
+      "title": "New clinical trial design in precision medicine",
+      "detail": "Signal Transduction and Targeted Therapy 2024",
+      "url": "https://www.nature.com/articles/s41392-024-01760-0"
+    },
+    {
+      "title": "Tumor diagnosis recharacterization enabled by comprehensive genomic profiling",
+      "detail": "npj Precision Oncology 2025",
+      "url": "https://www.nature.com/articles/s41698-025-00942-5"
+    },
+    {
+      "title": "Comprehensive genetic profiling and molecularly guided treatment in brain cancers",
+      "detail": "npj Precision Oncology 2024",
+      "url": "https://www.nature.com/articles/s41698-024-00674-y"
+    },
+    {
+      "title": "Integration of genomics with real-world data for precision oncology",
+      "detail": "Nature Medicine 2024",
+      "url": "https://www.nature.com/articles/s41591-023-02682-0"
+    },
+    {
+      "title": "Broad versus limited gene panels to guide treatment",
+      "detail": "Nature Medicine 2025",
+      "url": "https://www.nature.com/articles/s41591-025-03613-x"
+    },
+    {
+      "title": "NCI-MATCH (NCT02465060): Targeted therapy directed by genetic testing",
+      "detail": "ClinicalTrials.gov 2015–ongoing",
+      "url": "https://clinicaltrials.gov/ct2/show/NCT02465060"
+    }
+  ]
+}

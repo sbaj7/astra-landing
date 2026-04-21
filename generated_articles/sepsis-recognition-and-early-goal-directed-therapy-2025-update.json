@@ -1,0 +1,336 @@
+{
+  "heroLabel": "Sepsis 2025",
+  "title": "Sepsis Recognition and Early Goal-Directed Therapy: 2025 Update",
+  "summary": "**Recognition must be rapid, antibiotics within ≤1 hour for suspected septic shock, and resuscitation individualized rather than rigid EGDT targets.** Classic **EGDT (Rivers 2001)** showed benefit, but subsequent trials and syntheses indicate **no mortality advantage vs modern usual care**, shifting emphasis to timely antibiotics, source control, dynamic fluid assessment, and hemodynamic personalization. Emerging **LLM-based early warning systems** may improve recognition and workflow integration.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the 2025 best practices for recognizing sepsis early and for applying early goal-directed therapy principles in adults?",
+  "tags": [
+    "Sepsis",
+    "Critical Care",
+    "Antibiotics",
+    "Fluid Resuscitation",
+    "Vasopressors",
+    "Biomarkers",
+    "Machine Learning"
+  ],
+  "heroStats": [
+    {
+      "label": "Antibiotics Timing",
+      "value": "**≤1 hour** after recognition for suspected septic shock [1]"
+    },
+    {
+      "label": "EGDT vs Usual Care",
+      "value": "**No mortality reduction** overall (RR ~0.85, 95% CI 0.67–1.08) [2]"
+    },
+    {
+      "label": "Classic EGDT Trial",
+      "value": "**Rivers 2001** showed early survival benefit in severe sepsis/shock [3]"
+    },
+    {
+      "label": "AI-Enabled Recognition",
+      "value": "**Locally-deployed LLM** improved early prediction in deployment study [4]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Recognition",
+      "body": "**Early, standardized recognition** using clinical criteria, biomarkers, and EHR alerts improves timely treatment and outcomes [5], [1]."
+    },
+    {
+      "icon": "Activity",
+      "title": "Initial Hour",
+      "body": "**Administer broad-spectrum antibiotics within ≤1 hour** of recognition for suspected septic shock; do not delay for diagnostics when shock is likely [1]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "EGDT Revisited",
+      "body": "**Rigid EGDT protocols are not superior** to contemporary usual care; focus on personalized resuscitation and timely bundle elements [2], [6]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Personalized Hemodynamics",
+      "body": "**Use dynamic fluid responsiveness and early vasopressors** to avoid fluid overload while achieving perfusion targets [6], [7]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "AI and Workflow",
+      "body": "**LLM-driven early warning systems** can flag risk from unstructured notes, enabling preemptive evaluation and treatment [4]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "From suspicion to stabilization",
+      "title": "Operational Steps for Early Sepsis Care in 2025",
+      "blurb": "Time-sensitive recognition, antibiotics, source control, and individualized resuscitation supersede rigid EGDT targets.",
+      "steps": [
+        {
+          "title": "Rapid Recognition and Triage (Time 0)",
+          "body": "**Trigger evaluation on abnormal vitals, organ dysfunction, or infection clues.** Use EHR alerts, screening tools, and consider biomarkers (e.g., lactate) to stratify risk and expedite care [5], [1]."
+        },
+        {
+          "title": "Cultures and Antibiotics (≤60 minutes)",
+          "body": "Obtain blood cultures promptly but **do not delay antibiotics >1 hour** in suspected septic shock. Start broad-spectrum therapy tailored to local ecology and de-escalate with culture data [1]."
+        },
+        {
+          "title": "Initial Resuscitation and Perfusion Targets",
+          "body": "Aim for **MAP ≥65 mmHg**, improving mentation and urine output. Use **dynamic preload assessments** (PLR, stroke volume change) to guide fluids and avoid overload; consider early norepinephrine if hypotension persists [6], [7]."
+        },
+        {
+          "title": "Reassess and Individualize (first 3–6 hours)",
+          "body": "Trend **lactate**, adjust fluids/vasopressors/inotropes to perfusion endpoints rather than fixed ScvO2/CVP goals. Prioritize **source control** expeditiously (procedural or surgical) [6], [1]."
+        },
+        {
+          "title": "Augmented Detection and Monitoring",
+          "body": "Leverage **LLM-based clinical note analysis** or early warning systems to surface evolving sepsis risk and trigger clinician review without alert fatigue [4]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Bedside tools",
+      "title": "Checklists and Targets",
+      "blurb": "Embed high-yield actions and realistic targets into first-hour and early-resuscitation workflows.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Clock",
+          "title": "First Hour Actions",
+          "items": [
+            "**Recognize sepsis/shock**; activate pathway [5], [1]",
+            "**Cultures x2** before antibiotics if no delay [1]",
+            "**Antibiotics ≤1 hour** for suspected septic shock [1]",
+            "**Measure lactate**; repeat if elevated [1], [5]",
+            "**Begin fluids** if fluid responsive; reassess frequently [6]",
+            "**Start norepinephrine early** if MAP <65 despite fluids [6], [7]"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Diagnostics & Biomarkers",
+          "items": [
+            "**Serum lactate** for tissue hypoperfusion and trajectory [5]",
+            "Basic labs: CBC, CMP, coagulation, ABG/VBG",
+            "Cultures: blood (aerobic/anaerobic), site-specific",
+            "Imaging for source (CXR, CT/US as indicated)",
+            "**Use biomarkers to complement—not replace—clinical judgment** [5]"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Hemodynamic Targets",
+          "items": [
+            "**MAP ≥65 mmHg** (individualize in chronic HTN)",
+            "Urine output **≥0.5 mL/kg/h**",
+            "Improving mentation and skin perfusion",
+            "**Avoid static CVP targets**; use dynamic tests (PLR, SV variation) [6]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Fluids & Vasopressors",
+          "items": [
+            "Balanced crystalloids first-line",
+            "**Small boluses (250–500 mL)** guided by responsiveness",
+            "**Early norepinephrine** for persistent hypotension [6], [7]",
+            "Consider vasopressin adjunct if high NE dose",
+            "Inotrope (e.g., dobutamine) for persistent hypoperfusion with low CO"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Antibiotic Strategy",
+          "items": [
+            "**Start broad early**, narrow at 24–72 h based on data [1]",
+            "Dose-optimize for organ dysfunction",
+            "Consider extended/continuous infusion for time-dependent agents",
+            "Document beta-lactam allergy carefully; use test dosing when feasible"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "When EGDT is Not the Goal",
+          "items": [
+            "**Do not chase fixed ScvO2 or CVP targets** as primary endpoints [2], [6]",
+            "**Prioritize timeliness** (antibiotics, source control) over rigid bundles [1]",
+            "**Personalize** fluids/pressors to physiology and comorbidities [7]"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "American Journal of Respiratory and Critical Care Medicine",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.202401-0185ED",
+      "authors": "www.atsjournals.org"
+    },
+    {
+      "number": 2,
+      "title": "Early goal-directed therapy for severe sepsis and septic ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-and-management-of-suspected-sepsis-and-septic-shock-in-adults/abstract-text/27546746/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 3,
+      "title": "Early Goal-Directed Therapy in the Treatment of Severe ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa010307",
+      "authors": "www.nejm.org"
+    },
+    {
+      "number": 4,
+      "title": "Development and prospective implementation of a large ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-025-01689-w",
+      "authors": "www.nature.com"
+    },
+    {
+      "number": 5,
+      "title": "Early Diagnosis of Sepsis: The Role of Biomarkers and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38950606/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 6,
+      "title": "Early goal-directed therapy for severe sepsis and septic ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944116301393",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 7,
+      "title": "Geo-economic Influence on the Effect of Fluid Volume for ...",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/rccm.202309-1617OC",
+      "authors": "www.atsjournals.org"
+    },
+    {
+      "number": 8,
+      "title": "Systematic review and meta-analysis of goal-directed ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2589537024005236",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 9,
+      "title": "Protocol for a systematic review and meta-analysis ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/13/5/e069601",
+      "authors": "bmjopen.bmj.com"
+    },
+    {
+      "number": 10,
+      "title": "A Sepsis-related Diagnosis Impacts Interventions and ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5654880/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 11,
+      "title": "Early diagnosis and evidence-based care of surgical sepsis",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21747125/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 12,
+      "title": "Factors Affecting Early Treatment Goals of Sepsis Patients ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6259440/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "Early Goal-Directed Therapy in the Treatment of Severe ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa010307",
+      "authors": "www.nejm.org"
+    },
+    {
+      "number": 2,
+      "title": "Development and prospective implementation of a large ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-025-01689-w",
+      "authors": "www.nature.com"
+    },
+    {
+      "number": 3,
+      "title": "Early goal-directed therapy for severe sepsis and septic ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944116301393",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 4,
+      "title": "Systematic review and meta-analysis of goal-directed ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2589537024005236",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 5,
+      "title": "American Journal of Respiratory and Critical Care Medicine",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.202401-0185ED",
+      "authors": "www.atsjournals.org"
+    },
+    {
+      "number": 6,
+      "title": "Protocol for a systematic review and meta-analysis ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/13/5/e069601",
+      "authors": "bmjopen.bmj.com"
+    },
+    {
+      "number": 7,
+      "title": "Geo-economic Influence on the Effect of Fluid Volume for ...",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/rccm.202309-1617OC",
+      "authors": "www.atsjournals.org"
+    },
+    {
+      "number": 8,
+      "title": "Early goal-directed therapy for severe sepsis and septic ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/evaluation-and-management-of-suspected-sepsis-and-septic-shock-in-adults/abstract-text/27546746/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 9,
+      "title": "A Sepsis-related Diagnosis Impacts Interventions and ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5654880/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Early diagnosis and evidence-based care of surgical sepsis",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21747125/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 11,
+      "title": "Factors Affecting Early Treatment Goals of Sepsis Patients ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6259440/",
+      "authors": "pmc.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 12,
+      "title": "Early Diagnosis of Sepsis: The Role of Biomarkers and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38950606/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "sepsis-recognition-and-early-goal-directed-therapy-2025-update"
+}

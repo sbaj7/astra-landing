@@ -1,0 +1,227 @@
+{
+  "heroLabel": "ED Chest Pain Playbook",
+  "title": "Evaluation and Management of Chest Pain in the Emergency Department",
+  "summary": "A concise, evidence-based framework for rapid assessment, risk stratification, diagnostic pathways, and initial management of chest pain in the ED with emphasis on acute coronary syndrome, high-sensitivity troponin algorithms, and safe disposition.",
+  "updated": "October 2025",
+  "clinicalQuestion": "How should clinicians in the ED evaluate, risk stratify, and manage adults presenting with nontraumatic chest pain, with specific emphasis on suspected acute coronary syndrome?",
+  "tags": [
+    "Emergency Medicine",
+    "Cardiology",
+    "ACS",
+    "Troponin",
+    "Risk Stratification",
+    "Disposition"
+  ],
+  "heroStats": [
+    {
+      "label": "Goal door-to-ECG",
+      "value": "<10 minutes"
+    },
+    {
+      "label": "hs-cTn rule-out pathways",
+      "value": "0/1-h or 0/2-h preferred"
+    },
+    {
+      "label": "30-day MACE after low-risk rule-out",
+      "value": "<1%"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Immediate Triage and ECG",
+      "body": "Obtain ECG within 10 minutes; treat life threats. STEMI triggers emergent reperfusion."
+    },
+    {
+      "icon": "Activity",
+      "title": "High-Sensitivity Troponin Strategy",
+      "body": "Use validated 0/1-h or 0/2-h algorithms; integrate absolute delta changes with clinical risk."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Structured Risk Assessment",
+      "body": "Use HEART or EDACS with hs-cTn to guide disposition; aim for <1% 30-day MACE in discharge cohort."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Safe Disposition",
+      "body": "Discharge low-risk with rapid follow-up; admit or observe intermediate-risk; activate cath for STEMI/high-risk NSTEMI."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Pathways and Chest Pain Centers",
+      "body": "Standardized ED pathways and dedicated chest pain centers improve accuracy, speed, and resource use."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Rapid Care Pathway",
+      "title": "Stepwise ED Approach to Chest Pain",
+      "blurb": "A prioritized sequence from triage to disposition built on contemporary guidelines and consensus.",
+      "steps": [
+        {
+          "title": "Primary Survey and Immediate Actions",
+          "body": "Assess airway, breathing, circulation; place on monitor, obtain IV access, pulse oximetry. Obtain 12‑lead ECG within 10 minutes. Treat hypoxemia, severe hypertension, and arrhythmias. If **STEMI is present**, activate reperfusion pathway immediately [1]."
+        },
+        {
+          "title": "Focused History and Risk Flags",
+          "body": "Characterize pain (onset, exertional, pressure-like), associated symptoms (dyspnea, diaphoresis, syncope), risk factors (CAD, diabetes, CKD), and red flags (hemodynamic instability, new HF, ongoing ischemia). Consider important differentials: PE, aortic syndromes, pericarditis, pneumothorax, esophageal rupture [6]."
+        },
+        {
+          "title": "Initial Diagnostics",
+          "body": "Obtain hs-cTn at presentation with repeat per validated algorithm (0/1‑h or 0/2‑h), BMP, CBC if indicated. Chest radiograph for alternative diagnoses. Serial ECGs if ongoing pain or dynamic symptoms. Use **hs‑cTn** thresholds and absolute deltas to adjudicate MI per guideline-aligned pathways [6], [8]."
+        },
+        {
+          "title": "Risk Stratification and Pathway Selection",
+          "body": "Combine clinical impression with a structured score (e.g., **HEART** or **EDACS**) plus hs‑cTn trajectory to classify as low, intermediate, or high risk for 30‑day MACE. Low-risk patients with negative hs‑cTn and nonischemic ECG are candidates for ED discharge with expedited follow-up [3], [6], [8]."
+        },
+        {
+          "title": "Treatment Aligned to Risk/Diagnosis",
+          "body": "Provide analgesia, nitrates if ischemic pain and not hypotensive, and antiplatelet therapy when ACS is likely. STEMI: immediate reperfusion. NSTEMI/Unstable angina: antithrombotics and early cardiology evaluation; consider invasive strategy by risk profile [1], [6]."
+        },
+        {
+          "title": "Disposition and Follow-up",
+          "body": "Low risk: discharge with clear return precautions and rapid outpatient testing if indicated. Intermediate risk: ED observation with repeat hs‑cTn, ECGs, and possible noninvasive testing. High risk or diagnostic uncertainty: admit. Use chest pain center protocols to optimize throughput and outcomes [2], [7]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "ED Tools",
+      "title": "Key Checklists and Algorithms",
+      "blurb": "Operational elements that standardize care and reduce missed ACS.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Clock",
+          "title": "Time Targets",
+          "items": [
+            "ECG completed and interpreted: ≤10 minutes",
+            "Repeat ECG: for persistent/recurring pain or dynamic changes",
+            "hs‑cTn repeat draw: 1 hour (preferred) or 2 hours per assay validation"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "hs‑cTn Algorithms",
+          "items": [
+            "0/1‑h: baseline and 1‑h hs‑cTn; use assay‑specific rule‑out/rule‑in cutoffs and absolute delta",
+            "0/2‑h: alternative when 1‑h logistics limited",
+            "Single‑sample rule‑out possible if symptom onset >3 h and very low hs‑cTn, nonischemic ECG, low clinical risk [6], [8]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Risk Scores (with hs‑cTn)",
+          "items": [
+            "HEART score: history, ECG, age, risk factors, troponin",
+            "EDACS: symptom characteristics + risk factors + age",
+            "Use scores to guide disposition; target **<1% 30‑day MACE** for discharge cohorts [3], [6]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Red Flags for Immediate Action",
+          "items": [
+            "ST‑elevation or new LBBB with ischemic symptoms",
+            "Hypotension, shock, new/worsening heart failure",
+            "Refractory chest pain or dynamic ST‑T changes",
+            "Concern for aortic dissection, PE, tamponade, tension pneumothorax"
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "ACS Initial Therapies",
+          "items": [
+            "Aspirin loading if no contraindication",
+            "Nitrates for pain/ischemia; avoid if hypotension, RV infarct, or PDE‑5 inhibitors",
+            "Anticoagulation for NSTEMI/UA when diagnosis likely",
+            "High‑intensity statin initiation for confirmed ACS",
+            "Beta‑blocker if no contraindications; defer in shock/acute HF"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Disposition Guide",
+          "items": [
+            "Low risk + negative hs‑cTn algorithm + nonischemic ECG: discharge with expedited follow‑up",
+            "Intermediate risk: observation, serial hs‑cTn/ECG ± functional or anatomic testing",
+            "High risk or positive algorithm: admit; STEMI/NSTEMI pathways"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Evidence Highlights",
+      "title": "What the Evidence Supports",
+      "blurb": "Synthesis of high‑impact findings informing ED chest pain care.",
+      "steps": [
+        {
+          "title": "Guideline Consensus",
+          "body": "Recent multisociety guidance endorses **hs‑cTn‑based accelerated diagnostic pathways** with early ECG and structured risk assessment to safely increase ED discharges while maintaining low 30‑day MACE rates [6]."
+        },
+        {
+          "title": "High‑STEACS and Rapid Rule‑Out",
+          "body": "Implementation of **hs‑cTnI** with low thresholds enables **rapid rule‑out within 1 hour** for many patients, reducing admissions without increasing adverse events; these strategies underpin modern ED pathways [8]."
+        },
+        {
+          "title": "Chest Pain Centers and Pathways",
+          "body": "**Dedicated chest pain centers** and standardized protocols improve diagnostic speed, accuracy, and cost‑effectiveness compared with ad hoc care, supporting system‑level adoption [2], [7]."
+        },
+        {
+          "title": "Focused ACS Risk Stratification",
+          "body": "Combining clinical scores (e.g., **HEART/EDACS**) with hs‑cTn trajectories improves identification of low‑risk cohorts suitable for discharge, aiming for **<1%** short‑term MACE, aligning with guideline thresholds [3], [6]."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "Expert consensus on the emergency diagnosis and management of acute chest pain",
+      "detail": "Emergency & Critical Care Medicine. 2021",
+      "url": "https://journals.lww.com/eccm/fulltext/2021/12000/expert_consensus_on_the_emergency_diagnosis_and.2.aspx"
+    },
+    {
+      "title": "Chest pain emergency centers: improving acute care",
+      "detail": "UpToDate topic overview (cites Ann Emerg Med and related literature). 1999",
+      "url": "https://www.uptodate.com/contents/overview-of-the-acute-management-of-non-st-elevation-acute-coronary-syndromes/abstract-text/10492848/pubmed"
+    },
+    {
+      "title": "Diagnosis and risk stratification of chest pain in the ED: focus on ACS",
+      "detail": "UpToDate abstracted review. 2019",
+      "url": "https://tkl.uptodate.com/contents/approach-to-the-adult-with-nontraumatic-chest-pain-in-the-emergency-department/abstract-text/31958018/pubmed"
+    },
+    {
+      "title": "Emergency management of cardiac chest pain: a review",
+      "detail": "Emergency Medicine Journal. 2001",
+      "url": "https://emj.bmj.com/content/18/1/6"
+    },
+    {
+      "title": "Non-cardiac chest pain patients in the ED",
+      "detail": "UpToDate abstracted review. 2019",
+      "url": "https://tkl.uptodate.com/contents/approach-to-the-adult-with-nontraumatic-chest-pain-in-the-emergency-department/abstract-text/30707725/pubmed"
+    },
+    {
+      "title": "Initial evaluation and management of ED chest pain (consensus summary and guideline integration)",
+      "detail": "Curr Emerg Cardiol Rep. 2023. PMID: 37889421",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37889421/"
+    },
+    {
+      "title": "Evaluation of chest pain in the emergency department",
+      "detail": "Ann Emerg Med. 2000. PMID: 10783407",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9107535/"
+    },
+    {
+      "title": "Management of ED chest pain: implementation of 1‑h hs‑cTnI algorithm; commentary on High‑STEACS (Lancet 386:2481)",
+      "detail": "Eur Heart J Acute Cardiovasc Care. 2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4716952/"
+    },
+    {
+      "title": "Management of ACS in emergency departments",
+      "detail": "Pan Afr Med J. 2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6276213/"
+    }
+  ]
+}

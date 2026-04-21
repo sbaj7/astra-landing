@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: KaTeX if you actually enabled rehype-katex */
+/* @import 'katex/dist/katex.min.css'; */
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* Prettier blockquotes for evidence/guidelines */
+.prose blockquote {
+  position: relative;
+  border: none;
+  border-left: 3px solid #4A6B7D;
+  background: rgba(74, 107, 125, 0.04);
+  backdrop-filter: blur(10px);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  border-radius: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  color: inherit;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(74, 107, 125, 0.08);
+  transition: all 0.2s ease;
+}
+
+.prose blockquote:hover {
+  background: rgba(74, 107, 125, 0.06);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(74, 107, 125, 0.12);
+  transform: translateY(-1px);
+}
+
+.prose blockquote p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.dark .prose blockquote {
+  border-left-color: #8FA5B5;
+  background: rgba(143, 165, 181, 0.08);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(143, 165, 181, 0.15);
+}
+
+.dark .prose blockquote:hover {
+  background: rgba(143, 165, 181, 0.12);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(143, 165, 181, 0.2);
+}

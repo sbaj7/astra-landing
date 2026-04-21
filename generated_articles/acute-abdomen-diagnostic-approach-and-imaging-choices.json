@@ -1,0 +1,326 @@
+{
+  "heroLabel": "Imaging First Decisions",
+  "title": "Acute Abdomen: Diagnostic Approach and Imaging Choices",
+  "summary": "In acute, non‑traumatic abdominal pain, prioritize timely risk stratification, bedside ultrasound, and targeted cross‑sectional imaging to narrow differentials and guide urgent management. Contrast‑enhanced MDCT is generally preferred for severe or generalized pain; ultrasound remains first‑line for RUQ, gynecologic, and biliary etiologies; noncontrast CT is preferred for suspected renal colic; MRI is a radiation‑free alternative in selected populations. Integrate clinical context, hemodynamic status, and radiation/contrast risks to choose the right test the first time.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What is an evidence-based, clinically pragmatic diagnostic pathway for the acute abdomen, and how should imaging be selected by presentation and risk?",
+  "tags": [
+    "Emergency Medicine",
+    "Radiology",
+    "General Surgery",
+    "Point-of-Care Ultrasound",
+    "Internal Medicine"
+  ],
+  "heroStats": [
+    {
+      "label": "Preferred initial test in severe generalized pain",
+      "value": "Contrast-enhanced MDCT"
+    },
+    {
+      "label": "RUQ pain first-line",
+      "value": "Ultrasound"
+    },
+    {
+      "label": "Suspected renal colic",
+      "value": "Noncontrast CT"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Stethoscope",
+      "title": "Stabilize and risk-stratify before imaging",
+      "body": "Hemodynamic instability, peritonitis, or septic shock mandate immediate surgical/critical care involvement and do not delay life-saving interventions for imaging."
+    },
+    {
+      "icon": "Activity",
+      "title": "Choose the right test the first time",
+      "body": "Severe or nonlocalized pain: use contrast-enhanced MDCT. RUQ/biliary or gynecologic etiologies: prioritize ultrasound. Suspected stones: noncontrast CT."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "POCUS accelerates triage",
+      "body": "Bedside ultrasound rapidly answers focused questions (free fluid, AAA, gallbladder, hydronephrosis) and guides whether CT is immediately needed."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Minimize harm",
+      "body": "Avoid unnecessary radiation and iodinated contrast in vulnerable patients; consider MRI when available, especially in pregnancy or contrast contraindication."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Synthesize imaging with clinical data",
+      "body": "Combine exam, labs, and imaging to refine differentials; imaging results should change management—if not, reassess the diagnostic question."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Initial Actions",
+      "title": "Clinically Oriented Diagnostic Pathway",
+      "blurb": "A stepwise approach that prioritizes stabilization, pretest probabilities, and imaging tailored to presentation.",
+      "steps": [
+        {
+          "title": "Stabilize and identify red flags",
+          "body": "Assess ABCs, vitals, and provide analgesia. Look for peritonitis, GI bleed, shock, or ruptured AAA features. If unstable with suspected surgical catastrophe, **call surgery/IR and proceed to operative or damage-control pathways**; imaging should not delay resuscitation [1], [2]."
+        },
+        {
+          "title": "Define pain pattern and risk",
+          "body": "Localize pain (RUQ, RLQ, LLQ, flank, diffuse), characterize onset, and integrate age, pregnancy, immunosuppression, and prior surgery. Labs: CBC, BMP, LFTs, lipase, urinalysis ± pregnancy test; use them to set pretest probabilities that guide the imaging question [1], [3]."
+        },
+        {
+          "title": "Use POCUS to accelerate decisions",
+          "body": "Focused questions: free fluid, biliary dilation/cholecystitis, hydronephrosis, AAA, bowel dilatation, or appendiceal and gynecologic clues. **POCUS can shorten time-to-diagnosis and determine immediate need for CT** [4], [5], [6]."
+        },
+        {
+          "title": "Select the first-line imaging by presentation",
+          "body": "• Severe/nonlocalized pain: **contrast-enhanced MDCT is preferred** for broad differential and detection of life-threatening conditions [7], [8], [2]. • RUQ/biliary: **ultrasound first**; CT if nondiagnostic or complications suspected [9], [6]. • Renal colic: **noncontrast CT is gold standard**; US can be initial in young/pregnant to limit radiation [4]. • RLQ suspected appendicitis: CT with IV contrast in adults; **US first in young/pregnant**, then CT/MRI if equivocal [9], [2]. • Gynecologic etiologies: transabdominal/transvaginal **ultrasound first** [9]. • Suspected high-grade SBO/ischemia: **contrast-enhanced CT** for transition point and ischemia signs [7], [8], [2]."
+        },
+        {
+          "title": "Escalate or de-escalate",
+          "body": "If initial imaging is nondiagnostic but suspicion remains high, proceed to problem-focused CT or MRI. Conversely, if imaging confirms a benign, self-limited condition, **avoid repeat imaging**; provide return precautions and follow-up [7], [3], [2]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "Modality Selection",
+      "title": "Imaging Choices by Clinical Scenario",
+      "blurb": "Align modality with the dominant differential, balancing accuracy, speed, radiation, and contrast safety.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Activity",
+          "title": "Severe or generalized pain",
+          "items": [
+            "Preferred: **contrast-enhanced MDCT** for broad differential, obstruction, ischemia, perforation [7], [8].",
+            "Strength: High diagnostic yield; rapid; detects extra-abdominal mimics [7], [3].",
+            "Caution: Contrast nephropathy risk is low but consider AKI; hydrate and weigh risks/benefits [8]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Right upper quadrant (biliary)",
+          "items": [
+            "First-line: **ultrasound** for gallstones, wall thickening, sonographic Murphy sign [9], [6].",
+            "CT if equivocal/complications (emphysematous cholecystitis, perforation) [9].",
+            "POCUS useful to triage and expedite surgery/ERCP when positive [4], [5]."
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Renal/ureteric colic",
+          "items": [
+            "First-line: **noncontrast CT** for stones and alternative diagnoses [4].",
+            "Ultrasound to reduce radiation in pregnancy/young; look for hydronephrosis and twinkle artifact [4], [9]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Right lower quadrant (appendicitis)",
+          "items": [
+            "Adults: **CT with IV contrast** is highly accurate and reduces negative appendectomy [9].",
+            "Children/pregnancy: **ultrasound first**, then MRI or CT if equivocal [9], [2]."
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "Gynecologic etiologies",
+          "items": [
+            "First-line: **transvaginal + transabdominal ultrasound** for torsion, ectopic pregnancy, PID, hemorrhagic cyst [9].",
+            "MRI if equivocal or to avoid radiation/contrast [2]."
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Suspected SBO/ischemia/perforation",
+          "items": [
+            "**Contrast-enhanced CT** to identify transition point, closed-loop, pneumatosis, free air/fluid [7], [8], [2].",
+            "Oral contrast usually unnecessary in high-grade obstruction; use IV contrast unless contraindicated [8]."
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Special populations and safety",
+          "items": [
+            "Pregnancy: **Ultrasound first**, **MRI without gadolinium** when needed; avoid ionizing radiation when possible [2].",
+            "Renal impairment/iodine allergy: prefer **US or MRI**; consider noncontrast CT if appropriate [2].",
+            "Repeated ED visits: minimize cumulative radiation; leverage prior imaging and US [3]."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "The acute abdomen: A surgeon's approach to diagnosis ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/1096286703900260",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 2,
+      "title": "Imaging patients with acute abdominal pain",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19789254/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 3,
+      "title": "Diagnostic imaging for acute abdominal pain in an ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31493199/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 4,
+      "title": "Point-of-care ultrasound for the acute abdomen in the...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/tjem/fulltext/2020/20010/point_of_care_ultrasound_for_the_acute_abdomen_in.1.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 5,
+      "title": "diagnostic ultrasonography for the acute abdomen",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/indications-for-bedside-ultrasonography-in-the-critically-ill-adult-patient/abstract-text/22668809/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 6,
+      "title": "The role of US examination in the management of acute ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/2036-7902-5-S1-S6.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 7,
+      "title": "acute and generalized non-traumatic abdominal pain | British ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjr/article/89/1061/20150859/7477489",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 8,
+      "title": "Acute Nonlocalized Abdominal Pain",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Facsearch.acr.org%2Fdocs%2F69467%2FNarrative%2F&token=f6IRefqoc19TgkACOU4NLcR2BzxM6YTKJe6BTzgxHuc9lt5sPxkvT3ntkmSK7z1J8VeTAVXCYeqJb1RhgZwHEw%3D%3D&TOPIC_ID=120001",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic imaging of acute abdominal pain in adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25884745/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Diagnostic Imaging of the Acute Abdomen",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/book/10.1007/978-3-642-71884-7",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 11,
+      "title": "POCUS for acute abdominal pain: practical scan protocols ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s40477-025-01088-7",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 12,
+      "title": "acute abdominal pain: diagnostic strategies",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12195463/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "The acute abdomen: A surgeon's approach to diagnosis ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/1096286703900260",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 2,
+      "title": "acute and generalized non-traumatic abdominal pain | British ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjr/article/89/1061/20150859/7477489",
+      "authors": "academic.oup.com"
+    },
+    {
+      "number": 3,
+      "title": "Point-of-care ultrasound for the acute abdomen in the...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/tjem/fulltext/2020/20010/point_of_care_ultrasound_for_the_acute_abdomen_in.1.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 4,
+      "title": "Diagnostic Imaging of the Acute Abdomen",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/book/10.1007/978-3-642-71884-7",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 5,
+      "title": "diagnostic ultrasonography for the acute abdomen",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/indications-for-bedside-ultrasonography-in-the-critically-ill-adult-patient/abstract-text/22668809/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 6,
+      "title": "Acute Nonlocalized Abdominal Pain",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/external-redirect?target_url=https%3A%2F%2Facsearch.acr.org%2Fdocs%2F69467%2FNarrative%2F&token=f6IRefqoc19TgkACOU4NLcR2BzxM6YTKJe6BTzgxHuc9lt5sPxkvT3ntkmSK7z1J8VeTAVXCYeqJb1RhgZwHEw%3D%3D&TOPIC_ID=120001",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 7,
+      "title": "The role of US examination in the management of acute ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/2036-7902-5-S1-S6.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 8,
+      "title": "POCUS for acute abdominal pain: practical scan protocols ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s40477-025-01088-7",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic imaging of acute abdominal pain in adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25884745/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 10,
+      "title": "Diagnostic imaging for acute abdominal pain in an ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31493199/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 11,
+      "title": "acute abdominal pain: diagnostic strategies",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12195463/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "number": 12,
+      "title": "Imaging patients with acute abdominal pain",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19789254/",
+      "authors": "pubmed.ncbi.nlm.nih.gov"
+    }
+  ],
+  "slug": "acute-abdomen-diagnostic-approach-and-imaging-choices"
+}

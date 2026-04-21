@@ -1,0 +1,384 @@
+{
+  "heroLabel": "ICU Playbook",
+  "title": "Acute Respiratory Failure: Oxygenation Strategies and Escalation of Care",
+  "summary": "Evidence-based approach to initial oxygen therapy, noninvasive strategies (HFNO, CPAP/NIV), and timely intubation with lung-protective ventilation for acute hypoxemic or hypercapnic respiratory failure. Emphasis on individualized targets, dynamic reassessment, and avoidance of delayed intubation.",
+  "updated": "October 2025",
+  "clinicalQuestion": "What are the optimal oxygenation strategies and escalation steps for adults with acute respiratory failure in the ICU and ED?",
+  "tags": [
+    "AHRF",
+    "HFNO",
+    "NIV",
+    "CPAP",
+    "Intubation",
+    "ARDS",
+    "COPD",
+    "ICU"
+  ],
+  "heroStats": [
+    {
+      "label": "Target SpO2 (most adults)",
+      "value": "92–96% [1], [2]"
+    },
+    {
+      "label": "HFNO vs standard O2",
+      "value": "↓ Intubation risk (moderate evidence) [3], [4], [1], [2]"
+    },
+    {
+      "label": "NIV in acute hypercapnic COPD",
+      "value": "↓ Intubation and mortality (strong evidence) [5], [6], [7]"
+    },
+    {
+      "label": "Lung-protective ventilation",
+      "value": "VT 6 mL/kg PBW, low plateau pressure [8], [9]"
+    }
+  ],
+  "keyMoments": [
+    {
+      "icon": "Activity",
+      "title": "Define the phenotype early",
+      "body": "Differentiate hypoxemic vs hypercapnic failure; identify ARDS, COPD exacerbation, cardiogenic pulmonary edema, or immunocompromised host to tailor oxygenation strategy and escalation [7], [1], [2]."
+    },
+    {
+      "icon": "ClipboardList",
+      "title": "Start with safe oxygen targets",
+      "body": "Initiate O2 for SpO2 <90–92% or PaO2 <60 mm Hg; aim for SpO2 92–96% (88–92% if chronic hypercapnia risk) to avoid hypoxemia and hyperoxia-related harm [1], [2]."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Prefer HFNO for AHRF",
+      "body": "HFNO provides heated, humidified high FiO2 with flow-related PEEP, reduces work of breathing, and lowers intubation compared with standard oxygen in many AHRF settings [3], [4], [1], [2]."
+    },
+    {
+      "icon": "Stethoscope",
+      "title": "Use NIV where evidence is strongest",
+      "body": "NIV/CPAP is highly effective in acute hypercapnic COPD and cardiogenic pulmonary edema; monitor closely for failure to prevent harmful delays in intubation [5], [6], [7]."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Intubate when criteria met",
+      "body": "Failing noninvasive support, altered mental status, refractory hypoxemia, shock, or inability to protect airway warrant prompt intubation and lung-protective ventilation [7], [8], [9]."
+    }
+  ],
+  "sections": [
+    {
+      "type": "steps",
+      "eyebrow": "Initial Actions",
+      "title": "Stabilize, Classify, and Set Oxygen Targets",
+      "blurb": "Rapid ABCs, phenotype-based strategy, and tight oxygen titration.",
+      "steps": [
+        {
+          "title": "Assess severity and phenotype",
+          "body": "Identify hypoxemic AHRF (e.g., pneumonia/ARDS), hypercapnic failure (COPD/asthma), or mixed etiologies. Obtain SpO2, ABG/VBG, RR, work of breathing, mental status, hemodynamics, and chest imaging [7], [1], [2]."
+        },
+        {
+          "title": "Set oxygenation targets",
+          "body": "Aim SpO2 92–96% for most; in suspected chronic hypercapnia (COPD/OSA/obesity hypoventilation), target 88–92% to avoid oxygen-induced hypercapnia [1], [2]."
+        },
+        {
+          "title": "Start oxygen safely",
+          "body": "Begin with nasal cannula or nonrebreather as needed while preparing definitive support. Avoid prolonged FiO2 1.0; titrate to target and reassess within minutes [1], [2]."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Noninvasive Oxygenation",
+      "title": "High-Flow Nasal Oxygen (HFNO) as First-Line for AHRF",
+      "blurb": "HFNO is increasingly the reference therapy for AHRF with benefits on intubation risk.",
+      "steps": [
+        {
+          "title": "Initiation",
+          "body": "Start flow 40–60 L/min, FiO2 to achieve target SpO2; increase flow for dyspnea and to reduce entrainment. Use heated humidification to improve tolerance [3], [4], [1], [2]."
+        },
+        {
+          "title": "Physiology and benefits",
+          "body": "HFNO provides high FiO2, low-level PEEP, dead-space washout, and reduced work of breathing. Evidence suggests **reduced intubation risk** vs standard oxygen in AHRF (moderate certainty) [3], [4], [1], [2]."
+        },
+        {
+          "title": "Monitoring and time-limited trial",
+          "body": "Reassess at 30–60 minutes: respiratory rate, SpO2/FiO2, ROX index, mental status. **Escalate if ROX remains low or work of breathing is high** to avoid delayed intubation [1], [2]."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Ventilatory Support Without Intubation",
+      "title": "CPAP/NIV: When and How",
+      "blurb": "Use where evidence is strongest; avoid prolonged ineffective trials.",
+      "steps": [
+        {
+          "title": "COPD exacerbation with hypercapnic acidosis",
+          "body": "NIV is first-line; meta-analytic data show **reduced intubation and mortality** vs standard therapy [5], [6], [7]. Start IPAP/EPAP tailored to pH, PaCO2, and work of breathing; aim to correct acidosis and reduce RR."
+        },
+        {
+          "title": "Cardiogenic pulmonary edema",
+          "body": "CPAP/NIV rapidly improves oxygenation and dyspnea; reduces need for intubation in many studies. Ensure hemodynamic optimization in parallel [7]."
+        },
+        {
+          "title": "Hypoxemic AHRF (non-COPD)",
+          "body": "Evidence is mixed; HFNO is generally preferred. Select NIV for selected patients with high work of breathing and close monitoring. Consider helmet interface where available; trials show variable results vs HFNO in COVID-19 AHRF [10], [1], [2]."
+        },
+        {
+          "title": "Operational safety",
+          "body": "Use tight-fitting interface, early ABG reassessment (30–60 min), and predefined failure criteria. **Do not persist with NIV in worsening hypoxemia, acidosis, or encephalopathy** [5], [7], [1], [2]."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "eyebrow": "Escalation to Invasive Ventilation",
+      "title": "Intubation and Lung-Protective Ventilation",
+      "blurb": "Recognize failure early and apply lung-protective strategies.",
+      "steps": [
+        {
+          "title": "Indications for intubation",
+          "body": "Refractory hypoxemia (e.g., SpO2 <90% with high FiO2), persistent/worsening acidosis or hypercapnia despite NIV, inability to protect airway, severe work of breathing, shock, or altered mental status [7], [1], [2]."
+        },
+        {
+          "title": "Initial ventilator settings",
+          "body": "Use **VT 6 mL/kg PBW**, limit plateau pressure, adjust PEEP/FiO2 per ARDS principles, and target adequate oxygenation without hyperoxia [8], [9]."
+        },
+        {
+          "title": "Adjuncts and rescue",
+          "body": "For severe ARDS: higher PEEP strategy, early prone positioning, conservative fluids; consider neuromuscular blockade and extracorporeal support in refractory cases per local expertise [8], [9]."
+        }
+      ]
+    },
+    {
+      "type": "checklists",
+      "eyebrow": "At-a-Glance",
+      "title": "Practical Targets, Failure Signs, and Pearls",
+      "blurb": "Use this grid during bedside reassessment.",
+      "layout": "grid",
+      "cards": [
+        {
+          "icon": "Activity",
+          "title": "Targets",
+          "items": [
+            "SpO2 92–96% (most adults) [1], [2]",
+            "SpO2 88–92% in chronic hypercapnia risk (COPD) [1], [2]",
+            "RR < 25–30/min; improving work of breathing [7], [1]",
+            "ROX index improving on HFNO [1], [2]"
+          ]
+        },
+        {
+          "icon": "AlertTriangle",
+          "title": "Failure signs (escalate)",
+          "items": [
+            "Persistent tachypnea, escalating FiO2 on HFNO/NIV [1], [2]",
+            "Worsening acidosis or rising PaCO2 on NIV [5], [6], [7]",
+            "Altered mental status, hemodynamic instability [7]",
+            "Inability to clear secretions or protect airway [7]"
+          ]
+        },
+        {
+          "icon": "Clock",
+          "title": "Reassessment cadence",
+          "items": [
+            "HFNO/NIV: check at 30–60 minutes after initiation and after each change [1], [2]",
+            "ABG/VBG after starting NIV or if clinical status changes [7]",
+            "Continuous pulse oximetry; avoid sustained SpO2 >96% [1], [2]"
+          ]
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Safety pearls",
+          "items": [
+            "Humidification and adequate flow on HFNO to reduce dyspnea/work of breathing [3], [4], [1]",
+            "Predefine intubation criteria to avoid delays [7], [1], [2]",
+            "Use lung-protective ventilation from the first breath post-intubation [8], [9]"
+          ]
+        },
+        {
+          "icon": "ClipboardList",
+          "title": "COVID-19 specific notes",
+          "items": [
+            "HFNO is safe with precautions; alternating with NIV/helmet may help select patients [10]",
+            "Trial data show variable effects on mortality/intubation; individualize and monitor closely [10]"
+          ]
+        },
+        {
+          "icon": "TestTube2",
+          "title": "Pathophysiology anchors",
+          "items": [
+            "HFNO: high FiO2, low PEEP, dead-space washout [3], [4], [1]",
+            "NIV: improves alveolar ventilation (↓ PaCO2), unloads respiratory muscles [5], [6], [7]"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Oxygen therapy in acute hypoxemic respiratory failure",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/s13613-024-01367-2.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 2,
+      "title": "Oxygen therapy and noninvasive respiratory supports in acute ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/s13613-024-01389-w.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 3,
+      "title": "High-flow nasal oxygen is the reference treatment in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X24001415",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 4,
+      "title": "High-flow nasal oxygen is the reference treatment in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X24001397",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 5,
+      "title": "Non-invasive ventilation in acute respiratory failure: a meta ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824024503",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 6,
+      "title": "Acute non-invasive ventilation – getting it right on the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824011783",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 7,
+      "title": "Approach to acute respiratory failure for frontline clinicians",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/smj/fulltext/2022/12000/approach_to_acute_respiratory_failure_for.7.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 8,
+      "title": "Ventilatory Strategies in Severe Acute Respiratory Failure",
+      "detail": "www.thieme-connect.com",
+      "url": "https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0034-1382154",
+      "authors": "www.thieme-connect.com"
+    },
+    {
+      "number": 9,
+      "title": "Ventilator Strategies and Rescue Therapies for ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/mechanical-ventilation-of-adults-in-the-emergency-department/abstract-text/26014437/pubmed",
+      "authors": "www.uptodate.com"
+    },
+    {
+      "number": 10,
+      "title": "Noninvasive Oxygenation Strategies in Adult Patients With ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(23)00597-4/abstract",
+      "authors": "journal.chestnet.org"
+    },
+    {
+      "number": 11,
+      "title": "High-Flow Oxygen Therapy Application in Chronic ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/02000/high_flow_oxygen_therapy_application_in_chronic.4.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 12,
+      "title": "Managing Severe Hypoxic Respiratory Failure in COVID-19",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s40138-022-00245-0",
+      "authors": "link.springer.com"
+    }
+  ],
+  "citations": [
+    {
+      "number": 1,
+      "title": "High-flow nasal oxygen is the reference treatment in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X24001415",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 2,
+      "title": "High-flow nasal oxygen is the reference treatment in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X24001397",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 3,
+      "title": "Non-invasive ventilation in acute respiratory failure: a meta ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824024503",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 4,
+      "title": "Acute non-invasive ventilation – getting it right on the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824011783",
+      "authors": "www.sciencedirect.com"
+    },
+    {
+      "number": 5,
+      "title": "Approach to acute respiratory failure for frontline clinicians",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/smj/fulltext/2022/12000/approach_to_acute_respiratory_failure_for.7.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 6,
+      "title": "High-Flow Oxygen Therapy Application in Chronic ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/02000/high_flow_oxygen_therapy_application_in_chronic.4.aspx",
+      "authors": "journals.lww.com"
+    },
+    {
+      "number": 7,
+      "title": "Managing Severe Hypoxic Respiratory Failure in COVID-19",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/article/10.1007/s40138-022-00245-0",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 8,
+      "title": "Noninvasive Oxygenation Strategies in Adult Patients With ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(23)00597-4/abstract",
+      "authors": "journal.chestnet.org"
+    },
+    {
+      "number": 9,
+      "title": "Oxygen therapy in acute hypoxemic respiratory failure",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/s13613-024-01367-2.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 10,
+      "title": "Oxygen therapy and noninvasive respiratory supports in acute ...",
+      "detail": "link.springer.com",
+      "url": "https://link.springer.com/content/pdf/10.1186/s13613-024-01389-w.pdf",
+      "authors": "link.springer.com"
+    },
+    {
+      "number": 11,
+      "title": "Ventilatory Strategies in Severe Acute Respiratory Failure",
+      "detail": "www.thieme-connect.com",
+      "url": "https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-0034-1382154",
+      "authors": "www.thieme-connect.com"
+    },
+    {
+      "number": 12,
+      "title": "Ventilator Strategies and Rescue Therapies for ...",
+      "detail": "www.uptodate.com",
+      "url": "https://www.uptodate.com/contents/mechanical-ventilation-of-adults-in-the-emergency-department/abstract-text/26014437/pubmed",
+      "authors": "www.uptodate.com"
+    }
+  ],
+  "slug": "acute-respiratory-failure-oxygenation-strategies-and-escalation-of-care"
+}

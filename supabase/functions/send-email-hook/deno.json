@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "resend": "npm:resend@4.0.1",
+    "standardwebhooks": "https://esm.sh/standardwebhooks@1.0.0",
+    "std/": "https://deno.land/std@0.168.0/"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  }
+}

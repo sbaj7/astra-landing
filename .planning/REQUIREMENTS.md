@@ -1,0 +1,141 @@
+# Requirements: Astra MD Vision Image Analysis
+
+**Defined:** 2026-01-19
+**Core Value:** Healthcare professionals can analyze medical images and documents through AI-powered vision capabilities
+
+## v1 Requirements
+
+Requirements for initial release. Each maps to roadmap phases.
+
+### Image Upload
+
+- [x] **UPLD-01**: User can click upload button to select images from device
+- [x] **UPLD-02**: User can drag and drop images onto the input area
+- [x] **UPLD-03**: User sees preview thumbnail of selected image before sending
+- [x] **UPLD-04**: User can remove a selected image before sending
+- [x] **UPLD-05**: User sees clear error message for invalid file types
+- [x] **UPLD-06**: User sees clear error message when file exceeds size limit
+- [x] **UPLD-07**: Images are compressed client-side before upload (target 1MB)
+
+### Multi-Image Support
+
+- [x] **MULT-01**: User can attach up to 5 images per message
+- [x] **MULT-02**: User sees image count indicator (e.g., "3/5 images")
+- [x] **MULT-03**: User can remove individual images from multi-image selection
+
+### Camera Capture
+
+- [x] **CAM-01**: User can capture photo using device camera on mobile
+- [x] **CAM-02**: User sees appropriate message when camera permission is denied
+- [x] **CAM-03**: User can switch between front and back camera
+- [x] **CAM-04**: Camera captures correct orientation (EXIF handling)
+
+### PDF Support
+
+- [x] **PDF-01**: User can upload PDF documents
+- [x] **PDF-02**: PDF pages are converted to images for Vision API analysis
+- [x] **PDF-03**: User sees loading indicator during PDF processing
+
+### Vision API Integration
+
+- [x] **VIS-01**: Images are sent to OpenAI Vision API for analysis
+- [x] **VIS-02**: Image analysis works in search mode
+- [x] **VIS-03**: Image analysis works in reason mode
+- [x] **VIS-04**: Image analysis works in write mode
+- [x] **VIS-05**: Image analysis works in standard chat mode
+- [x] **VIS-06**: User sees streaming response during analysis
+- [x] **VIS-07**: User sees feedback when image quality is insufficient
+
+### Chat Display
+
+- [x] **DISP-01**: User's uploaded images display in chat conversation
+- [x] **DISP-02**: Images are responsive and fit within chat bubble
+- [x] **DISP-03**: User can tap/click image to view in full-size lightbox
+
+### Usage Limits
+
+- [x] **LIM-01**: Image analysis counts against existing chat limits
+- [x] **LIM-02**: User sees remaining limit after image analysis
+
+## v2 Requirements
+
+Deferred to future release. Tracked but not in current roadmap.
+
+### Enhanced Upload
+
+- **UPLD-08**: User can paste images from clipboard (Cmd+V)
+- **UPLD-09**: User can reorder images before sending
+
+### Advanced PDF
+
+- **PDF-04**: User can select specific pages from multi-page PDF
+- **PDF-05**: User sees page preview thumbnails for PDFs
+
+### Enhanced Analysis
+
+- **VIS-08**: User sees confidence indicators on AI findings
+- **VIS-09**: User can request high-detail analysis for specific images
+
+### Persistence
+
+- **PERS-01**: Images persist with chat history (optional)
+- **PERS-02**: User can re-analyze previously uploaded images
+
+## Out of Scope
+
+Explicitly excluded. Documented to prevent scope creep.
+
+| Feature | Reason |
+|---------|--------|
+| Permanent image storage | HIPAA liability, privacy concerns |
+| Real-time video analysis | High complexity, not essential for v1 |
+| DICOM viewer integration | Specialized format, high complexity |
+| Image annotation tools | High complexity, defer to v2+ |
+| Definitive medical diagnoses | Liability, AI limitations |
+| Image sharing between users | Privacy violation concerns |
+| Server-side image processing | Client-side simpler, preserves privacy |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| UPLD-01 | Phase 1 | Complete |
+| UPLD-02 | Phase 1 | Complete |
+| UPLD-03 | Phase 1 | Complete |
+| UPLD-04 | Phase 1 | Complete |
+| UPLD-05 | Phase 1 | Complete |
+| UPLD-06 | Phase 1 | Complete |
+| UPLD-07 | Phase 2 | Complete |
+| MULT-01 | Phase 3 | Complete |
+| MULT-02 | Phase 3 | Complete |
+| MULT-03 | Phase 3 | Complete |
+| CAM-01 | Phase 4 | Complete |
+| CAM-02 | Phase 4 | Complete |
+| CAM-03 | Phase 4 | Complete |
+| CAM-04 | Phase 4 | Complete |
+| PDF-01 | Phase 5 | Complete |
+| PDF-02 | Phase 5 | Complete |
+| PDF-03 | Phase 5 | Complete |
+| VIS-01 | Phase 6 | Complete |
+| VIS-02 | Phase 7 | Complete |
+| VIS-03 | Phase 7 | Complete |
+| VIS-04 | Phase 7 | Complete |
+| VIS-05 | Phase 7 | Complete |
+| VIS-06 | Phase 7 | Complete |
+| VIS-07 | Phase 8 | Complete |
+| DISP-01 | Phase 7 | Complete |
+| DISP-02 | Phase 7 | Complete |
+| DISP-03 | Phase 8 | Complete |
+| LIM-01 | Phase 7 | Complete |
+| LIM-02 | Phase 7 | Complete |
+
+**Coverage:**
+- v1 requirements: 26 total
+- Mapped to phases: 26
+- Unmapped: 0
+
+---
+*Requirements defined: 2026-01-19*
+*Last updated: 2026-01-20 after Phase 8 completion*
