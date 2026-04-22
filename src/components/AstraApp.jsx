@@ -2039,10 +2039,8 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, theme, isMobile
         gap: 2,
         padding: 4,
         borderRadius: isMobile ? 14 : 16,
-        background: `${theme.backgroundSurface}C0`,
+        background: theme.backgroundSurface,
         border: `1px solid ${theme.textSecondary}10`,
-        backdropFilter: 'blur(24px)',
-        WebkitBackdropFilter: 'blur(24px)',
         boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
         animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.08s backwards',
       }}>
@@ -6647,10 +6645,9 @@ const AstraApp = () => {
           {messages.length === 0 && !isLoading && !isStreaming && (
             <div style={{
               flex: 1,
-              overflowY: 'auto',
+              overflow: 'visible',
               paddingRight: isMobile ? 12 : 16,
               paddingLeft: isMobile ? 12 : 16,
-              WebkitOverflowScrolling: 'touch',
             }}>
               <div style={{ maxWidth: '100%', margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
                 <EmptyState
