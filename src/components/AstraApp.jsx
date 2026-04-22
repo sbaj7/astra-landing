@@ -1566,15 +1566,13 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   bottom: '100%',
                   left: 0,
                   marginBottom: 8,
-                  backgroundColor: `${theme.backgroundSurface}F2`,
-                  backdropFilter: 'blur(24px)',
-                  WebkitBackdropFilter: 'blur(24px)',
+                  backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
                   boxShadow: '0 -12px 40px rgba(0,0,0,0.12), 0 -2px 8px rgba(0,0,0,0.06)',
                   padding: '5px',
                   minWidth: 210,
-                  zIndex: 50,
+                  zIndex: 9999,
                   animation: 'fadeInDown 0.18s cubic-bezier(0.2, 0, 0, 1)'
                 }}
               >
@@ -1632,9 +1630,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   left: isMobile ? 'auto' : 0,
                   right: isMobile ? 0 : 'auto',
                   marginBottom: 8,
-                  backgroundColor: `${theme.backgroundSurface}F2`,
-                  backdropFilter: 'blur(24px)',
-                  WebkitBackdropFilter: 'blur(24px)',
+                  backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
                   boxShadow: '0 -12px 40px rgba(0,0,0,0.12), 0 -2px 8px rgba(0,0,0,0.06)',
@@ -1642,7 +1638,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   width: isMobile ? 260 : 320,
                   maxHeight: isMobile ? '50vh' : '420px',
                   overflowY: 'auto',
-                  zIndex: 50,
+                  zIndex: 9999,
                   animation: 'fadeInDown 0.18s cubic-bezier(0.2, 0, 0, 1)'
                 }}
               >
