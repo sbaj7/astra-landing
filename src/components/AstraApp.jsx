@@ -1350,20 +1350,16 @@ const ToolbarView = ({
 const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }) => {
   const [showDDxMenu, setShowDDxMenu] = useState(false);
   const [showAPMenu, setShowAPMenu] = useState(false);
-  const [ddxPos, setDdxPos] = useState(null);
-  const [apPos, setApPos] = useState(null);
   const ddxMenuRef = useRef(null);
   const apMenuRef = useRef(null);
-  const ddxDropdownRef = useRef(null);
-  const apDropdownRef = useRef(null);
 
   useEffect(() => {
     if (!showDDxMenu) return;
 
     const handleClickOutside = (e) => {
-      const inButton = ddxMenuRef.current?.contains(e.target);
-      const inDropdown = ddxDropdownRef.current?.contains(e.target);
-      if (!inButton && !inDropdown) setShowDDxMenu(false);
+      if (ddxMenuRef.current && !ddxMenuRef.current.contains(e.target)) {
+        setShowDDxMenu(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -1374,9 +1370,9 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
     if (!showAPMenu) return;
 
     const handleClickOutside = (e) => {
-      const inButton = apMenuRef.current?.contains(e.target);
-      const inDropdown = apDropdownRef.current?.contains(e.target);
-      if (!inButton && !inDropdown) setShowAPMenu(false);
+      if (apMenuRef.current && !apMenuRef.current.contains(e.target)) {
+        setShowAPMenu(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -1499,20 +1495,8 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!isDisabled) {
-                      if (isDDx) {
-                        if (!showDDxMenu) {
-                          const rect = ddxMenuRef.current?.getBoundingClientRect();
-                          if (rect) setDdxPos({ bottom: window.innerHeight - rect.top + 8, left: rect.left });
-                        }
-                        setShowDDxMenu(!showDDxMenu);
-                      }
-                      if (isAP) {
-                        if (!showAPMenu) {
-                          const rect = apMenuRef.current?.getBoundingClientRect();
-                          if (rect) setApPos({ bottom: window.innerHeight - rect.top + 8, left: isMobile ? undefined : rect.left, right: isMobile ? Math.max(8, window.innerWidth - rect.right) : undefined });
-                        }
-                        setShowAPMenu(!showAPMenu);
-                      }
+                      if (isDDx) setShowDDxMenu(!showDDxMenu);
+                      if (isAP) setShowAPMenu(!showAPMenu);
                     }
                   }}
                   role="button"
@@ -1574,14 +1558,14 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
               )}
             </button>
 
-            {/* DDx Dropdown — fixed positioning to escape overflow containers */}
-            {isDDx && showDDxMenu && ddxPos && (
+            {/* DDx Dropdown */}
+            {isDDx && showDDxMenu && (
               <div
-                ref={ddxDropdownRef}
                 style={{
-                  position: 'fixed',
-                  bottom: ddxPos.bottom,
-                  left: ddxPos.left,
+                  position: 'absolute',
+                  bottom: '100%',
+                  left: 0,
+                  marginBottom: 8,
                   backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
@@ -1637,22 +1621,22 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
               </div>
             )}
 
-            {/* A&P Dropdown with Categories — fixed positioning */}
-            {isAP && showAPMenu && apPos && (
+            {/* A&P Dropdown with Categories */}
+            {isAP && showAPMenu && (
               <div
-                ref={apDropdownRef}
                 style={{
-                  position: 'fixed',
-                  bottom: apPos.bottom,
-                  left: apPos.left,
-                  right: apPos.right,
+                  position: 'absolute',
+                  bottom: '100%',
+                  left: isMobile ? 'auto' : 0,
+                  right: isMobile ? 0 : 'auto',
+                  marginBottom: 8,
                   backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
                   boxShadow: '0 -12px 40px rgba(0,0,0,0.12), 0 -2px 8px rgba(0,0,0,0.06)',
                   padding: '5px',
                   width: isMobile ? 260 : 320,
-                  maxHeight: isMobile ? '50vh' : '420px',
+                  maxHeight: isMobile ? '40vh' : '320px',
                   overflowY: 'auto',
                   zIndex: 9999,
                   animation: 'fadeInDown 0.18s cubic-bezier(0.2, 0, 0, 1)'
