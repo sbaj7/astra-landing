@@ -2736,14 +2736,15 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     citMapRef.current = map;
   }, [citations]);
 
-  // Dynamically create & position hover cards on mouseenter of .cite-wrap
-  // Hover HTML is built at runtime (not embedded in markdown) to avoid rehype-sanitize issues
+  // Hover state kept in refs so it survives re-renders during streaming
+  const hoverStateRef = useRef({ activeCard: null, hideTimer: null });
+
+  // Attach hover listeners once on mount, read citMapRef at hover time
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    let activeCard = null;
-    let hideTimer = null;
+    const state = hoverStateRef.current;
 
     const buildHoverCard = (wrap) => {
       const nums = (wrap.dataset.citeNums || '').split(',').filter(Boolean);
@@ -2759,7 +2760,7 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
       card.style.zIndex = '9999';
       card.style.display = 'flex';
 
-      cits.forEach((cit, i) => {
+      cits.forEach((cit) => {
         const host = (cit.host || cit.hostname || (() => { try { return new URL(cit.url).hostname; } catch { return ''; } })()).replace(/^www\./, '');
         const journal = getJournalName(host) || host || 'Source';
         const faviconSrc = buildFaviconUrl(host);
@@ -2840,33 +2841,32 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     };
 
     const removeCard = () => {
-      if (activeCard && activeCard.parentNode) {
-        activeCard.parentNode.removeChild(activeCard);
+      if (state.activeCard && state.activeCard.parentNode) {
+        state.activeCard.parentNode.removeChild(state.activeCard);
       }
-      activeCard = null;
+      state.activeCard = null;
     };
 
     const show = (wrap) => {
-      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+      if (state.hideTimer) { clearTimeout(state.hideTimer); state.hideTimer = null; }
       removeCard();
       const card = buildHoverCard(wrap);
       if (!card) return;
-      activeCard = card;
+      state.activeCard = card;
 
-      // Allow mouse to move to the card
       card.addEventListener('mouseenter', () => {
-        if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+        if (state.hideTimer) { clearTimeout(state.hideTimer); state.hideTimer = null; }
       });
       card.addEventListener('mouseleave', () => {
-        hideTimer = setTimeout(removeCard, 80);
+        state.hideTimer = setTimeout(removeCard, 80);
       });
 
       positionCard(card, wrap);
     };
 
     const hide = () => {
-      hideTimer = setTimeout(() => {
-        if (activeCard && activeCard.matches(':hover')) return;
+      state.hideTimer = setTimeout(() => {
+        if (state.activeCard && state.activeCard.matches(':hover')) return;
         removeCard();
       }, 80);
     };
@@ -2886,10 +2886,10 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     return () => {
       container.removeEventListener('mouseenter', onEnter, true);
       container.removeEventListener('mouseleave', onLeave, true);
-      if (hideTimer) clearTimeout(hideTimer);
+      if (state.hideTimer) clearTimeout(state.hideTimer);
       removeCard();
     };
-  });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps — listeners attach once, read citMapRef live
 
   const baseMarkdown = preprocessMarkdown(markdown, isStreaming);
   const processedMarkdown = injectCitationPills(baseMarkdown, citations);
