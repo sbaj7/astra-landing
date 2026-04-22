@@ -1132,6 +1132,22 @@ const preprocessMarkdown = (markdown, isStreaming = false) => {
  // These are always citation artifacts — the [N] pills handle display
  markdown = markdown.replace(/\[([^\]]*)\]\(https?:\/\/(?:www\.)?(?:pubmed\.ncbi\.nlm\.nih\.gov|pmc\.ncbi\.nlm\.nih\.gov|ncbi\.nlm\.nih\.gov|ahajournals\.org|heart\.org|nejm\.org|thelancet\.com|bmj\.com|jamanetwork\.com|nature\.com|sciencedirect\.com|springer\.com|wiley\.com|doi\.org|dynamed\.com|uptodate\.com|cochranelibrary\.com|mayoclinic\.org|cdc\.gov|who\.int|nih\.gov|medscape\.com|webmd\.com|wikipedia\.org)[^)]*\)/gi, '');
 
+ // Catch-all: strip ALL remaining external markdown links — [N] citation pills handle source display
+ // Keep the link text only if it's meaningful (not a URL/domain), otherwise drop entirely
+ markdown = markdown.replace(/\[([^\]]*)\]\(https?:\/\/[^)]+\)/g, (match, text) => {
+   const trimmed = text.trim();
+   // If link text is a URL, domain, or empty — drop entirely
+   if (!trimmed || /^https?:\/\//i.test(trimmed) || /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(trimmed)) return '';
+   // Otherwise keep the text but remove the link
+   return trimmed;
+ });
+
+ // Strip bare domain references in parentheses: (pubmed.ncbi.nlm.nih.gov/...) or (nejm.org)
+ markdown = markdown.replace(/\((?:www\.)?([a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)*\.[a-z]{2,})(?:\/[^\s)]*)?(?:\s*;\s*[^\s)]+)?\)/gi, '');
+
+ // Strip bare inline URLs that survived previous passes (mid-sentence)
+ markdown = markdown.replace(/https?:\/\/[^\s)\]>]+/g, '');
+
  const lines = markdown.split('\n');
  const processedLines = [];
 
@@ -2590,17 +2606,20 @@ const markdownComponents = {
     const href = props.href || '';
     const isExternal = /^https?:\/\//i.test(href);
 
-    // Domain-text links (e.g. [pubmed.ncbi.nlm.nih.gov](url)) are citation artifacts —
-    // hide them since injectCitationPills already renders proper [N] citation pills
+    // Suppress ALL external links — citation pills handle source display
+    // Any external link that survived preprocessMarkdown is a citation artifact
     if (isExternal) {
       const childText = typeof children === 'string' ? children
         : Array.isArray(children) ? children.map(c => typeof c === 'string' ? c : '').join('') : '';
-      const isDomainText = /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(childText.trim());
-      if (isDomainText) {
-        return null; // Suppress — citation pills handle this
+      const trimmed = childText.trim();
+      // If text is a domain/URL or empty, hide entirely
+      if (!trimmed || /^https?:\/\//i.test(trimmed) || /^[a-z0-9.-]+\.[a-z]{2,}/i.test(trimmed)) {
+        return null;
       }
+      // If text is meaningful, render as plain text (no link)
+      return <span>{children}</span>;
     }
-    return <a {...props} target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>{children}</a>;
+    return <a {...props}>{children}</a>;
   },
   code: ({ node, inline, className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || '');
