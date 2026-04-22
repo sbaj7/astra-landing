@@ -6641,9 +6641,10 @@ const AstraApp = () => {
           {messages.length === 0 && !isLoading && !isStreaming && (
             <div style={{
               flex: 1,
-              overflow: 'visible',
+              overflowY: 'auto',
               paddingRight: isMobile ? 12 : 16,
               paddingLeft: isMobile ? 12 : 16,
+              WebkitOverflowScrolling: 'touch',
             }}>
               <div style={{ maxWidth: '100%', margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
                 <EmptyState
