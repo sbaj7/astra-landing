@@ -1499,13 +1499,18 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!isDisabled) {
-                      const rect = e.currentTarget.closest('[style]')?.getBoundingClientRect();
                       if (isDDx) {
-                        if (!showDDxMenu && rect) setDdxPos({ bottom: window.innerHeight - rect.top + 8, left: rect.left });
+                        if (!showDDxMenu) {
+                          const rect = ddxMenuRef.current?.getBoundingClientRect();
+                          if (rect) setDdxPos({ bottom: window.innerHeight - rect.top + 8, left: rect.left });
+                        }
                         setShowDDxMenu(!showDDxMenu);
                       }
                       if (isAP) {
-                        if (!showAPMenu && rect) setApPos({ bottom: window.innerHeight - rect.top + 8, left: isMobile ? undefined : rect.left, right: isMobile ? Math.max(8, window.innerWidth - rect.right) : undefined });
+                        if (!showAPMenu) {
+                          const rect = apMenuRef.current?.getBoundingClientRect();
+                          if (rect) setApPos({ bottom: window.innerHeight - rect.top + 8, left: isMobile ? undefined : rect.left, right: isMobile ? Math.max(8, window.innerWidth - rect.right) : undefined });
+                        }
                         setShowAPMenu(!showAPMenu);
                       }
                     }
