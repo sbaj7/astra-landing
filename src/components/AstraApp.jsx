@@ -4435,7 +4435,7 @@ const InputBar = ({
     >
       <div style={{
         position: 'relative',
-        backgroundColor: `${theme.backgroundSurface}F5`,
+        backgroundColor: theme.backgroundSurface,
         borderRadius: isMobile ? 22 : 28,
         border: isDragActive
           ? `2px dashed ${theme.accentSoftBlue}`
@@ -4444,9 +4444,7 @@ const InputBar = ({
           ? `0 0 0 4px ${theme.accentSoftBlue}20, 0 8px 32px rgba(0,0,0,0.12)`
           : `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
         transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
-        overflow: 'visible',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)'
+        overflow: 'visible'
       }}>
         {/* HIPAA Badge */}
         <div style={{
@@ -4458,14 +4456,12 @@ const InputBar = ({
           gap: 4,
           padding: isMobile ? '3px 8px' : '4px 10px',
           borderRadius: 20,
-          background: `${theme.backgroundSurface}F8`,
+          background: theme.backgroundSurface,
           border: `1px solid ${theme.accentSoftBlue}25`,
           fontSize: isMobile ? 9 : 10,
           fontWeight: 600,
           color: theme.accentSoftBlue,
           letterSpacing: '0.04em',
-          backdropFilter: 'blur(16px)',
-          WebkitBackdropFilter: 'blur(16px)',
           zIndex: 5,
           boxShadow: `0 2px 8px rgba(0,0,0,0.06), 0 0 0 0.5px ${theme.accentSoftBlue}10`,
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
