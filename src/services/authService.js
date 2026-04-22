@@ -69,9 +69,9 @@ class AuthService {
     if (typeof limit.used === 'number' && Number.isFinite(limit.used)) {
       used = limit.used;
     } else if (typeof limit.remaining === 'number' && Number.isFinite(limit.remaining)) {
-      used = 3 - limit.remaining;
+      used = 5 - limit.remaining;
     }
-    used = Math.max(0, Math.min(3, Math.floor(used)));
+    used = Math.max(0, Math.min(5, Math.floor(used)));
 
     let resetAt = typeof limit.reset_at === 'string' ? limit.reset_at : null;
     const resetTime = resetAt ? new Date(resetAt) : null;
@@ -81,7 +81,7 @@ class AuthService {
 
     return {
       used,
-      remaining: Math.max(0, 3 - used),
+      remaining: Math.max(0, 5 - used),
       reset_at: resetAt
     };
   }

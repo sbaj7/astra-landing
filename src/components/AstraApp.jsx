@@ -5398,7 +5398,7 @@ const AstraApp = () => {
       }
     }
     // Default state if no valid cache
-    return { remaining: 3, used: 0, resetAt: null };
+    return { remaining: 5, used: 0, resetAt: null };
   });
   const [showBilling, setShowBilling] = useState(false);
   const [subscriptionInfo, setSubscriptionInfo] = useState(null);
@@ -5687,7 +5687,7 @@ const AstraApp = () => {
     }
 
     // For anonymous users, fetch actual usage from backend
-    const ANONYMOUS_LIMIT = 3;
+    const ANONYMOUS_LIMIT = 5;
 
     const fetchAnonymousLimit = async () => {
       try {
@@ -6173,7 +6173,7 @@ const AstraApp = () => {
 
     // Check limits based on user type
     if (!isAuthenticated) {
-      // Anonymous users: 3 chats/day
+      // Anonymous users: 5 chats/day
       if (chatLimit.remaining <= 0) {
         setShowPaywall(true);
         return;
@@ -6190,8 +6190,8 @@ const AstraApp = () => {
       // Update local state (optimistic update)
       setChatLimit(prev => {
         const resetAt = prev.resetAt || authService.getDefaultAnonymousResetTimestamp();
-        const nextUsed = Math.min(3, (prev.used || 0) + 1);
-        const nextRemaining = Math.max(0, 3 - nextUsed);
+        const nextUsed = Math.min(5, (prev.used || 0) + 1);
+        const nextRemaining = Math.max(0, 5 - nextUsed);
         const nextState = {
           remaining: nextRemaining,
           used: nextUsed,
