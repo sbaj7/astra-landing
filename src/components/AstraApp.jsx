@@ -3183,11 +3183,7 @@ const WorkspaceCard = ({
   const IconMap = { Search, Stethoscope, FileText };
   const ModeIcon = IconMap[modeInfo.iconName] || Sparkles;
 
-  // Check if any turn has a DDx for maxWidth sizing
-  const anyDDx = turns.some(t => {
-    const c = t.assistantMessage?.content;
-    return c && /##\s*Differential\s+Diagnosis/i.test(c);
-  });
+  const isReasonMode = mode === 'reason' || mode === 'differential' || mode === 'next-steps' || mode === 'disposition' || mode === 'dispo';
 
   return (
     <div
@@ -3208,7 +3204,7 @@ const WorkspaceCard = ({
         padding: isMobile ? '0 12px' : (isSingleCard ? '0 16px' : '0 8px'),
       }}>
         <div style={{
-          maxWidth: isSingleCard ? (anyDDx ? 1400 : 855) : '100%',
+          maxWidth: isSingleCard ? (isReasonMode ? 1400 : 855) : '100%',
           margin: isSingleCard ? '0 auto' : 0,
           width: '100%',
           paddingTop: isMobile ? 12 : 20,
