@@ -1533,7 +1533,7 @@ function getResearchRole() {
 - Bold important parts of sentences.
 - ***DO NOT ask the user for more prompts at the end.***
 - No grouped citation styles like [1-3] or [1,2] — always cite [1], [2], [3] (separate by commas).
-- NEVER output URLs, hyperlinks, domains, or website addresses in your response. No markdown links like [text](url), no bare URLs, no (domain.com) references. Only use [N] numbered citation brackets.
+- No hyperlinks.
 - PLEASE NO references or citations section.
 - Use complex, beautiful markdown.
 - Headings, bullets, and tables
