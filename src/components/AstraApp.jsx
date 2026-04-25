@@ -4945,10 +4945,9 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   line-height: 1.65;
 }
 
-/* Bold — subtle blue tint */
 .markdown-body strong {
   font-weight: 650;
-  color: ${isDark ? theme.accentSoftBlue : theme.textPrimary};
+  color: ${theme.textPrimary};
   letter-spacing: -0.005em;
 }
 
