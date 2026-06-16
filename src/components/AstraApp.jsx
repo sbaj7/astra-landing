@@ -1847,35 +1847,11 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, th
       alignItems: 'center',
       justifyContent: 'flex-start',
       padding: isMobile ? '24px 12px' : '40px 16px',
-      height: '100%',
+      minHeight: '100%',
       gap: isMobile ? 20 : 28,
       position: 'relative',
       width: '100%',
     }}>
-      {/* Ambient glow */}
-      <div style={{
-        position: 'absolute',
-        top: isMobile ? -120 : -180,
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: isMobile ? 400 : 640,
-        height: isMobile ? 400 : 640,
-        borderRadius: '50%',
-        background: `radial-gradient(circle, ${theme.accentSoftBlue}0A 0%, ${theme.accentSoftBlue}05 35%, transparent 70%)`,
-        pointerEvents: 'none',
-        filter: 'blur(60px)',
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: isMobile ? 100 : 80,
-        right: isMobile ? -80 : -40,
-        width: isMobile ? 200 : 300,
-        height: isMobile ? 200 : 300,
-        borderRadius: '50%',
-        background: `radial-gradient(circle, ${theme.accentSoftBlue}06 0%, transparent 70%)`,
-        pointerEvents: 'none',
-        filter: 'blur(50px)',
-      }} />
 
       {/* Hero */}
       <div style={{
@@ -6646,11 +6622,12 @@ const AstraApp = () => {
             <div style={{
               flex: 1,
               overflowY: 'auto',
+              overflowX: 'hidden',
               paddingRight: isMobile ? 12 : 16,
               paddingLeft: isMobile ? 12 : 16,
               WebkitOverflowScrolling: 'touch',
             }}>
-              <div style={{ maxWidth: '100%', margin: '0 auto', padding: isMobile ? '12px 0' : '16px 0', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
+              <div style={{ maxWidth: '100%', margin: '0 auto', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
                 <EmptyState
                   currentMode={currentMode}
                   onSampleTapped={handleSampleTapped}

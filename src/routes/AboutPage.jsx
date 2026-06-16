@@ -27,6 +27,8 @@ const TEAM_MEMBERS = [
   { name: 'Jeremiah von Borstel', role: '', credentials: 'MD Candidate' },
   { name: 'Emily Bellow', role: '', credentials: 'MD Candidate' },
   { name: 'Thomas Fedrigoni', role: '', credentials: 'MD Candidate' },
+  { name: 'Jakub Goclon', role: '', credentials: 'PhD Candidate' },
+  { name: 'Benjamin Rudolph', role: '', credentials: 'PhD Candidate' },
   { name: 'Brodi Bajrami', role: '', credentials: 'BS, Stony Brook' },
   { name: 'Calvin Sekseni', role: '', credentials: 'BS, Brooklyn College' },
   { name: 'Alex Naishuler', role: '', credentials: 'BS, Northeastern' },
