@@ -18,18 +18,10 @@ const TEAM = [
 ];
 
 // Officers (title + firm, no bio), rendered in the same grid as the founders.
-const OFFICERS = [
-  { name: 'Haseeb Iqbal', role: 'Chief Financial Officer', credentials: 'J.P. Morgan Chase & Co.' },
-  { name: 'Latif Pelinku, J.D.', role: 'Chief Information Officer', credentials: 'Linklaters' },
-];
-
-const ENGINEERING = [
-  { name: 'Alex Naishuler', credentials: 'BS, Northeastern' },
-  { name: 'Sean Malamud', credentials: 'BS, Plattsburgh' },
-];
-
-const ADVISORS = [
+const TEAM_MEMBERS = [
   { name: 'Arvind Dev, MD', role: '', credentials: 'Albert Einstein College of Medicine' },
+  { name: 'Latif Pelinku, J.D.', role: '', credentials: 'Linklaters' },
+  { name: 'Haseeb Iqbal', role: '', credentials: 'J.P. Morgan Chase & Co.' },
   { name: 'Randy Abramovich', role: '', credentials: 'MD Candidate' },
   { name: 'Derek Johnson', role: '', credentials: 'MD Candidate' },
   { name: 'Jeremiah von Borstel', role: '', credentials: 'MD Candidate' },
@@ -37,6 +29,8 @@ const ADVISORS = [
   { name: 'Thomas Fedrigoni', role: '', credentials: 'MD Candidate' },
   { name: 'Brodi Bajrami', role: '', credentials: 'BS, Stony Brook' },
   { name: 'Calvin Sekseni', role: '', credentials: 'BS, Brooklyn College' },
+  { name: 'Alex Naishuler', role: '', credentials: 'BS, Northeastern' },
+  { name: 'Sean Malamud', role: '', credentials: 'BS, Plattsburgh' },
 ];
 
 const SERIF = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
@@ -272,7 +266,7 @@ const AboutPage = () => {
 
         {/* ===== TEAM ===== */}
         <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={eyebrow}>The team</p>
+          <p style={eyebrow}>Founders</p>
           <h2 style={{ ...h2, marginTop: 18, maxWidth: MEASURE }}>
             Clinicians and engineers, building the tool they wanted at the bedside.
           </h2>
@@ -300,47 +294,9 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* ===== OFFICERS ===== */}
+        {/* ===== THE TEAM ===== */}
         <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={{ ...eyebrow, textAlign: 'center' }}>Operations & strategy</p>
-          <div style={{
-            marginTop: 44,
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: 'clamp(36px, 5vw, 56px) 96px',
-          }}>
-            {OFFICERS.map((m, i) => (
-              <div key={`${m.name}-${i}`} style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', textAlign: 'center' }}>
-                <span style={{ fontSize: 16.5, fontWeight: 600, color: theme.textPrimary, fontFamily: SANS, letterSpacing: '-0.01em' }}>{m.name}</span>
-                {m.credentials && <span style={{ fontSize: 13, color: `${theme.textSecondary}A0`, fontFamily: SANS }}>{m.credentials}</span>}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ===== ENGINEERING ===== */}
-        <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={{ ...eyebrow, textAlign: 'center' }}>Engineering</p>
-          <div style={{
-            marginTop: 44,
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: 'clamp(36px, 5vw, 56px) 96px',
-          }}>
-            {ENGINEERING.map((m, i) => (
-              <div key={`${m.name}-${i}`} style={{ display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', textAlign: 'center' }}>
-                <span style={{ fontSize: 16.5, fontWeight: 600, color: theme.textPrimary, fontFamily: SANS, letterSpacing: '-0.01em' }}>{m.name}</span>
-                {m.credentials && <span style={{ fontSize: 13, color: `${theme.textSecondary}A0`, fontFamily: SANS }}>{m.credentials}</span>}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ===== MEDICAL ADVISORY ===== */}
-        <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={eyebrow}>Medical Advisory</p>
+          <p style={eyebrow}>The team</p>
           <div style={{
             marginTop: 44,
             display: 'grid',
@@ -348,7 +304,7 @@ const AboutPage = () => {
             gap: 'clamp(36px, 5vw, 56px) 40px',
             alignItems: 'start',
           }}>
-            {ADVISORS.map((m, i) => (
+            {TEAM_MEMBERS.map((m, i) => (
               <div key={`${m.name}-${i}`} style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <span style={{ fontSize: 16.5, fontWeight: 600, color: theme.textPrimary, fontFamily: SANS, letterSpacing: '-0.01em' }}>{m.name}</span>
                 {m.role && <span style={{ fontSize: 14, color: theme.textPrimary, fontFamily: SANS }}>{m.role}</span>}
