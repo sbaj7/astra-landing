@@ -110,3 +110,9 @@ sup.md-citation a:hover {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Marquee (used by home trust strip and About institution band) */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

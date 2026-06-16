@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { X, Plus, Info, Trash2, BookOpen } from 'lucide-react';
-import AboutView from './AboutView';
+import { X, Plus, Trash2, BookOpen } from 'lucide-react';
 import ClinicalArticlesModal from './ClinicalArticlesModal';
 
 // Helper function for relative time formatting
@@ -89,7 +88,6 @@ const SidebarView = ({
   onSelectArticle,
   theme
 }) => {
-  const [showAbout, setShowAbout] = useState(false);
   const [showClinicalArticles, setShowClinicalArticles] = useState(false);
 
   const handleClearHistory = () => {
@@ -178,13 +176,6 @@ const SidebarView = ({
                   theme={theme}
                 />
 
-                <PopupMenuItem
-                  icon={Info}
-                  title="About"
-                  onClick={() => setShowAbout(true)}
-                  theme={theme}
-                />
-
                 {chatHistory && chatHistory.length > 0 && (
                   <PopupMenuItem
                     icon={Trash2}
@@ -236,13 +227,6 @@ const SidebarView = ({
           <div className="flex-1" onClick={onDismiss} />
         </div>
       </div>
-
-      {/* About View Modal */}
-      <AboutView
-        isPresented={showAbout}
-        onDismiss={() => setShowAbout(false)}
-        theme={theme}
-      />
 
       {/* Clinical Articles Modal */}
       <ClinicalArticlesModal

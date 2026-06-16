@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Mic,
   ArrowUp,
@@ -36,7 +37,6 @@ import DeleteChatModal from './DeleteChatModal.jsx';
 import authService from '../services/authService.js';
 import useIsMobile from '../hooks/useIsMobile.js';
 import ReferencesView from './ReferencesView.jsx';
-import AboutView from './AboutView.jsx';
 import ClinicalArticlesModal from './ClinicalArticlesModal.jsx';
 import RemoteArticleView from './RemoteArticleView.jsx';
 import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
@@ -1811,7 +1811,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 };
 
 
-const EmptyState = ({ currentMode, onSampleTapped, onModeChange, theme, isMobile, inputBarSlot }) => {
+const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, theme, isMobile, inputBarSlot }) => {
   const getModeGroup = (mode) => {
     if (['reason', 'differential', 'next-steps', 'dispo', 'specialty-referral', 'orders'].includes(mode)) return 'reason';
     if (['write', 'prior-auth-appeal', 'medical-necessity', 'disability-fmla', 'dme', 'peer-to-peer'].includes(mode)) return 'write';
@@ -1912,7 +1912,7 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, theme, isMobile
           maxWidth: isMobile ? 300 : 460,
           marginInline: 'auto',
         }}>
-          Uncertainty ends here.
+          Clinical reasoning, grounded in evidence.
         </h2>
         <p style={{
           margin: '14px auto 0',
@@ -1924,7 +1924,7 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, theme, isMobile
           maxWidth: isMobile ? 300 : 420,
           letterSpacing: '-0.01em',
         }}>
-          31 million articles. 55+ clinical modes. Retrieval-augmented reasoning with structured citations—one workspace.
+          Search the literature, synthesize medical knowledge, and build cited clinical outputs from one intelligent workspace.
         </p>
       </div>
 
@@ -2245,6 +2245,39 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, theme, isMobile
           );
         })}
       </div>
+
+      {/* About Us */}
+      {onShowAbout && (
+        <div style={{
+          width: '100%',
+          maxWidth: 660,
+          display: 'flex',
+          justifyContent: 'center',
+          paddingTop: isMobile ? 4 : 8,
+          animation: 'fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.44s backwards',
+        }}>
+          <button
+            onClick={onShowAbout}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: isMobile ? '8px 18px' : '9px 20px',
+              borderRadius: 999,
+              background: theme.accentSoftBlue,
+              border: 'none',
+              color: '#fff',
+              cursor: 'pointer',
+              fontSize: isMobile ? 12.5 : 13,
+              fontWeight: 600,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            <span>About Us</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -4017,16 +4050,6 @@ const Sidebar = ({
               />
 
               <SidebarAction
-                icon={Info}
-                label="About Astra"
-                theme={theme}
-                onClick={() => {
-                  onShowAbout?.();
-                  onClose();
-                }}
-              />
-
-              <SidebarAction
                 icon={CreditCard}
                 label="Billing & Plans"
                 theme={theme}
@@ -4092,16 +4115,6 @@ const Sidebar = ({
                 theme={theme}
                 onClick={() => {
                   onShowClinicalArticles?.();
-                  onClose();
-                }}
-              />
-
-              <SidebarAction
-                icon={Info}
-                label="About Astra"
-                theme={theme}
-                onClick={() => {
-                  onShowAbout?.();
                   onClose();
                 }}
               />
@@ -5320,6 +5333,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
    APP
    ========================= */
 const AstraApp = () => {
+  const navigate = useNavigate();
   const [appSettings, setAppSettings] = useState(DEFAULT_APP_SETTINGS);
   const { colors: theme, isDark } = useTheme(appSettings);
   const speechRecognition = useSpeechRecognition();
@@ -5362,7 +5376,6 @@ const AstraApp = () => {
 
   const [citationSheetCitations, setCitationSheetCitations] = useState([]);
   const [showCitationSheet, setShowCitationSheet] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
   const [showClinicalArticles, setShowClinicalArticles] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState(null);
 
@@ -5896,12 +5909,8 @@ const AstraApp = () => {
   }, []);
 
   const handleOpenAbout = useCallback(() => {
-    setShowAbout(true);
-  }, []);
-
-  const handleCloseAbout = useCallback(() => {
-    setShowAbout(false);
-  }, []);
+    navigate('/about');
+  }, [navigate]);
 
   const handleOpenClinicalArticles = useCallback(() => {
     setShowClinicalArticles(true);
@@ -6646,6 +6655,7 @@ const AstraApp = () => {
                   currentMode={currentMode}
                   onSampleTapped={handleSampleTapped}
                   onModeChange={setCurrentMode}
+                  onShowAbout={handleOpenAbout}
                   theme={theme}
                   isMobile={isMobile}
                   inputBarSlot={
@@ -6854,14 +6864,6 @@ const AstraApp = () => {
           citations={sortedCitationSheet}
           isPresented={showCitationSheet}
           onDismiss={() => setShowCitationSheet(false)}
-          theme={theme}
-        />
-      )}
-
-      {showAbout && (
-        <AboutView
-          isPresented={showAbout}
-          onDismiss={handleCloseAbout}
           theme={theme}
         />
       )}
