@@ -20,7 +20,6 @@ const TEAM = [
 // Officers (title + firm, no bio), rendered in the same grid as the founders.
 const TEAM_MEMBERS = [
   { name: 'Arvind Dev, MD', role: '', credentials: 'Albert Einstein College of Medicine' },
-  { name: 'Latif Pelinku, J.D.', role: '', credentials: 'Linklaters' },
   { name: 'Haseeb Iqbal', role: '', credentials: 'J.P. Morgan Chase & Co.' },
   { name: 'Randy Abramovich', role: '', credentials: 'MD Candidate' },
   { name: 'Derek Johnson', role: '', credentials: 'MD Candidate' },
