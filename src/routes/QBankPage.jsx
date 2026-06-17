@@ -176,7 +176,7 @@ function Session({ theme, config, onFinish }) {
   const cellFor = useCallback((i) => {
     if (cells.current[i]) return cells.current[i];
     const cell = buildPlan({ step, count: 1, systems, specialties })[0];
-    cell.difficulty = difficulty === 'mixed' ? ['easy', 'medium', 'hard'][Math.floor(Math.random() * 3)] : difficulty;
+    cell.difficulty = difficulty === 'mixed' ? ['medium', 'hard', 'hard'][Math.floor(Math.random() * 3)] : difficulty;
     cell.step = step;
     cells.current[i] = cell;
     return cell;
