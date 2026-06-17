@@ -17,6 +17,7 @@ import {
   LogOut,
   MessageSquare,
   ClipboardList,
+  GraduationCap,
   Copy,
   Check,
   Info,
@@ -1811,7 +1812,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 };
 
 
-const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, theme, isMobile, inputBarSlot }) => {
+const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, onOpenQbank, theme, isMobile, inputBarSlot }) => {
   const getModeGroup = (mode) => {
     if (['reason', 'differential', 'next-steps', 'dispo', 'specialty-referral', 'orders'].includes(mode)) return 'reason';
     if (['write', 'prior-auth-appeal', 'medical-necessity', 'disability-fmla', 'dme', 'peer-to-peer'].includes(mode)) return 'write';
@@ -2007,6 +2008,36 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, th
         }}>
           {inputBarSlot}
         </div>
+      )}
+
+      {/* QBank entry */}
+      {onOpenQbank && (
+        <button
+          onClick={onOpenQbank}
+          aria-label="Open QBank"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 9,
+            padding: isMobile ? '12px 22px' : '13px 28px',
+            borderRadius: 14,
+            border: 'none',
+            background: `linear-gradient(160deg, ${theme.accentSoftBlue}, ${theme.accentSoftBlue}DC)`,
+            color: '#fff',
+            cursor: 'pointer',
+            marginTop: isMobile ? -8 : -12,
+            boxShadow: `0 6px 18px ${theme.accentSoftBlue}40`,
+            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
+            transition: 'transform .18s ease, box-shadow .18s ease',
+            animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.12s backwards',
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = `0 10px 24px ${theme.accentSoftBlue}55`; }}
+          onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = `0 6px 18px ${theme.accentSoftBlue}40`; }}
+        >
+          <GraduationCap size={isMobile ? 17 : 18} strokeWidth={2} />
+          <span style={{ fontSize: isMobile ? 14 : 14.5, fontWeight: 600, letterSpacing: '-0.01em' }}>QBank</span>
+        </button>
       )}
 
       {/* Mode Tabs */}
@@ -6633,6 +6664,7 @@ const AstraApp = () => {
                   onSampleTapped={handleSampleTapped}
                   onModeChange={setCurrentMode}
                   onShowAbout={handleOpenAbout}
+                  onOpenQbank={() => navigate('/qbank')}
                   theme={theme}
                   isMobile={isMobile}
                   inputBarSlot={
