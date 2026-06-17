@@ -30,8 +30,7 @@ const TEAM_MEMBERS = [
   { name: 'Benjamin Rudolph', role: '', credentials: 'PhD Candidate' },
   { name: 'Brodi Bajrami', role: '', credentials: 'BS, Stony Brook' },
   { name: 'Calvin Sekseni', role: '', credentials: 'BS, Brooklyn College' },
-  { name: 'Alex Naishuler', role: '', credentials: 'BS, Northeastern' },
-  { name: 'Sean Malamud', role: '', credentials: 'BS, Plattsburgh' },
+  { name: 'Sean Malamud', role: '', credentials: 'MS, Plattsburgh' },
 ];
 
 const SERIF = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
