@@ -6,6 +6,7 @@
 // the backend lands — the read/write surface below is the seam to replace.
 
 import { BLUEPRINT } from './blueprint.js';
+import { topicsForSystem } from './topics.js';
 
 const KEY = 'astra_qbank_mastery_v1';
 const RESP_KEY = 'astra_qbank_responses_v1';
@@ -138,6 +139,26 @@ const weightedPick = (items, mastery, step, axis, restrictTo) => {
     if (r <= 0) return list[i].key;
   }
   return list[list.length - 1].key;
+};
+
+// Pick ONE canonical topic from the system's pool using the user's scorecard:
+// FRESH (never seen) is top priority, then WEAK (low % correct), and MASTERED
+// topics rarely recur. `exclude` removes topics already shown this session.
+export const pickTopic = (step, systemKey, exclude = []) => {
+  const all = topicsForSystem(systemKey);
+  const ex = new Set(exclude);
+  let pool = all.filter((t) => !ex.has(t));
+  if (!pool.length) pool = all; // pool exhausted this session — allow repeats
+  const mastery = loadMastery();
+  const weights = pool.map((t) => {
+    const m = masteryFor(mastery, step, 'topics', t);
+    if (m == null) return 1.0;                 // fresh / never attempted → highest priority
+    return Math.max(0.06, (1 - m) * 0.9);      // weak drilled hard; mastered rarely repeats
+  });
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < pool.length; i++) { r -= weights[i]; if (r <= 0) return pool[i]; }
+  return pool[pool.length - 1];
 };
 
 export const buildPlan = ({ step, count, systems = [], specialties = [] }) => {

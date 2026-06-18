@@ -33,10 +33,12 @@ const STEP1_SYSTEMS = [
   { key: 'cardiovascular', label: 'Cardiovascular', weight: 9 },
   { key: 'gastrointestinal', label: 'Gastrointestinal', weight: 8 },
   { key: 'biostats', label: 'Biostatistics & Epidemiology', weight: 5 },
+  { key: 'social-sciences', label: 'Communication & Social Sciences', weight: 7 },
   { key: 'human-development', label: 'Human Development', weight: 2 },
 ];
 
 const STEP2_SYSTEMS = [
+  { key: 'nutrition', label: 'Nutrition', weight: 17 },
   { key: 'renal-repro', label: 'Renal/Urinary & Reproductive', weight: 10 },
   { key: 'cardiovascular', label: 'Cardiovascular', weight: 9 },
   { key: 'msk-skin', label: 'Musculoskeletal & Skin', weight: 9 },
@@ -50,6 +52,7 @@ const STEP2_SYSTEMS = [
   { key: 'pregnancy', label: 'Pregnancy & Childbirth', weight: 5 },
   { key: 'social-sciences', label: 'Ethics, Safety & Professionalism', weight: 12 },
   { key: 'biostats', label: 'Biostatistics & Epidemiology', weight: 4 },
+  { key: 'human-development', label: 'Human Development', weight: 3 },
 ];
 
 const STEP3_SYSTEMS = [
@@ -77,7 +80,9 @@ const STEP1_DISCIPLINES = [
   { key: 'microbiology', label: 'Microbiology', weight: 15 },
   { key: 'anatomy', label: 'Anatomy & Embryology', weight: 15 },
   { key: 'biochemistry', label: 'Biochemistry', weight: 10 },
+  { key: 'histology', label: 'Histology & Cell Biology', weight: 10 },
   { key: 'immunology', label: 'Immunology', weight: 10 },
+  { key: 'nutrition', label: 'Nutrition', weight: 17 },
   { key: 'behavioral', label: 'Behavioral Sciences', weight: 12 },
   { key: 'genetics', label: 'Genetics', weight: 7 },
 ];

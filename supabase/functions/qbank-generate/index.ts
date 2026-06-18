@@ -68,23 +68,18 @@ const STEP_PERSONA: Record<string, string> = {
 
 const NBME_RULES = `Write ONE USMLE one-best-answer item. Keep it SPARE, like a real NBME item.
 
-THE CORE PRINCIPLE — purposeful vagueness (this is what makes it valuable):
-- RADICALLY under-specify. NO single finding may be diagnostic on its own, and you may include AT MOST ONE finding that points toward the answer. Do NOT use the most specific / pathognomonic findings at all. (Example of what to AVOID: for aortic dissection, do not give an arm-to-arm BP differential AND a widened mediastinum AND tearing-to-the-back pain — that is three slam-dunks. Give an ordinary chest-pain picture and at most one subtle pointer.) The diagnosis must come from SYNTHESIZING non-specific findings, not from reading off confirmatory ones.
-- Aim for a stem where 1-2 answer options look genuinely plausible on first read, but exactly ONE is defensible — decided by a SINGLE subtle discriminator the careful reader catches. The point is the discrimination, not pattern-matching a complete picture. It is OK if the question is hard and the answer is not obvious; that is the goal.
-- A good test: if you can name 3+ findings in your stem that each independently confirm the answer, you have over-specified — cut it down to one.
-- DESCRIBE findings in plain language; never name the pathognomonic sign/eponym/buzzword.
-- Test ONE concept. The lead-in may ask for the diagnosis OR a downstream point (mechanism, next step, complication, etc.) — both are fine. The difficulty comes from the VIGNETTE being deliberately vague, NOT from the lead-in.
+THE CORE PRINCIPLE — the vignette must be VAGUE. Give an incomplete clinical picture: ordinary findings that fit several conditions, with no pathognomonic sign, no named diagnostic test result, and no complete classic triad. The reader should have to reason, not pattern-match. If the diagnosis is obvious from the stem, it is too detailed — make it vaguer. Describe findings in plain language; never name the buzzword/eponym/classic sign. Test ONE concept; the difficulty comes from the vague vignette, not a tricky lead-in.
 
 FORM:
 - Opening sentence: "A [age]-year-old [man/woman/boy/girl] [comes to the physician / is brought to the emergency department / ...] because of [chief complaint] for [duration]."
 - The "vignette" is DECLARATIVE prose only — no question mark, and it never restates the lead-in. A treatment already given is stated as a fact ("She has received 1 L of intravenous 0.9% saline.").
 - The single question is the "lead_in", ending in "?" (not a preposition).
 - EXACTLY 5 options, exactly ONE correct; distractors homogeneous (same category), plausible, on one continuum; one of them should be the tempting surface answer. No technical flaws (no "all/none of the above", no negative stems, no grammatical or length cues).
-- Each option: a one-sentence rationale. Assert only well-established facts; cite key claims.
+- Each option needs a one-sentence "rationale": for the correct option, why it is right; for EACH distractor, the specific reason it is wrong. Assert only well-established facts.
 
 LENGTH: Step 1 short (~2-4 sentences); Step 2/3 fuller (~4-7) but still minimal — every clause must earn its place.
 
-TAGS: topic (specific entity, canonical name), concept (the principle tested), keywords (3-6, FOR TAGGING ONLY — do not stuff into the stem), teaching_point (1-2 sentences).`;
+TAGS: topic (specific entity, canonical name), concept (the principle tested), keywords (3-6, FOR TAGGING ONLY — do not stuff into the stem). "teaching_point" is a thorough 4-7 sentence explanation: the core concept, why the correct answer is right, the key discriminating feature that rules out the most tempting distractor, and the high-yield take-home point.`;
 
 // Per-Step vignette length/detail calibration (from USMLE format research).
 const STEP_DETAIL: Record<string, string> = {
@@ -100,6 +95,104 @@ const DIFFICULTY_NOTE: Record<string, string> = {
   mixed: "Difficulty: board-appropriate, leaning hard.",
 };
 
+// Plain-text layout for the STREAMING path (renders progressively + parses cleanly).
+const STREAM_FORMAT = `OUTPUT FORMAT — output PLAIN TEXT in EXACTLY this layout and nothing else (no JSON, no markdown, no preamble). Use these exact line markers, in this order:
+TOPIC: <specific entity tested>
+VIGNETTE:
+<the vignette, 1-2 short paragraphs, declarative prose only, no question>
+QUESTION: <the single lead-in, ending in ?>
+A. <option>
+B. <option>
+C. <option>
+D. <option>
+E. <option>
+ANSWER: <one letter A-E>
+WHY-A: <one sentence — why A is correct, or the specific reason it is wrong>
+WHY-B: <one sentence>
+WHY-C: <one sentence>
+WHY-D: <one sentence>
+WHY-E: <one sentence>
+EXPLANATION:
+<a thorough 4-7 sentence explanation: the core concept, why the correct answer is right, the key discriminating feature that rules out the most tempting distractor, and the high-yield take-home point>
+Exactly five options A-E, exactly one correct. Provide a WHY line for EVERY option. The vignette must come before the QUESTION line.`;
+
+function buildInput(cell: Cell): string {
+  return (
+    `Generate one item.\n` +
+    `System: ${cell.systemLabel || cell.system}\n` +
+    `Discipline/specialty: ${cell.specialtyLabel || cell.specialty}\n` +
+    `Physician task: ${cell.taskLabel || cell.task}\n` +
+    (cell.topic
+      ? `TOPIC — write the item specifically about this exact condition (this is the diagnosis/entity being tested): ${cell.topic}. Tag "topic" with this exact name. Remember the vignette must NOT name it directly.\n`
+      : "") +
+    `${DIFFICULTY_NOTE[cell.difficulty || "mixed"]}\n` +
+    `${STEP_DETAIL[cell.step] || STEP_DETAIL.step1}\n` +
+    (cell.avoid?.length ? `Do NOT repeat these already-tested concepts: ${cell.avoid.join("; ")}.\n` : "")
+  );
+}
+
+// Streaming generation via the Responses API; forwards text deltas as SSE
+// (`data: {"delta":"..."}` ... `data: [DONE]`).
+async function streamItem(cell: Cell): Promise<Response> {
+  const key = Deno.env.get("OPENAI_API_KEY");
+  const fail = (msg: string, status = 500) =>
+    new Response(JSON.stringify({ error: msg }), { status, headers: { ...corsHeaders, "content-type": "application/json" } });
+  if (!key) return fail("OPENAI_API_KEY not configured");
+
+  const persona = STEP_PERSONA[cell.step] || STEP_PERSONA.step1;
+  const upstream = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: MODEL,
+      instructions: `${persona}\n\n${NBME_RULES}\n\n${STREAM_FORMAT}`,
+      input: buildInput(cell),
+      reasoning: { effort: "low" }, // low (not none) so the model can run the omission self-check
+      max_output_tokens: 2400,
+      stream: true,
+    }),
+  });
+  if (!upstream.ok || !upstream.body) return fail(`OpenAI ${upstream.status}: ${(await upstream.text()).slice(0, 300)}`);
+
+  const reader = upstream.body.getReader();
+  const enc = new TextEncoder();
+  const dec = new TextDecoder();
+  const sse = new ReadableStream({
+    async pull(controller) {
+      let buffer = "";
+      try {
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buffer += dec.decode(value, { stream: true });
+          let i;
+          while ((i = buffer.indexOf("\n\n")) !== -1) {
+            const block = buffer.slice(0, i).trim();
+            buffer = buffer.slice(i + 2);
+            if (!block) continue;
+            let ev = "", data = "";
+            for (const line of block.split("\n")) {
+              if (line.startsWith("event:")) ev = line.slice(6).trim();
+              else if (line.startsWith("data:")) data = line.slice(5).trim();
+            }
+            if (!data) continue;
+            if (ev === "response.output_text.delta") {
+              try { const p = JSON.parse(data); controller.enqueue(enc.encode(`data: ${JSON.stringify({ delta: p.delta })}\n\n`)); } catch { /* ignore */ }
+            } else if (ev === "response.completed") {
+              controller.enqueue(enc.encode("data: [DONE]\n\n")); controller.close(); return;
+            } else if (ev === "response.failed" || ev === "error") {
+              controller.enqueue(enc.encode("data: [DONE]\n\n")); controller.close(); return;
+            }
+          }
+        }
+        controller.enqueue(enc.encode("data: [DONE]\n\n"));
+        controller.close();
+      } catch (e) { controller.error(e); } finally { reader.releaseLock(); }
+    },
+  });
+  return new Response(sse, { headers: { ...corsHeaders, "content-type": "text/event-stream", "cache-control": "no-cache" } });
+}
+
 // TODO: wire real retrieval (Astra RAG) and pass passages into the author prompt.
 async function retrieve(_cell: Cell): Promise<string> {
   return "";
@@ -110,6 +203,7 @@ interface Cell {
   system?: string; specialty?: string; task?: string;
   systemLabel?: string; specialtyLabel?: string; taskLabel?: string;
   difficulty?: string;
+  topic?: string;
   avoid?: string[];
 }
 
@@ -123,7 +217,7 @@ async function openai(messages: unknown): Promise<any> {
       model: MODEL,
       messages,
       max_completion_tokens: 5000,
-      reasoning_effort: "low", // terser, less over-elaborated stems (and faster)
+      reasoning_effort: "low", // low so the model can run the omission self-check
       response_format: {
         type: "json_schema",
         json_schema: { name: "usmle_item", strict: true, schema: ITEM_SCHEMA },
@@ -157,15 +251,7 @@ async function authorItem(cell: Cell): Promise<any> {
   const persona = STEP_PERSONA[cell.step] || STEP_PERSONA.step1;
   const passages = await retrieve(cell);
   const system = `${persona}\n\n${NBME_RULES}`;
-  const userText =
-    `Generate one item.\n` +
-    `System/topic: ${cell.systemLabel || cell.system}\n` +
-    `Discipline/specialty: ${cell.specialtyLabel || cell.specialty}\n` +
-    `Physician task: ${cell.taskLabel || cell.task}\n` +
-    `${DIFFICULTY_NOTE[cell.difficulty || "mixed"]}\n` +
-    `${STEP_DETAIL[cell.step] || STEP_DETAIL.step1}\n` +
-    (cell.avoid?.length ? `Do NOT repeat these already-tested concepts: ${cell.avoid.join("; ")}.\n` : "") +
-    (passages ? `\nGround the item ONLY in these sources:\n${passages}\n` : "");
+  const userText = buildInput(cell) + (passages ? `\nGround the item ONLY in these sources:\n${passages}\n` : "");
 
   const resp = await openai([{ role: "system", content: system }, { role: "user", content: userText }]);
   return extractJson(resp);
@@ -212,12 +298,18 @@ serve(async (req) => {
     const cell: Cell = await req.json();
     if (!cell?.step) throw new Error("missing step");
 
+    if ((cell as any).stream) return await streamItem(cell);
+
     let item = await authorItem(cell);
     let err = validate(item);
     if (err) { item = await authorItem(cell); err = validate(item); }   // one retry
     if (err) throw new Error(`author invalid: ${err}`);
+    if (cell.topic) item.topic = cell.topic; // pin canonical topic
 
-    await persist(cell, item);
+    // Save for the calibration flywheel without blocking the response.
+    const saving = persist(cell, item).catch(() => {});
+    // deno-lint-ignore no-explicit-any
+    (globalThis as any).EdgeRuntime?.waitUntil?.(saving);
 
     const shaped = {
       id: crypto.randomUUID(),
