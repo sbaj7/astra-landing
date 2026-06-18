@@ -1830,15 +1830,9 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
 
   const stats = [
     { value: '500+', label: 'Landmark trials' },
-    { value: '<3s', label: 'Latency' },
     { value: '31M+', label: 'Articles' },
     { value: '55+', label: 'Modes' },
-  ];
-
-  const features = [
-    { Icon: BookOpen, title: 'Built for clinicians', desc: 'Designed with practicing physicians for real clinical workflows' },
-    { Icon: FileText, title: 'Always cited', desc: 'Every claim backed by verifiable trials and guidelines' },
-    { Icon: Sparkles, title: 'Save hours daily', desc: 'Literature review, DDx, and notes in one place' },
+    { value: '∞', label: 'Questions', big: true }, // ∞ glyph draws short — bump to optically match the digits
   ];
 
   return (
@@ -2170,12 +2164,14 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
             gap: 3,
           }}>
             <span style={{
-              fontSize: isMobile ? 18 : 22,
+              fontSize: stat.big ? (isMobile ? 22 : 26) : (isMobile ? 18 : 22),
               fontWeight: 700,
               color: theme.accentSoftBlue,
               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
               letterSpacing: '-0.02em',
-              lineHeight: 1,
+              // proportional line height keeps the line box equal so the labels stay aligned
+              lineHeight: stat.big ? (isMobile ? 18 / 22 : 22 / 26) : 1,
+              display: 'inline-block',
             }}>
               {stat.value}
             </span>
@@ -2193,64 +2189,48 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         ))}
       </div>
 
-      {/* Features */}
+      {/* Citation guarantee */}
       <div style={{
-        display: 'flex',
-        flexDirection: isMobile ? 'column' : 'row',
-        gap: isMobile ? 10 : 12,
         width: '100%',
-        maxWidth: 660,
+        maxWidth: 540,
+        display: 'flex',
+        justifyContent: 'center',
         animation: 'fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.36s backwards',
       }}>
-        {features.map((feature, i) => {
-          const FeatureIcon = feature.Icon;
-          return (
-            <div key={i} style={{
-              flex: 1,
-              padding: isMobile ? '16px' : '20px',
-              borderRadius: isMobile ? 14 : 16,
-              background: `${theme.backgroundSurface}E8`,
-              border: `1px solid ${theme.textSecondary}08`,
-              backdropFilter: 'blur(16px)',
-              WebkitBackdropFilter: 'blur(16px)',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 10,
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: isMobile ? 12 : 14,
+          padding: isMobile ? '14px 18px' : '16px 20px',
+          borderRadius: isMobile ? 14 : 16,
+          background: `${theme.backgroundSurface}E8`,
+          border: `1px solid ${theme.textSecondary}10`,
+          width: '100%',
+          maxWidth: '100%',
+        }}>
+          <ShieldCheck size={isMobile ? 24 : 27} color={theme.accentSoftBlue} strokeWidth={1.8} style={{ flexShrink: 0 }} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 3 : 4, minWidth: 0 }}>
+            <span style={{
+              fontSize: isMobile ? 14 : 14.5,
+              fontWeight: 600,
+              color: theme.textPrimary,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+              letterSpacing: '-0.01em',
+              lineHeight: 1.2,
             }}>
-              <div style={{
-                width: 34,
-                height: 34,
-                borderRadius: 9,
-                background: `${theme.accentSoftBlue}0C`,
-                border: `1px solid ${theme.accentSoftBlue}12`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <FeatureIcon size={17} color={theme.accentSoftBlue} strokeWidth={1.8} />
-              </div>
-              <h4 style={{
-                margin: 0,
-                fontSize: isMobile ? 14 : 14.5,
-                fontWeight: 600,
-                color: theme.textPrimary,
-                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
-                letterSpacing: '-0.01em',
-              }}>
-                {feature.title}
-              </h4>
-              <p style={{
-                margin: 0,
-                fontSize: isMobile ? 12 : 12.5,
-                lineHeight: 1.5,
-                color: `${theme.textSecondary}A0`,
-                fontWeight: 400,
-              }}>
-                {feature.desc}
-              </p>
-            </div>
-          );
-        })}
+              Anchored to primary evidence
+            </span>
+            <span style={{
+              fontSize: isMobile ? 12 : 12.5,
+              lineHeight: 1.5,
+              color: `${theme.textSecondary}A0`,
+              fontWeight: 400,
+              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
+            }}>
+              Responses are constrained to peer-reviewed literature, professional-society guidelines, and landmark trials, with every claim traceable to its citation.
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* About Us */}
