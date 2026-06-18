@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Check, X, BarChart3, RotateCcw, ChevronRight, ChevronLeft, ChevronDown, Loader2, Clock, Calculator, FlaskConical, CircleStop, Strikethrough, History as HistoryIcon, Trash2 } from 'lucide-react';
+import { ArrowLeft, Check, X, BarChart3, RotateCcw, ChevronRight, ChevronLeft, ChevronDown, Loader2, Clock, Calculator, FlaskConical, CircleStop, Strikethrough, History as HistoryIcon, Trash2, Plus } from 'lucide-react';
 import { LAB_SECTIONS } from '../qbank/labValues.js';
 import { useTheme } from '../components/Themes+Styles.jsx';
+import useIsMobile from '../hooks/useIsMobile.js';
 import { STEPS, DIFFICULTIES, MODES, BLUEPRINT, labelFor } from '../qbank/blueprint.js';
 import { buildPlan, pickTopic, recordResponse, loadMastery, masteryFor, resetProgress, summarizeByStep, predictStep } from '../qbank/mastery.js';
 import { saveSession, loadSessions, deleteSession } from '../qbank/history.js';
@@ -75,22 +76,31 @@ export default function QBankPage() {
 /* ----------------------------- shared bits ----------------------------- */
 const eyebrow = (theme) => ({ textTransform: 'uppercase', letterSpacing: '0.16em', fontSize: 11, fontWeight: 600, color: `${theme.textSecondary}99`, fontFamily: SANS, margin: 0 });
 
-const Header = ({ theme, onBack, view, onDashboard, onSetup, onHistory }) => (
-  <header style={{ position: 'sticky', top: 0, zIndex: 5, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '14px 24px', background: `${theme.backgroundPrimary}CC`, backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', borderBottom: `1px solid ${theme.textSecondary}1A` }}>
-    <button onClick={onBack} aria-label="Back to Astra" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 8px', margin: '-6px -8px', border: 'none', background: 'transparent', color: `${theme.textSecondary}C0`, cursor: 'pointer', fontSize: 13.5, fontWeight: 500, fontFamily: SANS }}>
-      <ArrowLeft size={16} /> Astra
-    </button>
-    <span style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', fontFamily: SERIF, fontSize: 17, color: theme.textPrimary, letterSpacing: '-0.01em', pointerEvents: 'none' }}>QBank</span>
-    <div style={{ display: 'flex', gap: 6 }}>
-      <NavBtn theme={theme} active={view === 'setup'} onClick={onSetup}>New</NavBtn>
-      <NavBtn theme={theme} active={view === 'history'} onClick={onHistory}><HistoryIcon size={14} /> History</NavBtn>
-      <NavBtn theme={theme} active={view === 'dashboard'} onClick={onDashboard}><BarChart3 size={14} /> Progress</NavBtn>
-    </div>
-  </header>
-);
+const Header = ({ theme, onBack, view, onDashboard, onSetup, onHistory }) => {
+  const isMobile = useIsMobile(560); // collapse labels to icons on small screens
+  return (
+    <header style={{ position: 'sticky', top: 0, zIndex: 5, display: 'flex', alignItems: 'center', gap: 8, padding: isMobile ? '12px 14px' : '14px 24px', background: `${theme.backgroundPrimary}CC`, backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', borderBottom: `1px solid ${theme.textSecondary}1A` }}>
+      {/* left section (flex:1 so the title stays exactly centered) */}
+      <div style={{ flex: 1, minWidth: 0, display: 'flex', justifyContent: 'flex-start' }}>
+        <button onClick={onBack} aria-label="Back to Astra" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '6px 8px', margin: '-6px -8px', border: 'none', background: 'transparent', color: `${theme.textSecondary}C0`, cursor: 'pointer', fontSize: 13.5, fontWeight: 500, fontFamily: SANS }}>
+          <ArrowLeft size={16} />{!isMobile && ' Astra'}
+        </button>
+      </div>
+      <span style={{ flex: '0 0 auto', fontFamily: SERIF, fontSize: 17, color: theme.textPrimary, letterSpacing: '-0.01em' }}>QBank</span>
+      {/* right section (flex:1, mirrors the left) */}
+      <div style={{ flex: 1, minWidth: 0, display: 'flex', justifyContent: 'flex-end', gap: 6 }}>
+        <NavBtn theme={theme} active={view === 'setup'} onClick={onSetup} icon={<Plus size={14} />} label="New" compact={isMobile} />
+        <NavBtn theme={theme} active={view === 'history'} onClick={onHistory} icon={<HistoryIcon size={14} />} label="History" compact={isMobile} />
+        <NavBtn theme={theme} active={view === 'dashboard'} onClick={onDashboard} icon={<BarChart3 size={14} />} label="Progress" compact={isMobile} />
+      </div>
+    </header>
+  );
+};
 
-const NavBtn = ({ theme, active, onClick, children }) => (
-  <button onClick={onClick} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 13px', borderRadius: 999, border: `1px solid ${active ? 'transparent' : `${theme.textSecondary}22`}`, background: active ? theme.accentSoftBlue : 'transparent', color: active ? '#fff' : `${theme.textSecondary}C0`, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, fontFamily: SANS }}>{children}</button>
+const NavBtn = ({ theme, active, onClick, icon, label, compact }) => (
+  <button onClick={onClick} aria-label={label} title={label} style={{ display: 'inline-flex', alignItems: 'center', gap: compact ? 0 : 6, padding: compact ? '8px' : '7px 13px', borderRadius: 999, border: `1px solid ${active ? 'transparent' : `${theme.textSecondary}22`}`, background: active ? theme.accentSoftBlue : 'transparent', color: active ? '#fff' : `${theme.textSecondary}C0`, cursor: 'pointer', fontSize: 12.5, fontWeight: 600, fontFamily: SANS, lineHeight: 0 }}>
+    {icon}{!compact && <span style={{ lineHeight: 1 }}>{label}</span>}
+  </button>
 );
 
 const Chip = ({ theme, active, onClick, children }) => (
