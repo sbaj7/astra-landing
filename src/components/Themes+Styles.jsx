@@ -72,6 +72,26 @@ const createColor = (lightHex, darkHex, isDark = false) => {
   return isDark ? darkHex : lightHex;
 };
 
+// User-selectable accent palettes (must match the app Settings accent options).
+export const ACCENT_COLOR_MAP = {
+  nightfall: { light: '#4A6B7D', dark: '#8FA5B5' },
+  glacier: { light: '#2563EB', dark: '#93C5FD' },
+  meadow: { light: '#059669', dark: '#34D399' },
+  ember: { light: '#EA580C', dark: '#FB923C' },
+  rose: { light: '#DB2777', dark: '#F472B6' },
+};
+
+// Resolve themed colors from a user settings object ({ theme, accentColor }),
+// honoring the manual light/dark choice (else systemDark) and the chosen accent.
+export const resolveThemedColors = (settings, systemDark = false) => {
+  const pref = settings?.theme;
+  const isDark = pref === 'dark' ? true : pref === 'light' ? false : !!systemDark;
+  const base = isDark ? colorDefinitions.dark : colorDefinitions.light;
+  const accentKey = settings?.accentColor && ACCENT_COLOR_MAP[settings.accentColor] ? settings.accentColor : 'nightfall';
+  const accent = ACCENT_COLOR_MAP[accentKey];
+  return { isDark, colors: { ...base, accentSoftBlue: isDark ? accent.dark : accent.light } };
+};
+
 // MARK: - Theme Context
 const ThemeContext = createContext();
 

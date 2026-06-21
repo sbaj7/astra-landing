@@ -1,13 +1,16 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Check, X, BarChart3, RotateCcw, ChevronRight, ChevronLeft, ChevronDown, Loader2, Clock, Calculator, FlaskConical, CircleStop, Strikethrough, History as HistoryIcon, Trash2, Plus } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { ArrowLeft, Check, X, BarChart3, RotateCcw, ChevronRight, ChevronLeft, ChevronDown, Loader2, Clock, Calculator, FlaskConical, CircleStop, Strikethrough, History as HistoryIcon, Trash2, Plus, Send, Sparkles } from 'lucide-react';
 import { LAB_SECTIONS } from '../qbank/labValues.js';
-import { useTheme } from '../components/Themes+Styles.jsx';
+import { useTheme, resolveThemedColors } from '../components/Themes+Styles.jsx';
+import { useSupabaseAuth } from '../components/Auth/SupabaseAuthProvider.jsx';
 import useIsMobile from '../hooks/useIsMobile.js';
 import { STEPS, DIFFICULTIES, MODES, BLUEPRINT, labelFor } from '../qbank/blueprint.js';
 import { buildPlan, pickTopic, recordResponse, loadMastery, masteryFor, resetProgress, summarizeByStep, predictStep } from '../qbank/mastery.js';
 import { saveSession, loadSessions, deleteSession } from '../qbank/history.js';
-import { generateQuestion, streamQuestion } from '../qbank/generateQuestion.js';
+import { generateQuestion, streamQuestion, streamTutor } from '../qbank/generateQuestion.js';
 
 const SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif';
 const SERIF = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
@@ -32,7 +35,14 @@ const stepName = (step) => (STEPS.find((s) => s.key === step)?.label || step);
 
 export default function QBankPage() {
   const navigate = useNavigate();
-  const { colors: theme } = useTheme();
+  // Honor the user's saved theme + accent (from profile settings); the provider's
+  // isDark only reflects the OS, so use it as the system fallback.
+  const { isDark: systemDark } = useTheme();
+  const { profile } = useSupabaseAuth();
+  const theme = useMemo(
+    () => resolveThemedColors(profile?.metadata?.settings, systemDark).colors,
+    [profile, systemDark]
+  );
   const [view, setView] = useState('setup'); // setup | session | results | dashboard | history
 
   // session config
@@ -57,6 +67,7 @@ export default function QBankPage() {
 
   return (
     <div style={{ height: '100dvh', width: '100%', overflowY: 'auto', WebkitOverflowScrolling: 'touch', background: theme.backgroundPrimary }}>
+      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <Header theme={theme} onBack={() => navigate('/')} view={view} onDashboard={() => setView('dashboard')} onSetup={() => setView('setup')} onHistory={() => setView('history')} />
       <main style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px 96px' }}>
         {view === 'setup' && <Setup theme={theme} onStart={startSession} />}
@@ -445,6 +456,8 @@ function Session({ theme, config, onFinish }) {
               <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.7, color: theme.textPrimary, fontFamily: SANS }}>{current.teachingPoint}</p>
             </div>
           )}
+
+          {isRevealed && <TutorBar key={current.id} theme={theme} item={current} step={step} />}
         </div>
       )}
 
@@ -571,6 +584,91 @@ const Loading = ({ theme }) => (
     <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
   </div>
 );
+
+/* ------------------ ask-the-tutor bar (post-answer) ------------------- */
+function TutorBar({ theme, item, step }) {
+  const [messages, setMessages] = useState([]); // {role, content} — the running conversation
+  const [input, setInput] = useState('');
+  const [streaming, setStreaming] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  const send = async () => {
+    const q = input.trim();
+    if (!q || busy) return;
+    const next = [...messages, { role: 'user', content: q }];
+    setMessages(next);
+    setInput('');
+    setBusy(true);
+    setStreaming('');
+    try {
+      const full = await streamTutor({ item, messages: next, step }, { onDelta: setStreaming });
+      setMessages((m) => [...m, { role: 'assistant', content: full || 'No response.' }]);
+    } catch {
+      setMessages((m) => [...m, { role: 'assistant', content: 'Sorry — I couldn’t answer that just now. Try again.' }]);
+    } finally {
+      setBusy(false);
+      setStreaming('');
+    }
+  };
+
+  const onKey = (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } };
+
+  const bubble = (role) => ({ alignSelf: role === 'user' ? 'flex-end' : 'flex-start', maxWidth: '88%', padding: '9px 13px', borderRadius: 13, fontSize: 14, lineHeight: 1.55, fontFamily: SANS, background: role === 'user' ? theme.accentSoftBlue : `${theme.textSecondary}10`, color: role === 'user' ? '#fff' : theme.textPrimary });
+
+  return (
+    <div style={{ marginTop: 4, padding: 16, borderRadius: 16, background: `${theme.backgroundPrimary}`, border: `1px solid ${theme.textSecondary}14`, display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <style>{`
+        .qbank-tutor-md > :first-child { margin-top: 0; }
+        .qbank-tutor-md > :last-child { margin-bottom: 0; }
+        .qbank-tutor-md p { margin: 0 0 7px; }
+        .qbank-tutor-md ul, .qbank-tutor-md ol { margin: 4px 0; padding-left: 18px; }
+        .qbank-tutor-md li { margin: 2px 0; }
+        .qbank-tutor-md strong { font-weight: 700; }
+        .qbank-tutor-md code { font-size: 12.5px; padding: 1px 5px; border-radius: 5px; background: ${theme.textSecondary}1A; }
+        .qbank-tutor-md h1, .qbank-tutor-md h2, .qbank-tutor-md h3 { font-size: 14.5px; font-weight: 700; margin: 8px 0 4px; }
+      `}</style>
+      <p style={{ ...eyebrow(theme), display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+        <Sparkles size={12} color={theme.accentSoftBlue} /> Ask about this question
+      </p>
+
+      {(messages.length > 0 || streaming) && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {messages.map((m, i) => (
+            <div key={i} style={bubble(m.role)}>
+              {m.role === 'assistant'
+                ? <div className="qbank-tutor-md"><ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown></div>
+                : <span style={{ whiteSpace: 'pre-wrap' }}>{m.content}</span>}
+            </div>
+          ))}
+          {streaming && (
+            <div style={bubble('assistant')}>
+              <div className="qbank-tutor-md"><ReactMarkdown remarkPlugins={[remarkGfm]}>{streaming}</ReactMarkdown></div>
+            </div>
+          )}
+          {busy && !streaming && (
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12.5, color: `${theme.textSecondary}90`, fontFamily: SANS }}>
+              <Loader2 size={12} color={theme.accentSoftBlue} style={{ animation: 'spin 1s linear infinite' }} /> thinking…
+            </span>
+          )}
+        </div>
+      )}
+
+      <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={onKey}
+          placeholder="e.g. why is B wrong?"
+          disabled={busy}
+          style={{ flex: 1, padding: '10px 14px', borderRadius: 999, border: `1px solid ${theme.textSecondary}22`, background: theme.backgroundSurface, color: theme.textPrimary, fontSize: 14, fontFamily: SANS, outline: 'none' }}
+        />
+        <button onClick={send} disabled={busy || !input.trim()} aria-label="Send" style={{ flexShrink: 0, width: 40, height: 40, borderRadius: '50%', border: 'none', background: busy || !input.trim() ? `${theme.textSecondary}2A` : theme.accentSoftBlue, color: '#fff', cursor: busy || !input.trim() ? 'default' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Send size={16} />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 /* ------------------------------ results ------------------------------- */
 function Results({ theme, result, onNew, onDashboard, onHistory, reviewing }) {
@@ -707,6 +805,8 @@ const ReviewQuestion = ({ theme, n, step, item, chosen }) => {
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: theme.textPrimary, fontFamily: SANS }}>{item.teachingPoint}</p>
         </div>
       )}
+
+      <TutorBar theme={theme} item={item} step={step} />
     </div>
   );
 };

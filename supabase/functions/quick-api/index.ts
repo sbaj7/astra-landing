@@ -1581,8 +1581,8 @@ async function planSearchQueries(userQuery) {
             content: userQuery
           }
         ],
-        max_tokens: 400,
-        temperature: 0.1
+        max_completion_tokens: 1200,
+        reasoning_effort: "none"
       })
     });
     if (!response.ok) throw new Error(`Query planning failed: ${response.status}`);
@@ -1611,8 +1611,8 @@ async function searchWithTavily(queryPlan) {
   try {
     const tavilyApiKey = "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";
     const searchPromises = [
-      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 3),
-      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 5))
+      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 8),
+      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 6))
     ];
     const searchResults = await Promise.all(searchPromises);
     const allResults = searchResults.flat().filter(Boolean);
@@ -1672,7 +1672,9 @@ async function performTavilySearch(query, apiKey, maxResults = 15, options = {})
     });
     if (!response.ok) throw new Error(`Tavily API error: ${response.status}`);
     const data = await response.json();
-    return data.results || [];
+    // Hard guarantee: drop anything not on the trusted allowlist, regardless of
+    // what Tavily returns (it can supplement include_domains with outside results).
+    return (data.results || []).filter((r: any) => isTrustedHost(hostOf(r.url)));
   } catch (error) {
     console.error(`❌ Error searching for "${query}":`, error);
     return [];
@@ -1683,6 +1685,21 @@ async function fetchIcdCodeHints() {
   // No need for external search - handled through prompting
   return "";
 }
+const hostOf = (url) => {
+  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
+};
+
+// STRICT ALLOWLIST: a source is allowed ONLY if its host matches a trusted domain.
+// Tavily can silently supplement include_domains with outside results when matches
+// are sparse, so we enforce the restriction ourselves — no fallback, ever.
+const isTrustedHost = (h) => {
+  if (!h) return false;
+  return trustedDomains.some((d) => {
+    const dom = d.split("/")[0]; // tolerate list entries that include a path
+    return h === dom || h.endsWith("." + dom);
+  });
+};
+
 function rankAndFilterResults(results) {
   const tier1Domains = [
     "nejm.org",
@@ -1701,18 +1718,18 @@ function rankAndFilterResults(results) {
     "onlinelibrary.wiley.com",
     "journals.lww.com"
   ];
-  const pubmedResults = results.filter((r) => new URL(r.url).hostname.includes("ncbi.nlm.nih.gov")).slice(0, 4);
-  const nonPubmedResults = results.filter((r) => !new URL(r.url).hostname.includes("ncbi.nlm.nih.gov"));
+  // Defense in depth: even here, keep only trusted hosts.
+  const clean = results.filter((r) => isTrustedHost(hostOf(r.url)));
+  const pubmedResults = clean.filter((r) => hostOf(r.url).includes("ncbi.nlm.nih.gov")).slice(0, 4);
+  const nonPubmedResults = clean.filter((r) => !hostOf(r.url).includes("ncbi.nlm.nih.gov"));
   nonPubmedResults.sort((a, b) => {
-    const aDomain = new URL(a.url).hostname.replace("www.", "");
-    const bDomain = new URL(b.url).hostname.replace("www.", "");
     const getScore = (domain) => {
       if (tier1Domains.includes(domain)) return 4;
       if (tier2Domains.includes(domain)) return 3;
       if (tier3Domains.includes(domain)) return 2;
       return 1;
     };
-    return getScore(bDomain) - getScore(aDomain);
+    return getScore(hostOf(b.url)) - getScore(hostOf(a.url));
   });
   return [
     ...nonPubmedResults.slice(0, 12),
@@ -1795,8 +1812,8 @@ async function planLiteratureReview(userQuery) {
           content: userQuery
         }
       ],
-      max_tokens: 800,
-      temperature: 0.1
+      max_completion_tokens: 1500,
+      reasoning_effort: "low"
     })
   });
   if (!response.ok) {

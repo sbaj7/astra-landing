@@ -6297,9 +6297,15 @@ const AstraApp = () => {
       // Continuous conversation: prepend the last 1-2 exchanges to the query text
       // so the model has context. `messages` still holds the pre-send state here,
       // so it's the prior turns only (the current question is queryToSend).
-      const recentTurns = (messages || [])
-        .filter((m) => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
-        .slice(-4); // ~last 2 Q&A pairs
+      //
+      // EXCEPTION: research/search mode plans its web searches FROM `query`, so
+      // embedding prior turns there pollutes retrieval and drops sources — skip it.
+      const supportsContext = currentMode !== 'search';
+      const recentTurns = supportsContext
+        ? (messages || [])
+            .filter((m) => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
+            .slice(-4) // ~last 2 Q&A pairs
+        : [];
       const queryWithContext = recentTurns.length
         ? `Previous conversation (for context only):\n${recentTurns
             .map((m) => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content.slice(0, 3000)}`)

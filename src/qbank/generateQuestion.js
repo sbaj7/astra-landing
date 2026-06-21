@@ -104,6 +104,40 @@ export async function streamQuestion(cell, { onPartial, signal, avoid = [] } = {
   return item;
 }
 
+// Tutor chat: stream a concise answer about an already-answered item. Sends the
+// item context + the running conversation (history). Calls onDelta with each token.
+export async function streamTutor({ item, messages, step }, { onDelta, signal } = {}) {
+  let token = SUPABASE_ANON;
+  try { const { data } = await supabase.auth.getSession(); if (data?.session?.access_token) token = data.session.access_token; } catch { /* anon */ }
+
+  const res = await fetch(`${SUPABASE_URL}/functions/v1/qbank-tutor`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, apikey: SUPABASE_ANON, 'Content-Type': 'application/json', Accept: 'text/event-stream' },
+    body: JSON.stringify({ item, messages, step }),
+    signal,
+  });
+  if (!res.ok || !res.body) throw new Error(`tutor ${res.status}`);
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '', full = '';
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    let i;
+    while ((i = buffer.indexOf('\n\n')) !== -1) {
+      const block = buffer.slice(0, i).trim();
+      buffer = buffer.slice(i + 2);
+      if (!block.startsWith('data:')) continue;
+      const data = block.slice(5).trim();
+      if (data === '[DONE]') continue;
+      try { const p = JSON.parse(data); if (p.delta) { full += p.delta; onDelta?.(full); } } catch { /* ignore */ }
+    }
+  }
+  return full;
+}
+
 const shuffle = (arr) => {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
