@@ -8,7 +8,7 @@ import { useTheme, resolveThemedColors } from '../components/Themes+Styles.jsx';
 import { useSupabaseAuth } from '../components/Auth/SupabaseAuthProvider.jsx';
 import useIsMobile from '../hooks/useIsMobile.js';
 import { STEPS, DIFFICULTIES, MODES, BLUEPRINT, labelFor } from '../qbank/blueprint.js';
-import { buildPlan, pickTopic, recordResponse, loadMastery, masteryFor, resetProgress, summarizeByStep, predictStep } from '../qbank/mastery.js';
+import { buildPlan, pickTopic, recordResponse, loadMastery, masteryFor, resetProgress, summarizeByStep, predictStep, rebuildFromSessions } from '../qbank/mastery.js';
 import { saveSession, loadSessions, deleteSession } from '../qbank/history.js';
 import { generateQuestion, streamQuestion, streamTutor } from '../qbank/generateQuestion.js';
 
@@ -44,6 +44,18 @@ export default function QBankPage() {
     [profile, systemDark]
   );
   const [view, setView] = useState('setup'); // setup | session | results | dashboard | history
+  const [masteryVersion, setMasteryVersion] = useState(0); // bumps after account mastery rebuild
+
+  // On login, seed local mastery + responses from the account's full history so
+  // adaptive picking and the dashboard reflect every device's sessions.
+  useEffect(() => {
+    if (!rawUser) return;
+    let alive = true;
+    loadSessions(rawUser)
+      .then((sessions) => { if (alive && sessions?.length) { rebuildFromSessions(sessions); setMasteryVersion((v) => v + 1); } })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [rawUser]);
 
   // session config
   const [config, setConfig] = useState(null);
@@ -77,7 +89,7 @@ export default function QBankPage() {
         {view === 'results' && sessionResult && (
           <Results theme={theme} result={sessionResult} reviewing={reviewing} onNew={() => setView('setup')} onDashboard={() => setView('dashboard')} onHistory={() => setView('history')} />
         )}
-        {view === 'dashboard' && <Dashboard theme={theme} onNew={() => setView('setup')} />}
+        {view === 'dashboard' && <Dashboard key={masteryVersion} theme={theme} onNew={() => setView('setup')} />}
         {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} supabaseUser={rawUser} />}
       </main>
     </div>
