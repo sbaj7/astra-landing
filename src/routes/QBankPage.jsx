@@ -38,7 +38,8 @@ export default function QBankPage() {
   // Honor the user's saved theme + accent (from profile settings); the provider's
   // isDark only reflects the OS, so use it as the system fallback.
   const { isDark: systemDark } = useTheme();
-  const { profile } = useSupabaseAuth();
+  const { profile, rawUser } = useSupabaseAuth();
+  const userId = rawUser?.id || null; // drives account-synced history
   const theme = useMemo(
     () => resolveThemedColors(profile?.metadata?.settings, systemDark).colors,
     [profile, systemDark]
@@ -53,7 +54,7 @@ export default function QBankPage() {
   const startSession = (cfg) => { setConfig(cfg); setView('session'); };
 
   const handleFinish = (r) => {
-    saveSession(r);
+    saveSession(r, userId); // persists to Supabase when signed in, else localStorage
     setSessionResult(r);
     setReviewing(false);
     setView('results');
@@ -78,7 +79,7 @@ export default function QBankPage() {
           <Results theme={theme} result={sessionResult} reviewing={reviewing} onNew={() => setView('setup')} onDashboard={() => setView('dashboard')} onHistory={() => setView('history')} />
         )}
         {view === 'dashboard' && <Dashboard theme={theme} onNew={() => setView('setup')} />}
-        {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} />}
+        {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} userId={userId} />}
       </main>
     </div>
   );
@@ -812,9 +813,22 @@ const ReviewQuestion = ({ theme, n, step, item, chosen }) => {
 };
 
 /* ------------------------------ history ------------------------------- */
-function History({ theme, onOpen, onNew }) {
-  const [sessions, setSessions] = useState(() => loadSessions());
-  const remove = (id, e) => { e.stopPropagation(); deleteSession(id); setSessions(loadSessions()); };
+function History({ theme, onOpen, onNew, userId }) {
+  const [sessions, setSessions] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let alive = true;
+    setLoading(true);
+    loadSessions(userId).then((s) => { if (alive) { setSessions(s); setLoading(false); } });
+    return () => { alive = false; };
+  }, [userId]);
+
+  const remove = async (id, e) => {
+    e.stopPropagation();
+    await deleteSession(id, userId);
+    setSessions(await loadSessions(userId));
+  };
 
   return (
     <div style={{ paddingTop: 'clamp(36px, 7vw, 72px)', display: 'flex', flexDirection: 'column', gap: 28 }}>
@@ -823,7 +837,11 @@ function History({ theme, onOpen, onNew }) {
         <h1 style={{ margin: '16px 0 0', fontFamily: SERIF, fontSize: 'clamp(30px, 5vw, 44px)', fontWeight: 400, letterSpacing: '-0.03em', color: theme.textPrimary }}>Past sets</h1>
       </div>
 
-      {!sessions.length ? (
+      {loading ? (
+        <div style={{ padding: '40px 0', display: 'flex', justifyContent: 'center', color: `${theme.textSecondary}A0` }}>
+          <Loader2 size={22} color={theme.accentSoftBlue} style={{ animation: 'spin 1s linear infinite' }} />
+        </div>
+      ) : !sessions.length ? (
         <div style={{ padding: '40px 0', textAlign: 'center', color: `${theme.textSecondary}A0`, fontFamily: SANS, fontSize: 15 }}>
           <p style={{ margin: '0 0 18px' }}>No completed sets yet. Finish a session and it’ll show up here.</p>
           <PrimaryBtn theme={theme} onClick={onNew}>Start a set</PrimaryBtn>
