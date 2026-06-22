@@ -44,16 +44,19 @@ export default function QBankPage() {
     [profile, systemDark]
   );
   const [view, setView] = useState('setup'); // setup | session | results | dashboard | history
-  const [masteryVersion, setMasteryVersion] = useState(0); // bumps after account mastery rebuild
+  const [masteryVersion, setMasteryVersion] = useState(0); // bumps after mastery rebuild
+  const [masteryReady, setMasteryReady] = useState(false);  // hydrated from the account yet?
 
-  // On login, seed local mastery + responses from the account's full history so
-  // adaptive picking and the dashboard reflect every device's sessions.
+  // Hydrate in-memory mastery + responses from the account's full history (every
+  // device) so adaptive picking and the dashboard are correct. Source of truth is
+  // the backend; nothing is read from localStorage.
   useEffect(() => {
-    if (!rawUser) return;
     let alive = true;
+    setMasteryReady(false);
     loadSessions(rawUser)
       .then((sessions) => { if (alive && sessions?.length) { rebuildFromSessions(sessions); setMasteryVersion((v) => v + 1); } })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => { if (alive) setMasteryReady(true); });
     return () => { alive = false; };
   }, [rawUser]);
 
@@ -82,7 +85,7 @@ export default function QBankPage() {
       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <Header theme={theme} onBack={() => navigate('/')} view={view} onDashboard={() => setView('dashboard')} onSetup={() => setView('setup')} onHistory={() => setView('history')} />
       <main style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px 96px' }}>
-        {view === 'setup' && <Setup theme={theme} onStart={startSession} />}
+        {view === 'setup' && <Setup theme={theme} onStart={startSession} ready={masteryReady} />}
         {view === 'session' && config && (
           <Session theme={theme} config={config} onFinish={handleFinish} />
         )}
@@ -173,7 +176,7 @@ function Slider({ theme, value, min = 1, max = 40, onChange }) {
 }
 
 /* ------------------------------- setup -------------------------------- */
-function Setup({ theme, onStart }) {
+function Setup({ theme, onStart, ready = true }) {
   const [step, setStep] = useState('step1');
   const [systems, setSystems] = useState([]);
   const [specialties, setSpecialties] = useState([]);
@@ -252,8 +255,8 @@ function Setup({ theme, onStart }) {
         </Section>
       </div>
 
-      <button onClick={() => onStart({ step, systems, specialties, count, difficulty, mode })} style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 28px', borderRadius: 999, border: 'none', background: theme.accentSoftBlue, color: '#fff', cursor: 'pointer', fontSize: 15, fontWeight: 600, fontFamily: SANS }}>
-        Start {count} question{count > 1 ? 's' : ''} <ChevronRight size={18} />
+      <button onClick={() => ready && onStart({ step, systems, specialties, count, difficulty, mode })} disabled={!ready} style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: 10, padding: '14px 28px', borderRadius: 999, border: 'none', background: ready ? theme.accentSoftBlue : `${theme.textSecondary}2A`, color: '#fff', cursor: ready ? 'pointer' : 'default', fontSize: 15, fontWeight: 600, fontFamily: SANS }}>
+        {ready ? <>Start {count} question{count > 1 ? 's' : ''} <ChevronRight size={18} /></> : <>Loading your progress… <Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /></>}
       </button>
     </div>
   );

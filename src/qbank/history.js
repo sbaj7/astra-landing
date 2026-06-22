@@ -1,20 +1,11 @@
-// Completed-session history. Persisted server-side through the auth-management
-// edge function (service role) — the SAME pattern the app uses for chat history
-// (user_chat_sessions) — so history follows the account across devices. The full
-// per-question `answers` payload (item topic/specialty/system/task/difficulty +
-// options + chosen + correct) is stored verbatim, so scores and every axis
-// breakdown can be recomputed losslessly. localStorage is kept as an offline cache.
+// Completed-session history — fully account-based, NO localStorage. Reads/writes
+// go through the auth-management edge function (service role), the same pattern the
+// app uses for chat history. The full per-question `answers` payload is stored
+// verbatim so scores and every axis breakdown recompute losslessly on any device.
 
 import authService from '../services/authService.js';
 
-const KEY = 'astra_qbank_history_v1';
 const CAP = 60;
-
-const readLocal = () => {
-  try { const raw = localStorage.getItem(KEY); return raw ? JSON.parse(raw) : []; }
-  catch { return []; }
-};
-const writeLocal = (v) => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* ignore */ } };
 
 // DB row -> the entry shape the UI expects.
 const rowToEntry = (r) => ({
@@ -29,34 +20,19 @@ const rowToEntry = (r) => ({
   answers: r.answers || [],
 });
 
-// Load history for the signed-in user (or anonymous), via the edge function.
+// Load history for the current account (or anonymous id) via the edge function.
 export async function loadSessions(supabaseUser) {
   try {
     const rows = await authService.getQbankSessions(supabaseUser, CAP);
-    const entries = rows.map(rowToEntry);
-    writeLocal(entries); // cache for fast/offline render
-    return entries;
+    return rows.map(rowToEntry);
   } catch {
-    return readLocal(); // network error -> show cached
+    return [];
   }
 }
 
 // record: { startedAt, step, mode, difficulty, answers:[{item, chosen, correct}] }
 export async function saveSession(record, supabaseUser) {
   if (!record || !Array.isArray(record.answers) || !record.answers.length) return null;
-  const total = record.answers.length;
-  const correct = record.answers.filter((a) => a && a.correct).length;
-
-  // Optimistic local cache entry so the UI is instant / works offline.
-  const localEntry = {
-    id: `s-${record.startedAt || Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-    startedAt: record.startedAt || Date.now(),
-    finishedAt: Date.now(),
-    step: record.step, mode: record.mode, difficulty: record.difficulty,
-    total, correct, answers: record.answers,
-  };
-  writeLocal([localEntry, ...readLocal()].slice(0, CAP));
-
   try {
     const row = await authService.saveQbankSession({
       startedAt: record.startedAt,
@@ -65,13 +41,12 @@ export async function saveSession(record, supabaseUser) {
       difficulty: record.difficulty,
       answers: record.answers, // full per-question payload, stored verbatim
     }, supabaseUser);
-    return row ? rowToEntry(row) : localEntry;
+    return row ? rowToEntry(row) : null;
   } catch {
-    return localEntry; // kept locally; reconciles on next load
+    return null;
   }
 }
 
 export async function deleteSession(id, supabaseUser) {
-  writeLocal(readLocal().filter((s) => s.id !== id));
   try { await authService.deleteQbankSession(id, supabaseUser); } catch { /* ignore */ }
 }

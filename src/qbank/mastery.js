@@ -2,30 +2,19 @@
 //
 // Mastery is tracked per (step, axis, value) so the dashboard can show
 // strengths/weaknesses by System, Specialty, and Physician Task independently.
-// Persisted in localStorage for now; swap for Supabase (`user_skill` table) when
-// the backend lands — the read/write surface below is the seam to replace.
+//
+// NO localStorage. This is an in-memory working copy, hydrated each load from the
+// account's synced sessions via rebuildFromSessions(). The source of truth is the
+// qbank_sessions table on the backend, so progress/adaptivity follow the account.
 
 import { BLUEPRINT } from './blueprint.js';
 import { topicsForSystem } from './topics.js';
 
-const KEY = 'astra_qbank_mastery_v1';
-const RESP_KEY = 'astra_qbank_responses_v1';
+let _mastery = {};   // _mastery[step][axis][value] = { correct, attempts }
+let _responses = [];
 
-const read = (k, fallback) => {
-  try {
-    const raw = localStorage.getItem(k);
-    return raw ? JSON.parse(raw) : fallback;
-  } catch {
-    return fallback;
-  }
-};
-const write = (k, v) => {
-  try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* ignore */ }
-};
-
-// mastery[step][axis][value] = { correct, attempts }
-export const loadMastery = () => read(KEY, {});
-export const loadResponses = () => read(RESP_KEY, []);
+export const loadMastery = () => _mastery;
+export const loadResponses = () => _responses;
 
 const cellScore = (rec) => {
   if (!rec || !rec.attempts) return null; // unseen
@@ -52,18 +41,16 @@ export const recordResponse = (item, correct, latencyMs) => {
   bump('specialties', item.specialty);
   bump('tasks', item.task);
   bump('topics', item.topic);     // granular, generator-tagged concept (deep gaps)
-  write(KEY, mastery);
+  // _mastery is mutated in place (loadMastery returns the live object).
 
-  const responses = loadResponses();
-  responses.push({
+  _responses.push({
     step: item.step, system: item.system, specialty: item.specialty, task: item.task,
     topic: item.topic, concept: item.concept, difficulty: item.difficulty, correct, latencyMs, ts: Date.now(),
   });
-  write(RESP_KEY, responses);
   return mastery;
 };
 
-export const resetProgress = () => { write(KEY, {}); write(RESP_KEY, []); };
+export const resetProgress = () => { _mastery = {}; _responses = []; };
 
 // Rebuild the local mastery + response log from the account's synced sessions, so
 // adaptive picking (fresh/weak/mastered) and the dashboard reflect ALL of the
@@ -95,8 +82,8 @@ export const rebuildFromSessions = (sessions = []) => {
       });
     }
   }
-  write(KEY, mastery);
-  write(RESP_KEY, responses);
+  _mastery = mastery;
+  _responses = responses;
   return mastery;
 };
 
