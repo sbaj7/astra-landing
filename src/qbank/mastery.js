@@ -55,32 +55,38 @@ export const resetProgress = () => { _mastery = {}; _responses = []; };
 // Rebuild the local mastery + response log from the account's synced sessions, so
 // adaptive picking (fresh/weak/mastered) and the dashboard reflect ALL of the
 // user's history across every device — not just what this browser stored.
-export const rebuildFromSessions = (sessions = []) => {
+// Rebuild from the most recent `maxAnswers` questions across the account's sessions.
+export const rebuildFromSessions = (sessions = [], maxAnswers = 500) => {
+  // Flatten every answer with its session timestamp, then keep the most recent N.
+  const flat = [];
+  for (const s of sessions) {
+    const ts = s.startedAt || 0;
+    for (const a of (s.answers || [])) {
+      if (a && a.item && a.item.step) flat.push({ item: a.item, correct: !!a.correct, ts });
+    }
+  }
+  flat.sort((x, y) => x.ts - y.ts);       // oldest -> newest
+  const recent = flat.slice(-maxAnswers); // most recent ~500 questions
+
   const mastery = {};
   const responses = [];
-  const ordered = [...sessions].sort((a, b) => (a.startedAt || 0) - (b.startedAt || 0));
-  for (const s of ordered) {
-    for (const a of (s.answers || [])) {
-      const item = a && a.item;
-      if (!item || !item.step) continue;
-      const correct = !!a.correct;
-      mastery[item.step] ??= {};
-      const bump = (axis, value) => {
-        if (!value) return;
-        mastery[item.step][axis] ??= {};
-        const rec = (mastery[item.step][axis][value] ??= { correct: 0, attempts: 0 });
-        rec.attempts += 1;
-        if (correct) rec.correct += 1;
-      };
-      bump('systems', item.system);
-      bump('specialties', item.specialty);
-      bump('tasks', item.task);
-      bump('topics', item.topic);
-      responses.push({
-        step: item.step, system: item.system, specialty: item.specialty, task: item.task,
-        topic: item.topic, difficulty: item.difficulty, correct, ts: s.startedAt || Date.now(),
-      });
-    }
+  for (const { item, correct, ts } of recent) {
+    mastery[item.step] ??= {};
+    const bump = (axis, value) => {
+      if (!value) return;
+      mastery[item.step][axis] ??= {};
+      const rec = (mastery[item.step][axis][value] ??= { correct: 0, attempts: 0 });
+      rec.attempts += 1;
+      if (correct) rec.correct += 1;
+    };
+    bump('systems', item.system);
+    bump('specialties', item.specialty);
+    bump('tasks', item.task);
+    bump('topics', item.topic);
+    responses.push({
+      step: item.step, system: item.system, specialty: item.specialty, task: item.task,
+      topic: item.topic, difficulty: item.difficulty, correct, ts,
+    });
   }
   _mastery = mastery;
   _responses = responses;

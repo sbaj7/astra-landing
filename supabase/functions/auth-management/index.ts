@@ -124,6 +124,8 @@ serve(async (req) => {
         return await handleQbankGetSessions(body, supabase);
       case "qbank-delete-session":
         return await handleQbankDeleteSession(body, supabase);
+      case "qbank-clear-sessions":
+        return await handleQbankClearSessions(body, supabase);
       case "update-profile":
         return await handleUpdateProfile(body, supabase);
       default:
@@ -769,6 +771,19 @@ async function handleQbankDeleteSession(body, supabase) {
   if (error) {
     console.error("Failed to delete qbank session:", error);
     return json({ error: "Failed to delete session" }, 500);
+  }
+  return json({ success: true });
+}
+
+async function handleQbankClearSessions(body, supabase) {
+  const { user_id, anonymous_id } = body;
+  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  let query = supabase.from("qbank_sessions").delete();
+  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
+  const { error } = await query;
+  if (error) {
+    console.error("Failed to clear qbank sessions:", error);
+    return json({ error: "Failed to clear sessions" }, 500);
   }
   return json({ success: true });
 }

@@ -545,6 +545,18 @@ class AuthService {
     });
   }
 
+  async clearQbankSessions(supabaseUser) {
+    let userId = null;
+    if (supabaseUser) {
+      const user = await this.syncUserWithSupabase(supabaseUser);
+      userId = user?.id;
+    }
+    return await this.callAuthAPI('qbank-clear-sessions', {
+      user_id: userId,
+      anonymous_id: !userId ? this.anonymousId : null
+    });
+  }
+
   // Local storage fallbacks for when API is unavailable
   handleLocalFallback(endpoint, data) {
     const now = new Date();

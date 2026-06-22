@@ -9,7 +9,7 @@ import { useSupabaseAuth } from '../components/Auth/SupabaseAuthProvider.jsx';
 import useIsMobile from '../hooks/useIsMobile.js';
 import { STEPS, DIFFICULTIES, MODES, BLUEPRINT, labelFor } from '../qbank/blueprint.js';
 import { buildPlan, pickTopic, recordResponse, loadMastery, masteryFor, resetProgress, summarizeByStep, predictStep, rebuildFromSessions } from '../qbank/mastery.js';
-import { saveSession, loadSessions, deleteSession } from '../qbank/history.js';
+import { saveSession, loadSessions, deleteSession, clearAllSessions } from '../qbank/history.js';
 import { generateQuestion, streamQuestion, streamTutor } from '../qbank/generateQuestion.js';
 
 const SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif';
@@ -53,7 +53,7 @@ export default function QBankPage() {
   useEffect(() => {
     let alive = true;
     setMasteryReady(false);
-    loadSessions(rawUser)
+    loadSessions(rawUser, 150) // pull enough sessions to cover ~500 recent questions
       .then((sessions) => { if (alive && sessions?.length) { rebuildFromSessions(sessions); setMasteryVersion((v) => v + 1); } })
       .catch(() => {})
       .finally(() => { if (alive) setMasteryReady(true); });
@@ -92,7 +92,7 @@ export default function QBankPage() {
         {view === 'results' && sessionResult && (
           <Results theme={theme} result={sessionResult} reviewing={reviewing} onNew={() => setView('setup')} onDashboard={() => setView('dashboard')} onHistory={() => setView('history')} />
         )}
-        {view === 'dashboard' && <Dashboard key={masteryVersion} theme={theme} onNew={() => setView('setup')} />}
+        {view === 'dashboard' && <Dashboard key={masteryVersion} theme={theme} onNew={() => setView('setup')} supabaseUser={rawUser} />}
         {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} supabaseUser={rawUser} />}
       </main>
     </div>
@@ -921,12 +921,23 @@ const PredPill = ({ theme, pred }) => {
 };
 
 /* ----------------------------- dashboard ------------------------------ */
-function Dashboard({ theme, onNew }) {
+function Dashboard({ theme, onNew, supabaseUser }) {
   const mastery = useMemo(() => loadMastery(), []);
   const summary = useMemo(() => summarizeByStep(), []);
   const steps = Object.keys(mastery);
   const hasData = steps.length > 0;
   const [openTopics, setOpenTopics] = useState({}); // collapsed by default
+  const [confirming, setConfirming] = useState(false);
+  const [wiping, setWiping] = useState(false);
+
+  const doReset = async () => {
+    setWiping(true);
+    await clearAllSessions(supabaseUser); // permanently delete account history
+    resetProgress();                       // clear in-memory mastery
+    setWiping(false);
+    setConfirming(false);
+    onNew();
+  };
 
   return (
     <div style={{ paddingTop: 'clamp(36px, 7vw, 72px)', display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -935,8 +946,17 @@ function Dashboard({ theme, onNew }) {
           <p style={eyebrow(theme)}>Progress</p>
           <h1 style={{ margin: '14px 0 0', fontFamily: SERIF, fontSize: 'clamp(28px, 5vw, 40px)', fontWeight: 400, letterSpacing: '-0.03em', color: theme.textPrimary }}>Your strengths &amp; gaps</h1>
         </div>
-        {hasData && (
-          <button onClick={() => { resetProgress(); onNew(); }} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 999, border: `1px solid ${theme.textSecondary}1F`, background: 'transparent', color: `${theme.textSecondary}A0`, cursor: 'pointer', fontSize: 13, fontWeight: 500, fontFamily: SANS }}><RotateCcw size={14} /> Reset</button>
+        {hasData && !confirming && (
+          <button onClick={() => setConfirming(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 999, border: `1px solid ${theme.textSecondary}1F`, background: 'transparent', color: `${theme.textSecondary}A0`, cursor: 'pointer', fontSize: 13, fontWeight: 500, fontFamily: SANS }}><RotateCcw size={14} /> Reset</button>
+        )}
+        {confirming && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: 13, color: theme.textPrimary, fontFamily: SANS }}>Delete all progress? This can’t be undone.</span>
+            <button onClick={() => setConfirming(false)} disabled={wiping} style={{ padding: '8px 14px', borderRadius: 999, border: `1px solid ${theme.textSecondary}22`, background: 'transparent', color: theme.textPrimary, cursor: 'pointer', fontSize: 13, fontWeight: 600, fontFamily: SANS }}>Cancel</button>
+            <button onClick={doReset} disabled={wiping} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 14px', borderRadius: 999, border: 'none', background: '#dc2626', color: '#fff', cursor: wiping ? 'default' : 'pointer', fontSize: 13, fontWeight: 600, fontFamily: SANS }}>
+              {wiping ? <><Loader2 size={13} style={{ animation: 'spin 1s linear infinite' }} /> Deleting…</> : <><RotateCcw size={13} /> Delete everything</>}
+            </button>
+          </div>
         )}
       </div>
 

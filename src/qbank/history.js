@@ -21,13 +21,20 @@ const rowToEntry = (r) => ({
 });
 
 // Load history for the current account (or anonymous id) via the edge function.
-export async function loadSessions(supabaseUser) {
+// `limit` lets the mastery rebuild pull more sessions than the History list shows.
+export async function loadSessions(supabaseUser, limit = CAP) {
   try {
-    const rows = await authService.getQbankSessions(supabaseUser, CAP);
+    const rows = await authService.getQbankSessions(supabaseUser, limit);
     return rows.map(rowToEntry);
   } catch {
     return [];
   }
+}
+
+// Wipe ALL of the account's QBank history (used by Reset progress).
+export async function clearAllSessions(supabaseUser) {
+  try { await authService.clearQbankSessions(supabaseUser); return true; }
+  catch { return false; }
 }
 
 // record: { startedAt, step, mode, difficulty, answers:[{item, chosen, correct}] }
