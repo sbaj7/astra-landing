@@ -118,6 +118,12 @@ serve(async (req) => {
         return await handleGetSessions(body, supabase);
       case "delete-session":
         return await handleDeleteSession(body, supabase);
+      case "qbank-save-session":
+        return await handleQbankSaveSession(body, supabase);
+      case "qbank-get-sessions":
+        return await handleQbankGetSessions(body, supabase);
+      case "qbank-delete-session":
+        return await handleQbankDeleteSession(body, supabase);
       case "update-profile":
         return await handleUpdateProfile(body, supabase);
       default:
@@ -703,6 +709,68 @@ async function handleDeleteSession(body, supabase) {
       "Content-Type": "application/json"
     }
   });
+}
+
+/* -------------------------------------------------------------------------- */
+/*  QBank session history (mirrors chat history, service-role)                */
+/* -------------------------------------------------------------------------- */
+const json = (obj, status = 200) => new Response(JSON.stringify(obj), {
+  status,
+  headers: { ...corsHeaders, "Content-Type": "application/json" }
+});
+
+async function handleQbankSaveSession(body, supabase) {
+  const { user_id, anonymous_id, session } = body;
+  if (!session || !Array.isArray(session.answers) || !session.answers.length) {
+    return json({ error: "session with answers required" }, 400);
+  }
+  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  const total = session.answers.length;
+  const correct = session.answers.filter((a) => a && a.correct).length;
+  const { data, error } = await supabase.from("qbank_sessions").insert({
+    user_id: user_id || null,
+    anonymous_id: user_id ? null : anonymous_id,
+    started_at: session.startedAt ? new Date(session.startedAt).toISOString() : new Date().toISOString(),
+    step: session.step || null,
+    mode: session.mode || null,
+    difficulty: session.difficulty || null,
+    total,
+    correct,
+    answers: session.answers,
+    created_at: new Date().toISOString()
+  }).select().single();
+  if (error) {
+    console.error("Error saving qbank session:", error);
+    return json({ error: "Failed to save session" }, 500);
+  }
+  return json({ session: data });
+}
+
+async function handleQbankGetSessions(body, supabase) {
+  const { user_id, anonymous_id, limit = 60 } = body;
+  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  let query = supabase.from("qbank_sessions").select("*").order("started_at", { ascending: false }).limit(limit);
+  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
+  const { data, error } = await query;
+  if (error) {
+    console.error("Error getting qbank sessions:", error);
+    return json({ error: "Failed to get sessions" }, 500);
+  }
+  return json({ sessions: data || [] });
+}
+
+async function handleQbankDeleteSession(body, supabase) {
+  const { session_id, user_id, anonymous_id } = body;
+  if (!session_id) return json({ error: "session_id required" }, 400);
+  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  let query = supabase.from("qbank_sessions").delete().eq("id", session_id);
+  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
+  const { error } = await query;
+  if (error) {
+    console.error("Failed to delete qbank session:", error);
+    return json({ error: "Failed to delete session" }, 500);
+  }
+  return json({ success: true });
 }
 
 /* -------------------------------------------------------------------------- */

@@ -502,6 +502,49 @@ class AuthService {
     });
   }
 
+  // ---- QBank session history (same pattern as chat sessions) ----
+  async saveQbankSession(session, supabaseUser) {
+    let userId = null;
+    if (supabaseUser) {
+      const user = await this.syncUserWithSupabase(supabaseUser);
+      userId = user?.id;
+    }
+    const response = await this.callAuthAPI('qbank-save-session', {
+      session,
+      user_id: userId,
+      anonymous_id: !userId ? this.anonymousId : null
+    });
+    return response.session || null;
+  }
+
+  async getQbankSessions(supabaseUser, limit = 60) {
+    let userId = null;
+    if (supabaseUser) {
+      const user = await this.syncUserWithSupabase(supabaseUser);
+      userId = user?.id;
+    }
+    const response = await this.callAuthAPI('qbank-get-sessions', {
+      user_id: userId,
+      anonymous_id: !userId ? this.anonymousId : null,
+      limit
+    });
+    return response.sessions || [];
+  }
+
+  async deleteQbankSession(sessionId, supabaseUser) {
+    if (!sessionId) throw new Error('sessionId required for deletion');
+    let userId = null;
+    if (supabaseUser) {
+      const user = await this.syncUserWithSupabase(supabaseUser);
+      userId = user?.id;
+    }
+    return await this.callAuthAPI('qbank-delete-session', {
+      session_id: sessionId,
+      user_id: userId,
+      anonymous_id: !userId ? this.anonymousId : null
+    });
+  }
+
   // Local storage fallbacks for when API is unavailable
   handleLocalFallback(endpoint, data) {
     const now = new Date();

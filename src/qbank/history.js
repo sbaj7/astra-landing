@@ -1,11 +1,14 @@
-// Completed-session history. Persisted to Supabase (table: qbank_sessions) when
-// the user is signed in, so history follows the account across devices; falls
-// back to localStorage for anonymous users / offline, and uses it as a cache.
+// Completed-session history. Persisted server-side through the auth-management
+// edge function (service role) — the SAME pattern the app uses for chat history
+// (user_chat_sessions) — so history follows the account across devices. The full
+// per-question `answers` payload (item topic/specialty/system/task/difficulty +
+// options + chosen + correct) is stored verbatim, so scores and every axis
+// breakdown can be recomputed losslessly. localStorage is kept as an offline cache.
 
-import { supabase } from '../services/supabaseClient.js';
+import authService from '../services/authService.js';
 
 const KEY = 'astra_qbank_history_v1';
-const CAP = 60; // most recent N sessions
+const CAP = 60;
 
 const readLocal = () => {
   try { const raw = localStorage.getItem(KEY); return raw ? JSON.parse(raw) : []; }
@@ -13,11 +16,11 @@ const readLocal = () => {
 };
 const writeLocal = (v) => { try { localStorage.setItem(KEY, JSON.stringify(v)); } catch { /* ignore */ } };
 
-// Supabase row -> the entry shape the UI expects.
+// DB row -> the entry shape the UI expects.
 const rowToEntry = (r) => ({
   id: r.id,
-  startedAt: r.started_at ? new Date(r.started_at).getTime() : Date.now(),
-  finishedAt: r.finished_at ? new Date(r.finished_at).getTime() : Date.now(),
+  startedAt: r.started_at ? new Date(r.started_at).getTime() : (r.created_at ? new Date(r.created_at).getTime() : Date.now()),
+  finishedAt: r.created_at ? new Date(r.created_at).getTime() : Date.now(),
   step: r.step,
   mode: r.mode,
   difficulty: r.difficulty,
@@ -26,72 +29,49 @@ const rowToEntry = (r) => ({
   answers: r.answers || [],
 });
 
-// Load history. Signed-in -> Supabase (cached locally); anonymous -> localStorage.
-export async function loadSessions(userId) {
-  if (!userId) return readLocal();
+// Load history for the signed-in user (or anonymous), via the edge function.
+export async function loadSessions(supabaseUser) {
   try {
-    const { data, error } = await supabase
-      .from('qbank_sessions')
-      .select('*')
-      .eq('user_id', userId)
-      .order('started_at', { ascending: false })
-      .limit(CAP);
-    if (error) throw error;
-    const entries = (data || []).map(rowToEntry);
-    writeLocal(entries); // keep a local cache for fast/offline render
+    const rows = await authService.getQbankSessions(supabaseUser, CAP);
+    const entries = rows.map(rowToEntry);
+    writeLocal(entries); // cache for fast/offline render
     return entries;
   } catch {
-    return readLocal(); // network/RLS error -> fall back to cache
+    return readLocal(); // network error -> show cached
   }
 }
 
 // record: { startedAt, step, mode, difficulty, answers:[{item, chosen, correct}] }
-export async function saveSession(record, userId) {
+export async function saveSession(record, supabaseUser) {
   if (!record || !Array.isArray(record.answers) || !record.answers.length) return null;
   const total = record.answers.length;
-  const correct = record.answers.filter((a) => a.correct).length;
-  const entry = {
+  const correct = record.answers.filter((a) => a && a.correct).length;
+
+  // Optimistic local cache entry so the UI is instant / works offline.
+  const localEntry = {
     id: `s-${record.startedAt || Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
     startedAt: record.startedAt || Date.now(),
     finishedAt: Date.now(),
-    step: record.step,
-    mode: record.mode,
-    difficulty: record.difficulty,
-    total,
-    correct,
-    answers: record.answers,
+    step: record.step, mode: record.mode, difficulty: record.difficulty,
+    total, correct, answers: record.answers,
   };
+  writeLocal([localEntry, ...readLocal()].slice(0, CAP));
 
-  // Local cache first (instant, works offline / anonymous).
-  writeLocal([entry, ...readLocal()].slice(0, CAP));
-
-  if (userId) {
-    try {
-      const { data } = await supabase
-        .from('qbank_sessions')
-        .insert({
-          user_id: userId,
-          started_at: new Date(entry.startedAt).toISOString(),
-          finished_at: new Date(entry.finishedAt).toISOString(),
-          step: entry.step,
-          mode: entry.mode,
-          difficulty: entry.difficulty,
-          total,
-          correct,
-          answers: entry.answers,
-        })
-        .select('id')
-        .single();
-      if (data?.id) entry.id = data.id; // adopt the server id
-    } catch { /* keep local copy; will reconcile on next load */ }
+  try {
+    const row = await authService.saveQbankSession({
+      startedAt: record.startedAt,
+      step: record.step,
+      mode: record.mode,
+      difficulty: record.difficulty,
+      answers: record.answers, // full per-question payload, stored verbatim
+    }, supabaseUser);
+    return row ? rowToEntry(row) : localEntry;
+  } catch {
+    return localEntry; // kept locally; reconciles on next load
   }
-  return entry;
 }
 
-export async function deleteSession(id, userId) {
+export async function deleteSession(id, supabaseUser) {
   writeLocal(readLocal().filter((s) => s.id !== id));
-  if (userId) {
-    try { await supabase.from('qbank_sessions').delete().eq('id', id).eq('user_id', userId); }
-    catch { /* ignore */ }
-  }
+  try { await authService.deleteQbankSession(id, supabaseUser); } catch { /* ignore */ }
 }

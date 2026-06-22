@@ -38,8 +38,7 @@ export default function QBankPage() {
   // Honor the user's saved theme + accent (from profile settings); the provider's
   // isDark only reflects the OS, so use it as the system fallback.
   const { isDark: systemDark } = useTheme();
-  const { profile, rawUser } = useSupabaseAuth();
-  const userId = rawUser?.id || null; // drives account-synced history
+  const { profile, rawUser } = useSupabaseAuth(); // rawUser drives account-synced history
   const theme = useMemo(
     () => resolveThemedColors(profile?.metadata?.settings, systemDark).colors,
     [profile, systemDark]
@@ -54,7 +53,7 @@ export default function QBankPage() {
   const startSession = (cfg) => { setConfig(cfg); setView('session'); };
 
   const handleFinish = (r) => {
-    saveSession(r, userId); // persists to Supabase when signed in, else localStorage
+    saveSession(r, rawUser); // persists via edge function (account) when signed in
     setSessionResult(r);
     setReviewing(false);
     setView('results');
@@ -79,7 +78,7 @@ export default function QBankPage() {
           <Results theme={theme} result={sessionResult} reviewing={reviewing} onNew={() => setView('setup')} onDashboard={() => setView('dashboard')} onHistory={() => setView('history')} />
         )}
         {view === 'dashboard' && <Dashboard theme={theme} onNew={() => setView('setup')} />}
-        {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} userId={userId} />}
+        {view === 'history' && <History theme={theme} onOpen={openPast} onNew={() => setView('setup')} supabaseUser={rawUser} />}
       </main>
     </div>
   );
@@ -813,21 +812,21 @@ const ReviewQuestion = ({ theme, n, step, item, chosen }) => {
 };
 
 /* ------------------------------ history ------------------------------- */
-function History({ theme, onOpen, onNew, userId }) {
+function History({ theme, onOpen, onNew, supabaseUser }) {
   const [sessions, setSessions] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let alive = true;
     setLoading(true);
-    loadSessions(userId).then((s) => { if (alive) { setSessions(s); setLoading(false); } });
+    loadSessions(supabaseUser).then((s) => { if (alive) { setSessions(s); setLoading(false); } });
     return () => { alive = false; };
-  }, [userId]);
+  }, [supabaseUser]);
 
   const remove = async (id, e) => {
     e.stopPropagation();
-    await deleteSession(id, userId);
-    setSessions(await loadSessions(userId));
+    await deleteSession(id, supabaseUser);
+    setSessions(await loadSessions(supabaseUser));
   };
 
   return (
