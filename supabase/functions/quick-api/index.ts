@@ -1915,19 +1915,19 @@ async function consumeUsage(userId?: string, anonymousId?: string): Promise<{ al
 
   try {
     if (userId) {
-      // Resolve tier + internal id. Tolerate missing/duplicate rows (no .single()).
+      // Resolve tier + internal id. Real schema: `subscription_status` holds the
+      // TIER ('free'|'plus'|'pro'); manual_subscription_* can override it. There is
+      // NO subscription_plan column (selecting it errored → fail-open bug).
       const { data: users } = await db.from("auth_users")
-        .select("id, subscription_status, subscription_plan, manual_subscription_enabled, manual_subscription_plan, manual_subscription_expires_at")
+        .select("id, subscription_status, manual_subscription_enabled, manual_subscription_plan, manual_subscription_expires_at")
         .eq("auth0_id", userId).order("created_at", { ascending: true }).limit(1);
       const u = users?.[0];
       if (!u) return { allowed: true }; // not synced yet → allow (client will sync)
 
       const manualValid = u.manual_subscription_enabled &&
         (!u.manual_subscription_expires_at || new Date(u.manual_subscription_expires_at) > now);
-      const status = (u.subscription_status || "").toLowerCase();
-      const plan = (manualValid ? u.manual_subscription_plan : u.subscription_plan || "").toLowerCase();
-      const paid = manualValid || ((status === "active" || status === "trialing") && (plan === "pro" || plan === "plus"));
-      const tier = paid ? (plan === "pro" ? "pro" : "plus") : "free";
+      const rawTier = (manualValid ? (u.manual_subscription_plan || u.subscription_status) : u.subscription_status || "free").toLowerCase();
+      const tier = rawTier === "pro" ? "pro" : rawTier === "plus" ? "plus" : "free";
       const limit = TIER_LIMITS[tier] ?? 10;
       if (!isFinite(limit)) return { allowed: true }; // pro → unlimited, no tracking
 
