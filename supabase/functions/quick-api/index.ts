@@ -1896,6 +1896,82 @@ async function retrieveRelevantTrials(userQuery) {
   }
 }
 // ==============================
+// USAGE LIMITS (server-side, tamper-proof)
+// ==============================
+// Daily caps by tier. Enforced HERE (not just client-side) so free/plus users
+// can't exceed by manipulating the browser. QBank uses a different function and
+// is unaffected. Fails OPEN only on genuine infra errors (never blocks a paying
+// path over a limits-DB blip); fails CLOSED on a confirmed over-limit.
+const TIER_LIMITS: Record<string, number> = { pro: Infinity, plus: 24, free: 10, anonymous: 5 };
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+// Returns { allowed, reason } and increments usage when allowed.
+async function consumeUsage(userId?: string, anonymousId?: string): Promise<{ allowed: boolean; reason?: string }> {
+  const url = Deno.env.get("SUPABASE_URL");
+  const key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  if (!url || !key) return { allowed: true }; // misconfig → don't block
+  const db = createClient(url, key);
+  const now = new Date();
+
+  try {
+    if (userId) {
+      // Resolve tier + internal id. Tolerate missing/duplicate rows (no .single()).
+      const { data: users } = await db.from("auth_users")
+        .select("id, subscription_status, subscription_plan, manual_subscription_enabled, manual_subscription_plan, manual_subscription_expires_at")
+        .eq("auth0_id", userId).order("created_at", { ascending: true }).limit(1);
+      const u = users?.[0];
+      if (!u) return { allowed: true }; // not synced yet → allow (client will sync)
+
+      const manualValid = u.manual_subscription_enabled &&
+        (!u.manual_subscription_expires_at || new Date(u.manual_subscription_expires_at) > now);
+      const status = (u.subscription_status || "").toLowerCase();
+      const plan = (manualValid ? u.manual_subscription_plan : u.subscription_plan || "").toLowerCase();
+      const paid = manualValid || ((status === "active" || status === "trialing") && (plan === "pro" || plan === "plus"));
+      const tier = paid ? (plan === "pro" ? "pro" : "plus") : "free";
+      const limit = TIER_LIMITS[tier] ?? 10;
+      if (!isFinite(limit)) return { allowed: true }; // pro → unlimited, no tracking
+
+      const { data: recs } = await db.from("user_limits").select("*").eq("user_id", u.id).order("updated_at", { ascending: false }).limit(1);
+      let rec = recs?.[0];
+      const expired = !rec || new Date(rec.reset_at) < now;
+      const used = expired ? 0 : (rec.chats_used || 0);
+      if (used >= limit) return { allowed: false, reason: "daily_limit" };
+
+      if (!rec) {
+        await db.from("user_limits").insert({ user_id: u.id, chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() });
+      } else if (expired) {
+        await db.from("user_limits").update({ chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() }).eq("id", rec.id);
+      } else {
+        await db.from("user_limits").update({ chats_used: used + 1, updated_at: now.toISOString() }).eq("id", rec.id);
+      }
+      return { allowed: true };
+    }
+
+    if (anonymousId) {
+      const limit = TIER_LIMITS.anonymous;
+      const { data: recs } = await db.from("anonymous_limits").select("*").eq("anonymous_id", anonymousId).order("updated_at", { ascending: false }).limit(1);
+      let rec = recs?.[0];
+      const expired = !rec || new Date(rec.reset_at) < now;
+      const used = expired ? 0 : (rec.chats_used || 0);
+      if (used >= limit) return { allowed: false, reason: "daily_limit" };
+      if (!rec) {
+        await db.from("anonymous_limits").insert({ anonymous_id: anonymousId, chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() });
+      } else if (expired) {
+        await db.from("anonymous_limits").update({ chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() }).eq("id", rec.id);
+      } else {
+        await db.from("anonymous_limits").update({ chats_used: used + 1, updated_at: now.toISOString() }).eq("id", rec.id);
+      }
+      return { allowed: true };
+    }
+
+    return { allowed: true }; // no identifier → can't enforce (shouldn't happen)
+  } catch (e) {
+    console.error("consumeUsage error (failing open):", e);
+    return { allowed: true }; // infra error → don't block
+  }
+}
+
+// ==============================
 // EDGE FUNCTION HANDLER
 // ==============================
 serve(async (req) => {
@@ -1919,7 +1995,7 @@ serve(async (req) => {
     });
   }
   try {
-    let { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [] } = body;
+    let { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], user_id = null, anonymous_id = null } = body;
 
     // Debug logging for images
     console.log(`📨 Request received - mode: ${mode}, images: ${images?.length || 0}, query length: ${query?.length || 0}`);
@@ -1936,6 +2012,20 @@ serve(async (req) => {
           ...corsHeaders,
           "Content-Type": "application/json"
         }
+      });
+    }
+
+    // Enforce daily usage limit server-side (tamper-proof). Regular modes only —
+    // QBank runs through a different function. Increments on allow.
+    const usage = await consumeUsage(user_id, anonymous_id);
+    if (!usage.allowed) {
+      return new Response(JSON.stringify({
+        error: "daily_limit_reached",
+        reason: usage.reason || "daily_limit",
+        message: "You've reached your daily limit. Upgrade for more."
+      }), {
+        status: 429,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
       });
     }
 

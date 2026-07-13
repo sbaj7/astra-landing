@@ -1,0 +1,26 @@
+project_id = "shwitfgtpfszjjoczbxp"
+
+# Functions that must be callable WITHOUT a Supabase JWT.
+# stripe-webhook is the critical one: Stripe sends only a `stripe-signature`
+# header (no Supabase auth), and the function verifies that signature itself. If
+# JWT verification is on, the gateway 401s every Stripe event before the function
+# runs — so paid users never get upgraded. Keep verify_jwt = false here.
+[functions.stripe-webhook]
+verify_jwt = false
+
+# These are invoked with the anon apikey from the browser / other functions and
+# do their own auth/limit checks. Pinned so redeploys don't re-enable the gate.
+[functions.quick-api]
+verify_jwt = false
+
+[functions.auth-management]
+verify_jwt = false
+
+[functions.billing-supabase]
+verify_jwt = false
+
+[functions.qbank-generate]
+verify_jwt = false
+
+[functions.qbank-tutor]
+verify_jwt = false

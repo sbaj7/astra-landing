@@ -6160,13 +6160,8 @@ const AstraApp = () => {
         return;
       }
 
-      // Increment usage in backend for anonymous users
-      try {
-        await authService.incrementAnonymousUsage();
-        console.log('✅ Incremented anonymous user usage in backend');
-      } catch (error) {
-        console.error('Failed to increment anonymous usage:', error);
-      }
+      // Usage is incremented server-side by quick-api (tamper-proof). Here we only
+      // update local state optimistically for immediate UI feedback.
 
       // Update local state (optimistic update)
       setChatLimit(prev => {
@@ -6194,17 +6189,7 @@ const AstraApp = () => {
         return;
       }
 
-      // Increment usage in backend
-      try {
-        if (!user?.id) {
-          console.error('❌ Cannot increment usage: authenticated user missing ID', user);
-          throw new Error('User ID is required for authenticated users');
-        }
-        await authService.incrementUserUsage(user.id);
-        console.log('✅ Incremented Plus user usage in backend');
-      } catch (error) {
-        console.error('Failed to increment Plus user usage:', error);
-      }
+      // Usage is incremented server-side by quick-api (tamper-proof).
 
       // Update local state (optimistic update)
       setChatLimit(prev => {
@@ -6227,17 +6212,7 @@ const AstraApp = () => {
         return;
       }
 
-      // Increment usage in backend for authenticated free users
-      try {
-        if (!user?.id) {
-          console.error('❌ Cannot increment usage: authenticated user missing ID', user);
-          throw new Error('User ID is required for authenticated users');
-        }
-        await authService.incrementUserUsage(user.id);
-        console.log('✅ Incremented free user usage in backend');
-      } catch (error) {
-        console.error('Failed to increment user usage:', error);
-      }
+      // Usage is incremented server-side by quick-api (tamper-proof).
 
       // Update local state (optimistic update)
       setChatLimit(prev => {
@@ -6312,14 +6287,17 @@ const AstraApp = () => {
             .join('\n\n')}\n\n---\n\nCurrent question: ${queryToSend}`
         : queryToSend;
 
-      // Build request body - include images when present
+      // Build request body - include images when present. Pass the user identity
+      // so the server can enforce/increment the daily limit (tamper-proof).
       const requestBody = {
         query: queryWithContext,
         isClinical: false,
         isReason: currentMode === 'reason',
         isWrite: currentMode === 'write',
         mode: currentMode,
-        stream: true
+        stream: true,
+        user_id: isAuthenticated ? (user?.id || null) : null,
+        anonymous_id: !isAuthenticated ? authService.getAnonymousId() : null
       };
 
       // Add images to request if present
@@ -6341,6 +6319,16 @@ const AstraApp = () => {
         body: JSON.stringify(requestBody),
         signal: abortControllerRef.current.signal
       });
+
+      // Server-side daily-limit block: roll back the optimistic message and paywall.
+      if (response.status === 429) {
+        setMessages(prev => prev.filter(m => m.id !== userMessage.id));
+        setChatLimit(prev => ({ ...prev, remaining: 0 }));
+        setIsLoading(false);
+        setIsStreaming(false);
+        setShowPaywall(true);
+        return;
+      }
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 

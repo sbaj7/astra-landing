@@ -161,21 +161,22 @@ async function handleCheckLimit(body, supabase) {
 
   // Handle authenticated users with plan-based limits
   if (user_id) {
-    // Get user's subscription info from auth_users table
-    const { data: userData, error: userError } = await supabase
+    // Get user's subscription info. Tolerate missing/duplicate rows (no .single()
+    // 500s — those were causing limits to silently fail open).
+    const { data: userRows } = await supabase
       .from('auth_users')
       .select('id, subscription_status')
       .eq('auth0_id', user_id)
-      .single();
+      .order('created_at', { ascending: true })
+      .limit(1);
+    const userData = userRows?.[0];
 
-    if (userError) {
-      console.error('❌ Error fetching user subscription:', userError);
+    if (!userData) {
+      // Not synced yet — report a fresh free-tier allowance for display only.
+      // Actual enforcement happens server-side in quick-api once synced.
       return new Response(
-        JSON.stringify({ error: 'Failed to fetch user data' }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" }
-        }
+        JSON.stringify({ used: 0, remaining: 10, reset_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString() }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
@@ -209,11 +210,13 @@ async function handleCheckLimit(body, supabase) {
 
     // For Free/Plus users, check usage in user_limits table
     const now = new Date();
-    let { data: limitRecord } = await supabase
+    let { data: limitRows } = await supabase
       .from('user_limits')
       .select('*')
       .eq('user_id', userData.id)
-      .single();
+      .order('updated_at', { ascending: false })
+      .limit(1);
+    let limitRecord = limitRows?.[0] || null;
 
     if (!limitRecord) {
       const newRecord = {
