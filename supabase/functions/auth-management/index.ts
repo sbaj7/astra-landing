@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.5";
+import { getSubscriptionDailyChatLimit } from "../_shared/usageLimits.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -154,7 +155,7 @@ serve(async (req) => {
 });
 
 /* -------------------------------------------------------------------------- */
-/*  Plan-based chat limits (Anonymous=3, Free=10, Plus=24, Pro=Unlimited)    */
+/*  Plan-based chat limits (Anonymous=3, Free=10, Plus=50, Pro=Unlimited)    */
 /* -------------------------------------------------------------------------- */
 async function handleCheckLimit(body, supabase) {
   const { anonymous_id, user_id } = body;
@@ -180,21 +181,10 @@ async function handleCheckLimit(body, supabase) {
       );
     }
 
-    // Determine daily limit based on subscription tier
-    let dailyLimit = 10; // Default: Free tier
-
-    const tier = userData?.subscription_status?.toLowerCase() || 'free';
-
-    if (tier === 'pro') {
-      dailyLimit = 999999; // Pro: Unlimited
-    } else if (tier === 'plus') {
-      dailyLimit = 24; // Plus: 24 chats/day
-    } else {
-      dailyLimit = 10; // Free: 10 chats/day
-    }
+    const dailyLimit = getSubscriptionDailyChatLimit(userData?.subscription_status);
 
     // Pro users get unlimited - return immediately without tracking
-    if (dailyLimit === 999999) {
+    if (!Number.isFinite(dailyLimit)) {
       return new Response(
         JSON.stringify({
           used: 0,

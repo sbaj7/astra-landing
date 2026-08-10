@@ -3,12 +3,35 @@ import { useSupabaseAuth } from './SupabaseAuthProvider.jsx';
 import { X, Zap, Shield, Clock } from 'lucide-react';
 import authService from '../../services/authService';
 import useIsMobile from '../../hooks/useIsMobile.js';
+import { CHAT_LIMITS } from '../../config/chatLimits.js';
 
-const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUpgrade }) => {
+const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, plan, onUpgrade }) => {
   const { signIn } = useSupabaseAuth();
   const [timeRemaining, setTimeRemaining] = useState('');
   const [authMessage, setAuthMessage] = useState('');
   const isMobile = useIsMobile();
+  const normalizedPlan = typeof plan === 'string' ? plan.toLowerCase() : '';
+  const limitType = !isAuthenticated ? 'anonymous' : normalizedPlan === 'plus' ? 'plus' : 'free';
+  const limitCopy = {
+    anonymous: {
+      title: "You've reached today's guest limit",
+      description: `You've used all ${CHAT_LIMITS.anonymous} guest chats for this 24-hour period. Create a free account for ${CHAT_LIMITS.free} chats per day, or choose a plan for more.`,
+      resetLabel: 'Guest chats reset in:',
+      actionLabel: 'Create Free Account'
+    },
+    free: {
+      title: "You've reached today's Free limit",
+      description: `You've used all ${CHAT_LIMITS.free} Free chats for this 24-hour period. Upgrade to Plus for ${CHAT_LIMITS.plus} chats per day or Pro for unlimited access.`,
+      resetLabel: 'Free chats reset in:',
+      actionLabel: 'View Plans & Upgrade'
+    },
+    plus: {
+      title: "You've reached today's Plus limit",
+      description: `You've used all ${CHAT_LIMITS.plus} Plus chats for this 24-hour period. Your chats will reset automatically, or you can upgrade to Pro for unlimited access.`,
+      resetLabel: 'Plus chats reset in:',
+      actionLabel: 'Upgrade to Pro'
+    }
+  }[limitType];
 
   useEffect(() => {
     if (isOpen && chatLimit?.resetAt) {
@@ -140,7 +163,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUp
             margin: '0 0 12px 0',
             fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif'
           }}>
-            {isAuthenticated ? "Upgrade to unlock unlimited chats" : "You've reached your free limit"}
+            {limitCopy.title}
           </h3>
 
           {/* Description */}
@@ -150,13 +173,11 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUp
             margin: '0 0 16px 0',
             lineHeight: '1.5'
           }}>
-            {isAuthenticated
-              ? "You're on the Free plan with 10 chats per day. Upgrade to Pro for unlimited medical consultations, early access to new features, and priority support."
-              : "You've used all 10 of your free chats for today. You can wait for the reset or create an account for unlimited access."}
+            {limitCopy.description}
           </p>
 
-          {/* Countdown Timer - only show for anonymous users */}
-          {!isAuthenticated && timeRemaining && timeRemaining !== 'Now' && (
+          {/* Countdown Timer */}
+          {timeRemaining && timeRemaining !== 'Now' && (
             <div style={{
               backgroundColor: `${theme.accentSoftBlue}10`,
               border: `1px solid ${theme.accentSoftBlue}30`,
@@ -170,7 +191,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUp
                 color: theme.textSecondary,
                 marginBottom: '4px'
               }}>
-                Free chats reset in:
+                {limitCopy.resetLabel}
               </div>
               <div style={{
                 fontSize: isMobile ? '18px' : '20px',
@@ -248,7 +269,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUp
                   e.target.style.transform = 'translateY(0)';
                 }}
               >
-                View Plans & Upgrade
+                {limitCopy.actionLabel}
               </button>
             ) : (
               // Show sign-up/sign-in buttons for anonymous users
@@ -327,7 +348,7 @@ const PaywallModal = ({ isOpen, onClose, theme, chatLimit, isAuthenticated, onUp
               margin: 0,
               lineHeight: '1.4'
             }}>
-              Free accounts reset every 24 hours. No credit card required.
+              Guest access resets every 24 hours. No credit card required.
             </p>
           )}
         </div>

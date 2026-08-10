@@ -304,11 +304,14 @@ export const SupabaseAuthProvider = ({ children }) => {
   }, []);
 
   const signOut = useCallback(async () => {
-    const { error } = await supabase.auth.signOut();
+    setLastError(null);
+    const { error } = await supabase.auth.signOut({ scope: 'local' });
     if (error) {
+      setLastError(error);
       throw error;
     }
-  }, []);
+    syncAuthContext(null);
+  }, [syncAuthContext]);
 
   const refreshSession = useCallback(async () => {
     const { data, error } = await supabase.auth.getSession();

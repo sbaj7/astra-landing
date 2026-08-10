@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Sun, Moon } from 'lucide-react';
 import useIsMobile from '../hooks/useIsMobile.js';
 import UsageBar from './UsageBar.jsx';
+import { CHAT_LIMITS } from '../config/chatLimits.js';
 
 const accentColorOptions = [
   { value: 'nightfall', label: 'Nightfall', swatch: '#4A6B7D' },
@@ -170,10 +171,11 @@ const SettingsModal = ({
   syncState = 'idle',
   syncError = '',
   chatLimit = null,
-  isPaidUser = false,
+  plan = 'free',
   onUpgrade = null
 }) => {
   const isMobile = useIsMobile();
+  const normalizedPlan = Object.hasOwn(CHAT_LIMITS, plan) ? plan : 'free';
 
   if (!isOpen) return null;
 
@@ -256,10 +258,10 @@ const SettingsModal = ({
           {chatLimit && (
             <UsageBar
               used={chatLimit.used || 0}
-              total={10}
+              total={CHAT_LIMITS[normalizedPlan]}
               resetAt={chatLimit.resetAt}
               theme={theme}
-              isPaidUser={isPaidUser}
+              plan={normalizedPlan}
               onUpgrade={onUpgrade}
             />
           )}

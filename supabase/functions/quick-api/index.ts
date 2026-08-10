@@ -1,6 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.5";
+import { getSubscriptionDailyChatLimit } from "../_shared/usageLimits.ts";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, accept"
@@ -1885,7 +1886,7 @@ async function retrieveRelevantTrials(userQuery) {
 // can't exceed by manipulating the browser. QBank uses a different function and
 // is unaffected. Fails OPEN only on genuine infra errors (never blocks a paying
 // path over a limits-DB blip); fails CLOSED on a confirmed over-limit.
-const TIER_LIMITS: Record<string, number> = { pro: Infinity, plus: 24, free: 10, anonymous: 5 };
+const ANONYMOUS_DAILY_CHAT_LIMIT = 5;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 // Returns { allowed, reason } and increments usage when allowed.
@@ -1910,8 +1911,7 @@ async function consumeUsage(userId?: string, anonymousId?: string): Promise<{ al
       const manualValid = u.manual_subscription_enabled &&
         (!u.manual_subscription_expires_at || new Date(u.manual_subscription_expires_at) > now);
       const rawTier = (manualValid ? (u.manual_subscription_plan || u.subscription_status) : u.subscription_status || "free").toLowerCase();
-      const tier = rawTier === "pro" ? "pro" : rawTier === "plus" ? "plus" : "free";
-      const limit = TIER_LIMITS[tier] ?? 10;
+      const limit = getSubscriptionDailyChatLimit(rawTier);
       if (!isFinite(limit)) return { allowed: true }; // pro → unlimited, no tracking
 
       const { data: recs } = await db.from("user_limits").select("*").eq("user_id", u.id).order("updated_at", { ascending: false }).limit(1);
@@ -1931,7 +1931,7 @@ async function consumeUsage(userId?: string, anonymousId?: string): Promise<{ al
     }
 
     if (anonymousId) {
-      const limit = TIER_LIMITS.anonymous;
+      const limit = ANONYMOUS_DAILY_CHAT_LIMIT;
       const { data: recs } = await db.from("anonymous_limits").select("*").eq("anonymous_id", anonymousId).order("updated_at", { ascending: false }).limit(1);
       let rec = recs?.[0];
       const expired = !rec || new Date(rec.reset_at) < now;

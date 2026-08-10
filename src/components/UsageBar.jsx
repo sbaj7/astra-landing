@@ -10,7 +10,7 @@ import authService from '../services/authService';
  * @param {number} total - Total chats allowed (default: 10)
  * @param {string} resetAt - ISO timestamp when usage resets
  * @param {object} theme - Theme object with colors
- * @param {boolean} isPaidUser - Whether user has active subscription
+ * @param {string} plan - Current subscription plan
  * @param {function} onUpgrade - Callback when upgrade button clicked
  * @param {boolean} compact - Compact mode for toolbar (optional)
  */
@@ -19,15 +19,20 @@ const UsageBar = ({
   total = 10,
   resetAt,
   theme,
-  isPaidUser = false,
+  plan = 'free',
   onUpgrade,
   compact = false
 }) => {
   const [timeRemaining, setTimeRemaining] = useState('');
+  const normalizedPlan = ['anonymous', 'free', 'plus', 'pro'].includes(plan) ? plan : 'free';
+  const isUnlimited = normalizedPlan === 'pro';
+  const planLabel = normalizedPlan === 'anonymous'
+    ? 'Guest'
+    : normalizedPlan.charAt(0).toUpperCase() + normalizedPlan.slice(1);
 
   // Update countdown timer every minute
   useEffect(() => {
-    if (!resetAt || isPaidUser) return;
+    if (!resetAt || isUnlimited) return;
 
     const updateTimer = () => {
       const remaining = authService.getTimeUntilReset(resetAt);
@@ -38,7 +43,7 @@ const UsageBar = ({
     const interval = setInterval(updateTimer, 60000); // Update every minute
 
     return () => clearInterval(interval);
-  }, [resetAt, isPaidUser]);
+  }, [isUnlimited, resetAt]);
 
   // Calculate percentage for progress bar
   const percentage = Math.min(100, Math.max(0, (used / total) * 100));
@@ -46,16 +51,15 @@ const UsageBar = ({
 
   // Determine color based on usage
   const getUsageColor = () => {
-    if (isPaidUser) return theme.accentSoftBlue;
+    if (isUnlimited) return theme.accentSoftBlue;
     if (used >= total) return '#EF4444'; // Red for limit reached
-    if (used >= 7) return '#EA580C'; // Orange for warning
+    if (used / total >= 0.7) return '#EA580C'; // Orange for warning
     return theme.accentSoftBlue; // Blue for normal
   };
 
   const usageColor = getUsageColor();
 
-  // Paid users get unlimited display
-  if (isPaidUser) {
+  if (isUnlimited) {
     return (
       <div style={{
         padding: compact ? '12px' : '16px 20px',
@@ -90,7 +94,6 @@ const UsageBar = ({
     );
   }
 
-  // Free users get usage bar
   return (
     <div style={{
       padding: compact ? '12px 16px' : '16px 20px',
@@ -188,7 +191,9 @@ const UsageBar = ({
             lineHeight: '1.5',
             fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif'
           }}>
-            You've reached your daily limit. Upgrade for unlimited chats.
+            {normalizedPlan === 'plus'
+              ? "You've reached today's Plus limit. Upgrade to Pro for unlimited chats."
+              : `You've reached today's ${planLabel} limit. Upgrade for more chats.`}
           </div>
           <button
             onClick={onUpgrade}
@@ -214,7 +219,7 @@ const UsageBar = ({
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
-            Upgrade to Plus
+            {normalizedPlan === 'plus' ? 'Upgrade to Pro' : 'Upgrade to Plus'}
           </button>
           {timeRemaining && timeRemaining !== 'Now' && (
             <div style={{
@@ -223,7 +228,7 @@ const UsageBar = ({
               textAlign: 'center',
               fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif'
             }}>
-              or wait {timeRemaining} for free chats to reset
+              or wait {timeRemaining} for {planLabel.toLowerCase()} chats to reset
             </div>
           )}
         </div>

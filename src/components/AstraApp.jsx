@@ -44,6 +44,8 @@ import { useImageInputManager, MAX_IMAGES } from './ImageInputManager.jsx';
 import { ImagePreviewStrip } from './ImagePreviewStrip.jsx';
 import { processPdfToImages } from '../utils/pdfUtils.js';
 import ImageLightbox from './ImageLightbox.jsx';
+import { CHAT_LIMITS } from '../config/chatLimits.js';
+import { getEffectiveSubscriptionPlan } from '../utils/subscriptionPlan.js';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -1844,7 +1846,7 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
       justifyContent: 'flex-start',
       padding: isMobile ? '38px 12px 48px' : '58px 20px 64px',
       minHeight: '100%',
-      gap: isMobile ? 22 : 28,
+      gap: isMobile ? 22 : 26,
       position: 'relative',
       width: '100%',
     }}>
@@ -1917,7 +1919,7 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         <div style={{
           width: '100%',
           maxWidth: isMobile ? '100%' : 680,
-          marginTop: isMobile ? 4 : 8,
+          marginTop: 0,
           position: 'relative',
           zIndex: 2,
           animation: 'fadeInUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.08s backwards',
@@ -3175,6 +3177,145 @@ const ICDCodeBadges = ({ codes, theme }) => {
 /* =========================
    WORKSPACE CARD - Subtle, muted response card matching toolbar aesthetic
    ========================= */
+const loadingCopyByMode = {
+  research: {
+    title: 'Searching the evidence',
+    details: [
+      'Reviewing the clinical literature',
+      'Comparing primary evidence',
+      'Checking guideline recommendations',
+      'Tracing claims to their sources',
+      'Synthesizing the findings',
+    ],
+  },
+  reasoning: {
+    title: 'Reasoning through the case',
+    details: [
+      'Reviewing the clinical picture',
+      'Weighing the differential',
+      'Checking for red flags',
+      'Testing the leading hypotheses',
+      'Mapping the next best steps',
+    ],
+  },
+  documentation: {
+    title: 'Building your clinical note',
+    details: [
+      'Reviewing the clinical details',
+      'Organizing the assessment and plan',
+      'Checking for missing elements',
+      'Structuring the complete note',
+      'Polishing the clinical narrative',
+    ],
+  },
+};
+
+const defaultLoadingCopy = {
+  title: 'Preparing your response',
+  details: [
+    'Reviewing the clinical details',
+    'Organizing the key findings',
+    'Preparing the clinical synthesis',
+  ],
+};
+
+const DnaThinkingLoader = ({ theme, isDark, isMobile, modeGroup }) => {
+  const copy = loadingCopyByMode[modeGroup] || defaultLoadingCopy;
+  const [detailIndex, setDetailIndex] = useState(0);
+  const detailCount = copy.details.length;
+
+  useEffect(() => {
+    setDetailIndex(0);
+
+    if (typeof window === 'undefined' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setDetailIndex((currentIndex) => (currentIndex + 1) % detailCount);
+    }, 2700);
+
+    return () => window.clearInterval(intervalId);
+  }, [detailCount, modeGroup]);
+
+  const detail = copy.details[detailIndex % detailCount];
+  const rungs = Array.from({ length: isMobile ? 9 : 11 }, (_, index) => index);
+
+  return (
+    <div
+      className="astra-reasoning-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      aria-label={copy.title}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: isMobile ? 12 : 16,
+        minHeight: isMobile ? 52 : 58,
+        padding: isMobile ? '4px 0 6px' : '5px 2px 7px',
+      }}
+    >
+      <div
+        className="astra-dna-loader"
+        aria-hidden="true"
+        style={{
+          '--dna-primary': theme.accentSoftBlue,
+          '--dna-secondary': isDark ? '#D5DCE1' : '#7C8991',
+          '--dna-bridge': isDark ? 'rgba(143, 165, 181, 0.28)' : 'rgba(74, 107, 125, 0.22)',
+          '--dna-surface': theme.backgroundSurface,
+          '--dna-glow': isDark ? 'rgba(143, 165, 181, 0.2)' : 'rgba(74, 107, 125, 0.14)',
+          width: isMobile ? 88 : 106,
+        }}
+      >
+        <div className="astra-dna-strand">
+          {rungs.map((index) => (
+            <span
+              key={index}
+              className="astra-dna-rung"
+              style={{
+                animationDelay: `${index * -0.13}s`,
+                transform: `rotateX(${index * 34}deg)`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div style={{ display: 'flex', minWidth: 0, flexDirection: 'column', gap: 3 }}>
+        <span style={{
+          color: theme.textPrimary,
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif',
+          fontSize: isMobile ? 13 : 13.5,
+          fontWeight: 590,
+          letterSpacing: '-0.012em',
+          lineHeight: 1.25,
+        }}>
+          {copy.title}
+        </span>
+        <span
+          key={`${modeGroup}-${detail}`}
+          className="astra-reasoning-detail"
+          aria-hidden="true"
+          style={{
+          color: theme.textSecondary,
+          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif',
+          fontSize: isMobile ? 11 : 11.5,
+          fontWeight: 450,
+          letterSpacing: '-0.006em',
+          lineHeight: 1.3,
+          opacity: 0.72,
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          whiteSpace: 'nowrap',
+        }}>
+          {detail}
+        </span>
+      </div>
+    </div>
+  );
+};
+
 const WorkspaceCard = ({
   workspace,
   isStreamingThis,
@@ -3362,22 +3503,12 @@ const WorkspaceCard = ({
 
                     {/* Loading */}
                     {turnIsLoading && !turnContent && (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 0' }}>
-                        <div style={{ display: 'flex', gap: 4 }}>
-                          {[0, 1, 2].map((i) => (
-                            <div key={i} style={{
-                              width: 5, height: 5, borderRadius: '50%',
-                              backgroundColor: theme.accentSoftBlue,
-                              animation: `elasticPulse 1.4s ease-in-out infinite ${i * 0.15}s`,
-                            }} />
-                          ))}
-                        </div>
-                        <span style={{
-                          fontSize: 14, fontWeight: 500, color: theme.accentSoftBlue,
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                          letterSpacing: '-0.01em',
-                        }}>Thinking</span>
-                      </div>
+                      <DnaThinkingLoader
+                        theme={theme}
+                        isDark={isDark}
+                        isMobile={isMobile}
+                        modeGroup={modeInfo.group}
+                      />
                     )}
 
                     {/* Response content */}
@@ -4199,6 +4330,7 @@ const InputBar = ({
   theme,
   onHeightChange,
   isMobile,
+  isInline = false,
   // Image upload props
   selectedImages,
   onAddImages,
@@ -4449,7 +4581,7 @@ const InputBar = ({
         paddingLeft: isMobile ? 16 : 24,
         paddingBottom: isMobile ? 'max(16px, env(safe-area-inset-bottom))' : 20,
         backgroundColor: 'transparent',
-        marginTop: isMobile ? -20 : -24,
+        marginTop: isInline ? 0 : (isMobile ? -20 : -24),
         pointerEvents: 'auto'
       }}
     >
@@ -4911,19 +5043,103 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes elasticPulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.4);
-    opacity: 0.7;
-  }
-}
 @keyframes slideInRight {
   from { opacity: 0; transform: translateX(40px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+.astra-dna-loader {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  height: 36px;
+  perspective: 180px;
+  filter: drop-shadow(0 3px 8px var(--dna-glow));
+}
+
+.astra-dna-strand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 28px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  animation: astraDnaUnwind 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.astra-dna-rung {
+  position: relative;
+  display: block;
+  width: 1.5px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    var(--dna-primary) 0%,
+    var(--dna-bridge) 44%,
+    var(--dna-bridge) 56%,
+    var(--dna-secondary) 100%
+  );
+  transform-origin: center;
+  transform-style: preserve-3d;
+  animation: astraDnaTurn 1.72s linear infinite;
+  will-change: transform, opacity;
+}
+
+.astra-dna-rung::before,
+.astra-dna-rung::after {
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: '';
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 1px var(--dna-surface);
+}
+
+.astra-dna-rung::before {
+  top: -2px;
+  background: var(--dna-primary);
+}
+
+.astra-dna-rung::after {
+  bottom: -2px;
+  background: var(--dna-secondary);
+}
+
+@keyframes astraDnaTurn {
+  0% { opacity: 0.58; transform: rotateX(0deg); }
+  24% { opacity: 0.86; }
+  50% { opacity: 1; transform: rotateX(180deg); }
+  76% { opacity: 0.86; }
+  100% { opacity: 0.58; transform: rotateX(360deg); }
+}
+
+@keyframes astraDnaUnwind {
+  0%, 100% { transform: scaleX(0.94) scaleY(0.82); }
+  46%, 62% { transform: scaleX(1.025) scaleY(1.06); }
+}
+
+.astra-reasoning-detail {
+  animation: astraReasoningDetailCycle 2.7s ease-in-out both;
+  will-change: transform, opacity;
+}
+
+@keyframes astraReasoningDetailCycle {
+  0% { opacity: 0; transform: translateY(3px); }
+  12%, 82% { opacity: 0.72; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .astra-dna-strand,
+  .astra-dna-rung,
+  .astra-reasoning-detail {
+    animation: none !important;
+  }
 }
 
 /* Workspace scroll */
@@ -5407,7 +5623,7 @@ const AstraApp = () => {
       }
     }
     // Default state if no valid cache
-    return { remaining: 5, used: 0, resetAt: null };
+    return { remaining: CHAT_LIMITS.anonymous, used: 0, resetAt: null };
   });
   const [showBilling, setShowBilling] = useState(false);
   const [subscriptionInfo, setSubscriptionInfo] = useState(null);
@@ -5429,8 +5645,13 @@ const AstraApp = () => {
   const [settingsSyncState, setSettingsSyncState] = useState('idle');
   const [settingsSyncError, setSettingsSyncError] = useState('');
 
+  const effectivePlan = isAuthenticated
+    ? getEffectiveSubscriptionPlan(accountProfile, subscriptionInfo)
+    : 'anonymous';
+
   const scrollRef = useRef(null);
   const abortControllerRef = useRef(null);
+  const chatLimitRequestRef = useRef(0);
   const [inputBarHeight, setInputBarHeight] = useState(0);
   const settingsPersistRef = useRef({ timeoutId: null, pending: null });
   const settingsStatusResetRef = useRef(null);
@@ -5695,8 +5916,10 @@ const AstraApp = () => {
       return;
     }
 
+    chatLimitRequestRef.current += 1;
+
     // For anonymous users, fetch actual usage from backend
-    const ANONYMOUS_LIMIT = 5;
+    const ANONYMOUS_LIMIT = CHAT_LIMITS.anonymous;
 
     const fetchAnonymousLimit = async () => {
       try {
@@ -5750,110 +5973,33 @@ const AstraApp = () => {
 
   // Update chat limit for authenticated users only (anonymous users fetch from backend)
   const updateChatLimit = useCallback(async () => {
-    if (isAuthenticated) {
-      console.log('📊 updateChatLimit called for authenticated user:', {
-        userId: user?.id,
-        accountProfileLoaded: !!accountProfile,
-        subscriptionStatus: accountProfile?.subscription_status
-      });
+    if (!isAuthenticated || !user?.id) return;
 
-      // Check for manual subscription first (takes precedence)
-      const hasManualSubscription = accountProfile?.manual_subscription_enabled;
-      const manualPlan = accountProfile?.manual_subscription_plan;
-      const manualExpiresAt = accountProfile?.manual_subscription_expires_at;
+    const requestId = ++chatLimitRequestRef.current;
 
-      // Check if manual subscription is valid (not expired)
-      const isManualSubscriptionValid = hasManualSubscription &&
-        (!manualExpiresAt || new Date(manualExpiresAt) > new Date());
-
-      // Check for regular Stripe subscription
-      const subscriptionStatus = accountProfile?.subscription_status;
-      const subscriptionPlan = accountProfile?.subscription?.plan_key || accountProfile?.subscription_plan;
-
-      // Check if user has an active paid subscription (manual grant OR Stripe subscription)
-      const hasActiveSubscription =
-        isManualSubscriptionValid ||
-        ((subscriptionStatus === 'active' || subscriptionStatus === 'trialing') &&
-        (subscriptionPlan === 'pro' || subscriptionPlan === 'plus'));
-
-      if (hasActiveSubscription) {
-        // Determine which plan the user has
-        const activePlan = isManualSubscriptionValid ? manualPlan : subscriptionPlan;
-        const isPro = activePlan === 'pro';
-
-        if (isPro) {
-          // Pro users get unlimited chats
-          setChatLimit({ remaining: 999, used: 0, resetAt: null });
-          console.log('🚀 Pro user - unlimited chats');
-        } else {
-          // Plus users get 30 chats/day - need to track usage
-          try {
-            const limit = await authService.checkUserLimit(user?.id);
-            const maxChats = 30;
-            const used = limit.used ?? 0;
-            setChatLimit({
-              remaining: Math.max(0, maxChats - used),
-              used: used,
-              resetAt: limit.reset_at
-            });
-            console.log('📊 Plus user - loaded usage:', { used, remaining: maxChats - used });
-          } catch (error) {
-            console.error('❌ Failed to load Plus user usage:', error);
-            // Fallback to full limit
-            setChatLimit({ remaining: 30, used: 0, resetAt: null });
-          }
-        }
-
-        // Log manual subscription info for debugging
-        if (isManualSubscriptionValid) {
-          console.log('🎁 User has manual subscription:', manualPlan);
-        }
-      } else {
-        // Free-tier authenticated users: 10 chats/day
-        const FREE_TIER_LIMIT = 10;
-        try {
-          const limit = await authService.checkUserLimit(user?.id);
-          console.log('📊 Raw backend response for free user:', limit);
-
-          // Always calculate remaining on frontend to ensure consistency
-          const used = limit.used ?? 0;
-          const remaining = Math.max(0, FREE_TIER_LIMIT - used);
-
-          setChatLimit({
-            remaining,
-            used,
-            resetAt: limit.reset_at
-          });
-          console.log('📊 Free user limit calculated:', { used, remaining, maxChats: FREE_TIER_LIMIT });
-        } catch (error) {
-          console.error('❌ Failed to load user usage limit:', error);
-          console.warn('⚠️ Unable to verify your usage limits. Using default limits. If this persists, please refresh the page.');
-
-          // Retry once after a delay
-          setTimeout(async () => {
-            try {
-              console.log('🔄 Retrying usage limit check...');
-              const limit = await authService.checkUserLimit(user?.id);
-              const used = limit.used ?? 0;
-              const remaining = Math.max(0, FREE_TIER_LIMIT - used);
-              setChatLimit({
-                remaining,
-                used,
-                resetAt: limit.reset_at
-              });
-              console.log('✅ Retry successful - Free user limit:', { used, remaining });
-            } catch (retryError) {
-              console.error('❌ Retry failed:', retryError);
-            }
-          }, 2000);
-
-          // Set fallback limits to allow usage while retrying
-          setChatLimit({ remaining: FREE_TIER_LIMIT, used: 0, resetAt: null });
-        }
-      }
+    if (effectivePlan === 'pro') {
+      setChatLimit({ remaining: 999, used: 0, resetAt: null });
+      return;
     }
-    // For anonymous users, do nothing - localStorage is the single source of truth
-  }, [isAuthenticated, accountProfile, user]);
+
+    const maxChats = effectivePlan === 'plus' ? CHAT_LIMITS.plus : CHAT_LIMITS.free;
+
+    try {
+      const limit = await authService.checkUserLimit(user.id);
+      if (requestId !== chatLimitRequestRef.current) return;
+
+      const used = limit.used ?? 0;
+      setChatLimit({
+        remaining: Math.max(0, maxChats - used),
+        used,
+        resetAt: limit.reset_at
+      });
+    } catch (error) {
+      if (requestId !== chatLimitRequestRef.current) return;
+      console.error(`Failed to load ${effectivePlan} usage:`, error);
+      setChatLimit({ remaining: maxChats, used: 0, resetAt: null });
+    }
+  }, [effectivePlan, isAuthenticated, user]);
 
   // Initialize chat limit only for authenticated users (removed for anonymous users)
   useEffect(() => {
@@ -6156,25 +6302,8 @@ const AstraApp = () => {
     // Allow sending if there's text OR images (or both)
     if ((!query.trim() && (!selectedImages || selectedImages.length === 0)) || isLoading || isStreaming) return;
 
-    // Check if user has active subscription (for authenticated users)
-    const subscriptionStatus = accountProfile?.subscription_status;
-    const subscriptionPlan = accountProfile?.subscription?.plan_key || accountProfile?.subscription_plan;
-
-    // Check for manual subscription
-    const hasManualSubscription = accountProfile?.manual_subscription_enabled;
-    const manualExpiresAt = accountProfile?.manual_subscription_expires_at;
-    const isManualSubscriptionValid = hasManualSubscription && (!manualExpiresAt || new Date(manualExpiresAt) > new Date());
-    const manualPlan = accountProfile?.manual_subscription_plan;
-
-    const hasActiveSubscription =
-      isManualSubscriptionValid ||
-      ((subscriptionStatus === 'active' || subscriptionStatus === 'trialing') &&
-      (subscriptionPlan === 'pro' || subscriptionPlan === 'plus'));
-
-    // Determine active plan
-    const activePlan = isManualSubscriptionValid ? manualPlan : subscriptionPlan;
-    const isPro = hasActiveSubscription && activePlan === 'pro';
-    const isPlus = hasActiveSubscription && activePlan === 'plus';
+    const isPro = effectivePlan === 'pro';
+    const isPlus = effectivePlan === 'plus';
 
     // Check limits based on user type
     if (!isAuthenticated) {
@@ -6190,8 +6319,8 @@ const AstraApp = () => {
       // Update local state (optimistic update)
       setChatLimit(prev => {
         const resetAt = prev.resetAt || authService.getDefaultAnonymousResetTimestamp();
-        const nextUsed = Math.min(5, (prev.used || 0) + 1);
-        const nextRemaining = Math.max(0, 5 - nextUsed);
+        const nextUsed = Math.min(CHAT_LIMITS.anonymous, (prev.used || 0) + 1);
+        const nextRemaining = Math.max(0, CHAT_LIMITS.anonymous - nextUsed);
         const nextState = {
           remaining: nextRemaining,
           used: nextUsed,
@@ -6207,7 +6336,7 @@ const AstraApp = () => {
       // Pro users: Unlimited - no limit check needed
       console.log('🚀 Pro user - unlimited chats');
     } else if (isPlus) {
-      // Plus users: 30 chats/day
+      // Plus users: 50 chats/day
       if (chatLimit.remaining <= 0) {
         setShowPaywall(true);
         return;
@@ -6217,7 +6346,7 @@ const AstraApp = () => {
 
       // Update local state (optimistic update)
       setChatLimit(prev => {
-        const maxChats = 30;
+        const maxChats = CHAT_LIMITS.plus;
         const nextUsed = Math.min(maxChats, (prev.used || 0) + 1);
         const nextRemaining = Math.max(0, maxChats - nextUsed);
         if (nextRemaining <= 0) {
@@ -6229,7 +6358,7 @@ const AstraApp = () => {
           resetAt: prev.resetAt
         };
       });
-    } else if (!hasActiveSubscription) {
+    } else {
       // Free-tier authenticated users: 10 chats/day
       if (chatLimit.remaining <= 0) {
         setShowPaywall(true);
@@ -6240,7 +6369,7 @@ const AstraApp = () => {
 
       // Update local state (optimistic update)
       setChatLimit(prev => {
-        const maxChats = 10;
+        const maxChats = CHAT_LIMITS.free;
         const nextUsed = Math.min(maxChats, (prev.used || 0) + 1);
         const nextRemaining = Math.max(0, maxChats - nextUsed);
         if (nextRemaining <= 0) {
@@ -6691,6 +6820,7 @@ const AstraApp = () => {
                       theme={theme}
                       onHeightChange={setInputBarHeight}
                       isMobile={isMobile}
+                      isInline
                       selectedImages={selectedImages}
                       onAddImages={addImages}
                       onRemoveImage={removeImage}
@@ -6780,6 +6910,7 @@ const AstraApp = () => {
         theme={theme}
         chatLimit={chatLimit}
         isAuthenticated={isAuthenticated}
+        plan={effectivePlan}
         onUpgrade={() => setShowBilling(true)}
       />
 
@@ -6829,20 +6960,7 @@ const AstraApp = () => {
         syncState={settingsSyncState}
         syncError={settingsSyncError}
         chatLimit={chatLimit}
-        isPaidUser={(() => {
-          // Check manual subscription
-          const hasManualSubscription = accountProfile?.manual_subscription_enabled;
-          const manualExpiresAt = accountProfile?.manual_subscription_expires_at;
-          const isManualSubscriptionValid = hasManualSubscription && (!manualExpiresAt || new Date(manualExpiresAt) > new Date());
-
-          // Check Stripe subscription
-          const subscriptionStatus = accountProfile?.subscription_status;
-          const subscriptionPlan = accountProfile?.subscription?.plan_key || accountProfile?.subscription_plan;
-
-          return isManualSubscriptionValid ||
-                 ((subscriptionStatus === 'active' || subscriptionStatus === 'trialing') &&
-                  (subscriptionPlan === 'pro' || subscriptionPlan === 'plus'));
-        })()}
+        plan={effectivePlan}
         onUpgrade={() => setShowBilling(true)}
       />
 
