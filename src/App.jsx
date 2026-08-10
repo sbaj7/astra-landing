@@ -6,6 +6,7 @@ import AstraApp from './components/AstraApp.jsx';
 import ArticlePage from './routes/ArticlePage.jsx';
 import AboutPage from './routes/AboutPage.jsx';
 import QBankPage from './routes/QBankPage.jsx';
+import ReferralAdminPage from './routes/ReferralAdminPage.jsx';
 import './App.css';
 
 export const AppRoutes = () => (
@@ -14,6 +15,7 @@ export const AppRoutes = () => (
     <Route path="/article/:slug" element={<ArticlePage />} />
     <Route path="/about" element={<AboutPage />} />
     <Route path="/qbank" element={<QBankPage />} />
+    <Route path="/admin/referrals" element={<ReferralAdminPage />} />
     <Route path="/*" element={<AstraApp />} />
   </Routes>
 );

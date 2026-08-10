@@ -1,6 +1,12 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.5";
 import Stripe from "https://esm.sh/stripe@14.21.0?target=deno";
+import {
+  getActivePlanPrices,
+  getPlanKeyForPrice,
+  type PlanKey
+} from "../_shared/stripePlans.ts";
+import { selectCurrentSubscription } from "../_shared/subscriptions.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,51 +25,6 @@ if (!stripeSecretKey) {
 const stripe = new Stripe(stripeSecretKey, {
   apiVersion: "2024-04-10"
 });
-
-type PlanKey = "plus" | "pro";
-
-function readFirstNonEmptyEnv(keys: string[]): string | undefined {
-  for (const key of keys) {
-    if (!key) continue;
-    const value = Deno.env.get(key);
-    if (value && value.trim().length > 0) {
-      return value.trim();
-    }
-  }
-  return undefined;
-}
-
-const priceIdCandidates: Record<PlanKey, string[]> = {
-  plus: ["STRIPE_PLUS_PRICE_ID", "STRIPE_STARTER_PRICE_ID", "VITE_STRIPE_PLUS_PRICE_ID"],
-  pro: ["STRIPE_PRO_PRICE_ID", "VITE_STRIPE_PRO_PRICE_ID"]
-};
-
-const resolvedPriceIds = Object.fromEntries(
-  (Object.entries(priceIdCandidates) as [PlanKey, string[]][]).map(([plan, envKeys]) => [
-    plan,
-    readFirstNonEmptyEnv(envKeys)
-  ])
-) as Record<PlanKey, string | undefined>;
-
-const missingPlanIds = (Object.entries(resolvedPriceIds) as [PlanKey, string | undefined][]).filter(
-  ([, value]) => !value
-);
-
-if (missingPlanIds.length > 0) {
-  const missingPlans = missingPlanIds.map(([plan]) => plan).join(", ");
-  throw new Error(
-    `Missing Stripe price IDs for plan(s): ${missingPlans}. ` +
-      `Set STRIPE_<PLAN>_PRICE_ID environment variables for the billing function (e.g. STRIPE_PLUS_PRICE_ID).`
-  );
-}
-
-// Price ID mapping for your plans (validated above)
-const PRICE_IDS = resolvedPriceIds as Record<PlanKey, string>;
-
-// Reverse mapping for subscription lookups
-const PLAN_BY_PRICE_ID = Object.fromEntries(
-  (Object.entries(PRICE_IDS) as [PlanKey, string][]).map(([plan, priceId]) => [priceId, plan])
-) as Record<string, PlanKey>;
 
 // Supabase configuration
 const supabaseUrl = Deno.env.get("SUPABASE_URL");
@@ -273,7 +234,7 @@ async function findExistingStripeCustomer(
       if (customersByEmail.data.length > 0) {
         // Prefer customer that has matching supabase_user_id in metadata
         const matchingCustomer = customersByEmail.data.find(
-          c => c.metadata?.supabase_user_id === supabaseUserId
+          (customer: Stripe.Customer) => customer.metadata?.supabase_user_id === supabaseUserId
         );
 
         if (matchingCustomer) {
@@ -460,7 +421,11 @@ async function syncSubscriptionMetadata(
     metadata.subscription = null;
   }
 
-  const additional: Record<string, any> = {};
+  const additional: Record<string, any> = {
+    subscription_status: subscription && (subscription.status === "active" || subscription.status === "trialing")
+      ? planKey || "free"
+      : "free"
+  };
   if (supabaseUser.email && supabaseUser.email !== authUser.email) {
     additional.email = supabaseUser.email;
   }
@@ -485,7 +450,6 @@ serve(async (req) => {
 
     const {
       action,
-      supabase_user,
       plan: planFromRequest,
       planKey: legacyPlanKey,
       return_url
@@ -498,15 +462,25 @@ serve(async (req) => {
       );
     }
 
-    if (!supabase_user?.id) {
+    const authorization = req.headers.get("Authorization");
+    const accessToken = authorization?.replace(/^Bearer\s+/i, "").trim();
+    if (!accessToken) {
       return new Response(
-        JSON.stringify({ error: "Supabase user is required" }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        JSON.stringify({ error: "Authentication is required" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
     const supabaseClient = createSupabaseClient();
-    const supabaseUser = supabase_user as SupabaseUser;
+    const { data: authData, error: authError } = await supabaseClient.auth.getUser(accessToken);
+    if (authError || !authData.user) {
+      return new Response(
+        JSON.stringify({ error: "Invalid or expired session" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const supabaseUser = authData.user as SupabaseUser;
     const authUser = await ensureAuthUserRecord(supabaseClient, supabaseUser);
     const planKey = normalizePlanKeyInput(planFromRequest) ?? normalizePlanKeyInput(legacyPlanKey);
 
@@ -533,7 +507,7 @@ serve(async (req) => {
       status: result.status,
       headers: { ...corsHeaders, "Content-Type": "application/json" }
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error("[billing] error", error);
     return new Response(
       JSON.stringify({ error: error.message ?? "Unexpected error" }),
@@ -549,34 +523,50 @@ async function createCheckoutSession(
   returnUrl: string | undefined,
   supabaseClient: SupabaseClient
 ): Promise<HandlerResponse> {
-  if (!planKey || !PRICE_IDS[planKey]) {
+  if (!planKey) {
     return {
       status: 400,
       body: { error: `Invalid plan: ${planKey}. Must be 'plus' or 'pro'` }
     };
   }
 
-  const priceId = PRICE_IDS[planKey];
   const baseReturnUrl = returnUrl || DEFAULT_RETURN_URL;
 
   try {
+    const prices = await getActivePlanPrices(stripe);
+    const price = prices[planKey];
     const { customer } = await getOrCreateStripeCustomer(supabaseUser, supabaseClient, authUser);
+    const priorSubscriptions = await stripe.subscriptions.list({
+      customer: customer.id,
+      status: "all",
+      limit: 1
+    });
+    const isTrialEligible = priorSubscriptions.data.length === 0;
 
     const session = await stripe.checkout.sessions.create({
       customer: customer.id,
       payment_method_types: ["card"],
       line_items: [
         {
-          price: priceId,
+          price: price.id,
           quantity: 1
         }
       ],
       mode: "subscription",
+      allow_promotion_codes: true,
       success_url: `${baseReturnUrl}?billing=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${baseReturnUrl}?billing=cancelled`,
       metadata: {
         supabase_user_id: supabaseUser.id,
         plan_key: planKey
+      },
+      subscription_data: {
+        ...(isTrialEligible ? { trial_period_days: 14 } : {}),
+        metadata: {
+          supabase_user_id: supabaseUser.id,
+          plan_key: planKey,
+          price_lookup_key: price.lookup_key || ""
+        }
       }
     });
 
@@ -636,11 +626,13 @@ async function getSubscription(
 
     const subscriptions = await stripe.subscriptions.list({
       customer: customer.id,
-      status: "active",
-      limit: 1
+      status: "all",
+      limit: 20
     });
 
-    if (subscriptions.data.length === 0) {
+    const subscription = selectCurrentSubscription<Stripe.Subscription>(subscriptions.data);
+
+    if (!subscription) {
       await syncSubscriptionMetadata(supabaseClient, supabaseUser, hydratedAuthUser, customer, null, null, null);
 
       // Fetch fresh user data including manual subscription fields
@@ -659,9 +651,9 @@ async function getSubscription(
       };
     }
 
-    const subscription = subscriptions.data[0];
-    const priceId = subscription.items.data[0]?.price?.id ?? null;
-    const planKey = priceId ? PLAN_BY_PRICE_ID[priceId] ?? null : null;
+    const subscriptionPrice = subscription.items.data[0]?.price;
+    const priceId = subscriptionPrice?.id ?? null;
+    const planKey = getPlanKeyForPrice(subscriptionPrice);
 
     await syncSubscriptionMetadata(
       supabaseClient,
@@ -688,6 +680,8 @@ async function getSubscription(
           status: subscription.status,
           current_period_end: subscription.current_period_end,
           current_period_start: subscription.current_period_start,
+          trial_end: subscription.trial_end ?? null,
+          cancel_at_period_end: subscription.cancel_at_period_end ?? false,
           price_id: priceId,
           plan_key: planKey
         },

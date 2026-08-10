@@ -17,7 +17,13 @@ verify_jwt = false
 verify_jwt = false
 
 [functions.billing-supabase]
+verify_jwt = true
+
+[functions.pricing]
 verify_jwt = false
+
+[functions.referral-admin]
+verify_jwt = true
 
 [functions.qbank-generate]
 verify_jwt = false

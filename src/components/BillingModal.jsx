@@ -1,12 +1,11 @@
-import React from 'react';
-import { X, Check, Loader2, ExternalLink } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { X, Check, Loader2, ExternalLink, RefreshCw } from 'lucide-react';
+import { fetchPricing } from '../services/pricingService.js';
 
-const plans = [
+const planPresentation = [
   {
     id: 'plus',
     name: 'Plus',
-    price: '$20',
-    cadence: 'per month',
     description: 'For individual clinicians who need enhanced clinical support.',
     features: [
       'Rate limited research chats',
@@ -18,8 +17,6 @@ const plans = [
   {
     id: 'pro',
     name: 'Pro',
-    price: '$50',
-    cadence: 'per month',
     description: 'For advanced practitioners who need comprehensive clinical tools.',
     features: [
       'Everything in Plus, unlimited',
@@ -30,6 +27,16 @@ const plans = [
     ]
   }
 ];
+
+const formatPrice = ({ amount, currency }) => new Intl.NumberFormat(undefined, {
+  style: 'currency',
+  currency: currency.toUpperCase(),
+  maximumFractionDigits: amount % 100 === 0 ? 0 : 2
+}).format(amount / 100);
+
+const formatCadence = ({ interval, interval_count: intervalCount }) => (
+  intervalCount === 1 ? `per ${interval}` : `every ${intervalCount} ${interval}s`
+);
 
 const formatTimestamp = (ts) => {
   if (!ts) return null;
@@ -78,6 +85,43 @@ const BillingModal = ({
   isProcessing,
   isMobile = false
 }) => {
+  const [pricing, setPricing] = useState(null);
+  const [pricingError, setPricingError] = useState(null);
+  const [isPricingLoading, setIsPricingLoading] = useState(false);
+  const [pricingRequest, setPricingRequest] = useState(0);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const controller = new AbortController();
+    setIsPricingLoading(true);
+    setPricingError(null);
+
+    fetchPricing({ signal: controller.signal })
+      .then(setPricing)
+      .catch((pricingLoadError) => {
+        if (pricingLoadError.name !== 'AbortError') {
+          console.error('Failed to load Stripe pricing', pricingLoadError);
+          setPricing(null);
+          setPricingError('Live pricing could not be loaded. Checkout is disabled until it is available.');
+        }
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setIsPricingLoading(false);
+      });
+
+    return () => controller.abort();
+  }, [isOpen, pricingRequest]);
+
+  const plans = useMemo(() => planPresentation.map((plan) => {
+    const livePrice = pricing?.[plan.id];
+    return {
+      ...plan,
+      price: livePrice ? formatPrice(livePrice) : '—',
+      cadence: livePrice ? formatCadence(livePrice) : ''
+    };
+  }), [pricing]);
+
   if (!isOpen) return null;
 
   // Check for manual subscription first (takes precedence)
@@ -95,6 +139,9 @@ const BillingModal = ({
   const effectivePlan = isManualSubscriptionValid ? manualPlan : subscription?.plan_key;
   const activePlanId = effectivePlan || null;
   const isSubscribed = Boolean(subscription || isManualSubscriptionValid);
+  const trialEndDate = subscription?.status === 'trialing'
+    ? formatTimestamp(subscription.trial_end)
+    : null;
   const renewalDate = isManualSubscriptionValid
     ? (manualExpiresAt ? new Date(manualExpiresAt).toLocaleDateString() : 'Never expires')
     : (subscription ? formatTimestamp(subscription.current_period_end) : null);
@@ -163,7 +210,7 @@ const BillingModal = ({
           <div>
             <h2 style={{ margin: 0, fontSize: isMobile ? 24 : 28, fontWeight: 600, color: theme.textPrimary }}>Billing & plans</h2>
             <p style={{ marginTop: 8, color: theme.textSecondary, lineHeight: 1.6, fontSize: isMobile ? 13 : 14 }}>
-              Upgrade to unlock unlimited chats, reasoning mode, and premium medical evidence packs.
+              New subscribers get 14 days free, then standard monthly billing begins. Cancel anytime during the trial.
             </p>
           </div>
 
@@ -201,6 +248,40 @@ const BillingModal = ({
             </div>
           )}
 
+          {pricingError && (
+            <div
+              style={{
+                padding: '12px 16px',
+                borderRadius: 12,
+                backgroundColor: `${theme.errorColor}18`,
+                color: theme.errorColor,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 12
+              }}
+            >
+              <span>{pricingError}</span>
+              <button
+                type="button"
+                onClick={() => setPricingRequest((request) => request + 1)}
+                style={{
+                  border: 'none',
+                  background: 'transparent',
+                  color: 'inherit',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  fontWeight: 600
+                }}
+              >
+                <RefreshCw size={15} />
+                Retry
+              </button>
+            </div>
+          )}
+
           <div
             style={{
               display: 'grid',
@@ -219,7 +300,7 @@ const BillingModal = ({
               const buttonColor = isActive ? theme.textPrimary : '#fff';
               const buttonLabel = isActive
                 ? 'Selected'
-                : isLoading || isProcessing
+                : isLoading || isProcessing || isPricingLoading
                   ? (
                     <>
                       <Loader2 size={16} style={{ animation: 'billing-spin 1s linear infinite' }} />
@@ -228,7 +309,9 @@ const BillingModal = ({
                   )
                   : isDowngradeOption
                     ? 'Downgrade'
-                    : 'Upgrade';
+                    : isSubscribed
+                      ? 'Upgrade'
+                      : 'Start 14-day free trial';
 
               return (
                 <div
@@ -251,6 +334,10 @@ const BillingModal = ({
                     />
                   )}
 
+                  {!isSubscribed && (
+                    <Badge label="14 days free" theme={theme} />
+                  )}
+
                   <div>
                     <h3 style={{ fontSize: isMobile ? 18 : 20, margin: 0, color: theme.textPrimary }}>{plan.name}</h3>
                     <p style={{ margin: '6px 0 0', color: theme.textSecondary, fontSize: isMobile ? 13 : 14 }}>{plan.description}</p>
@@ -260,6 +347,12 @@ const BillingModal = ({
                     <span style={{ fontSize: isMobile ? 26 : 30, fontWeight: 700, color: theme.textPrimary }}>{plan.price}</span>
                     <span style={{ fontSize: isMobile ? 13 : 14, color: theme.textSecondary }}>{plan.cadence}</span>
                   </div>
+
+                  {!isSubscribed && (
+                    <p style={{ margin: '-8px 0 0', color: theme.textSecondary, fontSize: isMobile ? 12 : 13 }}>
+                      No charge today. Billing starts after the trial.
+                    </p>
+                  )}
 
                   <ul style={{ listStyle: 'none', padding: 0, margin: '8px 0 0', display: 'flex', flexDirection: 'column', gap: isMobile ? 8 : 10 }}>
                     {plan.features.map((feature) => (
@@ -272,7 +365,7 @@ const BillingModal = ({
 
                   <button
                     onClick={() => onSelectPlan?.(plan.id)}
-                    disabled={isLoading || isProcessing || isActive}
+                    disabled={isLoading || isProcessing || isPricingLoading || Boolean(pricingError) || !pricing || isActive}
                     style={{
                       marginTop: 'auto',
                       padding: isMobile ? '11px 14px' : '12px 16px',
@@ -280,7 +373,7 @@ const BillingModal = ({
                       border: 'none',
                       backgroundColor: buttonBackground,
                       color: buttonColor,
-                      cursor: isActive ? 'default' : 'pointer',
+                      cursor: isActive || pricingError || !pricing ? 'default' : 'pointer',
                       fontWeight: 600,
                       fontSize: 14,
                       display: 'flex',
@@ -328,9 +421,11 @@ const BillingModal = ({
                     )}
                   </div>
                 ) : (
-                  renewalDate
-                    ? `Renews automatically on ${renewalDate}.`
-                    : 'Your subscription renews automatically.'
+                  trialEndDate
+                    ? `Your free trial ends on ${trialEndDate}. Monthly billing begins afterward.`
+                    : renewalDate
+                      ? `Renews automatically on ${renewalDate}.`
+                      : 'Your subscription renews automatically.'
                 )}
               </div>
               {!isManualSubscriptionValid && (

@@ -6,25 +6,6 @@ const AUTH_API_URL = 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/auth
 const BILLING_API_URL = (import.meta?.env?.VITE_BILLING_API_URL) || 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/billing-supabase';
 const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8';
 
-const PLAN_PRICE_IDS = {
-  plus: import.meta.env.VITE_STRIPE_PLUS_PRICE_ID,
-  pro: import.meta.env.VITE_STRIPE_PRO_PRICE_ID
-};
-
-const PRICE_TO_PLAN = Object.fromEntries(
-  Object.entries(PLAN_PRICE_IDS)
-    .filter(([, priceId]) => Boolean(priceId))
-    .map(([planKey, priceId]) => [priceId, planKey])
-);
-
-const getPlanPriceId = (planKey) => {
-  const priceId = PLAN_PRICE_IDS[planKey];
-  if (!priceId) {
-    throw new Error(`Missing Stripe price id for plan "${planKey}". Ensure VITE_STRIPE_${planKey?.toUpperCase?.() || planKey}_PRICE_ID is set.`);
-  }
-  return priceId;
-};
-
 console.log('🔧 Auth Service: Production mode');
 
 // Helper function to validate and ensure UUID format
@@ -261,7 +242,7 @@ class AuthService {
     }
 
     // Create a cache key based on the action and user ID to prevent duplicate requests
-    const userId = data.supabase_user?.id;
+    const userId = data.supabase_user?.id || this.currentSupabaseUser?.id;
     const cacheKey = userId ? `${action}_${userId}` : `${action}_anonymous`;
 
     // If there's already a request in progress for this action+user, return it
@@ -625,7 +606,6 @@ class AuthService {
     const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
 
     return await this.callBillingAPI('create_checkout_session', {
-      supabase_user: normalizedUser,
       planKey: planKey,
       return_url: baseReturnUrl
     });
@@ -640,7 +620,6 @@ class AuthService {
     const baseReturnUrl = returnUrl || (typeof window !== 'undefined' ? window.location.origin : '');
 
     return await this.callBillingAPI('create_portal_session', {
-      supabase_user: normalizedUser,
       return_url: baseReturnUrl
     });
   }
@@ -652,7 +631,7 @@ class AuthService {
     console.log('📊 Getting subscription status for user');
 
     return await this.callBillingAPI('get_subscription', {
-      supabase_user: normalizedUser
+      user_id: normalizedUser.id
     });
   }
 
