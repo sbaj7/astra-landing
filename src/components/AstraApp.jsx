@@ -3470,7 +3470,17 @@ const WorkspaceCard = ({
                               marginBottom: 8,
                               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
                             }}>Sources</div>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                            {/* Retrieval now returns 35-45 sources per search, so this
+                                list is scrolled rather than rendered full-height. ~10
+                                rows visible; the rest are one scroll away. */}
+                            <div style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: 6,
+                              maxHeight: 260,
+                              overflowY: 'auto',
+                              paddingRight: 4,
+                            }}>
                               {turnCitations.map((cit, ci) => {
                                 const host = cit.host || cit.hostname || (() => { try { return new URL(cit.url).hostname; } catch { return ''; } })();
                                 const favicon = cit.faviconUrl || cit.favicon || buildFaviconUrl(host);
