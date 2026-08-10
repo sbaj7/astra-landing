@@ -1817,7 +1817,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 
 
 const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, onOpenQbank, theme, isMobile, inputBarSlot }) => {
-  if (import.meta.env.DEV) {
+  if (import.meta.env.VITE_FIRST_PAGE_EXPERIENCE !== 'legacy') {
     return (
       <FirstPageExperience
         currentMode={currentMode}
