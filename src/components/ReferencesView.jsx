@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import { X, ExternalLink, Copy, Check } from 'lucide-react';
+
+// Show at most this many citations before the list scrolls. Retrieval now
+// returns 35-45 sources per search, so an uncapped list made the panel a wall.
+const VISIBLE_CITATIONS = 10;
 
 const isHttpUrl = (url) => typeof url === 'string' && (url.startsWith('http://') || url.startsWith('https://'));
 
@@ -31,6 +35,24 @@ const formatPublishedDate = (value) => {
 
 const ReferencesView = ({ citations, isPresented, onDismiss, theme }) => {
   const [showCopied, setShowCopied] = useState(false);
+  const listRef = useRef(null);
+  const [listMaxHeight, setListMaxHeight] = useState(null);
+
+  // Rows are variable height (title wrap, optional snippet/date), so measure the
+  // real 10th row instead of guessing a pixel constant.
+  useLayoutEffect(() => {
+    if (!isPresented) return;
+    const el = listRef.current;
+    if (!el) return;
+    const rows = el.querySelectorAll('[data-citation-row]');
+    if (rows.length <= VISIBLE_CITATIONS) {
+      setListMaxHeight(null);
+      return;
+    }
+    const top = rows[0].getBoundingClientRect().top;
+    const bottom = rows[VISIBLE_CITATIONS - 1].getBoundingClientRect().bottom;
+    setListMaxHeight(Math.round(bottom - top + 8));
+  }, [citations, isPresented]);
 
   if (!isPresented) return null;
 
@@ -151,7 +173,17 @@ const ReferencesView = ({ citations, isPresented, onDismiss, theme }) => {
           </h1>
         </div>
 
-        <div style={{ overflowY: 'auto', padding: '4px 0 16px' }}>
+        <div
+          ref={listRef}
+          style={{
+            overflowY: 'auto',
+            padding: '4px 0 16px',
+            // Whichever is smaller: 10 rows, or the panel's viewport cap. Keeps a
+            // 40-citation list scrollable without making the modal taller than
+            // the screen on a laptop.
+            ...(listMaxHeight ? { maxHeight: listMaxHeight } : {})
+          }}
+        >
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {citations.map((citation) => {
               const key = citation.id || `${citation.number}-${citation.url || citation.title}`;
@@ -164,6 +196,7 @@ const ReferencesView = ({ citations, isPresented, onDismiss, theme }) => {
               return (
                 <button
                   key={key}
+                  data-citation-row
                   disabled={!isClickable}
                   onClick={() => handleCitationClick(citation)}
                   style={{

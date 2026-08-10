@@ -1,6 +1,6 @@
 // qbank-generate — generates one USMLE-style one-best-answer item with OpenAI.
 //
-// Pipeline: author (gpt-5.1, structured JSON output, NBME rules) -> critic/flaw
+// Pipeline: author (gpt-5.6, structured JSON output, NBME rules) -> critic/flaw
 // gate (second pass that repairs any technical flaw or factual issue) -> validate
 // -> persist to qbank_items -> return. Grounding/RAG is a TODO hook (retrieve()).
 //
@@ -15,7 +15,7 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const MODEL = "gpt-5.1";
+const MODEL = "gpt-5.6";
 const GENERATOR_VERSION = "qbank-gen-1-openai";
 const OPENAI_URL = "https://api.openai.com/v1/chat/completions";
 

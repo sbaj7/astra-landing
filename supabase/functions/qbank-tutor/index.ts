@@ -14,7 +14,7 @@ const corsHeaders = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const MODEL = "gpt-5.1";
+const MODEL = "gpt-5.6";
 
 const PERSONA =
   "You are a sharp, friendly USMLE tutor helping a student understand a question they just answered. " +

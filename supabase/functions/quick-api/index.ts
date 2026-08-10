@@ -116,36 +116,25 @@ const trustedDomains = [
   "nature.com",
   "science.org",
   "sciencedirect.com",
-  "cell.com"
+  "cell.com",
+  // Modern hosts for journals already listed above. Several society domains
+  // have migrated (ATS + Brain -> OUP; CJASN, Annals of Surgery, Neurosurgery
+  // -> LWW; Arthroscopy -> Wiley; AAP -> publications.aap.org), so without
+  // these the relocated content is unreachable. The ranking tiers below
+  // already scored OUP/LWW/Wiley — they were just never let through.
+  "academic.oup.com",
+  "journals.lww.com",
+  "onlinelibrary.wiley.com",
+  "publications.aap.org",
+  "asn-online.org",
+  // Flagship journals whose society domain was listed but the journal was not:
+  // acc.org passed (news pages) while JACC itself was filtered out.
+  "jacc.org",
+  "ccjm.org"
 ];
 // ==============================
 // SYSTEM PROMPTS
 // ==============================
-function getQueryPlannerPrompt() {
-  return `You are a medical research query planner. Your job is to analyze a physician's research question and generate 2-4 optimal search queries for finding relevant medical literature.
-
-TASK: Break down the user's question into focused, searchable components that will retrieve the most relevant medical literature.
-
-OUTPUT FORMAT (JSON only):
-{
-  "primaryQuery": "most important search query",
-  "secondaryQueries": [
-    "additional focused query 1",
-    "additional focused query 2"
-  ],
-  "searchFocus": "brief explanation of search strategy"
-}
-
-SEARCH STRATEGY PRINCIPLES:
-- Use medical terminology and MeSH terms when appropriate
-- Include specific population, intervention, comparison, outcome (PICO) elements
-- Consider both broad disease terms and specific interventions
-- Include variant spellings and synonyms for key concepts
-- Focus on systematic reviews, RCTs, and meta-analyses when treatment questions
-- Include epidemiological terms for prevalence/incidence questions
-
-Now analyze the user's question and generate optimal search queries.`;
-}
 function getLiteratureReviewPlannerPrompt() {
   return `You are a medical literature review architect. Break down the research question into 6-7 thematic areas for a comprehensive systematic literature review.
 
@@ -1561,68 +1550,57 @@ WRITING PRINCIPLES
 // ==============================
 // SEARCH FUNCTIONS
 // ==============================
-async function planSearchQueries(userQuery) {
-  try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "gpt-5-mini",
-        messages: [
-          {
-            role: "system",
-            content: getQueryPlannerPrompt()
-          },
-          {
-            role: "user",
-            content: userQuery
-          }
-        ],
-        max_completion_tokens: 1200,
-        reasoning_effort: "none"
-      })
-    });
-    if (!response.ok) throw new Error(`Query planning failed: ${response.status}`);
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content;
-    if (!content) throw new Error("No content returned from query planner");
-    try {
-      return JSON.parse(content);
-    } catch {
-      return {
-        primaryQuery: userQuery,
-        secondaryQueries: [],
-        searchFocus: "JSON parsing failed, using original query"
-      };
-    }
-  } catch (error) {
-    console.error("❌ Query planning error:", error);
-    return {
-      primaryQuery: userQuery,
-      secondaryQueries: [],
-      searchFocus: "Using original query as fallback"
-    };
-  }
+// Deterministic 3-query fan-out — replaces the old LLM query planner.
+//
+// Measured: what drives source count and publisher diversity is the NUMBER of
+// distinct queries fired (1 query -> 20 results from one domain; 3 queries -> ~42
+// mixed), not how elegantly they're phrased. The planner cost a full model
+// round-trip on every single search (~12s measured with reasoning enabled) to
+// rewrite medical terminology into medical terminology for an audience that
+// already types it. It was also failing silently — `reasoning_effort: "none"`
+// 400'd, and the catch fell back to ONE query, which is what made search feel
+// like it returned too few and too-weird sources.
+//
+// Literature review keeps its LLM planner: decomposing a topic into 6-7 thematic
+// areas is real semantic work that templates can't fake, and that mode is
+// expected to be slow.
+function buildQueryPlan(userQuery) {
+  // Cap length: `query` may carry an appended vision-analysis block, and Tavily
+  // degrades badly on very long queries.
+  const q = (userQuery || "").trim().slice(0, 300);
+  return {
+    primaryQuery: q,
+    secondaryQueries: [
+      `${q} randomized controlled trial`,
+      `${q} guidelines recommendations`
+    ],
+    searchFocus: "primary + trials + guidelines"
+  };
 }
 async function searchWithTavily(queryPlan) {
   try {
     const tavilyApiKey = "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";
+    // Tavily bills per SEARCH, not per result, so a higher max_results is free
+    // headroom — same credit cost, ~2.5x the sources. 20 is the practical
+    // ceiling: asking for 30 measurably degrades the response (returns ~10).
     const searchPromises = [
-      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 8),
-      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 6))
+      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 20),
+      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 15))
     ];
     const searchResults = await Promise.all(searchPromises);
     const allResults = searchResults.flat().filter(Boolean);
+    // Dedupe on URL *and* normalized title: the same article is routinely indexed
+    // at several URLs on one publisher (/doi/10.1161/x vs /doi/full/10.1161/x),
+    // which used to burn two citation slots and cite one paper twice.
     const uniqueResults = [];
     const seenUrls = new Set();
+    const seenTitles = new Set();
     for (const result of allResults) {
-      if (!seenUrls.has(result.url)) {
-        seenUrls.add(result.url);
-        uniqueResults.push(result);
-      }
+      const titleKey = (result.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      if (seenUrls.has(result.url) || (titleKey && seenTitles.has(titleKey))) continue;
+      seenUrls.add(result.url);
+      if (titleKey) seenTitles.add(titleKey);
+      uniqueResults.push(result);
     }
     const rankedResults = rankAndFilterResults(uniqueResults);
     return {
@@ -1711,30 +1689,35 @@ function rankAndFilterResults(results) {
     "nature.com",
     "ahajournals.org",
     "annals.org",
-    "sciencedirect.com"
+    "acpjournals.org",
+    "jacc.org",
+    "cell.com",
+    "science.org"
   ];
   const tier3Domains = [
     "academic.oup.com",
     "onlinelibrary.wiley.com",
-    "journals.lww.com"
+    "journals.lww.com",
+    "sciencedirect.com"
   ];
   // Defense in depth: even here, keep only trusted hosts.
   const clean = results.filter((r) => isTrustedHost(hostOf(r.url)));
-  const pubmedResults = clean.filter((r) => hostOf(r.url).includes("ncbi.nlm.nih.gov")).slice(0, 4);
-  const nonPubmedResults = clean.filter((r) => !hostOf(r.url).includes("ncbi.nlm.nih.gov"));
-  nonPubmedResults.sort((a, b) => {
-    const getScore = (domain) => {
-      if (tier1Domains.includes(domain)) return 4;
-      if (tier2Domains.includes(domain)) return 3;
-      if (tier3Domains.includes(domain)) return 2;
-      return 1;
-    };
-    return getScore(hostOf(b.url)) - getScore(hostOf(a.url));
-  });
-  return [
-    ...nonPubmedResults.slice(0, 12),
-    ...pubmedResults
-  ];
+  // Match subdomains, not just exact hosts: clinician.nejm.org, pmc.ncbi.nlm.nih.gov
+  // and stroke.ahajournals.org are the SAME publishers as the tier entries, but
+  // exact-match scoring silently graded them bottom-tier.
+  const inTier = (tier, host) => tier.some((d) => host === d || host.endsWith("." + d));
+  const getScore = (domain) => {
+    if (inTier(tier1Domains, domain)) return 4;
+    if (inTier(tier2Domains, domain)) return 3;
+    if (inTier(tier3Domains, domain)) return 2;
+    return 1;
+  };
+  // NO CAPS: every trusted source we retrieved reaches the model, ordered by
+  // journal tier. The old version capped ncbi.nlm.nih.gov at 4 and everything
+  // else at 12 — since PubMed/PMC is where most citable open literature lives,
+  // that silently discarded the majority of a good retrieval (measured: 18
+  // sources found, 6 delivered). Ranking decides ORDER, never membership.
+  return [...clean].sort((a, b) => getScore(hostOf(b.url)) - getScore(hostOf(a.url)));
 }
 // Literature review version - no cap, returns all ranked results
 function rankAndFilterResultsLitReview(results) {
@@ -2079,7 +2062,7 @@ Use professional medical terminology while remaining clear. If the image quality
       ];
 
       const visionRequestBody: any = {
-        model: "gpt-5.2",
+        model: "gpt-5.6",
         messages: visionMessages,
         max_completion_tokens: 8096,
         reasoning_effort: "low",
@@ -2176,7 +2159,7 @@ Use professional medical terminology while remaining clear. If the image quality
         }
       ];
       // 5) Call model (same as regular search)
-      const model = "gpt-5.1";
+      const model = "gpt-5.6";
       const finalInstructions = messages.find((m: any) => m.role === "system")?.content || "";
       const finalInput = messages.filter((m: any) => m.role !== "system").map((m: any) => m.content).join("\n\n") || "";
       const requestBody: any = {
@@ -2509,15 +2492,8 @@ Use professional medical terminology while remaining clear. If the image quality
       systemPrompt = getResearchRole();
       let queryPlan;
       if (!wantsRawSearch) {
-        try {
-          queryPlan = await planSearchQueries(query);
-        } catch {
-          queryPlan = {
-            primaryQuery: query,
-            secondaryQueries: [],
-            searchFocus: "fallback"
-          };
-        }
+        // Synchronous and cannot fail — no try/catch, no silent single-query fallback.
+        queryPlan = buildQueryPlan(query);
       }
       let searchResults: any = null;
       try {
@@ -2579,17 +2555,17 @@ Use professional medical terminology while remaining clear. If the image quality
     }
     // Model selection
     let model;
-    if (isReason || mode === "reason") model = "gpt-5.1";
+    if (isReason || mode === "reason") model = "gpt-5.6";
     else if (isWrite || mode === "write") model = "gpt-5-mini";
     else if (mode === "prior-auth-appeal" || mode === "medical-necessity" || mode === "disability-fmla" || mode === "dme" || mode === "peer-to-peer" || mode === "specialty-referral") {
       model = "gpt-5-mini";
     } else if (mode === "psychiatry" || mode === "procedure-note" || mode === "dermatology" || mode === "emergency-medicine" || mode === "neurology" || mode === "ophthalmology" || specialtyModes.includes(mode)) {
       model = "gpt-5-mini";
     } else if (mode === "next-steps" || mode === "disposition" || mode === "dispo" || mode === "differential") {
-      model = "gpt-5.1";
+      model = "gpt-5.6";
     } else if (mode === "orders") {
       model = "gpt-5-mini";
-    } else model = "gpt-5.1";
+    } else model = "gpt-5.6";
 
 
     // ============================================
@@ -2618,7 +2594,12 @@ Use professional medical terminology while remaining clear. If the image quality
     };
     if (stream) requestBody.stream = true;
 
-    const upstream = await fetch("https://api.openai.com/v1/responses", {
+    // Kick the model call off WITHOUT awaiting it. Citations are already in hand
+    // (Tavily returned ~100ms ago) but the old code awaited this fetch before it
+    // could flush them, so the user stared at a spinner for the model's entire
+    // time-to-first-token. Starting it here keeps the model call as early as it
+    // ever was, while letting the source pills paint immediately below.
+    const upstreamPromise = fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
@@ -2627,40 +2608,32 @@ Use professional medical terminology while remaining clear. If the image quality
       body: JSON.stringify(requestBody)
     });
 
-    if (!upstream.ok) {
-      const errorText = await upstream.text();
-      console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
-      return new Response(JSON.stringify({
-        error: `OpenAI API error: ${upstream.status} - ${errorText}`
-      }), {
-        status: upstream.status,
-        headers: {
-          ...corsHeaders,
-          "Content-Type": "application/json"
-        }
-      });
-    }
-
     if (stream) {
-      // Stream Responses API to client
-      const upstreamReader = upstream.body?.getReader();
       const encoder = new TextEncoder();
       const decoder = new TextDecoder();
 
       const sse = new ReadableStream({
-        start(controller) {
-          // Send citations first if available
+        async start(controller) {
+          // Citations FIRST — before the model has produced a single token.
           if (citationsArray.length > 0) {
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({
               citations: citationsArray
             })}\n\n`));
           }
-        },
-        async pull(controller) {
-          if (!upstreamReader) {
+
+          const upstream = await upstreamPromise;
+          if (!upstream.ok || !upstream.body) {
+            const errorText = await upstream.text().catch(() => "");
+            console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
+            controller.enqueue(encoder.encode(`data: ${JSON.stringify({
+              error: `OpenAI API error: ${upstream.status}`
+            })}\n\n`));
+            controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
             controller.close();
             return;
           }
+
+          const upstreamReader = upstream.body.getReader();
           let buffer = "";
           try {
             while (true) {
@@ -2725,6 +2698,20 @@ Use professional medical terminology while remaining clear. If the image quality
       });
     } else {
       // Non-streaming response
+      const upstream = await upstreamPromise;
+      if (!upstream.ok) {
+        const errorText = await upstream.text();
+        console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
+        return new Response(JSON.stringify({
+          error: `OpenAI API error: ${upstream.status} - ${errorText}`
+        }), {
+          status: upstream.status,
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "application/json"
+          }
+        });
+      }
       const data = await upstream.json();
       const legacy: any = {
         id: data.id,
