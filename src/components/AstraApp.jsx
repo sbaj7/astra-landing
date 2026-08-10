@@ -46,6 +46,7 @@ import { processPdfToImages } from '../utils/pdfUtils.js';
 import ImageLightbox from './ImageLightbox.jsx';
 import { CHAT_LIMITS } from '../config/chatLimits.js';
 import { getEffectiveSubscriptionPlan } from '../utils/subscriptionPlan.js';
+import FirstPageExperience from './FirstPageExperience.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -1816,6 +1817,21 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 
 
 const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, onOpenQbank, theme, isMobile, inputBarSlot }) => {
+  if (import.meta.env.DEV) {
+    return (
+      <FirstPageExperience
+        currentMode={currentMode}
+        onSampleTapped={onSampleTapped}
+        onModeChange={onModeChange}
+        onShowAbout={onShowAbout}
+        onOpenQbank={onOpenQbank}
+        theme={theme}
+        sampleQueries={sampleQueries}
+        inputBarSlot={inputBarSlot}
+      />
+    );
+  }
+
   const getModeGroup = (mode) => {
     if (['reason', 'differential', 'next-steps', 'dispo', 'specialty-referral', 'orders'].includes(mode)) return 'reason';
     if (['write', 'prior-auth-appeal', 'medical-necessity', 'disability-fmla', 'dme', 'peer-to-peer'].includes(mode)) return 'write';
