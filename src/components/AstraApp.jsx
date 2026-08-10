@@ -1235,18 +1235,18 @@ const ToolbarView = ({
 
   return (
     <div style={{
-      height: isMobile ? 56 : 52,
+      height: isMobile ? 52 : 56,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       padding: `0 ${isMobile ? 12 : 16}px`,
-      backgroundColor: theme.backgroundSurface,
-      borderBottomLeftRadius: 20,
-      borderBottomRightRadius: 20,
-      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      backgroundColor: `${theme.backgroundSurface}F2`,
+      borderBottom: `1px solid ${theme.textSecondary}12`,
+      backdropFilter: 'blur(20px)',
+      WebkitBackdropFilter: 'blur(20px)',
       position: 'relative',
       zIndex: 10,
-      minHeight: isMobile ? 56 : 52
+      minHeight: isMobile ? 52 : 56
     }}>
       <button
         onClick={onToggleSidebar}
@@ -1270,10 +1270,11 @@ const ToolbarView = ({
       <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
   <h1 style={{
     color: theme.textPrimary,
-    fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-    fontSize: isMobile ? 24 : 28,
+    fontFamily: '"Iowan Old Style", Baskerville, Palatino, Georgia, serif',
+    fontSize: isMobile ? 23 : 26,
     margin: 0,
-    fontWeight: 400
+    fontWeight: 400,
+    letterSpacing: '-0.035em'
   }}>
     Astra
   </h1>
@@ -1841,9 +1842,9 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      padding: isMobile ? '24px 12px' : '40px 16px',
+      padding: isMobile ? '38px 12px 48px' : '58px 20px 64px',
       minHeight: '100%',
-      gap: isMobile ? 20 : 28,
+      gap: isMobile ? 22 : 28,
       position: 'relative',
       width: '100%',
     }}>
@@ -1857,47 +1858,73 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
       }}>
         <div style={{
-          width: isMobile ? 44 : 52,
-          height: isMobile ? 44 : 52,
+          width: isMobile ? 60 : 68,
+          height: isMobile ? 60 : 68,
           margin: '0 auto 20px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: isMobile ? 13 : 15,
-          background: `${theme.accentSoftBlue}0C`,
-          border: `1px solid ${theme.accentSoftBlue}15`,
-          boxShadow: `0 0 24px ${theme.accentSoftBlue}08`,
+          display: 'grid',
+          placeItems: 'center',
+          overflow: 'hidden',
+          position: 'relative',
         }}>
-          <svg width={isMobile ? 22 : 26} height={isMobile ? 22 : 26} viewBox="0 0 36 36" fill="none" aria-hidden="true">
-            <path d="M18 2L22 14L34 18L22 22L18 34L14 22L2 18L14 14L18 2Z" fill={theme.accentSoftBlue} fillOpacity="0.45" />
-          </svg>
+          <div
+            role="presentation"
+            style={{
+              display: 'block',
+              width: '100%',
+              height: '100%',
+              backgroundColor: theme.backgroundPrimary === '#121417' ? '#F9FAFB' : '#111111',
+              WebkitMaskImage: 'url(/Astraarticle.png)',
+              WebkitMaskPosition: 'center',
+              WebkitMaskRepeat: 'no-repeat',
+              WebkitMaskSize: isMobile ? '104px 104px' : '118px 118px',
+              maskImage: 'url(/Astraarticle.png)',
+              maskPosition: 'center',
+              maskRepeat: 'no-repeat',
+              maskSize: isMobile ? '104px 104px' : '118px 118px',
+            }}
+          />
         </div>
         <h2 style={{
           color: theme.textPrimary,
-          fontFamily: 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif',
-          fontSize: isMobile ? 34 : 46,
-          lineHeight: 1.1,
+          fontFamily: '"Iowan Old Style", Baskerville, Palatino, Georgia, serif',
+          fontSize: isMobile ? 42 : 64,
+          lineHeight: 0.98,
           margin: 0,
           fontWeight: 400,
-          letterSpacing: '-0.03em',
-          maxWidth: isMobile ? 300 : 460,
+          letterSpacing: '-0.048em',
+          maxWidth: isMobile ? 420 : 760,
           marginInline: 'auto',
         }}>
-          Clinical reasoning, grounded in evidence.
+          <span style={{ display: 'block' }}>Clinical reasoning,</span>
+          <span style={{ display: 'block' }}>grounded in evidence.</span>
         </h2>
         <p style={{
-          margin: '14px auto 0',
-          fontSize: isMobile ? 13.5 : 15.5,
-          lineHeight: 1.6,
-          color: `${theme.textSecondary}85`,
+          margin: isMobile ? '22px auto 0' : '26px auto 0',
+          fontSize: isMobile ? 15.5 : 18,
+          lineHeight: 1.5,
+          color: `${theme.textSecondary}C2`,
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif',
           fontWeight: 400,
-          maxWidth: isMobile ? 300 : 420,
-          letterSpacing: '-0.01em',
+          maxWidth: isMobile ? 365 : 580,
+          letterSpacing: '-0.015em',
         }}>
-          Search the literature, synthesize medical knowledge, and build cited clinical outputs from one intelligent workspace.
+          Research the literature, reason through differentials and next steps, write complete clinical notes, and master medicine with QBank.
         </p>
       </div>
+
+      {/* Primary product interaction */}
+      {inputBarSlot && (
+        <div style={{
+          width: '100%',
+          maxWidth: isMobile ? '100%' : 680,
+          marginTop: isMobile ? 4 : 8,
+          position: 'relative',
+          zIndex: 2,
+          animation: 'fadeInUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.08s backwards',
+        }}>
+          {inputBarSlot}
+        </div>
+      )}
 
       {/* Trust Strip */}
       {(() => {
@@ -1922,18 +1949,18 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         return (
           <div style={{
             width: '100%',
-            maxWidth: 640,
+            maxWidth: 680,
             overflow: 'hidden',
-            animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.04s backwards',
+            animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.16s backwards',
           }}>
             <p style={{
               textAlign: 'center',
               fontSize: isMobile ? 10 : 11,
               fontWeight: 600,
-              color: `${theme.textSecondary}45`,
-              letterSpacing: '0.08em',
+              color: `${theme.textSecondary}70`,
+              letterSpacing: '0.11em',
               textTransform: 'uppercase',
-              margin: '0 0 12px 0',
+              margin: '0 0 14px 0',
               fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
             }}>
               Trusted by clinicians at
@@ -1971,13 +1998,13 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
                         filter: isDark
                           ? 'grayscale(100%) invert(1) brightness(1.2) contrast(0.85)'
                           : 'grayscale(100%) contrast(0.9)',
-                        opacity: isDark ? 0.45 : 0.5,
+                        opacity: isDark ? 0.56 : 0.62,
                       }}
                     />
                     <span style={{
                       fontSize: isMobile ? 11.5 : 13,
                       fontWeight: 500,
-                      color: `${theme.textSecondary}40`,
+                      color: `${theme.textSecondary}72`,
                       letterSpacing: '-0.01em',
                       fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
                     }}>
@@ -1991,19 +2018,6 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         );
       })()}
 
-      {/* Inline Input Bar on start page */}
-      {inputBarSlot && (
-        <div style={{
-          width: '100%',
-          maxWidth: isMobile ? '100%' : 640,
-          marginTop: isMobile ? 16 : 20,
-          marginBottom: isMobile ? -4 : -8,
-          animation: 'fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.06s backwards',
-        }}>
-          {inputBarSlot}
-        </div>
-      )}
-
       {/* QBank entry */}
       {onOpenQbank && (
         <button
@@ -2015,19 +2029,19 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
             justifyContent: 'center',
             gap: 9,
             padding: isMobile ? '12px 22px' : '13px 28px',
-            borderRadius: 14,
-            border: 'none',
-            background: `linear-gradient(160deg, ${theme.accentSoftBlue}, ${theme.accentSoftBlue}DC)`,
+            borderRadius: 13,
+            border: `1px solid ${theme.accentSoftBlue}`,
+            background: theme.accentSoftBlue,
             color: '#fff',
             cursor: 'pointer',
-            marginTop: isMobile ? -8 : -12,
-            boxShadow: `0 6px 18px ${theme.accentSoftBlue}40`,
+            marginTop: isMobile ? -6 : -8,
+            boxShadow: `0 4px 14px ${theme.accentSoftBlue}2E`,
             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
             transition: 'transform .18s ease, box-shadow .18s ease',
             animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.12s backwards',
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = `0 10px 24px ${theme.accentSoftBlue}55`; }}
-          onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = `0 6px 18px ${theme.accentSoftBlue}40`; }}
+          onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = `0 7px 18px ${theme.accentSoftBlue}3A`; }}
+          onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = `0 4px 14px ${theme.accentSoftBlue}2E`; }}
         >
           <GraduationCap size={isMobile ? 17 : 18} strokeWidth={2} />
           <span style={{ fontSize: isMobile ? 14 : 14.5, fontWeight: 600, letterSpacing: '-0.01em' }}>QBank</span>
