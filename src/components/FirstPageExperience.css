@@ -59,6 +59,12 @@
 }
 
 .astra-first-page__mark {
+  --astra-first-page-logo-material:
+    radial-gradient(circle at 31% 20%, color-mix(in srgb, var(--astra-home-logo) 68%, white) 0%, transparent 34%),
+    linear-gradient(145deg,
+      color-mix(in srgb, var(--astra-home-logo) 84%, white) 0%,
+      var(--astra-home-logo) 44%,
+      color-mix(in srgb, var(--astra-home-logo) 82%, black) 100%);
   position: relative;
   display: grid;
   width: 78px;
@@ -68,27 +74,32 @@
   place-items: center;
 }
 
-.astra-first-page__mark::after {
+.astra-first-page__aperture-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.astra-first-page__aperture-shell {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 2;
   width: 62px;
   height: 62px;
-  background:
-    radial-gradient(circle at 31% 20%, color-mix(in srgb, var(--astra-home-logo) 68%, white) 0%, transparent 34%),
-    linear-gradient(145deg,
-      color-mix(in srgb, var(--astra-home-logo) 84%, white) 0%,
-      var(--astra-home-logo) 44%,
-      color-mix(in srgb, var(--astra-home-logo) 82%, black) 100%);
+  clip-path: polygon(50% 0, 58% 36%, 100% 50%, 58% 64%, 50% 100%, 42% 64%, 0 50%, 42% 36%);
+  overflow: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.astra-first-page__aperture-material {
+  position: absolute;
+  inset: 0;
+  background: var(--astra-first-page-logo-material);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 78px 78px;
-  clip-path: polygon(50% 0, 58% 36%, 100% 50%, 58% 64%, 50% 100%, 42% 64%, 0 50%, 42% 36%);
-  content: '';
-  transform: translate(-50%, -50%);
-  transform-origin: center;
-  animation: astra-home-aperture-open 760ms cubic-bezier(0.16, 1, 0.3, 1) 1020ms both;
 }
 
 .astra-first-page__orbit {
@@ -131,12 +142,7 @@
   display: block;
   width: 78px;
   height: 78px;
-  background:
-    radial-gradient(circle at 31% 20%, color-mix(in srgb, var(--astra-home-logo) 68%, white) 0%, transparent 34%),
-    linear-gradient(145deg,
-      color-mix(in srgb, var(--astra-home-logo) 84%, white) 0%,
-      var(--astra-home-logo) 44%,
-      color-mix(in srgb, var(--astra-home-logo) 82%, black) 100%);
+  background: var(--astra-first-page-logo-material);
   filter:
     drop-shadow(0 -1px 0 color-mix(in srgb, white 34%, transparent))
     drop-shadow(0 4px 5px color-mix(in srgb, black 11%, transparent))
@@ -763,17 +769,6 @@
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes astra-home-aperture-open {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.04);
-  }
-}
-
 @keyframes astra-home-orbit {
   to { transform: rotate(360deg); }
 }
@@ -827,9 +822,12 @@
     margin-bottom: 10px;
   }
 
-  .astra-first-page__mark::after {
+  .astra-first-page__aperture-shell {
     width: 54px;
     height: 54px;
+  }
+
+  .astra-first-page__aperture-material {
     background-size: 66px 66px;
   }
 
@@ -970,6 +968,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .astra-first-page__aperture-shell {
+    display: none;
+  }
+
   .astra-first-page *,
   .astra-first-page *::before,
   .astra-first-page *::after {
