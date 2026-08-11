@@ -18,6 +18,8 @@ const JOURNEY_MODES = [
   { key: 'master', label: 'Master', Icon: GraduationCap }
 ];
 
+const HERO_LEDE = 'Research the literature, reason through differentials and next steps, write complete clinical notes, and master medicine with QBank.';
+
 const MODE_EXPERIENCES = {
   search: {
     label: 'Clinical evidence',
@@ -143,7 +145,18 @@ const FirstPageExperience = ({
           </h2>
 
           <p className="astra-first-page__lede">
-            Research the literature, reason through differentials and next steps, write complete clinical notes, and master medicine with QBank.
+            <span className="astra-first-page__lede-copy" aria-hidden="true">
+              {Array.from(HERO_LEDE).map((character, index) => (
+                <span
+                  className="astra-first-page__lede-character"
+                  key={`${character}-${index}`}
+                  style={{ '--astra-character-index': index }}
+                >
+                  {character}
+                </span>
+              ))}
+            </span>
+            <span className="astra-first-page__sr-only">{HERO_LEDE}</span>
           </p>
         </header>
 
