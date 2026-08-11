@@ -279,13 +279,13 @@
 
 .astra-first-page__thread {
   position: relative;
-  width: min(900px, 100%);
+  width: min(860px, 100%);
   margin: 19px auto 0;
   overflow: hidden;
   border: 1px solid var(--astra-home-border);
   border-radius: 24px;
   background: color-mix(in srgb, var(--astra-home-surface) 94%, transparent);
-  box-shadow: 0 18px 52px color-mix(in srgb, var(--astra-home-text) 6%, transparent);
+  box-shadow: 0 12px 36px color-mix(in srgb, var(--astra-home-text) 4%, transparent);
   backdrop-filter: blur(28px);
   -webkit-backdrop-filter: blur(28px);
   animation: astra-home-rise 760ms cubic-bezier(0.16, 1, 0.3, 1) 230ms both;

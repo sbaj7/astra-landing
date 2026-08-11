@@ -6809,8 +6809,8 @@ const AstraApp = () => {
               flex: 1,
               overflowY: 'auto',
               overflowX: 'hidden',
-              paddingRight: isMobile ? 12 : 16,
-              paddingLeft: isMobile ? 12 : 16,
+              paddingRight: 0,
+              paddingLeft: 0,
               WebkitOverflowScrolling: 'touch',
             }}>
               <div style={{ maxWidth: '100%', margin: '0 auto', minHeight: '100%', display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center' }}>
