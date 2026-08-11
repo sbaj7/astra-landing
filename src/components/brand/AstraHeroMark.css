@@ -1,0 +1,100 @@
+.astra-hero-mark {
+  --astra-hero-mark-material:
+    radial-gradient(circle at 31% 20%, color-mix(in srgb, var(--astra-home-logo, #111111) 68%, white) 0%, transparent 34%),
+    linear-gradient(145deg,
+      color-mix(in srgb, var(--astra-home-logo, #111111) 84%, white) 0%,
+      var(--astra-home-logo, #111111) 44%,
+      color-mix(in srgb, var(--astra-home-logo, #111111) 82%, black) 100%);
+  position: relative;
+  display: grid;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 9px;
+  isolation: isolate;
+  place-items: center;
+}
+
+.astra-hero-mark__glyph {
+  display: block;
+  width: 78px;
+  height: 78px;
+  background: var(--astra-hero-mark-material);
+  filter:
+    drop-shadow(0 -1px 0 color-mix(in srgb, white 34%, transparent))
+    drop-shadow(0 4px 5px color-mix(in srgb, black 11%, transparent))
+    drop-shadow(0 15px 18px color-mix(in srgb, black 16%, transparent));
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 136px 136px;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 136px 136px;
+}
+
+.astra-hero-mark__glyph--static {
+  mask-image: url('/Astraarticle.png');
+  -webkit-mask-image: url('/Astraarticle.png');
+}
+
+.astra-hero-mark__glyph--animated {
+  mask-image: url('/brand/archive/Astraarticle-aperture-mask.png');
+  -webkit-mask-image: url('/brand/archive/Astraarticle-aperture-mask.png');
+}
+
+.astra-hero-mark__aperture-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.astra-hero-mark__aperture-shell {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 62px;
+  height: 62px;
+  clip-path: polygon(50% 0, 58% 36%, 100% 50%, 58% 64%, 50% 100%, 42% 64%, 0 50%, 42% 36%);
+  overflow: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.astra-hero-mark__aperture-material {
+  position: absolute;
+  inset: 0;
+  background: var(--astra-hero-mark-material);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 78px 78px;
+}
+
+@media (max-width: 640px) {
+  .astra-hero-mark {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 10px;
+  }
+
+  .astra-hero-mark__glyph {
+    width: 66px;
+    height: 66px;
+    mask-size: 114px 114px;
+    -webkit-mask-size: 114px 114px;
+  }
+
+  .astra-hero-mark__aperture-shell {
+    width: 54px;
+    height: 54px;
+  }
+
+  .astra-hero-mark__aperture-material {
+    background-size: 66px 66px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .astra-hero-mark__aperture-shell {
+    display: none;
+  }
+}

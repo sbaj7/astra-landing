@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ArrowUp,
   BookOpen,
@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Stethoscope
 } from 'lucide-react';
+import AstraHeroMark from './brand/AstraHeroMark';
 import './FirstPageExperience.css';
 
 const JOURNEY_MODES = [
@@ -73,9 +74,6 @@ const HOSPITALS = [
   { name: 'Duke Health', logo: '/logos/duke-health.png' }
 ];
 
-const APERTURE_CLIP_CLOSED = 'M.5 0L.58.36L1 .5L.58.64L.5 1L.42.64L0 .5L.42.36ZM.5.5L.5.5L.5.5L.5.5L.5.5L.5.5L.5.5L.5.5Z';
-const APERTURE_CLIP_OPEN = 'M.5 0L.58.36L1 .5L.58.64L.5 1L.42.64L0 .5L.42.36ZM.5-.06L.5896.3432L1.06.5L.5896.6568L.5 1.06L.4104.6568L-.06.5L.4104.3432Z';
-
 const getModeGroup = (mode) => {
   if (['reason', 'differential', 'next-steps', 'dispo', 'disposition', 'specialty-referral', 'orders'].includes(mode)) {
     return 'reason';
@@ -97,8 +95,6 @@ const FirstPageExperience = ({
   inputBarSlot
 }) => {
   const [activeJourney, setActiveJourney] = useState(getModeGroup(currentMode));
-  const apertureId = useId().replace(/:/g, '');
-  const apertureClipId = `astra-home-aperture-clip-${apertureId}`;
   const activeExperience = MODE_EXPERIENCES[activeJourney];
   const queries = activeJourney === 'master'
     ? []
@@ -139,36 +135,7 @@ const FirstPageExperience = ({
     >
       <div className="astra-first-page__shell">
         <header className="astra-first-page__intro">
-          <div className="astra-first-page__mark" aria-hidden="true">
-            <svg className="astra-first-page__aperture-defs" focusable="false">
-              <defs>
-                <clipPath id={apertureClipId} clipPathUnits="objectBoundingBox">
-                  <path d={APERTURE_CLIP_CLOSED} clipRule="evenodd" fillRule="evenodd">
-                    <animate
-                      attributeName="d"
-                      begin="800ms"
-                      calcMode="spline"
-                      dur="620ms"
-                      fill="freeze"
-                      keySplines="0.16 1 0.3 1"
-                      keyTimes="0;1"
-                      values={`${APERTURE_CLIP_CLOSED};${APERTURE_CLIP_OPEN}`}
-                    />
-                  </path>
-                </clipPath>
-              </defs>
-            </svg>
-            <span className="astra-first-page__glyph" />
-            <span className="astra-first-page__aperture-shell">
-              <span
-                className="astra-first-page__aperture-material"
-                style={{
-                  clipPath: `url(#${apertureClipId})`,
-                  WebkitClipPath: `url(#${apertureClipId})`
-                }}
-              />
-            </span>
-          </div>
+          <AstraHeroMark variant="static" />
 
           <h2 className="astra-first-page__title">
             <span>Clinical reasoning,</span>

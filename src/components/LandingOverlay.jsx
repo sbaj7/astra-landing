@@ -599,7 +599,7 @@ const LandingOverlay = ({ onClose }) => {
 
         <div className="landing-logo-container">
           <img
-            src="/Untitled design-3.png"
+            src="/Astra-Mark-Material.svg"
             alt="Astra Logo"
             className="landing-logo-img"
           />

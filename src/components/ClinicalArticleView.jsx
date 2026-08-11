@@ -798,7 +798,7 @@ const ClinicalArticleView = ({ article, theme, onBack }) => {
           url: 'https://astramd.org',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://astramd.org/Astraarticle.png'
+            url: 'https://astramd.org/apple-touch-icon.png'
           }
         },
         image: 'https://astramd.org/og-image.png',
@@ -937,7 +937,7 @@ const ClinicalArticleView = ({ article, theme, onBack }) => {
             </div>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <img
-                src="/Astraarticle.png"
+                src="/Astra-Mark-Material.svg"
                 alt="Astra logo"
                 style={{ width: 160, maxWidth: '60%' }}
               />
