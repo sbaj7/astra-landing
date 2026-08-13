@@ -19,7 +19,15 @@ const JOURNEY_MODES = [
   { key: 'master', label: 'Master', Icon: GraduationCap }
 ];
 
-const HERO_LEDE = 'Research the literature, reason through differentials and next steps, write complete clinical notes, and master medicine with QBank.';
+const HERO_LEDE_SEGMENTS = [
+  { lead: 'Research', rest: ' the literature,' },
+  { lead: 'reason', rest: ' through differentials and next steps,' },
+  { lead: 'write', rest: ' complete clinical notes,' },
+  { prefix: 'and ', lead: 'master', rest: ' medicine with QBank.' }
+];
+const HERO_LEDE = HERO_LEDE_SEGMENTS
+  .map(({ prefix = '', lead, rest }) => `${prefix}${lead}${rest}`)
+  .join(' ');
 
 const MODE_EXPERIENCES = {
   search: {
@@ -148,14 +156,18 @@ const FirstPageExperience = ({
 
           <p className="astra-first-page__lede">
             <span className="astra-first-page__lede-copy" aria-hidden="true">
-              {Array.from(HERO_LEDE).map((character, index) => (
-                <span
-                  className="astra-first-page__lede-character"
-                  key={`${character}-${index}`}
-                  style={{ '--astra-character-index': index }}
-                >
-                  {character}
-                </span>
+              {HERO_LEDE_SEGMENTS.map(({ prefix = '', lead, rest }, index) => (
+                <React.Fragment key={lead}>
+                  <span
+                    className="astra-first-page__lede-phrase"
+                    style={{ '--astra-phrase-index': index }}
+                  >
+                    {prefix}
+                    <strong>{lead}</strong>
+                    {rest}
+                  </span>
+                  {index < HERO_LEDE_SEGMENTS.length - 1 ? ' ' : null}
+                </React.Fragment>
               ))}
             </span>
             <span className="astra-first-page__sr-only">{HERO_LEDE}</span>
