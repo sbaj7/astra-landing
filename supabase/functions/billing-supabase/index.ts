@@ -174,7 +174,7 @@ async function persistAuthUserMetadata(
     .single();
 
   if (error) {
-    console.error("Failed to update auth_users metadata", error);
+    console.error("Failed to update auth_users metadata", error?.code || "database_error");
     return { ...user, metadata };
   }
 
@@ -214,12 +214,12 @@ async function findExistingStripeCustomer(
       const customer = customersByMetadata.data[0];
       // Verify it's not deleted
       if (!("deleted" in customer)) {
-        console.log(`✅ Found existing Stripe customer via metadata: ${customer.id}`);
+        console.log("Found existing Stripe customer via metadata");
         return customer;
       }
     }
   } catch (searchError) {
-    console.warn("⚠️ Stripe metadata search failed (non-fatal):", searchError);
+    console.warn("Stripe metadata search failed (non-fatal):", searchError instanceof Error ? searchError.name : "UnknownError");
     // Continue to email search
   }
 
@@ -238,17 +238,17 @@ async function findExistingStripeCustomer(
         );
 
         if (matchingCustomer) {
-          console.log(`✅ Found existing Stripe customer via email+metadata: ${matchingCustomer.id}`);
+          console.log("Found existing Stripe customer via email and metadata");
           return matchingCustomer;
         }
 
         // Otherwise, return the first customer (will be updated with metadata)
         const firstCustomer = customersByEmail.data[0];
-        console.log(`⚠️ Found Stripe customer via email only: ${firstCustomer.id} (will update metadata)`);
+        console.log("Found Stripe customer via email only; updating metadata");
         return firstCustomer;
       }
     } catch (emailSearchError) {
-      console.warn("⚠️ Stripe email search failed:", emailSearchError);
+      console.warn("Stripe email search failed:", emailSearchError instanceof Error ? emailSearchError.name : "UnknownError");
     }
   }
 
@@ -283,25 +283,25 @@ async function getOrCreateStripeCustomer(
         const retrieved = await stripe.customers.retrieve(trimmedId);
         if (!("deleted" in retrieved)) {
           customer = retrieved;
-          console.log(`✅ Retrieved stored Stripe customer: ${customer.id}`);
+          console.log("Retrieved stored Stripe customer");
         } else {
-          console.warn(`⚠️ Stored Stripe customer ${trimmedId} is deleted`);
+          console.warn("Stored Stripe customer is deleted");
         }
       } catch (retrieveError) {
-        console.warn(`⚠️ Failed to retrieve stored Stripe customer ${trimmedId}:`, retrieveError);
+        console.warn("Failed to retrieve stored Stripe customer:", retrieveError instanceof Error ? retrieveError.name : "UnknownError");
       }
     }
   }
 
   // Step 2: If no stored customer found, search comprehensively
   if (!customer) {
-    console.log(`🔍 Searching for existing Stripe customer for user ${supabaseUser.id}...`);
+    console.log("Searching for existing Stripe customer");
     customer = await findExistingStripeCustomer(supabaseUser.id, normalizedEmail);
   }
 
   // Step 3: Create new customer if none found (with idempotency key to prevent duplicates)
   if (!customer) {
-    console.log(`➕ Creating new Stripe customer for ${normalizedEmail}...`);
+    console.log("Creating new Stripe customer");
 
     // Use idempotency key based on supabase user ID to prevent duplicate creation on retry
     const idempotencyKey = `create_customer_${supabaseUser.id}`;
@@ -318,7 +318,7 @@ async function getOrCreateStripeCustomer(
       }, {
         idempotencyKey: idempotencyKey
       });
-      console.log(`✅ Created new Stripe customer: ${customer.id}`);
+      console.log("Created new Stripe customer");
     } catch (createError: any) {
       // Check if this is a duplicate creation error due to race condition
       if (createError.type === "idempotency_error") {
@@ -338,7 +338,7 @@ async function getOrCreateStripeCustomer(
 
   // Step 4: Update customer metadata if needed (ensure supabase_user_id is set)
   if (!customer.metadata?.supabase_user_id || customer.metadata.supabase_user_id !== supabaseUser.id) {
-    console.log(`🔄 Updating Stripe customer ${customer.id} metadata...`);
+    console.log("Updating Stripe customer metadata");
     customer = await stripe.customers.update(customer.id, {
       email: normalizedEmail,
       name: normalizedFullName || customer.name || undefined,
@@ -382,7 +382,7 @@ async function getOrCreateStripeCustomer(
     ? await persistAuthUserMetadata(supabaseClient, authUser, metadata, additionalFields)
     : { ...authUser, metadata };
 
-  console.log(`✅ Stripe customer resolution complete: ${customer.id}`);
+  console.log("Stripe customer resolution complete");
 
   return {
     customer,
@@ -508,9 +508,9 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
     });
   } catch (error: any) {
-    console.error("[billing] error", error);
+    console.error("[billing] error", error instanceof Error ? error.name : "UnknownError");
     return new Response(
-      JSON.stringify({ error: error.message ?? "Unexpected error" }),
+      JSON.stringify({ error: "Billing request failed" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
@@ -575,7 +575,7 @@ async function createCheckoutSession(
       body: { url: session.url, session_id: session.id }
     };
   } catch (error) {
-    console.error("Stripe checkout session creation failed:", error);
+    console.error("Stripe checkout session creation failed:", error instanceof Error ? error.name : "UnknownError");
     return {
       status: 500,
       body: { error: "Failed to create checkout session" }
@@ -604,7 +604,7 @@ async function createPortalSession(
       body: { url: session.url }
     };
   } catch (error) {
-    console.error("Stripe portal session creation failed:", error);
+    console.error("Stripe portal session creation failed:", error instanceof Error ? error.name : "UnknownError");
     return {
       status: 500,
       body: { error: "Failed to create portal session" }
@@ -689,7 +689,7 @@ async function getSubscription(
       }
     };
   } catch (error) {
-    console.error("Subscription lookup failed:", error);
+    console.error("Subscription lookup failed:", error instanceof Error ? error.name : "UnknownError");
     return {
       status: 500,
       body: { error: "Failed to get subscription status" }

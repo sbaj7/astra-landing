@@ -170,7 +170,7 @@ async function mergeDuplicateCustomers(
   deleteCustomerIds: string[],
   supabase: ReturnType<typeof createSupabaseClient>
 ): Promise<{ success: boolean; details: string }> {
-  console.log(`🔄 Merging customers: keeping ${keepCustomerId}, deleting ${deleteCustomerIds.join(", ")}`);
+  console.log(`Merging duplicate customers; deleting ${deleteCustomerIds.length}`);
 
   try {
     // Get the customer we're keeping
@@ -186,7 +186,7 @@ async function mergeDuplicateCustomers(
 
       // If they have subscriptions, we need to be careful
       if (subscriptions.data.length > 0) {
-        console.warn(`⚠️ Customer ${deleteId} has ${subscriptions.data.length} subscriptions - manual review required`);
+        console.warn(`Duplicate customer has ${subscriptions.data.length} subscriptions; manual review required`);
         return {
           success: false,
           details: `Customer ${deleteId} has active subscriptions. Manual review required to prevent data loss.`
@@ -203,12 +203,12 @@ async function mergeDuplicateCustomers(
         .eq("stripe_customer_id", deleteId);
 
       if (updateError) {
-        console.error(`❌ Failed to update database for customer ${deleteId}:`, updateError);
+        console.error("Failed to update database for duplicate customer:", updateError?.code || "database_error");
       }
 
       // Delete the Stripe customer
       await stripe.customers.del(deleteId);
-      console.log(`✅ Deleted Stripe customer ${deleteId}`);
+      console.log("Deleted duplicate Stripe customer");
     }
 
     return {
@@ -216,10 +216,10 @@ async function mergeDuplicateCustomers(
       details: `Successfully merged ${deleteCustomerIds.length} duplicate customer(s) into ${keepCustomerId}`
     };
   } catch (error: any) {
-    console.error(`❌ Merge failed:`, error);
+    console.error("Customer merge failed:", error instanceof Error ? error.name : "UnknownError");
     return {
       success: false,
-      details: `Merge failed: ${error.message}`
+      details: "Merge failed"
     };
   }
 }
@@ -305,13 +305,13 @@ serve(async (req) => {
           );
 
           const hasSubs = await Promise.all(
-            deleteCustomers.map(async c => {
+            deleteCustomers.map(async (c: Stripe.Customer | Stripe.DeletedCustomer) => {
               const subs = await stripe.subscriptions.list({ customer: c.id, limit: 1 });
               return subs.data.length > 0;
             })
           );
 
-          if (hasSubs.some(has => has)) {
+          if (hasSubs.some((has: boolean) => has)) {
             results.push({
               email: group.email,
               skipped: true,
@@ -348,9 +348,9 @@ serve(async (req) => {
         );
     }
   } catch (error: any) {
-    console.error("[deduplicate-customers] error:", error);
+    console.error("[deduplicate-customers] error:", error instanceof Error ? error.name : "UnknownError");
     return new Response(
-      JSON.stringify({ error: error.message ?? "Unexpected error" }),
+      JSON.stringify({ error: "Customer maintenance request failed" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }

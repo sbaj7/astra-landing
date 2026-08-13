@@ -1,3 +1,5 @@
+import SSEStream from './SSEStream';
+
 class PerplexityClient {
   static shared = new PerplexityClient();
   
@@ -5,8 +7,10 @@ class PerplexityClient {
     if (PerplexityClient.shared) {
       return PerplexityClient.shared;
     }
-    this.backendEndpoint = "https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api";
-    this.supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8";
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    this.backendEndpoint = import.meta.env.VITE_QUICK_API_URL
+      || (supabaseUrl ? `${supabaseUrl}/functions/v1/quick-api` : '');
+    this.supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
     this.liveStream = null;
   }
 
@@ -55,14 +59,6 @@ class PerplexityClient {
 
     const request = this.makeRequest(cfg, true);
 
-    console.log(`🚀 Sending ${cfg.currentMode} query: ${cfg.query}`);
-    console.log(`📡 Request URL: ${request.url}`);
-    console.log(`📋 Request headers:`, request.headers);
-    
-    if (request.body) {
-      console.log(`📦 Request body: ${request.body}`);
-    }
-
     // Only collect citations for search mode
     const shouldCollectCitations = cfg.currentMode === "search";
     
@@ -80,8 +76,6 @@ class PerplexityClient {
   async answer(cfg, onComplete) {
     const request = this.makeRequest(cfg, false);
     
-    console.log(`🚀 Sending non-streaming ${cfg.currentMode} query: ${cfg.query}`);
-    
     try {
       const response = await fetch(request.url, {
         method: request.method,
@@ -89,16 +83,11 @@ class PerplexityClient {
         body: request.body
       });
       
-      console.log(`📊 Response status: ${response.status}`);
-      
       if (response.status >= 300) {
-        const errorText = await response.text();
-        console.log(`❌ Server error: ${errorText}`);
         throw new Error(`Server error: ${response.status}`);
       }
 
       const json = await response.json();
-      console.log(`📄 Response JSON keys:`, Object.keys(json));
 
       // Try multiple possible response formats
       let content = null;
@@ -112,18 +101,20 @@ class PerplexityClient {
       }
       
       if (!content) {
-        console.log(`❌ Could not extract content from response:`, json);
         throw new Error("Could not parse response");
       }
 
       onComplete({ success: true, data: content });
     } catch (error) {
-      console.log(`❌ Request failed:`, error);
       onComplete({ success: false, error });
     }
   }
 
   makeRequest(cfg, stream) {
+    if (!this.backendEndpoint || !this.supabaseAnonKey) {
+      throw new Error('Astra API is not configured');
+    }
+
     const headers = {
       'Authorization': `Bearer ${this.supabaseAnonKey}`,
       'Content-Type': 'application/json',

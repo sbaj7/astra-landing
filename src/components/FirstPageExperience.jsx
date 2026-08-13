@@ -5,6 +5,7 @@ import {
   FileText,
   GraduationCap,
   LibraryBig,
+  Scale,
   Search,
   ShieldCheck,
   Stethoscope
@@ -283,18 +284,34 @@ const FirstPageExperience = ({
           </div>
 
           <div className="astra-first-page__actions">
-            {onShowAbout && (
-              <button type="button" className="astra-first-page__secondary-action" onClick={onShowAbout}>
-                <BookOpen size={16} />
-                About Astra
-              </button>
-            )}
-            {onShowSources && (
-              <button type="button" className="astra-first-page__secondary-action" onClick={onShowSources}>
-                <LibraryBig size={16} />
-                Sources List
-              </button>
-            )}
+            <div className="astra-first-page__action-buttons">
+              {onShowAbout && (
+                <button type="button" className="astra-first-page__secondary-action" onClick={onShowAbout}>
+                  <BookOpen size={16} />
+                  About Astra
+                </button>
+              )}
+              {onShowSources && (
+                <button type="button" className="astra-first-page__secondary-action" onClick={onShowSources}>
+                  <LibraryBig size={16} />
+                  Sources List
+                </button>
+              )}
+            </div>
+            <div className="astra-first-page__action-buttons astra-first-page__action-buttons--legal">
+              <a className="astra-first-page__secondary-action" href="/terms.html">
+                <Scale size={16} />
+                Terms of Use
+              </a>
+              <a className="astra-first-page__secondary-action" href="/privacy.html">
+                <ShieldCheck size={16} />
+                Privacy Policy
+              </a>
+              <a className="astra-first-page__secondary-action" href="/consumer-health-data.html">
+                <FileText size={16} />
+                Consumer Health Data
+              </a>
+            </div>
           </div>
         </section>
       </div>

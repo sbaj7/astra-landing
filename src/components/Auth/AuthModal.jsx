@@ -509,7 +509,7 @@ const AuthModal = ({
             {!isExistingUser && (
               <p className="auth-modal-terms">
                 By continuing, you agree to our{' '}
-                <a href="/privacy.html" target="_blank" rel="noopener noreferrer">
+                <a href="/terms.html" target="_blank" rel="noopener noreferrer">
                   Terms of Use
                 </a>{' '}
                 and{' '}

@@ -1,31 +1,11 @@
 import Cookies from 'js-cookie';
-import supabase from './supabaseClient.js';
 
-// API configuration for production Supabase
-const AUTH_API_URL = 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/auth-management';
-const BILLING_API_URL = (import.meta?.env?.VITE_BILLING_API_URL) || 'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/billing-supabase';
-const API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8';
-
-console.log('🔧 Auth Service: Production mode');
-
-// Helper function to validate and ensure UUID format
-const validateAndFormatUserId = (userId) => {
-  if (!userId) return null;
-
-  const userIdStr = String(userId).trim();
-
-  // Check if it's already a valid UUID format (36 chars with hyphens)
-  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-  if (uuidRegex.test(userIdStr)) {
-    return userIdStr;
-  }
-
-  // If it's a Supabase auth user ID, it should already be UUID format
-  // Log for debugging what we're getting
-  console.warn('🚨 User ID not in UUID format:', userIdStr, 'Length:', userIdStr.length);
-
-  return userIdStr; // Return as-is and let the database handle it
-};
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const AUTH_API_URL = import.meta.env.VITE_AUTH_API_URL
+  || (SUPABASE_URL ? `${SUPABASE_URL}/functions/v1/auth-management` : '');
+const BILLING_API_URL = import.meta.env.VITE_BILLING_API_URL
+  || (SUPABASE_URL ? `${SUPABASE_URL}/functions/v1/billing-supabase` : '');
+const API_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 class AuthService {
   constructor() {
@@ -50,9 +30,9 @@ class AuthService {
     if (typeof limit.used === 'number' && Number.isFinite(limit.used)) {
       used = limit.used;
     } else if (typeof limit.remaining === 'number' && Number.isFinite(limit.remaining)) {
-      used = 5 - limit.remaining;
+      used = 3 - limit.remaining;
     }
-    used = Math.max(0, Math.min(5, Math.floor(used)));
+    used = Math.max(0, Math.min(3, Math.floor(used)));
 
     let resetAt = typeof limit.reset_at === 'string' ? limit.reset_at : null;
     const resetTime = resetAt ? new Date(resetAt) : null;
@@ -62,7 +42,7 @@ class AuthService {
 
     return {
       used,
-      remaining: Math.max(0, 5 - used),
+      remaining: Math.max(0, 3 - used),
       reset_at: resetAt
     };
   }
@@ -134,6 +114,7 @@ class AuthService {
   }
 
   getAuthHeaders() {
+    if (!API_KEY) throw new Error('Supabase client key is not configured');
     const bearerToken = this.currentSession?.access_token || API_KEY;
     return {
       'Content-Type': 'application/json',
@@ -166,16 +147,16 @@ class AuthService {
   getOrCreateAnonymousId() {
     let id = Cookies.get('astra_anonymous_id');
     if (!id) {
-      id = 'anon_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+      id = `anon_${crypto.randomUUID()}`;
       try {
         Cookies.set('astra_anonymous_id', id, { expires: 365 });
-        console.log('🍪 Created new anonymous ID:', id);
+        console.log('Created anonymous usage identifier');
       } catch (error) {
         console.error('❌ Failed to set anonymous ID cookie:', error);
         console.warn('⚠️ Cookie blocking may prevent usage tracking');
       }
     } else {
-      console.log('🍪 Using existing anonymous ID:', id);
+      console.log('Using existing anonymous usage identifier');
     }
     return id;
   }
@@ -187,9 +168,10 @@ class AuthService {
   }
 
   async callAuthAPI(endpoint, data = {}) {
+    if (!AUTH_API_URL) throw new Error('Account API is not configured');
     const url = `${AUTH_API_URL}/${endpoint}`;
 
-    console.log(`📡 Calling API: ${endpoint}`, url);
+    console.log(`Calling auth API: ${endpoint}`);
 
     try {
       const response = await fetch(url, {
@@ -199,17 +181,11 @@ class AuthService {
       });
 
       const responseText = await response.text();
-      console.log(`📥 Response from ${endpoint}:`, response.status, responseText);
+      console.log(`Auth API completed: ${endpoint}`, response.status);
 
       if (!response.ok) {
-        let errorDetails;
-        try {
-          errorDetails = JSON.parse(responseText);
-          console.error(`❌ API Error Details:`, errorDetails);
-        } catch (e) {
-          errorDetails = { error: responseText };
-        }
-        throw new Error(`API error: ${response.status} - ${JSON.stringify(errorDetails)}`);
+        console.error(`Auth API failed: ${endpoint}`, response.status);
+        throw new Error(`API error: ${response.status}`);
       }
 
       try {
@@ -218,14 +194,16 @@ class AuthService {
           this._setAnonymousLimitCache(payload);
         }
         return payload;
-      } catch (e) {
-        console.error('Failed to parse response:', responseText);
+      } catch {
+        console.error(`Auth API returned invalid JSON: ${endpoint}`);
         throw new Error('Invalid JSON response');
       }
     } catch (error) {
       console.error(`❌ Failed to call ${endpoint}:`, error);
-      // Fallback to localStorage for anonymous users
-      return this.handleLocalFallback(endpoint, data);
+      if (endpoint === 'check-limit' && !this.currentSession) {
+        return this.handleLocalFallback(endpoint);
+      }
+      throw error;
     }
   }
 
@@ -247,7 +225,7 @@ class AuthService {
 
     // If there's already a request in progress for this action+user, return it
     if (this._inflightBillingRequests.has(cacheKey)) {
-      console.log(`🔄 Returning existing in-flight billing request for: ${cacheKey}`);
+      console.log(`Reusing in-flight billing request: ${action}`);
       return this._inflightBillingRequests.get(cacheKey);
     }
 
@@ -293,7 +271,7 @@ class AuthService {
         clearTimeout(timeout);
 
         const payload = await response.json();
-        console.log(`📥 Billing Response from ${action}:`, response.status, payload);
+        console.log(`Billing API completed: ${action}`, response.status);
 
         if (!response.ok) {
           const errorMessage = payload?.error || 'Billing API error';
@@ -371,13 +349,9 @@ class AuthService {
    * @returns {Promise<{remaining: number, used: number, reset_at: string}>}
    */
   async checkUserLimit(userId) {
-    // Only pass user_id for authenticated users, don't include anonymous_id
-    // This ensures the backend looks up the user's limit, not anonymous limit
-    if (userId) {
-      console.log('📊 Checking limit for authenticated user:', userId);
-      return await this.callAuthAPI('check-limit', {
-        user_id: userId
-      });
+    if (userId && this.currentSession) {
+      console.log('Checking authenticated usage limit');
+      return await this.callAuthAPI('check-limit');
     }
     // Fallback to anonymous if no userId (shouldn't happen for authenticated users)
     console.warn('⚠️ checkUserLimit called without userId, falling back to anonymous');
@@ -394,9 +368,7 @@ class AuthService {
   async incrementUserUsage(userId) {
     const payload = {};
 
-    if (userId) {
-      payload.user_id = userId;
-    } else {
+    if (!userId || !this.currentSession) {
       const anonId = this.getAnonymousId();
       if (!anonId) {
         console.error('❌ No valid user_id or anonymous_id available for incrementUserUsage');
@@ -411,54 +383,38 @@ class AuthService {
   async syncUserWithSupabase(supabaseUser = this.currentSupabaseUser) {
     if (!supabaseUser) return null;
 
-    const normalizedUser = this.normalizeSupabaseUser(supabaseUser);
-
-    console.log('🔄 Syncing Supabase user with backend:', normalizedUser);
+    console.log('Synchronizing authenticated account');
 
     try {
       const response = await this.callAuthAPI('sync-user', {
-        supabase_user: normalizedUser,
         anonymous_id: this.anonymousId
       });
 
-      console.log('✅ User sync successful:', response);
+      console.log('Account synchronization completed');
       if (response?.user) {
         this.cachedSupabaseProfile = response.user;
       }
       return response.user || this.cachedSupabaseProfile;
     } catch (error) {
       console.error('❌ User sync failed:', error);
-      console.error('Supabase user object:', normalizedUser);
       return this.cachedSupabaseProfile;
     }
   }
 
   async saveChatSession(title, messages, mode, supabaseUser) {
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
-
+    void supabaseUser;
     return await this.callAuthAPI('save-session', {
       title,
       messages,
       mode,
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null
+      anonymous_id: this.anonymousId
     });
   }
 
   async getChatSessions(supabaseUser, limit = 20) {
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
-
+    void supabaseUser;
     const response = await this.callAuthAPI('get-sessions', {
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null,
+      anonymous_id: this.anonymousId,
       limit
     });
 
@@ -466,120 +422,60 @@ class AuthService {
   }
 
   async deleteChatSession(sessionId, supabaseUser) {
+    void supabaseUser;
     if (!sessionId) {
       throw new Error('sessionId required for deletion');
     }
 
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
-
     return await this.callAuthAPI('delete-session', {
       session_id: sessionId,
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null
+      anonymous_id: this.anonymousId
     });
   }
 
   // ---- QBank session history (same pattern as chat sessions) ----
   async saveQbankSession(session, supabaseUser) {
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
+    void supabaseUser;
     const response = await this.callAuthAPI('qbank-save-session', {
       session,
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null
+      anonymous_id: this.anonymousId
     });
     return response.session || null;
   }
 
   async getQbankSessions(supabaseUser, limit = 60) {
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
+    void supabaseUser;
     const response = await this.callAuthAPI('qbank-get-sessions', {
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null,
+      anonymous_id: this.anonymousId,
       limit
     });
     return response.sessions || [];
   }
 
   async deleteQbankSession(sessionId, supabaseUser) {
+    void supabaseUser;
     if (!sessionId) throw new Error('sessionId required for deletion');
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
     return await this.callAuthAPI('qbank-delete-session', {
       session_id: sessionId,
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null
+      anonymous_id: this.anonymousId
     });
   }
 
   async clearQbankSessions(supabaseUser) {
-    let userId = null;
-    if (supabaseUser) {
-      const user = await this.syncUserWithSupabase(supabaseUser);
-      userId = user?.id;
-    }
+    void supabaseUser;
     return await this.callAuthAPI('qbank-clear-sessions', {
-      user_id: userId,
-      anonymous_id: !userId ? this.anonymousId : null
+      anonymous_id: this.anonymousId
     });
   }
 
-  // Local storage fallbacks for when API is unavailable
-  handleLocalFallback(endpoint, data) {
-    const now = new Date();
-
-    // Handle sync-user endpoint
-    if (endpoint === 'sync-user') {
-      console.warn('⚠️ User sync failed - edge function may not be deployed or accessible');
-      console.warn('Please ensure auth-management function is deployed to Supabase');
-      // Return a dummy response to prevent crashes
-      return {
-        user: {
-          id: 'local_' + Math.random().toString(36).substr(2, 9),
-          email: data.supabase_user?.email,
-          supabase_id: data.supabase_user?.id
-        }
-      };
-    }
-
+  // Display-only fallback. Model access is still enforced by quick-api.
+  handleLocalFallback(endpoint) {
     if (endpoint === 'check-limit') {
-      // If this was an authenticated user request (has user_id), don't return anonymous cache
-      if (data.user_id) {
-        console.warn('⚠️ check-limit failed for authenticated user, returning default free tier');
-        return { used: 0, remaining: 10, reset_at: this.getDefaultAnonymousResetTimestamp() };
-      }
-      // For anonymous users, use localStorage cache
       const cached = this._getAnonymousLimitCache();
       if (cached) return cached;
       const fresh = this._setAnonymousLimitCache({ used: 0, reset_at: this.getDefaultAnonymousResetTimestamp() });
       return fresh || { used: 0, remaining: 3, reset_at: this.getDefaultAnonymousResetTimestamp() };
     }
-
-    if (endpoint === 'increment-usage') {
-      // If this was an authenticated user request (has user_id), don't update anonymous cache
-      if (data.user_id) {
-        console.warn('⚠️ increment-usage failed for authenticated user');
-        return { success: false, error: 'Backend unavailable' };
-      }
-      // For anonymous users, update localStorage cache
-      const updated = this._bumpAnonymousLimitCache();
-      return updated || { used: 1, remaining: 2, reset_at: this.getDefaultAnonymousResetTimestamp() };
-    }
-
     return {};
   }
 
@@ -630,9 +526,7 @@ class AuthService {
 
     console.log('📊 Getting subscription status for user');
 
-    return await this.callBillingAPI('get_subscription', {
-      user_id: normalizedUser.id
-    });
+    return await this.callBillingAPI('get_subscription');
   }
 
   async updateUserProfile(supabaseUser, updates = {}) {
@@ -640,7 +534,6 @@ class AuthService {
     if (!normalizedUser) throw new Error('Supabase user required for profile updates');
 
     return await this.callAuthAPI('update-profile', {
-      supabase_user: normalizedUser,
       ...updates
     });
   }
@@ -656,11 +549,11 @@ class AuthService {
       throw new Error('Valid email required');
     }
 
-    console.log('📧 Checking if email exists:', email);
+    console.log('Checking account email availability');
 
     try {
       const response = await fetch(
-        'https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/check-email',
+        `${SUPABASE_URL}/functions/v1/check-email`,
         {
           method: 'POST',
           headers: this.getAuthHeaders(),
@@ -676,7 +569,7 @@ class AuthService {
       }
 
       const data = await response.json();
-      console.log('✅ Email check result:', data);
+      console.log('Email availability check completed');
       return data;
     } catch (error) {
       console.error('❌ Email check failed:', error);
@@ -691,24 +584,15 @@ class AuthService {
   async grantManualSubscription(userEmail, plan, options = {}) {
     const { expiresAt, notes, grantedBy, syncToStripe = false } = options;
 
-    console.log(`🎁 Granting manual ${plan} subscription to ${userEmail}`);
+    console.log(`Granting manual ${plan} subscription`);
 
     const adminApiUrl = import.meta.env.VITE_ADMIN_SUBSCRIPTION_API_URL ||
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-subscription-manager`;
 
-    const adminApiKey = import.meta.env.VITE_ADMIN_API_KEY;
-
-    if (!adminApiKey) {
-      throw new Error('Admin API key not configured');
-    }
-
     try {
       const response = await fetch(adminApiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-api-key': adminApiKey
-        },
+        headers: this.getAuthHeaders(),
         body: JSON.stringify({
           action: 'grant',
           userEmail,
@@ -726,7 +610,7 @@ class AuthService {
       }
 
       const result = await response.json();
-      console.log('✅ Manual subscription granted:', result);
+      console.log('Manual subscription granted');
       return result;
     } catch (error) {
       console.error('❌ Failed to grant manual subscription:', error);
@@ -735,24 +619,15 @@ class AuthService {
   }
 
   async revokeManualSubscription(userEmail, grantedBy = 'admin') {
-    console.log(`🚫 Revoking manual subscription for ${userEmail}`);
+    console.log('Revoking manual subscription');
 
     const adminApiUrl = import.meta.env.VITE_ADMIN_SUBSCRIPTION_API_URL ||
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-subscription-manager`;
 
-    const adminApiKey = import.meta.env.VITE_ADMIN_API_KEY;
-
-    if (!adminApiKey) {
-      throw new Error('Admin API key not configured');
-    }
-
     try {
       const response = await fetch(adminApiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-api-key': adminApiKey
-        },
+        headers: this.getAuthHeaders(),
         body: JSON.stringify({
           action: 'revoke',
           userEmail,
@@ -766,7 +641,7 @@ class AuthService {
       }
 
       const result = await response.json();
-      console.log('✅ Manual subscription revoked:', result);
+      console.log('Manual subscription revoked');
       return result;
     } catch (error) {
       console.error('❌ Failed to revoke manual subscription:', error);
@@ -780,19 +655,10 @@ class AuthService {
     const adminApiUrl = import.meta.env.VITE_ADMIN_SUBSCRIPTION_API_URL ||
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-subscription-manager`;
 
-    const adminApiKey = import.meta.env.VITE_ADMIN_API_KEY;
-
-    if (!adminApiKey) {
-      throw new Error('Admin API key not configured');
-    }
-
     try {
       const response = await fetch(adminApiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-api-key': adminApiKey
-        },
+        headers: this.getAuthHeaders(),
         body: JSON.stringify({
           action: 'list',
           page,
@@ -815,24 +681,15 @@ class AuthService {
   }
 
   async syncManualSubscriptionToStripe(userEmail) {
-    console.log(`🔄 Syncing manual subscription to Stripe for ${userEmail}`);
+    console.log('Synchronizing manual subscription to Stripe');
 
     const adminApiUrl = import.meta.env.VITE_ADMIN_SUBSCRIPTION_API_URL ||
       `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-subscription-manager`;
 
-    const adminApiKey = import.meta.env.VITE_ADMIN_API_KEY;
-
-    if (!adminApiKey) {
-      throw new Error('Admin API key not configured');
-    }
-
     try {
       const response = await fetch(adminApiUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-api-key': adminApiKey
-        },
+        headers: this.getAuthHeaders(),
         body: JSON.stringify({
           action: 'sync_stripe',
           userEmail
@@ -845,7 +702,7 @@ class AuthService {
       }
 
       const result = await response.json();
-      console.log('✅ Manual subscription synced to Stripe:', result);
+      console.log('Manual subscription synchronized to Stripe');
       return result;
     } catch (error) {
       console.error('❌ Failed to sync to Stripe:', error);

@@ -1,4 +1,11 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import {
+  createServiceClient,
+  HttpError,
+  resolveRequestIdentity,
+  statusForError
+} from "../_shared/requestIdentity.ts";
+import { consumeRateLimit } from "../_shared/rateLimits.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -96,6 +103,28 @@ serve(async (req) => {
   }
 
   try {
+    if (req.method !== "POST") throw new HttpError(405, "Method not allowed");
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    if (contentLength > 25_000_000) throw new HttpError(413, "Request too large");
+
+    const identity = await resolveRequestIdentity(req, { allowAnonymous: false });
+    const serviceClient = createServiceClient();
+    const burstLimit = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "vision_minute",
+      10,
+      60
+    );
+    if (!burstLimit.allowed) return errorResponse("Too many requests. Please wait and try again.", 429);
+    const dailyLimit = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "vision_daily",
+      100
+    );
+    if (!dailyLimit.allowed) return errorResponse("Daily image-analysis limit reached.", 429);
+
     const apiKey = Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
       console.error("[vision-api] OPENAI_API_KEY not configured");
@@ -113,13 +142,24 @@ serve(async (req) => {
     const { query, images, mode } = body;
 
     // Validate request - at least one image required
-    if (!images || !Array.isArray(images) || images.length === 0) {
+    if (!images || !Array.isArray(images) || images.length === 0 || images.length > 4) {
       return errorResponse("At least one image is required", 400);
+    }
+    const totalImageBytes = images.reduce(
+      (total, image) => total + (typeof image?.data === "string" ? image.data.length : 0),
+      0
+    );
+    if (images.some((image) => typeof image?.data !== "string") || totalImageBytes > 24_000_000) {
+      throw new HttpError(413, "Image payload too large");
     }
 
     // Build messages for OpenAI
     const messages = buildMessages(
-      { query: query || "", images, mode: mode || "standard" },
+      {
+        query: typeof query === "string" ? query.slice(0, 50_000) : "",
+        images,
+        mode: mode || "standard"
+      },
       MEDICAL_SYSTEM_PROMPT
     );
 
@@ -134,14 +174,15 @@ serve(async (req) => {
         model: "gpt-4o-mini",
         messages,
         stream: true,
-        max_tokens: 4096
+        max_tokens: 4096,
+        store: false
       })
     });
 
     // Handle OpenAI errors
     if (!openaiResponse.ok) {
       const errorText = await openaiResponse.text();
-      console.error("[vision-api] OpenAI error:", openaiResponse.status, errorText);
+      console.error("[vision-api] OpenAI error:", openaiResponse.status);
       return handleOpenAIError(openaiResponse.status, errorText);
     }
 
@@ -156,10 +197,10 @@ serve(async (req) => {
     });
 
   } catch (error) {
-    console.error("[vision-api] Error:", error);
+    console.error("[vision-api] Request failed:", error instanceof Error ? error.name : "UnknownError");
     return errorResponse(
-      error instanceof Error ? error.message : "Internal server error",
-      500
+      error instanceof HttpError ? error.message : "Internal server error",
+      statusForError(error)
     );
   }
 });

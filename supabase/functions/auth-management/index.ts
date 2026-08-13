@@ -1,12 +1,29 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.5";
-import { getSubscriptionDailyChatLimit } from "../_shared/usageLimits.ts";
+import {
+  createServiceClient,
+  deriveAnonymousIdentity,
+  HttpError,
+  resolveRequestIdentity,
+  statusForError,
+  type RequestIdentity,
+  type VerifiedAuthUser
+} from "../_shared/requestIdentity.ts";
+import {
+  consumeRateLimit,
+  getChatAllowance,
+  inspectRateLimit
+} from "../_shared/rateLimits.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, accept",
-  "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  "Access-Control-Allow-Methods": "POST, OPTIONS"
 };
+
+const json = (obj: unknown, status = 200) => new Response(JSON.stringify(obj), {
+  status,
+  headers: { ...corsHeaders, "Content-Type": "application/json" }
+});
 
 type SubscriptionSnapshot = {
   id: string | null;
@@ -63,6 +80,7 @@ function attachSubscriptionFields(user: any) {
 }
 
 const ALLOWED_SETTING_KEYS = new Set(['theme', 'accentColor', 'language', 'spokenLanguage']);
+const ALLOWED_PROFILE_KEYS = new Set(['organization', 'role', 'specialty']);
 
 function sanitizeSettings(settings: unknown) {
   if (!settings || typeof settings !== 'object' || Array.isArray(settings)) {
@@ -75,7 +93,7 @@ function sanitizeSettings(settings: unknown) {
     if (typeof rawValue === 'string') {
       const trimmed = rawValue.trim();
       if (trimmed.length > 0) {
-        result[key] = trimmed;
+        result[key] = trimmed.slice(0, 160);
       }
     }
   }
@@ -90,45 +108,54 @@ serve(async (req) => {
     });
   }
   try {
+    if (req.method !== "POST") {
+      throw new HttpError(405, "Method not allowed");
+    }
     const url = new URL(req.url);
     const pathname = url.pathname.split("/").pop();
-    const supabaseUrl = Deno.env.get("SUPABASE_URL");
-    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-    if (!supabaseUrl || !supabaseKey) {
-      throw new Error("Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    if (contentLength > 6_000_000) {
+      throw new HttpError(413, "Request too large");
     }
-    const supabase = createClient(supabaseUrl, supabaseKey);
-    let body = {};
+    const supabase = createServiceClient();
+    let body: Record<string, any> = {};
     if (req.method === "POST") {
       try {
         body = await req.json();
+        if (!body || typeof body !== "object" || Array.isArray(body)) {
+          throw new HttpError(400, "Invalid JSON object");
+        }
       } catch {
-        body = {};
+        throw new HttpError(400, "Invalid JSON");
       }
     }
+    const identity = await resolveRequestIdentity(req, {
+      allowAnonymous: true,
+      anonymousToken: body.anonymous_id
+    });
     switch(pathname) {
       case "check-limit":
-        return await handleCheckLimit(body, supabase);
+        return await handleCheckLimit(supabase, identity);
       case "increment-usage":
-        return await handleIncrementUsage(body, supabase);
+        return await handleIncrementUsage(supabase, identity);
       case "sync-user":
-        return await handleSyncUser(body, supabase);
+        return await handleSyncUser(req, body, supabase, identity);
       case "save-session":
-        return await handleSaveSession(body, supabase);
+        return await handleSaveSession(body, supabase, identity);
       case "get-sessions":
-        return await handleGetSessions(body, supabase);
+        return await handleGetSessions(body, supabase, identity);
       case "delete-session":
-        return await handleDeleteSession(body, supabase);
+        return await handleDeleteSession(body, supabase, identity);
       case "qbank-save-session":
-        return await handleQbankSaveSession(body, supabase);
+        return await handleQbankSaveSession(body, supabase, identity);
       case "qbank-get-sessions":
-        return await handleQbankGetSessions(body, supabase);
+        return await handleQbankGetSessions(body, supabase, identity);
       case "qbank-delete-session":
-        return await handleQbankDeleteSession(body, supabase);
+        return await handleQbankDeleteSession(body, supabase, identity);
       case "qbank-clear-sessions":
-        return await handleQbankClearSessions(body, supabase);
+        return await handleQbankClearSessions(body, supabase, identity);
       case "update-profile":
-        return await handleUpdateProfile(body, supabase);
+        return await handleUpdateProfile(body, supabase, identity);
       default:
         return new Response(JSON.stringify({
           error: `Unknown endpoint: ${pathname}`
@@ -141,11 +168,12 @@ serve(async (req) => {
         });
     }
   } catch (error) {
-    console.error("[auth-management] Error:", error);
+    console.error("[auth-management] Error:", error instanceof Error ? error.name : "UnknownError");
+    const status = statusForError(error);
     return new Response(JSON.stringify({
-      error: error.message
+      error: error instanceof HttpError ? error.message : "Account request failed"
     }), {
-      status: 500,
+      status,
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"
@@ -154,329 +182,199 @@ serve(async (req) => {
   }
 });
 
+function requireAuthenticated(identity: RequestIdentity): Extract<RequestIdentity, { kind: "authenticated" }> {
+  if (identity.kind !== "authenticated") {
+    throw new HttpError(401, "Authentication required");
+  }
+  return identity;
+}
+
+function verifiedUserMetadata(user: VerifiedAuthUser): Record<string, any> {
+  const source = user.user_metadata && typeof user.user_metadata === "object"
+    ? user.user_metadata as Record<string, unknown>
+    : {};
+  const metadata: Record<string, string> = {};
+  for (const key of ["full_name", "name", "avatar_url", "picture"]) {
+    const value = source[key];
+    if (typeof value === "string" && value.trim()) {
+      metadata[key] = value.trim().slice(0, key.includes("avatar") || key === "picture" ? 2048 : 160);
+    }
+  }
+  return metadata;
+}
+
+function verifiedAppMetadata(user: VerifiedAuthUser): Record<string, unknown> {
+  const source = user.app_metadata && typeof user.app_metadata === "object"
+    ? user.app_metadata as Record<string, unknown>
+    : {};
+  const metadata: Record<string, unknown> = {};
+  if (typeof source.provider === "string") {
+    metadata.provider = source.provider.slice(0, 80);
+  }
+  if (Array.isArray(source.providers)) {
+    metadata.providers = source.providers
+      .filter((provider): provider is string => typeof provider === "string")
+      .slice(0, 10)
+      .map((provider) => provider.slice(0, 80));
+  }
+  return metadata;
+}
+
+async function ensureInternalUser(supabase: any, identity: RequestIdentity) {
+  const authenticated = requireAuthenticated(identity);
+  const { data: rows, error } = await supabase
+    .from("auth_users")
+    .select("*")
+    .eq("auth0_id", authenticated.user.id)
+    .order("created_at", { ascending: true })
+    .limit(1);
+  if (error) throw new HttpError(503, "Account service unavailable");
+  if (rows?.[0]) return rows[0];
+
+  const metadata = verifiedUserMetadata(authenticated.user);
+  const now = new Date().toISOString();
+  const { data: created, error: createError } = await supabase
+    .from("auth_users")
+    .insert({
+      auth0_id: authenticated.user.id,
+      email: authenticated.user.email || "",
+      full_name: metadata.full_name || metadata.name || authenticated.user.email || "User",
+      metadata: {
+        avatar_url: metadata.avatar_url || metadata.picture || null,
+        supabase_profile: metadata,
+        first_login: now
+      },
+      created_at: now,
+      updated_at: now
+    })
+    .select()
+    .single();
+  if (!createError && created) return created;
+
+  const { data: retryRows, error: retryError } = await supabase
+    .from("auth_users")
+    .select("*")
+    .eq("auth0_id", authenticated.user.id)
+    .order("created_at", { ascending: true })
+    .limit(1);
+  if (retryError || !retryRows?.[0]) {
+    throw new HttpError(503, "Account service unavailable");
+  }
+  return retryRows[0];
+}
+
+async function requestOwner(supabase: any, identity: RequestIdentity) {
+  if (identity.kind === "authenticated") {
+    const user = await ensureInternalUser(supabase, identity);
+    return { userId: user.id as string, anonymousId: null };
+  }
+
+  if (identity.legacyAnonymousId !== identity.anonymousKey) {
+    const legacyIds = [identity.legacyAnonymousId];
+    const chatMigration = await supabase
+      .from("user_chat_sessions")
+      .update({ anonymous_id: identity.anonymousKey })
+      .in("anonymous_id", legacyIds);
+    const qbankMigration = await supabase
+      .from("qbank_sessions")
+      .update({ anonymous_id: identity.anonymousKey })
+      .in("anonymous_id", legacyIds);
+    if (chatMigration.error || qbankMigration.error) {
+      throw new HttpError(503, "History service unavailable");
+    }
+  }
+  return { userId: null, anonymousId: identity.anonymousKey };
+}
+
 /* -------------------------------------------------------------------------- */
 /*  Plan-based chat limits (Anonymous=3, Free=10, Plus=50, Pro=Unlimited)    */
 /* -------------------------------------------------------------------------- */
-async function handleCheckLimit(body, supabase) {
-  const { anonymous_id, user_id } = body;
-
-  // Handle authenticated users with plan-based limits
-  if (user_id) {
-    // Get user's subscription info. Tolerate missing/duplicate rows (no .single()
-    // 500s — those were causing limits to silently fail open).
-    const { data: userRows } = await supabase
-      .from('auth_users')
-      .select('id, subscription_status')
-      .eq('auth0_id', user_id)
-      .order('created_at', { ascending: true })
-      .limit(1);
-    const userData = userRows?.[0];
-
-    if (!userData) {
-      // Not synced yet — report a fresh free-tier allowance for display only.
-      // Actual enforcement happens server-side in quick-api once synced.
-      return new Response(
-        JSON.stringify({ used: 0, remaining: 10, reset_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString() }),
-        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    const dailyLimit = getSubscriptionDailyChatLimit(userData?.subscription_status);
-
-    // Pro users get unlimited - return immediately without tracking
-    if (!Number.isFinite(dailyLimit)) {
-      return new Response(
-        JSON.stringify({
-          used: 0,
-          remaining: 999999,
-          reset_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
-        }),
-        {
-          status: 200,
-          headers: { ...corsHeaders, "Content-Type": "application/json" }
-        }
-      );
-    }
-
-    // For Free/Plus users, check usage in user_limits table
-    const now = new Date();
-    let { data: limitRows } = await supabase
-      .from('user_limits')
-      .select('*')
-      .eq('user_id', userData.id)
-      .order('updated_at', { ascending: false })
-      .limit(1);
-    let limitRecord = limitRows?.[0] || null;
-
-    if (!limitRecord) {
-      const newRecord = {
-        user_id: userData.id,
-        chats_used: 0,
-        reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
-        updated_at: now.toISOString()
-      };
-      const { data: inserted } = await supabase
-        .from('user_limits')
-        .insert(newRecord)
-        .select()
-        .single();
-      limitRecord = inserted ?? newRecord;
-    }
-
-    const resetTime = new Date(limitRecord.reset_at);
-    if (resetTime < now) {
-      const nextReset = new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
-      const { data: updated } = await supabase
-        .from('user_limits')
-        .update({
-          chats_used: 0,
-          reset_at: nextReset,
-          updated_at: now.toISOString()
-        })
-        .eq('user_id', userData.id)
-        .select()
-        .single();
-      limitRecord = updated ?? {
-        user_id: userData.id,
-        chats_used: 0,
-        reset_at: nextReset,
-        updated_at: now.toISOString()
-      };
-    }
-
-    return new Response(
-      JSON.stringify({
-        used: limitRecord?.chats_used ?? 0,
-        remaining: Math.max(0, dailyLimit - (limitRecord?.chats_used ?? 0)),
-        reset_at: limitRecord?.reset_at
-      }),
-      {
-        status: 200,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    );
+async function handleCheckLimit(supabase: any, identity: RequestIdentity) {
+  const { limit } = await getChatAllowance(supabase, identity);
+  if (!Number.isFinite(limit)) {
+    return json({
+      used: 0,
+      remaining: 999999,
+      reset_at: new Date(Date.now() + 86_400_000).toISOString(),
+      unlimited: true
+    });
   }
-
-  // Handle anonymous users (3 chats/day)
-  if (!anonymous_id) {
-    return new Response(
-      JSON.stringify({ error: "Either anonymous_id or user_id is required" }),
-      {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    );
-  }
-
-  const now = new Date();
-  let { data: limitRecord } = await supabase
-    .from('anonymous_limits')
-    .select('*')
-    .eq('anonymous_id', anonymous_id)
-    .single();
-
-  if (!limitRecord) {
-    const newRecord = {
-      anonymous_id,
-      chats_used: 0,
-      reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
-      updated_at: now.toISOString()
-    };
-    const { data: inserted } = await supabase
-      .from('anonymous_limits')
-      .insert(newRecord)
-      .select()
-      .single();
-    limitRecord = inserted ?? newRecord;
-  }
-
-  const resetTime = new Date(limitRecord.reset_at);
-  if (resetTime < now) {
-    const nextReset = new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
-    const { data: updated } = await supabase
-      .from('anonymous_limits')
-      .update({
-        chats_used: 0,
-        reset_at: nextReset,
-        updated_at: now.toISOString()
-      })
-      .eq('anonymous_id', anonymous_id)
-      .select()
-      .single();
-    limitRecord = updated ?? {
-      anonymous_id,
-      chats_used: 0,
-      reset_at: nextReset,
-      updated_at: now.toISOString()
-    };
-  }
-
-  return new Response(
-    JSON.stringify({
-      remaining: Math.max(0, 3 - (limitRecord.chats_used ?? 0)), // Anonymous: 3 chats
-      used: limitRecord.chats_used ?? 0,
-      reset_at: limitRecord.reset_at
-    }),
-    {
-      status: 200,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-    }
-  );
+  const state = await inspectRateLimit(supabase, identity.rateLimitKey, "chat_daily", limit);
+  return json({
+    used: state.used,
+    remaining: state.remaining,
+    reset_at: state.resetAt
+  });
 }
 
-async function handleIncrementUsage(body, supabase) {
-  const { anonymous_id, user_id } = body;
-
-  // Handle authenticated users
-  if (user_id) {
-    // Check if user has Pro plan (unlimited) - skip tracking for Pro users
-    const { data: userData, error: userError } = await supabase
-      .from('auth_users')
-      .select('id, subscription_status')
-      .eq('auth0_id', user_id)
-      .single();
-
-    if (userError) {
-      console.error('❌ Error fetching user subscription:', userError);
-      return new Response(
-        JSON.stringify({ error: 'Failed to fetch user data' }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" }
-        }
-      );
-    }
-
-    // Check if Pro user (unlimited)
-    const tier = userData?.subscription_status?.toLowerCase() || 'free';
-    const isPro = tier === 'pro';
-
-    if (isPro) {
-      // Pro users have unlimited chats - don't track usage
-      return new Response(
-        JSON.stringify({
-          success: true,
-          unlimited: true
-        }),
-        {
-          status: 200,
-          headers: { ...corsHeaders, "Content-Type": "application/json" }
-        }
-      );
-    }
-
-    // For Free/Plus users, increment usage
-    const now = new Date();
-    const { data: record } = await supabase
-      .from('user_limits')
-      .select('*')
-      .eq('user_id', userData.id)
-      .single();
-
-    if (!record) {
-      await supabase
-        .from('user_limits')
-        .insert({
-          user_id: userData.id,
-          chats_used: 1,
-          reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
-          updated_at: now.toISOString()
-        });
-    } else {
-      await supabase
-        .from('user_limits')
-        .update({
-          chats_used: (record.chats_used || 0) + 1,
-          updated_at: now.toISOString()
-        })
-        .eq('id', record.id);
-    }
-
-    return new Response(
-      JSON.stringify({ success: true }),
-      {
-        status: 200,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    );
+async function handleIncrementUsage(supabase: any, identity: RequestIdentity) {
+  const { limit } = await getChatAllowance(supabase, identity);
+  if (!Number.isFinite(limit)) {
+    return json({ success: true, unlimited: true });
   }
-
-  // Handle anonymous users
-  if (!anonymous_id) {
-    return new Response(
-      JSON.stringify({ error: "Either anonymous_id or user_id is required" }),
-      {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    );
+  const state = await consumeRateLimit(supabase, identity.rateLimitKey, "chat_daily", limit);
+  if (!state.allowed) {
+    return json({
+      error: "daily_limit_reached",
+      used: state.used,
+      remaining: 0,
+      reset_at: state.resetAt
+    }, 429);
   }
-
-  const now = new Date();
-  const { data: record } = await supabase
-    .from('anonymous_limits')
-    .select('*')
-    .eq('anonymous_id', anonymous_id)
-    .single();
-
-  if (!record) {
-    await supabase
-      .from('anonymous_limits')
-      .insert({
-        anonymous_id,
-        chats_used: 1,
-        reset_at: new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString(),
-        updated_at: now.toISOString()
-      });
-  } else {
-    await supabase
-      .from('anonymous_limits')
-      .update({
-        chats_used: (record.chats_used || 0) + 1,
-        updated_at: now.toISOString()
-      })
-      .eq('id', record.id);
-  }
-
-  return new Response(
-    JSON.stringify({ success: true }),
-    {
-      status: 200,
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-    }
-  );
+  return json({
+    success: true,
+    used: state.used,
+    remaining: state.remaining,
+    reset_at: state.resetAt
+  });
 }
 
 /* -------------------------------------------------------------------------- */
 /*  Supabase user sync                                                        */
 /* -------------------------------------------------------------------------- */
-async function handleSyncUser(body, supabase) {
-  const { supabase_user, anonymous_id } = body;
-  if (!supabase_user || !supabase_user.id) {
-    return new Response(JSON.stringify({
-      error: "supabase_user required"
-    }), {
-      status: 400,
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/json"
-      }
-    });
-  }
+async function handleSyncUser(
+  req: Request,
+  body: Record<string, any>,
+  supabase: any,
+  identity: RequestIdentity
+) {
+  const authenticated = requireAuthenticated(identity);
+  const verifiedUser = authenticated.user;
+  const verifiedMetadata = verifiedUserMetadata(verifiedUser);
+  const supabase_user = {
+    id: verifiedUser.id,
+    email: verifiedUser.email || "",
+    full_name: verifiedMetadata.full_name || verifiedMetadata.name || verifiedUser.email || "User",
+    avatar_url: verifiedMetadata.avatar_url || verifiedMetadata.picture || null,
+    metadata: verifiedMetadata,
+    app_metadata: verifiedAppMetadata(verifiedUser),
+    identities: verifiedUser.identities || []
+  };
   const now = new Date().toISOString();
   const incomingMetadata = typeof supabase_user.metadata === "object" && supabase_user.metadata !== null ? supabase_user.metadata : {};
   const incomingSettings = sanitizeSettings(incomingMetadata?.settings);
   const appMetadata = typeof supabase_user.app_metadata === "object" && supabase_user.app_metadata !== null ? supabase_user.app_metadata : {};
   const identities = Array.isArray(supabase_user.identities) ? supabase_user.identities : [];
-  const identitySummaries = identities.map((identity) => ({
-    provider: identity?.provider || identity?.identity_provider || null,
-    identity_id: identity?.id || identity?.identity_id || null,
-    email: identity?.email || identity?.identity_data?.email || null,
-    last_sign_in_at: identity?.last_sign_in_at || identity?.last_signin_at || null
-  }));
+  const identitySummaries = identities
+    .map((identity) => ({
+      provider: typeof identity?.provider === "string"
+        ? identity.provider
+        : typeof identity?.identity_provider === "string"
+          ? identity.identity_provider
+          : null
+    }))
+    .filter((identity) => Boolean(identity.provider));
   const primaryProvider = (appMetadata?.provider || identitySummaries.find((item) => !!item.provider)?.provider || (supabase_user.email ? "email" : "unknown")) as string;
   const normalizedFullName = supabase_user.full_name || incomingMetadata.full_name || incomingMetadata.name || supabase_user.email || "User";
-  const { data: existingUser } = await supabase.from("auth_users").select("*").eq("auth0_id", supabase_user.id).maybeSingle();
+  const { data: existingUser, error: fetchError } = await supabase
+    .from("auth_users")
+    .select("*")
+    .eq("auth0_id", supabase_user.id)
+    .maybeSingle();
+  if (fetchError) {
+    console.error("Failed to load Supabase user record:", fetchError?.code || "database_error");
+    throw new HttpError(503, "User synchronization unavailable");
+  }
   let targetUser = existingUser;
   if (existingUser) {
     const nextMetadata = {
@@ -494,13 +392,17 @@ async function handleSyncUser(body, supabase) {
         ...incomingSettings
       };
     }
-    const { data: updatedUser } = await supabase.from("auth_users").update({
+    const { data: updatedUser, error: updateError } = await supabase.from("auth_users").update({
       updated_at: now,
       email: supabase_user.email || existingUser.email,
       full_name: normalizedFullName,
       metadata: nextMetadata
     }).eq("id", existingUser.id).select().single();
-    targetUser = updatedUser ?? existingUser;
+    if (updateError || !updatedUser) {
+      console.error("Failed to update Supabase user record:", updateError?.code || "database_error");
+      throw new HttpError(503, "User synchronization unavailable");
+    }
+    targetUser = updatedUser;
   } else {
     const { data: newUser, error } = await supabase.from("auth_users").insert({
       auth0_id: supabase_user.id,
@@ -519,7 +421,7 @@ async function handleSyncUser(body, supabase) {
       updated_at: now
     }).select().single();
     if (error) {
-      console.error("Failed to create Supabase user record:", error);
+      console.error("Failed to create Supabase user record:", error?.code || "database_error");
       return new Response(JSON.stringify({
         error: "Failed to create user"
       }), {
@@ -532,12 +434,21 @@ async function handleSyncUser(body, supabase) {
     }
     targetUser = newUser;
   }
-  if (anonymous_id && targetUser) {
-    await supabase.from("user_chat_sessions").update({
+  if (body.anonymous_id && targetUser) {
+    const anonymousIdentity = await deriveAnonymousIdentity(req, body.anonymous_id);
+    const anonymousIds = [anonymousIdentity.anonymousKey, anonymousIdentity.legacyAnonymousId];
+    const chatTransfer = await supabase.from("user_chat_sessions").update({
       user_id: targetUser.id,
       anonymous_id: null
-    }).eq("anonymous_id", anonymous_id);
-    await supabase.from("anonymous_limits").delete().eq("anonymous_id", anonymous_id);
+    }).in("anonymous_id", anonymousIds);
+    const qbankTransfer = await supabase.from("qbank_sessions").update({
+      user_id: targetUser.id,
+      anonymous_id: null
+    }).in("anonymous_id", anonymousIds);
+    await supabase.from("anonymous_limits").delete().in("anonymous_id", anonymousIds);
+    if (chatTransfer.error || qbankTransfer.error) {
+      throw new HttpError(503, "History transfer unavailable");
+    }
   }
   const responseUser = attachSubscriptionFields(targetUser);
   return new Response(JSON.stringify({
@@ -554,9 +465,9 @@ async function handleSyncUser(body, supabase) {
 /* -------------------------------------------------------------------------- */
 /*  Chat sessions                                                             */
 /* -------------------------------------------------------------------------- */
-async function handleSaveSession(body, supabase) {
-  const { title, messages, mode, user_id, anonymous_id } = body;
-  if (!title || !messages) {
+async function handleSaveSession(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const { title, messages, mode } = body;
+  if (typeof title !== "string" || !Array.isArray(messages) || messages.length === 0 || messages.length > 200) {
     return new Response(JSON.stringify({
       error: "title and messages required"
     }), {
@@ -567,16 +478,20 @@ async function handleSaveSession(body, supabase) {
       }
     });
   }
+  if (JSON.stringify(messages).length > 5_000_000) {
+    throw new HttpError(413, "Conversation too large");
+  }
+  const owner = await requestOwner(supabase, identity);
   const { data, error } = await supabase.from("user_chat_sessions").insert({
-    user_id: user_id || null,
-    anonymous_id: user_id ? null : anonymous_id,
-    title: title.substring(0, 100),
+    user_id: owner.userId,
+    anonymous_id: owner.anonymousId,
+    title: title.trim().substring(0, 100) || "Saved conversation",
     messages,
-    mode: mode || "search",
+    mode: typeof mode === "string" ? mode.substring(0, 64) : "search",
     created_at: new Date().toISOString()
   }).select().single();
   if (error) {
-    console.error("Error saving session:", error);
+    console.error("Error saving session:", error?.code || "database_error");
     return new Response(JSON.stringify({
       error: "Failed to save session"
     }), {
@@ -598,29 +513,18 @@ async function handleSaveSession(body, supabase) {
   });
 }
 
-async function handleGetSessions(body, supabase) {
-  const { user_id, anonymous_id, limit = 20 } = body;
+async function handleGetSessions(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const owner = await requestOwner(supabase, identity);
+  const limit = Math.min(100, Math.max(1, Number(body.limit) || 20));
   let query = supabase.from("user_chat_sessions").select("*").order("created_at", {
     ascending: false
   }).limit(limit);
-  if (user_id) {
-    query = query.eq("user_id", user_id);
-  } else if (anonymous_id) {
-    query = query.eq("anonymous_id", anonymous_id);
-  } else {
-    return new Response(JSON.stringify({
-      error: "user_id or anonymous_id required"
-    }), {
-      status: 400,
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/json"
-      }
-    });
-  }
+  query = owner.userId
+    ? query.eq("user_id", owner.userId)
+    : query.eq("anonymous_id", owner.anonymousId);
   const { data, error } = await query;
   if (error) {
-    console.error("Error getting sessions:", error);
+    console.error("Error getting sessions:", error?.code || "database_error");
     return new Response(JSON.stringify({
       error: "Failed to get sessions"
     }), {
@@ -642,8 +546,8 @@ async function handleGetSessions(body, supabase) {
   });
 }
 
-async function handleDeleteSession(body, supabase) {
-  const { session_id, user_id, anonymous_id } = body;
+async function handleDeleteSession(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const { session_id } = body;
   if (!session_id) {
     return new Response(JSON.stringify({
       error: "session_id required"
@@ -655,25 +559,14 @@ async function handleDeleteSession(body, supabase) {
       }
     });
   }
+  const owner = await requestOwner(supabase, identity);
   let query = supabase.from("user_chat_sessions").delete().eq("id", session_id);
-  if (user_id) {
-    query = query.eq("user_id", user_id);
-  } else if (anonymous_id) {
-    query = query.eq("anonymous_id", anonymous_id);
-  } else {
-    return new Response(JSON.stringify({
-      error: "user context required"
-    }), {
-      status: 400,
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/json"
-      }
-    });
-  }
+  query = owner.userId
+    ? query.eq("user_id", owner.userId)
+    : query.eq("anonymous_id", owner.anonymousId);
   const { data, error } = await query.select("id").maybeSingle();
   if (error) {
-    console.error("Failed to delete session:", error);
+    console.error("Failed to delete session:", error?.code || "database_error");
     return new Response(JSON.stringify({
       error: "Failed to delete session"
     }), {
@@ -709,22 +602,20 @@ async function handleDeleteSession(body, supabase) {
 /* -------------------------------------------------------------------------- */
 /*  QBank session history (mirrors chat history, service-role)                */
 /* -------------------------------------------------------------------------- */
-const json = (obj, status = 200) => new Response(JSON.stringify(obj), {
-  status,
-  headers: { ...corsHeaders, "Content-Type": "application/json" }
-});
-
-async function handleQbankSaveSession(body, supabase) {
-  const { user_id, anonymous_id, session } = body;
-  if (!session || !Array.isArray(session.answers) || !session.answers.length) {
+async function handleQbankSaveSession(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const { session } = body;
+  if (!session || !Array.isArray(session.answers) || !session.answers.length || session.answers.length > 200) {
     return json({ error: "session with answers required" }, 400);
   }
-  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  if (JSON.stringify(session.answers).length > 5_000_000) {
+    throw new HttpError(413, "QBank session too large");
+  }
+  const owner = await requestOwner(supabase, identity);
   const total = session.answers.length;
-  const correct = session.answers.filter((a) => a && a.correct).length;
+  const correct = session.answers.filter((answer: any) => answer && answer.correct).length;
   const { data, error } = await supabase.from("qbank_sessions").insert({
-    user_id: user_id || null,
-    anonymous_id: user_id ? null : anonymous_id,
+    user_id: owner.userId,
+    anonymous_id: owner.anonymousId,
     started_at: session.startedAt ? new Date(session.startedAt).toISOString() : new Date().toISOString(),
     step: session.step || null,
     mode: session.mode || null,
@@ -735,47 +626,53 @@ async function handleQbankSaveSession(body, supabase) {
     created_at: new Date().toISOString()
   }).select().single();
   if (error) {
-    console.error("Error saving qbank session:", error);
+    console.error("Error saving qbank session:", error?.code || "database_error");
     return json({ error: "Failed to save session" }, 500);
   }
   return json({ session: data });
 }
 
-async function handleQbankGetSessions(body, supabase) {
-  const { user_id, anonymous_id, limit = 60 } = body;
-  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+async function handleQbankGetSessions(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const owner = await requestOwner(supabase, identity);
+  const limit = Math.min(200, Math.max(1, Number(body.limit) || 60));
   let query = supabase.from("qbank_sessions").select("*").order("started_at", { ascending: false }).limit(limit);
-  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
+  query = owner.userId
+    ? query.eq("user_id", owner.userId)
+    : query.eq("anonymous_id", owner.anonymousId);
   const { data, error } = await query;
   if (error) {
-    console.error("Error getting qbank sessions:", error);
+    console.error("Error getting qbank sessions:", error?.code || "database_error");
     return json({ error: "Failed to get sessions" }, 500);
   }
   return json({ sessions: data || [] });
 }
 
-async function handleQbankDeleteSession(body, supabase) {
-  const { session_id, user_id, anonymous_id } = body;
+async function handleQbankDeleteSession(body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const { session_id } = body;
   if (!session_id) return json({ error: "session_id required" }, 400);
-  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+  const owner = await requestOwner(supabase, identity);
   let query = supabase.from("qbank_sessions").delete().eq("id", session_id);
-  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
-  const { error } = await query;
+  query = owner.userId
+    ? query.eq("user_id", owner.userId)
+    : query.eq("anonymous_id", owner.anonymousId);
+  const { data, error } = await query.select("id").maybeSingle();
   if (error) {
-    console.error("Failed to delete qbank session:", error);
+    console.error("Failed to delete qbank session:", error?.code || "database_error");
     return json({ error: "Failed to delete session" }, 500);
   }
+  if (!data) return json({ error: "Session not found" }, 404);
   return json({ success: true });
 }
 
-async function handleQbankClearSessions(body, supabase) {
-  const { user_id, anonymous_id } = body;
-  if (!user_id && !anonymous_id) return json({ error: "user context required" }, 400);
+async function handleQbankClearSessions(_body: Record<string, any>, supabase: any, identity: RequestIdentity) {
+  const owner = await requestOwner(supabase, identity);
   let query = supabase.from("qbank_sessions").delete();
-  query = user_id ? query.eq("user_id", user_id) : query.eq("anonymous_id", anonymous_id);
+  query = owner.userId
+    ? query.eq("user_id", owner.userId)
+    : query.eq("anonymous_id", owner.anonymousId);
   const { error } = await query;
   if (error) {
-    console.error("Failed to clear qbank sessions:", error);
+    console.error("Failed to clear qbank sessions:", error?.code || "database_error");
     return json({ error: "Failed to clear sessions" }, 500);
   }
   return json({ success: true });
@@ -784,34 +681,47 @@ async function handleQbankClearSessions(body, supabase) {
 /* -------------------------------------------------------------------------- */
 /*  Profile updates                                                           */
 /* -------------------------------------------------------------------------- */
-async function handleUpdateProfile(body, supabase) {
-  const { supabase_user, full_name, profile, settings } = body;
-  if (!supabase_user?.id) {
-    return new Response(JSON.stringify({
-      error: "supabase_user required"
-    }), {
-      status: 400,
-      headers: {
-        ...corsHeaders,
-        "Content-Type": "application/json"
-      }
-    });
-  }
+async function handleUpdateProfile(
+  body: Record<string, any>,
+  supabase: any,
+  identity: RequestIdentity
+) {
+  const { full_name, profile, settings } = body;
+  const authenticated = requireAuthenticated(identity);
+  const verifiedUser = authenticated.user;
+  const verifiedMetadata = verifiedUserMetadata(verifiedUser);
+  const supabase_user = {
+    id: verifiedUser.id,
+    email: verifiedUser.email || "",
+    avatar_url: verifiedMetadata.avatar_url || verifiedMetadata.picture || null,
+    metadata: verifiedMetadata,
+    app_metadata: verifiedAppMetadata(verifiedUser),
+    identities: verifiedUser.identities || []
+  };
   const now = new Date().toISOString();
-  const profileUpdates = typeof profile === "object" && profile !== null ? profile : {};
+  const profileUpdates = typeof profile === "object" && profile !== null
+    ? Object.fromEntries(
+        Object.entries(profile)
+          .filter(([key, value]) => ALLOWED_PROFILE_KEYS.has(key) && typeof value === "string")
+          .map(([key, value]) => [key, (value as string).trim().slice(0, 160)])
+      )
+    : {};
   const incomingMetadata = typeof supabase_user.metadata === "object" && supabase_user.metadata !== null ? supabase_user.metadata : {};
   const appMetadata = typeof supabase_user.app_metadata === "object" && supabase_user.app_metadata !== null ? supabase_user.app_metadata : {};
   const identities = Array.isArray(supabase_user.identities) ? supabase_user.identities : [];
-  const identitySummaries = identities.map((identity) => ({
-    provider: identity?.provider || identity?.identity_provider || null,
-    identity_id: identity?.id || identity?.identity_id || null,
-    email: identity?.email || identity?.identity_data?.email || null,
-    last_sign_in_at: identity?.last_sign_in_at || identity?.last_signin_at || null
-  }));
+  const identitySummaries = identities
+    .map((identity) => ({
+      provider: typeof identity?.provider === "string"
+        ? identity.provider
+        : typeof identity?.identity_provider === "string"
+          ? identity.identity_provider
+          : null
+    }))
+    .filter((identity) => Boolean(identity.provider));
   const primaryProvider = (appMetadata?.provider || identitySummaries.find((item) => !!item.provider)?.provider || (supabase_user.email ? "email" : "unknown")) as string;
   const { data: existingUser, error: fetchError } = await supabase.from("auth_users").select("*").eq("auth0_id", supabase_user.id).maybeSingle();
   if (fetchError && fetchError.code !== "PGRST116") {
-    console.error("Failed to fetch user for profile update:", fetchError);
+    console.error("Failed to fetch user for profile update:", fetchError?.code || "database_error");
     return new Response(JSON.stringify({
       error: "Unable to load user"
     }), {
@@ -850,8 +760,8 @@ async function handleUpdateProfile(body, supabase) {
   if (Object.keys(mergedSettings).length === 0) {
     delete nextMetadata.settings;
   }
-  const normalizedFullName = typeof full_name === "string" && full_name.trim() || existingUser?.full_name || incomingMetadata.full_name || incomingMetadata.name || supabase_user.email || "User";
-  const payload = {
+  const normalizedFullName = typeof full_name === "string" && full_name.trim().slice(0, 160) || existingUser?.full_name || incomingMetadata.full_name || incomingMetadata.name || supabase_user.email || "User";
+  const payload: Record<string, unknown> = {
     auth0_id: supabase_user.id,
     email: supabase_user.email || existingUser?.email || "",
     full_name: normalizedFullName,
@@ -865,7 +775,7 @@ async function handleUpdateProfile(body, supabase) {
     onConflict: "auth0_id"
   }).select().single();
   if (upsertError) {
-    console.error("Failed to write user profile:", upsertError);
+    console.error("Failed to write user profile:", upsertError?.code || "database_error");
     return new Response(JSON.stringify({
       error: "Unable to update profile"
     }), {

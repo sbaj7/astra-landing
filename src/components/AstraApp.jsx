@@ -933,9 +933,6 @@ function remarkCustomBreaks() {
 const fixMermaidContent = (content) => {
   if (!content) return content;
   
-  console.log('=== FIXING MERMAID CONTENT ===');
-  console.log('Original content:', content);
-  
   // Pattern to detect mermaid diagrams that aren't wrapped in code blocks
   const lines = content.split('\n');
   const result = [];
@@ -945,8 +942,6 @@ const fixMermaidContent = (content) => {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const trimmed = line.trim();
-    
-    console.log(`Line ${i}: "${trimmed}" (inMermaidBlock: ${inMermaidBlock})`);
     
     // Check if this line starts a mermaid diagram - more comprehensive detection
     const isMermaidStart = !inMermaidBlock && (
@@ -974,7 +969,6 @@ const fixMermaidContent = (content) => {
       // Check if it's already in a code block
       const recentLines = result.slice(-5).join('\n');
       if (!recentLines.includes('```mermaid') && !recentLines.includes('```')) {
-        console.log('🎯 DETECTED MERMAID START:', trimmed);
         inMermaidBlock = true;
         mermaidLines = [trimmed];
         continue;
@@ -996,12 +990,10 @@ const fixMermaidContent = (content) => {
           trimmed.includes('{') && trimmed.includes('}')) {
         
         if (trimmed !== '') {
-          console.log('📝 Adding mermaid line:', trimmed);
           mermaidLines.push(trimmed);
         }
       } else {
         // End of mermaid block
-        console.log('🏁 ENDING MERMAID BLOCK, collected lines:', mermaidLines);
         inMermaidBlock = false;
         result.push('```mermaid');
         result.push(...mermaidLines);
@@ -1021,18 +1013,12 @@ const fixMermaidContent = (content) => {
   
   // Handle case where mermaid block extends to end of content
   if (inMermaidBlock && mermaidLines.length > 0) {
-    console.log('🏁 ENDING MERMAID BLOCK AT EOF, collected lines:', mermaidLines);
     result.push('```mermaid');
     result.push(...mermaidLines);
     result.push('```');
   }
   
-  const finalContent = result.join('\n');
-  console.log('=== FIXED CONTENT ===');
-  console.log(finalContent);
-  console.log('======================');
-  
-  return finalContent;
+  return result.join('\n');
 };
 
 // Replace (domain.com) citation patterns with inline favicon buttons
@@ -2339,8 +2325,6 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
 
   // Parse differential diagnosis structure - loose parser since format is always the same
   const parseDifferentials = (text) => {
-    console.log('🔍 Parsing differential diagnosis, content length:', text.length);
-
     const differentials = [];
     // Very loose regex - just look for numbered items with bolded condition names
     // Format: "1. **Condition** — *Likelihood*" or "1. **Condition** - *Likelihood*"
@@ -2351,8 +2335,6 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
       const number = match[1];
       const condition = match[2].trim();
       const likelihood = match[3].replace(/^Likelihood\s+/i, '').trim();
-
-      console.log(`📊 Found differential #${number}: "${condition}" (${likelihood})`);
 
       // Get the block for this differential (from current match to next number or section)
       const startIndex = match.index;
@@ -2403,22 +2385,12 @@ const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) 
         });
       }
 
-      console.log(`   ✅ ${supporting.length} supporting, ⚠️ ${against.length} against`);
       differentials.push({ condition, likelihood, supporting, against });
     }
-
-    console.log(`🎯 Total differentials parsed: ${differentials.length}`);
     return differentials;
   };
 
   const differentials = parseDifferentials(content);
-
-  // Debug logging
-  if (differentials.length === 0) {
-    console.log('⚠️ No differentials parsed from content:', content.substring(0, 200));
-  } else {
-    console.log('✅ Parsed', differentials.length, 'differentials');
-  }
 
   if (differentials.length === 0) return null;
 
@@ -5585,6 +5557,7 @@ const AstraApp = () => {
 
   // Supabase auth
   const {
+    session,
     user,
     isAuthenticated,
     isLoading: authLoading,
@@ -5819,7 +5792,6 @@ const AstraApp = () => {
 
       // Also update accountProfile with fresh user data including manual subscription fields
       if (result?.user) {
-        console.log('🔄 Updating accountProfile with fresh user data:', result.user);
         setAccountProfile(result.user);
       }
 
@@ -6328,7 +6300,7 @@ const AstraApp = () => {
 
     // Check limits based on user type
     if (!isAuthenticated) {
-      // Anonymous users: 5 chats/day
+      // Anonymous users: 3 chats/day
       if (chatLimit.remaining <= 0) {
         setShowPaywall(true);
         return;
@@ -6461,8 +6433,8 @@ const AstraApp = () => {
             .join('\n\n')}\n\n---\n\nCurrent question: ${queryToSend}`
         : queryToSend;
 
-      // Build request body - include images when present. Pass the user identity
-      // so the server can enforce/increment the daily limit (tamper-proof).
+      // The server derives authenticated identity from the session JWT. The
+      // anonymous value is an opaque capability and is HMACed before storage.
       const requestBody = {
         query: queryWithContext,
         isClinical: false,
@@ -6470,7 +6442,6 @@ const AstraApp = () => {
         isWrite: currentMode === 'write',
         mode: currentMode,
         stream: true,
-        user_id: isAuthenticated ? (user?.id || null) : null,
         anonymous_id: !isAuthenticated ? authService.getAnonymousId() : null
       };
 
@@ -6482,12 +6453,20 @@ const AstraApp = () => {
         }));
       }
 
-      const response = await fetch(import.meta.env.VITE_API_URL, {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const anonymousApiKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      const quickApiUrl = import.meta.env.VITE_QUICK_API_URL
+        || import.meta.env.VITE_API_URL
+        || (supabaseUrl ? `${supabaseUrl}/functions/v1/quick-api` : '');
+      if (!quickApiUrl || !anonymousApiKey) {
+        throw new Error('Astra API is not configured');
+      }
+      const response = await fetch(quickApiUrl, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+          'Authorization': `Bearer ${session?.access_token || anonymousApiKey}`,
           'Content-Type': 'application/json',
-          'apikey': import.meta.env.VITE_API_KEY,
+          'apikey': anonymousApiKey,
           'Accept': 'text/event-stream'
         },
         body: JSON.stringify(requestBody),
@@ -6496,12 +6475,16 @@ const AstraApp = () => {
 
       // Server-side daily-limit block: roll back the optimistic message and paywall.
       if (response.status === 429) {
-        setMessages(prev => prev.filter(m => m.id !== userMessage.id));
-        setChatLimit(prev => ({ ...prev, remaining: 0 }));
-        setIsLoading(false);
-        setIsStreaming(false);
-        setShowPaywall(true);
-        return;
+        const rateLimitPayload = await response.json().catch(() => ({}));
+        if (rateLimitPayload?.error === 'daily_limit_reached') {
+          setMessages(prev => prev.filter(m => m.id !== userMessage.id));
+          setChatLimit(prev => ({ ...prev, remaining: 0 }));
+          setIsLoading(false);
+          setIsStreaming(false);
+          setShowPaywall(true);
+          return;
+        }
+        throw new Error(rateLimitPayload?.message || 'Too many requests. Please wait and try again.');
       }
 
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -6670,12 +6653,22 @@ const AstraApp = () => {
       setMessages(prev => [...prev, { id: Date.now() + 1, role: 'assistant', content: `⚠️ Error: ${error.message}. Please check your connection and try again.`, timestamp: new Date() }]);
 
       // Revert optimistic update if API call failed
-      if (!isAuthenticated) {
-        setChatLimit(prev => ({
-          ...prev,
-          remaining: prev.remaining + 1,
-          used: Math.max(0, prev.used - 1)
-        }));
+      if (effectivePlan !== 'pro') {
+        setChatLimit(prev => {
+          const nextState = {
+            ...prev,
+            remaining: prev.remaining + 1,
+            used: Math.max(0, prev.used - 1)
+          };
+          if (!isAuthenticated) {
+            authService.setCachedAnonymousLimitState({
+              used: nextState.used,
+              remaining: nextState.remaining,
+              reset_at: nextState.resetAt
+            });
+          }
+          return nextState;
+        });
       }
     } finally {
       abortControllerRef.current = null;

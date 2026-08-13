@@ -229,7 +229,7 @@ const {
 ### Environment Variables Required
 ```env
 VITE_SUPABASE_URL=https://shwitfgtpfszjjoczbxp.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 VITE_STRIPE_PLUS_PRICE_ID=price_xxx
 VITE_STRIPE_PRO_PRICE_ID=price_xxx
 VITE_BILLING_API_URL=https://...supabase.co/functions/v1/billing-supabase

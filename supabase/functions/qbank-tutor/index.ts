@@ -7,6 +7,14 @@
 // Secret required: OPENAI_API_KEY.
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import {
+  createServiceClient,
+  deriveRequestFingerprint,
+  HttpError,
+  resolveRequestIdentity,
+  statusForError
+} from "../_shared/requestIdentity.ts";
+import { consumeRateLimit, getQbankAllowance } from "../_shared/rateLimits.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -56,8 +64,54 @@ serve(async (req) => {
   const fail = (msg: string, status = 500) =>
     new Response(JSON.stringify({ error: msg }), { status, headers: { ...corsHeaders, "content-type": "application/json" } });
 
+  if (req.method !== "POST") return fail("Method not allowed", 405);
+  const contentLength = Number(req.headers.get("content-length") || 0);
+  if (contentLength > 250_000) return fail("Request too large", 413);
+
   let body: any;
   try { body = await req.json(); } catch { return fail("Invalid JSON", 400); }
+
+  try {
+    const identity = await resolveRequestIdentity(req, {
+      allowAnonymous: true,
+      anonymousToken: body.anonymous_id
+    });
+    const serviceClient = createServiceClient();
+    const burstLimit = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "qbank_tutor_minute",
+      identity.kind === "authenticated" ? 40 : 12,
+      60
+    );
+    if (!burstLimit.allowed) return fail("Too many requests. Please wait and try again.", 429);
+    if (identity.kind === "anonymous") {
+      const networkKey = await deriveRequestFingerprint(req, "qbank-tutor-anonymous-network");
+      const networkLimit = await consumeRateLimit(
+        serviceClient,
+        networkKey,
+        "qbank_tutor_anonymous_network_daily",
+        500
+      );
+      if (!networkLimit.allowed) return fail("Anonymous tutor limit reached. Please sign in.", 429);
+    }
+    const { limit } = await getQbankAllowance(serviceClient, identity, "tutor");
+    const usage = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "qbank_tutor_daily",
+      limit
+    );
+    if (!usage.allowed) {
+      return fail("Daily tutor limit reached", 429);
+    }
+  } catch (error) {
+    console.error("QBank tutor authorization failed:", error instanceof Error ? error.name : "UnknownError");
+    return fail(
+      error instanceof HttpError ? error.message : "Tutor service unavailable",
+      statusForError(error)
+    );
+  }
 
   const key = Deno.env.get("OPENAI_API_KEY");
   if (!key) return fail("OPENAI_API_KEY not configured");
@@ -78,9 +132,13 @@ serve(async (req) => {
       reasoning: { effort: "low" },
       max_output_tokens: 1200,
       stream: true,
+      store: false,
     }),
   });
-  if (!upstream.ok || !upstream.body) return fail(`OpenAI ${upstream.status}: ${(await upstream.text()).slice(0, 300)}`);
+  if (!upstream.ok || !upstream.body) {
+    await upstream.text().catch(() => "");
+    return fail(`OpenAI request failed: ${upstream.status}`, upstream.status >= 500 ? 502 : upstream.status);
+  }
 
   const reader = upstream.body.getReader();
   const enc = new TextEncoder();

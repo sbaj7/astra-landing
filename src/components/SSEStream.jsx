@@ -83,7 +83,6 @@ class SSEStream {
         }
 
         const chunk = decoder.decode(value, { stream: true });
-        console.log(`📥 Received chunk: ${chunk.substring(0, 100)}...`);
 
         // Handle error responses
         if (this.httpStatusCode >= 300 && chunk.includes('"error"') && !chunk.startsWith('data:')) {
@@ -103,7 +102,6 @@ class SSEStream {
   }
 
   handleErrorResponse(string) {
-    console.log(`❌ Handling error response: ${string}`);
     try {
       const json = JSON.parse(string);
       const message = json.error?.message || 'Unknown error';
@@ -137,12 +135,10 @@ class SSEStream {
   processLine(line) {
     const trimmed = line.trim();
     if (!trimmed || !trimmed.startsWith('data:')) {
-      console.log(`🔍 Skipping non-data line: ${trimmed.substring(0, 50)}`);
       return;
     }
 
     const payload = trimmed.substring(5).trim();
-    console.log(`🔄 Processing payload: ${payload.substring(0, 100)}...`);
 
     // ONLY complete on explicit [DONE] marker
     if (payload === '[DONE]') {
@@ -184,24 +180,18 @@ class SSEStream {
       
       if (json.choices?.[0]?.delta?.content) {
         content = json.choices[0].delta.content;
-        console.log(`📝 Extracted delta content: ${content.substring(0, 50)}...`);
       } else if (json.choices?.[0]?.message?.content) {
         content = json.choices[0].message.content;
-        console.log(`📝 Extracted message content: ${content.substring(0, 50)}...`);
       } else if (json.content) {
         content = json.content;
-        console.log(`📝 Extracted direct content: ${content.substring(0, 50)}...`);
       } else if (json.text) {
         content = json.text;
-        console.log(`📝 Extracted text content: ${content.substring(0, 50)}...`);
       }
 
       // Send content if found
       if (content && content.length > 0) {
         this.hasReceivedContent = true;
         this.onText(content);
-      } else {
-        console.log(`⚠️ No content found in JSON:`, json);
       }
 
     } catch (error) {
@@ -234,7 +224,6 @@ class SSEStream {
     
     // Process any remaining buffer
     if (this.buffer.trim()) {
-      console.log(`🧹 Processing remaining buffer: ${this.buffer.substring(0, 100)}...`);
       const lines = this.buffer.split(/\r?\n/);
       lines.forEach(line => {
         const trimmed = line.trim();

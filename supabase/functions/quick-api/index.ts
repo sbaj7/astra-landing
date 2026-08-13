@@ -1,10 +1,17 @@
 // deno-lint-ignore-file no-explicit-any
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.5";
-import { getSubscriptionDailyChatLimit } from "../_shared/usageLimits.ts";
+import {
+  createServiceClient,
+  deriveRequestFingerprint,
+  HttpError,
+  resolveRequestIdentity,
+  statusForError
+} from "../_shared/requestIdentity.ts";
+import { consumeRateLimit, getChatAllowance } from "../_shared/rateLimits.ts";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, accept"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, accept",
+  "Access-Control-Allow-Methods": "POST, OPTIONS"
 };
 const HOUSE_MARKDOWN_STYLE = `
 OUTPUT RULES (STRICT)
@@ -172,6 +179,7 @@ QUERY GENERATION RULES:
 - Prioritize: systematic reviews, meta-analyses, landmark RCTs, major guidelines
 - Include temporal diversity: landmark studies + recent evidence (last 3 years)
 - Target high-impact journals for each theme
+- Describe only the clinical topic. Never include or reproduce names, contact details, dates of birth, record numbers, account identifiers, or other patient identifiers in a search query.
 
 Ensure total targetSources across all themes = 50. Generate the thematic breakdown now.`;
 }
@@ -1226,7 +1234,7 @@ EXAMPLE:
 – Annual dilated exam minimum; sooner if retinopathy progresses`;
 }
 // Specialty-specific A+P variants (lean wrappers around base A+P)
-function getSpecialtyAPRole(specialty) {
+function getSpecialtyAPRole(specialty: string) {
   const basePrompt = getPlanRole();
   return `You are a ${specialty} physician preparing an Assessment and Plan. Apply ${specialty}-specific clinical reasoning (diagnostic nuances, therapeutics, landmark trials) while following the base formatting instructions verbatim. Do not change the section headings or bullet style—mirror the exact structure below.\n\n${basePrompt}`;
 }
@@ -1551,6 +1559,31 @@ WRITING PRINCIPLES
 // ==============================
 // SEARCH FUNCTIONS
 // ==============================
+function getTavilyApiKey() {
+  const apiKey = Deno.env.get("TAVILY_API_KEY")?.trim();
+  if (!apiKey) throw new Error("TAVILY_API_KEY not configured");
+  return apiKey;
+}
+
+function sanitizeSearchQuery(input: unknown) {
+  let query = String(input || "").split("=== VISION ANALYSIS")[0];
+
+  query = query
+    .replace(/data:[^,\s]+;base64,[A-Za-z0-9+/=]+/gi, " ")
+    .replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, " ")
+    .replace(/\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, " ")
+    .replace(/\b\d{3}-\d{2}-\d{4}\b/g, " ")
+    .replace(/\b(?:MRN|medical record(?: number)?|patient ID|member ID|account ID)\s*[:#=-]?\s*[A-Z0-9/-]{2,}\b/gi, " ")
+    .replace(/\b(?:DOB|date of birth|born)\s*(?:on|[:#=-])?\s*\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b/gi, " ")
+    .replace(/\b(?:patient\s+(?:named|name is)|name\s*[:=])\s+[A-Z][A-Za-z'’\-]+(?:\s+[A-Z][A-Za-z'’\-]+){1,2}\b/g, "patient")
+    .replace(/\b\d{1,5}\s+[A-Za-z0-9.'\-]+(?:\s+[A-Za-z0-9.'\-]+){0,4}\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|Way)\b/gi, " ")
+    .replace(/\b[A-Z0-9]{12,}\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return query.slice(0, 300);
+}
+
 // Deterministic 3-query fan-out — replaces the old LLM query planner.
 //
 // Measured: what drives source count and publisher diversity is the NUMBER of
@@ -1565,22 +1598,22 @@ WRITING PRINCIPLES
 // Literature review keeps its LLM planner: decomposing a topic into 6-7 thematic
 // areas is real semantic work that templates can't fake, and that mode is
 // expected to be slow.
-function buildQueryPlan(userQuery) {
+function buildQueryPlan(userQuery: string) {
   // Cap length: `query` may carry an appended vision-analysis block, and Tavily
   // degrades badly on very long queries.
-  const q = (userQuery || "").trim().slice(0, 300);
+  const q = sanitizeSearchQuery(userQuery);
   return {
     primaryQuery: q,
-    secondaryQueries: [
+    secondaryQueries: q ? [
       `${q} randomized controlled trial`,
       `${q} guidelines recommendations`
-    ],
+    ] : [],
     searchFocus: "primary + trials + guidelines"
   };
 }
-async function searchWithTavily(queryPlan) {
+async function searchWithTavily(queryPlan: { primaryQuery: string; secondaryQueries?: string[]; searchFocus: string }) {
   try {
-    const tavilyApiKey = "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";
+    const tavilyApiKey = getTavilyApiKey();
     // Tavily bills per SEARCH, not per result, so a higher max_results is free
     // headroom — same credit cost, ~2.5x the sources. 20 is the practical
     // ceiling: asking for 30 measurably degrades the response (returns ~10).
@@ -1609,13 +1642,13 @@ async function searchWithTavily(queryPlan) {
       searchStrategy: queryPlan.searchFocus
     };
   } catch (error) {
-    console.error("❌ Enhanced Tavily search error:", error);
+    console.error("Enhanced Tavily search failed:", error instanceof Error ? error.name : "UnknownError");
     return null;
   }
 }
-async function simpleRawSearch(query) {
+async function simpleRawSearch(query: string) {
   try {
-    const tavilyApiKey = "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";
+    const tavilyApiKey = getTavilyApiKey();
     const results = await performTavilySearch(query, tavilyApiKey, 15, {
       includeRawContent: true,
       includeAnswer: true,
@@ -1626,12 +1659,20 @@ async function simpleRawSearch(query) {
       searchStrategy: "simple-raw"
     };
   } catch (error) {
-    console.error("❌ Simple Tavily search error:", error);
+    console.error("Simple Tavily search failed:", error instanceof Error ? error.name : "UnknownError");
     return null;
   }
 }
-async function performTavilySearch(query, apiKey, maxResults = 15, options = {}) {
+async function performTavilySearch(
+  query: string,
+  apiKey: string,
+  maxResults = 15,
+  options: { includeRawContent?: boolean; includeAnswer?: boolean; searchDepth?: string } = {}
+) {
   const { includeRawContent = false, includeAnswer = false, searchDepth = "basic" } = options;
+  const safeQuery = sanitizeSearchQuery(query);
+  if (!safeQuery) return [];
+
   try {
     const response = await fetch("https://api.tavily.com/search", {
       method: "POST",
@@ -1640,7 +1681,7 @@ async function performTavilySearch(query, apiKey, maxResults = 15, options = {})
         "Authorization": `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        query,
+        query: safeQuery,
         max_results: maxResults,
         search_depth: searchDepth,
         include_domains: trustedDomains,
@@ -1655,7 +1696,7 @@ async function performTavilySearch(query, apiKey, maxResults = 15, options = {})
     // what Tavily returns (it can supplement include_domains with outside results).
     return (data.results || []).filter((r: any) => isTrustedHost(hostOf(r.url)));
   } catch (error) {
-    console.error(`❌ Error searching for "${query}":`, error);
+    console.error("Tavily search failed:", error instanceof Error ? error.name : "UnknownError");
     return [];
   }
 }
@@ -1664,14 +1705,14 @@ async function fetchIcdCodeHints() {
   // No need for external search - handled through prompting
   return "";
 }
-const hostOf = (url) => {
+const hostOf = (url: string) => {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
 };
 
 // STRICT ALLOWLIST: a source is allowed ONLY if its host matches a trusted domain.
 // Tavily can silently supplement include_domains with outside results when matches
 // are sparse, so we enforce the restriction ourselves — no fallback, ever.
-const isTrustedHost = (h) => {
+const isTrustedHost = (h: string) => {
   if (!h) return false;
   return trustedDomains.some((d) => {
     const dom = d.split("/")[0]; // tolerate list entries that include a path
@@ -1679,7 +1720,7 @@ const isTrustedHost = (h) => {
   });
 };
 
-function rankAndFilterResults(results) {
+function rankAndFilterResults(results: any[]) {
   const tier1Domains = [
     "nejm.org",
     "thelancet.com",
@@ -1702,12 +1743,12 @@ function rankAndFilterResults(results) {
     "sciencedirect.com"
   ];
   // Defense in depth: even here, keep only trusted hosts.
-  const clean = results.filter((r) => isTrustedHost(hostOf(r.url)));
+  const clean = results.filter((r: any) => isTrustedHost(hostOf(r.url)));
   // Match subdomains, not just exact hosts: clinician.nejm.org, pmc.ncbi.nlm.nih.gov
   // and stroke.ahajournals.org are the SAME publishers as the tier entries, but
   // exact-match scoring silently graded them bottom-tier.
-  const inTier = (tier, host) => tier.some((d) => host === d || host.endsWith("." + d));
-  const getScore = (domain) => {
+  const inTier = (tier: string[], host: string) => tier.some((domain) => host === domain || host.endsWith("." + domain));
+  const getScore = (domain: string) => {
     if (inTier(tier1Domains, domain)) return 4;
     if (inTier(tier2Domains, domain)) return 3;
     if (inTier(tier3Domains, domain)) return 2;
@@ -1721,7 +1762,7 @@ function rankAndFilterResults(results) {
   return [...clean].sort((a, b) => getScore(hostOf(b.url)) - getScore(hostOf(a.url)));
 }
 // Literature review version - no cap, returns all ranked results
-function rankAndFilterResultsLitReview(results) {
+function rankAndFilterResultsLitReview(results: any[]) {
   const tier1Domains = [
     "nejm.org",
     "thelancet.com",
@@ -1739,18 +1780,18 @@ function rankAndFilterResultsLitReview(results) {
     "onlinelibrary.wiley.com",
     "journals.lww.com"
   ];
-  const pubmedResults = results.filter((r) => new URL(r.url).hostname.includes("ncbi.nlm.nih.gov"));
-  const nonPubmedResults = results.filter((r) => !new URL(r.url).hostname.includes("ncbi.nlm.nih.gov"));
+  const pubmedResults = results.filter((result: any) => new URL(result.url).hostname.includes("ncbi.nlm.nih.gov"));
+  const nonPubmedResults = results.filter((result: any) => !new URL(result.url).hostname.includes("ncbi.nlm.nih.gov"));
   // Score and sort both groups
-  const scoreResult = (result) => {
+  const scoreResult = (result: any) => {
     const domain = new URL(result.url).hostname.replace("www.", "");
     if (tier1Domains.includes(domain)) return 4;
     if (tier2Domains.includes(domain)) return 3;
     if (tier3Domains.includes(domain)) return 2;
     return 1;
   };
-  nonPubmedResults.sort((a, b) => scoreResult(b) - scoreResult(a));
-  pubmedResults.sort((a, b) => scoreResult(b) - scoreResult(a));
+  nonPubmedResults.sort((a: any, b: any) => scoreResult(b) - scoreResult(a));
+  pubmedResults.sort((a: any, b: any) => scoreResult(b) - scoreResult(a));
   // Return ALL results, ranked (no cap)
   // Interleave: prioritize non-PubMed but include PubMed throughout
   const combined = [];
@@ -1777,7 +1818,7 @@ function rankAndFilterResultsLitReview(results) {
 // ==============================
 // LITERATURE REVIEW FUNCTIONS
 // ==============================
-async function planLiteratureReview(userQuery) {
+async function planLiteratureReview(userQuery: string) {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -1797,20 +1838,21 @@ async function planLiteratureReview(userQuery) {
         }
       ],
       max_completion_tokens: 1500,
-      reasoning_effort: "low"
+      reasoning_effort: "low",
+      store: false
     })
   });
   if (!response.ok) {
-    const errText = await response.text();
-    throw new Error(`Review planning failed: ${response.status} - ${errText}`);
+    await response.text().catch(() => "");
+    throw new Error(`Review planning failed: ${response.status}`);
   }
   const data = await response.json();
   const content = data.choices?.[0]?.message?.content;
   if (!content) throw new Error("No content returned from review planner");
   return JSON.parse(content);
 }
-async function conductLiteratureReview(reviewPlan) {
-  const tavilyApiKey = "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";
+async function conductLiteratureReview(reviewPlan: any) {
+  const tavilyApiKey = getTavilyApiKey();
   const allResults = [];
   // Flatten all queries across all themes
   const allQueries = [];
@@ -1842,7 +1884,7 @@ async function conductLiteratureReview(reviewPlan) {
 // ==============================
 // SUPABASE RAG
 // ==============================
-async function retrieveRelevantTrials(userQuery) {
+async function retrieveRelevantTrials(userQuery: string) {
   try {
     const embeddingRes = await fetch("https://api.openai.com/v1/embeddings", {
       method: "POST",
@@ -1858,14 +1900,14 @@ async function retrieveRelevantTrials(userQuery) {
     const embeddingData = await embeddingRes.json();
     const queryEmbedding = embeddingData.data?.[0]?.embedding;
     if (!queryEmbedding) return "";
-    const supabase = createClient(Deno.env.get("SUPABASE_URL"), Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
+    const supabase = createServiceClient();
     const { data, error } = await supabase.rpc("match_trials", {
       query_embedding: queryEmbedding,
       match_threshold: 0.5,
       match_count: 10
     });
     if (error) return "";
-    return (data || []).map((trial) => {
+    return (data || []).map((trial: any) => {
       const match = trial.text?.match(/^([A-Z0-9\-]+)\s+\((\d{4})\)/);
       const studyAcronym = match?.[1] || trial.id || "Unnamed Trial";
       const year = match?.[2] || "Unknown Year";
@@ -1880,87 +1922,25 @@ async function retrieveRelevantTrials(userQuery) {
   }
 }
 // ==============================
-// USAGE LIMITS (server-side, tamper-proof)
-// ==============================
-// Daily caps by tier. Enforced HERE (not just client-side) so free/plus users
-// can't exceed by manipulating the browser. QBank uses a different function and
-// is unaffected. Fails OPEN only on genuine infra errors (never blocks a paying
-// path over a limits-DB blip); fails CLOSED on a confirmed over-limit.
-const ANONYMOUS_DAILY_CHAT_LIMIT = 5;
-const DAY_MS = 24 * 60 * 60 * 1000;
-
-// Returns { allowed, reason } and increments usage when allowed.
-async function consumeUsage(userId?: string, anonymousId?: string): Promise<{ allowed: boolean; reason?: string }> {
-  const url = Deno.env.get("SUPABASE_URL");
-  const key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-  if (!url || !key) return { allowed: true }; // misconfig → don't block
-  const db = createClient(url, key);
-  const now = new Date();
-
-  try {
-    if (userId) {
-      // Resolve tier + internal id. Real schema: `subscription_status` holds the
-      // TIER ('free'|'plus'|'pro'); manual_subscription_* can override it. There is
-      // NO subscription_plan column (selecting it errored → fail-open bug).
-      const { data: users } = await db.from("auth_users")
-        .select("id, subscription_status, manual_subscription_enabled, manual_subscription_plan, manual_subscription_expires_at")
-        .eq("auth0_id", userId).order("created_at", { ascending: true }).limit(1);
-      const u = users?.[0];
-      if (!u) return { allowed: true }; // not synced yet → allow (client will sync)
-
-      const manualValid = u.manual_subscription_enabled &&
-        (!u.manual_subscription_expires_at || new Date(u.manual_subscription_expires_at) > now);
-      const rawTier = (manualValid ? (u.manual_subscription_plan || u.subscription_status) : u.subscription_status || "free").toLowerCase();
-      const limit = getSubscriptionDailyChatLimit(rawTier);
-      if (!isFinite(limit)) return { allowed: true }; // pro → unlimited, no tracking
-
-      const { data: recs } = await db.from("user_limits").select("*").eq("user_id", u.id).order("updated_at", { ascending: false }).limit(1);
-      let rec = recs?.[0];
-      const expired = !rec || new Date(rec.reset_at) < now;
-      const used = expired ? 0 : (rec.chats_used || 0);
-      if (used >= limit) return { allowed: false, reason: "daily_limit" };
-
-      if (!rec) {
-        await db.from("user_limits").insert({ user_id: u.id, chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() });
-      } else if (expired) {
-        await db.from("user_limits").update({ chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() }).eq("id", rec.id);
-      } else {
-        await db.from("user_limits").update({ chats_used: used + 1, updated_at: now.toISOString() }).eq("id", rec.id);
-      }
-      return { allowed: true };
-    }
-
-    if (anonymousId) {
-      const limit = ANONYMOUS_DAILY_CHAT_LIMIT;
-      const { data: recs } = await db.from("anonymous_limits").select("*").eq("anonymous_id", anonymousId).order("updated_at", { ascending: false }).limit(1);
-      let rec = recs?.[0];
-      const expired = !rec || new Date(rec.reset_at) < now;
-      const used = expired ? 0 : (rec.chats_used || 0);
-      if (used >= limit) return { allowed: false, reason: "daily_limit" };
-      if (!rec) {
-        await db.from("anonymous_limits").insert({ anonymous_id: anonymousId, chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() });
-      } else if (expired) {
-        await db.from("anonymous_limits").update({ chats_used: 1, reset_at: new Date(now.getTime() + DAY_MS).toISOString(), updated_at: now.toISOString() }).eq("id", rec.id);
-      } else {
-        await db.from("anonymous_limits").update({ chats_used: used + 1, updated_at: now.toISOString() }).eq("id", rec.id);
-      }
-      return { allowed: true };
-    }
-
-    return { allowed: true }; // no identifier → can't enforce (shouldn't happen)
-  } catch (e) {
-    console.error("consumeUsage error (failing open):", e);
-    return { allowed: true }; // infra error → don't block
-  }
-}
-
-// ==============================
 // EDGE FUNCTION HANDLER
 // ==============================
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", {
       headers: corsHeaders
+    });
+  }
+  if (req.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }), {
+      status: 405,
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+    });
+  }
+  const contentLength = Number(req.headers.get("content-length") || 0);
+  if (contentLength > 25_000_000) {
+    return new Response(JSON.stringify({ error: "Request too large" }), {
+      status: 413,
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
     });
   }
   let body;
@@ -1977,8 +1957,25 @@ serve(async (req) => {
       }
     });
   }
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
+    return new Response(JSON.stringify({ error: "Invalid JSON object" }), {
+      status: 400,
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+    });
+  }
   try {
-    let { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], user_id = null, anonymous_id = null } = body;
+    let { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], anonymous_id = null } = body;
+
+    query = typeof query === "string" ? query.slice(0, 50_000) : "";
+    mode = typeof mode === "string" ? mode.slice(0, 80) : "search";
+    if (!Array.isArray(images) || images.length > 4) {
+      throw new HttpError(400, "Invalid image payload");
+    }
+    const totalImageBytes = images.reduce((total, image) =>
+      total + (typeof image?.data === "string" ? image.data.length : 0), 0);
+    if (images.some((image) => typeof image?.data !== "string") || totalImageBytes > 24_000_000) {
+      throw new HttpError(413, "Image payload too large");
+    }
 
     // Debug logging for images
     console.log(`📨 Request received - mode: ${mode}, images: ${images?.length || 0}, query length: ${query?.length || 0}`);
@@ -1998,13 +1995,69 @@ serve(async (req) => {
       });
     }
 
-    // Enforce daily usage limit server-side (tamper-proof). Regular modes only —
-    // QBank runs through a different function. Increments on allow.
-    const usage = await consumeUsage(user_id, anonymous_id);
-    if (!usage.allowed) {
+    const identity = await resolveRequestIdentity(req, {
+      allowAnonymous: true,
+      anonymousToken: anonymous_id
+    });
+    const serviceClient = createServiceClient();
+    const burstLimit = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "chat_minute",
+      identity.kind === "authenticated" ? 20 : 8,
+      60
+    );
+    if (!burstLimit.allowed) {
+      return new Response(JSON.stringify({
+        error: "rate_limited",
+        message: "Too many requests. Please wait a moment and try again."
+      }), {
+        status: 429,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      });
+    }
+    if (identity.kind === "anonymous") {
+      const networkKey = await deriveRequestFingerprint(req, "quick-api-anonymous-network");
+      const networkLimit = await consumeRateLimit(
+        serviceClient,
+        networkKey,
+        "chat_anonymous_network_daily",
+        100
+      );
+      if (!networkLimit.allowed) {
+        return new Response(JSON.stringify({
+          error: "rate_limited",
+          message: "Anonymous request limit reached. Please sign in to continue."
+        }), {
+          status: 429,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    } else {
+      const safetyLimit = await consumeRateLimit(
+        serviceClient,
+        identity.rateLimitKey,
+        "chat_safety_daily",
+        5000
+      );
+      if (!safetyLimit.allowed) {
+        return new Response(JSON.stringify({
+          error: "rate_limited",
+          message: "Account safety limit reached. Contact support if you need help."
+        }), {
+          status: 429,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    }
+    const { limit } = await getChatAllowance(serviceClient, identity);
+    const usage = Number.isFinite(limit)
+      ? await consumeRateLimit(serviceClient, identity.rateLimitKey, "chat_daily", limit)
+      : null;
+    if (usage && !usage.allowed) {
       return new Response(JSON.stringify({
         error: "daily_limit_reached",
-        reason: usage.reason || "daily_limit",
+        reason: "daily_limit",
         message: "You've reached your daily limit. Upgrade for more."
       }), {
         status: 429,
@@ -2066,7 +2119,8 @@ Use professional medical terminology while remaining clear. If the image quality
         messages: visionMessages,
         max_completion_tokens: 8096,
         reasoning_effort: "low",
-        stream: false // We need the full response to pass to the next step
+        stream: false, // We need the full response to pass to the next step
+        store: false
       };
 
       try {
@@ -2080,24 +2134,22 @@ Use professional medical terminology while remaining clear. If the image quality
         });
 
         if (!visionUpstream.ok) {
-          const errorText = await visionUpstream.text();
-          console.error(`❌ Vision API error: ${visionUpstream.status} - ${errorText}`);
-          // Don't fail the whole request, just log and continue
-          visionAnalysis = `[Error running vision analysis: ${errorText}]`;
+          await visionUpstream.text().catch(() => "");
+          console.error(`Vision API error: ${visionUpstream.status}`);
+          visionAnalysis = "";
         } else {
           const visionData = await visionUpstream.json();
           visionAnalysis = visionData.choices?.[0]?.message?.content || "";
           console.log("✅ Vision analysis complete");
         }
-      } catch (err) {
-        console.error("❌ Vision API exception:", err);
-        visionAnalysis = `[Exception running vision analysis: ${err}]`;
+      } catch {
+        console.error("Vision API request failed");
+        visionAnalysis = "";
       }
     }
 
     // If we have vision analysis, update the query
     if (visionAnalysis) {
-      console.log(`👁️ Vision Analysis Result: ${visionAnalysis.substring(0, 100)}...`);
       const analysisContext = `\n\n=== VISION ANALYSIS OF UPLOADED IMAGE(S) ===\n${visionAnalysis}\n============================================\n\n`;
 
       if (!query) {
@@ -2169,7 +2221,8 @@ Use professional medical terminology while remaining clear. If the image quality
         reasoning: {
           effort: "medium"
         },
-        max_output_tokens: 50000 // Higher for long review
+        max_output_tokens: 50000, // Higher for long review
+        store: false
       };
       if (stream) requestBody.stream = true;
       const upstream = await fetch("https://api.openai.com/v1/responses", {
@@ -2181,9 +2234,10 @@ Use professional medical terminology while remaining clear. If the image quality
         body: JSON.stringify(requestBody)
       });
       if (!upstream.ok) {
-        const errorText = await upstream.text();
+        await upstream.text().catch(() => "");
+        console.error(`OpenAI literature review request failed: ${upstream.status}`);
         return new Response(JSON.stringify({
-          error: `OpenAI API error: ${upstream.status} - ${errorText}`
+          error: `OpenAI API error: ${upstream.status}`
         }), {
           status: upstream.status,
           headers: {
@@ -2243,7 +2297,7 @@ Use professional medical terminology while remaining clear. If the image quality
                     };
                     controller.enqueue(encoder.encode(`data: ${JSON.stringify(out)}\n\n`));
                   } else if (eventType === "response.error") {
-                    controller.enqueue(encoder.encode(`data: ${dataJson}\n\n`));
+                    controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: "Model response failed" })}\n\n`));
                   } else if (eventType === "response.completed") {
                     controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
                     controller.close();
@@ -2490,14 +2544,11 @@ Use professional medical terminology while remaining clear. If the image quality
       ];
     } else {
       systemPrompt = getResearchRole();
-      let queryPlan;
-      if (!wantsRawSearch) {
-        // Synchronous and cannot fail — no try/catch, no silent single-query fallback.
-        queryPlan = buildQueryPlan(query);
-      }
       let searchResults: any = null;
       try {
-        searchResults = wantsRawSearch ? await simpleRawSearch(query) : await searchWithTavily(queryPlan);
+        searchResults = wantsRawSearch
+          ? await simpleRawSearch(query)
+          : await searchWithTavily(buildQueryPlan(query));
       } catch { }
       let contextualInfo = "";
       if (searchResults && searchResults.results) {
@@ -2590,7 +2641,8 @@ Use professional medical terminology while remaining clear. If the image quality
       reasoning: {
         effort: reasoningEffort
       },
-      max_output_tokens: 5000
+      max_output_tokens: 5000,
+      store: false
     };
     if (stream) requestBody.stream = true;
 
@@ -2623,8 +2675,8 @@ Use professional medical terminology while remaining clear. If the image quality
 
           const upstream = await upstreamPromise;
           if (!upstream.ok || !upstream.body) {
-            const errorText = await upstream.text().catch(() => "");
-            console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
+            await upstream.text().catch(() => "");
+            console.error(`OpenAI API error: status=${upstream.status}, model=${model}`);
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({
               error: `OpenAI API error: ${upstream.status}`
             })}\n\n`));
@@ -2668,7 +2720,7 @@ Use professional medical terminology while remaining clear. If the image quality
                   };
                   controller.enqueue(encoder.encode(`data: ${JSON.stringify(out)}\n\n`));
                 } else if (eventType === "response.error") {
-                  controller.enqueue(encoder.encode(`data: ${dataJson}\n\n`));
+                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: "Model response failed" })}\n\n`));
                 } else if (eventType === "response.completed") {
                   controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
                   controller.close();
@@ -2700,10 +2752,10 @@ Use professional medical terminology while remaining clear. If the image quality
       // Non-streaming response
       const upstream = await upstreamPromise;
       if (!upstream.ok) {
-        const errorText = await upstream.text();
-        console.error(`❌ OpenAI API error: status=${upstream.status}, model=${model}, error=${errorText}`);
+        await upstream.text().catch(() => "");
+        console.error(`OpenAI API error: status=${upstream.status}, model=${model}`);
         return new Response(JSON.stringify({
-          error: `OpenAI API error: ${upstream.status} - ${errorText}`
+          error: `OpenAI API error: ${upstream.status}`
         }), {
           status: upstream.status,
           headers: {
@@ -2740,11 +2792,12 @@ Use professional medical terminology while remaining clear. If the image quality
       });
     }
   } catch (err) {
-    console.error("❌ Edge function error:", err);
+    console.error("Edge function request failed:", err instanceof Error ? err.name : "UnknownError");
+    const status = statusForError(err);
     return new Response(JSON.stringify({
-      error: err.message
+      error: err instanceof HttpError ? err.message : "Internal server error"
     }), {
-      status: 500,
+      status,
       headers: {
         ...corsHeaders,
         "Content-Type": "application/json"

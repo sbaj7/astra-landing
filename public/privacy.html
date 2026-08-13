@@ -2,116 +2,639 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Astra – Privacy Policy</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow" />
-  <style>
-    :root { --fg:#0b0b0c; --muted:#5e5e63; --bg:#fff; --card:#f7f7f8; --link:#0b5fff; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji; color:var(--fg); background:var(--bg); }
-    .wrap { max-width: 880px; margin: 48px auto; padding: 0 20px 80px; line-height: 1.65; }
-    h1 { font-size: 2rem; margin: 0 0 .25rem; }
-    h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; }
-    h3 { font-size: 1rem; margin: 1.25rem 0 .25rem; }
-    p, li { color: var(--fg); }
-    .muted { color: var(--muted); }
-    .card { background: var(--card); border-radius: 12px; padding: 1rem 1.25rem; }
-    a { color: var(--link); text-decoration: underline; }
-    .small { font-size:.9375rem; }
-    .footer { margin-top: 2.5rem; border-top: 1px solid #e9e9ee; padding-top: 1rem; }
-  </style>
+  <meta name="description" content="How Astraeus Intelligence LLC collects, uses, discloses, retains, and protects personal information in Astra." />
+  <title>Privacy Policy · Astra</title>
+  <link rel="stylesheet" href="/legal.css" />
 </head>
 <body>
-  <main class="wrap" role="main">
-    <header>
-      <h1>Privacy Policy</h1>
-      <p class="muted">Effective date: <strong>2025-08-04</strong></p>
-      <p class="card small">
-        This Privacy Policy explains how <strong>Astra</strong> collects, uses, and protects information when you use the Astra application and website (the “Service”).
-        By using the Service, you agree to this Policy.
+  <header class="legal-topbar">
+    <a class="legal-topbar__brand" href="/" aria-label="Back to Astra">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M12.8 4.2 7 10l5.8 5.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      Astra
+    </a>
+    <span class="legal-topbar__label">Privacy</span>
+  </header>
+
+  <main class="legal-page">
+    <section class="legal-hero" aria-labelledby="privacy-title">
+      <p class="legal-eyebrow">Astraeus Intelligence LLC</p>
+      <h1 id="privacy-title">Privacy, without the fine-print fog.</h1>
+      <p class="legal-hero__lede">
+        This notice explains what Astra collects, why we need it, who may receive it,
+        how long we keep it, and the choices available to you.
       </p>
-    </header>
+      <div class="legal-meta">
+        <span>Effective August 13, 2026</span>
+        <span>Version 2.0</span>
+        <span>United States</span>
+      </div>
+    </section>
 
-    <h2>1) Who we are</h2>
-    <p>
-      Controller: <strong>Astraeus Intelligence LLC</strong><br>
-      Address: 254 Chapman Rd, Ste 208 #22873, Newark, Delaware 19702, USA<br>
-      Contact: <a href="mailto:sandi@astramd.org">sandi@astramd.org</a>
-    </p>
+    <section class="legal-summary" aria-label="Privacy policy highlights">
+      <div class="legal-summary__item">
+        <span>01</span>
+        <strong>No sale. No behavioral advertising.</strong>
+        <p>We do not sell personal information or clinical content, and we do not use it for cross-context behavioral advertising.</p>
+      </div>
+      <div class="legal-summary__item">
+        <span>02</span>
+        <strong>Service only. No secondary use.</strong>
+        <p>Prompts, notes, uploads, transcripts, generated inferences, and saved clinical work are used only to deliver, secure, maintain, and support the Service you request.</p>
+      </div>
+      <div class="legal-summary__item">
+        <span>03</span>
+        <strong>You can ask, access, correct, or delete.</strong>
+        <p>Privacy requests and appeals can be sent to <a href="mailto:outreach@astramd.org">outreach@astramd.org</a>.</p>
+      </div>
+    </section>
 
-    <h2>2) Information we collect</h2>
-    <ul>
-      <li><strong>Account data</strong> (if you sign in): name, email, authentication identifiers.</li>
-      <li><strong>Content you provide</strong>: prompts, notes, uploads, feedback, and settings.</li>
-      <li><strong>Usage data</strong>: feature interactions, timestamps, device/OS, app version, coarse IP/region for security and rate-limiting.</li>
-      <li><strong>Diagnostics (optional)</strong>: crash reports and performance metrics if you opt in.</li>
-    </ul>
+    <div class="legal-layout">
+      <nav class="legal-toc" aria-label="Privacy policy contents">
+        <strong>Contents</strong>
+        <a href="#scope">Scope and roles</a>
+        <a href="#collection">Information collected</a>
+        <a href="#sources">Sources of information</a>
+        <a href="#uses">How information is used</a>
+        <a href="#ai">AI and retrieval</a>
+        <a href="#disclosures">Disclosures</a>
+        <a href="#devices">Cookies and devices</a>
+        <a href="#retention">Retention</a>
+        <a href="#security">Security</a>
+        <a href="#rights">Your rights</a>
+        <a href="#state">State notices</a>
+        <a href="#deidentified">Deidentified data</a>
+        <a href="#transfers">International transfers</a>
+        <a href="#children">Children</a>
+        <a href="#changes">Changes</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <h3>Protected Health Information (PHI)</h3>
-    <p>
-      Astra is clinical decision support. <strong>Do not enter identifiable patient information unless your organization has a signed BAA with us and PHI mode is enabled.</strong>
-      When PHI is off, you must de-identify any clinical data you submit.
-    </p>
+      <article class="legal-article">
+        <section class="legal-section" id="scope">
+          <span class="legal-section__number">01</span>
+          <h2>Scope, definitions, and our role</h2>
+          <p>
+            This Privacy Policy applies to the Astra website, web application, account and subscription
+            services, Research, Reason, Write, and Master features, QBank, referral program, support
+            communications, and related services operated by <strong>Astraeus Intelligence LLC</strong>
+            (collectively, “Astra” or the “Service”).
+          </p>
+          <p>
+            It does not govern a third-party website, scientific source, payment portal, browser service,
+            or other service that has its own privacy notice. A link to another site does not mean Astra
+            controls that site.
+          </p>
 
-    <h2>3) How we use information</h2>
-    <ul>
-      <li>Provide core features (Research, DDx, A&amp;P) and generate responses with citations.</li>
-      <li>Maintain security, prevent abuse, and debug issues.</li>
-      <li>Improve quality and user experience (aggregated or de-identified where possible).</li>
-      <li>Comply with legal obligations and enforce terms.</li>
-    </ul>
+          <h3>When Astra determines the purposes of processing</h3>
+          <p>
+            For an individual account that you create and control, Astra generally acts as the
+            <strong>controller</strong>, “business,” or equivalent entity under applicable privacy law.
+          </p>
 
-    <h2>4) Processors / third-party services</h2>
-    <p>We use service providers acting under contracts that restrict their use of data to our instructions:</p>
-    <ul>
-      <li><strong>Model inference:</strong> OpenAI, Inc. (and other providers if you enable them).</li>
-      <li><strong>Search/Retrieval (Research):</strong> Perplexity/Tavily or equivalent services to fetch public sources you request.</li>
-      <li><strong>Storage/Database:</strong> Supabase (Postgres) for accounts and saved conversations.</li>
-      <li><strong>Analytics/Crash (optional):</strong> Sentry/PostHog/Firebase with IP redaction where supported.</li>
-    </ul>
+          <h3>When an organization controls the account</h3>
+          <p>
+            If you use Astra through a hospital, clinic, university, employer, or other organization,
+            that organization may control your account and the data submitted through it. Astra may act
+            as its processor, service provider, or contractor. Contact the organization first for requests
+            concerning organization-controlled data.
+          </p>
 
-    <h2>5) Security</h2>
-    <ul>
-      <li>TLS for data in transit; AES-256 encryption at rest for stored data.</li>
-      <li>Role-based access, least privilege, and audit logging for administrative access.</li>
-      <li>Secrets managed via environment variables and key management services where supported.</li>
-    </ul>
+          <h3>Contract priority</h3>
+          <p>
+            A signed Data Processing Addendum, order form, or other written agreement may impose additional
+            or different requirements. If this Policy conflicts with such an agreement, that agreement controls
+            to the extent of the conflict. Nothing in this Policy limits a right or obligation that cannot lawfully be limited.
+          </p>
 
-    <h2>6) Data retention</h2>
-    <ul>
-      <li><strong>Conversations:</strong> kept until you delete them (or auto-purged after an organization-set period).</li>
-      <li><strong>Logs:</strong> security/diagnostic logs retained up to 30–90 days unless legally required longer.</li>
-      <li>You may request deletion of your account and content at any time (see Rights).</li>
-    </ul>
+          <div class="legal-callout">
+            <strong>This is a notice, not a blanket authorization.</strong>
+            <p>
+              We process sensitive or health-related information only as described here, as directed by an
+              authorized organization, with consent where required, or as otherwise permitted by law.
+            </p>
+          </div>
+        </section>
 
-    <h2>7) Your choices</h2>
-    <ul>
-      <li>Disable saving conversation history.</li>
-      <li>Toggle analytics/crash sharing.</li>
-      <li>Export or delete conversations and your account.</li>
-    </ul>
+        <section class="legal-section" id="collection">
+          <span class="legal-section__number">02</span>
+          <h2>Information we collect</h2>
+          <p>
+            The information collected depends on the features you use, whether you have an account, and
+            whether an organization manages your access.
+          </p>
 
-    <h2>8) Legal bases & your rights</h2>
-    <p>
-      If you are in the EEA/UK, we process data under GDPR bases including performance of a contract, legitimate interests (security and improvement), and consent where required (analytics).
-      You may request access, correction, deletion, restriction, objection, or portability by contacting us.
-    </p>
-    <p>
-      If you are in California, we do not sell or share personal information for cross-context behavioral advertising. You have CPRA rights to know, delete, correct, and limit use of sensitive personal information.
-    </p>
+          <div class="legal-table-wrap" role="region" aria-label="Categories of information collected" tabindex="0">
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Examples</th>
+                  <th>When collected</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Account and identity</td>
+                  <td>Name, email, authentication identifier, profile information, account status, organization affiliation, and account metadata.</td>
+                  <td>When you register, sign in, join an organization, or update an account.</td>
+                </tr>
+                <tr>
+                  <td>Clinical and user content</td>
+                  <td>Questions, search terms, patient or case narratives, symptoms, histories, notes, differentials, plans, medications, laboratory or imaging information, feedback, and other text you submit.</td>
+                  <td>When you use Research, Reason, Write, support, or other content features.</td>
+                </tr>
+                <tr>
+                  <td>Files, images, and voice</td>
+                  <td>Images, photographs, PDFs, document text, camera captures, audio handled by a browser speech service, and resulting transcripts.</td>
+                  <td>When you choose to upload, capture, dictate, or submit them.</td>
+                </tr>
+                <tr>
+                  <td>Generated content and inferences</td>
+                  <td>Answers, citations, summaries, differentials, next steps, draft documentation, health-related inferences, generated questions, explanations, and tutoring responses.</td>
+                  <td>When Astra processes submitted content.</td>
+                </tr>
+                <tr>
+                  <td>Learning and QBank data</td>
+                  <td>Selected USMLE Step exam, topics, systems, specialties, answers, scores, confidence, response time, session settings, and inferred strengths or weaknesses.</td>
+                  <td>When you use Master or QBank features.</td>
+                </tr>
+                <tr>
+                  <td>Subscription and transaction data</td>
+                  <td>Plan, trial status, billing status, Stripe customer or subscription identifiers, transaction status, and limited payment metadata. Astra does not receive full card numbers.</td>
+                  <td>When you begin a trial, purchase, renew, cancel, or manage a subscription.</td>
+                </tr>
+                <tr>
+                  <td>Referral and payout data</td>
+                  <td>Referral code, attribution, partner name and email, commission records, payout status, payout contact or method, and related audit history.</td>
+                  <td>When you use, administer, or participate in the referral program.</td>
+                </tr>
+                <tr>
+                  <td>Communications</td>
+                  <td>Support requests, privacy requests, survey or feedback responses, email content, and records of our response.</td>
+                  <td>When you communicate with us.</td>
+                </tr>
+                <tr>
+                  <td>Technical and usage data</td>
+                  <td>IP address, browser and device information, operating system, timestamps, page or feature interactions, request metadata, error and security events, usage counts, token counts, and an anonymous usage identifier.</td>
+                  <td>Automatically when you access or use the Service.</td>
+                </tr>
+                <tr>
+                  <td>Preferences and local state</td>
+                  <td>Theme, interface state, cached usage state, session state, and other settings stored in cookies or browser storage.</td>
+                  <td>When needed to remember settings, maintain a session, or enforce limits.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            We do not intentionally collect biometric templates, genetic test results, precise geolocation,
+            government identification numbers, or full payment-card details through Astra’s ordinary product
+            interfaces. Do not submit such information unless a specific feature and written agreement require it.
+          </p>
+        </section>
 
-    <h2>9) Data residency & transfers</h2>
-    <p>Data may be processed in the United States and other countries where our providers operate. Where required, we rely on appropriate transfer mechanisms (e.g., Standard Contractual Clauses).</p>
+        <section class="legal-section" id="sources">
+          <span class="legal-section__number">03</span>
+          <h2>Where information comes from</h2>
+          <ul>
+            <li><strong>From you</strong>, including information you type, upload, dictate, photograph, or send to us.</li>
+            <li><strong>From your organization</strong>, such as account, role, entitlement, or administrative information.</li>
+            <li><strong>From your browser and device</strong>, including technical, permission, cookie, local-storage, and usage information.</li>
+            <li><strong>From payment and referral partners</strong>, including subscription, payment status, fraud, attribution, and payout information.</li>
+            <li><strong>From public and licensed sources</strong>, such as scientific literature, clinical guidelines, registries, and regulatory sources retrieved in response to a request.</li>
+            <li><strong>From our service providers</strong>, such as authentication events, delivery status, security signals, model output, search results, and operational logs.</li>
+            <li><strong>From inferences</strong> generated from information you provide, including a ranked differential, draft note, or learning-strength profile.</li>
+          </ul>
+        </section>
 
-    <h2>10) Children’s privacy</h2>
-    <p>Astra is not intended for children under 13 or for unsupervised use by minors. We do not knowingly collect data from children.</p>
+        <section class="legal-section" id="uses">
+          <span class="legal-section__number">04</span>
+          <h2>How and why we use information</h2>
+          <ul>
+            <li><strong>Provide the Service:</strong> authenticate users, process prompts and files, retrieve evidence, generate outputs, save conversations, and synchronize account state.</li>
+            <li><strong>Personalize learning:</strong> adapt QBank content to selected exams, prior responses, confidence, timing, strengths, and weaknesses.</li>
+            <li><strong>Operate subscriptions and referrals:</strong> administer trials, plans, billing, access, referral attribution, commissions, and manual payouts.</li>
+            <li><strong>Communicate:</strong> send transactional messages, respond to support or privacy requests, and provide service notices.</li>
+            <li><strong>Protect the Service:</strong> authenticate requests, enforce limits, prevent abuse and fraud, investigate incidents, debug failures, and maintain reliability.</li>
+            <li><strong>Meet legal obligations:</strong> comply with law, respond to valid legal process, preserve records, enforce agreements, and establish or defend legal claims.</li>
+            <li><strong>Complete a transaction or reorganization:</strong> conduct diligence or transfer assets in a financing, merger, acquisition, restructuring, or similar event, subject to applicable protections.</li>
+          </ul>
+          <div class="legal-callout">
+            <strong>Customer Content is not a product-development asset.</strong>
+            <p>
+              Astra does not use Customer Content for advertising, marketing, behavioral profiling, benchmarking,
+              unrelated analytics, research, model training, human evaluation, or product improvement. Technical
+              metadata may be used only as necessary to provide, secure, maintain, support, bill for, and legally
+              administer the Service.
+            </p>
+          </div>
 
-    <h2>11) Changes to this Policy</h2>
-    <p>We may update this Policy from time to time. Changes take effect when posted here with an updated effective date. Material changes may be announced in-app or by email.</p>
+          <h3>Legal bases outside the United States</h3>
+          <p>
+            Where a legal basis is required, we rely as appropriate on performance of a contract, steps
+            requested before entering a contract, our legitimate interests in providing and protecting the
+            Service, compliance with legal obligations, consent, and the lawful instructions of an organization
+            acting as controller. For health or other specially protected data, we rely on an additional
+            condition required by applicable law, such as explicit consent, healthcare-related processing,
+            substantial public interest, or the organization’s lawful basis. An organization remains
+            responsible for identifying its own legal basis and providing required notices.
+          </p>
 
-    <div class="footer small">
-      <strong>Contact:</strong> <a href="mailto:sandi@astramd.org">sandi@astramd.org</a>
+          <h3>No solely automated legal or similarly significant decisions</h3>
+          <p>
+            Astra generates clinical and educational content, but Astra does not use personal information to
+            make solely automated decisions that produce legal or similarly significant effects about you.
+            A qualified human remains responsible for clinical, academic, employment, and other consequential decisions.
+          </p>
+        </section>
+
+        <section class="legal-section" id="ai">
+          <span class="legal-section__number">05</span>
+          <h2>AI, retrieval, files, and generated inferences</h2>
+          <p>
+            Astra uses artificial intelligence and retrieval services to process content and return the feature
+            you request. Submitted content may be transformed into model instructions, embeddings, search terms,
+            or structured data. Outputs may infer information about a person’s health even when the inference was
+            not explicitly stated in the input.
+          </p>
+
+          <h3>Model processing</h3>
+          <p>
+            Astra uses OpenAI business/API services for model inference and related processing. Under the
+            applicable business/API terms, API data is not used to train OpenAI’s general models by default.
+            Astra configures supported inference requests not to create provider application state. Separate
+            abuse-monitoring, safety, and legal retention depend on Astra’s account configuration, endpoint,
+            and contract. We do not authorize a model provider to use identifiable clinical
+            content to train a public foundation model.
+          </p>
+
+          <h3>Research and web retrieval</h3>
+          <p>
+            Research mode may derive search terms from a prompt and send those terms to Tavily to retrieve public
+            web results. Astra may then retrieve or link to medical journals, societies, government agencies,
+            registries, publishers, and other public sources. Search providers and destination sites receive and
+            handle data under their own contracts and notices where they act independently.
+          </p>
+          <p>
+            Astra applies automated identifier-reduction rules before sending a Research query to a web-search
+            provider. Users should avoid including names, contact information, record numbers, exact dates,
+            addresses, or other unnecessary personal identifiers in a Research query.
+          </p>
+
+          <h3>Images and documents</h3>
+          <p>
+            When you submit an image, the image is transmitted for model analysis. Astra is designed not to write
+            the raw image bytes into the saved chat record after analysis; however, the generated description,
+            response, message text, and limited metadata may be saved, and processors may retain request data under
+            the applicable configuration and contract. Documents and extracted text may be retained with the
+            conversation or workspace when the feature indicates that content is saved.
+          </p>
+
+          <h3>Human access</h3>
+          <p>
+            Astra personnel do not routinely inspect stored Customer Content and do not review it for training,
+            evaluation, product improvement, advertising, analytics, or research. Support is designed to use
+            technical metadata or information you choose to provide rather than opening stored clinical content.
+          </p>
+          <p>
+            Exceptional access may occur only when you expressly request content-level support; when strictly
+            necessary to investigate or contain a confirmed security incident that cannot reasonably be addressed
+            with metadata; to comply with valid legal process; or to perform a specific contractual duty.
+            Such access must be purpose-limited, least-privilege, subject to confidentiality obligations, and logged
+            where supported. Service-provider access remains governed by the applicable contract, account controls,
+            safety requirements, and law; Astra cannot promise that legally required or emergency access is impossible.
+          </p>
+        </section>
+
+        <section class="legal-section" id="disclosures">
+          <span class="legal-section__number">06</span>
+          <h2>When and with whom we disclose information</h2>
+          <p>
+            We disclose information only for the purposes described below, at your direction, or as permitted by
+            law. A provider may act as our processor for one activity and as an independent controller or business
+            for another activity, such as fraud prevention or its own account administration.
+          </p>
+
+          <div class="legal-provider-list">
+            <div class="legal-provider">
+              <h3><a href="https://supabase.com/privacy" rel="noreferrer">Supabase</a></h3>
+              <p>Authentication, managed Postgres database, storage, server-side functions, and operational infrastructure under Astra’s configured account and contractual controls.</p>
+            </div>
+            <div class="legal-provider">
+              <h3><a href="https://openai.com/policies/privacy-policy/" rel="noreferrer">OpenAI</a></h3>
+              <p>Model inference, vision, embeddings, and generated responses under applicable business/API terms, contractual protections, and retention controls.</p>
+            </div>
+            <div class="legal-provider">
+              <h3><a href="https://www.tavily.com/privacy" rel="noreferrer">Tavily</a></h3>
+              <p>Web search and retrieval for Research mode. It may receive minimized search terms derived from a prompt.</p>
+            </div>
+            <div class="legal-provider">
+              <h3><a href="https://stripe.com/privacy" rel="noreferrer">Stripe</a></h3>
+              <p>Checkout, subscriptions, billing portal, payment processing, fraud prevention, and transaction records. Stripe receives payment and device data under its own privacy terms; Astra does not send clinical prompt content to Stripe.</p>
+            </div>
+            <div class="legal-provider">
+              <h3><a href="https://vercel.com/legal/privacy-notice" rel="noreferrer">Vercel</a></h3>
+              <p>Website hosting and content delivery. Vercel may receive IP address, browser, request, and security data. Astra does not intentionally route clinical prompt bodies through the static hosting layer.</p>
+            </div>
+            <div class="legal-provider">
+              <h3><a href="https://resend.com/legal/privacy-policy" rel="noreferrer">Resend</a></h3>
+              <p>Transactional email delivery. Resend may receive recipient, sender, delivery, and message data. Do not send sensitive clinical content to Astra by ordinary email unless a secure process is provided.</p>
+            </div>
+            <div class="legal-provider">
+              <h3>Browser and device providers</h3>
+              <p>When you use speech recognition, camera, or file-selection features, your browser, operating system, or configured speech provider may process audio, images, permissions, or transcripts under its own terms.</p>
+            </div>
+            <div class="legal-provider">
+              <h3>Google favicon service</h3>
+              <p>The Sources List may request grayscale source icons through Google’s favicon service. Google may receive technical request data and the source domain requested, but not the clinical prompt itself.</p>
+            </div>
+          </div>
+
+          <h3>Other permitted disclosures</h3>
+          <ul>
+            <li><strong>Your organization and its administrators</strong>, according to account controls and its policies.</li>
+            <li><strong>People you direct us to share with</strong>, including when you export, copy, send, or open content or a citation.</li>
+            <li><strong>Professional advisers and auditors</strong> under confidentiality obligations where reasonably necessary.</li>
+            <li><strong>Authorities or other parties</strong> when we reasonably believe disclosure is required by law, valid process, or necessary to protect rights, safety, security, or the integrity of the Service.</li>
+            <li><strong>A transaction counterparty</strong> in a financing, merger, acquisition, reorganization, bankruptcy, or sale of assets, subject to appropriate confidentiality and applicable notice requirements.</li>
+            <li><strong>Any other recipient</strong> with your direction or consent.</li>
+          </ul>
+
+          <h3>No sale or targeted advertising</h3>
+          <p>
+            Astra does not sell personal information or consumer health data for money or other valuable
+            consideration. Astra does not share personal information for cross-context behavioral advertising,
+            and does not use clinical content to target advertisements. We do not knowingly sell or share the
+            personal information of anyone under 18.
+          </p>
+        </section>
+
+        <section class="legal-section" id="devices">
+          <span class="legal-section__number">07</span>
+          <h2>Cookies, browser storage, permissions, and links</h2>
+          <p>
+            Astra uses cookies and browser storage that are necessary to maintain authentication, remember
+            preferences, cache limited interface or usage state, prevent abuse, and apply account or anonymous
+            limits. For example, Astra may set an anonymous usage identifier that remains in the browser for up
+            to 365 days unless you clear it earlier.
+          </p>
+          <p>
+            We do not currently use third-party advertising cookies or cross-site advertising trackers in the
+            Astra application. Browser privacy controls may clear or block local state, but doing so can sign you
+            out, reset preferences, or affect usage-limit functionality.
+          </p>
+
+          <h3>Microphone and speech recognition</h3>
+          <p>
+            Astra requests microphone access only when you choose a voice feature. Speech recognition may be
+            provided by the browser, operating system, or a vendor selected by those products. Astra receives the
+            resulting transcript when you submit it. The provider may separately process audio under its own notice.
+          </p>
+
+          <h3>Camera, images, and files</h3>
+          <p>
+            Camera and file permissions are requested only when you choose the relevant feature. Review images and
+            documents for identifiers before submission. Revoking a permission in the browser prevents future
+            access but does not delete content already submitted.
+          </p>
+
+          <h3>External citations and links</h3>
+          <p>
+            When you open a citation, payment portal, or external link, your browser contacts that site directly.
+            The destination may receive your IP address, browser information, referrer information, and anything
+            you choose to provide there.
+          </p>
+        </section>
+
+        <section class="legal-section" id="retention">
+          <span class="legal-section__number">08</span>
+          <h2>How long we retain information</h2>
+          <p>
+            We retain personal information only for as long as reasonably necessary for the purpose collected,
+            the instructions of an organization, an applicable contract, security and continuity needs,
+            legal obligations, dispute resolution, and enforcement. Retention varies by record:
+          </p>
+          <ul>
+            <li><strong>Account and saved content:</strong> generally while the account or workspace is active and until deletion, subject to organization controls, backups, legal holds, and records we must preserve.</li>
+            <li><strong>QBank and personalization records:</strong> while needed to provide history and adaptive learning, or until deletion or account closure, subject to the same exceptions.</li>
+            <li><strong>Subscription, referral, commission, and payout records:</strong> for the periods required for accounting, tax, fraud prevention, contractual, and legal purposes.</li>
+            <li><strong>Security, rate-limit, and operational records:</strong> for a limited period proportionate to reliability, abuse prevention, incident investigation, and legal needs.</li>
+            <li><strong>Support and privacy records:</strong> while needed to resolve the request and document compliance.</li>
+            <li><strong>Backups:</strong> until overwritten or deleted through the ordinary protected backup cycle, unless preservation is legally required.</li>
+            <li><strong>Deidentified information:</strong> only while needed to provide, secure, maintain, support, bill for, or legally administer the Service.</li>
+          </ul>
+          <p>
+            Deletion removes or deidentifies information from active systems where reasonably feasible. We may
+            retain a minimal record of a request, transaction, consent, opt-out, or legal restriction. If an
+            organization controls the record, its instructions and legal retention duties may prevent Astra from
+            deleting it on an individual user’s direct request.
+          </p>
+        </section>
+
+        <section class="legal-section" id="security">
+          <span class="legal-section__number">09</span>
+          <h2>Security and incident response</h2>
+          <p>
+            Astra uses administrative, technical, and organizational safeguards designed for the nature and
+            sensitivity of the information processed. These include encrypted network transport, provider-managed
+            encryption at rest where supported, authentication, access controls, environment separation, logging
+            and monitoring, vendor review, secure-development practices, backups, and incident-response procedures.
+          </p>
+          <p>
+            Security is a shared responsibility. Users and organizations must protect credentials, enable available
+            multi-factor authentication, use supported devices and secure networks, limit access, maintain accurate
+            roles, and avoid copying sensitive content into unapproved systems. No internet transmission, storage
+            system, or security control can guarantee absolute security.
+          </p>
+          <p>
+            We investigate suspected incidents and provide notices to affected organizations, individuals,
+            regulators, or others when required by applicable law or contract.
+            Notification timing and content depend on the law, our role, the facts, and the organization’s obligations.
+          </p>
+          <div class="legal-callout">
+            <strong>Report a suspected privacy or security issue promptly.</strong>
+            <p>
+              Email <a href="mailto:outreach@astramd.org?subject=Privacy%20or%20Security%20Issue">outreach@astramd.org</a>
+              without including sensitive clinical content or confidential credentials in the email. We will provide a secure channel if needed.
+            </p>
+          </div>
+        </section>
+
+        <section class="legal-section" id="rights">
+          <span class="legal-section__number">10</span>
+          <h2>Your privacy choices and rights</h2>
+          <p>
+            Depending on where you live and our role, you may have the right to confirm processing; access, correct,
+            or delete information; obtain a portable copy; restrict or object to processing; withdraw consent;
+            opt out of sale, targeted advertising, or qualifying profiling; receive a list of certain third parties;
+            and appeal a denied request. We do not discriminate for exercising a privacy right.
+          </p>
+
+          <h3>How to submit a request</h3>
+          <p>
+            Email <a href="mailto:outreach@astramd.org?subject=Privacy%20Request">outreach@astramd.org</a> with
+            “Privacy Request” in the subject line and describe the account, right, and jurisdiction involved.
+            Do not include sensitive clinical content in ordinary email. We may ask for information reasonably necessary to verify identity,
+            authority, account ownership, and the scope of the request.
+          </p>
+          <p>
+            An authorized agent may submit a request where permitted by law. We may require proof of authorization
+            and may verify the request directly with the individual. If we deny a request in whole or part, you may
+            appeal by replying with “Privacy Appeal” and explaining the basis for the appeal.
+          </p>
+
+          <h3>Limits and exceptions</h3>
+          <p>
+            Rights are not absolute. We may retain or decline to disclose information where permitted or required
+            for security, fraud prevention, legal compliance, privileged material, the rights of others, transaction
+            records, or other lawful reasons. We will explain the basis when required.
+          </p>
+
+          <h3>Organization-controlled accounts</h3>
+          <p>
+            For data controlled by a hospital, clinic, school, or employer, submit the request to that organization.
+            Astra will assist it as required. Account administrators may be able to access, export, correct, retain,
+            or delete information under the organization’s policies.
+          </p>
+
+          <h3>Communication choices</h3>
+          <p>
+            Astra uses account contact information for transactional, security, support, privacy, billing, and legal
+            messages needed to administer the Service. Astra does not use Customer Content or consumer health data
+            for marketing and does not send clinical content in ordinary email.
+          </p>
+        </section>
+
+        <section class="legal-section" id="state">
+          <span class="legal-section__number">11</span>
+          <h2>United States state privacy disclosures</h2>
+          <p>
+            The categories collected, sources, business purposes, and recipients are described in Sections 2, 3,
+            4, and 7. During the preceding twelve months, Astra may have collected and disclosed the categories
+            listed there for operational purposes. Astra has not sold personal information or shared it for
+            cross-context behavioral advertising.
+          </p>
+
+          <h3>California and similar comprehensive privacy laws</h3>
+          <p>
+            Where applicable, residents may exercise rights to know, access, correct, delete, port, limit certain
+            uses of sensitive information, opt out of sale or sharing, opt out of qualifying profiling, and receive
+            equal service. Because Astra does not sell or share personal information for targeted advertising, no
+            sale/share opt-out is ordinarily necessary. We recognize browser-based opt-out preference signals,
+            including Global Privacy Control, where legally required and technically applicable.
+          </p>
+
+          <h3>Consumer health data</h3>
+          <p>
+            Washington, Nevada, and other jurisdictions may provide specific rights concerning consumer health data.
+            Astra’s separate notice describes the relevant health-data categories, sources, purposes, recipients,
+            and applicable rights.
+          </p>
+          <div class="legal-contact">
+            <strong>Consumer Health Data Privacy Notice</strong>
+            <p>Read the separate, state-specific disclosure for consumer health information.</p>
+            <div class="legal-contact__actions">
+              <a class="legal-button" href="/consumer-health-data.html">Read the notice</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="legal-section" id="deidentified">
+          <span class="legal-section__number">12</span>
+          <h2>Deidentified information and operational metadata</h2>
+          <p>
+            Astra does not repurpose Customer Content for analytics, research, model training, human evaluation, or
+            product improvement, even after attempting to aggregate or deidentify it. If information is transformed
+            so it cannot reasonably be linked to an individual, Astra uses it only as necessary to provide, secure,
+            maintain, support, bill for, or legally administer the Service. When Astra represents information as
+            deidentified, Astra maintains it in deidentified form and does not attempt to reidentify it except as
+            required to validate the deidentification process or comply with law.
+          </p>
+          <p>
+            Removing names alone may not adequately deidentify information. Unless Astra has expressly agreed to
+            perform deidentification, the user or organization is responsible for deciding whether content is
+            adequately deidentified before submitting it to an external retrieval workflow.
+          </p>
+        </section>
+
+        <section class="legal-section" id="transfers">
+          <span class="legal-section__number">13</span>
+          <h2>International processing and transfers</h2>
+          <p>
+            Astra is based in the United States, and information may be processed in the United States and other
+            countries where our providers or their subprocessors operate. Those countries may have different data
+            protection laws. Where required, we use an approved transfer mechanism, such as Standard Contractual
+            Clauses, a recognized adequacy decision, or another lawful safeguard, and apply supplementary measures
+            where appropriate.
+          </p>
+        </section>
+
+        <section class="legal-section" id="children">
+          <span class="legal-section__number">14</span>
+          <h2>Children and students</h2>
+          <p>
+            Astra is intended for adults and authorized medical, clinical, and professional education users. It is
+            not directed to children under 13, and individual consumer accounts are not intended for anyone under
+            18 or the age of majority in their jurisdiction. We do not knowingly collect personal information
+            directly from a child in violation of law.
+          </p>
+          <p>
+            A school or other institution that authorizes student use is responsible for required permissions,
+            notices, age controls, and education-record obligations. If you believe a child provided information
+            without appropriate authorization, contact us.
+          </p>
+        </section>
+
+        <section class="legal-section" id="changes">
+          <span class="legal-section__number">15</span>
+          <h2>Changes to this Policy</h2>
+          <p>
+            We may update this Policy to reflect changes in the Service, law, contracts, or our practices. We will
+            post the revised version with a new effective date. When required, we will provide additional notice
+            or obtain consent before a material new use. We will not retroactively reduce protections for Customer
+            Content in a manner inconsistent with an applicable contract or law.
+          </p>
+        </section>
+
+        <section class="legal-section" id="contact">
+          <span class="legal-section__number">16</span>
+          <h2>Contact Astra</h2>
+          <p>
+            Questions, privacy requests, consumer health data requests, and appeals may be directed to:
+          </p>
+          <div class="legal-contact">
+            <strong>Astraeus Intelligence LLC</strong>
+            <p>
+              254 Chapman Road, Suite 208 #22873<br />
+              Newark, Delaware 19702, United States
+            </p>
+            <div class="legal-contact__actions">
+              <a class="legal-button" href="mailto:outreach@astramd.org">outreach@astramd.org</a>
+              <a class="legal-button" href="/terms.html">Terms of Use</a>
+              <a class="legal-button" href="/consumer-health-data.html">Consumer Health Data Notice</a>
+            </div>
+          </div>
+          <p>
+            Do not include sensitive clinical content, passwords, secret keys, or full payment-card information in ordinary email.
+            We will provide a more secure method when necessary.
+          </p>
+        </section>
+      </article>
     </div>
+
+    <footer class="legal-footer">
+      <p>© 2026 Astraeus Intelligence LLC</p>
+      <nav aria-label="Legal links">
+        <a href="/">Astra</a>
+        <a href="/terms.html">Terms of Use</a>
+        <a href="/consumer-health-data.html">Consumer Health Data</a>
+        <a href="mailto:outreach@astramd.org">Contact</a>
+      </nav>
+    </footer>
   </main>
 </body>
 </html>

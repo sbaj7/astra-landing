@@ -3,41 +3,21 @@
 // whether to show sign-in or sign-up form
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
+import {
+  createServiceClient,
+  deriveRequestFingerprint,
+  HttpError,
+  statusForError
+} from "../_shared/requestIdentity.ts";
+import { consumeRateLimit } from "../_shared/rateLimits.ts";
 
 // CORS headers for browser requests
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
-
-// Rate limiting store (in-memory - resets when function cold starts)
-const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_WINDOW = 60000; // 1 minute
-const RATE_LIMIT_MAX_REQUESTS = 10; // 10 requests per minute per IP
-
-// Rate limiting function to prevent email enumeration attacks
-function checkRateLimit(clientIp: string): boolean {
-  const now = Date.now();
-  const record = rateLimitStore.get(clientIp);
-
-  if (!record || now > record.resetTime) {
-    // Reset or create new record
-    rateLimitStore.set(clientIp, {
-      count: 1,
-      resetTime: now + RATE_LIMIT_WINDOW,
-    });
-    return true;
-  }
-
-  if (record.count >= RATE_LIMIT_MAX_REQUESTS) {
-    return false;
-  }
-
-  record.count++;
-  return true;
-}
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -46,11 +26,20 @@ serve(async (req) => {
   }
 
   try {
-    // Get client IP for rate limiting
-    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0] || "unknown";
+    if (req.method !== "POST") throw new HttpError(405, "Method not allowed");
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    if (contentLength > 10_000) throw new HttpError(413, "Request too large");
 
-    // Check rate limit
-    if (!checkRateLimit(clientIp)) {
+    const supabaseAdmin = createServiceClient();
+    const fingerprint = await deriveRequestFingerprint(req, "email-check");
+    const rateLimit = await consumeRateLimit(
+      supabaseAdmin,
+      fingerprint,
+      "email_check_minute",
+      10,
+      60
+    );
+    if (!rateLimit.allowed) {
       return new Response(
         JSON.stringify({
           error: "Too many requests. Please try again later.",
@@ -63,9 +52,18 @@ serve(async (req) => {
     }
 
     // Parse request body
-    const { email } = await req.json();
+    let payload: { email?: unknown };
+    try {
+      payload = await req.json();
+    } catch {
+      throw new HttpError(400, "Invalid JSON");
+    }
+    if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+      throw new HttpError(400, "Invalid request");
+    }
+    const email = typeof payload?.email === "string" ? payload.email.trim().toLowerCase() : "";
 
-    if (!email || typeof email !== "string") {
+    if (!email) {
       return new Response(
         JSON.stringify({ error: "Email is required" }),
         {
@@ -77,7 +75,7 @@ serve(async (req) => {
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (email.length > 254 || !emailRegex.test(email)) {
       return new Response(
         JSON.stringify({ error: "Invalid email format" }),
         {
@@ -87,24 +85,12 @@ serve(async (req) => {
       );
     }
 
-    // Initialize Supabase Admin client with service role key
-    const supabaseAdmin = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-      {
-        auth: {
-          autoRefreshToken: false,
-          persistSession: false,
-        },
-      }
-    );
-
-    // Query auth.users table to check if email exists
-    // Using admin client to bypass RLS
-    const { data, error } = await supabaseAdmin.auth.admin.listUsers();
+    const { data, error } = await supabaseAdmin.rpc("auth_email_exists", {
+      p_email: email
+    });
 
     if (error) {
-      console.error("Error querying users:", error);
+      console.error("Error querying users:", error?.code || "database_error");
       // Don't expose internal errors to client
       return new Response(
         JSON.stringify({ exists: false }),
@@ -115,27 +101,22 @@ serve(async (req) => {
       );
     }
 
-    // Check if email exists in the user list
-    const userExists = data.users.some(
-      (user) => user.email?.toLowerCase() === email.toLowerCase()
-    );
-
     // Return result
     return new Response(
-      JSON.stringify({ exists: userExists }),
+      JSON.stringify({ exists: data === true }),
       {
         status: 200,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       }
     );
   } catch (error) {
-    console.error("Error in check-email function:", error);
+    console.error("Error in check-email function:", error instanceof Error ? error.name : "UnknownError");
 
     // Return generic error to avoid leaking information
     return new Response(
-      JSON.stringify({ error: "Internal server error" }),
+      JSON.stringify({ error: error instanceof HttpError ? error.message : "Internal server error" }),
       {
-        status: 500,
+        status: statusForError(error),
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       }
     );

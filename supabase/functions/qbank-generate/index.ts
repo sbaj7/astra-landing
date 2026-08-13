@@ -8,6 +8,14 @@
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import {
+  createServiceClient,
+  deriveRequestFingerprint,
+  HttpError,
+  resolveRequestIdentity,
+  statusForError
+} from "../_shared/requestIdentity.ts";
+import { consumeRateLimit, getQbankAllowance } from "../_shared/rateLimits.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -150,9 +158,13 @@ async function streamItem(cell: Cell): Promise<Response> {
       reasoning: { effort: "low" }, // low (not none) so the model can run the omission self-check
       max_output_tokens: 2400,
       stream: true,
+      store: false,
     }),
   });
-  if (!upstream.ok || !upstream.body) return fail(`OpenAI ${upstream.status}: ${(await upstream.text()).slice(0, 300)}`);
+  if (!upstream.ok || !upstream.body) {
+    await upstream.text().catch(() => "");
+    return fail(`OpenAI request failed: ${upstream.status}`, upstream.status >= 500 ? 502 : upstream.status);
+  }
 
   const reader = upstream.body.getReader();
   const enc = new TextEncoder();
@@ -205,6 +217,8 @@ interface Cell {
   difficulty?: string;
   topic?: string;
   avoid?: string[];
+  anonymous_id?: string;
+  stream?: boolean;
 }
 
 async function openai(messages: unknown): Promise<any> {
@@ -218,6 +232,7 @@ async function openai(messages: unknown): Promise<any> {
       messages,
       max_completion_tokens: 5000,
       reasoning_effort: "low", // low so the model can run the omission self-check
+      store: false,
       response_format: {
         type: "json_schema",
         json_schema: { name: "usmle_item", strict: true, schema: ITEM_SCHEMA },
@@ -225,8 +240,8 @@ async function openai(messages: unknown): Promise<any> {
     }),
   });
   if (!res.ok) {
-    const txt = await res.text();
-    throw new Error(`OpenAI ${res.status}: ${txt.slice(0, 400)}`);
+    await res.text().catch(() => "");
+    throw new Error(`OpenAI request failed: ${res.status}`);
   }
   return res.json();
 }
@@ -295,10 +310,70 @@ async function persist(cell: Cell, item: any) {
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
   try {
-    const cell: Cell = await req.json();
-    if (!cell?.step) throw new Error("missing step");
+    if (req.method !== "POST") throw new HttpError(405, "Method not allowed");
+    const contentLength = Number(req.headers.get("content-length") || 0);
+    if (contentLength > 100_000) throw new HttpError(413, "Request too large");
+    let cell: Cell;
+    try {
+      cell = await req.json();
+    } catch {
+      throw new HttpError(400, "Invalid JSON");
+    }
+    if (!cell || typeof cell !== "object" || !cell.step) {
+      throw new HttpError(400, "Missing step");
+    }
 
-    if ((cell as any).stream) return await streamItem(cell);
+    const identity = await resolveRequestIdentity(req, {
+      allowAnonymous: true,
+      anonymousToken: cell.anonymous_id
+    });
+    const serviceClient = createServiceClient();
+    const burstLimit = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "qbank_generate_minute",
+      identity.kind === "authenticated" ? 30 : 10,
+      60
+    );
+    if (!burstLimit.allowed) {
+      return new Response(JSON.stringify({ error: "rate_limited" }), {
+        status: 429,
+        headers: { ...corsHeaders, "content-type": "application/json" }
+      });
+    }
+    if (identity.kind === "anonymous") {
+      const networkKey = await deriveRequestFingerprint(req, "qbank-generate-anonymous-network");
+      const networkLimit = await consumeRateLimit(
+        serviceClient,
+        networkKey,
+        "qbank_generate_anonymous_network_daily",
+        300
+      );
+      if (!networkLimit.allowed) {
+        return new Response(JSON.stringify({ error: "rate_limited" }), {
+          status: 429,
+          headers: { ...corsHeaders, "content-type": "application/json" }
+        });
+      }
+    }
+    const { limit } = await getQbankAllowance(serviceClient, identity, "generate");
+    const usage = await consumeRateLimit(
+      serviceClient,
+      identity.rateLimitKey,
+      "qbank_generate_daily",
+      limit
+    );
+    if (!usage.allowed) {
+      return new Response(JSON.stringify({
+        error: "daily_limit_reached",
+        reset_at: usage.resetAt
+      }), {
+        status: 429,
+        headers: { ...corsHeaders, "content-type": "application/json" }
+      });
+    }
+
+    if (cell.stream) return await streamItem(cell);
 
     let item = await authorItem(cell);
     let err = validate(item);
@@ -324,8 +399,12 @@ serve(async (req) => {
     };
     return new Response(JSON.stringify(shaped), { headers: { ...corsHeaders, "content-type": "application/json" } });
   } catch (e) {
-    return new Response(JSON.stringify({ error: String(e?.message || e) }), {
-      status: 500, headers: { ...corsHeaders, "content-type": "application/json" },
+    console.error("QBank generation failed:", e instanceof Error ? e.name : "UnknownError");
+    const status = statusForError(e);
+    return new Response(JSON.stringify({
+      error: e instanceof HttpError ? e.message : "Question generation failed"
+    }), {
+      status, headers: { ...corsHeaders, "content-type": "application/json" },
     });
   }
 });

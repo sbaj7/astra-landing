@@ -282,7 +282,7 @@ async function recordPayout(admin: User, input: NonNullable<AdminRequest["payout
     p_paid_at: paidAt.toISOString(),
     p_actor_user_id: admin.id
   });
-  if (error) throw new ResponseError(400, error.message);
+  if (error) throw new ResponseError(400, "Unable to record payout");
   return { payoutId: data };
 }
 
@@ -378,7 +378,7 @@ Deno.serve(async (req) => {
   } catch (error) {
     const status = error instanceof ResponseError ? error.status : 500;
     const message = error instanceof Error ? error.message : "Unexpected error";
-    console.error("[referral-admin]", status, message);
+    console.error("[referral-admin] request failed", status);
     return json({ error: status === 500 ? "Referral management request failed" : message }, status);
   }
 });

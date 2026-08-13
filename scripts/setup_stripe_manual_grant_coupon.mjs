@@ -125,22 +125,8 @@ async function setupStripeCoupon() {
 
     console.log('🎯 Next steps:');
     console.log('   1. Deploy the admin-subscription-manager edge function');
-    console.log('   2. Set the ADMIN_API_KEY environment variable in Supabase');
-    console.log('   3. Use the admin API to grant manual subscriptions');
-    console.log('\nExample API call to grant a manual subscription:');
-    console.log(`
-curl -X POST https://your-project.supabase.co/functions/v1/admin-subscription-manager \\
-  -H "x-admin-api-key: YOUR_ADMIN_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '{
-    "action": "grant",
-    "userEmail": "user@example.com",
-    "plan": "pro",
-    "notes": "Beta tester",
-    "grantedBy": "admin@astramd.com",
-    "syncToStripe": true
-  }'
-    `);
+    console.log('   2. Sign in with an account listed in referral_admins');
+    console.log('   3. Use the authenticated admin UI to grant manual subscriptions');
 
   } catch (error) {
     console.error('❌ Error setting up Stripe coupon:', error.message);

@@ -1,6 +1,6 @@
 // Admin Subscription Manager Edge Function
 // Purpose: Manage manual subscription grants for Astra MD users
-// Security: Requires admin API key authentication
+// Security: Requires a verified Supabase user in the referral_admins allowlist
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.1";
@@ -15,12 +15,9 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") ?? "", {
 // CORS headers
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-admin-api-key",
-  "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
-
-// Admin API key for authentication
-const ADMIN_API_KEY = Deno.env.get("ADMIN_API_KEY");
 
 // Stripe coupon IDs for 100% discount
 const MANUAL_GRANT_COUPON_ID = "MANUAL_GRANT_100_OFF";
@@ -38,6 +35,34 @@ interface ManualSubscriptionRequest {
   limit?: number;
 }
 
+class ResponseError extends Error {
+  status: number;
+
+  constructor(status: number, message: string) {
+    super(message);
+    this.status = status;
+  }
+}
+
+async function requireSubscriptionAdmin(req: Request, supabase: any) {
+  const accessToken = (req.headers.get("authorization") || "")
+    .replace(/^Bearer\s+/i, "")
+    .trim();
+  if (!accessToken) throw new ResponseError(401, "Authentication required");
+
+  const { data, error } = await supabase.auth.getUser(accessToken);
+  if (error || !data.user) throw new ResponseError(401, "Invalid or expired session");
+
+  const { data: admin, error: adminError } = await supabase
+    .from("referral_admins")
+    .select("user_id")
+    .eq("user_id", data.user.id)
+    .maybeSingle();
+  if (adminError) throw adminError;
+  if (!admin) throw new ResponseError(403, "Subscription management access required");
+  return data.user;
+}
+
 serve(async (req: Request) => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
@@ -45,14 +70,7 @@ serve(async (req: Request) => {
   }
 
   try {
-    // Verify admin authentication
-    const adminApiKey = req.headers.get("x-admin-api-key");
-    if (!ADMIN_API_KEY || adminApiKey !== ADMIN_API_KEY) {
-      return new Response(
-        JSON.stringify({ error: "Unauthorized. Invalid admin API key." }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
+    if (req.method !== "POST") throw new ResponseError(405, "Method not allowed");
 
     // Initialize Supabase admin client
     const supabaseAdmin = createClient(
@@ -65,8 +83,18 @@ serve(async (req: Request) => {
         },
       }
     );
+    const adminUser = await requireSubscriptionAdmin(req, supabaseAdmin);
 
-    const body: ManualSubscriptionRequest = await req.json();
+    let body: ManualSubscriptionRequest;
+    try {
+      body = await req.json();
+    } catch {
+      throw new ResponseError(400, "Invalid JSON");
+    }
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      throw new ResponseError(400, "Invalid request");
+    }
+    body.grantedBy = adminUser.email || adminUser.id;
     const { action } = body;
 
     console.log(`🔧 Admin subscription action: ${action}`);
@@ -94,10 +122,10 @@ serve(async (req: Request) => {
         );
     }
   } catch (error) {
-    console.error("❌ Admin subscription error:", error);
+    console.error("Admin subscription error:", error instanceof Error ? error.name : "UnknownError");
     return new Response(
-      JSON.stringify({ error: error.message }),
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      JSON.stringify({ error: error instanceof ResponseError ? error.message : "Admin subscription request failed" }),
+      { status: error instanceof ResponseError ? error.status : 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 });
@@ -111,7 +139,7 @@ async function grantManualSubscription(
   const { userId, userEmail, plan, expiresAt, notes, grantedBy, syncToStripe = false } = request;
 
   // Validate required fields
-  if (!plan || !grantedBy) {
+  if (!plan || !["plus", "pro"].includes(plan) || !grantedBy) {
     return new Response(
       JSON.stringify({ error: "Missing required fields: plan, grantedBy" }),
       { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -130,10 +158,14 @@ async function grantManualSubscription(
     if (error) throw error;
     user = data;
   } else if (userEmail) {
+    const normalizedEmail = userEmail.trim().toLowerCase().slice(0, 254);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+      throw new ResponseError(400, "Valid user email required");
+    }
     const { data, error } = await supabase
       .from("auth_users")
       .select("*")
-      .ilike("email", userEmail.toLowerCase())
+      .ilike("email", normalizedEmail)
       .single();
 
     if (error) throw error;
@@ -153,25 +185,31 @@ async function grantManualSubscription(
   }
 
   // Update user with manual subscription
-  const updateData = {
+  const parsedExpiration = expiresAt ? new Date(expiresAt) : null;
+  if (parsedExpiration && (Number.isNaN(parsedExpiration.getTime()) || parsedExpiration <= new Date())) {
+    throw new ResponseError(400, "Expiration must be a future date");
+  }
+  const updateData: Record<string, unknown> = {
     manual_subscription_enabled: true,
     manual_subscription_plan: plan,
-    manual_subscription_expires_at: expiresAt || null,
+    manual_subscription_expires_at: parsedExpiration?.toISOString() || null,
     manual_subscription_granted_by: grantedBy,
     manual_subscription_granted_at: new Date().toISOString(),
-    manual_subscription_notes: notes || null,
+    manual_subscription_notes: typeof notes === "string" ? notes.trim().slice(0, 2000) || null : null,
     manual_subscription_stripe_synced: false,
-    subscription_status: "active",
+    subscription_status: plan,
     updated_at: new Date().toISOString(),
   };
 
   // Also update metadata to maintain compatibility
   const metadata = user.metadata || {};
-  metadata.subscription = {
-    ...metadata.subscription,
+  if (metadata.subscription?.is_manual_grant) {
+    metadata.subscription = metadata.manual_subscription_previous || null;
+  }
+  delete metadata.manual_subscription_previous;
+  metadata.manual_subscription = {
     plan_key: plan,
     status: "active",
-    is_manual_grant: true,
     granted_by: grantedBy,
     granted_at: new Date().toISOString(),
   };
@@ -213,7 +251,7 @@ async function grantManualSubscription(
       .eq("id", user.id);
   }
 
-  console.log(`✅ Manual subscription granted to user ${user.email} (${plan})`);
+  console.log(`Manual subscription granted (${plan})`);
 
   return new Response(
     JSON.stringify({
@@ -283,7 +321,14 @@ async function revokeManualSubscription(
   const previousPlan = user.manual_subscription_plan;
 
   // Update user to revoke manual subscription
-  const updateData = {
+  const metadata = user.metadata || {};
+  const stripeSubscription = metadata.subscription?.is_manual_grant
+    ? metadata.manual_subscription_previous || null
+    : metadata.subscription;
+  const restoredPlan = stripeSubscription && ["active", "trialing"].includes(stripeSubscription.status)
+    ? stripeSubscription.plan_key || "free"
+    : "free";
+  const updateData: Record<string, unknown> = {
     manual_subscription_enabled: false,
     manual_subscription_plan: null,
     manual_subscription_expires_at: null,
@@ -291,19 +336,14 @@ async function revokeManualSubscription(
     manual_subscription_granted_at: null,
     manual_subscription_notes: null,
     manual_subscription_stripe_synced: false,
-    subscription_status: "free",
+    subscription_status: restoredPlan,
     updated_at: new Date().toISOString(),
   };
 
   // Also update metadata
-  const metadata = user.metadata || {};
-  if (metadata.subscription && metadata.subscription.is_manual_grant) {
-    delete metadata.subscription.is_manual_grant;
-    delete metadata.subscription.granted_by;
-    delete metadata.subscription.granted_at;
-    metadata.subscription.status = "free";
-    metadata.subscription.plan_key = null;
-  }
+  metadata.subscription = stripeSubscription;
+  delete metadata.manual_subscription;
+  delete metadata.manual_subscription_previous;
   updateData.metadata = metadata;
 
   const { error: updateError } = await supabase
@@ -322,7 +362,7 @@ async function revokeManualSubscription(
     notes: `Manual subscription revoked`,
   });
 
-  console.log(`✅ Manual subscription revoked for user ${user.email}`);
+  console.log("Manual subscription revoked");
 
   return new Response(
     JSON.stringify({
@@ -340,7 +380,8 @@ async function revokeManualSubscription(
 
 // List all subscriptions with pagination
 async function listSubscriptions(supabase: any, request: ManualSubscriptionRequest) {
-  const { page = 1, limit = 50 } = request;
+  const page = Math.max(1, Math.floor(Number(request.page) || 1));
+  const limit = Math.min(100, Math.max(1, Math.floor(Number(request.limit) || 50)));
   const offset = (page - 1) * limit;
 
   // Get total count
@@ -497,10 +538,10 @@ async function createStripeSubscriptionWithFullDiscount(
       },
     });
 
-    console.log(`✅ Created Stripe subscription with 100% discount for ${user.email}`);
+    console.log("Created Stripe subscription with 100% discount");
     return subscription;
   } catch (error) {
-    console.error("❌ Error creating Stripe subscription:", error);
+    console.error("Stripe subscription creation failed:", error instanceof Error ? error.name : "UnknownError");
     throw error;
   }
 }
@@ -511,7 +552,7 @@ async function syncManualSubscriptionToStripe(
   stripe: Stripe,
   request: ManualSubscriptionRequest
 ) {
-  const { userId, userEmail } = request;
+  const { userId, userEmail, grantedBy } = request;
 
   // Find user
   let user;
@@ -563,7 +604,7 @@ async function syncManualSubscriptionToStripe(
     user_id: user.id,
     action: "sync_stripe",
     plan_type: user.manual_subscription_plan,
-    performed_by: "admin",
+    performed_by: grantedBy || "admin",
     notes: "Manual subscription synced to Stripe with 100% discount",
     metadata: {
       stripe_subscription_id: stripeSubscription.id,

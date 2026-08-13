@@ -6,6 +6,7 @@
 // STUB so the full UX still works end to end.
 
 import { supabase } from '../services/supabaseClient.js';
+import authService from '../services/authService.js';
 import { labelFor } from './blueprint.js';
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
@@ -23,6 +24,7 @@ function buildPayload(cell, avoid = []) {
     taskLabel: labelFor(cell.step, 'tasks', cell.task),
     difficulty: cell.difficulty || 'mixed',
     avoid,
+    anonymous_id: authService.getAnonymousId(),
   };
 }
 
@@ -113,7 +115,7 @@ export async function streamTutor({ item, messages, step }, { onDelta, signal } 
   const res = await fetch(`${SUPABASE_URL}/functions/v1/qbank-tutor`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}`, apikey: SUPABASE_ANON, 'Content-Type': 'application/json', Accept: 'text/event-stream' },
-    body: JSON.stringify({ item, messages, step }),
+    body: JSON.stringify({ item, messages, step, anonymous_id: authService.getAnonymousId() }),
     signal,
   });
   if (!res.ok || !res.body) throw new Error(`tutor ${res.status}`);

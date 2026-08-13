@@ -48,7 +48,7 @@ serve(async (req: Request) => {
     try {
       webhookData = wh.verify(payload, headers)
     } catch (err) {
-      console.error("Webhook verification failed:", err)
+      console.error("Webhook verification failed:", err instanceof Error ? err.name : "UnknownError")
       return new Response(
         JSON.stringify({ error: "Invalid webhook signature" }),
         { status: 401, headers: { "Content-Type": "application/json" } }
@@ -62,7 +62,7 @@ serve(async (req: Request) => {
       email_action_type
     } = webhookData
 
-    console.log(`Processing ${email_action_type} email for ${user.email}`)
+    console.log(`Processing ${email_action_type} email`)
 
     // Initialize Resend
     const resend = await initResend()
@@ -197,14 +197,14 @@ serve(async (req: Request) => {
       })
 
       if (error) {
-        console.error("Resend API error:", error)
+        console.error("Resend API error:", error?.name || "resend_error")
         return new Response(
           JSON.stringify({ error: "Failed to send email", details: error }),
           { status: 500, headers: { "Content-Type": "application/json" } }
         )
       }
 
-      console.log(`Email sent successfully via Resend. ID: ${data?.id}`)
+      console.log("Email sent successfully via Resend")
 
       return new Response(
         JSON.stringify({
@@ -216,7 +216,7 @@ serve(async (req: Request) => {
       )
 
     } catch (err) {
-      console.error("Error sending email:", err)
+      console.error("Error sending email:", err instanceof Error ? err.name : "UnknownError")
       return new Response(
         JSON.stringify({
           error: "Failed to send email",
@@ -227,7 +227,7 @@ serve(async (req: Request) => {
     }
 
   } catch (err) {
-    console.error("Unexpected error in email hook:", err)
+    console.error("Unexpected error in email hook:", err instanceof Error ? err.name : "UnknownError")
     return new Response(
       JSON.stringify({
         error: "Internal server error",

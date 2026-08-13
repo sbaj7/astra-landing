@@ -16,6 +16,9 @@ verify_jwt = false
 [functions.auth-management]
 verify_jwt = false
 
+[functions.admin-subscription-manager]
+verify_jwt = true
+
 [functions.billing-supabase]
 verify_jwt = true
 
@@ -30,3 +33,6 @@ verify_jwt = false
 
 [functions.qbank-tutor]
 verify_jwt = false
+
+[functions.vision-api]
+verify_jwt = true

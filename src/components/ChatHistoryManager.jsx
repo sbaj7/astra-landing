@@ -39,7 +39,6 @@ class ChatHistoryManager {
     }
     
     const title = this.generateChatTitle(messages);
-    console.log(`💾 Saving chat with title: ${title}`);
     
     try {
       await this.chatClient.saveChat(title, messages, isClinicalMode);
@@ -56,8 +55,6 @@ class ChatHistoryManager {
 
   // Delete Chat from Backend
   async deleteChat(session) {
-    console.log(`🗑️ Deleting chat: ${session.title}`);
-    
     try {
       await this.chatClient.deleteChat(session.id);
       this.chatSessions = this.chatSessions.filter(s => s.id !== session.id);
@@ -81,7 +78,7 @@ class ChatHistoryManager {
         try {
           await this.chatClient.deleteChat(session.id);
         } catch (error) {
-          console.log(`Failed to delete session ${session.id}:`, error);
+          console.log('Failed to delete a chat session:', error);
         }
       }
       
@@ -148,8 +145,10 @@ class ChatClient {
     if (ChatClient.shared) {
       return ChatClient.shared;
     }
-    this.backendEndpoint = "https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api";
-    this.supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8";
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    this.backendEndpoint = import.meta.env.VITE_QUICK_API_URL
+      || (supabaseUrl ? `${supabaseUrl}/functions/v1/quick-api` : '');
+    this.supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
   }
 
   get userId() {
@@ -239,6 +238,10 @@ class ChatClient {
 
   // Helper Methods
   makeRequest(action, body) {
+    if (!this.backendEndpoint || !this.supabaseAnonKey) {
+      throw new Error('Astra API is not configured');
+    }
+
     const headers = {
       'Authorization': `Bearer ${this.supabaseAnonKey}`,
       'Content-Type': 'application/json'

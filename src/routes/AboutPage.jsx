@@ -321,7 +321,7 @@ const AboutPage = () => {
             <span style={{ fontSize: 14, color: `${theme.textSecondary}A0`, fontFamily: SANS }}>254 Chapman Rd, Ste 208 #22873 · Newark, Delaware 19702</span>
           </div>
           <a
-            href="mailto:support@astramd.org"
+            href="mailto:outreach@astramd.org"
             style={{
               fontSize: 15,
               fontWeight: 500,
@@ -332,7 +332,7 @@ const AboutPage = () => {
               paddingBottom: 2,
             }}
           >
-            support@astramd.org
+            outreach@astramd.org
           </a>
         </section>
       </main>

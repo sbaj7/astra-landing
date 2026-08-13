@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync, mkdirSync, readdirSync, statSync } from 'fs'
-import { resolve, join } from 'path'
+import { copyFileSync, mkdirSync, readdirSync } from 'fs'
+import { join } from 'path'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     {
@@ -39,6 +39,9 @@ export default defineConfig({
     }
   ],
   publicDir: 'public',
+  esbuild: mode === 'production'
+    ? { drop: ['console', 'debugger'] }
+    : undefined,
   server: {
     fs: {
       // Allow serving files from the generated_articles directory
@@ -50,4 +53,4 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true
   }
-})
+}))

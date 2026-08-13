@@ -94,8 +94,8 @@ def extract_content_from_response(data: Dict[str, Any]) -> str:
 
 
 DEFAULT_RESEARCHER_ENDPOINT = "https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api"
-DEFAULT_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8"
-DEFAULT_SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MDI2Njk4OSwiZXhwIjoyMDY1ODQyOTg5fQ.JPLxruyKRnLXsA4HDU89WgUZRDcUgMZPowRsSHtc3mA"
+DEFAULT_SUPABASE_ANON_KEY = None
+DEFAULT_SUPABASE_SERVICE_ROLE_KEY = None
 DEFAULT_SUPABASE_URL = "https://shwitfgtpfszjjoczbxp.supabase.co"
 DEFAULT_ARTICLE_BUCKET = "articles"
 

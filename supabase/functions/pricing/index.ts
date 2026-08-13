@@ -51,7 +51,7 @@ serve(async (req) => {
       }
     });
   } catch (error) {
-    console.error("[pricing] error", error);
+    console.error("[pricing] error", error instanceof Error ? error.name : "UnknownError");
     return new Response(JSON.stringify({ error: "Pricing is temporarily unavailable" }), {
       status: 503,
       headers: {

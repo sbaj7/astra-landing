@@ -96,15 +96,12 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
           console.log('📡 Local response status:', response.status, response.statusText);
 
           if (!response.ok) {
-            const text = await response.text();
-            console.error('❌ Response body:', text);
             throw new Error(`Failed to load articles from both Supabase and local (HTTP ${response.status})`);
           }
         }
 
         const data = await response.json();
         console.log('✅ Loaded articles:', data.length, 'articles');
-        console.log('📄 First article:', data[0]);
 
         setArticles(data);
         setFilteredArticles(data);

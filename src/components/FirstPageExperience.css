@@ -695,12 +695,24 @@
 
 .astra-first-page__actions {
   display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 28px;
 }
 
-.astra-first-page__actions button {
+.astra-first-page__action-buttons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.astra-first-page__action-buttons > button,
+.astra-first-page__action-buttons > a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -710,6 +722,12 @@
   cursor: pointer;
   font-size: 12px;
   font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.astra-first-page__action-buttons--legal {
+  margin-top: 2px;
 }
 
 .astra-first-page__primary-action {
@@ -722,6 +740,13 @@
   border: 1px solid var(--astra-home-border-strong);
   color: var(--astra-home-text);
   background: transparent;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.astra-first-page__secondary-action:hover,
+.astra-first-page__secondary-action:focus-visible {
+  border-color: color-mix(in srgb, var(--astra-home-accent) 46%, var(--astra-home-border-strong));
+  background: color-mix(in srgb, var(--astra-home-surface) 72%, transparent);
 }
 
 @keyframes astra-home-rise {

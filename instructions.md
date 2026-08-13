@@ -121,7 +121,7 @@ VITE_ENV=production
 
 # Production Supabase
 VITE_SUPABASE_URL=https://shwitfgtpfszjjoczbxp.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 
 # Production Edge Functions
 VITE_API_URL=https://shwitfgtpfszjjoczbxp.supabase.co/functions/v1/quick-api
@@ -660,7 +660,7 @@ const AUTH_API_URL = isLocal
 
 const API_KEY = isLocal
   ? import.meta.env.VITE_SUPABASE_ANON_KEY
-  : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNod2l0Zmd0cGZzempqb2N6YnhwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAyNjY5ODksImV4cCI6MjA2NTg0Mjk4OX0.b8CBToFGkvPUcxwxJL4ZnFIe4tanZigHdGp9BKzLBM8';
+  : import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 console.log(`🔧 Auth Service: ${isLocal ? 'LOCAL' : 'PRODUCTION'} mode`);
 
@@ -867,11 +867,9 @@ const AstraApp = () => {
   }, [isAuthenticated, user]);
 
   const checkMessageLimit = async () => {
-    if (isAuthenticated) {
-      return true; // Unlimited for authenticated users
-    }
-
-    const limit = await authService.checkAnonymousLimit();
+    const limit = isAuthenticated
+      ? await authService.checkUserLimit(user.id)
+      : await authService.checkAnonymousLimit();
     if (limit.remaining <= 0) {
       setShowPaywall(true);
       return false;
@@ -888,32 +886,26 @@ const AstraApp = () => {
 
     try {
       // Call your existing quick-api endpoint
-      const response = await fetch(import.meta.env.VITE_API_URL, {
+      const response = await fetch(import.meta.env.VITE_QUICK_API_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_API_KEY}`
+          ...authService.getAuthHeaders(),
+          'Accept': 'text/event-stream'
         },
         body: JSON.stringify({
           query,
           mode,
           stream: true,
           isClinical: mode === 'write',
-          isReason: mode === 'reason'
+          isReason: mode === 'reason',
+          anonymous_id: isAuthenticated ? null : authService.getAnonymousId()
         })
       });
 
       // Handle the response (your existing logic)
       // ... process streaming response ...
 
-      // After successful query, update usage
-      if (!isAuthenticated) {
-        await authService.incrementAnonymousUsage();
-        // Update the header counter
-        if (window.updateChatLimit) {
-          window.updateChatLimit();
-        }
-      }
+      // quick-api performs the authoritative atomic increment server-side.
 
       // Save chat session
       const title = query.substring(0, 50) + '...';

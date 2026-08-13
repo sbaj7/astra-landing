@@ -45,7 +45,7 @@ async function syncCustomerToDatabase(
   supabaseUserId: string,
   email: string | null
 ): Promise<void> {
-  console.log(`🔄 Syncing Stripe customer ${stripeCustomerId} to database for user ${supabaseUserId}...`);
+  console.log("Syncing Stripe customer to database");
 
   const now = new Date().toISOString();
 
@@ -60,11 +60,11 @@ async function syncCustomerToDatabase(
     .select();
 
   if (error) {
-    console.error(`❌ Failed to sync customer to database:`, error);
+    console.error("Failed to sync customer to database:", error?.code || "database_error");
     throw error;
   }
 
-  console.log(`✅ Synced Stripe customer ${stripeCustomerId} to database`);
+  console.log("Synced Stripe customer to database");
 }
 
 /**
@@ -78,7 +78,7 @@ async function syncSubscriptionToDatabase(
     ? subscription.customer
     : subscription.customer.id;
 
-  console.log(`🔄 Syncing subscription ${subscription.id} for customer ${stripeCustomerId}...`);
+  console.log("Syncing Stripe subscription");
 
   // Find the auth_users record by stripe_customer_id
   const { data: authUsers, error: fetchError } = await supabase
@@ -88,12 +88,12 @@ async function syncSubscriptionToDatabase(
     .limit(1);
 
   if (fetchError) {
-    console.error(`❌ Failed to fetch user by stripe_customer_id:`, fetchError);
+    console.error("Failed to fetch user by Stripe customer ID:", fetchError?.code || "database_error");
     throw fetchError;
   }
 
   if (!authUsers || authUsers.length === 0) {
-    console.warn(`⚠️ No user found with stripe_customer_id: ${stripeCustomerId}`);
+    console.warn("No user found for Stripe customer");
     return;
   }
 
@@ -141,11 +141,11 @@ async function syncSubscriptionToDatabase(
     .eq("id", authUser.id);
 
   if (updateError) {
-    console.error(`❌ Failed to update subscription in database:`, updateError);
+    console.error("Failed to update subscription in database:", updateError?.code || "database_error");
     throw updateError;
   }
 
-  console.log(`✅ Synced subscription ${subscription.id} with status ${subscriptionStatus}`);
+  console.log(`Synced subscription with status ${subscriptionStatus}`);
 }
 
 /**
@@ -155,7 +155,7 @@ async function handleCheckoutCompleted(
   supabase: ReturnType<typeof createSupabaseClient>,
   session: Stripe.Checkout.Session
 ): Promise<void> {
-  console.log(`🎉 Checkout completed: ${session.id}`);
+  console.log("Checkout completed");
 
   const stripeCustomerId = typeof session.customer === "string"
     ? session.customer
@@ -164,7 +164,7 @@ async function handleCheckoutCompleted(
   const supabaseUserId = session.metadata?.supabase_user_id;
 
   if (!stripeCustomerId) {
-    console.error(`❌ No customer ID in checkout session ${session.id}`);
+    console.error("Checkout session has no customer ID");
     return;
   }
 
@@ -191,7 +191,7 @@ async function retrieveCheckoutWithDiscounts(sessionId: string): Promise<Stripe.
       expand: ["total_details.breakdown.discounts.discount.promotion_code"]
     });
   } catch (error) {
-    console.warn(`[referrals] Expanded Checkout retrieval failed for ${sessionId}; retrying without expansion`, error);
+    console.warn("[referrals] Expanded Checkout retrieval failed; retrying without expansion", error instanceof Error ? error.name : "UnknownError");
     return await stripe.checkout.sessions.retrieve(sessionId);
   }
 }
@@ -399,9 +399,9 @@ serve(async (req) => {
       );
       console.log(`✅ Webhook signature verified for event: ${event.type}`);
     } catch (err: any) {
-      console.error(`❌ Webhook signature verification failed:`, err.message);
+      console.error("Webhook signature verification failed:", err instanceof Error ? err.name : "UnknownError");
       return new Response(
-        JSON.stringify({ error: `Webhook signature verification failed: ${err.message}` }),
+        JSON.stringify({ error: "Webhook signature verification failed" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -418,7 +418,7 @@ serve(async (req) => {
         if (supabaseUserId) {
           await syncCustomerToDatabase(supabase, customer.id, supabaseUserId, customer.email);
         } else {
-          console.warn(`⚠️ Customer ${customer.id} has no supabase_user_id in metadata`);
+          console.warn("Stripe customer has no Supabase user ID in metadata");
         }
         break;
       }
@@ -480,9 +480,9 @@ serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error: any) {
-    console.error("[stripe-webhook] error:", error);
+    console.error("[stripe-webhook] error:", error instanceof Error ? error.name : "UnknownError");
     return new Response(
-      JSON.stringify({ error: error.message ?? "Unexpected error" }),
+      JSON.stringify({ error: "Webhook processing failed" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
