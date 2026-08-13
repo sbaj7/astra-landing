@@ -4,6 +4,7 @@ import {
   BookOpen,
   FileText,
   GraduationCap,
+  LibraryBig,
   Search,
   ShieldCheck,
   Stethoscope
@@ -91,6 +92,7 @@ const FirstPageExperience = ({
   onSampleTapped,
   onModeChange,
   onShowAbout,
+  onShowSources,
   onOpenQbank,
   theme,
   sampleQueries,
@@ -273,6 +275,12 @@ const FirstPageExperience = ({
               <button type="button" className="astra-first-page__secondary-action" onClick={onShowAbout}>
                 <BookOpen size={16} />
                 About Astra
+              </button>
+            )}
+            {onShowSources && (
+              <button type="button" className="astra-first-page__secondary-action" onClick={onShowSources}>
+                <LibraryBig size={16} />
+                Sources List
               </button>
             )}
           </div>

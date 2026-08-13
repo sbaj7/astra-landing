@@ -1816,7 +1816,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
 };
 
 
-const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, onOpenQbank, theme, isMobile, inputBarSlot }) => {
+const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, onShowSources, onOpenQbank, theme, isMobile, inputBarSlot }) => {
   if (import.meta.env.VITE_FIRST_PAGE_EXPERIENCE !== 'legacy') {
     return (
       <FirstPageExperience
@@ -1824,6 +1824,7 @@ const EmptyState = ({ currentMode, onSampleTapped, onModeChange, onShowAbout, on
         onSampleTapped={onSampleTapped}
         onModeChange={onModeChange}
         onShowAbout={onShowAbout}
+        onShowSources={onShowSources}
         onOpenQbank={onOpenQbank}
         theme={theme}
         sampleQueries={sampleQueries}
@@ -6085,6 +6086,10 @@ const AstraApp = () => {
     navigate('/about');
   }, [navigate]);
 
+  const handleOpenSources = useCallback(() => {
+    navigate('/sources');
+  }, [navigate]);
+
   const handleOpenClinicalArticles = useCallback(() => {
     setShowClinicalArticles(true);
   }, []);
@@ -6819,6 +6824,7 @@ const AstraApp = () => {
                   onSampleTapped={handleSampleTapped}
                   onModeChange={setCurrentMode}
                   onShowAbout={handleOpenAbout}
+                  onShowSources={handleOpenSources}
                   onOpenQbank={() => navigate('/qbank')}
                   theme={theme}
                   isMobile={isMobile}
