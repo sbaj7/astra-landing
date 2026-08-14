@@ -1435,7 +1435,7 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
   };
 
   return (
-    <div style={{ display: 'flex', gap: isMobile ? 4 : 6, flexWrap: 'nowrap', position: 'relative' }}>
+    <div style={{ display: 'flex', gap: 2, flexWrap: 'nowrap', position: 'relative' }}>
       {modes.map(({ key, title, icon: Icon }) => {
         const isSelected = displayMode === key;
         const isDDx = key === 'reason';
@@ -1464,14 +1464,14 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                 display: 'flex',
                 alignItems: 'center',
                 gap: 4,
-                paddingTop: isMobile ? '5px' : '6px',
-                paddingBottom: isMobile ? '5px' : '6px',
-                paddingLeft: isMobile ? '10px' : '10px',
-                paddingRight: hasDropdown ? (isMobile ? '4px' : '5px') : (isMobile ? '10px' : '10px'),
+                paddingTop: '6px',
+                paddingBottom: '6px',
+                paddingLeft: '9px',
+                paddingRight: hasDropdown ? '4px' : '9px',
                 borderRadius: 50,
-                border: `1px solid ${theme.textSecondary}50`,
-                backgroundColor: isSelected ? theme.accentSoftBlue : 'transparent',
-                color: isSelected ? '#fff' : theme.textPrimary,
+                border: '1px solid transparent',
+                backgroundColor: isSelected ? `${theme.accentSoftBlue}12` : 'transparent',
+                color: isSelected ? theme.accentSoftBlue : theme.textPrimary,
                 fontSize: isMobile ? 11 : 12,
                 fontWeight: 500,
                 cursor: 'pointer',
@@ -4548,11 +4548,14 @@ const InputBar = ({
     }
   }, [imageError, onClearError]);
 
-  const getPlaceholder = () => (
-    speechRecognition.isRecording ? 'Listening...' :
-    currentMode === 'reason' ? 'Present your case' :
-    currentMode === 'write' ? 'Outline your plan' : 'Ask anything'
-  );
+  const getPlaceholder = () => {
+    if (speechRecognition.isRecording) return 'Listening...';
+
+    const modeGroup = getModeDisplayInfo(currentMode).group;
+    if (modeGroup === 'reasoning') return 'Describe the patient';
+    if (modeGroup === 'documentation') return 'Describe the encounter';
+    return 'Ask a clinical question';
+  };
 
   const isDisabled = isStreaming || isLoading;
 
@@ -4566,9 +4569,9 @@ const InputBar = ({
       onDrop={handleDrop}
       style={{
         paddingTop: 0,
-        paddingRight: isMobile ? 16 : 24,
-        paddingLeft: isMobile ? 16 : 24,
-        paddingBottom: isMobile ? 'max(16px, env(safe-area-inset-bottom))' : 20,
+        paddingRight: isInline ? 0 : (isMobile ? 16 : 24),
+        paddingLeft: isInline ? 0 : (isMobile ? 16 : 24),
+        paddingBottom: isInline ? 12 : (isMobile ? 'max(16px, env(safe-area-inset-bottom))' : 20),
         backgroundColor: 'transparent',
         marginTop: isInline ? 0 : (isMobile ? -20 : -24),
         pointerEvents: 'auto'
@@ -4577,18 +4580,20 @@ const InputBar = ({
       <div style={{
         position: 'relative',
         backgroundColor: theme.backgroundSurface,
-        borderRadius: isMobile ? 22 : 28,
+        borderRadius: isInline ? 26 : (isMobile ? 22 : 28),
         border: isDragActive
           ? `2px dashed ${theme.accentSoftBlue}`
           : `1px solid ${theme.textSecondary}25`,
         boxShadow: isDragActive
           ? `0 0 0 4px ${theme.accentSoftBlue}20, 0 8px 32px rgba(0,0,0,0.12)`
-          : `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
+          : isInline
+            ? '0 1px 2px rgba(0,0,0,0.05), 0 5px 18px rgba(0,0,0,0.07)'
+            : `0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08)`,
         transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         overflow: 'visible'
       }}>
         {/* HIPAA Badge */}
-        <div style={{
+        {!isInline && <div style={{
           position: 'absolute',
           top: isMobile ? -10 : -12,
           right: isMobile ? 14 : 18,
@@ -4610,7 +4615,7 @@ const InputBar = ({
         }}>
           <ShieldCheck size={isMobile ? 10 : 11} strokeWidth={2.2} />
           HIPAA
-        </div>
+        </div>}
 
         {/* Image Preview Strip - shows above input when images selected */}
         {selectedImages && selectedImages.length > 0 && (
@@ -4702,7 +4707,9 @@ const InputBar = ({
           display: 'flex',
           alignItems: 'center',
           gap: isMobile ? 8 : 10,
-          padding: isMobile ? '10px 10px 4px 10px' : '12px 12px 6px 12px'
+          padding: isInline
+            ? (isMobile ? '10px 10px 4px' : '12px 12px 5px')
+            : (isMobile ? '10px 10px 4px 10px' : '12px 12px 6px 12px')
         }}>
           <textarea
             ref={textareaRef}
@@ -4848,9 +4855,9 @@ const InputBar = ({
           alignItems: 'center',
           justifyContent: 'space-between',
           paddingTop: 0,
-          paddingBottom: isMobile ? 10 : 14,
-          paddingLeft: isMobile ? 12 : 16,
-          paddingRight: isMobile ? 12 : 16,
+          paddingBottom: isInline ? 10 : (isMobile ? 10 : 14),
+          paddingLeft: isInline ? 10 : (isMobile ? 12 : 16),
+          paddingRight: isInline ? 10 : (isMobile ? 12 : 16),
           gap: isMobile ? 6 : 12
         }}>
           <div style={{ flexShrink: 0 }}>
@@ -4862,7 +4869,7 @@ const InputBar = ({
               isMobile={isMobile}
             />
           </div>
-          <p style={{
+          {!isInline && <p style={{
             fontSize: isMobile ? 10 : 11,
             color: theme.textSecondary,
             margin: 0,
@@ -4878,7 +4885,7 @@ const InputBar = ({
             flexShrink: 0
           }}>
             Astra can make mistakes.
-          </p>
+          </p>}
         </div>
       </div>
     </div>
@@ -6291,9 +6298,12 @@ const AstraApp = () => {
     }
   };
 
-  const handleSend = async () => {
+  const handleSend = async (options = {}) => {
+    const outgoingQuery = typeof options?.promptQuery === 'string' ? options.promptQuery : query;
+    const outgoingMode = typeof options?.promptMode === 'string' ? options.promptMode : currentMode;
+
     // Allow sending if there's text OR images (or both)
-    if ((!query.trim() && (!selectedImages || selectedImages.length === 0)) || isLoading || isStreaming) return;
+    if ((!outgoingQuery.trim() && (!selectedImages || selectedImages.length === 0)) || isLoading || isStreaming) return;
 
     const isPro = effectivePlan === 'pro';
     const isPlus = effectivePlan === 'plus';
@@ -6382,21 +6392,21 @@ const AstraApp = () => {
     const userMessage = {
       id: Date.now(),
       role: 'user',
-      content: query.trim(),
+      content: outgoingQuery.trim(),
       // Include images for display in chat (will be stripped on persistence)
       images: imagesToSend.length > 0 ? imagesToSend.map(img => ({
         id: img.id,
         data: img.data,
         type: img.type
       })) : undefined,
-      wasInReasonMode: currentMode === 'reason',
-      wasInWriteMode: currentMode === 'write',
-      mode: currentMode,
+      wasInReasonMode: outgoingMode === 'reason',
+      wasInWriteMode: outgoingMode === 'write',
+      mode: outgoingMode,
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    const queryToSend = query.trim();
+    const queryToSend = outgoingQuery.trim();
     setQuery('');
     clearAllImages(); // Clear images after sending
     setIsLoading(true);
@@ -6421,7 +6431,7 @@ const AstraApp = () => {
       //
       // EXCEPTION: research/search mode plans its web searches FROM `query`, so
       // embedding prior turns there pollutes retrieval and drops sources — skip it.
-      const supportsContext = currentMode !== 'search';
+      const supportsContext = outgoingMode !== 'search';
       const recentTurns = supportsContext
         ? (messages || [])
             .filter((m) => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string' && m.content.trim())
@@ -6438,9 +6448,9 @@ const AstraApp = () => {
       const requestBody = {
         query: queryWithContext,
         isClinical: false,
-        isReason: currentMode === 'reason',
-        isWrite: currentMode === 'write',
-        mode: currentMode,
+        isReason: outgoingMode === 'reason',
+        isWrite: outgoingMode === 'write',
+        mode: outgoingMode,
         stream: true,
         anonymous_id: !isAuthenticated ? authService.getAnonymousId() : null
       };
@@ -6541,7 +6551,7 @@ const AstraApp = () => {
 
           if (trimmedAssistantContent) {
             // Reorder citations by appearance for search and reason modes
-            const shouldReorder = currentMode === 'search' || currentMode === 'reason';
+            const shouldReorder = outgoingMode === 'search' || outgoingMode === 'reason';
             const { reorderedCitations, updatedContent } = shouldReorder
               ? reorderCitationsByAppearance(trimmedAssistantContent, collectedCitations)
               : { reorderedCitations: collectedCitations, updatedContent: trimmedAssistantContent };
@@ -6553,7 +6563,7 @@ const AstraApp = () => {
               content: updatedContent,
               citations: reorderedCitations,
               inlineCitations,
-              mode: currentMode,
+              mode: outgoingMode,
               timestamp: new Date(),
               isStreamingComplete: true
             };
@@ -6618,7 +6628,7 @@ const AstraApp = () => {
           if (persistedMessages && persistedMessages.length > 0) {
             const chatTitle = createChatTitle(userMessage.content);
             try {
-              const saveResult = await authService.saveChatSession(chatTitle, persistedMessages, currentMode, user);
+              const saveResult = await authService.saveChatSession(chatTitle, persistedMessages, outgoingMode, user);
 
               if (saveResult?.session) {
                 const normalized = normalizeSessionForHistory(saveResult.session);
@@ -6705,11 +6715,10 @@ const AstraApp = () => {
       }
   };
 
-  const handleSampleTapped = (sampleQuery) => {
+  const handleSampleTapped = (sampleQuery, sampleMode = currentMode) => {
+    setCurrentMode(sampleMode);
     setQuery(sampleQuery);
-    setTimeout(() => {
-      handleSend();
-    }, 50);
+    handleSend({ promptQuery: sampleQuery, promptMode: sampleMode });
   };
 
   const loadChatSession = (session) => {
