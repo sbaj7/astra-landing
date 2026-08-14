@@ -1223,7 +1223,7 @@ const ToolbarView = ({
   };
 
   return (
-    <div style={{
+    <div data-astra-app-header style={{
       height: isMobile ? 52 : 56,
       display: 'flex',
       alignItems: 'center',
@@ -1341,8 +1341,42 @@ const ToolbarView = ({
 const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }) => {
   const [showDDxMenu, setShowDDxMenu] = useState(false);
   const [showAPMenu, setShowAPMenu] = useState(false);
+  const [ddxMenuLayout, setDdxMenuLayout] = useState(null);
+  const [apMenuLayout, setApMenuLayout] = useState(null);
   const ddxMenuRef = useRef(null);
   const apMenuRef = useRef(null);
+
+  const calculateMenuLayout = useCallback((anchor, preferredWidth, alignment = 'left') => {
+    if (!anchor || typeof window === 'undefined') return null;
+
+    const viewportGutter = 12;
+    const menuGap = 8;
+    const preferredMaxHeight = 320;
+    const anchorRect = anchor.getBoundingClientRect();
+    const appHeaderBottom = document
+      .querySelector('[data-astra-app-header]')
+      ?.getBoundingClientRect().bottom ?? 0;
+    const minimumTop = Math.max(viewportGutter, appHeaderBottom + viewportGutter);
+    const availableWidth = Math.max(1, window.innerWidth - (viewportGutter * 2));
+    const width = Math.min(preferredWidth, availableWidth);
+    const preferredLeft = alignment === 'right'
+      ? anchorRect.right - width
+      : anchorRect.left;
+    const maximumLeft = Math.max(viewportGutter, window.innerWidth - viewportGutter - width);
+    const viewportLeft = Math.min(Math.max(preferredLeft, viewportGutter), maximumLeft);
+    const availableAbove = Math.max(0, anchorRect.top - minimumTop - menuGap);
+    const availableBelow = Math.max(0, window.innerHeight - anchorRect.bottom - viewportGutter - menuGap);
+    const openAbove = availableAbove >= Math.min(180, preferredMaxHeight)
+      || availableAbove >= availableBelow;
+    const availableHeight = openAbove ? availableAbove : availableBelow;
+
+    return {
+      left: Math.round(viewportLeft - anchorRect.left),
+      width: Math.floor(width),
+      maxHeight: Math.floor(Math.min(preferredMaxHeight, availableHeight)),
+      openAbove
+    };
+  }, []);
 
   useEffect(() => {
     if (!showDDxMenu) return;
@@ -1369,6 +1403,44 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [showAPMenu]);
+
+  useEffect(() => {
+    if (!showDDxMenu && !showAPMenu) return undefined;
+
+    const updateMenuLayouts = () => {
+      if (showDDxMenu) {
+        setDdxMenuLayout(calculateMenuLayout(ddxMenuRef.current, 210, 'left'));
+      }
+      if (showAPMenu) {
+        setApMenuLayout(calculateMenuLayout(apMenuRef.current, isMobile ? 260 : 320, 'right'));
+      }
+    };
+
+    updateMenuLayouts();
+    window.addEventListener('resize', updateMenuLayouts);
+    window.addEventListener('scroll', updateMenuLayouts, true);
+
+    return () => {
+      window.removeEventListener('resize', updateMenuLayouts);
+      window.removeEventListener('scroll', updateMenuLayouts, true);
+    };
+  }, [showDDxMenu, showAPMenu, isMobile, calculateMenuLayout]);
+
+  const toggleDDxMenu = () => {
+    const shouldOpen = !showDDxMenu;
+    if (shouldOpen) {
+      setDdxMenuLayout(calculateMenuLayout(ddxMenuRef.current, 210, 'left'));
+    }
+    setShowDDxMenu(shouldOpen);
+  };
+
+  const toggleAPMenu = () => {
+    const shouldOpen = !showAPMenu;
+    if (shouldOpen) {
+      setApMenuLayout(calculateMenuLayout(apMenuRef.current, isMobile ? 260 : 320, 'right'));
+    }
+    setShowAPMenu(shouldOpen);
+  };
 
   const modes = [
     { key: 'search', title: 'Research', icon: Search },
@@ -1486,8 +1558,8 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                   onClick={(e) => {
                     e.stopPropagation();
                     if (!isDisabled) {
-                      if (isDDx) setShowDDxMenu(!showDDxMenu);
-                      if (isAP) setShowAPMenu(!showAPMenu);
+                      if (isDDx) toggleDDxMenu();
+                      if (isAP) toggleAPMenu();
                     }
                   }}
                   role="button"
@@ -1498,8 +1570,8 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
                       e.preventDefault();
                       e.stopPropagation();
                       if (!isDisabled) {
-                        if (isDDx) setShowDDxMenu(!showDDxMenu);
-                        if (isAP) setShowAPMenu(!showAPMenu);
+                        if (isDDx) toggleDDxMenu();
+                        if (isAP) toggleAPMenu();
                       }
                     }
                   }}
@@ -1554,15 +1626,22 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '100%',
-                  left: 0,
-                  marginBottom: 8,
+                  top: ddxMenuLayout?.openAbove === false ? 'calc(100% + 8px)' : 'auto',
+                  bottom: ddxMenuLayout?.openAbove === false ? 'auto' : 'calc(100% + 8px)',
+                  left: ddxMenuLayout?.left ?? 0,
+                  right: 'auto',
                   backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
                   boxShadow: '0 -12px 40px rgba(0,0,0,0.12), 0 -2px 8px rgba(0,0,0,0.06)',
                   padding: '5px',
-                  minWidth: 210,
+                  width: ddxMenuLayout?.width ?? 210,
+                  maxWidth: 'calc(100vw - 24px)',
+                  maxHeight: ddxMenuLayout?.maxHeight ?? 320,
+                  overflowY: 'auto',
+                  overscrollBehavior: 'contain',
+                  WebkitOverflowScrolling: 'touch',
+                  boxSizing: 'border-box',
                   zIndex: 9999,
                   animation: 'fadeInDown 0.18s cubic-bezier(0.2, 0, 0, 1)'
                 }}
@@ -1617,18 +1696,22 @@ const ModeSwitcher = ({ currentMode, onModeChange, isDisabled, theme, isMobile }
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '100%',
-                  left: isMobile ? 'auto' : 0,
-                  right: isMobile ? 0 : 'auto',
-                  marginBottom: 8,
+                  top: apMenuLayout?.openAbove === false ? 'calc(100% + 8px)' : 'auto',
+                  bottom: apMenuLayout?.openAbove === false ? 'auto' : 'calc(100% + 8px)',
+                  left: apMenuLayout?.left ?? 0,
+                  right: 'auto',
                   backgroundColor: theme.backgroundSurface,
                   border: `1px solid ${theme.textSecondary}15`,
                   borderRadius: 14,
                   boxShadow: '0 -12px 40px rgba(0,0,0,0.12), 0 -2px 8px rgba(0,0,0,0.06)',
                   padding: '5px',
-                  width: isMobile ? 260 : 320,
-                  maxHeight: isMobile ? '40vh' : '320px',
+                  width: apMenuLayout?.width ?? (isMobile ? 260 : 320),
+                  maxWidth: 'calc(100vw - 24px)',
+                  maxHeight: apMenuLayout?.maxHeight ?? 320,
                   overflowY: 'auto',
+                  overscrollBehavior: 'contain',
+                  WebkitOverflowScrolling: 'touch',
+                  boxSizing: 'border-box',
                   zIndex: 9999,
                   animation: 'fadeInDown 0.18s cubic-bezier(0.2, 0, 0, 1)'
                 }}
