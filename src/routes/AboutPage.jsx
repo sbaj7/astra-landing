@@ -3,36 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { useTheme } from '../components/Themes+Styles.jsx';
 
-// ---------------------------------------------------------------------------
-// TEAM
-// Edit this list to add/remove members. Each entry supports:
-//   name    – full name (required)
-//   role    – title / role line (required)
-//   credentials – degrees / affiliation shown under the name (optional)
-//   bio     – one or two sentence blurb (optional)
-// ---------------------------------------------------------------------------
-const TEAM = [
-  { name: 'Sandi Bajrami', role: 'Founder & CEO', credentials: 'MD Candidate', bio: 'An MD candidate at Renaissance School of Medicine at Stony Brook University, Sandi leads Astra’s clinical direction, medical reasoning architecture, and physician-facing product strategy. His work spans biomedical research, perioperative outcomes, cardiovascular medicine, oncology, software development, and applied AI, with a focus on translating clinical complexity into structured, evidence-grounded systems.' },
-  { name: 'Shon B. Shmushkevich', role: 'Co-Founder & COO', credentials: 'MD Candidate', bio: 'An MD candidate at Florida International University Herbert Wertheim College of Medicine, Shon leads operations, institutional strategy, partnerships, and user implementation. His background includes ophthalmology research, surgical outcomes, medical technology, and academic publishing, giving him a practical view of how clinical tools are evaluated, adopted, and integrated by physicians and trainees.' },
-  { name: 'Michael Belenkiy', role: 'Co-Founder & CTO', credentials: 'Co-Founder, Sentinel Tech Solutions', bio: 'Michael leads Astra’s engineering organization, infrastructure, security, and platform reliability. He has built and deployed technology ventures across software, digital infrastructure, healthcare technology, and business automation, with responsibility for the systems architecture required to scale Astra securely.' },
-];
-
-// Officers (title + firm, no bio), rendered in the same grid as the founders.
-const TEAM_MEMBERS = [
-  { name: 'Arvind Dev, MD', role: '', credentials: 'Albert Einstein College of Medicine' },
-  { name: 'Haseeb Iqbal', role: '', credentials: 'J.P. Morgan Chase & Co.' },
-  { name: 'Randy Abramovich', role: '', credentials: 'MD Candidate' },
-  { name: 'Derek Johnson', role: '', credentials: 'MD Candidate' },
-  { name: 'Jeremiah von Borstel', role: '', credentials: 'MD Candidate' },
-  { name: 'Emily Bellow', role: '', credentials: 'MD Candidate' },
-  { name: 'Thomas Fedrigoni', role: '', credentials: 'MD Candidate' },
-  { name: 'Jakub Goclon', role: '', credentials: 'PhD Candidate' },
-  { name: 'Benjamin Rudolph', role: '', credentials: 'PhD Candidate' },
-  { name: 'Brodi Bajrami', role: '', credentials: 'BS, Stony Brook' },
-  { name: 'Calvin Sekseni', role: '', credentials: 'BS, Brooklyn College' },
-  { name: 'Sean Malamud', role: '', credentials: 'MS, Plattsburgh' },
-];
-
 const SERIF = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
 const SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif';
 const MEASURE = 680;
@@ -68,14 +38,6 @@ const AboutPage = () => {
     color: `${theme.textSecondary}99`,
     fontFamily: SANS,
     margin: 0,
-  };
-  const h2 = {
-    margin: 0,
-    fontFamily: SERIF,
-    fontSize: 'clamp(24px, 3.2vw, 30px)',
-    fontWeight: 400,
-    letterSpacing: '-0.02em',
-    color: theme.textPrimary,
   };
   const body = {
     margin: 0,
@@ -259,56 +221,6 @@ const AboutPage = () => {
                 <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.75, color: `${theme.textSecondary}D0`, fontFamily: SANS }}>
                   {p.text}
                 </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ===== TEAM ===== */}
-        <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={eyebrow}>Founders</p>
-          <h2 style={{ ...h2, marginTop: 18, maxWidth: MEASURE }}>
-            Clinicians and engineers, building the tool they wanted at the bedside.
-          </h2>
-          <div style={{
-            marginTop: 44,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: 'clamp(36px, 5vw, 56px) 40px',
-            alignItems: 'start',
-          }}>
-            {TEAM.map((m, i) => (
-              <div key={`${m.name}-${i}`} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-                  <span style={{ fontSize: 16.5, fontWeight: 600, color: theme.textPrimary, fontFamily: SANS, letterSpacing: '-0.01em' }}>{m.name}</span>
-                  <span style={{ fontSize: 14, lineHeight: 1.3, color: theme.textPrimary, fontFamily: SANS }}>{m.role}</span>
-                  {m.credentials && (
-                    <span style={{ fontSize: 13, lineHeight: 1.4, color: `${theme.textSecondary}A0`, fontFamily: SANS }}>{m.credentials}</span>
-                  )}
-                </div>
-                {m.bio && (
-                  <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: `${theme.textSecondary}C0`, fontFamily: SANS }}>{m.bio}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ===== THE TEAM ===== */}
-        <section style={{ marginTop: 'clamp(56px, 9vw, 96px)', paddingTop: 'clamp(40px, 6vw, 64px)', borderTop: `1px solid ${hair}` }}>
-          <p style={eyebrow}>The team</p>
-          <div style={{
-            marginTop: 44,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: 'clamp(36px, 5vw, 56px) 40px',
-            alignItems: 'start',
-          }}>
-            {TEAM_MEMBERS.map((m, i) => (
-              <div key={`${m.name}-${i}`} style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                <span style={{ fontSize: 16.5, fontWeight: 600, color: theme.textPrimary, fontFamily: SANS, letterSpacing: '-0.01em' }}>{m.name}</span>
-                {m.role && <span style={{ fontSize: 14, color: theme.textPrimary, fontFamily: SANS }}>{m.role}</span>}
-                {m.credentials && <span style={{ fontSize: 13, color: `${theme.textSecondary}A0`, fontFamily: SANS }}>{m.credentials}</span>}
               </div>
             ))}
           </div>
