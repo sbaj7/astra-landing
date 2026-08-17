@@ -76,74 +76,10 @@
   animation: astra-home-enter 560ms cubic-bezier(0.22, 1, 0.36, 1) 60ms both;
 }
 
-.astra-first-page__actions {
-  display: grid;
+.astra-first-page__showcase {
   width: 100%;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin: 0 auto;
+  margin: 8px auto 0;
   animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
-}
-
-.astra-first-page__action {
-  display: flex;
-  min-width: 0;
-  min-height: 84px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid var(--astra-home-border);
-  border-radius: 16px;
-  color: var(--astra-home-text);
-  background: transparent;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 160ms ease, color 160ms ease;
-}
-
-.astra-first-page__action:hover,
-.astra-first-page__action:focus-visible {
-  border-color: var(--astra-home-border-strong);
-  background: color-mix(in srgb, var(--astra-home-text) 2.5%, var(--astra-home-bg));
-}
-
-.astra-first-page__action:focus-visible,
-.astra-first-page__sources-action:focus-visible,
-.astra-first-page__footer a:focus-visible,
-.astra-first-page__footer button:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--astra-home-accent) 58%, transparent);
-  outline-offset: 3px;
-}
-
-.astra-first-page__action-meta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--astra-home-muted);
-  opacity: 0.7;
-}
-
-.astra-first-page__action-meta small {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.2;
-}
-
-.astra-first-page__action > strong {
-  display: -webkit-box;
-  overflow: hidden;
-  color: var(--astra-home-text);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  font-size: 13.5px;
-  font-weight: 520;
-  letter-spacing: -0.018em;
-  line-height: 1.28;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
 }
 
 .astra-first-page__sources-action {
@@ -173,6 +109,44 @@
   background: color-mix(in srgb, var(--astra-home-text) 2.5%, var(--astra-home-bg));
 }
 
+.astra-first-page__scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 5px;
+  margin: 0 auto;
+  padding: 10px 12px 18px;
+  border: 0;
+  color: var(--astra-home-muted);
+  background: transparent;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.42;
+  transition: opacity 160ms ease, color 160ms ease;
+  animation: astra-home-enter 640ms cubic-bezier(0.22, 1, 0.36, 1) 260ms both;
+}
+
+.astra-first-page__scroll-cue:hover,
+.astra-first-page__scroll-cue:focus-visible {
+  color: var(--astra-home-text);
+  opacity: 1;
+}
+
+.astra-first-page__scroll-cue svg {
+  animation: astra-home-cue-drift 2.6s ease-in-out infinite;
+}
+
+.astra-first-page__about {
+  width: 100%;
+  padding-top: clamp(44px, 7vw, 82px);
+  border-top: 1px solid var(--astra-home-border);
+}
+
 .astra-first-page__footer {
   display: flex;
   width: 100%;
@@ -180,7 +154,7 @@
   align-items: center;
   justify-content: center;
   gap: 9px;
-  padding: 18px 0 max(22px, env(safe-area-inset-bottom));
+  padding: 18px clamp(16px, 3vw, 32px) max(22px, env(safe-area-inset-bottom));
   color: var(--astra-home-muted);
 }
 
@@ -245,6 +219,16 @@
   }
 }
 
+@keyframes astra-home-cue-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
 @keyframes astra-home-logo-heartbeat {
   0%,
   68%,
@@ -296,18 +280,10 @@
     line-height: 1.18;
   }
 
-  .astra-first-page__actions {
-    gap: 8px;
-  }
-
-  .astra-first-page__action {
-    min-height: 82px;
-    padding: 11px 12px;
-    border-radius: 16px;
-  }
-
-  .astra-first-page__action > strong {
-    font-size: 12.5px;
+  /* Sit the mode hero directly under the input bar — a wide gap reads as a
+     disconnect between the toolbar chips and the tabs that mirror them. */
+  .astra-first-page__showcase {
+    margin-top: 6px;
   }
 
   .astra-first-page__sources-action {

@@ -47,6 +47,8 @@ import ImageLightbox from './ImageLightbox.jsx';
 import { CHAT_LIMITS } from '../config/chatLimits.js';
 import { getEffectiveSubscriptionPlan } from '../utils/subscriptionPlan.js';
 import FirstPageExperience from './FirstPageExperience.jsx';
+import DifferentialDiagnosisView from './DifferentialDiagnosisView.jsx';
+import ClinicalSectionsView from './ClinicalSectionsView.jsx';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -2397,298 +2399,6 @@ const processStreamingContentForMermaid = (content) => {
 /* =========================
    DIFFERENTIAL DIAGNOSIS RENDERER - Apple-inspired minimal design
    ========================= */
-const DifferentialDiagnosisRenderer = ({ content, theme, isDark, isStreaming }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Parse differential diagnosis structure - loose parser since format is always the same
-  const parseDifferentials = (text) => {
-    const differentials = [];
-    // Very loose regex - just look for numbered items with bolded condition names
-    // Format: "1. **Condition** — *Likelihood*" or "1. **Condition** - *Likelihood*"
-    const diffRegex = /(\d+)\.\s*\*\*([^*]+)\*\*\s*[—–\-]\s*\*([^*]+)\*/g;
-    let match;
-
-    while ((match = diffRegex.exec(text)) !== null) {
-      const number = match[1];
-      const condition = match[2].trim();
-      const likelihood = match[3].replace(/^Likelihood\s+/i, '').trim();
-
-      // Get the block for this differential (from current match to next number or section)
-      const startIndex = match.index;
-      const nextNum = parseInt(number) + 1;
-      let endIndex = text.length;
-
-      // Look for next differential or next ## section
-      const searchAfter = text.substring(startIndex + match[0].length);
-      const nextDiff = searchAfter.search(new RegExp(`^\\s*${nextNum}\\.\\s*\\*\\*`, 'm'));
-      const nextSection = searchAfter.search(/^##\s+[A-Z]/m);
-
-      if (nextDiff > -1) {
-        endIndex = startIndex + match[0].length + nextDiff;
-      } else if (nextSection > -1) {
-        endIndex = startIndex + match[0].length + nextSection;
-      }
-
-      const diffBlock = text.substring(startIndex, endIndex);
-
-      // Extract Supporting items - just look for lines starting with dash after "Supporting"
-      const supporting = [];
-      const supportingStart = diffBlock.search(/\*\*Supporting\*\*/i);
-      if (supportingStart > -1) {
-        const afterSupporting = diffBlock.substring(supportingStart);
-        const againstStart = afterSupporting.search(/\*\*Against\*\*/i);
-        const supportingText = againstStart > -1 ? afterSupporting.substring(0, againstStart) : afterSupporting;
-
-        supportingText.split('\n').forEach(line => {
-          const trimmed = line.trim();
-          // Match any line starting with dash/bullet
-          if (/^[–—\-•]/.test(trimmed)) {
-            supporting.push(trimmed.replace(/^[–—\-•]\s*/, ''));
-          }
-        });
-      }
-
-      // Extract Against items
-      const against = [];
-      const againstStart = diffBlock.search(/\*\*Against\*\*/i);
-      if (againstStart > -1) {
-        const afterAgainst = diffBlock.substring(againstStart);
-
-        afterAgainst.split('\n').forEach(line => {
-          const trimmed = line.trim();
-          if (/^[–—\-•]/.test(trimmed)) {
-            against.push(trimmed.replace(/^[–—\-•]\s*/, ''));
-          }
-        });
-      }
-
-      differentials.push({ condition, likelihood, supporting, against });
-    }
-    return differentials;
-  };
-
-  const differentials = parseDifferentials(content);
-
-  if (differentials.length === 0) return null;
-
-  return (
-    <div>
-      {/* Minimal header with subtle divider */}
-      <div style={{
-        marginBottom: isMobile ? 18 : 24,
-        paddingBottom: isMobile ? 12 : 16,
-        borderBottom: `1px solid ${isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)'}`
-      }}>
-        <h2 style={{
-          fontSize: isMobile ? 20 : 24,
-          fontWeight: 600,
-          margin: 0,
-          color: theme.textPrimary,
-          letterSpacing: '-0.02em',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif'
-        }}>
-          Differential Diagnosis
-        </h2>
-      </div>
-
-      {/* Card layout */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 16 : 20 }}>
-        {differentials.map((diff, index) => (
-          <div key={index} style={{
-            background: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.8)',
-            border: `1px solid ${isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)'}`,
-            borderRadius: isMobile ? 14 : 18,
-            padding: isMobile ? 18 : 24,
-            boxShadow: isDark
-              ? '0 4px 16px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.3)'
-              : '0 4px 20px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02)',
-          }}>
-            {/* Header: condition name and percentage on same line */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: 16,
-              marginBottom: isMobile ? 16 : 20
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 10 : 12, flex: 1, minWidth: 0 }}>
-                {/* Circular number badge */}
-                <div style={{
-                  width: isMobile ? 26 : 30,
-                  height: isMobile ? 26 : 30,
-                  borderRadius: '50%',
-                  background: `${theme.accentSoftBlue}15`,
-                  border: `1.5px solid ${theme.accentSoftBlue}30`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0
-                }}>
-                  <span style={{
-                    fontSize: isMobile ? 12 : 13,
-                    fontWeight: 600,
-                    color: theme.accentSoftBlue,
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif'
-                  }}>
-                    {index + 1}
-                  </span>
-                </div>
-
-                {/* Condition name */}
-                <h3 style={{
-                  fontSize: isMobile ? 17 : 20,
-                  fontWeight: 600,
-                  margin: 0,
-                  color: theme.textPrimary,
-                  letterSpacing: '-0.015em',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
-                }}>
-                  {diff.condition}
-                </h3>
-              </div>
-
-              {/* Likelihood percentage - top right */}
-              <div style={{
-                background: `${theme.accentSoftBlue}12`,
-                borderRadius: 100,
-                padding: isMobile ? '4px 12px' : '5px 13px',
-                flexShrink: 0
-              }}>
-                <span style={{
-                  fontSize: isMobile ? 12 : 13,
-                  fontWeight: 500,
-                  color: theme.accentSoftBlue,
-                  letterSpacing: '0.01em',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                  whiteSpace: 'nowrap'
-                }}>
-                  {diff.likelihood}
-                </span>
-              </div>
-            </div>
-
-            {/* Evidence grid — always stacked for clean readability */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: isMobile ? 14 : 16 }}>
-              {/* Supporting Evidence */}
-              <div>
-                <h4 style={{
-                  fontSize: isMobile ? 12 : 13,
-                  fontWeight: 600,
-                  margin: 0,
-                  marginBottom: isMobile ? 10 : 12,
-                  color: theme.successColor || '#12B76A',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif'
-                }}>
-                  Supporting
-                </h4>
-
-                <div>
-                  {diff.supporting.length > 0 ? (
-                    diff.supporting.map((item, i) => (
-                      <div key={i} style={{ display: 'flex', gap: 10, marginBottom: isMobile ? 8 : 10, alignItems: 'flex-start' }}>
-                        <div style={{
-                          width: 4,
-                          height: 4,
-                          borderRadius: '50%',
-                          background: `${theme.successColor || '#12B76A'}40`,
-                          flexShrink: 0,
-                          marginTop: isMobile ? 8 : 9
-                        }} />
-                        <span style={{
-                          fontSize: 16,
-                          lineHeight: 1.65,
-                          letterSpacing: '-0.011em',
-                          color: theme.textPrimary,
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-                          fontWeight: 400,
-                          WebkitFontSmoothing: 'antialiased'
-                        }}>
-                          {item}
-                        </span>
-                      </div>
-                    ))
-                  ) : (
-                    <span style={{
-                      fontSize: isMobile ? 14 : 15,
-                      color: theme.textSecondary,
-                      fontStyle: 'italic',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif'
-                    }}>
-                      {isStreaming ? 'Loading...' : 'None specified'}
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Against Evidence */}
-              <div>
-                <h4 style={{
-                  fontSize: isMobile ? 12 : 13,
-                  fontWeight: 600,
-                  margin: 0,
-                  marginBottom: isMobile ? 10 : 12,
-                  color: theme.errorColor || '#D92D20',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif'
-                }}>
-                  Against
-                </h4>
-
-                <div>
-                  {diff.against.length > 0 ? (
-                    diff.against.map((item, i) => (
-                      <div key={i} style={{ display: 'flex', gap: 10, marginBottom: isMobile ? 8 : 10, alignItems: 'flex-start' }}>
-                        <div style={{
-                          width: 4,
-                          height: 4,
-                          borderRadius: '50%',
-                          background: `${theme.errorColor || '#D92D20'}40`,
-                          flexShrink: 0,
-                          marginTop: isMobile ? 8 : 9
-                        }} />
-                        <span style={{
-                          fontSize: 16,
-                          lineHeight: 1.65,
-                          letterSpacing: '-0.011em',
-                          color: theme.textPrimary,
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-                          fontWeight: 400,
-                          WebkitFontSmoothing: 'antialiased'
-                        }}>
-                          {item}
-                        </span>
-                      </div>
-                    ))
-                  ) : (
-                    <span style={{
-                      fontSize: isMobile ? 14 : 15,
-                      color: theme.textSecondary,
-                      fontStyle: 'italic',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif'
-                    }}>
-                      {isStreaming ? 'Loading...' : 'None specified'}
-                    </span>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 /* =========================
    MARKDOWN BLOCK (Tailwind Typography)
@@ -3092,103 +2802,49 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     >
       {hasDifferentialDiagnosis ? (
         <>
-          {beforeDiff && (
-            <ReactMarkdown
-              remarkPlugins={remarkPlugins}
-              rehypePlugins={rehypePlugins}
-              components={componentsWithTheme}
-            >
-              {injectCitationPills(preprocessMarkdown(beforeDiff, isStreaming), citations) || ''}
-            </ReactMarkdown>
+          {beforeDiff.trim() && (
+            <div style={{ marginBottom: 18 }}>
+              <ReactMarkdown
+                remarkPlugins={remarkPlugins}
+                rehypePlugins={rehypePlugins}
+                components={componentsWithTheme}
+              >
+                {injectCitationPills(preprocessMarkdown(beforeDiff.trim(), isStreaming), citations) || ''}
+              </ReactMarkdown>
+            </div>
           )}
 
-          {/* Container for differential pills and content pill side-by-side */}
-          <div style={{
-            display: 'flex',
-            flexDirection: windowWidth < 1024 ? 'column' : 'row',
-            gap: 32,
-            alignItems: 'flex-start',
-            marginTop: 32,
-            marginBottom: 32,
-            maxWidth: '100%',
-            width: '100%'
-          }}>
-            {/* Differential pills - always takes up exactly half width */}
-            <div style={{
-              flex: '1',
-              minWidth: 0,
-              width: '100%',
-              maxWidth: windowWidth >= 1024 ? 'calc(50% - 16px)' : '100%'
-            }}>
-              <DifferentialDiagnosisRenderer
-                content={diffSection}
+          {/* Ranked differential */}
+          <DifferentialDiagnosisView
+            content={diffSection}
+            theme={theme}
+            isDark={invert}
+            isStreaming={isStreaming}
+            citations={citations}
+            isMobile={windowWidth < 768}
+          />
+
+          {/* Everything after the differential — next steps, management, evidence */}
+          {afterDiff.trim() && (
+            <div style={{ marginTop: windowWidth < 768 ? 22 : 28 }}>
+              <ClinicalSectionsView
+                markdown={afterDiff}
                 theme={theme}
                 isDark={invert}
-                isStreaming={isStreaming}
-              />
-            </div>
-
-            {/* Content pill or empty spacer - always present to maintain layout */}
-            {afterDiff ? (
-              <div style={{
-                flex: '1',
-                minWidth: 0,
-                width: '100%',
-                maxWidth: windowWidth >= 1024 ? 'calc(50% - 16px)' : '100%',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                {/* Title header matching differential style */}
-                <div style={{
-                  marginBottom: windowWidth < 768 ? 18 : 24,
-                  paddingBottom: windowWidth < 768 ? 12 : 16,
-                  borderBottom: `1px solid ${invert ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.06)'}`,
-                  marginTop: 0,
-                  paddingTop: 0
-                }}>
-                  <h2 style={{
-                    fontSize: windowWidth < 768 ? 20 : 24,
-                    fontWeight: 600,
-                    margin: 0,
-                    padding: 0,
-                    color: theme.textPrimary,
-                    letterSpacing: '-0.02em',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif'
-                  }}>
-                    Clinical Reasoning
-                  </h2>
-                </div>
-
-                {/* Content with same pill styling as differentials */}
-                <div
-                  className="clinical-reasoning-content markdown-body"
-                  style={{
-                    background: invert ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.8)',
-                    border: `1px solid ${invert ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)'}`,
-                    borderRadius: windowWidth < 768 ? 14 : 18,
-                    padding: windowWidth < 768 ? 18 : 24,
-                    boxShadow: invert
-                      ? '0 4px 16px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.3)'
-                      : '0 4px 20px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02)',
-                  }}>
+                citations={citations}
+                isMobile={windowWidth < 768}
+                renderMarkdown={(body) => (
                   <ReactMarkdown
                     remarkPlugins={remarkPlugins}
                     rehypePlugins={rehypePlugins}
                     components={componentsWithTheme}
                   >
-                    {injectCitationPills(preprocessMarkdown(afterDiff, isStreaming), citations) || ''}
+                    {injectCitationPills(preprocessMarkdown(body, isStreaming), citations) || ''}
                   </ReactMarkdown>
-                </div>
-              </div>
-            ) : (
-              <div style={{
-                flex: '1',
-                minWidth: 0,
-                width: '100%',
-                maxWidth: windowWidth >= 1024 ? 'calc(50% - 16px)' : '100%'
-              }} />
-            )}
-          </div>
+                )}
+              />
+            </div>
+          )}
         </>
       ) : (
         <ReactMarkdown

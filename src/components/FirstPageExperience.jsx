@@ -1,40 +1,10 @@
-import React from 'react';
-import {
-  FileText,
-  GraduationCap,
-  LibraryBig,
-  Search,
-  Stethoscope
-} from 'lucide-react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { ChevronDown, LibraryBig } from 'lucide-react';
 import AstraHeroMark from './brand/AstraHeroMark';
+import AboutContent from './AboutContent.jsx';
+import AboutModeShowcase from './AboutModeShowcase.jsx';
 import './FirstPageExperience.css';
 
-const HOME_ACTIONS = [
-  {
-    key: 'search',
-    label: 'Research',
-    prompt: 'Research early rhythm control in new AF.',
-    Icon: Search
-  },
-  {
-    key: 'reason',
-    label: 'Reason',
-    prompt: 'Reason through painless jaundice with weight loss.',
-    Icon: Stethoscope
-  },
-  {
-    key: 'write',
-    label: 'Write',
-    prompt: 'Write an A&P for decompensated HFrEF.',
-    Icon: FileText
-  },
-  {
-    key: 'qbank',
-    label: 'QBank',
-    prompt: 'Practice my weakest Step 2 CK areas.',
-    Icon: GraduationCap
-  }
-];
 
 const MODE_HEADLINES = {
   search: 'What do you need to know?',
@@ -58,8 +28,18 @@ const getModeHeadline = (mode) => {
   return 'What do you need to document?';
 };
 
+// The hero tabs and the input-bar mode selector are two views of one choice.
+const APP_MODE_TO_SHOWCASE = (mode) => {
+  if (['reason', 'differential', 'next-steps', 'dispo', 'disposition', 'specialty-referral', 'orders'].includes(mode)) return 'reason';
+  if (mode === 'search') return 'research';
+  return 'write';
+};
+
+const SHOWCASE_TO_APP_MODE = { research: 'search', reason: 'reason', write: 'write' };
+
 const FirstPageExperience = ({
   currentMode,
+  onModeChange,
   onSampleTapped,
   onShowAbout,
   onShowSources,
@@ -69,14 +49,32 @@ const FirstPageExperience = ({
 }) => {
   const isDark = theme.backgroundPrimary === '#121417';
   const headline = getModeHeadline(currentMode);
+  const aboutRef = useRef(null);
 
-  const handleAction = (action) => {
-    if (action.key === 'qbank') {
+  const scrollToAbout = useCallback(() => {
+    aboutRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, []);
+
+  // Master has no toolbar equivalent, so the tab is tracked locally and only
+  // pushed to the toolbar when it maps to a real chat mode.
+  const [showcaseKey, setShowcaseKey] = useState(() => APP_MODE_TO_SHOWCASE(currentMode));
+
+  useEffect(() => {
+    setShowcaseKey(APP_MODE_TO_SHOWCASE(currentMode));
+  }, [currentMode]);
+
+  const handleShowcaseKeyChange = useCallback((key) => {
+    setShowcaseKey(key);
+    const appMode = SHOWCASE_TO_APP_MODE[key];
+    if (appMode && appMode !== currentMode) onModeChange?.(appMode);
+  }, [currentMode, onModeChange]);
+
+  const handlePromptSelect = (prompt, key) => {
+    if (key === 'master') {
       onOpenQbank?.();
       return;
     }
-
-    onSampleTapped?.(action.prompt, action.key);
+    onSampleTapped?.(prompt, SHOWCASE_TO_APP_MODE[key] || 'search');
   };
 
   return (
@@ -115,22 +113,15 @@ const FirstPageExperience = ({
             </div>
           )}
 
-          <div className="astra-first-page__actions" aria-label="Start with Astra">
-            {HOME_ACTIONS.map((action) => (
-                <button
-                  key={action.key}
-                  type="button"
-                  className="astra-first-page__action"
-                  onClick={() => handleAction(action)}
-                  aria-label={`${action.label}: ${action.prompt}`}
-                >
-                  <strong>{action.prompt}</strong>
-                  <span className="astra-first-page__action-meta">
-                    <action.Icon size={14} strokeWidth={1.7} />
-                    <small>{action.label}</small>
-                  </span>
-                </button>
-            ))}
+          <div className="astra-first-page__showcase" aria-label="What each Astra mode returns">
+            <AboutModeShowcase
+              compact
+              theme={theme}
+              isDark={isDark}
+              activeKey={showcaseKey}
+              onActiveKeyChange={handleShowcaseKeyChange}
+              onPromptSelect={handlePromptSelect}
+            />
           </div>
 
           {onShowSources && (
@@ -145,17 +136,31 @@ const FirstPageExperience = ({
           )}
         </section>
 
-        <footer className="astra-first-page__footer" aria-label="Astra information">
-          <p>Astra can make mistakes. Check important clinical information.</p>
-          <div className="astra-first-page__footer-links">
-            {onShowAbout && (
-              <button type="button" onClick={onShowAbout}>About Astra</button>
-            )}
-            <a href="/terms.html">Terms of Use</a>
-            <a href="/privacy.html">Privacy Policy</a>
-          </div>
-        </footer>
+        <button
+          type="button"
+          className="astra-first-page__scroll-cue"
+          onClick={scrollToAbout}
+          aria-label="Scroll to learn about Astra"
+        >
+          <span>Why Astra</span>
+          <ChevronDown size={15} strokeWidth={1.8} aria-hidden="true" />
+        </button>
       </div>
+
+      <section className="astra-first-page__about" ref={aboutRef} aria-label="About Astra">
+        <AboutContent embedded />
+      </section>
+
+      <footer className="astra-first-page__footer" aria-label="Astra information">
+        <p>Astra can make mistakes. Check important clinical information.</p>
+        <div className="astra-first-page__footer-links">
+          {onShowAbout && (
+            <button type="button" onClick={onShowAbout}>About Astra</button>
+          )}
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </footer>
     </main>
   );
 };
