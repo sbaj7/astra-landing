@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ChevronDown, LibraryBig } from 'lucide-react';
+import { ChevronDown, GraduationCap, LibraryBig } from 'lucide-react';
 import AstraHeroMark from './brand/AstraHeroMark';
 import AboutContent from './AboutContent.jsx';
 import AboutModeShowcase from './AboutModeShowcase.jsx';
@@ -124,15 +124,29 @@ const FirstPageExperience = ({
             />
           </div>
 
-          {onShowSources && (
-            <button
-              type="button"
-              className="astra-first-page__sources-action"
-              onClick={onShowSources}
-            >
-              <LibraryBig size={15} strokeWidth={1.8} />
-              Sources List
-            </button>
+          {(onShowSources || onOpenQbank) && (
+            <div className="astra-first-page__resource-actions">
+              {onShowSources && (
+                <button
+                  type="button"
+                  className="astra-first-page__sources-action"
+                  onClick={onShowSources}
+                >
+                  <LibraryBig size={15} strokeWidth={1.8} />
+                  Sources List
+                </button>
+              )}
+              {onOpenQbank && (
+                <button
+                  type="button"
+                  className="astra-first-page__sources-action"
+                  onClick={onOpenQbank}
+                >
+                  <GraduationCap size={15} strokeWidth={1.8} />
+                  QBank
+                </button>
+              )}
+            </div>
           )}
         </section>
 

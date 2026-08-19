@@ -82,12 +82,22 @@
   animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
 }
 
+.astra-first-page__resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 8px;
+  margin: 12px auto 0;
+  animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
+}
+
 .astra-first-page__sources-action {
   display: inline-flex;
   align-items: center;
-  align-self: center;
   gap: 6px;
-  margin: 12px auto 0;
+  margin: 0;
   padding: 10px 16px;
   border: 1px solid var(--astra-home-border);
   border-radius: 8px;
@@ -99,7 +109,6 @@
   font-weight: 520;
   line-height: 1;
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
-  animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
 }
 
 .astra-first-page__sources-action:hover,
