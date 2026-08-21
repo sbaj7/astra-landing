@@ -185,7 +185,6 @@ const FirstPageExperience = ({
         </section>
 
         <footer className="astra-first-page__footer" aria-label="Astra information">
-          <p>Astra can make mistakes.</p>
           <button
             type="button"
             className="astra-first-page__scroll-cue"
