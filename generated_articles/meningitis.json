@@ -1,0 +1,699 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Diseases",
+  "title": "Meningitis",
+  "summary": "Suspected acute meningitis requires parallel stabilization, prompt blood cultures and lumbar puncture when safe, and immediate empiric therapy without diagnostic delay. Cerebrospinal fluid interpretation, targeted molecular testing, host factors, and neuroimaging indications determine etiologic treatment, public-health actions, and surveillance for delayed neurologic sequelae.",
+  "seoDescription": "Physician guide to acute meningitis evaluation, lumbar puncture, imaging, empiric treatment, microbiologic testing, complications, and follow-up.",
+  "clinicalQuestion": "How should clinicians rapidly evaluate, treat, and follow patients with suspected acute community-acquired meningitis?",
+  "specialty": "Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute meningitis",
+    "bacterial meningitis",
+    "lumbar puncture",
+    "cerebrospinal fluid",
+    "empiric antibiotics",
+    "meningococcal disease"
+  ],
+  "keyTakeaways": [
+    "Do not delay empiric intravenous antimicrobial therapy for imaging or lumbar puncture when either procedure is unsafe or would cause a clinically important delay. [14]",
+    "Obtain blood cultures promptly and perform lumbar puncture as soon as possible, preferably before antimicrobials, when no contraindication or need for deferral exists. [14]",
+    "CSF Gram stain, cell count with differential, protein, glucose with concurrent blood glucose, culture, susceptibility testing, and pathogen-directed PCR provide complementary\u2014not interchangeable\u2014diagnostic information. [14]",
+    "Obtain cranial imaging before lumbar puncture for GCS below 10, focal deficits, cranial nerve deficits, papilledema, new-onset adult seizure, or severe immunocompromise; initiate treatment first if imaging delays care. [14]",
+    "Assess all survivors for sequelae before discharge and again within 4 weeks; formal audiologic screening should occur before discharge or within 4 weeks. [14]"
+  ],
+  "sections": [
+    {
+      "id": "initial-priorities",
+      "eyebrow": "Emergency management",
+      "heading": "Treat suspected acute bacterial meningitis as a time-critical syndrome",
+      "intro": "The initial objective is to obtain actionable microbiology without postponing lifesaving treatment.",
+      "paragraphs": [
+        "Acute bacterial meningitis is a medical emergency. A compatible syndrome, particularly fever, headache, neck stiffness, and altered cognition or consciousness, should trigger urgent evaluation; the absence of all four manifestations reduces the probability of bacterial disease, but individual meningeal signs have limited sensitivity. [16] Stabilize airway, ventilation, circulation, seizures, and shock while obtaining blood cultures and preparing for lumbar puncture (LP). [14]",
+        "In hospital, administer empiric intravenous antimicrobials as early as possible. The WHO guideline identifies the first hour as the usual target window; LP and blood tests should precede therapy only when they can be completed safely without delaying treatment. [14] Observational evidence associates earlier in-hospital antibiotic treatment with lower adult mortality, although a precise evidence-based cutoff remains uncertain. [3]"
+      ],
+      "bullets": [
+        "If transfer will be clinically delayed and bacterial meningitis is strongly suspected, consider parenteral prehospital therapy; if meningococcal disease is strongly suspected, give parenteral ceftriaxone or benzylpenicillin without delaying transfer. [3]",
+        "A rapidly progressive nonblanching petechial or purpuric rash, purpura larger than 2 mm, or meningitic symptoms plus a nonblanching rash strongly suggests meningococcal disease. [3]",
+        "Use immediate infection-control and public-health processes for suspected invasive meningococcal disease; close-contact prophylaxis is recommended for laboratory-confirmed sporadic cases. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "diagnostic-sequence",
+      "eyebrow": "Diagnosis",
+      "heading": "Use a parallel blood-CSF-microbiology strategy",
+      "intro": "Routine blood tests cannot substitute for CSF evaluation.",
+      "paragraphs": [
+        "When LP can proceed, send CSF for Gram stain, white blood cell count and differential, protein, glucose with a paired blood glucose and CSF-to-blood glucose ratio, culture with antimicrobial susceptibility testing, and PCR-based testing for relevant pathogens. [14] CSF lactate may assist differentiation of bacterial from viral meningitis before antibiotic exposure, but its value is limited after antibiotics or with competing central nervous system disorders. [14]",
+        "A neutrophilic pleocytosis with low CSF glucose or low CSF-to-serum glucose ratio and increased protein is the classic pyogenic pattern, but no individual CSF measure confirms or excludes meningitis. Interpret the integrated profile alongside presentation, Gram stain, cultures, and molecular testing. [14] Send blood cultures as soon as possible, preferably before antibiotics. [14] Peripheral leukocyte count, C-reactive protein, and procalcitonin may contribute to diagnostic probability where available but must not defer LP or treatment. [14]"
+      ],
+      "bullets": [
+        "CSF culture and susceptibility testing remain essential for bacterial identification and resistance characterization; PCR supplements rather than replaces culture. [14]",
+        "A positive multiplex molecular result requires clinical and CSF correlation. The U.S. FDA-cleared BioFire FilmArray ME panel detects six bacterial, seven viral, and Cryptococcus targets; pediatric survey data show widespread use but substantial variation in ordering and interpretation practices. [13]",
+        "Antibiotic exposure reduces microbiologic yield. In a five-hospital U.S. retrospective cohort, 44.4% of patients receiving antibiotics before CSF culture had received them before CSF collection, illustrating the operational importance of obtaining specimens promptly when feasible. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Core tests for suspected acute community-acquired meningitis. [14]",
+        "columns": [
+          "Specimen or test",
+          "Clinical role",
+          "Interpretive limitation or action"
+        ],
+        "rows": [
+          [
+            "Blood cultures",
+            "Obtain promptly, preferably before antibiotics; may establish bacterial etiology when LP is deferred. [14]",
+            "Do not delay empiric treatment to obtain cultures. [14]"
+          ],
+          [
+            "CSF Gram stain and culture with susceptibility testing",
+            "Immediate morphologic clue plus definitive bacterial identification and resistance data. [14]",
+            "Negative results do not exclude disease, particularly after antimicrobial exposure. [14]"
+          ],
+          [
+            "CSF cell count, differential, protein, glucose and paired blood glucose",
+            "Defines inflammatory pattern and supports bacterial-versus-viral probability assessment. [14]",
+            "No single parameter rules meningitis in or out; use age-appropriate interpretation in young children. [14]"
+          ],
+          [
+            "CSF PCR-based molecular testing",
+            "Add relevant pathogen detection, including when culture sensitivity is reduced. [14]",
+            "Interpret with syndrome, CSF profile, Gram stain, and culture; do not replace culture. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "when-to-image",
+      "eyebrow": "Lumbar puncture safety",
+      "heading": "Reserve cranial imaging before LP for features suggesting mass effect or herniation risk",
+      "intro": "Imaging is not routine before LP in suspected meningitis.",
+      "paragraphs": [
+        "Perform cranial imaging before LP when readily accessible if the patient has GCS below 10, focal neurologic signs, cranial nerve deficits, papilledema, new-onset seizure in an adult, or severe immunocompromise. [14] If imaging is not readily accessible, defer LP in patients with these features until they resolve; obtain blood cultures and start antimicrobials immediately. [14]",
+        "New-onset isolated seizure in a child does not independently require pre-LP cranial imaging when no other high-risk feature is present. [14] Conversely, concern for hydrocephalus, mass lesion, cerebral edema, or altered consciousness should prompt neurocritical assessment and imaging once treatment has begun. [16]"
+      ],
+      "bullets": [
+        "Do not obtain routine imaging solely because meningitis is suspected. [14]",
+        "A normal head CT does not create a mandate to delay therapy; treatment must proceed if LP or imaging cannot be completed promptly. [14]",
+        "For patients with suspected fungal meningitis after epidural anesthesia, injection, or another relevant procedure, LP may be contraindicated by puncture-site infection or a brain mass with increased intracranial pressure; involve infectious diseases urgently and do not withhold treatment solely for negative fungal cultures or beta-D-glucan. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "empiric-antimicrobial-therapy",
+      "eyebrow": "Pharmacotherapy",
+      "heading": "Select empiric therapy by bacterial likelihood and host risk",
+      "intro": "The supplied literature supports agent selection but does not provide U.S. dosing details.",
+      "paragraphs": [
+        "For suspected or probable acute bacterial meningitis, use intravenous ceftriaxone or cefotaxime as empiric therapy. [14] Add intravenous ampicillin or amoxicillin when Listeria risk is present: age over 60 years, pregnancy, immunocompromise, transplantation, malignancy, advanced HIV disease, diabetes, end-stage kidney disease, cirrhosis, or alcohol use disorder. [14] Consider intravenous vancomycin where local pneumococcal resistance to penicillin or third-generation cephalosporins is high. [14]",
+        "Once culture and susceptibility results are available, narrow and optimize therapy. [14] The supplied sources do not provide U.S. agent dosing, renal-adjustment specifications, or organism-specific treatment durations; use current local susceptibility data, institutional pathways, and prescribing references for these details."
+      ],
+      "bullets": [
+        "Investigate reported beta-lactam allergy carefully: most nonsevere penicillin allergies do not preclude cephalosporin use, whereas previous life-threatening beta-lactam reactions warrant avoidance. [14]",
+        "In non-epidemic settings with no pathogen identified, stopping empiric antibiotics after 7 days may be considered only if the patient has clinically recovered, including sustained resolution of fever, vital-sign abnormalities, and altered mental status for at least 48 hours. [14]",
+        "For confirmed or strongly suspected bacterial meningitis in settings where LP can be performed, initiate intravenous corticosteroid therapy with the first antibiotic dose; discontinue if CSF is not consistent with bacterial meningitis. [14]"
+      ],
+      "subsections": [
+        {
+          "heading": "Adjunctive corticosteroids",
+          "paragraphs": [
+            "WHO recommends intravenous corticosteroids with the first antibiotic dose in suspected bacterial meningitis when LP is feasible, with discontinuation when CSF does not support bacterial meningitis. [14] A NICE evidence review found corticosteroids associated with lower mortality and hearing impairment in adults and lower hearing impairment in children, although evidence quality ranged from very low to moderate. [17]",
+            "Dexamethasone is the most studied agent, but the supplied WHO source does not provide a dose. The NICE review cites adult dexamethasone 10 mg IV every 6 hours for 4 days and pediatric dosing of 0.15 mg/kg IV every 6 hours for 4 days, but this reflects UK formulary-based guidance rather than U.S. labeling. [17] Antibiotics should never be delayed while waiting to administer dexamethasone. [17]"
+          ],
+          "bullets": [
+            "Do not routinely use corticosteroids during a meningococcal epidemic; use them in suspected or probable pneumococcal meningitis during a pneumococcal epidemic. [14]",
+            "Do not routinely restrict fluid intake; use isotonic IV maintenance fluid when enteral hydration is not possible, and individualize restriction for suspected SIADH without hypovolemia or shock. [14]",
+            "Do not use glycerol routinely. Hypertonic saline or mannitol may be temporizing measures for impending herniation while definitive intracranial-pressure management is arranged. [14]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "etiologic-branches",
+      "eyebrow": "Etiology",
+      "heading": "Escalate beyond routine bacterial pathways when tempo, host factors, or exposure changes the differential",
+      "intro": "Subacute and chronic meningitides require distinct diagnostic and therapeutic pathways.",
+      "paragraphs": [
+        "Viral meningitis is commonly self-limited, but severe disease and immunocompromise require heightened attention. In the United States, enteroviruses are leading causes; herpesviruses and influenza may have actionable antiviral treatment considerations. Most mild viral meningitis improves within 7 to 10 days, whereas severe illness or high-risk patients may require hospitalization. [24]",
+        "Fungal meningitis is uncommon but life-threatening. Consider it with advanced immune compromise, relevant endemic fungal exposure, or recent epidural anesthesia, injection, or invasive procedure. Fungal cultures can be negative and may take up to 2 weeks to turn positive; CDC advises immediate treatment after CSF acquisition when fungal meningitis is suspected and not withholding therapy because culture or beta-D-glucan is negative. [18]",
+        "Tuberculous meningitis is outside routine acute bacterial pathways and often needs empiric treatment despite nondiagnostic testing. No single negative test excludes disease; CSF Xpert MTB/RIF Ultra is preferred when available, but should be paired with mycobacterial culture and clinical-imaging assessment. [9]"
+      ],
+      "bullets": [
+        "For possible tuberculous meningitis, obtain baseline neuroimaging to assess hydrocephalus, infarcts, and tuberculomas; test for pulmonary tuberculosis because concurrent pulmonary disease occurs in about half of cases. [9]",
+        "In people with HIV and possible tuberculous meningitis, cryptococcal meningitis should be urgently excluded with cryptococcal antigen testing because presentations overlap. [10]",
+        "For suspected healthcare-associated fungal meningitis, consult infectious diseases; broad-spectrum antifungals with CNS penetration may be required, and dual or triple therapy has been used in outbreaks. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "complications-and-follow-up",
+      "eyebrow": "Aftercare",
+      "heading": "Plan sequelae detection before discharge, not after symptoms emerge",
+      "intro": "Delayed hearing, neurocognitive, psychiatric, and neurologic disability is common enough to justify structured follow-up.",
+      "paragraphs": [
+        "Before discharge, assess for neurologic, sensory, functional, psychosocial, and care-support needs, and establish a documented follow-up plan. WHO recommends a clinician review for all children and adults before discharge and at least once within 4 weeks after discharge. [14] Formal audiologic screening should occur before discharge or, if not feasible, within 4 weeks; even those with an initially normal screen should have repeat formal assessment because delayed hearing loss can occur. [14]",
+        "A 2026 systematic review and meta-analysis found meningitis-related sequelae in 18% of assessed adults and 24% of assessed children. In adults, pooled sequelae prevalence was 24.8% at discharge, 41.5% within 3 months, and 31.9% beyond 3 months; in children, pooled prevalence was 28.9% at discharge, 29.9% within 3 months, and 38.2% beyond 3 months. [11] These data support both discharge assessment and longitudinal reassessment rather than a single follow-up encounter."
+      ],
+      "bullets": [
+        "Arrange urgent hearing rehabilitation or cochlear implantation evaluation when hearing loss is identified. [14]",
+        "Refer promptly for rehabilitation when motor, cognitive, communication, visual, behavioral, or functional sequelae are identified. [14]",
+        "For acute symptomatic seizures attributable to meningitis, antiseizure therapy should generally be continued no longer than 3 months in the absence of recurrent seizures. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should antibiotics wait until lumbar puncture is completed?",
+      "answer": "No. Obtain blood cultures and CSF first only when this can be done safely and without clinically important delay. Start empiric intravenous antibiotics immediately if LP is deferred, imaging is needed, or diagnostic logistics delay therapy. [14]"
+    },
+    {
+      "question": "Which patients need head CT before lumbar puncture?",
+      "answer": "Obtain cranial imaging before LP when feasible for GCS below 10, focal neurologic signs, cranial nerve deficits, papilledema, new-onset adult seizure, or severe immunocompromise. Do not delay antimicrobial therapy for imaging. [14]"
+    },
+    {
+      "question": "Can a negative molecular CSF panel rule out meningitis?",
+      "answer": "No. CSF PCR must be interpreted with clinical features, CSF indices, Gram stain, and culture. Culture and susceptibility testing remain necessary for bacterial identification and resistance characterization. [14]"
+    },
+    {
+      "question": "When should survivors be screened for hearing loss?",
+      "answer": "Perform formal audiologic screening before discharge when possible; otherwise complete it within 4 weeks. Repeat testing is appropriate even after a normal initial assessment because delayed hearing loss can occur. [14]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Viral meningitis - Symptoms, diagnosis and treatment",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/540",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Viral meningitis\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nRecommendations\n\nTreatment algorithm\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nReferences\n\nPatient information\n\npadlock-locked\n\nWhen",
+      "score": 0.25994346
+    },
+    {
+      "number": 2,
+      "title": "Meningitis (bacterial) and meningococcal disease",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/387/bmj.q2452.full.pdf",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "GUIDELINES Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management\u2014summary of updated NICE guidance Aye Paing, 1 Laura Elliff-O\u2019Shea, 1 Lisa Boardman, 1 David Turner, 2 Linda Glennie3, on behalf of the Guideline Committee What you need to know \u2022 Identification of red ",
+      "score": 0.62495816
+    },
+    {
+      "number": 3,
+      "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management\u2014summary of updated NICE guidance",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/387/bmj.q2452",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "A senior clinical decision maker should perform an initial assessment and ensure that:\n\n       Antibiotics start within one hour of the person with suspected bacterial meningitis arriving at hospital, and in line with the section on antibiotics for bacterial meningitis in hospital [in the full guide",
+      "score": 0.6102915
+    },
+    {
+      "number": 4,
+      "title": "Bacterial meningitis - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/539",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Bacterial meningitis\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences",
+      "score": 0.3515342
+    },
+    {
+      "number": 5,
+      "title": "Practice Guidelines for the Management of Bacterial Meningitis",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/39/9/1267/402080",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AR Tunkel \u00b7 2004 \u00b7 Cited by 3253 \u2014 The objective of these practice guidelines is to provide clinicians with recommendations for the diagnosis and treatment of bacterial meningitis.",
+      "score": 0.528169
+    },
+    {
+      "number": 6,
+      "title": "Tuberculous meningitis: does lowering the treatment threshold ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1365-3156.2007.01975.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "67,0\u201388,1); probabilities above 80% were reached in 73% of patients. Lowering this threshold from 80% to 20% would add 14% more patients to be treated, for a",
+      "score": 0.4811862
+    },
+    {
+      "number": 7,
+      "title": "Diagnosis and Management of Bacterial Meningitis in the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2012/320309",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Initial blood tests should be performed for full blood count, coagulation studies, and electrolytes to assess for complications of sepsis and to",
+      "score": 0.28156903
+    },
+    {
+      "number": 8,
+      "title": "Meningitis in adults: diagnosis and management - Young",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/imj.14102",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by N Young \u00b7 2018 \u00b7 Cited by 162 \u2014 1 Despite ongoing advances in diagnostic methods and treatment strategies, mortality remains as high as 30% in pneumococcal meningitis and 5\u201310%",
+      "score": 0.27590016
+    },
+    {
+      "number": 9,
+      "title": "A Clinical Practice Guideline for Tuberculous Meningitis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12419961",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is the most severe form of tuberculosis, causing death or disability in around half of those affected. There are no up-to-date international guidelines defining its optimal management. Therefore, the Tuberculous Meningitis International Research Consortium conducted a systematic review of availa",
+      "score": 0.6947383
+    },
+    {
+      "number": 10,
+      "title": "A clinical practice guideline for tuberculous meningitis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40840485",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Tuberculous meningitis is the most severe form of tuberculosis, causing death or disability in around half of those affected. There are no up-to-date international guidelines defining its optimal management. Therefore, the Tuberculous Meningitis International Research Consortium conducted a systemat",
+      "score": 0.6155738
+    },
+    {
+      "number": 11,
+      "title": "Detection of sequelae from acute meningitis during clinical review by a healthcare provider: a systematic review and meta-analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12961891",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "This systematic review was performed in adherence with the Preferred Reporting Items for Systematic Review and Meta-Analysis  (PRISMA) and Meta-Analysis of Observational studies in Epidemiology  (MOOSE) guidelines. The literature search followed the PICO (Population, Intervention, Comparator, and Ou",
+      "score": 0.58777803
+    },
+    {
+      "number": 12,
+      "title": "A Ten-Year Retrospective Review of Medical Records of Patients Admitted with Meningitis or Encephalitis at Five Hospitals in the United States Highlights the Potential for Under-Ascertainment of Invasive Meningococcal Disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12567064",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "9.McGill F., Heyderman R.S., Michael B.D., Defres S., Beeching N.J., Borrow R., Glennie L., Gaillemin O., Wyncoll D., Kaczmarski E., et al. The UK joint specialist societies guideline on the diagnosis and management of acute meningitis and meningococcal sepsis in immunocompetent adults. J. Infect. 2",
+      "score": 0.5775198
+    },
+    {
+      "number": 13,
+      "title": "Current state and practice variation in the use of Meningitis/Encephalitis (ME) FilmArray panel in children - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9620602",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "9.Sigfrid L, Perfect C, Rojek A, et al. A systematic review of clinical guidelines on the management of acute, community-acquired CNS infections. BMC Med. 2019;17(1):170. doi: 10.1186/s12916-019-1387-5. [DOI] [PMC free article] [PubMed] [Google Scholar]\n 10.Posadas E, Fisher J. Pediatric bacterial m",
+      "score": 0.49494705
+    },
+    {
+      "number": 14,
+      "title": "Executive summary - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614846",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Recommendations for the diagnosis and management of epilepsy and seizures in children and adults are presented in the WHO mental health Gap Action Programme (mhGAP) guideline for mental, neurological and substance use disorders.\n\n### C. Management of sequelae\n\n#### Clinical assessment\n\nStrong recomm",
+      "score": 0.45754927
+    },
+    {
+      "number": 15,
+      "title": "Guideline development teams - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614840",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Taoufik Alsaadi\n\nAmerican Center of Psychiatry and Neurology\n\nAbu Dhabi, United Arab Emirates\n\nNeurology\n\nEpilepsy\n\nAction Amos\n\nInternational Bureau of Epilepsy\n\nBlantyre, Malawi\n\nPerson with lived experience\n\nEpilepsy and disability\n\nSatinder Aneja (co-chair)\n\nLady Hardinge Medical College\n\nNew De",
+      "score": 0.45682228
+    },
+    {
+      "number": 16,
+      "title": "Introduction - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614833",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## 1.5. Clinical presentation\n\nAcute meningitis is characterized by the rapid onset of fever, neck stiffness, headache, photophobia and/or altered mental status, ranging from sensory obtundation to confusion, lethargy and coma (5). The classic triad of fever, neck stiffness and altered mental status",
+      "score": 0.43655056
+    },
+    {
+      "number": 17,
+      "title": "Evidence review for corticosteroids for treatment of bacterial meningitis - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK604108",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Local commissioners and/or providers have a responsibility to enable the guideline to be applied when individual health professionals and their patients or service users wish to use it. They should do so in the context of local and national priorities for funding and developing services, and in ligh",
+      "score": 0.43122545
+    },
+    {
+      "number": 18,
+      "title": "Clinical Overview of Fungal Meningitis | Meningitis | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/hcp/clinical-overview-fm/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Diagnostic testing for fungal meningitis is challenging and susceptible to false-negative results. Fungal culture results are often negative and take up to 2 weeks to turn positive. Additionally, infections may involve multiple fungal pathogens or a combination of bacterial and fungal pathogens.\nRec",
+      "score": 0.3413854
+    },
+    {
+      "number": 19,
+      "title": "Community-acquired bacterial meningitis in adults with ...",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000002315",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "by JM Costerus \u00b7 2016 \u00b7 Cited by 49 \u2014 Patients with cancer are at higher risk of infections and so generally there is a low threshold to start antibiotics, or the patient may receive prophylactic",
+      "score": 0.30625775
+    },
+    {
+      "number": 20,
+      "title": "About Meningitis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Testing and diagnosis\n\nIf healthcare providers suspect meningitis, they may collect samples of blood or cerebrospinal fluid (fluid surrounding the spinal cord). Then laboratories can perform specific tests, depending on the type of infection suspected. Knowing the specific cause is important beca",
+      "score": 0.30380458
+    },
+    {
+      "number": 21,
+      "title": "About Fungal Meningitis | Meningitis | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/fungal-meningitis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Other prevention strategies\n\n## Testing and diagnosis\n\nThere are laboratory tests for meningitis. Tests might include a spinal tap, where a long needle collects fluid from around the spine for testing. The fluid around the spine may be sent to the lab to look for signs of infection, such as spec",
+      "score": 0.28072527
+    },
+    {
+      "number": 22,
+      "title": "Study Details | NCT03759470 | Evaluation of Different Methods for Diagnosis of ME | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03759470",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "| Groups/Cohorts | Evaluation of different methods for diagnosis of meningitis The CSF samples will be stored at -80\u00b0C until testing . CSF specimens will be prepared for GS and culture examinations by centrifugation at 3,000 rpm for 10 minutes at room temperaturetemperature.Culture will be performed",
+      "score": 0.26516554
+    },
+    {
+      "number": 23,
+      "title": "Laboratory Methods for the Diagnosis of Meningitis ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/11632",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by D Castillo \u00b7 2011 \u00b7 Cited by 172 \u2014 Laboratory Methods for the Diagnosis of Meningitis Caused by Neisseria meningitidis, Streptococcus pneumoniae, and Haemophilus Influenza: WHO Manual. 2nd Ed.",
+      "score": 0.24509902
+    },
+    {
+      "number": 24,
+      "title": "About Viral Meningitis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/viral-meningitis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Close contacts aren't likely to develop meningitis\n\n## How it spreads\n\nLearn how viruses that cause meningitis spread:\n\n## Prevention\n\n### Limit virus exposure and spread\n\nMany daily healthy habits can help prevent viral infections:\n\n### Vaccination\n\nVaccines can protect against some diseases th",
+      "score": 0.19273713
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Viral meningitis - Symptoms, diagnosis and treatment",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/540",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Viral meningitis\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nRecommendations\n\nTreatment algorithm\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nReferences\n\nPatient information\n\npadlock-locked\n\nWhen",
+      "score": 0.25994346
+    },
+    {
+      "number": 2,
+      "title": "Meningitis (bacterial) and meningococcal disease",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/387/bmj.q2452.full.pdf",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "GUIDELINES Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management\u2014summary of updated NICE guidance Aye Paing, 1 Laura Elliff-O\u2019Shea, 1 Lisa Boardman, 1 David Turner, 2 Linda Glennie3, on behalf of the Guideline Committee What you need to know \u2022 Identification of red ",
+      "score": 0.62495816
+    },
+    {
+      "number": 3,
+      "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management\u2014summary of updated NICE guidance",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/387/bmj.q2452",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "A senior clinical decision maker should perform an initial assessment and ensure that:\n\n       Antibiotics start within one hour of the person with suspected bacterial meningitis arriving at hospital, and in line with the section on antibiotics for bacterial meningitis in hospital [in the full guide",
+      "score": 0.6102915
+    },
+    {
+      "number": 4,
+      "title": "Bacterial meningitis - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/539",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Bacterial meningitis\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences",
+      "score": 0.3515342
+    },
+    {
+      "number": 5,
+      "title": "Practice Guidelines for the Management of Bacterial Meningitis",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/39/9/1267/402080",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AR Tunkel \u00b7 2004 \u00b7 Cited by 3253 \u2014 The objective of these practice guidelines is to provide clinicians with recommendations for the diagnosis and treatment of bacterial meningitis.",
+      "score": 0.528169
+    },
+    {
+      "number": 6,
+      "title": "Tuberculous meningitis: does lowering the treatment threshold ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1365-3156.2007.01975.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "67,0\u201388,1); probabilities above 80% were reached in 73% of patients. Lowering this threshold from 80% to 20% would add 14% more patients to be treated, for a",
+      "score": 0.4811862
+    },
+    {
+      "number": 7,
+      "title": "Diagnosis and Management of Bacterial Meningitis in the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2012/320309",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Initial blood tests should be performed for full blood count, coagulation studies, and electrolytes to assess for complications of sepsis and to",
+      "score": 0.28156903
+    },
+    {
+      "number": 8,
+      "title": "Meningitis in adults: diagnosis and management - Young",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/imj.14102",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by N Young \u00b7 2018 \u00b7 Cited by 162 \u2014 1 Despite ongoing advances in diagnostic methods and treatment strategies, mortality remains as high as 30% in pneumococcal meningitis and 5\u201310%",
+      "score": 0.27590016
+    },
+    {
+      "number": 9,
+      "title": "A Clinical Practice Guideline for Tuberculous Meningitis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12419961",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is the most severe form of tuberculosis, causing death or disability in around half of those affected. There are no up-to-date international guidelines defining its optimal management. Therefore, the Tuberculous Meningitis International Research Consortium conducted a systematic review of availa",
+      "score": 0.6947383
+    },
+    {
+      "number": 10,
+      "title": "A clinical practice guideline for tuberculous meningitis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40840485",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Tuberculous meningitis is the most severe form of tuberculosis, causing death or disability in around half of those affected. There are no up-to-date international guidelines defining its optimal management. Therefore, the Tuberculous Meningitis International Research Consortium conducted a systemat",
+      "score": 0.6155738
+    },
+    {
+      "number": 11,
+      "title": "Detection of sequelae from acute meningitis during clinical review by a healthcare provider: a systematic review and meta-analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12961891",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "This systematic review was performed in adherence with the Preferred Reporting Items for Systematic Review and Meta-Analysis  (PRISMA) and Meta-Analysis of Observational studies in Epidemiology  (MOOSE) guidelines. The literature search followed the PICO (Population, Intervention, Comparator, and Ou",
+      "score": 0.58777803
+    },
+    {
+      "number": 12,
+      "title": "A Ten-Year Retrospective Review of Medical Records of Patients Admitted with Meningitis or Encephalitis at Five Hospitals in the United States Highlights the Potential for Under-Ascertainment of Invasive Meningococcal Disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12567064",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "9.McGill F., Heyderman R.S., Michael B.D., Defres S., Beeching N.J., Borrow R., Glennie L., Gaillemin O., Wyncoll D., Kaczmarski E., et al. The UK joint specialist societies guideline on the diagnosis and management of acute meningitis and meningococcal sepsis in immunocompetent adults. J. Infect. 2",
+      "score": 0.5775198
+    },
+    {
+      "number": 13,
+      "title": "Current state and practice variation in the use of Meningitis/Encephalitis (ME) FilmArray panel in children - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9620602",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "9.Sigfrid L, Perfect C, Rojek A, et al. A systematic review of clinical guidelines on the management of acute, community-acquired CNS infections. BMC Med. 2019;17(1):170. doi: 10.1186/s12916-019-1387-5. [DOI] [PMC free article] [PubMed] [Google Scholar]\n 10.Posadas E, Fisher J. Pediatric bacterial m",
+      "score": 0.49494705
+    },
+    {
+      "number": 14,
+      "title": "Executive summary - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614846",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Recommendations for the diagnosis and management of epilepsy and seizures in children and adults are presented in the WHO mental health Gap Action Programme (mhGAP) guideline for mental, neurological and substance use disorders.\n\n### C. Management of sequelae\n\n#### Clinical assessment\n\nStrong recomm",
+      "score": 0.45754927
+    },
+    {
+      "number": 15,
+      "title": "Guideline development teams - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614840",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Taoufik Alsaadi\n\nAmerican Center of Psychiatry and Neurology\n\nAbu Dhabi, United Arab Emirates\n\nNeurology\n\nEpilepsy\n\nAction Amos\n\nInternational Bureau of Epilepsy\n\nBlantyre, Malawi\n\nPerson with lived experience\n\nEpilepsy and disability\n\nSatinder Aneja (co-chair)\n\nLady Hardinge Medical College\n\nNew De",
+      "score": 0.45682228
+    },
+    {
+      "number": 16,
+      "title": "Introduction - WHO guidelines on meningitis diagnosis, treatment and care - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK614833",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## 1.5. Clinical presentation\n\nAcute meningitis is characterized by the rapid onset of fever, neck stiffness, headache, photophobia and/or altered mental status, ranging from sensory obtundation to confusion, lethargy and coma (5). The classic triad of fever, neck stiffness and altered mental status",
+      "score": 0.43655056
+    },
+    {
+      "number": 17,
+      "title": "Evidence review for corticosteroids for treatment of bacterial meningitis - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK604108",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Local commissioners and/or providers have a responsibility to enable the guideline to be applied when individual health professionals and their patients or service users wish to use it. They should do so in the context of local and national priorities for funding and developing services, and in ligh",
+      "score": 0.43122545
+    },
+    {
+      "number": 18,
+      "title": "Clinical Overview of Fungal Meningitis | Meningitis | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/hcp/clinical-overview-fm/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Diagnostic testing for fungal meningitis is challenging and susceptible to false-negative results. Fungal culture results are often negative and take up to 2 weeks to turn positive. Additionally, infections may involve multiple fungal pathogens or a combination of bacterial and fungal pathogens.\nRec",
+      "score": 0.3413854
+    },
+    {
+      "number": 19,
+      "title": "Community-acquired bacterial meningitis in adults with ...",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000002315",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "by JM Costerus \u00b7 2016 \u00b7 Cited by 49 \u2014 Patients with cancer are at higher risk of infections and so generally there is a low threshold to start antibiotics, or the patient may receive prophylactic",
+      "score": 0.30625775
+    },
+    {
+      "number": 20,
+      "title": "About Meningitis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Testing and diagnosis\n\nIf healthcare providers suspect meningitis, they may collect samples of blood or cerebrospinal fluid (fluid surrounding the spinal cord). Then laboratories can perform specific tests, depending on the type of infection suspected. Knowing the specific cause is important beca",
+      "score": 0.30380458
+    },
+    {
+      "number": 21,
+      "title": "About Fungal Meningitis | Meningitis | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/fungal-meningitis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Other prevention strategies\n\n## Testing and diagnosis\n\nThere are laboratory tests for meningitis. Tests might include a spinal tap, where a long needle collects fluid from around the spine for testing. The fluid around the spine may be sent to the lab to look for signs of infection, such as spec",
+      "score": 0.28072527
+    },
+    {
+      "number": 22,
+      "title": "Study Details | NCT03759470 | Evaluation of Different Methods for Diagnosis of ME | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03759470",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "| Groups/Cohorts | Evaluation of different methods for diagnosis of meningitis The CSF samples will be stored at -80\u00b0C until testing . CSF specimens will be prepared for GS and culture examinations by centrifugation at 3,000 rpm for 10 minutes at room temperaturetemperature.Culture will be performed",
+      "score": 0.26516554
+    },
+    {
+      "number": 23,
+      "title": "Laboratory Methods for the Diagnosis of Meningitis ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/11632",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by D Castillo \u00b7 2011 \u00b7 Cited by 172 \u2014 Laboratory Methods for the Diagnosis of Meningitis Caused by Neisseria meningitidis, Streptococcus pneumoniae, and Haemophilus Influenza: WHO Manual. 2nd Ed.",
+      "score": 0.24509902
+    },
+    {
+      "number": 24,
+      "title": "About Viral Meningitis",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/meningitis/about/viral-meningitis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Close contacts aren't likely to develop meningitis\n\n## How it spreads\n\nLearn how viruses that cause meningitis spread:\n\n## Prevention\n\n### Limit virus exposure and spread\n\nMany daily healthy habits can help prevent viral infections:\n\n### Vaccination\n\nVaccines can protect against some diseases th",
+      "score": 0.19273713
+    }
+  ],
+  "publishedAt": "2026-08-20T23:57:00.189790Z",
+  "updatedAt": "2026-08-20T23:57:00.189790Z",
+  "readingMinutes": 7,
+  "slug": "meningitis"
+}

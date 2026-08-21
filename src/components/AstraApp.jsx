@@ -4753,8 +4753,8 @@ html, body { position: fixed; overflow: hidden; width: 100%; height: 100%; }
 textarea::placeholder { color: ${theme.textSecondary}; opacity: 1; }
 textarea { font-family: inherit; line-height: inherit; border: none; outline: none; resize: none; background: transparent; font-size: 16px; }
 
-button:not(:disabled):hover { transform: translateY(-1px); }
-button:not(:disabled):active { transform: translateY(0); }
+button:not(:disabled):hover,
+button:not(:disabled):active { transform: none; }
 button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accentSoftBlue}; outline-offset: 2px; }
 
 @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
@@ -4884,10 +4884,10 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 
 .markdown-body {
   color: ${theme.textPrimary};
-  line-height: 1.65;
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  letter-spacing: -0.011em;
+  line-height: 1.68;
+  font-size: clamp(16.5px, 1.35vw, 17.5px);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  letter-spacing: -0.006em;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -4898,54 +4898,54 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 .markdown-body > :first-child { margin-top: 0; }
 .markdown-body > :last-child  { margin-bottom: 0; }
 
-/* Headings — blue container */
+/* Editorial headings */
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
   color: ${theme.textPrimary};
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
-  margin: 1.25em 0 0.6em;
+  font-family: "Iowan Old Style", Baskerville, Palatino, Georgia, serif;
+  line-height: 1.18;
+  letter-spacing: -0.018em;
+  margin: 1.35em 0 0.55em;
   padding: 0;
 }
 
-.markdown-body h1 { font-size: 1.45em; font-weight: 700; }
-.markdown-body h2 { font-size: 1.22em; font-weight: 650; }
-.markdown-body h3 { font-size: 1.08em; font-weight: 600; }
+.markdown-body h1 { font-size: 1.58em; font-weight: 400; }
+.markdown-body h2 { font-size: 1.38em; font-weight: 400; }
+.markdown-body h3 { font-size: 1.18em; font-weight: 400; }
 
 /* Paragraphs */
 .markdown-body p {
-  margin: 0.7em 0;
-  line-height: 1.65;
+  margin: 0.75em 0;
+  line-height: 1.68;
 }
 
 .markdown-body strong {
-  font-weight: 650;
+  font-weight: 600;
   color: ${theme.textPrimary};
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
 }
 
-/* Horizontal rule — blue divider */
+/* Horizontal rule */
 .markdown-body hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, ${theme.accentSoftBlue}35, ${theme.accentSoftBlue}45, ${theme.accentSoftBlue}35, transparent);
-  margin: 1.5rem 0;
+  background: ${theme.textSecondary}24;
+  margin: 1.65rem 0;
 }
 
-/* Blockquotes — near-white with blue accent */
+/* Editorial blockquotes */
 .markdown-body blockquote {
   position: relative;
   margin: 1.5rem 0;
-  padding: 1.25rem 1.5rem;
+  padding: 0.2rem 0 0.2rem 1.15rem;
   border: none;
-  background: ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(255,255,255,0.85)'};
-  border-radius: 12px;
-  border-left: 3px solid ${theme.accentSoftBlue};
-  font-size: 0.95em;
+  background: transparent;
+  border-radius: 0;
+  border-left: 2px solid ${theme.accentSoftBlue};
+  font-size: 1em;
   color: ${theme.textPrimary};
-  box-shadow: ${isDark ? 'none' : `0 1px 6px ${theme.accentSoftBlue}0A`};
+  box-shadow: none;
 }
 
 .markdown-body blockquote p {
@@ -4961,12 +4961,14 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 /* Links + citation pills */
 .markdown-body a {
   color: ${theme.accentSoftBlue};
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color .2s ease;
+  text-decoration: underline;
+  text-decoration-color: ${theme.accentSoftBlue}55;
+  text-underline-offset: 3px;
+  border-bottom: 0;
+  transition: text-decoration-color .2s ease;
   word-break: break-word;
 }
-.markdown-body a:hover { border-bottom-color: ${theme.accentSoftBlue}; }
+.markdown-body a:hover { text-decoration-color: ${theme.accentSoftBlue}; }
 
 /* Favicon citation buttons */
 .markdown-body .cite-wrap {
@@ -4977,46 +4979,51 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 8px 2px 4px;
+  padding: 1px 3px 2px;
   margin: 0 2px;
-  border-radius: 20px;
-  background: ${isDark ? `${theme.accentSoftBlue}15` : `${theme.accentSoftBlue}0C`};
-  border: 1px solid ${theme.accentSoftBlue}20;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid ${theme.accentSoftBlue}55;
   text-decoration: none;
   color: ${theme.accentSoftBlue};
-  font-size: 12px;
-  font-weight: 550;
-  line-height: 1;
-  vertical-align: middle;
-  transition: all 0.15s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.15;
+  vertical-align: 0.08em;
+  transition: border-color 0.15s ease, color 0.15s ease;
   cursor: pointer;
   white-space: nowrap;
 }
 .markdown-body .cite-btn:hover {
-  background: ${isDark ? `${theme.accentSoftBlue}25` : `${theme.accentSoftBlue}18`};
-  border-color: ${theme.accentSoftBlue}40;
-  box-shadow: 0 2px 8px ${theme.accentSoftBlue}15;
+  background: transparent;
+  border-color: ${theme.accentSoftBlue};
+  box-shadow: none;
+  color: ${theme.textPrimary};
 }
 .markdown-body .cite-btn-favicon {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #fff;
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: transparent;
+  filter: grayscale(1);
   flex-shrink: 0;
+  opacity: 0.62;
 }
 .markdown-body .cite-btn-label {
-  letter-spacing: -0.01em;
-  max-width: 140px;
+  letter-spacing: 0;
+  max-width: 120px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .markdown-body .cite-btn-count {
-  font-size: 10px;
-  font-weight: 700;
-  background: ${theme.accentSoftBlue};
-  color: #fff;
-  border-radius: 8px;
-  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 600;
+  background: transparent;
+  color: ${theme.textSecondary};
+  border-radius: 0;
+  padding: 0;
   margin-left: 1px;
   line-height: 1.3;
   letter-spacing: 0;
@@ -5026,12 +5033,12 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   position: fixed;
   z-index: 9999;
   background: ${isDark ? theme.backgroundSurface : '#fff'};
-  border: 1px solid ${isDark ? `${theme.accentSoftBlue}30` : `${theme.accentSoftBlue}20`};
-  border-radius: 12px;
-  padding: 10px;
+  border: 1px solid ${theme.textSecondary}2B;
+  border-radius: 5px;
+  padding: 7px;
   min-width: 260px;
   max-width: 380px;
-  box-shadow: 0 8px 30px rgba(0,0,0,${isDark ? '0.4' : '0.12'}), 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 32px rgba(0,0,0,${isDark ? '0.4' : '0.11'}), 0 2px 8px rgba(0,0,0,0.05);
   pointer-events: auto;
   flex-direction: column;
   gap: 0;
@@ -5052,8 +5059,8 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   gap: 10px;
   text-decoration: none;
   color: ${theme.textPrimary};
-  padding: 6px 4px;
-  border-radius: 8px;
+  padding: 8px 7px;
+  border-radius: 3px;
   transition: background 0.12s ease;
 }
 .cite-hover-entry {
@@ -5227,47 +5234,49 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
 /* When code blocks appear in lists, keep spacing tidy */
 .markdown-body li pre { margin-top: 0.25rem; }
 
-/* ===== Tables: soft blue tint, clean medical feel ===== */
+/* ===== Tables: restrained editorial treatment ===== */
 .markdown-body .table-wrapper,
 .markdown-body table {
   max-width: 100%;
 }
 .markdown-body table {
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
   width: 100%;
-  margin: 0.75rem 0 1rem;
-  border-radius: 12px;
+  margin: 1.1rem 0 1.35rem;
+  border-radius: 0;
   overflow: hidden;
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid ${theme.accentSoftBlue}18;
-  background: ${isDark ? `${theme.accentSoftBlue}08` : `${theme.accentSoftBlue}05`};
+  border: 0;
+  border-top: 1px solid ${theme.textSecondary}34;
+  border-bottom: 1px solid ${theme.textSecondary}34;
+  background: transparent;
 }
 
 .markdown-body thead th {
-  background: ${isDark ? `${theme.accentSoftBlue}20` : `${theme.accentSoftBlue}14`};
+  background: transparent;
   color: ${theme.textPrimary};
   font-weight: 600;
-  font-size: 0.82em;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  font-size: 0.8em;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
   text-align: left;
   white-space: nowrap;
 }
 
 .markdown-body th,
 .markdown-body td {
-  padding: 10px 14px;
-  border-bottom: 1px solid ${theme.accentSoftBlue}14;
+  padding: 11px 16px 11px 0;
+  border-bottom: 1px solid ${theme.textSecondary}24;
   vertical-align: top;
-  font-size: 0.92em;
-  line-height: 1.55;
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 
 .markdown-body tbody tr:nth-child(even) td {
-  background: ${isDark ? `${theme.accentSoftBlue}0E` : `${theme.accentSoftBlue}0A`};
+  background: transparent;
 }
 
 .markdown-body tbody tr:last-child td {

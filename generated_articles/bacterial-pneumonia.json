@@ -1,0 +1,754 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary Infection",
+  "title": "Bacterial Pneumonia",
+  "summary": "Manage suspected bacterial pneumonia by establishing illness severity and site of care, confirming a compatible pulmonary process, obtaining targeted microbiology in severe disease, and rapidly reconsidering alternative diagnoses or complications when empiric therapy fails.",
+  "seoDescription": "Point-of-care approach to bacterial pneumonia: triage, imaging, microbiologic testing, diagnostic pitfalls, complications, and escalation for adults and immunocompromised patients.",
+  "clinicalQuestion": "How should physicians triage, diagnose, test, and escalate care for suspected bacterial pneumonia?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "bacterial pneumonia",
+    "community-acquired pneumonia",
+    "hospital-acquired pneumonia",
+    "ventilator-associated pneumonia",
+    "pneumonia severity index",
+    "lung ultrasound",
+    "bronchoscopy"
+  ],
+  "keyTakeaways": [
+    "Use the Pneumonia Severity Index to support outpatient versus inpatient disposition; ATS/IDSA guidance prefers PSI over CURB-65 because it has been more extensively studied and validated. [20]",
+    "Reserve blood cultures and sputum Gram stain/culture for severe, deteriorating, or hospitalized pneumonia rather than routine ambulatory cases; use a recovered pathogen and susceptibility result to narrow therapy. [11][14]",
+    "A nondiagnostic chest radiograph does not exclude pneumonia: CT may demonstrate pneumonia in up to 27% of cases with a negative or nondiagnostic radiograph, and lung ultrasound is useful when radiography is negative or inconclusive. [10][13]",
+    "Do not use procalcitonin alone to decide whether to initiate antibiotics; it is an adjunct to clinical assessment and rises after approximately 6 hours. [10]",
+    "Nonresponse should trigger a directed search for a noninfectious mimic or a complication such as abscess or empyema, rather than automatic extension or broadening of antibiotics. [10][15]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-immediate-risk",
+      "eyebrow": "First decision",
+      "heading": "Choose outpatient, inpatient, or ICU care before refining etiology",
+      "intro": "Disposition determines the intensity of physiologic support and microbiologic evaluation.",
+      "paragraphs": [
+        "For suspected community-acquired pneumonia (CAP), calculate the Pneumonia Severity Index (PSI) to support outpatient versus inpatient care; ATS/IDSA guidance prefers PSI over CURB-65 because PSI has been more extensively studied and validated. Do not let a low score override hypoxemia, inability to maintain oral intake, impaired social support, or a trajectory that requires hospital-level observation. [20][11]",
+        "Assess for severe CAP using ATS/IDSA major and minor criteria to identify patients who merit ICU-level care. The major criteria identify the clearest need for intensive support; minor criteria identify patients whose aggregate physiologic derangement warrants escalation even before overt organ failure. [20]",
+        "Separate CAP from hospital-acquired pneumonia (HAP) and ventilator-associated pneumonia (VAP) at presentation because the populations have distinct organism exposures, diagnostic testing needs, empiric-treatment approaches, and prevention goals. VAP is the most common ICU-acquired infection and remains diagnostically difficult, so avoid treating an isolated new radiographic opacity without integrating the clinical trajectory and competing pulmonary processes. [1][20]"
+      ],
+      "bullets": [
+        "Escalate immediately for impending respiratory failure, shock, altered mental status, or rapidly progressive infiltrates; these findings also lower the threshold for blood cultures, lower-respiratory sampling, and ICU consultation. [11][20]",
+        "In patients after cardiac arrest, do not prescribe prophylactic antibiotics solely to prevent early pneumonia; randomized trials found no survival or neurologic benefit, despite lower early-pneumonia incidence in one trial. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition framework for suspected bacterial pneumonia. [11][20]",
+        "columns": [
+          "Clinical setting",
+          "Decision tool or trigger",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Potential outpatient CAP",
+            "PSI supports low mortality risk; no overriding physiologic or practical barrier to outpatient care. [20]",
+            "Treat and arrange reassessment if symptoms or oxygenation worsen. [20]"
+          ],
+          [
+            "Hospitalized CAP",
+            "PSI or clinical status supports admission; obtain testing selectively in severe, deteriorating, or hospitalized disease. [11][20]",
+            "Assess for severe-CAP criteria and obtain targeted microbiology when results can change management. [11][20]"
+          ],
+          [
+            "Possible severe CAP",
+            "ATS/IDSA severe-CAP major or minor criteria. [20]",
+            "Provide ICU-level evaluation and early organ support as indicated. [20]"
+          ],
+          [
+            "HAP or VAP",
+            "Pneumonia develops during hospitalization or mechanical ventilation. [1][20]",
+            "Use a hospital-acquired-infection diagnostic and treatment pathway rather than CAP assumptions. [19][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-pulmonary-process",
+      "eyebrow": "Diagnostic branch",
+      "heading": "Confirm pneumonia and identify imaging discordance",
+      "intro": "Interpret imaging against the pretest probability and alternative pulmonary diagnoses.",
+      "paragraphs": [
+        "Obtain chest radiography when pneumonia is clinically suspected, but interpret an infiltrate as supportive rather than definitive of bacterial etiology. Chest radiography has substantial limitations in VAP: a systematic review cited sensitivity of 88.9% and specificity of 26.1%, with important interpretation variability. [6][11]",
+        "If the chest radiograph is negative or equivocal but clinical suspicion remains high, use lung ultrasound or chest CT according to bedside availability and the decision at stake. Lung ultrasound is useful when radiography is negative or inconclusive and, in ICU pneumonia, has shown higher sensitivity and accuracy than chest radiography, particularly when dorsal zones are assessed. [13][4]",
+        "Use chest CT when confirmation will alter treatment or when the key question is a complication or competing diagnosis. CT may show pneumonia in up to 27% of cases with a negative or nondiagnostic chest radiograph; it is also useful for lung abscess and empyema. CT findings alone should not be used to determine bacterial versus nonbacterial treatment, because reported discriminatory performance is insufficient to tailor antibiotic therapy. [10]"
+      ],
+      "bullets": [
+        "A focal or lobar process increases the probability of bacterial pneumonia but does not establish a specific pathogen; in children, lobar pneumonia is commonly bacterial, including atypical bacteria. [23]",
+        "When imaging and the clinical course diverge, evaluate pulmonary edema and pulmonary embolism as alternatives to CAP rather than assuming treatment failure from resistant bacteria. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Imaging selection when bacterial pneumonia remains uncertain. [4][6][10][13]",
+        "columns": [
+          "Clinical problem",
+          "Preferred next test",
+          "Interpretation that changes management"
+        ],
+        "rows": [
+          [
+            "Initial suspected CAP",
+            "Chest radiography. [11]",
+            "A compatible infiltrate supports pneumonia but does not define bacterial cause. [6][11]"
+          ],
+          [
+            "Negative or equivocal radiograph with persistent suspicion",
+            "Lung ultrasound, especially in bedside or ICU assessment. [4][13]",
+            "A positive bedside study can support treatment while other causes are assessed; examine dorsal zones in ICU patients. [4]"
+          ],
+          [
+            "Need to resolve radiograph\u2013clinical discordance",
+            "Chest CT. [10]",
+            "CT can identify pneumonia missed on radiography and identify alternative structural explanations. [10]"
+          ],
+          [
+            "Concern for abscess or empyema",
+            "Chest CT. [10]",
+            "Demonstration of a complication redirects management beyond uncomplicated pneumonia treatment. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "microbiology-and-biomarkers",
+      "eyebrow": "Etiologic branch",
+      "heading": "Target microbiologic testing to severity, host risk, and treatment response",
+      "intro": "Test when an organism-level diagnosis can narrow therapy or reveal an alternative process.",
+      "paragraphs": [
+        "Do not routinely obtain blood cultures or sputum Gram stain/culture in uncomplicated ambulatory CAP. Obtain them in severe or deteriorating disease and in hospitalized patients, where identifying an invasive pathogen can change therapy. When blood or pleural fluid culture recovers a pathogenic isolate, use susceptibility testing to determine the antibiotic regimen. [11][14]",
+        "Use viral-pathogen and atypical-bacteria testing when clinically indicated, particularly during outbreaks or in high-risk groups. A detected respiratory virus does not by itself exclude bacterial coinfection; interpret the result with imaging, trajectory, inflammatory findings, and microbiology. [11][5]",
+        "Use procalcitonin and C-reactive protein as adjuncts, not stand-alone bacterial rule-in or rule-out tests. Procalcitonin rises in many inflammatory conditions, generally more in bacterial infection, and increases after approximately 6 hours; it should not be the sole determinant of whether to start antibiotics. Acute-phase reactants are not recommended for initial diagnosis in one evidence-based guideline, but may be useful when the patient fails to improve. [10][11]",
+        "For mechanically ventilated patients, VAP diagnosis is particularly vulnerable to misclassification because infiltrates, inflammation, colonization, aspiration, edema, and atelectasis overlap. Biomarker-guided stewardship has been studied in suspected VAP, but a biomarker should not replace clinical assessment, imaging, and respiratory sampling when the patient is unstable or the diagnosis is uncertain. [1][6]"
+      ],
+      "bullets": [
+        "Send pleural-fluid culture when a pleural effusion is sampled; a pathogenic pleural-fluid isolate should direct definitive antibiotic selection. [14]",
+        "In bacterial versus viral pediatric lower-respiratory infection research, bacterial classification used culture- or PCR-confirmed bacteria in significant samples, or a probable-bacterial pattern incorporating lobar pneumonia or significant effusion, leukocytosis greater than 15 \u00d7 10^9/L, or CRP greater than 40 mg/L or procalcitonin greater than 0.5 \u00b5g/L. These thresholds are classification criteria from that study, not independent indications to prescribe antibiotics. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Targeted testing strategy for suspected bacterial pneumonia. [5][10][11][14]",
+        "columns": [
+          "Test",
+          "When to obtain",
+          "Decision use"
+        ],
+        "rows": [
+          [
+            "Blood cultures",
+            "Severe, deteriorating, or hospitalized pneumonia. [11]",
+            "A pathogenic isolate permits susceptibility-directed treatment. [14]"
+          ],
+          [
+            "Sputum Gram stain and culture",
+            "Severe, deteriorating, or hospitalized pneumonia. [11]",
+            "Use an interpretable pathogen result to narrow or redirect therapy. [11][14]"
+          ],
+          [
+            "Pleural-fluid culture",
+            "When pleural fluid is obtained. [14]",
+            "Use pathogen identification and susceptibility results to select definitive therapy. [14]"
+          ],
+          [
+            "Respiratory viral and atypical testing",
+            "Outbreak exposure, high-risk host, or a presentation in which the result changes management. [11]",
+            "Refines the etiologic differential; does not alone exclude bacterial coinfection. [5][11]"
+          ],
+          [
+            "Procalcitonin or CRP",
+            "Adjunctive use, particularly with nonresponse or diagnostic uncertainty. [10][11]",
+            "Do not use alone to decide initial antibiotic treatment. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "host-specific-escalation",
+      "eyebrow": "High-risk hosts",
+      "heading": "Lower the threshold for invasive diagnosis in transplant and other immunocompromised hosts",
+      "intro": "Host immune status changes both the differential diagnosis and the required diagnostic speed.",
+      "paragraphs": [
+        "In solid-organ transplant recipients, obtain chest imaging in every patient with suspected pneumonia and recognize that up to 45% may lack typical examination findings such as crackles or bronchial breathing. Neutrophilia is common with bacterial infection, whereas leukopenia or lymphopenia may accompany viral or opportunistic infection under high immunosuppression. [12]",
+        "Use the radiographic pattern and immune risk to broaden testing beyond routine bacterial cultures. Diffuse infiltrates with hypoxemia, elevated lactate dehydrogenase, and elevated beta-D-glucan should raise concern for Pneumocystis jirovecii pneumonia rather than routine bacterial CAP; lymphopenia with reduced CD4+/CD8+ counts is associated with severe viral and Legionella infection in solid-organ transplant recipients. [12]",
+        "Proceed to bronchoscopy with bronchoalveolar lavage (BAL) when a transplant recipient is clinically unstable, has no etiologic diagnosis from noninvasive testing, fails empiric antibacterial therapy, or has focal or diffuse infiltrates requiring organism-level clarification. BAL yields an etiologic diagnosis in approximately 39% to 77% of solid-organ transplant pneumonias; select BAL studies according to imaging, symptoms, and immunologic risk. [12]"
+      ],
+      "bullets": [
+        "Consider transbronchial biopsy or lung biopsy selectively when BAL and noninvasive testing do not establish a diagnosis and a tissue diagnosis will change treatment. [12]",
+        "In people with HIV, use a CAP pathway that accounts for opportunistic-infection risk and potential limitations of standard severity scores in this population. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation triggers in solid-organ transplant recipients with pulmonary infiltrates. [12]",
+        "columns": [
+          "Finding",
+          "Diagnostic implication",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Absent classic crackles or bronchial breathing",
+            "Typical examination findings may be absent. [12]",
+            "Do not defer imaging or microbiologic evaluation on the basis of examination alone. [12]"
+          ],
+          [
+            "Diffuse infiltrates, hypoxemia, high LDH, elevated beta-D-glucan",
+            "Pattern is characteristic of Pneumocystis jirovecii pneumonia. [12]",
+            "Expand the differential beyond bacterial pneumonia and pursue directed diagnostic testing. [12]"
+          ],
+          [
+            "Instability or no improvement on empiric antibacterials",
+            "Noninvasive testing may be insufficient. [12]",
+            "Perform bronchoscopy with BAL when appropriate. [12]"
+          ],
+          [
+            "BAL nondiagnostic and tissue result would change therapy",
+            "Persistent uncertainty may require tissue sampling. [12]",
+            "Consider transbronchial or lung biopsy selectively. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nonresponse-and-complications",
+      "eyebrow": "Reassessment",
+      "heading": "Treat nonresponse as a diagnostic problem",
+      "intro": "Failure to improve should trigger a structured reassessment rather than reflexive antibiotic escalation.",
+      "paragraphs": [
+        "When presumed bacterial pneumonia does not improve, reassess the original diagnosis, adherence and drug exposure, source control, microbiology, and the possibility of a noninfectious mimic. Established HAP guidance specifically directs evaluation for noninfectious mimics and pneumonia complications in the nonresponding patient. [15]",
+        "Use CT when the reassessment question is abscess, empyema, or another structural complication. If pleural fluid is obtained, send culture and use any pathogenic isolate with susceptibility data to tailor definitive antibiotics. [10][14]",
+        "In suspected VAP, diagnostic uncertainty and competing explanations for new infiltrates make indiscriminate prolonged antibiotic exposure particularly hazardous. A recent trial evaluated short versus long antibiotic courses for VAP because the safety of shorter treatment remains debated; use clinical response, organism data, and complications to individualize duration rather than treating every persistent opacity as ongoing infection. [1][3]"
+      ],
+      "bullets": [
+        "Reconsider pulmonary edema or pulmonary embolism when the clinical picture or imaging is atypical for CAP. [10]",
+        "Escalate to BAL in solid-organ transplant recipients with instability or failure of empiric antibacterial therapy without a diagnosis from noninvasive testing. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Directed reassessment for nonresolving presumed bacterial pneumonia. [10][12][15]",
+        "columns": [
+          "Problem pattern",
+          "Key discriminator",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Persistent infiltrate with weak infectious evidence",
+            "Consider pulmonary edema or pulmonary embolism as CAP mimics. [10]",
+            "Reframe the diagnostic workup rather than automatically broadening antibiotics. [10][15]"
+          ],
+          [
+            "Persistent fever or clinical deterioration",
+            "Complication such as abscess or empyema. [10][15]",
+            "Obtain chest CT; sample pleural fluid when present. [10][14]"
+          ],
+          [
+            "Immunocompromised host without diagnosis",
+            "Failure of noninvasive testing or empiric antibacterial therapy. [12]",
+            "Perform BAL when clinically appropriate; consider biopsy selectively. [12]"
+          ],
+          [
+            "Ventilated patient with ongoing opacity",
+            "VAP is diagnostically heterogeneous and radiography is nonspecific. [1][6]",
+            "Reassess competing causes and microbiology before extending therapy. [1][6]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Biomarker-guided antibiotic stewardship in suspected ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(19)30367-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by TP Hellyer \u00b7 2020 \u00b7 Cited by 136 \u2014 Ventilator-associated pneumonia is the most common intensive care unit (ICU)-acquired infection, yet accurate diagnosis remains difficult,",
+      "score": 0.23863931
+    },
+    {
+      "number": 2,
+      "title": "Surveillance of ventilator associated pneumonia in a ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lansea/article/PIIS2772-3682(24)00100-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by P Mathur \u00b7 2024 \u00b7 Cited by 10 \u2014 Amongst the 261 VAP events reported, 126 (48.3%) events (123 in adults and 3 in pediatrics) had a fatal outcome. When we analyzed the 14-day outcome of VAP",
+      "score": 0.2349069
+    },
+    {
+      "number": 3,
+      "title": "Comparison of a short versus long-course antibiotic ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(23)00057-3/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by MA Daghmouri \u00b7 2023 \u00b7 Cited by 35 \u2014 For ventilator-associated pneumonia (VAP), the safety of short-course versus long-course antibiotic therapy is still debated,",
+      "score": 0.124457784
+    },
+    {
+      "number": 4,
+      "title": "Lung ultrasound vs chest radiography for pneumonia ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370%2825%2900486-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by D Orso \u00b7 2025 \u00b7 Cited by 5 \u2014 LUS shows higher sensitivity and accuracy than CXR in ICU pneumonia, particularly when dorsal zones are assessed.",
+      "score": 0.3284653
+    },
+    {
+      "number": 5,
+      "title": "Point-of-care lung ultrasound to differentiate bacterial and viral lower respiratory tract infections in pediatric age: a multicenter prospective observational study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-19040-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Bacterial pneumonia was considered in patients with documented bacterial infection (either culture- or PCR-based methods) in clinically significant samples (bronchoalveolar lavage, pleural drainage, blood cultures) (in this case, bacterial pneumonia was defined as confirmed), or when a mix of the th",
+      "score": 0.62000114
+    },
+    {
+      "number": 6,
+      "title": "Ventilator-associated pneumonia: pathobiological heterogeneity and diagnostic challenges | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-50805-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "A recent systematic review reported that CXR had a sensitivity of 88.9% (95% CI 73.9\u201395.8) and a specificity of 26.1% (95% CI 15.1\u201341.4) with a significant discrepancy in interpretation, increasing the likelihood of late or missed diagnosis8.\"). A comparison of CT and CXR suggested poor cross-valida",
+      "score": 0.49113917
+    },
+    {
+      "number": 7,
+      "title": "Diagnostic performance of lung ultrasound for detecting lung necrosis in children with community-acquired pneumonia | Pediatric Research",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41390-026-05026-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Microbiological investigations, including cultures of blood, sputum, pleural fluid, and bronchoalveolar lavage samples, identified a range of bacterial pathogens.\n\nIn the NP group, Methicillin-Sensitive Staphylococcus aureus (MSSA) was the most frequently isolated organism (n\u2009=\u20093), followed by Methi",
+      "score": 0.40924495
+    },
+    {
+      "number": 8,
+      "title": "Pneumonia | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-021-00259-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "PubMed CentralGoogle Scholar\n\n184.   Claessens, Y.-E. et al. Early chest computed tomography scan to assist diagnosis and guide treatment decision for suspected community-acquired pneumonia. _Am. J. Respir. Crit. Care Med._192, 974\u2013982 (2015).\n\nPubMedGoogle Scholar\n\n185.   Ding, X., Xu, J., Zhou, J.",
+      "score": 0.36114272
+    },
+    {
+      "number": 9,
+      "title": "Part 11: Post\u2013Cardiac Arrest Care: 2025 ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001375",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A 2020 ILCOR systematic review1 identified 2 randomized controlled trials (RCTs) that found no difference in survival or neurological outcome2,3 in patients treated with early prophylactic antibiotics after cardiac arrest. One RCT2 did find lower incidence of early pneumonia in those who received pr",
+      "score": 0.4122231
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for diagnosis and management of community- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201229052-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "nodules were the principal finding, they were specific but lacked sensitivity for non-bacterial pneumonia (specificity 98% and sensitivity 23%). CT could discriminate bacterial pneumonia from non-bacterial pneumonia with a sensitivity and specificity of 70% and 84%, respectively. Thus, HRCT findings",
+      "score": 0.4851368
+    },
+    {
+      "number": 11,
+      "title": "The Saudi Thoracic Society evidence-based... : Annals of Thoracic Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/aotm/_layouts/15/oaks.journals/downloadpdf.aspx?an=01284540-202510000-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Swingler GH, Hussey GD, Zwarenstein M. Randomised controlled trial of clinical outcome after chest radiograph in ambulatory acute lower-respiratory infection in children. Lancet 1998;351:404\u20138.Cited HereFull TextCrossRef07013-X)PubMedGoogle Scholar \n   ## 54.\n\nEbell MH, Locatelli I, Mueller Y, Senn ",
+      "score": 0.40910333
+    },
+    {
+      "number": 12,
+      "title": "Pneumonia after Solid Organ Transplantation : Seminars in Respiratory & Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019574-202604000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "even in the absence of specific respiratory symptoms. Up to 45% of this patient population does not present with typical examination findings of pneumonia, such as crackles or bronchial breathing. The laboratory results should be carefully interpreted; for instance, white blood cell count can be var",
+      "score": 0.4017588
+    },
+    {
+      "number": 13,
+      "title": "Medicine\u00ae",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/_layouts/15/oaks.journals/downloadpdf.aspx?an=00005792-201607050-00078",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by A Ticinesi \u00b7 2016 \u00b7 Cited by 140 \u2014 lung ultrasound (LUS) is a useful test for diagnosing pneumonia, especially when chest x-ray (CXR) results are negative or inconclusive.[1\u20133]",
+      "score": 0.34767053
+    },
+    {
+      "number": 14,
+      "title": "The Management of Community-Acquired Pneumonia in ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/53/7/617/424575",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JS Bradley \u00b7 2011 \u00b7 Cited by 2735 \u2014 When the blood or pleural fluid bacterial culture identifies a pathogenic isolate, antibiotic susceptibility should be used to determine the antibiotic regimen.",
+      "score": 0.38193452
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the Management of Adults with Hospital ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/171/4/388/8538364",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Feb 15, 2005 \u2014 Pseudomonas aeruginosa, The nonresponding patient should be evaluated for noninfectious mimics of pneumonia, complications of pneumonia and its",
+      "score": 0.2966955
+    },
+    {
+      "number": 16,
+      "title": "Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America - PubMed",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=31573350&link_type=MED&atom=%2Fccjom%2F92%2F12%2F724.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Background: This document provides evidence-based clinical practice guidelines on the management of adult patients with community-acquired pneumonia.Methods: A multidisciplinary panel conducted pragmatic systematic reviews of the relevant research and applied Grading of Recommendations, Assessment, ",
+      "score": 0.72977066
+    },
+    {
+      "number": 17,
+      "title": "Community-Acquired Pneumonia: Adult and Adolescent OIs",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/community-acquired",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "English\n   English\n\n1.   Home\n2.   Guidelines\n3.   HIV Clinical Guidelines: Adult and Adolescent Opportunistic Infections\n4.    Community-Acquired Bacterial Pneumonia \n\n# Guidelines for the Prevention and Treatment of Opportunistic Infections in Adults and Adolescents With HIV\n\nThe information in th",
+      "score": 0.61363083
+    },
+    {
+      "number": 18,
+      "title": "Diagnosis and Management of Community-acquired Pneumonia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1164%2Frccm.202507-1692ST&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by BE Jones \u00b7 2026 \u00b7 Cited by 155 \u2014 This document updates evidence-based clinical practice guidelines on four key questions for the diagnosis and management of adult patients with CAP.",
+      "score": 0.5993685
+    },
+    {
+      "number": 19,
+      "title": "2016 Clinical Practice Guidelines by the Infectious Diseases ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=27418577&link_type=MED&atom=%2Fccjom%2F87%2F10%2F633.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by AC Kalil \u00b7 2016 \u00b7 Cited by 4839 \u2014 These guidelines are intended for use by healthcare professionals who care for patients at risk for hospital-acquired pneumonia (HAP) and",
+      "score": 0.5602773
+    },
+    {
+      "number": 20,
+      "title": "Community-acquired pneumonia: Strategies for triage and treatment | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/87/3/145",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Inpatients with pneumonia fall into 2 categories: those with community-acquired pneumonia (CAP) who are admitted, and those who develop either hospital-acquired or ventilator-associated pneumonia while already hospitalized. Each patient population faces unique organism exposures, and thus, recommend",
+      "score": 0.5559422
+    },
+    {
+      "number": 21,
+      "title": "Pneumonia | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/47/4/196/207020/Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The medical management of pneumonia should be tailored based on the patient's clinical presentation and presumed etiology, immunization status,",
+      "score": 0.35093334
+    },
+    {
+      "number": 22,
+      "title": "110: Community-Acquired Pneumonia",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/aapbooks/book/676/chapter/8137956/Community-Acquired-Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "By definition, community-acquired pneumonia (CAP) occurs in a previously healthy child and is caused by an infection of the pulmonary parenchyma that has b.",
+      "score": 0.30315435
+    },
+    {
+      "number": 23,
+      "title": "Pneumonia (Chapter 315) | American Academy of ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5785224/Pneumonia-Chapter-315",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Bacterial pneumonia often follows a viral upper respiratory infection (URI). Lobar pneumonia is most commonly bacterial, including atypical bacteria.",
+      "score": 0.30278313
+    },
+    {
+      "number": 24,
+      "title": "Ventilator-Associated Pneumonia in the Neonatal Intensive ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/neoreviews/article/23/7/e448/188382/Ventilator-Associated-Pneumonia-in-the-Neonatal",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "This article will review current knowledge about neonatal VAP and remaining uncertainties in the field. In this review, the term \u201cneonatal VAP\u201d",
+      "score": 0.22789903
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Biomarker-guided antibiotic stewardship in suspected ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(19)30367-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by TP Hellyer \u00b7 2020 \u00b7 Cited by 136 \u2014 Ventilator-associated pneumonia is the most common intensive care unit (ICU)-acquired infection, yet accurate diagnosis remains difficult,",
+      "score": 0.23863931
+    },
+    {
+      "number": 2,
+      "title": "Surveillance of ventilator associated pneumonia in a ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lansea/article/PIIS2772-3682(24)00100-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by P Mathur \u00b7 2024 \u00b7 Cited by 10 \u2014 Amongst the 261 VAP events reported, 126 (48.3%) events (123 in adults and 3 in pediatrics) had a fatal outcome. When we analyzed the 14-day outcome of VAP",
+      "score": 0.2349069
+    },
+    {
+      "number": 3,
+      "title": "Comparison of a short versus long-course antibiotic ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(23)00057-3/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by MA Daghmouri \u00b7 2023 \u00b7 Cited by 35 \u2014 For ventilator-associated pneumonia (VAP), the safety of short-course versus long-course antibiotic therapy is still debated,",
+      "score": 0.124457784
+    },
+    {
+      "number": 4,
+      "title": "Lung ultrasound vs chest radiography for pneumonia ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370%2825%2900486-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by D Orso \u00b7 2025 \u00b7 Cited by 5 \u2014 LUS shows higher sensitivity and accuracy than CXR in ICU pneumonia, particularly when dorsal zones are assessed.",
+      "score": 0.3284653
+    },
+    {
+      "number": 5,
+      "title": "Point-of-care lung ultrasound to differentiate bacterial and viral lower respiratory tract infections in pediatric age: a multicenter prospective observational study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-19040-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Bacterial pneumonia was considered in patients with documented bacterial infection (either culture- or PCR-based methods) in clinically significant samples (bronchoalveolar lavage, pleural drainage, blood cultures) (in this case, bacterial pneumonia was defined as confirmed), or when a mix of the th",
+      "score": 0.62000114
+    },
+    {
+      "number": 6,
+      "title": "Ventilator-associated pneumonia: pathobiological heterogeneity and diagnostic challenges | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-50805-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "A recent systematic review reported that CXR had a sensitivity of 88.9% (95% CI 73.9\u201395.8) and a specificity of 26.1% (95% CI 15.1\u201341.4) with a significant discrepancy in interpretation, increasing the likelihood of late or missed diagnosis8.\"). A comparison of CT and CXR suggested poor cross-valida",
+      "score": 0.49113917
+    },
+    {
+      "number": 7,
+      "title": "Diagnostic performance of lung ultrasound for detecting lung necrosis in children with community-acquired pneumonia | Pediatric Research",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41390-026-05026-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Microbiological investigations, including cultures of blood, sputum, pleural fluid, and bronchoalveolar lavage samples, identified a range of bacterial pathogens.\n\nIn the NP group, Methicillin-Sensitive Staphylococcus aureus (MSSA) was the most frequently isolated organism (n\u2009=\u20093), followed by Methi",
+      "score": 0.40924495
+    },
+    {
+      "number": 8,
+      "title": "Pneumonia | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-021-00259-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "PubMed CentralGoogle Scholar\n\n184.   Claessens, Y.-E. et al. Early chest computed tomography scan to assist diagnosis and guide treatment decision for suspected community-acquired pneumonia. _Am. J. Respir. Crit. Care Med._192, 974\u2013982 (2015).\n\nPubMedGoogle Scholar\n\n185.   Ding, X., Xu, J., Zhou, J.",
+      "score": 0.36114272
+    },
+    {
+      "number": 9,
+      "title": "Part 11: Post\u2013Cardiac Arrest Care: 2025 ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001375",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A 2020 ILCOR systematic review1 identified 2 randomized controlled trials (RCTs) that found no difference in survival or neurological outcome2,3 in patients treated with early prophylactic antibiotics after cardiac arrest. One RCT2 did find lower incidence of early pneumonia in those who received pr",
+      "score": 0.4122231
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for diagnosis and management of community- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201229052-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "nodules were the principal finding, they were specific but lacked sensitivity for non-bacterial pneumonia (specificity 98% and sensitivity 23%). CT could discriminate bacterial pneumonia from non-bacterial pneumonia with a sensitivity and specificity of 70% and 84%, respectively. Thus, HRCT findings",
+      "score": 0.4851368
+    },
+    {
+      "number": 11,
+      "title": "The Saudi Thoracic Society evidence-based... : Annals of Thoracic Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/aotm/_layouts/15/oaks.journals/downloadpdf.aspx?an=01284540-202510000-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Swingler GH, Hussey GD, Zwarenstein M. Randomised controlled trial of clinical outcome after chest radiograph in ambulatory acute lower-respiratory infection in children. Lancet 1998;351:404\u20138.Cited HereFull TextCrossRef07013-X)PubMedGoogle Scholar \n   ## 54.\n\nEbell MH, Locatelli I, Mueller Y, Senn ",
+      "score": 0.40910333
+    },
+    {
+      "number": 12,
+      "title": "Pneumonia after Solid Organ Transplantation : Seminars in Respiratory & Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019574-202604000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "even in the absence of specific respiratory symptoms. Up to 45% of this patient population does not present with typical examination findings of pneumonia, such as crackles or bronchial breathing. The laboratory results should be carefully interpreted; for instance, white blood cell count can be var",
+      "score": 0.4017588
+    },
+    {
+      "number": 13,
+      "title": "Medicine\u00ae",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/_layouts/15/oaks.journals/downloadpdf.aspx?an=00005792-201607050-00078",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by A Ticinesi \u00b7 2016 \u00b7 Cited by 140 \u2014 lung ultrasound (LUS) is a useful test for diagnosing pneumonia, especially when chest x-ray (CXR) results are negative or inconclusive.[1\u20133]",
+      "score": 0.34767053
+    },
+    {
+      "number": 14,
+      "title": "The Management of Community-Acquired Pneumonia in ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/53/7/617/424575",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JS Bradley \u00b7 2011 \u00b7 Cited by 2735 \u2014 When the blood or pleural fluid bacterial culture identifies a pathogenic isolate, antibiotic susceptibility should be used to determine the antibiotic regimen.",
+      "score": 0.38193452
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the Management of Adults with Hospital ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/171/4/388/8538364",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Feb 15, 2005 \u2014 Pseudomonas aeruginosa, The nonresponding patient should be evaluated for noninfectious mimics of pneumonia, complications of pneumonia and its",
+      "score": 0.2966955
+    },
+    {
+      "number": 16,
+      "title": "Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Official Clinical Practice Guideline of the American Thoracic Society and Infectious Diseases Society of America - PubMed",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=31573350&link_type=MED&atom=%2Fccjom%2F92%2F12%2F724.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Background: This document provides evidence-based clinical practice guidelines on the management of adult patients with community-acquired pneumonia.Methods: A multidisciplinary panel conducted pragmatic systematic reviews of the relevant research and applied Grading of Recommendations, Assessment, ",
+      "score": 0.72977066
+    },
+    {
+      "number": 17,
+      "title": "Community-Acquired Pneumonia: Adult and Adolescent OIs",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/community-acquired",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "English\n   English\n\n1.   Home\n2.   Guidelines\n3.   HIV Clinical Guidelines: Adult and Adolescent Opportunistic Infections\n4.    Community-Acquired Bacterial Pneumonia \n\n# Guidelines for the Prevention and Treatment of Opportunistic Infections in Adults and Adolescents With HIV\n\nThe information in th",
+      "score": 0.61363083
+    },
+    {
+      "number": 18,
+      "title": "Diagnosis and Management of Community-acquired Pneumonia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1164%2Frccm.202507-1692ST&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by BE Jones \u00b7 2026 \u00b7 Cited by 155 \u2014 This document updates evidence-based clinical practice guidelines on four key questions for the diagnosis and management of adult patients with CAP.",
+      "score": 0.5993685
+    },
+    {
+      "number": 19,
+      "title": "2016 Clinical Practice Guidelines by the Infectious Diseases ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=27418577&link_type=MED&atom=%2Fccjom%2F87%2F10%2F633.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by AC Kalil \u00b7 2016 \u00b7 Cited by 4839 \u2014 These guidelines are intended for use by healthcare professionals who care for patients at risk for hospital-acquired pneumonia (HAP) and",
+      "score": 0.5602773
+    },
+    {
+      "number": 20,
+      "title": "Community-acquired pneumonia: Strategies for triage and treatment | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/87/3/145",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Inpatients with pneumonia fall into 2 categories: those with community-acquired pneumonia (CAP) who are admitted, and those who develop either hospital-acquired or ventilator-associated pneumonia while already hospitalized. Each patient population faces unique organism exposures, and thus, recommend",
+      "score": 0.5559422
+    },
+    {
+      "number": 21,
+      "title": "Pneumonia | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/47/4/196/207020/Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The medical management of pneumonia should be tailored based on the patient's clinical presentation and presumed etiology, immunization status,",
+      "score": 0.35093334
+    },
+    {
+      "number": 22,
+      "title": "110: Community-Acquired Pneumonia",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/aapbooks/book/676/chapter/8137956/Community-Acquired-Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "By definition, community-acquired pneumonia (CAP) occurs in a previously healthy child and is caused by an infection of the pulmonary parenchyma that has b.",
+      "score": 0.30315435
+    },
+    {
+      "number": 23,
+      "title": "Pneumonia (Chapter 315) | American Academy of ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5785224/Pneumonia-Chapter-315",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Bacterial pneumonia often follows a viral upper respiratory infection (URI). Lobar pneumonia is most commonly bacterial, including atypical bacteria.",
+      "score": 0.30278313
+    },
+    {
+      "number": 24,
+      "title": "Ventilator-Associated Pneumonia in the Neonatal Intensive ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/neoreviews/article/23/7/e448/188382/Ventilator-Associated-Pneumonia-in-the-Neonatal",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "This article will review current knowledge about neonatal VAP and remaining uncertainties in the field. In this review, the term \u201cneonatal VAP\u201d",
+      "score": 0.22789903
+    }
+  ],
+  "publishedAt": "2026-08-21T02:31:49.571311+00:00",
+  "updatedAt": "2026-08-21T02:31:49.571311+00:00",
+  "readingMinutes": 6,
+  "slug": "bacterial-pneumonia"
+}

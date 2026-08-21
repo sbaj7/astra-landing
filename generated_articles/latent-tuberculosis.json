@@ -1,0 +1,763 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Disease",
+  "title": "Latent Tuberculosis",
+  "summary": "Target testing to patients at increased risk, exclude active tuberculosis before treatment, and preferentially use short-course rifamycin-based regimens after resolving clinically consequential drug interactions and monitoring requirements.",
+  "seoDescription": "Point-of-care approach to latent tuberculosis screening, exclusion of active disease, regimen selection, rifamycin interactions, and treatment monitoring.",
+  "clinicalQuestion": "How should clinicians identify, evaluate, treat, and monitor adults with latent tuberculosis infection?",
+  "specialty": "Infectious Disease",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "latent tuberculosis infection",
+    "LTBI",
+    "IGRA",
+    "tuberculin skin test",
+    "3HP",
+    "rifampin",
+    "isoniazid"
+  ],
+  "keyTakeaways": [
+    "Screen asymptomatic adults at increased risk for latent tuberculosis infection; the USPSTF assigns this a grade B recommendation. [4][21]",
+    "Do not initiate LTBI treatment until active tuberculosis disease has been excluded. [13][17]",
+    "Prefer 3- or 4-month rifamycin-based regimens over 6- or 9-month isoniazid monotherapy when feasible because short-course regimens are effective, safe, and have higher completion rates. [13][17][18]",
+    "Assess adherence, symptoms of tuberculosis disease, and medication adverse effects at least monthly during LTBI treatment. [17][20]",
+    "Hold LTBI drugs for symptomatic transaminase elevations greater than three times the upper limit of normal or asymptomatic elevations at least five times the upper limit of normal. [20]"
+  ],
+  "sections": [
+    {
+      "id": "who-to-test",
+      "eyebrow": "Case finding",
+      "heading": "Who should be tested for latent tuberculosis infection",
+      "intro": "Test only when a positive result would trigger evaluation for disease and consideration of preventive treatment.",
+      "paragraphs": [
+        "Screen asymptomatic adults at increased risk for LTBI rather than using low-yield population-wide testing. USPSTF recommends screening populations at increased risk with moderate certainty of moderate net benefit; accurate screening tests are available, and treatment reduces progression to active tuberculosis. [1][4][21]",
+        "Risk-based testing should identify patients with increased likelihood of infection and those with increased risk of progression once infected. Groups specifically identified for systematic testing in guideline summaries include persons living with HIV, household contacts of patients with active pulmonary tuberculosis, patients initiating anti-TNF therapy, patients receiving dialysis, organ or hematologic transplant candidates, and patients with silicosis. [14][16][23]",
+        "Test people with HIV at diagnosis; those at high risk of ongoing tuberculosis exposure should undergo annual LTBI testing. [23] Screening before planned targeted immune modulation is disease-management testing and was outside the USPSTF primary-care screening evidence review, but remains a clinically important indication. [22]"
+      ],
+      "bullets": [
+        "Prioritize a positive IGRA or TST result in patients with known progression risks for treatment after exclusion of tuberculosis disease. [13]",
+        "In persons without known risk factors, treatment may be considered after a positive IGRA or a TST reaction of at least 15 mm. [13]",
+        "Use contact investigation pathways for close contacts of active tuberculosis cases rather than treating this as routine preventive screening. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-priority settings for LTBI testing and the decision that follows. [13][14][16][23]",
+        "columns": [
+          "Clinical setting",
+          "Testing action",
+          "Next decision after a positive result"
+        ],
+        "rows": [
+          [
+            "Asymptomatic adult at increased epidemiologic risk",
+            "Screen for LTBI under USPSTF grade B recommendation. [4][21]",
+            "Exclude active tuberculosis before selecting preventive treatment. [13][17]"
+          ],
+          [
+            "HIV infection",
+            "Test at HIV diagnosis; repeat annually if high exposure risk persists. [23]",
+            "Prioritize LTBI treatment after excluding active disease. [13][23]"
+          ],
+          [
+            "Planned anti-TNF therapy, dialysis, transplant preparation, or silicosis",
+            "Perform systematic LTBI testing. [14][16]",
+            "Coordinate regimen selection around immunosuppression timing and drug interactions. [11][14]"
+          ],
+          [
+            "Household contact of active pulmonary tuberculosis",
+            "Evaluate through contact-tracing and public-health pathways. [14][22]",
+            "Exclude disease and determine preventive treatment through the exposure evaluation. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-infection-exclude-disease",
+      "eyebrow": "Diagnostic gate",
+      "heading": "Interpret testing and exclude active tuberculosis before treatment",
+      "intro": "A positive test identifies tuberculosis infection; it does not permit preventive therapy until disease has been excluded.",
+      "paragraphs": [
+        "Use either a tuberculin skin test performed by the Mantoux method or a commercial interferon-gamma release assay for LTBI screening. [22] For patients being considered for treatment without other known risk factors, CDC permits treatment consideration after a positive IGRA or a TST reaction measuring 15 mm or larger. [13]",
+        "A positive screening test requires an active-tuberculosis assessment before LTBI therapy. Do not start preventive treatment until tuberculosis disease is excluded. [13][17] If symptoms or other findings raise concern for disease, obtain chest radiography; patients who develop symptoms suggestive of active tuberculosis during LTBI treatment also require chest radiography. [20]",
+        "Do not use a positive TST or IGRA to determine drug susceptibility. The NTCA/CDC LTBI regimens are intended for infection with Mycobacterium tuberculosis presumed susceptible to isoniazid or rifampin and do not apply when the infecting strain is known resistant to both drugs. [15][18] Drug-resistant exposure requires a regimen based on the exposure investigation and drug-resistance guidance rather than routine LTBI regimens. [15]"
+      ],
+      "bullets": [
+        "At the pretreatment visit, document tuberculosis symptom review and chest-radiograph findings sufficiently to support exclusion of active disease before dispensing LTBI therapy. [13][17][20]",
+        "If active disease is suspected, stop the LTBI pathway and pursue diagnostic evaluation for tuberculosis disease rather than monotherapy or a short preventive regimen. [13][17]",
+        "Reassess for new symptoms of active tuberculosis at each monthly treatment encounter. [17][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretive pathway after LTBI testing. [13][17][20]",
+        "columns": [
+          "Result or clinical finding",
+          "Interpretation",
+          "Immediate next action"
+        ],
+        "rows": [
+          [
+            "Positive IGRA or positive TST",
+            "Tuberculosis infection is possible; active disease has not been excluded. [13][17]",
+            "Perform active-disease assessment before LTBI treatment. [13][17]"
+          ],
+          [
+            "TST at least 15 mm in person without known risk factors",
+            "CDC permits consideration of LTBI treatment. [13]",
+            "Exclude active disease, then weigh treatment. [13]"
+          ],
+          [
+            "Symptoms suggestive of active tuberculosis before or during treatment",
+            "Possible tuberculosis disease. [20]",
+            "Obtain chest radiography and evaluate for disease; do not proceed as uncomplicated LTBI. [20]"
+          ],
+          [
+            "Known source strain resistant to both isoniazid and rifampin",
+            "Standard NTCA/CDC LTBI regimens do not apply. [15][18]",
+            "Use drug-resistant tuberculosis exposure guidance. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "select-regimen",
+      "eyebrow": "Preventive treatment",
+      "heading": "Choose an LTBI regimen by duration and interaction burden",
+      "intro": "Short-course rifamycin-based therapy is preferred when susceptibility and concomitant medications permit.",
+      "paragraphs": [
+        "NTCA and CDC preferentially recommend three short-course rifamycin-based regimens: 3 months of once-weekly isoniazid plus rifapentine (3HP), 4 months of daily rifampin (4R), or 3 months of daily isoniazid plus rifampin (3HR). [5][13][15][18] These regimens are preferred over 6 or 9 months of daily isoniazid monotherapy because they are effective, safe, and have higher completion rates. [13][17]",
+        "Use 6 months or 9 months of daily isoniazid (6H or 9H) when a short-course rifamycin regimen is not an option, including when clinically significant rifamycin drug interactions preclude it. [13][18] This is an alternative effective approach, not a reason to omit treatment once active disease has been excluded and the patient is an appropriate candidate. [13]",
+        "Before prescribing rifampin or rifapentine, perform a medication-by-medication interaction review using current product labeling and authoritative interaction resources. Rifamycin-related interactions are especially consequential in patients undergoing solid-organ transplantation because rifampin and rifapentine interact with transplant immunosuppressive therapy. [6][17] For patients starting immunosuppressive therapy, coordinate LTBI treatment timing with the prescribing specialist; evidence summarized in inflammatory bowel disease populations supports simultaneous initiation in selected patients, but the regimen and timing should reflect tuberculosis risk and the immunosuppressive plan. [11]"
+      ],
+      "bullets": [
+        "Use 3HP: once-weekly isoniazid plus rifapentine for 3 months. [5][15][18]",
+        "Use 4R: daily rifampin for 4 months. [5][15][18]",
+        "Use 3HR: daily isoniazid plus rifampin for 3 months. [5][15][18]",
+        "Use 6H or 9H: daily isoniazid for 6 or 9 months when rifamycin-based treatment is not feasible. [13][15][18]"
+      ],
+      "subsections": [
+        {
+          "heading": "Pregnancy and postpartum timing",
+          "paragraphs": [
+            "For pregnant patients at high risk of progression, including those with HIV infection or recent tuberculosis contact, consider LTBI treatment during pregnancy. [20] For pregnant patients without high-risk features, treatment may be deferred until 2 to 3 months postpartum; isoniazid has been the preferred regimen in pregnancy, with rifampin an alternative option. [20]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "NTCA/CDC LTBI regimen hierarchy and selection constraints. [13][15][18]",
+        "columns": [
+          "Regimen",
+          "Schedule",
+          "Role",
+          "Selection constraint"
+        ],
+        "rows": [
+          [
+            "3HP",
+            "Isoniazid plus rifapentine once weekly for 3 months. [5][15][18]",
+            "Preferred rifamycin-based regimen. [15][18]",
+            "Review rifapentine interactions before prescribing. [6][17]"
+          ],
+          [
+            "4R",
+            "Rifampin daily for 4 months. [5][15][18]",
+            "Preferred rifamycin-based regimen. [15][18]",
+            "Avoid or modify when rifampin interactions are clinically unacceptable. [6][13][17]"
+          ],
+          [
+            "3HR",
+            "Isoniazid plus rifampin daily for 3 months. [5][15][18]",
+            "Preferred rifamycin-based regimen. [15][18]",
+            "Requires assessment of rifampin interactions and isoniazid tolerability. [6][17]"
+          ],
+          [
+            "6H or 9H",
+            "Isoniazid daily for 6 or 9 months. [13][15][18]",
+            "Alternative effective regimen. [13][18]",
+            "Use when short-course rifamycin therapy is not an option, such as due to rifamycin interactions. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-safety",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor adherence, toxicity, and incident tuberculosis disease",
+      "intro": "Monthly assessment is the minimum monitoring interval for every LTBI regimen.",
+      "paragraphs": [
+        "Evaluate every patient receiving LTBI treatment at least monthly for adherence, symptoms or signs of tuberculosis disease, medication adverse effects, and patient education needs. [17][20] Instruct patients with possible medication adverse reactions to stop the medication and contact the treating clinician immediately. [17]",
+        "Routine follow-up laboratory testing is not required for every patient. Obtain periodic laboratory monitoring when baseline liver enzymes are abnormal or when hepatotoxicity risk is present. [20] Interrupt treatment when transaminases exceed three times the upper limit of normal with symptoms or reach at least five times the upper limit of normal without symptoms. [20]",
+        "At each visit, recheck the active-disease screen rather than attributing constitutional or respiratory symptoms to medication effects alone. New symptoms concerning for active tuberculosis warrant chest radiography and a diagnostic transition away from the LTBI treatment pathway. [17][20]"
+      ],
+      "bullets": [
+        "Monthly: adherence review, adverse-effect review, tuberculosis symptom assessment, and education. [17][20]",
+        "Periodic liver testing: patients with abnormal baseline liver enzymes or hepatotoxicity risk. [20]",
+        "Stop drugs and urgently reassess: symptomatic aminotransferase elevation greater than 3 times the upper limit of normal, or asymptomatic elevation at least 5 times the upper limit of normal. [20]",
+        "Obtain chest radiography when symptoms suggest tuberculosis disease during treatment. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "LTBI treatment monitoring actions. [17][20]",
+        "columns": [
+          "Finding",
+          "Threshold or trigger",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Routine treatment follow-up",
+            "At least monthly. [17][20]",
+            "Assess adherence, adverse effects, symptoms of tuberculosis disease, and education needs. [17][20]"
+          ],
+          [
+            "Baseline liver abnormality or hepatotoxicity risk",
+            "Present before or during therapy. [20]",
+            "Perform periodic laboratory monitoring. [20]"
+          ],
+          [
+            "Possible drug adverse reaction",
+            "Patient-reported concerning symptoms. [17]",
+            "Advise medication interruption and immediate clinician contact. [17]"
+          ],
+          [
+            "Hepatotoxicity laboratory signal",
+            "Symptoms plus transaminases >3 times upper limit of normal, or no symptoms plus transaminases \u22655 times upper limit of normal. [20]",
+            "Hold LTBI medications and reassess. [20]"
+          ],
+          [
+            "New possible tuberculosis symptoms",
+            "At any visit. [20]",
+            "Obtain chest radiography and evaluate for active disease. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "implementation-priorities",
+      "eyebrow": "Clinical priority",
+      "heading": "Prioritize treatment for patients most likely to benefit",
+      "intro": "A positive test is most actionable when progression risk is elevated and a complete regimen is feasible.",
+      "paragraphs": [
+        "Give high priority for LTBI treatment to patients with known risk factors for progression who have a positive IGRA or TST result, after active tuberculosis is excluded. [13] This includes patients whose immune status or planned immunosuppression makes progression prevention time-sensitive. [14][16][23]",
+        "Treatment has a central public-health role because progression from untreated LTBI accounts for approximately 80% of U.S. tuberculosis cases. [17] The practical treatment decision is therefore not whether preventive therapy has value, but whether active disease has been adequately excluded, the presumed organism is susceptible to a standard regimen, and a rifamycin-based option can be safely accommodated. [15][17][18]"
+      ],
+      "bullets": [],
+      "subsections": [],
+      "table": {
+        "caption": "Decision priorities after a positive LTBI test. [13][15][17]",
+        "columns": [
+          "Priority question",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Has active tuberculosis been excluded?",
+            "If no, do not begin LTBI therapy; evaluate for tuberculosis disease. [13][17]"
+          ],
+          [
+            "Does the patient have a progression risk factor?",
+            "If yes, prioritize preventive treatment after disease exclusion. [13][14][23]"
+          ],
+          [
+            "Can a rifamycin regimen be used safely?",
+            "If yes, choose a preferred 3- or 4-month regimen; if no, consider 6H or 9H. [13][18]"
+          ],
+          [
+            "Is the source strain known resistant to both isoniazid and rifampin?",
+            "Do not apply standard LTBI regimens; use drug-resistant exposure guidance. [15]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: US Preventive Services Task Force Recommendation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2547762",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Title: Screening for Latent Tuberculosis Infection in Adults: US Preventive Services Task Force Recommendation\nUS Preventive Services Task Force. US Preventive Services Task Force. *   US Preventive Services Task Force USPSTF Recommendation: Screening for Latent Tuberculosis Infection in AdultsUS Pr",
+      "score": 0.8245895
+    },
+    {
+      "number": 2,
+      "title": "Screening for Latent Tuberculosis Infection | Guidelines",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2804395",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by D Menzies \u00b7 2023 \u00b7 Cited by 9 \u2014 The US Preventive Services Task Force (USPSTF) has recommended screening of adults at increased risk for latent tuberculosis (TB) infection",
+      "score": 0.7366474
+    },
+    {
+      "number": 3,
+      "title": "USPSTF Reaffirms Recommendation to Screen for Latent Tuberculosis Infection in High-Risk Populations | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-reaffirms-recommendation-screen-latent-tuberculosis-infection-high-risk-populations-nejm-jw.NA56100",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\n### Background\n\nLatent tuberculosis infection (LTBI) is detectible by screening, and active disease can be prevented in those who screen positive. LTBI is of particular concern in certain high-risk populations. In 2016, the USPSTF found moderate evidence to support TB screening in asy",
+      "score": 0.7352811
+    },
+    {
+      "number": 4,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: US ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2804319",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2023 \u00b7 Cited by 92 \u2014 The USPSTF recommends screening for LTBI in populations at increased risk. An effective strategy for reducing the transmission, morbidity, and",
+      "score": 0.6238588
+    },
+    {
+      "number": 5,
+      "title": "Guidelines for the treatment of latent tuberculosis infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1600613522222989",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "treatment guidelines include the NTCA- and CDC-recommended treatment regimens that comprise three preferred rifamycin-based regimens and two alternative monotherapy regimens with daily isoniazid. All recommended treatment regimens are intended for persons infected with _Mycobacterium tuberculosis_ t",
+      "score": 0.72184175
+    },
+    {
+      "number": 6,
+      "title": "Prevention and management of tuberculosis in solid organ ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0929664623001511",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by CY Chiang \u00b7 2023 \u00b7 Cited by 12 \u2014 4. Recommended regimens for LTBI for candidates before transplant include 3HP, 3HR, 4R, and 9H. Due to drug\u2013drug interaction, rifampin/rifapentine need to",
+      "score": 0.9744060817172187
+    },
+    {
+      "number": 7,
+      "title": "Infectious Diseases Learning Unit: Understanding Advances ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/8/8/ofab319/6323324",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by NJ Mehtani \u00b7 2021 \u00b7 Cited by 4 \u2014 HIV, latent tuberculosis infection, rifamycin (4R), 3 months of daily INH + RIF (3HR), 3 months of weekly INH + RPT (3HP), or 6 or 9 months of daily INH (6H or",
+      "score": 0.9680256900511475
+    },
+    {
+      "number": 8,
+      "title": "Latent tuberculosis infection in the outpatient general ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2211335523002127",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Levine \u00b7 2023 \u00b7 Cited by 8 \u2014 The 2020 LTBI treatment guidelines include National Tuberculosis Controllers ... Regimens of 6 or 9 mo of daily INH (6H) or (9H) are alternative regimens.",
+      "score": 0.9634932948728336
+    },
+    {
+      "number": 9,
+      "title": "Safety and treatment completion of latent tuberculosis ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1201971220303155",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JY Feng \u00b7 2020 \u00b7 Cited by 32 \u2014 3HP, 3 months of once-weekly rifapentine and isoniazid; 4R, 4 months of daily rifampicin; 9H, 9 months of daily isoniazid; DOPT, directly observed preventive",
+      "score": 0.9558823591150097
+    },
+    {
+      "number": 10,
+      "title": "Tuberculosis in Pregnant and Postpartum Women",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/55/11/1532/369212",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JS Mathad \u00b7 2012 \u00b7 Cited by 403 \u2014 HIV-Positive Women. Management of tuberculosis/HIV coinfection in pregnancy is complicated. It remains unknown whether pregnancy affects the metabolism of",
+      "score": 0.9212904199636249
+    },
+    {
+      "number": 11,
+      "title": "Review article: latent tuberculosis in patients with ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111%2Fapt.16952",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by SR Fehily \u00b7 2022 \u00b7 Cited by 64 \u2014 The evidence overall supports the simultaneous commencement of active and LTBI therapy with immunosuppressive therapy. However",
+      "score": 0.42935818
+    },
+    {
+      "number": 12,
+      "title": "Latent TB Infection Resource Hub | Tuberculosis (TB) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "http://www.cdc.gov/tb/latent-tb-infection-resources/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "# Latent TB Infection Resource Hub. The online latent TB infection resource hub is a\u202fone-stop shop for resources related to:. The Stop TB poster provides an overview of latent TB infection and TB disease. Latent Tuberculosis Infection: A Guide for Primary Health Care Providers. Guide for primary car",
+      "score": 0.82425016
+    },
+    {
+      "number": 13,
+      "title": "Treatment for Latent Tuberculosis Infection | Tuberculosis (TB) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/tb/hcp/treatment/latent-tuberculosis-infection.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Ftb%2Ftopic%2Ftreatment%2Fdecideltbi.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Title: Treatment for Latent Tuberculosis Infection | Tuberculosis (TB) | CDC\nClinical Overview   Guidelines   Clinical Signs and Symptoms   Bacille Calmette-Gu\u00e9rin (BCG) Vaccine   Clinical Testing and Diagnosis   Clinical Treatment   Mantoux Tuberculin Skin Test Toolkit   Health Care Provider Commun",
+      "score": 0.8055255
+    },
+    {
+      "number": 14,
+      "title": "Background Information and Contextual Questions - Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK591774",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Organization, Year | Screening Recommendation | Treatment Recommendation |\n --- \n| ATS/IDSA/CDC, 201737 | A clinical practice guideline from the ATS, IDSA, and CDC recommends screening for LTBI to identify persons who may benefit from treatment before progression to active TB infection. | Not appl",
+      "score": 0.7606688
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020 - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32053584",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Comprehensive guidelines for treatment of latent tuberculosis infection (LTBI) among persons living in the United States were last published in 2000 (American Thoracic Society. CDC targeted tuberculin testing and treatment of latent tuberculosis infection. Am J Respir Crit Care Med 2000;161:S221-47)",
+      "score": 0.75464433
+    },
+    {
+      "number": 16,
+      "title": "Appendix A Table 1, Screening Recommendations of Other Groups - Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK591774/table/appa.tab1?report=objectonly",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Organization, Year | Screening Recommendation | Treatment Recommendation |\n --- \n| ATS/IDSA/CDC, 201737 | A clinical practice guideline from the ATS, IDSA, and CDC recommends screening for LTBI to identify persons who may benefit from treatment before progression to active TB infection. | Not appl",
+      "score": 0.735737
+    },
+    {
+      "number": 17,
+      "title": "Treatment for Latent Tuberculosis Infection",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/tb/hcp/treatment/latent-tuberculosis-infection.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "#### Printable table\n\n## Patient monitoring and education\n\nHealth care providers should assess the patient's progress at least monthly. This evaluation includes clinical monitoring, laboratory testing, and patient education.\n\n### Clinical monitoring\n\nAll patients receiving latent TB infection treatm",
+      "score": 0.7216064
+    },
+    {
+      "number": 18,
+      "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/69/rr/rr6901a1.htm?s_cid=rr601a1_w",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Title: Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020  | MMWR\nA .gov website belongs to an official government organization in the United States. Comprehensive guidelines for treatment of latent tube",
+      "score": 0.71496695
+    },
+    {
+      "number": 19,
+      "title": "Guidelines on controlling latent tuberculosis infection to support tuberculosis elimination",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8278168",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### 2.4.1. Intravenous drug users\n\nCommon protocols should be used to rule out tuberculosis in persons who go to HRPs or CMCs. The option of including persons who are infected at the end of the screening in LTBI treatment shall be considered: in cases of HIV infection or another immunosuppressive d",
+      "score": 0.6994397
+    },
+    {
+      "number": 20,
+      "title": "Treatment of latent tuberculosis infection \u2013 An Update",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7043866",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "16.. Getahun, Matteelli, Abubakar, _et al._ Management of latent Mycobacterium tuberculosis infection: WHO guidelines for low tuberculosis burden countries. _Eur Respir J_. 2015;46(6): 1563\u20131576. doi: 10.1183/13993003.01245-2015  [DOI] [PMC free article] [PubMed] [Google Scholar]\n   17..U.S. Prevent",
+      "score": 0.6944897
+    },
+    {
+      "number": 21,
+      "title": "Screening for Latent Tuberculosis Infection in Adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37129649",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by CM Mangione \u00b7 2023 \u00b7 Cited by 92 \u2014 Recommendation: The USPSTF recommends screening for LTBI in populations at increased risk. (B recommendation). Publication types. Practice",
+      "score": 0.63125396
+    },
+    {
+      "number": 22,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK591768",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "English-language controlled studies evaluating (1) screening for LTBI with the tuberculin skin test (TST) using the Mantoux method or commercial interferon-gamma release assays (IGRAs) or (2) treatment of LTBI with pharmacotherapy regimens that are currently recommended by the Centers for Disease Co",
+      "score": 0.6202772
+    },
+    {
+      "number": 23,
+      "title": "Tuberculosis Screening for People With Chronic Conditions - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK583752",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The CDC/NIH/HIV MAIDSA guideline4 recommends that all people with HIV should be tested for latent tuberculosis infection (LTBI), at the time of their HIV diagnosis; this is a strong recommendation based on 1 or more well-designed study. The CDC/NIH/HIV MAIDSA guideline4 also recommends that people w",
+      "score": 0.5971152
+    },
+    {
+      "number": 24,
+      "title": "Mycobacterium tuberculosis: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/mycobacterium",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "17.   Lewinsohn DM, Leonard MK, LoBue PA, et al. Official American Thoracic Society/Infectious Diseases Society of America/Centers for Disease Control and Prevention Clinical Practice Guidelines: Diagnosis of Tuberculosis in Adults and Children. _Clin Infect Dis_. 2017;64(2):111-115. Available at: \n",
+      "score": 0.57293844
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: US Preventive Services Task Force Recommendation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2547762",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Title: Screening for Latent Tuberculosis Infection in Adults: US Preventive Services Task Force Recommendation\nUS Preventive Services Task Force. US Preventive Services Task Force. *   US Preventive Services Task Force USPSTF Recommendation: Screening for Latent Tuberculosis Infection in AdultsUS Pr",
+      "score": 0.8245895
+    },
+    {
+      "number": 2,
+      "title": "Screening for Latent Tuberculosis Infection | Guidelines",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2804395",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by D Menzies \u00b7 2023 \u00b7 Cited by 9 \u2014 The US Preventive Services Task Force (USPSTF) has recommended screening of adults at increased risk for latent tuberculosis (TB) infection",
+      "score": 0.7366474
+    },
+    {
+      "number": 3,
+      "title": "USPSTF Reaffirms Recommendation to Screen for Latent Tuberculosis Infection in High-Risk Populations | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-reaffirms-recommendation-screen-latent-tuberculosis-infection-high-risk-populations-nejm-jw.NA56100",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\n### Background\n\nLatent tuberculosis infection (LTBI) is detectible by screening, and active disease can be prevented in those who screen positive. LTBI is of particular concern in certain high-risk populations. In 2016, the USPSTF found moderate evidence to support TB screening in asy",
+      "score": 0.7352811
+    },
+    {
+      "number": 4,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: US ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2804319",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2023 \u00b7 Cited by 92 \u2014 The USPSTF recommends screening for LTBI in populations at increased risk. An effective strategy for reducing the transmission, morbidity, and",
+      "score": 0.6238588
+    },
+    {
+      "number": 5,
+      "title": "Guidelines for the treatment of latent tuberculosis infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1600613522222989",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "treatment guidelines include the NTCA- and CDC-recommended treatment regimens that comprise three preferred rifamycin-based regimens and two alternative monotherapy regimens with daily isoniazid. All recommended treatment regimens are intended for persons infected with _Mycobacterium tuberculosis_ t",
+      "score": 0.72184175
+    },
+    {
+      "number": 6,
+      "title": "Prevention and management of tuberculosis in solid organ ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0929664623001511",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by CY Chiang \u00b7 2023 \u00b7 Cited by 12 \u2014 4. Recommended regimens for LTBI for candidates before transplant include 3HP, 3HR, 4R, and 9H. Due to drug\u2013drug interaction, rifampin/rifapentine need to",
+      "score": 0.9744060817172187
+    },
+    {
+      "number": 7,
+      "title": "Infectious Diseases Learning Unit: Understanding Advances ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/8/8/ofab319/6323324",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by NJ Mehtani \u00b7 2021 \u00b7 Cited by 4 \u2014 HIV, latent tuberculosis infection, rifamycin (4R), 3 months of daily INH + RIF (3HR), 3 months of weekly INH + RPT (3HP), or 6 or 9 months of daily INH (6H or",
+      "score": 0.9680256900511475
+    },
+    {
+      "number": 8,
+      "title": "Latent tuberculosis infection in the outpatient general ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2211335523002127",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Levine \u00b7 2023 \u00b7 Cited by 8 \u2014 The 2020 LTBI treatment guidelines include National Tuberculosis Controllers ... Regimens of 6 or 9 mo of daily INH (6H) or (9H) are alternative regimens.",
+      "score": 0.9634932948728336
+    },
+    {
+      "number": 9,
+      "title": "Safety and treatment completion of latent tuberculosis ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1201971220303155",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JY Feng \u00b7 2020 \u00b7 Cited by 32 \u2014 3HP, 3 months of once-weekly rifapentine and isoniazid; 4R, 4 months of daily rifampicin; 9H, 9 months of daily isoniazid; DOPT, directly observed preventive",
+      "score": 0.9558823591150097
+    },
+    {
+      "number": 10,
+      "title": "Tuberculosis in Pregnant and Postpartum Women",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/55/11/1532/369212",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JS Mathad \u00b7 2012 \u00b7 Cited by 403 \u2014 HIV-Positive Women. Management of tuberculosis/HIV coinfection in pregnancy is complicated. It remains unknown whether pregnancy affects the metabolism of",
+      "score": 0.9212904199636249
+    },
+    {
+      "number": 11,
+      "title": "Review article: latent tuberculosis in patients with ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111%2Fapt.16952",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by SR Fehily \u00b7 2022 \u00b7 Cited by 64 \u2014 The evidence overall supports the simultaneous commencement of active and LTBI therapy with immunosuppressive therapy. However",
+      "score": 0.42935818
+    },
+    {
+      "number": 12,
+      "title": "Latent TB Infection Resource Hub | Tuberculosis (TB) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "http://www.cdc.gov/tb/latent-tb-infection-resources/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "# Latent TB Infection Resource Hub. The online latent TB infection resource hub is a\u202fone-stop shop for resources related to:. The Stop TB poster provides an overview of latent TB infection and TB disease. Latent Tuberculosis Infection: A Guide for Primary Health Care Providers. Guide for primary car",
+      "score": 0.82425016
+    },
+    {
+      "number": 13,
+      "title": "Treatment for Latent Tuberculosis Infection | Tuberculosis (TB) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/tb/hcp/treatment/latent-tuberculosis-infection.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Ftb%2Ftopic%2Ftreatment%2Fdecideltbi.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Title: Treatment for Latent Tuberculosis Infection | Tuberculosis (TB) | CDC\nClinical Overview   Guidelines   Clinical Signs and Symptoms   Bacille Calmette-Gu\u00e9rin (BCG) Vaccine   Clinical Testing and Diagnosis   Clinical Treatment   Mantoux Tuberculin Skin Test Toolkit   Health Care Provider Commun",
+      "score": 0.8055255
+    },
+    {
+      "number": 14,
+      "title": "Background Information and Contextual Questions - Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK591774",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Organization, Year | Screening Recommendation | Treatment Recommendation |\n --- \n| ATS/IDSA/CDC, 201737 | A clinical practice guideline from the ATS, IDSA, and CDC recommends screening for LTBI to identify persons who may benefit from treatment before progression to active TB infection. | Not appl",
+      "score": 0.7606688
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020 - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32053584",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Comprehensive guidelines for treatment of latent tuberculosis infection (LTBI) among persons living in the United States were last published in 2000 (American Thoracic Society. CDC targeted tuberculin testing and treatment of latent tuberculosis infection. Am J Respir Crit Care Med 2000;161:S221-47)",
+      "score": 0.75464433
+    },
+    {
+      "number": 16,
+      "title": "Appendix A Table 1, Screening Recommendations of Other Groups - Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK591774/table/appa.tab1?report=objectonly",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Organization, Year | Screening Recommendation | Treatment Recommendation |\n --- \n| ATS/IDSA/CDC, 201737 | A clinical practice guideline from the ATS, IDSA, and CDC recommends screening for LTBI to identify persons who may benefit from treatment before progression to active TB infection. | Not appl",
+      "score": 0.735737
+    },
+    {
+      "number": 17,
+      "title": "Treatment for Latent Tuberculosis Infection",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/tb/hcp/treatment/latent-tuberculosis-infection.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "#### Printable table\n\n## Patient monitoring and education\n\nHealth care providers should assess the patient's progress at least monthly. This evaluation includes clinical monitoring, laboratory testing, and patient education.\n\n### Clinical monitoring\n\nAll patients receiving latent TB infection treatm",
+      "score": 0.7216064
+    },
+    {
+      "number": 18,
+      "title": "Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/69/rr/rr6901a1.htm?s_cid=rr601a1_w",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Title: Guidelines for the Treatment of Latent Tuberculosis Infection: Recommendations from the National Tuberculosis Controllers Association and CDC, 2020  | MMWR\nA .gov website belongs to an official government organization in the United States. Comprehensive guidelines for treatment of latent tube",
+      "score": 0.71496695
+    },
+    {
+      "number": 19,
+      "title": "Guidelines on controlling latent tuberculosis infection to support tuberculosis elimination",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8278168",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### 2.4.1. Intravenous drug users\n\nCommon protocols should be used to rule out tuberculosis in persons who go to HRPs or CMCs. The option of including persons who are infected at the end of the screening in LTBI treatment shall be considered: in cases of HIV infection or another immunosuppressive d",
+      "score": 0.6994397
+    },
+    {
+      "number": 20,
+      "title": "Treatment of latent tuberculosis infection \u2013 An Update",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7043866",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "16.. Getahun, Matteelli, Abubakar, _et al._ Management of latent Mycobacterium tuberculosis infection: WHO guidelines for low tuberculosis burden countries. _Eur Respir J_. 2015;46(6): 1563\u20131576. doi: 10.1183/13993003.01245-2015  [DOI] [PMC free article] [PubMed] [Google Scholar]\n   17..U.S. Prevent",
+      "score": 0.6944897
+    },
+    {
+      "number": 21,
+      "title": "Screening for Latent Tuberculosis Infection in Adults",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37129649",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by CM Mangione \u00b7 2023 \u00b7 Cited by 92 \u2014 Recommendation: The USPSTF recommends screening for LTBI in populations at increased risk. (B recommendation). Publication types. Practice",
+      "score": 0.63125396
+    },
+    {
+      "number": 22,
+      "title": "Screening for Latent Tuberculosis Infection in Adults: An Evidence Review for the U.S. Preventive Services Task Force - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK591768",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "English-language controlled studies evaluating (1) screening for LTBI with the tuberculin skin test (TST) using the Mantoux method or commercial interferon-gamma release assays (IGRAs) or (2) treatment of LTBI with pharmacotherapy regimens that are currently recommended by the Centers for Disease Co",
+      "score": 0.6202772
+    },
+    {
+      "number": 23,
+      "title": "Tuberculosis Screening for People With Chronic Conditions - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK583752",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The CDC/NIH/HIV MAIDSA guideline4 recommends that all people with HIV should be tested for latent tuberculosis infection (LTBI), at the time of their HIV diagnosis; this is a strong recommendation based on 1 or more well-designed study. The CDC/NIH/HIV MAIDSA guideline4 also recommends that people w",
+      "score": 0.5971152
+    },
+    {
+      "number": 24,
+      "title": "Mycobacterium tuberculosis: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/mycobacterium",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "17.   Lewinsohn DM, Leonard MK, LoBue PA, et al. Official American Thoracic Society/Infectious Diseases Society of America/Centers for Disease Control and Prevention Clinical Practice Guidelines: Diagnosis of Tuberculosis in Adults and Children. _Clin Infect Dis_. 2017;64(2):111-115. Available at: \n",
+      "score": 0.57293844
+    }
+  ],
+  "publishedAt": "2026-08-21T01:57:54.530507+00:00",
+  "updatedAt": "2026-08-21T01:57:54.530507+00:00",
+  "readingMinutes": 5,
+  "slug": "latent-tuberculosis"
+}

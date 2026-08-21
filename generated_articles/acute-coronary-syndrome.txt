@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular medicine",
+  "title": "Acute Coronary Syndrome",
+  "summary": "Acute coronary syndrome requires parallel ECG- and troponin-based classification, immediate STEMI reperfusion, risk-directed NSTE-ACS angiography, and early secondary prevention. The 2025 U.S. guideline prioritizes potent P2Y12 inhibition for PCI, radial access, complete revascularization when stable, and individualized bleeding mitigation.",
+  "seoDescription": "Point-of-care review of acute coronary syndrome diagnosis, reperfusion, invasive management, antithrombotics, and secondary prevention.",
+  "clinicalQuestion": "How should physicians rapidly classify, risk-stratify, revascularize, and initiate evidence-based antithrombotic and preventive therapy for acute coronary syndrome?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute coronary syndrome",
+    "STEMI",
+    "NSTEMI",
+    "unstable angina",
+    "primary PCI",
+    "dual antiplatelet therapy",
+    "cardiogenic shock"
+  ],
+  "keyTakeaways": [
+    "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact or ED arrival; a nondiagnostic ECG does not exclude ACS, so repeat serial ECGs when suspicion is high or symptoms persist. [12]",
+    "Use high-sensitivity cardiac troponin when available; repeat testing at 1 to 2 hours after an initially nondiagnostic hs-cTn, or 3 to 6 hours with conventional cTn. [12]",
+    "For STEMI within 12 hours, primary PCI is preferred when first-medical-contact-to-device time is expected to be 90 minutes or less, or 120 minutes or less when transfer is required; if delay exceeds 120 minutes, give fibrinolysis when eligible and transfer immediately to a PCI-capable center. [12]",
+    "For ACS treated with PCI, ticagrelor or prasugrel is preferred over clopidogrel unless contraindicated or not tolerated; prasugrel must not be used after prior stroke or TIA. [12]",
+    "Default DAPT is aspirin plus an oral P2Y12 inhibitor for at least 12 months in ACS without high bleeding risk; selected patients tolerating ticagrelor-based DAPT may transition to ticagrelor monotherapy after at least 1 month post-PCI. [12]",
+    "Radial access is preferred for ACS PCI. In stable multivessel ACS, complete revascularization is recommended; in cardiogenic shock, treat the culprit vessel and avoid routine nonculprit PCI during the index procedure. [12]"
+  ],
+  "sections": [
+    {
+      "id": "initial-classification",
+      "eyebrow": "First decisions",
+      "heading": "Classify ACS without delaying time-critical reperfusion",
+      "intro": "Use symptoms, ECG, and serial troponin as parallel—not sequential—inputs.",
+      "paragraphs": [
+        "The 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline addresses presumed type 1 ACS: unstable angina, NSTEMI, and STEMI resulting from plaque disruption with coronary thrombosis. Unstable angina reflects transient ischemia without significant troponin-detected myonecrosis; NSTEMI requires myocardial injury with ischemic evidence; STEMI generally reflects acute transmural ischemia from complete coronary occlusion. [12]",
+        "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact or hospital presentation. Persistent ST-segment elevation should trigger STEMI reperfusion pathways without waiting for troponin. In NSTE-ACS, ECG findings may include dynamic ST depression, T-wave inversion, transient ST elevation, nonspecific changes, or a normal tracing. Repeat ECGs when symptoms continue, clinical suspicion remains high, or the patient deteriorates. Isolated anterior ST depression in V1-V3 should prompt posterior leads V7-V9 to assess for posterior STEMI. [12]",
+        "Measure cTn promptly, preferably hs-cTn. With initially nondiagnostic results, repeat hs-cTn at 1 to 2 hours or conventional cTn at 3 to 6 hours. Acute MI requires a rise and/or fall with at least one value above the assay-specific 99th-percentile upper reference limit plus clinical evidence of ischemia. Troponin elevation alone does not establish type 1 MI; interpret it against symptoms, ECG, and competing causes of myocardial injury. [12]"
+      ],
+      "bullets": [
+        "Treat as STEMI when new or presumed-new ST elevation meets contiguous-lead criteria; new left bundle-branch block alone is not diagnostic of STEMI. [12]",
+        "Obtain urgent echocardiography or point-of-care ultrasound for shock, hemodynamic instability, or suspected mechanical complication; do not delay STEMI reperfusion for additional testing unless it will immediately change management. [12]",
+        "Assess alternative high-consequence diagnoses when clinical features suggest aortic dissection, pulmonary embolism, pericardial disease, or another nonatherothrombotic cause of myocardial injury. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational differentiation of ACS phenotypes. [12]",
+        "columns": [
+          "Phenotype",
+          "Core finding",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "STEMI",
+            "Persistent ST-segment elevation meeting contiguous-lead criteria, usually with acute coronary occlusion. [12]",
+            "Activate reperfusion pathway; do not await troponin. [12]"
+          ],
+          [
+            "NSTEMI",
+            "Ischemic syndrome with dynamic cTn elevation above the 99th percentile; ECG may be ischemic or nondiagnostic. [12]",
+            "Risk-stratify for immediate, early, or in-hospital invasive evaluation. [12]"
+          ],
+          [
+            "Unstable angina",
+            "Transient ischemia without significant troponin-detected myonecrosis. [12]",
+            "Further risk stratification determines selective versus routine invasive evaluation. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "immediate-medical-therapy",
+      "eyebrow": "Initial treatment",
+      "heading": "Start antithrombotic treatment while defining the revascularization pathway",
+      "intro": "Treat presumed type 1 ACS promptly while reassessing bleeding risk and diagnostic certainty.",
+      "paragraphs": [
+        "Give non-enteric-coated aspirin 162 to 325 mg orally, chewed when possible, followed by 75 to 100 mg daily. Aspirin is recommended across ACS phenotypes unless an absolute contraindication exists; for reported hypersensitivity, desensitization is preferred when feasible, while a loading dose of a P2Y12 inhibitor should be given if aspirin cannot be taken. [12]",
+        "Add an oral P2Y12 inhibitor. In ACS undergoing PCI, prasugrel or ticagrelor is recommended over clopidogrel to reduce MACE and stent thrombosis. In NSTE-ACS managed without planned invasive assessment, ticagrelor is recommended; clopidogrel is the alternative when ticagrelor or prasugrel is unavailable, contraindicated, or intolerable. Prasugrel is contraindicated with prior stroke or TIA. [12]",
+        "Use parenteral anticoagulation for presumed ACS. UFH is useful in NSTE-ACS and PCI. Enoxaparin or fondaparinux are alternatives when early invasive management is not planned; do not use fondaparinux as the sole PCI anticoagulant because of catheter thrombosis risk. For STEMI PCI, bivalirudin is an alternative to UFH; for fibrinolysis-treated STEMI, continue parenteral anticoagulation through hospitalization for up to 8 days or until revascularization. [12]"
+      ],
+      "bullets": [
+        "P2Y12 loading and maintenance doses: clopidogrel 300 or 600 mg then 75 mg daily; ticagrelor 180 mg then 90 mg twice daily; prasugrel 60 mg then 10 mg daily for body weight 60 kg or greater and age under 75 years, with 5 mg daily considered cautiously when body weight is under 60 kg or age is 75 years or older. [12]",
+        "Do not routinely administer supplemental oxygen when oxygen saturation is 90% or greater. Give oxygen for confirmed hypoxemia with saturation below 90%, targeting at least 90%. [12]",
+        "For persistent ischemic pain, use sublingual nitroglycerin 0.3 or 0.4 mg every 5 minutes for up to three doses if hemodynamically stable. Avoid nitrates after PDE5 inhibitor use: within 12 hours of avanafil, 24 hours of sildenafil or vardenafil, or 48 hours of tadalafil. [12]",
+        "Reserve IV morphine or fentanyl for pain refractory to maximally tolerated anti-ischemic therapy; opioids can delay absorption of oral P2Y12 inhibitors. [2][3][4]",
+        "Avoid nonaspirin NSAIDs in suspected or confirmed ACS because they increase MACE risk. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Antiplatelet selection during ACS hospitalization. [12]",
+        "columns": [
+          "Clinical setting",
+          "Preferred P2Y12 strategy",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "NSTE-ACS undergoing PCI",
+            "Prasugrel or ticagrelor. [12]",
+            "Do not use prasugrel with prior stroke or TIA. [12]"
+          ],
+          [
+            "NSTE-ACS without planned invasive evaluation",
+            "Ticagrelor; clopidogrel if ticagrelor is unsuitable. [12]",
+            "For angiography expected more than 24 hours later, upstream clopidogrel or ticagrelor may be considered. [12]"
+          ],
+          [
+            "STEMI treated with primary PCI",
+            "Prasugrel or ticagrelor; clopidogrel if potent agents cannot be used. [12]",
+            "Balance ischemic benefit against non-CABG bleeding risk. [12]"
+          ],
+          [
+            "STEMI treated with fibrinolysis",
+            "Clopidogrel: 300 mg then 75 mg daily if age 75 years or younger; 75 mg daily without loading if older than 75 years. [12]",
+            "Fibrinolytic-treated patients require transfer to PCI-capable care. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stemi-reperfusion",
+      "eyebrow": "STEMI",
+      "heading": "Choose reperfusion by expected time to device activation",
+      "intro": "System delay—not just door-to-balloon time—determines the appropriate pathway.",
+      "paragraphs": [
+        "For STEMI presenting within 12 hours, perform primary PCI when first-medical-contact-to-device activation can occur within 90 minutes, or within 120 minutes for patients requiring transfer. EMS transport to a PCI-capable hospital, prehospital ECG transmission, and catheterization laboratory activation are recommended system strategies. [12]",
+        "When expected first-medical-contact-to-device time exceeds 120 minutes and symptom onset is under 12 hours, administer fibrinolytic therapy if no contraindication exists, then transfer immediately to a PCI-capable center. Patients with failed reperfusion require immediate angiography and rescue PCI; otherwise, perform early angiography with intent to PCI within 2 to 24 hours after fibrinolysis. [12]",
+        "Primary PCI remains indicated regardless of symptom duration in ACS with cardiogenic shock or hemodynamic instability. In stable patients with STEMI and an occluded infarct-related artery more than 24 hours after onset without ongoing ischemia, severe heart failure, or life-threatening arrhythmia, routine PCI has no demonstrated benefit. [12]"
+      ],
+      "bullets": [
+        "Use fibrin-specific agents when fibrinolysis is selected. Tenecteplase is a single weight-based IV bolus; alteplase is a 90-minute weight-based infusion; reteplase is administered as two 10-unit IV boluses 30 minutes apart. [12]",
+        "Do not administer fibrinolysis for isolated ST depression unless true posterior STEMI is suspected. [12]",
+        "Use radial access for primary PCI when feasible to reduce bleeding, vascular complications, and death. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "STEMI reperfusion selection. [12]",
+        "columns": [
+          "Clinical scenario",
+          "Action",
+          "Time target or limitation"
+        ],
+        "rows": [
+          [
+            "PCI-capable hospital or transfer pathway with timely access",
+            "Primary PCI. [12]",
+            "FMC-to-device 90 minutes or less; up to 120 minutes with transfer. [12]"
+          ],
+          [
+            "No PCI within 120 minutes; symptoms under 12 hours; fibrinolysis eligible",
+            "Fibrinolysis, then immediate transfer. [12]",
+            "Angiography/PCI within 2 to 24 hours if reperfusion appears successful; rescue PCI for failed reperfusion. [12]"
+          ],
+          [
+            "Shock, ongoing ischemia, or life-threatening arrhythmia",
+            "Emergency culprit-vessel revascularization by PCI or CABG as appropriate. [12]",
+            "Do not delay because of late presentation. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nste-acs-invasive-strategy",
+      "eyebrow": "NSTE-ACS",
+      "heading": "Use instability and ischemic risk to determine angiography timing",
+      "intro": "Routine invasive management benefits patients suitable for revascularization; urgency is driven by instability.",
+      "paragraphs": [
+        "For intermediate- or high-risk NSTE-ACS patients who are appropriate candidates for revascularization, perform an invasive approach during hospitalization. For low-risk patients, either routine invasive or selective invasive management with additional risk stratification is recommended. Patients in whom ACS remains uncertain and biomarkers are normal may undergo stress testing or coronary CT angiography before discharge to clarify need for angiography. [12]",
+        "Perform immediate invasive evaluation for refractory or recurrent angina despite medical therapy, hemodynamic or electrical instability, acute pulmonary edema or heart failure, worsening mitral regurgitation, or sustained ventricular arrhythmia. In high-risk NSTE-ACS, early angiography within 24 hours is reasonable; a GRACE score above 140, advancing troponin pattern, new ST depression, diabetes, age over 75 years, or elevated biomarkers support earlier evaluation. [12]",
+        "Relative reasons to reconsider a routine invasive strategy include severe thrombocytopenia, high bleeding risk on DAPT, advanced kidney disease not on dialysis, acute renal failure, limited life expectancy, advanced dementia, anatomy already known to preclude PCI/CABG, and patient preference. These are risk-benefit considerations, not automatic exclusions. [12]"
+      ],
+      "bullets": [
+        "Use validated GRACE or TIMI risk scores for prognosis and to support invasive-strategy timing; do not use them as diagnostic tools. [12]",
+        "Assess LVEF before discharge to guide therapy and risk stratification; transthoracic echocardiography is generally preferred. [12]",
+        "Admit ongoing angina, instability, uncontrolled arrhythmia, suboptimal reperfusion, or shock to a cardiac intensive care setting. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "NSTE-ACS angiography timing. [12]",
+        "columns": [
+          "Risk state",
+          "Invasive approach",
+          "Decision triggers"
+        ],
+        "rows": [
+          [
+            "Immediate",
+            "Immediate angiography with intent to revascularize. [12]",
+            "Refractory angina, hemodynamic or electrical instability, acute pulmonary edema/HF, or worsening mitral regurgitation. [12]"
+          ],
+          [
+            "High risk",
+            "Early angiography within 24 hours is reasonable. [12]",
+            "GRACE score >140, dynamic troponin rise, new ST depression, or other high-risk ischemic features. [12]"
+          ],
+          [
+            "Not high risk but invasive strategy selected",
+            "Angiography before discharge. [12]",
+            "Intermediate-risk profile without immediate/early triggers. [12]"
+          ],
+          [
+            "Low risk or uncertain ACS",
+            "Selective invasive strategy with noninvasive risk stratification. [12]",
+            "Normal biomarkers or uncertain diagnosis; use stress testing or CCTA before discharge when appropriate. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pci-and-revascularization",
+      "eyebrow": "Procedural management",
+      "heading": "Optimize PCI and complete revascularization selectively",
+      "intro": "Stable multivessel ACS usually warrants complete revascularization; shock is the major exception.",
+      "paragraphs": [
+        "For ACS PCI, radial access is preferred over femoral access. In complex lesions or left main intervention, use IVUS or OCT to guide coronary stent implantation and reduce ischemic events. Routine manual aspiration thrombectomy before primary PCI should not be performed because it has not improved clinical outcomes; reserve it for bailout treatment of persistent thrombus or no-reflow. [12]",
+        "In hemodynamically stable STEMI with multivessel disease, complete revascularization of significantly stenosed nonculprit arteries is recommended after successful culprit-vessel PCI to reduce death or MI and improve angina-related quality of life. PCI may be staged or, in selected low-complexity disease, performed during the index procedure. Patients with left main disease, complex multivessel disease, diabetes with LAD involvement, or severe LV dysfunction may be better served by CABG after Heart Team assessment. [12]",
+        "In stable NSTE-ACS with multivessel disease and no left main stenosis, complete PCI of significant nonculprit lesions at the index procedure or as a staged intervention is recommended when CABG is not intended. Physiologic assessment of nonculprit lesions may guide revascularization. In cardiogenic shock, routine nonculprit PCI at the index procedure increases death or kidney-failure risk and should not be performed. [12]"
+      ],
+      "bullets": [
+        "For ACS with cardiogenic shock, revascularize the culprit vessel urgently with PCI or CABG, irrespective of symptom duration. [12]",
+        "Selected STEMI patients with severe or refractory shock meeting DanGer-SHOCK-like features may benefit from a microaxial flow pump, but balance lower mortality against increased bleeding, limb ischemia, and renal replacement therapy. [12]",
+        "Routine IABP or VA-ECMO in infarct-related shock has no demonstrated survival benefit. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Revascularization strategy by hemodynamic status. [12]",
+        "columns": [
+          "Clinical state",
+          "Revascularization approach",
+          "Avoid"
+        ],
+        "rows": [
+          [
+            "Stable STEMI with multivessel disease",
+            "Complete treatment of significant nonculprit lesions during index PCI or staged after culprit PCI. [12]",
+            "Routine thrombectomy before PCI. [12]"
+          ],
+          [
+            "Stable NSTE-ACS with multivessel disease",
+            "PCI of significant nonculprit lesions at index or staged procedure if CABG is not intended. [12]",
+            "Assuming angiographic severity alone always identifies lesions requiring PCI; physiology may help. [12]"
+          ],
+          [
+            "ACS with cardiogenic shock",
+            "Emergency culprit-vessel PCI or CABG. [12]",
+            "Routine nonculprit PCI during the index procedure. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "discharge-and-secondary-prevention",
+      "eyebrow": "After stabilization",
+      "heading": "Build secondary prevention into the index admission",
+      "intro": "The post-ACS risk period is front-loaded; medication access and follow-up are treatment components.",
+      "paragraphs": [
+        "For ACS patients without high bleeding risk, continue DAPT with aspirin and an oral P2Y12 inhibitor for at least 12 months. In patients who tolerate ticagrelor-based DAPT, transition to ticagrelor monotherapy at least 1 month after PCI is useful for bleeding reduction. In high-bleeding-risk PCI patients, transition to single antiplatelet therapy after 1 month may be reasonable; switching from ticagrelor or prasugrel to clopidogrel after 1 month may also reduce bleeding risk. [12]",
+        "If long-term oral anticoagulation is required, discontinue aspirin after 1 to 4 weeks of triple therapy and continue an oral anticoagulant plus a P2Y12 inhibitor, preferably clopidogrel. Prescribe a proton pump inhibitor for patients at elevated GI bleeding risk receiving DAPT, anticoagulation, or both. [12]",
+        "Initiate or continue high-intensity statin therapy for all ACS patients unless contraindicated. In patients already receiving maximally tolerated statin therapy, add a nonstatin agent if LDL-C is 70 mg/dL or greater; adding nonstatin therapy is reasonable at LDL-C 55 to 69 mg/dL. Concurrent ezetimibe plus maximally tolerated statin may be considered during the index ACS admission. [12]"
+      ],
+      "bullets": [
+        "High-intensity statin regimens include atorvastatin 40 to 80 mg or rosuvastatin 20 to 40 mg daily. [12]",
+        "Obtain a fasting lipid panel 4 to 8 weeks after initiation or adjustment of lipid-lowering therapy to assess response and adherence. [12]",
+        "Start oral beta-blocker therapy within 24 hours in ACS without contraindications such as acute heart failure, low output, shock risk, significant conduction disease, severe bradycardia, or active bronchospasm. [12]",
+        "Use an ACE inhibitor or ARB in high-risk ACS with LVEF 40% or less, hypertension, diabetes, or anterior STEMI; add a mineralocorticoid receptor antagonist for LVEF 40% or less with heart-failure symptoms and/or diabetes when renal function and potassium permit. [12]",
+        "Refer every ACS patient to cardiac rehabilitation before discharge; home-based programs are a reasonable alternative when center-based rehabilitation is inaccessible. [12]",
+        "Give annual influenza vaccination in ACS patients without contraindication. [12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Bleeding and anemia",
+          "paragraphs": [
+            "Use bleeding-risk assessment to individualize DAPT intensity and duration. ARC-HBR identifies high bleeding risk by at least one major or two minor criteria; major criteria include anticipated long-term oral anticoagulation, eGFR below 30 mL/min, hemoglobin below 11 g/dL, platelet count below 100 × 10^9/L, recent major bleeding, and prior intracranial hemorrhage. [12]"
+          ],
+          "bullets": [
+            "For ACS with acute or chronic anemia and no active bleeding, transfusion to achieve hemoglobin of at least 10 g/dL may be reasonable; the MINT trial suggested potential short-term benefit of a liberal versus restrictive threshold, but its primary endpoint was not statistically significant. [12]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Key discharge actions after ACS. [12]",
+        "columns": [
+          "Domain",
+          "Action",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Antithrombotics",
+            "Document intended DAPT duration, bleeding plan, and procedure-related interruption strategy. [12]",
+            "Before discharge. [12]"
+          ],
+          [
+            "Lipid lowering",
+            "High-intensity statin; consider ezetimibe or other nonstatin therapy according to LDL-C and statin tolerance. [12]",
+            "Initiate before discharge; check fasting lipids in 4 to 8 weeks. [12]"
+          ],
+          [
+            "Cardiac function",
+            "Assess LVEF to guide neurohormonal therapy and later ICD decisions. [12]",
+            "Before discharge; repeat echocardiography in 6 to 12 weeks if reduced LVEF. [12]"
+          ],
+          [
+            "Rehabilitation",
+            "Refer to outpatient CR or a home-based alternative. [12]",
+            "Before discharge. [12]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should fibrinolysis be used for STEMI?",
+      "answer": "Use fibrinolysis when symptom onset is under 12 hours and expected first-medical-contact-to-device time exceeds 120 minutes, provided no contraindication exists; immediately transfer to a PCI-capable center afterward. [12]"
+    },
+    {
+      "question": "Should all NSTE-ACS patients undergo immediate angiography?",
+      "answer": "No. Immediate angiography is indicated for refractory angina or hemodynamic/electrical instability. High-risk patients may benefit from early angiography within 24 hours; lower-risk patients can undergo angiography before discharge or selective testing-guided evaluation. [12]"
+    },
+    {
+      "question": "How long should DAPT continue after ACS PCI?",
+      "answer": "At least 12 months is the default for ACS patients without high bleeding risk. Selected patients tolerating ticagrelor-based DAPT may stop aspirin and continue ticagrelor alone after at least 1 month post-PCI. [12]"
+    },
+    {
+      "question": "What is the preferred P2Y12 inhibitor in ACS PCI?",
+      "answer": "Prasugrel or ticagrelor is preferred to clopidogrel for ACS patients undergoing PCI. Do not use prasugrel in patients with prior stroke or TIA; use clopidogrel when potent agents are unsuitable. [12]"
+    },
+    {
+      "question": "How should cardiogenic shock change multivessel PCI decisions?",
+      "answer": "Perform emergency culprit-vessel revascularization. Routine PCI of nonculprit arteries during the index procedure should not be performed because it increases death or kidney-failure risk. [12]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Septic Shock",
+  "summary": "Septic shock requires parallel source-directed therapy and physiology-guided resuscitation. Identify infection-associated organ dysfunction, obtain cultures without delaying antimicrobials, assess fluid responsiveness dynamically, initiate norepinephrine promptly for persistent hypotension, and repeatedly reassess perfusion, source control, and evolving organ failure.",
+  "seoDescription": "Physician guide to septic shock diagnosis, resuscitation, vasopressors, antimicrobials, source control, monitoring, and adjunctive therapy.",
+  "clinicalQuestion": "How should physicians recognize and manage adult septic shock while limiting delays in antimicrobials, source control, and effective perfusion support?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "septic shock",
+    "sepsis",
+    "norepinephrine",
+    "vasopressors",
+    "fluid responsiveness",
+    "source control",
+    "lactate",
+    "Surviving Sepsis Campaign"
+  ],
+  "keyTakeaways": [
+    "Septic shock under Sepsis-3 requires sepsis plus vasopressor-dependent hypotension to maintain MAP at least 65 mmHg and lactate above 2 mmol/L despite adequate volume resuscitation.[6][7]",
+    "Do not use qSOFA as the sole screening test; in suspected infection, evaluate organ dysfunction and use broader screening approaches because qSOFA lacks sensitivity.[24]",
+    "Obtain blood cultures and source-directed specimens promptly, but do not delay empiric antimicrobials in septic shock; delayed effective therapy is associated with worse survival.[7][24]",
+    "Use balanced crystalloids initially and reassess after small boluses with dynamic measures of fluid responsiveness rather than CVP targets alone.[24]",
+    "Norepinephrine is first-line for persistent hypotension, targeting MAP 65 mmHg; add vasopressin when norepinephrine alone is insufficient, and consider hydrocortisone for ongoing vasopressor-requiring shock.[10][24]"
+  ],
+  "sections": [
+    {
+      "id": "definition-and-immediate-recognition",
+      "eyebrow": "Recognition",
+      "heading": "Confirm shock physiology while treating presumptively",
+      "intro": "Septic shock is a treatment emergency, not a diagnosis that should await microbiologic confirmation.",
+      "paragraphs": [
+        "Sepsis is life-threatening organ dysfunction caused by a dysregulated host response to infection. Septic shock is the higher-risk subset with persistent circulatory and metabolic abnormalities: vasopressor requirement to maintain MAP at least 65 mmHg and lactate greater than 2 mmol/L despite adequate volume resuscitation.[6][7]",
+        "In suspected infection, obtain lactate, CBC, metabolic and hepatic testing, coagulation studies, blood cultures, and source-directed cultures or fluid studies while examining for competing or concomitant shock states, particularly hemorrhagic, cardiogenic, obstructive, or drug-related shock. A lactate above 2 mmol/L is part of the Sepsis-3 shock construct, but lactate should be interpreted as a risk and perfusion marker rather than as a stand-alone proof of hypovolemia.[6][7]",
+        "qSOFA can identify high-risk patients outside the ICU but should not be the sole screening tool because it is insufficiently sensitive. A SOFA increase of at least 2 in the setting of infection supports sepsis; serial organ dysfunction assessment is more useful than reliance on systemic inflammatory-response criteria alone.[6][24]"
+      ],
+      "bullets": [
+        "Place continuous monitoring, establish reliable IV access, and measure urine output early when shock is suspected.[24]",
+        "Use bedside echocardiography and lung ultrasound when cardiac dysfunction, right-sided obstruction, pulmonary edema, or an alternative shock mechanism would change immediate resuscitation.[1][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Sepsis-3 clinical framework and immediate implications.[6][7]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Suspected or documented infection plus acute organ dysfunction",
+            "Sepsis; calculate and trend SOFA when data are available.[6]",
+            "Obtain cultures and source studies; initiate source-directed empiric antimicrobials without avoidable delay.[24]"
+          ],
+          [
+            "Vasopressor requirement for MAP at least 65 mmHg plus lactate >2 mmol/L after volume resuscitation",
+            "Septic shock; markedly increased short-term risk.[6][7]",
+            "ICU-level resuscitation, vasopressor support, frequent perfusion reassessment, and urgent source-control review.[24]"
+          ],
+          [
+            "Hypotension with uncertain volume status or poor response to initial fluids",
+            "Do not infer fluid responsiveness from CVP alone.[1][24]",
+            "Use passive leg raise, stroke-volume change, pulse-pressure/stroke-volume variation when valid, or focused echocardiography.[24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "first-hours-management",
+      "eyebrow": "Resuscitation",
+      "heading": "Run antimicrobials, source control, perfusion support, and diagnostic reassessment in parallel",
+      "intro": "The first hours should reduce time to effective treatment and avoid unmeasured fluid accumulation.",
+      "paragraphs": [
+        "Collect blood cultures and relevant site-specific cultures before antimicrobials only if this does not meaningfully delay treatment. In septic shock or high likelihood of sepsis, empiric therapy should be administered immediately, ideally within 1 hour; observational evidence associates delayed effective therapy with increased mortality.[7][24]",
+        "Choose empiric antimicrobials according to the probable anatomic source, prior antimicrobial exposure, recent health care contact, immunosuppression, indwelling devices, local antibiogram, and risk for resistant organisms. Broad initial therapy should be reassessed daily and narrowed or discontinued when microbiology, clinical trajectory, and source evaluation permit.[24]",
+        "Source control is a time-sensitive intervention. Drain infected collections, remove or exchange infected devices when feasible, debride necrotic tissue, and involve surgery, interventional radiology, gastroenterology, or other procedural services early when an anatomic source is plausible. Persistent vasopressor requirement or rising lactate after initial treatment should trigger renewed search for an uncontrolled source, ischemia, bleeding, or an alternative shock mechanism.[1][24]"
+      ],
+      "bullets": [
+        "For intra-abdominal sepsis, ensure empiric activity against enteric gram-negative organisms and anaerobes; additional resistant-organism or antifungal coverage depends on patient-specific epidemiology and risk factors rather than abdominal source alone.[1][24]",
+        "Do not use procalcitonin to decide whether to start antimicrobials in a patient with suspected septic shock; it may have a role in supporting treatment-duration decisions alongside source control and clinical response.[24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value actions during initial septic-shock management.[24]",
+        "columns": [
+          "Domain",
+          "Action",
+          "Operational endpoint"
+        ],
+        "rows": [
+          [
+            "Microbiology",
+            "Obtain blood cultures and source-directed specimens promptly.[24]",
+            "Do not defer urgent antimicrobial administration for culture collection."
+          ],
+          [
+            "Antimicrobials",
+            "Start broad empiric therapy matched to source, host factors, resistance risk, and local epidemiology.[24]",
+            "Daily de-escalation review when cultures and clinical response are available.[24]"
+          ],
+          [
+            "Source control",
+            "Identify drainable, removable, obstructed, or surgically correctable infection.[24]",
+            "Definitive procedure or procedural plan; reassess if shock persists."
+          ],
+          [
+            "Perfusion",
+            "Measure arterial pressure, urine output, lactate trend, and clinical peripheral perfusion.[24]",
+            "MAP at least 65 mmHg with improving perfusion and avoidance of progressive fluid overload.[24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fluids-and-vasopressors",
+      "eyebrow": "Hemodynamics",
+      "heading": "Use physiology-guided fluids and early norepinephrine for persistent hypotension",
+      "intro": "Static filling pressures should not determine ongoing fluid administration.",
+      "paragraphs": [
+        "Balanced crystalloids are preferred initial resuscitation fluids. The Surviving Sepsis Campaign suggests at least 30 mL/kg of intravenous crystalloid during the first 3 hours for sepsis-induced hypoperfusion or septic shock, but the recommendation is weak and subsequent fluid should be individualized.[24]",
+        "After initial resuscitation, give repeated 250- to 500-mL boluses only when there is evidence of fluid responsiveness and acceptable fluid tolerance. Dynamic assessments, including passive leg raising with stroke-volume or cardiac-output measurement, can identify patients likely to augment forward flow. CVP alone is unreliable for predicting fluid responsiveness and should not be used as a sole target.[1][24]",
+        "Start norepinephrine for persistent hypotension, targeting MAP of 65 mmHg. Norepinephrine is the preferred first-line vasopressor because it primarily restores vascular tone while providing modest beta-adrenergic support. Earlier initiation may reduce cumulative fluid exposure, although the ideal timing relative to fluid administration remains clinically individualized.[10][24]"
+      ],
+      "bullets": [
+        "Place an arterial catheter when shock severity, vasopressor titration, or frequent blood gas analysis warrants continuous beat-to-beat pressure measurement.[24]",
+        "Escalate norepinephrine while simultaneously reassessing preload responsiveness, ventricular function, bleeding, ventilation effects, and occult obstruction.[1][24]",
+        "A higher MAP may be reasonable in selected patients with chronic hypertension or signs of inadequate organ perfusion at 65 mmHg, but evidence does not support a universally higher target.[10][24]"
+      ],
+      "subsections": [
+        {
+          "heading": "Vasopressor escalation and inotropy",
+          "paragraphs": [
+            "Add vasopressin to norepinephrine when MAP remains inadequate or when reducing catecholamine exposure is desirable; it is used as an adjunct rather than a replacement first-line agent. Epinephrine is an additional option when MAP remains inadequate despite norepinephrine and vasopressin, but can cause tachyarrhythmia and increase lactate.[10][24]",
+            "Consider dobutamine only when bedside assessment suggests persistent hypoperfusion with impaired cardiac output despite adequate MAP and volume assessment. Because tachyarrhythmia and vasodilation may worsen instability, reassess response promptly and discontinue ineffective therapy.[1][24]"
+          ],
+          "bullets": [
+            "Norepinephrine: first-line vasopressor; titrate to MAP and organ-perfusion response.[10][24]",
+            "Vasopressin: adjunct to norepinephrine for persistent vasoplegia or catecholamine-sparing effect.[10][24]",
+            "Epinephrine: subsequent vasopressor option; interpret lactate trends cautiously after initiation.[24]",
+            "Dobutamine: reserve for demonstrated or strongly suspected low-output physiology with ongoing hypoperfusion.[1][24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Hemodynamic decisions in septic shock.[10][24]",
+        "columns": [
+          "Clinical problem",
+          "Preferred response",
+          "Avoid"
+        ],
+        "rows": [
+          [
+            "Hypotension after initial fluid assessment",
+            "Start and titrate norepinephrine to MAP at least 65 mmHg.[10][24]",
+            "Delaying vasopressors solely to complete a fixed fluid volume in a patient with persistent hypotension or poor fluid tolerance.[24]"
+          ],
+          [
+            "Need for additional volume",
+            "Use dynamic evidence of fluid responsiveness and assess congestion risk.[24]",
+            "Using CVP normalization as the sole resuscitation endpoint.[1][24]"
+          ],
+          [
+            "Persistent MAP deficit on norepinephrine",
+            "Add vasopressin; consider epinephrine if still inadequate.[10][24]",
+            "Dopamine as a routine substitute for norepinephrine, particularly with tachyarrhythmia risk.[24]"
+          ],
+          [
+            "Ongoing hypoperfusion with suspected low output",
+            "Perform focused cardiac assessment; consider dobutamine when appropriate.[1][24]",
+            "Empiric inotropy without reassessing ventricular function and perfusion response.[1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-organ-support",
+      "eyebrow": "Reassessment",
+      "heading": "Monitor response by perfusion, organ function, and treatment complications",
+      "intro": "Hemodynamic normalization without improving tissue perfusion is not sufficient.",
+      "paragraphs": [
+        "Trend lactate when initially elevated, but interpret it alongside capillary refill, skin temperature and mottling, mental status, urine output, arterial pressure, and cardiac assessment. Elevated lactate is associated with greater risk and is a defining metabolic feature of septic shock, but may reflect mechanisms beyond oxygen-delivery failure.[6][7][24]",
+        "Use lung-protective mechanical ventilation if intubation is required. Low tidal volume ventilation around 6 mL/kg predicted body weight is supported for mechanically ventilated patients at risk for acute lung injury; consider the need for sufficient minute ventilation in severe metabolic acidosis.[24]",
+        "Monitor renal function, electrolytes, acid-base status, coagulation, glucose, and medication exposure as physiology evolves. Renal replacement therapy is indicated for conventional complications of acute kidney injury, such as refractory hyperkalemia, severe acidosis, fluid overload, or uremic complications; sepsis-associated AKI alone is not an indication for immediate dialysis.[24]"
+      ],
+      "bullets": [
+        "Use insulin rather than oral hypoglycemic therapy for significant ICU hyperglycemia; the cited review describes a glucose target of 144 to 180 mg/dL.[24]",
+        "Provide pharmacologic VTE prophylaxis unless contraindicated; low-molecular-weight heparin is generally preferred over unfractionated heparin.[24]",
+        "Use stress-ulcer prophylaxis selectively according to bleeding risk; evidence supporting routine PPI use is limited and adverse effects require consideration.[24]",
+        "Avoid sodium bicarbonate for routine lactic acidosis; consider it in severe acidemia, particularly with acute kidney injury, recognizing uncertain mortality benefit.[24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring targets and actions during ongoing shock management.[6][24]",
+        "columns": [
+          "Measure",
+          "Interpretation",
+          "Action if unfavorable"
+        ],
+        "rows": [
+          [
+            "MAP",
+            "General initial target is at least 65 mmHg.[6][24]",
+            "Titrate vasopressors; reassess volume responsiveness, cardiac function, bleeding, and source control."
+          ],
+          [
+            "Lactate",
+            "Initial elevation identifies greater-risk physiology; >2 mmol/L is part of Sepsis-3 septic shock criteria after adequate volume resuscitation.[6][7]",
+            "Repeat and interpret with clinical perfusion; investigate ongoing hypoperfusion or nonhypoperfusion contributors."
+          ],
+          [
+            "Urine output and creatinine",
+            "Markers of renal perfusion and evolving AKI, but affected by chronic disease and medications.[24]",
+            "Review perfusion, congestion, nephrotoxins, obstruction, and need for renal support."
+          ],
+          [
+            "Ventilatory pressures and oxygenation",
+            "Identify evolving acute lung injury and effects of fluids or ventilator settings.[24]",
+            "Use lung-protective ventilation and limit additional fluids unless responsive and tolerant."
+          ],
+          [
+            "Vasopressor dose trajectory",
+            "Escalating requirement suggests uncontrolled infection, inadequate perfusion strategy, myocardial dysfunction, or another shock process.[24]",
+            "Reassess source control, antimicrobials, cardiac function, fluid strategy, and adjunctive vasopressors."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "adjunctive-therapy-and-prognosis",
+      "eyebrow": "Adjuncts",
+      "heading": "Reserve adjuncts for defined indications and communicate high near-term risk",
+      "intro": "No adjunctive drug substitutes for source control, effective antimicrobials, and adequate perfusion support.",
+      "paragraphs": [
+        "For adults with ongoing vasopressor-requiring septic shock, intravenous hydrocortisone 200 mg/day is suggested in contemporary guidance; it can accelerate shock reversal, while mortality benefit remains uncertain across trials and syntheses.[24]",
+        "Red-cell transfusion should be restrictive in septic shock when there is no active major hemorrhage or other individualized indication. In a randomized trial of septic shock, lower versus higher hemoglobin transfusion thresholds produced similar 90-day mortality, ischemic events, and life-support use.[2]",
+        "Septic shock carries substantial short-term mortality. Contemporary reviews cite mortality near 40% in the Sepsis-3 shock population, while an ICU prediction cohort reported mortality estimates up to 45%; risk rises with persistent hyperlactatemia, progressive organ dysfunction, delayed source control, and increasing vasopressor requirement.[7][24]"
+      ],
+      "bullets": [
+        "Discuss prognosis and treatment preferences early, particularly when vasopressor requirements are escalating, multiorgan failure develops, or baseline functional reserve is limited.[1][24]",
+        "Do not initiate IV immunoglobulin, statins, activated protein C, or extracorporeal blood-purification approaches as routine septic-shock therapy based on the supplied evidence.[1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Adjunctive treatments: when evidence supports use and when uncertainty remains.[1][2][24]",
+        "columns": [
+          "Intervention",
+          "Role",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Hydrocortisone",
+            "Consider 200 mg/day for persistent vasopressor-requiring septic shock.[24]",
+            "May shorten shock duration; survival benefit is not consistently established.[24]"
+          ],
+          [
+            "Packed red cells",
+            "Use a restrictive strategy in stabilized septic shock absent another transfusion indication.[2]",
+            "Higher hemoglobin thresholds did not improve 90-day outcomes in the cited trial.[2]"
+          ],
+          [
+            "Renal replacement therapy",
+            "Use for conventional severe AKI indications.[24]",
+            "No established benefit from initiating solely because sepsis-associated AKI is present.[24]"
+          ],
+          [
+            "IVIG, statins, activated protein C",
+            "Not routine therapy for septic shock based on available evidence.[1]",
+            "Do not displace proven resuscitation and source-control measures.[1]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Sepsis-3 definition of septic shock?",
+      "answer": "Septic shock is sepsis with vasopressor requirement to maintain MAP at least 65 mmHg and lactate greater than 2 mmol/L despite adequate volume resuscitation.[6][7]"
+    },
+    {
+      "question": "Should CVP guide ongoing fluid resuscitation in septic shock?",
+      "answer": "No. CVP alone does not reliably predict fluid responsiveness. Use dynamic assessment, such as passive leg raise with stroke-volume or cardiac-output measurement, alongside evaluation of fluid tolerance.[1][24]"
+    },
+    {
+      "question": "When should norepinephrine be started?",
+      "answer": "Start norepinephrine for persistent hypotension despite initial fluid assessment, targeting MAP at least 65 mmHg. Early use may limit fluid accumulation, but timing should be individualized to perfusion, fluid responsiveness, and tolerance.[10][24]"
+    },
+    {
+      "question": "When should hydrocortisone be used in septic shock?",
+      "answer": "Consider intravenous hydrocortisone 200 mg/day for adults with ongoing vasopressor-requiring septic shock despite fluids and vasopressor therapy; it is not routine treatment for hemodynamically stable sepsis.[24]"
+    },
+    {
+      "question": "Should procalcitonin determine whether to start antibiotics?",
+      "answer": "No. In suspected septic shock, procalcitonin should not delay empiric antimicrobials. It may support later decisions about antimicrobial duration when integrated with clinical response and source control.[24]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Septic shock is the most likely diagnosis. Rapid fluid test is the principal procedure. If increment of CVP after rapid hydration is less than 3cmH2O, sufficient fluid resuscitation with alternating crystalloid and colloid through a central venous catheter is the essential intervention. Invasive hem",
+      "score": 0.43453383
+    },
+    {
+      "number": 2,
+      "title": "Lower versus Higher Hemoglobin Threshold for ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1406617",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by LB Holst \u00b7 2014 \u00b7 Cited by 1183 \u2014 Among patients with septic shock, mortality at 90 days and rates of ischemic events and use of life support were similar among those assigned",
+      "score": 0.43323857
+    },
+    {
+      "number": 3,
+      "title": "A 3-Level Prognostic Classification in Septic Shock Based ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192412",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by D Annane \u00b7 2000 \u00b7 Cited by 1386 \u2014 These patients had the highest risk of death and a median survival time of 5 days. Finally, more than 50% of our patients with septic shock had a basal cortisol",
+      "score": 0.39061585
+    },
+    {
+      "number": 4,
+      "title": "Developing a New Definition and Assessing New Clinical ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492876",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by M Shankar-Hari \u00b7 2016 \u00b7 Cited by 2893 \u2014 Adult patients with septic shock can be identified using the clinical criteria of hypotension requiring vasopressor therapy to maintain mean BP",
+      "score": 0.17651571
+    },
+    {
+      "number": 5,
+      "title": "Development and Validation of the Phoenix Criteria for ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2814296",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by LN Sanchez-Pinto \u00b7 2024 \u00b7 Cited by 294 \u2014 This cohort study derives and validates novel criteria for diagnosis of pediatric sepsis and septic shock across high-resource and",
+      "score": 0.17477651
+    },
+    {
+      "number": 6,
+      "title": "Consensus Definitions for Sepsis and Septic Shock",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492881",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by M Singer \u00b7 2016 \u00b7 Cited by 36601 \u2014 This article presents updated definitions of and clinical criteria for diagnosing sepsis and septic shock based on recommendations from an expert task.",
+      "score": 0.15847395
+    },
+    {
+      "number": 7,
+      "title": "Data-driven discovery of a novel sepsis pre-shock state predicts impending septic shock in the ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-019-42637-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Figure 1\n\nFigure 1\n\nFull size image\n\nRisk score z(t) (black line) trajectories for a septic shock patient ((A) MIMIC-III subject 250) and a non-shock sepsis patient ((B) subject 21). The detection threshold \u03b8 applied to z(t) is indicated by the red horizontal line. In panel A, patient state transiti",
+      "score": 0.58408195
+    },
+    {
+      "number": 8,
+      "title": "Best diagnostic accuracy of sepsis combining SIRS criteria or qSOFA score with Procalcitonin and Mid-Regional pro-Adrenomedullin outside ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73676-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Mid-regional pro-adrenomedullin (MR-proADM) has been recently proposed for sepsis diagnosis and prognosis, also providing etiological information12.\"),21 and MR-pro-Adrenomedullin (MR-proADM) in bacterial infections. APMIS. 123, 740\u2013748 (2015).\"),22.\"),23.\"),24.\"). Its levels significantly relate wi",
+      "score": 0.47066417
+    },
+    {
+      "number": 9,
+      "title": "Survival prediction of patients with sepsis from age, sex, and septic episode number alone | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73558-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Full size table\n\nWe report two scores considering all the possible confusion matrix thresholds (precision-recall curve and receiver operating characteristic curve), and seven scores computed by artificially setting the confusion matrix threshold to 0.5 (TP rate, TN rate, PPV, NPV, MCC, \\(\\hbox {F}\\_",
+      "score": 0.29264632
+    },
+    {
+      "number": 10,
+      "title": "Vasopressor Management in Septic Shock Treatment | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/vasopressor-management-in-septic-shock-treatment",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Septic shock arises when a dysregulated host response to infection produces profound vasodilatation, capillary leak and cellular hypoperfusion. Vasopressors have become indispensable to restore vascular tone and maintain mean arterial pressure (MAP) above critical thresholds to ensure organ perfusio",
+      "score": 0.24226433
+    },
+    {
+      "number": 11,
+      "title": "Management of Sepsis in Hospitalized Patients | Annals of ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02685",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Treatment includes intravenous fluids, vasopressors, steroids if shock is present, antimicrobial therapy targeting the most likely source of",
+      "score": 0.33522078
+    },
+    {
+      "number": 12,
+      "title": "S1392 Serum Lactate Thresholds in the Diagnosis...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/2022/10002/s1392_serum_lactate_thresholds_in_the_diagnosis_of.1392.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Conclusion: Serum lactate levels at time of septic shock diagnosis between 2-4 mmol/L were associated with similarly increased in-hospital mortality in both",
+      "score": 0.73023266
+    },
+    {
+      "number": 13,
+      "title": "Prediction of Impending Septic Shock in Children... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/06000/prediction_of_impending_septic_shock_in_children.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Early Prediction of Septic Shock\n\nFigure 1 shows risk score trajectories using XGBoost (29) from patients with sepsis who do (Fig. 1 _A_) and do not (Fig. 1 _B_) develop septic shock. The risk score of the patient who does not develop shock remains below the threshold, whereas the patient who ul",
+      "score": 0.5504388
+    },
+    {
+      "number": 14,
+      "title": "Quick Sequential Organ Failure Assessment Score, Lactate,...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/onlinejets/fulltext/2023/16040/quick_sequential_organ_failure_assessment_score,.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by R Kumar \u00b7 2023 \u00b7 Cited by 6 \u2014 The mortality rate from sepsis ranges between 25% and 30% for severe sepsis and 40% and 70% for septic shock. Mortality is reported in 70% of septic patients",
+      "score": 0.24256024
+    },
+    {
+      "number": 15,
+      "title": "A pharmacovigilance study based on the FDA Adverse Event",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/pdf/10.1002/bcp.70293",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "10 novel AE signals that are absent from current prescribing information: renal failure, septic shock, acidosis,",
+      "score": 0.32424662
+    },
+    {
+      "number": 16,
+      "title": "Novel drugs approved by the EMA, the FDA and the MHRA in ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.17458",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "by S Topouzis \u00b7 2025 \u00b7 Cited by 42 \u2014 Landiolol and Organ Failure in Patients With Septic Shock: The STRESS-L Randomized Clinical Trial.",
+      "score": 0.2926615
+    },
+    {
+      "number": 17,
+      "title": "Consensus recommendations for the use of novel ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.2914",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "The metabolic disposition of ibalizumab suggests no required adjustment in people with renal or hepatic impairment, including those with severe",
+      "score": 0.24026659
+    },
+    {
+      "number": 18,
+      "title": "Consensus Guidance for Beta-Lactam Antibiotic Dose",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/pdf/10.1002/phar.70181",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "by EF Barreto \u00b7 2026 \u2014 Beta-lactam dose individualization, warrant tailored PKPD thresholds (e.g., septic shock). Doses higher than those approved by regulatory agencies may be",
+      "score": 0.16555294
+    },
+    {
+      "number": 19,
+      "title": "Utilization of vasopressin before and after protocol ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1080",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Jan 24, 2019 \u2014 Vasopressin is recommended for management of septic shock refractory to fluid challenge and norepinephrine. Controversy exists over when to add\u00a0...Read more",
+      "score": 0.15660757
+    },
+    {
+      "number": 20,
+      "title": "ACCP Abstract Booklet - 2022 - Wiley Online Library",
+      "detail": "accp1.onlinelibrary.wiley.com",
+      "url": "https://accp1.onlinelibrary.wiley.com/doi/full/10.1002/cpdd.1151",
+      "authors": "accp1.onlinelibrary.wiley.com",
+      "host": "accp1.onlinelibrary.wiley.com",
+      "snippet": "up to 20.5% per 2020 guidance). Drugs that included PK analyses in patients with GFR <30 mL/min were more likely to require renal dose adjustment (p=0.049). eCL Cr was utilized to evaluate GFR in 63.5% of trials and 83.6% of PK analyses while eGFR was utilized in only 5.4% of trials and 16.4% of PK ",
+      "score": 0.1478382
+    },
+    {
+      "number": 21,
+      "title": "Key Challenges in Providing Effective Antibiotic Therapy for ...",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2203",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "Feb 11, 2021 \u2014 However, currently, there is a paucity of guidelines to inform antibiotic dosing in critically ill patients, including those with sepsis or\u00a0...Read more",
+      "score": 0.09808816
+    },
+    {
+      "number": 22,
+      "title": "2026 - Clinical Pharmacology & Therapeutics",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70201?af=R",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "We surveyed prescribing information and clinical pharmacology reviews for 20 FDA-approved ERTs. prescribing medications",
+      "score": 0.07887636
+    },
+    {
+      "number": 23,
+      "title": "Perceptions regarding vasopressin use and practices in septic ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1079",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Jan 24, 2019 \u2014 Vasopressin is recommended as an adjunctive agent to norepinephrine to raise mean arterial pressure or to reduce norepinephrine requirements in\u00a0...Read more",
+      "score": 0.04539074
+    },
+    {
+      "number": 24,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score \u2265 2. Septic shock is defined by the need for a vasopressor to maintain a patient\u2019s mean arterial pressure (MAP) \u2265 65 mmHg and serum lactate level \u2265 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.683948
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Septic shock is the most likely diagnosis. Rapid fluid test is the principal procedure. If increment of CVP after rapid hydration is less than 3cmH2O, sufficient fluid resuscitation with alternating crystalloid and colloid through a central venous catheter is the essential intervention. Invasive hem",
+      "score": 0.43453383
+    },
+    {
+      "number": 2,
+      "title": "Lower versus Higher Hemoglobin Threshold for ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1406617",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by LB Holst \u00b7 2014 \u00b7 Cited by 1183 \u2014 Among patients with septic shock, mortality at 90 days and rates of ischemic events and use of life support were similar among those assigned",
+      "score": 0.43323857
+    },
+    {
+      "number": 3,
+      "title": "A 3-Level Prognostic Classification in Septic Shock Based ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192412",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by D Annane \u00b7 2000 \u00b7 Cited by 1386 \u2014 These patients had the highest risk of death and a median survival time of 5 days. Finally, more than 50% of our patients with septic shock had a basal cortisol",
+      "score": 0.39061585
+    },
+    {
+      "number": 4,
+      "title": "Developing a New Definition and Assessing New Clinical ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492876",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by M Shankar-Hari \u00b7 2016 \u00b7 Cited by 2893 \u2014 Adult patients with septic shock can be identified using the clinical criteria of hypotension requiring vasopressor therapy to maintain mean BP",
+      "score": 0.17651571
+    },
+    {
+      "number": 5,
+      "title": "Development and Validation of the Phoenix Criteria for ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2814296",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by LN Sanchez-Pinto \u00b7 2024 \u00b7 Cited by 294 \u2014 This cohort study derives and validates novel criteria for diagnosis of pediatric sepsis and septic shock across high-resource and",
+      "score": 0.17477651
+    },
+    {
+      "number": 6,
+      "title": "Consensus Definitions for Sepsis and Septic Shock",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492881",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by M Singer \u00b7 2016 \u00b7 Cited by 36601 \u2014 This article presents updated definitions of and clinical criteria for diagnosing sepsis and septic shock based on recommendations from an expert task.",
+      "score": 0.15847395
+    },
+    {
+      "number": 7,
+      "title": "Data-driven discovery of a novel sepsis pre-shock state predicts impending septic shock in the ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-019-42637-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Figure 1\n\nFigure 1\n\nFull size image\n\nRisk score z(t) (black line) trajectories for a septic shock patient ((A) MIMIC-III subject 250) and a non-shock sepsis patient ((B) subject 21). The detection threshold \u03b8 applied to z(t) is indicated by the red horizontal line. In panel A, patient state transiti",
+      "score": 0.58408195
+    },
+    {
+      "number": 8,
+      "title": "Best diagnostic accuracy of sepsis combining SIRS criteria or qSOFA score with Procalcitonin and Mid-Regional pro-Adrenomedullin outside ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73676-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Mid-regional pro-adrenomedullin (MR-proADM) has been recently proposed for sepsis diagnosis and prognosis, also providing etiological information12.\"),21 and MR-pro-Adrenomedullin (MR-proADM) in bacterial infections. APMIS. 123, 740\u2013748 (2015).\"),22.\"),23.\"),24.\"). Its levels significantly relate wi",
+      "score": 0.47066417
+    },
+    {
+      "number": 9,
+      "title": "Survival prediction of patients with sepsis from age, sex, and septic episode number alone | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73558-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Full size table\n\nWe report two scores considering all the possible confusion matrix thresholds (precision-recall curve and receiver operating characteristic curve), and seven scores computed by artificially setting the confusion matrix threshold to 0.5 (TP rate, TN rate, PPV, NPV, MCC, \\(\\hbox {F}\\_",
+      "score": 0.29264632
+    },
+    {
+      "number": 10,
+      "title": "Vasopressor Management in Septic Shock Treatment | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/vasopressor-management-in-septic-shock-treatment",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Septic shock arises when a dysregulated host response to infection produces profound vasodilatation, capillary leak and cellular hypoperfusion. Vasopressors have become indispensable to restore vascular tone and maintain mean arterial pressure (MAP) above critical thresholds to ensure organ perfusio",
+      "score": 0.24226433
+    },
+    {
+      "number": 11,
+      "title": "Management of Sepsis in Hospitalized Patients | Annals of ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02685",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Treatment includes intravenous fluids, vasopressors, steroids if shock is present, antimicrobial therapy targeting the most likely source of",
+      "score": 0.33522078
+    },
+    {
+      "number": 12,
+      "title": "S1392 Serum Lactate Thresholds in the Diagnosis...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/2022/10002/s1392_serum_lactate_thresholds_in_the_diagnosis_of.1392.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Conclusion: Serum lactate levels at time of septic shock diagnosis between 2-4 mmol/L were associated with similarly increased in-hospital mortality in both",
+      "score": 0.73023266
+    },
+    {
+      "number": 13,
+      "title": "Prediction of Impending Septic Shock in Children... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/06000/prediction_of_impending_septic_shock_in_children.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Early Prediction of Septic Shock\n\nFigure 1 shows risk score trajectories using XGBoost (29) from patients with sepsis who do (Fig. 1 _A_) and do not (Fig. 1 _B_) develop septic shock. The risk score of the patient who does not develop shock remains below the threshold, whereas the patient who ul",
+      "score": 0.5504388
+    },
+    {
+      "number": 14,
+      "title": "Quick Sequential Organ Failure Assessment Score, Lactate,...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/onlinejets/fulltext/2023/16040/quick_sequential_organ_failure_assessment_score,.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by R Kumar \u00b7 2023 \u00b7 Cited by 6 \u2014 The mortality rate from sepsis ranges between 25% and 30% for severe sepsis and 40% and 70% for septic shock. Mortality is reported in 70% of septic patients",
+      "score": 0.24256024
+    },
+    {
+      "number": 15,
+      "title": "A pharmacovigilance study based on the FDA Adverse Event",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/pdf/10.1002/bcp.70293",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "10 novel AE signals that are absent from current prescribing information: renal failure, septic shock, acidosis,",
+      "score": 0.32424662
+    },
+    {
+      "number": 16,
+      "title": "Novel drugs approved by the EMA, the FDA and the MHRA in ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.17458",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "by S Topouzis \u00b7 2025 \u00b7 Cited by 42 \u2014 Landiolol and Organ Failure in Patients With Septic Shock: The STRESS-L Randomized Clinical Trial.",
+      "score": 0.2926615
+    },
+    {
+      "number": 17,
+      "title": "Consensus recommendations for the use of novel ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/phar.2914",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "The metabolic disposition of ibalizumab suggests no required adjustment in people with renal or hepatic impairment, including those with severe",
+      "score": 0.24026659
+    },
+    {
+      "number": 18,
+      "title": "Consensus Guidance for Beta-Lactam Antibiotic Dose",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/pdf/10.1002/phar.70181",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "by EF Barreto \u00b7 2026 \u2014 Beta-lactam dose individualization, warrant tailored PKPD thresholds (e.g., septic shock). Doses higher than those approved by regulatory agencies may be",
+      "score": 0.16555294
+    },
+    {
+      "number": 19,
+      "title": "Utilization of vasopressin before and after protocol ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1080",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Jan 24, 2019 \u2014 Vasopressin is recommended for management of septic shock refractory to fluid challenge and norepinephrine. Controversy exists over when to add\u00a0...Read more",
+      "score": 0.15660757
+    },
+    {
+      "number": 20,
+      "title": "ACCP Abstract Booklet - 2022 - Wiley Online Library",
+      "detail": "accp1.onlinelibrary.wiley.com",
+      "url": "https://accp1.onlinelibrary.wiley.com/doi/full/10.1002/cpdd.1151",
+      "authors": "accp1.onlinelibrary.wiley.com",
+      "host": "accp1.onlinelibrary.wiley.com",
+      "snippet": "up to 20.5% per 2020 guidance). Drugs that included PK analyses in patients with GFR <30 mL/min were more likely to require renal dose adjustment (p=0.049). eCL Cr was utilized to evaluate GFR in 63.5% of trials and 83.6% of PK analyses while eGFR was utilized in only 5.4% of trials and 16.4% of PK ",
+      "score": 0.1478382
+    },
+    {
+      "number": 21,
+      "title": "Key Challenges in Providing Effective Antibiotic Therapy for ...",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2203",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "Feb 11, 2021 \u2014 However, currently, there is a paucity of guidelines to inform antibiotic dosing in critically ill patients, including those with sepsis or\u00a0...Read more",
+      "score": 0.09808816
+    },
+    {
+      "number": 22,
+      "title": "2026 - Clinical Pharmacology & Therapeutics",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.70201?af=R",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "We surveyed prescribing information and clinical pharmacology reviews for 20 FDA-approved ERTs. prescribing medications",
+      "score": 0.07887636
+    },
+    {
+      "number": 23,
+      "title": "Perceptions regarding vasopressin use and practices in septic ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.1079",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Jan 24, 2019 \u2014 Vasopressin is recommended as an adjunctive agent to norepinephrine to raise mean arterial pressure or to reduce norepinephrine requirements in\u00a0...Read more",
+      "score": 0.04539074
+    },
+    {
+      "number": 24,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score \u2265 2. Septic shock is defined by the need for a vasopressor to maintain a patient\u2019s mean arterial pressure (MAP) \u2265 65 mmHg and serum lactate level \u2265 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.683948
+    }
+  ],
+  "publishedAt": "2026-08-20T23:25:48.111063Z",
+  "updatedAt": "2026-08-20T23:25:48.111063Z",
+  "readingMinutes": 6,
+  "slug": "septic-shock"
+}

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neuromuscular Medicine",
+  "title": "Myasthenia Gravis",
+  "summary": "Myasthenia gravis requires rapid separation of respiratory or bulbar deterioration from stable ocular or generalized disease, confirmation with antibody and electrodiagnostic testing, chest imaging for thymoma, and phenotype-directed escalation from pyridostigmine to immunotherapy or rescue treatment.",
+  "seoDescription": "Point-of-care approach to myasthenia gravis diagnosis, crisis recognition, antibody testing, thymoma assessment, and phenotype-directed treatment.",
+  "clinicalQuestion": "How should physicians confirm, triage, and treat ocular, generalized, crisis, and immune checkpoint inhibitor-associated myasthenia gravis?",
+  "specialty": "Neurology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "myasthenia gravis",
+    "myasthenic crisis",
+    "ocular myasthenia gravis",
+    "AChR antibody",
+    "MuSK antibody",
+    "thymoma",
+    "pyridostigmine",
+    "IVIG",
+    "plasma exchange"
+  ],
+  "keyTakeaways": [
+    "Treat bulbar dysfunction, rapidly progressive generalized weakness, or respiratory compromise as potential myasthenic crisis; plasma exchange or IVIG is used for severe exacerbation and crisis. [11]",
+    "Order AChR antibody testing first; AChR binding antibody is highly specific and detects up to approximately 85% of generalized cases. If negative, test MuSK and consider LRP4 antibodies and electrodiagnostic confirmation. [17][23]",
+    "Repetitive nerve stimulation showing decrement or single-fiber EMG showing increased jitter supports impaired neuromuscular transmission when serology is negative or the phenotype is uncertain. [1][23]",
+    "Patients who do not reach treatment goals after an adequate pyridostigmine trial should receive corticosteroid or nonsteroidal immunosuppressive therapy; steroid benefit often begins at about 2 weeks. [17]",
+    "In checkpoint inhibitor-associated MG, actively evaluate for concurrent myositis and myocarditis; first-line plasma exchange or IVIG plus corticosteroids was associated with more improvement than corticosteroids alone in reported patients. [7][8][21]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-immediate-threats",
+      "eyebrow": "Urgent Triage",
+      "heading": "Identify crisis and high-risk overlap syndromes first",
+      "intro": "Disposition is driven by bulbar and respiratory trajectory rather than antibody status.",
+      "paragraphs": [
+        "Admit and urgently involve neurology and critical care for progressive dysphagia, dysarthria, weak cough, dyspnea, or rapidly worsening generalized weakness, because respiratory-muscle involvement defines the life-threatening end of the MG spectrum. Myasthenic crisis and severe exacerbations are treated with rapid immunomodulation using plasma exchange (PLEX) or intravenous immunoglobulin (IVIG); pyridostigmine can worsen airway secretions in at least some ventilated crisis presentations. [1][11][15]",
+        "If symptoms emerge during or after immune checkpoint inhibitor (ICI) therapy, treat MG as a possible myositis-myocarditis-MG overlap syndrome rather than isolated ocular or limb weakness. Obtain cardiac troponin and skeletal-muscle biomarkers including creatine phosphokinase, and assess for conduction disease, ventricular arrhythmia, reduced left-ventricular function, and myocarditis-directed cardiac magnetic resonance findings when clinically indicated. Overlap syndromes carry higher mortality, and respiratory failure from respiratory-muscle myositis is a recognized cause of death. [8][21]",
+        "For ICI-associated MG, early PLEX or IVIG in addition to corticosteroids should be favored when weakness is clinically significant, particularly with bulbar, respiratory, or concurrent cardiac or myositis features. In a systematic review and single-center experience, first-line PLEX or IVIG plus steroids was associated with improvement in 95% of patients versus 63% with steroids alone. [7]"
+      ],
+      "bullets": [
+        "Escalate immediately for shortness of breath, weak cough, dysphagia, dysarthria, or rapidly progressive generalized weakness. [1][11]",
+        "In an ICI-treated patient with ptosis, diplopia, weakness, or dyspnea, add troponin and creatine phosphokinase evaluation and assess for myocarditis and myositis overlap. [8][21]",
+        "Use PLEX or IVIG for crisis or severe exacerbation; do not rely on symptomatic therapy alone in this setting. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that require different initial actions in suspected MG. [1][7][8][11][21]",
+        "columns": [
+          "Presentation",
+          "Immediate discriminator",
+          "Initial action"
+        ],
+        "rows": [
+          [
+            "Ocular symptoms only",
+            "Ptosis or diplopia without bulbar, limb, or respiratory involvement. [1]",
+            "Confirm MG serologically and/or electrophysiologically; trial pyridostigmine when medical treatment is desired. [10][17]"
+          ],
+          [
+            "Generalized MG",
+            "Ocular symptoms plus bulbar, limb, axial, or respiratory weakness. [1]",
+            "Assess severity and treatment goals; add corticosteroid or nonsteroidal immunosuppression if pyridostigmine is inadequate. [17]"
+          ],
+          [
+            "Severe exacerbation or crisis",
+            "Bulbar dysfunction, dyspnea, or rapidly progressing generalized weakness. [1][11]",
+            "Hospitalize; initiate PLEX or IVIG and provide respiratory support as required. [11]"
+          ],
+          [
+            "ICI-associated MG",
+            "MG phenotype after ICI exposure, especially with elevated troponin or creatine phosphokinase. [8][21]",
+            "Evaluate for myocarditis/myositis overlap and use early corticosteroids plus PLEX or IVIG for clinically significant disease. [7][8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Diagnostic Workup",
+      "heading": "Confirm impaired neuromuscular transmission and define the antibody phenotype",
+      "intro": "Start with serology, then use electrodiagnostics to resolve seronegative or discordant cases.",
+      "paragraphs": [
+        "Order anti-AChR binding antibody as the initial serologic test in clinically suspected MG; it is highly specific, exceeding 90%, and has sensitivity up to approximately 85% in generalized MG. A positive result confirms an autoimmune postsynaptic neuromuscular-junction disorder in the appropriate clinical setting and identifies the phenotype most relevant to thymectomy and complement-directed treatment discussions. [17][23]",
+        "If AChR testing is negative, obtain MuSK antibody testing. MuSK antibodies are detected by radioimmunoassay in approximately 5% to 7% of MG cases; in patients who remain antibody-negative by routine testing, live cell-based assays can identify low-affinity clustered AChR or MuSK antibodies in a proportion of double-seronegative cases. LRP4 antibodies are another recognized antibody target, but a negative routine panel does not exclude MG. [1][23]",
+        "Use repetitive nerve stimulation (RNS) and single-fiber EMG (SFEMG) to demonstrate neuromuscular transmission failure when antibodies are absent, symptoms are atypical, or objective confirmation is needed before committing to chronic immunotherapy. A decremental RNS response or increased SFEMG jitter supports MG; in reported double-seronegative cohorts, diagnosis incorporated a characteristic syndrome plus RNS or SFEMG evidence of transmission impairment. [1][23]",
+        "Document disease burden longitudinally with a reproducible clinical scale such as MG Activities of Daily Living (MG-ADL), Quantitative Myasthenia Gravis (QMG), or Myasthenia Gravis Composite (MGC). These measures were used at baseline and follow-up in comparative generalized-MG treatment studies and provide an objective anchor for escalation, tapering, or determination of inadequate response. [2][12]"
+      ],
+      "bullets": [
+        "First-line serology: AChR binding antibody. [17]",
+        "If AChR-negative: test MuSK; consider LRP4 testing and cell-based AChR/MuSK assays where available. [1][23]",
+        "If serology is negative or phenotype remains uncertain: perform RNS and/or SFEMG. [1][23]",
+        "Record MG-ADL, QMG, or MGC before changing long-term treatment. [2][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Ocular versus generalized disease",
+          "paragraphs": [
+            "Classify disease as ocular when weakness is confined to eyelid or extraocular muscles and as generalized when bulbar, limb, axial, or respiratory muscles are affected. This distinction changes urgency, treatment intensity, and counseling: ocular MG can cause disabling diplopia or functional visual impairment from ptosis, while generalized involvement introduces bulbar and respiratory risk. [1][10]"
+          ],
+          "bullets": [
+            "Ptosis may respond better to pyridostigmine than diplopia. [10]",
+            "Use mechanical symptom measures such as lid crutches for ptosis or patching for diplopia when appropriate while diagnostic and medical treatment proceeds. [10]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Testing sequence for suspected myasthenia gravis. [1][17][23]",
+        "columns": [
+          "Test",
+          "Interpretation",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "AChR binding antibody",
+            "Highly specific; sensitivity up to approximately 85% in generalized MG. [17]",
+            "Confirm clinical diagnosis and phenotype; proceed with severity assessment and thymic evaluation. [17]"
+          ],
+          [
+            "MuSK antibody",
+            "Identifies a distinct autoimmune MG subgroup when AChR testing is negative. [1][23]",
+            "Use phenotype-directed immunotherapy planning; do not dismiss MG because AChR is negative. [1][23]"
+          ],
+          [
+            "LRP4 antibody or live cell-based AChR/MuSK assay",
+            "May identify antibodies in some patients negative by routine radioimmunoassay. [1][23]",
+            "Pursue when clinical and electrodiagnostic evidence remains compelling. [23]"
+          ],
+          [
+            "RNS or SFEMG",
+            "RNS decrement or increased SFEMG jitter supports neuromuscular transmission impairment. [1][23]",
+            "Use to support diagnosis in seronegative or diagnostically uncertain disease. [1][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "thymic-assessment",
+      "eyebrow": "Etiologic Branch",
+      "heading": "Evaluate the thymus early and separate thymoma from nonthymomatous disease",
+      "intro": "Thymoma changes oncologic and surgical planning.",
+      "paragraphs": [
+        "Obtain chest imaging to evaluate for thymoma after MG is diagnosed or strongly suspected, because thymoma is a clinically important MG-associated condition and thymectomy is a key therapeutic intervention in thymoma-associated MG. Computed tomography or magnetic resonance imaging can identify thymoma for preoperative risk assessment and surgical planning. [13][14]",
+        "Refer patients with radiologic thymoma for multidisciplinary thoracic surgical and oncology assessment. Thymectomy is not rescue therapy for acute weakness; stabilize active crisis or severe exacerbation first with rapid immunomodulation and respiratory support before elective operative planning. [11][13]",
+        "Before thymectomy, reassess current bulbar symptoms, MG severity classification, prior crisis, and recent IVIG use because each has been incorporated into postoperative myasthenic-crisis prediction models. Postoperative myasthenic crisis is defined in one registry model as crisis occurring within 30 days after thymectomy. [14]"
+      ],
+      "bullets": [
+        "Use chest CT or MRI to identify thymoma. [14]",
+        "Treat thymoma-associated MG with coordinated surgical planning, but do not substitute thymectomy for acute PLEX or IVIG in crisis. [11][13]",
+        "Flag recent bulbar symptoms, MG severity, prior crisis, and preoperative IVIG as perioperative risk variables. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Thymic findings and management implications. [11][13][14]",
+        "columns": [
+          "Finding",
+          "Implication",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Radiologic thymoma",
+            "Thymectomy is a key therapeutic option in thymoma-associated MG. [13]",
+            "Coordinate thoracic surgical evaluation after clinical stabilization. [11][13]"
+          ],
+          [
+            "Active severe weakness or crisis",
+            "Thymectomy does not provide acute rescue. [11]",
+            "Use PLEX or IVIG and respiratory support as needed before elective surgery. [11]"
+          ],
+          [
+            "Recent bulbar symptoms, prior crisis, higher preoperative MG severity",
+            "Variables used in models predicting crisis within 30 days after thymectomy. [14]",
+            "Plan perioperative monitoring and optimization with neuromuscular and surgical teams. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "maintenance-treatment",
+      "eyebrow": "Long-Term Treatment",
+      "heading": "Escalate from symptomatic therapy to immunosuppression based on functional targets",
+      "intro": "Aim for minimal manifestations or better with acceptable treatment toxicity.",
+      "paragraphs": [
+        "Use pyridostigmine as symptomatic therapy for patients seeking medical treatment, particularly in ocular MG; it is generally more effective for ptosis than diplopia. If adequate pyridostigmine treatment does not meet functional goals, add corticosteroids or a nonsteroidal immunosuppressive drug rather than continuing ineffective symptomatic treatment alone. [10][17]",
+        "Corticosteroids benefit most MG subtypes, with improvement beginning at approximately 2 weeks on average and marked improvement reported in more than 80% of patients in retrospective evidence. Reassess response and toxicity early: among patients treated with high-dose corticosteroids, approximately 5% to 20% have inadequate benefit or prohibitive adverse effects after several weeks to 3 months, prompting use of nonsteroidal immunosuppression and avoidance of prolonged high-dose exposure. [17][18]",
+        "Use a nonsteroidal immunosuppressive agent when corticosteroid toxicity, steroid dependence, or insufficient response makes steroid-sparing treatment necessary. Agents used in standard generalized-MG treatment include azathioprine, mycophenolate mofetil, cyclosporine, methotrexate, and tacrolimus; selection should reflect prior treatment response and patient-specific toxicity risk. [2][17][18]",
+        "Define treatment success prospectively. Complete stable remission is generally no MG signs or symptoms without therapy for 1 year, but minimal manifestation status or better with only mild adverse effects is a more realistic target for many patients; minimal manifestation status permits mild examination weakness without functional limitation. [18]"
+      ],
+      "bullets": [
+        "Trial pyridostigmine for symptomatic ocular or generalized disease, recognizing stronger ptosis than diplopia benefit in ocular MG. [10]",
+        "Escalate to corticosteroid or nonsteroidal immunosuppression when pyridostigmine does not achieve treatment goals. [17]",
+        "Reconsider prolonged high-dose corticosteroid treatment when benefit remains inadequate or toxicity is prohibitive after weeks to 3 months. [18]",
+        "Track MG-ADL, QMG, or MGC alongside functional goals before and after escalation. [2][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Refractory generalized MG",
+          "paragraphs": [
+            "For generalized MG with persistent disability despite conventional treatment, management commonly incorporates targeted biologic approaches in addition to standard therapy. Ravulizumab has been used as add-on therapy in anti-AChR-positive generalized MG alongside corticosteroids, pyridostigmine, thymectomy where appropriate, and conventional immunosuppressants; FcRn modulation with efgartigimod is another approved generalized-MG approach. [2][6]"
+          ],
+          "bullets": [
+            "Confirm antibody phenotype and quantify baseline MG-ADL/QMG before switching or adding targeted therapy. [2]",
+            "Seek early neuromuscular-specialist input when treatment requires strategies beyond first-line agents. [18]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Treatment escalation by clinical state and treatment response. [2][10][11][17][18]",
+        "columns": [
+          "Clinical state",
+          "Treatment direction",
+          "Reassessment trigger"
+        ],
+        "rows": [
+          [
+            "Ocular MG with disabling ptosis or diplopia",
+            "Trial pyridostigmine; use patching or lid crutches for symptom control when needed. [10]",
+            "Persistent functional impairment despite symptomatic therapy. [10][17]"
+          ],
+          [
+            "Generalized MG not meeting goals on pyridostigmine",
+            "Add corticosteroid or nonsteroidal immunosuppression. [17]",
+            "Assess functional outcome and treatment toxicity over subsequent weeks to months. [17][18]"
+          ],
+          [
+            "High-dose steroid nonresponse or prohibitive toxicity",
+            "Add or transition toward steroid-sparing nonsteroidal immunosuppression. [18]",
+            "Suboptimal efficacy or adverse effects after several weeks to 3 months. [18]"
+          ],
+          [
+            "Crisis or severe exacerbation",
+            "PLEX or IVIG as rapid rescue treatment. [11]",
+            "Clinical respiratory, bulbar, and generalized-strength trajectory. [1][11]"
+          ],
+          [
+            "Refractory anti-AChR-positive generalized MG",
+            "Consider add-on targeted therapy such as ravulizumab within specialist-directed care. [2]",
+            "MG-ADL, QMG, treatment burden, and conventional-treatment response. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-special-situations",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor function, toxicity, and treatment-triggered deterioration",
+      "intro": "Follow clinical function, not serology alone, when judging treatment response.",
+      "paragraphs": [
+        "At each treatment decision, document ocular, bulbar, limb, and respiratory function and compare MG-ADL, QMG, or MGC with baseline. In generalized-MG studies, MG-ADL was collected at baseline and approximately 1, 3, and 6 months, illustrating a practical framework for objectively tracking early and intermediate treatment response. [2]",
+        "Monitor corticosteroid toxicity proactively, especially weight gain, osteoporosis, dysglycemia, psychiatric effects, and infection risk; these complications were documented drivers of treatment escalation in high-risk MG cohorts. A patient with improved strength but unacceptable steroid toxicity has not achieved an acceptable long-term treatment outcome and should be considered for steroid-sparing therapy. [3][18]",
+        "Patients receiving ICI therapy require a low threshold for reassessment of dyspnea, diplopia, ptosis, weakness, chest symptoms, palpitations, presyncope, or syncope. Neurologic ICI toxicities have a median onset of 4 weeks but may occur from 1 to 68 weeks after exposure; concurrent myocarditis or MG is associated with high mortality. [8][21]"
+      ],
+      "bullets": [
+        "Use MG-ADL, QMG, or MGC serially to distinguish response from subjective fluctuation. [2][12]",
+        "Screen for steroid-associated weight gain, osteoporosis, dysglycemia, psychiatric effects, and infection complications. [3]",
+        "For ICI-associated symptoms, reassess cardiac and skeletal-muscle involvement rather than attributing weakness to isolated MG. [8][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring priorities during MG treatment. [2][3][8][21]",
+        "columns": [
+          "Domain",
+          "Measure",
+          "Actionable finding"
+        ],
+        "rows": [
+          [
+            "Neuromuscular function",
+            "MG-ADL, QMG, or MGC with ocular, bulbar, limb, and respiratory examination. [2][12]",
+            "Worsening score or new bulbar/respiratory weakness should prompt urgent reassessment and escalation consideration. [1][11]"
+          ],
+          [
+            "Corticosteroid tolerability",
+            "Weight, bone complications, glycemic status, psychiatric symptoms, and infection history. [3]",
+            "Clinically important toxicity supports steroid-sparing immunosuppression. [18]"
+          ],
+          [
+            "ICI overlap toxicity",
+            "Troponin, creatine phosphokinase, rhythm/conduction assessment, ventricular function, and clinical symptoms when indicated. [8]",
+            "Abnormal cardiac or skeletal-muscle findings require urgent overlap-syndrome management. [8][21]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

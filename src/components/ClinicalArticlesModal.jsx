@@ -137,11 +137,6 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
     setFilteredArticles(filtered);
   }, [searchQuery, articles]);
 
-  const handleArticleClick = (article) => {
-    onSelectArticle(article);
-    onDismiss();
-  };
-
   if (!isPresented) return null;
 
   return (
@@ -354,9 +349,9 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
               }}
             >
               {filteredArticles.map((article) => (
-                <button
+                <a
                   key={article.slug}
-                  onClick={() => handleArticleClick(article)}
+                  href={`/articles/${article.slug}`}
                   style={{
                     textAlign: 'left',
                     padding: '20px',
@@ -367,7 +362,8 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
                     transition: 'all 0.2s',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '12px'
+                    gap: '12px',
+                    textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
@@ -449,7 +445,7 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
                       )}
                     </div>
                   )}
-                </button>
+                </a>
               ))}
             </div>
           )}

@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary and acute care",
+  "title": "Dyspnea",
+  "summary": "Dyspnea requires rapid separation of airway, pulmonary vascular, parenchymal, cardiac, metabolic, and neuromuscular causes. Initial physiologic severity determines disposition; targeted bedside imaging, ECG, biomarkers, pulmonary testing, and exercise evaluation then identify the mechanism driving symptoms and direct treatment.",
+  "seoDescription": "A physician-focused approach to acute and chronic dyspnea, emphasizing stabilization, targeted testing, etiologic patterns, and escalation.",
+  "clinicalQuestion": "How should physicians stabilize, evaluate, and triage adults with acute or persistent dyspnea?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute dyspnea",
+    "chronic dyspnea",
+    "exertional dyspnea",
+    "respiratory distress",
+    "cardiopulmonary exercise testing",
+    "pulmonary embolism",
+    "heart failure"
+  ],
+  "keyTakeaways": [
+    "Treat undifferentiated respiratory distress as an airway, oxygenation, ventilation, or circulatory emergency until bedside assessment establishes otherwise. [15][18]",
+    "Lung ultrasound combined with echocardiography is a rapid first-line strategy to distinguish cardiac, pulmonary, and extrapulmonary contributors to acute dyspnea. [15]",
+    "Natriuretic peptides support evaluation for heart failure but are affected by obesity, age, kidney disease, atrial fibrillation, sepsis, pulmonary hypertension, hemodialysis, and ARNI therapy. [5][6]",
+    "Persistent exertional limitation after pulmonary embolism warrants structured reassessment at least 6 months after the event; abnormal exercise physiology should prompt ventilation-perfusion imaging. [12]",
+    "When routine resting cardiopulmonary testing is unrevealing, CPET can localize exercise limitation; invasive CPET can identify exercise-HFpEF, exercise pulmonary hypertension, impaired preload augmentation, or impaired peripheral oxygen extraction. [3][4][11]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-triage",
+      "eyebrow": "First minutes",
+      "heading": "Identify respiratory and circulatory threats before completing the differential",
+      "intro": "Escalate monitoring and support according to instability rather than the reported intensity of breathlessness.",
+      "paragraphs": [
+        "Immediately assess mental status, work of breathing, respiratory rate, oxygen saturation, blood pressure, heart rate, ability to speak, and signs of upper-airway compromise. Altered mentation, accessory-muscle use, paradoxical chest-wall motion, or hemodynamic instability in a patient with obstructive lung disease signals possible impending respiratory failure and requires urgent assessment for ventilatory support. [22]",
+        "Prioritize a patent, protected airway and assisted or controlled ventilation when respiratory failure is present. Use supplemental oxygen and, when indicated, vasopressors for circulatory shock; manage cardiac arrest or arrhythmia with advanced life-support measures. [1] Noninvasive respiratory support, including high-flow nasal oxygen and continuous positive airway pressure, is part of acute dyspnea management when oxygenation or ventilatory support is needed and the airway remains protectable. [15]",
+        "Do not attribute severe dyspnea to anxiety, COPD, or asthma before excluding immediately dangerous mimics. Acute dyspnea occurs with pulmonary embolism, pneumothorax, pneumonia, anaphylaxis, acute myocardial ischemia, cardiac tamponade, and heart failure; worsening dyspnea may be the only manifestation of pulmonary embolism in patients with preexisting cardiac or pulmonary disease. [16][20]"
+      ],
+      "bullets": [
+        "Stridor, facial or oropharyngeal swelling, or a suspected foreign body should shift the evaluation to upper-airway obstruction or anaphylaxis. [19]",
+        "Pleuritic pain, hemoptysis, syncope or presyncope, or unexplained tachypnea should raise the priority of pulmonary embolism and pneumothorax. [18][20]",
+        "Orthopnea, edema, pulmonary edema, or abnormal heart sounds should redirect testing toward heart failure or valvular disease. [18][9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Bedside patterns that should immediately redirect the differential and initial testing. [18][19][20][22]",
+        "columns": [
+          "Bedside pattern",
+          "High-priority etiologies",
+          "Immediate diagnostic direction"
+        ],
+        "rows": [
+          [
+            "Wheeze",
+            "Asthma, COPD, allergic reaction, or heart failure-associated wheeze. [18]",
+            "Assess airflow limitation and search for edema, hypoxemia, hypercapnia, or anaphylaxis features. [18][22]"
+          ],
+          [
+            "Pleuritic chest pain or hemoptysis",
+            "Pulmonary embolism, pneumonia, pneumothorax, or malignancy. [18][20]",
+            "Prioritize pulmonary vascular and pleural-parenchymal evaluation. [18][20]"
+          ],
+          [
+            "Orthopnea with edema or pulmonary edema",
+            "Acute heart failure; renal, hepatic, or sepsis-associated ARDS may also produce pulmonary edema. [18]",
+            "Perform bedside lung ultrasound and echocardiography; obtain ECG and natriuretic peptide testing when heart failure is considered. [15][5]"
+          ],
+          [
+            "Fever with cough",
+            "Pneumonia or bronchitis; malignancy and tuberculosis remain considerations when hemoptysis or persistent symptoms coexist. [18][19]",
+            "Obtain chest imaging and evaluate for systemic illness and hypoxemia. [15][18]"
+          ],
+          [
+            "Tachypnea without clear lung findings",
+            "Pulmonary embolism, metabolic acidosis including salicylate toxicity, or anxiety. [18]",
+            "Obtain a focused cardiopulmonary assessment and evaluate for metabolic and pulmonary vascular causes before assigning a functional diagnosis. [18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-diagnostic-workup",
+      "eyebrow": "Undifferentiated dyspnea",
+      "heading": "Use parallel cardiopulmonary testing to localize the process",
+      "intro": "The initial workup should answer whether the dominant problem is cardiac congestion, airflow obstruction, parenchymal disease, pulmonary vascular disease, or an extrapulmonary process.",
+      "paragraphs": [
+        "Obtain focused history for time course, exertional versus resting symptoms, orthopnea, cough, sputum, fever, pleuritic pain, hemoptysis, chest pain, edema, medication exposure, smoking, thromboembolic history, and occupational or environmental exposure. Acute onset favors pulmonary embolism, pneumothorax, acute airway disease, pneumonia, ischemia, tamponade, or acute heart failure; chronic progressive symptoms more often reflect COPD, interstitial lung disease, cardiac dysfunction, obesity, neuromuscular weakness, or psychiatric disease. [16][19]",
+        "Use ECG, chest imaging, pulse oximetry, and focused lung ultrasound plus echocardiography early when the diagnosis is unclear. Lung ultrasound and echocardiography can rapidly differentiate heart, lung, and extrapulmonary involvement in acute dyspnea. [15] Echocardiography is particularly useful when the examination suggests heart failure or valvular disease. [9]",
+        "Order BNP or NT-proBNP when acute heart failure is a competing diagnosis, but interpret the result within the clinical context. Natriuretic peptides are recommended biomarkers for initial heart-failure evaluation in dyspneic patients, yet diagnostic misclassification with BNP has been reported and values are influenced by obesity, age, chronic kidney disease, hemodialysis, pulmonary hypertension, sepsis, chronic atrial fibrillation, and ARNI therapy. [5][6] A biomarker result should therefore not replace imaging and clinical integration."
+      ],
+      "bullets": [
+        "Obtain spirometry when obstructive disease is suspected; persistent airflow obstruction is supported by an FEV1/FVC ratio below 0.70. [13][14]",
+        "Add lung volumes and DLCO when spirometry, clinical findings, or imaging suggest hyperinflation, air trapping, emphysema, restriction, or interstitial disease. [13][14][17]",
+        "Use a timed walk or 6-minute walk test with oximetry to document exertional limitation or desaturation in stable chronic dyspnea. [13][14][17]",
+        "If pulmonary embolism remains plausible, pursue a pulmonary vascular diagnostic pathway rather than relying on nonspecific symptoms; untreated pulmonary embolism has substantial mortality. [20]"
+      ],
+      "subsections": [
+        {
+          "heading": "Avoid anchoring on known COPD",
+          "paragraphs": [
+            "In a patient with established COPD and worsening dyspnea, actively assess for pulmonary hypertension, bronchiectasis, pulmonary embolism, heart failure, diastolic dysfunction, arrhythmia, anemia, depression, anxiety, and deconditioning rather than assuming an obstructive exacerbation. Physiologic assessment should include pulmonary function testing, body plethysmography for hyperinflation or air trapping, echocardiography when cardiac disease is plausible, and exercise testing when symptoms remain disproportionate. [17][22]"
+          ],
+          "bullets": [
+            "Increased sputum volume or purulence, worsened wheeze, dyspnea at rest, accessory-muscle recruitment, and altered mentation favor acute COPD exacerbation and require assessment for hypercapnic respiratory failure. [22]",
+            "New fever, focal imaging abnormalities, edema, rhythm disturbance, or pleuritic symptoms should trigger evaluation for infection, heart failure, arrhythmia, or pulmonary embolism instead of escalating COPD therapy alone. [18][17]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Physiologic patterns that refine chronic or exertional dyspnea evaluation. [13][14][17]",
+        "columns": [
+          "Pattern",
+          "Key tests",
+          "Interpretation and next action"
+        ],
+        "rows": [
+          [
+            "Obstructive physiology",
+            "Spirometry; lung volumes; DLCO. [13][14]",
+            "FEV1/FVC below 0.70 supports airflow obstruction; assess hyperinflation, air trapping, gas transfer, and non-COPD contributors to dyspnea. [13][14][17]"
+          ],
+          [
+            "Restrictive pattern with reduced gas transfer",
+            "Spirometry, total lung capacity, DLCO, exertional oximetry, and chest imaging. [13][14]",
+            "Reduced volumes with reduced DLCO and exercise hypoxemia support an interstitial/parenchymal process and warrant imaging-based characterization. [13][14]"
+          ],
+          [
+            "Disproportionate exertional limitation",
+            "CPET, echocardiography, and targeted pulmonary vascular testing. [3][4][11]",
+            "Use exercise physiology to distinguish cardiac output limitation, ventilatory limitation, abnormal gas exchange, or peripheral limitation when resting testing is nondiagnostic. [3][4][11]"
+          ],
+          [
+            "Pulmonary vascular concern after prior PE",
+            "Noninvasive CPET followed by ventilation-perfusion scan when exercise abnormalities are present. [12]",
+            "Residual obstruction on perfusion imaging should prompt resting echocardiography, confirmatory chest imaging, and hemodynamic assessment when indicated. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiologic-branches",
+      "eyebrow": "Diagnostic branching",
+      "heading": "Match symptom pattern to the dominant cardiopulmonary mechanism",
+      "intro": "Several common diseases coexist; seek the process that explains the current trajectory and physiologic impairment.",
+      "paragraphs": [
+        "A cardiac-congestion pattern is suggested by orthopnea, edema, pulmonary edema, abnormal heart sounds, or a compatible bedside ultrasound and echocardiogram. Combine these findings with ECG and natriuretic peptide testing, while recognizing that BNP and NT-proBNP are altered by major comorbidities and medications. [18][9][15][5][6]",
+        "An airway-obstruction pattern is suggested by wheeze, chronic cough or sputum, smoking exposure, or spirometric obstruction. In COPD, quantify obstruction with spirometry, assess air trapping or hyperinflation with body plethysmography, and measure DLCO when emphysema or gas-exchange impairment is suspected. [13][14][17] Acute deterioration with altered mentation, accessory-muscle use, or paradoxical breathing should be treated as possible ventilatory failure rather than routine outpatient exacerbation. [22]",
+        "A parenchymal or gas-transfer pattern is suggested by diffuse infiltrates, reduced lung volumes, coarse bibasilar crackles, clubbing, reduced DLCO, and exertional hypoxemia. This pattern should lead to chest imaging and serial physiologic assessment rather than empiric escalation of bronchodilators alone. [13][14] Pneumonia, interstitial lung disease, and ARDS remain distinct possibilities depending on acuity, fever, radiographic findings, and systemic illness. [16][18][19]",
+        "A pulmonary vascular pattern is suggested by acute dyspnea with pleuritic pain, hemoptysis, presyncope, syncope, or unexplained tachypnea; pulmonary embolism can present only as worsening dyspnea in patients with baseline cardiopulmonary disease. [18][20] After acute pulmonary embolism, persistent symptoms should not be dismissed as deconditioning without structured exercise, perfusion, echocardiographic, imaging, and\u2014when needed\u2014hemodynamic evaluation. [12]"
+      ],
+      "bullets": [
+        "Consider anemia, metabolic acidosis, medication effects, neuromuscular weakness, obesity, and anxiety after urgent cardiopulmonary causes have been assessed. [16][18][19][22]",
+        "Review drugs that can worsen dyspnea, including nonselective beta-blockers, NSAIDs, and platelet aggregation inhibitors. [19]",
+        "In older multimorbid adults, dyspnea may be multifactorial; a single diagnostic label should not preclude targeted testing for coexisting cardiac and pulmonary disease. [19][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Actionable etiologic branches in dyspnea. [15][17][18][19][20]",
+        "columns": [
+          "Dominant branch",
+          "Discriminating findings",
+          "Targeted next step"
+        ],
+        "rows": [
+          [
+            "Acute heart failure or valvular disease",
+            "Orthopnea, edema, pulmonary edema, abnormal heart sounds, or cardiac ultrasound findings. [18][9][15]",
+            "ECG, natriuretic peptide testing, lung ultrasound, and echocardiography; interpret peptide values with obesity, kidney disease, atrial fibrillation, sepsis, pulmonary hypertension, and ARNI use in mind. [5][6][15]"
+          ],
+          [
+            "Asthma or COPD",
+            "Wheeze, cough, sputum, smoking exposure, and spirometric obstruction. [18][13]",
+            "Spirometry; add plethysmography and DLCO when hyperinflation, air trapping, emphysema, or disproportionate symptoms are suspected. [17][13][14]"
+          ],
+          [
+            "Interstitial or other parenchymal lung disease",
+            "Crackles, clubbing, diffuse infiltrates, reduced lung volumes, reduced DLCO, and exertional hypoxemia. [13][14]",
+            "Chest imaging plus lung volumes, DLCO, and exertional oximetry to characterize restrictive and gas-transfer impairment. [13][14]"
+          ],
+          [
+            "Pulmonary embolism or chronic thromboembolic sequelae",
+            "Pleuritic pain, hemoptysis, syncope, unexplained tachypnea, or persistent exercise intolerance after PE. [18][20][12]",
+            "Acute pulmonary vascular evaluation when clinically suspected; for post-PE symptoms, use the SEARCH sequence with exercise testing and ventilation-perfusion imaging. [12]"
+          ],
+          [
+            "Extrapulmonary or mixed disease",
+            "Tachypnea with acidosis, medication exposure, obesity, neuromuscular weakness, anxiety, anemia, or discordance between symptoms and resting tests. [16][18][19][22]",
+            "Target testing to the suspected systemic mechanism; proceed to CPET when the exercise limitation remains unexplained after standard cardiopulmonary evaluation. [3][4][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "persistent-exertional-dyspnea",
+      "eyebrow": "Unexplained limitation",
+      "heading": "Escalate from resting tests to exercise physiology when symptoms persist",
+      "intro": "Resting spirometry, imaging, echocardiography, and biomarkers can miss exertional hemodynamic and gas-exchange abnormalities.",
+      "paragraphs": [
+        "Use noninvasive CPET for persistent exertional dyspnea when initial resting cardiopulmonary testing does not explain symptom severity. CPET can identify abnormal oxygen uptake kinetics, ventilatory inefficiency, impaired stroke-volume augmentation, and other exercise abnormalities that are not apparent at rest. [3][4][12] A flattened oxygen uptake-to-work-rate relationship may reflect impaired cardiac output augmentation in ischemia or severe left ventricular systolic dysfunction, but it is not specific and can occur without reduced coronary reserve or left ventricular systolic dysfunction. [4]",
+        "Reserve invasive CPET for selected patients with disabling unexplained exercise intolerance after noninvasive testing, particularly when exercise-induced hemodynamic disease is suspected. Upright cycle exercise with invasive pressure measurement, direct Fick cardiac output, and blood-gas assessment can identify abnormal exercise pulmonary arterial wedge pressure consistent with exercise-HFpEF, abnormal pulmonary vascular pressure-flow responses, impaired preload augmentation associated with autonomic dysfunction, and impaired peripheral oxygen extraction compatible with mitochondrial myopathy. [11]",
+        "For persistent dyspnea after pulmonary embolism, ask at least 6 months after the acute event whether the patient has returned to baseline respiratory comfort and exercise tolerance. The SEARCH approach proceeds through symptom screening, exercise testing, arterial perfusion assessment, resting echocardiography, confirmatory chest imaging, and right-heart catheterization when hemodynamic confirmation is required. [12]"
+      ],
+      "bullets": [
+        "Use ventilation-perfusion scanning after post-PE exercise abnormalities to detect residual pulmonary arterial obstruction or suggest alternative diagnoses. [12]",
+        "Do not infer that a normal resting echocardiogram excludes exercise-HFpEF or exercise pulmonary vascular limitation when exercise physiology remains abnormal. [11]",
+        "Interpret CPET patterns in conjunction with symptoms, imaging, pulmonary function, and hemodynamics rather than assigning a diagnosis from a single variable. [4][11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation pathway for exertional dyspnea not explained by resting testing. [3][4][11][12]",
+        "columns": [
+          "Clinical situation",
+          "Next test",
+          "What the result changes"
+        ],
+        "rows": [
+          [
+            "Persistent exercise intolerance with nondiagnostic resting cardiopulmonary evaluation",
+            "Noninvasive CPET. [3][4]",
+            "Localizes ventilatory, gas-exchange, cardiac-output, or peripheral exercise limitation and guides targeted follow-up testing. [3][4]"
+          ],
+          [
+            "Dyspnea at least 6 months after acute PE",
+            "CPET followed by ventilation-perfusion scanning if exercise physiology is abnormal. [12]",
+            "Identifies residual pulmonary arterial obstruction or an alternative explanation for post-PE limitation. [12]"
+          ],
+          [
+            "Suspected exercise-HFpEF, exercise pulmonary hypertension, preload failure, or impaired oxygen extraction after noninvasive testing",
+            "Invasive CPET with exercise hemodynamics and blood-gas assessment. [11]",
+            "Defines the pressure-flow and oxygen-transport mechanism that may be absent at rest. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "management-and-monitoring",
+      "eyebrow": "Treatment priorities",
+      "heading": "Treat the physiologic emergency while directing therapy to the identified cause",
+      "intro": "Supportive measures should stabilize oxygenation, ventilation, and perfusion without delaying diagnosis of the underlying disorder.",
+      "paragraphs": [
+        "For respiratory failure or shock, provide oxygen, assisted or controlled ventilation when needed, and vasopressors when circulatory shock is present. [1] Choose noninvasive respiratory support, including high-flow nasal oxygen or continuous positive airway pressure, when appropriate for the patient\u2019s oxygenation and ventilatory needs. [15] Reassess work of breathing, oxygen saturation, mental status, and hemodynamics frequently because deterioration may precede a definitive diagnosis.",
+        "Cause-directed therapy follows the diagnostic branch: pulmonary embolism requires timely recognition and treatment because mortality is substantially higher without treatment; acute heart failure requires confirmation of cardiac congestion and evaluation of precipitating ischemic, rhythm, valvular, renal, or systemic contributors; acute obstructive deterioration requires assessment for infection, hypercapnia, and competing heart failure or embolic disease. [20][18][22] For pneumonia and other parenchymal processes, use imaging and systemic findings to establish the responsible disease before selecting therapy. [18][16]",
+        "For refractory dyspnea in advanced cardiopulmonary disease or end-of-life care after treatment of reversible causes and optimization of oxygen or respiratory support, opioids may be considered under evidence-based protocols with close monitoring because their therapeutic margin is narrow and respiratory adverse effects can occur. [23][24] Opioid toxicity with clinically significant respiratory or circulatory depression requires airway and ventilatory support and administration of an opioid antagonist. [1]"
+      ],
+      "bullets": [
+        "Reassess after every escalation of oxygen or ventilatory support for oxygenation, ventilation, hemodynamics, and mental status. [1][15][22]",
+        "In COPD with persistent dyspnea, measure the contribution of obstruction, hyperinflation, cardiac disease, pulmonary hypertension, bronchiectasis, pulmonary embolism, and deconditioning before changing long-term therapy. [17]",
+        "After pulmonary embolism, document recovery of baseline exertional function at or beyond 6 months and pursue the SEARCH evaluation when limitation persists. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring targets after initial stabilization. [1][12][15][22]",
+        "columns": [
+          "Setting",
+          "Monitor",
+          "Escalate when"
+        ],
+        "rows": [
+          [
+            "Acute respiratory distress",
+            "Mental status, work of breathing, oxygen saturation, respiratory rate, blood pressure, and heart rate. [1][15][22]",
+            "Ventilatory effort, oxygenation, consciousness, or hemodynamics worsen despite initial support. [1][22]"
+          ],
+          [
+            "COPD exacerbation or suspected hypercapnic failure",
+            "Accessory-muscle use, paradoxical breathing, mentation, wheeze, and hemodynamic status. [22]",
+            "Altered mentation, severe work of breathing, or instability suggests impending respiratory failure. [22]"
+          ],
+          [
+            "Post-pulmonary embolism follow-up",
+            "Return to baseline respiratory comfort and exercise tolerance at least 6 months after the event. [12]",
+            "Persistent dyspnea or exercise intolerance should initiate symptom screening, CPET, perfusion assessment, echocardiography, imaging, and hemodynamics as indicated. [12]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should invasive cardiopulmonary exercise testing be considered for dyspnea?",
+      "answer": "Consider invasive CPET for disabling unexplained exertional dyspnea after routine resting and noninvasive exercise testing, especially when exercise-HFpEF, exercise pulmonary hypertension, preload failure, or impaired peripheral oxygen extraction is suspected. [11]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "OXYCODONE HYDROCHLORIDE ORAL SOLUTION",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/200535s026lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "death. Marked mydriasis rather than miosis may be seen with hypoxia in overdose situations [see Clinical Pharmacology (12.2)].Toxic leukoencephalopathy has been reported after opioid overdose and can present hours, days, or weeks after apparent recovery from the initial intoxication. Treatment of Ov",
+      "score": 0.14924625
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Reference ID: 5716078 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/210730s004lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "disorders Flatulence, Dry mouth, Dyspepsia, Diarrhea General disorders and administration site Pyrexia, Infusion site extravasation conditions Injury, poisoning and procedural complications Procedural nausea Investigations Oxygen saturation decreased, Alanine aminotransferase increased, Blood pressu",
+      "score": 0.14636794
+    },
+    {
+      "number": 3,
+      "title": "Cardiopulmonary Exercise Testing in the Clinical ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.109.914788",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by R Arena \u00b7 2011 \u00b7 Cited by 327 \u2014 Exercise testing is used in the evaluation of dyspnea, both for the targeted diagnosis of suspected exercise-induced asthma (EIA)",
+      "score": 0.47124818
+    },
+    {
+      "number": 4,
+      "title": "2016 Focused Update: Clinical Recommendations for Cardiopulmonary Exercise Testing Data Assessment in Specific Patient Populations",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000406",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In the presence of exercise-induced dyspnea, some individuals exhibit impaired Image 87o 2 kinetics, demonstrated by a transition from Image 88o 2 linearity to a flattened pattern during progressive exercise. This phenomenon has commonly been interpreted as the inability of the heart to adequately i",
+      "score": 0.43338245
+    },
+    {
+      "number": 5,
+      "title": "Artificial Intelligence-Enabled ECG Algorithm to Identify Patients With Left Ventricular Systolic Dysfunction Presenting to the Emergency Department With Dyspnea",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008437?doi=10.1161%2FCIRCEP.120.008437",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "We retrospectively applied a validated artificial intelligence-enabled ECG algorithm for the identification of LVSD (defined as LV ejection fraction \u226435%) to a cohort of patients aged \u226518 years who were evaluated in the ED at a Mayo Clinic site with dyspnea. This AI-ECG algorithm has been previously",
+      "score": 0.43136916
+    },
+    {
+      "number": 6,
+      "title": "Artificial Intelligence-Enabled ECG Algorithm to Identify Patients With Left Ventricular Systolic Dysfunction Presenting to the Emergency Department With Dyspnea | Circulation: Arrhythmia and Electrophysiology",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008437",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This AI-ECG algorithm has been previously demonstrated to be effective in identification of LVSD.6 To test this hypothesis, we performed a retrospective study of patients presenting to the Mayo Clinic ED with acute dyspnea. Natriuretic peptides are by far the most widely used and the only biomarkers",
+      "score": 0.42205253
+    },
+    {
+      "number": 7,
+      "title": "Lung transplantation for patients with severe COVID-19",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/scitranslmed.abe4282",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "A 57-year-old woman with no known medical conditions presented with dyspnea and was initially treated with a 1-week course of steroids and hydroxychloroquine. She was intubated for acute hypoxemic respiratory failure. She was managed with prone ventilation based on ARDSNet guidelines. After intubati",
+      "score": 0.18440038
+    },
+    {
+      "number": 8,
+      "title": "Chronic Obstructive Pulmonary Disease | Annals of Internal ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-154-7-201104050-01004",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Less common diagnoses include other pulmonary conditions that cause dyspnea, such as interstitial lung disease; pulmonary arterial hypertension",
+      "score": 0.35884774
+    },
+    {
+      "number": 9,
+      "title": "Asthma | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-160-5-201403040-01003",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Abnormal heart sounds also might indicate heart failure or additional cardiac causes of dyspnea, such as valvular disease. Echocardiography can",
+      "score": 0.2698134
+    },
+    {
+      "number": 10,
+      "title": "How Would You Manage Perioperative Cardiovascular ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-26-02584",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The patient reports long-standing dyspnea on exertion, which he attributes to chronic obstructive pulmonary disease (COPD).",
+      "score": 0.18325754
+    },
+    {
+      "number": 11,
+      "title": "Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1569904826000091",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance - ScienceDirect\n# Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance. iCPET is the most comprehensive test for unexp",
+      "score": 0.47563025
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369222012156",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism - ScienceDirect\n## Chest. Volume 163, Issue 4, April 2023, Pages 933-941. # Pulmonary Vascular: How I Do It Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism. Author links open overlay pa",
+      "score": 0.44059017
+    },
+    {
+      "number": 13,
+      "title": "Lung Function - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/immunology-and-microbiology/lung-function",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Elderly patient, prior smoker, with insidious onset of dyspnea (occurs only with exertion for past 2 years) and mild nonproductive cough, without prior, relevant occupational exposures | Gaunt Respiratory and heart rates increased Coarse crackles heard at lung bases Mild clubbing Radiograph with d",
+      "score": 0.40028095
+    },
+    {
+      "number": 14,
+      "title": "Lung Diffusion Capacity - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/immunology-and-microbiology/lung-diffusion-capacity",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Older middle aged, moderate smoker for 30-40 yr, dyspnea (with moderate exertion), morning cough and phlegm, mild weight loss | Respiratory rate is likely to be increased at rest Thorax hyperinflated Breath sounds decreased Scattered wheezes and crackles Nail bed cyanosis Radiograph normal or hype",
+      "score": 0.3864398
+    },
+    {
+      "number": 15,
+      "title": "Acute dyspnea in the emergency department: a clinical review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10235852",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "74.Ponikowski P, Voors AA, Anker SD, Bueno H, Cleland JGF, Coats AJS, et al. 2016 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure: the task force for the diagnosis and treatment of acute and chronic heart failure of the European society of cardiology (ESC) Developed",
+      "score": 0.71995544
+    },
+    {
+      "number": 16,
+      "title": "Dyspnea - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK499965",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Acute dyspnea suggests conditions such as asthma exacerbation, pneumonia, anaphylaxis, pulmonary embolism, pneumothorax, acute myocardial ischemia, cardiac tamponade, or heart failure. In contrast, chronic or progressive dyspnea is more often due to COPD, interstitial lung disease, amyotrophic later",
+      "score": 0.6829338
+    },
+    {
+      "number": 17,
+      "title": "Dyspnea in Chronic Obstructive Pulmonary Disease: Expert Assessment of Management in Clinical Practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12623595",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In the assessment of dyspnea in COPD, it is important to distinguish between dyspnea due to COPD, dyspnea due to pulmonary causes other than COPD (e.g., pulmonary hypertension, bronchiectasis, pulmonary embolism, among others), dyspnea from nonpulmonary causes such as cardiac comorbidities (e.g., co",
+      "score": 0.6493346
+    },
+    {
+      "number": 18,
+      "title": "Approach to Adult Patients with Acute Dyspnea - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7126145",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Abstract\n\nUndifferentiated patients in respiratory distress require immediate attention in the emergency department. Using a thorough history and clinical examination, clinicians can determine the most likely causes of dyspnea. Understanding the pathophysiology of the most common diseases contrib",
+      "score": 0.63397753
+    },
+    {
+      "number": 19,
+      "title": "The Differential Diagnosis of Dyspnea - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5247680",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Chronic dyspnea\n\nChronic dyspnea is usually due to one of a small number of causes: bronchial asthma, COPD, congestive heart failure, interstitial lung disease, pneumonia, and mental disorders (e.g., anxiety disorders, panic disorders, somatization disorders) (3, 12). Further causes are given in ",
+      "score": 0.6097339
+    },
+    {
+      "number": 20,
+      "title": "Acute Pulmonary Embolism - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560551",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A timely diagnosis of PE is crucial because of the high associated mortality and morbidity, which may be prevented with early treatment. Notably, 30% of untreated patients with PEs die, while only 8% die after timely therapy.(#article-42576.r22)(#article-42576.r23) Unfortunately, diagnosing PE can b",
+      "score": 0.40683898
+    },
+    {
+      "number": 21,
+      "title": "Inclusion and Exclusion Criteria of Included Studies - Pharmacologic and Nonpharmacologic Therapies in Adult Patients With Exacerbation of COPD: A Systematic Review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK549033",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Abreu Gonzalez, 200617 | Diagnosed with an exacerbation of COPD. | Diagnosed with pneumonia, HF, arrhythmias, or kidney failure and those who did not show a sufficient level of cooperation. |\n| Aggarwal, 201168 | Aged >50 years known to have COPD as defined in The GOLD guidelines, who presented to",
+      "score": 0.37346497
+    },
+    {
+      "number": 22,
+      "title": "Chronic Obstructive Pulmonary Disease (COPD) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Cardiovascular and extremities:\n\nAcute exacerbation:\n\nDuring AECOPD, key clinical findings include worsened dyspnea at rest, increased sputum volume and purulence, worsening wheeze, use of all accessory muscles, paradoxical chest wall motion, altered mentation (suggesting hypercapnic encephalopathy)",
+      "score": 0.3233165
+    },
+    {
+      "number": 23,
+      "title": "Living guidance for clinical management of COVID-19 - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/670e3b89-b4ae-429b-abee-7b0d3d54af49/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "Consider non-pharmacologic and pharmacologic interventions (such as opioids) for relief of dyspnoea that is refractory to treatment of the underlying cause (i.e. oxygen therapy, escalation of respiratory support, corticosteroids) and/or as part of end-of-life care (268). The narrow therapeutic margi",
+      "score": 0.44073462
+    },
+    {
+      "number": 24,
+      "title": "Opioids and the control of respiration",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(17)34291-5/pdf",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by KTS Pattinson \u00b7 2008 \u00b7 Cited by 953 \u2014 Symptomatic therapy of dyspnea with strong opioids and its effect on ventilation in palliative care patients.",
+      "score": 0.40344992
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "OXYCODONE HYDROCHLORIDE ORAL SOLUTION",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/200535s026lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "death. Marked mydriasis rather than miosis may be seen with hypoxia in overdose situations [see Clinical Pharmacology (12.2)].Toxic leukoencephalopathy has been reported after opioid overdose and can present hours, days, or weeks after apparent recovery from the initial intoxication. Treatment of Ov",
+      "score": 0.14924625
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Reference ID: 5716078 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/210730s004lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "disorders Flatulence, Dry mouth, Dyspepsia, Diarrhea General disorders and administration site Pyrexia, Infusion site extravasation conditions Injury, poisoning and procedural complications Procedural nausea Investigations Oxygen saturation decreased, Alanine aminotransferase increased, Blood pressu",
+      "score": 0.14636794
+    },
+    {
+      "number": 3,
+      "title": "Cardiopulmonary Exercise Testing in the Clinical ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.109.914788",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by R Arena \u00b7 2011 \u00b7 Cited by 327 \u2014 Exercise testing is used in the evaluation of dyspnea, both for the targeted diagnosis of suspected exercise-induced asthma (EIA)",
+      "score": 0.47124818
+    },
+    {
+      "number": 4,
+      "title": "2016 Focused Update: Clinical Recommendations for Cardiopulmonary Exercise Testing Data Assessment in Specific Patient Populations",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000406",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In the presence of exercise-induced dyspnea, some individuals exhibit impaired Image 87o 2 kinetics, demonstrated by a transition from Image 88o 2 linearity to a flattened pattern during progressive exercise. This phenomenon has commonly been interpreted as the inability of the heart to adequately i",
+      "score": 0.43338245
+    },
+    {
+      "number": 5,
+      "title": "Artificial Intelligence-Enabled ECG Algorithm to Identify Patients With Left Ventricular Systolic Dysfunction Presenting to the Emergency Department With Dyspnea",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008437?doi=10.1161%2FCIRCEP.120.008437",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "We retrospectively applied a validated artificial intelligence-enabled ECG algorithm for the identification of LVSD (defined as LV ejection fraction \u226435%) to a cohort of patients aged \u226518 years who were evaluated in the ED at a Mayo Clinic site with dyspnea. This AI-ECG algorithm has been previously",
+      "score": 0.43136916
+    },
+    {
+      "number": 6,
+      "title": "Artificial Intelligence-Enabled ECG Algorithm to Identify Patients With Left Ventricular Systolic Dysfunction Presenting to the Emergency Department With Dyspnea | Circulation: Arrhythmia and Electrophysiology",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008437",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This AI-ECG algorithm has been previously demonstrated to be effective in identification of LVSD.6 To test this hypothesis, we performed a retrospective study of patients presenting to the Mayo Clinic ED with acute dyspnea. Natriuretic peptides are by far the most widely used and the only biomarkers",
+      "score": 0.42205253
+    },
+    {
+      "number": 7,
+      "title": "Lung transplantation for patients with severe COVID-19",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/scitranslmed.abe4282",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "A 57-year-old woman with no known medical conditions presented with dyspnea and was initially treated with a 1-week course of steroids and hydroxychloroquine. She was intubated for acute hypoxemic respiratory failure. She was managed with prone ventilation based on ARDSNet guidelines. After intubati",
+      "score": 0.18440038
+    },
+    {
+      "number": 8,
+      "title": "Chronic Obstructive Pulmonary Disease | Annals of Internal ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-154-7-201104050-01004",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Less common diagnoses include other pulmonary conditions that cause dyspnea, such as interstitial lung disease; pulmonary arterial hypertension",
+      "score": 0.35884774
+    },
+    {
+      "number": 9,
+      "title": "Asthma | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-160-5-201403040-01003",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Abnormal heart sounds also might indicate heart failure or additional cardiac causes of dyspnea, such as valvular disease. Echocardiography can",
+      "score": 0.2698134
+    },
+    {
+      "number": 10,
+      "title": "How Would You Manage Perioperative Cardiovascular ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-26-02584",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The patient reports long-standing dyspnea on exertion, which he attributes to chronic obstructive pulmonary disease (COPD).",
+      "score": 0.18325754
+    },
+    {
+      "number": 11,
+      "title": "Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1569904826000091",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance - ScienceDirect\n# Invasive cardiopulmonary exercise testing: Physiologic assessment of unexplained dyspnea and exercise intolerance. iCPET is the most comprehensive test for unexp",
+      "score": 0.47563025
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369222012156",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism - ScienceDirect\n## Chest. Volume 163, Issue 4, April 2023, Pages 933-941. # Pulmonary Vascular: How I Do It Evaluation of Dyspnea and Exercise Intolerance After Acute Pulmonary Embolism. Author links open overlay pa",
+      "score": 0.44059017
+    },
+    {
+      "number": 13,
+      "title": "Lung Function - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/immunology-and-microbiology/lung-function",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Elderly patient, prior smoker, with insidious onset of dyspnea (occurs only with exertion for past 2 years) and mild nonproductive cough, without prior, relevant occupational exposures | Gaunt Respiratory and heart rates increased Coarse crackles heard at lung bases Mild clubbing Radiograph with d",
+      "score": 0.40028095
+    },
+    {
+      "number": 14,
+      "title": "Lung Diffusion Capacity - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/immunology-and-microbiology/lung-diffusion-capacity",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Older middle aged, moderate smoker for 30-40 yr, dyspnea (with moderate exertion), morning cough and phlegm, mild weight loss | Respiratory rate is likely to be increased at rest Thorax hyperinflated Breath sounds decreased Scattered wheezes and crackles Nail bed cyanosis Radiograph normal or hype",
+      "score": 0.3864398
+    },
+    {
+      "number": 15,
+      "title": "Acute dyspnea in the emergency department: a clinical review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10235852",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "74.Ponikowski P, Voors AA, Anker SD, Bueno H, Cleland JGF, Coats AJS, et al. 2016 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure: the task force for the diagnosis and treatment of acute and chronic heart failure of the European society of cardiology (ESC) Developed",
+      "score": 0.71995544
+    },
+    {
+      "number": 16,
+      "title": "Dyspnea - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK499965",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Acute dyspnea suggests conditions such as asthma exacerbation, pneumonia, anaphylaxis, pulmonary embolism, pneumothorax, acute myocardial ischemia, cardiac tamponade, or heart failure. In contrast, chronic or progressive dyspnea is more often due to COPD, interstitial lung disease, amyotrophic later",
+      "score": 0.6829338
+    },
+    {
+      "number": 17,
+      "title": "Dyspnea in Chronic Obstructive Pulmonary Disease: Expert Assessment of Management in Clinical Practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12623595",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In the assessment of dyspnea in COPD, it is important to distinguish between dyspnea due to COPD, dyspnea due to pulmonary causes other than COPD (e.g., pulmonary hypertension, bronchiectasis, pulmonary embolism, among others), dyspnea from nonpulmonary causes such as cardiac comorbidities (e.g., co",
+      "score": 0.6493346
+    },
+    {
+      "number": 18,
+      "title": "Approach to Adult Patients with Acute Dyspnea - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7126145",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Abstract\n\nUndifferentiated patients in respiratory distress require immediate attention in the emergency department. Using a thorough history and clinical examination, clinicians can determine the most likely causes of dyspnea. Understanding the pathophysiology of the most common diseases contrib",
+      "score": 0.63397753
+    },
+    {
+      "number": 19,
+      "title": "The Differential Diagnosis of Dyspnea - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5247680",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Chronic dyspnea\n\nChronic dyspnea is usually due to one of a small number of causes: bronchial asthma, COPD, congestive heart failure, interstitial lung disease, pneumonia, and mental disorders (e.g., anxiety disorders, panic disorders, somatization disorders) (3, 12). Further causes are given in ",
+      "score": 0.6097339
+    },
+    {
+      "number": 20,
+      "title": "Acute Pulmonary Embolism - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560551",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A timely diagnosis of PE is crucial because of the high associated mortality and morbidity, which may be prevented with early treatment. Notably, 30% of untreated patients with PEs die, while only 8% die after timely therapy.(#article-42576.r22)(#article-42576.r23) Unfortunately, diagnosing PE can b",
+      "score": 0.40683898
+    },
+    {
+      "number": 21,
+      "title": "Inclusion and Exclusion Criteria of Included Studies - Pharmacologic and Nonpharmacologic Therapies in Adult Patients With Exacerbation of COPD: A Systematic Review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK549033",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Abreu Gonzalez, 200617 | Diagnosed with an exacerbation of COPD. | Diagnosed with pneumonia, HF, arrhythmias, or kidney failure and those who did not show a sufficient level of cooperation. |\n| Aggarwal, 201168 | Aged >50 years known to have COPD as defined in The GOLD guidelines, who presented to",
+      "score": 0.37346497
+    },
+    {
+      "number": 22,
+      "title": "Chronic Obstructive Pulmonary Disease (COPD) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Cardiovascular and extremities:\n\nAcute exacerbation:\n\nDuring AECOPD, key clinical findings include worsened dyspnea at rest, increased sputum volume and purulence, worsening wheeze, use of all accessory muscles, paradoxical chest wall motion, altered mentation (suggesting hypercapnic encephalopathy)",
+      "score": 0.3233165
+    },
+    {
+      "number": 23,
+      "title": "Living guidance for clinical management of COVID-19 - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/670e3b89-b4ae-429b-abee-7b0d3d54af49/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "Consider non-pharmacologic and pharmacologic interventions (such as opioids) for relief of dyspnoea that is refractory to treatment of the underlying cause (i.e. oxygen therapy, escalation of respiratory support, corticosteroids) and/or as part of end-of-life care (268). The narrow therapeutic margi",
+      "score": 0.44073462
+    },
+    {
+      "number": 24,
+      "title": "Opioids and the control of respiration",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(17)34291-5/pdf",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by KTS Pattinson \u00b7 2008 \u00b7 Cited by 953 \u2014 Symptomatic therapy of dyspnea with strong opioids and its effect on ventilation in palliative care patients.",
+      "score": 0.40344992
+    }
+  ],
+  "publishedAt": "2026-08-21T01:55:29.096211+00:00",
+  "updatedAt": "2026-08-21T01:55:29.096211+00:00",
+  "readingMinutes": 7,
+  "slug": "dyspnea"
+}

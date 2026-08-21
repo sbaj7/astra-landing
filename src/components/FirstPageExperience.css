@@ -25,44 +25,44 @@
 
 .astra-first-page__workspace {
   display: flex;
-  width: min(760px, 100%);
+  width: min(720px, 100%);
   flex: 1;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: clamp(38px, 8vh, 86px) 0 clamp(28px, 5vh, 54px);
+  padding: clamp(40px, 9vh, 92px) 0 clamp(28px, 5vh, 52px);
 }
 
 .astra-first-page__intro {
   width: 100%;
-  margin: 0 auto 22px;
+  margin: 0 auto 20px;
   text-align: center;
   animation: astra-home-enter 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .astra-first-page .astra-hero-mark {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 18px;
+  width: 31px;
+  height: 31px;
+  margin-bottom: 17px;
   transform-origin: center;
   animation: astra-home-logo-heartbeat 720ms cubic-bezier(0.22, 1, 0.36, 1) 260ms 3 both;
 }
 
 .astra-first-page .astra-hero-mark__glyph {
-  width: 36px;
-  height: 36px;
-  mask-size: 63px 63px;
-  -webkit-mask-size: 63px 63px;
+  width: 31px;
+  height: 31px;
+  mask-size: 55px 55px;
+  -webkit-mask-size: 55px 55px;
 }
 
 .astra-first-page__title {
-  max-width: 720px;
+  max-width: 620px;
   margin: 0 auto;
   color: var(--astra-home-text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  font-size: clamp(25px, 2.9vw, 29px);
-  font-weight: 560;
-  letter-spacing: -0.032em;
+  font-size: clamp(24px, 2.7vw, 28px);
+  font-weight: 540;
+  letter-spacing: -0.03em;
   line-height: 1.2;
   text-wrap: balance;
   animation: astra-home-title-swap 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -76,10 +76,67 @@
   animation: astra-home-enter 560ms cubic-bezier(0.22, 1, 0.36, 1) 60ms both;
 }
 
-.astra-first-page__showcase {
+.astra-first-page__mode-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 13px auto 0;
+  animation: astra-home-enter 560ms cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+}
+
+.astra-first-page__mode {
+  padding: 7px 2px 6px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  color: color-mix(in srgb, var(--astra-home-muted) 72%, transparent);
+  background: transparent;
+  cursor: pointer;
+  font: 510 12.5px/1 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  letter-spacing: -0.01em;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.astra-first-page__mode:hover,
+.astra-first-page__mode:focus-visible {
+  color: var(--astra-home-text);
+}
+
+.astra-first-page__mode[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--astra-home-text) 72%, transparent);
+  color: var(--astra-home-text);
+}
+
+.astra-first-page__examples {
+  display: grid;
   width: 100%;
-  margin: 8px auto 0;
-  animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 18px auto 0;
+  animation: astra-home-examples-in 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.astra-first-page__example {
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid var(--astra-home-border);
+  border-radius: 9px;
+  color: color-mix(in srgb, var(--astra-home-text) 82%, var(--astra-home-muted));
+  background: transparent;
+  cursor: pointer;
+  font: 430 13px/1.38 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  letter-spacing: -0.012em;
+  text-align: left;
+  text-wrap: pretty;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.astra-first-page__example:hover,
+.astra-first-page__example:focus-visible {
+  border-color: var(--astra-home-border-strong);
+  color: var(--astra-home-text);
+  background: color-mix(in srgb, var(--astra-home-text) 2.5%, transparent);
 }
 
 .astra-first-page__resource-actions {
@@ -89,7 +146,7 @@
   justify-content: center;
   align-self: center;
   gap: 8px;
-  margin: 12px auto 0;
+  margin: 14px auto 0;
   animation: astra-home-enter 580ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both;
 }
 
@@ -98,15 +155,15 @@
   align-items: center;
   gap: 6px;
   margin: 0;
-  padding: 10px 16px;
-  border: 1px solid var(--astra-home-border);
-  border-radius: 8px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 4px;
   color: var(--astra-home-muted);
-  background: var(--astra-home-bg);
+  background: transparent;
   cursor: pointer;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  font-size: 13.5px;
-  font-weight: 520;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 1;
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
 }
@@ -114,17 +171,16 @@
 .astra-first-page__sources-action:hover,
 .astra-first-page__sources-action:focus-visible {
   color: var(--astra-home-text);
-  border-color: var(--astra-home-border-strong);
-  background: color-mix(in srgb, var(--astra-home-text) 2.5%, var(--astra-home-bg));
+  background: color-mix(in srgb, var(--astra-home-text) 3%, transparent);
 }
 
 .astra-first-page__scroll-cue {
   display: inline-flex;
   align-items: center;
-  align-self: center;
+  justify-self: center;
   gap: 5px;
-  margin: 0 auto;
-  padding: 10px 12px 18px;
+  margin: 0;
+  padding: 8px 10px;
   border: 0;
   color: var(--astra-home-muted);
   background: transparent;
@@ -138,6 +194,10 @@
   opacity: 0.42;
   transition: opacity 160ms ease, color 160ms ease;
   animation: astra-home-enter 640ms cubic-bezier(0.22, 1, 0.36, 1) 260ms both;
+}
+
+.astra-first-page__footer .astra-first-page__scroll-cue {
+  grid-column: 2;
 }
 
 .astra-first-page__scroll-cue:hover,
@@ -157,22 +217,21 @@
 }
 
 .astra-first-page__footer {
-  display: flex;
+  display: grid;
   width: 100%;
-  flex-direction: column;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 18px clamp(16px, 3vw, 32px) max(22px, env(safe-area-inset-bottom));
+  gap: 18px;
+  padding: 5px 0 max(16px, env(safe-area-inset-bottom));
   color: var(--astra-home-muted);
 }
 
 .astra-first-page__footer > p {
+  justify-self: start;
   margin: 0;
   font-size: 10px;
   font-weight: 400;
   line-height: 1.35;
-  text-align: center;
   opacity: 0.58;
 }
 
@@ -182,6 +241,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px 18px;
+  justify-self: end;
 }
 
 .astra-first-page__footer-links a,
@@ -218,6 +278,17 @@
 }
 
 @keyframes astra-home-title-swap {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes astra-home-examples-in {
   from {
     opacity: 0;
     transform: translateY(4px);
@@ -267,20 +338,20 @@
   }
 
   .astra-first-page__intro {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
   }
 
   .astra-first-page .astra-hero-mark {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 16px;
+    width: 29px;
+    height: 29px;
+    margin-bottom: 15px;
   }
 
   .astra-first-page .astra-hero-mark__glyph {
-    width: 32px;
-    height: 32px;
-    mask-size: 56px 56px;
-    -webkit-mask-size: 56px 56px;
+    width: 29px;
+    height: 29px;
+    mask-size: 51px 51px;
+    -webkit-mask-size: 51px 51px;
   }
 
   .astra-first-page__title {
@@ -289,20 +360,37 @@
     line-height: 1.18;
   }
 
-  /* Sit the mode hero directly under the input bar — a wide gap reads as a
-     disconnect between the toolbar chips and the tabs that mirror them. */
-  .astra-first-page__showcase {
-    margin-top: 6px;
+  .astra-first-page__mode-picker {
+    gap: 10px;
+    margin-top: 11px;
+  }
+
+  .astra-first-page__examples {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 15px;
+  }
+
+  .astra-first-page__example {
+    min-height: 0;
+    padding: 12px 13px;
+    font-size: 12.75px;
   }
 
   .astra-first-page__sources-action {
-    font-size: 12.5px;
+    font-size: 11.5px;
   }
 
   .astra-first-page__footer {
-    gap: 7px 14px;
-    padding-top: 14px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 7px;
+    padding-top: 12px;
   }
+
+  .astra-first-page__footer > p,
+  .astra-first-page__footer-links,
+  .astra-first-page__scroll-cue { grid-column: 1; justify-self: center; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {

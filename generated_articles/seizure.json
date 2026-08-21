@@ -1,0 +1,761 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neurology",
+  "title": "Seizure",
+  "summary": "Manage a suspected seizure by identifying ongoing status epilepticus, rapidly separating acute provoked from unprovoked events, obtaining targeted metabolic, infectious, toxicologic, EEG, and neuroimaging data, and using recurrence-risk features to decide whether long-term antiseizure treatment is justified.",
+  "seoDescription": "Physician guide to seizure stabilization, status epilepticus recognition, targeted evaluation, etiologic triage, EEG use, and recurrence-risk counseling.",
+  "clinicalQuestion": "How should clinicians stabilize, evaluate, and risk-stratify an adult presenting after a suspected seizure?",
+  "specialty": "Neurology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "seizure evaluation",
+    "first unprovoked seizure",
+    "status epilepticus",
+    "nonconvulsive status epilepticus",
+    "EEG",
+    "seizure recurrence"
+  ],
+  "keyTakeaways": [
+    "Treat continuous clinical or electrographic seizure activity lasting 5 minutes or recurrent seizures without recovery to baseline as status epilepticus. [8][11]",
+    "In a suspected seizure, first determine whether the event is acute provoked or unprovoked; obtain electrolytes and pursue lumbar puncture when fever, immunosuppression, or other features suggest CNS infection. [12]",
+    "Persistent altered mental status after convulsions warrants prompt EEG evaluation for nonconvulsive seizures or nonconvulsive status epilepticus. [6][16]",
+    "After a first unprovoked seizure, recurrence risk is highest during the first 2 years and is estimated at 21% to 45%. [4][14]",
+    "Epilepsy may be diagnosed after one unprovoked seizure when the estimated 10-year recurrence risk is at least 60%. [15]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-triage",
+      "eyebrow": "Emergency triage",
+      "heading": "Identify status epilepticus and protect airway first",
+      "intro": "Time from onset and recovery between events determine the immediate pathway.",
+      "paragraphs": [
+        "Treat a seizure lasting at least 5 minutes, or recurrent clinical or electrographic seizures without return to baseline, as status epilepticus rather than waiting for spontaneous resolution. This threshold applies to generalized convulsive and electrographic seizure activity and should trigger immediate emergency management. [8][11]",
+        "For convulsive status epilepticus, prioritize airway protection, oxygenation, cardiorespiratory monitoring, IV access, bedside glucose measurement, and prompt benzodiazepine treatment. Benzodiazepines can cause decreased respirations, oversedation, and cardiopulmonary instability; anticipate ventilatory support when consciousness remains depressed or repeated rescue dosing is required. [18]",
+        "Escalate to ICU-level care for persistent convulsions, inability to protect the airway, or seizures that continue after initial therapy. Refractory status epilepticus is ongoing seizure activity despite one benzodiazepine and one non-benzodiazepine antiseizure medication; it requires critical care and IV anesthetic therapy to suppress seizures. [6]"
+      ],
+      "bullets": [
+        "Document witnessed onset time, semiologic evolution, focal features, trauma, medications, recent medication withdrawal, alcohol or substance exposure, pregnancy status, fever, and interval recovery; these details direct the acute-provoked differential. [12][13]",
+        "Treat nonconvulsive status epilepticus with impaired consciousness as aggressively as convulsive status epilepticus; it may follow convulsive status and is a treatable cause of coma. [6]",
+        "In altered mental status without an obvious motor seizure, obtain EEG promptly when nonconvulsive seizures are plausible; approximately 5% of emergency department patients with altered mental status have nonconvulsive seizures, including nonconvulsive status epilepticus. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition and escalation triggers in suspected status epilepticus. [6][8][11][16]",
+        "columns": [
+          "Clinical state",
+          "Immediate interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Continuous convulsion for at least 5 minutes",
+            "Convulsive status epilepticus. [8][11]",
+            "Begin emergency seizure treatment and airway-focused resuscitation. [8][18]"
+          ],
+          [
+            "Recurrent seizures without return to baseline",
+            "Status epilepticus even if individual events are brief. [8][11]",
+            "Treat immediately; monitor for respiratory compromise. [8][18]"
+          ],
+          [
+            "Persistent coma or confusion after convulsions",
+            "Consider nonconvulsive seizures or nonconvulsive status epilepticus. [6][16]",
+            "Obtain urgent EEG and continue cause-directed evaluation. [6][16]"
+          ],
+          [
+            "Seizure persists after benzodiazepine plus one non-benzodiazepine antiseizure medication",
+            "Refractory status epilepticus. [6]",
+            "Admit to critical care for IV anesthetic seizure suppression. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-evaluation",
+      "eyebrow": "Diagnostic branch point",
+      "heading": "Classify the event as acute provoked, unprovoked, or a mimic",
+      "intro": "The first diagnostic question is whether a reversible acute cause precipitated the event.",
+      "paragraphs": [
+        "Obtain a focused history and examination after stabilization, then decide whether the event was provoked by a metabolic, toxic, infectious, structural, or medication-related insult or was unprovoked. Initial laboratory evaluation typically includes electrolytes; add targeted studies according to clinical context rather than using an indiscriminate panel. [12]",
+        "Use fever, immunosuppression, meningismus, persistent encephalopathy, or other features concerning for CNS infection to lower the threshold for lumbar puncture. In pregnancy, evaluate alternative causes of seizure with history, examination, medication and substance review, medical comorbidity assessment, and clinically directed CBC, glucose, electrolytes, urinalysis for protein, toxicology studies, lumbar puncture, and brain imaging. [12][13]",
+        "Do not anchor on epilepsy when the event history favors a mimic. Convulsive syncope, convulsive concussion, movement disorders, rigors, sleep-related events, and psychogenic nonepileptic spells remain in the differential; a witness account of onset, motor sequence, awareness, and recovery is often the decisive data source. [12]"
+      ],
+      "bullets": [
+        "Check bedside glucose during ongoing or recently terminated convulsive activity; glucose is specifically identified among the immediate laboratory assessments in seizure evaluation. [12][13]",
+        "Review prescribed drugs, recent antiseizure medication interruption, alcohol use, and substance exposure before labeling an event unprovoked. [12][13]",
+        "Obtain CT or MRI when clinical circumstances raise concern for intracranial pathology; neuroimaging is part of the diagnostic assessment of seizures in pregnancy and alternative neurologic diagnoses. [13]"
+      ],
+      "subsections": [
+        {
+          "heading": "When infection or inflammation is plausible",
+          "paragraphs": [
+            "Fever or immunosuppression should prompt evaluation for CNS infection, including lumbar puncture when clinically appropriate. Persistent altered mental status after a seizure should not be attributed solely to a postictal state until ongoing electrographic seizure activity and CNS infection have been considered. [12][16]"
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "When pregnancy changes the differential",
+          "paragraphs": [
+            "A seizure during pregnancy requires assessment for eclampsia alongside epilepsy, stroke, toxic-metabolic disease, and other intracranial disorders. Urinalysis for protein, blood pressure assessment, and brain CT or MRI are clinically directed components of this evaluation; treatment must be directed to the identified underlying disorder. [13]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Targeted diagnostic pathways after stabilization. [12][13][16]",
+        "columns": [
+          "Clinical pattern",
+          "Tests or data that change management",
+          "Interpretation and next step"
+        ],
+        "rows": [
+          [
+            "Possible metabolic or toxic seizure",
+            "Electrolytes, glucose, medication review, and toxicology testing when indicated. [12][13]",
+            "Identify and correct the provoking abnormality; avoid classifying as unprovoked before the acute cause is addressed. [12]"
+          ],
+          [
+            "Fever, immunosuppression, or concern for CNS infection",
+            "Lumbar puncture when clinically appropriate. [12]",
+            "Evaluate for CNS infection and direct therapy to the identified cause. [12]"
+          ],
+          [
+            "Persistent altered mental status after apparent seizure termination",
+            "Urgent EEG. [6][16]",
+            "Detect or exclude nonconvulsive seizures or nonconvulsive status epilepticus. [6][16]"
+          ],
+          [
+            "Pregnancy with seizure or atypical neurologic features",
+            "Blood pressure assessment, urinalysis for protein, CBC, glucose, electrolytes, clinically directed toxicology, and brain CT or MRI. [13]",
+            "Distinguish eclampsia from epilepsy, stroke, and other secondary causes before definitive treatment. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "eeg-and-imaging",
+      "eyebrow": "Neurodiagnostics",
+      "heading": "Use EEG to detect ongoing seizures and refine recurrence risk",
+      "intro": "EEG has different value in persistent encephalopathy than after full recovery.",
+      "paragraphs": [
+        "Order EEG urgently for persistent altered mental status, unexplained behavioral change, or coma after a suspected seizure because nonconvulsive status epilepticus depends on EEG findings and may not have a prominent motor component. Delayed recognition is clinically consequential: approximately half of patients with nonconvulsive status epilepticus are diagnosed more than 24 hours after emergency department arrival. [6][16]",
+        "After a first unprovoked seizure, EEG findings help recurrence-risk counseling. Interictal epileptiform discharges are associated with increased recurrence risk after a first unprovoked seizure, whereas nonspecific EEG abnormalities should not be treated as equivalent evidence of epilepsy. [3]",
+        "Use CT or MRI selectively to investigate a suspected structural cause, particularly when the history or examination raises concern for stroke, trauma, tumor, infection, or another intracranial disorder. In pregnant patients with seizure, CT or MRI is part of the evaluation for alternative diagnoses. [13]"
+      ],
+      "bullets": [
+        "A normal neurologic examination and return to baseline reduce urgency for emergent EEG relative to persistent encephalopathy, but do not resolve the longer-term question of whether the event was unprovoked. [6][12]",
+        "If focal weakness, focal seizure manifestations, or atypical recovery are present, prioritize evaluation for a focal cerebral lesion or stroke rather than assuming a primary generalized epilepsy syndrome. [12][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How EEG results affect the next decision after suspected seizure. [3][6][16]",
+        "columns": [
+          "EEG setting or finding",
+          "Clinical meaning",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Persistent altered mental status with EEG-confirmed seizure activity",
+            "Nonconvulsive seizure or nonconvulsive status epilepticus. [6][16]",
+            "Treat as an acute seizure emergency and monitor response clinically and electrographically. [6]"
+          ],
+          [
+            "First unprovoked seizure with interictal epileptiform discharges",
+            "Higher recurrence risk. [3]",
+            "Use this result in individualized counseling about epilepsy diagnosis and long-term antiseizure treatment. [3][15]"
+          ],
+          [
+            "Nonspecific EEG abnormality",
+            "Does not establish epilepsy by itself. [1][3]",
+            "Integrate with seizure history, imaging, and estimated recurrence risk rather than treating the EEG result alone. [3][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "first-unprovoked-seizure",
+      "eyebrow": "Longitudinal decision",
+      "heading": "Counsel after a first unprovoked seizure using recurrence risk",
+      "intro": "The decision to diagnose epilepsy or begin maintenance therapy is risk-based.",
+      "paragraphs": [
+        "Adults with a first unprovoked seizure should be counseled that recurrence risk is greatest in the first 2 years and is estimated at 21% to 45%. This estimate supports structured follow-up and a shared decision about whether immediate long-term antiseizure treatment offers sufficient benefit relative to treatment burden. [4][14]",
+        "One unprovoked or reflex seizure can establish epilepsy when the estimated probability of recurrence is at least 60% over the next 10 years. Apply this threshold only after excluding an acute provoking cause and integrating EEG, imaging, clinical history, and other evidence of an enduring predisposition to recurrent seizures. [15]",
+        "Avoid abruptly discontinuing an established antiseizure medication because abrupt withdrawal can increase seizure frequency and precipitate status epilepticus. Medication changes should be planned around the seizure diagnosis, adverse effects, comorbidities, concomitant drugs, and the patient\u2019s recurrence-risk profile. [23][21]"
+      ],
+      "bullets": [
+        "Arrange neurology follow-up after a first unprovoked seizure to integrate EEG and neuroimaging findings into an individualized recurrence estimate. [3][14][15]",
+        "If a reversible acute cause is identified, prioritize correction of that cause and reassess whether chronic antiseizure therapy is necessary after the acute illness resolves. [12][13]",
+        "Document whether the event was unprovoked, reflex, or acute provoked; this distinction determines whether the 10-year epilepsy diagnostic threshold is applicable. [12][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Risk-based framework after a first unprovoked seizure. [3][4][14][15]",
+        "columns": [
+          "Finding",
+          "Risk implication",
+          "Clinical decision"
+        ],
+        "rows": [
+          [
+            "First unprovoked seizure without a demonstrated acute cause",
+            "Recurrence risk is 21% to 45% within 2 years. [4][14]",
+            "Provide recurrence counseling and arrange diagnostic follow-up. [14]"
+          ],
+          [
+            "Interictal epileptiform EEG discharges",
+            "Associated with increased recurrence risk. [3]",
+            "Incorporate into the individualized estimate for epilepsy diagnosis and treatment planning. [3][15]"
+          ],
+          [
+            "Estimated recurrence risk at least 60% over 10 years",
+            "Meets the recurrence-risk criterion for epilepsy after one unprovoked or reflex seizure. [15]",
+            "Diagnose epilepsy if the overall clinical assessment supports this estimate. [15]"
+          ],
+          [
+            "Acute provoking factor identified",
+            "Does not represent the same recurrence-risk category as an unprovoked event. [12]",
+            "Treat the precipitant and reassess need for long-term antiseizure therapy. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "refractory-and-special-situations",
+      "eyebrow": "Escalation",
+      "heading": "Escalate persistent seizures and avoid missed secondary causes",
+      "intro": "Failure to recover or respond should trigger a parallel search for ongoing seizure and cause.",
+      "paragraphs": [
+        "When seizures persist despite a benzodiazepine and one non-benzodiazepine antiseizure medication, manage as refractory status epilepticus in critical care with IV anesthetic therapy. Continue evaluation for a reversible cause while seizure suppression is being established; refractory status management does not replace metabolic, infectious, toxicologic, or structural evaluation. [6][12]",
+        "For established epilepsy with prolonged convulsions, use the patient\u2019s individualized emergency management plan when immediately available. A convulsive seizure lasting 5 minutes or longer, or exceeding the individual\u2019s usual duration by more than 2 minutes, is a medical emergency requiring rescue treatment pathways. [10]",
+        "In pregnancy, seizure evaluation must remain broad even when eclampsia is suspected. Medication exposure, substance use, comorbid illness, CNS infection, stroke, and other intracranial pathology can alter both the diagnostic workup and definitive treatment. [13]"
+      ],
+      "bullets": [
+        "Do not accept persistent postictal confusion as the final explanation until nonconvulsive status epilepticus has been evaluated with EEG when suspicion remains. [6][16]",
+        "Repeated rescue benzodiazepine exposure requires close respiratory and hemodynamic monitoring because respiratory depression and cardiopulmonary instability can occur. [18]",
+        "Use imaging and lumbar puncture selectively for the clinical syndrome; fever, immunosuppression, and focal or atypical findings should shift the evaluation toward CNS infection or structural disease. [12][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation checkpoints after seizure presentation. [6][10][12][13][16][18]",
+        "columns": [
+          "Checkpoint",
+          "Do not miss",
+          "Required next step"
+        ],
+        "rows": [
+          [
+            "Convulsion reaches 5 minutes",
+            "Status epilepticus. [10][11]",
+            "Initiate emergency treatment and airway-focused monitoring. [10][18]"
+          ],
+          [
+            "Mental status does not normalize",
+            "Nonconvulsive seizures or nonconvulsive status epilepticus. [6][16]",
+            "Obtain urgent EEG. [16]"
+          ],
+          [
+            "Fever or immunosuppression accompanies seizure",
+            "CNS infection. [12]",
+            "Consider lumbar puncture and direct infectious evaluation. [12]"
+          ],
+          [
+            "Pregnancy with seizure",
+            "Eclampsia, stroke, epilepsy, toxic-metabolic disease, or another intracranial disorder. [13]",
+            "Perform clinically directed obstetric, laboratory, and neuroimaging evaluation. [13]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Abstracts",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/55/suppl_2/a1",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "Results: 74% had an EEG abnormality, 16% had a VEP abnormality, 6% had an SEP abnormality, 60% had SRAR abnormality, and 36% had abnormal Epworth scores. The EEG abnormalities in each case were sharp waves, largely localised. These are non-specific but may indicate subclinical neuronal dysfunction a",
+      "score": 0.103178136
+    },
+    {
+      "number": 2,
+      "title": "A Phase 1, Open-label Study of ASP9801, an Oncolytic Virus ...",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/14/2/e012377/DC1/embed/inline-supplementary-material-1.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "or electrical seizures without return to baseline in between \u2022 Deep focal motor weakness such as hemiparesis or paraparesis \u2022 Diffuse cerebral edema on neuroimaging; decerebrate or decorticate posturing; or cranial nerve VI palsy; or papilledema; or Cushing's triad \u2022 ICU care, consider mechanical ve",
+      "score": 0.09583088
+    },
+    {
+      "number": 3,
+      "title": "Management of a First Seizure",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2016/02000/management_of_a_first_seizure.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n5.\n\nKrumholz A, Wiebe S, Gronseth G, et al. Practice parameter: evaluating an apparent unprovoked first seizure in adults (an evidence-based review): report of the Quality Standards Subcommittee of the American Academy of Neurology and the American Epilepsy Society. Neurolo",
+      "score": 0.37744942
+    },
+    {
+      "number": 4,
+      "title": "New Guideline: How To Manage Unprovoked Seizures in Adults",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/neurotodayonline/fulltext/2015/05070/New_Guideline__How_To_Manage_Unprovoked_Seizures.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "We found that the risk of recurrence is highest within the first two years \u2014 between 21 and 45 percent (Level A) \u2014 and the likelihood of having a second seizure",
+      "score": 0.35300484
+    },
+    {
+      "number": 5,
+      "title": "Management of convulsive status epilepticus: recent updates",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10295829",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## _. 2019. 25:454-476. doi: 10.1212/CON.0000000000000716 [DOI] [PubMed] [Google Scholar]\n   5.Glauser T, Shinnar S, Gloss D, _et al_. Evidence-based guideline: treatment of convulsive status epilepticus in children and adults: report of the Guideline Committee of the American Epilepsy Society. _Epi",
+      "score": 0.7101667
+    },
+    {
+      "number": 6,
+      "title": "Guidance for: The acute management of status epilepticus in adult patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12062632",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In NCSE presenting as a change in mental status or behaviour from baseline, the risks are less clear and in most cases admission to critical care is not necessary. The consensus view remains that early active treatment is desirable in these patients and the majority of the recommendations in this gu",
+      "score": 0.64639384
+    },
+    {
+      "number": 7,
+      "title": "Background and research question - Pre-hospital and emergency department treatment of convulsive status epilepticus in adults: an evidence synthesis - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK579006",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Scottish Intercollegiate Guidelines Network (SIGN) 143 guideline for the diagnosis and management of epilepsy in adults, which was originally published in 2015 and subsequently revised in 2018,16 states that many status epilepticus seizures resolve themselves without treatment; emergency treatment i",
+      "score": 0.6227582
+    },
+    {
+      "number": 8,
+      "title": "Pediatric Status Epilepticus Management - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4277681",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  and anticonvulsant administration delays are associated with more refractory seizures. The most recent Neurocritical Care Society guideline for SE management in children and adults defines SE as \u201c5 minutes or more of (i) continuous clinical and/or electrographic seizure activity or (ii) recurren",
+      "score": 0.5962692
+    },
+    {
+      "number": 9,
+      "title": "Evidence-Based Guideline: Treatment of Convulsive Status ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4749120",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In 1993, the Epilepsy Foundation of America asked its professional advisory board to convene a working group of experts to develop a treatment protocol and related educational materials depicting the best current medical management of convulsive status epilepticus. The subsequent consensus guideline",
+      "score": 0.5954225
+    },
+    {
+      "number": 10,
+      "title": "Epilepsies in children, young people and adults - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK581165",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "### 7.3. Prolonged seizures\n\nFor convulsive seizures that continue for 5 minutes or more, follow the recommendations in the section on status epilepticus.\n\nManage prolonged convulsive seizures (any convulsive seizure that continues for more than 2 minutes longer than a person's usual seizure) as a m",
+      "score": 0.5829428
+    },
+    {
+      "number": 11,
+      "title": "Status Epilepticus - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430686",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nStatus epilepticus is a neurological emergency requiring immediate evaluation and management to prevent significant morbidity or mortality. Previously, status epilepticus was defined as a seizure with a duration equal to or greater than 30 minutes or a series of sei",
+      "score": 0.5663309
+    },
+    {
+      "number": 12,
+      "title": "Seizure - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430765",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nFurther clinical evaluation is guided by the history and physical examination. If the clinician believes that the event is a seizure, the first question is whether it is provoked or unprovoked. Typically, laboratory work, including electrolytes, is obtained. Lumbar puncture should be ",
+      "score": 0.47928494
+    },
+    {
+      "number": 13,
+      "title": "Eclampsia in the 21st century",
+      "detail": "www.ajog.org",
+      "url": "https://www.ajog.org/article/S0002-9378(20)31128-5/fulltext",
+      "authors": "www.ajog.org",
+      "host": "www.ajog.org",
+      "snippet": "When an alternative diagnosis is considered, the path toward the diagnosis of a seizure in pregnant women will begin with a thorough history and physical examination. Underlying causes, including medications, substance abuse, and medical comorbidities, should be evaluated. Although not routinely rec",
+      "score": 0.37284824
+    },
+    {
+      "number": 14,
+      "title": "Management of an unprovoked first seizure in adults ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25901057",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by A Krumholz \u00b7 2015 \u00b7 Cited by 602 \u2014 Adults with an unprovoked first seizure should be informed that their seizure recurrence risk is greatest early within the first 2 years (21%-45%) (Level A),",
+      "score": 0.28754818
+    },
+    {
+      "number": 15,
+      "title": "Epilepsy diagnosis based on one unprovoked seizure and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34740089",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by SV L\u00f3pez \u00b7 2021 \u00b7 Cited by 11 \u2014 epilepsy can be diagnosed after one unprovoked (or reflex) seizure when there is a \u226560% of seizure recurrence in the next decade.",
+      "score": 0.2495711
+    },
+    {
+      "number": 16,
+      "title": "YMEM_v70_i4_sS_COVER.indd",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/pb/assets/raw/Health%20Advance/journals/ymem/AnnalsOct17supplement.pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Lumbar puncture is a continued important procedure for diagnostic and therapeutic uses in United States hospitals. [...] Study Objectives: Nonconvulsive seizures (NCS) and other EEG abnormalities are common in emergency department (ED) patients with altered mental status (AMS). NCS and non-convulsiv",
+      "score": 0.18422419
+    },
+    {
+      "number": 17,
+      "title": "Keppra, INN-levetiracetam - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/keppra-h-c-277-p46-0060-epar-assessment-report_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": ": 1 day to 17.8 years Mean age : 6.3 years 6 months to 14.8 years Indication Acute repetitive seizures/status epilepticus, temporarily replacement for oral Levetiracetam for medical reasons, seizure prophylaxis during brain biopsy, maintenance treatment after Status epilepticus, acute exacerbation o",
+      "score": 0.65597594
+    },
+    {
+      "number": 18,
+      "title": "Rescue Medicine for Epilepsy in Education Settings",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/137/1/e20153876/52853/Rescue-Medicine-for-Epilepsy-in-Education-Settings",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Adverse effects of all seizure rescue medications include decreased respirations, oversedation, and cardiopulmonary instability, which may vary",
+      "score": 0.6108487
+    },
+    {
+      "number": 19,
+      "title": "Seizure Disorders (Chapter 327)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5786371/Seizure-Disorders-Chapter-327",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The lack of significant adverse effects and drug interactions has made levetiracetam an initial choice, especially for primary generalized seizures.",
+      "score": 0.5954225
+    },
+    {
+      "number": 20,
+      "title": "draft-guideline-clinical-investigation-medicinal-products ...",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/draft-guideline-clinical-investigation-medicinal-products-treatment-epileptic-disorders-revision-3_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "to an appropriate active comparator. For first line status epilepticus 551 treatment this would be an approved benzodiazepine. For trials in second line treatment, appropriate 552 comparators could be intravenous (fos)phenytoin or phenobarbital. Persistent seizure cessation should 553 be the primary",
+      "score": 0.5809471
+    },
+    {
+      "number": 21,
+      "title": "[PDF] EU RISK MANAGEMENT PLAN FOR LEVETIRACETAM 250MG ...",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/rmp-summary/keppra-epar-risk-management-plan-summary_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "risk, ie, \u0394APD90>6% and \u0394EMw<-10%. Relevance to human usage: No hazard for humans was noted. This has been outlined in SmPC Section 5.3. \u2022 Nervous system There were central nervous system adverse effects in any safety pharmacology study. Relevance to human usage: This has been outlined in SmPC Secti",
+      "score": 0.57437146
+    },
+    {
+      "number": 22,
+      "title": "Assessment report - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/lacosamide-ucb-h-c-5243-ws-1782-epar-assessment-report-variation_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "from the study treatment (and study): Assessment report EMA/23665/2021 Page 69/88 A subject, assigned to LCM) was diagnosed with epilepsy in 2010. The patient developed an SAE of moderate increased transaminases during the Maintenance Period of the study, 90 days after drug initiation. At the time o",
+      "score": 0.47124818
+    },
+    {
+      "number": 23,
+      "title": "LevETIRAcetam | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5852/LevETIRAcetam",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Antiseizure medications should not be discontinued abruptly because of the possibility of increasing seizure frequency and status epilepticus;",
+      "score": 0.41948205
+    },
+    {
+      "number": 24,
+      "title": "Seizure Disorders | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396225/95/Seizure-Disorders",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Benzodiazepines are effective, but adverse effects on behavior make them second-line therapeutic agents. Phenytoin, phenobarbital,",
+      "score": 0.3701121
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Abstracts",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/55/suppl_2/a1",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "Results: 74% had an EEG abnormality, 16% had a VEP abnormality, 6% had an SEP abnormality, 60% had SRAR abnormality, and 36% had abnormal Epworth scores. The EEG abnormalities in each case were sharp waves, largely localised. These are non-specific but may indicate subclinical neuronal dysfunction a",
+      "score": 0.103178136
+    },
+    {
+      "number": 2,
+      "title": "A Phase 1, Open-label Study of ASP9801, an Oncolytic Virus ...",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/14/2/e012377/DC1/embed/inline-supplementary-material-1.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "or electrical seizures without return to baseline in between \u2022 Deep focal motor weakness such as hemiparesis or paraparesis \u2022 Diffuse cerebral edema on neuroimaging; decerebrate or decorticate posturing; or cranial nerve VI palsy; or papilledema; or Cushing's triad \u2022 ICU care, consider mechanical ve",
+      "score": 0.09583088
+    },
+    {
+      "number": 3,
+      "title": "Management of a First Seizure",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2016/02000/management_of_a_first_seizure.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n5.\n\nKrumholz A, Wiebe S, Gronseth G, et al. Practice parameter: evaluating an apparent unprovoked first seizure in adults (an evidence-based review): report of the Quality Standards Subcommittee of the American Academy of Neurology and the American Epilepsy Society. Neurolo",
+      "score": 0.37744942
+    },
+    {
+      "number": 4,
+      "title": "New Guideline: How To Manage Unprovoked Seizures in Adults",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/neurotodayonline/fulltext/2015/05070/New_Guideline__How_To_Manage_Unprovoked_Seizures.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "We found that the risk of recurrence is highest within the first two years \u2014 between 21 and 45 percent (Level A) \u2014 and the likelihood of having a second seizure",
+      "score": 0.35300484
+    },
+    {
+      "number": 5,
+      "title": "Management of convulsive status epilepticus: recent updates",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10295829",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## _. 2019. 25:454-476. doi: 10.1212/CON.0000000000000716 [DOI] [PubMed] [Google Scholar]\n   5.Glauser T, Shinnar S, Gloss D, _et al_. Evidence-based guideline: treatment of convulsive status epilepticus in children and adults: report of the Guideline Committee of the American Epilepsy Society. _Epi",
+      "score": 0.7101667
+    },
+    {
+      "number": 6,
+      "title": "Guidance for: The acute management of status epilepticus in adult patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12062632",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In NCSE presenting as a change in mental status or behaviour from baseline, the risks are less clear and in most cases admission to critical care is not necessary. The consensus view remains that early active treatment is desirable in these patients and the majority of the recommendations in this gu",
+      "score": 0.64639384
+    },
+    {
+      "number": 7,
+      "title": "Background and research question - Pre-hospital and emergency department treatment of convulsive status epilepticus in adults: an evidence synthesis - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK579006",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Scottish Intercollegiate Guidelines Network (SIGN) 143 guideline for the diagnosis and management of epilepsy in adults, which was originally published in 2015 and subsequently revised in 2018,16 states that many status epilepticus seizures resolve themselves without treatment; emergency treatment i",
+      "score": 0.6227582
+    },
+    {
+      "number": 8,
+      "title": "Pediatric Status Epilepticus Management - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4277681",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  and anticonvulsant administration delays are associated with more refractory seizures. The most recent Neurocritical Care Society guideline for SE management in children and adults defines SE as \u201c5 minutes or more of (i) continuous clinical and/or electrographic seizure activity or (ii) recurren",
+      "score": 0.5962692
+    },
+    {
+      "number": 9,
+      "title": "Evidence-Based Guideline: Treatment of Convulsive Status ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4749120",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In 1993, the Epilepsy Foundation of America asked its professional advisory board to convene a working group of experts to develop a treatment protocol and related educational materials depicting the best current medical management of convulsive status epilepticus. The subsequent consensus guideline",
+      "score": 0.5954225
+    },
+    {
+      "number": 10,
+      "title": "Epilepsies in children, young people and adults - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK581165",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "### 7.3. Prolonged seizures\n\nFor convulsive seizures that continue for 5 minutes or more, follow the recommendations in the section on status epilepticus.\n\nManage prolonged convulsive seizures (any convulsive seizure that continues for more than 2 minutes longer than a person's usual seizure) as a m",
+      "score": 0.5829428
+    },
+    {
+      "number": 11,
+      "title": "Status Epilepticus - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430686",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nStatus epilepticus is a neurological emergency requiring immediate evaluation and management to prevent significant morbidity or mortality. Previously, status epilepticus was defined as a seizure with a duration equal to or greater than 30 minutes or a series of sei",
+      "score": 0.5663309
+    },
+    {
+      "number": 12,
+      "title": "Seizure - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430765",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nFurther clinical evaluation is guided by the history and physical examination. If the clinician believes that the event is a seizure, the first question is whether it is provoked or unprovoked. Typically, laboratory work, including electrolytes, is obtained. Lumbar puncture should be ",
+      "score": 0.47928494
+    },
+    {
+      "number": 13,
+      "title": "Eclampsia in the 21st century",
+      "detail": "www.ajog.org",
+      "url": "https://www.ajog.org/article/S0002-9378(20)31128-5/fulltext",
+      "authors": "www.ajog.org",
+      "host": "www.ajog.org",
+      "snippet": "When an alternative diagnosis is considered, the path toward the diagnosis of a seizure in pregnant women will begin with a thorough history and physical examination. Underlying causes, including medications, substance abuse, and medical comorbidities, should be evaluated. Although not routinely rec",
+      "score": 0.37284824
+    },
+    {
+      "number": 14,
+      "title": "Management of an unprovoked first seizure in adults ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25901057",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by A Krumholz \u00b7 2015 \u00b7 Cited by 602 \u2014 Adults with an unprovoked first seizure should be informed that their seizure recurrence risk is greatest early within the first 2 years (21%-45%) (Level A),",
+      "score": 0.28754818
+    },
+    {
+      "number": 15,
+      "title": "Epilepsy diagnosis based on one unprovoked seizure and ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34740089",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by SV L\u00f3pez \u00b7 2021 \u00b7 Cited by 11 \u2014 epilepsy can be diagnosed after one unprovoked (or reflex) seizure when there is a \u226560% of seizure recurrence in the next decade.",
+      "score": 0.2495711
+    },
+    {
+      "number": 16,
+      "title": "YMEM_v70_i4_sS_COVER.indd",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/pb/assets/raw/Health%20Advance/journals/ymem/AnnalsOct17supplement.pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Lumbar puncture is a continued important procedure for diagnostic and therapeutic uses in United States hospitals. [...] Study Objectives: Nonconvulsive seizures (NCS) and other EEG abnormalities are common in emergency department (ED) patients with altered mental status (AMS). NCS and non-convulsiv",
+      "score": 0.18422419
+    },
+    {
+      "number": 17,
+      "title": "Keppra, INN-levetiracetam - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/keppra-h-c-277-p46-0060-epar-assessment-report_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": ": 1 day to 17.8 years Mean age : 6.3 years 6 months to 14.8 years Indication Acute repetitive seizures/status epilepticus, temporarily replacement for oral Levetiracetam for medical reasons, seizure prophylaxis during brain biopsy, maintenance treatment after Status epilepticus, acute exacerbation o",
+      "score": 0.65597594
+    },
+    {
+      "number": 18,
+      "title": "Rescue Medicine for Epilepsy in Education Settings",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/137/1/e20153876/52853/Rescue-Medicine-for-Epilepsy-in-Education-Settings",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Adverse effects of all seizure rescue medications include decreased respirations, oversedation, and cardiopulmonary instability, which may vary",
+      "score": 0.6108487
+    },
+    {
+      "number": 19,
+      "title": "Seizure Disorders (Chapter 327)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5786371/Seizure-Disorders-Chapter-327",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The lack of significant adverse effects and drug interactions has made levetiracetam an initial choice, especially for primary generalized seizures.",
+      "score": 0.5954225
+    },
+    {
+      "number": 20,
+      "title": "draft-guideline-clinical-investigation-medicinal-products ...",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/draft-guideline-clinical-investigation-medicinal-products-treatment-epileptic-disorders-revision-3_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "to an appropriate active comparator. For first line status epilepticus 551 treatment this would be an approved benzodiazepine. For trials in second line treatment, appropriate 552 comparators could be intravenous (fos)phenytoin or phenobarbital. Persistent seizure cessation should 553 be the primary",
+      "score": 0.5809471
+    },
+    {
+      "number": 21,
+      "title": "[PDF] EU RISK MANAGEMENT PLAN FOR LEVETIRACETAM 250MG ...",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/rmp-summary/keppra-epar-risk-management-plan-summary_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "risk, ie, \u0394APD90>6% and \u0394EMw<-10%. Relevance to human usage: No hazard for humans was noted. This has been outlined in SmPC Section 5.3. \u2022 Nervous system There were central nervous system adverse effects in any safety pharmacology study. Relevance to human usage: This has been outlined in SmPC Secti",
+      "score": 0.57437146
+    },
+    {
+      "number": 22,
+      "title": "Assessment report - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/lacosamide-ucb-h-c-5243-ws-1782-epar-assessment-report-variation_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "from the study treatment (and study): Assessment report EMA/23665/2021 Page 69/88 A subject, assigned to LCM) was diagnosed with epilepsy in 2010. The patient developed an SAE of moderate increased transaminases during the Maintenance Period of the study, 90 days after drug initiation. At the time o",
+      "score": 0.47124818
+    },
+    {
+      "number": 23,
+      "title": "LevETIRAcetam | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5852/LevETIRAcetam",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Antiseizure medications should not be discontinued abruptly because of the possibility of increasing seizure frequency and status epilepticus;",
+      "score": 0.41948205
+    },
+    {
+      "number": 24,
+      "title": "Seizure Disorders | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396225/95/Seizure-Disorders",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Benzodiazepines are effective, but adverse effects on behavior make them second-line therapeutic agents. Phenytoin, phenobarbital,",
+      "score": 0.3701121
+    }
+  ],
+  "publishedAt": "2026-08-21T02:37:55.375903+00:00",
+  "updatedAt": "2026-08-21T02:37:55.375903+00:00",
+  "readingMinutes": 6,
+  "slug": "seizure"
+}

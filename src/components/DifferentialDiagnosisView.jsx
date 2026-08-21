@@ -7,8 +7,9 @@ import { ChevronRight } from 'lucide-react';
    ranked list. Each row expands to its evidence, then to its reasoning.
    ========================= */
 
-const SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif';
 const TEXT_SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif';
+const DISPLAY = '"Iowan Old Style", Baskerville, Palatino, Georgia, serif';
+const BODY = 'Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif';
 
 // The model is asked for these labels, but wording drifts — accept the common variants.
 const LABEL_ALIASES = {
@@ -149,17 +150,15 @@ export const InlineText = ({ children, citations, theme }) => {
       const pill = (
         <sup
           style={{
-            display: 'inline-block',
-            minWidth: 14,
+            display: 'inline',
             marginLeft: 2,
-            padding: '1px 4px',
-            borderRadius: 5,
-            background: `${theme.accentSoftBlue}1F`,
+            padding: 0,
+            background: 'transparent',
             color: theme.accentSoftBlue,
-            fontSize: 9,
-            fontWeight: 650,
-            lineHeight: 1.4,
-            textAlign: 'center',
+            fontFamily: TEXT_SANS,
+            fontSize: 10,
+            fontWeight: 600,
+            lineHeight: 1,
             verticalAlign: 'super',
           }}
         >
@@ -209,10 +208,11 @@ const EvidenceColumn = ({ items, tone, label, theme, citations, isStreaming }) =
             <span
               style={{
                 color: theme.textPrimary,
-                fontFamily: TEXT_SANS,
-                fontSize: 13.5,
-                letterSpacing: '-0.008em',
-                lineHeight: 1.5,
+                fontFamily: BODY,
+                fontSize: 16.5,
+                fontWeight: 400,
+                letterSpacing: 0,
+                lineHeight: 1.58,
               }}
             >
               <InlineText citations={citations} theme={theme}>{item}</InlineText>
@@ -221,7 +221,7 @@ const EvidenceColumn = ({ items, tone, label, theme, citations, isStreaming }) =
         ))}
       </div>
     ) : (
-      <span style={{ color: theme.textSecondary, fontFamily: TEXT_SANS, fontSize: 13, fontStyle: 'italic', opacity: 0.7 }}>
+      <span style={{ color: theme.textSecondary, fontFamily: BODY, fontSize: 16, fontStyle: 'italic', fontWeight: 400, opacity: 0.82 }}>
         {isStreaming ? 'Reasoning…' : 'None specified'}
       </span>
     )}
@@ -348,10 +348,10 @@ const DifferentialDiagnosisView = ({ content, theme, isDark, isStreaming, citati
             margin: 0,
             flexShrink: 0,
             color: theme.textPrimary,
-            fontFamily: SANS,
-            fontSize: isMobile ? 16 : 17,
-            fontWeight: 600,
-            letterSpacing: '-0.015em',
+            fontFamily: DISPLAY,
+            fontSize: isMobile ? 20 : 22,
+            fontWeight: 400,
+            letterSpacing: '-0.018em',
           }}
         >
           Differential Diagnosis
@@ -406,8 +406,8 @@ const DifferentialDiagnosisView = ({ content, theme, isDark, isStreaming, citati
                     minWidth: 0,
                     overflow: 'hidden',
                     color: theme.textPrimary,
-                    fontFamily: TEXT_SANS,
-                    fontSize: isMobile ? 13.5 : 14,
+                    fontFamily: BODY,
+                    fontSize: isMobile ? 15.5 : 16.5,
                     fontWeight: index === 0 ? 600 : 500,
                     letterSpacing: '-0.011em',
                     textOverflow: 'ellipsis',
@@ -524,13 +524,13 @@ const DifferentialDiagnosisView = ({ content, theme, isDark, isStreaming, citati
                               >
                                 Discriminator
                               </span>
-                              <p style={{ margin: 0, color: theme.textPrimary, fontFamily: TEXT_SANS, fontSize: 13.5, lineHeight: 1.6 }}>
+                              <p style={{ margin: 0, color: theme.textPrimary, fontFamily: BODY, fontSize: 16.5, fontWeight: 400, lineHeight: 1.64 }}>
                                 <InlineText citations={citations} theme={theme}>{item.discriminator}</InlineText>
                               </p>
                             </div>
                           )}
                           {item.reasoning && (
-                            <p style={{ margin: 0, color: theme.textPrimary, fontFamily: TEXT_SANS, fontSize: 13.5, lineHeight: 1.68 }}>
+                            <p style={{ margin: 0, color: theme.textPrimary, fontFamily: BODY, fontSize: 16.5, fontWeight: 400, lineHeight: 1.68 }}>
                               <InlineText citations={citations} theme={theme}>{item.reasoning}</InlineText>
                             </p>
                           )}

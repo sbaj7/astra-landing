@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular Medicine",
+  "title": "Syncope",
+  "summary": "Evaluate syncope by first identifying unstable cardiac, structural, pulmonary, hemorrhagic, or neurologic mimics; then use history, orthostatic vital signs, examination, and 12-lead ECG to direct selective testing, disposition, rhythm correlation, and cause-specific treatment.",
+  "seoDescription": "Point-of-care syncope evaluation: identify high-risk presentations, target ECG and orthostatic testing, select monitoring, and manage reflex, orthostatic, and cardiac causes.",
+  "clinicalQuestion": "How should physicians rapidly risk-stratify, evaluate, and manage adults presenting with syncope?",
+  "specialty": "Cardiology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "syncope evaluation",
+    "transient loss of consciousness",
+    "orthostatic hypotension",
+    "vasovagal syncope",
+    "arrhythmic syncope",
+    "ambulatory ECG monitoring"
+  ],
+  "keyTakeaways": [
+    "All patients require a focused history, physical examination, family history, and 12-lead ECG; obtain orthostatic blood pressure and heart-rate measurements, particularly in older adults. [4][6]",
+    "Treat syncope during exertion or supine, syncope with palpitations, heart failure or prior myocardial infarction, left-ventricular dysfunction, severe structural heart disease, or an abnormal ECG as a cardiac-risk presentation requiring targeted urgent evaluation. [3]",
+    "A classic vasovagal history with normal examination and ECG generally requires no further testing; avoid indiscriminate laboratory, neurologic, and imaging testing. [24]",
+    "Use rhythm monitoring when an arrhythmic mechanism remains plausible after initial evaluation; extended monitoring is appropriate for persistent unexplained syncope, with device selection guided by event frequency and need for symptom-rhythm correlation. [3][5]",
+    "Tilt-table testing is useful when vasovagal syncope or delayed orthostatic hypotension remains uncertain after initial assessment, and in selected cases to distinguish convulsive syncope from epilepsy or establish pseudosyncope. [4]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-triage",
+      "eyebrow": "First decision",
+      "heading": "Identify presentations requiring urgent resuscitation and monitored evaluation",
+      "intro": "Disposition follows suspected cause and immediate risk, not whether a prodrome was reported.",
+      "paragraphs": [
+        "Confirm that the event was transient loss of consciousness with rapid onset, short duration, and spontaneous complete recovery before applying a syncope pathway. Generalized epileptic seizure, functional transient loss of consciousness, acute blood loss, intoxication, concussion, subarachnoid hemorrhage, pulmonary embolism, aortic dissection, ruptured ectopic pregnancy, and other disorders can mimic syncope or coexist with it. [7][15][24]",
+        "Immediately assess airway, breathing, circulation, injury, persistent altered mental status, active bleeding, chest pain, dyspnea, focal neurologic findings, and hemodynamic instability. These findings redirect care toward the suspected emergency rather than outpatient syncope testing; vascular and obstructive causes requiring consideration include pulmonary embolism, aortic dissection, intracranial hemorrhage, carotid or vertebral dissection, and abdominal aortic aneurysm. [15][24]",
+        "Treat a presentation as potentially cardiac when syncope occurs during exertion or while supine, is accompanied by palpitations, or occurs in a patient with heart failure, prior myocardial infarction, left-ventricular dysfunction, severe structural heart disease, or abnormal ECG findings. Obtain monitored evaluation and targeted testing for arrhythmia, ischemia, or structural disease in this branch. [3]",
+        "Admit patients with a serious suspected underlying condition; patients with clearly low-risk features may be managed as outpatients, whereas intermediate-risk patients are candidates for emergency-department observation or a dedicated syncope unit when available. [21]"
+      ],
+      "bullets": [
+        "Do not label a patient \u201cvasovagal\u201d solely because a prodrome occurred: prodrome is not consistently present in vasovagal syncope and can accompany cardiac syncope. [8]",
+        "In older adults, address fall risk during disposition: the reported 1-year fall rate is 38% among persons with syncope versus 18.3% among nonfainters. [1]",
+        "Counsel patients to avoid driving and heights after a syncopal episode while recurrence risk and cause are being evaluated; driving restrictions vary by jurisdiction and underlying diagnosis. [19][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial disposition branch for syncope. [3][15][21]",
+        "columns": [
+          "Clinical branch",
+          "Discriminators",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Unstable or alternate emergency suspected",
+            "Persistent instability, trauma, bleeding, chest pain, dyspnea, focal neurologic findings, or concern for pulmonary embolism, dissection, hemorrhage, or aneurysm. [15][24]",
+            "Resuscitate and pursue disease-specific emergency evaluation; do not defer evaluation for a syncope clinic pathway. [15]"
+          ],
+          [
+            "Potential cardiac syncope",
+            "Exertional or supine event, palpitations, abnormal ECG, heart failure, prior MI, LV dysfunction, or severe structural disease. [3]",
+            "Monitored urgent evaluation with targeted rhythm, ischemic, and structural assessment. [3]"
+          ],
+          [
+            "Low-risk reflex or orthostatic pattern",
+            "Typical trigger/prodrome with normal examination and ECG and no concerning competing diagnosis. [23][24]",
+            "Outpatient management; testing is not routinely required for a classic vasovagal presentation. [24]"
+          ],
+          [
+            "Unexplained intermediate risk",
+            "No definitive benign diagnosis and no immediate unstable condition. [21]",
+            "Emergency observation or syncope-unit evaluation when available; arrange rhythm evaluation based on suspected arrhythmic risk. [21][3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-evaluation",
+      "eyebrow": "Core assessment",
+      "heading": "Use history, orthostatic vital signs, examination, and ECG to choose the diagnostic branch",
+      "intro": "The initial evaluation should establish a probable mechanism or identify the reason for escalation.",
+      "paragraphs": [
+        "Obtain a detailed event history from the patient and witnesses, including posture, exertion, situational trigger, prodrome, palpitations, duration of unresponsiveness, recovery, injury, medication exposure, prior events, cardiovascular history, and family history. A detailed history, physical examination, family history, and 12-lead ECG are recommended for syncope evaluation; in older adults, polypharmacy, autonomic dysfunction, orthostatic intolerance, and carotid sinus hypersensitivity frequently contribute simultaneously. [4][6]",
+        "Measure supine and standing blood pressure and heart rate. A reproducible orthostatic pattern shifts management toward volume status, medication effects, autonomic dysfunction, and orthostatic hypotension; when bedside assessment is nondiagnostic but delayed orthostatic hypotension remains suspected, tilt-table testing can be useful. [6][4]",
+        "Perform a 12-lead ECG in every patient and use it to direct further testing rather than as a stand-alone exclusion test. ECG and echocardiography can identify clues such as left-ventricular dysfunction, dynamic ventricular outflow obstruction, atrial myxoma or thrombus, and ECG abnormalities that indicate a cardiac pathway. [3]",
+        "Order CBC, electrolytes, cardiac biomarkers, imaging, or other studies only when the history, examination, or ECG suggests a specific competing diagnosis. In a healthy patient with classic vasovagal syncope, normal examination, and normal ECG, laboratory testing is low yield and no further testing is indicated. [24]"
+      ],
+      "bullets": [
+        "Review antihypertensives, diuretics, vasodilators, and other drugs that can worsen orthostatic intolerance; medication burden is a particular concern in older adults. [6]",
+        "Do not assume a single abnormality explains recurrent syncope in multimorbid patients; multiple mechanisms can interact, including reflex bradycardia, orthostatic hypotension, structural disease, and arrhythmia. [6][14]",
+        "Consider echocardiography when examination or clinical context suggests structural heart disease; use cardiac MRI selectively when required by the suspected diagnosis. [3][5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic pattern recognition after the initial evaluation. [3][6][7][14][23]",
+        "columns": [
+          "Likely mechanism",
+          "Pattern that increases probability",
+          "Directed next step"
+        ],
+        "rows": [
+          [
+            "Reflex syncope, including vasovagal or situational syncope",
+            "Nausea, diaphoresis, lightheadedness, prolonged standing, phlebotomy, micturition, or defecation trigger; normal cardiovascular evaluation supports this branch. [23][24]",
+            "Educate on trigger avoidance, hydration, recognition of prodrome, and supine positioning at symptom onset; reserve tilt testing for uncertain cases. [22][24][4]"
+          ],
+          [
+            "Orthostatic hypotension",
+            "Postural association with orthostatic blood-pressure and heart-rate assessment suggesting orthostatic intolerance; older adults may have medication, autonomic, and volume-related contributors. [6]",
+            "Correct reversible volume and medication contributors; consider tilt testing if delayed orthostatic hypotension remains suspected after nondiagnostic initial evaluation. [6][4]"
+          ],
+          [
+            "Arrhythmic syncope",
+            "Palpitations at event onset, abnormal ECG, structural heart disease, heart failure, prior MI, or unexplained recurrent events. [3]",
+            "Select ambulatory ECG monitoring for symptom-rhythm correlation; consider EPS in selected patients with suspected arrhythmic etiology. [3][4]"
+          ],
+          [
+            "Structural cardiac or cardiopulmonary syncope",
+            "Exertional or supine syncope, severe structural disease, LV dysfunction, dynamic outflow obstruction, ischemic disease, cardiomyopathy, or pulmonary hypertension. [3][14]",
+            "Obtain echocardiography and targeted ischemic, exercise, or advanced imaging assessment as clinically indicated. [3][5]"
+          ],
+          [
+            "Seizure or functional transient loss of consciousness",
+            "Features inconsistent with syncope, persistent diagnostic uncertainty, or convulsive episodes requiring differentiation from epilepsy. [7][4]",
+            "Use tilt-table testing selectively to distinguish convulsive syncope from epilepsy or establish pseudosyncope; pursue neurologic evaluation when the presentation supports a neurologic disorder. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "selective-testing",
+      "eyebrow": "Test selection",
+      "heading": "Match monitoring, tilt testing, imaging, and electrophysiology to the suspected mechanism",
+      "intro": "Testing should answer a mechanism-specific question that changes disposition or treatment.",
+      "paragraphs": [
+        "For recurrent or unexplained syncope with possible arrhythmia, pursue ambulatory ECG monitoring to document symptom-rhythm correlation. Long-term monitoring is often warranted when initial findings do not establish a diagnosis; in persistent unexplained syncope, extended rhythm monitoring may be used as appropriate, although an optimal device and monitoring duration are not firmly established. [3][5]",
+        "Use echocardiography when history, examination, or ECG raises concern for structural heart disease. In athletes with unexplained exertional syncope after an initial cardiovascular evaluation, extended monitoring can be beneficial; exercise stress testing, echocardiography, and cardiac MRI are selected according to the suspected cardiovascular substrate. [5]",
+        "Tilt-table testing is not a screening test for all unexplained events. It is useful after nondiagnostic initial evaluation when vasovagal syncope or delayed orthostatic hypotension is suspected, and it is reasonable in selected patients to distinguish convulsive syncope from epilepsy or diagnose pseudosyncope. It should not be used to predict response to vasovagal drug therapy. [4]",
+        "Consider electrophysiologic study only in selected patients with suspected arrhythmic syncope. EPS is not recommended when ECG and structure are normal unless a specific arrhythmic concern remains; a nondiagnostic initial evaluation does not itself justify invasive testing. [4]"
+      ],
+      "bullets": [
+        "Carotid sinus syndrome requires reproduction of clinical syncope during carotid sinus massage; cardioinhibitory responses include asystole longer than 3 seconds or AV block. [5]",
+        "In a patient with normal evaluation, no evidence of ischemia, and a structurally normal heart, the pretest probability of neurocardiogenic syncope may already be high; a negative tilt test does not exclude it. [6]",
+        "Do not rely on a normal short evaluation to exclude intermittent bradyarrhythmia or tachyarrhythmia when the event pattern remains concerning; choose longer rhythm monitoring instead. [3][6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Mechanism-directed testing in syncope. [3][4][5][6]",
+        "columns": [
+          "Test",
+          "Use when",
+          "Interpretation or limitation"
+        ],
+        "rows": [
+          [
+            "12-lead ECG",
+            "All patients during initial evaluation. [4]",
+            "Abnormal findings direct cardiac evaluation; a normal ECG alone does not exclude intermittent arrhythmia. [3][6]"
+          ],
+          [
+            "Orthostatic blood pressure and heart rate",
+            "All patients, especially older adults and those with postural symptoms or medication burden. [6]",
+            "Supports an orthostatic branch and identifies a target for medication and volume review. [6]"
+          ],
+          [
+            "Echocardiography",
+            "Clinical or ECG evidence of structural heart disease or exertional/supine high-risk pattern. [3]",
+            "May identify LV dysfunction, dynamic outflow obstruction, or intracardiac mass/thrombus. [3]"
+          ],
+          [
+            "Ambulatory or extended ECG monitoring",
+            "Suspected arrhythmia, recurrent unexplained syncope, or need for symptom-rhythm correlation. [3][5]",
+            "Monitoring duration and device selection remain individualized; persistent unexplained events justify extended monitoring. [5]"
+          ],
+          [
+            "Tilt-table testing",
+            "Unclear suspected vasovagal syncope, delayed orthostatic hypotension, convulsive syncope versus epilepsy, or suspected pseudosyncope. [4]",
+            "Do not use to predict vasovagal treatment response. [4]"
+          ],
+          [
+            "Electrophysiologic study",
+            "Selected patients with suspected arrhythmic etiology. [4]",
+            "Not recommended solely for syncope in patients without a specific arrhythmic indication. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cause-directed-management",
+      "eyebrow": "Treatment",
+      "heading": "Treat the mechanism and reduce recurrent injury",
+      "intro": "Management is directed to the cause; recurrent events justify escalation only after the mechanism is reassessed.",
+      "paragraphs": [
+        "For vasovagal syncope, provide education regarding symptom awareness and trigger avoidance. Patients with a recognizable prodrome should sit or lie supine when symptoms begin; increase fluid and salt intake when clinically appropriate, avoid dehydration, and use physical countermeasures when a sufficiently long prodrome permits. [21][22][24]",
+        "For recurrent vasovagal episodes despite avoidance of triggers and conservative measures, midodrine may be useful. Orthostatic training or fludrocortisone may be considered, and beta-blockers may be considered in patients older than 42 years; tilt-table response should not be used to predict medication benefit. [21][4]",
+        "For orthostatic syncope, identify and reverse exacerbating factors, including dehydration and medication burden. In older adults, address polypharmacy, autonomic dysfunction, orthostatic intolerance, and carotid sinus hypersensitivity concurrently rather than attributing events to one finding without reassessment. [6][22]",
+        "For cardiac syncope, definitive therapy depends on the documented rhythm disorder or structural substrate. When an arrhythmic cause is suspected but unproven, prioritize rhythm correlation with monitoring; when structural disease, ischemia, cardiomyopathy, or pulmonary hypertension is suspected, direct treatment to that disease process after targeted imaging and cardiovascular evaluation. [3][14]"
+      ],
+      "bullets": [
+        "Avoid empiric antiarrhythmic or device-directed treatment without a documented or strongly supported arrhythmic mechanism; reflex syncope can produce bradycardia and must be distinguished from primary conduction disease. [14]",
+        "Patients with recurrent unexplained exertional syncope should not return to athletic competition until cardiovascular evaluation is completed; extended monitoring may be beneficial when the initial assessment is unrevealing. [5]",
+        "Reassess injury risk, driving, work at heights, and access to rapid follow-up at every disposition decision. [19][22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Carotid sinus syndrome",
+          "paragraphs": [
+            "Consider carotid sinus syndrome when syncope occurs with mechanical carotid sinus stimulation and confirm it only when carotid sinus massage reproduces clinical syncope. A cardioinhibitory response is defined by asystole longer than 3 seconds or AV block during massage. [5]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Cause-directed outpatient and specialty actions. [5][6][21][22][24]",
+        "columns": [
+          "Mechanism",
+          "Initial intervention",
+          "Escalation trigger"
+        ],
+        "rows": [
+          [
+            "Vasovagal syncope",
+            "Trigger avoidance, fluid and salt intake when appropriate, prodrome recognition, and supine positioning at symptom onset. [22][24]",
+            "Recurrent episodes despite conservative management: consider midodrine; orthostatic training or fludrocortisone may be considered. [21]"
+          ],
+          [
+            "Orthostatic hypotension",
+            "Assess orthostatic vital signs; address dehydration, offending medications, autonomic dysfunction, and polypharmacy. [6][22]",
+            "Persistent unexplained postural events: consider tilt testing for delayed orthostatic hypotension. [4]"
+          ],
+          [
+            "Suspected arrhythmia",
+            "Obtain rhythm monitoring matched to recurrence pattern and cardiovascular risk. [3][5]",
+            "Persistent suspicion or documented arrhythmia: cardiovascular/electrophysiology-directed treatment. EPS is limited to selected suspected arrhythmic cases. [4]"
+          ],
+          [
+            "Carotid sinus syndrome",
+            "Confirm symptom reproduction with carotid sinus massage rather than diagnosing from an isolated physiologic response. [5]",
+            "Cardioinhibitory response with clinical syncope requires cause-specific cardiovascular management. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "follow-up-and-safety",
+      "eyebrow": "After disposition",
+      "heading": "Build follow-up around recurrence, injury risk, and diagnostic yield",
+      "intro": "A negative emergency evaluation is not the endpoint when the event pattern remains concerning.",
+      "paragraphs": [
+        "Arrange follow-up according to the unresolved diagnostic question: cardiovascular follow-up for abnormal ECG, structural disease, exertional or supine events, palpitations, or recurrent unexplained episodes; neurologic evaluation when seizure or other neurologic pathology remains plausible; and medication/autonomic review for orthostatic presentations. [3][4][6][7]",
+        "At follow-up, document recurrence frequency, posture and triggers, prodrome, injury, medication changes, orthostatic measurements, ECG findings, and any monitor-recorded symptoms. Escalate from short-term to extended ECG monitoring when intermittent arrhythmia remains plausible and initial monitoring has not captured an event. [3][5]",
+        "Avoid routine monitoring in low-risk patients whose emergency assessment establishes a benign reflex diagnosis. In contrast, low-risk patients with a negative initial emergency workup generally do not need ambulatory monitoring, although it may be considered for reassurance in selected patients; this tradeoff should not delay targeted evaluation in patients with cardiac-risk features. [23]"
+      ],
+      "bullets": [
+        "Syncope can recur and has important functional consequences; incorporate falls assessment in older adults and driving counseling in all patients with unresolved recurrence risk. [1][19]",
+        "A normal structural and ischemic evaluation lowers the likelihood of life-threatening disease but does not exclude reflex syncope, carotid sinus hypersensitivity, paroxysmal bradyarrhythmia, supraventricular tachycardia, or ventricular tachycardia. [6]",
+        "Use specialty referral as a mechanism-based decision: electrophysiology for suspected rhythm-mediated events, structural cardiology for cardiomyopathy or valve/outflow disease, and neurology for seizure-focused differential diagnosis. [3][4][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up priorities after an initially unrevealing syncope evaluation. [3][5][6][23]",
+        "columns": [
+          "Follow-up finding",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "No recurrence; classic reflex history; normal ECG and examination",
+            "Low-risk vasovagal pattern. [24]",
+            "Continue education and trigger-based prevention; routine ambulatory monitoring is generally unnecessary. [23][24]"
+          ],
+          [
+            "Recurrent unexplained episodes",
+            "Intermittent arrhythmia, reflex syncope, delayed orthostatic hypotension, or mixed mechanisms remain possible. [3][6]",
+            "Reassess orthostatic vital signs and select extended ECG monitoring or tilt testing according to the suspected branch. [4][5]"
+          ],
+          [
+            "Exertional, supine, palpitation-associated, or ECG-abnormal recurrence",
+            "Higher concern for cardiac syncope. [3]",
+            "Urgent cardiovascular reassessment with rhythm and structural evaluation. [3][5]"
+          ],
+          [
+            "Convulsive or diagnostically discordant events",
+            "Convulsive syncope, epilepsy, or functional transient loss of consciousness may be difficult to distinguish clinically. [4][7]",
+            "Consider tilt-table testing in selected cases and pursue neurologic evaluation when appropriate. [4]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "2017 ACC/AHA/HRS Guideline for the Evaluation and ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000499",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by WK Shen \u00b7 2017 \u00b7 Cited by 1528 \u2014 Older adults are predisposed to falls when syncope occurs, with a 1-year fall rate of 38% among fainters versus 18.3% among nonfainters. 2.3. Initial Evaluation",
+      "score": 0.69573146
+    },
+    {
+      "number": 2,
+      "title": "Syncope Evaluation in the Emergency Department Study ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.0000149236.92822.07",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by WK Shen \u00b7 2004 \u00b7 Cited by 407 \u2014 Syncope Evaluation in the Emergency Department Study (SEEDS): A Multidisciplinary Approach to Syncope Management ... clinical guidelines.",
+      "score": 0.44116792
+    },
+    {
+      "number": 3,
+      "title": "Syncope: Therapeutic Approaches",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.12.065",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in ViewerImage 2\n\nFigure 1. Initial Approach to the Evaluation of Suspected Syncope\n\nDiagnostic pathway for evaluation of suspected syncope (see the Syncope Classification and Diagnostic Tools section for details). The approach advocated here is modified from that proposed in the European Socie",
+      "score": 0.7120925
+    },
+    {
+      "number": 4,
+      "title": "2017 ACC/AHA/HRS Guideline for\u00a0the\u00a0Evaluation and Management of\u00a0Patients With Syncope: Executive\u00a0Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.03.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| COR | LOE | Recommendations |\n --- \n| I | C-LD | VVS evaluation, including a detailed medical history, physical examination, family history, and a 12-lead ECG, should be performed in all pediatric patients presenting with syncope(348\u2013357). |\n| I | C-LD | Noninvasive diagnostic testing should be pe",
+      "score": 0.6778372
+    },
+    {
+      "number": 5,
+      "title": "2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.03.003",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| IIa | C-LD | Extended monitoring can be beneficial for athletes with unexplained exertional syncope after an initial cardiovascular evaluation(717,718). |\n| N/A | For those with a suspected cardiovascular etiology of syncope, an evaluation includes an ECG, tilt-table testing, and imaging as clinic",
+      "score": 0.6519982
+    },
+    {
+      "number": 6,
+      "title": "AHA/ACCF Scientific Statement on the Evaluation of Syncope: From the American Heart Association Councils on Clinical Cardiology, Cardiovascular Nursing, Cardiovascular Disease in the Young, and Stroke, and the Quality of Care and Outcomes Research Interdisciplinary Working Group; and the American College of Cardiology Foundation In Collaboration With the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2005.12.019",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "As with other patients with syncope, the goal of the diagnostic evaluation in the elderly is to exclude life-threatening illnesses and to prevent recurrent falls. Orthostatic blood pressure and heart rate measurements should be obtained.\n\nThe treatment of syncope is directed at its cause. In the eld",
+      "score": 0.64986813
+    },
+    {
+      "number": 7,
+      "title": "A guide to disorders causing transient loss of consciousness: focus on syncope | Nature Reviews Neurology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrneurol.2009.99",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: A guide to disorders causing transient loss of consciousness: focus on syncope | Nature Reviews Neurology\n# A guide to disorders causing transient loss of consciousness: focus on syncope. *Nature Reviews Neurology* **volume\u00a05**,\u00a0pages 438\u2013448 (2009)Cite this article. Syncope is defined as TLO",
+      "score": 0.67527276
+    },
+    {
+      "number": 8,
+      "title": "Sunday, 30 August 2009",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article-pdf/30/suppl_1/1/1288213/ehp413.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Moscow Institute For Paediatry&Surgery, Moscow, Russian Federation Syncope is a common symptom in children with apparently normal heart. The diagnosis is often not evidence based in spite of careful analysis of personal and family history, physical examination, ECG, stress test, Holter monitoring, e",
+      "score": 0.529337
+    },
+    {
+      "number": 9,
+      "title": "\u2020Guidelines for the diagnosis and management of syncope ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/30/21/2631/2887508",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Developed in collaboration with \u00b7 2009 \u00b7 Cited by 21 \u2014 Equipment Core equipment for the Syncope Unit includes: ECG recorders, BP monitors, tilt table, external and implantable ECG monitoring systems, 24 h",
+      "score": 0.49611887
+    },
+    {
+      "number": 10,
+      "title": "1256.pdf - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article-pdf/22/15/1256/17884164/1256.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Brignole \u00b7 2001 \u00b7 Cited by 958 \u2014 The tests for neurally mediated syncope consist of tilt testing and carotid massage. ... spontaneous syncope. The relationship between carotid sinus",
+      "score": 0.46526662
+    },
+    {
+      "number": 11,
+      "title": "Guidelines for cardiac pacing and cardiac resynchronization ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/9/10/959/497331",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by PE Vardas \u00b7 2007 \u00b7 Cited by 1445 \u2014 Carotid sinus massage is a tool used to demonstrate carotid sinus syndrome in patients with syncope; its precise methodology and results are reported in the\u00a0...Read more",
+      "score": 0.41734326
+    },
+    {
+      "number": 12,
+      "title": "Risk stratification of syncope: Current syncope guidelines and beyond",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1566070221001594",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Syncope in the Emergency Department: A Practical Approach [...] 2023, BMC Medicine  Show abstract Syncope management is fraught with unnecessary tests and frequent failure to establish a diagnosis. We evaluated the potential of implementing the 2018 European Society of Cardiology (ESC) Syncope G",
+      "score": 0.3333952
+    },
+    {
+      "number": 13,
+      "title": "Clinical Classification of Syncope",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0033062012002125",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Syncope is a presenting symptom, and in itself is not a diagnosis. An etiology or a mechanism must be sought in all cases. Currently, most clinicians classify syncope on clinical grounds by attempting to ascertain its etiology. They then use this classification to guide further management. Using thi",
+      "score": 0.66045773
+    },
+    {
+      "number": 14,
+      "title": "Syncope - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146280603001981",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Syncope - ScienceDirect\n# Syncope. The principal groups of causes may be summarized as: (1) neurally mediated reflex syncope (eg, vasovagal faint, carotid sinus syndrome); (2) orthostatic (postural) syncope; (3) cardiac arrhythmias; (4) structural cardiac and pulmonary causes; and (5) cerebro",
+      "score": 0.6271529
+    },
+    {
+      "number": 15,
+      "title": "Vascular Causes of Syncope: An Emergency Medicine Review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467917304304",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Vascular Causes of Syncope: An Emergency Medicine Review - ScienceDirect\n# Clinical Review Vascular Causes of Syncope: An Emergency Medicine Review. Syncope is a common emergency department (ED) complaint, accounting for 2% of visits annually. This review evaluates vascular causes of syncope ",
+      "score": 0.6244086
+    },
+    {
+      "number": 16,
+      "title": "SynDA: Syncope Decision Aid for Emergency Care",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/63/NCT02971163/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "(Blanc, L'Her et al. 2002). In this common third scenario where no diagnosis is made, a disposition decision must be made under conditions of uncertainty: was the syncope/presyncope a result of a serious but occult cardiac condition (e.g. dysrhythmia) or was it truly benign? Current clinical practic",
+      "score": 0.6307082
+    },
+    {
+      "number": 17,
+      "title": "Key Reference Library Table 3 Syllabus for all heart rhythm specialists",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/recommended-reading/heart-rhythm/key-references-in-heart-rhythm/key-reference-library-table-3-syllabus-for-all-heart-rhythm-specialists4",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "8.1 Clinical evaluation\n\n Weinstock C, Wagner H, Snuckel M, et al. Evidence-Based Approach to Palpitations. Med Clin North Am. 2021 Jan;105(1):93-106. doi: 10.1016/j.mcna.2020.09.004.\n Thavendiranathan P, Bagai A, Khoo C, et al. Does this patient with palpitations have a cardiac arrhythmia? JAMA 200",
+      "score": 0.40359092
+    },
+    {
+      "number": 18,
+      "title": "Arrhythmias and Electrophysiology",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/scientific-statements/arrhythmias-and-electrophysiology",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "+ Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ESC Pocket Guidelines\n  + ESC Pocket Guidelines App\n  + ESC Chat\n\nScientific documents\n\n Scientific statements\n Scientific document policy\n Recommended reading\n\nClinical practice tools\n\n EHRA Key Messa",
+      "score": 0.16202202
+    },
+    {
+      "number": 19,
+      "title": "Driving restrictions in patients with implantable cardioverter defibrillators and pacemakers - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5728711",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Syncope is a common clinical problem, with an incidence rate of 6.2 per 1000 person-years in the Framingham study (#bib17), and is often recurrent (#bib18). Syncope while driving has evident personal and public implications, but data on the causes and outcome of syncope while driving are scarce. Pre",
+      "score": 0.5792344
+    },
+    {
+      "number": 20,
+      "title": "Syncope in the Emergency Department: A Practical Approach",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11172976",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords: syncope, management reasoning, orthostatic hypotension, arrhythmia, risk stratification\n\n## 1. Introduction\n\nSyncope is defined by the European Society of Cardiology (ESC) as a transient loss of consciousness (TLOC) due to cerebral hypoperfusion, characterized by a rapid onset, short durat",
+      "score": 0.5660431
+    },
+    {
+      "number": 21,
+      "title": "Evaluation and Management of Syncope: Comparing the Guidelines of the American College of Cardiology/American Heart Association/Heart Rhythm Society and the European Society of Cardiology",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7252783",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "One difficult decision physicians face is whether to discharge a patient from the emergency department or admit them for evaluation. With regard to disposition (Table 3), the ACC/AHA/HRS guidelines substratify based on the seriousness of the suspected underlying medical condition. The ESC guidelines",
+      "score": 0.5637388
+    },
+    {
+      "number": 22,
+      "title": "Syncope - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK442006",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Deterrence and Patient Education\n\nEducation is vital for patients experiencing syncope due to vasovagal responses, orthostatic hypotension, and situational triggers. Patients should be advised to refrain from driving and avoid heights following a syncopal episode. Additionally, individuals with s",
+      "score": 0.52334785
+    },
+    {
+      "number": 23,
+      "title": "Syncope: a review of emergency department management ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5052859",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## . Vasovagal syncope, also referred to as neurocardiogenic syncope, is the most common cause of syncope . This type of syncopal episode occurs due to inappropriate vasodilation of the vascular system or due to bradycardia that leads to cerebral hypoperfusion and loss of consciousness. Most patient",
+      "score": 0.51076555
+    },
+    {
+      "number": 24,
+      "title": "Vasovagal Episode - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470277",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Further emergency evaluation for syncope is dictated by the patient's presentation and existing comorbid conditions. In healthy patients with a classic history of vasovagal syncope, a normal exam, and a normal ECG, no further testing is indicated, and laboratory testing is low yield. When a diagnosi",
+      "score": 0.4603137
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "2017 ACC/AHA/HRS Guideline for the Evaluation and ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000499",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by WK Shen \u00b7 2017 \u00b7 Cited by 1528 \u2014 Older adults are predisposed to falls when syncope occurs, with a 1-year fall rate of 38% among fainters versus 18.3% among nonfainters. 2.3. Initial Evaluation",
+      "score": 0.69573146
+    },
+    {
+      "number": 2,
+      "title": "Syncope Evaluation in the Emergency Department Study ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.0000149236.92822.07",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by WK Shen \u00b7 2004 \u00b7 Cited by 407 \u2014 Syncope Evaluation in the Emergency Department Study (SEEDS): A Multidisciplinary Approach to Syncope Management ... clinical guidelines.",
+      "score": 0.44116792
+    },
+    {
+      "number": 3,
+      "title": "Syncope: Therapeutic Approaches",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.12.065",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in ViewerImage 2\n\nFigure 1. Initial Approach to the Evaluation of Suspected Syncope\n\nDiagnostic pathway for evaluation of suspected syncope (see the Syncope Classification and Diagnostic Tools section for details). The approach advocated here is modified from that proposed in the European Socie",
+      "score": 0.7120925
+    },
+    {
+      "number": 4,
+      "title": "2017 ACC/AHA/HRS Guideline for\u00a0the\u00a0Evaluation and Management of\u00a0Patients With Syncope: Executive\u00a0Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.03.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| COR | LOE | Recommendations |\n --- \n| I | C-LD | VVS evaluation, including a detailed medical history, physical examination, family history, and a 12-lead ECG, should be performed in all pediatric patients presenting with syncope(348\u2013357). |\n| I | C-LD | Noninvasive diagnostic testing should be pe",
+      "score": 0.6778372
+    },
+    {
+      "number": 5,
+      "title": "2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.03.003",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| IIa | C-LD | Extended monitoring can be beneficial for athletes with unexplained exertional syncope after an initial cardiovascular evaluation(717,718). |\n| N/A | For those with a suspected cardiovascular etiology of syncope, an evaluation includes an ECG, tilt-table testing, and imaging as clinic",
+      "score": 0.6519982
+    },
+    {
+      "number": 6,
+      "title": "AHA/ACCF Scientific Statement on the Evaluation of Syncope: From the American Heart Association Councils on Clinical Cardiology, Cardiovascular Nursing, Cardiovascular Disease in the Young, and Stroke, and the Quality of Care and Outcomes Research Interdisciplinary Working Group; and the American College of Cardiology Foundation In Collaboration With the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2005.12.019",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "As with other patients with syncope, the goal of the diagnostic evaluation in the elderly is to exclude life-threatening illnesses and to prevent recurrent falls. Orthostatic blood pressure and heart rate measurements should be obtained.\n\nThe treatment of syncope is directed at its cause. In the eld",
+      "score": 0.64986813
+    },
+    {
+      "number": 7,
+      "title": "A guide to disorders causing transient loss of consciousness: focus on syncope | Nature Reviews Neurology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrneurol.2009.99",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: A guide to disorders causing transient loss of consciousness: focus on syncope | Nature Reviews Neurology\n# A guide to disorders causing transient loss of consciousness: focus on syncope. *Nature Reviews Neurology* **volume\u00a05**,\u00a0pages 438\u2013448 (2009)Cite this article. Syncope is defined as TLO",
+      "score": 0.67527276
+    },
+    {
+      "number": 8,
+      "title": "Sunday, 30 August 2009",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article-pdf/30/suppl_1/1/1288213/ehp413.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Moscow Institute For Paediatry&Surgery, Moscow, Russian Federation Syncope is a common symptom in children with apparently normal heart. The diagnosis is often not evidence based in spite of careful analysis of personal and family history, physical examination, ECG, stress test, Holter monitoring, e",
+      "score": 0.529337
+    },
+    {
+      "number": 9,
+      "title": "\u2020Guidelines for the diagnosis and management of syncope ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/30/21/2631/2887508",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Developed in collaboration with \u00b7 2009 \u00b7 Cited by 21 \u2014 Equipment Core equipment for the Syncope Unit includes: ECG recorders, BP monitors, tilt table, external and implantable ECG monitoring systems, 24 h",
+      "score": 0.49611887
+    },
+    {
+      "number": 10,
+      "title": "1256.pdf - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article-pdf/22/15/1256/17884164/1256.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Brignole \u00b7 2001 \u00b7 Cited by 958 \u2014 The tests for neurally mediated syncope consist of tilt testing and carotid massage. ... spontaneous syncope. The relationship between carotid sinus",
+      "score": 0.46526662
+    },
+    {
+      "number": 11,
+      "title": "Guidelines for cardiac pacing and cardiac resynchronization ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/9/10/959/497331",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by PE Vardas \u00b7 2007 \u00b7 Cited by 1445 \u2014 Carotid sinus massage is a tool used to demonstrate carotid sinus syndrome in patients with syncope; its precise methodology and results are reported in the\u00a0...Read more",
+      "score": 0.41734326
+    },
+    {
+      "number": 12,
+      "title": "Risk stratification of syncope: Current syncope guidelines and beyond",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1566070221001594",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Syncope in the Emergency Department: A Practical Approach [...] 2023, BMC Medicine  Show abstract Syncope management is fraught with unnecessary tests and frequent failure to establish a diagnosis. We evaluated the potential of implementing the 2018 European Society of Cardiology (ESC) Syncope G",
+      "score": 0.3333952
+    },
+    {
+      "number": 13,
+      "title": "Clinical Classification of Syncope",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0033062012002125",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Syncope is a presenting symptom, and in itself is not a diagnosis. An etiology or a mechanism must be sought in all cases. Currently, most clinicians classify syncope on clinical grounds by attempting to ascertain its etiology. They then use this classification to guide further management. Using thi",
+      "score": 0.66045773
+    },
+    {
+      "number": 14,
+      "title": "Syncope - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146280603001981",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Syncope - ScienceDirect\n# Syncope. The principal groups of causes may be summarized as: (1) neurally mediated reflex syncope (eg, vasovagal faint, carotid sinus syndrome); (2) orthostatic (postural) syncope; (3) cardiac arrhythmias; (4) structural cardiac and pulmonary causes; and (5) cerebro",
+      "score": 0.6271529
+    },
+    {
+      "number": 15,
+      "title": "Vascular Causes of Syncope: An Emergency Medicine Review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467917304304",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Vascular Causes of Syncope: An Emergency Medicine Review - ScienceDirect\n# Clinical Review Vascular Causes of Syncope: An Emergency Medicine Review. Syncope is a common emergency department (ED) complaint, accounting for 2% of visits annually. This review evaluates vascular causes of syncope ",
+      "score": 0.6244086
+    },
+    {
+      "number": 16,
+      "title": "SynDA: Syncope Decision Aid for Emergency Care",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/63/NCT02971163/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "(Blanc, L'Her et al. 2002). In this common third scenario where no diagnosis is made, a disposition decision must be made under conditions of uncertainty: was the syncope/presyncope a result of a serious but occult cardiac condition (e.g. dysrhythmia) or was it truly benign? Current clinical practic",
+      "score": 0.6307082
+    },
+    {
+      "number": 17,
+      "title": "Key Reference Library Table 3 Syllabus for all heart rhythm specialists",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/recommended-reading/heart-rhythm/key-references-in-heart-rhythm/key-reference-library-table-3-syllabus-for-all-heart-rhythm-specialists4",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "8.1 Clinical evaluation\n\n Weinstock C, Wagner H, Snuckel M, et al. Evidence-Based Approach to Palpitations. Med Clin North Am. 2021 Jan;105(1):93-106. doi: 10.1016/j.mcna.2020.09.004.\n Thavendiranathan P, Bagai A, Khoo C, et al. Does this patient with palpitations have a cardiac arrhythmia? JAMA 200",
+      "score": 0.40359092
+    },
+    {
+      "number": 18,
+      "title": "Arrhythmias and Electrophysiology",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/scientific-statements/arrhythmias-and-electrophysiology",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "+ Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ESC Pocket Guidelines\n  + ESC Pocket Guidelines App\n  + ESC Chat\n\nScientific documents\n\n Scientific statements\n Scientific document policy\n Recommended reading\n\nClinical practice tools\n\n EHRA Key Messa",
+      "score": 0.16202202
+    },
+    {
+      "number": 19,
+      "title": "Driving restrictions in patients with implantable cardioverter defibrillators and pacemakers - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5728711",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Syncope is a common clinical problem, with an incidence rate of 6.2 per 1000 person-years in the Framingham study (#bib17), and is often recurrent (#bib18). Syncope while driving has evident personal and public implications, but data on the causes and outcome of syncope while driving are scarce. Pre",
+      "score": 0.5792344
+    },
+    {
+      "number": 20,
+      "title": "Syncope in the Emergency Department: A Practical Approach",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11172976",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords: syncope, management reasoning, orthostatic hypotension, arrhythmia, risk stratification\n\n## 1. Introduction\n\nSyncope is defined by the European Society of Cardiology (ESC) as a transient loss of consciousness (TLOC) due to cerebral hypoperfusion, characterized by a rapid onset, short durat",
+      "score": 0.5660431
+    },
+    {
+      "number": 21,
+      "title": "Evaluation and Management of Syncope: Comparing the Guidelines of the American College of Cardiology/American Heart Association/Heart Rhythm Society and the European Society of Cardiology",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7252783",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "One difficult decision physicians face is whether to discharge a patient from the emergency department or admit them for evaluation. With regard to disposition (Table 3), the ACC/AHA/HRS guidelines substratify based on the seriousness of the suspected underlying medical condition. The ESC guidelines",
+      "score": 0.5637388
+    },
+    {
+      "number": 22,
+      "title": "Syncope - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK442006",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Deterrence and Patient Education\n\nEducation is vital for patients experiencing syncope due to vasovagal responses, orthostatic hypotension, and situational triggers. Patients should be advised to refrain from driving and avoid heights following a syncopal episode. Additionally, individuals with s",
+      "score": 0.52334785
+    },
+    {
+      "number": 23,
+      "title": "Syncope: a review of emergency department management ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5052859",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## . Vasovagal syncope, also referred to as neurocardiogenic syncope, is the most common cause of syncope . This type of syncopal episode occurs due to inappropriate vasodilation of the vascular system or due to bradycardia that leads to cerebral hypoperfusion and loss of consciousness. Most patient",
+      "score": 0.51076555
+    },
+    {
+      "number": 24,
+      "title": "Vasovagal Episode - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470277",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Further emergency evaluation for syncope is dictated by the patient's presentation and existing comorbid conditions. In healthy patients with a classic history of vasovagal syncope, a normal exam, and a normal ECG, no further testing is indicated, and laboratory testing is low yield. When a diagnosi",
+      "score": 0.4603137
+    }
+  ],
+  "publishedAt": "2026-08-21T01:56:24.521512+00:00",
+  "updatedAt": "2026-08-21T01:56:24.521512+00:00",
+  "readingMinutes": 7,
+  "slug": "syncope"
+}

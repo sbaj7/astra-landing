@@ -1,0 +1,739 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary and Infectious Disease",
+  "title": "Community-Acquired Pneumonia",
+  "summary": "A decision-focused approach to confirming community-acquired pneumonia, selecting site of care, identifying severe disease and resistant-pathogen risk, obtaining targeted microbiology, and reassessing response when initial therapy fails.",
+  "seoDescription": "Physician guide to adult community-acquired pneumonia diagnosis, severity assessment, site-of-care decisions, microbiologic testing, and escalation.",
+  "clinicalQuestion": "How should immunocompetent adults with suspected community-acquired pneumonia be confirmed, risk stratified, tested, and escalated?",
+  "specialty": "Pulmonary and Infectious Disease",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "community-acquired pneumonia",
+    "CAP",
+    "pneumonia severity index",
+    "CURB-65",
+    "lung ultrasound",
+    "severe pneumonia",
+    "microbiologic testing"
+  ],
+  "keyTakeaways": [
+    "Confirm suspected CAP with a new pulmonary infiltrate plus a compatible acute lower-respiratory syndrome; obtain chest radiography in hospitalized patients. [3][5]",
+    "Use the Pneumonia Severity Index with clinical judgment for outpatient versus inpatient decisions; PSI has greater mortality-prediction accuracy than CURB-65 but does not replace assessment of oxygenation, hemodynamics, or social safety. [3][13]",
+    "Obtain sputum and blood cultures in severe CAP and when empirically treating for MRSA or Pseudomonas aeruginosa; these are the settings in which microbiology is most likely to change antimicrobial management. [3]",
+    "Lung ultrasound is a useful bedside adjunct when radiography is nondiagnostic or delayed; meta-analysis estimated 88% sensitivity and 86% specificity for adult pneumonia detection. [14]",
+    "Escalate care for evolving respiratory or vasopressor support needs rather than relying on a low-risk score alone; procalcitonin is associated with invasive respiratory or vasopressor support within 72 hours in hospitalized CAP. [24]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First decision",
+      "heading": "Identify patients who need immediate monitored or critical care",
+      "intro": "Stabilization and site-of-care decisions precede etiologic refinement.",
+      "paragraphs": [
+        "Assess oxygenation, respiratory work, blood pressure, mental status, and need for ventilatory or vasopressor support at presentation. CAP severity tools identify lower-risk patients suitable for ambulatory treatment, but they should not override an immediate requirement for invasive respiratory or vasopressor support. [24]",
+        "Use a two-step disposition approach: first decide whether hospitalization is needed, then determine ward versus ICU-level care. Clinical judgment is a required modifier because prognostic scores incompletely capture social support, baseline function, and rapidly evolving physiologic failure. [12]"
+      ],
+      "bullets": [
+        "Treat a new requirement for invasive respiratory support or vasopressors as an escalation signal independent of a calculated PSI or CURB-65 result. [24]",
+        "Reassess repeatedly during the first 72 hours of hospitalization, the period in which invasive respiratory or vasopressor support was evaluated in the EPIC CAP cohort. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial disposition framework for adult CAP. [3][12][13][24]",
+        "columns": [
+          "Decision",
+          "Operational approach",
+          "Interpretation and next action"
+        ],
+        "rows": [
+          [
+            "Outpatient versus inpatient",
+            "Calculate PSI and apply clinical judgment. [3][13]",
+            "PSI is preferred for mortality risk stratification and identifies more patients as low risk than CURB-65; override a low score when physiologic instability or unsafe outpatient conditions are present. [13]"
+          ],
+          [
+            "Consider admission",
+            "CRB-65 score greater than 1 is a proposed admission threshold. [12]",
+            "Use as a prompt for hospital evaluation rather than an isolated disposition rule. [12]"
+          ],
+          [
+            "Ward versus ICU-level care",
+            "Assess for actual or anticipated invasive respiratory or vasopressor support. [24]",
+            "Escalate monitoring and level of care when support is needed or likely; PSI and CURB-65 are not designed to substitute for this assessment. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-diagnosis",
+      "eyebrow": "Diagnostic confirmation",
+      "heading": "Confirm pneumonia and distinguish an imaging-negative presentation",
+      "intro": "Require objective lung involvement before labeling a lower-respiratory syndrome as CAP.",
+      "paragraphs": [
+        "Establish CAP when a new pulmonary infiltrate is present on chest imaging together with compatible acute lower-respiratory symptoms or findings. In hospitalized patients with suspected CAP, order chest radiography to confirm or exclude the diagnosis. [3][5]",
+        "When a portable radiograph is equivocal, technically limited, or discordant with the clinical examination, use point-of-care lung ultrasound as an adjunct. A meta-analysis reported pooled sensitivity of 88% and specificity of 86% for adult pneumonia, with higher sensitivity than chest radiography in the included comparison. [14]",
+        "Do not use CRP or procalcitonin as routine standalone diagnostic tests for CAP. Interpret inflammatory biomarkers only alongside the clinical syndrome and imaging, where they may contribute to severity assessment rather than establish the diagnosis. [11][12]"
+      ],
+      "bullets": [
+        "A diagnosis termed \u201cdefinite CAP\u201d in a recent hospital cohort required a new radiographic infiltrate plus at least one lower-respiratory symptom or examination abnormality. [5]",
+        "For an imaging-negative patient, reassess the diagnostic label rather than treating biomarker elevation as confirmation of pneumonia. [11][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Diagnostic tools and their decision roles in suspected adult CAP. [3][11][12][14]",
+        "columns": [
+          "Test or assessment",
+          "Best use",
+          "Limitation or interpretation"
+        ],
+        "rows": [
+          [
+            "Chest radiography",
+            "Obtain in hospitalized patients with suspected CAP to confirm or exclude pneumonia. [3]",
+            "CAP requires an infiltrate in conjunction with a compatible clinical syndrome. [3][5]"
+          ],
+          [
+            "Point-of-care lung ultrasound",
+            "Use as a bedside adjunct when pneumonia remains suspected and radiography is limited or discordant. [14]",
+            "Reported meta-analytic sensitivity was 88% and specificity 86%; performance depends on operator skill and the imaging reference standard. [14]"
+          ],
+          [
+            "CRP or procalcitonin",
+            "Consider only as adjunctive information integrated with clinical and radiologic findings. [11]",
+            "Routine measurement is not required for CAP diagnosis. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "severity-and-prognosis",
+      "eyebrow": "Risk stratification",
+      "heading": "Use severity scores for mortality risk, then look separately for organ-support risk",
+      "intro": "Scores inform disposition but do not define stability.",
+      "paragraphs": [
+        "Calculate the PSI when selecting outpatient versus inpatient care. PSI uses demographic characteristics, comorbidities, examination findings, laboratory values, and imaging data to stratify mortality risk; the 2019 ATS/IDSA approach recommends PSI with clinical judgment. [13]",
+        "CURB-65 and CRB-65 are simpler bedside alternatives, but they should be treated as screening tools rather than complete disposition instruments. The PSI was derived to estimate 30-day mortality across five risk classes, with mortality reported from 0.4% in class I to 31% in class V. [12]",
+        "Separate mortality prediction from prediction of respiratory or circulatory deterioration. SMART-COP incorporates systolic pressure, multilobar radiographic involvement, albumin, respiratory rate, tachycardia, confusion, oxygenation, and arterial pH; in one comparison it performed better than PSI and CURB-65 for predicting need for mechanical ventilation or inotropic support, although it missed some patients younger than 50 years. [24]",
+        "Procalcitonin may add prognostic information in hospitalized disease: in the EPIC multicenter cohort, it was strongly associated with invasive respiratory or vasopressor support within 72 hours and correlated with ATS minor criteria, PSI, and SMART-COP severity. It should complement, not replace, bedside reassessment and organ-failure evaluation. [24]"
+      ],
+      "bullets": [
+        "Do not discharge solely because a mortality score is low if hypoxemia, hypotension, confusion, or progressive work of breathing is present. [12][24]",
+        "Use score results to structure reassessment: PSI for mortality-oriented site-of-care decisions and physiologic support needs for escalation decisions. [13][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How to select a CAP risk tool. [12][13][24]",
+        "columns": [
+          "Tool",
+          "Primary decision supported",
+          "Important caveat"
+        ],
+        "rows": [
+          [
+            "PSI",
+            "Outpatient versus inpatient risk stratification with clinical judgment. [13]",
+            "It predicts mortality and is more complex than CURB-65; it does not independently settle ICU need. [12][13]"
+          ],
+          [
+            "CURB-65 or CRB-65",
+            "Rapid initial bedside risk assessment. [12]",
+            "A CRB-65 score greater than 1 has been proposed as a threshold to consider admission; apply clinical judgment. [12]"
+          ],
+          [
+            "SMART-COP",
+            "Estimate risk of mechanical ventilation or inotropic support. [24]",
+            "May miss younger patients requiring support and should not replace clinical monitoring. [24]"
+          ],
+          [
+            "Procalcitonin",
+            "Adjunctive prognostic marker in hospitalized CAP. [24]",
+            "Association with invasive support does not make it a standalone triage test. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "microbiology-and-etiology",
+      "eyebrow": "Targeted testing",
+      "heading": "Reserve broad microbiologic testing for severe disease or resistant-pathogen coverage",
+      "intro": "Testing should be ordered when results can narrow, redirect, or justify empiric therapy.",
+      "paragraphs": [
+        "Obtain sputum and blood cultures for severe CAP and for hospitalized patients receiving empiric coverage for MRSA or Pseudomonas aeruginosa. These are the explicit high-yield testing groups identified in adult CAP guidance summaries. [3]",
+        "Use rapidly available molecular pathogen testing when it can clarify viral versus bacterial contributors or identify a treatable respiratory pathogen; expanded rapid molecular testing is a major feature of contemporary CAP management. [1] Interpret a positive result within the clinical and imaging context rather than assuming it explains every infiltrate.",
+        "For pneumonia that does not resolve as expected or has atypical features, broaden the diagnosis before simply extending empiric antibiotics. In a recent CAP cohort, bronchoscopy was reserved for respiratory-specialist evaluation of atypical symptoms or nonresolving pneumonia, illustrating its role as a selective\u2014not routine\u2014diagnostic procedure. [5]"
+      ],
+      "bullets": [
+        "Collect blood and sputum cultures before antimicrobial changes when feasible in severe CAP or when MRSA/Pseudomonas coverage is planned. [3]",
+        "In nonresolving disease, reconsider an alternative infectious pathogen, an obstructing lesion, inflammatory lung disease, or a noninfectious infiltrative process; pursue targeted imaging and specialist-directed sampling when the presentation remains atypical. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Microbiologic and invasive testing triggers in CAP. [1][3][5]",
+        "columns": [
+          "Clinical context",
+          "Test or procedure",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Severe CAP",
+            "Blood cultures and sputum culture. [3]",
+            "Use results to direct antimicrobial therapy and assess for a microbiologically confirmed pathogen. [3]"
+          ],
+          [
+            "Empiric MRSA or Pseudomonas aeruginosa treatment",
+            "Blood cultures and sputum culture. [3]",
+            "Supports de-escalation or pathogen-directed treatment when microbiology is available. [3]"
+          ],
+          [
+            "Atypical or nonresolving pneumonia",
+            "Respiratory-specialist-directed bronchoscopy in selected cases. [5]",
+            "Seek an alternative diagnosis or microbiologic explanation rather than continuing unchanged empiric therapy. [5]"
+          ],
+          [
+            "Need for pathogen clarification",
+            "Rapid molecular respiratory testing when clinically actionable. [1]",
+            "May identify viral and other respiratory pathogens and informs antimicrobial reassessment. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "treatment-reassessment",
+      "eyebrow": "Treatment course",
+      "heading": "Start empiric therapy after diagnostic assessment and shorten treatment when clinical response permits",
+      "intro": "Antimicrobial selection should be reassessed against severity, microbiology, and trajectory.",
+      "paragraphs": [
+        "For patients admitted with CAP, begin the first antibiotic dose while the patient remains in the emergency department after diagnostic evaluation supports pneumonia; guidance does not require a rigid four-hour deadline, reflecting the risk of misdiagnosis and antibiotic overuse when speed is prioritized over diagnostic accuracy. [16]",
+        "Choose empiric treatment according to CAP severity, comorbidities, local resistance patterns, and whether MRSA or Pseudomonas coverage is being used; obtain cultures in the latter two scenarios to enable directed therapy and de-escalation. [3] Do not use this framework for hospital-acquired, ventilator-associated, COVID-19, or immunocompromised-host pneumonia without applying the relevant disease-specific guidance. [1][15]",
+        "Reassess antibiotic need and regimen as pathogen data, molecular testing, oxygen requirement, hemodynamics, and radiographic-clinical concordance evolve. Contemporary CAP updates identify evidence supporting shorter antibiotic courses, making a documented clinical response and early treatment review central stewardship steps. [1]",
+        "Systemic corticosteroids are an evolving issue in severe CAP: contemporary guidance updates cite new data supporting steroids specifically in severe pneumonia. Limit consideration to severe disease and verify the current guideline recommendation, contraindications, and patient-specific risks before prescribing. [1]"
+      ],
+      "bullets": [
+        "Do not delay initial inpatient treatment for exhaustive testing, but avoid protocol-driven antibiotic administration when the diagnosis remains unsubstantiated. [16]",
+        "At each reassessment, use culture and molecular results to narrow therapy where possible; persistent instability should prompt escalation of support and diagnostic reconsideration rather than automatic prolongation of the same regimen. [1][3][5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Treatment and reassessment checkpoints for hospitalized adult CAP. [1][3][16]",
+        "columns": [
+          "Checkpoint",
+          "Action",
+          "Why it changes care"
+        ],
+        "rows": [
+          [
+            "Emergency department after diagnostic assessment",
+            "Administer the first antibiotic dose before leaving the emergency department when CAP is diagnosed. [16]",
+            "Avoids unnecessary delay while preserving time to distinguish CAP from mimics. [16]"
+          ],
+          [
+            "Initial empiric MRSA or Pseudomonas coverage",
+            "Obtain blood and sputum cultures. [3]",
+            "Creates a basis for pathogen-directed therapy and de-escalation. [3]"
+          ],
+          [
+            "Early clinical review",
+            "Review microbiology, molecular testing, oxygenation, hemodynamics, and response. [1][3]",
+            "Supports narrower therapy and shorter treatment courses when clinical response permits. [1]"
+          ],
+          [
+            "Severe CAP",
+            "Consider whether corticosteroid evidence applies after confirming severe disease and contraindications. [1]",
+            "Steroid data cited in current updates are specific to severe pneumonia. [1]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Update on Managing Community-Acquired Pneumonia | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/update-managing-community-acquired-pneumonia-nejm-jw.NA59072",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\n### Background\n\nIn 2019, ATS and the Infectious Diseases Society of America (IDSA) cosponsored a guideline on managing adult community-acquired pneumonia (CAP; NEJM JW Gen Med Dec 1 2019 and Am J Respir Crit Care Med 2019; 200:45). The current update has been published solely by ATS, ",
+      "score": 0.7487387
+    },
+    {
+      "number": 2,
+      "title": "Community-Acquired Pneumonia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra1312885",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by DM Musher \u00b7 2014 \u00b7 Cited by 1034 \u2014 pneumonia remains a major cause of patients should be hospitalized \u30fb the IDSA/ATS guidelines \u30fb patients who are severely ill \u30fb only in",
+      "score": 0.50315
+    },
+    {
+      "number": 3,
+      "title": "Community-acquired pneumonia in adults (non Covid-19) - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/zh-cn/17",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "# Community-acquired pneumonia in adults (non Covid-19). Community-acquired pneumonia (CAP) is typically characterized by a new lung infiltrate on chest x-ray, together with one or more of the following: fever, chills, cough, sputum production, dyspnea, myalgia, arthralgia, pleuritic pain. Order a c",
+      "score": 0.6565047
+    },
+    {
+      "number": 4,
+      "title": "Randomized Trial of Amoxicillin for Pneumonia in Pakistan",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1911998",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by F Jehan \u00b7 2020 \u00b7 Cited by 67 \u2014 Effectiveness of amoxicillin and amoxicillin-clavulanate for the treatment of community-acquired pneumonia in adults and children: a systematic",
+      "score": 0.3679292
+    },
+    {
+      "number": 5,
+      "title": "Impact of antibiotic changes on hospital stay and treatment duration in community-acquired pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-73304-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### Definitions\n\nA definite CAP diagnosis required the presence of a new pulmonary infiltrate on chest radiography and at least one additional lower respiratory infection symptom and physical examination finding: fever\u2009>\u200938 \u00b0C, cough, sputum, dyspnea, tachypnea, white blood count\u2009>\u200912,000 mm3 or <\u20096",
+      "score": 0.50315
+    },
+    {
+      "number": 6,
+      "title": "Dual threat: Susceptibility mechanisms and treatment strategies for COVID-19 and bacterial co-infections",
+      "detail": "spj.science.org",
+      "url": "https://spj.science.org/doi/abs/10.1016/j.csbj.2025.05.033",
+      "authors": "spj.science.org",
+      "host": "spj.science.org",
+      "snippet": "Google Scholar\n\n92\n\nYe Z., Wang Y., Colunga-Lozano L.E. et al: Efficacy and safety of corticosteroids in COVID-19 based on evidence for COVID-19, other coronavirus infections, influenza, community-acquired pneumonia and acute respiratory distress syndrome: a systematic review and meta-analysis [J]. ",
+      "score": 0.35079992
+    },
+    {
+      "number": 7,
+      "title": "Treatment of Community\u2010Acquired Pneumonia: A Case ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2017/5045087",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Current IDSA/ATS guidelines recommend that in regions with a high rate (25%) of infection with high-level (MIC, \u226516 mg/mL) macrolide",
+      "score": 0.69573146
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and treatment of community\u2010acquired ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/crj.12674",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by B Cao \u00b7 2018 \u00b7 Cited by 324 \u2014 This guideline is applicable for the immunocompetent community-acquired pneumonia (CAP) patients aged 18 years and older.",
+      "score": 0.5059329
+    },
+    {
+      "number": 9,
+      "title": "Clinical progress note: Update in management in community ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.13174",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by AE Carpenter \u00b7 2023 \u00b7 Cited by 4 \u2014 Community-acquired pneumonia (CAP) in children is an infection of the lower respiratory tract that is acquired outside of the hospital setting.",
+      "score": 0.49948794
+    },
+    {
+      "number": 10,
+      "title": "Clinical Effectiveness and Outcomes of Azithromycin ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/8861376",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by AS Babonji \u00b7 2023 \u00b7 Cited by 9 \u2014 Community acquired pneumonia (CAP) is a common serious infection that is usually treated with a macrolide with a \u03b2-lactam while doxycycline is",
+      "score": 0.21133581
+    },
+    {
+      "number": 11,
+      "title": "Role of biomarkers in community-acquired pneumonia... : Journal of Acute Disease",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/joad/fulltext/2024/13030/role_of_biomarkers_in_community_acquired_pneumonia.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Role of biomarkers in community-acquired pneumonia... : Journal of Acute Disease\nBiomarkers and scoring systems play a crucial role in diagnosing, assessing severity, and guiding treatment decisions for CAP patients. Biomarkers like C reactive protein, procalcitonin, and the neutrophil-to-lym",
+      "score": 0.6018984
+    },
+    {
+      "number": 12,
+      "title": "Guidelines for diagnosis and management of community- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201229052-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Pneumonia severity index (PSI)\n\nThe PSI is a prognostic prediction rule that defines the severity of illness based on predicted risk of mortality at 30 days. It includes 20 prognostic variables to stratify the risk of death due to CAP into five classes. The mortality risk increases with the increase",
+      "score": 0.60133666
+    },
+    {
+      "number": 13,
+      "title": "The Saudi Thoracic Society evidence\u2010based guidelines for ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/aotm/_layouts/15/oaks.journals/downloadpdf.aspx?an=01284540-202510000-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The PSI incorporates demographic characteristics, comorbidities, physical examination findings, laboratory data, and imaging to stratify mortality risk and guide decisions regarding outpatient versus inpatient care [Tables 4 and 5].\n\nImage 9 Open multimedia modal\n\n## Table 4 Open multimedia modal\n\nP",
+      "score": 0.50344294
+    },
+    {
+      "number": 14,
+      "title": "Lung ultrasound for the diagnosis of pneumonia in adults: A ... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2017/01200/lung_ultrasound_for_the_diagnosis_of_pneumonia_in.6.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Lung ultrasound for the diagnosis of pneumonia in adults: A ... : Medicine\nAbbreviations: AUC = area under the curve, CAP = community-acquired pneumonia, CENTRAL = Cochrane Central Register of Controlled Trials, CT = computed tomography, DOR = diagnostic odds ratio, ICU = intensive care unit,",
+      "score": 0.50007385
+    },
+    {
+      "number": 15,
+      "title": "Pneumonia: diagnosis and management | Guidance",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/NG250",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Pneumonia: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing, assessing, and treating community-acquired and hospital-acquired pneumonia, including bacterial pneumonia secondary to COVID-19, in babies over 1 month (corrected gestational age), children, young pe",
+      "score": 0.7062922
+    },
+    {
+      "number": 16,
+      "title": "Managing community-acquired pneumonia during flu season",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/79/1/67.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Based on studies that showed a lower mortal-ity rate when antibiotics were started sooner, Medicare and Medicaid adopted a quality measure calling for starting antibiotics within 4 hours in patients being admitted to the hos-pital.50,71 However, several subsequent studies showed that the diagnosis o",
+      "score": 0.66229486
+    },
+    {
+      "number": 17,
+      "title": "NG250 Pneumonia: diagnosis and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng250/evidence/k-prognostic-accuracy-of-news2-and-pews-in-people-with-community-acquired-pneumonia-pdf-555571948502",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "use in all evidence reviews for this guideline. These terms aimed to cover all the included populations named in the final scope (section 3.1), namely babies over 28 days (corrected gestational age), children, young people and adults with suspected or diagnosed community-acquired or hospital acquire",
+      "score": 0.609455
+    },
+    {
+      "number": 18,
+      "title": "Diagnosis and Management of Community-acquired Pneumonia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1164%2Frccm.202507-1692ST&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by BE Jones \u00b7 2026 \u00b7 Cited by 155 \u2014 Guidelines for the management of adults with community-acquired pneumonia. Diagnosis, assessment of severity, antimicrobial therapy, and prevention",
+      "score": 0.60274047
+    },
+    {
+      "number": 19,
+      "title": "New Community-Acquired Pneumonia (CAP) Guidelines",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/aapgrandrounds/article/27/3/36/90582/New-Community-Acquired-Pneumonia-CAP-Guidelines",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The guidelines incorporate clinical questions to guide practitioners in determining optimal venues for delivery of care, ideal diagnostic",
+      "score": 0.586926
+    },
+    {
+      "number": 20,
+      "title": "Impact of a Guideline on Management of Children ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/129/3/e597/31718/Impact-of-a-Guideline-on-Management-of-Children",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Community-acquired pneumonia (CAP) is a common pediatric illness caused by Streptococcus pneumoniae. New pediatric Infectious Diseases Society",
+      "score": 0.49494705
+    },
+    {
+      "number": 21,
+      "title": "Pneumonia | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/47/4/196/207020/Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The diagnosis of uncomplicated, community-acquired pneumonia continues to be based on patient history, physical exam, and clinical judgement in",
+      "score": 0.48806435
+    },
+    {
+      "number": 22,
+      "title": "Infectious Diseases Society of America 2026 Guidance ... - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/amr-guidance-update.pdf",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "ill patients. Antimicrob Agents Chemother 2014; 58(12): 7331\u20139. 469. Rouby JJ, Bouhemad B, Monsel A, et al. Aerosolized antibiotics for ventilator-associated pneumonia: lessons from experimental studies. Anesthesiology 2012; 117(6): 1364\u201380. 470. Wenzler E, Fraidenburg DR, Scardina T, Danziger LH. I",
+      "score": 0.47475353
+    },
+    {
+      "number": 23,
+      "title": "Scenario: Community-acquired pneumonia | Chest infections",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/chest-infections-adult/management/community-acquired-pneumonia",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "## Content licensing\n\nCKS is third-party content hosted on the NICE site on behalf of the publishers Clarity\nInformatics Ltd (trading as Agilio Software | Primary Care). It is not NICE content and is\nexcluded from the NICE UK Open Content Licence.\n\nThis content is only available to clinicians in the",
+      "score": 0.35441124
+    },
+    {
+      "number": 24,
+      "title": "Procalcitonin in Severe Community-Acquired Pneumonia - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)52685-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Procalcitonin as an Early Marker of the Need for Invasive Respiratory or Vasopressor Support in Adults With Community-Acquired Pneumonia48560-0/fulltext \"Procalcitonin as an Early Marker of the Need for Invasive Respiratory or Vasopressor Support in Adults With Community-Acquired Pneumonia\"). Accord",
+      "score": 0.7197191
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Update on Managing Community-Acquired Pneumonia | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/update-managing-community-acquired-pneumonia-nejm-jw.NA59072",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\n### Background\n\nIn 2019, ATS and the Infectious Diseases Society of America (IDSA) cosponsored a guideline on managing adult community-acquired pneumonia (CAP; NEJM JW Gen Med Dec 1 2019 and Am J Respir Crit Care Med 2019; 200:45). The current update has been published solely by ATS, ",
+      "score": 0.7487387
+    },
+    {
+      "number": 2,
+      "title": "Community-Acquired Pneumonia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra1312885",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by DM Musher \u00b7 2014 \u00b7 Cited by 1034 \u2014 pneumonia remains a major cause of patients should be hospitalized \u30fb the IDSA/ATS guidelines \u30fb patients who are severely ill \u30fb only in",
+      "score": 0.50315
+    },
+    {
+      "number": 3,
+      "title": "Community-acquired pneumonia in adults (non Covid-19) - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/zh-cn/17",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "# Community-acquired pneumonia in adults (non Covid-19). Community-acquired pneumonia (CAP) is typically characterized by a new lung infiltrate on chest x-ray, together with one or more of the following: fever, chills, cough, sputum production, dyspnea, myalgia, arthralgia, pleuritic pain. Order a c",
+      "score": 0.6565047
+    },
+    {
+      "number": 4,
+      "title": "Randomized Trial of Amoxicillin for Pneumonia in Pakistan",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1911998",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by F Jehan \u00b7 2020 \u00b7 Cited by 67 \u2014 Effectiveness of amoxicillin and amoxicillin-clavulanate for the treatment of community-acquired pneumonia in adults and children: a systematic",
+      "score": 0.3679292
+    },
+    {
+      "number": 5,
+      "title": "Impact of antibiotic changes on hospital stay and treatment duration in community-acquired pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-73304-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### Definitions\n\nA definite CAP diagnosis required the presence of a new pulmonary infiltrate on chest radiography and at least one additional lower respiratory infection symptom and physical examination finding: fever\u2009>\u200938 \u00b0C, cough, sputum, dyspnea, tachypnea, white blood count\u2009>\u200912,000 mm3 or <\u20096",
+      "score": 0.50315
+    },
+    {
+      "number": 6,
+      "title": "Dual threat: Susceptibility mechanisms and treatment strategies for COVID-19 and bacterial co-infections",
+      "detail": "spj.science.org",
+      "url": "https://spj.science.org/doi/abs/10.1016/j.csbj.2025.05.033",
+      "authors": "spj.science.org",
+      "host": "spj.science.org",
+      "snippet": "Google Scholar\n\n92\n\nYe Z., Wang Y., Colunga-Lozano L.E. et al: Efficacy and safety of corticosteroids in COVID-19 based on evidence for COVID-19, other coronavirus infections, influenza, community-acquired pneumonia and acute respiratory distress syndrome: a systematic review and meta-analysis [J]. ",
+      "score": 0.35079992
+    },
+    {
+      "number": 7,
+      "title": "Treatment of Community\u2010Acquired Pneumonia: A Case ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2017/5045087",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Current IDSA/ATS guidelines recommend that in regions with a high rate (25%) of infection with high-level (MIC, \u226516 mg/mL) macrolide",
+      "score": 0.69573146
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and treatment of community\u2010acquired ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/crj.12674",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by B Cao \u00b7 2018 \u00b7 Cited by 324 \u2014 This guideline is applicable for the immunocompetent community-acquired pneumonia (CAP) patients aged 18 years and older.",
+      "score": 0.5059329
+    },
+    {
+      "number": 9,
+      "title": "Clinical progress note: Update in management in community ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.13174",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by AE Carpenter \u00b7 2023 \u00b7 Cited by 4 \u2014 Community-acquired pneumonia (CAP) in children is an infection of the lower respiratory tract that is acquired outside of the hospital setting.",
+      "score": 0.49948794
+    },
+    {
+      "number": 10,
+      "title": "Clinical Effectiveness and Outcomes of Azithromycin ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/8861376",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by AS Babonji \u00b7 2023 \u00b7 Cited by 9 \u2014 Community acquired pneumonia (CAP) is a common serious infection that is usually treated with a macrolide with a \u03b2-lactam while doxycycline is",
+      "score": 0.21133581
+    },
+    {
+      "number": 11,
+      "title": "Role of biomarkers in community-acquired pneumonia... : Journal of Acute Disease",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/joad/fulltext/2024/13030/role_of_biomarkers_in_community_acquired_pneumonia.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Role of biomarkers in community-acquired pneumonia... : Journal of Acute Disease\nBiomarkers and scoring systems play a crucial role in diagnosing, assessing severity, and guiding treatment decisions for CAP patients. Biomarkers like C reactive protein, procalcitonin, and the neutrophil-to-lym",
+      "score": 0.6018984
+    },
+    {
+      "number": 12,
+      "title": "Guidelines for diagnosis and management of community- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201229052-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Pneumonia severity index (PSI)\n\nThe PSI is a prognostic prediction rule that defines the severity of illness based on predicted risk of mortality at 30 days. It includes 20 prognostic variables to stratify the risk of death due to CAP into five classes. The mortality risk increases with the increase",
+      "score": 0.60133666
+    },
+    {
+      "number": 13,
+      "title": "The Saudi Thoracic Society evidence\u2010based guidelines for ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/aotm/_layouts/15/oaks.journals/downloadpdf.aspx?an=01284540-202510000-00001",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The PSI incorporates demographic characteristics, comorbidities, physical examination findings, laboratory data, and imaging to stratify mortality risk and guide decisions regarding outpatient versus inpatient care [Tables 4 and 5].\n\nImage 9 Open multimedia modal\n\n## Table 4 Open multimedia modal\n\nP",
+      "score": 0.50344294
+    },
+    {
+      "number": 14,
+      "title": "Lung ultrasound for the diagnosis of pneumonia in adults: A ... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2017/01200/lung_ultrasound_for_the_diagnosis_of_pneumonia_in.6.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Lung ultrasound for the diagnosis of pneumonia in adults: A ... : Medicine\nAbbreviations: AUC = area under the curve, CAP = community-acquired pneumonia, CENTRAL = Cochrane Central Register of Controlled Trials, CT = computed tomography, DOR = diagnostic odds ratio, ICU = intensive care unit,",
+      "score": 0.50007385
+    },
+    {
+      "number": 15,
+      "title": "Pneumonia: diagnosis and management | Guidance",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/NG250",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Pneumonia: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing, assessing, and treating community-acquired and hospital-acquired pneumonia, including bacterial pneumonia secondary to COVID-19, in babies over 1 month (corrected gestational age), children, young pe",
+      "score": 0.7062922
+    },
+    {
+      "number": 16,
+      "title": "Managing community-acquired pneumonia during flu season",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/79/1/67.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Based on studies that showed a lower mortal-ity rate when antibiotics were started sooner, Medicare and Medicaid adopted a quality measure calling for starting antibiotics within 4 hours in patients being admitted to the hos-pital.50,71 However, several subsequent studies showed that the diagnosis o",
+      "score": 0.66229486
+    },
+    {
+      "number": 17,
+      "title": "NG250 Pneumonia: diagnosis and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng250/evidence/k-prognostic-accuracy-of-news2-and-pews-in-people-with-community-acquired-pneumonia-pdf-555571948502",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "use in all evidence reviews for this guideline. These terms aimed to cover all the included populations named in the final scope (section 3.1), namely babies over 28 days (corrected gestational age), children, young people and adults with suspected or diagnosed community-acquired or hospital acquire",
+      "score": 0.609455
+    },
+    {
+      "number": 18,
+      "title": "Diagnosis and Management of Community-acquired Pneumonia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1164%2Frccm.202507-1692ST&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by BE Jones \u00b7 2026 \u00b7 Cited by 155 \u2014 Guidelines for the management of adults with community-acquired pneumonia. Diagnosis, assessment of severity, antimicrobial therapy, and prevention",
+      "score": 0.60274047
+    },
+    {
+      "number": 19,
+      "title": "New Community-Acquired Pneumonia (CAP) Guidelines",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/aapgrandrounds/article/27/3/36/90582/New-Community-Acquired-Pneumonia-CAP-Guidelines",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The guidelines incorporate clinical questions to guide practitioners in determining optimal venues for delivery of care, ideal diagnostic",
+      "score": 0.586926
+    },
+    {
+      "number": 20,
+      "title": "Impact of a Guideline on Management of Children ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/129/3/e597/31718/Impact-of-a-Guideline-on-Management-of-Children",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Community-acquired pneumonia (CAP) is a common pediatric illness caused by Streptococcus pneumoniae. New pediatric Infectious Diseases Society",
+      "score": 0.49494705
+    },
+    {
+      "number": 21,
+      "title": "Pneumonia | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/47/4/196/207020/Pneumonia",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The diagnosis of uncomplicated, community-acquired pneumonia continues to be based on patient history, physical exam, and clinical judgement in",
+      "score": 0.48806435
+    },
+    {
+      "number": 22,
+      "title": "Infectious Diseases Society of America 2026 Guidance ... - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/amr-guidance/5.0/amr-guidance-update.pdf",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "ill patients. Antimicrob Agents Chemother 2014; 58(12): 7331\u20139. 469. Rouby JJ, Bouhemad B, Monsel A, et al. Aerosolized antibiotics for ventilator-associated pneumonia: lessons from experimental studies. Anesthesiology 2012; 117(6): 1364\u201380. 470. Wenzler E, Fraidenburg DR, Scardina T, Danziger LH. I",
+      "score": 0.47475353
+    },
+    {
+      "number": 23,
+      "title": "Scenario: Community-acquired pneumonia | Chest infections",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/chest-infections-adult/management/community-acquired-pneumonia",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "## Content licensing\n\nCKS is third-party content hosted on the NICE site on behalf of the publishers Clarity\nInformatics Ltd (trading as Agilio Software | Primary Care). It is not NICE content and is\nexcluded from the NICE UK Open Content Licence.\n\nThis content is only available to clinicians in the",
+      "score": 0.35441124
+    },
+    {
+      "number": 24,
+      "title": "Procalcitonin in Severe Community-Acquired Pneumonia - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)52685-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Procalcitonin as an Early Marker of the Need for Invasive Respiratory or Vasopressor Support in Adults With Community-Acquired Pneumonia48560-0/fulltext \"Procalcitonin as an Early Marker of the Need for Invasive Respiratory or Vasopressor Support in Adults With Community-Acquired Pneumonia\"). Accord",
+      "score": 0.7197191
+    }
+  ],
+  "publishedAt": "2026-08-21T02:43:40.358855+00:00",
+  "updatedAt": "2026-08-21T02:43:40.358855+00:00",
+  "readingMinutes": 5,
+  "slug": "community-acquired-pneumonia"
+}

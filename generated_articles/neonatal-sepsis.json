@@ -1,0 +1,719 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neonatology",
+  "title": "Neonatal Sepsis",
+  "summary": "Neonatal sepsis requires immediate culture-directed evaluation and empiric treatment when illness is plausible, while structured early-onset risk assessment, serial examination, and timely culture review prevent avoidable antibiotic exposure in uninfected infants.",
+  "seoDescription": "Physician guide to neonatal sepsis: early- and late-onset evaluation, cultures and lumbar puncture, empiric antibiotics, stewardship, and prevention.",
+  "clinicalQuestion": "How should clinicians evaluate, empirically treat, and safely de-escalate suspected early- or late-onset neonatal sepsis?",
+  "specialty": "Neonatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "neonatal sepsis",
+    "early-onset sepsis",
+    "late-onset sepsis",
+    "EOS calculator",
+    "neonatal antibiotic stewardship",
+    "neonatal meningitis"
+  ],
+  "keyTakeaways": [
+    "For infants born at 35 weeks' gestation or later, acceptable early-onset sepsis strategies are categorical risk assessment, multivariate EOS-calculator assessment, or serial structured examinations; no approach identifies every case at birth. [10][11]",
+    "Obtain a blood culture before empiric antimicrobials whenever this does not materially delay treatment; collect at least 1 mL to optimize pathogen recovery. [11][12]",
+    "CBC indices, CRP, and procalcitonin cannot independently establish neonatal sepsis. Serial clinical assessment and culture results drive treatment decisions; serial CRP can support discontinuation in a clinically improving infant. [9][11][12]",
+    "For suspected early-onset bacterial sepsis, ampicillin plus gentamicin remains the standard empiric regimen; broaden only for severe illness, meningitis concern, or epidemiologically credible resistant Gram-negative risk. [11][12]",
+    "Stop empiric antibiotics by 36 to 48 hours when cultures remain sterile and there is no convincing site-specific infection or persistent clinical evidence of infection. [9][11][12]"
+  ],
+  "sections": [
+    {
+      "id": "clinical-framing",
+      "eyebrow": "Immediate priority",
+      "heading": "Separate early-onset from late-onset disease",
+      "intro": "Timing, acquisition route, and local epidemiology determine the initial evaluation and empiric regimen.",
+      "paragraphs": [
+        "Early-onset sepsis (EOS) is generally defined as infection presenting before 72 hours of life, although some surveillance definitions use the first 7 days. It is usually vertically acquired. In the United States, group B streptococcus (GBS) predominates in term infants, whereas Escherichia coli is relatively more important in preterm and very-low-birth-weight infants. [11][12][22]",
+        "Late-onset sepsis (LOS; 72 hours or later) is commonly healthcare-associated in hospitalized preterm infants. Coagulase-negative staphylococci, Staphylococcus aureus, Gram-negative bacilli, and Candida are relevant pathogens, but the empiric choice should follow unit-specific susceptibility data and the infant's device, operative, and colonization history. [9][11][12]"
+      ],
+      "bullets": [
+        "Treat shock, respiratory failure, seizures, or rapidly progressive illness as an emergency: obtain cultures promptly but do not defer antimicrobials for a lengthy diagnostic workup. [11][15]",
+        "A sepsis-like syndrome also warrants consideration of HSV, enterovirus, fungal infection, congenital infection, metabolic disease, and noninfectious cardiopulmonary disease when the presentation or trajectory is discordant with bacterial sepsis. [11][12][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "eos-risk-assessment",
+      "eyebrow": "Early-onset sepsis",
+      "heading": "Choose and operationalize one EOS assessment strategy",
+      "intro": "For well-appearing term and late-preterm infants, maternal risk factors alone should not mandate antibiotics.",
+      "paragraphs": [
+        "For infants born at 35 weeks' gestation or later, the American Academy of Pediatrics recognizes three EOS risk-assessment approaches: categorical maternal and neonatal risk thresholds, multivariate assessment using the Neonatal EOS Risk Calculator, and serial physical examination based on the infant's evolving condition. Each requires a local protocol defining vital-sign frequency, escalation criteria, and documentation. [10][11]",
+        "The EOS calculator incorporates gestational age, highest maternal intrapartum temperature, maternal GBS status, rupture-of-membranes duration, and intrapartum antibiotics, then combines these with the infant's clinical examination. In one prospective implementation cohort of 204,685 infants, calculator-guided care reduced blood-culture testing by 66% and empiric antibiotic treatment by 48% compared with a categorical CDC-based strategy. [11]",
+        "Calculator-derived risk of at least 1 per 1,000 births supports blood culture plus clinical observation; a risk of at least 3 per 1,000 supports empiric antibiotics in the cited review. This tool is not a substitute for reassessment: an infant who becomes ill during observation requires immediate evaluation and treatment. [11]"
+      ],
+      "bullets": [
+        "For preterm infants at 34 6/7 weeks' gestation or less, delivery circumstances are central. Lowest-risk characteristics are noninfectious indication for delivery, cesarean birth, and no labor, attempted induction, or membrane rupture before delivery; selected infants may receive observation alone or culture plus observation. [10][11]",
+        "Preterm birth after cervical insufficiency, preterm labor, preterm premature rupture of membranes, suspected intra-amniotic infection, or unexplained acute nonreassuring fetal status confers high EOS risk and generally warrants blood culture plus empiric treatment. [10][11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "EOS approaches for infants born at 35 weeks' gestation or later. [10][11]",
+        "columns": [
+          "Approach",
+          "Core action",
+          "Operational requirement"
+        ],
+        "rows": [
+          [
+            "Categorical risk assessment",
+            "Treat clinically ill infants and those with significant intrapartum infection concern; observe or test other risk groups according to local thresholds. [10][11]",
+            "Avoid ambiguous definitions; specify surveillance and treatment triggers. [11]"
+          ],
+          [
+            "Multivariate EOS calculator",
+            "Use maternal variables plus newborn examination to recommend observation, culture, or empiric antibiotics. [11]",
+            "Use only within validated gestational-age range and pair with serial assessment. [11][15]"
+          ],
+          [
+            "Serial examination",
+            "Withhold empiric antibiotics in initially well-appearing infants while performing structured repeated examinations through 48 hours. [11]",
+            "Require reliable staffing, predefined escalation criteria, and documented examinations. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-evaluation",
+      "eyebrow": "Diagnosis",
+      "heading": "Culture first; use laboratory tests as adjuncts",
+      "intro": "The diagnostic task is to identify invasive infection without extending antibiotics for nonspecific abnormalities.",
+      "paragraphs": [
+        "Blood culture remains the reference test for bacterial sepsis. Obtain it before the first antibiotic dose whenever feasible. A minimum 1 mL blood volume improves detection of low-density bacteremia. Modern continuously monitored systems detect more than 90% of untreated bacteremia by 36 hours in one review, supporting early antibiotic reassessment when the infant improves and cultures remain negative. [9][11][12]",
+        "CBC abnormalities have limited positive predictive value. Leukopenia below 5,000/mm3 and severe neutropenia are more concerning than leukocytosis, but normal values do not exclude sepsis. An elevated immature-to-total neutrophil ratio is nonspecific; CBC findings should not independently justify prolonged empiric therapy. [10][11][12]",
+        "CRP rises after infection onset and has limited utility at initial presentation. Serial rather than single measurements can contribute to a decision to stop therapy when cultures are negative and the infant is clinically well. Procalcitonin rises earlier but is also affected by noninfectious neonatal physiology and should not independently diagnose infection. [9][11][12]"
+      ],
+      "bullets": [
+        "EOS: do not routinely obtain urine culture in an otherwise standard EOS evaluation. [11][12]",
+        "LOS: obtain urine testing when evaluating infants outside the neonatal unit; urine culture is generally recommended in LOS evaluations in the StatPearls review. Local pathways may differ for infants already hospitalized in a NICU. [11][12][15]",
+        "Chest radiography is appropriate when respiratory findings raise concern for pneumonia or when an alternative pulmonary diagnosis needs assessment. [12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Lumbar puncture and meningitis",
+          "paragraphs": [
+            "Perform lumbar puncture before antibiotics when it is safe and does not significantly delay treatment in an infant with strong clinical concern for sepsis or meningitis. Defer until stabilization in respiratory compromise, shock, uncontrolled seizures, or bleeding risk. [11][15]",
+            "Lumbar puncture is particularly important with positive blood culture, CNS signs, failure to improve, or strong persistent suspicion. Meningitis may occur despite a negative blood culture; CSF evaluation should include cell count and differential, protein, glucose with paired blood glucose, Gram stain, culture, and pathogen-directed PCR when available. [11][12][15]"
+          ],
+          "bullets": [
+            "A clinically well infant assessed only because of maternal EOS risk factors does not routinely need lumbar puncture. [12][17]",
+            "If bacterial meningitis is confirmed, arrange audiologic and neurodevelopmental follow-up; NICE recommends audiologic assessment within 4 weeks of the infant being well enough for testing. [15]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "empiric-treatment",
+      "eyebrow": "Antimicrobials",
+      "heading": "Start empiric therapy promptly, then narrow or stop decisively",
+      "intro": "Exact neonatal dosing must follow gestational age, postnatal age, renal function, and local neonatal formulary guidance.",
+      "paragraphs": [
+        "For suspected EOS, intravenous ampicillin plus gentamicin provides coverage for GBS, E. coli, enterococci, and Listeria and remains the recommended empiric combination in AAP-derived guidance. The supplied sources do not provide a U.S. neonatal dosing table sufficient to safely specify ampicillin or gentamicin dose intervals across gestational and postnatal ages; use an institutional neonatal dosing reference and therapeutic drug monitoring protocol. [10][11][12]",
+        "Avoid routine empiric third-generation cephalosporins for uncomplicated EOS because broader exposure is associated with antimicrobial resistance and invasive fungal infection. Consider expanded Gram-negative coverage for an infant who is critically ill despite ampicillin-gentamicin, has credible resistant Gram-negative risk, or has suspected Gram-negative meningitis; obtain infectious diseases or microbiology input and use local susceptibility data. [11][12]",
+        "For hospital-acquired LOS, empiric regimens should cover local Gram-positive and Gram-negative epidemiology. Narrow-spectrum antistaphylococcal therapy plus an aminoglycoside is a reasonable approach where methicillin-resistant S. aureus prevalence is low; reserve empiric vancomycin for units or infants with a credible resistant Gram-positive risk. Suspected necrotizing enterocolitis requires anaerobic coverage, such as metronidazole. [9][11][15]"
+      ],
+      "bullets": [
+        "Suspected neonatal meningitis: use a regimen with reliable CSF activity. NICE recommends intravenous amoxicillin plus cefotaxime when the pathogen is unknown in a neonatal unit. [15]",
+        "Suspected HSV disease, particularly with vesicles, seizures, hepatitis, liver failure, or compatible CSF pleocytosis, warrants urgent HSV PCR testing and consideration of empiric acyclovir while results are pending. [11][17]",
+        "Suspected invasive candidiasis in high-risk preterm infants requires antifungal-directed evaluation and treatment; amphotericin B deoxycholate is cited as first-line empiric therapy when Candida is suspected. [11]"
+      ],
+      "subsections": [
+        {
+          "heading": "Gentamicin monitoring",
+          "paragraphs": [
+            "Gentamicin requires dose-interval adjustment and drug concentration monitoring. NICE recommends obtaining a trough immediately before the second dose if a second dose is administered, targeting trough concentrations below 2 mg/L and, when treatment exceeds three doses, below 1 mg/L. This is international guidance; U.S. centers should follow local neonatal pharmacokinetic protocols. [15]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Empiric therapy principles by syndrome; final selection should incorporate local antibiograms and culture results. [9][11][12][15]",
+        "columns": [
+          "Clinical setting",
+          "Initial approach",
+          "Escalation or tailoring"
+        ],
+        "rows": [
+          [
+            "Suspected EOS",
+            "IV ampicillin plus gentamicin. [11][12]",
+            "Add broader Gram-negative coverage only for severe illness, meningitis concern, or credible resistant-pathogen risk. [11][12]"
+          ],
+          [
+            "Hospital-acquired LOS",
+            "Use local susceptibility data; consider antistaphylococcal therapy plus aminoglycoside, with vancomycin reserved for appropriate resistant Gram-positive risk. [9][11]",
+            "Add anaerobic activity if necrotizing enterocolitis is suspected. [11][15]"
+          ],
+          [
+            "Meningitis concern",
+            "Use agents with CSF activity; obtain CSF when safe. [15][17]",
+            "Narrow to pathogen-directed therapy and extend duration according to organism, CSF sterilization, and complications. [15][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stewardship-and-duration",
+      "eyebrow": "Reassessment",
+      "heading": "Use culture time-to-positivity and clinical trajectory to stop unnecessary therapy",
+      "intro": "Culture-negative illness is common; prolonged therapy requires a documented indication.",
+      "paragraphs": [
+        "For suspected EOS, discontinue empiric therapy by 36 to 48 hours of sterile culture incubation unless there is clear site-specific infection or compelling persistent clinical evidence. Persistent cardiorespiratory instability in very-low-birth-weight infants, or isolated laboratory abnormalities, should not alone drive prolonged empirical treatment. [9][10][11][12]",
+        "For suspected LOS, NICE recommends reassessment at 48 hours and discontinuation when cultures are negative, initial suspicion was not strong, the infant is clinically reassuring, and CRP trends are reassuring. If antibiotics continue despite sterile cultures, review daily for a stop decision. [15]",
+        "For uncomplicated culture-positive bacteremia without meningitis, 7 days is recommended in NICE guidance for EOS and LOS, with longer treatment for incomplete recovery, Gram-negative or S. aureus infection, central-line infection, osteomyelitis, intra-abdominal disease, or other focal infection. Duration must be individualized to organism, infection site, source control, CSF findings, and clearance cultures. [15]"
+      ],
+      "bullets": [
+        "Document the presumed syndrome, microbiologic evidence, source evaluation, and planned reassessment time at antibiotic initiation. [16]",
+        "De-escalate to the narrowest active agent when organism identification and susceptibility data return. [11][12]",
+        "In culture-negative cases, avoid using the label \"sepsis\" as the sole rationale for prolonged therapy without serial clinical and microbiologic justification. [9][11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "prevention",
+      "eyebrow": "Prevention",
+      "heading": "Prevent vertical transmission and device-associated infection",
+      "intro": "Prevention changes both EOS burden and the probability that broad empiric therapy is needed.",
+      "paragraphs": [
+        "GBS screening and intrapartum antibiotic prophylaxis have substantially reduced GBS-associated EOS. ACOG-based recommendations cited in the supplied review support maternal rectovaginal screening at 36 0/7 to 37 6/7 weeks' gestation and intrapartum prophylaxis when indicated. [11]",
+        "For LOS prevention, reduce invasive-device exposure, adhere to central-line insertion and maintenance practices, practice hand hygiene, and use antimicrobial stewardship to limit selection pressure and invasive candidiasis risk. [11][12]",
+        "In NICUs with substantial invasive candidiasis risk, antifungal prophylaxis may be considered for high-risk preterm infants. NICE recommends oral nystatin for infants receiving antibiotics for suspected LOS who weigh 1,500 g or less or were born before 30 weeks; intravenous fluconazole is an off-label alternative when enteral administration is not possible. Applicability to U.S. practice depends on local invasive candidiasis incidence and formulary policy. [15]"
+      ],
+      "bullets": [],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should empiric antibiotics be stopped in suspected EOS?",
+      "answer": "Stop by 36 to 48 hours if blood cultures remain sterile and there is no site-specific infection or convincing ongoing clinical evidence of infection. Do not prolong therapy for laboratory abnormalities alone. [9][10][11][12]"
+    },
+    {
+      "question": "Can a normal CBC or CRP exclude neonatal sepsis?",
+      "answer": "No. CBC and single inflammatory-marker values are insufficient to exclude sepsis. Serial clinical examination, culture results, and\u2014in selected cases\u2014serial CRP trends are more useful for safe de-escalation. [9][11][12]"
+    },
+    {
+      "question": "When is lumbar puncture required in neonatal sepsis evaluation?",
+      "answer": "Perform lumbar puncture when meningitis is suspected, blood culture is positive, the infant has CNS signs, fails to improve, or clinical suspicion remains strong, provided stabilization and timely treatment are not compromised. [11][12][15]"
+    },
+    {
+      "question": "Is the EOS calculator appropriate for preterm infants?",
+      "answer": "It is intended for infants born at approximately 34 to 35 weeks' gestation or later, depending on the cited guidance. For more preterm infants, assess risk primarily from the circumstances of preterm delivery and clinical status. [10][11][15]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "A Quantitative Approach to Neonatal Sepsis Management | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/nejm-jw.NA43555",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\nIn the first week of life, 15% to 20% of term and near-term newborns are evaluated for sepsis, and 5% to 8% are empirically treated for sepsis, despite a concurrent sepsis rate of only 0.3 to 0.8 per 1000 births. Existing guidelines are not specific in predicting early-onset sepsis (E",
+      "score": 0.48703963
+    },
+    {
+      "number": 2,
+      "title": "Adherence to Perinatal Asphyxia or Sepsis Management ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834206",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by A Rahman \u00b7 2025 \u00b7 Cited by 4 \u2014 Objective To assess adherence to World Health Organization clinical care guidelines for management of perinatal asphyxia and neonatal sepsis and",
+      "score": 0.4611872
+    },
+    {
+      "number": 3,
+      "title": "Proposed Core Outcomes After Neonatal Sepsis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2830560",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by PE Taneri \u00b7 2025 \u00b7 Cited by 9 \u2014 This consensus statement provides recommendations on evaluating the effectiveness of neonatal sepsis treatments and reporting the",
+      "score": 0.3437607
+    },
+    {
+      "number": 4,
+      "title": "1140. Evaluation of Neonatal Sepsis Guidelines in a Neonatal ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/6/Supplement_2/S406/5605061",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "a multidisciplinary team developed a guideline for the evaluation and management of suspected and proven sepsis within the NICU in preterm",
+      "score": 0.6638657
+    },
+    {
+      "number": 5,
+      "title": "Neonatal sepsis: A review of current management strategies",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1355184124000553",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Discussion of guidelines and effectiveness\n\nGuidelines for neonatal sepsis have been developed by authoritative bodies, including the American Academy of Pediatrics (AAP) and international health organizations. These guidelines encompass recommendations for risk assessment, diagnostic criteria, ",
+      "score": 0.65173227
+    },
+    {
+      "number": 6,
+      "title": "Assessing the Use of Neonatal Sepsis Guidelines and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jpids/article/14/4/piaf017/8029324",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by N Khan \u00b7 2025 \u00b7 Cited by 6 \u2014 Application of WHO guidelines would increase antibiotic prescription to 91% at SMCH, 88% at CPH, and 77% in KCH. Maternal risk factors for sepsis, male gender,",
+      "score": 0.5510187
+    },
+    {
+      "number": 7,
+      "title": "Neonatal sepsis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S175172221930071X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by O Walker \u00b7 2019 \u00b7 Cited by 47 \u2014 Physiological monitoring can be used to monitor the early signs of sepsis on the neonatal unit and facilitate prompt intervention. EONS is",
+      "score": 0.5446325
+    },
+    {
+      "number": 8,
+      "title": "Neonatal sepsis management in Africa: A rapid systematic ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1875957225002062",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This study aimed to examine neonatal sepsis treatment guidelines in Africa, compare them with WHO recommendations, identify similarities and deviations,",
+      "score": 0.50886196
+    },
+    {
+      "number": 9,
+      "title": "Neonatal Sepsis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/neonatal-sepsis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Neonatal sepsis is a syndrome associated with hemodynamic changes and other clinical manifestations resulting in significant morbidity and mortality and is often caused by bacterial, viral, or fungal infections. Depending on the age of onset and timing of the episode, neonatal sepsis is classified a",
+      "score": 0.502564
+    },
+    {
+      "number": 10,
+      "title": "Quality assessment of clinical practice guidelines for neonatal sepsis using the Appraisal of Guidelines for Research and Evaluation (AGREE) II Instrument: A systematic review of neonatal guidelines",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9424847",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Conclusion\n\nThe methodological quality of the NICE CPG was superior followed by the QH CPG with relevant recommendations for use in practice.\n\n### Systematic review registration\n\n PROSPERO (CRD42021258732).\n\nKeywords:neonatal sepsis, pediatrics, clinical practice guidelines, systematic review, A",
+      "score": 0.7283819
+    },
+    {
+      "number": 11,
+      "title": "Neonatal Sepsis: A Comprehensive Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11761862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this review, the most recent data on neonatal sepsis are summarized, including its definition, pathophysiology, risk factors, and clinical presentation. Additionally, the utility of sepsis risk assessment tools for term and preterm infants is discussed, along with optimal antibiotic treatment str",
+      "score": 0.64236575
+    },
+    {
+      "number": 12,
+      "title": "Neonatal Sepsis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531478",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Effective management of neonatal sepsis requires an interprofessional approach that integrates clinical expertise, communication, and coordinated care. Physicians and advanced pediatric practitioners oversee diagnostic and therapeutic decisions, adjusting antimicrobials based on culture results and ",
+      "score": 0.609455
+    },
+    {
+      "number": 13,
+      "title": "Neonatal Sepsis: Aetiology, Pathophysiology, Diagnostic Advances and Management Strategies",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452898",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "52. Ara\u00fajo, Guimar\u00e3es Risk factors for neonatal sepsis: an overview. _J Pediatr Neonat Individual Med_. 2020;9:e090206. [Google Scholar]\n   53. Paul, Khattak, Kini, Heaton, Goel NICE guideline review: neonatal infection: antibiotics for prevention and treatment (NG195). _Arch Dis Child Educ Pract Ed",
+      "score": 0.5715041
+    },
+    {
+      "number": 14,
+      "title": "Assessing the Use of Neonatal Sepsis Guidelines and Antibiotic Prescription With Large-Scale Prospective Data From Zimbabwe and Malawi - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11976057",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Worldwide, neonatal sepsis causes ~800 000 deaths annually, the majority of which are in low-resource settings (LRS).1,2 Gold standard diagnosis of sepsis uses blood cultures, which take at least 24-48 h to process and depend on laboratory facilities and staff. The initial decision of clinicians to ",
+      "score": 0.521886
+    },
+    {
+      "number": 15,
+      "title": "Neonatal infection: antibiotics for prevention and treatment - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK571222",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "With limited evidence on prognostic models, the committee agreed that it was instead important for clinicians to be aware of the clinical indicators and risk factors for late-onset neonatal infection. There was very limited evidence on maternal risk factors for late-onset infection and so the recomm",
+      "score": 0.4517382
+    },
+    {
+      "number": 16,
+      "title": "Hospital Sepsis Program Core Elements",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/sepsis/hcp/core-elements/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "This document summarizes Core Elements of hospital sepsis programs, which are intended to monitor and optimize hospital management and outcomes of sepsis. It complements existing sepsis guidelines, and helps facilitate implementation of guideline-recommended care practices that apply to a broad rang",
+      "score": 0.21187343
+    },
+    {
+      "number": 17,
+      "title": "Neonatal Meningitis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK532264",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Neonatal meningitis requires diligent clinical assessment, with multiple diagnostic tests and early CSF assessment. The emergency medical provider is an essential team member, as they are tasked with performing an LP in all patients with suspected disease. The neonatal intensive care physicians, phy",
+      "score": 0.21060428
+    },
+    {
+      "number": 18,
+      "title": "Neonatal Respiratory Distress Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560779",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nRespiratory distress syndrome (RDS) represents a major cause of neonatal morbidity and mortality, primarily affecting premature infants due to surfactant deficiency and lung immaturity. The disorder results in alveolar collapse, reduced lung compliance, hypoxemia, a",
+      "score": 0.11394409
+    },
+    {
+      "number": 19,
+      "title": "Newborn Health",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/newborn-health/essential-newborn-care",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "Essential newborn care includes:\n\n## WHO\u2019s work includes: monitoring and data; guidelines; quality of care and research ---\n\nMonitoring and data\n\n### Related links\n\nicon-static-visualizations\n\nGuidelines\n\n Regularly updating clinical guidelines for the routine care of newborns\n Supporting countries ",
+      "score": 0.10787861
+    },
+    {
+      "number": 20,
+      "title": "Neonatal Sepsis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30285373",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Display options\n\n Display options \n\n Format \n\n## Excerpt\n\nNeonatal sepsis is an infection involving the bloodstream in infants younger than 28 days old and remains a leading cause of morbidity and mortality among neonates, especially in middle and lower-income countries. Neonatal sepsis is divided i",
+      "score": 0.39641917
+    },
+    {
+      "number": 21,
+      "title": "Sepsis Program Activities in Acute Care Hospitals",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/72/wr/mm7234a2.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Update sepsis identification and management protocols based on current evidence | 81 | 77 | 78 | 80 | 84 | 85 | 84 |\n| Monitor and review outcomes among patients with sepsis | 81 | 78 | 79 | 81 | 83 | 85 | 82 |\n| Develop educational materials for facility staff to improve sepsis care | 79 | 72 | 7",
+      "score": 0.44912744
+    },
+    {
+      "number": 22,
+      "title": "Early-Onset Neonatal Sepsis Surveillance and Trends | ABCs | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/abcs/reports/neonatal-sepsis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ABCs identifies early-onset neonatal sepsis cases through\n\nSurveillance program staff complete standardized case report forms for each identified case. The forms include information on\n\n## Most common bacterial causes\n\nGBS and E. coli are leading causes of early-onset neonatal sepsis.\n\nOverall incid",
+      "score": 0.37827587
+    },
+    {
+      "number": 23,
+      "title": "Tables of Antibacterial Drug Dosages",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/515318/rbo2021_s4_005_en.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Recommended dosages for antibacterial agents commonly used for neonates \u30fb in renal or hepatic function, max 6 g per day Fourth generation. Dosage adjustments",
+      "score": 0.51603514
+    },
+    {
+      "number": 24,
+      "title": "Cefprozil | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5232/Cefprozil",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Renally adjusted dose recommendations are based on a usual dose of 30 mg/kg/day divided every mg/kg/dose every 12 hours. recommendations are based on doses of",
+      "score": 0.34118778
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "A Quantitative Approach to Neonatal Sepsis Management | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/nejm-jw.NA43555",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "###### Topics\n\nIn the first week of life, 15% to 20% of term and near-term newborns are evaluated for sepsis, and 5% to 8% are empirically treated for sepsis, despite a concurrent sepsis rate of only 0.3 to 0.8 per 1000 births. Existing guidelines are not specific in predicting early-onset sepsis (E",
+      "score": 0.48703963
+    },
+    {
+      "number": 2,
+      "title": "Adherence to Perinatal Asphyxia or Sepsis Management ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834206",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by A Rahman \u00b7 2025 \u00b7 Cited by 4 \u2014 Objective To assess adherence to World Health Organization clinical care guidelines for management of perinatal asphyxia and neonatal sepsis and",
+      "score": 0.4611872
+    },
+    {
+      "number": 3,
+      "title": "Proposed Core Outcomes After Neonatal Sepsis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2830560",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by PE Taneri \u00b7 2025 \u00b7 Cited by 9 \u2014 This consensus statement provides recommendations on evaluating the effectiveness of neonatal sepsis treatments and reporting the",
+      "score": 0.3437607
+    },
+    {
+      "number": 4,
+      "title": "1140. Evaluation of Neonatal Sepsis Guidelines in a Neonatal ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/6/Supplement_2/S406/5605061",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "a multidisciplinary team developed a guideline for the evaluation and management of suspected and proven sepsis within the NICU in preterm",
+      "score": 0.6638657
+    },
+    {
+      "number": 5,
+      "title": "Neonatal sepsis: A review of current management strategies",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1355184124000553",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Discussion of guidelines and effectiveness\n\nGuidelines for neonatal sepsis have been developed by authoritative bodies, including the American Academy of Pediatrics (AAP) and international health organizations. These guidelines encompass recommendations for risk assessment, diagnostic criteria, ",
+      "score": 0.65173227
+    },
+    {
+      "number": 6,
+      "title": "Assessing the Use of Neonatal Sepsis Guidelines and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jpids/article/14/4/piaf017/8029324",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by N Khan \u00b7 2025 \u00b7 Cited by 6 \u2014 Application of WHO guidelines would increase antibiotic prescription to 91% at SMCH, 88% at CPH, and 77% in KCH. Maternal risk factors for sepsis, male gender,",
+      "score": 0.5510187
+    },
+    {
+      "number": 7,
+      "title": "Neonatal sepsis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S175172221930071X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by O Walker \u00b7 2019 \u00b7 Cited by 47 \u2014 Physiological monitoring can be used to monitor the early signs of sepsis on the neonatal unit and facilitate prompt intervention. EONS is",
+      "score": 0.5446325
+    },
+    {
+      "number": 8,
+      "title": "Neonatal sepsis management in Africa: A rapid systematic ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1875957225002062",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This study aimed to examine neonatal sepsis treatment guidelines in Africa, compare them with WHO recommendations, identify similarities and deviations,",
+      "score": 0.50886196
+    },
+    {
+      "number": 9,
+      "title": "Neonatal Sepsis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/neonatal-sepsis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Neonatal sepsis is a syndrome associated with hemodynamic changes and other clinical manifestations resulting in significant morbidity and mortality and is often caused by bacterial, viral, or fungal infections. Depending on the age of onset and timing of the episode, neonatal sepsis is classified a",
+      "score": 0.502564
+    },
+    {
+      "number": 10,
+      "title": "Quality assessment of clinical practice guidelines for neonatal sepsis using the Appraisal of Guidelines for Research and Evaluation (AGREE) II Instrument: A systematic review of neonatal guidelines",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9424847",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Conclusion\n\nThe methodological quality of the NICE CPG was superior followed by the QH CPG with relevant recommendations for use in practice.\n\n### Systematic review registration\n\n PROSPERO (CRD42021258732).\n\nKeywords:neonatal sepsis, pediatrics, clinical practice guidelines, systematic review, A",
+      "score": 0.7283819
+    },
+    {
+      "number": 11,
+      "title": "Neonatal Sepsis: A Comprehensive Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11761862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this review, the most recent data on neonatal sepsis are summarized, including its definition, pathophysiology, risk factors, and clinical presentation. Additionally, the utility of sepsis risk assessment tools for term and preterm infants is discussed, along with optimal antibiotic treatment str",
+      "score": 0.64236575
+    },
+    {
+      "number": 12,
+      "title": "Neonatal Sepsis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531478",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Effective management of neonatal sepsis requires an interprofessional approach that integrates clinical expertise, communication, and coordinated care. Physicians and advanced pediatric practitioners oversee diagnostic and therapeutic decisions, adjusting antimicrobials based on culture results and ",
+      "score": 0.609455
+    },
+    {
+      "number": 13,
+      "title": "Neonatal Sepsis: Aetiology, Pathophysiology, Diagnostic Advances and Management Strategies",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452898",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "52. Ara\u00fajo, Guimar\u00e3es Risk factors for neonatal sepsis: an overview. _J Pediatr Neonat Individual Med_. 2020;9:e090206. [Google Scholar]\n   53. Paul, Khattak, Kini, Heaton, Goel NICE guideline review: neonatal infection: antibiotics for prevention and treatment (NG195). _Arch Dis Child Educ Pract Ed",
+      "score": 0.5715041
+    },
+    {
+      "number": 14,
+      "title": "Assessing the Use of Neonatal Sepsis Guidelines and Antibiotic Prescription With Large-Scale Prospective Data From Zimbabwe and Malawi - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11976057",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Worldwide, neonatal sepsis causes ~800 000 deaths annually, the majority of which are in low-resource settings (LRS).1,2 Gold standard diagnosis of sepsis uses blood cultures, which take at least 24-48 h to process and depend on laboratory facilities and staff. The initial decision of clinicians to ",
+      "score": 0.521886
+    },
+    {
+      "number": 15,
+      "title": "Neonatal infection: antibiotics for prevention and treatment - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK571222",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "With limited evidence on prognostic models, the committee agreed that it was instead important for clinicians to be aware of the clinical indicators and risk factors for late-onset neonatal infection. There was very limited evidence on maternal risk factors for late-onset infection and so the recomm",
+      "score": 0.4517382
+    },
+    {
+      "number": 16,
+      "title": "Hospital Sepsis Program Core Elements",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/sepsis/hcp/core-elements/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "This document summarizes Core Elements of hospital sepsis programs, which are intended to monitor and optimize hospital management and outcomes of sepsis. It complements existing sepsis guidelines, and helps facilitate implementation of guideline-recommended care practices that apply to a broad rang",
+      "score": 0.21187343
+    },
+    {
+      "number": 17,
+      "title": "Neonatal Meningitis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK532264",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Neonatal meningitis requires diligent clinical assessment, with multiple diagnostic tests and early CSF assessment. The emergency medical provider is an essential team member, as they are tasked with performing an LP in all patients with suspected disease. The neonatal intensive care physicians, phy",
+      "score": 0.21060428
+    },
+    {
+      "number": 18,
+      "title": "Neonatal Respiratory Distress Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560779",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nRespiratory distress syndrome (RDS) represents a major cause of neonatal morbidity and mortality, primarily affecting premature infants due to surfactant deficiency and lung immaturity. The disorder results in alveolar collapse, reduced lung compliance, hypoxemia, a",
+      "score": 0.11394409
+    },
+    {
+      "number": 19,
+      "title": "Newborn Health",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/newborn-health/essential-newborn-care",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "Essential newborn care includes:\n\n## WHO\u2019s work includes: monitoring and data; guidelines; quality of care and research ---\n\nMonitoring and data\n\n### Related links\n\nicon-static-visualizations\n\nGuidelines\n\n Regularly updating clinical guidelines for the routine care of newborns\n Supporting countries ",
+      "score": 0.10787861
+    },
+    {
+      "number": 20,
+      "title": "Neonatal Sepsis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30285373",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Display options\n\n Display options \n\n Format \n\n## Excerpt\n\nNeonatal sepsis is an infection involving the bloodstream in infants younger than 28 days old and remains a leading cause of morbidity and mortality among neonates, especially in middle and lower-income countries. Neonatal sepsis is divided i",
+      "score": 0.39641917
+    },
+    {
+      "number": 21,
+      "title": "Sepsis Program Activities in Acute Care Hospitals",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/72/wr/mm7234a2.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Update sepsis identification and management protocols based on current evidence | 81 | 77 | 78 | 80 | 84 | 85 | 84 |\n| Monitor and review outcomes among patients with sepsis | 81 | 78 | 79 | 81 | 83 | 85 | 82 |\n| Develop educational materials for facility staff to improve sepsis care | 79 | 72 | 7",
+      "score": 0.44912744
+    },
+    {
+      "number": 22,
+      "title": "Early-Onset Neonatal Sepsis Surveillance and Trends | ABCs | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/abcs/reports/neonatal-sepsis.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ABCs identifies early-onset neonatal sepsis cases through\n\nSurveillance program staff complete standardized case report forms for each identified case. The forms include information on\n\n## Most common bacterial causes\n\nGBS and E. coli are leading causes of early-onset neonatal sepsis.\n\nOverall incid",
+      "score": 0.37827587
+    },
+    {
+      "number": 23,
+      "title": "Tables of Antibacterial Drug Dosages",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/515318/rbo2021_s4_005_en.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Recommended dosages for antibacterial agents commonly used for neonates \u30fb in renal or hepatic function, max 6 g per day Fourth generation. Dosage adjustments",
+      "score": 0.51603514
+    },
+    {
+      "number": 24,
+      "title": "Cefprozil | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5232/Cefprozil",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Renally adjusted dose recommendations are based on a usual dose of 30 mg/kg/day divided every mg/kg/dose every 12 hours. recommendations are based on doses of",
+      "score": 0.34118778
+    }
+  ],
+  "publishedAt": "2026-08-21T00:10:19.605912Z",
+  "updatedAt": "2026-08-21T00:10:19.605912Z",
+  "readingMinutes": 7,
+  "slug": "neonatal-sepsis"
+}

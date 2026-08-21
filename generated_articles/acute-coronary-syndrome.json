@@ -1,0 +1,822 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular medicine",
+  "title": "Acute Coronary Syndrome",
+  "summary": "Acute coronary syndrome requires parallel ECG- and troponin-based classification, immediate STEMI reperfusion, risk-directed NSTE-ACS angiography, and early secondary prevention. The 2025 U.S. guideline prioritizes potent P2Y12 inhibition for PCI, radial access, complete revascularization when stable, and individualized bleeding mitigation.",
+  "seoDescription": "Point-of-care review of acute coronary syndrome diagnosis, reperfusion, invasive management, antithrombotics, and secondary prevention.",
+  "clinicalQuestion": "How should physicians rapidly classify, risk-stratify, revascularize, and initiate evidence-based antithrombotic and preventive therapy for acute coronary syndrome?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute coronary syndrome",
+    "STEMI",
+    "NSTEMI",
+    "unstable angina",
+    "primary PCI",
+    "dual antiplatelet therapy",
+    "cardiogenic shock"
+  ],
+  "keyTakeaways": [
+    "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact or ED arrival; a nondiagnostic ECG does not exclude ACS, so repeat serial ECGs when suspicion is high or symptoms persist. [12]",
+    "Use high-sensitivity cardiac troponin when available; repeat testing at 1 to 2 hours after an initially nondiagnostic hs-cTn, or 3 to 6 hours with conventional cTn. [12]",
+    "For STEMI within 12 hours, primary PCI is preferred when first-medical-contact-to-device time is expected to be 90 minutes or less, or 120 minutes or less when transfer is required; if delay exceeds 120 minutes, give fibrinolysis when eligible and transfer immediately to a PCI-capable center. [12]",
+    "For ACS treated with PCI, ticagrelor or prasugrel is preferred over clopidogrel unless contraindicated or not tolerated; prasugrel must not be used after prior stroke or TIA. [12]",
+    "Default DAPT is aspirin plus an oral P2Y12 inhibitor for at least 12 months in ACS without high bleeding risk; selected patients tolerating ticagrelor-based DAPT may transition to ticagrelor monotherapy after at least 1 month post-PCI. [12]",
+    "Radial access is preferred for ACS PCI. In stable multivessel ACS, complete revascularization is recommended; in cardiogenic shock, treat the culprit vessel and avoid routine nonculprit PCI during the index procedure. [12]"
+  ],
+  "sections": [
+    {
+      "id": "initial-classification",
+      "eyebrow": "First decisions",
+      "heading": "Classify ACS without delaying time-critical reperfusion",
+      "intro": "Use symptoms, ECG, and serial troponin as parallel\u2014not sequential\u2014inputs.",
+      "paragraphs": [
+        "The 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline addresses presumed type 1 ACS: unstable angina, NSTEMI, and STEMI resulting from plaque disruption with coronary thrombosis. Unstable angina reflects transient ischemia without significant troponin-detected myonecrosis; NSTEMI requires myocardial injury with ischemic evidence; STEMI generally reflects acute transmural ischemia from complete coronary occlusion. [12]",
+        "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact or hospital presentation. Persistent ST-segment elevation should trigger STEMI reperfusion pathways without waiting for troponin. In NSTE-ACS, ECG findings may include dynamic ST depression, T-wave inversion, transient ST elevation, nonspecific changes, or a normal tracing. Repeat ECGs when symptoms continue, clinical suspicion remains high, or the patient deteriorates. Isolated anterior ST depression in V1-V3 should prompt posterior leads V7-V9 to assess for posterior STEMI. [12]",
+        "Measure cTn promptly, preferably hs-cTn. With initially nondiagnostic results, repeat hs-cTn at 1 to 2 hours or conventional cTn at 3 to 6 hours. Acute MI requires a rise and/or fall with at least one value above the assay-specific 99th-percentile upper reference limit plus clinical evidence of ischemia. Troponin elevation alone does not establish type 1 MI; interpret it against symptoms, ECG, and competing causes of myocardial injury. [12]"
+      ],
+      "bullets": [
+        "Treat as STEMI when new or presumed-new ST elevation meets contiguous-lead criteria; new left bundle-branch block alone is not diagnostic of STEMI. [12]",
+        "Obtain urgent echocardiography or point-of-care ultrasound for shock, hemodynamic instability, or suspected mechanical complication; do not delay STEMI reperfusion for additional testing unless it will immediately change management. [12]",
+        "Assess alternative high-consequence diagnoses when clinical features suggest aortic dissection, pulmonary embolism, pericardial disease, or another nonatherothrombotic cause of myocardial injury. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational differentiation of ACS phenotypes. [12]",
+        "columns": [
+          "Phenotype",
+          "Core finding",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "STEMI",
+            "Persistent ST-segment elevation meeting contiguous-lead criteria, usually with acute coronary occlusion. [12]",
+            "Activate reperfusion pathway; do not await troponin. [12]"
+          ],
+          [
+            "NSTEMI",
+            "Ischemic syndrome with dynamic cTn elevation above the 99th percentile; ECG may be ischemic or nondiagnostic. [12]",
+            "Risk-stratify for immediate, early, or in-hospital invasive evaluation. [12]"
+          ],
+          [
+            "Unstable angina",
+            "Transient ischemia without significant troponin-detected myonecrosis. [12]",
+            "Further risk stratification determines selective versus routine invasive evaluation. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "immediate-medical-therapy",
+      "eyebrow": "Initial treatment",
+      "heading": "Start antithrombotic treatment while defining the revascularization pathway",
+      "intro": "Treat presumed type 1 ACS promptly while reassessing bleeding risk and diagnostic certainty.",
+      "paragraphs": [
+        "Give non-enteric-coated aspirin 162 to 325 mg orally, chewed when possible, followed by 75 to 100 mg daily. Aspirin is recommended across ACS phenotypes unless an absolute contraindication exists; for reported hypersensitivity, desensitization is preferred when feasible, while a loading dose of a P2Y12 inhibitor should be given if aspirin cannot be taken. [12]",
+        "Add an oral P2Y12 inhibitor. In ACS undergoing PCI, prasugrel or ticagrelor is recommended over clopidogrel to reduce MACE and stent thrombosis. In NSTE-ACS managed without planned invasive assessment, ticagrelor is recommended; clopidogrel is the alternative when ticagrelor or prasugrel is unavailable, contraindicated, or intolerable. Prasugrel is contraindicated with prior stroke or TIA. [12]",
+        "Use parenteral anticoagulation for presumed ACS. UFH is useful in NSTE-ACS and PCI. Enoxaparin or fondaparinux are alternatives when early invasive management is not planned; do not use fondaparinux as the sole PCI anticoagulant because of catheter thrombosis risk. For STEMI PCI, bivalirudin is an alternative to UFH; for fibrinolysis-treated STEMI, continue parenteral anticoagulation through hospitalization for up to 8 days or until revascularization. [12]"
+      ],
+      "bullets": [
+        "P2Y12 loading and maintenance doses: clopidogrel 300 or 600 mg then 75 mg daily; ticagrelor 180 mg then 90 mg twice daily; prasugrel 60 mg then 10 mg daily for body weight 60 kg or greater and age under 75 years, with 5 mg daily considered cautiously when body weight is under 60 kg or age is 75 years or older. [12]",
+        "Do not routinely administer supplemental oxygen when oxygen saturation is 90% or greater. Give oxygen for confirmed hypoxemia with saturation below 90%, targeting at least 90%. [12]",
+        "For persistent ischemic pain, use sublingual nitroglycerin 0.3 or 0.4 mg every 5 minutes for up to three doses if hemodynamically stable. Avoid nitrates after PDE5 inhibitor use: within 12 hours of avanafil, 24 hours of sildenafil or vardenafil, or 48 hours of tadalafil. [12]",
+        "Reserve IV morphine or fentanyl for pain refractory to maximally tolerated anti-ischemic therapy; opioids can delay absorption of oral P2Y12 inhibitors. [2][3][4]",
+        "Avoid nonaspirin NSAIDs in suspected or confirmed ACS because they increase MACE risk. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Antiplatelet selection during ACS hospitalization. [12]",
+        "columns": [
+          "Clinical setting",
+          "Preferred P2Y12 strategy",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "NSTE-ACS undergoing PCI",
+            "Prasugrel or ticagrelor. [12]",
+            "Do not use prasugrel with prior stroke or TIA. [12]"
+          ],
+          [
+            "NSTE-ACS without planned invasive evaluation",
+            "Ticagrelor; clopidogrel if ticagrelor is unsuitable. [12]",
+            "For angiography expected more than 24 hours later, upstream clopidogrel or ticagrelor may be considered. [12]"
+          ],
+          [
+            "STEMI treated with primary PCI",
+            "Prasugrel or ticagrelor; clopidogrel if potent agents cannot be used. [12]",
+            "Balance ischemic benefit against non-CABG bleeding risk. [12]"
+          ],
+          [
+            "STEMI treated with fibrinolysis",
+            "Clopidogrel: 300 mg then 75 mg daily if age 75 years or younger; 75 mg daily without loading if older than 75 years. [12]",
+            "Fibrinolytic-treated patients require transfer to PCI-capable care. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stemi-reperfusion",
+      "eyebrow": "STEMI",
+      "heading": "Choose reperfusion by expected time to device activation",
+      "intro": "System delay\u2014not just door-to-balloon time\u2014determines the appropriate pathway.",
+      "paragraphs": [
+        "For STEMI presenting within 12 hours, perform primary PCI when first-medical-contact-to-device activation can occur within 90 minutes, or within 120 minutes for patients requiring transfer. EMS transport to a PCI-capable hospital, prehospital ECG transmission, and catheterization laboratory activation are recommended system strategies. [12]",
+        "When expected first-medical-contact-to-device time exceeds 120 minutes and symptom onset is under 12 hours, administer fibrinolytic therapy if no contraindication exists, then transfer immediately to a PCI-capable center. Patients with failed reperfusion require immediate angiography and rescue PCI; otherwise, perform early angiography with intent to PCI within 2 to 24 hours after fibrinolysis. [12]",
+        "Primary PCI remains indicated regardless of symptom duration in ACS with cardiogenic shock or hemodynamic instability. In stable patients with STEMI and an occluded infarct-related artery more than 24 hours after onset without ongoing ischemia, severe heart failure, or life-threatening arrhythmia, routine PCI has no demonstrated benefit. [12]"
+      ],
+      "bullets": [
+        "Use fibrin-specific agents when fibrinolysis is selected. Tenecteplase is a single weight-based IV bolus; alteplase is a 90-minute weight-based infusion; reteplase is administered as two 10-unit IV boluses 30 minutes apart. [12]",
+        "Do not administer fibrinolysis for isolated ST depression unless true posterior STEMI is suspected. [12]",
+        "Use radial access for primary PCI when feasible to reduce bleeding, vascular complications, and death. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "STEMI reperfusion selection. [12]",
+        "columns": [
+          "Clinical scenario",
+          "Action",
+          "Time target or limitation"
+        ],
+        "rows": [
+          [
+            "PCI-capable hospital or transfer pathway with timely access",
+            "Primary PCI. [12]",
+            "FMC-to-device 90 minutes or less; up to 120 minutes with transfer. [12]"
+          ],
+          [
+            "No PCI within 120 minutes; symptoms under 12 hours; fibrinolysis eligible",
+            "Fibrinolysis, then immediate transfer. [12]",
+            "Angiography/PCI within 2 to 24 hours if reperfusion appears successful; rescue PCI for failed reperfusion. [12]"
+          ],
+          [
+            "Shock, ongoing ischemia, or life-threatening arrhythmia",
+            "Emergency culprit-vessel revascularization by PCI or CABG as appropriate. [12]",
+            "Do not delay because of late presentation. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nste-acs-invasive-strategy",
+      "eyebrow": "NSTE-ACS",
+      "heading": "Use instability and ischemic risk to determine angiography timing",
+      "intro": "Routine invasive management benefits patients suitable for revascularization; urgency is driven by instability.",
+      "paragraphs": [
+        "For intermediate- or high-risk NSTE-ACS patients who are appropriate candidates for revascularization, perform an invasive approach during hospitalization. For low-risk patients, either routine invasive or selective invasive management with additional risk stratification is recommended. Patients in whom ACS remains uncertain and biomarkers are normal may undergo stress testing or coronary CT angiography before discharge to clarify need for angiography. [12]",
+        "Perform immediate invasive evaluation for refractory or recurrent angina despite medical therapy, hemodynamic or electrical instability, acute pulmonary edema or heart failure, worsening mitral regurgitation, or sustained ventricular arrhythmia. In high-risk NSTE-ACS, early angiography within 24 hours is reasonable; a GRACE score above 140, advancing troponin pattern, new ST depression, diabetes, age over 75 years, or elevated biomarkers support earlier evaluation. [12]",
+        "Relative reasons to reconsider a routine invasive strategy include severe thrombocytopenia, high bleeding risk on DAPT, advanced kidney disease not on dialysis, acute renal failure, limited life expectancy, advanced dementia, anatomy already known to preclude PCI/CABG, and patient preference. These are risk-benefit considerations, not automatic exclusions. [12]"
+      ],
+      "bullets": [
+        "Use validated GRACE or TIMI risk scores for prognosis and to support invasive-strategy timing; do not use them as diagnostic tools. [12]",
+        "Assess LVEF before discharge to guide therapy and risk stratification; transthoracic echocardiography is generally preferred. [12]",
+        "Admit ongoing angina, instability, uncontrolled arrhythmia, suboptimal reperfusion, or shock to a cardiac intensive care setting. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "NSTE-ACS angiography timing. [12]",
+        "columns": [
+          "Risk state",
+          "Invasive approach",
+          "Decision triggers"
+        ],
+        "rows": [
+          [
+            "Immediate",
+            "Immediate angiography with intent to revascularize. [12]",
+            "Refractory angina, hemodynamic or electrical instability, acute pulmonary edema/HF, or worsening mitral regurgitation. [12]"
+          ],
+          [
+            "High risk",
+            "Early angiography within 24 hours is reasonable. [12]",
+            "GRACE score >140, dynamic troponin rise, new ST depression, or other high-risk ischemic features. [12]"
+          ],
+          [
+            "Not high risk but invasive strategy selected",
+            "Angiography before discharge. [12]",
+            "Intermediate-risk profile without immediate/early triggers. [12]"
+          ],
+          [
+            "Low risk or uncertain ACS",
+            "Selective invasive strategy with noninvasive risk stratification. [12]",
+            "Normal biomarkers or uncertain diagnosis; use stress testing or CCTA before discharge when appropriate. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pci-and-revascularization",
+      "eyebrow": "Procedural management",
+      "heading": "Optimize PCI and complete revascularization selectively",
+      "intro": "Stable multivessel ACS usually warrants complete revascularization; shock is the major exception.",
+      "paragraphs": [
+        "For ACS PCI, radial access is preferred over femoral access. In complex lesions or left main intervention, use IVUS or OCT to guide coronary stent implantation and reduce ischemic events. Routine manual aspiration thrombectomy before primary PCI should not be performed because it has not improved clinical outcomes; reserve it for bailout treatment of persistent thrombus or no-reflow. [12]",
+        "In hemodynamically stable STEMI with multivessel disease, complete revascularization of significantly stenosed nonculprit arteries is recommended after successful culprit-vessel PCI to reduce death or MI and improve angina-related quality of life. PCI may be staged or, in selected low-complexity disease, performed during the index procedure. Patients with left main disease, complex multivessel disease, diabetes with LAD involvement, or severe LV dysfunction may be better served by CABG after Heart Team assessment. [12]",
+        "In stable NSTE-ACS with multivessel disease and no left main stenosis, complete PCI of significant nonculprit lesions at the index procedure or as a staged intervention is recommended when CABG is not intended. Physiologic assessment of nonculprit lesions may guide revascularization. In cardiogenic shock, routine nonculprit PCI at the index procedure increases death or kidney-failure risk and should not be performed. [12]"
+      ],
+      "bullets": [
+        "For ACS with cardiogenic shock, revascularize the culprit vessel urgently with PCI or CABG, irrespective of symptom duration. [12]",
+        "Selected STEMI patients with severe or refractory shock meeting DanGer-SHOCK-like features may benefit from a microaxial flow pump, but balance lower mortality against increased bleeding, limb ischemia, and renal replacement therapy. [12]",
+        "Routine IABP or VA-ECMO in infarct-related shock has no demonstrated survival benefit. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Revascularization strategy by hemodynamic status. [12]",
+        "columns": [
+          "Clinical state",
+          "Revascularization approach",
+          "Avoid"
+        ],
+        "rows": [
+          [
+            "Stable STEMI with multivessel disease",
+            "Complete treatment of significant nonculprit lesions during index PCI or staged after culprit PCI. [12]",
+            "Routine thrombectomy before PCI. [12]"
+          ],
+          [
+            "Stable NSTE-ACS with multivessel disease",
+            "PCI of significant nonculprit lesions at index or staged procedure if CABG is not intended. [12]",
+            "Assuming angiographic severity alone always identifies lesions requiring PCI; physiology may help. [12]"
+          ],
+          [
+            "ACS with cardiogenic shock",
+            "Emergency culprit-vessel PCI or CABG. [12]",
+            "Routine nonculprit PCI during the index procedure. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "discharge-and-secondary-prevention",
+      "eyebrow": "After stabilization",
+      "heading": "Build secondary prevention into the index admission",
+      "intro": "The post-ACS risk period is front-loaded; medication access and follow-up are treatment components.",
+      "paragraphs": [
+        "For ACS patients without high bleeding risk, continue DAPT with aspirin and an oral P2Y12 inhibitor for at least 12 months. In patients who tolerate ticagrelor-based DAPT, transition to ticagrelor monotherapy at least 1 month after PCI is useful for bleeding reduction. In high-bleeding-risk PCI patients, transition to single antiplatelet therapy after 1 month may be reasonable; switching from ticagrelor or prasugrel to clopidogrel after 1 month may also reduce bleeding risk. [12]",
+        "If long-term oral anticoagulation is required, discontinue aspirin after 1 to 4 weeks of triple therapy and continue an oral anticoagulant plus a P2Y12 inhibitor, preferably clopidogrel. Prescribe a proton pump inhibitor for patients at elevated GI bleeding risk receiving DAPT, anticoagulation, or both. [12]",
+        "Initiate or continue high-intensity statin therapy for all ACS patients unless contraindicated. In patients already receiving maximally tolerated statin therapy, add a nonstatin agent if LDL-C is 70 mg/dL or greater; adding nonstatin therapy is reasonable at LDL-C 55 to 69 mg/dL. Concurrent ezetimibe plus maximally tolerated statin may be considered during the index ACS admission. [12]"
+      ],
+      "bullets": [
+        "High-intensity statin regimens include atorvastatin 40 to 80 mg or rosuvastatin 20 to 40 mg daily. [12]",
+        "Obtain a fasting lipid panel 4 to 8 weeks after initiation or adjustment of lipid-lowering therapy to assess response and adherence. [12]",
+        "Start oral beta-blocker therapy within 24 hours in ACS without contraindications such as acute heart failure, low output, shock risk, significant conduction disease, severe bradycardia, or active bronchospasm. [12]",
+        "Use an ACE inhibitor or ARB in high-risk ACS with LVEF 40% or less, hypertension, diabetes, or anterior STEMI; add a mineralocorticoid receptor antagonist for LVEF 40% or less with heart-failure symptoms and/or diabetes when renal function and potassium permit. [12]",
+        "Refer every ACS patient to cardiac rehabilitation before discharge; home-based programs are a reasonable alternative when center-based rehabilitation is inaccessible. [12]",
+        "Give annual influenza vaccination in ACS patients without contraindication. [12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Bleeding and anemia",
+          "paragraphs": [
+            "Use bleeding-risk assessment to individualize DAPT intensity and duration. ARC-HBR identifies high bleeding risk by at least one major or two minor criteria; major criteria include anticipated long-term oral anticoagulation, eGFR below 30 mL/min, hemoglobin below 11 g/dL, platelet count below 100 \u00d7 10^9/L, recent major bleeding, and prior intracranial hemorrhage. [12]"
+          ],
+          "bullets": [
+            "For ACS with acute or chronic anemia and no active bleeding, transfusion to achieve hemoglobin of at least 10 g/dL may be reasonable; the MINT trial suggested potential short-term benefit of a liberal versus restrictive threshold, but its primary endpoint was not statistically significant. [12]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Key discharge actions after ACS. [12]",
+        "columns": [
+          "Domain",
+          "Action",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Antithrombotics",
+            "Document intended DAPT duration, bleeding plan, and procedure-related interruption strategy. [12]",
+            "Before discharge. [12]"
+          ],
+          [
+            "Lipid lowering",
+            "High-intensity statin; consider ezetimibe or other nonstatin therapy according to LDL-C and statin tolerance. [12]",
+            "Initiate before discharge; check fasting lipids in 4 to 8 weeks. [12]"
+          ],
+          [
+            "Cardiac function",
+            "Assess LVEF to guide neurohormonal therapy and later ICD decisions. [12]",
+            "Before discharge; repeat echocardiography in 6 to 12 weeks if reduced LVEF. [12]"
+          ],
+          [
+            "Rehabilitation",
+            "Refer to outpatient CR or a home-based alternative. [12]",
+            "Before discharge. [12]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should fibrinolysis be used for STEMI?",
+      "answer": "Use fibrinolysis when symptom onset is under 12 hours and expected first-medical-contact-to-device time exceeds 120 minutes, provided no contraindication exists; immediately transfer to a PCI-capable center afterward. [12]"
+    },
+    {
+      "question": "Should all NSTE-ACS patients undergo immediate angiography?",
+      "answer": "No. Immediate angiography is indicated for refractory angina or hemodynamic/electrical instability. High-risk patients may benefit from early angiography within 24 hours; lower-risk patients can undergo angiography before discharge or selective testing-guided evaluation. [12]"
+    },
+    {
+      "question": "How long should DAPT continue after ACS PCI?",
+      "answer": "At least 12 months is the default for ACS patients without high bleeding risk. Selected patients tolerating ticagrelor-based DAPT may stop aspirin and continue ticagrelor alone after at least 1 month post-PCI. [12]"
+    },
+    {
+      "question": "What is the preferred P2Y12 inhibitor in ACS PCI?",
+      "answer": "Prasugrel or ticagrelor is preferred to clopidogrel for ACS patients undergoing PCI. Do not use prasugrel in patients with prior stroke or TIA; use clopidogrel when potent agents are unsuitable. [12]"
+    },
+    {
+      "question": "How should cardiogenic shock change multivessel PCI decisions?",
+      "answer": "Perform emergency culprit-vessel revascularization. Routine PCI of nonculprit arteries during the index procedure should not be performed because it increases death or kidney-failure risk. [12]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "highlights of prescribing information",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Renal Impairment No dose adjustment is necessary. No dose adjustment is likely to be needed for mild-moderate hepatic impairment.",
+      "score": 0.47621483
+    },
+    {
+      "number": 2,
+      "title": "These highlights do not include all the information needed to use CLOPIDOGREL TABLETS safely and effectively. See full prescribing information for CLOPIDOGREL TABLETS.\n \nCLOPIDOGREL tablets, for oral use\n \nInitial U.S. Approval: 1997",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=65ea4dc6-acb2-4609-9a4c-4866ef0ccb11&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | FULL PRESCRIBING INFORMATION: CONTENTS\\WARNING: DIMINISHED ANTIPLATELET EFFECT IN PATIENTS WITH TWO LOSS-OF-FUNCTION ALLELES OF THE CYP2C19 GENE1 INDICATIONS AND USAGE1.1 Acute Coronary Syndrome (ACS)1.2 Recent MI, Recent Stroke, or Established Peripheral Arterial Disease2 DOSAGE AND ADMINISTRA",
+      "score": 0.42591617
+    },
+    {
+      "number": 3,
+      "title": "DailyMed - TICAGRELOR tablet",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "To report SUSPECTED ADVERSE REACTIONS, contact Ascend Laboratories, LLC at 1-877-272-7901 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# DRUG INTERACTIONS\n\n# USE IN SPECIFIC POPULATIONS\n\nSee 17 for PATIENT COUNSELING INFORMATION and Medication Guide.\n\nRevised: 1/2026\n\n# FULL PRESCRIBING INFORM",
+      "score": 0.42048118
+    },
+    {
+      "number": 4,
+      "title": "These highlights do not include all the information needed to use PRASUGREL TABLETS safely and effectively. See full prescribing information for PRASUGREL TABLETS.\n \nPRASUGREL tablets, for oral use\n \nInitial U.S. Approval: 2009",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=35aa7f3e-bbd8-4eae-b61f-29d1abca2224&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | FULL PRESCRIBING INFORMATION: CONTENTS\\WARNING: BLEEDING RISK1 INDICATIONS AND USAGE1.1 Acute Coronary Syndrome2 DOSAGE AND ADMINISTRATION3 DOSAGE FORMS AND STRENGTHS4 CONTRAINDICATIONS4.1 Active Bleeding4.2 Prior Transient Ischemic Attack or Stroke4.3 Hypersensitivity5 WARNINGS AND PRECAUTIONS",
+      "score": 0.41805586
+    },
+    {
+      "number": 5,
+      "title": "Overview of acute coronary syndrome",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/152",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "## Introduction\n\nAcute coronary syndrome (ACS) refers to a spectrum of acute myocardial ischaemia and/or infarction. Acute chest pain is the leading presenting symptom; all patients with chest pain require urgent evaluation. ECG should not be delayed in the patient with suspected ACS. Myocardial bio",
+      "score": 0.6219319
+    },
+    {
+      "number": 6,
+      "title": "Non-ST-elevation myocardial infarction - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/151",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nRao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for the management of patients with acute coronary syndromes: a report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Ci",
+      "score": 0.604703
+    },
+    {
+      "number": 7,
+      "title": "Optimal management of acute coronary syndromes in the era of COVID-19 | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/106/20/1609",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Prompt treatment and minimisation of testing unlikely to change near-term clinical decisions should help to minimise the inpatient length of stay. This is important to reduce the likelihood of patients acquiring de novo coronavirus infection from other patients. In efficient healthcare systems with ",
+      "score": 0.5694942
+    },
+    {
+      "number": 8,
+      "title": "2025 Acute Coronary Syndromes Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.01.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "## Introduction\n\nThe 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients with Acute Coronary Syndromes1 (ACC/AHA/Multisociety ACS Guideline) highlights the importance of the most recent clinical evidence in treating patients with heart attacks and other acute coronary syndromes (A",
+      "score": 0.77446437
+    },
+    {
+      "number": 9,
+      "title": "Acute Coronary Syndromes Guideline Hub",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/guidelines/acute-coronary-syndromes",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### Footnotes\n\nDeveloped in Collaboration With and Endorsed by the American College of Emergency Physicians, National Association of EMS Physicians, and Society for Cardiovascular Angiography and Interventions.\n\nThis document was approved by the American College of Cardiology Clinical Policy Approva",
+      "score": 0.7106489
+    },
+    {
+      "number": 10,
+      "title": "2025 ACC/AHA Clinical Practice Guidelines Core Principles and Development Process: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.06.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n   [a [...] behaviors, and medication adherence.](\n   [b [...] assessments, including length of follow-up.](\n\n37.\n\nKourbelis C.M., Marin T.S., Foote J., et al. Effectiveness of discharge education strategies versus usual care on clinical outcomes in acute coronary s",
+      "score": 0.59033114
+    },
+    {
+      "number": 11,
+      "title": "2014 AHA/ACC Guideline for the\u00a0Management of Patients With\u00a0Non\u2013ST-Elevation Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.09.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Patients with continuing angina, hemodynamic instability, uncontrolled arrhythmias, or a large MI should be admitted to a coronary care unit. The nurse-to-patient ratio should be sufficient to provide 1) continuous electrocardiographic rhythm monitoring, 2) frequent assessment of vital signs and men",
+      "score": 0.8091708
+    },
+    {
+      "number": 12,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001309",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "> Daily dosing should be used in patients who weigh <70 kg and further ad-justed in patients with stage 4-5 kidney disease, severe hepatic impairment, or with concomitant P-glycoprotein and/or moderate and severe CYP3A4 inhibitors.\n> Downloaded from  by on August 18, 2026 CLINICAL STATEMENTS AND GUI",
+      "score": 0.60245985
+    },
+    {
+      "number": 13,
+      "title": "Management of Acute Coronary Syndrome in the Older ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001112",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by AA Damluji \u00b7 2023 \u00b7 Cited by 416 \u2014 dosing adjustment is warranted if a patient meets 2 of the following: age \u226580 years, body weight \u226460 kg, or a serum creatinine \u22651.5 mg/dL.73",
+      "score": 0.52962893
+    },
+    {
+      "number": 14,
+      "title": "Recommendations for Management of Clinically Significant Drug-Drug Interactions With Statins and Select Agents Used in Patients With Cardiovascular Disease: A Scientific Statement From the American Heart Association | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000456",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Fenofibrate is a prodrug, the ester of fenofibric acid. Ester hydrolysis converts fenofibrate to fenofibric acid, the active chemical moiety.65,66 The drug may be administered as either a prodrug (fenofibrate) or the active metabolite (fenofibric acid). Both agents are well absorbed from the gastroi",
+      "score": 0.1867916
+    },
+    {
+      "number": 15,
+      "title": "Clinical guideline highlights for the hospitalist: Updated ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.70198?af=R",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "Guideline for the Management of Patients with Acute Coronary Syndromes: acute coronary syndromes: a systematic review and meta-analysis.",
+      "score": 0.66699636
+    },
+    {
+      "number": 16,
+      "title": "2023 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RA Byrne \u00b7 2023 \u00b7 Cited by 7190 \u2014 This consists of medical therapy, lifestyle changes and cardiac rehabilitation, as well as consideration of psychosocial factors. 2.1.",
+      "score": 0.5832277
+    },
+    {
+      "number": 17,
+      "title": "Acute Coronary Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459157",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The 2025 American College of Cardiology/American Heart Association/American College of Emergency Physicians/National Association of EMS Physicians/Society for Cardiovascular Angiography and Interventions (ACC/AHA/ACEP/NAEMSP/SCAI) Guideline for the Management of Patients with Acute Coronary Syndrome",
+      "score": 0.7781275
+    },
+    {
+      "number": 18,
+      "title": "Barriers to the Implementation of Acute Coronary Syndrome Guidelines in Healthcare: A Systematic Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13155982",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": ".Rao SV, O\u2019Donoghue ML, Ruel M, Rab T, Tamis-Holland JE, Alexander JH, _et al_. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guideli",
+      "score": 0.74385756
+    },
+    {
+      "number": 19,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40014670",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Affiliations\n\n### Affiliations\n\n 1 ACC/AHA Joint Committee on Clinical Practice Guidelines liaison.\n 2 Lay stakeholder/patient representative.\n 3 Society for Cardiovascular Angiography and Interventions representative.\n 4 American College of Emergency Physicians representative.\n 5 ACC/AHA joint staf",
+      "score": 0.72465646
+    },
+    {
+      "number": 20,
+      "title": "Adherence to Cardiac Practice Guidelines in the Management ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5324326",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conclusion: This review showed wide variation in guideline adherence, with a substantial proportion of NST-ACS patients possibly not receiving guideline-recommended care. Consequently, lower adherence might be associated with a higher risk for poor prognosis. Future research should further investiga",
+      "score": 0.7208996
+    },
+    {
+      "number": 21,
+      "title": "Acute Coronary Syndromes: State-of-the-Art Diagnosis ... - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12787086",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this review, new findings and recommendations are fused into a risk-stratified approach to key clinical decisions by the frontline clinician from acute reperfusion and antithrombotic therapy to lipid control and long-term prevention, providing clear, evidence-informed strategies that clinicians c",
+      "score": 0.71496695
+    },
+    {
+      "number": 22,
+      "title": "2023 Acute Coronary Syndromes",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-coronary-syndromes",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "25 Aug, 2023\n\nThe present guideline has been developed to support healthcare professionals in the diagnosis and management of patients presenting with acute coronary syndrome (ACS). The conditions of ST-elevation myocardial infarction (STEMI) and non-ST-elevation ACS (NSTE-ACS) have been covered sep",
+      "score": 0.657033
+    },
+    {
+      "number": 23,
+      "title": "Management of Acute Coronary Syndrome",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41910981",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "This JAMA Clinical Guidelines Synopsis summarizes the 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for the management of patients with acute coronary",
+      "score": 0.6485337
+    },
+    {
+      "number": 24,
+      "title": "Acute Coronary Syndromes and Acute Cardiac Care",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/topics/acute-cardiac-care",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "The current Guidelines for the management of cardiovascular disease and pregnancy support health care professionals to manage and care for women with cardiovascular diseases before, during and after pregnancy.\n\nRead\n\n##### 2023 ESC Guidelines for the management of acute coronary syndromes\n\nThe prese",
+      "score": 0.6102915
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "highlights of prescribing information",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Renal Impairment No dose adjustment is necessary. No dose adjustment is likely to be needed for mild-moderate hepatic impairment.",
+      "score": 0.47621483
+    },
+    {
+      "number": 2,
+      "title": "These highlights do not include all the information needed to use CLOPIDOGREL TABLETS safely and effectively. See full prescribing information for CLOPIDOGREL TABLETS.\n \nCLOPIDOGREL tablets, for oral use\n \nInitial U.S. Approval: 1997",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=65ea4dc6-acb2-4609-9a4c-4866ef0ccb11&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | FULL PRESCRIBING INFORMATION: CONTENTS\\WARNING: DIMINISHED ANTIPLATELET EFFECT IN PATIENTS WITH TWO LOSS-OF-FUNCTION ALLELES OF THE CYP2C19 GENE1 INDICATIONS AND USAGE1.1 Acute Coronary Syndrome (ACS)1.2 Recent MI, Recent Stroke, or Established Peripheral Arterial Disease2 DOSAGE AND ADMINISTRA",
+      "score": 0.42591617
+    },
+    {
+      "number": 3,
+      "title": "DailyMed - TICAGRELOR tablet",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f73a4db-2c7f-4e42-a914-87aedc2780fb",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "To report SUSPECTED ADVERSE REACTIONS, contact Ascend Laboratories, LLC at 1-877-272-7901 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# DRUG INTERACTIONS\n\n# USE IN SPECIFIC POPULATIONS\n\nSee 17 for PATIENT COUNSELING INFORMATION and Medication Guide.\n\nRevised: 1/2026\n\n# FULL PRESCRIBING INFORM",
+      "score": 0.42048118
+    },
+    {
+      "number": 4,
+      "title": "These highlights do not include all the information needed to use PRASUGREL TABLETS safely and effectively. See full prescribing information for PRASUGREL TABLETS.\n \nPRASUGREL tablets, for oral use\n \nInitial U.S. Approval: 2009",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=35aa7f3e-bbd8-4eae-b61f-29d1abca2224&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | FULL PRESCRIBING INFORMATION: CONTENTS\\WARNING: BLEEDING RISK1 INDICATIONS AND USAGE1.1 Acute Coronary Syndrome2 DOSAGE AND ADMINISTRATION3 DOSAGE FORMS AND STRENGTHS4 CONTRAINDICATIONS4.1 Active Bleeding4.2 Prior Transient Ischemic Attack or Stroke4.3 Hypersensitivity5 WARNINGS AND PRECAUTIONS",
+      "score": 0.41805586
+    },
+    {
+      "number": 5,
+      "title": "Overview of acute coronary syndrome",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/152",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "## Introduction\n\nAcute coronary syndrome (ACS) refers to a spectrum of acute myocardial ischaemia and/or infarction. Acute chest pain is the leading presenting symptom; all patients with chest pain require urgent evaluation. ECG should not be delayed in the patient with suspected ACS. Myocardial bio",
+      "score": 0.6219319
+    },
+    {
+      "number": 6,
+      "title": "Non-ST-elevation myocardial infarction - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/151",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nRao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for the management of patients with acute coronary syndromes: a report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Ci",
+      "score": 0.604703
+    },
+    {
+      "number": 7,
+      "title": "Optimal management of acute coronary syndromes in the era of COVID-19 | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/106/20/1609",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Prompt treatment and minimisation of testing unlikely to change near-term clinical decisions should help to minimise the inpatient length of stay. This is important to reduce the likelihood of patients acquiring de novo coronavirus infection from other patients. In efficient healthcare systems with ",
+      "score": 0.5694942
+    },
+    {
+      "number": 8,
+      "title": "2025 Acute Coronary Syndromes Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.01.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "## Introduction\n\nThe 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients with Acute Coronary Syndromes1 (ACC/AHA/Multisociety ACS Guideline) highlights the importance of the most recent clinical evidence in treating patients with heart attacks and other acute coronary syndromes (A",
+      "score": 0.77446437
+    },
+    {
+      "number": 9,
+      "title": "Acute Coronary Syndromes Guideline Hub",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/guidelines/acute-coronary-syndromes",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### Footnotes\n\nDeveloped in Collaboration With and Endorsed by the American College of Emergency Physicians, National Association of EMS Physicians, and Society for Cardiovascular Angiography and Interventions.\n\nThis document was approved by the American College of Cardiology Clinical Policy Approva",
+      "score": 0.7106489
+    },
+    {
+      "number": 10,
+      "title": "2025 ACC/AHA Clinical Practice Guidelines Core Principles and Development Process: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.06.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n   [a [...] behaviors, and medication adherence.](\n   [b [...] assessments, including length of follow-up.](\n\n37.\n\nKourbelis C.M., Marin T.S., Foote J., et al. Effectiveness of discharge education strategies versus usual care on clinical outcomes in acute coronary s",
+      "score": 0.59033114
+    },
+    {
+      "number": 11,
+      "title": "2014 AHA/ACC Guideline for the\u00a0Management of Patients With\u00a0Non\u2013ST-Elevation Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.09.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Patients with continuing angina, hemodynamic instability, uncontrolled arrhythmias, or a large MI should be admitted to a coronary care unit. The nurse-to-patient ratio should be sufficient to provide 1) continuous electrocardiographic rhythm monitoring, 2) frequent assessment of vital signs and men",
+      "score": 0.8091708
+    },
+    {
+      "number": 12,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001309",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "> Daily dosing should be used in patients who weigh <70 kg and further ad-justed in patients with stage 4-5 kidney disease, severe hepatic impairment, or with concomitant P-glycoprotein and/or moderate and severe CYP3A4 inhibitors.\n> Downloaded from  by on August 18, 2026 CLINICAL STATEMENTS AND GUI",
+      "score": 0.60245985
+    },
+    {
+      "number": 13,
+      "title": "Management of Acute Coronary Syndrome in the Older ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001112",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by AA Damluji \u00b7 2023 \u00b7 Cited by 416 \u2014 dosing adjustment is warranted if a patient meets 2 of the following: age \u226580 years, body weight \u226460 kg, or a serum creatinine \u22651.5 mg/dL.73",
+      "score": 0.52962893
+    },
+    {
+      "number": 14,
+      "title": "Recommendations for Management of Clinically Significant Drug-Drug Interactions With Statins and Select Agents Used in Patients With Cardiovascular Disease: A Scientific Statement From the American Heart Association | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000456",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Fenofibrate is a prodrug, the ester of fenofibric acid. Ester hydrolysis converts fenofibrate to fenofibric acid, the active chemical moiety.65,66 The drug may be administered as either a prodrug (fenofibrate) or the active metabolite (fenofibric acid). Both agents are well absorbed from the gastroi",
+      "score": 0.1867916
+    },
+    {
+      "number": 15,
+      "title": "Clinical guideline highlights for the hospitalist: Updated ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.70198?af=R",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "Guideline for the Management of Patients with Acute Coronary Syndromes: acute coronary syndromes: a systematic review and meta-analysis.",
+      "score": 0.66699636
+    },
+    {
+      "number": 16,
+      "title": "2023 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RA Byrne \u00b7 2023 \u00b7 Cited by 7190 \u2014 This consists of medical therapy, lifestyle changes and cardiac rehabilitation, as well as consideration of psychosocial factors. 2.1.",
+      "score": 0.5832277
+    },
+    {
+      "number": 17,
+      "title": "Acute Coronary Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459157",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The 2025 American College of Cardiology/American Heart Association/American College of Emergency Physicians/National Association of EMS Physicians/Society for Cardiovascular Angiography and Interventions (ACC/AHA/ACEP/NAEMSP/SCAI) Guideline for the Management of Patients with Acute Coronary Syndrome",
+      "score": 0.7781275
+    },
+    {
+      "number": 18,
+      "title": "Barriers to the Implementation of Acute Coronary Syndrome Guidelines in Healthcare: A Systematic Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13155982",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": ".Rao SV, O\u2019Donoghue ML, Ruel M, Rab T, Tamis-Holland JE, Alexander JH, _et al_. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guideli",
+      "score": 0.74385756
+    },
+    {
+      "number": 19,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40014670",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Affiliations\n\n### Affiliations\n\n 1 ACC/AHA Joint Committee on Clinical Practice Guidelines liaison.\n 2 Lay stakeholder/patient representative.\n 3 Society for Cardiovascular Angiography and Interventions representative.\n 4 American College of Emergency Physicians representative.\n 5 ACC/AHA joint staf",
+      "score": 0.72465646
+    },
+    {
+      "number": 20,
+      "title": "Adherence to Cardiac Practice Guidelines in the Management ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5324326",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conclusion: This review showed wide variation in guideline adherence, with a substantial proportion of NST-ACS patients possibly not receiving guideline-recommended care. Consequently, lower adherence might be associated with a higher risk for poor prognosis. Future research should further investiga",
+      "score": 0.7208996
+    },
+    {
+      "number": 21,
+      "title": "Acute Coronary Syndromes: State-of-the-Art Diagnosis ... - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12787086",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this review, new findings and recommendations are fused into a risk-stratified approach to key clinical decisions by the frontline clinician from acute reperfusion and antithrombotic therapy to lipid control and long-term prevention, providing clear, evidence-informed strategies that clinicians c",
+      "score": 0.71496695
+    },
+    {
+      "number": 22,
+      "title": "2023 Acute Coronary Syndromes",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-coronary-syndromes",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "25 Aug, 2023\n\nThe present guideline has been developed to support healthcare professionals in the diagnosis and management of patients presenting with acute coronary syndrome (ACS). The conditions of ST-elevation myocardial infarction (STEMI) and non-ST-elevation ACS (NSTE-ACS) have been covered sep",
+      "score": 0.657033
+    },
+    {
+      "number": 23,
+      "title": "Management of Acute Coronary Syndrome",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41910981",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "This JAMA Clinical Guidelines Synopsis summarizes the 2025 ACC/AHA/ACEP/NAEMSP/SCAI guideline for the management of patients with acute coronary",
+      "score": 0.6485337
+    },
+    {
+      "number": 24,
+      "title": "Acute Coronary Syndromes and Acute Cardiac Care",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/topics/acute-cardiac-care",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "The current Guidelines for the management of cardiovascular disease and pregnancy support health care professionals to manage and care for women with cardiovascular diseases before, during and after pregnancy.\n\nRead\n\n##### 2023 ESC Guidelines for the management of acute coronary syndromes\n\nThe prese",
+      "score": 0.6102915
+    }
+  ],
+  "publishedAt": "2026-08-20T23:16:48.678194Z",
+  "updatedAt": "2026-08-20T23:16:48.678194Z",
+  "readingMinutes": 9,
+  "slug": "acute-coronary-syndrome"
+}

@@ -57,15 +57,17 @@ export const reorderArticleCitations = (articleData) => {
   // Find all citations in order of first appearance
   const appearanceOrder = [];
   const seen = new Set();
-  const regex = /\[(\d+)\]/g;
+  const regex = /\[((?:\d+\s*,\s*)*\d+)\]/g;
   let match;
 
   while ((match = regex.exec(allContent)) !== null) {
-    const num = Number.parseInt(match[1], 10);
-    if (!seen.has(num)) {
-      appearanceOrder.push(num);
-      seen.add(num);
-    }
+    (match[1].match(/\d+/g) || []).forEach((number) => {
+      const num = Number.parseInt(number, 10);
+      if (!seen.has(num)) {
+        appearanceOrder.push(num);
+        seen.add(num);
+      }
+    });
   }
 
   // Create mapping from old numbers to new sequential numbers
@@ -77,10 +79,13 @@ export const reorderArticleCitations = (articleData) => {
   // Function to renumber text
   const renumberText = (text) => {
     if (!text) return text;
-    return text.replace(/\[(\d+)\]/g, (full, numStr) => {
-      const oldNum = Number.parseInt(numStr, 10);
-      const newNum = numberMap[oldNum];
-      return newNum !== undefined ? `[${newNum}]` : full;
+    return text.replace(/\[((?:\d+\s*,\s*)*\d+)\]/g, (full, numberList) => {
+      const replacements = (numberList.match(/\d+/g) || []).map((numStr) => {
+        const oldNum = Number.parseInt(numStr, 10);
+        const newNum = numberMap[oldNum];
+        return newNum !== undefined ? `[${newNum}]` : `[${oldNum}]`;
+      });
+      return replacements.length ? replacements.join('') : full;
     });
   };
 

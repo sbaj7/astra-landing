@@ -1,0 +1,782 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology",
+  "title": "Heart Failure With Preserved Ejection Fraction",
+  "summary": "HFpEF requires objective evidence of heart failure beyond a preserved ejection fraction. Diagnose systematically, exclude cardiac and noncardiac mimics, use stress or invasive hemodynamics when uncertainty persists, decongest judiciously, initiate SGLT2 inhibition, and phenotype-directed therapy for obesity, CKD, atrial fibrillation, and hypertension.",
+  "seoDescription": "Evidence-based diagnosis and management of HFpEF, including diagnostic scores, hemodynamic testing, SGLT2 inhibitors, obesity therapy, and comorbidity care.",
+  "clinicalQuestion": "How should clinicians confirm, phenotype, and manage HFpEF while avoiding diagnostic mimics and treatment-related harm?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "HFpEF",
+    "heart failure with preserved ejection fraction",
+    "H2FPEF",
+    "HFA-PEFF",
+    "SGLT2 inhibitors",
+    "obesity-related HFpEF",
+    "diastolic stress testing"
+  ],
+  "keyTakeaways": [
+    "HFpEF is a clinical syndrome, not an echocardiographic ejection-fraction category: establish symptoms or signs of HF, LVEF at least 50%, and objective evidence of congestion or elevated filling pressure while excluding mimics. [5][7]",
+    "Normal BNP or NT-proBNP does not exclude HFpEF, particularly in obesity; when resting data are nondiagnostic, exercise echocardiography or invasive exercise hemodynamics can demonstrate provokable elevation in filling pressures. [2][5][11]",
+    "Dapagliflozin or empagliflozin is foundational therapy for symptomatic HFpEF without contraindications because both reduce worsening HF events or HF hospitalization across diabetic-status subgroups. [2][5][7]",
+    "For obesity-related HFpEF, semaglutide 2.4 mg weekly improved KCCQ clinical summary score, body weight, and 6-minute walk distance at 52 weeks in patients without diabetes; treatment should accompany exercise and nutritional strategies to preserve muscle function. [1][5]",
+    "Use beta-blockers only for a separate indication such as angina or AF rate control; routine heart-rate lowering may worsen exertional intolerance in patients with chronotropic incompetence. [2][5]"
+  ],
+  "sections": [
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm HF physiology, not just preserved EF",
+      "intro": "A preserved EF does not establish HFpEF.",
+      "paragraphs": [
+        "For ambulatory patients, diagnose HFpEF when symptoms or signs are attributable to structural or functional cardiac abnormality and are supported by elevated natriuretic peptides or objective cardiogenic pulmonary or systemic congestion; HFpEF conventionally requires LVEF at least 50%. [5][7] The practical diagnostic problem is the euvolemic patient with exertional dyspnea, normal or equivocal natriuretic peptides, and no obvious resting congestion.",
+        "Obesity, atrial fibrillation, CKD, lung disease, anemia, deconditioning, and frailty may independently cause dyspnea and may coexist with HFpEF. Do not label isolated diastolic dysfunction as HFpEF. Likewise, identify cardiac conditions with distinct treatment implications before assigning primary HFpEF, including significant valve disease, constrictive pericarditis, ischemia, hypertrophic cardiomyopathy, infiltrative or storage cardiomyopathy, and high-output states. [2][5][7]"
+      ],
+      "bullets": [
+        "Initial evaluation: ECG, chest radiography, transthoracic echocardiography with Doppler assessment, BNP or NT-proBNP, CBC, kidney function and electrolytes; add thyroid, liver, iron, pulmonary, or ischemic evaluation when indicated by phenotype. [5][23]",
+        "Interpret natriuretic peptides in context: values may be lower in obesity and HFpEF and higher with AF or CKD; normal values alone should not exclude HFpEF when clinical probability remains high. [2][5]",
+        "Use clinical history and echocardiography to trigger directed testing for amyloidosis, hypertrophic cardiomyopathy, constriction, pulmonary disease, high-output states, or significant valvular disease. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "Use probability scores to determine who needs definitive testing",
+          "paragraphs": [
+            "The H2FPEF score uses obesity, treatment with at least 2 antihypertensives, AF, estimated pulmonary artery systolic pressure above 35 mm Hg, age above 60 years, and E/e\u2032 above 9. Scores range from 0 to 9; low scores support noncardiac causes, scores of 6 or higher strongly support HFpEF, and intermediate scores should prompt further evaluation. [11]",
+            "HFA-PEFF integrates pretest assessment, natriuretic peptides, echocardiographic structure and function, functional testing, and final etiologic assessment. It is more comprehensive but often produces an intermediate result and requires tests not universally available. The 2026 ACC pathway supports H2FPEF as an accessible initial clinical tool, with HFA-PEFF or advanced testing for discordant or unresolved cases. [5]"
+          ],
+          "bullets": [
+            "Do not overrule high pretest probability with a low score or normal natriuretic peptide level in a patient with obesity and exertional limitation. [5]",
+            "Diagnostic scores estimate likelihood; they do not replace assessment for mimics or direct measurement of filling pressures when results will alter management. [5][11]"
+          ]
+        },
+        {
+          "heading": "Escalate to stress or invasive hemodynamics when rest studies are nondiagnostic",
+          "paragraphs": [
+            "Exercise is critical in suspected early HFpEF because filling pressures can be normal at rest yet rise abnormally with exertion. Invasive right-heart catheterization with exercise remains the reference standard when noninvasive data are equivocal. In the H2FPEF derivation cohort, HFpEF was defined by pulmonary capillary wedge pressure at least 15 mm Hg at rest or at least 25 mm Hg during exercise. [2][11]",
+            "Noninvasive diastolic stress echocardiography can be used when available, but an equivocal stress study should not close the diagnostic evaluation in a patient with persistent exertional symptoms and substantial clinical probability. [2][5]"
+          ],
+          "bullets": [
+            "Proceed directly to definitive testing when the distinction between HFpEF and pulmonary, obesity-related, pericardial, infiltrative, or high-output physiology will change treatment. [5]",
+            "In patients with suspected pulmonary hypertension, right-heart catheterization distinguishes precapillary from postcapillary physiology and informs subsequent management. [5]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "High-yield HFpEF mimics requiring targeted evaluation. [5]",
+        "columns": [
+          "Potential mimic",
+          "Clues that should change the workup",
+          "Directed evaluation"
+        ],
+        "rows": [
+          [
+            "Cardiac amyloidosis",
+            "Increased wall thickness with low-voltage ECG, carpal tunnel syndrome, spinal stenosis, neuropathy or autonomic symptoms. [5]",
+            "Serum and urine immunofixation plus serum free light chains; bone-avid radionuclide scintigraphy only in the setting of a negative monoclonal protein screen; biopsy when indicated. [5]"
+          ],
+          [
+            "Constrictive pericarditis",
+            "Prior pericarditis, cardiac surgery, chest radiation, Kussmaul sign, predominant right-sided congestion. [5]",
+            "Doppler echocardiography; cardiac CT or CMR; right- and left-heart catheterization when confirmation is needed. [5]"
+          ],
+          [
+            "Pulmonary disease or pulmonary vascular disease",
+            "Hypoxemia, chronic cough or wheeze, reduced DLCO, right-heart predominance, thromboembolic risk. [5]",
+            "Pulmonary function testing, chest imaging, V/Q scan or CT pulmonary angiography when appropriate, cardiopulmonary exercise testing, and right-heart catheterization. [5]"
+          ],
+          [
+            "High-output state",
+            "Warm extremities, widened pulse pressure, tachycardia, anemia, hyperthyroidism, liver disease, arteriovenous fistula, or systemic inflammation. [5]",
+            "CBC, TSH, liver testing and imaging, inflammatory evaluation, echocardiography, and hemodynamics when needed. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "foundational-management",
+      "eyebrow": "Treatment",
+      "heading": "Start disease-modifying therapy and titrate congestion treatment to phenotype",
+      "intro": "Treat confirmed symptomatic HFpEF while addressing its dominant drivers.",
+      "paragraphs": [
+        "Use loop diuretics to relieve congestion, titrating to clinical volume status and symptoms. Patients with HFpEF can be sensitive to excessive preload reduction; reassess blood pressure, kidney function, electrolytes, weight trajectory, orthostasis, and residual congestion rather than pursuing a fixed dose. [2][5]",
+        "SGLT2 inhibitors are the core pharmacologic therapy. In EMPEROR-Preserved, empagliflozin reduced cardiovascular death or HF hospitalization versus placebo (hazard ratio 0.79, 95% CI 0.69-0.90), driven largely by fewer HF hospitalizations. In DELIVER, dapagliflozin reduced worsening HF or cardiovascular death (hazard ratio 0.82, 95% CI 0.73-0.92), with benefit evident across prespecified subgroups. [2][5]",
+        "The 2026 ACC pathway recommends dapagliflozin 10 mg orally daily or empagliflozin 10 mg orally daily without titration. Avoid use in type 1 diabetes, pregnancy, lactation, and known hypersensitivity; the pathway lists eGFR below 25 mL/min/1.73 m\u00b2 for dapagliflozin and below 20 mL/min/1.73 m\u00b2 for empagliflozin as contraindications or major limitations. Counsel about genital mycotic infection, volume depletion, ketoacidosis risk during acute illness, prolonged fasting, ketogenic diets, excessive alcohol use, or insulin deficiency, and reassess diuretic dose if hypotension or overdiuresis emerges. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "MRA, ARNI, and ARB selection",
+          "paragraphs": [
+            "Finerenone reduced the composite of total worsening HF events and cardiovascular death in FINEARTS-HF (hazard ratio 0.82, 95% CI 0.71-0.94), primarily through fewer worsening HF events. The 2026 ACC pathway identifies finerenone as the preferred MRA in HFpEF, with spironolactone as a reasonable alternative when cost or tolerance limits use. [5]",
+            "Finerenone is started at 10 mg daily for eGFR 25 to less than 60 mL/min/1.73 m\u00b2 or 20 mg daily for eGFR at least 60 mL/min/1.73 m\u00b2, with targets of 20 mg and 40 mg daily, respectively. Do not initiate with potassium at least 5.0 mmol/L, eGFR below 25 mL/min/1.73 m\u00b2, Addison disease, pregnancy, or strong or moderate CYP3A4 inhibitors or inducers. Monitor potassium and kidney function. [5]",
+            "Sacubitril/valsartan did not meet the overall PARAGON-HF primary endpoint, but possible benefit was greater in women and in patients with LVEF below the trial median of 57%. It is reasonable when additional blood pressure lowering is needed, especially in these subgroups. Start 24/26 mg twice daily and target 97/103 mg twice daily if tolerated; avoid with prior angioedema, pregnancy, severe hepatic impairment, or within 36 hours of ACE inhibitor exposure. [5] Candesartan is an alternative when ARNI is not feasible; start 4 to 8 mg daily and target 32 mg daily. [5]"
+          ],
+          "bullets": [
+            "Spironolactone may reduce HF hospitalization but its overall TOPCAT primary endpoint was neutral and regional trial conduct raised interpretive uncertainty. Use only with structured potassium and kidney-function surveillance. [2][5]",
+            "Avoid routine beta-blocker use for HFpEF alone. Restrict it to compelling indications such as angina or AF rate control, and reduce or discontinue if chronotropic limitation or exertional intolerance appears. [5]",
+            "Do not use nitrates solely to improve HFpEF activity tolerance; isosorbide mononitrate reduced activity and did not improve quality of life or submaximal exercise capacity in symptomatic HFpEF. [2][5]"
+          ]
+        },
+        {
+          "heading": "Obesity-related HFpEF merits targeted therapy",
+          "paragraphs": [
+            "Obesity is both a common HFpEF phenotype and a diagnostic confounder. It promotes plasma-volume expansion, elevated exercise filling pressures, inflammation, impaired exercise capacity, and lower natriuretic peptide concentrations. [1][5] Confirm HF physiology before attributing dyspnea solely to body habitus.",
+            "In STEP-HFpEF, adults with HFpEF, BMI at least 30 kg/m\u00b2, and no diabetes received semaglutide 2.4 mg subcutaneously weekly or placebo for 52 weeks. Semaglutide improved KCCQ clinical summary score by 7.8 points versus placebo, produced a 10.7-percentage-point greater reduction in body weight, and improved 6-minute walk distance by 20.3 m. [1] Initiate at 0.25 mg weekly and increase every 4 weeks as tolerated to 2.4 mg weekly. [1][5]",
+            "Semaglutide and tirzepatide are appropriate considerations for selected patients with obesity-related HFpEF, but the 2026 ACC pathway emphasizes concurrent exercise and nutritional support because incretin-based therapy can reduce lean mass and contribute to sarcopenic obesity. Contraindications include personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2, pregnancy, lactation, and hypersensitivity. [5]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Medication priorities for established symptomatic HFpEF. [5]",
+        "columns": [
+          "Therapy",
+          "Who benefits most",
+          "Practical monitoring or limitation"
+        ],
+        "rows": [
+          [
+            "Dapagliflozin 10 mg daily or empagliflozin 10 mg daily",
+            "Most symptomatic HFpEF patients without contraindications, regardless of diabetes status. [2][5]",
+            "Assess volume status, renal function, genital infection risk, and ketoacidosis risk factors; consider loop-diuretic adjustment after initiation. [5]"
+          ],
+          [
+            "Finerenone",
+            "Eligible HFpEF patients, particularly when cardiovascular-kidney-metabolic disease coexists. [5]",
+            "Check potassium, eGFR, interacting CYP3A4 agents, blood pressure, and concomitant potassium-raising medications. [5]"
+          ],
+          [
+            "Semaglutide 2.4 mg weekly",
+            "Symptomatic obesity-related HFpEF; STEP-HFpEF excluded diabetes. [1]",
+            "Titrate every 4 weeks; monitor gastrointestinal intolerance, hydration, gallbladder or pancreatitis symptoms, nutrition, and lean-mass preservation strategy. [1][5]"
+          ],
+          [
+            "Sacubitril/valsartan",
+            "Women or patients with LVEF below the normal range, especially when additional blood pressure control is needed. [5]",
+            "Monitor blood pressure, kidney function, potassium, and angioedema risk; never coadminister with an ACE inhibitor. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "comorbidity-phenotype-care",
+      "eyebrow": "Phenotype-directed care",
+      "heading": "Treat the comorbid drivers that determine symptoms and events",
+      "intro": "HFpEF care is often determined by cardiovascular-kidney-metabolic disease burden.",
+      "paragraphs": [
+        "Hypertension, AF, CKD, diabetes, obesity, CAD, and sleep-disordered breathing are not ancillary diagnoses in HFpEF; they may drive filling-pressure elevation, functional limitation, and recurrent hospitalization. The 2026 ACC pathway frames management around cardiovascular-kidney-metabolic disease and favors therapies with overlapping cardiac, renal, and metabolic benefit. [5]",
+        "For hypertension, a systolic blood pressure below 130 mm Hg is recommended in most patients, but pooled HFpEF trial data suggest higher risk at both systolic pressure at least 140 mm Hg and below 120 mm Hg; a practical individualized target is 120 to 129 mm Hg when tolerated. [5] Use ARNI or ARB preferentially when indicated for both blood pressure and potential HF benefit, while avoiding indiscriminate beta-blockade. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "Atrial fibrillation",
+          "paragraphs": [
+            "AF is common in HFpEF and is associated with worse symptoms, cardiac dysfunction, hospitalization, and death. Follow contemporary AF guidance for anticoagulation and rhythm or rate control. Aggressive rate slowing can worsen exertional capacity when chronotropic reserve is limited. [5]",
+            "Rhythm control, including catheter ablation in appropriate candidates, is reasonable when AF appears to drive symptoms. The supporting HFpEF evidence is largely observational, subgroup, and meta-analytic rather than definitive dedicated randomized trial evidence; discuss uncertainty explicitly. [2][5]"
+          ],
+          "bullets": [
+            "Evaluate AF-related symptoms separately from HF symptoms before escalating diuretics or HF therapies. [5]",
+            "Address obesity, hypertension, diabetes, and sleep apnea because these factors influence AF burden and HFpEF trajectory. [5]"
+          ]
+        },
+        {
+          "heading": "CKD and diabetes",
+          "paragraphs": [
+            "CKD is common in HFpEF and increases risk of worsening HF and death. SGLT2 inhibitors, renin-angiotensin system blockade when indicated, nonsteroidal MRAs, and GLP-1 receptor agonists in appropriate patients can provide overlapping kidney and cardiovascular benefit. [5]",
+            "Do not stop SGLT2 inhibition solely for a small early creatinine rise without assessing volume status and longer-term renal trajectory. In contrast, hyperkalemia, progressive renal dysfunction, symptomatic hypotension, or volume depletion should trigger reassessment of MRA, ARNI, ARB, diuretic, and potassium-supplement exposure. [2][5]"
+          ],
+          "bullets": [
+            "Avoid thiazolidinediones in HFpEF because of fluid retention and increased HF events. [5]",
+            "Avoid saxagliptin and alogliptin in HFpEF because of increased HF-event concerns. [5]"
+          ]
+        },
+        {
+          "heading": "Exercise, caloric restriction, and selected devices",
+          "paragraphs": [
+            "Exercise training improves exercise capacity and quality of life in HFpEF, although a reduction in HF hospitalization or death has not been consistently demonstrated. Programs should be individualized, include aerobic and resistance components when feasible, and account for frailty and musculoskeletal limitation. [2][5]",
+            "For recurrent hospitalization with persistent NYHA class III symptoms despite optimized therapy, unstable volume status, cardiorenal syndrome, or difficult differentiation of HF from obesity or lung disease, pulmonary artery pressure monitoring may be considered at centers able to manage transmitted data. [5] Interatrial shunting, splanchnic nerve ablation, and rate-adaptive pacing have not established routine benefit in HFpEF. [5]"
+          ]
+        }
+      ],
+      "bullets": [
+        "Screen for obstructive sleep apnea when symptoms, resistant hypertension, AF rhythm-control strategy, nocturnal hypoxemia, or marked obesity raises suspicion; treat for symptom and sleep-quality benefit rather than assuming cardiovascular event reduction. [2][5]",
+        "Evaluate CAD when dyspnea could represent an anginal equivalent. Manage secondary prevention and consider revascularization according to coronary disease indications rather than as routine HFpEF therapy. [5]"
+      ],
+      "table": {
+        "caption": "Monitoring after therapeutic changes in HFpEF. [5]",
+        "columns": [
+          "Clinical situation",
+          "What to reassess",
+          "Finding that should trigger action"
+        ],
+        "rows": [
+          [
+            "After SGLT2 inhibitor initiation",
+            "Volume status, blood pressure, renal function, genital symptoms, diabetes sick-day risk. [5]",
+            "Symptomatic hypotension or volume depletion: reduce loop diuretic or other nonessential antihypertensive therapy before abandoning disease-modifying treatment when clinically appropriate. [2][5]"
+          ],
+          [
+            "After MRA, ARNI, or ARB initiation or titration",
+            "Potassium, creatinine/eGFR, blood pressure, concurrent potassium supplementation, NSAID or trimethoprim exposure. [5]",
+            "Hyperkalemia, clinically meaningful kidney-function decline, or symptomatic hypotension: adjust the responsible agent and interacting therapies. [5]"
+          ],
+          [
+            "Persistent exertional dyspnea despite treatment",
+            "Congestion, AF burden and rate response, ischemia, pulmonary disease, obesity-related limitation, anemia, sleep apnea, and diagnostic certainty. [5]",
+            "Discordant clinical and resting tests: proceed to stress echocardiography, cardiopulmonary exercise testing, or invasive exercise hemodynamics when results will alter management. [5][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prognosis-referral",
+      "eyebrow": "Follow-up",
+      "heading": "Communicate persistent risk and refer when the phenotype is uncertain or unstable",
+      "intro": "A preserved EF does not confer benign prognosis.",
+      "paragraphs": [
+        "HFpEF remains associated with recurrent hospitalization, progressive functional decline, and cardiovascular and noncardiovascular mortality. A U.S. Markov model based on contemporary trial populations estimated that over 10 years, 37% of patients would experience at least 1 HF hospitalization, 26% cardiovascular death, and mean life expectancy of 6.1 years from age 72; these estimates are model-based and may be optimistic relative to routine practice. [3]",
+        "Refer to cardiology or an HF specialist when diagnosis remains uncertain, suspected amyloidosis or other specific cardiomyopathy is present, pulmonary hypertension or right-heart dysfunction is disproportionate, recurrent HF admissions occur, diuretic requirements escalate, hypotension or renal dysfunction complicates therapy, or symptoms persist despite optimized therapy. [2][5]"
+      ],
+      "bullets": [
+        "Use patient-reported health status, functional capacity, weight and congestion trends, blood pressure, kidney function, potassium, AF status, and hospitalizations to guide follow-up intensity. [1][5]",
+        "Introduce supportive and palliative care early for persistent symptom burden, frailty, recurrent admissions, or uncertainty about acceptable treatment tradeoffs; this is not limited to end-of-life care. [7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical features that should prompt reassessment of diagnosis or escalation of care. [5]",
+        "columns": [
+          "Feature",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Persistent dyspnea with low natriuretic peptide levels and obesity",
+            "Do not dismiss HFpEF; reassess objective congestion and consider exercise-based or invasive filling-pressure evaluation. [5]"
+          ],
+          [
+            "Marked wall thickening, neuropathy, carpal tunnel syndrome, spinal stenosis, or discordant ECG voltage",
+            "Evaluate for cardiac amyloidosis before treating as uncomplicated HFpEF. [5]"
+          ],
+          [
+            "Recurrent admissions or NYHA class III symptoms despite therapy",
+            "Confirm adherence, reassess congestion and comorbidity triggers, optimize disease-modifying therapy, and consider pulmonary artery pressure monitoring or HF specialty referral. [5]"
+          ],
+          [
+            "Worsening right-sided dysfunction or pulmonary hypertension",
+            "Reevaluate for postcapillary versus precapillary pulmonary hypertension, lung disease, thromboembolic disease, valve disease, and advanced HFpEF physiology. [5]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can normal BNP or NT-proBNP exclude HFpEF?",
+      "answer": "No. Natriuretic peptide concentrations may be normal or lower than expected in HFpEF, especially with obesity. When clinical probability remains high, use diagnostic scoring and consider stress echocardiography or invasive exercise hemodynamics. [2][5]"
+    },
+    {
+      "question": "What is the first disease-modifying medication for HFpEF?",
+      "answer": "An SGLT2 inhibitor is foundational therapy for most symptomatic patients without contraindications. Dapagliflozin 10 mg daily and empagliflozin 10 mg daily reduced worsening HF outcomes in pivotal HFpEF trials. [2][5]"
+    },
+    {
+      "question": "When should invasive exercise hemodynamics be used?",
+      "answer": "Use it when unexplained exertional symptoms persist despite nondiagnostic resting evaluation and the result will change management. Elevated PCWP at rest or during exercise supports HFpEF physiology. [5][11]"
+    },
+    {
+      "question": "Should beta-blockers be routinely prescribed for HFpEF?",
+      "answer": "No. Use beta-blockers for a separate indication, such as angina or AF rate control. Routine use lacks established HFpEF benefit and can impair exercise tolerance through chronotropic incompetence. [2][5]"
+    },
+    {
+      "question": "Which patients with HFpEF should receive semaglutide?",
+      "answer": "Consider it for obesity-related HFpEF after confirming HF physiology and reviewing contraindications. STEP-HFpEF enrolled patients with BMI at least 30 kg/m\u00b2 and no diabetes; semaglutide improved symptoms, weight, and 6-minute walk distance. [1]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2306963",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Crossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n2.\n\nRedfield MM, Borlaug BA. Heart failure with preserved ejection fraction: a review. _JAMA_ 2023;329:827-838.\n\nCrossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n3.\n\nBorlaug BA. Evaluation and management of heart failure with preserved ejection frac",
+      "score": 0.43194416
+    },
+    {
+      "number": 2,
+      "title": "How to Manage Heart Failure With Preserved Ejection ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jchf.2023.03.011",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Although patients with heart failure with preserved ejection fraction (HFpEF) comprise nearly half of those with heart failure (HF), evidence-based treatment options have historically been limited.1 Treatment guidelines have accordingly emphasized symptomatic management through relief of congestion ",
+      "score": 0.7123327
+    },
+    {
+      "number": 3,
+      "title": "Long-Term Outcomes of Heart Failure With Preserved or Mid-Range Ejection Fraction in the United States",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2024.101027",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "TRANSLATIONAL OUTLOOK: Clinical trial experience in HFpEF/HFmrEF is limited compared to that of HFrEF, which has a longer history of being studied and characterized as a prevailing phenotype of HF. As a result, clinical guidance on treatment and care planning for HFpEF and HFmrEF is also relatively ",
+      "score": 0.7101667
+    },
+    {
+      "number": 4,
+      "title": "A contemporary review on heart failure with improved ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s44325-025-00093-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The definition of HF with improved ejection fraction has evolved4.\"). The 2013 ACC/AHA guidelines were the first to appreciate patients with HFpEF who previously had HFrEF as clinically unique from those with persistently preserved or reduced EF; this cohort was classified as \u201cHeart failure with pre",
+      "score": 0.6557114
+    },
+    {
+      "number": 5,
+      "title": "Management of Heart Failure With Preserved Ejection ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n172.\n\nDesai N., Olewinska E., Famulska A., et al. Heart failure with mildly reduced and preserved ejection fraction: a review of disease burden and remaining unmet medical needs within a new treatment landscape. _Heart Fail Rev_. 2024;29:631-662.\n\nGo",
+      "score": 0.64746445
+    },
+    {
+      "number": 6,
+      "title": "Heart failure with preserved ejection fraction: present status and future directions | Experimental & Molecular Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s12276-019-0323-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The clinical importance of heart failure with preserved ejection fraction (HFpEF) has recently become apparent. HFpEF refers to heart failure (HF) symptoms with normal or near-normal cardiac function on echocardiography. Common clinical features of HFpEF include diastolic dysfunction, reduced compli",
+      "score": 0.6158511
+    },
+    {
+      "number": 7,
+      "title": "2023 ACC Expert Consensus Decision Pathway on ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.03.393",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "HF = heart failure; HFpEF = heart failure with preserved ejection fraction; V o 2 = oxygen consumption\n\n#### 7.2.1 Exercise and Calorie Restriction\n\nIdeally, HFpEF-directed therapy would reduce symptoms of HF, the risk of hospitalization, and mortality. Exercise intolerance is a key symptom of HFpEF",
+      "score": 0.6108487
+    },
+    {
+      "number": 8,
+      "title": "Heart failure articles within Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/heart-failure/nrcardio",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The pathophysiology of heart failure with preserved ejection fraction (HFpEF) remains poorly understood. In this Review, Redfield and colleagues highlight",
+      "score": 0.5993685
+    },
+    {
+      "number": 9,
+      "title": "Heart Failure Management in Primary Care | Primary Health Care | Health Services and Systems | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/heart-failure-management-in-primary-care",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### References\n\n1. Few geriatric heart failure patients investigated according to clinical guidelines: a retrospective review of patient records.\n   BMC Geriatrics (2023).\n2. Impact of an extended audit on identifying heart failure patients in general practice: baseline results of the OSCAR\u2010HF pilot",
+      "score": 0.5602773
+    },
+    {
+      "number": 10,
+      "title": "Heart Failure With Preserved Ejection Fraction In Perspective",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circresaha.119.313572",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "LV hypertrophy is consistently predictive of worse prognosis in HFpEF, including higher risk of death or HF hospitalization independent of clinical predictors",
+      "score": 0.69049704
+    },
+    {
+      "number": 11,
+      "title": "A Simple, Evidence-Based Approach to Help Guide Diagnosis of Heart Failure With Preserved Ejection Fraction",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.118.034646",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Transthoracic echocardiography revealed that patients with HFpEF were more likely to have diastolic dysfunction, with higher noninvasive estimates of filling pressure (higher E/e\u2019 ratio). Although the ejection fraction was similar, patients with HFpEF had subtle impairment in systolic function as ev",
+      "score": 0.6607204
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of 2 Existing Diagnostic Scores for Heart Failure ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.120.050757",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by TW Churchill \u00b7 2021 \u00b7 Cited by 63 \u2014 Heart failure with preserved ejection fraction (HFpEF) is increasingly common and presents challenges for accurate diagnosis.",
+      "score": 0.474023
+    },
+    {
+      "number": 13,
+      "title": "Heart failure with preserved ejection fraction management",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ehjqcco/article-abstract/10/7/571/7699092",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Mahmood \u00b7 2024 \u00b7 Cited by 23 \u2014 Multiple guidelines exist for the diagnosis and management of heart failure with preserved ejection fraction (HFpEF). We systematically reviewed.",
+      "score": 0.6651719
+    },
+    {
+      "number": 14,
+      "title": "The use of sodium-glucose cotransporter 2 inhibitors in heart ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/pmj/article/99/1176/1052/7097869",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by KAA Clark \u00b7 2023 \u00b7 Cited by 10 \u2014 In the USA, approximately half of HF patients that are hospitalized have HFpEF, leading to new therapeutic options for a significant",
+      "score": 0.4475333
+    },
+    {
+      "number": 15,
+      "title": "Global status and trends in heart failure with... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2022/03180/global_status_and_trends_in_heart_failure_with.51.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cited HereFull TextCrossRefGoogle Scholar\n ## \n\n  Shah SJ, Katz DH, Deo RC. Phenotypic spectrum of heart failure with preserved ejection fraction. Heart Fail Clin 2014;10:407-18.\n\n  Cited HereGoogle Scholar\n ## \n\n  D\u2019Elia E, Vaduganathan M, Gori M, Gavazzi A, Butler J, Senni M. Role of biomarkers in",
+      "score": 0.40952834
+    },
+    {
+      "number": 16,
+      "title": "Heart failure with preserved ejection fraction - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/32/6/670/496707",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by BA Borlaug \u00b7 2011 \u00b7 Cited by 1620 \u2014 Abstract. Half of patients with heart failure (HF) have a preserved left ventricular ejection fraction (HFpEF). Morbidity and mortality in HFpEF are simila.",
+      "score": 0.35878035
+    },
+    {
+      "number": 17,
+      "title": "Established and emerging pharmacologic options and unmet ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eschf/article/13/2/xvag056/8489955",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AJ Sauer \u00b7 2026 \u00b7 Cited by 3 \u2014 Clinical trials have demonstrated the efficacy of sodium\u2013glucose cotransporter 2 inhibitors for improving outcomes in HFpEF and HFmrEF.",
+      "score": 0.3004689
+    },
+    {
+      "number": 18,
+      "title": "Chronic heart failure in adults: diagnosis and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/Guidance/NG106",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Chronic heart failure in adults: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing and managing chronic heart failure in people aged 18 and over. It aims to improve diagnosis and treatment to increase the length and quality of life for people with heart failure",
+      "score": 0.61112726
+    },
+    {
+      "number": 19,
+      "title": "Scenario: Confirmed heart failure with preserved ejection ...",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/heart-failure-chronic/management/confirmed-heart-failure-with-preserved-ejection-fraction",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "Covers the management of people with heart failure with preserved ejection fraction.",
+      "score": 0.35160094
+    },
+    {
+      "number": 20,
+      "title": "Heart failure with preserved ejection fraction: an update on pathophysiology, diagnosis, treatment, and prognosis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7296715",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Prognosis\n\nThe prognosis of patients with HFpEF is less well defined than that of patients with HFrEF. Population-based data from hospitalized patients have shown similar outcomes in patients with HFpEF and HFrEF (63). However, a large meta-analysis, including community-based studies and trials,",
+      "score": 0.8687491
+    },
+    {
+      "number": 21,
+      "title": "Focus on Heart Failure | HFpEF: Where We Stand in 2025",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2025/06/01/01/focus-on-heart-failure-hfpef",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "The HFA-PEEF is a more involved scoring system, utilizing many echocardiographic features, both functional (E/e' ratio \u22659, tricuspid regurgitation velocity >2.8 m/s, global longitudinal systolic strain <16%) and morphologic (left atrial volume index >29, left ventricular mass index >115/95 g/m2, rel",
+      "score": 0.7795405
+    },
+    {
+      "number": 22,
+      "title": "Heart Failure With Preserved Ejection Fraction (HFpEF) - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK599960",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Prognosis\n\nPatients with HFpEF have increased rates of morbidity and mortality compared with patients without heart failure. However, recent studies suggest that morbidity rates are similar for patients with HFpEF and HFrEF.(#article-164817.r27)(#article-164817.r93) The presence and severity of c",
+      "score": 0.7548612
+    },
+    {
+      "number": 23,
+      "title": "2024 Guidelines of the Taiwan Society of Cardiology for the Diagnosis and Treatment of Heart Failure with Preserved Ejection Fraction",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10961629",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "or raised left ventricular filling pressure. If diagnosis is still uncertain, invasive or noninvasive stress test can be performed in the second step. Comorbidities need to be controlled in HFpEF. Weight reduction for obesity and supervised exercise training are recommended for HFpEF. For pharmacolo",
+      "score": 0.750937
+    },
+    {
+      "number": 24,
+      "title": "Prognosis of heart failure with preserved ejection fraction",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18156618",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by C Tribouilloy \u00b7 2008 \u00b7 Cited by 657 \u2014 Patients with HFPEF had a significantly lower 5 year survival than the age- with a 5 year survival rate after a first episode of 43% and a high excess mortality",
+      "score": 0.7373288
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2306963",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Crossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n2.\n\nRedfield MM, Borlaug BA. Heart failure with preserved ejection fraction: a review. _JAMA_ 2023;329:827-838.\n\nCrossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n3.\n\nBorlaug BA. Evaluation and management of heart failure with preserved ejection frac",
+      "score": 0.43194416
+    },
+    {
+      "number": 2,
+      "title": "How to Manage Heart Failure With Preserved Ejection ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jchf.2023.03.011",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Although patients with heart failure with preserved ejection fraction (HFpEF) comprise nearly half of those with heart failure (HF), evidence-based treatment options have historically been limited.1 Treatment guidelines have accordingly emphasized symptomatic management through relief of congestion ",
+      "score": 0.7123327
+    },
+    {
+      "number": 3,
+      "title": "Long-Term Outcomes of Heart Failure With Preserved or Mid-Range Ejection Fraction in the United States",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2024.101027",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "TRANSLATIONAL OUTLOOK: Clinical trial experience in HFpEF/HFmrEF is limited compared to that of HFrEF, which has a longer history of being studied and characterized as a prevailing phenotype of HF. As a result, clinical guidance on treatment and care planning for HFpEF and HFmrEF is also relatively ",
+      "score": 0.7101667
+    },
+    {
+      "number": 4,
+      "title": "A contemporary review on heart failure with improved ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s44325-025-00093-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The definition of HF with improved ejection fraction has evolved4.\"). The 2013 ACC/AHA guidelines were the first to appreciate patients with HFpEF who previously had HFrEF as clinically unique from those with persistently preserved or reduced EF; this cohort was classified as \u201cHeart failure with pre",
+      "score": 0.6557114
+    },
+    {
+      "number": 5,
+      "title": "Management of Heart Failure With Preserved Ejection ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.06.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n172.\n\nDesai N., Olewinska E., Famulska A., et al. Heart failure with mildly reduced and preserved ejection fraction: a review of disease burden and remaining unmet medical needs within a new treatment landscape. _Heart Fail Rev_. 2024;29:631-662.\n\nGo",
+      "score": 0.64746445
+    },
+    {
+      "number": 6,
+      "title": "Heart failure with preserved ejection fraction: present status and future directions | Experimental & Molecular Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s12276-019-0323-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The clinical importance of heart failure with preserved ejection fraction (HFpEF) has recently become apparent. HFpEF refers to heart failure (HF) symptoms with normal or near-normal cardiac function on echocardiography. Common clinical features of HFpEF include diastolic dysfunction, reduced compli",
+      "score": 0.6158511
+    },
+    {
+      "number": 7,
+      "title": "2023 ACC Expert Consensus Decision Pathway on ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.03.393",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "HF = heart failure; HFpEF = heart failure with preserved ejection fraction; V o 2 = oxygen consumption\n\n#### 7.2.1 Exercise and Calorie Restriction\n\nIdeally, HFpEF-directed therapy would reduce symptoms of HF, the risk of hospitalization, and mortality. Exercise intolerance is a key symptom of HFpEF",
+      "score": 0.6108487
+    },
+    {
+      "number": 8,
+      "title": "Heart failure articles within Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/heart-failure/nrcardio",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The pathophysiology of heart failure with preserved ejection fraction (HFpEF) remains poorly understood. In this Review, Redfield and colleagues highlight",
+      "score": 0.5993685
+    },
+    {
+      "number": 9,
+      "title": "Heart Failure Management in Primary Care | Primary Health Care | Health Services and Systems | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/heart-failure-management-in-primary-care",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### References\n\n1. Few geriatric heart failure patients investigated according to clinical guidelines: a retrospective review of patient records.\n   BMC Geriatrics (2023).\n2. Impact of an extended audit on identifying heart failure patients in general practice: baseline results of the OSCAR\u2010HF pilot",
+      "score": 0.5602773
+    },
+    {
+      "number": 10,
+      "title": "Heart Failure With Preserved Ejection Fraction In Perspective",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circresaha.119.313572",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "LV hypertrophy is consistently predictive of worse prognosis in HFpEF, including higher risk of death or HF hospitalization independent of clinical predictors",
+      "score": 0.69049704
+    },
+    {
+      "number": 11,
+      "title": "A Simple, Evidence-Based Approach to Help Guide Diagnosis of Heart Failure With Preserved Ejection Fraction",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.118.034646",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Transthoracic echocardiography revealed that patients with HFpEF were more likely to have diastolic dysfunction, with higher noninvasive estimates of filling pressure (higher E/e\u2019 ratio). Although the ejection fraction was similar, patients with HFpEF had subtle impairment in systolic function as ev",
+      "score": 0.6607204
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of 2 Existing Diagnostic Scores for Heart Failure ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.120.050757",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by TW Churchill \u00b7 2021 \u00b7 Cited by 63 \u2014 Heart failure with preserved ejection fraction (HFpEF) is increasingly common and presents challenges for accurate diagnosis.",
+      "score": 0.474023
+    },
+    {
+      "number": 13,
+      "title": "Heart failure with preserved ejection fraction management",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ehjqcco/article-abstract/10/7/571/7699092",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Mahmood \u00b7 2024 \u00b7 Cited by 23 \u2014 Multiple guidelines exist for the diagnosis and management of heart failure with preserved ejection fraction (HFpEF). We systematically reviewed.",
+      "score": 0.6651719
+    },
+    {
+      "number": 14,
+      "title": "The use of sodium-glucose cotransporter 2 inhibitors in heart ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/pmj/article/99/1176/1052/7097869",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by KAA Clark \u00b7 2023 \u00b7 Cited by 10 \u2014 In the USA, approximately half of HF patients that are hospitalized have HFpEF, leading to new therapeutic options for a significant",
+      "score": 0.4475333
+    },
+    {
+      "number": 15,
+      "title": "Global status and trends in heart failure with... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2022/03180/global_status_and_trends_in_heart_failure_with.51.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cited HereFull TextCrossRefGoogle Scholar\n ## \n\n  Shah SJ, Katz DH, Deo RC. Phenotypic spectrum of heart failure with preserved ejection fraction. Heart Fail Clin 2014;10:407-18.\n\n  Cited HereGoogle Scholar\n ## \n\n  D\u2019Elia E, Vaduganathan M, Gori M, Gavazzi A, Butler J, Senni M. Role of biomarkers in",
+      "score": 0.40952834
+    },
+    {
+      "number": 16,
+      "title": "Heart failure with preserved ejection fraction - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/32/6/670/496707",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by BA Borlaug \u00b7 2011 \u00b7 Cited by 1620 \u2014 Abstract. Half of patients with heart failure (HF) have a preserved left ventricular ejection fraction (HFpEF). Morbidity and mortality in HFpEF are simila.",
+      "score": 0.35878035
+    },
+    {
+      "number": 17,
+      "title": "Established and emerging pharmacologic options and unmet ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eschf/article/13/2/xvag056/8489955",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AJ Sauer \u00b7 2026 \u00b7 Cited by 3 \u2014 Clinical trials have demonstrated the efficacy of sodium\u2013glucose cotransporter 2 inhibitors for improving outcomes in HFpEF and HFmrEF.",
+      "score": 0.3004689
+    },
+    {
+      "number": 18,
+      "title": "Chronic heart failure in adults: diagnosis and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/Guidance/NG106",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Chronic heart failure in adults: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing and managing chronic heart failure in people aged 18 and over. It aims to improve diagnosis and treatment to increase the length and quality of life for people with heart failure",
+      "score": 0.61112726
+    },
+    {
+      "number": 19,
+      "title": "Scenario: Confirmed heart failure with preserved ejection ...",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/heart-failure-chronic/management/confirmed-heart-failure-with-preserved-ejection-fraction",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "Covers the management of people with heart failure with preserved ejection fraction.",
+      "score": 0.35160094
+    },
+    {
+      "number": 20,
+      "title": "Heart failure with preserved ejection fraction: an update on pathophysiology, diagnosis, treatment, and prognosis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7296715",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Prognosis\n\nThe prognosis of patients with HFpEF is less well defined than that of patients with HFrEF. Population-based data from hospitalized patients have shown similar outcomes in patients with HFpEF and HFrEF (63). However, a large meta-analysis, including community-based studies and trials,",
+      "score": 0.8687491
+    },
+    {
+      "number": 21,
+      "title": "Focus on Heart Failure | HFpEF: Where We Stand in 2025",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2025/06/01/01/focus-on-heart-failure-hfpef",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "The HFA-PEEF is a more involved scoring system, utilizing many echocardiographic features, both functional (E/e' ratio \u22659, tricuspid regurgitation velocity >2.8 m/s, global longitudinal systolic strain <16%) and morphologic (left atrial volume index >29, left ventricular mass index >115/95 g/m2, rel",
+      "score": 0.7795405
+    },
+    {
+      "number": 22,
+      "title": "Heart Failure With Preserved Ejection Fraction (HFpEF) - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK599960",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Prognosis\n\nPatients with HFpEF have increased rates of morbidity and mortality compared with patients without heart failure. However, recent studies suggest that morbidity rates are similar for patients with HFpEF and HFrEF.(#article-164817.r27)(#article-164817.r93) The presence and severity of c",
+      "score": 0.7548612
+    },
+    {
+      "number": 23,
+      "title": "2024 Guidelines of the Taiwan Society of Cardiology for the Diagnosis and Treatment of Heart Failure with Preserved Ejection Fraction",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10961629",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "or raised left ventricular filling pressure. If diagnosis is still uncertain, invasive or noninvasive stress test can be performed in the second step. Comorbidities need to be controlled in HFpEF. Weight reduction for obesity and supervised exercise training are recommended for HFpEF. For pharmacolo",
+      "score": 0.750937
+    },
+    {
+      "number": 24,
+      "title": "Prognosis of heart failure with preserved ejection fraction",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18156618",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by C Tribouilloy \u00b7 2008 \u00b7 Cited by 657 \u2014 Patients with HFPEF had a significantly lower 5 year survival than the age- with a 5 year survival rate after a first episode of 43% and a high excess mortality",
+      "score": 0.7373288
+    }
+  ],
+  "publishedAt": "2026-08-20T23:51:13.524393Z",
+  "updatedAt": "2026-08-20T23:51:13.524393Z",
+  "readingMinutes": 9,
+  "slug": "heart-failure-with-preserved-ejection-fraction"
+}

@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Musculoskeletal Medicine",
+  "title": "Low Back Pain",
+  "summary": "A decision-focused approach to low back pain that prioritizes cauda equina syndrome, spinal infection, fracture, malignancy, and progressive neurologic deficit; limits low-value imaging; and selects function-oriented nonpharmacologic, medication, injection, or surgical pathways.",
+  "seoDescription": "Physician guide to low back pain evaluation, red flags, imaging selection, radiculopathy assessment, conservative treatment, and procedural escalation.",
+  "clinicalQuestion": "How should physicians triage, evaluate, image, and manage adults presenting with acute or persistent low back pain?",
+  "specialty": "Primary Care and Musculoskeletal Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "low back pain",
+    "lumbar radiculopathy",
+    "cauda equina syndrome",
+    "spinal epidural abscess",
+    "lumbar MRI",
+    "epidural steroid injection",
+    "lumbar spinal stenosis"
+  ],
+  "keyTakeaways": [
+    "Obtain urgent MRI and emergency spine consultation for new bladder or bowel dysfunction, saddle sensory disturbance, or progressive neurologic deficit suggesting cauda equina compression. [15][19][22]",
+    "Do not routinely image uncomplicated low back pain during the first 6 weeks; image sooner when red flags suggest fracture, infection, malignancy, cauda equina syndrome, or another serious process. [14][22]",
+    "For suspected spinal infection, MRI is the most sensitive diagnostic modality; normal leukocyte count does not exclude spinal epidural abscess, whereas ESR and CRP are commonly elevated. [2]",
+    "Use straight-leg raise and slump testing to support\u2014but not establish\u2014the diagnosis of nerve-root involvement; neurodynamic tests have limited specificity and do not reliably identify foraminal compression. [16]",
+    "Prioritize exercise-based and psychosocial/nonpharmacologic management for most nonspecific low back pain; systemic medications are adjuncts chosen for short-term functional goals and adverse-effect tradeoffs. [7][8]",
+    "Consider image-guided epidural steroid injection only for selected persistent radicular pain after concordant clinical and imaging evaluation; short-term outcomes may be similar between transforaminal and targeted caudal approaches. [18][24]"
+  ],
+  "sections": [
+    {
+      "id": "first-visit-triage",
+      "eyebrow": "Immediate Triage",
+      "heading": "Identify neurologic compression, infection, fracture, and malignancy before treating presumed mechanical pain",
+      "intro": "The first decision is whether the patient needs emergency imaging, laboratory testing, or referral rather than routine conservative care.",
+      "paragraphs": [
+        "Treat acute back and/or leg pain with new urinary retention, overflow incontinence, fecal incontinence, saddle or perineal sensory loss, reduced anal sphincter tone, or evolving bilateral motor/sensory deficits as suspected cauda equina syndrome. Obtain urgent lumbar MRI and arrange emergency spine surgical assessment; isolated bilateral leg pain is not sufficient to establish high-risk cauda equina compression. [15][19][20]",
+        "Escalate immediately for progressive or severe lower-extremity weakness, objective neurologic deterioration, or symptoms compatible with spinal cord or cauda equina compression. The history and examination should document gait, heel and toe walking when feasible, motor strength by myotome, reflexes, sensory distribution, and perineal sensation when cauda equina syndrome is suspected. Imaging is indicated for neurologic deficits and red-flag features rather than for uncomplicated pain alone. [15][22]",
+        "Suspect spinal epidural abscess, discitis, or vertebral osteomyelitis when back pain occurs with fever, bacteremia risk, immunocompromise, recent spinal procedure, or new neurologic findings. Order ESR and CRP with CBC, but do not exclude infection because the WBC count is normal: in reported spinal epidural abscess series, leukocytosis occurred in only 56%, while ESR and CRP were elevated in 97% and 98%, respectively. MRI is the most sensitive test for epidural abscess. [2]",
+        "For possible vertebral fracture, obtain targeted imaging when pain follows trauma or occurs in a patient with osteoporosis or other fracture risk. Clinical red flags alone have heterogeneous diagnostic performance, and imaging modalities used as reference standards include radiography, CT, MRI, and bone scan; use the suspected lesion and urgency to choose the study rather than relying on a single historical feature. [21][22]"
+      ],
+      "bullets": [
+        "Suspected cauda equina syndrome: urgent MRI and emergency spine evaluation; document bladder/bowel disturbance and saddle sensory symptoms. [15][19]",
+        "Suspected spinal infection: MRI plus ESR, CRP, CBC, and microbiologic evaluation directed by the clinical setting. [2]",
+        "Suspected fracture: obtain imaging rather than attempting to rule out fracture from examination findings alone. [21]",
+        "No red flags and no objective deficit: begin conservative treatment without immediate imaging. [14][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-risk low back pain patterns requiring diagnostic escalation. [2][15][19][21][22]",
+        "columns": [
+          "Pattern",
+          "Discriminating findings",
+          "Immediate next step"
+        ],
+        "rows": [
+          [
+            "Cauda equina compression",
+            "Bladder or bowel dysfunction, saddle/perineal sensory disturbance, reduced anal tone, or progressive bilateral neurologic deficit. [15][19]",
+            "Urgent lumbar MRI and emergency spine surgical assessment. [15][19][22]"
+          ],
+          [
+            "Spinal epidural abscess or vertebral infection",
+            "Back pain with fever, infection risk, neurologic findings, or elevated ESR/CRP; normal WBC does not exclude disease. [2]",
+            "MRI; obtain CBC, ESR, CRP, and microbiologic studies appropriate to suspected infection. [2]"
+          ],
+          [
+            "Vertebral fracture",
+            "Traumatic mechanism or osteoporosis-associated fracture risk with focal pain. [21][22]",
+            "Obtain targeted spine imaging; select radiography, CT, MRI, or bone scan according to suspected injury and clinical urgency. [21]"
+          ],
+          [
+            "Malignancy or other serious structural disease",
+            "Red-flag history or examination findings, persistent/progressive symptoms, or neurologic deficit. [14][22]",
+            "Prompt imaging and disease-directed evaluation rather than empiric treatment alone. [14][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-assessment",
+      "eyebrow": "Clinical Classification",
+      "heading": "Classify the presentation before ordering imaging or interventions",
+      "intro": "Use history and neurologic examination to separate nonspecific axial pain from radicular, stenotic, and serious structural patterns.",
+      "paragraphs": [
+        "Classify pain as acute when duration is less than 6 weeks and chronic when symptoms persist beyond 6 weeks. In the absence of red flags, most acute episodes are self-limited and can be assessed clinically; routine early imaging increases testing without changing management for the typical uncomplicated presentation. [14]",
+        "Identify lumbar radicular pain by leg symptoms in a plausible dermatomal distribution together with concordant neurologic findings such as myotomal weakness, reflex asymmetry, sensory change, or reproduction of familiar leg pain during neurodynamic testing. A positive straight-leg raise or slump test should increase attention to a radicular pattern but should not be used as a stand-alone imaging surrogate. [5][16]",
+        "Interpret neurodynamic tests cautiously. In an MRI-referenced study, the slump test was sensitive for extrusion and subarticular nerve compression but had low specificity; no tested neurodynamic assessment correlated reliably with MRI-defined foraminal nerve compression. A discordant examination should therefore prompt reconsideration of hip, peripheral nerve, vascular, or nonspinal causes rather than automatic attribution to foraminal stenosis. [16]",
+        "Age shifts the pretest probability but does not replace a focused examination: acute strain, ligamentous injury, and disc herniation are more common in younger adults, whereas degenerative disc disease, facet arthropathy, osteoporotic compression fracture, and spinal stenosis are more prevalent in older adults. Use these patterns to prioritize the differential, then confirm clinically significant structural disease only when results will change management. [22]"
+      ],
+      "bullets": [
+        "Document pain distribution, walking tolerance, position dependence, trauma, constitutional symptoms, infection risk, cancer history, medication-related fracture risk, and bladder/bowel symptoms. [19][21][22]",
+        "Perform and record motor, reflex, sensory, gait, and neurodynamic examinations when radiculopathy is suspected. [5][16]",
+        "Do not use an isolated imaging abnormality to explain pain unless it matches the symptom distribution and objective findings. MRI visualizes discs, roots, and canal anatomy but must be interpreted with the clinical assessment. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that change the diagnostic pathway. [5][14][16][22]",
+        "columns": [
+          "Presentation",
+          "Key examination or history discriminator",
+          "Diagnostic implication"
+        ],
+        "rows": [
+          [
+            "Nonspecific axial low back pain",
+            "No red flags, no objective neurologic deficit, and no dominant dermatomal leg syndrome. [14][22]",
+            "No immediate imaging; initiate conservative, function-oriented care. [14][22]"
+          ],
+          [
+            "Lumbar radicular syndrome",
+            "Dermatomal leg symptoms with concordant motor, sensory, reflex, or neurodynamic findings. [5][16]",
+            "Use examination to localize clinically; reserve MRI for persistent/progressive symptoms or when intervention is being considered. [14][22]"
+          ],
+          [
+            "Possible foraminal compression",
+            "Radicular symptoms may occur despite nondiagnostic neurodynamic testing. [16]",
+            "Do not exclude foraminal disease from a negative straight-leg raise or slump test; use clinical course and MRI when indicated. [16]"
+          ],
+          [
+            "Persistent pain beyond 6 weeks",
+            "Symptoms persist or progress despite initial management. [14]",
+            "Reassess diagnosis and consider imaging if findings will change procedural, surgical, or disease-specific management. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "imaging-and-laboratory-workup",
+      "eyebrow": "Testing Strategy",
+      "heading": "Order MRI, CT, radiography, and inflammatory markers only for a defined diagnostic question",
+      "intro": "The preferred test depends on whether the concern is neural compression, infection, fracture, or bony stenosis.",
+      "paragraphs": [
+        "Obtain lumbar MRI when there is suspected cauda equina compression, serious or progressive neurologic deficit, infection, malignancy, or persistent/progressive symptoms beyond 6 weeks in which structural findings would alter treatment. MRI provides high-resolution assessment of discs, nerve roots, and the spinal canal and is the most sensitive modality for epidural abscess. [2][5][14][22]",
+        "Use CT when the clinical question is osseous anatomy, including bony stenosis or fracture characterization, especially when MRI is unavailable or contraindicated. Conventional radiography can rapidly assess vertebral alignment and disc height but is less suited to soft-tissue, nerve-root, epidural, and canal pathology. [5][21]",
+        "Do not order ESR or CRP as screening tests for patients without red flags. When infection is plausible, however, elevated ESR and CRP support escalation to MRI and serial assessment; normal values materially lower concern less reliably than the highly elevated values reported in spinal epidural abscess cohorts. [2][23]",
+        "If MRI identifies a lesion, correlate laterality, level, and morphology with the patient's neurologic examination before labeling it causal. The practical value of imaging is highest when it resolves a procedural or surgical decision, identifies an urgent lesion, or redirects evaluation toward infection, fracture, or malignancy. [5][14][22]"
+      ],
+      "bullets": [
+        "MRI: neural compression, suspected epidural abscess, disc/root/canal characterization, or serious pathology. [2][5][22]",
+        "CT: bony stenosis and fracture detail. [5][21]",
+        "Radiography: rapid alignment and disc-height assessment, with limited soft-tissue evaluation. [5]",
+        "ESR/CRP: reserve for clinical suspicion of infection or inflammatory serious pathology, not routine uncomplicated pain. [2][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Test selection for common low back pain diagnostic questions. [2][5][14][21][23]",
+        "columns": [
+          "Clinical question",
+          "Preferred test",
+          "Interpretation that changes action"
+        ],
+        "rows": [
+          [
+            "Is there cauda equina or severe neural compression?",
+            "Lumbar MRI. [15][22]",
+            "Compressive findings concordant with bladder/bowel, saddle sensory, or progressive neurologic deficits require urgent spine management. [15][19]"
+          ],
+          [
+            "Is spinal epidural abscess suspected?",
+            "MRI with ESR, CRP, and CBC. [2]",
+            "MRI detects epidural pathology; normal WBC does not exclude infection. [2]"
+          ],
+          [
+            "Is vertebral fracture present or anatomically complex?",
+            "Radiography, CT, MRI, or bone scan selected for the clinical context. [21]",
+            "Imaging-confirmed fracture redirects management to fracture stabilization and osteoporosis-related assessment. [21][22]"
+          ],
+          [
+            "Does persistent radiculopathy merit procedural planning?",
+            "MRI after persistent or progressive symptoms when intervention is under consideration. [14][22]",
+            "Proceed only when imaging anatomy matches the clinical syndrome. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "conservative-management",
+      "eyebrow": "Initial Treatment",
+      "heading": "Treat uncomplicated low back pain for function while monitoring for diagnostic change",
+      "intro": "For patients without an urgent structural process, set functional goals and reassess rather than pursuing immediate procedures.",
+      "paragraphs": [
+        "Use nonpharmacologic treatment as the foundation for most uncomplicated low back pain. Exercise-based approaches and psychosocial management are preferred for many patients and should be selected around a concrete functional target such as walking, work tolerance, sleep, or return to usual activity. [8]",
+        "If medication is needed, use systemic therapy as an adjunct to nonpharmacologic care and reassess benefit against toxicity. NSAIDs and skeletal muscle relaxants are among the most commonly prescribed options; evidence reviews also identify analgesic benefit for acetaminophen, tramadol, benzodiazepines, and gabapentin for radiculopathy, but treatment selection must account for sedation, falls, misuse potential, renal function, gastrointestinal risk, and drug interactions. [6][7]",
+        "Do not continue or escalate analgesics solely because pain persists. Reassess at each follow-up for new objective neurologic deficit, new systemic features, changing pain distribution, impaired function, or failure of the working diagnosis. Persistent or progressive symptoms beyond 6 weeks should trigger reconsideration of imaging when it would change management. [14][22]",
+        "For chronic low back pain, avoid overreliance on prognostic prediction models when making individual treatment decisions. Prognostic models for chronic low back pain outcomes in primary care have been reported to have high risk of bias and inadequate validation. [4]"
+      ],
+      "bullets": [
+        "Define a functional treatment target before prescribing medication or referring for a procedure. [8]",
+        "Use medication response as a treatment assessment, not as proof of a mechanical diagnosis. [6][7]",
+        "Re-examine for neurologic and red-flag evolution at follow-up, particularly when symptoms persist beyond 6 weeks. [14][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Conservative management choices and reassessment triggers. [4][6][7][8][14][22]",
+        "columns": [
+          "Management component",
+          "Role",
+          "Reassess or change course when"
+        ],
+        "rows": [
+          [
+            "Exercise and psychosocial management",
+            "Preferred nonpharmacologic foundation for most low back pain presentations. [8]",
+            "Function does not improve or the clinical pattern evolves. [8][22]"
+          ],
+          [
+            "NSAID or skeletal muscle relaxant",
+            "Systemic adjuncts commonly used for pain control. [7]",
+            "Adverse effects occur, functional benefit is absent, or risk outweighs benefit. [7]"
+          ],
+          [
+            "Acetaminophen, tramadol, benzodiazepine, or gabapentin for radiculopathy",
+            "Agents with reported analgesic benefit in evidence review; patient-specific adverse-effect tradeoffs are central. [6]",
+            "Sedation, misuse risk, falls, interaction risk, or inadequate functional improvement emerges. [6]"
+          ],
+          [
+            "Clinical follow-up",
+            "Detects progression and verifies the working diagnosis. [14][22]",
+            "New deficit, red flags, or persistent/progressive symptoms beyond 6 weeks develop. [14][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "radiculopathy-and-procedures",
+      "eyebrow": "Escalation",
+      "heading": "Use epidural injection and surgical referral for concordant, persistent radicular or compressive disease",
+      "intro": "Procedural care is most defensible when symptoms, examination, and imaging define the same target.",
+      "paragraphs": [
+        "Consider epidural steroid injection for persistent lumbar radicular pain when the clinical syndrome and imaging identify a plausible epidural or nerve-root target and conservative treatment has not met functional goals. Epidural injection is a pain-modulating procedure rather than treatment for cauda equina syndrome, spinal infection, fracture instability, or another emergency structural cause. [18][24]",
+        "Transforaminal and targeted caudal epidural steroid approaches can both be considered for lumbar radiculopathy. A randomized trial found similar short-term pain and disability outcomes, and cited comparative evidence found that any apparent advantage of transforaminal over caudal injection was not clinically or statistically significant in meta-analysis. Technique selection should therefore be driven by anatomy, prior surgery, target accessibility, and procedural risk rather than an assumed universal superiority. [18]",
+        "Perform epidural steroid injection with fluoroscopic control. This supports accurate epidural delivery and should be incorporated into the procedural plan rather than relying on non-image-guided placement. [24]",
+        "Refer for urgent surgical evaluation when MRI-confirmed compression is accompanied by cauda equina features or progressive neurologic deficit. For nonemergent radiculopathy or stenotic symptoms, refer when persistent disabling symptoms, objective deficit, and concordant imaging create a surgical decision; imaging alone is insufficient. [15][19][22]"
+      ],
+      "bullets": [
+        "Before injection, confirm that symptoms, neurologic localization, and imaging target are concordant. [5][18]",
+        "Do not substitute epidural steroid injection for urgent MRI and surgical assessment in suspected cauda equina syndrome. [15][19]",
+        "Use fluoroscopic control for epidural steroid injection. [24]",
+        "Reassess injection benefit by functional improvement, not pain score alone. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation decisions for lumbar radicular pain. [15][18][19][24]",
+        "columns": [
+          "Scenario",
+          "Appropriate escalation",
+          "Key limitation or tradeoff"
+        ],
+        "rows": [
+          [
+            "Acute cauda equina features",
+            "Urgent MRI and emergency spine surgical assessment. [15][19]",
+            "Injection-based pain treatment is not definitive management for neural compression. [15][19]"
+          ],
+          [
+            "Persistent concordant radicular pain",
+            "Consider fluoroscopy-guided epidural steroid injection after clinical and imaging correlation. [18][24]",
+            "Expected benefit is principally short-term symptom and disability improvement. [18]"
+          ],
+          [
+            "Choice of epidural approach",
+            "Use transforaminal or targeted caudal technique according to anatomy and procedural context. [18]",
+            "Evidence does not establish clinically meaningful universal superiority of transforaminal over caudal treatment. [18]"
+          ],
+          [
+            "Persistent disabling compression with objective deficit",
+            "Spine referral when clinical and imaging findings are concordant. [22]",
+            "Do not base referral solely on incidental imaging abnormalities. [5]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "CURRICULUM VITAE",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/123955/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Injury Determination with Conventional Spine Imaging and Cryomicrotomy. Spine 26; (22) 2443-2448, 2001 12. Chivukula M., RAO R., Macchi J., Ghazala F., Rao N.R., Komorowski R., Shidham V.B.: FNAB Cytology of Chordoma Masquerading as 19 Adenocarcinoma: A Case Report. Diagnostic Cytopathology, 26(5): ",
+      "score": 0.22589478
+    },
+    {
+      "number": 2,
+      "title": "ASRA Pain Medicine consensus practice infection control ...",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/early/2025/01/14/rapm-2024-105651",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "### CNS infections: diagnostic tests\n\nThe most common and most sensitive method of detection for epidural abscess is MRI, although other modalities such as CT scan or myelography have been performed.45\u201352 158 183 187 192 197\u2013199 Rosero and Joshi185 estimated that the need for MRI without the need fo",
+      "score": 0.17677137
+    },
+    {
+      "number": 3,
+      "title": "With Disabling Spinal Stenosis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/393354/jama_274_24_042.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Epidural steroid injection in the treatment of low back pain: a meta-analysis. Anesthesiology. 1994;81:923. 42. Kana SM, Wiesel SW. Conservative therapy for",
+      "score": 0.46584973
+    },
+    {
+      "number": 4,
+      "title": "PROBAST: A Tool to Assess Risk of Bias and Applicability ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M18-1377",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Prognostic Models for Chronic Low Back Pain Outcomes in Primary Care Are at High Risk of Bias and Lack Validation\u2014High-Quality Studies Are",
+      "score": 0.19387928
+    },
+    {
+      "number": 5,
+      "title": "Diagnostic Imaging and Clinical Assessment in Lumbar Spine Pathologies | Radiology and Organ Imaging | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/diagnostic-imaging-and-clinical-assessment-in-lumbar-spine-pathologies",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Lumbar spine pathologies encompass a spectrum of degenerative, inflammatory and compressive disorders that often present with low back pain, radiculopathy and functional impairment. Diagnostic imaging plays a central role in characterising osseous and soft\u2010tissue changes, with conventional radiograp",
+      "score": 0.5019781
+    },
+    {
+      "number": 6,
+      "title": "Medications for Acute and Chronic Low Back Pain",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-147-7-200710020-00008",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by R Chou \u00b7 2007 \u00b7 Cited by 800 \u2014 We found fair evidence that acetaminophen, tramadol, benzodiazepines, and gabapentin (for radiculopathy) are effective for pain relief.",
+      "score": 0.5079833
+    },
+    {
+      "number": 7,
+      "title": "Systemic Pharmacologic Therapies for Low Back Pain",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/M16-2458",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by R Chou \u00b7 2017 \u00b7 Cited by 651 \u2014 The most commonly prescribed medications for low back pain are nonsteroidal anti-inflammatory drugs (NSAIDs), skeletal muscle relaxants,",
+      "score": 0.44478238
+    },
+    {
+      "number": 8,
+      "title": "Low Back Pain | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/AITC202108170",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Nonpharmacologic therapies, including exercise and psychosocial management, are preferred for most patients with low back pain and may be",
+      "score": 0.43842506
+    },
+    {
+      "number": 9,
+      "title": "Insights from a Brief Study of Renal Calculi: Recent Diagnostic and Treatment Approaches",
+      "detail": "spj.science.org",
+      "url": "https://spj.science.org/doi/10.34133/jbioxresearch.0002",
+      "authors": "spj.science.org",
+      "host": "spj.science.org",
+      "snippet": "Table. Medication therapy for treatment of kidney stones. Intravenous NSAIDs or opioids must frequently be used to treat pain (e.g., tramadol). The effectiveness of oral medicines is lower. Expulsive medical therapy aids in directing the proper use of medications for the treatment of renal calculi.\n",
+      "score": 0.1732186
+    },
+    {
+      "number": 10,
+      "title": "Low-cost, high-volume healthcare services contribute the most ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/12/qxaf225/8339504",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Miyawaki \u00b7 2025 \u00b7 Cited by 2 \u2014 WHO guideline for non-surgical management of chronic primary low back pain in adults in primary and community care settings. 2023 . Accessed August 12, 2025.",
+      "score": 0.67269784
+    },
+    {
+      "number": 11,
+      "title": "Management of low back pain among Medicaid beneficiaries",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/9/qxaf180/8248919",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by KN Tormohlen \u00b7 2025 \u00b7 Cited by 2 \u2014 We quantitatively described modalities of treatment and low-value care received following a low back pain diagnosis among Medicaid beneficiaries across the",
+      "score": 0.48411235
+    },
+    {
+      "number": 12,
+      "title": "Area-Level socioeconomic disadvantage and access to ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/4/qxaf066/8102997",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JA Staloff \u00b7 2025 \u00b7 Cited by 20 \u2014 Sociodemographic differences in pain medication usage and healthcare provider utilization among adults with chronic low back pain .",
+      "score": 0.3502663
+    },
+    {
+      "number": 13,
+      "title": "and middle-income countries: a secondary qualitative study ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/heapol/article/38/2/129/6649495",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AM Briggs \u00b7 2023 \u00b7 Cited by 63 \u2014 Abstract. Musculoskeletal (MSK) health impairments contribute substantially to the pain and disability burden in low- and middle-income countries (LMICs),",
+      "score": 0.1213628
+    },
+    {
+      "number": 14,
+      "title": "Diagnostic accuracy of lumbar CT and MRI in the evaluation of chronic low back pain without red flag symptoms",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2173510723001209",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thus, the American College of Radiology (ACR), the American Association of Family Physicians, the North American Spine Society and the European guidelines for the management of low back pain advise that imaging studies should only be performed when symptoms persist or progress beyond six weeks (i.e.",
+      "score": 0.7166357
+    },
+    {
+      "number": 15,
+      "title": "What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2468781218305095",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Clinicians are advised to assess whether serious underlying pathology exists in patients with low back pain by evaluating the presence of key clinical signs and symptoms, referred to as \u201cred flags\u201d for CES, during the subjective history and physical examination. These are described as signs and symp",
+      "score": 0.6227582
+    },
+    {
+      "number": 16,
+      "title": "Validity of the Straight-Leg Raise Test for Patients With Sciatic Pain With or Without Lumbar Pain Using Magnetic Resonance Imaging Results as a Reference Standard",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0161475411000704",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "specificity (.34). Only 1 assessment had a concurrent high sensitivity and specificity (ie, radiculopathy II) in detecting subarticular nerve compression (.71 and .73, respectively). The AUC for all tests in detecting extrusion, subarticular nerve compression, and foraminal nerve compression showed ",
+      "score": 0.575517
+    },
+    {
+      "number": 17,
+      "title": "Lumbar spine x-rays: A multihospital study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064483803783",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Lumbar spine x-rays: A multihospital study - ScienceDirect\n* ### Low Back Pain in the Emergency Department: Prevalence of Serious Spinal Pathologies and Diagnostic Accuracy of Red Flags. One guideline suggested the use of progressive weakness in lower limbs to identify patients with a serious",
+      "score": 0.5674818
+    },
+    {
+      "number": 18,
+      "title": "Comparison of Clinical Effects and Physical Examination of Transforaminal and Caudal Steroid Injection With Targeted Catheter in Lumbar Radiculopathy: A Single\u2010Blind Randomized Clinical Trial - Imani - 2024 - Brain and Behavior - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/brb3.70067",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The aim of this study was to investigate the clinical effects and physical examinations of transforaminal steroid injection compared to caudal through a targeted catheter in lumbar radiculopathy. This study showed that transforaminal and caudal steroid injection (with a targeted catheter) in patient",
+      "score": 0.41236505
+    },
+    {
+      "number": 19,
+      "title": "Red flag symptoms and signs | Diagnosis | Sciatica (lumbar radiculopathy) | CKS | NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/sciatica-lumbar-radiculopathy/diagnosis/red-flag-symptoms-signs",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "This information is based on the US Institute for Clinical Systems Improvement (ICIS) guideline *A*dult*\u00a0acute and subacute low back pain*[ICSI, 2018], a Canadian guideline\u00a0*Evidence-informed primary care management of low back pain: clinical practice guideline*\u00a0[TOP, 2017], the British Medical Jour",
+      "score": 0.6914979
+    },
+    {
+      "number": 20,
+      "title": "What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/31132655",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in",
+      "score": 0.6041426
+    },
+    {
+      "number": 21,
+      "title": "Red flags to screen for vertebral fracture in people presenting with low back pain - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10448864",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Red flags to screen for vertebral fracture in people presenting with low back pain - PMC\nWe considered primary diagnostic studies if they compared results of history taking or physical examination (or both) findings (index test) with a reference standard test (e.g. X\u2010ray, magnetic resonance i",
+      "score": 0.49992734
+    },
+    {
+      "number": 22,
+      "title": "Low Back Pain: Evaluation and Management - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=69de5bc08a71a424d7022c66",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Low Back Pain: Evaluation and Management - StatPearls - NCBI Bookshelf\nAn official website of the United States government. **The .gov means it's official.**. The **https://** ensures that you are connecting to the official website and that any information you provide is encrypted and transmi",
+      "score": 0.44898248
+    },
+    {
+      "number": 23,
+      "title": "Managing Nontraumatic Acute Back Pain",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(14)01509-1/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by JA Edlow \u00b7 2015 \u00b7 Cited by 55 \u2014 Because of poor specificity, ESR and C-reactive protein are not recommended for patients without red flags, and because of poor sensitivity, they are not useful",
+      "score": 0.35979196
+    },
+    {
+      "number": 24,
+      "title": "Epidural steroid injection: a procedure ideally performed with fluoroscopic control.Radiology",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiology.168.2.2969118",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Epidural injection of steroid and local anesthesia can be used to treat low back pain. View all available purchase options and get full access to this article. * Radiation dose of fluoroscopy-guided versus ultralow-dose CT-fluoroscopy-guided lumbar spine epidural steroid injections. 2021Jul1 | The K",
+      "score": 0.62770075
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "CURRICULUM VITAE",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/123955/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Injury Determination with Conventional Spine Imaging and Cryomicrotomy. Spine 26; (22) 2443-2448, 2001 12. Chivukula M., RAO R., Macchi J., Ghazala F., Rao N.R., Komorowski R., Shidham V.B.: FNAB Cytology of Chordoma Masquerading as 19 Adenocarcinoma: A Case Report. Diagnostic Cytopathology, 26(5): ",
+      "score": 0.22589478
+    },
+    {
+      "number": 2,
+      "title": "ASRA Pain Medicine consensus practice infection control ...",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/early/2025/01/14/rapm-2024-105651",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "### CNS infections: diagnostic tests\n\nThe most common and most sensitive method of detection for epidural abscess is MRI, although other modalities such as CT scan or myelography have been performed.45\u201352 158 183 187 192 197\u2013199 Rosero and Joshi185 estimated that the need for MRI without the need fo",
+      "score": 0.17677137
+    },
+    {
+      "number": 3,
+      "title": "With Disabling Spinal Stenosis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/393354/jama_274_24_042.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Epidural steroid injection in the treatment of low back pain: a meta-analysis. Anesthesiology. 1994;81:923. 42. Kana SM, Wiesel SW. Conservative therapy for",
+      "score": 0.46584973
+    },
+    {
+      "number": 4,
+      "title": "PROBAST: A Tool to Assess Risk of Bias and Applicability ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M18-1377",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Prognostic Models for Chronic Low Back Pain Outcomes in Primary Care Are at High Risk of Bias and Lack Validation\u2014High-Quality Studies Are",
+      "score": 0.19387928
+    },
+    {
+      "number": 5,
+      "title": "Diagnostic Imaging and Clinical Assessment in Lumbar Spine Pathologies | Radiology and Organ Imaging | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/diagnostic-imaging-and-clinical-assessment-in-lumbar-spine-pathologies",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Lumbar spine pathologies encompass a spectrum of degenerative, inflammatory and compressive disorders that often present with low back pain, radiculopathy and functional impairment. Diagnostic imaging plays a central role in characterising osseous and soft\u2010tissue changes, with conventional radiograp",
+      "score": 0.5019781
+    },
+    {
+      "number": 6,
+      "title": "Medications for Acute and Chronic Low Back Pain",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-147-7-200710020-00008",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by R Chou \u00b7 2007 \u00b7 Cited by 800 \u2014 We found fair evidence that acetaminophen, tramadol, benzodiazepines, and gabapentin (for radiculopathy) are effective for pain relief.",
+      "score": 0.5079833
+    },
+    {
+      "number": 7,
+      "title": "Systemic Pharmacologic Therapies for Low Back Pain",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/M16-2458",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by R Chou \u00b7 2017 \u00b7 Cited by 651 \u2014 The most commonly prescribed medications for low back pain are nonsteroidal anti-inflammatory drugs (NSAIDs), skeletal muscle relaxants,",
+      "score": 0.44478238
+    },
+    {
+      "number": 8,
+      "title": "Low Back Pain | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/AITC202108170",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Nonpharmacologic therapies, including exercise and psychosocial management, are preferred for most patients with low back pain and may be",
+      "score": 0.43842506
+    },
+    {
+      "number": 9,
+      "title": "Insights from a Brief Study of Renal Calculi: Recent Diagnostic and Treatment Approaches",
+      "detail": "spj.science.org",
+      "url": "https://spj.science.org/doi/10.34133/jbioxresearch.0002",
+      "authors": "spj.science.org",
+      "host": "spj.science.org",
+      "snippet": "Table. Medication therapy for treatment of kidney stones. Intravenous NSAIDs or opioids must frequently be used to treat pain (e.g., tramadol). The effectiveness of oral medicines is lower. Expulsive medical therapy aids in directing the proper use of medications for the treatment of renal calculi.\n",
+      "score": 0.1732186
+    },
+    {
+      "number": 10,
+      "title": "Low-cost, high-volume healthcare services contribute the most ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/12/qxaf225/8339504",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Miyawaki \u00b7 2025 \u00b7 Cited by 2 \u2014 WHO guideline for non-surgical management of chronic primary low back pain in adults in primary and community care settings. 2023 . Accessed August 12, 2025.",
+      "score": 0.67269784
+    },
+    {
+      "number": 11,
+      "title": "Management of low back pain among Medicaid beneficiaries",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/9/qxaf180/8248919",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by KN Tormohlen \u00b7 2025 \u00b7 Cited by 2 \u2014 We quantitatively described modalities of treatment and low-value care received following a low back pain diagnosis among Medicaid beneficiaries across the",
+      "score": 0.48411235
+    },
+    {
+      "number": 12,
+      "title": "Area-Level socioeconomic disadvantage and access to ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/healthaffairsscholar/article/3/4/qxaf066/8102997",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JA Staloff \u00b7 2025 \u00b7 Cited by 20 \u2014 Sociodemographic differences in pain medication usage and healthcare provider utilization among adults with chronic low back pain .",
+      "score": 0.3502663
+    },
+    {
+      "number": 13,
+      "title": "and middle-income countries: a secondary qualitative study ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/heapol/article/38/2/129/6649495",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AM Briggs \u00b7 2023 \u00b7 Cited by 63 \u2014 Abstract. Musculoskeletal (MSK) health impairments contribute substantially to the pain and disability burden in low- and middle-income countries (LMICs),",
+      "score": 0.1213628
+    },
+    {
+      "number": 14,
+      "title": "Diagnostic accuracy of lumbar CT and MRI in the evaluation of chronic low back pain without red flag symptoms",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2173510723001209",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thus, the American College of Radiology (ACR), the American Association of Family Physicians, the North American Spine Society and the European guidelines for the management of low back pain advise that imaging studies should only be performed when symptoms persist or progress beyond six weeks (i.e.",
+      "score": 0.7166357
+    },
+    {
+      "number": 15,
+      "title": "What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2468781218305095",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Clinicians are advised to assess whether serious underlying pathology exists in patients with low back pain by evaluating the presence of key clinical signs and symptoms, referred to as \u201cred flags\u201d for CES, during the subjective history and physical examination. These are described as signs and symp",
+      "score": 0.6227582
+    },
+    {
+      "number": 16,
+      "title": "Validity of the Straight-Leg Raise Test for Patients With Sciatic Pain With or Without Lumbar Pain Using Magnetic Resonance Imaging Results as a Reference Standard",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0161475411000704",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "specificity (.34). Only 1 assessment had a concurrent high sensitivity and specificity (ie, radiculopathy II) in detecting subarticular nerve compression (.71 and .73, respectively). The AUC for all tests in detecting extrusion, subarticular nerve compression, and foraminal nerve compression showed ",
+      "score": 0.575517
+    },
+    {
+      "number": 17,
+      "title": "Lumbar spine x-rays: A multihospital study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064483803783",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Lumbar spine x-rays: A multihospital study - ScienceDirect\n* ### Low Back Pain in the Emergency Department: Prevalence of Serious Spinal Pathologies and Diagnostic Accuracy of Red Flags. One guideline suggested the use of progressive weakness in lower limbs to identify patients with a serious",
+      "score": 0.5674818
+    },
+    {
+      "number": 18,
+      "title": "Comparison of Clinical Effects and Physical Examination of Transforaminal and Caudal Steroid Injection With Targeted Catheter in Lumbar Radiculopathy: A Single\u2010Blind Randomized Clinical Trial - Imani - 2024 - Brain and Behavior - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/brb3.70067",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The aim of this study was to investigate the clinical effects and physical examinations of transforaminal steroid injection compared to caudal through a targeted catheter in lumbar radiculopathy. This study showed that transforaminal and caudal steroid injection (with a targeted catheter) in patient",
+      "score": 0.41236505
+    },
+    {
+      "number": 19,
+      "title": "Red flag symptoms and signs | Diagnosis | Sciatica (lumbar radiculopathy) | CKS | NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/sciatica-lumbar-radiculopathy/diagnosis/red-flag-symptoms-signs",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "This information is based on the US Institute for Clinical Systems Improvement (ICIS) guideline *A*dult*\u00a0acute and subacute low back pain*[ICSI, 2018], a Canadian guideline\u00a0*Evidence-informed primary care management of low back pain: clinical practice guideline*\u00a0[TOP, 2017], the British Medical Jour",
+      "score": 0.6914979
+    },
+    {
+      "number": 20,
+      "title": "What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/31132655",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: What is the diagnostic accuracy of red flags related to cauda equina syndrome (CES), when compared to Magnetic Resonance Imaging (MRI)? A systematic review - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in",
+      "score": 0.6041426
+    },
+    {
+      "number": 21,
+      "title": "Red flags to screen for vertebral fracture in people presenting with low back pain - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10448864",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Red flags to screen for vertebral fracture in people presenting with low back pain - PMC\nWe considered primary diagnostic studies if they compared results of history taking or physical examination (or both) findings (index test) with a reference standard test (e.g. X\u2010ray, magnetic resonance i",
+      "score": 0.49992734
+    },
+    {
+      "number": 22,
+      "title": "Low Back Pain: Evaluation and Management - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=69de5bc08a71a424d7022c66",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Low Back Pain: Evaluation and Management - StatPearls - NCBI Bookshelf\nAn official website of the United States government. **The .gov means it's official.**. The **https://** ensures that you are connecting to the official website and that any information you provide is encrypted and transmi",
+      "score": 0.44898248
+    },
+    {
+      "number": 23,
+      "title": "Managing Nontraumatic Acute Back Pain",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(14)01509-1/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by JA Edlow \u00b7 2015 \u00b7 Cited by 55 \u2014 Because of poor specificity, ESR and C-reactive protein are not recommended for patients without red flags, and because of poor sensitivity, they are not useful",
+      "score": 0.35979196
+    },
+    {
+      "number": 24,
+      "title": "Epidural steroid injection: a procedure ideally performed with fluoroscopic control.Radiology",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiology.168.2.2969118",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Epidural injection of steroid and local anesthesia can be used to treat low back pain. View all available purchase options and get full access to this article. * Radiation dose of fluoroscopy-guided versus ultralow-dose CT-fluoroscopy-guided lumbar spine epidural steroid injections. 2021Jul1 | The K",
+      "score": 0.62770075
+    }
+  ],
+  "publishedAt": "2026-08-21T02:24:55.342137+00:00",
+  "updatedAt": "2026-08-21T02:24:55.342137+00:00",
+  "readingMinutes": 7,
+  "slug": "low-back-pain"
+}

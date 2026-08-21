@@ -1,0 +1,774 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular emergency",
+  "title": "ST-Segment Elevation Myocardial Infarction",
+  "summary": "ST-segment elevation myocardial infarction requires immediate ECG-based activation, reperfusion-centered care, and early recognition of shock, failed fibrinolysis, mechanical complications, and nonatherothrombotic mimics that alter acute management.",
+  "seoDescription": "Point-of-care review of STEMI diagnosis, ECG thresholds, reperfusion timing, antithrombotic therapy, complications, and postinfarction management.",
+  "clinicalQuestion": "How should physicians rapidly diagnose, reperfuse, and stabilize patients with suspected STEMI?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "STEMI",
+    "acute coronary syndrome",
+    "primary PCI",
+    "fibrinolysis",
+    "ST-segment elevation",
+    "cardiogenic shock"
+  ],
+  "keyTakeaways": [
+    "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact; persistent ischemic ST elevation or an ECG equivalent is a working diagnosis requiring immediate reperfusion planning, not troponin confirmation. [15]",
+    "Primary PCI is the preferred reperfusion strategy for ischemic symptoms lasting less than 12 hours; target PCI within 90 minutes at a PCI-capable hospital or within 120 minutes when transfer is required. [15]",
+    "When PCI cannot be delivered within 120 minutes, initiate fibrinolysis within 30 minutes of hospital arrival when appropriate, transfer promptly to a PCI-capable center, and perform rescue PCI for failed reperfusion or reinfarction. [15]",
+    "Cardiogenic shock or acute severe heart failure warrants primary PCI regardless of elapsed time from infarct onset. [15]",
+    "Do not let bedside echocardiography, CT, or serial biomarkers delay catheterization when acute coronary occlusion is likely; use imaging when diagnosis is uncertain or a competing emergency is plausible. [15]"
+  ],
+  "sections": [
+    {
+      "id": "initial-recognition",
+      "eyebrow": "Immediate action",
+      "heading": "Recognize STEMI and activate reperfusion without waiting for biomarkers",
+      "intro": "Treat the initial ECG as a time-critical triage test.",
+      "paragraphs": [
+        "For acute chest discomfort or an ischemic equivalent, obtain a resting 12-lead ECG immediately and have it interpreted within 10 minutes of first medical contact. Persistent ST-segment elevation or an ECG equivalent in an ischemic clinical context establishes a working diagnosis of STEMI and should trigger a reperfusion pathway; troponin supports infarction diagnosis but should not delay catheterization laboratory activation. [15]",
+        "STEMI commonly reflects acute coronary atherothrombosis after plaque disruption, platelet activation, and occlusive thrombus formation. However, a STEMI-pattern presentation can result from spontaneous coronary artery dissection, coronary spasm, coronary embolism, hypercoagulability, or noncoronary disorders; angiography and, when needed, intravascular imaging establish the mechanism. [9][15]"
+      ],
+      "bullets": [
+        "Place on continuous cardiac monitoring, obtain intravenous access, and assess blood pressure, perfusion, pulmonary edema, new murmur, and neurologic status while reperfusion logistics proceed. [15]",
+        "Obtain a focused history for symptom onset, prior coronary disease, bleeding risk, anticoagulants or antiplatelets, cocaine or other drug exposure, and symptoms suggesting aortic dissection or pulmonary embolism. [15]",
+        "Give supplemental oxygen for hypoxemia or risk of hypoxemia; routine oxygen in normoxemic myocardial infarction may be harmful. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ECG findings supporting a STEMI working diagnosis and immediate action. [15]",
+        "columns": [
+          "Finding",
+          "Threshold or context",
+          "Action"
+        ],
+        "rows": [
+          [
+            "ST elevation in contiguous leads",
+            "New J-point elevation >0.1 mV in 2 contiguous leads, except V2-V3. [15]",
+            "Activate reperfusion pathway when clinical presentation is ischemic. [15]"
+          ],
+          [
+            "ST elevation in V2-V3",
+            ">0.2 mV in men aged 40 years or older; >0.25 mV in men younger than 40 years; >0.15 mV in women. [15]",
+            "Activate reperfusion pathway when clinical presentation is ischemic. [15]"
+          ],
+          [
+            "LBBB with suspected occlusion",
+            "Concordant ST elevation \u22651 mm, concordant ST depression \u22651 mm in V1-V3, or discordant ST elevation \u22655 mm are original Sgarbossa criteria; sensitivity is limited. [15]",
+            "Integrate symptoms, serial ECGs, prior ECGs, and urgent cardiology assessment; do not use a nondiagnostic ECG alone to exclude acute occlusion. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-refinement",
+      "eyebrow": "Do not delay reperfusion",
+      "heading": "Use adjunctive testing to confirm injury, define complications, and identify mimics",
+      "intro": "Testing should answer a management question rather than create delay.",
+      "paragraphs": [
+        "Obtain high-sensitivity cardiac troponin in all suspected acute coronary syndrome presentations. In an ischemic presentation, a rise or fall with at least one value above the 99th percentile supports myocardial infarction; 0/1-hour algorithms are preferred when STEMI or very-high-risk non-ST-elevation ACS has been excluded. [15]",
+        "Use transthoracic echocardiography when the diagnosis is uncertain, hemodynamics deteriorate, or a mechanical complication is suspected. New regional wall-motion abnormality supports ongoing ischemia, while echocardiography can identify acute severe mitral regurgitation, ventricular septal defect, tamponade, or alternative pathology. It must not materially delay catheterization for suspected acute coronary occlusion. [15]",
+        "CT is appropriate when aortic dissection or pulmonary embolism is a credible competing diagnosis, but is generally not indicated when ongoing coronary occlusion is the leading diagnosis and immediate invasive angiography is available. [15]"
+      ],
+      "bullets": [
+        "Repeat ECGs when symptoms persist, recur, or have resolved before the initial tracing; compare with prior ECGs when available. [15]",
+        "Use coronary angiography to define culprit anatomy and provide revascularization; consider intravascular imaging when angiography suggests dissection, embolism, or another nonatherosclerotic mechanism. [9][15]",
+        "Consider myocarditis, pericarditis, stress cardiomyopathy, early repolarization, ventricular aneurysm, vasospasm, electrolyte abnormalities, Brugada syndrome, and LBBB among ST-elevation mimics. [8][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value diagnostic tests after STEMI pathway activation. [15]",
+        "columns": [
+          "Test",
+          "Role",
+          "Operational caution"
+        ],
+        "rows": [
+          [
+            "High-sensitivity cardiac troponin",
+            "Confirms myocardial injury and supports infarction diagnosis through a rise or fall above the 99th percentile. [15]",
+            "Do not await results before reperfusion for diagnostic STEMI. [15]"
+          ],
+          [
+            "Transthoracic echocardiography",
+            "Assesses regional dysfunction, ventricular function, and mechanical complications. [15]",
+            "Use when uncertainty or instability justifies it; avoid catheterization delay. [15]"
+          ],
+          [
+            "Coronary angiography",
+            "Identifies culprit anatomy and enables PCI. [15]",
+            "Priority test for suspected ongoing coronary occlusion. [15]"
+          ],
+          [
+            "CT angiography",
+            "Evaluates selected lethal alternatives such as acute aortic disease or pulmonary embolism. [15]",
+            "Not a routine substitute for invasive angiography in likely coronary occlusion. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reperfusion-strategy",
+      "eyebrow": "Time-dependent treatment",
+      "heading": "Choose primary PCI whenever timely delivery is feasible",
+      "intro": "The central decision is the fastest effective route to reperfusion.",
+      "paragraphs": [
+        "For STEMI with ischemic symptoms lasting less than 12 hours, primary PCI is recommended to improve survival. At a PCI-capable hospital, the target is PCI within 90 minutes of presentation; when transfer is needed, the target is PCI within 120 minutes. Regional systems that permit EMS identification, prearrival notification, direct transport, and rapid catheterization team activation are integral to achieving these intervals. [15][8]",
+        "Primary PCI remains indicated for cardiogenic shock or acute severe heart failure regardless of time from symptom onset. Immediate invasive assessment is also required after unsuccessful fibrinolysis, recurrent ST elevation, or reinfarction. [15]",
+        "Routine manual thrombus aspiration before PCI is not supported: subsequent trials and meta-analyses found no meaningful clinical benefit and identified excess stroke risk. Selective use for high thrombus burden may be considered by the interventional team, but it is not routine care. [15]"
+      ],
+      "bullets": [
+        "For multivessel STEMI, trial evidence supports fractional flow reserve-guided PCI of nonculprit lesions compared with culprit-only PCI, but the supplied evidence does not establish an individualized timing strategy for every patient. [3]",
+        "Following out-of-hospital cardiac arrest without ST-segment elevation, immediate coronary angiography did not improve outcomes over delayed angiography in the COACT trial; this does not apply to patients with STEMI, for whom immediate angiography with PCI is recommended. [1]",
+        "Avoid routine delays for transfer through a non-PCI emergency department when direct EMS transport to a PCI center is feasible within the reperfusion window. [8][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Reperfusion decisions for STEMI. [15]",
+        "columns": [
+          "Clinical scenario",
+          "Preferred action",
+          "Required follow-through"
+        ],
+        "rows": [
+          [
+            "PCI available within target interval",
+            "Primary PCI within 90 minutes of presentation at a PCI-capable hospital or within 120 minutes when transfer is required. [15]",
+            "Continue antithrombotic therapy and monitor for reperfusion complications. [15]"
+          ],
+          [
+            "PCI unavailable within 120 minutes",
+            "Initiate fibrinolysis within 30 minutes of hospital arrival if no contraindication. [15]",
+            "Transfer promptly to a PCI-capable center. [15]"
+          ],
+          [
+            "Failed fibrinolysis or recurrent ischemia",
+            "Immediate angiography and rescue PCI. [15]",
+            "Do not administer additional fibrinolytic therapy. [15]"
+          ],
+          [
+            "Apparently successful fibrinolysis",
+            "Early angiography within 2 to 24 hours is advised. [15]",
+            "Assess for recurrent ischemia, reinfarction, and bleeding. [15]"
+          ],
+          [
+            "Cardiogenic shock or acute severe heart failure",
+            "Primary PCI regardless of time since infarct onset. [15]",
+            "Escalate hemodynamic and critical care support while pursuing revascularization. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pharmacotherapy",
+      "eyebrow": "Antithrombotic and secondary prevention therapy",
+      "heading": "Match antiplatelet therapy to the reperfusion strategy and bleeding risk",
+      "intro": "Drug selection should not delay reperfusion.",
+      "paragraphs": [
+        "Start aspirin promptly, followed by maintenance aspirin 75 to 100 mg once daily. Most patients with acute coronary syndrome should receive dual antiplatelet therapy with aspirin plus a potent P2Y12 inhibitor; ticagrelor or prasugrel is preferred over clopidogrel after PCI in the supplied review. Prasugrel is contraindicated with prior transient ischemic attack or stroke. [15]",
+        "For fibrinolysis, use clopidogrel rather than ticagrelor or prasugrel according to the supplied source. Initiate procedural anticoagulation with unfractionated heparin, low-molecular-weight heparin, bivalirudin, or fondaparinux; agent selection should follow the local PCI or fibrinolysis protocol and renal function because dosing details were not provided in the supplied evidence. [15]",
+        "Initiate high-intensity statin therapy early, ideally before planned PCI, using the highest tolerated dose. ACE inhibitor therapy improves outcomes after myocardial infarction in patients with heart failure, LVEF 40% or less, diabetes, chronic kidney disease, or hypertension. Evidence for chronic beta-blockers is strongest with reduced LVEF; benefit after uncomplicated ACS with LVEF above 40% is less certain. [15]"
+      ],
+      "bullets": [
+        "Avoid nitroglycerin with recent phosphodiesterase inhibitor exposure or right ventricular infarction. [15]",
+        "Morphine may be used for refractory pain after nitroglycerin, but routine use is discouraged because of adverse outcome associations. [15]",
+        "Do not administer routine oxygen to normoxemic patients. [15]",
+        "The supplied sources support early high-intensity statin therapy but do not provide a source-supported dose, LDL-C target, or duration of dual antiplatelet therapy; use current institutional and guideline protocols for those decisions. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Medication decisions supported by the supplied evidence. [15]",
+        "columns": [
+          "Therapy",
+          "Use",
+          "Key limitation or precaution"
+        ],
+        "rows": [
+          [
+            "Aspirin",
+            "Administer early; continue 75-100 mg once daily as maintenance. [15]",
+            "Use with a P2Y12 inhibitor for dual antiplatelet therapy in most ACS patients. [15]"
+          ],
+          [
+            "Ticagrelor or prasugrel",
+            "Preferred over clopidogrel for patients undergoing PCI in the supplied review. [15]",
+            "Prasugrel is contraindicated with prior TIA or stroke. [15]"
+          ],
+          [
+            "Clopidogrel",
+            "Use with fibrinolytic therapy; consider when potent P2Y12 inhibitors are contraindicated, unavailable, or bleeding risk is high. [15]",
+            "Has less potent and more variable platelet inhibition than ticagrelor or prasugrel. [15]"
+          ],
+          [
+            "Anticoagulant",
+            "Use unfractionated heparin, low-molecular-weight heparin, bivalirudin, or fondaparinux with antiplatelet therapy. [15]",
+            "Select and dose using the reperfusion strategy, renal function, and institutional protocol; supplied evidence does not provide dosing. [15]"
+          ],
+          [
+            "High-intensity statin",
+            "Initiate early, ideally before PCI, at the highest tolerated dose. [15]",
+            "Monitor tolerability and use contemporary lipid-management pathways after discharge. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "complications-and-disposition",
+      "eyebrow": "Critical care and follow-up",
+      "heading": "Monitor actively for shock, arrhythmia, and mechanical complications",
+      "intro": "Clinical deterioration after reperfusion demands immediate reassessment.",
+      "paragraphs": [
+        "Monitor continuously for ventricular arrhythmia, recurrent ischemia, heart failure, cardiogenic shock, and mechanical complications. A new systolic murmur, abrupt pulmonary edema, hypotension, or escalating vasopressor requirement should prompt urgent echocardiography and cardiothoracic consultation for acute severe mitral regurgitation, ventricular septal rupture, or free-wall rupture. [15]",
+        "Mechanical complications carry very high mortality. Free-wall rupture occurs within 5 days in approximately half of cases and within 2 weeks in 90% of cases, with mortality exceeding 80%; ventricular septal rupture typically occurs 3 to 5 days after infarction and has mortality exceeding 70%. Acute severe ischemic mitral regurgitation has reported 30-day survival of 24%. [15]",
+        "Before discharge, assess ventricular function, reconcile antithrombotic therapy, ensure high-intensity statin and appropriate neurohormonal therapy, and refer to cardiac rehabilitation. Rehabilitation supports exercise training, secondary prevention education, psychosocial support, and medication titration. [7][11][12]"
+      ],
+      "bullets": [
+        "Failed fibrinolysis is suggested by recurrent ischemia or ST elevation; even with apparent success, early angiography within 2 to 24 hours is advised. [15]",
+        "TIMI risk scoring estimates 30-day mortality; the score incorporates age, diabetes, hypertension or angina history, systolic blood pressure, heart rate, Killip class, and low body weight. [15]",
+        "Reported 30-day STEMI mortality ranges from 2.5% to 10%; prognosis is worsened by shock, heart failure, reduced LVEF, and mechanical complications. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-STEMI deterioration requiring urgent reassessment. [15]",
+        "columns": [
+          "Clinical change",
+          "Immediate concern",
+          "Next diagnostic action"
+        ],
+        "rows": [
+          [
+            "Hypotension, cool extremities, oliguria, altered mentation",
+            "Cardiogenic shock. [15]",
+            "Urgent hemodynamic assessment, bedside echocardiography, and immediate revascularization strategy if not already completed. [15]"
+          ],
+          [
+            "New loud murmur with pulmonary edema or shock",
+            "Acute severe mitral regurgitation or ventricular septal rupture. [15]",
+            "Urgent echocardiography and cardiothoracic consultation. [15]"
+          ],
+          [
+            "Recurrent chest pain or ST elevation after fibrinolysis",
+            "Failed reperfusion, reocclusion, or reinfarction. [15]",
+            "Immediate angiography and rescue PCI. [15]"
+          ],
+          [
+            "Syncope, pulselessness, or unstable rhythm",
+            "Ventricular arrhythmia or other electrical complication. [15]",
+            "Continuous monitoring and advanced cardiac life support-directed management. [15]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should troponin results be awaited before activating the catheterization laboratory for STEMI?",
+      "answer": "No. Persistent ischemic ST elevation or an ECG equivalent is a working STEMI diagnosis requiring immediate reperfusion planning; troponin supports myocardial infarction diagnosis but should not delay catheterization. [15]"
+    },
+    {
+      "question": "When is fibrinolysis appropriate for STEMI?",
+      "answer": "When timely PCI cannot be achieved within 120 minutes, initiate fibrinolysis within 30 minutes of hospital arrival if no contraindication, then transfer promptly to a PCI-capable center. Perform rescue PCI for failed reperfusion or reinfarction. [15]"
+    },
+    {
+      "question": "What indicates successful fibrinolysis?",
+      "answer": "The supplied review describes more than 50% ST-segment resolution at 60 to 90 minutes, typical reperfusion arrhythmias, and relief of chest pain as signs of apparent success; early angiography within 2 to 24 hours is still advised. [15]"
+    },
+    {
+      "question": "Is new left bundle branch block alone diagnostic of STEMI?",
+      "answer": "No. LBBB complicates ECG interpretation. Use Sgarbossa-type concordant or excessive discordant ST changes together with ischemic symptoms, serial ECGs, prior tracings, and urgent clinical assessment; original criteria are highly specific but have limited sensitivity. [15]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Coronary Angiography after Cardiac Arrest without ST- ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1816897",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by JS Lemkes \u00b7 2019 \u00b7 Cited by 633 \u2014 Current European and American guidelines recommend immediate coronary angiography with PCI in patients who present with ST-segment elevation",
+      "score": 0.2104582
+    },
+    {
+      "number": 2,
+      "title": "Immediate or Deferred Nonculprit-Lesion PCI in Myocardial ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512918",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by R Nijveldt \u00b7 2026 \u00b7 Cited by 20 \u2014 Current guidelines recommend revascularization of nonculprit coronary-artery lesions in patients who have ST-segment elevation myocardial\u00a0...Read more",
+      "score": 0.20659012
+    },
+    {
+      "number": 3,
+      "title": "Fractional Flow Reserve\u2013Guided Multivessel Angioplasty ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1701067",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by PC Smits \u00b7 2017 \u00b7 Cited by 971 \u2014 Patients presenting with acute ST-segment elevation myocardial infarction (STEMI) are best treated with percutaneous coronary intervention (PCI",
+      "score": 0.27617094
+    },
+    {
+      "number": 4,
+      "title": "Population Trends in the Incidence and Outcomes of Acute ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0908610",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RW Yeh \u00b7 2010 \u00b7 Cited by 2466 \u2014 The proportion of myocardial infarctions that were ST-segment elevation myocardial infarctions decreased from 47.0% in 1999 to 22.9% in 2008.",
+      "score": 0.25507727
+    },
+    {
+      "number": 5,
+      "title": "Characterization of Circulating Endothelial Cells in Acute ...",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/scitranslmed.3003451",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "by S Damani \u00b7 2012 \u00b7 Cited by 140 \u2014 All patients met criteria for STEMI including ST-segment elevation of at least 0.2 mV in two contiguous precordial leads or 0.1 mV in",
+      "score": 0.53473455
+    },
+    {
+      "number": 6,
+      "title": "The acute management of ST-segment-elevation myocardial infarction",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824015240",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Acute ST-segment-elevation myocardial infarction (STEMI) results from complete obstruction to coronary artery blood flow accompanied by the appearance of ST-segment-elevation on the electrocardiogram. Emergency treatment is required to restore coronary perfusion, thereby limiting the extent of damag",
+      "score": 0.838376
+    },
+    {
+      "number": 7,
+      "title": "Comprehensive review of ST-segment elevation... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2023/10270/comprehensive_review_of_st_segment_elevation.69.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "#### 5.5.2. ESC guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation.\n\nThe ESC guidelines provide evidence-based recommendations for managing acute myocardial infarction, including STEMI. The guidelines emphasize the importance of rapid diagno",
+      "score": 0.7407191
+    },
+    {
+      "number": 8,
+      "title": "ST Segment Elevation Myocardial Infarction - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/st-segment-elevation-myocardial-infarction",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "and has yielded satisfactory clinical results. Network organization is central for optimizing patient care at the acute stage of myocardial infarction. This review describes different clinical experiences with network implementation both in Europe and in North America. In all instances, early recogn",
+      "score": 0.64880073
+    },
+    {
+      "number": 9,
+      "title": "ST-segment elevation myocardial infarction as the first... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2026/02060/st_segment_elevation_myocardial_infarction_as_the.55.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: ST-segment elevation myocardial infarction as the first... : Medicine\nAcute ST-segment elevation myocardial infarction (STEMI) typically results from abrupt coronary occlusion, most often caused by rupture of an atherosclerotic plaque. In the setting of nephrotic-range proteinuria and hypoalb",
+      "score": 0.6260562
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for the diagnosis and treatment of non-ST-segment ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/28/13/1598/2887402",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JP Bassand \u00b7 2007 \u00b7 Cited by 2516 \u2014 The management of patients with STEMI is addressed in the ESC Guidelines for management of ST-elevation acute MI.2",
+      "score": 0.70702106
+    },
+    {
+      "number": 11,
+      "title": "ESC Guidelines for the management of acute myocardial ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/33/20/2569/447818",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Authors/Task Force Members \u00b7 2012 \u00b7 Cited by 7284 \u2014 An additional benefit of rehabilitation programmes is to help ensure proper titration and monitoring of key, evidence-based therapies after STEMI.",
+      "score": 0.61972505
+    },
+    {
+      "number": 12,
+      "title": "2023 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RA Byrne \u00b7 2023 \u00b7 Cited by 7190 \u2014 This consists of medical therapy, lifestyle changes and cardiac rehabilitation, as well as consideration of psychosocial factors. 2.1.",
+      "score": 0.47767657
+    },
+    {
+      "number": 13,
+      "title": "2020 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/42/14/1289/5898842",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JP Collet \u00b7 2021 \u00b7 Cited by 7529 \u2014 The mainstay of treatment in these patients is immediate reperfusion by primary percutaneous coronary intervention (PCI) or, if not available",
+      "score": 0.3995779
+    },
+    {
+      "number": 14,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=69926a7c50bd6f6bff8e0b2f",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Acute ST-Segment Elevation Myocardial Infarction (STEMI) - StatPearls - NCBI Bookshelf\n# Acute ST-Segment Elevation Myocardial Infarction (STEMI). An acute ST-segment elevation myocardial infarction (STEMI)\u00a0arises from the occlusion of\u00a01 or more coronary arteries, causing transmural myocardia",
+      "score": 0.79484755
+    },
+    {
+      "number": 15,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI)",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK532281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "This activity for healthcare professionals reviews the etiology, epidemiology, risk factors, pathogenic mechanisms, clinical presentation, evaluation, and management of STEMI and underscores the integral role of the interprofessional team in improving outcomes for patients with this type of myocardi",
+      "score": 0.7498395
+    },
+    {
+      "number": 16,
+      "title": "2017 ACEP Reperfusion Acute STEMI.pdf",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(17)31743-2/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by JM Glauser \u00b7 2017 \u00b7 Cited by 16 \u2014 This clinical policy from the American College of Emergency Physicians addresses key issues in reperfusion for patients with acute ST-segment",
+      "score": 0.68191797
+    },
+    {
+      "number": 17,
+      "title": "Clinical Policy: Emergency Department Management of ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(17)31743-2/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by MD Brown \u00b7 2017 \u00b7 Cited by 16 \u2014 This clinical policy from the American College of Emergency Physicians addresses key issues in reperfusion for patients with acute ST-segment elevation",
+      "score": 0.5820878
+    },
+    {
+      "number": 18,
+      "title": "2017 ESC Guidelines for the management of acute ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1093%2Feurheartj%2Fehx393&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by B Ibanez \u00b7 2018 \u00b7 Cited by 14109 \u2014 It is recommended to initiate ECG monitoring as soon as possible in all patients with suspected STEMI in order to detect life-threatening",
+      "score": 0.5382315
+    },
+    {
+      "number": 19,
+      "title": "Anesthesia Toolbox Question: | American Society of Anesthesiologists (ASA)",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/education-and-career/asa-resident-component/anesthesia-toolbox-sign-up/toolbox-question-1",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "Fihn S, Gardin J, Abrams J, et al. 2012 ACC/AHA/ACP/AATS/PCNA/SCAI/STS Guideline for the Diagnosis and Management of Patients With Stable Ischemic Heart Disease. Circulation 2012;126(25);3097-137.\n\nO\u2019Gara PT, Kushner F, Ascheim D, et al. 2013 ACCF/AHA Guideline for the Management of ST-Elevation Myo",
+      "score": 0.47431523
+    },
+    {
+      "number": 20,
+      "title": "Clinical development of fibrinolytic medicinal products in the treatment of patients with ST -segment elevation acute myocardial infarction (STEMI) - Scientific guideline | European Medicines Agency (EMA)",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/clinical-development-fibrinolytic-medicinal-products-treatment-patients-st-segment-elevation-acute-myocardial-infarction-stemi-scientific-guideline",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "This document provides guidance on the clinical development of new fibrinolytics in the treatment of patients with ST segment elevation acute myocardial infarction.\n\nKeywords:ST segment elevation, acute coronary syndrome, myocardial infarction, angina, revascularisation, anticoagulants, antithrombot",
+      "score": 0.39873472
+    },
+    {
+      "number": 21,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(06)01011-0/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by FM Fesmire \u00b7 2006 \u00b7 Cited by 68 \u2014 ACC/AHA 2002 guideline update for the management of patients with unstable angina and non-ST-segment elevation myocardial infarction: A report of the American",
+      "score": 0.33796838
+    },
+    {
+      "number": 22,
+      "title": "PASS Information - HMA-EMA Catalogues",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/B021%20RMiP%20PASS%20Protocol.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "postauthorisation safety study PCI percutaneous coronary intervention PSUR periodic safety update report RMM risk minimization measures RMP risk minimization plan SmPC Summary of Product Characteristics SOP standard operating procedure STEMI ST segment elevation myocardial infarction STROBE STrength",
+      "score": 0.26897496
+    },
+    {
+      "number": 23,
+      "title": "2002 Update to the ACC/AHA Guidelines for the",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(02)85027-2/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by CV Pollack Jr \u00b7 2003 \u00b7 Cited by 71 \u2014 Many of the recommendations included in the guidelines have relevance to the emergency de- partment care of patients with non\u2013ST-segment\u00a0...Read more",
+      "score": 0.24119031
+    },
+    {
+      "number": 24,
+      "title": "Preventing Chronic Disease | An Algorithm That Identifies Coronary and Heart Failure Events in the Electronic Health Record - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/pcd/issues/2013/12_0097.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| 1. STEMI | Hospital discharge codeb 410.0\u2013410.6 or 410.8 OR 410.7 or 410.9 and \u22651 troponin level >3 \u00d7 ULN and serial ECGs show evolving ST elevation by visual inspection and clinical history consistent with acute coronary syndrome OR diagnosis of STEMI on discharge summary. | Hospital discharge co",
+      "score": 0.45638612
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Coronary Angiography after Cardiac Arrest without ST- ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1816897",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by JS Lemkes \u00b7 2019 \u00b7 Cited by 633 \u2014 Current European and American guidelines recommend immediate coronary angiography with PCI in patients who present with ST-segment elevation",
+      "score": 0.2104582
+    },
+    {
+      "number": 2,
+      "title": "Immediate or Deferred Nonculprit-Lesion PCI in Myocardial ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2512918",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by R Nijveldt \u00b7 2026 \u00b7 Cited by 20 \u2014 Current guidelines recommend revascularization of nonculprit coronary-artery lesions in patients who have ST-segment elevation myocardial\u00a0...Read more",
+      "score": 0.20659012
+    },
+    {
+      "number": 3,
+      "title": "Fractional Flow Reserve\u2013Guided Multivessel Angioplasty ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1701067",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by PC Smits \u00b7 2017 \u00b7 Cited by 971 \u2014 Patients presenting with acute ST-segment elevation myocardial infarction (STEMI) are best treated with percutaneous coronary intervention (PCI",
+      "score": 0.27617094
+    },
+    {
+      "number": 4,
+      "title": "Population Trends in the Incidence and Outcomes of Acute ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa0908610",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RW Yeh \u00b7 2010 \u00b7 Cited by 2466 \u2014 The proportion of myocardial infarctions that were ST-segment elevation myocardial infarctions decreased from 47.0% in 1999 to 22.9% in 2008.",
+      "score": 0.25507727
+    },
+    {
+      "number": 5,
+      "title": "Characterization of Circulating Endothelial Cells in Acute ...",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/scitranslmed.3003451",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "by S Damani \u00b7 2012 \u00b7 Cited by 140 \u2014 All patients met criteria for STEMI including ST-segment elevation of at least 0.2 mV in two contiguous precordial leads or 0.1 mV in",
+      "score": 0.53473455
+    },
+    {
+      "number": 6,
+      "title": "The acute management of ST-segment-elevation myocardial infarction",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1470211824015240",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Acute ST-segment-elevation myocardial infarction (STEMI) results from complete obstruction to coronary artery blood flow accompanied by the appearance of ST-segment-elevation on the electrocardiogram. Emergency treatment is required to restore coronary perfusion, thereby limiting the extent of damag",
+      "score": 0.838376
+    },
+    {
+      "number": 7,
+      "title": "Comprehensive review of ST-segment elevation... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2023/10270/comprehensive_review_of_st_segment_elevation.69.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "#### 5.5.2. ESC guidelines for the management of acute myocardial infarction in patients presenting with ST-segment elevation.\n\nThe ESC guidelines provide evidence-based recommendations for managing acute myocardial infarction, including STEMI. The guidelines emphasize the importance of rapid diagno",
+      "score": 0.7407191
+    },
+    {
+      "number": 8,
+      "title": "ST Segment Elevation Myocardial Infarction - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/st-segment-elevation-myocardial-infarction",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "and has yielded satisfactory clinical results. Network organization is central for optimizing patient care at the acute stage of myocardial infarction. This review describes different clinical experiences with network implementation both in Europe and in North America. In all instances, early recogn",
+      "score": 0.64880073
+    },
+    {
+      "number": 9,
+      "title": "ST-segment elevation myocardial infarction as the first... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2026/02060/st_segment_elevation_myocardial_infarction_as_the.55.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: ST-segment elevation myocardial infarction as the first... : Medicine\nAcute ST-segment elevation myocardial infarction (STEMI) typically results from abrupt coronary occlusion, most often caused by rupture of an atherosclerotic plaque. In the setting of nephrotic-range proteinuria and hypoalb",
+      "score": 0.6260562
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for the diagnosis and treatment of non-ST-segment ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/28/13/1598/2887402",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JP Bassand \u00b7 2007 \u00b7 Cited by 2516 \u2014 The management of patients with STEMI is addressed in the ESC Guidelines for management of ST-elevation acute MI.2",
+      "score": 0.70702106
+    },
+    {
+      "number": 11,
+      "title": "ESC Guidelines for the management of acute myocardial ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/33/20/2569/447818",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Authors/Task Force Members \u00b7 2012 \u00b7 Cited by 7284 \u2014 An additional benefit of rehabilitation programmes is to help ensure proper titration and monitoring of key, evidence-based therapies after STEMI.",
+      "score": 0.61972505
+    },
+    {
+      "number": 12,
+      "title": "2023 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RA Byrne \u00b7 2023 \u00b7 Cited by 7190 \u2014 This consists of medical therapy, lifestyle changes and cardiac rehabilitation, as well as consideration of psychosocial factors. 2.1.",
+      "score": 0.47767657
+    },
+    {
+      "number": 13,
+      "title": "2020 ESC Guidelines for the management of acute coronary ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/42/14/1289/5898842",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JP Collet \u00b7 2021 \u00b7 Cited by 7529 \u2014 The mainstay of treatment in these patients is immediate reperfusion by primary percutaneous coronary intervention (PCI) or, if not available",
+      "score": 0.3995779
+    },
+    {
+      "number": 14,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=69926a7c50bd6f6bff8e0b2f",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Acute ST-Segment Elevation Myocardial Infarction (STEMI) - StatPearls - NCBI Bookshelf\n# Acute ST-Segment Elevation Myocardial Infarction (STEMI). An acute ST-segment elevation myocardial infarction (STEMI)\u00a0arises from the occlusion of\u00a01 or more coronary arteries, causing transmural myocardia",
+      "score": 0.79484755
+    },
+    {
+      "number": 15,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI)",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK532281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "This activity for healthcare professionals reviews the etiology, epidemiology, risk factors, pathogenic mechanisms, clinical presentation, evaluation, and management of STEMI and underscores the integral role of the interprofessional team in improving outcomes for patients with this type of myocardi",
+      "score": 0.7498395
+    },
+    {
+      "number": 16,
+      "title": "2017 ACEP Reperfusion Acute STEMI.pdf",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(17)31743-2/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by JM Glauser \u00b7 2017 \u00b7 Cited by 16 \u2014 This clinical policy from the American College of Emergency Physicians addresses key issues in reperfusion for patients with acute ST-segment",
+      "score": 0.68191797
+    },
+    {
+      "number": 17,
+      "title": "Clinical Policy: Emergency Department Management of ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(17)31743-2/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by MD Brown \u00b7 2017 \u00b7 Cited by 16 \u2014 This clinical policy from the American College of Emergency Physicians addresses key issues in reperfusion for patients with acute ST-segment elevation",
+      "score": 0.5820878
+    },
+    {
+      "number": 18,
+      "title": "2017 ESC Guidelines for the management of acute ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1093%2Feurheartj%2Fehx393&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by B Ibanez \u00b7 2018 \u00b7 Cited by 14109 \u2014 It is recommended to initiate ECG monitoring as soon as possible in all patients with suspected STEMI in order to detect life-threatening",
+      "score": 0.5382315
+    },
+    {
+      "number": 19,
+      "title": "Anesthesia Toolbox Question: | American Society of Anesthesiologists (ASA)",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/education-and-career/asa-resident-component/anesthesia-toolbox-sign-up/toolbox-question-1",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "Fihn S, Gardin J, Abrams J, et al. 2012 ACC/AHA/ACP/AATS/PCNA/SCAI/STS Guideline for the Diagnosis and Management of Patients With Stable Ischemic Heart Disease. Circulation 2012;126(25);3097-137.\n\nO\u2019Gara PT, Kushner F, Ascheim D, et al. 2013 ACCF/AHA Guideline for the Management of ST-Elevation Myo",
+      "score": 0.47431523
+    },
+    {
+      "number": 20,
+      "title": "Clinical development of fibrinolytic medicinal products in the treatment of patients with ST -segment elevation acute myocardial infarction (STEMI) - Scientific guideline | European Medicines Agency (EMA)",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/clinical-development-fibrinolytic-medicinal-products-treatment-patients-st-segment-elevation-acute-myocardial-infarction-stemi-scientific-guideline",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "This document provides guidance on the clinical development of new fibrinolytics in the treatment of patients with ST segment elevation acute myocardial infarction.\n\nKeywords:ST segment elevation, acute coronary syndrome, myocardial infarction, angina, revascularisation, anticoagulants, antithrombot",
+      "score": 0.39873472
+    },
+    {
+      "number": 21,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(06)01011-0/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by FM Fesmire \u00b7 2006 \u00b7 Cited by 68 \u2014 ACC/AHA 2002 guideline update for the management of patients with unstable angina and non-ST-segment elevation myocardial infarction: A report of the American",
+      "score": 0.33796838
+    },
+    {
+      "number": 22,
+      "title": "PASS Information - HMA-EMA Catalogues",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/B021%20RMiP%20PASS%20Protocol.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "postauthorisation safety study PCI percutaneous coronary intervention PSUR periodic safety update report RMM risk minimization measures RMP risk minimization plan SmPC Summary of Product Characteristics SOP standard operating procedure STEMI ST segment elevation myocardial infarction STROBE STrength",
+      "score": 0.26897496
+    },
+    {
+      "number": 23,
+      "title": "2002 Update to the ACC/AHA Guidelines for the",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(02)85027-2/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by CV Pollack Jr \u00b7 2003 \u00b7 Cited by 71 \u2014 Many of the recommendations included in the guidelines have relevance to the emergency de- partment care of patients with non\u2013ST-segment\u00a0...Read more",
+      "score": 0.24119031
+    },
+    {
+      "number": 24,
+      "title": "Preventing Chronic Disease | An Algorithm That Identifies Coronary and Heart Failure Events in the Electronic Health Record - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/pcd/issues/2013/12_0097.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| 1. STEMI | Hospital discharge codeb 410.0\u2013410.6 or 410.8 OR 410.7 or 410.9 and \u22651 troponin level >3 \u00d7 ULN and serial ECGs show evolving ST elevation by visual inspection and clinical history consistent with acute coronary syndrome OR diagnosis of STEMI on discharge summary. | Hospital discharge co",
+      "score": 0.45638612
+    }
+  ],
+  "publishedAt": "2026-08-20T23:23:20.222242Z",
+  "updatedAt": "2026-08-20T23:23:20.222242Z",
+  "readingMinutes": 6,
+  "slug": "st-segment-elevation-myocardial-infarction"
+}

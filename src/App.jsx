@@ -4,6 +4,7 @@ import { ThemeProvider } from './components/Themes+Styles.jsx';
 import SupabaseAuthProvider from './components/Auth/SupabaseAuthProvider.jsx';
 import AstraApp from './components/AstraApp.jsx';
 import ArticlePage from './routes/ArticlePage.jsx';
+import ArticlesIndexPage from './routes/ArticlesIndexPage.jsx';
 import AboutPage from './routes/AboutPage.jsx';
 import SourcesPage from './routes/SourcesPage.jsx';
 import QBankPage from './routes/QBankPage.jsx';
@@ -12,6 +13,7 @@ import './App.css';
 
 export const AppRoutes = () => (
   <Routes>
+    <Route path="/articles" element={<ArticlesIndexPage />} />
     <Route path="/articles/:slug" element={<ArticlePage />} />
     <Route path="/article/:slug" element={<ArticlePage />} />
     <Route path="/about" element={<AboutPage />} />

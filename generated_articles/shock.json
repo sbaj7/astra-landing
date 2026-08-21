@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Shock",
+  "summary": "Shock requires simultaneous resuscitation and etiologic diagnosis. Recognize tissue hypoperfusion before sustained hypotension, establish monitoring and access, use focused bedside testing to identify the hemodynamic phenotype, and rapidly deliver source- or mechanism-directed treatment while reassessing perfusion and treatment response.",
+  "seoDescription": "Physician guide to recognizing, evaluating, and managing undifferentiated circulatory shock, including perfusion assessment, POCUS, fluids, vasopressors, and escalation.",
+  "clinicalQuestion": "How should clinicians stabilize and phenotype undifferentiated circulatory shock while initiating cause-specific treatment?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "circulatory shock",
+    "undifferentiated shock",
+    "septic shock",
+    "cardiogenic shock",
+    "point-of-care ultrasound",
+    "vasopressors",
+    "tissue hypoperfusion"
+  ],
+  "keyTakeaways": [
+    "Treat shock as a time-critical syndrome of inadequate tissue perfusion; resuscitation must proceed while the cause is investigated. [15]",
+    "Mental status, urine output, and skin perfusion provide rapid bedside evidence of systemic hypoperfusion; prolonged capillary refill, reduced peripheral temperature, and shock index of at least 0.7-0.8 support concern for shock. [20]",
+    "Focused point-of-care ultrasound can help distinguish shock phenotype and assess fluid responsiveness, but should complement rather than delay definitive treatment. [19]",
+    "Balanced crystalloids are the preferred initial resuscitation fluid in undifferentiated circulatory shock; subsequent fluid should be individualized to perfusion response and congestion risk. [19]",
+    "Norepinephrine is the preferred vasopressor in septic shock and profound cardiogenic shock. [19]",
+    "For cardiogenic shock, assign SCAI shock severity early and reassess serially; deterioration during the first 24 hours identifies a particularly high-risk trajectory. [6][7][8]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-and-stabilize",
+      "eyebrow": "First Minutes",
+      "heading": "Recognize shock from hypoperfusion, not blood pressure alone",
+      "intro": "Begin stabilization and diagnostic phenotyping in parallel.",
+      "paragraphs": [
+        "Shock is a life-threatening state requiring urgent intervention, often in a critical care setting. A structured <C>ABCDE approach prioritizes immediate threats while empirical treatment begins. [1] Hypotension may be absent early; concerning findings include altered mentation, tachycardia, tachypnea, cool or mottled extremities, oliguria, metabolic acidosis, and hyperlactatemia. [15]",
+        "Use repeated bedside assessment of the brain, kidneys, and skin to judge perfusion. Reduced peripheral perfusion or temperature, prolonged capillary refill, and a shock index (heart rate divided by systolic blood pressure) of at least 0.7-0.8 are validated clinical indicators of shock. [20] Trend these findings with arterial pressure, lactate, urine output, and evolving organ dysfunction rather than accepting transient blood-pressure correction as adequate resuscitation. [15][20]"
+      ],
+      "bullets": [
+        "Activate appropriate critical care, emergency, procedural, surgical, trauma, cardiology, or interventional support early when a rapidly reversible cause is plausible.",
+        "Obtain continuous cardiac monitoring and a 12-lead ECG; ECG findings may identify acute coronary syndrome or arrhythmia and may provide clues to pericardial effusion or pulmonary embolism. [15]",
+        "Establish reliable vascular access and obtain blood for targeted testing without delaying resuscitation or definitive source control. [15][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Bedside findings that support systemic hypoperfusion and warrant immediate reassessment or escalation. [15][20]",
+        "columns": [
+          "Clinical window",
+          "Concerning finding",
+          "Clinical implication"
+        ],
+        "rows": [
+          [
+            "Brain",
+            "Obtundation or abnormal mental status [15]",
+            "Supports inadequate cerebral perfusion or evolving organ dysfunction; reassess immediately. [15]"
+          ],
+          [
+            "Kidney",
+            "Oliguria [15]",
+            "Supports impaired renal perfusion; trend with hemodynamics and fluid balance. [15]"
+          ],
+          [
+            "Skin",
+            "Cool or mottled extremities, prolonged capillary refill, reduced peripheral temperature [15][20]",
+            "Rapid marker of impaired peripheral perfusion and a useful serial resuscitation endpoint. [20]"
+          ],
+          [
+            "Integrated vital signs",
+            "Shock index at least 0.7-0.8 [20]",
+            "Raises concern for shock even before overt hypotension. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "phenotype-the-shock",
+      "eyebrow": "Diagnostic Strategy",
+      "heading": "Identify the mechanism driving hypoperfusion",
+      "intro": "Categorize the dominant physiology while maintaining a differential for mixed shock.",
+      "paragraphs": [
+        "The immediate diagnostic objective is to identify whether hypoperfusion is primarily due to volume loss, vasodilation or maldistribution, pump failure, obstructed circulation, or a mixed process. Etiology determines the definitive intervention; therefore, a focused history, medication review, physical examination, ECG, laboratory testing, and imaging should proceed concurrently with supportive care. [15][19]",
+        "Point-of-care ultrasound is useful in undifferentiated shock to assess cardiac function, congestion, pericardial fluid, volume status, and fluid responsiveness. [19] Its value is greatest when findings are integrated with the examination and serial perfusion response; a single static measure should not substitute for reassessment after fluids, vasoactive therapy, or a corrective procedure. [19][20]"
+      ],
+      "bullets": [
+        "Hypovolemic or hemorrhagic phenotype: seek external or concealed bleeding, gastrointestinal loss, trauma, or other fluid loss; prioritize hemorrhage control and blood-product support when bleeding is present. [22]",
+        "Distributive phenotype: evaluate for infection and other inflammatory, toxicologic, endocrine, or neurogenic causes; obtain appropriate cultures before antimicrobials when feasible, but do not delay prompt treatment for suspected sepsis. [16]",
+        "Cardiogenic phenotype: evaluate acute coronary syndrome, arrhythmia, acute valvular disease, mechanical complications, myocarditis, and acute or decompensated heart failure. [8][15]",
+        "Obstructive phenotype: rapidly evaluate for pericardial disease, pulmonary embolism, and tension physiology; definitive mechanical relief or reperfusion may be time-sensitive. [15][17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Septic shock",
+          "paragraphs": [
+            "Septic shock is defined by a vasopressor requirement to maintain mean arterial pressure of at least 65 mm Hg and serum lactate of at least 2 mmol/L. [16] Obtain appropriate culture specimens before antibiotics when possible, then administer empiric antimicrobial therapy promptly; the cited emergency medicine review identifies an ideal goal of administration within 1 hour. [16]"
+          ],
+          "bullets": [
+            "Reassess antimicrobial selection as microbiology, source, host factors, and clinical trajectory become available; short courses and de-escalation may be appropriate when supported by the clinical syndrome. [16]",
+            "No single biomarker adequately determines infection presence, pathogen type, and severity; do not use an isolated biomarker result as a substitute for clinical assessment and microbiologic evaluation. [9]"
+          ]
+        },
+        {
+          "heading": "Cardiogenic shock",
+          "paragraphs": [
+            "Initial suspicion and diagnosis of cardiogenic shock do not require invasive hemodynamic monitoring, but arterial access, pulmonary artery catheterization, or other invasive assessment can clarify ventricular involvement and congestion and may inform treatment decisions. [8] Once suspected, classify severity using the SCAI shock stage and reassess as physiology and treatment intensity change. [7][8]"
+          ],
+          "bullets": [
+            "Clinical and biochemical tissue hypoperfusion define cardiogenic shock; traditional hemodynamic criteria include cardiac index no greater than 2.2 L/min/m² and pulmonary capillary wedge pressure greater than 15 mm Hg. [21]",
+            "Serial reassessment is essential: more than half of patients initially classified as SCAI stage B or C worsened by 24 hours in a contemporary cohort, and patients presenting in or progressing to stage E had the poorest prognosis. [6]"
+          ]
+        }
+      ],
+      "table": null
+    },
+    {
+      "id": "initial-resuscitation",
+      "eyebrow": "Resuscitation",
+      "heading": "Use response-guided fluids and early vasopressor support",
+      "intro": "Support perfusion while avoiding reflexive, unmeasured fluid loading.",
+      "paragraphs": [
+        "Balanced crystalloids are favored for initial fluid resuscitation in circulatory shock. [19] Fluid administration should be followed by immediate reassessment of blood pressure, mental status, skin perfusion, urine output, lactate, pulmonary congestion, and dynamic evidence of fluid responsiveness. Point-of-care ultrasound may assist this assessment. [19][20]",
+        "Escalate to norepinephrine when hypotension and hypoperfusion persist despite initial resuscitative measures or when additional fluid is unlikely to restore perfusion safely. Norepinephrine is identified as the preferred vasopressor in septic shock and profound cardiogenic shock. [19] The supplied sources do not provide a supported starting dose, titration range, or upper dose limit; use institutional critical-care protocols and patient-specific monitoring."
+      ],
+      "bullets": [
+        "Avoid using central venous pressure alone as a marker of ongoing fluid requirement; post-resuscitation positive fluid balance has been associated with higher mortality in septic shock cohorts. [2]",
+        "For suspected hemorrhage, do not treat crystalloid response as a substitute for bleeding control, transfusion support, and urgent operative or interventional management. [22]",
+        "For suspected cardiogenic shock with congestion or ventricular failure, use fluids cautiously and reassess after each intervention; invasive hemodynamics may help define the congestive and ventricular profile. [8][19]",
+        "Monitor for deterioration after every major intervention; shock management requires repeated phenotyping because mixed physiology and treatment-related changes are common. [19][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiology-directed priorities during initial stabilization. [15][16][19][22]",
+        "columns": [
+          "Dominant phenotype",
+          "Immediate supportive approach",
+          "Definitive priority"
+        ],
+        "rows": [
+          [
+            "Hypovolemic or hemorrhagic",
+            "Volume replacement and hemodynamic support while monitoring perfusion. [22]",
+            "Identify and control bleeding or ongoing fluid loss; escalate to surgical or interventional treatment when needed. [22]"
+          ],
+          [
+            "Distributive or septic",
+            "Balanced crystalloid resuscitation, norepinephrine when vasopressor support is needed, and serial perfusion reassessment. [19]",
+            "Prompt empiric antimicrobial therapy and source-directed management after obtaining cultures when feasible. [16]"
+          ],
+          [
+            "Cardiogenic",
+            "Support perfusion, avoid unmeasured fluid loading, and use norepinephrine in profound shock. [19]",
+            "Define myocardial, valvular, arrhythmic, or mechanical cause and pursue cause-specific cardiology or procedural treatment. [8][17]"
+          ],
+          [
+            "Obstructive",
+            "Temporize oxygenation and perfusion while rapidly confirming the obstruction. [15]",
+            "Urgent relief of the obstructive lesion or reperfusion when indicated. [15][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Reassessment",
+      "heading": "Measure trajectory and escalate before refractory shock",
+      "intro": "The response over hours is more informative than a single initial measurement.",
+      "paragraphs": [
+        "Monitor serial perfusion variables: mental status, skin temperature and capillary refill, urine output, lactate, arterial pressure, acid-base status, and evidence of pulmonary or systemic congestion. [15][20] A falling lactate and improving peripheral perfusion support recovery, whereas worsening clinical perfusion, rising vasoactive requirements, or progressive organ dysfunction should trigger immediate reassessment of diagnosis, source control, hemorrhage control, cardiac function, and adequacy of procedural intervention. [6][19]",
+        "In cardiogenic shock, the first 24 hours are a particularly consequential treatment window. In a cohort of 3,268 patients, mortality was 44.6% among patients whose SCAI stage worsened within 24 hours, compared with 34.2% among those whose stage improved; survivors had lower lactate than nonsurvivors. [6] Escalating shock severity should prompt early multidisciplinary discussion regarding invasive monitoring, revascularization or other corrective procedures, and temporary mechanical circulatory support where appropriate. [8][17]"
+      ],
+      "bullets": [
+        "Document a working phenotype and its uncertainty; mixed shock is common and treatment should change as new evidence emerges. [19]",
+        "Reevaluate fluid responsiveness and congestion rather than continuing empiric fluids after initial resuscitation. [19]",
+        "In septic shock, reassess antimicrobials, source control, perfusion, and fluid balance repeatedly; persistent positive fluid accumulation after initial resuscitation is a concern. [2][16]",
+        "In cardiogenic shock, communicate SCAI stage and trajectory during transfers and escalation decisions to standardize severity assessment. [7][8]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "common-pitfalls",
+      "eyebrow": "Avoidable Errors",
+      "heading": "Prevent delays and misleading endpoints",
+      "intro": "Several common practices obscure ongoing hypoperfusion or delay definitive care.",
+      "paragraphs": [
+        "Do not wait for persistent hypotension before treating suspected shock. Peripheral hypoperfusion, impaired mentation, oliguria, metabolic acidosis, hyperlactatemia, and an elevated shock index may precede or accompany hypotension. [15][20] Conversely, restoration of an acceptable arterial pressure does not establish adequate tissue perfusion; continue to examine perfusion and organ-function trends. [15][20]",
+        "Do not permit diagnostic uncertainty to delay treatment of rapidly reversible causes. Resuscitation should not be delayed while evaluating undifferentiated shock, and focused ultrasound, ECG, cultures, and targeted laboratory testing should be used to accelerate—not sequentially postpone—definitive treatment. [15][16][19]"
+      ],
+      "bullets": [
+        "Do not use a single central venous pressure target as proof of fluid responsiveness or optimal fluid balance. [2]",
+        "Do not rely on one biomarker to diagnose sepsis, define pathogen class, and determine severity. [9]",
+        "Do not treat a static cardiogenic shock designation as sufficient; serial SCAI-stage assessment identifies important early deterioration. [6][7]",
+        "Do not continue fluid administration without reassessing for response and congestion, particularly in suspected cardiogenic shock. [19]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "What bedside findings are most useful for early recognition of shock?",
+      "answer": "Assess mentation, urine output, skin temperature and mottling, capillary refill, vital-sign trajectory, and shock index. A shock index of at least 0.7-0.8, prolonged capillary refill, or reduced peripheral temperature supports concern for shock. [15][20]"
+    },
+    {
+      "question": "Should hypotension be required before diagnosing shock?",
+      "answer": "No. Clinical evidence of tissue hypoperfusion, including altered mental status, oliguria, cool or mottled extremities, metabolic acidosis, and hyperlactatemia, may establish concern before sustained hypotension. [15]"
+    },
+    {
+      "question": "When should point-of-care ultrasound be used in undifferentiated shock?",
+      "answer": "Use it early when available to help characterize cardiac function, congestion, pericardial fluid, and fluid responsiveness. Integrate findings with the examination and serial response to treatment rather than relying on a single ultrasound measure. [19]"
+    },
+    {
+      "question": "Which vasopressor is preferred in septic and profound cardiogenic shock?",
+      "answer": "The cited review identifies norepinephrine as the preferred vasopressor in septic shock and profound cardiogenic shock. Specific dosing and titration are not provided in the supplied sources. [19]"
+    },
+    {
+      "question": "How should cardiogenic shock severity be tracked?",
+      "answer": "Classify cardiogenic shock using SCAI stage after diagnosis and reassess serially, especially during the first 24 hours. Worsening stage is associated with high mortality and should prompt urgent reassessment and escalation. [6][7][8]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Shock - Symptoms, diagnosis and treatment | BMJ Best Practice 临床实践",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1013",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "主页\n主页\nopen menu\n\n# Shock\n\nEpidemiology\n\nAetiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nInvestigations\n\nDifferentials\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences\n\nCalcula",
+      "score": 0.42233846
+    },
+    {
+      "number": 2,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Septic shock is the most likely diagnosis. Rapid fluid test is the principal procedure. If increment of CVP after rapid hydration is less than 3cmH2O, sufficient fluid resuscitation with alternating crystalloid and colloid through a central venous catheter is the essential intervention. Invasive hem",
+      "score": 0.22187328
+    },
+    {
+      "number": 3,
+      "title": "Restriction of Intravenous Fluid in ICU Patients with Septic Shock",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2202707",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Crossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n19.\n\nPerner A, Haase N, Guttormsen AB, et al. Hydroxyethyl starch 130/0.42 versus Ringer’s acetate in severe sepsis. _N Engl J Med_ 2012;367:124-134.\n\nCrossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n20.\n\nHolst LB, Haase N, Wetterslev J, et al. Lowe",
+      "score": 0.14476466
+    },
+    {
+      "number": 4,
+      "title": "Contemporary Management of Cardiogenic Shock",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000525",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by S van Diepen · 2017 · Cited by 2110 — This scientific statement on cardiogenic shock summarizes the epidemiology, pathophysiology, causes, and outcomes of cardiogenic shock; reviews",
+      "score": 0.14411299
+    },
+    {
+      "number": 5,
+      "title": "Best diagnostic accuracy of sepsis combining SIRS criteria or qSOFA score with Procalcitonin and Mid-Regional pro-Adrenomedullin outside ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73676-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n    CAS \n    PubMed \n    Google Scholar\n22. Angeletti, S. et al. Procalcitonin, MR-Proadrenomedullin, and cytokines measurement in sepsis diagnosis: advantages from test combination. Dis. Markers 2015, 951532 (2015).\n\n    Article \n    PubMed \n    PubMed Central \n    CAS \n    Google Scholar\n",
+      "score": 0.30473486
+    },
+    {
+      "number": 6,
+      "title": "Serial Shock Severity Assessment Within 72 Hours After ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.069",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "A total of 3,268 patients (57% HF-CS; 27% MI-CS) were included. At CS diagnosis, CSWG-SCAI stage breakdown was 593 (18.1%) stage B, 528 (16.2%) stage C, 1,659 (50.8%) stage D, and 488 (14.9%) noncardiac arrest stage E. At 24 hours, >50% of stages B and C patients worsened, but 86% of stage D patient",
+      "score": 0.29877824
+    },
+    {
+      "number": 7,
+      "title": "Criteria for Defining Stages of Cardiogenic Shock Severity",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2022.04.049",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "One of the key goals of introducing the SCAI classifications was to enhance clinical communication and expedite decision-making by standardizing definitions of shock severity. The descriptors of shock staging include key parameters derived from physical examination, biochemical markers, and hemodyna",
+      "score": 0.24324717
+    },
+    {
+      "number": 8,
+      "title": "2025 Concise Clinical Guidance: An ACC Expert ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.02.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "ALT = alanine transaminase; BiV = biventricular; CS = cardiogenic shock; ECG = electrocardiogram; LV = left ventricular; MAP = mean arterial pressure; pH = potential of hydrogen; RV = right ventricular; SBP = systolic blood pressure; STEMI = ST-segment elevation myocardial infarction.\n\nIt is importa",
+      "score": 0.11748122
+    },
+    {
+      "number": 9,
+      "title": "Clinical validation of an AI-based blood testing device for ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "## Discussion\n\nDiagnosis and prognosis of patients presenting with symptoms of acute infections or suspected sepsis is an ongoing clinical challenge. Current diagnostic tools have limited sensitivity or require a long time to obtain results and do not assess prognosis or etiology6.\"),8.\"),24.\"). Pat",
+      "score": 0.115670934
+    },
+    {
+      "number": 10,
+      "title": "Survival prediction of patients with sepsis from age, sex ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73558-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Google Scholar\n14. Tao, T. et al. The top cited clinical research articles on sepsis: a bibliometric analysis. Crit. Care 16, R110.  (2012).\n\n    Article \n    PubMed \n    PubMed Central \n    Google Scholar\n15. Kempker, J. A. & Martin, G. S. A global accounting of sepsis. Lancet 395, 168–170 (2020).\n",
+      "score": 0.07619448
+    },
+    {
+      "number": 11,
+      "title": "Current Concepts on the Management of Shock | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.CIR.16.6.1097",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In the handling of a patient with shock it is essential to identify the underlying cause in order to plan rational treatment. On the basis of information",
+      "score": 0.3163064
+    },
+    {
+      "number": 12,
+      "title": "2022 AHA/ACC/HFSA Guideline for the Management of ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.12.012",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Progressive deterioration in renal or hepatic function.\nWorsening right HF or secondary pulmonary hypertension.\nFrequent SBP ≤90 mm Hg.\nCardiac cachexia.\nPersistent hyponatremia (serum sodium, <134 mEq/L).\nRefractory or recurrent ventricular arrhythmias; frequent ICD shocks.\nIncreased predicted 1-ye",
+      "score": 0.10177697
+    },
+    {
+      "number": 13,
+      "title": "Validation of a Machine Learning Model for Early Shock ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/milmed/article/187/1-2/82/6289841",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Y Pinevich · 2022 · Cited by 16 — The 4TDS shock model demonstrated a sensitivity of 78.6% (95% CI 74.1-82.7%) and a specificity of 93.1% (95% CI 92.4-93.8%). The model showed a",
+      "score": 0.09562799
+    },
+    {
+      "number": 14,
+      "title": "Book in Review - In Shock by Dr. Rana Awsish | Medical Directors Section",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/medicaldirectors/newsroom/md-newsroom-articles/mar2019/book-in-review-in-shock-by-dr.-rana-awsish",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "So starts the profoundly personal, yet universally applicable, and transformative book, In Shock, by Dr. Rana Awsish. In the introduction entitled \"A Chance to Die,\" she lays the lessons she learned from going from a healthy ICU doctor to a profoundly ill patient and back again. Behind her introduct",
+      "score": 0.4858686
+    },
+    {
+      "number": 15,
+      "title": "Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nResuscitation should not delay while investigating the etiology of undifferentiated shock. Physicians should have a high clinical suspicion for the presence of shock, and an attempt to stratify the severity of the shock should also take place to assess the need for emergent or early i",
+      "score": 0.44695392
+    },
+    {
+      "number": 16,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score ≥ 2. Septic shock is defined by the need for a vasopressor to maintain a patient’s mean arterial pressure (MAP) ≥ 65 mmHg and serum lactate level ≥ 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.43669468
+    },
+    {
+      "number": 17,
+      "title": "Management of cardiogenic shock: a narrative review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10980676",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "77..Otto CM, Nishimura RA, Bonow RO, Carabello BA, Erwin JP, Gentile F, _et al_. 2020 ACC/AHA guideline for the management of patients with valvular heart disease: executive summary: a report of the American college of cardiology/American Heart Association Joint Committee on Clinical Practice Guidel",
+      "score": 0.42319635
+    },
+    {
+      "number": 18,
+      "title": "An overview of international cardiogenic shock guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31107307",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by S van Diepen · 2019 · Cited by 40 — In this review, we compare central differences in cardiogenic shock recommendations in international clinical practice guidelines, scientific statements,",
+      "score": 0.3699755
+    },
+    {
+      "number": 19,
+      "title": "Circulatory shock in adults in emergency department",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10389095",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  AND (\"management\" OR \"treatment\" OR \"resuscitation\"). The review emphasizes prompt shock identification with tissue hypoperfusion, knowledge of the underlying pathophysiological mechanism, initial fluid resuscitation with balanced crystalloids, norepinephrine as the preferred vasopressor in sept",
+      "score": 0.35501477
+    },
+    {
+      "number": 20,
+      "title": "The MINUTES bundle for the initial 30 min management of undifferentiated circulatory shock: an expert opinion",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270766",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The aim of this review is to propose a simplified bundle for the initial management of patients with undifferentiated shock. Based on pathophysiological knowledge and scientific evidence, the expert panel suggests an acronym that could help acute care physicians in this task by applying a bundle of ",
+      "score": 0.350133
+    },
+    {
+      "number": 21,
+      "title": "Cardiogenic Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482255",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Introduction\n\nCardiogenic shock is defined as a primary cardiac disorder that results in both clinical and biochemical evidence of tissue hypoperfusion. Clinical criteria include a systolic blood pressure of less than or equal to 90 mm Hg for greater than or equal to 30 minutes or support to main",
+      "score": 0.22674122
+    },
+    {
+      "number": 22,
+      "title": "Hypovolemia and Hypovolemic Shock - StatPearls - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513297",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Effective management of hypovolemic shock requires a coordinated, interprofessional approach that leverages the unique skills and perspectives of all healthcare team members to improve patient-centered outcomes, safety, and overall team performance. Physicians and advanced practitioners lead diagnos",
+      "score": 0.22255686
+    },
+    {
+      "number": 23,
+      "title": "Guideline-directed medical therapy implementation ... - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39327768",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by MG Dimond · 2025 · Cited by 13 — Aims: Despite significant morbidity and mortality, recent advances in cardiogenic shock (CS) management have been associated with increased survival.",
+      "score": 0.19636384
+    },
+    {
+      "number": 24,
+      "title": "Definitions for sepsis and organ failure and guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1303622",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Sepsis / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Severity of Illness Index \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Shock, Septic / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n     ",
+      "score": 0.19534872
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Shock - Symptoms, diagnosis and treatment | BMJ Best Practice 临床实践",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1013",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "主页\n主页\nopen menu\n\n# Shock\n\nEpidemiology\n\nAetiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nInvestigations\n\nDifferentials\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences\n\nCalcula",
+      "score": 0.42233846
+    },
+    {
+      "number": 2,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Septic shock is the most likely diagnosis. Rapid fluid test is the principal procedure. If increment of CVP after rapid hydration is less than 3cmH2O, sufficient fluid resuscitation with alternating crystalloid and colloid through a central venous catheter is the essential intervention. Invasive hem",
+      "score": 0.22187328
+    },
+    {
+      "number": 3,
+      "title": "Restriction of Intravenous Fluid in ICU Patients with Septic Shock",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2202707",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Crossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n19.\n\nPerner A, Haase N, Guttormsen AB, et al. Hydroxyethyl starch 130/0.42 versus Ringer’s acetate in severe sepsis. _N Engl J Med_ 2012;367:124-134.\n\nCrossref\n\nPubMed\n\nWeb of Science\n\nGoogle Scholar\n\n20.\n\nHolst LB, Haase N, Wetterslev J, et al. Lowe",
+      "score": 0.14476466
+    },
+    {
+      "number": 4,
+      "title": "Contemporary Management of Cardiogenic Shock",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000525",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by S van Diepen · 2017 · Cited by 2110 — This scientific statement on cardiogenic shock summarizes the epidemiology, pathophysiology, causes, and outcomes of cardiogenic shock; reviews",
+      "score": 0.14411299
+    },
+    {
+      "number": 5,
+      "title": "Best diagnostic accuracy of sepsis combining SIRS criteria or qSOFA score with Procalcitonin and Mid-Regional pro-Adrenomedullin outside ICU | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73676-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n    CAS \n    PubMed \n    Google Scholar\n22. Angeletti, S. et al. Procalcitonin, MR-Proadrenomedullin, and cytokines measurement in sepsis diagnosis: advantages from test combination. Dis. Markers 2015, 951532 (2015).\n\n    Article \n    PubMed \n    PubMed Central \n    CAS \n    Google Scholar\n",
+      "score": 0.30473486
+    },
+    {
+      "number": 6,
+      "title": "Serial Shock Severity Assessment Within 72 Hours After ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.069",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "A total of 3,268 patients (57% HF-CS; 27% MI-CS) were included. At CS diagnosis, CSWG-SCAI stage breakdown was 593 (18.1%) stage B, 528 (16.2%) stage C, 1,659 (50.8%) stage D, and 488 (14.9%) noncardiac arrest stage E. At 24 hours, >50% of stages B and C patients worsened, but 86% of stage D patient",
+      "score": 0.29877824
+    },
+    {
+      "number": 7,
+      "title": "Criteria for Defining Stages of Cardiogenic Shock Severity",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2022.04.049",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "One of the key goals of introducing the SCAI classifications was to enhance clinical communication and expedite decision-making by standardizing definitions of shock severity. The descriptors of shock staging include key parameters derived from physical examination, biochemical markers, and hemodyna",
+      "score": 0.24324717
+    },
+    {
+      "number": 8,
+      "title": "2025 Concise Clinical Guidance: An ACC Expert ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.02.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "ALT = alanine transaminase; BiV = biventricular; CS = cardiogenic shock; ECG = electrocardiogram; LV = left ventricular; MAP = mean arterial pressure; pH = potential of hydrogen; RV = right ventricular; SBP = systolic blood pressure; STEMI = ST-segment elevation myocardial infarction.\n\nIt is importa",
+      "score": 0.11748122
+    },
+    {
+      "number": 9,
+      "title": "Clinical validation of an AI-based blood testing device for ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "## Discussion\n\nDiagnosis and prognosis of patients presenting with symptoms of acute infections or suspected sepsis is an ongoing clinical challenge. Current diagnostic tools have limited sensitivity or require a long time to obtain results and do not assess prognosis or etiology6.\"),8.\"),24.\"). Pat",
+      "score": 0.115670934
+    },
+    {
+      "number": 10,
+      "title": "Survival prediction of patients with sepsis from age, sex ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-73558-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Google Scholar\n14. Tao, T. et al. The top cited clinical research articles on sepsis: a bibliometric analysis. Crit. Care 16, R110.  (2012).\n\n    Article \n    PubMed \n    PubMed Central \n    Google Scholar\n15. Kempker, J. A. & Martin, G. S. A global accounting of sepsis. Lancet 395, 168–170 (2020).\n",
+      "score": 0.07619448
+    },
+    {
+      "number": 11,
+      "title": "Current Concepts on the Management of Shock | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.CIR.16.6.1097",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In the handling of a patient with shock it is essential to identify the underlying cause in order to plan rational treatment. On the basis of information",
+      "score": 0.3163064
+    },
+    {
+      "number": 12,
+      "title": "2022 AHA/ACC/HFSA Guideline for the Management of ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.12.012",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Progressive deterioration in renal or hepatic function.\nWorsening right HF or secondary pulmonary hypertension.\nFrequent SBP ≤90 mm Hg.\nCardiac cachexia.\nPersistent hyponatremia (serum sodium, <134 mEq/L).\nRefractory or recurrent ventricular arrhythmias; frequent ICD shocks.\nIncreased predicted 1-ye",
+      "score": 0.10177697
+    },
+    {
+      "number": 13,
+      "title": "Validation of a Machine Learning Model for Early Shock ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/milmed/article/187/1-2/82/6289841",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by Y Pinevich · 2022 · Cited by 16 — The 4TDS shock model demonstrated a sensitivity of 78.6% (95% CI 74.1-82.7%) and a specificity of 93.1% (95% CI 92.4-93.8%). The model showed a",
+      "score": 0.09562799
+    },
+    {
+      "number": 14,
+      "title": "Book in Review - In Shock by Dr. Rana Awsish | Medical Directors Section",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/medicaldirectors/newsroom/md-newsroom-articles/mar2019/book-in-review-in-shock-by-dr.-rana-awsish",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "So starts the profoundly personal, yet universally applicable, and transformative book, In Shock, by Dr. Rana Awsish. In the introduction entitled \"A Chance to Die,\" she lays the lessons she learned from going from a healthy ICU doctor to a profoundly ill patient and back again. Behind her introduct",
+      "score": 0.4858686
+    },
+    {
+      "number": 15,
+      "title": "Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nResuscitation should not delay while investigating the etiology of undifferentiated shock. Physicians should have a high clinical suspicion for the presence of shock, and an attempt to stratify the severity of the shock should also take place to assess the need for emergent or early i",
+      "score": 0.44695392
+    },
+    {
+      "number": 16,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score ≥ 2. Septic shock is defined by the need for a vasopressor to maintain a patient’s mean arterial pressure (MAP) ≥ 65 mmHg and serum lactate level ≥ 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.43669468
+    },
+    {
+      "number": 17,
+      "title": "Management of cardiogenic shock: a narrative review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10980676",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "77..Otto CM, Nishimura RA, Bonow RO, Carabello BA, Erwin JP, Gentile F, _et al_. 2020 ACC/AHA guideline for the management of patients with valvular heart disease: executive summary: a report of the American college of cardiology/American Heart Association Joint Committee on Clinical Practice Guidel",
+      "score": 0.42319635
+    },
+    {
+      "number": 18,
+      "title": "An overview of international cardiogenic shock guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31107307",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by S van Diepen · 2019 · Cited by 40 — In this review, we compare central differences in cardiogenic shock recommendations in international clinical practice guidelines, scientific statements,",
+      "score": 0.3699755
+    },
+    {
+      "number": 19,
+      "title": "Circulatory shock in adults in emergency department",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10389095",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  AND (\"management\" OR \"treatment\" OR \"resuscitation\"). The review emphasizes prompt shock identification with tissue hypoperfusion, knowledge of the underlying pathophysiological mechanism, initial fluid resuscitation with balanced crystalloids, norepinephrine as the preferred vasopressor in sept",
+      "score": 0.35501477
+    },
+    {
+      "number": 20,
+      "title": "The MINUTES bundle for the initial 30 min management of undifferentiated circulatory shock: an expert opinion",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11270766",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The aim of this review is to propose a simplified bundle for the initial management of patients with undifferentiated shock. Based on pathophysiological knowledge and scientific evidence, the expert panel suggests an acronym that could help acute care physicians in this task by applying a bundle of ",
+      "score": 0.350133
+    },
+    {
+      "number": 21,
+      "title": "Cardiogenic Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482255",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Introduction\n\nCardiogenic shock is defined as a primary cardiac disorder that results in both clinical and biochemical evidence of tissue hypoperfusion. Clinical criteria include a systolic blood pressure of less than or equal to 90 mm Hg for greater than or equal to 30 minutes or support to main",
+      "score": 0.22674122
+    },
+    {
+      "number": 22,
+      "title": "Hypovolemia and Hypovolemic Shock - StatPearls - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513297",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Effective management of hypovolemic shock requires a coordinated, interprofessional approach that leverages the unique skills and perspectives of all healthcare team members to improve patient-centered outcomes, safety, and overall team performance. Physicians and advanced practitioners lead diagnos",
+      "score": 0.22255686
+    },
+    {
+      "number": 23,
+      "title": "Guideline-directed medical therapy implementation ... - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39327768",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by MG Dimond · 2025 · Cited by 13 — Aims: Despite significant morbidity and mortality, recent advances in cardiogenic shock (CS) management have been associated with increased survival.",
+      "score": 0.19636384
+    },
+    {
+      "number": 24,
+      "title": "Definitions for sepsis and organ failure and guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1303622",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Sepsis / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Severity of Illness Index \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Shock, Septic / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n     ",
+      "score": 0.19534872
+    }
+  ],
+  "publishedAt": "2026-08-21T00:29:19.064619+00:00",
+  "updatedAt": "2026-08-21T00:29:19.064619+00:00",
+  "readingMinutes": 6,
+  "slug": "shock"
+}

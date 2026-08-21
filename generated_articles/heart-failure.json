@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology",
+  "title": "Heart Failure",
+  "summary": "Heart failure requires phenotype-specific confirmation, rapid identification of reversible precipitants, early disease-modifying therapy for reduced ejection fraction, and surveillance for congestion, arrhythmia, renal dysfunction, and progression to advanced therapies. Management must align treatment intensity with hemodynamics, comorbidity, and patient goals.",
+  "seoDescription": "Physician guide to heart failure diagnosis, phenotype assessment, evidence-based treatment, monitoring, congestion management, and advanced therapy referral.",
+  "clinicalQuestion": "How should clinicians confirm, phenotype, treat, and longitudinally monitor heart failure while identifying candidates for advanced therapies?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "heart failure",
+    "congestive heart failure",
+    "HFrEF",
+    "HFpEF",
+    "HFmrEF",
+    "guideline-directed medical therapy",
+    "acute decompensated heart failure"
+  ],
+  "keyTakeaways": [
+    "Heart failure is a clinical syndrome; reduced ejection fraction alone does not establish the diagnosis without compatible symptoms or signs. [10]",
+    "Determine ejection-fraction phenotype, structural cause, congestion, perfusion, rhythm, ischemic substrate, valvular disease, and reversible precipitants before assigning long-term therapy. [10][11]",
+    "For HFrEF, guideline-directed therapy includes an ARNI, evidence-based beta blocker, mineralocorticoid receptor antagonist, and SGLT2 inhibitor, with individualized sequencing and monitoring. [11]",
+    "Loop diuretics relieve congestion but do not substitute for disease-modifying therapy; in obstructive hypertrophic cardiomyopathy, excessive preload reduction can worsen outflow obstruction. [8]",
+    "Advanced heart failure can occur with preserved EF in restrictive hypertrophic cardiomyopathy; transplant referral should not be deferred solely because EF is preserved. [8]"
+  ],
+  "sections": [
+    {
+      "id": "clinical-assessment",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm the syndrome and define the phenotype",
+      "intro": "Use symptoms, examination, biomarkers, imaging, and etiologic assessment rather than ejection fraction alone.",
+      "paragraphs": [
+        "Heart failure is a clinical syndrome caused by structural or functional impairment of ventricular filling or ejection. Dyspnea, fatigue, congestion, and edema are common but nonspecific; no single diagnostic test is sufficient. A prior low EF without clinical evidence of heart failure should not be equated with heart failure. [10][23]",
+        "Initial assessment should establish acuity, congestion versus hypoperfusion, blood pressure, rhythm, ischemic symptoms, valve disease, renal and hepatic dysfunction, and competing cardiopulmonary diagnoses. Obtain ECG, chest radiography when clinically useful, CBC, renal function and electrolytes, liver tests, thyroid testing, glycemic assessment, and transthoracic echocardiography to evaluate ventricular systolic and diastolic function, valves, chamber size, and shunts. [23]",
+        "Classify by LVEF: HFrEF at 40% or less, HFmrEF above 40% to below 50%, HFpEF at 50% or greater, and HF with recovered EF when a previously reduced EF improves to at least 50%. These categories guide evidence application but do not define etiology or filling pressures. [10]"
+      ],
+      "bullets": [
+        "Use natriuretic peptides to support or weaken diagnostic probability, recognizing that age, renal dysfunction, tachycardia, right-sided pressure overload, hypoxemia, sepsis, COPD, diabetes, and cirrhosis can elevate values; obesity and treatment with diuretics, ACE inhibitors, ARBs, beta blockers, or mineralocorticoid receptor antagonists can lower them. [23]",
+        "If echocardiography is nondiagnostic or image quality is inadequate, cardiac MRI can clarify ventricular structure, function, scar, inflammation, or infiltrative disease; CT is an alternative when echo is limited and CMR is unavailable or contraindicated. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Core diagnostic framework for suspected heart failure. [10][23]",
+        "columns": [
+          "Clinical question",
+          "Action",
+          "Interpretation or next step"
+        ],
+        "rows": [
+          [
+            "Is the syndrome present?",
+            "Integrate symptoms, signs, examination, and objective testing.",
+            "Do not diagnose heart failure from LVEF alone. [10]"
+          ],
+          [
+            "Is cardiac dysfunction or structural disease present?",
+            "Perform transthoracic echocardiography.",
+            "Assess LVEF, diastolic function, valves, chamber dimensions, and shunts. [23]"
+          ],
+          [
+            "Is natriuretic peptide testing useful?",
+            "Measure NT-proBNP when heart failure is suspected.",
+            "In untreated patients, NT-proBNP below 400 ng/L makes heart failure less likely in the NICE pathway; values above 2,000 ng/L warrant urgent specialist assessment and echocardiography within 2 weeks. This is a UK pathway, not a U.S. threshold recommendation. [23]"
+          ],
+          [
+            "Is etiology actionable?",
+            "Assess ischemia, hypertension, valvular disease, arrhythmia, cardiomyopathy, toxin exposure, infiltrative disease, congenital disease, and systemic causes.",
+            "Treatable cause identification changes therapy, prognosis, and referral. [10][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "chronic-management",
+      "eyebrow": "Treatment",
+      "heading": "Build phenotype-directed long-term therapy",
+      "intro": "Separate symptom relief from therapies that alter morbidity and mortality.",
+      "paragraphs": [
+        "The supplied U.S. heart failure guideline is the principal source for patient-centered prevention, diagnosis, and management recommendations, but detailed drug dose tables are not available in the provided search excerpts. Therefore, this review names core medication classes without adding unsupported dose or titration schedules. [11]",
+        "In HFrEF, foundational therapy includes renin-angiotensin system modulation with an ARNI or other appropriate RAAS-directed therapy, an evidence-based beta blocker, a mineralocorticoid receptor antagonist, and an SGLT2 inhibitor. The 2022 AHA/ACC/HFSA guideline is the key U.S. reference for selection, sequencing, eligibility, and monitoring. [11]",
+        "Sacubitril/valsartan is FDA-indicated to reduce cardiovascular death and heart failure hospitalization in adults with chronic heart failure, with benefit most clearly evident when LVEF is below normal. The usual adult starting dose is 49/51 mg orally twice daily, titrated every 2 to 4 weeks as tolerated to 97/103 mg twice daily; begin at half the usual starting dose for severe renal impairment, moderate hepatic impairment, or no/low prior ACE inhibitor or ARB exposure. Do not coadminister with an ACE inhibitor; allow a 36-hour washout when switching from an ACE inhibitor. [2]",
+        "Metoprolol succinate is FDA-indicated for stable symptomatic NYHA II or III heart failure. Start 25 mg once daily for 2 weeks in NYHA II or 12.5 mg once daily in more severe heart failure, then double every 2 weeks to the highest tolerated dose or 200 mg daily. Stabilize other heart failure therapy first; with transient worsening heart failure, intensify diuresis and restore clinical stability before further titration. Avoid abrupt discontinuation. [3]"
+      ],
+      "bullets": [
+        "Monitor blood pressure, renal function, potassium, heart rate, volume status, and symptom trajectory during initiation and titration of disease-modifying therapy. Sacubitril/valsartan can cause hypotension, hyperkalemia, renal dysfunction, and angioedema. [2]",
+        "Use loop diuretics for congestion. Thiazide-like diuretics such as chlorthalidone can cause hypokalemia, hyponatremia, hypomagnesemia, hyperuricemia, hyperglycemia, and acute kidney injury from hypovolemia; monitor renal function and electrolytes. [7]",
+        "Dapagliflozin labeling includes warnings for ketoacidosis and volume depletion; review full prescribing information when selecting an SGLT2 inhibitor, especially in patients with diabetes, reduced intake, acute illness, or diuretic-associated volume depletion. [6]"
+      ],
+      "subsections": [
+        {
+          "heading": "Acute congestion and decompensation",
+          "paragraphs": [
+            "Acute pulmonary edema or pulmonary congestion requires rapid assessment of oxygenation, perfusion, blood pressure, ischemia, arrhythmia, renal function, and precipitating causes. Invasive hemodynamics may be useful when noninvasive testing does not resolve diagnostic uncertainty or when refractory symptoms require precise characterization of filling pressures, cardiac output, and pulmonary pressures. [10][11]"
+          ],
+          "bullets": [
+            "Avoid routine initiation of high-dose extended-release metoprolol immediately before noncardiac surgery; perioperative initiation in a trial was associated with more bradycardia, hypotension, stroke, and death. Chronic beta-blocker therapy should not routinely be withdrawn before major surgery. [3]",
+            "For patients treated with sacubitril/valsartan who develop hypotension, address volume depletion and reconsider concomitant diuretics or antihypertensives before permanent discontinuation when feasible. [2]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Selected FDA-supported medication details relevant to chronic heart failure. [2][3]",
+        "columns": [
+          "Agent",
+          "Use and dosing",
+          "Key safety actions"
+        ],
+        "rows": [
+          [
+            "Sacubitril/valsartan",
+            "Chronic heart failure: start 49/51 mg twice daily; double after 2-4 weeks as tolerated to 97/103 mg twice daily. Use half the usual starting dose with severe renal impairment, moderate hepatic impairment, or no/low prior ACE inhibitor or ARB exposure. [2]",
+            "Contraindicated with ACE inhibitors and in prior ACE inhibitor- or ARB-related angioedema; require 36-hour ACE inhibitor washout. Monitor potassium and renal function. [2]"
+          ],
+          [
+            "Metoprolol succinate",
+            "Stable symptomatic NYHA II-III heart failure: 25 mg once daily for NYHA II or 12.5 mg once daily for more severe heart failure; double every 2 weeks to highest tolerated dose or 200 mg daily. [3]",
+            "Do not initiate in decompensated heart failure. Monitor for bradycardia and worsening congestion during titration; taper over 1-2 weeks if discontinuing chronic therapy. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "special-populations",
+      "eyebrow": "Etiology matters",
+      "heading": "Modify treatment when cardiomyopathy physiology changes the risk",
+      "intro": "Heart failure management changes substantially when obstruction, infiltrative disease, or systolic decline is present.",
+      "paragraphs": [
+        "In obstructive hypertrophic cardiomyopathy, dynamic outflow obstruction is sensitive to preload, afterload, and contractility. A peak LVOT gradient of at least 30 mm Hg defines obstruction; resting or provoked gradients of at least 50 mm Hg are generally considered capable of causing symptoms and are the threshold for advanced pharmacologic or invasive strategies when symptoms are refractory. [8]",
+        "For symptomatic obstructive hypertrophic cardiomyopathy, nonvasodilating beta blockers are first-line. Verapamil or diltiazem are alternatives. Persistent symptoms despite first-line therapy may prompt consideration of a cardiac myosin inhibitor in adults, disopyramide with an AV nodal blocking agent, or septal reduction therapy at an experienced HCM center. [8]",
+        "Avoid or reconsider pure vasodilators, high-dose diuretics, and positive inotropes in symptomatic obstructive hypertrophic cardiomyopathy because reduced preload or afterload and increased contractility can worsen obstruction. Low-dose diuretics may be used cautiously for persistent congestive symptoms. [8]"
+      ],
+      "bullets": [
+        "Mavacamten reduces contractility and can reduce LVEF. In HCM, interrupt cardiac myosin inhibitor therapy if LVEF falls below 50%; restart at a lower dose only if LVEF recovers. [8]",
+        "For HCM with persistent systolic dysfunction defined by LVEF below 50%, evaluate alternative contributors including coronary disease, valvular disease, metabolic disease, and phenocopies, and apply HFrEF guideline-directed therapy as tolerated. [8]",
+        "Consider referral to a comprehensive HCM center for complex diagnosis, genetic counseling, ICD decisions, septal reduction therapy, advanced heart failure therapies, or management of refractory arrhythmias. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Management implications of obstructive hypertrophic cardiomyopathy with heart failure symptoms. [8]",
+        "columns": [
+          "Finding",
+          "Clinical implication",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Resting or provoked LVOT gradient \u226550 mm Hg with attributable symptoms",
+            "Hemodynamically important obstruction is likely.",
+            "Use nonvasodilating beta blocker first; escalate to disopyramide, adult myosin inhibitor, or septal reduction therapy if refractory. [8]"
+          ],
+          [
+            "Congestion with obstructive physiology",
+            "Diuresis may relieve symptoms but can worsen obstruction by reducing preload.",
+            "Use low-dose diuretics cautiously and reassess symptoms, blood pressure, and gradient. [8]"
+          ],
+          [
+            "LVEF <50% during myosin inhibitor therapy",
+            "Potential drug-related systolic dysfunction.",
+            "Interrupt therapy; consider lower-dose restart only after recovery. [8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-referral",
+      "eyebrow": "Longitudinal care",
+      "heading": "Monitor trajectory and refer before advanced disease becomes irreversible",
+      "intro": "Serial assessment should detect congestion, arrhythmia, progressive dysfunction, and advanced-therapy eligibility.",
+      "paragraphs": [
+        "Follow-up should include symptoms, NYHA class, blood pressure, heart rate and rhythm, weight and volume status, renal function, electrolytes, medication tolerance, and adherence. Heart failure data standards also identify functional assessment, patient-reported outcomes, cardiopulmonary exercise testing, rhythm monitoring, and invasive hemodynamics as appropriate tools in selected patients. [10]",
+        "In hypertrophic cardiomyopathy, serial transthoracic echocardiography every 1 to 2 years in asymptomatic patients can assess changes in systolic and diastolic function, wall thickness, chamber size, LVOT obstruction, and valvular disease. Ambulatory ECG monitoring every 1 to 2 years is reasonable for arrhythmia surveillance in patients without ICDs. [8]",
+        "Advanced heart failure develops in an estimated 3% to 8% of patients with hypertrophic cardiomyopathy. Refer for transplant evaluation when severe symptoms or recurrent ventricular arrhythmias persist despite optimized medical therapy and septal reduction is not an option; preserved EF does not exclude advanced restrictive physiology or transplant candidacy. [8]"
+      ],
+      "bullets": [
+        "Use cardiopulmonary exercise testing when evaluating severe symptoms or transplant candidacy; reduced peak oxygen consumption, impaired ventilatory efficiency, and abnormal anaerobic threshold are associated with adverse outcomes in HCM. [8]",
+        "For atrial fibrillation in HCM, oral anticoagulation is generally the default irrespective of CHA2DS2-VASc score because thromboembolic risk is elevated; direct oral anticoagulants are supported as at least as effective as warfarin in observational data. [8]",
+        "Reassess sudden cardiac death risk in HCM every 1 to 2 years. Risk assessment incorporates prior cardiac arrest or sustained ventricular arrhythmia, family history, unexplained syncope, ventricular wall thickness, apical aneurysm, LVEF, ambulatory NSVT, and CMR fibrosis. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value longitudinal surveillance in heart failure and HCM. [8][10]",
+        "columns": [
+          "Domain",
+          "What to measure",
+          "Escalation trigger"
+        ],
+        "rows": [
+          [
+            "Congestion and treatment tolerance",
+            "Weight, symptoms, blood pressure, renal function, potassium, and diuretic response.",
+            "Progressive congestion, hypotension, hyperkalemia, or clinically significant renal decline requires medication and volume reassessment. [2][7]"
+          ],
+          [
+            "HCM anatomy and hemodynamics",
+            "TTE with resting and provoked LVOT gradient when relevant.",
+            "New symptoms, provoked gradient \u226550 mm Hg, progressive mitral regurgitation, or systolic decline should prompt treatment reassessment. [8]"
+          ],
+          [
+            "Advanced heart failure",
+            "NYHA class, recurrent hospitalizations, refractory symptoms, ventricular arrhythmias, and CPET.",
+            "Refer for advanced heart failure or transplant evaluation when optimized therapy and anatomy-directed options are exhausted. [8]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What establishes a diagnosis of heart failure?",
+      "answer": "Diagnosis requires compatible clinical symptoms or signs plus evidence of relevant structural or functional cardiac abnormality; a reduced LVEF alone is insufficient. [10][23]"
+    },
+    {
+      "question": "How should suspected heart failure be evaluated initially?",
+      "answer": "Use history, examination, ECG, laboratories for reversible contributors, natriuretic peptide testing when appropriate, and transthoracic echocardiography to define function, structure, valves, and shunts. [23]"
+    },
+    {
+      "question": "When should sacubitril/valsartan not be used?",
+      "answer": "Do not use with an ACE inhibitor or within 36 hours of ACE inhibitor exposure, in patients with prior ACE inhibitor- or ARB-related angioedema, or with aliskiren in diabetes. Monitor renal function and potassium. [2]"
+    },
+    {
+      "question": "When should patients with hypertrophic cardiomyopathy be referred to an expert center?",
+      "answer": "Refer for complex diagnostic or genetic issues, difficult ICD decisions, refractory obstruction, septal reduction therapy, complex arrhythmia management, or advanced heart failure and transplant assessment. [8]"
+    },
+    {
+      "question": "Can advanced heart failure occur with preserved ejection fraction?",
+      "answer": "Yes. In hypertrophic cardiomyopathy, restrictive physiology can produce severe heart failure despite preserved EF; advanced therapy and transplant referral should be based on clinical trajectory, not EF alone. [8]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "prescribing information - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020702Orig1s079correctedlbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "(2.3). \u2022 Pediatric Patients Aged 10 Years of Age and Older with HoFH: Recommended starting dosage is 10 to 20 mg once daily; dosage range is 10 to 80 mg once daily (2.4). \u2022 See full prescribing information for LIPITOR dosage modifications due to drug interactions (2.5). ---------------------DOSAGE F",
+      "score": 0.6578248
+    },
+    {
+      "number": 2,
+      "title": "ENTRESTO\u00ae (sacubitril and valsartan) tablets, for oral use ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/207620s025,218591s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "impairment. (7.3) \u2022 Lithium: Increased risk of lithium toxicity. (7.4) ------------------------USE IN SPECIFIC POPULATIONS----------------------\u00ad \u2022 Lactation: Breastfeeding not recommended. (8.2) \u2022 Severe Hepatic Impairment: Use not recommended. (2.8, 8.6) See 17 for PATIENT COUNSELING INFORMATION a",
+      "score": 0.491725
+    },
+    {
+      "number": 3,
+      "title": "Metoprolol succinate - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/019962s041lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "with TOPROL-XL in patients with hepatic impairment. Because TOPROL-XL is metabolized by the liver, metoprolol blood levels are likely to increase substantially with poor hepatic function. Therefore, initiate therapy at doses lower than those recommended for a given indication; and increase doses gra",
+      "score": 0.3788962
+    },
+    {
+      "number": 4,
+      "title": "FDA Approves First Generic Pimobendan for Management of Congestive Heart Failure in Dogs | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/animal-veterinary/cvm-updates/fda-approves-first-generic-pimobendan-management-congestive-heart-failure-dogs",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Pimomedin is available as 1.25, 2.5, 5 and 10 mg oblong half-scored chewable tablets with 50 tablets per bottle. Pimomedin should be administered orally at a total daily dose of 0.23 mg/lb (0.5 mg/kg) body weight, using a suitable combination of whole or half tablets. The total daily dose should be ",
+      "score": 0.33980626
+    },
+    {
+      "number": 5,
+      "title": "These highlights do not include all the information needed to use VALSARTAN TABLETS safely and effectively. See full prescribing information for VALSARTAN TABLETS.\n <br/>\n      <br/>\n      <br/>\n      <br/>\nVALSARTAN tablets, for oral use\n <br/>\n      <br/>\n      <br/>\n      <br/>\nInitial U.S. Approval: 1996",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/f755ffef-66fc-1de5-e053-6294a90ab746/f755ffef-66fc-1de5-e053-6294a90ab746.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |\n ---  --- |\n|  | Placebo     (N=181) | Valsartan     (N=185) | Hazard Ratio     (95% CI) |\n| Components of HF morbidity |  |  |  |\n| All-cause mortality | 49 (27.1%) | 32 (17.3%) | 0.59 (0.37, 0.91) |\n| Sudden death with resuscitation | 2 (1.1%) | 1 (0.5%) | 0.47 (0.04, 5.20) |\n| CHF t",
+      "score": 0.3180195
+    },
+    {
+      "number": 6,
+      "title": "FDA Approves First Generic Dapagliflozin Tablets | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-approves-first-generic-dapagliflozin-tablets",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "FDA approves multiple generics of FARXIGA\n\n[4/7/2026] The U.S. Food and Drug Administration approved the first generics of FARXIGA (dapagliflozin) tablets to reduce the risk of hospitalization for heart failure in adults with type 2 diabetes mellitus and either established cardiovascular disease or ",
+      "score": 0.2814505
+    },
+    {
+      "number": 7,
+      "title": "These highlights do not include all the information needed to use\u00a0HEMICLOR<sup>TM </sup>safely and effectively. See full prescribing information for HEMICLOR.<br/> <br/>HEMICLOR (chlorthalidone) tablets, for oral use<br/>Initial U.S. Approval: 1960",
+      "detail": "nctr-crs.fda.gov",
+      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/3f0f3ee0-f5a6-4bda-8160-a77744e9fa46/spl-doc?hl=",
+      "authors": "nctr-crs.fda.gov",
+      "host": "nctr-crs.fda.gov",
+      "snippet": "Insulin requirements and oral hypoglycemic agent dosages may require adjustments (7). Possible increased responsiveness to tubocurarine (7). Possible decreased arterial responsiveness to norepinephrine (7). Lithium renal clearance is reduced by chlorthalidone, increasing the risk of lithium toxicity",
+      "score": 0.2046759
+    },
+    {
+      "number": 8,
+      "title": "2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001250",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "HCM is a common inherited heart disease reported in populations globally. The estimated prevalence of HCM varies depending on whether subclinical or clinically evident cases are being considered, how or if the diagnosis is adjudicated, and age of the sample studied.1 The prevalence of unexplained as",
+      "score": 0.58465123
+    },
+    {
+      "number": 9,
+      "title": "Get With The Guidelines-Heart Failure: Twenty Years in ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.125.012936",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by AB Tang \u00b7 2025 \u00b7 Cited by 27 \u2014 This narrative review provides an overview of the indelible impact of the Get With The Guidelines-Heart Failure program on quality heart failure",
+      "score": 0.5715041
+    },
+    {
+      "number": 10,
+      "title": "2021 ACC/AHA Key Data Elements and Definitions for Heart Failure: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Data Standards (Writing Committee to Develop Clinical Data Standards for Heart Failure)",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/HCQ.0000000000000102",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In clinical care, a broad spectrum of clinicians provides a continuum of care for patients with HF, ranging from primary care/family medicine providers, HF specialists and/or cardiologists, cardiac and transplant surgeons, interventional cardiologists, electrophysiologists, advanced practice provide",
+      "score": 0.5608546
+    },
+    {
+      "number": 11,
+      "title": "2022 AHA/ACC/HFSA Guideline for the Management of ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by PA Heidenreich \u00b7 2022 \u00b7 Cited by 11103 \u2014 The 2022 guideline is intended to provide patient-centric recommendations for clinicians to prevent, diagnose, and manage patients with heart failure.",
+      "score": 0.5356092
+    },
+    {
+      "number": 12,
+      "title": "Prognosis of Heart Failure - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/prognosis-of-heart-failure",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "acute decompensation. Diagnosis of HF is most commonly based on comprehensive patient history and physical examination, chest radiography, electrocardiography, echocardiography, and laboratory results. [...] normal_ _systolic function_) accounts for 40% to 50% of heart failure cases,3,4 a similar cl",
+      "score": 0.6326168
+    },
+    {
+      "number": 13,
+      "title": "Endpoints in Heart Failure Drug Development",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213177920300731",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Fiuzat \u00b7 2020 \u00b7 Cited by 64 \u2014 The FDA recently issued a draft guidance, Treatment for Heart Failure: Endpoints for Drug Development, Two drugs, ivabradine and digoxin, are approved only for",
+      "score": 0.3078161
+    },
+    {
+      "number": 14,
+      "title": "Hydralazine Plus Isosorbide Dinitrate - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hydralazine-plus-isosorbide-dinitrate",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "\u25aa\nACE inhibitors (captopril, enalapril, lisinopril, ramipril, or monopril).\n\n\u25aa\nARBs (losartan, irbesartan, valsartan, candesartan or telmisartan) if ACE inhibitors are not well tolerated or contraindicated.\n\n\u25aa\nVasodilators (hydralazine) if ACE inhibitors or ARBs if not tolerated. In African American",
+      "score": 0.29859412
+    },
+    {
+      "number": 15,
+      "title": "Prognostic impact of the coexistence of hepato-renal ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0914508722002234",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by T Noda \u00b7 2023 \u00b7 Cited by 7 \u2014 Hepato-renal dysfunction is associated with frailty in patients with HF, which affects patient prognosis. Adjusted by Get With the Guidelines-Heart Failure",
+      "score": 0.2467697
+    },
+    {
+      "number": 16,
+      "title": "Changes in Mortality From Heart Failure --\r\nUnited States, 1980-1995",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/00054249.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "for evaluation and care of patients with heart failure are followed appropriately by all physicians to improve survival and reduce the risk for hospitalization through consistent pharmacologic management of this condition. Peer review organizations in states such as Louisiana (10) have begun to asse",
+      "score": 0.74363416
+    },
+    {
+      "number": 17,
+      "title": "Overview | Chronic heart failure in adults: diagnosis and management | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/Guidance/NG106",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Chronic heart failure in adults: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing and managing chronic heart failure in people aged 18 and over. It aims to improve diagnosis and treatment to increase the length and quality of life for people with heart failure",
+      "score": 0.59372765
+    },
+    {
+      "number": 18,
+      "title": "ESC Clinical Practice Guidelines",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "ACVC: Acute cardiovascular care\n EACVI: Cardiovascular imaging\n\n  EACVI: Cardiovascular imaging\n EAPC: Preventive cardiology\n\n  EAPC: Preventive cardiology\n\n EAPCI: Percutaneous cardiovascular interventions\n\n  EAPCI: Percutaneous cardiovascular interventions\n EHRA: Heart rhythm\n\n  EHRA: Heart rhythm",
+      "score": 0.46657884
+    },
+    {
+      "number": 19,
+      "title": "2023 Focused Update on Heart Failure",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/focused-update-on-heart-failure",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Since the publication of the2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure, there have been several randomised controlled trials that should change patient management ahead of the next scheduled full guideline. This 2023 Focused Update addresses changes in rec",
+      "score": 0.41236505
+    },
+    {
+      "number": 20,
+      "title": "Heart Failure",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/scientific-statements/heart-failure",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "+ Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ESC Pocket Guidelines\n  + ESC Pocket Guidelines App\n  + ESC Chat\n\nScientific documents\n\n Scientific statements\n Scientific document policy\n Recommended reading\n\nClinical practice tools\n\n EHRA Key Messa",
+      "score": 0.38172707
+    },
+    {
+      "number": 21,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(22)00366-3/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by SM Silvers \u00b7 2022 \u00b7 Cited by 13 \u2014 The prevalence of heart failure among adults in the United States has increased by nearly 10% between 2012 (5.7 million Americans) and 2016 (6.2",
+      "score": 0.32453555
+    },
+    {
+      "number": 22,
+      "title": "ESC 365 - Longitudinal patterns of guideline-directed medical therapy use in severe heart failure with reduced ejection fraction after hospitalization: insights from the CONNECT-HF trial",
+      "detail": "esc365.escardio.org",
+      "url": "https://esc365.escardio.org/presentation/321279",
+      "authors": "esc365.escardio.org",
+      "host": "esc365.escardio.org",
+      "snippet": "Header\n\n# Longitudinal patterns of guideline-directed medical therapy use in severe heart failure with reduced ejection fraction after hospitalization: insights from the CONNECT-HF trial\n\nLogo\n\n### Abstract\n\n### Slides\n\n### About the speaker\n\nPhoto\n\n##### Doctor Paula Rambarat\n\nDuke University Schoo",
+      "score": 0.20515321
+    },
+    {
+      "number": 23,
+      "title": "Diagnosing heart failure - Chronic Heart Failure in Adults - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK536086",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The committee also raised concerns that the threshold recommended in the 2010 Chronic Heart Failure (CHF) guideline (which was in line with the previous ESC thresholds) may be too high, resulting in some patients with heart failure receiving a delayed diagnosis and either re-presenting to primary ca",
+      "score": 0.7568076
+    },
+    {
+      "number": 24,
+      "title": "Diagnostic Modalities in Heart Failure: A Narrative Review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11417415",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Testing for various biomarkers in the patient's blood is instrumental in confirming the diagnosis and elucidating the etiology of HF. One such biomarker, elevated in response to increased myocardial stress and volume overload, is BNP and its NT-proBNP. BNP proves highly valuable in differentiating C",
+      "score": 0.6607204
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "prescribing information - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020702Orig1s079correctedlbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "(2.3). \u2022 Pediatric Patients Aged 10 Years of Age and Older with HoFH: Recommended starting dosage is 10 to 20 mg once daily; dosage range is 10 to 80 mg once daily (2.4). \u2022 See full prescribing information for LIPITOR dosage modifications due to drug interactions (2.5). ---------------------DOSAGE F",
+      "score": 0.6578248
+    },
+    {
+      "number": 2,
+      "title": "ENTRESTO\u00ae (sacubitril and valsartan) tablets, for oral use ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/207620s025,218591s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "impairment. (7.3) \u2022 Lithium: Increased risk of lithium toxicity. (7.4) ------------------------USE IN SPECIFIC POPULATIONS----------------------\u00ad \u2022 Lactation: Breastfeeding not recommended. (8.2) \u2022 Severe Hepatic Impairment: Use not recommended. (2.8, 8.6) See 17 for PATIENT COUNSELING INFORMATION a",
+      "score": 0.491725
+    },
+    {
+      "number": 3,
+      "title": "Metoprolol succinate - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/019962s041lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "with TOPROL-XL in patients with hepatic impairment. Because TOPROL-XL is metabolized by the liver, metoprolol blood levels are likely to increase substantially with poor hepatic function. Therefore, initiate therapy at doses lower than those recommended for a given indication; and increase doses gra",
+      "score": 0.3788962
+    },
+    {
+      "number": 4,
+      "title": "FDA Approves First Generic Pimobendan for Management of Congestive Heart Failure in Dogs | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/animal-veterinary/cvm-updates/fda-approves-first-generic-pimobendan-management-congestive-heart-failure-dogs",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Pimomedin is available as 1.25, 2.5, 5 and 10 mg oblong half-scored chewable tablets with 50 tablets per bottle. Pimomedin should be administered orally at a total daily dose of 0.23 mg/lb (0.5 mg/kg) body weight, using a suitable combination of whole or half tablets. The total daily dose should be ",
+      "score": 0.33980626
+    },
+    {
+      "number": 5,
+      "title": "These highlights do not include all the information needed to use VALSARTAN TABLETS safely and effectively. See full prescribing information for VALSARTAN TABLETS.\n <br/>\n      <br/>\n      <br/>\n      <br/>\nVALSARTAN tablets, for oral use\n <br/>\n      <br/>\n      <br/>\n      <br/>\nInitial U.S. Approval: 1996",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/f755ffef-66fc-1de5-e053-6294a90ab746/f755ffef-66fc-1de5-e053-6294a90ab746.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |\n ---  --- |\n|  | Placebo     (N=181) | Valsartan     (N=185) | Hazard Ratio     (95% CI) |\n| Components of HF morbidity |  |  |  |\n| All-cause mortality | 49 (27.1%) | 32 (17.3%) | 0.59 (0.37, 0.91) |\n| Sudden death with resuscitation | 2 (1.1%) | 1 (0.5%) | 0.47 (0.04, 5.20) |\n| CHF t",
+      "score": 0.3180195
+    },
+    {
+      "number": 6,
+      "title": "FDA Approves First Generic Dapagliflozin Tablets | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-approves-first-generic-dapagliflozin-tablets",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "FDA approves multiple generics of FARXIGA\n\n[4/7/2026] The U.S. Food and Drug Administration approved the first generics of FARXIGA (dapagliflozin) tablets to reduce the risk of hospitalization for heart failure in adults with type 2 diabetes mellitus and either established cardiovascular disease or ",
+      "score": 0.2814505
+    },
+    {
+      "number": 7,
+      "title": "These highlights do not include all the information needed to use\u00a0HEMICLOR<sup>TM </sup>safely and effectively. See full prescribing information for HEMICLOR.<br/> <br/>HEMICLOR (chlorthalidone) tablets, for oral use<br/>Initial U.S. Approval: 1960",
+      "detail": "nctr-crs.fda.gov",
+      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/3f0f3ee0-f5a6-4bda-8160-a77744e9fa46/spl-doc?hl=",
+      "authors": "nctr-crs.fda.gov",
+      "host": "nctr-crs.fda.gov",
+      "snippet": "Insulin requirements and oral hypoglycemic agent dosages may require adjustments (7). Possible increased responsiveness to tubocurarine (7). Possible decreased arterial responsiveness to norepinephrine (7). Lithium renal clearance is reduced by chlorthalidone, increasing the risk of lithium toxicity",
+      "score": 0.2046759
+    },
+    {
+      "number": 8,
+      "title": "2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001250",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "HCM is a common inherited heart disease reported in populations globally. The estimated prevalence of HCM varies depending on whether subclinical or clinically evident cases are being considered, how or if the diagnosis is adjudicated, and age of the sample studied.1 The prevalence of unexplained as",
+      "score": 0.58465123
+    },
+    {
+      "number": 9,
+      "title": "Get With The Guidelines-Heart Failure: Twenty Years in ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.125.012936",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by AB Tang \u00b7 2025 \u00b7 Cited by 27 \u2014 This narrative review provides an overview of the indelible impact of the Get With The Guidelines-Heart Failure program on quality heart failure",
+      "score": 0.5715041
+    },
+    {
+      "number": 10,
+      "title": "2021 ACC/AHA Key Data Elements and Definitions for Heart Failure: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Data Standards (Writing Committee to Develop Clinical Data Standards for Heart Failure)",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/HCQ.0000000000000102",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "In clinical care, a broad spectrum of clinicians provides a continuum of care for patients with HF, ranging from primary care/family medicine providers, HF specialists and/or cardiologists, cardiac and transplant surgeons, interventional cardiologists, electrophysiologists, advanced practice provide",
+      "score": 0.5608546
+    },
+    {
+      "number": 11,
+      "title": "2022 AHA/ACC/HFSA Guideline for the Management of ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001063",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by PA Heidenreich \u00b7 2022 \u00b7 Cited by 11103 \u2014 The 2022 guideline is intended to provide patient-centric recommendations for clinicians to prevent, diagnose, and manage patients with heart failure.",
+      "score": 0.5356092
+    },
+    {
+      "number": 12,
+      "title": "Prognosis of Heart Failure - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/prognosis-of-heart-failure",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "acute decompensation. Diagnosis of HF is most commonly based on comprehensive patient history and physical examination, chest radiography, electrocardiography, echocardiography, and laboratory results. [...] normal_ _systolic function_) accounts for 40% to 50% of heart failure cases,3,4 a similar cl",
+      "score": 0.6326168
+    },
+    {
+      "number": 13,
+      "title": "Endpoints in Heart Failure Drug Development",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213177920300731",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Fiuzat \u00b7 2020 \u00b7 Cited by 64 \u2014 The FDA recently issued a draft guidance, Treatment for Heart Failure: Endpoints for Drug Development, Two drugs, ivabradine and digoxin, are approved only for",
+      "score": 0.3078161
+    },
+    {
+      "number": 14,
+      "title": "Hydralazine Plus Isosorbide Dinitrate - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hydralazine-plus-isosorbide-dinitrate",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "\u25aa\nACE inhibitors (captopril, enalapril, lisinopril, ramipril, or monopril).\n\n\u25aa\nARBs (losartan, irbesartan, valsartan, candesartan or telmisartan) if ACE inhibitors are not well tolerated or contraindicated.\n\n\u25aa\nVasodilators (hydralazine) if ACE inhibitors or ARBs if not tolerated. In African American",
+      "score": 0.29859412
+    },
+    {
+      "number": 15,
+      "title": "Prognostic impact of the coexistence of hepato-renal ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0914508722002234",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by T Noda \u00b7 2023 \u00b7 Cited by 7 \u2014 Hepato-renal dysfunction is associated with frailty in patients with HF, which affects patient prognosis. Adjusted by Get With the Guidelines-Heart Failure",
+      "score": 0.2467697
+    },
+    {
+      "number": 16,
+      "title": "Changes in Mortality From Heart Failure --\r\nUnited States, 1980-1995",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/00054249.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "for evaluation and care of patients with heart failure are followed appropriately by all physicians to improve survival and reduce the risk for hospitalization through consistent pharmacologic management of this condition. Peer review organizations in states such as Louisiana (10) have begun to asse",
+      "score": 0.74363416
+    },
+    {
+      "number": 17,
+      "title": "Overview | Chronic heart failure in adults: diagnosis and management | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/Guidance/NG106",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Chronic heart failure in adults: diagnosis and management\n\n## Overview\n\nThis guideline covers diagnosing and managing chronic heart failure in people aged 18 and over. It aims to improve diagnosis and treatment to increase the length and quality of life for people with heart failure",
+      "score": 0.59372765
+    },
+    {
+      "number": 18,
+      "title": "ESC Clinical Practice Guidelines",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "ACVC: Acute cardiovascular care\n EACVI: Cardiovascular imaging\n\n  EACVI: Cardiovascular imaging\n EAPC: Preventive cardiology\n\n  EAPC: Preventive cardiology\n\n EAPCI: Percutaneous cardiovascular interventions\n\n  EAPCI: Percutaneous cardiovascular interventions\n EHRA: Heart rhythm\n\n  EHRA: Heart rhythm",
+      "score": 0.46657884
+    },
+    {
+      "number": 19,
+      "title": "2023 Focused Update on Heart Failure",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/focused-update-on-heart-failure",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Since the publication of the2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure, there have been several randomised controlled trials that should change patient management ahead of the next scheduled full guideline. This 2023 Focused Update addresses changes in rec",
+      "score": 0.41236505
+    },
+    {
+      "number": 20,
+      "title": "Heart Failure",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/guidelines/scientific-documents/scientific-statements/heart-failure",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "+ Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ESC Pocket Guidelines\n  + ESC Pocket Guidelines App\n  + ESC Chat\n\nScientific documents\n\n Scientific statements\n Scientific document policy\n Recommended reading\n\nClinical practice tools\n\n EHRA Key Messa",
+      "score": 0.38172707
+    },
+    {
+      "number": 21,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(22)00366-3/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by SM Silvers \u00b7 2022 \u00b7 Cited by 13 \u2014 The prevalence of heart failure among adults in the United States has increased by nearly 10% between 2012 (5.7 million Americans) and 2016 (6.2",
+      "score": 0.32453555
+    },
+    {
+      "number": 22,
+      "title": "ESC 365 - Longitudinal patterns of guideline-directed medical therapy use in severe heart failure with reduced ejection fraction after hospitalization: insights from the CONNECT-HF trial",
+      "detail": "esc365.escardio.org",
+      "url": "https://esc365.escardio.org/presentation/321279",
+      "authors": "esc365.escardio.org",
+      "host": "esc365.escardio.org",
+      "snippet": "Header\n\n# Longitudinal patterns of guideline-directed medical therapy use in severe heart failure with reduced ejection fraction after hospitalization: insights from the CONNECT-HF trial\n\nLogo\n\n### Abstract\n\n### Slides\n\n### About the speaker\n\nPhoto\n\n##### Doctor Paula Rambarat\n\nDuke University Schoo",
+      "score": 0.20515321
+    },
+    {
+      "number": 23,
+      "title": "Diagnosing heart failure - Chronic Heart Failure in Adults - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK536086",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The committee also raised concerns that the threshold recommended in the 2010 Chronic Heart Failure (CHF) guideline (which was in line with the previous ESC thresholds) may be too high, resulting in some patients with heart failure receiving a delayed diagnosis and either re-presenting to primary ca",
+      "score": 0.7568076
+    },
+    {
+      "number": 24,
+      "title": "Diagnostic Modalities in Heart Failure: A Narrative Review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11417415",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Testing for various biomarkers in the patient's blood is instrumental in confirming the diagnosis and elucidating the etiology of HF. One such biomarker, elevated in response to increased myocardial stress and volume overload, is BNP and its NT-proBNP. BNP proves highly valuable in differentiating C",
+      "score": 0.6607204
+    }
+  ],
+  "publishedAt": "2026-08-20T23:32:30.158442Z",
+  "updatedAt": "2026-08-20T23:32:30.158442Z",
+  "readingMinutes": 6,
+  "slug": "heart-failure"
+}

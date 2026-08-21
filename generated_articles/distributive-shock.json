@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Distributive Shock",
+  "summary": "Distributive shock is acute circulatory failure from pathologic vasodilation and maldistributed flow. Rapidly identify the precipitant, assess for concurrent hypovolemic, cardiogenic, or obstructive physiology, treat the cause, restore perfusion with individualized fluid resuscitation, and initiate vasopressors without delaying definitive therapy.[14][15]",
+  "seoDescription": "Distributive shock: recognition, differential diagnosis, hemodynamic assessment, cause-specific treatment, fluid strategy, vasopressors, and monitoring.",
+  "clinicalQuestion": "How should clinicians identify, differentiate, and manage distributive shock while avoiding delayed treatment of its cause or fluid overload?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "distributive shock",
+    "vasodilatory shock",
+    "septic shock",
+    "vasopressors",
+    "norepinephrine",
+    "vasopressin",
+    "anaphylactic shock"
+  ],
+  "keyTakeaways": [
+    "Distributive shock is a low-systemic-vascular-resistance state, but cardiac output may be high, normal, or depressed; mixed shock is common and should be actively sought with focused examination, laboratory assessment, and bedside echocardiography.[14][15][20]",
+    "In suspected septic shock, obtain cultures when feasible without delaying antimicrobials, pursue prompt source control, use balanced crystalloids for initial resuscitation, and reassess fluid responsiveness and fluid tolerance rather than relying on static filling pressures alone.[18][22]",
+    "For septic vasodilatory shock, norepinephrine is the preferred first-line vasopressor with an initial MAP target of 65 mmHg; add vasopressin when norepinephrine alone is inadequate, and consider hydrocortisone for shock persisting despite fluids and vasopressors.[18][22]",
+    "Anaphylactic shock requires immediate intramuscular epinephrine; antihistamines and corticosteroids do not replace epinephrine for airway, breathing, or circulatory compromise.[21]"
+  ],
+  "sections": [
+    {
+      "id": "recognition-and-physiology",
+      "eyebrow": "Recognition",
+      "heading": "Recognize distributive physiology and exclude mixed shock",
+      "intro": "Hypotension alone is insufficient; identify tissue hypoperfusion and the mechanism of circulatory failure.",
+      "paragraphs": [
+        "Distributive shock reflects pathologic vasodilation and impaired vascular responsiveness, producing inadequate effective arterial filling and tissue oxygen utilization. Common causes are sepsis, anaphylaxis, neurogenic shock, pancreatitis, and post-cardiotomy vasoplegia. Septic shock accounts for most distributive shock and may initially be hyperdynamic, but sepsis-associated myocardial dysfunction can convert the phenotype to mixed distributive-cardiogenic shock.[14][20]",
+        "Treat shock as a physiologic syndrome rather than a single diagnosis. Hypotension, elevated lactate, oliguria, altered mentation, delayed capillary refill, mottling, and cool extremities indicate hypoperfusion, although early septic shock can present with warm, flushed skin and preserved or high cardiac output.[14][15][20]",
+        "A presumed distributive cause does not exclude hemorrhage, acute coronary syndrome, pulmonary embolism, tamponade, tension pneumothorax, or medication-associated vasodilation. Reassess whenever vasopressor requirements escalate, lactate fails to improve, pulmonary edema develops, or bedside findings are discordant with the presumed phenotype.[14][15]"
+      ],
+      "bullets": [
+        "Obtain serial lactate, blood gas, CBC, renal and hepatic studies, coagulation testing, and type-and-screen when hemorrhage is plausible; obtain cultures and source-directed specimens before antimicrobials if this does not delay treatment.[15][18][22]",
+        "Use ECG and cardiac biomarkers when cardiogenic ischemia is plausible; use focused cardiac and lung ultrasonography to assess biventricular function, gross volume status, tamponade, pneumothorax, and pulmonary congestion.[14][15][20]",
+        "In severe or rapidly evolving shock, place an arterial line when vasoactive therapy is required and use serial urine output, mental status, capillary refill, skin perfusion, and lactate trajectory to judge response.[14][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical features that help distinguish major shock phenotypes; overlap is frequent and mixed shock requires repeated reassessment.[14][15][20]",
+        "columns": [
+          "Phenotype",
+          "Typical hemodynamics",
+          "High-yield clues",
+          "Immediate priority"
+        ],
+        "rows": [
+          [
+            "Distributive",
+            "Low SVR; cardiac output often high early but variable later.[14]",
+            "Sepsis: suspected infection, vasoplegia, possible warm skin early; anaphylaxis: rapid allergic exposure with airway, breathing, or circulatory compromise; neurogenic shock may include bradycardia after spinal injury.[14][20][21]",
+            "Treat cause, give carefully reassessed fluids, and support MAP with vasopressors.[18][20][22]"
+          ],
+          [
+            "Hypovolemic/hemorrhagic",
+            "Low preload and cardiac output with compensatory vasoconstriction.[14]",
+            "Bleeding, gastrointestinal or renal losses, dry mucosa, low JVP, falling hemoglobin when not hemoconcentrated.[14][20]",
+            "Control loss and restore intravascular volume; use blood-product resuscitation when hemorrhage is present.[14]"
+          ],
+          [
+            "Cardiogenic",
+            "Low cardiac output with elevated filling pressures in typical congestive phenotypes.[14]",
+            "Pulmonary congestion, elevated JVP, cool extremities, ECG changes, arrhythmia, or new ventricular dysfunction.[14][20]",
+            "Identify ischemic, arrhythmic, mechanical, or pump-failure cause; avoid indiscriminate fluid loading.[14][16]"
+          ],
+          [
+            "Obstructive",
+            "Reduced cardiac output despite generally preserved contractility; CVP is often increased.[14]",
+            "Tamponade, tension pneumothorax, massive pulmonary embolism, or excessive intrathoracic pressure.[14][20]",
+            "Relieve obstruction immediately; do not delay definitive treatment for confirmatory testing in extremis.[14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "septic-vasodilatory-shock",
+      "eyebrow": "Most Common Cause",
+      "heading": "Manage septic vasodilatory shock",
+      "intro": "Source control, effective antimicrobials, individualized resuscitation, and vasopressor support should proceed in parallel.",
+      "paragraphs": [
+        "Septic shock is sepsis with vasopressor requirement to maintain MAP at least 65 mmHg and lactate above 2 mmol/L despite adequate fluid resuscitation.[18][22] Antimicrobial therapy and source control are the time-critical disease-modifying interventions. Obtain blood cultures and source-directed specimens before antimicrobials when feasible, but do not permit testing to delay treatment in a patient with shock.[18][22]",
+        "Initial fluid therapy should address suspected reduced intravascular volume while avoiding fluid accumulation. Balanced crystalloids are preferred over normal saline in the cited sepsis guidance. Some patients require at least 30 mL/kg within 3 hours, but subsequent fluids should be individualized using response to a small bolus, dynamic measures of fluid responsiveness, bedside echocardiography, and evidence of fluid intolerance or congestion.[18][22]",
+        "Norepinephrine is first-line for septic shock and should be started early when hypotension persists during resuscitation; the cited review describes 0.1 to 1.2 micrograms/kg/min. A MAP target of 65 mmHg is appropriate initially for most patients. Vasopressin is an adjunct when norepinephrine alone does not achieve the target; epinephrine is generally reserved for inadequate pressure control despite norepinephrine and vasopressin or when inotropic effects are needed.[18][22]"
+      ],
+      "bullets": [
+        "Use repeated 250- to 500-mL crystalloid boluses with reassessment when further fluid is being considered; a stroke-volume increase of at least 10% after a 200- to 500-mL bolus over 10 to 15 minutes is one definition of fluid responsiveness.[18]",
+        "Use lactate trend, capillary refill, urine output, skin perfusion, and bedside echocardiography as complementary endpoints. Static CVP alone should not determine further fluid administration.[18][22]",
+        "Consider low-dose hydrocortisone 200 mg/day for septic shock that remains unresponsive to initial fluids and vasopressors; its most consistent cited benefit is faster shock recovery rather than a definitive mortality benefit.[18][22]",
+        "Do not use IVIG routinely for sepsis; current cited guidance suggests against it. Consider empiric antifungal therapy only when the infection focus, patient profile, or microbiologic findings indicate fungal risk.[22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Source control and antimicrobials",
+          "paragraphs": [
+            "Abdominal, urinary obstructive, pleural, necrotizing soft-tissue, and catheter-related sources often require procedural rather than pharmacologic control. Source control should occur as soon as possible after sepsis recognition when the source is amenable to drainage, debridement, removal, decompression, or surgery.[22]"
+          ],
+          "bullets": [
+            "For complicated intra-abdominal infection, select empiric therapy according to suspected organisms, prior antimicrobial exposure, local resistance, and severity; reassess daily for de-escalation when cultures and clinical trajectory permit.[18][22]",
+            "For suspected invasive candidiasis, an echinocandin may be considered in patients with compatible risk factors and life-threatening illness; the supplied evidence does not support routine empiric antifungal therapy for all patients with septic shock.[18][22]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Septic vasodilatory shock decisions supported by cited sepsis reviews and guidelines.[18][22]",
+        "columns": [
+          "Decision",
+          "Action",
+          "Monitoring or trigger for escalation"
+        ],
+        "rows": [
+          [
+            "Initial resuscitation",
+            "Use balanced crystalloids; assess volume status, fluid responsiveness, and fluid tolerance repeatedly rather than administering an unbounded fixed volume.[18][22]",
+            "Monitor MAP, lactate, capillary refill, urine output, pulmonary congestion, and echocardiographic findings.[18][22]"
+          ],
+          [
+            "First vasopressor",
+            "Start norepinephrine for persistent hypotension during resuscitation; target MAP 65 mmHg initially.[18][22]",
+            "Escalate if MAP remains below target or tissue hypoperfusion persists despite appropriate resuscitation.[18][22]"
+          ],
+          [
+            "Second vasopressor",
+            "Add vasopressin when norepinephrine alone does not provide adequate pressure support.[18][22]",
+            "Monitor for ischemic complications and reassess for occult hypovolemia, cardiogenic dysfunction, or unresolved source.[14][22]"
+          ],
+          [
+            "Refractory shock",
+            "Consider hydrocortisone 200 mg/day when shock remains vasopressor dependent despite fluids and vasopressors.[18]",
+            "Assess glucose, infection complications, gastrointestinal bleeding risk, and vasopressor duration.[18][22]"
+          ],
+          [
+            "Cardiac dysfunction",
+            "Use echocardiography to identify sepsis-associated myocardial dysfunction; evidence is insufficient to establish one optimal inotrope or mechanical-support strategy in this setting.[22]",
+            "If persistent hypoperfusion accompanies reduced cardiac function despite adequate MAP and resuscitation, pursue expert hemodynamic evaluation.[22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "anaphylactic-shock",
+      "eyebrow": "Cause-Specific Emergency",
+      "heading": "Treat anaphylactic shock with epinephrine first",
+      "intro": "Do not substitute adjunctive therapies for epinephrine in anaphylaxis with airway, breathing, or circulatory compromise.",
+      "paragraphs": [
+        "Anaphylaxis is a rapid systemic hypersensitivity reaction characterized by airway, breathing, and/or circulatory compromise; cutaneous findings may be absent. The immediate first-line treatment is intramuscular epinephrine. Prompt administration is associated with better outcomes, and a second intramuscular dose should be administered after 5 minutes if ABC compromise persists.[21]",
+        "Place the patient supine with legs elevated when feasible to maximize venous return. Give oxygen, establish IV or intraosseous access, and provide IV fluid resuscitation for shock or poor response to epinephrine. Refractory anaphylaxis is persistent ABC compromise after two appropriate intramuscular doses and warrants urgent critical care support and a titrated low-dose IV epinephrine infusion by clinicians experienced with vasopressors and continuous monitoring.[21]"
+      ],
+      "bullets": [
+        "Antihistamines may treat residual skin symptoms after ABC compromise resolves, but they do not treat respiratory or cardiovascular manifestations and must not delay epinephrine.[21]",
+        "Routine corticosteroids are not recommended for initial emergency treatment; they may be considered after initial resuscitation for refractory reactions or concomitant poorly controlled asthma.[21]",
+        "Measure serum tryptase only after initial treatment has begun; it supports retrospective diagnosis but must not delay resuscitation.[21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Anaphylactic shock actions from the cited emergency anaphylaxis guidance.[21]",
+        "columns": [
+          "Clinical situation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Suspected anaphylaxis with ABC compromise",
+            "Give IM epinephrine immediately; do not wait for rash, tryptase, or IV access.[21]"
+          ],
+          [
+            "Persistent ABC compromise after 5 minutes",
+            "Repeat IM epinephrine and continue supportive care.[21]"
+          ],
+          [
+            "Shock or poor response",
+            "Administer IV fluids and optimize positioning to support venous return.[21]"
+          ],
+          [
+            "Persistent compromise after two IM doses",
+            "Treat as refractory anaphylaxis; obtain expert support for monitored low-dose IV epinephrine infusion.[21]"
+          ],
+          [
+            "After stabilization",
+            "Observe in a setting capable of treating recurrent ABC compromise; observation duration should be risk-stratified by severity and epinephrine requirement.[21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "neurogenic-and-other-causes",
+      "eyebrow": "Other Etiologies",
+      "heading": "Address neurogenic and nonseptic vasodilatory causes directly",
+      "intro": "Vasopressor selection and fluid strategy must match the mechanism, not merely the blood pressure.",
+      "paragraphs": [
+        "Neurogenic shock follows disruption of sympathetic pathways, most often after traumatic spinal cord injury, producing low vascular resistance, reduced venous return, and often bradycardia. Supportive care includes continuous hemodynamic and respiratory monitoring, treatment of the spinal injury, and vasoconstrictor support; norepinephrine may be useful when both vasoconstriction and inotropy are needed, whereas phenylephrine may be appropriate in selected circumstances.[14]",
+        "Other nonseptic vasodilatory states include post-cardiopulmonary-bypass vasoplegia, pancreatitis, medication-associated vasodilation, adrenal crisis, and severe inflammatory states. These presentations require active evaluation for mixed shock and targeted treatment of the precipitant; generalized vasopressor escalation without diagnostic reassessment can miss pump failure, hemorrhage, or obstruction.[14][15][20]"
+      ],
+      "bullets": [
+        "In suspected neurogenic shock, distinguish it from hemorrhage in trauma; spinal injury does not preclude occult bleeding.[14][15]",
+        "Use focused echocardiography and serial examination when clinical trajectory suggests mixed distributive-cardiogenic physiology or right ventricular dysfunction.[14][20]",
+        "In adrenal crisis, treat with judicious fluid resuscitation and IV dexamethasone according to the cited shock review.[20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Selected nonseptic distributive-shock mechanisms and immediate priorities.[14][20][21]",
+        "columns": [
+          "Cause",
+          "Mechanistic clue",
+          "Immediate priority"
+        ],
+        "rows": [
+          [
+            "Anaphylaxis",
+            "Mast-cell mediator release causes vasodilation, vascular leak, bronchospasm, and possible myocardial dysfunction.[14][21]",
+            "IM epinephrine, positioning, oxygen, IV fluids for shock, and escalation to monitored IV epinephrine infusion if refractory.[21]"
+          ],
+          [
+            "Neurogenic shock",
+            "Loss of sympathetic tone after spinal cord injury causes vasodilation, reduced venous return, and possible bradycardia.[14]",
+            "Support perfusion with vasoconstrictors while evaluating for concurrent hemorrhage and treating the spinal injury.[14]"
+          ],
+          [
+            "Post-cardiotomy vasoplegia",
+            "Profound vasodilation after cardiopulmonary bypass can resemble septic vasodilatory shock.[14]",
+            "Assess cardiac output and filling; use vasopressor support while addressing postoperative contributors.[14]"
+          ],
+          [
+            "Medication-associated vasodilation",
+            "Sedatives, opioids, vasodilators, and other drugs can contribute to pharmacologic shock.[20]",
+            "Stop or reverse the precipitant when possible and support circulation while excluding alternative causes.[20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-escalation",
+      "eyebrow": "Monitoring",
+      "heading": "Monitor perfusion, not pressure alone",
+      "intro": "MAP is necessary but not sufficient evidence of restored tissue perfusion.",
+      "paragraphs": [
+        "A MAP target of 65 mmHg is a reasonable initial target in septic shock, but hemodynamic stabilization should be judged by end-organ perfusion. Follow urine output, mentation, capillary refill, skin temperature and mottling, lactate, acid-base status, and the trajectory of vasopressor requirement. Failure of these markers to improve should prompt a search for inadequate source control, occult hemorrhage, excessive sedation, myocardial dysfunction, obstruction, or ongoing hypoxemia.[14][18][22]",
+        "Fluid administration should stop when there is no evidence of benefit or when fluid intolerance emerges. Reassess after each intervention with dynamic testing or stroke-volume response when available, and use lung and cardiac ultrasonography to identify pulmonary congestion or impaired ventricular function. Positive fluid balance and elevated CVP have been associated with worse outcomes in septic shock, but observational associations should not be used as a substitute for individualized assessment.[18]"
+      ],
+      "bullets": [
+        "Escalate monitoring in patients with rapidly changing vasoactive requirements, persistent lactate elevation, oliguria, suspected ventricular dysfunction, or possible mixed shock.[14][15][20]",
+        "Consider renal replacement therapy for conventional indications such as severe metabolic acidosis, refractory fluid overload, electrolyte imbalance, or uremic complications; sepsis alone is not an indication for renal replacement therapy.[18]",
+        "Use low-tidal-volume ventilation when invasive mechanical ventilation is necessary; positive-pressure ventilation can reduce venous return and cardiac output, especially in preload-dependent shock.[18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical response assessment in distributive shock.[14][18][20][22]",
+        "columns": [
+          "Domain",
+          "What to follow",
+          "Concerning finding and next action"
+        ],
+        "rows": [
+          [
+            "Perfusion",
+            "Serial lactate, capillary refill, skin perfusion, urine output, mentation.[14][18][22]",
+            "Persistent abnormality: reassess diagnosis, source control, fluid responsiveness, oxygen delivery, and cardiac function.[14][18][22]"
+          ],
+          [
+            "Pressure support",
+            "MAP and vasopressor dose.[18][22]",
+            "MAP below 65 mmHg or rising norepinephrine requirement: add vasopressin when appropriate and evaluate for mixed shock or ongoing volume loss.[18][22]"
+          ],
+          [
+            "Volume status",
+            "Response to fluid bolus, passive leg raise or stroke-volume assessment, echocardiographic preload and congestion findings.[18][22]",
+            "No response or evidence of congestion: stop routine fluid loading and prioritize vasopressor or cause-specific therapy.[18][22]"
+          ],
+          [
+            "Cardiac function",
+            "Focused echocardiography and ECG; consider biomarkers when ischemia is plausible.[14][15][20]",
+            "New ventricular dysfunction, pulmonary edema, or arrhythmia: manage mixed cardiogenic physiology and seek specialist support.[14][16]"
+          ],
+          [
+            "Respiration",
+            "Oxygenation, ventilator pressures, lung ultrasound, and hemodynamic effect of positive pressure.[18][20]",
+            "Worsening oxygenation or hypotension after ventilation changes: reassess preload dependence, RV function, and obstructive complications.[14][18][20]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What distinguishes distributive from hypovolemic shock at the bedside?",
+      "answer": "Distributive shock is driven by low vascular resistance and may initially have warm skin and preserved or high cardiac output, whereas hypovolemic shock more often has low preload and compensatory vasoconstriction. Overlap is common; use serial perfusion markers, focused ultrasound, and response to a carefully assessed fluid challenge rather than any single sign.[14][15][20]"
+    },
+    {
+      "question": "When should norepinephrine be started in septic shock?",
+      "answer": "Start norepinephrine when hypotension persists during initial resuscitation or fluid administration alone is unlikely to restore MAP and perfusion. Early vasopressor use may limit fluid overload; use an initial MAP target of 65 mmHg and reassess tissue perfusion continuously.[18][22]"
+    },
+    {
+      "question": "When should vasopressin be added to norepinephrine?",
+      "answer": "Add vasopressin when norepinephrine alone does not achieve the target MAP or when escalating catecholamine exposure is undesirable. It is an adjunct rather than a replacement for norepinephrine in the cited septic-shock guidance.[18][22]"
+    },
+    {
+      "question": "Should hydrocortisone be given to every patient with septic shock?",
+      "answer": "No. Hydrocortisone is reserved for shock that remains dependent on vasopressors despite initial fluids and vasopressor therapy. The cited guidance supports approximately 200 mg/day to facilitate shock recovery; routine use before vasopressor-resistant shock is not supported.[18][22]"
+    },
+    {
+      "question": "What is the first treatment for anaphylactic shock?",
+      "answer": "Immediate intramuscular epinephrine is first-line. Position the patient to optimize venous return, administer oxygen and IV fluids for shock, and repeat IM epinephrine after 5 minutes if ABC compromise persists. Antihistamines and corticosteroids must not delay epinephrine.[21]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "3594816 This label may not be the latest approved by FDA ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018644s049lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "mg 3 times daily. (2.1) \uf0b7 Periodically reassess the dose and need for maintenance treatment. (2.1) \uf0b7 Moderate to severe hepatic impairment: 75 mg once daily. (2.2, 8.7) \uf0b7 Mild hepatic impairment: Consider reducing the dose and/or frequency of dosing. (2.2, 8.7) \uf0b7 Renal impairment: Consider reducing ",
+      "score": 0.46949652
+    },
+    {
+      "number": 2,
+      "title": "[PDF] 212593Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2021/212593Orig1s000PharmR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "shock and were significantly depressed post-resuscitation (13,910 \u00b1 3016 pg/ml, p<0.05) and at 18 hr (15,592 \u00b11169 pg/ml, p<0.05). Resuscitation with LR + AVP led to higher serum AVP levels at 60R (31 \u00b1 8 vs 79 \u00b1 12, p<0.01) with an improved MAP both at 60R (125 \u00b1 3 vs 77 \u00b1 7 mm Hg, p<0.01) and 18 h",
+      "score": 0.35655922
+    },
+    {
+      "number": 3,
+      "title": "Wellbutrin XL - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021515s044lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "the dose to 150 mg once daily prior to discontinuation. 2.6 Dosage Adjustment in Patients with Hepatic Impairment In patients with moderate to severe hepatic impairment (Child-Pugh score: 7 to 15), the maximum dose is 150 mg every other day. In patients with mild hepatic impairment (Child-Pugh score",
+      "score": 0.34900057
+    },
+    {
+      "number": 4,
+      "title": "prescribing information - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020702Orig1s079correctedlbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Dose selection for an elderly patient should be cautious, recognizing the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy and the higher risk of myopathy. Monitor geriatric patients receiving LIPITOR for the increased risk of myopa",
+      "score": 0.34072697
+    },
+    {
+      "number": 5,
+      "title": "2018 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2018-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 21 | 209467 | Succinylcholine Chloride Injection USP, 200 mg/10 mL (20 mg/mL) Multiple-Dose Vials | Zydus Pharmaceuticals (USA), Inc. | Quelicin (Succinylcholine Chloride) Injection USP, 200 mg/10 mL (20 mg/mL) Multiple-Dose Vials | 5/4/2018 | As an adjunct to general anesthesia, to facilitate tra",
+      "score": 0.23842646
+    },
+    {
+      "number": 6,
+      "title": "2020 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2020-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 46 | 212346 | Potassium Chloride in 5% Dextrose Injection USP, 10 mEq/1,000 mL (0.75 g/L) and 20 mEq/1,000 mL (1.5 g/L) in Single-Dose Containers | Fresenius Kabi USA, LLC | Potassium Chloride in 5% Dextrose Injection USP, 10 mEq/1,000 mL (0.75 g/L) and 20 mEq/1,000 mL (1.5 g/L) in Single-Dose Con",
+      "score": 0.21710542
+    },
+    {
+      "number": 7,
+      "title": "2017 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2017-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 48 | 090978 | Lanthanum Carbonate Chewable Tablets, 500 mg (base), 750 mg (base), 1000 mg (base) | Natco Pharma Limited | Fosrenol (Lanthanum Carbonate) Chewable Tablets, 500 mg (base), 750 mg (base), 1000 mg (base) | 8/11/2017 | To reduce serum phosphate in patients with end stage renal disease (",
+      "score": 0.21499655
+    },
+    {
+      "number": 8,
+      "title": "2025 First Generic Drug Approvals",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/2025-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 51 | 204144 | Sitagliptin and Metformin ER Tablet | PH Health Limited | Janumet XR Tablet | 6/4/2025 | Indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. |\n| 50 | 216966 | Angiotensin II Acetate Injection | Gland Pharma Limited | Giapr",
+      "score": 0.19905913
+    },
+    {
+      "number": 9,
+      "title": "These highlights do not include all the information needed to use OXYCONTIN<sup>\u00ae</sup> safely and effectively. See full prescribing information for OXYCONTIN. <br/> <br/> OXYCONTIN<sup>\u00ae</sup> (oxycodone hydrochloride) extended-release tablets, for oral use, CII <br/> Initial U.S. Approval: 1950",
+      "detail": "nctr-crs.fda.gov",
+      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/bfdfe235-d717-4855-a3c8-a13d26dadede/spl-doc",
+      "authors": "nctr-crs.fda.gov",
+      "host": "nctr-crs.fda.gov",
+      "snippet": "2.7 Dosage Modifications in Geriatric Patients who are Debilitated and not Opioid-Tolerant  For geriatric patients who are debilitated and not opioid-tolerant, start dosing patients at one-third to one-half the recommended starting dosage and titrate the dosage cautiously. Regularly evaluate for sig",
+      "score": 0.18696968
+    },
+    {
+      "number": 10,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "raza ullah | Resident, PULMONARY DISEASE | Disclosure: None\n\nPakistan\n\nSaturday, August 17, 2013\n\n## overall management\n\nas the patient is in shock,\n\n1.continue suppoert e norepinepherine...aim of BP should b 100 or above systolic\n\n2.continue O2 saturation monitoring\n\n3.continue ventillation support",
+      "score": 0.559411
+    },
+    {
+      "number": 11,
+      "title": "NEJMra1208627_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/9d8057b1-821e-4c34-9eb0-fd7d869d33a2/assetFile/NEJMra1208627_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "The current guidelines for the treatment of septic shock patients suggest the use of albumin in the fluid resuscitation of severe sepsis and septic shock",
+      "score": 0.33102292
+    },
+    {
+      "number": 12,
+      "title": "Clinical guideline highlights for the hospitalist: International ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/full/10.1002/jhm.13459",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by JA Watson \u00b7 2024 \u00b7 Cited by 5 \u2014 Clinical guideline highlights for the hospitalist: International consensus criteria for pediatric sepsis and septic shock. James A. Watson MD",
+      "score": 0.29422557
+    },
+    {
+      "number": 13,
+      "title": "Evaluation and management of haemorrhagic shock in polytrauma: Clinical practice guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S097656622030566X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Whole body computed tomograph (WBCT) scan\n\nWhole body CT scan has become an integral part of assessment of polytrauma patients presenting with haemorrhagic shock because it allows accurate evaluation of severity of injury to the visceral organs of the torso, valid estimation of the Injury severit",
+      "score": 0.49582586
+    },
+    {
+      "number": 14,
+      "title": "Shock (Circulatory) - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/shock-circulatory",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "#### Monitoring\n\nPatients with neurogenic shock should be monitored in an ICU with continuous blood pressure measurements, telemetry and pulse oximetry. These patients have a high incidence of respiratory failure, particularly in mid-thoracic SCI and above.59 Patients with thoracic SCI and above hav",
+      "score": 0.49143207
+    },
+    {
+      "number": 15,
+      "title": "Shock: causes, initial assessment and investigations",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1472029916302223",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "practice there if often considerable overlap between these different types of shock in clinical practice. After identification of patients in shock, immediate life-saving resuscitation with directed therapy to prevent further deterioration, worsening organ failure and to improve outcome is vital. An",
+      "score": 0.40042162
+    },
+    {
+      "number": 16,
+      "title": "Protocolised Management of Cardiogenic Shock and Shock Teams: A Narrative Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1443950623043251",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(OR 0.66, 95% CI 0.16-2.41). We found that: 1) early screening by frontline staff was feasible but had limitations (26% screening failure); 2) CS-Team activation appeared discretionary (limited activation to 45% of patients); and 3) CS-Team activation resulted in a significant increase in the use of",
+      "score": 0.3866482
+    },
+    {
+      "number": 17,
+      "title": "Book in Review - In Shock by Dr. Rana Awsish | Medical Directors Section",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/medicaldirectors/newsroom/md-newsroom-articles/mar2019/book-in-review-in-shock-by-dr.-rana-awsish",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "So starts the profoundly personal, yet universally applicable, and transformative book, In Shock, by Dr. Rana Awsish. In the introduction entitled \"A Chance to Die,\" she lays the lessons she learned from going from a healthy ICU doctor to a profoundly ill patient and back again. Behind her introduct",
+      "score": 0.4858686
+    },
+    {
+      "number": 18,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score \u2265 2. Septic shock is defined by the need for a vasopressor to maintain a patient\u2019s mean arterial pressure (MAP) \u2265 65 mmHg and serum lactate level \u2265 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.43669468
+    },
+    {
+      "number": 19,
+      "title": "An overview of international cardiogenic shock guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31107307",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by S van Diepen \u00b7 2019 \u00b7 Cited by 40 \u2014 In this review, we compare central differences in cardiogenic shock recommendations in international clinical practice guidelines, scientific statements,",
+      "score": 0.36990723
+    },
+    {
+      "number": 20,
+      "title": "Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A focused history should be obtained from the patient (if feasible) and/or patient's relatives. Also, a review of the patient\u2019s outpatient medical records (information regarding risk factors, medications, and trend of baseline vital signs including blood pressure), as well as hospital medical record",
+      "score": 0.35925227
+    },
+    {
+      "number": 21,
+      "title": "Emergency treatment of anaphylaxis: concise clinical guidance",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9345203",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The primary goal in treatment of refractory anaphylaxis is to optimise delivery of adrenaline. Intravenous fluid infusion is, therefore, crucial to treat shock and provide sufficient circulating volume to maintain cardiac output and deliver adrenaline at the tissue level.43 In cases where the ABC fe",
+      "score": 0.31459826
+    },
+    {
+      "number": 22,
+      "title": "The Japanese Clinical Practice Guidelines for Management of Sepsis and Septic Shock 2024",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11907869",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Requiements of analgesics and sedatives during tracheal intubation is reduced in critically ill patients . Clinicians should pay attention to hemodynamic and respiratory failure immediately after tracheal intubation . A recent review shows that fluid loading and early introduction of vasopressors to",
+      "score": 0.28739816
+    },
+    {
+      "number": 23,
+      "title": "The Japanese Clinical Practice Guidelines for Management of Sepsis and Septic Shock 2016 (J\u2010SSCG 2016)",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5797842",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The recommendations and expert consensus concerning initial resuscitation and cardiovascular agents with respect to septic shock presented in this guideline are based on the RCTs and/or systematic reviews that have been reported so far. However, the treatment of sepsis can vary significantly dependi",
+      "score": 0.28175429
+    },
+    {
+      "number": 24,
+      "title": "Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1303622",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Sepsis / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Severity of Illness Index \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Shock, Septic / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n     ",
+      "score": 0.2347753
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "3594816 This label may not be the latest approved by FDA ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/018644s049lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "mg 3 times daily. (2.1) \uf0b7 Periodically reassess the dose and need for maintenance treatment. (2.1) \uf0b7 Moderate to severe hepatic impairment: 75 mg once daily. (2.2, 8.7) \uf0b7 Mild hepatic impairment: Consider reducing the dose and/or frequency of dosing. (2.2, 8.7) \uf0b7 Renal impairment: Consider reducing ",
+      "score": 0.46949652
+    },
+    {
+      "number": 2,
+      "title": "[PDF] 212593Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2021/212593Orig1s000PharmR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "shock and were significantly depressed post-resuscitation (13,910 \u00b1 3016 pg/ml, p<0.05) and at 18 hr (15,592 \u00b11169 pg/ml, p<0.05). Resuscitation with LR + AVP led to higher serum AVP levels at 60R (31 \u00b1 8 vs 79 \u00b1 12, p<0.01) with an improved MAP both at 60R (125 \u00b1 3 vs 77 \u00b1 7 mm Hg, p<0.01) and 18 h",
+      "score": 0.35655922
+    },
+    {
+      "number": 3,
+      "title": "Wellbutrin XL - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021515s044lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "the dose to 150 mg once daily prior to discontinuation. 2.6 Dosage Adjustment in Patients with Hepatic Impairment In patients with moderate to severe hepatic impairment (Child-Pugh score: 7 to 15), the maximum dose is 150 mg every other day. In patients with mild hepatic impairment (Child-Pugh score",
+      "score": 0.34900057
+    },
+    {
+      "number": 4,
+      "title": "prescribing information - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/020702Orig1s079correctedlbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Dose selection for an elderly patient should be cautious, recognizing the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy and the higher risk of myopathy. Monitor geriatric patients receiving LIPITOR for the increased risk of myopa",
+      "score": 0.34072697
+    },
+    {
+      "number": 5,
+      "title": "2018 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2018-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 21 | 209467 | Succinylcholine Chloride Injection USP, 200 mg/10 mL (20 mg/mL) Multiple-Dose Vials | Zydus Pharmaceuticals (USA), Inc. | Quelicin (Succinylcholine Chloride) Injection USP, 200 mg/10 mL (20 mg/mL) Multiple-Dose Vials | 5/4/2018 | As an adjunct to general anesthesia, to facilitate tra",
+      "score": 0.23842646
+    },
+    {
+      "number": 6,
+      "title": "2020 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2020-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 46 | 212346 | Potassium Chloride in 5% Dextrose Injection USP, 10 mEq/1,000 mL (0.75 g/L) and 20 mEq/1,000 mL (1.5 g/L) in Single-Dose Containers | Fresenius Kabi USA, LLC | Potassium Chloride in 5% Dextrose Injection USP, 10 mEq/1,000 mL (0.75 g/L) and 20 mEq/1,000 mL (1.5 g/L) in Single-Dose Con",
+      "score": 0.21710542
+    },
+    {
+      "number": 7,
+      "title": "2017 First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/first-generic-drug-approvals/2017-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 48 | 090978 | Lanthanum Carbonate Chewable Tablets, 500 mg (base), 750 mg (base), 1000 mg (base) | Natco Pharma Limited | Fosrenol (Lanthanum Carbonate) Chewable Tablets, 500 mg (base), 750 mg (base), 1000 mg (base) | 8/11/2017 | To reduce serum phosphate in patients with end stage renal disease (",
+      "score": 0.21499655
+    },
+    {
+      "number": 8,
+      "title": "2025 First Generic Drug Approvals",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/2025-first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 51 | 204144 | Sitagliptin and Metformin ER Tablet | PH Health Limited | Janumet XR Tablet | 6/4/2025 | Indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. |\n| 50 | 216966 | Angiotensin II Acetate Injection | Gland Pharma Limited | Giapr",
+      "score": 0.19905913
+    },
+    {
+      "number": 9,
+      "title": "These highlights do not include all the information needed to use OXYCONTIN<sup>\u00ae</sup> safely and effectively. See full prescribing information for OXYCONTIN. <br/> <br/> OXYCONTIN<sup>\u00ae</sup> (oxycodone hydrochloride) extended-release tablets, for oral use, CII <br/> Initial U.S. Approval: 1950",
+      "detail": "nctr-crs.fda.gov",
+      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/bfdfe235-d717-4855-a3c8-a13d26dadede/spl-doc",
+      "authors": "nctr-crs.fda.gov",
+      "host": "nctr-crs.fda.gov",
+      "snippet": "2.7 Dosage Modifications in Geriatric Patients who are Debilitated and not Opioid-Tolerant  For geriatric patients who are debilitated and not opioid-tolerant, start dosing patients at one-third to one-half the recommended starting dosage and titrate the dosage cautiously. Regularly evaluate for sig",
+      "score": 0.18696968
+    },
+    {
+      "number": 10,
+      "title": "NEJMra1208623_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/155d637b-5ab9-4a08-b8c9-da52350f3ab3/assetFile/NEJMra1208623_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "raza ullah | Resident, PULMONARY DISEASE | Disclosure: None\n\nPakistan\n\nSaturday, August 17, 2013\n\n## overall management\n\nas the patient is in shock,\n\n1.continue suppoert e norepinepherine...aim of BP should b 100 or above systolic\n\n2.continue O2 saturation monitoring\n\n3.continue ventillation support",
+      "score": 0.559411
+    },
+    {
+      "number": 11,
+      "title": "NEJMra1208627_discussion_1",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/cms/asset/9d8057b1-821e-4c34-9eb0-fd7d869d33a2/assetFile/NEJMra1208627_discussion_1.html",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "The current guidelines for the treatment of septic shock patients suggest the use of albumin in the fluid resuscitation of severe sepsis and septic shock",
+      "score": 0.33102292
+    },
+    {
+      "number": 12,
+      "title": "Clinical guideline highlights for the hospitalist: International ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/full/10.1002/jhm.13459",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by JA Watson \u00b7 2024 \u00b7 Cited by 5 \u2014 Clinical guideline highlights for the hospitalist: International consensus criteria for pediatric sepsis and septic shock. James A. Watson MD",
+      "score": 0.29422557
+    },
+    {
+      "number": 13,
+      "title": "Evaluation and management of haemorrhagic shock in polytrauma: Clinical practice guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S097656622030566X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Whole body computed tomograph (WBCT) scan\n\nWhole body CT scan has become an integral part of assessment of polytrauma patients presenting with haemorrhagic shock because it allows accurate evaluation of severity of injury to the visceral organs of the torso, valid estimation of the Injury severit",
+      "score": 0.49582586
+    },
+    {
+      "number": 14,
+      "title": "Shock (Circulatory) - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/shock-circulatory",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "#### Monitoring\n\nPatients with neurogenic shock should be monitored in an ICU with continuous blood pressure measurements, telemetry and pulse oximetry. These patients have a high incidence of respiratory failure, particularly in mid-thoracic SCI and above.59 Patients with thoracic SCI and above hav",
+      "score": 0.49143207
+    },
+    {
+      "number": 15,
+      "title": "Shock: causes, initial assessment and investigations",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1472029916302223",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "practice there if often considerable overlap between these different types of shock in clinical practice. After identification of patients in shock, immediate life-saving resuscitation with directed therapy to prevent further deterioration, worsening organ failure and to improve outcome is vital. An",
+      "score": 0.40042162
+    },
+    {
+      "number": 16,
+      "title": "Protocolised Management of Cardiogenic Shock and Shock Teams: A Narrative Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1443950623043251",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(OR 0.66, 95% CI 0.16-2.41). We found that: 1) early screening by frontline staff was feasible but had limitations (26% screening failure); 2) CS-Team activation appeared discretionary (limited activation to 45% of patients); and 3) CS-Team activation resulted in a significant increase in the use of",
+      "score": 0.3866482
+    },
+    {
+      "number": 17,
+      "title": "Book in Review - In Shock by Dr. Rana Awsish | Medical Directors Section",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/medicaldirectors/newsroom/md-newsroom-articles/mar2019/book-in-review-in-shock-by-dr.-rana-awsish",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "So starts the profoundly personal, yet universally applicable, and transformative book, In Shock, by Dr. Rana Awsish. In the introduction entitled \"A Chance to Die,\" she lays the lessons she learned from going from a healthy ICU doctor to a profoundly ill patient and back again. Behind her introduct",
+      "score": 0.4858686
+    },
+    {
+      "number": 18,
+      "title": "2023 Update on Sepsis and Septic Shock in Adult Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10179263",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "(SOFA) score \u2265 2. Septic shock is defined by the need for a vasopressor to maintain a patient\u2019s mean arterial pressure (MAP) \u2265 65 mmHg and serum lactate level \u2265 2 mmol/L . Based on this background, we wrote the present review to provide emergency physicians with a thorough update on the management o",
+      "score": 0.43669468
+    },
+    {
+      "number": 19,
+      "title": "An overview of international cardiogenic shock guidelines ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31107307",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by S van Diepen \u00b7 2019 \u00b7 Cited by 40 \u2014 In this review, we compare central differences in cardiogenic shock recommendations in international clinical practice guidelines, scientific statements,",
+      "score": 0.36990723
+    },
+    {
+      "number": 20,
+      "title": "Shock - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A focused history should be obtained from the patient (if feasible) and/or patient's relatives. Also, a review of the patient\u2019s outpatient medical records (information regarding risk factors, medications, and trend of baseline vital signs including blood pressure), as well as hospital medical record",
+      "score": 0.35925227
+    },
+    {
+      "number": 21,
+      "title": "Emergency treatment of anaphylaxis: concise clinical guidance",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9345203",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The primary goal in treatment of refractory anaphylaxis is to optimise delivery of adrenaline. Intravenous fluid infusion is, therefore, crucial to treat shock and provide sufficient circulating volume to maintain cardiac output and deliver adrenaline at the tissue level.43 In cases where the ABC fe",
+      "score": 0.31459826
+    },
+    {
+      "number": 22,
+      "title": "The Japanese Clinical Practice Guidelines for Management of Sepsis and Septic Shock 2024",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11907869",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Requiements of analgesics and sedatives during tracheal intubation is reduced in critically ill patients . Clinicians should pay attention to hemodynamic and respiratory failure immediately after tracheal intubation . A recent review shows that fluid loading and early introduction of vasopressors to",
+      "score": 0.28739816
+    },
+    {
+      "number": 23,
+      "title": "The Japanese Clinical Practice Guidelines for Management of Sepsis and Septic Shock 2016 (J\u2010SSCG 2016)",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5797842",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The recommendations and expert consensus concerning initial resuscitation and cardiovascular agents with respect to septic shock presented in this guideline are based on the RCTs and/or systematic reviews that have been reported so far. However, the treatment of sepsis can vary significantly dependi",
+      "score": 0.28175429
+    },
+    {
+      "number": 24,
+      "title": "Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1303622",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Sepsis / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Severity of Illness Index \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n       Add to Search\n\n   \n Shock, Septic / therapy \n\nActions \n\n       Search in PubMed\n       Search in MeSH\n     ",
+      "score": 0.2347753
+    }
+  ],
+  "publishedAt": "2026-08-21T00:17:03.114592Z",
+  "updatedAt": "2026-08-21T00:17:03.114592Z",
+  "readingMinutes": 6,
+  "slug": "distributive-shock"
+}

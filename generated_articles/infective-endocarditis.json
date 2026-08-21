@@ -1,0 +1,829 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular Infection",
+  "title": "Infective Endocarditis",
+  "summary": "Manage suspected infective endocarditis by obtaining diagnostic blood cultures before antibiotics, defining valve or device involvement with staged imaging, identifying heart failure or uncontrolled infection requiring urgent surgery, and tailoring antimicrobial therapy to microbiology with documented culture clearance.",
+  "seoDescription": "Point-of-care approach to infective endocarditis: cultures, multimodality imaging, surgical triggers, antimicrobial management, and follow-up.",
+  "clinicalQuestion": "How should clinicians diagnose, risk-stratify, and manage suspected or confirmed infective endocarditis?",
+  "specialty": "Cardiology and Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "infective endocarditis",
+    "blood cultures",
+    "Duke-ISCVID criteria",
+    "transesophageal echocardiography",
+    "prosthetic valve endocarditis",
+    "cardiac device infection",
+    "endocarditis surgery"
+  ],
+  "keyTakeaways": [
+    "Obtain at least two separate blood-culture sets before antibiotics; three sets from different venipuncture sites are preferred when feasible, then repeat cultures every 24-48 hours until clearance. [5][20][22]",
+    "Use transthoracic echocardiography first, then transesophageal echocardiography to confirm suspected disease and define valvular complications; TEE has higher sensitivity than TTE for vegetations. [7][8][10]",
+    "Escalate beyond echocardiography when prosthetic material, cardiac devices, equivocal studies, or suspected paravalvular extension are present: cardiac CT helps define paravalvular anatomy, while FDG-PET/CT is particularly useful in prosthetic-valve and device infection. [2][3][10]",
+    "Treat heart failure, prosthetic-valve endocarditis, and uncontrolled infection as major surgical pathways; early surgery occurs during the index hospitalization before completion of antimicrobial therapy. [5][6]",
+    "Do not add an aminoglycoside to vancomycin for MRSA endocarditis routinely: nephrotoxicity and ototoxicity increase with minimal survival benefit. [22]"
+  ],
+  "sections": [
+    {
+      "id": "first-hours",
+      "eyebrow": "Initial actions",
+      "heading": "Stabilize, culture, and identify patients needing urgent source control",
+      "intro": "The first decision is whether infection-related hemodynamic or structural complications require immediate operative planning.",
+      "paragraphs": [
+        "Admit patients with suspected infective endocarditis (IE) when bacteremia, acute valvular dysfunction, embolic disease, sepsis, prosthetic material, or a cardiac implantable electronic device (CIED) raises concern for an endovascular focus. In-hospital mortality is reported at 15%-20%, and 1-year mortality approaches 40%; use early cardiology, infectious diseases, cardiac surgery, and device-extraction expertise rather than serial uncoordinated consultations. [10][24]",
+        "Before antimicrobial therapy, obtain at least two separate blood-culture sets for secure microbiologic diagnosis; preferably obtain three sets from different venous sites. Pre-culture antibiotic exposure is the leading cause of culture-negative IE and converts a potentially organism-directed regimen into a prolonged diagnostic problem. [5][22]",
+        "Assess urgently for acute heart failure from valve destruction, uncontrolled infection, prosthetic-valve involvement, conduction disturbance suggesting periannular extension, and neurologic embolic complications. Congestive heart failure, prosthetic-valve endocarditis, and uncontrolled infection are established surgical indications; do not wait for completion of a full antibiotic course when an operative indication is present. [5][6]"
+      ],
+      "bullets": [
+        "Obtain baseline complete or basic metabolic panel to identify renal and electrolyte abnormalities that will affect antimicrobial selection and dosing. [20]",
+        "Obtain urinalysis when renal involvement is suspected; proteinuria, microscopic hematuria, or pyuria may reflect glomerular injury, renal infarction, or inflammation. [20]",
+        "Repeat blood cultures every 24-48 hours after therapy begins to document bloodstream clearance and redirect therapy. [20][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immediate management priorities in suspected IE. [5][6][20][22]",
+        "columns": [
+          "Finding",
+          "Immediate next action",
+          "Why it changes management"
+        ],
+        "rows": [
+          [
+            "Hemodynamic compromise or acute severe regurgitation",
+            "Urgent echocardiographic definition of valve dysfunction and early cardiac-surgical assessment. [5][6]",
+            "Heart failure is a major indication for surgical intervention. [5]"
+          ],
+          [
+            "Persistent or initially positive blood cultures",
+            "Repeat cultures every 24-48 hours until negative; tailor therapy to organism and susceptibility results. [20][22]",
+            "Persistent bacteremia indicates incomplete microbiologic control and may support surgery for uncontrolled infection. [5][20]"
+          ],
+          [
+            "Prosthetic valve or CIED",
+            "Perform TTE/TEE and plan adjunctive cardiac CT or FDG-PET/CT when structural or prosthetic infection remains uncertain. [2][3][10]",
+            "Prosthetic and device infection have lower diagnostic yield from echocardiography alone and frequently require source control. [10][15]"
+          ],
+          [
+            "Focal neurologic deficit or concern for embolism",
+            "Obtain neurologic assessment and structural brain imaging before timing surgery; coordinate with the endocarditis team. [6][16]",
+            "Stroke characteristics affect operative timing, although surgery may proceed without delay after stroke when no intracranial hemorrhage or extensive neurologic damage is present. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Establish microbiologic and imaging evidence using Duke-ISCVID principles",
+      "intro": "Classify disease with integrated clinical, microbiologic, imaging, and operative evidence rather than an isolated echocardiographic result.",
+      "paragraphs": [
+        "Apply the 2023 Duke-International Society of Cardiovascular Infectious Diseases (Duke-ISCVID) framework, which incorporates clinical, microbiologic, imaging, and surgical standards. A microbiologic major criterion includes an organism commonly causing IE from two or more separate blood-culture sets; organisms that only occasionally or rarely cause IE require isolation from three or more separate sets. [4]",
+        "For culture-negative presentations, distinguish antibiotic-suppressed bacterial IE from specific fastidious etiologies. Duke-ISCVID major laboratory evidence includes blood PCR or another nucleic acid-based assay for Coxiella burnetii, Bartonella species, or Tropheryma whipplei; C. burnetii phase I IgG greater than 1:800 is also major evidence. [4]",
+        "Interpret imaging in the clinical context. Echocardiography can identify vegetations and structural complications including pseudoaneurysm, intracardiac fistula, valve perforation, and valve aneurysm; these findings constitute major imaging evidence in contemporary criteria. [2][3][4]"
+      ],
+      "bullets": [
+        "Typical IE organisms include Staphylococcus aureus and viridans-group streptococci, reported as the most common isolates worldwide. [4]",
+        "A rapid resolution of bacteremia with an atypical IE pathogen, absence of IE evidence on cardiac imaging, and an alternative source should prompt reassessment rather than automatic attribution to IE. [17]",
+        "A firm noninfectious alternative for imaging findings, such as marantic/nonbacterial thrombotic endocarditis without microbiologic evidence, argues against IE. [17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Culture-negative or discordant cases",
+          "paragraphs": [
+            "Do not equate negative cultures with exclusion of IE. Culture negativity has been reported in 5%-70% of cases, and one contributor is antibiotics administered before culture acquisition. When clinical suspicion remains high after nondiagnostic cultures and echocardiography, pursue targeted serology and molecular testing for C. burnetii, Bartonella species, and T. whipplei and add structural or nuclear imaging based on valve and device context. [5][7][4]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Evidence that changes diagnostic classification and next testing. [2][3][4][7][10]",
+        "columns": [
+          "Clinical branch",
+          "High-value evidence",
+          "Next diagnostic step"
+        ],
+        "rows": [
+          [
+            "Native-valve IE suspected; TTE nondiagnostic",
+            "TEE detects native vegetations more sensitively than TTE; reported sensitivities are 96% versus 70% in one summary. [7]",
+            "Perform TEE to evaluate vegetations and destructive valve lesions. [7][8][10]"
+          ],
+          [
+            "Prosthetic-valve IE suspected",
+            "Abnormal FDG uptake around the implantation site is a major imaging criterion in prosthetic valves. [2][3]",
+            "Use TEE plus FDG-PET/CT; add cardiac CT when paravalvular anatomy is unclear. [2][3][10]"
+          ],
+          [
+            "CIED infection suspected",
+            "FDG-PET/CT and radiolabeled WBC-SPECT/CT are useful adjuncts, particularly for device infection. [10]",
+            "Integrate echocardiography with nuclear imaging and evaluate need for infected-device removal. [10][15]"
+          ],
+          [
+            "Periannular extension suspected",
+            "Cardiac CT is recommended to define morphology and anatomy when echocardiography does not clearly delineate paravalvular infection. [2][3]",
+            "Obtain gated cardiac CT to define abscess, pseudoaneurysm, fistula, or other extension for surgical planning. [2][3]"
+          ],
+          [
+            "Culture-negative IE suspected",
+            "C. burnetii phase I IgG >1:800 or blood nucleic-acid testing for C. burnetii, Bartonella, or T. whipplei is major laboratory evidence. [4]",
+            "Order targeted serology and blood molecular testing rather than repeating only routine cultures. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "imaging-pathway",
+      "eyebrow": "Imaging",
+      "heading": "Choose imaging by valve type, diagnostic uncertainty, and suspected complication",
+      "intro": "TTE is the entry test; TEE and adjunctive imaging answer different anatomic questions.",
+      "paragraphs": [
+        "Perform transthoracic echocardiography first in suspected IE, then use transesophageal echocardiography (TEE) for confirmation and complication assessment. In comparative summaries, reported sensitivity is approximately 75% for TTE and 90% for TEE, with specificity of approximately 90% for each; TEE performs better than CT for valvular IE-related lesions. [8][9][10]",
+        "Use cardiac CT when the key question is paravalvular extension or when echocardiography cannot define the anatomy. CT detects paravalvular lesions comparably to TEE in surgically confirmed left-sided IE, and one meta-analysis summary reported higher sensitivity for CT than TEE for paravalvular abscess detection (88% versus 74%). [9][20]",
+        "Reserve cardiac FDG-PET/CT principally for prosthetic-valve or device-associated infection and for identifying distant embolic infection. Its sensitivity for cardiac infection in native-valve IE is too low for routine use, although it may improve diagnostic classification in selected patients with possible native-valve IE. [3][7][10]"
+      ],
+      "bullets": [
+        "Use cardiac MRI selectively for valvular regurgitation quantification or intracardiac shunt assessment; it has no principal diagnostic role in IE imaging. [10]",
+        "Document vegetation morphology, valve dysfunction, abscess or fistula, and prosthetic/device involvement because these findings determine whether antimicrobial therapy alone is plausible or surgery is needed. [2][5][10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical role of major imaging modalities in IE. [2][3][8][9][10]",
+        "columns": [
+          "Modality",
+          "Best use",
+          "Key limitation or tradeoff"
+        ],
+        "rows": [
+          [
+            "TTE",
+            "First-line evaluation in suspected IE. [8][10]",
+            "Lower sensitivity than TEE for vegetations. [7][8]"
+          ],
+          [
+            "TEE",
+            "Confirmation and assessment of valvular lesions and complications. [8][10]",
+            "May not fully delineate paravalvular anatomy, particularly around prosthetic material. [2][3]"
+          ],
+          [
+            "Cardiac CT",
+            "Equivocal echocardiography or suspected paravalvular infection/abscess. [2][3][10]",
+            "Less effective than TEE for valvular IE-related lesions. [9]"
+          ],
+          [
+            "FDG-PET/CT",
+            "Prosthetic-valve infection, CIED infection, and detection of distant embolic events. [3][10]",
+            "Routine cardiac use in native-valve IE is limited by low sensitivity. [3]"
+          ],
+          [
+            "WBC-SPECT/CT",
+            "Adjunctive evaluation, especially in prosthetic-valve and CIED infection. [10]",
+            "Not included in Duke-ISCVID imaging criteria, unlike the 2023 ESC criteria. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "antimicrobial-management",
+      "eyebrow": "Antimicrobial therapy",
+      "heading": "Use culture-directed intravenous therapy and document clearance before outpatient transition",
+      "intro": "Antimicrobial selection and duration depend on organism, susceptibility, native versus prosthetic material, complications, and source control.",
+      "paragraphs": [
+        "Start antimicrobial therapy after cultures are obtained unless unstable sepsis makes delay unsafe, then narrow promptly once the organism and susceptibility profile are known. Antibiotic therapy is most effective when the responsible organism and susceptibilities are identified; management should be pathogen-directed rather than driven by a fixed empiric regimen. [5][22]",
+        "For MRSA endocarditis, source summaries identify vancomycin 30 mg/kg or daptomycin 6-10 mg/kg as treatment options. Do not routinely combine vancomycin with an aminoglycoside: this increases nephrotoxicity and ototoxicity with minimal survival benefit, and the American Heart Association discourages the combination for MRSA. [22]",
+        "Monitor clinical response and obtain blood cultures every 24-48 hours until negative. Most patients become afebrile within 3-5 days of appropriate therapy, but defervescence does not replace microbiologic clearance or imaging reassessment when valve dysfunction, embolic disease, persistent bacteremia, or abscess is present. [20][22]"
+      ],
+      "bullets": [
+        "Involve infectious diseases early to select pathogen-specific therapy, manage drug toxicity, and determine treatment duration in native-valve, prosthetic-valve, and device-associated disease. [20][24]",
+        "Drain abscesses, remove infected cardiac devices when indicated, and proceed with valve surgery when required; antibiotics alone do not correct structural destruction or retained infected material. [15]",
+        "Avoid outpatient treatment during the unstable phase. The 2023 ESC approach considers outpatient parenteral or oral step-down therapy only after an initial intravenous phase, after TEE at day 10 excludes complications in stable patients, and from day 10 of IV therapy or day 7 after surgery when uncomplicated and feasible. [15]"
+      ],
+      "subsections": [
+        {
+          "heading": "Monitoring for treatment failure",
+          "paragraphs": [
+            "Escalate evaluation for persistent positive cultures, new or worsening heart failure, recurrent embolic events, new conduction abnormalities, enlarging vegetations, prosthetic dysfunction, or paravalvular abscess. Repeat TEE and obtain cardiac CT when a paravalvular complication is plausible, because operative timing depends on anatomic extension rather than fever alone. [2][3][5][10]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Therapeutic monitoring and transition decisions. [15][20][22]",
+        "columns": [
+          "Time point",
+          "Required assessment",
+          "Action if abnormal"
+        ],
+        "rows": [
+          [
+            "Before antibiotics",
+            "At least two culture sets; preferably three from separate venous sites. [5][22]",
+            "Obtain cultures before therapy whenever clinically possible; send targeted testing if culture-negative IE is suspected. [4][22]"
+          ],
+          [
+            "Every 24-48 hours after therapy begins",
+            "Repeat blood cultures until negative. [20][22]",
+            "Persistent bacteremia should trigger reassessment for uncontrolled infection, retained device material, abscess, or need for surgery. [5][20]"
+          ],
+          [
+            "First 3-5 days",
+            "Assess fever curve and clinical response. [22]",
+            "Failure to improve requires review of microbiology, drug exposure, valve/device complications, and extracardiac infection. [10][20][22]"
+          ],
+          [
+            "Day 10 of IV therapy in stable patients",
+            "TEE to exclude complications before considering outpatient treatment. [15]",
+            "Continue inpatient management if complications, instability, or source-control needs are present. [15]"
+          ],
+          [
+            "Postoperative transition",
+            "Outpatient therapy may be considered from day 7 after surgery if stable, uncomplicated, and feasible. [15]",
+            "Maintain inpatient therapy when monitoring, surgical, or device-related needs persist. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surgical-and-neurologic-decisions",
+      "eyebrow": "Source control",
+      "heading": "Refer early for surgery when structural, prosthetic, or uncontrolled infection is present",
+      "intro": "Surgery is a treatment for hemodynamic failure and infection control, not a last resort after antibiotics fail.",
+      "paragraphs": [
+        "Refer to an endocarditis team early when IE is complicated by congestive heart failure, prosthetic-valve endocarditis, or uncontrolled infection. Early surgery is defined as intervention during the initial hospitalization before completion of an appropriate antimicrobial course. [5][6]",
+        "Use imaging to make the surgical question explicit: valvular destruction and vegetation are best characterized by TEE, whereas abscess, pseudoaneurysm, fistula, and other paravalvular extension may require cardiac CT for operative anatomy. [2][3][9][10]",
+        "Neurologic events require coordinated timing rather than reflex cancellation of surgery. In patients with a surgical indication and stroke but without intracranial hemorrhage or extensive neurologic damage, surgery without delay may be considered. The ESC discussion identifies severely decreased consciousness as Glasgow Coma Scale 4 or less or NIH Stroke Scale greater than 18; brain imaging should define hemorrhage and structural injury before proceeding. [6][16]"
+      ],
+      "bullets": [
+        "Treat early prosthetic-valve endocarditis as a pathway warranting more liberal consideration of cardiac surgery. [15]",
+        "When CIED infection is present, integrate antimicrobial therapy with removal of infected hardware during the initial intravenous-treatment phase. [15]",
+        "Use a multidisciplinary team to align surgical timing, antimicrobial therapy, device extraction, neurologic assessment, and postoperative follow-up. [15][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operative decision branches in IE. [5][6][15][16]",
+        "columns": [
+          "Problem",
+          "Surgical or procedural implication",
+          "Timing principle"
+        ],
+        "rows": [
+          [
+            "Congestive heart failure from IE",
+            "Surgery is recommended. [5]",
+            "Do not defer solely to complete an antibiotic course. [5][6]"
+          ],
+          [
+            "Prosthetic-valve endocarditis",
+            "Surgery is a major management pathway; early PVE has a more liberal surgical approach in ESC guidance. [5][15]",
+            "Evaluate during the index hospitalization. [6][15]"
+          ],
+          [
+            "Uncontrolled infection",
+            "Surgery is recommended; investigate abscess, paravalvular extension, and retained infected material. [5][15]",
+            "Escalate promptly while obtaining anatomic definition with TEE/CT. [2][3][5]"
+          ],
+          [
+            "Ischemic stroke without hemorrhage or extensive injury",
+            "Surgery without delay may be considered when otherwise indicated. [6]",
+            "Base timing on neurologic examination and brain imaging. [6][16]"
+          ],
+          [
+            "CIED infection",
+            "Remove infected cardiac device during the initial IV-treatment phase when indicated. [15]",
+            "Coordinate extraction with antimicrobial treatment and assessment for valve involvement. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prevention-and-follow-up",
+      "eyebrow": "Prevention",
+      "heading": "Target prevention and longitudinal follow-up to the highest-risk substrate",
+      "intro": "Prevention is risk-stratified and should focus on patients with prior IE, prosthetic material, selected congenital disease, and ventricular assist devices.",
+      "paragraphs": [
+        "Classify risk before invasive exposures. High-risk groups include prior IE, prosthetic valves, ventricular assist devices, and congenital heart disease other than isolated congenital valve abnormalities; the intermediate-risk category includes rheumatic heart disease, nonrheumatic degenerative valve disease, bicuspid aortic valve disease, CIEDs, and hypertrophic cardiomyopathy. [16]",
+        "After treatment, arrange serial echocardiography when needed to assess valve function and treatment response, and reassess for heart failure, recurrent bacteremia, embolic complications, and device or prosthetic dysfunction. Persistent or recurrent concerns should prompt repeat cultures and TEE, with cardiac CT when paravalvular disease is suspected. [2][3][23]",
+        "Address modifiable exposure risks. In patients with congenital heart disease, tattooing and piercing have been associated with IE, and ESC guidance recommends avoiding them; antibiotic prophylaxis for these exposures remains unclear. [17]"
+      ],
+      "bullets": [
+        "For patients receiving outpatient therapy, educate patients and caregivers to monitor for clinical deterioration and ensure a feasible monitoring system before discharge. [15]",
+        "Document the infecting organism, valve or device involvement, operative findings, and residual valve dysfunction to guide recurrence evaluation and future procedural planning. [4][15][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Risk categories relevant to prevention planning. [16]",
+        "columns": [
+          "Risk category",
+          "Examples",
+          "Clinical implication"
+        ],
+        "rows": [
+          [
+            "High risk",
+            "Previous IE, prosthetic valves, ventricular assist devices, and specified congenital heart disease. [16]",
+            "Prioritize preventive counseling and prompt investigation of febrile illness or bacteremia. [16]"
+          ],
+          [
+            "Intermediate risk",
+            "Rheumatic heart disease, degenerative valve disease, bicuspid aortic valve, CIED, hypertrophic cardiomyopathy. [16]",
+            "Maintain a lower threshold to evaluate compatible bacteremia or embolic/valvular findings. [16]"
+          ],
+          [
+            "Exposure concern in congenital heart disease",
+            "Tattooing and piercing. [17]",
+            "Counsel avoidance; prophylactic-antibiotic benefit for these exposures is unclear. [17]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Supplementary appendix",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S0140-6736(24)01098-5/attachment/8d3c10ab-16b5-418d-b3a7-6142c387fbd6/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Major clinical criteria. Major criteria. 1) Blood cultures positive for infective endocarditis. \u2022 Typical microorganisms from 2 separate blood cultures o",
+      "score": 0.635879
+    },
+    {
+      "number": 2,
+      "title": "Multimodality Imaging in Infective Endocarditis",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIRCULATIONAHA.119.040228",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "CDRIE indicates cardiac device\u2013related infective endocarditis; CIED, cardiac implantable electronic device; CTA, cardiac tomographic angiography; FDG, fluorodeoxyglucose; IE, infective endocarditis; MRI, magnetic resonance imaging; NA, not applicable; NVE, native valve endocarditis; PET, positron em",
+      "score": 0.6643884
+    },
+    {
+      "number": 3,
+      "title": "Multimodality Imaging in Infective Endocarditis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIRCULATIONAHA.119.040228?doi=10.1161%2FCIRCULATIONAHA.119.040228",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "CDRIE indicates cardiac device\u2013related infective endocarditis; CIED, cardiac implantable electronic device; CTA, cardiac tomographic angiography; FDG, fluorodeoxyglucose; IE, infective endocarditis; MRI, magnetic resonance imaging; NA, not applicable; NVE, native valve endocarditis; PET, positron em",
+      "score": 0.6450534
+    },
+    {
+      "number": 4,
+      "title": "Recent Insights Into Native Valve Infective Endocarditis: JACC Focus Seminar 4/4",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.12.043",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 1 The Duke-ISCVID Criteria13\n\nMajor\nMicrobiologic major criteria(a)\n\nPositive blood cultures:\n\ni.\n\nMicroorganisms that commonly cause IEa isolated from 2 or more separate blood culture setsb; or\n\nii.\n\nMicroorganisms that occasionally or rarely cause IE isolated from 3 or more s",
+      "score": 0.62879556
+    },
+    {
+      "number": 5,
+      "title": "Surgery for Infective Endocarditis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.108.773598",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Surgery is recommended in patients with congestive heart failure, prosthetic valve endocarditis, and uncontrolled infection, and prolonged",
+      "score": 0.5255399
+    },
+    {
+      "number": 6,
+      "title": "2020 ACC/AHA Guideline for the Management of Patients ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000923",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "6.\n\nTwo sets of blood culture samples are the minimum for a secure microbiological diagnosis of IE. Antibiotic therapy is most effective if the identity and sensitivities of the responsible organism are known. _S. aureus_ is the most common pathogen responsible for prosthetic valve endocarditis but ",
+      "score": 0.5065188
+    },
+    {
+      "number": 7,
+      "title": "[18F]FDG-PET CT for the evaluation of native valve endocarditis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1071358123001812",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: [18F]FDG-PET CT for the evaluation of native valve endocarditis - ScienceDirect\n# Original Article [18F]FDG-PET CT for the evaluation of native valve endocarditis. We examined the use of [18F]FDG-PET/CT for the diagnosis of native valve endocarditis (NVE). The addition of a positive [18F]FDG-",
+      "score": 0.70483154
+    },
+    {
+      "number": 8,
+      "title": "Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in infective endocarditis: A contemporary comparative meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1934592520304810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in infective endocarditis: A contemporary comparative meta-analysis - ScienceDirect\n# Research paper Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in i",
+      "score": 0.69249696
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic Performance of Transesophageal Echocardiography and Cardiac Computed Tomography in Infective Endocarditis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0894731720304776",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Clinical Investigation Infectious Endocarditis Diagnostic Performance of Transesophageal Echocardiography and Cardiac Computed Tomography in Infective Endocarditis. The aim of this work was to evaluate the agreement between transesophageal echocardiography (TEE) and cardiac computed tomography (CT",
+      "score": 0.6844544
+    },
+    {
+      "number": 10,
+      "title": "Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S003306202300110X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations - ScienceDirect\n# Review Article Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations. Infective endocarditis (IE) is the in",
+      "score": 0.67988104
+    },
+    {
+      "number": 11,
+      "title": "2025 ACCP Annual Meeting Abstracts",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.70148",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Polymicrobial infective endocarditis (IE) Current guidelines recommend combined surgical valve replacement and six-week parenteral",
+      "score": 0.58777803
+    },
+    {
+      "number": 12,
+      "title": "Outpatient Parenteral Antibiotic Treatment vs Hospitalization ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/9/9/ofac442/6678808",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JM Peric\u00e0s \u00b7 2022 \u00b7 Cited by 22 \u2014 Outpatient intravenous treatment for infective endocarditis: safety, effectiveness and one-year outcomes .",
+      "score": 0.51105833
+    },
+    {
+      "number": 13,
+      "title": "33-2-203.pdf",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article-pdf/33/2/203/927448/33-2-203.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by MM Andrews \u00b7 2001 \u00b7 Cited by 172 \u2014 Proposed guidelines for the use of inpatient antibiotic therapy (IPAT) and outpatient parenteral antibiotic therapy (OPAT) for infective endocarditis (IE).",
+      "score": 0.498902
+    },
+    {
+      "number": 14,
+      "title": "Limitations of presently available glycopeptides in the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1469-0691.2001.00059.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by HM Ziglam \u00b7 2001 \u00b7 Cited by 37 \u2014 2 week antibiotic therapy for MRSA endocarditis in IV drug users, Three of the eight patients underwent valve replacement. (7\u201310 mg/kg/day for",
+      "score": 0.46570396
+    },
+    {
+      "number": 15,
+      "title": "The 2023 new European guidelines on infective endocarditis: main novelties and implications for clinical practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11365601",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords:antibiotic therapy, cardiac surgery, heart team, infective endocarditis, prevention\n\n## .\n\nFig. 1\nImage 15: Fig. 1\n\nOpen in a new tab\n\nHighlights of major novelties of the 2023 ESC guidelines on the management of infective endocarditis. Novelties are in four areas: prevention, diagnosis wit",
+      "score": 0.7663815
+    },
+    {
+      "number": 16,
+      "title": "2023 European Society of Cardiology guidelines for the management of infective endocarditis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12779890",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Regarding our proposed adjustments for the clinical neurological criteria before a potential IE surgery, the ESC guideline describes a severely decreased level of consciousness as \u2018a Glasgow Coma Scale \u2264 4 or National Institutes of Health Stroke Scale Score (NIHSS) > 18\u2019. We would specify the first ",
+      "score": 0.7491794
+    },
+    {
+      "number": 17,
+      "title": "Endocarditis in Adult Congenital Heart Disease Patients: Prevention, Recognition, and Management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379749",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "with prolongation of the QTc interval [27][28]. The 2023 ESC Guidelines in IE discourages the use of clindamycin and azithromycin, while the AHA no longer recommends clindamycin due to the higher risk profile of side effects . [...] Tattooing and piercing can be associated with IE, particularly in i",
+      "score": 0.73023266
+    },
+    {
+      "number": 18,
+      "title": "Infective Endocarditis and Antithrombotic Therapy",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11449188",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "15.. Delgado V , Ajmone MarsanN, de WahaS, BonarosN, BridaM, BurriH, _et al._. 2023 ESC guidelines for the management of endocarditis: developed by the task force on the management of endocarditis of the European society of cardiology (ESC) endorsed by the European association for cardio-thoracic su",
+      "score": 0.7159213
+    },
+    {
+      "number": 19,
+      "title": "Guidelines for Diagnosis and Management of Infective ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37523190",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by EG McDonald \u00b7 2023 \u00b7 Cited by 132 \u2014 Objective: To create a clinical guideline for the diagnosis and management of adult bacterial infective endocarditis (IE) that addresses the gap",
+      "score": 0.7031221
+    },
+    {
+      "number": 20,
+      "title": "Infective Endocarditis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557641",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "One meta-analysis highlighted a superior sensitivity of 88% for CT compared with 74% for TEE in detecting paravavular abscess.(#article-21090.r43) Nonetheless, the 2023 European Society of Cardiology guidelines continue to recommend TTE as the first-line imaging modality for suspected cases.(#articl",
+      "score": 0.6083387
+    },
+    {
+      "number": 21,
+      "title": "Prevention of Bacterial Endocarditis | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/755/chapter/14084128/Prevention-of-Bacterial-Endocarditis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "In 2015, the AHA issued updated guidance on the epidemiology, clinical findings, pathogenesis, diagnosis, and treatment of pediatric bacterial endocarditis",
+      "score": 0.4746074
+    },
+    {
+      "number": 22,
+      "title": "Endocarditis Antibiotic Regimens - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542162",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The American Heart Association 2015 Adult Infective Endocarditis guidelines and European Society of Cardiologists 2015 management of infective endocarditis guidelines serve as the basis for the following recommendation.(#article-21087.r2)(#article-21087.r3) The treatment of endocarditis should be pa",
+      "score": 0.4368388
+    },
+    {
+      "number": 23,
+      "title": "Endocarditis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK499844",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Differential Diagnosis\n\n## Prognosis\n\nInfective endocarditis remains high. Morbidity occurs in more than half of children with a diagnosis of infective endocarditis. Most common complications are heart failure secondary to vegetation in the aortic or mitral valve, myocardial abscesses, toxic myoc",
+      "score": 0.418341
+    },
+    {
+      "number": 24,
+      "title": "Aortic Valve Endocarditis Surgical Treatment - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK544348",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Infective endocarditis (IE) is a serious condition with a grave prognosis. Despite technological advances over the past few decades, which have helped improve the diagnosis and management of IE, its mortality remains high. Results from several observational studies have highlighted the critical role",
+      "score": 0.3284007
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Supplementary appendix",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S0140-6736(24)01098-5/attachment/8d3c10ab-16b5-418d-b3a7-6142c387fbd6/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Major clinical criteria. Major criteria. 1) Blood cultures positive for infective endocarditis. \u2022 Typical microorganisms from 2 separate blood cultures o",
+      "score": 0.635879
+    },
+    {
+      "number": 2,
+      "title": "Multimodality Imaging in Infective Endocarditis",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIRCULATIONAHA.119.040228",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "CDRIE indicates cardiac device\u2013related infective endocarditis; CIED, cardiac implantable electronic device; CTA, cardiac tomographic angiography; FDG, fluorodeoxyglucose; IE, infective endocarditis; MRI, magnetic resonance imaging; NA, not applicable; NVE, native valve endocarditis; PET, positron em",
+      "score": 0.6643884
+    },
+    {
+      "number": 3,
+      "title": "Multimodality Imaging in Infective Endocarditis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIRCULATIONAHA.119.040228?doi=10.1161%2FCIRCULATIONAHA.119.040228",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "CDRIE indicates cardiac device\u2013related infective endocarditis; CIED, cardiac implantable electronic device; CTA, cardiac tomographic angiography; FDG, fluorodeoxyglucose; IE, infective endocarditis; MRI, magnetic resonance imaging; NA, not applicable; NVE, native valve endocarditis; PET, positron em",
+      "score": 0.6450534
+    },
+    {
+      "number": 4,
+      "title": "Recent Insights Into Native Valve Infective Endocarditis: JACC Focus Seminar 4/4",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.12.043",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 1 The Duke-ISCVID Criteria13\n\nMajor\nMicrobiologic major criteria(a)\n\nPositive blood cultures:\n\ni.\n\nMicroorganisms that commonly cause IEa isolated from 2 or more separate blood culture setsb; or\n\nii.\n\nMicroorganisms that occasionally or rarely cause IE isolated from 3 or more s",
+      "score": 0.62879556
+    },
+    {
+      "number": 5,
+      "title": "Surgery for Infective Endocarditis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.108.773598",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Surgery is recommended in patients with congestive heart failure, prosthetic valve endocarditis, and uncontrolled infection, and prolonged",
+      "score": 0.5255399
+    },
+    {
+      "number": 6,
+      "title": "2020 ACC/AHA Guideline for the Management of Patients ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000923",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "6.\n\nTwo sets of blood culture samples are the minimum for a secure microbiological diagnosis of IE. Antibiotic therapy is most effective if the identity and sensitivities of the responsible organism are known. _S. aureus_ is the most common pathogen responsible for prosthetic valve endocarditis but ",
+      "score": 0.5065188
+    },
+    {
+      "number": 7,
+      "title": "[18F]FDG-PET CT for the evaluation of native valve endocarditis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1071358123001812",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: [18F]FDG-PET CT for the evaluation of native valve endocarditis - ScienceDirect\n# Original Article [18F]FDG-PET CT for the evaluation of native valve endocarditis. We examined the use of [18F]FDG-PET/CT for the diagnosis of native valve endocarditis (NVE). The addition of a positive [18F]FDG-",
+      "score": 0.70483154
+    },
+    {
+      "number": 8,
+      "title": "Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in infective endocarditis: A contemporary comparative meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1934592520304810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in infective endocarditis: A contemporary comparative meta-analysis - ScienceDirect\n# Research paper Diagnostic performance of cardiac computed tomography versus transesophageal echocardiography in i",
+      "score": 0.69249696
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic Performance of Transesophageal Echocardiography and Cardiac Computed Tomography in Infective Endocarditis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0894731720304776",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Clinical Investigation Infectious Endocarditis Diagnostic Performance of Transesophageal Echocardiography and Cardiac Computed Tomography in Infective Endocarditis. The aim of this work was to evaluate the agreement between transesophageal echocardiography (TEE) and cardiac computed tomography (CT",
+      "score": 0.6844544
+    },
+    {
+      "number": 10,
+      "title": "Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S003306202300110X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations - ScienceDirect\n# Review Article Role of multimodality imaging in infective endocarditis: Contemporary diagnostic and prognostic considerations. Infective endocarditis (IE) is the in",
+      "score": 0.67988104
+    },
+    {
+      "number": 11,
+      "title": "2025 ACCP Annual Meeting Abstracts",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1002/jac5.70148",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "Polymicrobial infective endocarditis (IE) Current guidelines recommend combined surgical valve replacement and six-week parenteral",
+      "score": 0.58777803
+    },
+    {
+      "number": 12,
+      "title": "Outpatient Parenteral Antibiotic Treatment vs Hospitalization ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/9/9/ofac442/6678808",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by JM Peric\u00e0s \u00b7 2022 \u00b7 Cited by 22 \u2014 Outpatient intravenous treatment for infective endocarditis: safety, effectiveness and one-year outcomes .",
+      "score": 0.51105833
+    },
+    {
+      "number": 13,
+      "title": "33-2-203.pdf",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article-pdf/33/2/203/927448/33-2-203.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by MM Andrews \u00b7 2001 \u00b7 Cited by 172 \u2014 Proposed guidelines for the use of inpatient antibiotic therapy (IPAT) and outpatient parenteral antibiotic therapy (OPAT) for infective endocarditis (IE).",
+      "score": 0.498902
+    },
+    {
+      "number": 14,
+      "title": "Limitations of presently available glycopeptides in the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1469-0691.2001.00059.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by HM Ziglam \u00b7 2001 \u00b7 Cited by 37 \u2014 2 week antibiotic therapy for MRSA endocarditis in IV drug users, Three of the eight patients underwent valve replacement. (7\u201310 mg/kg/day for",
+      "score": 0.46570396
+    },
+    {
+      "number": 15,
+      "title": "The 2023 new European guidelines on infective endocarditis: main novelties and implications for clinical practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11365601",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords:antibiotic therapy, cardiac surgery, heart team, infective endocarditis, prevention\n\n## .\n\nFig. 1\nImage 15: Fig. 1\n\nOpen in a new tab\n\nHighlights of major novelties of the 2023 ESC guidelines on the management of infective endocarditis. Novelties are in four areas: prevention, diagnosis wit",
+      "score": 0.7663815
+    },
+    {
+      "number": 16,
+      "title": "2023 European Society of Cardiology guidelines for the management of infective endocarditis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12779890",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Regarding our proposed adjustments for the clinical neurological criteria before a potential IE surgery, the ESC guideline describes a severely decreased level of consciousness as \u2018a Glasgow Coma Scale \u2264 4 or National Institutes of Health Stroke Scale Score (NIHSS) > 18\u2019. We would specify the first ",
+      "score": 0.7491794
+    },
+    {
+      "number": 17,
+      "title": "Endocarditis in Adult Congenital Heart Disease Patients: Prevention, Recognition, and Management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379749",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "with prolongation of the QTc interval [27][28]. The 2023 ESC Guidelines in IE discourages the use of clindamycin and azithromycin, while the AHA no longer recommends clindamycin due to the higher risk profile of side effects . [...] Tattooing and piercing can be associated with IE, particularly in i",
+      "score": 0.73023266
+    },
+    {
+      "number": 18,
+      "title": "Infective Endocarditis and Antithrombotic Therapy",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11449188",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "15.. Delgado V , Ajmone MarsanN, de WahaS, BonarosN, BridaM, BurriH, _et al._. 2023 ESC guidelines for the management of endocarditis: developed by the task force on the management of endocarditis of the European society of cardiology (ESC) endorsed by the European association for cardio-thoracic su",
+      "score": 0.7159213
+    },
+    {
+      "number": 19,
+      "title": "Guidelines for Diagnosis and Management of Infective ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37523190",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by EG McDonald \u00b7 2023 \u00b7 Cited by 132 \u2014 Objective: To create a clinical guideline for the diagnosis and management of adult bacterial infective endocarditis (IE) that addresses the gap",
+      "score": 0.7031221
+    },
+    {
+      "number": 20,
+      "title": "Infective Endocarditis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557641",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "One meta-analysis highlighted a superior sensitivity of 88% for CT compared with 74% for TEE in detecting paravavular abscess.(#article-21090.r43) Nonetheless, the 2023 European Society of Cardiology guidelines continue to recommend TTE as the first-line imaging modality for suspected cases.(#articl",
+      "score": 0.6083387
+    },
+    {
+      "number": 21,
+      "title": "Prevention of Bacterial Endocarditis | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/755/chapter/14084128/Prevention-of-Bacterial-Endocarditis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "In 2015, the AHA issued updated guidance on the epidemiology, clinical findings, pathogenesis, diagnosis, and treatment of pediatric bacterial endocarditis",
+      "score": 0.4746074
+    },
+    {
+      "number": 22,
+      "title": "Endocarditis Antibiotic Regimens - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542162",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The American Heart Association 2015 Adult Infective Endocarditis guidelines and European Society of Cardiologists 2015 management of infective endocarditis guidelines serve as the basis for the following recommendation.(#article-21087.r2)(#article-21087.r3) The treatment of endocarditis should be pa",
+      "score": 0.4368388
+    },
+    {
+      "number": 23,
+      "title": "Endocarditis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK499844",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Differential Diagnosis\n\n## Prognosis\n\nInfective endocarditis remains high. Morbidity occurs in more than half of children with a diagnosis of infective endocarditis. Most common complications are heart failure secondary to vegetation in the aortic or mitral valve, myocardial abscesses, toxic myoc",
+      "score": 0.418341
+    },
+    {
+      "number": 24,
+      "title": "Aortic Valve Endocarditis Surgical Treatment - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK544348",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Infective endocarditis (IE) is a serious condition with a grave prognosis. Despite technological advances over the past few decades, which have helped improve the diagnosis and management of IE, its mortality remains high. Results from several observational studies have highlighted the critical role",
+      "score": 0.3284007
+    }
+  ],
+  "publishedAt": "2026-08-21T01:52:29.815734+00:00",
+  "updatedAt": "2026-08-21T01:52:29.815734+00:00",
+  "readingMinutes": 7,
+  "slug": "infective-endocarditis"
+}

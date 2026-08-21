@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Shock",
+  "summary": "Shock requires simultaneous resuscitation and etiologic diagnosis. Recognize tissue hypoperfusion before sustained hypotension, establish monitoring and access, use focused bedside testing to identify the hemodynamic phenotype, and rapidly deliver source- or mechanism-directed treatment while reassessing perfusion and treatment response.",
+  "seoDescription": "Physician guide to recognizing, evaluating, and managing undifferentiated circulatory shock, including perfusion assessment, POCUS, fluids, vasopressors, and escalation.",
+  "clinicalQuestion": "How should clinicians stabilize and phenotype undifferentiated circulatory shock while initiating cause-specific treatment?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "circulatory shock",
+    "undifferentiated shock",
+    "septic shock",
+    "cardiogenic shock",
+    "point-of-care ultrasound",
+    "vasopressors",
+    "tissue hypoperfusion"
+  ],
+  "keyTakeaways": [
+    "Treat shock as a time-critical syndrome of inadequate tissue perfusion; resuscitation must proceed while the cause is investigated. [15]",
+    "Mental status, urine output, and skin perfusion provide rapid bedside evidence of systemic hypoperfusion; prolonged capillary refill, reduced peripheral temperature, and shock index of at least 0.7-0.8 support concern for shock. [20]",
+    "Focused point-of-care ultrasound can help distinguish shock phenotype and assess fluid responsiveness, but should complement rather than delay definitive treatment. [19]",
+    "Balanced crystalloids are the preferred initial resuscitation fluid in undifferentiated circulatory shock; subsequent fluid should be individualized to perfusion response and congestion risk. [19]",
+    "Norepinephrine is the preferred vasopressor in septic shock and profound cardiogenic shock. [19]",
+    "For cardiogenic shock, assign SCAI shock severity early and reassess serially; deterioration during the first 24 hours identifies a particularly high-risk trajectory. [6,7,8]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-and-stabilize",
+      "eyebrow": "First Minutes",
+      "heading": "Recognize shock from hypoperfusion, not blood pressure alone",
+      "intro": "Begin stabilization and diagnostic phenotyping in parallel.",
+      "paragraphs": [
+        "Shock is a life-threatening state requiring urgent intervention, often in a critical care setting. A structured <C>ABCDE approach prioritizes immediate threats while empirical treatment begins. [1] Hypotension may be absent early; concerning findings include altered mentation, tachycardia, tachypnea, cool or mottled extremities, oliguria, metabolic acidosis, and hyperlactatemia. [15]",
+        "Use repeated bedside assessment of the brain, kidneys, and skin to judge perfusion. Reduced peripheral perfusion or temperature, prolonged capillary refill, and a shock index (heart rate divided by systolic blood pressure) of at least 0.7-0.8 are validated clinical indicators of shock. [20] Trend these findings with arterial pressure, lactate, urine output, and evolving organ dysfunction rather than accepting transient blood-pressure correction as adequate resuscitation. [15,20]"
+      ],
+      "bullets": [
+        "Activate appropriate critical care, emergency, procedural, surgical, trauma, cardiology, or interventional support early when a rapidly reversible cause is plausible.",
+        "Obtain continuous cardiac monitoring and a 12-lead ECG; ECG findings may identify acute coronary syndrome or arrhythmia and may provide clues to pericardial effusion or pulmonary embolism. [15]",
+        "Establish reliable vascular access and obtain blood for targeted testing without delaying resuscitation or definitive source control. [15,16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Bedside findings that support systemic hypoperfusion and warrant immediate reassessment or escalation. [15,20]",
+        "columns": [
+          "Clinical window",
+          "Concerning finding",
+          "Clinical implication"
+        ],
+        "rows": [
+          [
+            "Brain",
+            "Obtundation or abnormal mental status [15]",
+            "Supports inadequate cerebral perfusion or evolving organ dysfunction; reassess immediately. [15]"
+          ],
+          [
+            "Kidney",
+            "Oliguria [15]",
+            "Supports impaired renal perfusion; trend with hemodynamics and fluid balance. [15]"
+          ],
+          [
+            "Skin",
+            "Cool or mottled extremities, prolonged capillary refill, reduced peripheral temperature [15,20]",
+            "Rapid marker of impaired peripheral perfusion and a useful serial resuscitation endpoint. [20]"
+          ],
+          [
+            "Integrated vital signs",
+            "Shock index at least 0.7-0.8 [20]",
+            "Raises concern for shock even before overt hypotension. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "phenotype-the-shock",
+      "eyebrow": "Diagnostic Strategy",
+      "heading": "Identify the mechanism driving hypoperfusion",
+      "intro": "Categorize the dominant physiology while maintaining a differential for mixed shock.",
+      "paragraphs": [
+        "The immediate diagnostic objective is to identify whether hypoperfusion is primarily due to volume loss, vasodilation or maldistribution, pump failure, obstructed circulation, or a mixed process. Etiology determines the definitive intervention; therefore, a focused history, medication review, physical examination, ECG, laboratory testing, and imaging should proceed concurrently with supportive care. [15,19]",
+        "Point-of-care ultrasound is useful in undifferentiated shock to assess cardiac function, congestion, pericardial fluid, volume status, and fluid responsiveness. [19] Its value is greatest when findings are integrated with the examination and serial perfusion response; a single static measure should not substitute for reassessment after fluids, vasoactive therapy, or a corrective procedure. [19,20]"
+      ],
+      "bullets": [
+        "Hypovolemic or hemorrhagic phenotype: seek external or concealed bleeding, gastrointestinal loss, trauma, or other fluid loss; prioritize hemorrhage control and blood-product support when bleeding is present. [22]",
+        "Distributive phenotype: evaluate for infection and other inflammatory, toxicologic, endocrine, or neurogenic causes; obtain appropriate cultures before antimicrobials when feasible, but do not delay prompt treatment for suspected sepsis. [16]",
+        "Cardiogenic phenotype: evaluate acute coronary syndrome, arrhythmia, acute valvular disease, mechanical complications, myocarditis, and acute or decompensated heart failure. [8,15]",
+        "Obstructive phenotype: rapidly evaluate for pericardial disease, pulmonary embolism, and tension physiology; definitive mechanical relief or reperfusion may be time-sensitive. [15,17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Septic shock",
+          "paragraphs": [
+            "Septic shock is defined by a vasopressor requirement to maintain mean arterial pressure of at least 65 mm Hg and serum lactate of at least 2 mmol/L. [16] Obtain appropriate culture specimens before antibiotics when possible, then administer empiric antimicrobial therapy promptly; the cited emergency medicine review identifies an ideal goal of administration within 1 hour. [16]"
+          ],
+          "bullets": [
+            "Reassess antimicrobial selection as microbiology, source, host factors, and clinical trajectory become available; short courses and de-escalation may be appropriate when supported by the clinical syndrome. [16]",
+            "No single biomarker adequately determines infection presence, pathogen type, and severity; do not use an isolated biomarker result as a substitute for clinical assessment and microbiologic evaluation. [9]"
+          ]
+        },
+        {
+          "heading": "Cardiogenic shock",
+          "paragraphs": [
+            "Initial suspicion and diagnosis of cardiogenic shock do not require invasive hemodynamic monitoring, but arterial access, pulmonary artery catheterization, or other invasive assessment can clarify ventricular involvement and congestion and may inform treatment decisions. [8] Once suspected, classify severity using the SCAI shock stage and reassess as physiology and treatment intensity change. [7,8]"
+          ],
+          "bullets": [
+            "Clinical and biochemical tissue hypoperfusion define cardiogenic shock; traditional hemodynamic criteria include cardiac index no greater than 2.2 L/min/m² and pulmonary capillary wedge pressure greater than 15 mm Hg. [21]",
+            "Serial reassessment is essential: more than half of patients initially classified as SCAI stage B or C worsened by 24 hours in a contemporary cohort, and patients presenting in or progressing to stage E had the poorest prognosis. [6]"
+          ]
+        }
+      ],
+      "table": null
+    },
+    {
+      "id": "initial-resuscitation",
+      "eyebrow": "Resuscitation",
+      "heading": "Use response-guided fluids and early vasopressor support",
+      "intro": "Support perfusion while avoiding reflexive, unmeasured fluid loading.",
+      "paragraphs": [
+        "Balanced crystalloids are favored for initial fluid resuscitation in circulatory shock. [19] Fluid administration should be followed by immediate reassessment of blood pressure, mental status, skin perfusion, urine output, lactate, pulmonary congestion, and dynamic evidence of fluid responsiveness. Point-of-care ultrasound may assist this assessment. [19,20]",
+        "Escalate to norepinephrine when hypotension and hypoperfusion persist despite initial resuscitative measures or when additional fluid is unlikely to restore perfusion safely. Norepinephrine is identified as the preferred vasopressor in septic shock and profound cardiogenic shock. [19] The supplied sources do not provide a supported starting dose, titration range, or upper dose limit; use institutional critical-care protocols and patient-specific monitoring."
+      ],
+      "bullets": [
+        "Avoid using central venous pressure alone as a marker of ongoing fluid requirement; post-resuscitation positive fluid balance has been associated with higher mortality in septic shock cohorts. [2]",
+        "For suspected hemorrhage, do not treat crystalloid response as a substitute for bleeding control, transfusion support, and urgent operative or interventional management. [22]",
+        "For suspected cardiogenic shock with congestion or ventricular failure, use fluids cautiously and reassess after each intervention; invasive hemodynamics may help define the congestive and ventricular profile. [8,19]",
+        "Monitor for deterioration after every major intervention; shock management requires repeated phenotyping because mixed physiology and treatment-related changes are common. [19,20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiology-directed priorities during initial stabilization. [15,16,19,22]",
+        "columns": [
+          "Dominant phenotype",
+          "Immediate supportive approach",
+          "Definitive priority"
+        ],
+        "rows": [
+          [
+            "Hypovolemic or hemorrhagic",
+            "Volume replacement and hemodynamic support while monitoring perfusion. [22]",
+            "Identify and control bleeding or ongoing fluid loss; escalate to surgical or interventional treatment when needed. [22]"
+          ],
+          [
+            "Distributive or septic",
+            "Balanced crystalloid resuscitation, norepinephrine when vasopressor support is needed, and serial perfusion reassessment. [19]",
+            "Prompt empiric antimicrobial therapy and source-directed management after obtaining cultures when feasible. [16]"
+          ],
+          [
+            "Cardiogenic",
+            "Support perfusion, avoid unmeasured fluid loading, and use norepinephrine in profound shock. [19]",
+            "Define myocardial, valvular, arrhythmic, or mechanical cause and pursue cause-specific cardiology or procedural treatment. [8,17]"
+          ],
+          [
+            "Obstructive",
+            "Temporize oxygenation and perfusion while rapidly confirming the obstruction. [15]",
+            "Urgent relief of the obstructive lesion or reperfusion when indicated. [15,17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Reassessment",
+      "heading": "Measure trajectory and escalate before refractory shock",
+      "intro": "The response over hours is more informative than a single initial measurement.",
+      "paragraphs": [
+        "Monitor serial perfusion variables: mental status, skin temperature and capillary refill, urine output, lactate, arterial pressure, acid-base status, and evidence of pulmonary or systemic congestion. [15,20] A falling lactate and improving peripheral perfusion support recovery, whereas worsening clinical perfusion, rising vasoactive requirements, or progressive organ dysfunction should trigger immediate reassessment of diagnosis, source control, hemorrhage control, cardiac function, and adequacy of procedural intervention. [6,19]",
+        "In cardiogenic shock, the first 24 hours are a particularly consequential treatment window. In a cohort of 3,268 patients, mortality was 44.6% among patients whose SCAI stage worsened within 24 hours, compared with 34.2% among those whose stage improved; survivors had lower lactate than nonsurvivors. [6] Escalating shock severity should prompt early multidisciplinary discussion regarding invasive monitoring, revascularization or other corrective procedures, and temporary mechanical circulatory support where appropriate. [8,17]"
+      ],
+      "bullets": [
+        "Document a working phenotype and its uncertainty; mixed shock is common and treatment should change as new evidence emerges. [19]",
+        "Reevaluate fluid responsiveness and congestion rather than continuing empiric fluids after initial resuscitation. [19]",
+        "In septic shock, reassess antimicrobials, source control, perfusion, and fluid balance repeatedly; persistent positive fluid accumulation after initial resuscitation is a concern. [2,16]",
+        "In cardiogenic shock, communicate SCAI stage and trajectory during transfers and escalation decisions to standardize severity assessment. [7,8]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "common-pitfalls",
+      "eyebrow": "Avoidable Errors",
+      "heading": "Prevent delays and misleading endpoints",
+      "intro": "Several common practices obscure ongoing hypoperfusion or delay definitive care.",
+      "paragraphs": [
+        "Do not wait for persistent hypotension before treating suspected shock. Peripheral hypoperfusion, impaired mentation, oliguria, metabolic acidosis, hyperlactatemia, and an elevated shock index may precede or accompany hypotension. [15,20] Conversely, restoration of an acceptable arterial pressure does not establish adequate tissue perfusion; continue to examine perfusion and organ-function trends. [15,20]",
+        "Do not permit diagnostic uncertainty to delay treatment of rapidly reversible causes. Resuscitation should not be delayed while evaluating undifferentiated shock, and focused ultrasound, ECG, cultures, and targeted laboratory testing should be used to accelerate—not sequentially postpone—definitive treatment. [15,16,19]"
+      ],
+      "bullets": [
+        "Do not use a single central venous pressure target as proof of fluid responsiveness or optimal fluid balance. [2]",
+        "Do not rely on one biomarker to diagnose sepsis, define pathogen class, and determine severity. [9]",
+        "Do not treat a static cardiogenic shock designation as sufficient; serial SCAI-stage assessment identifies important early deterioration. [6,7]",
+        "Do not continue fluid administration without reassessing for response and congestion, particularly in suspected cardiogenic shock. [19]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "What bedside findings are most useful for early recognition of shock?",
+      "answer": "Assess mentation, urine output, skin temperature and mottling, capillary refill, vital-sign trajectory, and shock index. A shock index of at least 0.7-0.8, prolonged capillary refill, or reduced peripheral temperature supports concern for shock. [15,20]"
+    },
+    {
+      "question": "Should hypotension be required before diagnosing shock?",
+      "answer": "No. Clinical evidence of tissue hypoperfusion, including altered mental status, oliguria, cool or mottled extremities, metabolic acidosis, and hyperlactatemia, may establish concern before sustained hypotension. [15]"
+    },
+    {
+      "question": "When should point-of-care ultrasound be used in undifferentiated shock?",
+      "answer": "Use it early when available to help characterize cardiac function, congestion, pericardial fluid, and fluid responsiveness. Integrate findings with the examination and serial response to treatment rather than relying on a single ultrasound measure. [19]"
+    },
+    {
+      "question": "Which vasopressor is preferred in septic and profound cardiogenic shock?",
+      "answer": "The cited review identifies norepinephrine as the preferred vasopressor in septic shock and profound cardiogenic shock. Specific dosing and titration are not provided in the supplied sources. [19]"
+    },
+    {
+      "question": "How should cardiogenic shock severity be tracked?",
+      "answer": "Classify cardiogenic shock using SCAI stage after diagnosis and reassess serially, especially during the first 24 hours. Worsening stage is associated with high mortality and should prompt urgent reassessment and escalation. [6,7,8]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

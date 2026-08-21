@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular Medicine",
+  "title": "Chest Pain",
+  "summary": "Evaluate acute chest pain with immediate ECG, high-sensitivity troponin, and structured risk pathways while actively excluding ACS, aortic syndromes, pulmonary embolism, and other lethal alternatives. Stable symptoms require contemporary pretest assessment and selective anatomic or functional testing rather than routine testing.",
+  "seoDescription": "Evidence-based evaluation of acute and stable chest pain using ECG, high-sensitivity troponin, risk pathways, coronary imaging, and ischemia testing.",
+  "clinicalQuestion": "How should clinicians rapidly exclude acute myocardial infarction and appropriately evaluate suspected stable ischemic chest pain?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute chest pain",
+    "acute coronary syndrome",
+    "high-sensitivity troponin",
+    "HEART Pathway",
+    "coronary CT angiography",
+    "stable chest pain",
+    "INOCA"
+  ],
+  "keyTakeaways": [
+    "Treat chest discomfort, pressure, tightness, dyspnea, fatigue, and pain in the shoulders, arms, neck, back, upper abdomen, or jaw as possible anginal presentations; avoid the term “atypical chest pain.” [11]",
+    "For suspected ACS, obtain and interpret a 12-lead ECG within 10 minutes; a normal or nondiagnostic tracing does not exclude ACS and warrants serial ECGs when symptoms persist or recur. [12][13]",
+    "Use assay-specific high-sensitivity cardiac troponin protocols with serial values and delta interpretation; troponin is myocardial-injury specific, not ACS specific. [12][13]",
+    "Patients meeting a validated low-risk pathway threshold for <1% 30-day death or MACE generally do not benefit from routine urgent stress testing or cardiac imaging. [11][12]",
+    "For stable chest pain without known CAD, defer urgent testing when pretest probability is low; for intermediate-high probability, select CCTA or stress imaging according to age, exercise capacity, baseline ECG, comorbidity, and local expertise. [11][12]"
+  ],
+  "sections": [
+    {
+      "id": "first-priority",
+      "eyebrow": "Immediate triage",
+      "heading": "Separate unstable from stable presentations before choosing a test",
+      "intro": "The first decision is disposition, not test modality.",
+      "paragraphs": [
+        "Acute chest pain is new discomfort or a change in pattern, intensity, or duration. Stable chest pain is chronic and consistently provoked by exertion or emotional stress. In any acute presentation, prioritize ACS, acute aortic syndrome, pulmonary embolism, tension pneumothorax, and esophageal rupture before pursuing outpatient-style ischemia testing. [12]",
+        "Features increasing ischemic concern include diffuse retrosternal pressure, tightness, heaviness, or squeezing that builds over minutes; exertional or emotional provocation; radiation to the arm, neck, jaw, back, or upper abdomen; and accompanying dyspnea, diaphoresis, nausea, palpitations, lightheadedness, or syncope. Brief pain lasting seconds, pain localized to a very small area, and pain that is positional or pleuritic lower—but do not eliminate—ischemic probability. Relief with nitroglycerin is not diagnostic. [11][12]"
+      ],
+      "bullets": [
+        "Activate emergency evaluation for ongoing ischemic symptoms, hemodynamic instability, acute heart failure, malignant arrhythmia, syncope with concerning features, or suspected ACS within 12 hours when the ECG is abnormal or unavailable. [23]",
+        "Consider acute aortic syndrome with abrupt severe chest or back pain, especially with pulse differential, aortic regurgitation, connective-tissue disease, known aortic disease, or hypertension; CTA is the preferred diagnostic study in stable patients. [12]",
+        "Consider pulmonary embolism with acute dyspnea and pleuritic pain; use clinical pretest assessment to select D-dimer testing or PE-protocol CTA. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial clinical findings that change the urgent diagnostic pathway. [11][12]",
+        "columns": [
+          "Finding",
+          "Immediate implication",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Persistent ischemic discomfort with ST-elevation or suspected STEMI equivalent",
+            "Probable acute coronary occlusion",
+            "Activate STEMI reperfusion pathway; do not delay reperfusion for troponin results. [13]"
+          ],
+          [
+            "New ischemic ST depression, dynamic T-wave change, or elevated/rising troponin",
+            "High-risk suspected NSTE-ACS or myocardial injury",
+            "Hospital-based ACS evaluation and risk-directed invasive management. [12][13]"
+          ],
+          [
+            "Abrupt tearing chest/back pain with dissection features",
+            "Possible acute aortic syndrome",
+            "Urgent aortic CTA if stable; use echocardiography to assess complications when relevant. [12]"
+          ],
+          [
+            "Pleuritic pain with dyspnea or venous thromboembolism risk",
+            "Possible pulmonary embolism",
+            "Apply pretest-risk assessment; use D-dimer selectively or PE-protocol CTA. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-acs-evaluation",
+      "eyebrow": "Acute chest pain",
+      "heading": "Use ECG, high-sensitivity troponin, and a validated clinical decision pathway",
+      "intro": "No single symptom, ECG, or biomarker result safely rules out ACS in isolation.",
+      "paragraphs": [
+        "Obtain a 12-lead ECG and interpret it within 10 minutes of presentation. Compare with prior tracings when available. A normal initial ECG is insufficient to exclude ACS; repeat ECGs for persistent or recurrent symptoms, clinical deterioration, or evolving concern. Obtain posterior leads when isolated ST depression in V1 through V3 raises concern for posterior infarction, and right-sided leads when inferior STEMI suggests right ventricular involvement. [12][13]",
+        "High-sensitivity troponin I or T is preferred for identifying or excluding myocardial injury. Myocardial injury is indicated by a value above the assay-specific 99th-percentile upper reference limit; MI requires a rise and/or fall in troponin with clinical evidence of ischemia. Interpret values using assay-specific thresholds, serial change criteria, symptom onset, ECG findings, and competing causes of injury. Elevated troponin may occur with noncoronary cardiac and noncardiac illness and should not automatically be labeled ACS. [11][12][13]",
+        "Use an institutional clinical decision pathway rather than unstructured judgment alone. With hs-cTn, validated 0/1-hour, 0/2-hour, or other assay-specific serial strategies can identify patients at very low short-term risk. A single hs-cTn strategy is limited to patients with symptoms beginning at least 3 hours before testing and an assay result below the relevant low threshold. Conventional troponin assays require longer serial sampling, generally 3 to 6 hours after ED arrival. [11][12][13]"
+      ],
+      "bullets": [
+        "A low-risk designation corresponds to <1% 30-day risk of death or MACE. Examples include HEART Pathway score ≤3 with initial and serial troponins below the assay 99th percentile, or hs-cTn values meeting low-value and low-delta criteria. [11][12]",
+        "Low-risk patients do not routinely require immediate stress testing, CCTA, or admission solely for suspected CAD; arrange follow-up and address risk factors and alternate diagnoses. [11][12]",
+        "Intermediate-risk patients without acute myocardial injury generally need observation-unit or inpatient evaluation and selective CCTA or stress imaging. [11][12]",
+        "High-risk features include new ischemic ECG changes, troponin-confirmed acute myocardial injury, new LVEF <40%, moderate-severe inducible ischemia, hemodynamic instability, or a high-risk clinical decision pathway score; invasive coronary angiography is indicated when ACS is confirmed or high-risk status is established. [12][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical interpretation of acute chest pain testing. [11][12][13]",
+        "columns": [
+          "Test or pathway component",
+          "Interpretive point",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Initial 12-lead ECG",
+            "ST-elevation requires immediate STEMI-directed management; absence of ST-elevation does not exclude ACS. [12][13]",
+            "Treat STEMI immediately; obtain serial ECGs when concern persists. [12][13]"
+          ],
+          [
+            "hs-cTn above 99th percentile",
+            "Indicates myocardial injury, not necessarily type 1 MI. [12][13]",
+            "Assess rise/fall, ischemic evidence, and alternative causes such as myocarditis, aortic dissection, or PE. [12][23]"
+          ],
+          [
+            "Serial hs-cTn low value and low delta",
+            "Supports low short-term risk when used within an assay-specific pathway. [11][12]",
+            "Discharge may be appropriate if clinical assessment and ECG are concordantly low risk. [11][12]"
+          ],
+          [
+            "Prior normal CCTA without plaque or stenosis",
+            "Guideline warranty period is 2 years if symptoms are unchanged. [11][12]",
+            "Further acute CAD testing is often low yield if there is no biomarker injury or new symptom pattern. [11][12]"
+          ],
+          [
+            "Prior adequate normal stress test",
+            "Guideline warranty period is 1 year if symptoms are unchanged. [11][12]",
+            "Reassess if symptom frequency, severity, or clinical context has changed. [11][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-management",
+      "eyebrow": "Suspected ACS",
+      "heading": "Begin time-sensitive treatment without obscuring the diagnosis",
+      "intro": "Management should proceed in parallel with diagnostic clarification.",
+      "paragraphs": [
+        "For suspected ACS, EMS transport is preferred because prehospital monitoring, ECG acquisition, and treatment can reduce delays and support resuscitation if deterioration occurs. [11][13] Aspirin should be given promptly unless contraindicated; the 2025 ACC/AHA ACS guideline recommends an oral loading dose of 162 to 325 mg followed by 75 to 100 mg daily. [13]",
+        "Do not administer supplemental oxygen routinely when oxygen saturation is at least 90%; provide oxygen for hypoxemia, with a target saturation of at least 90%. [13] Sublingual nitroglycerin may be used in hemodynamically stable patients, but avoid it with suspected right ventricular infarction, systolic blood pressure below 90 mm Hg, or recent phosphodiesterase-5 inhibitor exposure. [13]",
+        "Patients with confirmed ACS require syndrome-specific antiplatelet therapy, parenteral anticoagulation, reperfusion or invasive management, and secondary prevention. The 2025 ACC/AHA guideline recommends ticagrelor or prasugrel over clopidogrel for ACS patients undergoing PCI, while recognizing bleeding-risk and contraindication tradeoffs. [13]"
+      ],
+      "bullets": [
+        "Avoid using symptom relief after nitroglycerin to establish or exclude myocardial ischemia. [11][12]",
+        "Avoid nonaspirin NSAIDs for suspected or established ACS when possible because of increased cardiovascular risk. [13]",
+        "For patients with ACS at risk for gastrointestinal bleeding who receive DAPT or oral anticoagulation, use a proton pump inhibitor. [13]",
+        "In confirmed ACS, high-intensity statin therapy is recommended; reassess a fasting lipid panel 4 to 8 weeks after starting or changing lipid-lowering therapy. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Selected source-supported initial medication details for suspected or confirmed ACS. [13]",
+        "columns": [
+          "Therapy",
+          "Source-supported regimen",
+          "Key restrictions"
+        ],
+        "rows": [
+          [
+            "Aspirin",
+            "162-325 mg orally as a loading dose; maintenance 75-100 mg orally daily. [13]",
+            "Avoid with clear allergy or absolute contraindication. [13]"
+          ],
+          [
+            "Nitroglycerin",
+            "Sublingual 0.3 or 0.4 mg every 5 minutes as needed for up to 3 doses; IV infusion begins at 10 micrograms/min and is titrated to relief and hemodynamics when needed. [13]",
+            "Avoid with SBP <90 mm Hg, suspected RV infarction, or recent PDE5 inhibitor exposure. [13]"
+          ],
+          [
+            "Morphine",
+            "IV 2-4 mg; may repeat every 5-15 minutes if needed. [13]",
+            "Reserve for pain resistant to maximally tolerated anti-ischemic therapy; may delay oral P2Y12 inhibitor effect. [13]"
+          ],
+          [
+            "Oxygen",
+            "Give for peripheral oxygen saturation <90%; routine oxygen offers no benefit in normoxemic suspected MI. [13]",
+            "Avoid liberal oxygen in normoxemia. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stable-chest-pain",
+      "eyebrow": "Stable symptoms",
+      "heading": "Estimate pretest probability before ordering noninvasive testing",
+      "intro": "Test selection should answer a specific anatomic or ischemic question.",
+      "paragraphs": [
+        "For stable symptoms without known CAD, use a contemporary pretest estimate based on age, sex, and symptom characteristics; older Diamond-Forrester approaches overestimate obstructive CAD in contemporary populations. Noninvasive testing is most beneficial when pretest probability exceeds 15%; testing may be considered at lower probability when clinical judgment supports it. [11][12]",
+        "Stable anginal features are constricting chest, neck, shoulder, jaw, or arm discomfort precipitated by exertion and relieved by rest or nitroglycerin. Two of three features represent atypical angina and one or none represent nonanginal pain, but symptom labels should not override risk factors, evolving symptoms, or clinician concern. [5][23]",
+        "For low-risk stable chest pain, defer urgent testing when clinical probability is low. Coronary artery calcium testing can help identify a low-risk group when CAC is zero, and exercise ECG without imaging is a reasonable option when the patient can exercise and the resting ECG is interpretable. [11][12]"
+      ],
+      "bullets": [
+        "CCTA is generally preferable in patients younger than 65 years and those not already receiving optimal preventive therapy because it defines plaque burden and stenosis. [11][12]",
+        "Stress imaging is often favored in patients 65 years or older, those with greater likelihood of ischemia, known extensive plaque, uninterpretable resting ECG, or inability to exercise adequately. [11][12]",
+        "CCTA is limited by iodinated contrast allergy, renal impairment per local protocol, inability to cooperate with breath-holding, elevated or irregular heart rate, and contraindications to heart-rate control or nitroglycerin. [11][12]",
+        "Stress imaging options include stress echocardiography, PET or SPECT myocardial perfusion imaging, and stress CMR; PET provides better diagnostic and prognostic performance than SPECT when available. [11][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "When to escalate after initial testing",
+          "paragraphs": [
+            "For an intermediate coronary stenosis on CCTA, FFR-CT can provide lesion-specific ischemia assessment, particularly for 40% to 90% proximal or mid-coronary stenoses. Patients with high-risk CAD anatomy, including left main stenosis of at least 50% or anatomically significant three-vessel disease, require invasive evaluation and guideline-directed management. [11][12]",
+            "If stable symptoms persist despite nonobstructive coronary findings or a negative anatomic test, do not dismiss ischemia. Consider INOCA, especially in women and patients with hypertension or diabetes. PET myocardial blood-flow reserve, stress CMR blood-flow reserve, stress echocardiographic coronary flow velocity reserve, or invasive coronary function testing can identify microvascular dysfunction or vasomotor abnormalities. [11][12]"
+          ],
+          "bullets": [
+            "A CCTA-first strategy in stable chest pain referred for invasive angiography produced similar 3.5-year MACE compared with direct invasive angiography but fewer major procedure-related complications. [2]",
+            "In the DISCHARGE trial, major procedure-related complications occurred in 0.5% with initial CT versus 1.9% with initial invasive angiography. [2]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Selection of testing in stable chest pain without known CAD. [11][12]",
+        "columns": [
+          "Clinical setting",
+          "Preferred strategy",
+          "Important limitation or next step"
+        ],
+        "rows": [
+          [
+            "Low pretest probability",
+            "Defer urgent testing; CAC scoring or exercise ECG may be considered in selected patients. [11][12]",
+            "Continue evaluation for noncoronary diagnoses and manage cardiovascular risk. [11][12]"
+          ],
+          [
+            "Intermediate-high probability, younger patient, plaque definition needed",
+            "CCTA. [11][12]",
+            "Use FFR-CT or stress imaging for intermediate stenoses when functional significance is uncertain. [11][12]"
+          ],
+          [
+            "Intermediate-high probability, older patient or higher ischemia likelihood",
+            "Stress imaging with PET, SPECT, stress echocardiography, or stress CMR. [11][12]",
+            "Choose modality based on exercise capacity, baseline ECG, renal function, body habitus, and local expertise. [11][12]"
+          ],
+          [
+            "Persistent symptoms with nonobstructive CAD",
+            "Evaluate for INOCA with flow-reserve assessment or invasive coronary function testing when appropriate. [11][12]",
+            "Anatomic testing alone cannot exclude microvascular dysfunction or vasospasm. [11][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "known-cad-and-ischemia",
+      "eyebrow": "Known coronary disease",
+      "heading": "Optimize medical therapy and use testing to direct revascularization decisions",
+      "intro": "Symptoms, ischemic burden, anatomy, and patient goals determine escalation.",
+      "paragraphs": [
+        "For stable chest pain with known CAD, first assess whether preventive and anti-ischemic therapy can be intensified. In patients with frequent symptoms despite guideline-directed therapy, severe stress-induced ischemia, high-risk anatomy, or new high-risk clinical findings, invasive angiography may be appropriate if revascularization is consistent with patient goals. [11][12]",
+        "Invasive physiologic assessment should guide revascularization of intermediate lesions. FFR of 0.80 or less or instantaneous wave-free ratio of 0.89 or less identifies lesion-specific ischemia used to guide PCI. [5][11][12] In stable CAD, an initial invasive strategy does not reduce the composite primary MACE endpoint compared with a conservative strategy in the ISCHEMIA trial, but patients with frequent angina experienced more prompt and durable symptom improvement with invasive management. [11][12]"
+      ],
+      "bullets": [
+        "For prior CABG with stable symptoms, stress imaging helps localize ischemia; CCTA is useful for graft patency but may be less reliable for native-vessel stenosis. [11][12]",
+        "For known nonobstructive CAD, CCTA can identify progression, new obstructive stenosis, and high-risk plaque features, while stress imaging evaluates ischemic burden. [11][12]",
+        "Nonobstructive CAD is clinically meaningful: in PROMISE, it was associated with approximately threefold higher MACE risk over about two years. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value follow-up decisions after coronary testing. [11][12][13]",
+        "columns": [
+          "Result",
+          "Clinical interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "No plaque or stenosis on CCTA",
+            "Low near-term obstructive CAD risk, but does not explain all noncoronary or microvascular symptoms. [11][12]",
+            "Evaluate alternate causes; reconsider INOCA only if symptoms and objective ischemic concern persist. [11][12]"
+          ],
+          [
+            "Nonobstructive plaque",
+            "Established CAD with preventive-treatment implications. [11][12]",
+            "Intensify prevention and assess ischemia if symptoms persist. [11][12]"
+          ],
+          [
+            "Intermediate stenosis",
+            "Anatomic severity alone may not establish ischemic significance. [11][12]",
+            "Use FFR-CT, stress imaging, or invasive physiology based on clinical context. [11][12]"
+          ],
+          [
+            "High-risk anatomy or severe ischemia",
+            "Potential prognostic and symptom-management implications. [11][12]",
+            "Refer for invasive angiography and Heart Team or revascularization assessment as appropriate. [11][12]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can a normal ECG exclude acute coronary syndrome?",
+      "answer": "No. A normal or unchanged initial ECG does not exclude ACS. Repeat ECGs are indicated when symptoms persist, recur, or clinical concern remains, and serial hs-cTn testing should be interpreted in an assay-specific pathway. [11][12][13]"
+    },
+    {
+      "question": "When can a single high-sensitivity troponin rule out MI?",
+      "answer": "A single hs-cTn strategy is limited to patients with symptom onset at least 3 hours before testing and a result below the applicable assay-specific low threshold. Otherwise, use serial testing and delta interpretation. [11][12][13]"
+    },
+    {
+      "question": "Does relief with nitroglycerin prove ischemic chest pain?",
+      "answer": "No. Nitroglycerin response is not diagnostic of myocardial ischemia and should not be used to distinguish cardiac from esophageal or other chest pain. [11][12][23]"
+    },
+    {
+      "question": "Which stable chest pain patients need CCTA versus stress imaging?",
+      "answer": "For intermediate-high pretest probability, CCTA is generally favored in younger patients and when plaque characterization changes prevention decisions; stress imaging is often favored in older patients or those with higher ischemia likelihood, extensive calcification, uninterpretable ECG, or limited CCTA feasibility. [11][12]"
+    },
+    {
+      "question": "What should be considered after angina symptoms with nonobstructive coronary arteries?",
+      "answer": "Consider INOCA, including microvascular dysfunction and vasomotor disorders. PET or CMR flow-reserve assessment, stress echocardiographic coronary flow velocity reserve, or invasive coronary function testing may establish an actionable endotype. [11][12]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

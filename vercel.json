@@ -1,5 +1,20 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/articles/atrial-fibrillation-in-adults-diagnosis-stroke-prevention-rate-or-rhythm-control-and-ablation",
+      "destination": "/articles/atrial-fibrillation",
+      "permanent": true
+    },
+    {
+      "source": "/article/:slug",
+      "destination": "/articles/:slug",
+      "permanent": true
+    }
+  ],
   "rewrites": [
+    { "source": "/articles", "destination": "/articles/index.html" },
+    { "source": "/articles/:slug", "destination": "/articles/:slug/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

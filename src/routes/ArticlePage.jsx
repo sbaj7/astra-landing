@@ -1,28 +1,15 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import RemoteArticleView from '../components/RemoteArticleView.jsx';
-import { useTheme } from '../components/Themes+Styles.jsx';
+
+const articleAliases = {
+  'atrial-fibrillation-in-adults-diagnosis-stroke-prevention-rate-or-rhythm-control-and-ablation': 'atrial-fibrillation'
+};
 
 const ArticlePage = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
-  const { colors } = useTheme();
-
-  return (
-    <div
-      style={{
-        height: '100dvh',
-        overflowY: 'auto',
-        WebkitOverflowScrolling: 'touch'
-      }}
-    >
-      <RemoteArticleView
-        slug={slug}
-        theme={colors}
-        onBack={() => navigate('/')}
-      />
-    </div>
-  );
+  if (articleAliases[slug]) return <Navigate to={`/articles/${articleAliases[slug]}`} replace />;
+  return <RemoteArticleView slug={slug} />;
 };
 
 export default ArticlePage;

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiac Electrophysiology",
+  "title": "Atrial Fibrillation in Adults: Diagnosis, Stroke Prevention, Rate or Rhythm Control, and Catheter Ablation",
+  "summary": "Contemporary atrial fibrillation management integrates electrocardiographic diagnosis, dynamic thromboembolic-risk assessment, direct oral anticoagulation when indicated, risk-factor modification, and individualized rate or early rhythm control. Catheter ablation is particularly important for symptomatic AF and selected patients with heart failure, but does not replace risk-based anticoagulation.",
+  "clinicalQuestion": "How should clinicians diagnose and comprehensively manage atrial fibrillation in adults, including stroke prevention, rate versus rhythm control, and the role of catheter ablation?",
+  "specialty": "Cardiology and Cardiac Electrophysiology",
+  "audience": "Clinicians and medical trainees",
+  "tags": [
+    "atrial fibrillation diagnosis",
+    "CHA2DS2-VASc anticoagulation",
+    "direct oral anticoagulants",
+    "rate control",
+    "early rhythm control",
+    "catheter ablation",
+    "atrial fibrillation heart failure"
+  ],
+  "keyTakeaways": [
+    "**AF diagnosis requires ECG documentation**, followed by assessment of AF pattern, symptoms, ventricular rate, structural heart disease, reversible precipitants, and stroke/bleeding risk; management should be reassessed longitudinally as substrate and comorbidity evolve [18], [34].",
+    "**Stroke prevention is determined by thromboembolic risk rather than AF symptom burden or apparent rhythm success**; DOACs are generally preferred over warfarin for eligible patients, and anticoagulation remains foundational even when rhythm-control therapy is selected [1], [13].",
+    "**Early rhythm control within 12 months of AF diagnosis improves major cardiovascular outcomes** in appropriately selected patients with cardiovascular risk factors, compared with usual care in EAST-AFNET 4 [11].",
+    "**Catheter ablation improves rhythm outcomes and is especially consequential in selected HFrEF populations**; in CASTLE-AF, ablation reduced death or heart-failure hospitalization versus medical therapy, but post-ablation anticoagulation should remain risk-based [14], [18]."
+  ],
+  "sections": [
+    {
+      "id": "diagnosis-and-initial-assessment",
+      "eyebrow": "Clinical Recognition",
+      "heading": "How should atrial fibrillation be diagnosed and initially evaluated?",
+      "intro": "AF is a sustained supraventricular tachyarrhythmia characterized clinically by an irregular ventricular rhythm and absent organized atrial activity on ECG.",
+      "paragraphs": [
+        "The immediate diagnostic objective is to **document AF on a rhythm tracing** and determine whether the presentation is hemodynamically unstable, associated with acute heart failure, ischemia, syncope, or another time-sensitive condition. AF may be symptomatic with palpitations, exertional intolerance, dyspnea, fatigue, chest discomfort, or presyncope, but a substantial proportion of patients are asymptomatic and are identified incidentally or after embolic events [13], [38].",
+        "Initial evaluation should establish the temporal pattern—paroxysmal, persistent, long-standing persistent, or permanent AF—while recognizing that AF is progressive and that management cannot rest on a single snapshot of rhythm burden. The 2024 ESC framework emphasizes management of **comorbidities and risk factors**, avoidance of stroke and thromboembolism, symptom-directed rate or rhythm control, and individualized reassessment over time [34]."
+      ],
+      "bullets": [
+        "**Obtain a 12-lead ECG** to establish the rhythm and evaluate QRS duration, pre-excitation, ischemic changes, and QT interval before antiarrhythmic therapy.",
+        "**Assess ventricular function and valvular disease**, generally with transthoracic echocardiography, because left ventricular ejection fraction, atrial size, and structural disease determine drug and ablation candidacy [13], [18].",
+        "**Identify modifiable contributors** including hypertension, obesity, alcohol exposure, sleep-disordered breathing, diabetes, chronic kidney disease, coronary disease, and heart failure; hypertension alone accounts for approximately one fifth of AF cases at the population level [38].",
+        "**Treat instability first**: hypotension, ongoing ischemia, pulmonary edema, or shock attributable to AF warrants urgent synchronized cardioversion rather than delayed pharmacologic strategy."
+      ],
+      "subsections": [
+        {
+          "heading": "What must be distinguished at presentation?",
+          "paragraphs": [
+            "A rapid irregular rhythm should prompt differentiation of AF from atrial flutter with variable conduction, multifocal atrial tachycardia, frequent atrial ectopy, and other supraventricular tachyarrhythmias. If pre-excitation is suspected, atrioventricular nodal blocking drugs can be hazardous because preferential conduction through an accessory pathway may precipitate extreme ventricular rates or ventricular fibrillation; urgent electrophysiology-informed management is appropriate."
+          ],
+          "bullets": [
+            "**Acute precipitants** include infection, surgery, pulmonary embolism, thyroid dysfunction, alcohol exposure, acute coronary syndromes, pulmonary disease exacerbation, and decompensated heart failure.",
+            "**A reversible trigger does not eliminate future AF or stroke risk**; longitudinal reassessment remains necessary after apparent resolution [34]."
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Practical initial assessment domains in newly documented AF",
+        "columns": [
+          "Domain",
+          "Clinical purpose",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "**Hemodynamic status**",
+            "Identify shock, ischemia, pulmonary edema, syncope, or severe hypotension.",
+            "Urgent synchronized cardioversion when instability is attributable to AF."
+          ],
+          [
+            "**Rhythm characterization**",
+            "Confirm AF and define paroxysmal versus sustained AF pattern.",
+            "Informs monitoring, cardioversion planning, antiarrhythmic selection, and ablation discussions."
+          ],
+          [
+            "**Cardiac substrate**",
+            "Evaluate LV function, atrial dimensions, valve disease, and coronary disease.",
+            "Determines safety of antiarrhythmic drugs and prognostic value of ablation [13], [18]."
+          ],
+          [
+            "**Thromboembolic and bleeding risk**",
+            "Estimate stroke risk and identify modifiable bleeding hazards.",
+            "Guides oral anticoagulation; bleeding risk should prompt mitigation rather than reflexive withholding of anticoagulation [1], [13]."
+          ],
+          [
+            "**Comorbidity burden**",
+            "Assess hypertension, obesity, diabetes, CKD, sleep apnea, alcohol exposure, and heart failure.",
+            "Risk-factor modification is a central component of care for every AF phenotype [34]."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stroke-prevention-and-anticoagulation",
+      "eyebrow": "Thromboembolism",
+      "heading": "How should stroke risk and anticoagulation be managed?",
+      "intro": "Stroke prevention is the most consequential long-term intervention in AF because AF is associated with an approximately fivefold higher ischemic-stroke risk and contributes to roughly one in seven strokes in the United States [38].",
+      "paragraphs": [
+        "Use a validated clinical thromboembolic-risk framework, commonly **CHA2DS2-VASc**, to guide oral anticoagulation decisions. Risk assessment should be repeated when age, heart failure, hypertension, diabetes, vascular disease, kidney function, or prior thromboembolism changes; the ESC guideline specifically frames AF care as a dynamic process requiring individualized reevaluation [34].",
+        "For patients eligible for a DOAC, contemporary evidence syntheses and guidelines generally favor a **direct oral anticoagulant over warfarin** for stroke prevention, while emphasizing correct dose selection and renal-function surveillance [1]. Anticoagulation is not a treatment for symptoms and should not be stopped merely because sinus rhythm is restored after cardioversion, antiarrhythmic therapy, or ablation; thromboembolic prophylaxis follows the underlying risk profile rather than perceived procedural success [13], [18]."
+      ],
+      "bullets": [
+        "**Do not use aspirin as a substitute for therapeutic anticoagulation** when oral anticoagulation is indicated; its stroke-prevention efficacy is inadequate relative to anticoagulation.",
+        "**Dose DOACs according to labeled renal function, age, body-weight, and interacting-drug criteria**; inappropriate dose reduction may compromise protection from embolic events [1].",
+        "**Identify and correct bleeding contributors**: uncontrolled hypertension, concomitant antiplatelet or NSAID exposure when avoidable, excess alcohol use, anemia, renal dysfunction, and poor medication adherence.",
+        "**Cardioversion planning requires thromboembolic protection** according to AF duration, anticoagulation history, and imaging strategy; restoration of sinus rhythm does not obviate subsequent risk-based anticoagulation."
+      ],
+      "subsections": [
+        {
+          "heading": "When should anticoagulation remain in place after ablation?",
+          "paragraphs": [
+            "Catheter ablation reduces AF burden and improves symptom control, but recurrent AF may be asymptomatic and incomplete rhythm surveillance can underestimate recurrence. Accordingly, guideline-based anticoagulation decisions after ablation should continue to reflect baseline thromboembolic risk rather than absence of detected AF alone [18]."
+          ],
+          "bullets": [
+            "**Low observed AF burden is not equivalent to low embolic risk.**",
+            "**Ablation should not be offered primarily to permit anticoagulation discontinuation** in patients whose clinical risk profile otherwise supports ongoing therapy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rate-control-strategy",
+      "eyebrow": "Ventricular Rate",
+      "heading": "When is rate control an appropriate primary strategy?",
+      "intro": "Rate control remains a valid initial approach for many patients, particularly when symptoms are modest, AF is longstanding, rhythm-control durability is unlikely, or patient preference favors avoidance of antiarrhythmic therapy or procedures.",
+      "paragraphs": [
+        "Historical randomized comparisons, including AFFIRM, did not demonstrate superiority of drug-based rhythm control over rate control for mortality in older populations with established AF [12], [24]. These trials shaped the traditional approach of prioritizing adequate ventricular-rate control and anticoagulation, with rhythm control principally reserved for persistent symptoms or tachycardia-mediated cardiomyopathy.",
+        "Rate-control therapy usually begins with a **beta-blocker** or a nondihydropyridine calcium-channel blocker when left ventricular systolic function permits; digoxin may be useful in selected sedentary patients or as adjunctive therapy, although concerns regarding adverse associations limit indiscriminate use in older adults [15]. Targets should be individualized according to symptoms, resting and exertional ventricular rate, ventricular function, and development of tachycardia-mediated cardiomyopathy."
+      ],
+      "bullets": [
+        "**Beta-blockers** are useful when concomitant coronary disease, hypertension, adrenergic AF triggers, or HFrEF are present.",
+        "**Diltiazem or verapamil** can be effective for rate control when systolic function is preserved, but should generally be avoided in clinically significant HFrEF.",
+        "**Digoxin** may support resting rate control, especially when hypotension limits other agents; it is less effective for exertional tachycardia and requires kidney-function and toxicity surveillance.",
+        "**Atrioventricular junction ablation with pacing** is a later option for refractory rate control when medications and rhythm strategies fail or are unsuitable [15]."
+      ],
+      "subsections": [
+        {
+          "heading": "Which patients should not be managed with rate control alone?",
+          "paragraphs": [
+            "Rate control alone is often inadequate in patients with substantial AF-related symptoms, recurrent hospitalizations, difficult-to-control ventricular rates, or suspected AF-mediated cardiomyopathy. NICE guidance identifies new-onset AF, AF with a reversible cause, heart failure thought primarily caused by AF, and atrial flutter suitable for ablation as scenarios in which rhythm control may be more appropriate than a default rate-control strategy [32]."
+          ],
+          "bullets": [
+            "**Persistent exercise intolerance despite apparently adequate resting rate control** should prompt rhythm-control reassessment.",
+            "**New or worsening LV dysfunction with rapid AF** should raise concern for arrhythmia-induced cardiomyopathy and favor an earlier rhythm-control strategy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rhythm-control-and-cardioversion",
+      "eyebrow": "Sinus Rhythm",
+      "heading": "Who benefits from early rhythm control and how should it be delivered?",
+      "intro": "Rhythm control includes electrical cardioversion, antiarrhythmic drugs, catheter ablation, or a sequenced combination designed to restore and maintain sinus rhythm.",
+      "paragraphs": [
+        "The strongest contemporary shift in management derives from **EAST-AFNET 4**, which enrolled patients with AF diagnosed within 12 months and cardiovascular risk factors. Early rhythm control—using antiarrhythmic drugs, catheter ablation, or both—reduced the composite of cardiovascular death, stroke, and hospitalization for worsening heart failure or acute coronary syndrome compared with usual care; the benefit was observed alongside guideline-directed anticoagulation and management of comorbid disease [11].",
+        "> **Early rhythm control should be considered as a prognostic strategy in appropriately selected patients with recently diagnosed AF and cardiovascular risk factors—not solely as symptom treatment.** [11]",
+        "The applicability of this strategy should not be overgeneralized to every patient with longstanding, minimally symptomatic AF. Treatment selection requires consideration of AF duration, left-atrial remodeling, symptoms, coronary disease, LV function, kidney disease, likelihood of durable sinus rhythm, antiarrhythmic contraindications, procedural risk, and patient priorities [11], [18]."
+      ],
+      "bullets": [
+        "**Electrical cardioversion** is appropriate for hemodynamic instability and can be used electively for symptomatic persistent AF after appropriate thromboembolic-risk management.",
+        "**Antiarrhythmic drug selection is substrate-dependent**: structural heart disease, coronary disease, LV dysfunction, renal function, QT interval, and concomitant drugs determine safety.",
+        "**Amiodarone is highly effective but toxicity-limited**, with extracardiac adverse effects making it an especially cautious long-term choice when alternatives exist.",
+        "**Rhythm control does not replace anticoagulation**; continued stroke prophylaxis remains based on risk assessment [13], [18]."
+      ],
+      "subsections": [
+        {
+          "heading": "How should comorbidity management be integrated with rhythm control?",
+          "paragraphs": [
+            "AF control is less durable when the atrial substrate remains unaddressed. The 2024 ESC guideline places comorbidity and risk-factor management first in its CARE framework, preceding stroke prevention and symptom-directed rate or rhythm interventions [34]."
+          ],
+          "bullets": [
+            "**Optimize blood pressure, weight, diabetes control, heart failure therapy, alcohol exposure, and sleep-disordered breathing assessment.**",
+            "**Treating the substrate should accompany—not delay—anticoagulation or needed rhythm intervention.**"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catheter-ablation",
+      "eyebrow": "Interventional Rhythm Control",
+      "heading": "When should catheter ablation be considered?",
+      "intro": "Catheter ablation, centered on pulmonary-vein isolation for most AF phenotypes, is an established rhythm-control therapy for symptomatic AF and an increasingly early option in selected patients.",
+      "paragraphs": [
+        "Compared with antiarrhythmic-drug strategies, catheter ablation provides superior suppression of recurrent atrial arrhythmia in randomized-trial syntheses, although the magnitude of benefit and procedural burden vary by AF phenotype and substrate [5]. It is particularly reasonable for symptomatic paroxysmal or persistent AF when antiarrhythmic drugs are ineffective, contraindicated, or not desired, and may be selected earlier after shared decision-making in patients who value rhythm durability and symptom improvement [18], [35].",
+        "The clearest outcome benefit is in carefully selected patients with AF and HFrEF. In **CASTLE-AF**, catheter ablation reduced the composite of all-cause death or hospitalization for worsening heart failure compared with medical therapy in patients with symptomatic AF, LVEF 35% or less, and implanted defibrillator-based monitoring [14]. Smaller randomized evidence also found improved peak oxygen consumption, quality of life, neurohormonal status, and sinus-rhythm maintenance with ablation versus rate control in persistent AF with heart failure [22]."
+      ],
+      "bullets": [
+        "**Consider ablation early** for symptomatic AF when durable rhythm control is desired, particularly with paroxysmal AF and favorable atrial substrate [5], [18].",
+        "**Prioritize electrophysiology referral** for suspected AF-mediated cardiomyopathy, recurrent AF-related heart-failure admissions, or drug-refractory symptoms.",
+        "**Set realistic expectations**: repeat procedures and adjunctive antiarrhythmic drugs may be needed, particularly in persistent AF, enlarged atria, obesity, untreated sleep apnea, or advanced structural heart disease.",
+        "**Discuss procedural harms** including vascular complications, pericardial effusion/tamponade, stroke, pulmonary-vein stenosis, phrenic nerve injury, and rare atrioesophageal fistula."
+      ],
+      "subsections": [
+        {
+          "heading": "What are the important limitations of ablation evidence?",
+          "paragraphs": [
+            "Ablation improves rhythm outcomes most consistently, whereas effects on mortality, stroke, and heart-failure hospitalization are population-specific. A 2024 meta-analysis found that greater ablation use within rhythm-control arms correlated with lower cardiovascular death, all-cause death, and heart-failure hospitalization, but not with reduced stroke risk; this reinforces that anticoagulation, rather than rhythm strategy alone, remains the principal proven mechanism of stroke prevention [20]."
+          ],
+          "bullets": [
+            "**Do not extrapolate HFrEF trial benefits to all AF populations**, particularly frail older adults and patients with advanced atrial myopathy, who remain underrepresented in trials [15], [25].",
+            "**Success should be defined by meaningful patient outcomes**—symptoms, functional capacity, AF burden, hospitalizations, and LV recovery—not simply a single post-procedure ECG."
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Selecting rate control, rhythm control, or catheter ablation",
+        "columns": [
+          "Clinical context",
+          "Preferred strategic emphasis",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "**Minimally symptomatic established AF with acceptable ventricular rate**",
+            "Rate control plus risk-based anticoagulation.",
+            "Historical trials found no mortality advantage for conventional drug-based rhythm control in many established-AF populations [12], [24]."
+          ],
+          [
+            "**AF diagnosed within 12 months plus cardiovascular risk factors**",
+            "Discuss early rhythm control in addition to anticoagulation and risk-factor treatment.",
+            "EAST-AFNET 4 demonstrated fewer major cardiovascular events with early rhythm control [11]."
+          ],
+          [
+            "**Symptomatic AF despite rate-control therapy or antiarrhythmic intolerance**",
+            "Rhythm control; consider catheter ablation.",
+            "Ablation improves arrhythmia recurrence outcomes compared with antiarrhythmic-drug strategies [5]."
+          ],
+          [
+            "**AF with HFrEF or suspected AF-mediated cardiomyopathy**",
+            "Early rhythm-control evaluation, often including ablation.",
+            "CASTLE-AF demonstrated reduced death or heart-failure hospitalization in selected HFrEF patients [14]."
+          ],
+          [
+            "**Post-ablation sinus rhythm**",
+            "Continue anticoagulation according to thromboembolic risk.",
+            "Ablation does not independently establish low embolic risk; risk-based anticoagulation remains recommended [13], [18]."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-care",
+      "eyebrow": "Follow-up",
+      "heading": "What does high-quality longitudinal AF care require?",
+      "intro": "AF care should be organized as an iterative process rather than a one-time choice between rate and rhythm control.",
+      "paragraphs": [
+        "Follow-up should reassess symptoms, functional capacity, heart-failure status, rhythm and rate adequacy, medication adherence, renal function, bleeding events, and evolving thromboembolic risk. NICE recommends a personalized documented care package encompassing stroke awareness, stroke prevention, rate control, symptom assessment for rhythm control, education, and psychological support where needed [32].",
+        "The most effective AF strategy frequently changes over time: patients initially managed with rate control may later develop symptoms, ventricular dysfunction, difficult rate control, or recurrent hospitalizations that justify rhythm-control escalation. Conversely, rhythm-control therapy should be de-escalated when treatment toxicity, limited likelihood of benefit, or patient preferences outweigh expected gains."
+      ],
+      "bullets": [
+        "**Reassess anticoagulant dose at every meaningful renal-function or weight change** [1].",
+        "**Monitor for recurrence after cardioversion or ablation**, recognizing that asymptomatic episodes are common.",
+        "**Reevaluate LV function** after effective rate or rhythm control when tachycardia-mediated cardiomyopathy is suspected.",
+        "**Use shared decision-making** to balance symptom goals, prognostic evidence, treatment burden, and procedural preferences."
+      ],
+      "subsections": [
+        {
+          "heading": "Where is evidence still limited?",
+          "paragraphs": [
+            "Important evidence gaps remain in very old adults, frail populations, those with extensive comorbidity, and patients with advanced atrial remodeling. Older patients carry high cumulative stroke and gastrointestinal-bleeding burdens, yet are often underrepresented in invasive AF trials, requiring more individualized assessment of competing risks, functional status, and treatment goals [15], [25]."
+          ],
+          "bullets": [
+            "**Chronologic age alone should not exclude anticoagulation, rhythm control, or ablation**, but frailty and competing risks should materially influence decisions.",
+            "**Absence of symptomatic recurrence is an insufficient endpoint** for determining long-term thromboembolic safety after rhythm intervention."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does successful catheter ablation allow oral anticoagulation to be stopped?",
+      "answer": "Usually not solely because ablation appears successful. Post-ablation anticoagulation should be continued or discontinued according to the patient’s underlying thromboembolic-risk profile, because asymptomatic AF recurrence occurs and ablation does not independently establish low stroke risk [13], [18]."
+    },
+    {
+      "question": "Is rhythm control better than rate control for every patient with atrial fibrillation?",
+      "answer": "No. Older trials of conventional drug-based rhythm control did not show mortality superiority over rate control in many patients with established AF [12], [24]. However, early rhythm control improved cardiovascular outcomes in EAST-AFNET 4 among patients with recently diagnosed AF and cardiovascular risk factors, making timing and patient phenotype central to selection [11]."
+    },
+    {
+      "question": "Which patients with AF and heart failure should be referred for ablation evaluation?",
+      "answer": "Referral should be strongly considered for symptomatic AF with HFrEF, recurrent AF-related heart-failure hospitalization, difficult rate control, or suspected AF-mediated cardiomyopathy. In selected patients with LVEF 35% or less, CASTLE-AF showed that ablation reduced death or heart-failure hospitalization relative to medical therapy [14]."
+    },
+    {
+      "question": "What is the preferred anticoagulant for nonvalvular atrial fibrillation?",
+      "answer": "For most eligible patients, a DOAC is generally preferred over warfarin because contemporary evidence and guideline syntheses support its use for AF stroke prevention, provided renal function, drug interactions, age, and body-weight dose criteria are correctly applied [1]. Warfarin remains necessary in selected circumstances, including some patients with mechanical valves or other specific indications not addressed by DOAC labeling."
+    },
+    {
+      "question": "Should asymptomatic atrial fibrillation be treated with rhythm control?",
+      "answer": "Absence of symptoms does not eliminate stroke risk, so anticoagulation decisions remain risk-based [13], [34]. Early rhythm control may be appropriate in selected patients with AF diagnosed within 12 months and cardiovascular risk factors because EAST-AFNET 4 demonstrated improved major cardiovascular outcomes, but treatment should be individualized rather than automatic [11]."
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature and reviewed for clarity. This guide is educational and does not replace clinical judgment."
+}

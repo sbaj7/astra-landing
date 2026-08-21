@@ -2,30 +2,47 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronDown, GraduationCap, LibraryBig } from 'lucide-react';
 import AstraHeroMark from './brand/AstraHeroMark';
 import AboutContent from './AboutContent.jsx';
-import AboutModeShowcase from './AboutModeShowcase.jsx';
 import './FirstPageExperience.css';
 
-
-const MODE_HEADLINES = {
-  search: 'What do you need to know?',
-  reason: 'Tell me about the patient.',
-  differential: 'What are you considering?',
-  'next-steps': 'What happens next?',
-  dispo: 'Where should this patient go?',
-  disposition: 'Where should this patient go?',
-  'specialty-referral': 'Who needs to weigh in?',
-  orders: 'What needs to be ordered?',
-  write: 'What do you need to document?',
-  'prior-auth-appeal': 'What needs approval?',
-  'medical-necessity': 'What needs justification?',
-  'disability-fmla': 'What needs certification?',
-  dme: 'What equipment is needed?',
-  'peer-to-peer': 'What decision needs review?'
+const HOME_HEADLINES = {
+  research: 'What should we investigate?',
+  reason: 'What case are we working through?',
+  write: 'What are we managing today?',
+  master: 'What should we practice next?'
 };
 
-const getModeHeadline = (mode) => {
-  if (MODE_HEADLINES[mode]) return MODE_HEADLINES[mode];
-  return 'What do you need to document?';
+const HOME_MODES = [
+  { key: 'research', label: 'Research' },
+  { key: 'reason', label: 'Reason' },
+  { key: 'write', label: 'Write' },
+  { key: 'master', label: 'Master' }
+];
+
+const HOME_PROMPTS = {
+  research: [
+    'What is the best evidence for early rhythm control in newly diagnosed atrial fibrillation?',
+    'When should SGLT2 inhibitors be held before surgery, and when can they be restarted?',
+    'How long should uncomplicated gram-negative bacteremia be treated?',
+    'When should anticoagulation be resumed after a gastrointestinal bleed?'
+  ],
+  reason: [
+    'Severe aortic stenosis with new AF with RVR, pulmonary edema, MAP 58, and rising creatinine after diuresis.',
+    'Postpartum day 5 with severe headache, BP 178/112, platelets 82k, elevated AST, and a focal seizure.',
+    'Kidney transplant recipient with fever, progressive hypoxemia, diffuse ground-glass opacities, elevated LDH, and negative cultures.',
+    'Cirrhosis with tense ascites, Na 121, creatinine rising from 0.9 to 2.4, bland sediment, and no response to albumin.'
+  ],
+  write: [
+    'Decompensated HFrEF improving on IV diuresis, net negative 2 L today.',
+    'Sepsis from community-acquired pneumonia, improving after initial antibiotics and fluids.',
+    'NSTEMI day 1 after PCI, stable on telemetry and dual antiplatelet therapy.',
+    'DKA resolving on insulin infusion, ready to transition to subcutaneous insulin.'
+  ],
+  master: [
+    'Step 1 · my weakest systems',
+    'Step 2 · diagnoses I keep missing',
+    'Step 3 · management at my current difficulty',
+    'Recent misses · pattern review'
+  ]
 };
 
 // The hero tabs and the input-bar mode selector are two views of one choice.
@@ -41,14 +58,12 @@ const FirstPageExperience = ({
   currentMode,
   onModeChange,
   onSampleTapped,
-  onShowAbout,
   onShowSources,
   onOpenQbank,
   theme,
   inputBarSlot
 }) => {
   const isDark = theme.backgroundPrimary === '#121417';
-  const headline = getModeHeadline(currentMode);
   const aboutRef = useRef(null);
 
   const scrollToAbout = useCallback(() => {
@@ -58,6 +73,7 @@ const FirstPageExperience = ({
   // Master has no toolbar equivalent, so the tab is tracked locally and only
   // pushed to the toolbar when it maps to a real chat mode.
   const [showcaseKey, setShowcaseKey] = useState(() => APP_MODE_TO_SHOWCASE(currentMode));
+  const headline = HOME_HEADLINES[showcaseKey] || HOME_HEADLINES.research;
 
   useEffect(() => {
     setShowcaseKey(APP_MODE_TO_SHOWCASE(currentMode));
@@ -76,6 +92,8 @@ const FirstPageExperience = ({
     }
     onSampleTapped?.(prompt, SHOWCASE_TO_APP_MODE[key] || 'search');
   };
+
+  const activePrompts = HOME_PROMPTS[showcaseKey] || HOME_PROMPTS.research;
 
   return (
     <main
@@ -113,15 +131,31 @@ const FirstPageExperience = ({
             </div>
           )}
 
-          <div className="astra-first-page__showcase" aria-label="What each Astra mode returns">
-            <AboutModeShowcase
-              compact
-              theme={theme}
-              isDark={isDark}
-              activeKey={showcaseKey}
-              onActiveKeyChange={handleShowcaseKeyChange}
-              onPromptSelect={handlePromptSelect}
-            />
+          <div className="astra-first-page__mode-picker" aria-label="Choose how Astra can help">
+            {HOME_MODES.map((mode) => (
+              <button
+                type="button"
+                key={mode.key}
+                className="astra-first-page__mode"
+                aria-pressed={showcaseKey === mode.key}
+                onClick={() => handleShowcaseKeyChange(mode.key)}
+              >
+                {mode.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="astra-first-page__examples" key={showcaseKey} aria-label={`${HOME_MODES.find((mode) => mode.key === showcaseKey)?.label || 'Astra'} example prompts`}>
+            {activePrompts.map((prompt) => (
+              <button
+                type="button"
+                className="astra-first-page__example"
+                key={prompt}
+                onClick={() => handlePromptSelect(prompt, showcaseKey)}
+              >
+                {prompt}
+              </button>
+            ))}
           </div>
 
           {(onShowSources || onOpenQbank) && (
@@ -150,31 +184,27 @@ const FirstPageExperience = ({
           )}
         </section>
 
-        <button
-          type="button"
-          className="astra-first-page__scroll-cue"
-          onClick={scrollToAbout}
-          aria-label="Scroll to learn about Astra"
-        >
-          <span>Why Astra</span>
-          <ChevronDown size={15} strokeWidth={1.8} aria-hidden="true" />
-        </button>
+        <footer className="astra-first-page__footer" aria-label="Astra information">
+          <p>Astra can make mistakes.</p>
+          <button
+            type="button"
+            className="astra-first-page__scroll-cue"
+            onClick={scrollToAbout}
+            aria-label="Scroll to learn about Astra"
+          >
+            <span>Why Astra</span>
+            <ChevronDown size={15} strokeWidth={1.8} aria-hidden="true" />
+          </button>
+          <div className="astra-first-page__footer-links">
+            <a href="/terms.html">Terms of Use</a>
+            <a href="/privacy.html">Privacy Policy</a>
+          </div>
+        </footer>
       </div>
 
       <section className="astra-first-page__about" ref={aboutRef} aria-label="About Astra">
         <AboutContent embedded />
       </section>
-
-      <footer className="astra-first-page__footer" aria-label="Astra information">
-        <p>Astra can make mistakes. Check important clinical information.</p>
-        <div className="astra-first-page__footer-links">
-          {onShowAbout && (
-            <button type="button" onClick={onShowAbout}>About Astra</button>
-          )}
-          <a href="/terms.html">Terms of Use</a>
-          <a href="/privacy.html">Privacy Policy</a>
-        </div>
-      </footer>
     </main>
   );
 };

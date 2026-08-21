@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "Chronic Lymphocytic Leukemia",
+  "summary": "CLL requires confirmation of persistent clonal B-cell lymphocytosis, risk assessment before therapy, and treatment only for active disease. Modern care prioritizes BTK- and BCL2-directed strategies, while surveillance remains appropriate for most asymptomatic early-stage patients.",
+  "seoDescription": "Physician guide to chronic lymphocytic leukemia diagnosis, risk testing, surveillance, indications for treatment, and targeted therapy selection.",
+  "clinicalQuestion": "How should clinicians confirm, risk-stratify, observe, and treat chronic lymphocytic leukemia in contemporary practice?",
+  "specialty": "Hematology and Oncology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "CLL",
+    "small lymphocytic lymphoma",
+    "CLL diagnosis",
+    "iwCLL treatment indications",
+    "BTK inhibitor",
+    "venetoclax",
+    "TP53",
+    "del17p"
+  ],
+  "keyTakeaways": [
+    "Confirm CLL with at least 5 × 10⁹/L clonal peripheral-blood B cells with characteristic immunophenotype persisting for at least 3 months; lower-count CLL-phenotype clones are monoclonal B-cell lymphocytosis unless marrow-infiltration cytopenia establishes CLL. [3][16][21]",
+    "Do not treat asymptomatic early-stage CLL solely because of lymphocytosis; active surveillance is appropriate until symptoms or other treatment indications develop. [1][22]",
+    "Before each new treatment course, assess del(17p) by FISH and TP53 mutation by sequencing because TP53 disruption predicts poor outcomes with chemoimmunotherapy and informs treatment selection. [19][22]",
+    "BTK- and BCL2-directed therapies have largely replaced chemoimmunotherapy in first- and second-line CLL; regimen selection depends on treatment-duration goals, comorbidity, prior exposure, adverse-effect tolerance, and drug interactions. [18][19]"
+  ],
+  "sections": [
+    {
+      "id": "diagnosis",
+      "eyebrow": "Initial evaluation",
+      "heading": "Confirm clonal CLL and distinguish related entities",
+      "intro": "Peripheral blood testing is usually sufficient for diagnosis.",
+      "paragraphs": [
+        "Diagnose CLL when peripheral blood contains at least 5 × 10⁹/L clonal B lymphocytes for at least 3 months with a characteristic CLL immunophenotype. Flow cytometry should demonstrate the characteristic B-cell phenotype, including CD19, CD5, CD20, CD23, and light-chain restriction. [3][16]",
+        "Below this blood clonal-B-cell threshold, classify a CLL-phenotype clone as monoclonal B-cell lymphocytosis (MBL) when there is no disease-defining marrow-infiltration cytopenia. CLL and small lymphocytic lymphoma are the same disease with different anatomic presentations and are treated similarly. [16][21]",
+        "Obtain a CBC with differential, peripheral smear, and peripheral-blood flow cytometry for suspected CLL. Routine bone marrow biopsy and routine cross-sectional or PET imaging are not required for initial diagnosis; consider marrow evaluation when cytopenias are unexplained or diagnostic uncertainty persists. [3][21]"
+      ],
+      "bullets": [
+        "Use peripheral-blood flow cytometry rather than morphology alone to establish clonality and immunophenotype. [3][16]",
+        "Do not use routine imaging to establish initial CLL diagnosis in an otherwise straightforward presentation. [21]",
+        "Evaluate cytopenias carefully: cytopenia caused by typical marrow infiltration establishes CLL regardless of circulating B-cell count. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Diagnostic distinctions relevant to initial classification. [3][16][21]",
+        "columns": [
+          "Entity",
+          "Defining finding",
+          "Clinical implication"
+        ],
+        "rows": [
+          [
+            "CLL",
+            "At least 5 × 10⁹/L clonal peripheral-blood B cells with characteristic phenotype, sustained for at least 3 months. [3][16]",
+            "Stage, assess treatment need, and obtain predictive testing before therapy. [19]"
+          ],
+          [
+            "CLL-phenotype MBL",
+            "Clonal B-cell count below 5 × 10⁹/L without disease-defining marrow-infiltration cytopenia. [21]",
+            "Periodic surveillance rather than CLL-directed treatment. [21]"
+          ],
+          [
+            "SLL",
+            "Same biologic disease as CLL with predominant nodal presentation rather than circulating disease. [3][16]",
+            "Use the same overall treatment principles as CLL. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-and-baseline-assessment",
+      "eyebrow": "Before treatment",
+      "heading": "Separate prognosis from treatment indication",
+      "intro": "Risk markers refine counseling and regimen selection but do not independently mandate treatment.",
+      "paragraphs": [
+        "Stage clinically using Rai or Binet systems; iwCLL integrates Rai and Binet categories for standardized disease assessment. [20] Early-stage disease often follows a slow course, and some untreated patients have survival similar to the general population. [3][22]",
+        "Before initiating therapy, test for del(17p) by FISH and TP53 mutation by DNA sequencing. iwCLL-based recommendations support this testing because TP53-disrupted CLL has a high likelihood of poor response or early relapse after chemoimmunotherapy. [19][22] FISH using four probes and assessment of immunoglobulin heavy-chain variable-region mutation status are also recommended in contemporary guideline-based prognostic evaluation. [16]",
+        "Reassess predictive genetics before subsequent lines of therapy rather than assuming results remain clinically sufficient from the initial workup; treatment selection in relapsed disease depends on prior treatment class, reason for discontinuation, patient factors, and available trials. [17][18]"
+      ],
+      "bullets": [
+        "Use Rai/Binet stage for standardized clinical risk communication, not as an automatic trigger for therapy. [20]",
+        "Obtain del(17p) and TP53 mutation status before treatment selection. [19]",
+        "Avoid chemoimmunotherapy as the preferred strategy for TP53-disrupted disease because of poor expected durability. [22]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "surveillance-and-treatment-triggers",
+      "eyebrow": "Timing",
+      "heading": "Observe until active disease requires therapy",
+      "intro": "The decision to treat is driven by active or symptomatic disease, not the diagnosis alone.",
+      "paragraphs": [
+        "Active surveillance is appropriate for asymptomatic Rai 0-II or Binet A-B disease until symptoms or other accepted indications for treatment emerge. [1] Randomized comparisons of immediate versus delayed treatment did not show a significant long-term survival benefit from early treatment initiation in otherwise asymptomatic patients. [22]",
+        "At surveillance visits, reassess symptoms, lymphadenopathy and splenomegaly, CBC trends, and evolving cytopenias. The relevant transition is from clinically stable disease to iwCLL-defined active disease, including clinically symptomatic disease. [22][23] The supplied evidence does not provide sufficiently detailed iwCLL thresholds for cytopenias, lymphocyte kinetics, nodal bulk, or constitutional symptoms; verify current iwCLL or NCCN criteria when making a treatment-start decision. [1][15][23]"
+      ],
+      "bullets": [
+        "Do not initiate therapy for isolated asymptomatic lymphocytosis. [1][22]",
+        "Start a treatment discussion when disease becomes clinically symptomatic or otherwise meets current iwCLL active-disease criteria. [22][23]",
+        "Continue observation for asymptomatic early-stage disease, with follow-up intensity individualized to disease tempo and clinical findings. [1][3]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "first-line-treatment",
+      "eyebrow": "Treatment selection",
+      "heading": "Use targeted therapy as the default systemic approach",
+      "intro": "Choice is principally between continuous BTK inhibition and fixed-duration BCL2-based treatment.",
+      "paragraphs": [
+        "BTK inhibitors and BCL2 inhibitors have replaced chemoimmunotherapy for most patients in first- and second-line CLL. [18] Anti-CD20 monoclonal antibodies may be incorporated into targeted regimens, while chemoimmunotherapy is now reserved for selected circumstances based on molecular profile, age, and fitness. [1][18]",
+        "Continuous BTK inhibitor therapy provides ongoing disease control but generally leaves measurable residual disease detectable, and patients may ultimately discontinue because of adverse effects or relapse. Fixed-duration combination regimens can achieve undetectable measurable residual disease, although recurrence still occurs in a meaningful proportion of patients. [18] These differing treatment-duration and response-depth goals should be discussed explicitly.",
+        "The supplied sources identify the major treatment classes and broad tradeoffs but do not provide FDA-label-supported dosing, titration, renal or hepatic adjustments, contraindications, interaction management, or comparative selection among individual BTK inhibitors. Use current U.S. prescribing information and an up-to-date CLL pathway before prescribing a specific regimen."
+      ],
+      "bullets": [
+        "Consider a BTK inhibitor strategy when continuous oral disease control is acceptable. [18]",
+        "Consider fixed-duration BCL2-based therapy when a time-limited strategy and deeper measurable residual disease response are priorities. [18]",
+        "Individualize selection according to comorbidities, concomitant medications, treatment goals, access, and anticipated toxicity. [17]",
+        "Recognize tumor lysis syndrome as a reported complication of targeted therapy in CLL, particularly relevant to BCL2-directed treatment planning; use regimen-specific risk mitigation from current labeling and protocols. [2]"
+      ],
+      "subsections": [
+        {
+          "heading": "Role of chemoimmunotherapy",
+          "paragraphs": [
+            "Chemoimmunotherapy has improved survival in historical first-line studies but has been displaced in most current first- and second-line settings by BTK- and BCL2-targeted therapies. [18] Its use should be exceptional and informed by molecular risk, fitness, and availability of targeted therapy. [1]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "High-level treatment-strategy tradeoffs; regimen-specific prescribing details require current labeling and specialty protocols. [1][2][17][18]",
+        "columns": [
+          "Strategy",
+          "Potential advantage",
+          "Key limitation or planning issue"
+        ],
+        "rows": [
+          [
+            "Continuous BTK inhibitor therapy",
+            "Effective long-term disease control. [18]",
+            "Measurable residual disease commonly persists; later relapse or discontinuation for adverse effects may occur. [18]"
+          ],
+          [
+            "Fixed-duration BCL2-based combination therapy",
+            "Can achieve undetectable measurable residual disease. [18]",
+            "Relapse remains possible; tumor lysis syndrome planning is required with targeted therapies. [2][18]"
+          ],
+          [
+            "Chemoimmunotherapy",
+            "May remain an option in selected circumstances. [1]",
+            "Generally replaced by BTK- and BCL2-directed therapy and is unfavorable in TP53-disrupted disease. [18][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "relapsed-refractory-disease",
+      "eyebrow": "Sequencing",
+      "heading": "Sequence between BTK and BCL2 pathways when feasible",
+      "intro": "Prior drug class and reason for discontinuation determine the next strategy.",
+      "paragraphs": [
+        "After prior BTK inhibitor therapy, switching to a BCL2 inhibitor strategy, or vice versa, is a current standard approach. [18] In relapsed or refractory disease, selection should account for prior therapies, whether treatment ended because of resistance versus intolerance, comorbidities, concomitant medications, treatment goals, and clinical-trial access. [17]",
+        "There are no head-to-head trials directly comparing BTK and BCL2 inhibitors in relapsed or refractory CLL in the supplied evidence base; therefore, class sequencing remains individualized rather than algorithmically settled. [17] Patients refractory to both BTK and BCL2 inhibitor classes have no established standard therapy and should be considered for clinical trials or referral to a CLL-focused center. [18]",
+        "Allogeneic hematopoietic stem-cell transplantation is generally reserved for younger, fit, high-risk patients who have failed a pathway inhibitor and should prompt early transplant-center assessment when applicable; it is generally unsuitable for older patients when alternatives exist because of mortality risk. [17]"
+      ],
+      "bullets": [
+        "Distinguish progression on therapy from treatment intolerance before choosing the next agent class. [17]",
+        "Refer double-refractory disease for clinical trial evaluation when possible. [18]",
+        "Consider early transplant consultation only in selected younger, fit, high-risk patients with pathway-inhibitor failure. [17]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "monitoring-and-supportive-care",
+      "eyebrow": "Longitudinal care",
+      "heading": "Monitor disease course and treatment-specific complications",
+      "intro": "Supportive care is integral because treatment is frequently prolonged and patients are often older.",
+      "paragraphs": [
+        "During observation, monitor for evolving symptoms, organ enlargement, and CBC changes that may signal active disease. [1][22] During targeted therapy, monitor according to the selected drug's toxicity profile and label-directed laboratory requirements; targeted therapies have distinct adverse-effect profiles, and tumor lysis syndrome has been reported in treated CLL. [2]",
+        "Do not use measurable residual disease as a stand-alone reason to alter routine care outside a regimen-specific or trial-defined context based on the supplied evidence. Contemporary guidelines address measurable residual disease in clinical evaluation, and fixed-duration combinations may achieve undetectable measurable residual disease, but recurrence remains possible. [15][18]"
+      ],
+      "bullets": [
+        "Use symptoms, examination findings, and CBC trends to identify transition from surveillance to active disease. [1][22]",
+        "Apply regimen-specific tumor lysis syndrome prevention and monitoring procedures when initiating targeted therapy. [2]",
+        "Interpret measurable residual disease in the context of the treatment strategy rather than as proof of cure. [15][18]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does an elevated absolute lymphocyte count alone require CLL treatment?",
+      "answer": "No. Asymptomatic early-stage CLL is generally managed with active surveillance, and randomized evidence has not shown a significant long-term survival advantage for immediate treatment in asymptomatic disease. [1][22]"
+    },
+    {
+      "question": "What testing should be obtained before initiating CLL therapy?",
+      "answer": "Obtain del(17p) testing by FISH and TP53 mutation testing by DNA sequencing before treatment. Contemporary guideline-based prognostic assessment also includes FISH testing and immunoglobulin heavy-chain variable-region mutation status. [16][19]"
+    },
+    {
+      "question": "Is bone marrow biopsy required to diagnose CLL?",
+      "answer": "Usually no. CBC, smear, and peripheral-blood flow cytometry establish most diagnoses. Consider marrow examination for unexplained cytopenias, possible myelodysplasia, or diagnostic uncertainty. [3][21]"
+    },
+    {
+      "question": "How should double-refractory CLL be managed?",
+      "answer": "There is no established standard therapy after refractoriness to both BTK and BCL2 inhibitor classes. Prioritize clinical-trial evaluation and referral to a CLL-focused center; selected younger, fit, high-risk patients may warrant early transplant-center evaluation. [17][18]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

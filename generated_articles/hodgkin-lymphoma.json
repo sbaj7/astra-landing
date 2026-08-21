@@ -1,0 +1,688 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology-Oncology",
+  "title": "Hodgkin Lymphoma",
+  "summary": "Confirm Hodgkin lymphoma on adequately sampled tissue, stage with FDG-PET/CT, and use disease extent, bulk, prognosis, and PET-adapted response to select curative-intent treatment while minimizing late toxicity.",
+  "seoDescription": "Physician guide to Hodgkin lymphoma diagnosis, biopsy interpretation, PET/CT staging, marrow assessment, and risk-adapted curative treatment.",
+  "clinicalQuestion": "How should physicians confirm, stage, and direct initial management of suspected or newly diagnosed Hodgkin lymphoma?",
+  "specialty": "Hematology-Oncology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "Hodgkin lymphoma",
+    "classical Hodgkin lymphoma",
+    "Reed-Sternberg cells",
+    "FDG-PET/CT",
+    "excisional lymph node biopsy",
+    "ABVD",
+    "brentuximab vedotin"
+  ],
+  "keyTakeaways": [
+    "Establish the diagnosis with an excisional lymph node biopsy whenever feasible because intact architecture and sufficient tissue are central to lymphoma classification.[22]",
+    "Classical Hodgkin lymphoma usually shows Hodgkin/Reed-Sternberg cells with CD30 and CD15 expression plus weak PAX5; strong background B-cell marker expression should prompt reassessment for a CD30-positive non-Hodgkin lymphoma.[9][12][22]",
+    "Use FDG-PET/CT for initial staging and response assessment; routine blind bone marrow biopsy has limited clinical yield when newly diagnosed Hodgkin lymphoma is staged by PET/CT.[15][20][23]",
+    "For early-stage favorable disease, two cycles of ABVD followed by 20 Gy involved-field radiotherapy achieved effective disease control in a randomized trial, illustrating the curative efficacy of reduced-intensity combined-modality treatment in selected patients.[2]",
+    "In limited-stage nonbulky disease, chemotherapy alone avoids radiation exposure but must be weighed against the durable disease-control benefit and late-effect tradeoffs of combined-modality treatment.[3]"
+  ],
+  "sections": [
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Tissue first",
+      "heading": "Confirm Hodgkin lymphoma before staging or treatment",
+      "intro": "Avoid assigning therapy from cytology or a limited immunophenotype alone.",
+      "paragraphs": [
+        "Obtain an excisional biopsy of the most accessible abnormal lymph node when feasible. Excision preserves nodal architecture, permits full histologic assessment, and allows flow cytometry and molecular studies to be directed by the pathologic differential; it remains the diagnostic reference procedure for malignant lymphomas.[22] Core-needle biopsy may be necessary for deep or unsafe nodal targets, but nondiagnostic or discordant core results should lead to excision rather than empiric lymphoma treatment.[10][22]",
+        "For classical Hodgkin lymphoma (cHL), correlate morphology with immunohistochemistry rather than relying on CD30 alone. Hodgkin/Reed-Sternberg cells commonly coexpress CD30 and CD15, show weak PAX5 expression, and lack CD45; CD20 may be absent or variable.[8][9][22] CD15-negative cHL occurs, so absent CD15 should trigger expanded evaluation rather than automatic exclusion of cHL.[9]",
+        "Escalate the pathology review when the specimen contains Reed-Sternberg-like cells within a population of atypical B cells, because diffuse large B-cell lymphoma and small lymphocytic lymphoma can contain cells with a CD30-strong, PAX5-weak phenotype resembling cHL.[12] A background population that is CD20- and PAX5-positive favors a B-cell non-Hodgkin lymphoma with Reed-Sternberg-like cells rather than cHL.[12]"
+      ],
+      "bullets": [
+        "Request correlation of morphology with CD30, CD15, PAX5, CD45, CD20, CD3, and B-cell transcription-factor patterns when cHL is in the differential.[8][9][22]",
+        "Treat persistent CD30-negative cHL on limited tissue as an exceptional diagnostic problem: when feasible, obtain complete excision and use expanded immunohistochemistry before final classification.[10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pathology patterns that change the next diagnostic action.[8][9][10][12][22]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "CD30+/CD15+ large atypical cells; weak PAX5; CD45 negative",
+            "Pattern supports cHL when morphology and background are concordant.[8][9][22]",
+            "Complete subtype classification and proceed to PET/CT staging."
+          ],
+          [
+            "CD15 absent but cHL morphology and weak PAX5 retained",
+            "CD15-negative cHL is possible; CD15 absence is not independently exclusionary.[9]",
+            "Expand the panel and exclude CD30-positive NHL."
+          ],
+          [
+            "Reed-Sternberg-like cells with CD20/PAX5-positive atypical background B cells",
+            "Consider B-cell NHL with Reed-Sternberg-like cells.[12]",
+            "Obtain expert hematopathology review; do not apply cHL treatment solely from CD30 positivity."
+          ],
+          [
+            "CD30-negative limited core biopsy with cHL-like morphology",
+            "Exceptionally rare diagnostic scenario; limited tissue can be misleading.[10]",
+            "Pursue excisional biopsy when feasible and expanded immunohistochemistry."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "staging-and-baseline-assessment",
+      "eyebrow": "Extent and response framework",
+      "heading": "Stage with FDG-PET/CT and reserve marrow biopsy for unresolved questions",
+      "intro": "The staging study should also establish the baseline for response-adapted management.",
+      "paragraphs": [
+        "Perform baseline whole-body FDG-PET/CT after tissue confirmation. The Lugano classification applies FDG-PET/CT to lymphoma staging and response assessment, making the scan the central imaging study for defining nodal and extranodal disease distribution and for comparison with interim or end-of-treatment studies.[20]",
+        "Do not routinely add a blind iliac-crest bone marrow biopsy when a newly diagnosed patient with Hodgkin lymphoma has been staged by FDG-PET/CT. A meta-analysis specifically evaluated whether PET/CT can replace blind marrow biopsy in newly diagnosed Hodgkin lymphoma, and an accompanying clinical analysis found that routine marrow biopsy added limited useful information without therapeutic consequences after PET/CT staging.[15][23]",
+        "Reconsider marrow sampling when PET/CT findings, cytopenias, or an alternative hematologic diagnosis create a question that would change classification or management. PET/CT and single-site biopsy assess marrow differently, and diffuse marrow FDG uptake has uncertain specificity for infiltration; discordance should be resolved in the clinical-pathologic context rather than assumed to represent Hodgkin lymphoma involvement.[13]"
+      ],
+      "bullets": [
+        "Document baseline PET/CT disease sites before treatment so subsequent PET-based response can be interpreted against pretreatment distribution.[20]",
+        "Use a focal or diffuse marrow PET finding as an imaging result, not as a substitute for pathology when a competing marrow disorder is clinically plausible.[13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial staging decisions in newly diagnosed Hodgkin lymphoma.[13][15][20][23]",
+        "columns": [
+          "Clinical scenario",
+          "Staging action",
+          "Reasoning"
+        ],
+        "rows": [
+          [
+            "Tissue-confirmed cHL",
+            "Obtain FDG-PET/CT.[20]",
+            "Lugano staging and response assessment use FDG-PET/CT.[20]"
+          ],
+          [
+            "PET/CT completed; no separate marrow-management question",
+            "Omit routine blind bone marrow biopsy.[15][23]",
+            "Routine biopsy has limited additional clinical value after PET/CT staging.[23]"
+          ],
+          [
+            "Unexplained cytopenias, equivocal diffuse marrow uptake, or concern for another marrow process",
+            "Individualize marrow biopsy.[13]",
+            "Diffuse FDG uptake does not reliably establish marrow infiltration, and PET/CT versus single-site biopsy discordance requires contextual interpretation.[13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-treatment-selection",
+      "eyebrow": "Curative intent",
+      "heading": "Match initial therapy intensity to stage, bulk, prognosis, and late-effect tradeoffs",
+      "intro": "Use a multidisciplinary treatment plan after PET/CT-based staging and risk assignment.",
+      "paragraphs": [
+        "For early-stage favorable Hodgkin lymphoma, combined-modality therapy can achieve high cure rates with reduced treatment intensity. In a randomized trial, two cycles of ABVD followed by 20 Gy involved-field radiotherapy was an effective regimen for patients with early-stage favorable disease.[2] This evidence supports a discussion centered on whether a patient meets the favorable-risk population studied and whether the expected benefit of radiation outweighs site-specific late toxicity.",
+        "For stage IA or IIA nonbulky Hodgkin lymphoma, chemotherapy plus radiation controlled disease in approximately 90% of patients in trial evidence, but radiation-based treatment carries late-effect considerations.[3] Chemotherapy-only strategies are therefore a deliberate tradeoff rather than a default: they avoid radiotherapy exposure while accepting a different balance of relapse control, salvage treatment, and long-term toxicity.[3]",
+        "Use interim FDG-PET response as part of response-adapted management where the selected protocol incorporates it. PET-guided approaches have been studied to reduce chemotherapy intensity and direct radiotherapy in advanced-stage Hodgkin lymphoma, and contemporary reviews identify interim FDG-PET as a key component of response-adapted therapy.[16][18] The regimen, scan timing, and PET interpretation framework should follow the specific protocol rather than ad hoc treatment changes."
+      ],
+      "bullets": [
+        "Early-stage favorable disease: discuss reduced-intensity ABVD plus 20 Gy involved-field radiotherapy as a trial-supported combined-modality option.[2]",
+        "Limited-stage nonbulky disease: explicitly document the radiation-versus-chemotherapy-alone tradeoff, including disease control and anticipated late effects.[3]",
+        "Advanced-stage disease: use a protocolized interim PET strategy if treatment de-escalation or radiotherapy decisions will depend on response.[16][18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial management branches supported by treatment-trial populations.[2][3][16][18]",
+        "columns": [
+          "Disease setting",
+          "Decision framework",
+          "Supported treatment implication"
+        ],
+        "rows": [
+          [
+            "Early-stage favorable Hodgkin lymphoma",
+            "Minimize intensity while retaining curative control.[2]",
+            "Two cycles of ABVD followed by 20 Gy involved-field radiotherapy was effective in the randomized trial population.[2]"
+          ],
+          [
+            "Stage IA-IIA nonbulky Hodgkin lymphoma",
+            "Balance disease control against late effects of radiation.[3]",
+            "Chemotherapy plus radiation produced disease control in about 90%; chemotherapy alone avoids radiation exposure but changes the control-to-toxicity balance.[3]"
+          ],
+          [
+            "Advanced-stage Hodgkin lymphoma",
+            "Use baseline and interim FDG-PET within a defined response-adapted protocol.[16][18]",
+            "PET-guided treatment strategies have been studied to reduce treatment intensity and guide radiotherapy decisions.[16][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "relapsed-or-refractory-disease",
+      "eyebrow": "Salvage pathway",
+      "heading": "Rebiopsy suspected relapse when feasible and plan salvage around transplant eligibility",
+      "intro": "Confirm that recurrent PET-avid disease represents lymphoma before committing to salvage therapy.",
+      "paragraphs": [
+        "At suspected relapse or refractory disease, obtain tissue confirmation when an accessible lesion is available and when histology could alter management. This is particularly important after a limited original specimen or when imaging findings are discordant with the clinical course, because CD30-positive non-Hodgkin lymphomas and cHL can overlap morphologically and immunophenotypically.[9][12]",
+        "Salvage management should distinguish patients being considered for transplant-based therapy from those receiving nontransplant approaches. Contemporary work specifically evaluates transplant and nontransplant salvage strategies in relapsed/refractory Hodgkin lymphoma, while pediatric low-risk relapse studies have examined transplant-free approaches; selection therefore depends on relapse-risk setting and treatment strategy rather than a single universal salvage regimen.[6][7]",
+        "Brentuximab vedotin is a CD30-directed agent relevant to cHL, but this article does not specify a regimen or dose because treatment selection and dosing require protocol- and patient-specific prescribing information. Before using a CD30-directed strategy, confirm tumor classification and CD30 expression in the relevant specimen, especially when pathology is atypical.[8][9][10]"
+      ],
+      "bullets": [
+        "Rebiopsy relapse when feasible if pathology confirmation would distinguish cHL from an alternative lymphoma or other PET-avid process.[9][12]",
+        "Refer transplant-eligible relapsed/refractory patients early to a lymphoma/transplant program so response assessment and salvage sequencing do not delay definitive planning.[6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Relapsed or refractory disease decisions.[6][7][9][12]",
+        "columns": [
+          "Decision point",
+          "Action",
+          "Why it matters"
+        ],
+        "rows": [
+          [
+            "PET-avid lesion at suspected relapse",
+            "Biopsy an accessible lesion when the result could alter management.[9][12]",
+            "Morphologic and immunophenotypic mimics can change the lymphoma classification and treatment pathway.[9][12]"
+          ],
+          [
+            "Relapsed/refractory cHL with potential transplant candidacy",
+            "Coordinate salvage planning with a transplant program.[6]",
+            "Transplant and nontransplant salvage pathways are distinct therapeutic strategies.[6]"
+          ],
+          [
+            "Low-risk pediatric relapse",
+            "Use pediatric relapse-risk protocols rather than extrapolating adult transplant pathways.[7]",
+            "A trial evaluated transplant-free salvage in a low-risk pediatric population.[7]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Low-Intensity Therapy in Adults with Burkitt's Lymphoma",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1308392",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by K Dunleavy \u00b7 2013 \u00b7 Cited by 447 \u2014 Current treatments are less effective and have more severe side effects in adults and patients with immunodeficiency than in children.",
+      "score": 0.27060053
+    },
+    {
+      "number": 2,
+      "title": "Reduced Treatment Intensity in Patients with Early-Stage ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1000067",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by A Engert \u00b7 2010 \u00b7 Cited by 1229 \u2014 In patients with early-stage Hodgkin's lymphoma and a favorable prognosis, treatment with two cycles of ABVD followed by 20 Gy of involved-field",
+      "score": 0.2368872
+    },
+    {
+      "number": 3,
+      "title": "ABVD Alone versus Radiation-Based Therapy in Limited ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1111961",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RM Meyer \u00b7 2012 \u00b7 Cited by 552 \u2014 Chemotherapy plus radiation treatment is effective in controlling stage IA or IIA nonbulky Hodgkin's lymphoma in 90% of patients but is associated with late",
+      "score": 0.20654209
+    },
+    {
+      "number": 4,
+      "title": "Brentuximab Vedotin with Chemotherapy in Pediatric High ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2206660",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by SM Castellino \u00b7 2022 \u00b7 Cited by 192 \u2014 Hodgkin's lymphoma can serve as a model for balancing curative-intent therapy with long-term effects in populations who have decades of life",
+      "score": 0.16394038
+    },
+    {
+      "number": 5,
+      "title": "An Individualized Prediction Model for Early-Stage Classic ...",
+      "detail": "evidence.nejm.org",
+      "url": "https://evidence.nejm.org/doi/abs/10.1056/EVIDoa2500115?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed",
+      "authors": "evidence.nejm.org",
+      "host": "evidence.nejm.org",
+      "snippet": "by AM Rodday \u00b7 2025 \u00b7 Cited by 7 \u2014 A predictive model for early-stage classic Hodgkin's lymphoma (cHL) does not exist. Leveraging patient-level data from large clinical trials",
+      "score": 0.1213628
+    },
+    {
+      "number": 6,
+      "title": "Transplant and Nontransplant Salvage Therapy in ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2828594",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by S Daw \u00b7 2025 \u00b7 Cited by 13 \u2014 PET radiomics predicts progression-free survival in relapsed/refractory Hodgkin lymphoma.",
+      "score": 0.64478505
+    },
+    {
+      "number": 7,
+      "title": "Transplant-Free Salvage Therapy for Low-Risk Relapsed ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2828596",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by BS Hoppe \u00b7 2025 \u00b7 Cited by 12 \u2014 This nonrandomized clinical trial reports outcomes for children with low-risk relapsed Hodgkin lymphoma , resulting in a 3-year progression-",
+      "score": 0.34634283
+    },
+    {
+      "number": 8,
+      "title": "Hodgkin Lymphoma Treatment With Brentuximab... : eJHaem",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02186220-202504010-00048",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Bone marrow trephine biopsy showing findings consistent with cHL. (A, B) H&E stains (40\u00d7 and 400\u00d7, respectively, original magnification) showing a hypercellular marrow with diminished trilineage hematopoiesis and extensive infiltration by numerous atypical large cells with prominent nucleoli most co",
+      "score": 0.48557588
+    },
+    {
+      "number": 9,
+      "title": "Use of an expanded immunohistochemical panel to distinguish cutaneous Hodgkin lymphoma from histopathologic imitators - Cho - 2012 - Journal of Cutaneous Pathology - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0560.2012.01872.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Department of Dermatology, University of California, San Francisco, CA, USA. Department of Dermatology, University of California, San Francisco, CA, USA. Department of Dermatology, University of California, San Francisco, CA, USA. Pincus, MD, Department of Dermatology, University of California, San ",
+      "score": 0.4473884
+    },
+    {
+      "number": 10,
+      "title": "Diagnostic challenges and considerations in CD30-negative classical Hodgkin lymphoma from biopsy specimens - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1092913425001212",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cytological-Pathologic Correlation Diagnostic challenges and considerations in CD30-negative classical Hodgkin lymphoma from biopsy specimens. CD30-negative cHL is exceedingly rare in biopsy specimens. CD30-negative cHL predominantly occurs in young male patients. This study aimed to investigate t",
+      "score": 0.42076674
+    },
+    {
+      "number": 11,
+      "title": "FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected mature T- and natural killer-cell lymphomas: A meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0720048X2400069X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected mature T- and natural killer-cell lymphomas: A meta-analysis - ScienceDirect\n# Meta-analyses FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected ",
+      "score": 0.3957184
+    },
+    {
+      "number": 12,
+      "title": "ORAL PAPER ABSTRACTS : Indian Journal of Pathology and Microbiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijpm/fulltext/2022/65002/oral_paper_abstracts.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Introduction: Reed Sternberg cells are characteristic of Classical Hodgkin Lymphoma. However, large cells with similar morphologic and immunophenotypic features are occasionally seen in T cell and B cell Non-Hodgkin Lymphomas (NHL), known as Reed Sternberg-like cells (RSLC). Objectives: To study the",
+      "score": 0.2834396
+    },
+    {
+      "number": 13,
+      "title": "Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphoma - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2387020619305364",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphoma - ScienceDirect\n# Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphomaFDG-PET/TC de cuerpo entero para evaluar la infiltraci",
+      "score": 0.26677063
+    },
+    {
+      "number": 14,
+      "title": "Journal of Pediatric Hematology/Oncology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jpho-online/fulltext/2024/08000/combining_brentuximab_vedotin_with_dexamethasone,.23.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Hodgkin lymphoma (HL) is among the most commonly occurring malignancies in adolescents. For relapsed/refractory disease, many regimens have been proposed.",
+      "score": 0.21740435
+    },
+    {
+      "number": 15,
+      "title": "Systematic review and meta-analysis on the diagnostic performance of FDG-PET/CT in detecting bone marrow involvement in newly diagnosed Hodgkin lymphoma: is bone marrow biopsy still necessary? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0923753419347684",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Systematic review and meta-analysis on the diagnostic performance of FDG-PET/CT in detecting bone marrow involvement in newly diagnosed Hodgkin lymphoma: is bone marrow biopsy still necessary? - ScienceDirect\n## Annals of Oncology. Volume 25, Issue 5, May 2014, Pages 921-927. # reviews System",
+      "score": 0.21290259
+    },
+    {
+      "number": 16,
+      "title": "Hodgkin Lymphoma",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jnci/article-pdf/109/4/djw249/9731612/djw249.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by CS Diefenbach \u00b7 2017 \u00b7 Cited by 50 \u2014 Data from the de-escalation arms of the response-adapted therapy based on interim FDG-PET scans in an advanced Hodgkin lymphoma study (RATHL)\u00a0...Read more",
+      "score": 0.39173222
+    },
+    {
+      "number": 17,
+      "title": "Recommendations for Clinical Trial Development in Follicular ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jnci/article/109/3/djw255/2758474",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by K Maddocks \u00b7 2017 \u00b7 Cited by 26 \u2014 High-dose therapy improves progression-free survival and survival in relapsed follicular non-Hodgkin's lymphoma: Results from the randomized",
+      "score": 0.32623976
+    },
+    {
+      "number": 18,
+      "title": "Hodgkin Lymphom S3-Leitlinie Diagnostik, Therapie und ...",
+      "detail": "extranet.who.int",
+      "url": "https://extranet.who.int/ncdccs/Data/DEU_D1_Hodgkins%20lymphoma.pdf",
+      "authors": "extranet.who.int",
+      "host": "extranet.who.int",
+      "snippet": "Psychoonkologische Behandlungsma\u00dfnahmen sollten in das Gesamtkonzept der onkologischen Therapie integriert werden. Zurzeit ist eine S3-Leitlinie Psychoonkologie in der Erarbeitung und wird voraussichtlich Ende 2012 fertiggestellt sein. Die Leitlinie wird auch ein Kapitel zur Diagnostik enthalten, in",
+      "score": 0.6399392
+    },
+    {
+      "number": 19,
+      "title": "CT, MRI, and FDG PET/CT in the Assessment of Lymph ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.232650",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by D Stoevesandt \u00b7 2025 \u00b7 Cited by 9 \u2014 This article presents consensus guidelines that extend the traditional classifications used for adult Hodgkin lymphoma staging and provide",
+      "score": 0.528753
+    },
+    {
+      "number": 20,
+      "title": "Imaging for Staging and Response Assessment in ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/abs/10.1148/radiol.2015142088",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by SA Johnson \u00b7 2015 \u00b7 Cited by 239 \u2014 The most recent system proposed for staging and response assessment, known as the Lugano classification, applies to both Hodgkin and non-Hodgkin",
+      "score": 0.27191806
+    },
+    {
+      "number": 21,
+      "title": "Global status report on cancer 2026 - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/80778183-2ea1-49f5-9964-e002ca250079/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "and 74% in HICs (population weighted) (2023) with high loss-to-follow-up after positive screening test xvii Cancer control domain Current status Key implementation gaps Diagnostic work-up & staging Insufficient progress Plans: 44% of NCCPs address diagnosis/staging with defined strategies and measur",
+      "score": 0.16273929
+    },
+    {
+      "number": 22,
+      "title": "Complete Issue (PDF)",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/90/8/local/complete-issue.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "In our patient, pathologic analysis of the exci-sional lymph node biopsy confi rmed the diagnosis of lymphocyte-rich Hodgkin lymphoma. Figure 4 illus-trates the complete distortion of the usual lymph node architecture owing to the presence of atypical poly-morphous infi ltrates. Hematoxylin and eosi",
+      "score": 0.69968605
+    },
+    {
+      "number": 23,
+      "title": "Staging DLBCL: bone marrow biopsy or PET-CT? | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/122/1/4/31575/Staging-DLBCL-bone-marrow-biopsy-or-PET-CT",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Staging DLBCL: bone marrow biopsy or PET-CT? | Blood | American Society of Hematology\ndiffuse large b-cell lymphoma. Patients with marrow involvement detected by PET had similar OS to those individuals with stage IV disease without an involved marrow. Patients with marrow involvement detected",
+      "score": 0.3699755
+    },
+    {
+      "number": 24,
+      "title": "Non-Hodgkin Lymphoma Involving the Gallbladder | ACS",
+      "detail": "www.facs.org",
+      "url": "https://www.facs.org/for-medical-professionals/news-publications/journals/case-reviews/issues/v4n8/10-romero-velez-nhl-lymphoma",
+      "authors": "www.facs.org",
+      "host": "www.facs.org",
+      "snippet": "Bone marrow biopsy, performed as part of staging workup, revealed hypercellular marrow with reduced trilineage hematopoiesis and atypical B-cell infiltrates (Figure 2). Positron emission tomography (PET)/computed tomography (CT) scan identified mesenteric and external iliac lymphadenopathy along wit",
+      "score": 0.22926803
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Low-Intensity Therapy in Adults with Burkitt's Lymphoma",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1308392",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by K Dunleavy \u00b7 2013 \u00b7 Cited by 447 \u2014 Current treatments are less effective and have more severe side effects in adults and patients with immunodeficiency than in children.",
+      "score": 0.27060053
+    },
+    {
+      "number": 2,
+      "title": "Reduced Treatment Intensity in Patients with Early-Stage ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1000067",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by A Engert \u00b7 2010 \u00b7 Cited by 1229 \u2014 In patients with early-stage Hodgkin's lymphoma and a favorable prognosis, treatment with two cycles of ABVD followed by 20 Gy of involved-field",
+      "score": 0.2368872
+    },
+    {
+      "number": 3,
+      "title": "ABVD Alone versus Radiation-Based Therapy in Limited ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1111961",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RM Meyer \u00b7 2012 \u00b7 Cited by 552 \u2014 Chemotherapy plus radiation treatment is effective in controlling stage IA or IIA nonbulky Hodgkin's lymphoma in 90% of patients but is associated with late",
+      "score": 0.20654209
+    },
+    {
+      "number": 4,
+      "title": "Brentuximab Vedotin with Chemotherapy in Pediatric High ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2206660",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by SM Castellino \u00b7 2022 \u00b7 Cited by 192 \u2014 Hodgkin's lymphoma can serve as a model for balancing curative-intent therapy with long-term effects in populations who have decades of life",
+      "score": 0.16394038
+    },
+    {
+      "number": 5,
+      "title": "An Individualized Prediction Model for Early-Stage Classic ...",
+      "detail": "evidence.nejm.org",
+      "url": "https://evidence.nejm.org/doi/abs/10.1056/EVIDoa2500115?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub++0pubmed",
+      "authors": "evidence.nejm.org",
+      "host": "evidence.nejm.org",
+      "snippet": "by AM Rodday \u00b7 2025 \u00b7 Cited by 7 \u2014 A predictive model for early-stage classic Hodgkin's lymphoma (cHL) does not exist. Leveraging patient-level data from large clinical trials",
+      "score": 0.1213628
+    },
+    {
+      "number": 6,
+      "title": "Transplant and Nontransplant Salvage Therapy in ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2828594",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by S Daw \u00b7 2025 \u00b7 Cited by 13 \u2014 PET radiomics predicts progression-free survival in relapsed/refractory Hodgkin lymphoma.",
+      "score": 0.64478505
+    },
+    {
+      "number": 7,
+      "title": "Transplant-Free Salvage Therapy for Low-Risk Relapsed ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2828596",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by BS Hoppe \u00b7 2025 \u00b7 Cited by 12 \u2014 This nonrandomized clinical trial reports outcomes for children with low-risk relapsed Hodgkin lymphoma , resulting in a 3-year progression-",
+      "score": 0.34634283
+    },
+    {
+      "number": 8,
+      "title": "Hodgkin Lymphoma Treatment With Brentuximab... : eJHaem",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02186220-202504010-00048",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Bone marrow trephine biopsy showing findings consistent with cHL. (A, B) H&E stains (40\u00d7 and 400\u00d7, respectively, original magnification) showing a hypercellular marrow with diminished trilineage hematopoiesis and extensive infiltration by numerous atypical large cells with prominent nucleoli most co",
+      "score": 0.48557588
+    },
+    {
+      "number": 9,
+      "title": "Use of an expanded immunohistochemical panel to distinguish cutaneous Hodgkin lymphoma from histopathologic imitators - Cho - 2012 - Journal of Cutaneous Pathology - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0560.2012.01872.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Department of Dermatology, University of California, San Francisco, CA, USA. Department of Dermatology, University of California, San Francisco, CA, USA. Department of Dermatology, University of California, San Francisco, CA, USA. Pincus, MD, Department of Dermatology, University of California, San ",
+      "score": 0.4473884
+    },
+    {
+      "number": 10,
+      "title": "Diagnostic challenges and considerations in CD30-negative classical Hodgkin lymphoma from biopsy specimens - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1092913425001212",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cytological-Pathologic Correlation Diagnostic challenges and considerations in CD30-negative classical Hodgkin lymphoma from biopsy specimens. CD30-negative cHL is exceedingly rare in biopsy specimens. CD30-negative cHL predominantly occurs in young male patients. This study aimed to investigate t",
+      "score": 0.42076674
+    },
+    {
+      "number": 11,
+      "title": "FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected mature T- and natural killer-cell lymphomas: A meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0720048X2400069X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected mature T- and natural killer-cell lymphomas: A meta-analysis - ScienceDirect\n# Meta-analyses FDG PET/CT may replace bone marrow biopsy for the evaluation of bone marrow involvement in selected ",
+      "score": 0.3957184
+    },
+    {
+      "number": 12,
+      "title": "ORAL PAPER ABSTRACTS : Indian Journal of Pathology and Microbiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijpm/fulltext/2022/65002/oral_paper_abstracts.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Introduction: Reed Sternberg cells are characteristic of Classical Hodgkin Lymphoma. However, large cells with similar morphologic and immunophenotypic features are occasionally seen in T cell and B cell Non-Hodgkin Lymphomas (NHL), known as Reed Sternberg-like cells (RSLC). Objectives: To study the",
+      "score": 0.2834396
+    },
+    {
+      "number": 13,
+      "title": "Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphoma - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2387020619305364",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphoma - ScienceDirect\n# Whole body FDG-PET/CT for the assessment of bone marrow infiltration in patients with newly diagnosed lymphomaFDG-PET/TC de cuerpo entero para evaluar la infiltraci",
+      "score": 0.26677063
+    },
+    {
+      "number": 14,
+      "title": "Journal of Pediatric Hematology/Oncology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jpho-online/fulltext/2024/08000/combining_brentuximab_vedotin_with_dexamethasone,.23.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Hodgkin lymphoma (HL) is among the most commonly occurring malignancies in adolescents. For relapsed/refractory disease, many regimens have been proposed.",
+      "score": 0.21740435
+    },
+    {
+      "number": 15,
+      "title": "Systematic review and meta-analysis on the diagnostic performance of FDG-PET/CT in detecting bone marrow involvement in newly diagnosed Hodgkin lymphoma: is bone marrow biopsy still necessary? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0923753419347684",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Systematic review and meta-analysis on the diagnostic performance of FDG-PET/CT in detecting bone marrow involvement in newly diagnosed Hodgkin lymphoma: is bone marrow biopsy still necessary? - ScienceDirect\n## Annals of Oncology. Volume 25, Issue 5, May 2014, Pages 921-927. # reviews System",
+      "score": 0.21290259
+    },
+    {
+      "number": 16,
+      "title": "Hodgkin Lymphoma",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jnci/article-pdf/109/4/djw249/9731612/djw249.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by CS Diefenbach \u00b7 2017 \u00b7 Cited by 50 \u2014 Data from the de-escalation arms of the response-adapted therapy based on interim FDG-PET scans in an advanced Hodgkin lymphoma study (RATHL)\u00a0...Read more",
+      "score": 0.39173222
+    },
+    {
+      "number": 17,
+      "title": "Recommendations for Clinical Trial Development in Follicular ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jnci/article/109/3/djw255/2758474",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by K Maddocks \u00b7 2017 \u00b7 Cited by 26 \u2014 High-dose therapy improves progression-free survival and survival in relapsed follicular non-Hodgkin's lymphoma: Results from the randomized",
+      "score": 0.32623976
+    },
+    {
+      "number": 18,
+      "title": "Hodgkin Lymphom S3-Leitlinie Diagnostik, Therapie und ...",
+      "detail": "extranet.who.int",
+      "url": "https://extranet.who.int/ncdccs/Data/DEU_D1_Hodgkins%20lymphoma.pdf",
+      "authors": "extranet.who.int",
+      "host": "extranet.who.int",
+      "snippet": "Psychoonkologische Behandlungsma\u00dfnahmen sollten in das Gesamtkonzept der onkologischen Therapie integriert werden. Zurzeit ist eine S3-Leitlinie Psychoonkologie in der Erarbeitung und wird voraussichtlich Ende 2012 fertiggestellt sein. Die Leitlinie wird auch ein Kapitel zur Diagnostik enthalten, in",
+      "score": 0.6399392
+    },
+    {
+      "number": 19,
+      "title": "CT, MRI, and FDG PET/CT in the Assessment of Lymph ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.232650",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by D Stoevesandt \u00b7 2025 \u00b7 Cited by 9 \u2014 This article presents consensus guidelines that extend the traditional classifications used for adult Hodgkin lymphoma staging and provide",
+      "score": 0.528753
+    },
+    {
+      "number": 20,
+      "title": "Imaging for Staging and Response Assessment in ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/abs/10.1148/radiol.2015142088",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by SA Johnson \u00b7 2015 \u00b7 Cited by 239 \u2014 The most recent system proposed for staging and response assessment, known as the Lugano classification, applies to both Hodgkin and non-Hodgkin",
+      "score": 0.27191806
+    },
+    {
+      "number": 21,
+      "title": "Global status report on cancer 2026 - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/80778183-2ea1-49f5-9964-e002ca250079/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "and 74% in HICs (population weighted) (2023) with high loss-to-follow-up after positive screening test xvii Cancer control domain Current status Key implementation gaps Diagnostic work-up & staging Insufficient progress Plans: 44% of NCCPs address diagnosis/staging with defined strategies and measur",
+      "score": 0.16273929
+    },
+    {
+      "number": 22,
+      "title": "Complete Issue (PDF)",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/90/8/local/complete-issue.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "In our patient, pathologic analysis of the exci-sional lymph node biopsy confi rmed the diagnosis of lymphocyte-rich Hodgkin lymphoma. Figure 4 illus-trates the complete distortion of the usual lymph node architecture owing to the presence of atypical poly-morphous infi ltrates. Hematoxylin and eosi",
+      "score": 0.69968605
+    },
+    {
+      "number": 23,
+      "title": "Staging DLBCL: bone marrow biopsy or PET-CT? | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/122/1/4/31575/Staging-DLBCL-bone-marrow-biopsy-or-PET-CT",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Staging DLBCL: bone marrow biopsy or PET-CT? | Blood | American Society of Hematology\ndiffuse large b-cell lymphoma. Patients with marrow involvement detected by PET had similar OS to those individuals with stage IV disease without an involved marrow. Patients with marrow involvement detected",
+      "score": 0.3699755
+    },
+    {
+      "number": 24,
+      "title": "Non-Hodgkin Lymphoma Involving the Gallbladder | ACS",
+      "detail": "www.facs.org",
+      "url": "https://www.facs.org/for-medical-professionals/news-publications/journals/case-reviews/issues/v4n8/10-romero-velez-nhl-lymphoma",
+      "authors": "www.facs.org",
+      "host": "www.facs.org",
+      "snippet": "Bone marrow biopsy, performed as part of staging workup, revealed hypercellular marrow with reduced trilineage hematopoiesis and atypical B-cell infiltrates (Figure 2). Positron emission tomography (PET)/computed tomography (CT) scan identified mesenteric and external iliac lymphadenopathy along wit",
+      "score": 0.22926803
+    }
+  ],
+  "publishedAt": "2026-08-21T02:15:12.977747+00:00",
+  "updatedAt": "2026-08-21T02:15:12.977747+00:00",
+  "readingMinutes": 5,
+  "slug": "hodgkin-lymphoma"
+}

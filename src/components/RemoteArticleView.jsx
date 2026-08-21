@@ -2,184 +2,83 @@ import React, { useEffect, useState } from 'react';
 import ClinicalArticleView from './ClinicalArticleView.jsx';
 import { reorderArticleCitations } from '../utils/reorderArticleCitations.js';
 
-const resolveSupabaseUrl = () => {
-  return (
-    import.meta?.env?.VITE_SUPABASE_URL ||
-    'https://shwitfgtpfszjjoczbxp.supabase.co'
-  );
-};
+const resolveSupabaseUrl = () => import.meta?.env?.VITE_SUPABASE_URL || 'https://shwitfgtpfszjjoczbxp.supabase.co';
 
-const RemoteArticleView = ({
-  slug,
-  theme,
-  onBack,
-  bucket = 'articles',
-  objectPath
-}) => {
-  const preloadedArticle =
-    typeof window !== 'undefined'
-      ? (() => {
-          const payload = window.__PRERENDERED_ARTICLE__;
-          return payload && payload.slug === slug ? payload.article : null;
-        })()
-      : null;
-
-  const [article, setArticle] = useState(
-    preloadedArticle ? reorderArticleCitations(preloadedArticle) : null
-  );
+const RemoteArticleView = ({ slug, bucket = 'articles', objectPath }) => {
+  const preloaded = typeof window !== 'undefined' && window.__PRERENDERED_ARTICLE__?.slug === slug ? window.__PRERENDERED_ARTICLE__ : null;
+  const [article, setArticle] = useState(preloaded?.article ? reorderArticleCitations(preloaded.article) : null);
+  const [relatedArticles, setRelatedArticles] = useState(preloaded?.relatedArticles || []);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(!preloadedArticle);
-  const hasPreloaded = Boolean(preloadedArticle);
+  const [isLoading, setIsLoading] = useState(!preloaded?.article);
 
   useEffect(() => {
     if (!slug && !objectPath) {
       setError('Article slug or object path required');
       setIsLoading(false);
-      return;
+      return undefined;
+    }
+    if (preloaded?.article) {
+      delete window.__PRERENDERED_ARTICLE__;
+      return undefined;
     }
 
-    if (hasPreloaded) {
-      setArticle(reorderArticleCitations(preloadedArticle));
-      setIsLoading(false);
-      if (typeof window !== 'undefined' && window.__PRERENDERED_ARTICLE__?.slug === slug) {
-        delete window.__PRERENDERED_ARTICLE__;
-      }
-      return;
-    }
-
-    const supabaseUrl = resolveSupabaseUrl();
     const path = objectPath || `${bucket}/${slug}/article.json`;
-    const supabaseArticleUrl = `${supabaseUrl}/storage/v1/object/public/${path}`;
-    const localArticleUrl = `/generated_articles/${slug}.json`;
+    const remoteUrl = `${resolveSupabaseUrl()}/storage/v1/object/public/${path}`;
+    const localUrl = `/generated_articles/${slug}.json`;
+    let cancelled = false;
 
-    let isCancelled = false;
-
-    // Try Supabase first, then local fallback
-    fetch(supabaseArticleUrl)
-      .then((response) => {
-        if (!response.ok) {
-          console.log(`⚠️ Supabase article fetch failed, trying local: ${localArticleUrl}`);
-          return fetch(localArticleUrl);
+    const loadArticle = async () => {
+      try {
+        setIsLoading(true);
+        const manifestResponse = await fetch('/generated_articles/index.json');
+        if (!manifestResponse.ok) throw new Error('The clinical article index could not be loaded.');
+        const manifest = await manifestResponse.json();
+        const manifestEntry = Array.isArray(manifest) ? manifest.find((entry) => entry.slug === slug) : null;
+        if (!manifestEntry) {
+          throw new Error('This article is no longer available.');
         }
-        return response;
-      })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Unable to load article (status ${response.status})`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (isCancelled) return;
-        setArticle(reorderArticleCitations(data));
-        setError(null);
-      })
-      .catch((err) => {
-        if (isCancelled) return;
-        console.error('Failed to fetch article:', err);
-        setError(err.message || 'Failed to load article.');
-        setArticle(null);
-      })
-      .finally(() => {
-        if (!isCancelled) setIsLoading(false);
-      });
-
-    return () => {
-      isCancelled = true;
+        const manifestSource = manifestEntry.source
+          ? `/${String(manifestEntry.source).replace(/^\//, '')}`
+          : localUrl;
+        let response = await fetch(manifestSource);
+        if (!response.ok) response = await fetch(remoteUrl);
+        if (!response.ok) throw new Error(`Unable to load article (status ${response.status})`);
+        const data = await response.json();
+        if (!cancelled) setArticle(reorderArticleCitations({ ...data, slug }));
+      } catch (loadError) {
+        if (!cancelled) setError(loadError.message || 'Failed to load article.');
+      } finally {
+        if (!cancelled) setIsLoading(false);
+      }
     };
-  }, [slug, bucket, objectPath, hasPreloaded]);
 
-  // Dynamic SEO: update document head when article loads
+    loadArticle();
+    return () => { cancelled = true; };
+  }, [bucket, objectPath, preloaded, slug]);
+
   useEffect(() => {
-    if (!article) return;
+    if (preloaded?.relatedArticles?.length || !article?.tags?.length) return undefined;
+    let cancelled = false;
+    fetch('/generated_articles/index.json')
+      .then((response) => response.ok ? response.json() : [])
+      .then((items) => {
+        if (cancelled || !Array.isArray(items)) return;
+        const tagSet = new Set(article.tags.map((tag) => tag.toLowerCase()));
+        const related = items
+          .filter((item) => item.slug !== slug)
+          .map((item) => ({ ...item, score: (item.tags || []).filter((tag) => tagSet.has(String(tag).toLowerCase())).length }))
+          .filter((item) => item.score > 0)
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 3);
+        setRelatedArticles(related);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [article, preloaded, slug]);
 
-    const title = article.title || 'Clinical Article';
-    const summary = (article.summary || '').replace(/\*\*/g, '').slice(0, 160);
-    const tags = article.tags || [];
-    const url = `https://astramd.org/articles/${slug}`;
-
-    // Title
-    document.title = `${title} — Astra MD`;
-
-    // Meta description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', summary);
-
-    // OG tags
-    const ogMap = { 'og:title': title, 'og:description': summary, 'og:url': url, 'og:type': 'article' };
-    Object.entries(ogMap).forEach(([prop, content]) => {
-      let el = document.querySelector(`meta[property="${prop}"]`);
-      if (el) el.setAttribute('content', content);
-    });
-
-    // Twitter tags
-    const twMap = { 'twitter:title': title, 'twitter:description': summary, 'twitter:url': url };
-    Object.entries(twMap).forEach(([name, content]) => {
-      let el = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
-      if (el) el.setAttribute('content', content);
-    });
-
-    // Canonical
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.setAttribute('href', url);
-
-    // JSON-LD structured data for the article
-    let ldScript = document.getElementById('article-jsonld');
-    if (!ldScript) {
-      ldScript = document.createElement('script');
-      ldScript.id = 'article-jsonld';
-      ldScript.type = 'application/ld+json';
-      document.head.appendChild(ldScript);
-    }
-    ldScript.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'MedicalScholarlyArticle',
-      'name': title,
-      'headline': title,
-      'description': summary,
-      'url': url,
-      'dateModified': article.updated || article.generatedAt || undefined,
-      'keywords': tags.join(', '),
-      'about': tags.map(t => ({ '@type': 'MedicalCondition', 'name': t })),
-      'medicalAudience': { '@type': 'MedicalAudience', 'audienceType': 'Clinician' },
-      'publisher': { '@type': 'Organization', 'name': 'Astra MD', 'url': 'https://astramd.org/' },
-      'isPartOf': { '@type': 'WebSite', 'name': 'Astra MD', 'url': 'https://astramd.org/' },
-      ...(article.clinicalQuestion ? { 'mainEntity': { '@type': 'Question', 'name': article.clinicalQuestion } } : {}),
-      ...(article.references ? { 'citation': article.references.slice(0, 10).filter(r => r.url).map(r => ({ '@type': 'CreativeWork', 'name': r.title, 'url': r.url })) } : {})
-    });
-
-    return () => {
-      // Reset on unmount
-      document.title = 'Astra MD — AI Clinical Decision Support for Healthcare Professionals';
-      if (ldScript?.parentNode) ldScript.parentNode.removeChild(ldScript);
-    };
-  }, [article, slug]);
-
-  if (isLoading) {
-    return (
-      <div style={{ padding: 32, color: theme?.textSecondary || '#555' }}>
-        Loading article…
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div style={{ padding: 32, color: theme?.errorColor || '#b91c1c' }}>
-        {error}
-      </div>
-    );
-  }
-
-  if (!article) {
-    return (
-      <div style={{ padding: 32, color: theme?.textSecondary || '#555' }}>
-        Article not available.
-      </div>
-    );
-  }
-
-  return <ClinicalArticleView article={article} theme={theme} onBack={onBack} />;
+  if (isLoading) return <main className="article-main"><p>Loading article…</p></main>;
+  if (error || !article) return <main className="article-main"><h1>Article unavailable</h1><p>{error}</p><a href="/articles">Browse the clinical library</a></main>;
+  return <ClinicalArticleView article={article} relatedArticles={relatedArticles} />;
 };
 
 export default RemoteArticleView;

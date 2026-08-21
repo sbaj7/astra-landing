@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFCFA"/>
+      <stop offset="1" stop-color="#F3F4F1"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="480" y1="424" x2="720" y2="664" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B3B3A"/>
+      <stop offset="0.52" stop-color="#111110"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <filter id="shadow" x="400" y="340" width="400" height="400" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#161616" flood-opacity="0.13"/>
+      <feDropShadow dx="0" dy="-2" stdDeviation="2" flood-color="#FFFFFF" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#paper)"/>
+  <path d="M98 600H388L423 600L450 565L480 635L514 480L550 716L584 578L616 628L651 600H1102" fill="none" stroke="#3F6375" stroke-opacity="0.23" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#shadow)">
+    <path d="M546 408H654V546H792V654H654V792H546V654H408V546H546V408Z" fill="url(#mark)"/>
+    <path d="M600 492L620 576L708 600L620 624L600 708L580 624L492 600L580 576L600 492Z" fill="#F8F8F5"/>
+  </g>
+  <text x="600" y="862" fill="#20201F" font-family="Iowan Old Style, Baskerville, Georgia, serif" font-size="72" text-anchor="middle" letter-spacing="-2">Atrial Fibrillation</text>
+  <text x="600" y="928" fill="#667078" font-family="Inter, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="4">ASTRA CLINICAL LIBRARY</text>
+</svg>

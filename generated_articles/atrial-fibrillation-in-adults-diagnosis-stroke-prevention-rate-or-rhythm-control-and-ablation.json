@@ -1,0 +1,792 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology | Electrophysiology",
+  "title": "Atrial Fibrillation",
+  "summary": "Confirm AF on electrocardiography, define reversible contributors and structural substrate, estimate thromboembolic risk, and separate stroke prevention from symptom and rhythm decisions. Contemporary care emphasizes DOAC-based prevention when indicated, risk-factor management, early rhythm-control consideration, and selective catheter ablation.",
+  "seoDescription": "An evidence-based guide to atrial fibrillation diagnosis, stroke prevention, rate and rhythm control, and catheter ablation.",
+  "imageSlug": "atrial-fibrillation",
+  "clinicalQuestion": "How should clinicians confirm, risk-stratify, and individualize stroke prevention, rate or rhythm control, and ablation for adult atrial fibrillation?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "atrial fibrillation diagnosis",
+    "CHA2DS2-VASc",
+    "DOAC",
+    "rate control",
+    "rhythm control",
+    "catheter ablation",
+    "pulmonary vein isolation",
+    "EAST-AFNET 4"
+  ],
+  "keyTakeaways": [
+    "Document AF with an ECG rhythm strip; for newly diagnosed AF, obtain transthoracic echocardiography, CBC, metabolic panel, and thyroid testing. Do not order routine ischemia, acute coronary syndrome, or pulmonary embolism testing without corresponding clinical features.[12]",
+    "Stroke prevention is independent of symptom status and of rate-versus-rhythm strategy. Estimate annual thromboembolic risk with a validated score; for AF or flutter with estimated annual risk of at least 2%, DOACs are preferred over warfarin unless moderate-to-severe mitral stenosis or a mechanical valve is present.[12]",
+    "Rate control remains appropriate for many patients, particularly when symptoms are controlled and LV function is preserved. In stable AF with rapid ventricular response and EF greater than 40%, beta-blockers or diltiazem/verapamil are recommended; avoid intravenous nondihydropyridine calcium-channel blockers in moderate-to-severe LV systolic dysfunction.[12]",
+    "For AF diagnosed within 1 year in patients with cardiovascular comorbidity, early rhythm control reduced cardiovascular death, stroke, heart-failure hospitalization, or acute coronary syndrome hospitalization versus usual care (3.9 vs 5.0 events per 100 person-years; HR 0.79) in EAST-AFNET 4.[6]",
+    "Catheter ablation is a rhythm-control treatment, not a substitute for thromboembolic risk assessment. Pulmonary vein isolation is the primary lesion set; ongoing anticoagulation after ablation should be determined by thromboembolic risk rather than apparent procedural success.[12]"
+  ],
+  "sections": [
+    {
+      "id": "diagnosis-and-initial-evaluation",
+      "eyebrow": "Diagnostic approach",
+      "heading": "Confirm AF, then identify management-changing substrate and triggers",
+      "intro": "ECG confirmation and a focused baseline evaluation should precede long-term therapeutic commitments.",
+      "paragraphs": [
+        "AF requires electrocardiographic documentation. A 12-lead ECG is preferred when available; a rhythm strip of at least 30 seconds with AF characteristics is sufficient for diagnosis. Do not infer AF from palpitations, irregular pulse, or consumer-device alerts alone.[15]",
+        "For newly diagnosed AF, obtain transthoracic echocardiography to assess chamber size, ventricular function, valvular disease, and pulmonary pressures. Order CBC, metabolic panel, and thyroid function testing because anemia, renal or hepatic dysfunction, electrolyte abnormalities, and thyroid disease alter both arrhythmia management and anticoagulant selection.[12]",
+        "Use targeted testing rather than a routine diagnostic bundle. Myocardial ischemia, ACS, and pulmonary embolism testing should follow symptoms, signs, or pretest probability rather than the AF diagnosis itself.[12]"
+      ],
+      "bullets": [
+        "Characterize AF pattern and time from first diagnosis; early AF is clinically relevant because randomized evidence for outcome benefit from rhythm control enrolled patients diagnosed within 1 year.[6]",
+        "Assess symptoms and functional limitation, ventricular response, hemodynamic stability, heart failure, ischemia, pre-excitation, renal function, and medications that constrain rate-control or antiarrhythmic choices.[11][12]",
+        "Evaluate modifiable drivers: hypertension, obesity, alcohol exposure, smoking, physical inactivity, diabetes, sleep apnea, structural heart disease, thyroid dysfunction, and kidney disease.[11][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Baseline evaluation for newly diagnosed AF and management consequence.[12]",
+        "columns": [
+          "Test or assessment",
+          "Why it changes management",
+          "Actionable interpretation"
+        ],
+        "rows": [
+          [
+            "12-lead ECG or diagnostic rhythm strip",
+            "Confirms AF and identifies ventricular rate, conduction disease, ischemic changes, or pre-excitation.[12][15]",
+            "If pre-excitation with AF is suspected, avoid routine AV-nodal blockade and obtain urgent electrophysiology/cardiology input.[15]"
+          ],
+          [
+            "Transthoracic echocardiogram",
+            "Assesses EF, valves, chamber size, and structural substrate; EF directs acute rate-control and antiarrhythmic selection.[12]",
+            "EF 40% or lower excludes nondihydropyridine calcium-channel blockers for acute rate control and raises concern for AF-related cardiomyopathy.[12]"
+          ],
+          [
+            "CBC, metabolic panel, thyroid function",
+            "Detects contributors and determines renal/hepatic suitability for anticoagulants and antiarrhythmics.[12]",
+            "Correct reversible abnormalities; incorporate kidney and liver function into anticoagulant and antiarrhythmic selection.[12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stroke-prevention",
+      "eyebrow": "Thromboembolism prevention",
+      "heading": "Base anticoagulation on annual thromboembolic risk, not AF pattern or rhythm-control success",
+      "intro": "Stroke prevention should be assessed at diagnosis and re-evaluated over time.",
+      "paragraphs": [
+        "Assess annual thromboembolic risk with a validated clinical score. CHA2DS2-VASc remains the usual bedside tool, but ATRIA and GARFIELD-AF are acceptable validated alternatives. The 2026 AHA/ACC performance measure specifies documentation of a validated score for AF or atrial flutter in inpatient or outpatient care.[12]",
+        "For estimated annual thromboembolic risk of at least 2%\u2014illustrated by CHA2DS2-VASc at least 2 in men or at least 3 in women\u2014oral anticoagulation is recommended. In patients eligible for anticoagulation without moderate-to-severe rheumatic mitral stenosis or a mechanical heart valve, a DOAC is preferred over warfarin because randomized evidence and meta-analyses support lower stroke, systemic embolism, mortality, and intracranial hemorrhage risk versus warfarin.[5][12]",
+        "For intermediate estimated risk of 1% to less than 2% per year, corresponding to CHA2DS2-VASc 1 in men or 2 in women, anticoagulation is reasonable and should incorporate patient-level stroke modifiers, bleeding risk, and preference. Aspirin alone or combined with clopidogrel is not an anticoagulant alternative when oral anticoagulation is indicated.[12]"
+      ],
+      "bullets": [
+        "Use warfarin rather than a DOAC for AF with rheumatic mitral stenosis or mitral stenosis of moderate or greater severity, and avoid DOACs in mechanical-valve recipients.[12]",
+        "A high bleeding-risk score should prompt correction of modifiable bleeding risks and closer follow-up; it should not be used in isolation to deny indicated anticoagulation.[11][12]",
+        "For AF with chronic coronary disease beyond 1 year after revascularization and no history of stent thrombosis, oral anticoagulant monotherapy is recommended over adding a single antiplatelet agent to reduce major bleeding.[12]",
+        "For AF requiring anticoagulation after PCI, use a DOAC plus a P2Y12 inhibitor in most patients and discontinue aspirin early, generally within 1 to 4 weeks; longer triple therapy may be considered when perceived stent-thrombosis risk is high.[12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Anticoagulation and ablation",
+          "paragraphs": [
+            "Catheter ablation does not by itself establish that anticoagulation can be stopped. During AF ablation, perform the procedure on uninterrupted therapeutic warfarin or continuous/minimally interrupted DOAC therapy. Subsequent long-term anticoagulation decisions should remain tied to thromboembolic risk because asymptomatic recurrence and progressive atrial disease remain clinically relevant.[12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Stroke-prevention decisions supported by current AHA/ACC performance measures.[12]",
+        "columns": [
+          "Clinical setting",
+          "Preferred approach",
+          "Important exception"
+        ],
+        "rows": [
+          [
+            "Estimated annual thromboembolic risk \u22652%",
+            "Prescribe oral anticoagulation; prefer a DOAC when eligible.[12]",
+            "Use warfarin for mechanical valves or moderate-to-severe mitral stenosis.[12]"
+          ],
+          [
+            "Estimated annual risk 1% to <2%",
+            "Anticoagulation is reasonable after individualized discussion.[12]",
+            "Do not use aspirin or aspirin plus clopidogrel as an alternative to indicated anticoagulation.[12]"
+          ],
+          [
+            "AF with stage 5 CKD or dialysis",
+            "Evidence is uncertain; warfarin or an evidence-based apixaban dose may be reasonable.[12]",
+            "Dabigatran and edoxaban are inappropriate in this setting.[12]"
+          ],
+          [
+            "AF undergoing PCI",
+            "DOAC plus P2Y12 inhibitor with aspirin discontinued after 1-4 weeks in most patients.[12]",
+            "Consider up to 30 days of triple therapy only when stent-thrombosis risk outweighs bleeding risk.[12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rate-control",
+      "eyebrow": "Symptom control",
+      "heading": "Use rate control when it achieves clinical stability and acceptable symptoms",
+      "intro": "Rate control remains foundational even when rhythm control is pursued.",
+      "paragraphs": [
+        "In hemodynamically stable AF with rapid ventricular response and EF greater than 40%, beta-blockers or nondihydropyridine calcium-channel blockers are recommended for acute rate control. If moderate-to-severe LV systolic dysfunction is known or suspected, intravenous diltiazem or verapamil should not be used because of harm from negative inotropy.[12]",
+        "For chronic therapy, beta-blockers are commonly used; diltiazem or verapamil are effective when systolic function is preserved. Digoxin is generally an adjunct for resting-rate control and requires particular caution in older adults and kidney impairment. It has limited control during exertion, and increased serum digitalis levels have been associated with arrhythmias and mortality.[11]",
+        "A lenient resting-rate approach of less than 110 beats/min was noninferior to strict control in RACE II, although the trial largely enrolled patients with permanent AF and preserved LV function. Tighten targets when symptoms, tachycardia-mediated cardiomyopathy, or inadequate functional control persists.[11]"
+      ],
+      "bullets": [
+        "Urgently cardiovert patients with hemodynamic instability attributable to AF; do not delay for a rate-control trial when shock, ongoing ischemia, or pulmonary edema is present.[15]",
+        "Avoid AV-nodal blocking drugs in AF with pre-excitation, where they can favor rapid accessory-pathway conduction.[15]",
+        "Consider AV-node ablation with pacing only when medication and rhythm-control strategies fail or are not tolerated; it improves symptoms and quality of life but causes pacemaker dependence and does not remove the need for anticoagulation.[11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical rate-control selection based on available guideline and review evidence.[11][12]",
+        "columns": [
+          "Situation",
+          "Preferred approach",
+          "Avoid or monitor"
+        ],
+        "rows": [
+          [
+            "Stable AF with rapid ventricular response; EF >40%",
+            "Beta-blocker or diltiazem/verapamil.[12]",
+            "Monitor blood pressure, bradycardia, and response."
+          ],
+          [
+            "Moderate-to-severe LV systolic dysfunction or decompensated HFrEF",
+            "Avoid intravenous diltiazem/verapamil; use an alternative strategy individualized to hemodynamics.[12]",
+            "Nondihydropyridine calcium-channel blockers are harmful in this setting.[12]"
+          ],
+          [
+            "Need additional resting-rate control, especially with HFrEF",
+            "Digoxin may be adjunctive to a beta-blocker.[11]",
+            "Renal function, serum concentration when clinically indicated, drug interactions, and toxicity."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rhythm-control",
+      "eyebrow": "Rhythm strategy",
+      "heading": "Consider early rhythm control when symptoms, AF progression, or cardiovascular risk justify it",
+      "intro": "Modern rhythm control includes cardioversion, antiarrhythmic drugs, and catheter ablation.",
+      "paragraphs": [
+        "Older trials of drug-based rhythm control versus rate control generally found no mortality advantage for rhythm control, with substantial crossover, imperfect maintenance of sinus rhythm, and antiarrhythmic toxicity limiting interpretation.[4][8][11] Contemporary management should not treat those trials as a prohibition against rhythm control.",
+        "EAST-AFNET 4 tested systematic early rhythm control in 2,789 adults with AF diagnosed within 1 year and cardiovascular conditions. Over a median 5.1 years, early rhythm control reduced the composite of cardiovascular death, stroke, heart-failure hospitalization, or ACS hospitalization from 5.0 to 3.9 events per 100 person-years (HR 0.79). The strategy included antiarrhythmic drugs, cardioversion, and ablation when appropriate; it did not replace anticoagulation, rate control, or treatment of cardiovascular comorbidity.[6]",
+        "Use shared decision-making to choose rate versus rhythm control. The discussion should address symptom burden, time since diagnosis, AF pattern, LV function, atrial size and substrate, comorbidities, treatment risks, likelihood of durable rhythm control, and patient goals.[12]"
+      ],
+      "bullets": [
+        "In newly diagnosed HFrEF with AF, suspect arrhythmia-induced or AF-worsened cardiomyopathy and pursue an early, aggressive rhythm-control strategy.[12]",
+        "For long-term antiarrhythmic selection, avoid flecainide and propafenone after MI or with significant structural heart disease, including HFrEF; only amiodarone and dofetilide have evidence of not increasing mortality in heart failure.[10][11][12]",
+        "Dronedarone should not be used in NYHA class III-IV heart failure, recent decompensated heart failure, or high-risk permanent AF because of increased adverse outcomes in these populations.[6][12]",
+        "Initiate or up-titrate dofetilide in a monitored inpatient setting for at least 3 days with continuous ECG monitoring, creatinine-clearance calculation, and resuscitation capability.[12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Rhythm-control selection principles; drug dosing details are not provided in the supplied sources and should follow current U.S. labeling.[10][12]",
+        "columns": [
+          "Clinical context",
+          "Reasonable strategy",
+          "Key safety constraint"
+        ],
+        "rows": [
+          [
+            "Early AF with cardiovascular comorbidity",
+            "Discuss early rhythm-control strategy incorporating antiarrhythmic therapy, cardioversion, and/or ablation.[6]",
+            "Continue risk-based anticoagulation and comprehensive comorbidity treatment.[6][12]"
+          ],
+          [
+            "No significant structural heart disease",
+            "Class Ic therapy may be an option when rhythm control is desired.[11]",
+            "Avoid class Ic drugs with prior MI, substantial scar, or HFrEF.[12]"
+          ],
+          [
+            "HFrEF",
+            "Amiodarone, dofetilide, cardioversion, and/or catheter ablation may be considered within a rhythm-control plan.[10][12]",
+            "Dofetilide requires inpatient monitored initiation; dronedarone is contraindicated in advanced or recently decompensated HF.[12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "catheter-ablation",
+      "eyebrow": "Procedural care",
+      "heading": "Use catheter ablation for symptom relief and selected outcome benefit, with pulmonary vein isolation as the procedural foundation",
+      "intro": "Ablation is increasingly used earlier, but patient selection and post-procedure risk management remain decisive.",
+      "paragraphs": [
+        "Catheter ablation should be offered to patients with symptomatic AF when continued rhythm control is desired and antiarrhythmic drugs are ineffective, contraindicated, poorly tolerated, or not preferred. It is also effective for symptomatic or clinically significant atrial flutter. For AF ablation, pulmonary vein isolation is the primary lesion set unless a different specific trigger is identified.[12]",
+        "In CABANA, ablation did not significantly reduce the intention-to-treat composite of death, disabling stroke, serious bleeding, or cardiac arrest compared with drug therapy, but reduced the secondary endpoint of death or cardiovascular hospitalization, largely through fewer hospitalizations related to antiarrhythmic drug management.[11] The trial should not be interpreted as evidence that ablation is ineffective for symptoms or AF burden.",
+        "For appropriate patients with AF and HFrEF receiving guideline-directed medical therapy, catheter ablation is beneficial for symptoms, quality of life, ventricular function, and cardiovascular outcomes. In CASTLE-AF, the composite of all-cause death or heart-failure hospitalization occurred in 28.5% with ablation versus 44.6% with medical therapy (HR 0.62).[11][12]"
+      ],
+      "bullets": [
+        "Set expectations: PVI reduces AF burden but does not guarantee freedom from recurrence; recurrent AF after ablation can reflect pulmonary-vein reconnection, non-pulmonary-vein triggers, and progressive atrial substrate.[11]",
+        "Discuss procedural complications, including vascular injury, pericardial effusion/tamponade, stroke/TIA, phrenic nerve injury, pulmonary-vein stenosis, and rare atrioesophageal fistula.[11]",
+        "In persistent AF, empiric linear ablation or complex fractionated electrogram ablation added to PVI did not reduce recurrent AF in STAR AF II; additional substrate work should be individualized rather than routine.[11]"
+      ],
+      "subsections": [
+        {
+          "heading": "Risk-factor intervention is part of procedural success",
+          "paragraphs": [
+            "Ablation should be integrated with secondary prevention. For AF with BMI greater than 27 kg/m\u00b2, target at least 10% weight loss; recommend moderate-to-vigorous exercise totaling 210 minutes weekly; support smoking cessation; minimize or eliminate alcohol for patients pursuing rhythm control; and optimize blood-pressure control.[12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "When ablation meaningfully changes management.[11][12]",
+        "columns": [
+          "Patient group",
+          "Expected benefit",
+          "Decision caveat"
+        ],
+        "rows": [
+          [
+            "Symptomatic AF despite, intolerant of, or declining antiarrhythmic drugs",
+            "Improved rhythm control and symptoms.[12]",
+            "Assess atrial substrate, procedural risk, anticoagulation tolerance, access, and patient preference."
+          ],
+          [
+            "AF with HFrEF on guideline-directed medical therapy",
+            "Improves symptoms, QOL, ventricular function, and cardiovascular outcomes.[12]",
+            "Benefit is greatest when meaningful procedural success is plausible; severe frailty, advanced atrial myopathy, or prohibitive comorbidity may limit value.[12]"
+          ],
+          [
+            "Persistent AF",
+            "PVI remains the foundation.[12]",
+            "Routine empiric extra-PVI lesion sets have not consistently improved outcomes.[11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "follow-up-and-prevention",
+      "eyebrow": "Longitudinal care",
+      "heading": "Treat AF as progressive cardiovascular disease, not an isolated rhythm finding",
+      "intro": "Follow-up should reassess risk, treatment effectiveness, and modifiable contributors.",
+      "paragraphs": [
+        "AF risk and treatment indications evolve. Reassess thromboembolic risk annually, review renal function and medication interactions, confirm anticoagulant adherence, and reconsider rate versus rhythm strategy when symptoms, EF, AF burden, or clinical circumstances change.[12][23]",
+        "Lifestyle and risk-factor management is a Class 1 component of secondary prevention. Comprehensive care should address weight, exercise, smoking, alcohol, hypertension, diabetes, sleep-disordered breathing when clinically suspected, and other cardiovascular comorbidity.[12][23]",
+        "AF identified during acute medical illness or surgery is not necessarily transient. Patients should be counseled about substantial recurrence risk after the precipitating condition resolves and should receive follow-up for recurrence detection, thromboembolic risk reassessment, and management adjustment.[12]"
+      ],
+      "bullets": [
+        "For overweight or obesity with BMI above 27 kg/m\u00b2, offer weight-loss management targeting at least 10% loss.[12]",
+        "Counsel moderate-to-vigorous exercise targeting at least 210 minutes weekly, unless AF is associated with excessive endurance training or another individualized limitation.[12]",
+        "For tobacco use, provide cessation counseling and evidence-based tobacco treatment; for alcohol use, counsel minimization or elimination when pursuing rhythm control.[12]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does successful catheter ablation allow anticoagulation to be stopped?",
+      "answer": "Not routinely. Long-term anticoagulation should be determined by validated thromboembolic risk assessment rather than apparent maintenance of sinus rhythm after ablation, because asymptomatic recurrence and progressive atrial disease remain possible.[12]"
+    },
+    {
+      "question": "Should every newly diagnosed patient with AF have an ischemic evaluation?",
+      "answer": "No. Obtain ECG confirmation, transthoracic echocardiography, CBC, metabolic panel, and thyroid testing. Ischemia, ACS, and pulmonary embolism testing should be targeted to symptoms or signs rather than ordered solely because AF is present.[12]"
+    },
+    {
+      "question": "When is rate control alone reasonable?",
+      "answer": "Rate control is reasonable when symptoms are controlled, LV function is preserved, and the patient does not have a compelling rhythm-control indication. In asymptomatic patients with preserved LV function, lenient resting control below 110 beats/min is reasonable, with tighter goals when symptoms or tachycardia-mediated cardiomyopathy persist.[11][12]"
+    },
+    {
+      "question": "Who should be considered for early rhythm control?",
+      "answer": "Discuss early rhythm control in patients with AF diagnosed within 1 year and cardiovascular comorbidity, symptomatic AF, AF with HFrEF or suspected arrhythmia-induced cardiomyopathy, or when preserving sinus rhythm is likely to improve symptoms or cardiovascular outcomes.[6][12]"
+    },
+    {
+      "question": "Which patients should not receive a DOAC for AF?",
+      "answer": "Use warfarin rather than a DOAC for mechanical heart valves and rheumatic or moderate-to-severe mitral stenosis. In stage 5 CKD or dialysis, dabigatran and edoxaban are inappropriate; evidence remains limited and individualized warfarin or apixaban decisions may be reasonable.[12]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Screening for Atrial Fibrillation With Electrocardiography ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2695678",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2018 \u00b7 Cited by 206 \u2014 adults 85 years and older. Atrial fibrillation is a major risk factor for ischemic stroke, increasing risk of stroke by as much as 5-fold.",
+      "score": 0.39075536
+    },
+    {
+      "number": 2,
+      "title": "Prevalence of Diagnosed Atrial Fibrillation in Adults ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/193807",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by AS Go \u00b7 2001 \u00b7 Cited by 9509 \u2014 Atrial fibrillation is the most common clinically significant cardiac arrhythmia. It is also a potent risk factor for ischemic stroke,",
+      "score": 0.35615602
+    },
+    {
+      "number": 3,
+      "title": "USPSTF Recommendation: Screening for Atrial Fibrillation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2788340",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2022 \u00b7 Cited by 257 \u2014 Approximately 20% of patients who have a stroke associated with AF are first diagnosed with AF at the time of the stroke or shortly thereafter.",
+      "score": 0.33173695
+    },
+    {
+      "number": 4,
+      "title": "Rate vs Rhythm Control in Patients With Atrial Fibrillation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/486408",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by S de Denus \u00b7 2005 \u00b7 Cited by 383 \u2014 No significant difference was observed between the rate and the rhythm control groups regarding all-cause mortality, although a strong trend in favor of a rate",
+      "score": 0.26308715
+    },
+    {
+      "number": 5,
+      "title": "Atrial fibrillation: stroke prevention",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(23)00216-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by TF Chao \u00b7 2024 \u00b7 Cited by 113 \u2014 Direct oral anticoagulants (DOACs) are generally the preferred choice over warfarin for stroke prevention in AF, while the importance of appropriate dosing of",
+      "score": 0.359657
+    },
+    {
+      "number": 6,
+      "title": "Early Rhythm-Control Therapy in Patients with Atrial ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2019422",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Even with current guideline-based management, patients with atrial fibrillation have stroke, acute coronary syndrome, heart failure, and cardiovascular death at a rate of approximately 5% of patients per year,1-4 and 35 to 50% of patients with atrial fibrillation who receive adequate anticoagulation",
+      "score": 0.5968332
+    },
+    {
+      "number": 7,
+      "title": "Atrial Fibrillation",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp2023658",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Management of atrial fibrillation includes therapy for treatable risk factors, anticoagulation based on estimated stroke risk, rate control,",
+      "score": 0.45507812
+    },
+    {
+      "number": 8,
+      "title": "Atrial Fibrillation | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/AITC202307180",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Older trials have shown that compared with rate control, rhythm control generally does not improve mortality, frequency of stroke or",
+      "score": 0.3070987
+    },
+    {
+      "number": 9,
+      "title": "Age and Outcomes of Early Rhythm Control in Patients With Atrial Fibrillation: Nationwide Cohort Study",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.02.014",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The details of the study protocol are presented in Supplemental Table 1. We identified adults (\u226518 years of age) with AF who were treated with rhythm control or rate control strategies between January 1, 2005, and December 31, 2015, and who were >75 years of age, had a history of a transient ischemi",
+      "score": 0.5243709
+    },
+    {
+      "number": 10,
+      "title": "Rhythm Control in Heart Failure Patients With Atrial ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.06.1169",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "HF, a diagnosis that encompasses those with both preserved and reduced ejection fractions (EF), is also increasingly prevalent (12). As the care for coronary artery disease and acute coronary syndromes improves, the incidence of ischemic cardiomyopathy has increased accordingly. Population studies s",
+      "score": 0.48806435
+    },
+    {
+      "number": 11,
+      "title": "Atrial Fibrillation: JACC Council Perspectives",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.02.025",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Atrial fibrillation (AF) is an increasingly prevalent arrhythmia; its pathophysiology and progression are well studied. Stroke and bleeding risk models have been created and validated. Decision tools for stroke prophylaxis are evolving, with better options at hand. Utilization of various diagnostic ",
+      "score": 0.47709182
+    },
+    {
+      "number": 12,
+      "title": "2026 AHA/ACC Clinical Performance and Quality Measures for Patients With Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.05.032",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| Clinical Recommendation(s) |\n| 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation5 1. Patients with AF, regardless of sex28 and gender diversity, race and ethnicity,22 or adverse social determinants of health (SDOH),23,24\u2217 should be equitably offered guideline-",
+      "score": 0.46774563
+    },
+    {
+      "number": 13,
+      "title": "Management of Atrial Fibrillation in Elderly Adults",
+      "detail": "agsjournals.onlinelibrary.wiley.com",
+      "url": "https://agsjournals.onlinelibrary.wiley.com/doi/10.1111/jgs.14483",
+      "authors": "agsjournals.onlinelibrary.wiley.com",
+      "host": "agsjournals.onlinelibrary.wiley.com",
+      "snippet": "Management of AF focuses on two broad areas: stroke risk reduction and symptom control. There is a robust and continuously evolving body of",
+      "score": 0.43727133
+    },
+    {
+      "number": 14,
+      "title": "Stroke Prevention in Atrial Fibrillation in Older Adults: Existing ...",
+      "detail": "agsjournals.onlinelibrary.wiley.com",
+      "url": "https://agsjournals.onlinelibrary.wiley.com/doi/10.1111/jgs.12456",
+      "authors": "agsjournals.onlinelibrary.wiley.com",
+      "host": "agsjournals.onlinelibrary.wiley.com",
+      "snippet": "AF-related stroke can be largely prevented, yet despite advances in stroke prevention. Determine methods to improve time in therapeutic range",
+      "score": 0.4129331
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the management of atrial fibrillation: The Task Force for the Management of Atrial Fibrillation of the European Society of Cardiology (ESC)",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/31/19/2369/442190",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "#### Patients with known atrial fibrillation\n\nIndications for AF monitoring in patients with previously diagnosed AF differ compared with undiagnosed patients. When arrhythmia- or therapy-related symptoms are suspected, monitoring using Holter recordings or external event recorders should be conside",
+      "score": 0.6052631
+    },
+    {
+      "number": 16,
+      "title": "2016 ESC Guidelines for the management of atrial fibrillation ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/37/38/2893/2334964",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by P Kirchhof \u00b7 2016 \u00b7 Cited by 13742 \u2014 Rate control is an integral part of the management of AF patients, and is often sufficient to improve AF-related symptoms.",
+      "score": 0.45406118
+    },
+    {
+      "number": 17,
+      "title": "2014 AHA/ACC/HRS Guideline for the Management of ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/doi/10.1161/cir.0000000000000040",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nCirculation\n\nNavbar\n\nMenu\n\n   Issues   \n   About Journal   \n   For Authors   \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n   Image 1Permissions   \n   Share   \n   Cite   \n ",
+      "score": 0.44275752
+    },
+    {
+      "number": 18,
+      "title": "Atrial Fibrillation: Stroke Prevention in Older Adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749069012000778",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The prevalence of atrial fibrillation (AF), the most common clinically significant cardiac arrhythmia, is increasing as the population of the United States ages.1, 2, 3 AF disproportionately affects the elderly and confers a significant stroke risk.1 With appropriate preventive strategies, the negat",
+      "score": 0.43093804
+    },
+    {
+      "number": 19,
+      "title": "Stroke Prevention in Atrial Fibrillation | ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/book/9780323554299/stroke-prevention-in-atrial-fibrillation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Covers a broad spectrum of management and treatment options for atrial fibrillation including anticoagulants, surgical and implanted devices.\n   Presents information on recent drug trials to keep you up to date with the latest developments.\n   Includes guidance on anticoagulation in special situatio",
+      "score": 0.4256297
+    },
+    {
+      "number": 20,
+      "title": "Atrial fibrillation: Stroke prevention in focus - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1036731413001690",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Atrial fibrillation: Stroke prevention in focus - ScienceDirect\n# Atrial fibrillation: Stroke prevention in focus. Atrial fibrillation (AF) is a common arrhythmia and a risk factor for stroke and other, adverse events. A review of key databases was conducted from 2002 to 2012 using the key se",
+      "score": 0.38623142
+    },
+    {
+      "number": 21,
+      "title": "Stroke prevention in patients with atrial fibrillation - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0828282X06702653",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Stroke prevention in patients with atrial fibrillation: The diagnosis and management of hypertension by specialists - ScienceDirect Skip to main contentSkip to article Volume 22, Issue 6, May 2006, Pages 485-488 Stroke prevention in patients with atrial fibrillation: The diagnosis and management of ",
+      "score": 0.23901214
+    },
+    {
+      "number": 22,
+      "title": "Atrial fibrillation: Rate control or rhythm control?",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/89/10/567",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The EAST-AFNET 4 (Early Treatment of Atrial Fibrillation for Stroke Prevention Trial)9 reported that in patients with a diagnosis of atrial fibrillation within the past year and concomitant high-cardiovascular-risk conditions, treatment with drugs or catheter ablation was associated with lower risks",
+      "score": 0.59655124
+    },
+    {
+      "number": 23,
+      "title": "New atrial fibrillation guideline: Modify risk, control rhythm ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/5/291",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Last, the guideline emphasizes an annual assessment of thromboembolic risk by using verified scores beyond CHA2DS2-VASc in shared decision-making regarding anticoagulation or other treatments, such as left atrial appendage occlusion.\n\n## WHAT IS THE EXPECTED CLINICAL IMPACT?\n\nThe new guideline will ",
+      "score": 0.5832277
+    },
+    {
+      "number": 24,
+      "title": "The beat goes on: Highlights from the new American and ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/5/297",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "In this issue of the Journal, Campbell at al5 provide a timely, expert review of the new American guideline for the diagnosis and management of atrial fibrillation.3 The authors emphasize the new staging system and the inclusion of individuals at risk of atrial fibrillation, and acknowledge that atr",
+      "score": 0.5780915
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Screening for Atrial Fibrillation With Electrocardiography ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2695678",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2018 \u00b7 Cited by 206 \u2014 adults 85 years and older. Atrial fibrillation is a major risk factor for ischemic stroke, increasing risk of stroke by as much as 5-fold.",
+      "score": 0.39075536
+    },
+    {
+      "number": 2,
+      "title": "Prevalence of Diagnosed Atrial Fibrillation in Adults ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/193807",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by AS Go \u00b7 2001 \u00b7 Cited by 9509 \u2014 Atrial fibrillation is the most common clinically significant cardiac arrhythmia. It is also a potent risk factor for ischemic stroke,",
+      "score": 0.35615602
+    },
+    {
+      "number": 3,
+      "title": "USPSTF Recommendation: Screening for Atrial Fibrillation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2788340",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by US Preventive Services Task Force \u00b7 2022 \u00b7 Cited by 257 \u2014 Approximately 20% of patients who have a stroke associated with AF are first diagnosed with AF at the time of the stroke or shortly thereafter.",
+      "score": 0.33173695
+    },
+    {
+      "number": 4,
+      "title": "Rate vs Rhythm Control in Patients With Atrial Fibrillation",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/486408",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by S de Denus \u00b7 2005 \u00b7 Cited by 383 \u2014 No significant difference was observed between the rate and the rhythm control groups regarding all-cause mortality, although a strong trend in favor of a rate",
+      "score": 0.26308715
+    },
+    {
+      "number": 5,
+      "title": "Atrial fibrillation: stroke prevention",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(23)00216-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by TF Chao \u00b7 2024 \u00b7 Cited by 113 \u2014 Direct oral anticoagulants (DOACs) are generally the preferred choice over warfarin for stroke prevention in AF, while the importance of appropriate dosing of",
+      "score": 0.359657
+    },
+    {
+      "number": 6,
+      "title": "Early Rhythm-Control Therapy in Patients with Atrial ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2019422",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Even with current guideline-based management, patients with atrial fibrillation have stroke, acute coronary syndrome, heart failure, and cardiovascular death at a rate of approximately 5% of patients per year,1-4 and 35 to 50% of patients with atrial fibrillation who receive adequate anticoagulation",
+      "score": 0.5968332
+    },
+    {
+      "number": 7,
+      "title": "Atrial Fibrillation",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp2023658",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Management of atrial fibrillation includes therapy for treatable risk factors, anticoagulation based on estimated stroke risk, rate control,",
+      "score": 0.45507812
+    },
+    {
+      "number": 8,
+      "title": "Atrial Fibrillation | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/AITC202307180",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Older trials have shown that compared with rate control, rhythm control generally does not improve mortality, frequency of stroke or",
+      "score": 0.3070987
+    },
+    {
+      "number": 9,
+      "title": "Age and Outcomes of Early Rhythm Control in Patients With Atrial Fibrillation: Nationwide Cohort Study",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.02.014",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The details of the study protocol are presented in Supplemental Table 1. We identified adults (\u226518 years of age) with AF who were treated with rhythm control or rate control strategies between January 1, 2005, and December 31, 2015, and who were >75 years of age, had a history of a transient ischemi",
+      "score": 0.5243709
+    },
+    {
+      "number": 10,
+      "title": "Rhythm Control in Heart Failure Patients With Atrial ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.06.1169",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "HF, a diagnosis that encompasses those with both preserved and reduced ejection fractions (EF), is also increasingly prevalent (12). As the care for coronary artery disease and acute coronary syndromes improves, the incidence of ischemic cardiomyopathy has increased accordingly. Population studies s",
+      "score": 0.48806435
+    },
+    {
+      "number": 11,
+      "title": "Atrial Fibrillation: JACC Council Perspectives",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.02.025",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Atrial fibrillation (AF) is an increasingly prevalent arrhythmia; its pathophysiology and progression are well studied. Stroke and bleeding risk models have been created and validated. Decision tools for stroke prophylaxis are evolving, with better options at hand. Utilization of various diagnostic ",
+      "score": 0.47709182
+    },
+    {
+      "number": 12,
+      "title": "2026 AHA/ACC Clinical Performance and Quality Measures for Patients With Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.05.032",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| Clinical Recommendation(s) |\n| 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation5 1. Patients with AF, regardless of sex28 and gender diversity, race and ethnicity,22 or adverse social determinants of health (SDOH),23,24\u2217 should be equitably offered guideline-",
+      "score": 0.46774563
+    },
+    {
+      "number": 13,
+      "title": "Management of Atrial Fibrillation in Elderly Adults",
+      "detail": "agsjournals.onlinelibrary.wiley.com",
+      "url": "https://agsjournals.onlinelibrary.wiley.com/doi/10.1111/jgs.14483",
+      "authors": "agsjournals.onlinelibrary.wiley.com",
+      "host": "agsjournals.onlinelibrary.wiley.com",
+      "snippet": "Management of AF focuses on two broad areas: stroke risk reduction and symptom control. There is a robust and continuously evolving body of",
+      "score": 0.43727133
+    },
+    {
+      "number": 14,
+      "title": "Stroke Prevention in Atrial Fibrillation in Older Adults: Existing ...",
+      "detail": "agsjournals.onlinelibrary.wiley.com",
+      "url": "https://agsjournals.onlinelibrary.wiley.com/doi/10.1111/jgs.12456",
+      "authors": "agsjournals.onlinelibrary.wiley.com",
+      "host": "agsjournals.onlinelibrary.wiley.com",
+      "snippet": "AF-related stroke can be largely prevented, yet despite advances in stroke prevention. Determine methods to improve time in therapeutic range",
+      "score": 0.4129331
+    },
+    {
+      "number": 15,
+      "title": "Guidelines for the management of atrial fibrillation: The Task Force for the Management of Atrial Fibrillation of the European Society of Cardiology (ESC)",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/31/19/2369/442190",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "#### Patients with known atrial fibrillation\n\nIndications for AF monitoring in patients with previously diagnosed AF differ compared with undiagnosed patients. When arrhythmia- or therapy-related symptoms are suspected, monitoring using Holter recordings or external event recorders should be conside",
+      "score": 0.6052631
+    },
+    {
+      "number": 16,
+      "title": "2016 ESC Guidelines for the management of atrial fibrillation ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/37/38/2893/2334964",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by P Kirchhof \u00b7 2016 \u00b7 Cited by 13742 \u2014 Rate control is an integral part of the management of AF patients, and is often sufficient to improve AF-related symptoms.",
+      "score": 0.45406118
+    },
+    {
+      "number": 17,
+      "title": "2014 AHA/ACC/HRS Guideline for the Management of ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/doi/10.1161/cir.0000000000000040",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nCirculation\n\nNavbar\n\nMenu\n\n   Issues   \n   About Journal   \n   For Authors   \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n   Image 1Permissions   \n   Share   \n   Cite   \n ",
+      "score": 0.44275752
+    },
+    {
+      "number": 18,
+      "title": "Atrial Fibrillation: Stroke Prevention in Older Adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749069012000778",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The prevalence of atrial fibrillation (AF), the most common clinically significant cardiac arrhythmia, is increasing as the population of the United States ages.1, 2, 3 AF disproportionately affects the elderly and confers a significant stroke risk.1 With appropriate preventive strategies, the negat",
+      "score": 0.43093804
+    },
+    {
+      "number": 19,
+      "title": "Stroke Prevention in Atrial Fibrillation | ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/book/9780323554299/stroke-prevention-in-atrial-fibrillation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Covers a broad spectrum of management and treatment options for atrial fibrillation including anticoagulants, surgical and implanted devices.\n   Presents information on recent drug trials to keep you up to date with the latest developments.\n   Includes guidance on anticoagulation in special situatio",
+      "score": 0.4256297
+    },
+    {
+      "number": 20,
+      "title": "Atrial fibrillation: Stroke prevention in focus - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1036731413001690",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Atrial fibrillation: Stroke prevention in focus - ScienceDirect\n# Atrial fibrillation: Stroke prevention in focus. Atrial fibrillation (AF) is a common arrhythmia and a risk factor for stroke and other, adverse events. A review of key databases was conducted from 2002 to 2012 using the key se",
+      "score": 0.38623142
+    },
+    {
+      "number": 21,
+      "title": "Stroke prevention in patients with atrial fibrillation - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0828282X06702653",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Stroke prevention in patients with atrial fibrillation: The diagnosis and management of hypertension by specialists - ScienceDirect Skip to main contentSkip to article Volume 22, Issue 6, May 2006, Pages 485-488 Stroke prevention in patients with atrial fibrillation: The diagnosis and management of ",
+      "score": 0.23901214
+    },
+    {
+      "number": 22,
+      "title": "Atrial fibrillation: Rate control or rhythm control?",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/89/10/567",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The EAST-AFNET 4 (Early Treatment of Atrial Fibrillation for Stroke Prevention Trial)9 reported that in patients with a diagnosis of atrial fibrillation within the past year and concomitant high-cardiovascular-risk conditions, treatment with drugs or catheter ablation was associated with lower risks",
+      "score": 0.59655124
+    },
+    {
+      "number": 23,
+      "title": "New atrial fibrillation guideline: Modify risk, control rhythm ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/5/291",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Last, the guideline emphasizes an annual assessment of thromboembolic risk by using verified scores beyond CHA2DS2-VASc in shared decision-making regarding anticoagulation or other treatments, such as left atrial appendage occlusion.\n\n## WHAT IS THE EXPECTED CLINICAL IMPACT?\n\nThe new guideline will ",
+      "score": 0.5832277
+    },
+    {
+      "number": 24,
+      "title": "The beat goes on: Highlights from the new American and ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/5/297",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "In this issue of the Journal, Campbell at al5 provide a timely, expert review of the new American guideline for the diagnosis and management of atrial fibrillation.3 The authors emphasize the new staging system and the inclusion of individuals at risk of atrial fibrillation, and acknowledge that atr",
+      "score": 0.5780915
+    }
+  ],
+  "publishedAt": "2026-08-20T22:42:58.343585Z",
+  "updatedAt": "2026-08-20T22:42:58.343585Z",
+  "readingMinutes": 8,
+  "slug": "atrial-fibrillation"
+}

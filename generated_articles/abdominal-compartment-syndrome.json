@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Abdominal Compartment Syndrome",
+  "summary": "Abdominal compartment syndrome is new organ dysfunction caused by sustained intra-abdominal hypertension. Diagnosis requires standardized bladder-pressure measurement in at-risk critically ill patients; management combines rapid pressure-reducing measures, source-directed drainage when feasible, and timely decompressive laparotomy for refractory organ dysfunction.",
+  "seoDescription": "Diagnose and manage abdominal compartment syndrome with standardized bladder-pressure monitoring, medical decompression, and timely surgical consultation.",
+  "clinicalQuestion": "How should clinicians identify, monitor, and treat abdominal compartment syndrome before irreversible organ injury occurs?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "abdominal compartment syndrome",
+    "intra-abdominal hypertension",
+    "bladder pressure",
+    "intra-abdominal pressure",
+    "decompressive laparotomy",
+    "open abdomen"
+  ],
+  "keyTakeaways": [
+    "Abdominal compartment syndrome (ACS) is sustained intra-abdominal pressure (IAP) >20 mm Hg, with or without abdominal perfusion pressure <60 mm Hg, plus new organ dysfunction or failure. [3][4]",
+    "Do not rely on abdominal examination or late physiologic signs. Measure IAP proactively in critically ill patients with risk factors, using standardized transbladder pressure measurement. [3][22]",
+    "Standardize bladder-pressure acquisition: supine, relaxed patient; end-expiratory measurement; transducer at the midaxillary line/iliac-crest level; use <25 mL intravesical fluid. [22]",
+    "Treat intra-abdominal hypertension by reducing intraluminal and extraluminal volume, improving abdominal-wall compliance, and avoiding further positive fluid balance while arranging early surgical evaluation for ACS. [3][20][22]",
+    "Decompressive laparotomy is definitive treatment for ACS refractory to nonoperative pressure-reducing measures; pressure alone should not replace assessment of evolving organ failure. [3][16][22]"
+  ],
+  "sections": [
+    {
+      "id": "recognition-and-thresholds",
+      "eyebrow": "Diagnosis",
+      "heading": "Recognize ACS as pressure-associated new organ dysfunction",
+      "intro": "ACS is a clinical syndrome confirmed by standardized IAP measurement.",
+      "paragraphs": [
+        "ACS is defined as sustained IAP >20 mm Hg, with or without abdominal perfusion pressure (APP) <60 mm Hg, associated with new organ dysfunction or failure. IAH precedes ACS and is defined by sustained or repeated IAP >12 mm Hg. APP is calculated as mean arterial pressure minus IAP. [3][4][15]",
+        "The high-value diagnostic distinction is between elevated pressure alone and pressure causing a new physiologic deterioration. Oliguria, increasing ventilator pressures with worsening gas exchange, hypotension or reduced cardiac output, and progressive abdominal distension should trigger immediate IAP measurement rather than attribution solely to shock, ARDS, acute kidney injury, or the underlying abdominal disease. [3][15][22]",
+        "Clinical examination is insufficient to exclude IAH or ACS; physical findings are nonspecific and often late. In critically ill patients with risk factors, proactive IAP monitoring is therefore central to diagnosis. [3][22]"
+      ],
+      "bullets": [
+        "Risk settings include reduced abdominal-wall compliance; ileus or bowel obstruction; ascites, hemoperitoneum, tumor, or other intra-abdominal collections; severe pancreatitis; sepsis; and large-volume resuscitation. [3][15][22]",
+        "Massive transfusion (>10 units in 24 hours) and excessive resuscitation are recognized high-risk exposures. [3][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pressure definitions and decision implications. [3][4][15][22]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "IAP >12 mm Hg, sustained or repeated",
+            "Intra-abdominal hypertension. [3][15]",
+            "Identify reversible contributors, serially assess organ function, and monitor IAP. [20][22]"
+          ],
+          [
+            "IAP >20 mm Hg plus new organ dysfunction",
+            "Abdominal compartment syndrome. [3][4]",
+            "Start or intensify pressure-reducing measures and obtain urgent surgical evaluation for decompression if dysfunction persists. [3][22]"
+          ],
+          [
+            "APP <60 mm Hg with ACS physiology",
+            "Included in consensus ACS definition when accompanied by IAP >20 mm Hg and new organ dysfunction. [3][4]",
+            "Interpret with the overall hemodynamic and organ-failure trajectory; do not use APP in isolation. [3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "measurement",
+      "eyebrow": "Monitoring",
+      "heading": "Measure intra-abdominal pressure correctly",
+      "intro": "Transbladder pressure is the practical reference method for estimating IAP.",
+      "paragraphs": [
+        "Use transbladder measurement through an indwelling Foley catheter. Device labeling supports bladder-pressure monitoring as an aid to diagnosing IAH and ACS. [1][2] Standardization matters because abdominal muscle activity, position, respiratory phase, transducer level, and excessive bladder instillation can distort results. [1][22]",
+        "For an interpretable bedside value, position the patient supine and as relaxed as possible; record at end expiration; level the transducer at the midaxillary line at the iliac-crest level; and instill less than 25 mL of fluid to establish the fluid column. If the patient is intubated and abdominal contraction is materially limiting interpretation, neuromuscular blockade may improve measurement accuracy. [22]",
+        "In critically ill patients with at least one risk factor, screening may be performed every 4 to 6 hours or at least daily according to the ACEP summary of WSACS-oriented practice. Escalate the frequency when IAP is elevated or organ function is worsening. [22]"
+      ],
+      "bullets": [
+        "Document the measurement conditions with each value: body position, respiratory phase, transducer reference point, instillation volume, and whether abdominal muscle activity was present. [1][22]",
+        "Trend IAP together with urine output, ventilator pressures and gas exchange, hemodynamics, lactate or other perfusion markers, and the trajectory of the underlying process. ACS is not diagnosed by a pressure value alone. [3][15][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common sources of misleading transbladder IAP values. [1][22]",
+        "columns": [
+          "Potential error",
+          "Why it matters",
+          "Corrective action"
+        ],
+        "rows": [
+          [
+            "Non-supine position or incorrect transducer level",
+            "Can produce a noncomparable pressure estimate. [22]",
+            "Use supine positioning and level the transducer at the specified midaxillary/iliac-crest reference. [22]"
+          ],
+          [
+            "Measurement away from end expiration",
+            "Respiratory variation can alter the recorded pressure. [1][22]",
+            "Read at end expiration. [1][22]"
+          ],
+          [
+            "Active abdominal contraction",
+            "May raise the measured pressure and impair clinical interpretation. [1][22]",
+            "Ensure analgesia and relaxation; consider neuromuscular blockade in an intubated patient when needed for accurate assessment. [22]"
+          ],
+          [
+            "Instilling excessive bladder volume",
+            "Can falsely elevate bladder pressure. [22]",
+            "Use less than 25 mL of fluid. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-management",
+      "eyebrow": "Management",
+      "heading": "Reduce pressure while treating the precipitating process",
+      "intro": "Management is simultaneous: stabilize organ perfusion, reduce abdominal volume or wall tension, and involve surgery early.",
+      "paragraphs": [
+        "For IAH or suspected ACS, address reversible pressure drivers immediately. Core nonoperative goals are evacuation of intraluminal contents, evacuation of intra-abdominal or extraluminal contents, improvement in abdominal-wall compliance, and optimization of fluid balance. [20][22] These measures should not delay surgical evaluation when new organ dysfunction is progressing.",
+        "Decompress the gastrointestinal tract with nasogastric and rectal decompression when appropriate. Hold enteral feeding during worsening IAH; in the absence of bowel obstruction, prokinetic therapy may be used. [22]",
+        "Drainage is particularly relevant when ascites or a sizable fluid collection is a major pressure contributor. Paracentesis or drain placement may reduce pressure in selected patients with substantial intra-abdominal fluid before ACS is established or when laparotomy carries substantial risk. [1]",
+        "Avoid continuing excessive intravenous fluid administration once initial resuscitation priorities permit. Positive fluid balance and third spacing can aggravate bowel and retroperitoneal edema, worsening IAP. [3][20][22] Analgesia, appropriate positioning, and\u2014when severe abdominal-wall muscle tone is contributing\u2014short-term neuromuscular blockade can decrease IAP; available evidence summarized by ACEP notes improved organ function but no proven mortality benefit for neuromuscular blockade. [3][22]"
+      ],
+      "bullets": [
+        "Obtain urgent surgical consultation when IAP is rising with new renal, respiratory, hemodynamic, or other organ dysfunction. [22]",
+        "Search for a drainable or surgically correctable cause: hemoperitoneum, ascites, abscess or fluid collection, bowel distension/obstruction, abdominal packing, edema after resuscitation, or an overly restrictive abdominal closure. [1][3][15]",
+        "Reassess IAP and organ function after each intervention; a falling pressure without physiologic improvement should prompt reassessment for other causes of organ failure. [3][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pressure-reducing interventions before or alongside surgical decompression. [1][20][22]",
+        "columns": [
+          "Target",
+          "Practical intervention",
+          "Use and limitation"
+        ],
+        "rows": [
+          [
+            "Intraluminal volume",
+            "Nasogastric and rectal decompression; hold tube feeding during worsening IAH; consider prokinetic therapy if no obstruction. [22]",
+            "Appropriate for bowel distension or ileus; does not replace source control or surgery for ACS. [20][22]"
+          ],
+          [
+            "Extraluminal volume",
+            "Paracentesis or image-guided drainage of ascites or sizable fluid collections. [1][22]",
+            "Most useful when fluid is a major mechanical contributor and is safely accessible. [1]"
+          ],
+          [
+            "Abdominal-wall compliance",
+            "Adequate analgesia, relaxation, positioning, and selected neuromuscular blockade. [3][22]",
+            "Can lower IAP transiently; no demonstrated mortality benefit for neuromuscular blockade. [22]"
+          ],
+          [
+            "Capillary leak and edema",
+            "Avoid unnecessary additional IV fluid and correct positive fluid balance when feasible. [20][22]",
+            "Must be balanced against ongoing shock and perfusion requirements. [20][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surgical-decompression",
+      "eyebrow": "Procedure",
+      "heading": "Use decompressive laparotomy for refractory ACS",
+      "intro": "Decompression is definitive when ACS persists despite feasible nonoperative measures.",
+      "paragraphs": [
+        "Decompressive laparotomy is the definitive treatment for ACS and is generally reserved for patients in whom medical or minimally invasive pressure-reducing measures fail. [3][22] The indication is worsening pressure-associated organ dysfunction, not an IAP threshold in isolation. Historical literature emphasizes that no single pressure threshold applies universally because clinical effects and pressure do not correlate perfectly across patients. [16]",
+        "At laparotomy, the abdomen is typically managed open with a temporary abdominal closure rather than forced fascial reapproximation. Open-abdomen strategies use temporary coverage systems, including vacuum-based approaches, to accommodate edema and reduce recurrent IAH risk. [7][14][15]",
+        "Prepare for abrupt physiologic shifts with decompression. Reported concerns include hemodynamic instability, reperfusion effects, hyperkalemia, hemorrhage, fluid loss, infection, evisceration, and enterocutaneous fistula; temporary abdominal closure can also lead to a ventral hernia requiring delayed reconstruction. [15]"
+      ],
+      "bullets": [
+        "Before decompression, ensure adequate vascular access and controlled ventilation, optimize intravascular volume and oxygen delivery as feasible, and correct hypothermia and coagulopathy when present. [15]",
+        "After decompression, monitor for rapid changes in blood pressure, ventilation, urine output, acid-base status, potassium, hemorrhage, and recurrent IAH. [15]",
+        "The choice between planned open-abdomen and primary fascial closure in severe abdominal sepsis remains under study; the COOL trial was designed because equipoise persists and no results were posted in the registry record. [21]"
+      ],
+      "subsections": [
+        {
+          "heading": "Pediatric considerations",
+          "paragraphs": [
+            "Pediatric ACS may progress rapidly and is associated with substantial mortality. In a retrospective series of 26 children treated with emergency decompressive laparotomy, most required surgery within 8 hours of PICU admission; mortality was 58%, and higher bladder pressure was associated with death. [14] Adult IAP thresholds should not be applied uncritically to children. [14]"
+          ],
+          "bullets": [
+            "In children with high-risk illness and evolving oliguria, ventilatory deterioration, shock, or rising lactate, obtain early pediatric surgical and critical care input rather than waiting for a fixed adult pressure threshold. [14]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "When to escalate to operative decompression. [3][14][16][22]",
+        "columns": [
+          "Clinical state",
+          "Action",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "IAH without new organ dysfunction",
+            "Institute reversible pressure-reducing measures and serial monitoring. [20][22]",
+            "Aim to prevent progression to ACS. [20][22]"
+          ],
+          [
+            "ACS with a readily drainable fluid contributor",
+            "Perform feasible drainage while monitoring response and involving surgery. [1][22]",
+            "Drainage can reduce IAP in selected fluid-dominant presentations. [1]"
+          ],
+          [
+            "Persistent or worsening ACS despite feasible nonoperative measures",
+            "Proceed urgently toward decompressive laparotomy with temporary abdominal closure planning. [3][22]",
+            "Delayed relief risks progressive multisystem organ dysfunction. [3][14][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prognosis-and-communication",
+      "eyebrow": "Prognosis",
+      "heading": "Communicate the urgency and uncertainty of outcomes",
+      "intro": "ACS signals severe critical illness; decompression may reverse physiology but does not eliminate underlying risk.",
+      "paragraphs": [
+        "Untreated ACS is potentially fatal, and mortality remains high even after treatment. [3][4][22] In a pediatric decompressive-laparotomy series, overall mortality was 58%; however, this reflects a severely ill selected cohort and should not be generalized to all adults or children with ACS. [14]",
+        "Explain to families that decompression aims to reverse immediately life-threatening pressure-related organ dysfunction, but the patient may remain at high risk from the underlying cause, ischemia-reperfusion injury, sepsis, hemorrhage, respiratory failure, kidney injury, and complications of an open abdomen. [14][15]"
+      ],
+      "bullets": [
+        "Document the presumed mechanism of IAH/ACS, serial IAP values with technique, organ-failure trajectory, interventions attempted, surgical consultation timing, and response to decompression. [1][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What confirms abdominal compartment syndrome?",
+      "answer": "ACS requires sustained IAP >20 mm Hg plus new organ dysfunction or failure; the consensus definition permits associated APP <60 mm Hg but does not require it. Use standardized transbladder measurement to estimate IAP. [3][4][22]"
+    },
+    {
+      "question": "How often should I measure bladder pressure in an at-risk ICU patient?",
+      "answer": "For critically ill patients with at least one risk factor, screening may be performed every 4 to 6 hours or at least daily; increase monitoring when IAP is elevated or organ dysfunction evolves. [22]"
+    },
+    {
+      "question": "Should a tense abdomen or oliguria alone trigger laparotomy?",
+      "answer": "No. These findings should trigger urgent standardized IAP measurement and evaluation for ACS, but operative decompression is based on pressure-associated organ dysfunction and response to feasible pressure-reducing measures rather than a single clinical sign or pressure number. [3][16][22]"
+    },
+    {
+      "question": "Can neuromuscular blockade treat abdominal compartment syndrome?",
+      "answer": "It may transiently reduce IAP and improve organ function by increasing abdominal-wall compliance, particularly in an intubated patient, but it has no proven mortality benefit and should not delay decompressive management of refractory ACS. [22]"
+    },
+    {
+      "question": "When is percutaneous drainage appropriate?",
+      "answer": "Use paracentesis or drain placement when ascites or an accessible intra-abdominal fluid collection is a major contributor to elevated pressure. It may reduce IAP in selected patients but is not a substitute for laparotomy when ACS persists with worsening organ dysfunction. [1][22]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Orthopaedic and Rehabilitation Devices Panel Sept. 8-9, 2020 - PHU Executive Summary",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/141847/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Abdominal compartment syndrome (ACS) describes increasing organ dysfunction or failure as a result of sustained intra-abdominal hypertension (IAH) which causes decreased perfusion to end organs (such as the kidneys) and can negatively impact pulmonary mechanics due to increased pressure on the diaph",
+      "score": 0.41805586
+    },
+    {
+      "number": 2,
+      "title": "ORDP Sept. 8-9, 2020 - Classification of Intra-Abdominal Pressure Monitoring Devices",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/141903/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "\uf09f Labeling  \n\n> 889\n\n## Proposed Classification Regulation \n\n878.XXXX Intra-Abdominal Pressure Monitoring Device \n\n(a)  Identification. An intra-abdominal pressure monitoring device is a prescription device that monitors pressure in the abdominal compartment to aid in the diagnosis of abdominal comp",
+      "score": 0.16725977
+    },
+    {
+      "number": 3,
+      "title": "Abdominal compartment syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1125?locale=zh_TW",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Skip to search\n\n# Abdominal compartment syndrome\n\n\ue5d4 Menu\ue5d4 Close\n\n Overview \ue313\ue316\n Theory \ue313\ue316\n Diagnosis \ue313\ue316\n Management \ue313\ue316\n Follow up \ue313\ue316\n Resources \ue313\ue316\n\nLog in or subscribe to access all of BMJ Best Practice\n\nEvidence last reviewed: 20 Jul 2026\n\nTopic last updated: 11 Nov 2022\n\n## Summary\n\nAbdominal compa",
+      "score": 0.57408494
+    },
+    {
+      "number": 4,
+      "title": "Abdominal compartment syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1125",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### Definition\n\nAbdominal compartment syndrome (ACS) is a sustained IAP over 20 mmHg, with or without an abdominal perfusion pressure below 60 mmHg, that is associated with new organ dysfunction or failure.(#referencePop1)The World Society of the Abdominal Compartment Syndrome. WSACS consensus guide",
+      "score": 0.56690645
+    },
+    {
+      "number": 5,
+      "title": "Surgical Decompression for Abdominal Compartment ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/406194",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by P Mentula \u00b7 2010 \u00b7 Cited by 259 \u2014 The best treatment for ACS is its prevention by intensive monitoring to avoid excess fluid administration.12",
+      "score": 0.5402697
+    },
+    {
+      "number": 6,
+      "title": "Avoidance of Abdominal Compartment Syndrome in ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/391636",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by PJ Offner \u00b7 2001 \u00b7 Cited by 320 \u2014 Fortunately, it is easily treated by means of abdominal decompression, which readily reverses adverse physiological consequences.",
+      "score": 0.23066878
+    },
+    {
+      "number": 7,
+      "title": "Abdominal Compartment Syndrome in the Open Abdomen",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/213101",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by VH Gracias \u00b7 2002 \u00b7 Cited by 214 \u2014 An increasingly common method is the vacuum packed technique. This method accommodates considerable expansion of intra-abdominal contents and should obviate the",
+      "score": 0.22164577
+    },
+    {
+      "number": 8,
+      "title": "Mission to Eliminate Postinjury Abdominal Compartment ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/1107102",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by ZJ Balogh \u00b7 2011 \u00b7 Cited by 92 \u2014 Abdominal compartment syndrome was defined as a sustained IAP greater than 20 mm Hg (with or without an APP < 60 mm Hg) that is associated with",
+      "score": 0.21621042
+    },
+    {
+      "number": 9,
+      "title": "Survey of intensive care physicians on the... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2006/09000/survey_of_intensive_care_physicians_on_the.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Authors and Affiliations\n\nCritical Care Medicine34(9):p 2340-2348, September 2006. | DOI: 10.1097/01.CCM.0000233874.88032.1C\n\nAbstract\n\n## Objective:\n\nTo assess current understanding and clinical management of intra-abdominal hypertension and abdominal compartment syndrome among critical care physic",
+      "score": 0.45028743
+    },
+    {
+      "number": 10,
+      "title": "Medical Intelligence Unit: Abdominal Compartment... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/10.1097/01.ccm.0000281646.08933.49~medical-intelligence-unit-abdominal-compartment-syndrome",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nImage 1: ccmjournal-bg-headerImage 2: SCCM-logo-1\n\nSearch Search\n\nSearch History\n\nLog in\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections   \n   Media   \n   Journal Info   \n   For Authors   \n   Become a Member  \n\n   More menu items  \n\nSearch\n\nHistory\n\nButton group.\n\n   Check Access   \n   Ima",
+      "score": 0.33954337
+    },
+    {
+      "number": 11,
+      "title": "Review of Nutrition Guidelines and Evidence on Diet and Survival Outcomes for Cancer Survivors: Call for Integrating Nutrition into Oncology Care",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022316624003018",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Several organizations have published nutrition guidelines for cancer survivors during and after treatment. This review compared nutrition guidelines for cancer survivors published in the United States for the topics that are covered in the guidelines and evaluated the evidence that these guidelines ",
+      "score": 0.072328284
+    },
+    {
+      "number": 12,
+      "title": "Intra-Abdominal Pressure : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2014/02000/intra_abdominal_pressure__why_are_you_not.38.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nImage 1: ccmjournal-bg-headerImage 2: SCCM-logo-1\n\nSearch Search\n\nSearch History\n\nLog in\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections   \n   Media   \n   Journal Info   \n   For Authors   \n   Become a Member  \n\n   More menu items  \n\nSearch\n\nHistory\n\nButton group.\n\n   Check Access   \n   Ima",
+      "score": 0.041965928
+    },
+    {
+      "number": 13,
+      "title": "Fluid Resuscitation for Burn Patients at Risk for... : Journal of the American College of Surgeons",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/journalacs/fulltext/2013/05000/fluid_resuscitation_for_burn_patients_at_risk_for.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nJournal of the American College of Surgeons\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections  \n   About Journal   \n   For Authors   \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n",
+      "score": 0.038441
+    },
+    {
+      "number": 14,
+      "title": "Decompressive laparotomy for abdominal compartment syndrome in children: before it is too late",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022346810002265",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "20 mmHg is accepted as a diagnostic pressure for ACS in adulthood. Although in children various IAP values like 10\u201317 mmHg were used as threshold levels in previous studies [1,3,4,13]. In our study, 15 mmHg was accepted as a diagnostic level, but a new consisted organ failure was necessary for certa",
+      "score": 0.65676886
+    },
+    {
+      "number": 15,
+      "title": "Abdominal Compartment Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/abdominal-compartment-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The diagnosis of abdominal compartment syndrome is based on clinical suspicion and measurement of bladder pressures, by injecting 50 mL of saline into the empty bladder through the Foley catheter. The tubing of the drainage bag is cross-clamped and a 16-gauge needle inserted through the aspiration p",
+      "score": 0.64236575
+    },
+    {
+      "number": 16,
+      "title": "The abdominal compartment syndrome: a complication with many faces",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300297701001048",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "cases. However no single threshold of abdominal pressure can be applied universally. Pending further clinical trials the best therapeutic option seems to be to decompress the abdomen surgically if the intravesical pressure is 25 mmHg or higher in patients with refractory hypotension, acute renal fai",
+      "score": 0.54985875
+    },
+    {
+      "number": 17,
+      "title": "Abdominal Compartment Syndrome: Risk Factors, ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2012/908169",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "At-risk patient populations should be routinely monitored and tiered interventions should be undertaken as a team approach to management.",
+      "score": 0.53968745
+    },
+    {
+      "number": 18,
+      "title": "Treatment of Abdominal Compartment Syndrome with ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-006-0024-6",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The subcutaneous anterior abdominal fasciotomy is a promising method for safe and effective abdominal decompression with sustained effect and",
+      "score": 0.40387306
+    },
+    {
+      "number": 19,
+      "title": "Interventional Treatment of Abdominal Compartment ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2016/5251806",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Two techniques have been described: subcutaneous linea alba fasciotomy [26] and fasciotomy of the anterior rectus abdominis sheath [27]. The",
+      "score": 0.3701121
+    },
+    {
+      "number": 20,
+      "title": "Nonoperative Management of Intraabdominal ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-009-0003-9",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The nonoperative management of IAH/ACS can be summarized using five therapeutic goals: evacuate intraluminal contents, evacuate intraabdominal",
+      "score": 0.34112197
+    },
+    {
+      "number": 21,
+      "title": "Study Details | NCT03163095 | Closed or Open Abdomen for the Management of Abdominal Sepsis | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03163095",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Kirkpatrick AW, Roberts DJ, De Waele J, Jaeschke R, Malbrain ML, De Keulenaer B, Duchesne J, Bjorck M, Leppaniemi A, Ejike JC, Sugrue M, Cheatham M, Ivatury R, Ball CG, Reintam Blaser A, Regli A, Balogh ZJ, D'Amours S, Debergh D, Kaplan M, Kimball E, Olvera C; Pediatric Guidelines Sub-Committee for ",
+      "score": 0.6150191
+    },
+    {
+      "number": 22,
+      "title": "Midriff Mayhem: Abdominal Compartment Syndrome in the ICU",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/criticalcare/newsroom/newsroom-articles/april2021/midriff-mayhem-abdominal-compartment-syndrome-in-the-icu",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "1.   Murphy PB, Parry NG, Sela N, et al. (2018). Intra-abdominal hypertension is more common than previously thought: A prospective study in a mixed medical-surgical ICU. _Crit Care Med_. 2018;46(6):958\u201364. \n2.   Kirkpatrick AW, Roberts DJ, De Waele J, et al. Intra-abdominal hypertension and the abd",
+      "score": 0.43568602
+    },
+    {
+      "number": 23,
+      "title": "MASSIVE GENERALIZED SUBCUTANEOUS EMPHYSEMA ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(20)33335-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by J Feliciano-FIgueroa \u00b7 2020 \u2014 Abdominal compartment syndrome (ACS) is a well-known syndrome defined as increased intraabdominal pressure >20mmHg with end-organ damage.",
+      "score": 0.34178072
+    },
+    {
+      "number": 24,
+      "title": "Intraabdominal Hypertension, Abdominal Compartment ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)31319-3/abstract",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by WK Rogers \u00b7 2018 \u00b7 Cited by 208 \u2014 Abdominal compartment syndrome (ACS) is the end point of a process whereby massive interstitial swelling in the abdomen or rapid development",
+      "score": 0.3045797
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Orthopaedic and Rehabilitation Devices Panel Sept. 8-9, 2020 - PHU Executive Summary",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/141847/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Abdominal compartment syndrome (ACS) describes increasing organ dysfunction or failure as a result of sustained intra-abdominal hypertension (IAH) which causes decreased perfusion to end organs (such as the kidneys) and can negatively impact pulmonary mechanics due to increased pressure on the diaph",
+      "score": 0.41805586
+    },
+    {
+      "number": 2,
+      "title": "ORDP Sept. 8-9, 2020 - Classification of Intra-Abdominal Pressure Monitoring Devices",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/141903/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "\uf09f Labeling  \n\n> 889\n\n## Proposed Classification Regulation \n\n878.XXXX Intra-Abdominal Pressure Monitoring Device \n\n(a)  Identification. An intra-abdominal pressure monitoring device is a prescription device that monitors pressure in the abdominal compartment to aid in the diagnosis of abdominal comp",
+      "score": 0.16725977
+    },
+    {
+      "number": 3,
+      "title": "Abdominal compartment syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1125?locale=zh_TW",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Skip to search\n\n# Abdominal compartment syndrome\n\n\ue5d4 Menu\ue5d4 Close\n\n Overview \ue313\ue316\n Theory \ue313\ue316\n Diagnosis \ue313\ue316\n Management \ue313\ue316\n Follow up \ue313\ue316\n Resources \ue313\ue316\n\nLog in or subscribe to access all of BMJ Best Practice\n\nEvidence last reviewed: 20 Jul 2026\n\nTopic last updated: 11 Nov 2022\n\n## Summary\n\nAbdominal compa",
+      "score": 0.57408494
+    },
+    {
+      "number": 4,
+      "title": "Abdominal compartment syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1125",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### Definition\n\nAbdominal compartment syndrome (ACS) is a sustained IAP over 20 mmHg, with or without an abdominal perfusion pressure below 60 mmHg, that is associated with new organ dysfunction or failure.(#referencePop1)The World Society of the Abdominal Compartment Syndrome. WSACS consensus guide",
+      "score": 0.56690645
+    },
+    {
+      "number": 5,
+      "title": "Surgical Decompression for Abdominal Compartment ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/406194",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by P Mentula \u00b7 2010 \u00b7 Cited by 259 \u2014 The best treatment for ACS is its prevention by intensive monitoring to avoid excess fluid administration.12",
+      "score": 0.5402697
+    },
+    {
+      "number": 6,
+      "title": "Avoidance of Abdominal Compartment Syndrome in ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/391636",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by PJ Offner \u00b7 2001 \u00b7 Cited by 320 \u2014 Fortunately, it is easily treated by means of abdominal decompression, which readily reverses adverse physiological consequences.",
+      "score": 0.23066878
+    },
+    {
+      "number": 7,
+      "title": "Abdominal Compartment Syndrome in the Open Abdomen",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/213101",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by VH Gracias \u00b7 2002 \u00b7 Cited by 214 \u2014 An increasingly common method is the vacuum packed technique. This method accommodates considerable expansion of intra-abdominal contents and should obviate the",
+      "score": 0.22164577
+    },
+    {
+      "number": 8,
+      "title": "Mission to Eliminate Postinjury Abdominal Compartment ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/1107102",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by ZJ Balogh \u00b7 2011 \u00b7 Cited by 92 \u2014 Abdominal compartment syndrome was defined as a sustained IAP greater than 20 mm Hg (with or without an APP < 60 mm Hg) that is associated with",
+      "score": 0.21621042
+    },
+    {
+      "number": 9,
+      "title": "Survey of intensive care physicians on the... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2006/09000/survey_of_intensive_care_physicians_on_the.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Authors and Affiliations\n\nCritical Care Medicine34(9):p 2340-2348, September 2006. | DOI: 10.1097/01.CCM.0000233874.88032.1C\n\nAbstract\n\n## Objective:\n\nTo assess current understanding and clinical management of intra-abdominal hypertension and abdominal compartment syndrome among critical care physic",
+      "score": 0.45028743
+    },
+    {
+      "number": 10,
+      "title": "Medical Intelligence Unit: Abdominal Compartment... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/10.1097/01.ccm.0000281646.08933.49~medical-intelligence-unit-abdominal-compartment-syndrome",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nImage 1: ccmjournal-bg-headerImage 2: SCCM-logo-1\n\nSearch Search\n\nSearch History\n\nLog in\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections   \n   Media   \n   Journal Info   \n   For Authors   \n   Become a Member  \n\n   More menu items  \n\nSearch\n\nHistory\n\nButton group.\n\n   Check Access   \n   Ima",
+      "score": 0.33954337
+    },
+    {
+      "number": 11,
+      "title": "Review of Nutrition Guidelines and Evidence on Diet and Survival Outcomes for Cancer Survivors: Call for Integrating Nutrition into Oncology Care",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022316624003018",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Several organizations have published nutrition guidelines for cancer survivors during and after treatment. This review compared nutrition guidelines for cancer survivors published in the United States for the topics that are covered in the guidelines and evaluated the evidence that these guidelines ",
+      "score": 0.072328284
+    },
+    {
+      "number": 12,
+      "title": "Intra-Abdominal Pressure : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2014/02000/intra_abdominal_pressure__why_are_you_not.38.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nImage 1: ccmjournal-bg-headerImage 2: SCCM-logo-1\n\nSearch Search\n\nSearch History\n\nLog in\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections   \n   Media   \n   Journal Info   \n   For Authors   \n   Become a Member  \n\n   More menu items  \n\nSearch\n\nHistory\n\nButton group.\n\n   Check Access   \n   Ima",
+      "score": 0.041965928
+    },
+    {
+      "number": 13,
+      "title": "Fluid Resuscitation for Burn Patients at Risk for... : Journal of the American College of Surgeons",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/journalacs/fulltext/2013/05000/fluid_resuscitation_for_burn_patients_at_risk_for.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nJournal of the American College of Surgeons\n\nNavbar\n\nMenu\n\n   Issues   \n   Collections  \n   About Journal   \n   For Authors   \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n",
+      "score": 0.038441
+    },
+    {
+      "number": 14,
+      "title": "Decompressive laparotomy for abdominal compartment syndrome in children: before it is too late",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022346810002265",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "20 mmHg is accepted as a diagnostic pressure for ACS in adulthood. Although in children various IAP values like 10\u201317 mmHg were used as threshold levels in previous studies [1,3,4,13]. In our study, 15 mmHg was accepted as a diagnostic level, but a new consisted organ failure was necessary for certa",
+      "score": 0.65676886
+    },
+    {
+      "number": 15,
+      "title": "Abdominal Compartment Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/abdominal-compartment-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The diagnosis of abdominal compartment syndrome is based on clinical suspicion and measurement of bladder pressures, by injecting 50 mL of saline into the empty bladder through the Foley catheter. The tubing of the drainage bag is cross-clamped and a 16-gauge needle inserted through the aspiration p",
+      "score": 0.64236575
+    },
+    {
+      "number": 16,
+      "title": "The abdominal compartment syndrome: a complication with many faces",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300297701001048",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "cases. However no single threshold of abdominal pressure can be applied universally. Pending further clinical trials the best therapeutic option seems to be to decompress the abdomen surgically if the intravesical pressure is 25 mmHg or higher in patients with refractory hypotension, acute renal fai",
+      "score": 0.54985875
+    },
+    {
+      "number": 17,
+      "title": "Abdominal Compartment Syndrome: Risk Factors, ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2012/908169",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "At-risk patient populations should be routinely monitored and tiered interventions should be undertaken as a team approach to management.",
+      "score": 0.53968745
+    },
+    {
+      "number": 18,
+      "title": "Treatment of Abdominal Compartment Syndrome with ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-006-0024-6",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The subcutaneous anterior abdominal fasciotomy is a promising method for safe and effective abdominal decompression with sustained effect and",
+      "score": 0.40387306
+    },
+    {
+      "number": 19,
+      "title": "Interventional Treatment of Abdominal Compartment ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2016/5251806",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Two techniques have been described: subcutaneous linea alba fasciotomy [26] and fasciotomy of the anterior rectus abdominis sheath [27]. The",
+      "score": 0.3701121
+    },
+    {
+      "number": 20,
+      "title": "Nonoperative Management of Intraabdominal ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1007/s00268-009-0003-9",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The nonoperative management of IAH/ACS can be summarized using five therapeutic goals: evacuate intraluminal contents, evacuate intraabdominal",
+      "score": 0.34112197
+    },
+    {
+      "number": 21,
+      "title": "Study Details | NCT03163095 | Closed or Open Abdomen for the Management of Abdominal Sepsis | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03163095",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Kirkpatrick AW, Roberts DJ, De Waele J, Jaeschke R, Malbrain ML, De Keulenaer B, Duchesne J, Bjorck M, Leppaniemi A, Ejike JC, Sugrue M, Cheatham M, Ivatury R, Ball CG, Reintam Blaser A, Regli A, Balogh ZJ, D'Amours S, Debergh D, Kaplan M, Kimball E, Olvera C; Pediatric Guidelines Sub-Committee for ",
+      "score": 0.6150191
+    },
+    {
+      "number": 22,
+      "title": "Midriff Mayhem: Abdominal Compartment Syndrome in the ICU",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/criticalcare/newsroom/newsroom-articles/april2021/midriff-mayhem-abdominal-compartment-syndrome-in-the-icu",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "1.   Murphy PB, Parry NG, Sela N, et al. (2018). Intra-abdominal hypertension is more common than previously thought: A prospective study in a mixed medical-surgical ICU. _Crit Care Med_. 2018;46(6):958\u201364. \n2.   Kirkpatrick AW, Roberts DJ, De Waele J, et al. Intra-abdominal hypertension and the abd",
+      "score": 0.43568602
+    },
+    {
+      "number": 23,
+      "title": "MASSIVE GENERALIZED SUBCUTANEOUS EMPHYSEMA ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(20)33335-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by J Feliciano-FIgueroa \u00b7 2020 \u2014 Abdominal compartment syndrome (ACS) is a well-known syndrome defined as increased intraabdominal pressure >20mmHg with end-organ damage.",
+      "score": 0.34178072
+    },
+    {
+      "number": 24,
+      "title": "Intraabdominal Hypertension, Abdominal Compartment ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)31319-3/abstract",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by WK Rogers \u00b7 2018 \u00b7 Cited by 208 \u2014 Abdominal compartment syndrome (ACS) is the end point of a process whereby massive interstitial swelling in the abdomen or rapid development",
+      "score": 0.3045797
+    }
+  ],
+  "publishedAt": "2026-08-20T23:37:32.234628Z",
+  "updatedAt": "2026-08-20T23:37:32.234628Z",
+  "readingMinutes": 5,
+  "slug": "abdominal-compartment-syndrome"
+}

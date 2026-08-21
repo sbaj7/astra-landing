@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Rheumatology",
+  "title": "Systemic Lupus Erythematosus",
+  "summary": "Manage SLE by confirming a clinical autoimmune phenotype, rapidly identifying renal, neurologic, hematologic, thrombotic, and cardiopulmonary threats, then using hydroxychloroquine and early steroid-sparing therapy to control activity while limiting glucocorticoid damage.",
+  "seoDescription": "Point-of-care guidance for diagnosing and treating systemic lupus erythematosus, including organ-threatening disease, lupus nephritis, and steroid-sparing therapy.",
+  "clinicalQuestion": "How should physicians diagnose SLE, identify organ-threatening involvement, and select disease-modifying treatment while minimizing glucocorticoid exposure?",
+  "specialty": "Rheumatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "systemic lupus erythematosus",
+    "SLE diagnosis",
+    "lupus nephritis",
+    "hydroxychloroquine",
+    "anifrolumab",
+    "belimumab",
+    "antiphospholipid syndrome"
+  ],
+  "keyTakeaways": [
+    "Diagnose SLE clinically; classification criteria support but do not replace clinical judgment, particularly in ANA-negative disease or biopsy-proven lupus nephritis. [2][3][6]",
+    "Use hydroxychloroquine unless contraindicated, targeting no more than 5 mg/kg/day of real body weight while balancing flare prevention against retinal toxicity. [18]",
+    "Treat glucocorticoids as short bridging therapy; aim for prednisone-equivalent maintenance doses of 5 mg/day or less and withdraw when feasible. [18]",
+    "New proteinuria, active urinary sediment, or declining kidney function should trigger urgent evaluation for lupus nephritis and kidney-directed immunosuppression. [18]",
+    "For active lupus nephritis, glucocorticoids plus mycophenolate or low-dose intravenous cyclophosphamide are anchor therapy; belimumab or a calcineurin inhibitor may be added. [18]",
+    "Test for antiphospholipid antibodies when thrombosis or pregnancy morbidity is present; APS requires compatible clinical events plus persistent aPL positivity. [24]"
+  ],
+  "sections": [
+    {
+      "id": "triage-organ-threatening-disease",
+      "eyebrow": "First decision",
+      "heading": "Identify organ-threatening SLE before treating routine manifestations",
+      "intro": "Triage by organ involvement and pace of injury rather than total symptom count.",
+      "paragraphs": [
+        "Prioritize immediate assessment for kidney injury, neuropsychiatric disease, severe cytopenias, thrombosis, pregnancy complications, and cardiopulmonary involvement. Renal and neuropsychiatric manifestations contribute substantially to SLE morbidity and mortality, while immunosuppressive therapy further increases infection risk. [13][16]",
+        "In a patient with suspected active systemic disease, obtain CBC with differential and platelets, serum creatinine, urinalysis with sediment, quantitative proteinuria, serum albumin, complement levels, anti-dsDNA, and targeted testing for antiphospholipid antibodies when thrombosis or obstetric morbidity is present. Low complement, anti-dsDNA, anti-Sm, and antiphospholipid antibodies are diagnostic aids; anti-dsDNA and anti-Sm are relatively specific but insensitive, whereas ANA is sensitive but nonspecific. [2][5]",
+        "New hypertension, edema, substantial proteinuria, lipid casts, fat oval bodies, abnormal urinary sediment, or loss of kidney function should shift management toward possible lupus nephritis rather than attribution to nonspecific SLE activity. A pregnancy-associated renal presentation also requires a competing assessment for preeclampsia, as severe hypertension and proteinuria can occur in that setting. [8][18]"
+      ],
+      "bullets": [
+        "For suspected thrombosis or recurrent fetal loss, order lupus anticoagulant, anticardiolipin antibodies, and anti-beta-2 glycoprotein I antibodies; APS is defined by thrombosis and/or pregnancy morbidity with persistent aPL positivity. [24]",
+        "For suspected pulmonary arterial hypertension, transthoracic echocardiography is a screening test; right-heart catheterization establishes hemodynamics when pulmonary hypertension is being evaluated definitively. [19]",
+        "Do not delay organ-directed treatment planning for failure to satisfy a classification score when the clinical phenotype and objective organ involvement are compelling. [2][3][6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that should redirect the initial SLE evaluation. [8][13][16][18][19][24]",
+        "columns": [
+          "Pattern",
+          "Immediate tests",
+          "Interpretation and next action"
+        ],
+        "rows": [
+          [
+            "Renal syndrome",
+            "Creatinine, urinalysis with sediment, quantitative proteinuria, serum albumin, complement, anti-dsDNA",
+            "Proteinuria, active sediment, or kidney dysfunction raises concern for active lupus nephritis; move to kidney-directed immunosuppressive planning. [18]"
+          ],
+          [
+            "Thrombosis or pregnancy morbidity",
+            "Lupus anticoagulant, anticardiolipin, anti-beta-2 glycoprotein I antibodies",
+            "Compatible events plus persistent aPL support APS; address secondary thrombosis prevention and cardiovascular risk factors. [24][19]"
+          ],
+          [
+            "Cardiopulmonary symptoms with pulmonary hypertension concern",
+            "Echocardiography followed by right-heart catheterization when definitive hemodynamics are needed",
+            "Elevated mean pulmonary arterial pressure and pulmonary vascular resistance with a normal wedge pressure support precapillary pulmonary arterial hypertension. [19]"
+          ],
+          [
+            "Neuropsychiatric presentation",
+            "Focused neurologic and psychiatric evaluation plus assessment for alternative causes",
+            "Neuropsychiatric involvement can occur at any point in SLE and is associated with major morbidity; distinguish inflammatory lupus manifestations from thrombosis, infection, medication effects, and primary neurologic disease before immunosuppression escalation. [13][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Use serology to support a clinical diagnosis, not to substitute for one",
+      "intro": "SLE is diagnosed from a coherent clinical phenotype plus evidence of immune-mediated disease.",
+      "paragraphs": [
+        "The diagnosis of SLE is clinical and supported by laboratory evidence of immune reactivity or inflammatory organ injury. The 2019 EULAR/ACR criteria have favorable sensitivity and specificity among contemporary classification systems, but they are classification criteria rather than diagnostic criteria. [2][3]",
+        "ANA positivity is the EULAR/ACR 2019 entry criterion, but a negative ANA should not automatically exclude SLE when the phenotype is persuasive. In an incident cohort, 18 of 737 patients (2.4%) were ANA-negative at diagnosis; another cohort included ANA-negative patients with biopsy-proven class III, IV, and V lupus nephritis. [4][6]",
+        "Interpret ANA by assay context and pretest probability. ANA is common in SLE but may occur in healthy individuals and other disorders, producing high sensitivity but low specificity; assay differences can also change apparent positivity. Anti-dsDNA and anti-Sm increase diagnostic specificity but do not have sufficient sensitivity to rule out disease. [5]",
+        "When patients do not meet a classification threshold but have a compatible phenotype, document the objective clinical and immunologic evidence, reassess longitudinally, and exclude competing connective-tissue, infectious, thrombotic, drug-related, and organ-specific diagnoses. For ANA-negative suspected SLE, low complement and/or antiphospholipid antibodies may provide an alternative immunologic entry point in a diagnostic algorithm. [2][3]"
+      ],
+      "bullets": [
+        "Use anti-dsDNA, anti-Sm, complement levels, CBC abnormalities, urinalysis, and protein quantification to define the organ pattern and establish a baseline for monitoring. [2][5]",
+        "Avoid using a normal or negative ANA alone to dismiss possible lupus nephritis when biopsy-level renal evidence and the clinical syndrome support SLE. [6]",
+        "Do not use neutrophil-to-lymphocyte ratio as a replacement for diagnostic serology; proposed thresholds and flare-monitoring algorithms require validation before routine practice adoption. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of common immunologic findings in suspected SLE. [2][4][5][6]",
+        "columns": [
+          "Finding",
+          "What it changes",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Positive ANA",
+            "Supports immune-mediated connective-tissue disease and permits entry into 2019 EULAR/ACR classification. [2]",
+            "Low specificity; positivity occurs in healthy persons and other diseases. [5]"
+          ],
+          [
+            "Negative ANA",
+            "Lowers probability but does not exclude clinical SLE, especially with convincing organ disease. [4][6]",
+            "ANA-negative lupus nephritis, including biopsy-proven proliferative disease, has been reported. [6]"
+          ],
+          [
+            "Anti-dsDNA or anti-Sm positivity",
+            "Raises diagnostic confidence in a compatible clinical syndrome. [5]",
+            "Both have low sensitivity; their absence does not rule out SLE. [5]"
+          ],
+          [
+            "Low complement",
+            "Supports immune activity and may help frame ANA-negative suspected SLE. [2][3]",
+            "Interpret with the full clinical phenotype rather than as an isolated diagnostic test. [2]"
+          ],
+          [
+            "Antiphospholipid antibodies",
+            "Prompt assessment for thrombotic and pregnancy morbidity phenotypes. [24]",
+            "APS requires compatible clinical events and persistent antibody positivity. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "baseline-therapy-and-glucocorticoid-sparing",
+      "eyebrow": "Disease control",
+      "heading": "Build treatment around hydroxychloroquine and early glucocorticoid-sparing therapy",
+      "intro": "Select therapy according to active organ involvement, severity, prior response, and toxicity risk.",
+      "paragraphs": [
+        "Use hydroxychloroquine for essentially all patients with SLE unless contraindicated or not tolerated. The EULAR target is 5 mg/kg/day or less using real body weight, individualized against the competing risks of flare and retinal toxicity. [18]",
+        "Use systemic glucocorticoids as bridging treatment during active disease, not as a default chronic maintenance strategy. For maintenance, minimize prednisone-equivalent exposure to 5 mg/day or less and withdraw when possible; prompt use of steroid-sparing immunosuppressive drugs and/or biologic agents facilitates tapering. [18]",
+        "For nonrenal inflammatory disease requiring escalation beyond hydroxychloroquine, consider methotrexate, azathioprine, or mycophenolate, and consider belimumab or anifrolumab when disease remains active or steroid tapering is not achievable. Choice should be driven by the dominant disease domain, reproductive considerations, prior immunosuppressant exposure, infection risk, and the objective need to reduce glucocorticoid exposure. [18]",
+        "Reserve cyclophosphamide for organ-threatening disease and consider rituximab for refractory disease. This distinction matters because cyclophosphamide is positioned for high-severity inflammatory organ injury, whereas rituximab is an option when standard approaches have not achieved control. [18]"
+      ],
+      "bullets": [
+        "Before escalating immunosuppression, distinguish active inflammatory disease from irreversible damage, infection, thrombosis, medication toxicity, or a non-SLE comorbidity; infection risk is amplified by immunosuppressive treatment. [16]",
+        "Reassess treatment response with the same organ-specific abnormalities used at baseline, such as urinary protein and sediment for nephritis, CBC for hematologic disease, and disease-specific clinical findings for cutaneous or musculoskeletal activity. [18]",
+        "Address health-related quality of life, patient participation, and individualized multidisciplinary nonpharmacologic interventions alongside pharmacotherapy. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Medication roles in SLE management. [18]",
+        "columns": [
+          "Clinical role",
+          "Treatment approach",
+          "Key treatment target or limitation"
+        ],
+        "rows": [
+          [
+            "Baseline disease modification",
+            "Hydroxychloroquine at a target dose no greater than 5 mg/kg/day real body weight. [18]",
+            "Balance flare prevention with retinal toxicity risk. [18]"
+          ],
+          [
+            "Short-term control of active disease",
+            "Glucocorticoids as bridging therapy. [18]",
+            "Taper toward 5 mg/day prednisone equivalent or less for maintenance and withdraw if possible. [18]"
+          ],
+          [
+            "Steroid-sparing treatment for active nonrenal disease",
+            "Methotrexate, azathioprine, mycophenolate, belimumab, or anifrolumab, selected by disease pattern and treatment history. [18]",
+            "Initiate early enough to permit glucocorticoid tapering. [18]"
+          ],
+          [
+            "Organ-threatening or refractory disease",
+            "Consider cyclophosphamide for organ-threatening disease and rituximab for refractory disease. [18]",
+            "Confirm active inflammatory disease and exclude infection or thrombotic mimics before escalation. [16][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lupus-nephritis",
+      "eyebrow": "Renal disease",
+      "heading": "Treat suspected active lupus nephritis as a high-priority organ manifestation",
+      "intro": "Renal findings change both urgency and the immunosuppressive regimen.",
+      "paragraphs": [
+        "Active lupus nephritis should be considered when SLE is accompanied by proteinuria, urinary sediment abnormalities, edema, hypertension, hypoalbuminemia, or kidney dysfunction. Quantify proteinuria and assess sediment rather than relying on dipstick results alone; nephrotic-range proteinuria with low albumin and lipid casts or fat oval bodies identifies a nephrotic pattern that warrants focused renal evaluation. [8]",
+        "For active lupus nephritis, use glucocorticoids plus mycophenolate or low-dose intravenous cyclophosphamide as anchor treatment. Consider adding belimumab or a calcineurin inhibitor, specifically voclosporin or tacrolimus, to the anchor regimen. [18]",
+        "Do not classify all proteinuria in pregnancy as active nephritis. Severe hypertension, weight gain, and proteinuria arising late in pregnancy may represent preeclampsia; persistent postpartum proteinuria requires reassessment for an underlying renal process rather than assuming the pregnancy complication fully explains ongoing urinary abnormalities. [8]",
+        "Follow renal response with serial quantitative proteinuria, serum creatinine, urine sediment, serum albumin when nephrotic features are present, blood pressure, and concurrent SLE activity measures. Escalate the diagnostic discussion when renal findings and systemic immune activity diverge, because ANA status and even conventional serologies do not reliably exclude biopsy-proven lupus nephritis. [6][8][18]"
+      ],
+      "bullets": [
+        "Use mycophenolate or low-dose intravenous cyclophosphamide as the principal immunosuppressive anchor for active lupus nephritis rather than treating with hydroxychloroquine alone. [18]",
+        "Consider belimumab or calcineurin inhibitor add-on therapy in active lupus nephritis when selecting a combination approach. [18]",
+        "Interpret pregnancy-associated proteinuria in conjunction with blood pressure, gestational timing, urinary findings, renal function, and postpartum trajectory. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Renal decision points in SLE. [6][8][18]",
+        "columns": [
+          "Clinical finding",
+          "Likely management branch",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Proteinuria with abnormal sediment or kidney dysfunction",
+            "Possible active lupus nephritis",
+            "Quantify proteinuria, assess creatinine and sediment, and initiate kidney-directed treatment planning. [18]"
+          ],
+          [
+            "Nephrotic proteinuria, hypoalbuminemia, lipid casts, or fat oval bodies",
+            "Nephrotic renal pattern",
+            "Perform focused renal assessment and distinguish lupus nephritis from alternative glomerular disease. [8]"
+          ],
+          [
+            "Late-pregnancy hypertension with severe proteinuria and weight gain",
+            "Preeclampsia versus lupus nephritis",
+            "Assess obstetric and renal features jointly; persistent postpartum proteinuria warrants renewed renal evaluation. [8]"
+          ],
+          [
+            "ANA-negative renal inflammatory syndrome with compelling lupus features",
+            "Possible ANA-negative lupus nephritis",
+            "Do not exclude lupus nephritis solely on ANA negativity; integrate renal pathology and the full immune phenotype. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-monitoring-and-risk-reduction",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor objective organ activity, treatment toxicity, thrombosis risk, and patient function",
+      "intro": "Track the abnormality that drove treatment rather than relying on symptoms alone.",
+      "paragraphs": [
+        "At follow-up, repeat disease- and organ-specific measures that were abnormal at presentation: CBC for cytopenias, creatinine and quantitative proteinuria with urine sediment for renal disease, complement and anti-dsDNA as adjunctive immune activity markers, and focused cardiopulmonary or neurologic testing when those organs are involved. This approach separates clinical activity from damage and permits glucocorticoid tapering only when objective control is sustained. [2][18]",
+        "Maintain hydroxychloroquine within the individualized weight-based target and revisit adherence, toxicity, and flare history when disease appears active. Lower hydroxychloroquine blood concentrations have been associated with exacerbations, and long-term hydroxychloroquine exposure requires attention to retinal and cardiac toxicity. [14][18]",
+        "For patients with aPL and prior thrombosis or pregnancy morbidity, manage the patient as possible APS rather than as isolated SLE seropositivity. Secondary thrombosis prevention and modification of cardiovascular risk factors are important because subsequent damage worsens health-related quality of life. [19][24]",
+        "Include structured nonpharmacologic care rather than treating pharmacotherapy as the entire intervention. EULAR emphasizes holistic, multidisciplinary, patient-involved, individualized strategies to improve quality of care and health-related quality of life in SLE. [1]"
+      ],
+      "bullets": [
+        "Reevaluate unexplained deterioration for infection before increasing glucocorticoids or immunosuppression. [16]",
+        "Use the lowest sustainable glucocorticoid exposure; the maintenance target is prednisone equivalent 5 mg/day or less, with withdrawal when feasible. [18]",
+        "In established APS, address tobacco use and oral contraceptive exposure because their combination with aPL increases thrombosis risk. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Longitudinal monitoring priorities in SLE. [1][14][16][18][19][24]",
+        "columns": [
+          "Domain",
+          "Monitoring focus",
+          "Action when abnormal"
+        ],
+        "rows": [
+          [
+            "Renal disease",
+            "Creatinine, quantitative proteinuria, urine sediment, blood pressure, albumin when nephrotic features are present. [18]",
+            "Determine whether abnormalities indicate active nephritis, chronic damage, pregnancy-related disease, or another renal process before altering immunosuppression. [8][18]"
+          ],
+          [
+            "Glucocorticoid exposure",
+            "Current prednisone-equivalent dose and taper feasibility. [18]",
+            "Add or optimize steroid-sparing therapy to reach 5 mg/day or less and withdraw when possible. [18]"
+          ],
+          [
+            "Hydroxychloroquine",
+            "Weight-based dose, adherence, adverse effects, and flare history. [14][18]",
+            "Keep dosing at or below the 5 mg/kg/day real-body-weight target and balance efficacy against retinal toxicity. [18]"
+          ],
+          [
+            "Thrombotic risk",
+            "Clinical thrombosis history, pregnancy morbidity, persistent aPL profile, and cardiovascular risk factors. [19][24]",
+            "Apply APS-directed secondary prevention and risk-factor modification when clinical APS is present. [19][24]"
+          ],
+          [
+            "Immunosuppression safety",
+            "New fever, focal infection symptoms, cytopenias, and unexplained organ dysfunction. [16]",
+            "Evaluate infection and noninflammatory mimics before escalating immunosuppression. [16]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neuromuscular Medicine",
+  "title": "Myasthenia Gravis",
+  "summary": "Myasthenia gravis requires rapid separation of respiratory or bulbar deterioration from stable ocular or generalized disease, confirmation with antibody and electrodiagnostic testing, chest imaging for thymoma, and phenotype-directed escalation from pyridostigmine to immunotherapy or rescue treatment.",
+  "seoDescription": "Point-of-care approach to myasthenia gravis diagnosis, crisis recognition, antibody testing, thymoma assessment, and phenotype-directed treatment.",
+  "clinicalQuestion": "How should physicians confirm, triage, and treat ocular, generalized, crisis, and immune checkpoint inhibitor-associated myasthenia gravis?",
+  "specialty": "Neurology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "myasthenia gravis",
+    "myasthenic crisis",
+    "ocular myasthenia gravis",
+    "AChR antibody",
+    "MuSK antibody",
+    "thymoma",
+    "pyridostigmine",
+    "IVIG",
+    "plasma exchange"
+  ],
+  "keyTakeaways": [
+    "Treat bulbar dysfunction, rapidly progressive generalized weakness, or respiratory compromise as potential myasthenic crisis; plasma exchange or IVIG is used for severe exacerbation and crisis. [11]",
+    "Order AChR antibody testing first; AChR binding antibody is highly specific and detects up to approximately 85% of generalized cases. If negative, test MuSK and consider LRP4 antibodies and electrodiagnostic confirmation. [17][23]",
+    "Repetitive nerve stimulation showing decrement or single-fiber EMG showing increased jitter supports impaired neuromuscular transmission when serology is negative or the phenotype is uncertain. [1][23]",
+    "Patients who do not reach treatment goals after an adequate pyridostigmine trial should receive corticosteroid or nonsteroidal immunosuppressive therapy; steroid benefit often begins at about 2 weeks. [17]",
+    "In checkpoint inhibitor-associated MG, actively evaluate for concurrent myositis and myocarditis; first-line plasma exchange or IVIG plus corticosteroids was associated with more improvement than corticosteroids alone in reported patients. [7][8][21]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-immediate-threats",
+      "eyebrow": "Urgent Triage",
+      "heading": "Identify crisis and high-risk overlap syndromes first",
+      "intro": "Disposition is driven by bulbar and respiratory trajectory rather than antibody status.",
+      "paragraphs": [
+        "Admit and urgently involve neurology and critical care for progressive dysphagia, dysarthria, weak cough, dyspnea, or rapidly worsening generalized weakness, because respiratory-muscle involvement defines the life-threatening end of the MG spectrum. Myasthenic crisis and severe exacerbations are treated with rapid immunomodulation using plasma exchange (PLEX) or intravenous immunoglobulin (IVIG); pyridostigmine can worsen airway secretions in at least some ventilated crisis presentations. [1][11][15]",
+        "If symptoms emerge during or after immune checkpoint inhibitor (ICI) therapy, treat MG as a possible myositis-myocarditis-MG overlap syndrome rather than isolated ocular or limb weakness. Obtain cardiac troponin and skeletal-muscle biomarkers including creatine phosphokinase, and assess for conduction disease, ventricular arrhythmia, reduced left-ventricular function, and myocarditis-directed cardiac magnetic resonance findings when clinically indicated. Overlap syndromes carry higher mortality, and respiratory failure from respiratory-muscle myositis is a recognized cause of death. [8][21]",
+        "For ICI-associated MG, early PLEX or IVIG in addition to corticosteroids should be favored when weakness is clinically significant, particularly with bulbar, respiratory, or concurrent cardiac or myositis features. In a systematic review and single-center experience, first-line PLEX or IVIG plus steroids was associated with improvement in 95% of patients versus 63% with steroids alone. [7]"
+      ],
+      "bullets": [
+        "Escalate immediately for shortness of breath, weak cough, dysphagia, dysarthria, or rapidly progressive generalized weakness. [1][11]",
+        "In an ICI-treated patient with ptosis, diplopia, weakness, or dyspnea, add troponin and creatine phosphokinase evaluation and assess for myocarditis and myositis overlap. [8][21]",
+        "Use PLEX or IVIG for crisis or severe exacerbation; do not rely on symptomatic therapy alone in this setting. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that require different initial actions in suspected MG. [1][7][8][11][21]",
+        "columns": [
+          "Presentation",
+          "Immediate discriminator",
+          "Initial action"
+        ],
+        "rows": [
+          [
+            "Ocular symptoms only",
+            "Ptosis or diplopia without bulbar, limb, or respiratory involvement. [1]",
+            "Confirm MG serologically and/or electrophysiologically; trial pyridostigmine when medical treatment is desired. [10][17]"
+          ],
+          [
+            "Generalized MG",
+            "Ocular symptoms plus bulbar, limb, axial, or respiratory weakness. [1]",
+            "Assess severity and treatment goals; add corticosteroid or nonsteroidal immunosuppression if pyridostigmine is inadequate. [17]"
+          ],
+          [
+            "Severe exacerbation or crisis",
+            "Bulbar dysfunction, dyspnea, or rapidly progressing generalized weakness. [1][11]",
+            "Hospitalize; initiate PLEX or IVIG and provide respiratory support as required. [11]"
+          ],
+          [
+            "ICI-associated MG",
+            "MG phenotype after ICI exposure, especially with elevated troponin or creatine phosphokinase. [8][21]",
+            "Evaluate for myocarditis/myositis overlap and use early corticosteroids plus PLEX or IVIG for clinically significant disease. [7][8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Diagnostic Workup",
+      "heading": "Confirm impaired neuromuscular transmission and define the antibody phenotype",
+      "intro": "Start with serology, then use electrodiagnostics to resolve seronegative or discordant cases.",
+      "paragraphs": [
+        "Order anti-AChR binding antibody as the initial serologic test in clinically suspected MG; it is highly specific, exceeding 90%, and has sensitivity up to approximately 85% in generalized MG. A positive result confirms an autoimmune postsynaptic neuromuscular-junction disorder in the appropriate clinical setting and identifies the phenotype most relevant to thymectomy and complement-directed treatment discussions. [17][23]",
+        "If AChR testing is negative, obtain MuSK antibody testing. MuSK antibodies are detected by radioimmunoassay in approximately 5% to 7% of MG cases; in patients who remain antibody-negative by routine testing, live cell-based assays can identify low-affinity clustered AChR or MuSK antibodies in a proportion of double-seronegative cases. LRP4 antibodies are another recognized antibody target, but a negative routine panel does not exclude MG. [1][23]",
+        "Use repetitive nerve stimulation (RNS) and single-fiber EMG (SFEMG) to demonstrate neuromuscular transmission failure when antibodies are absent, symptoms are atypical, or objective confirmation is needed before committing to chronic immunotherapy. A decremental RNS response or increased SFEMG jitter supports MG; in reported double-seronegative cohorts, diagnosis incorporated a characteristic syndrome plus RNS or SFEMG evidence of transmission impairment. [1][23]",
+        "Document disease burden longitudinally with a reproducible clinical scale such as MG Activities of Daily Living (MG-ADL), Quantitative Myasthenia Gravis (QMG), or Myasthenia Gravis Composite (MGC). These measures were used at baseline and follow-up in comparative generalized-MG treatment studies and provide an objective anchor for escalation, tapering, or determination of inadequate response. [2][12]"
+      ],
+      "bullets": [
+        "First-line serology: AChR binding antibody. [17]",
+        "If AChR-negative: test MuSK; consider LRP4 testing and cell-based AChR/MuSK assays where available. [1][23]",
+        "If serology is negative or phenotype remains uncertain: perform RNS and/or SFEMG. [1][23]",
+        "Record MG-ADL, QMG, or MGC before changing long-term treatment. [2][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Ocular versus generalized disease",
+          "paragraphs": [
+            "Classify disease as ocular when weakness is confined to eyelid or extraocular muscles and as generalized when bulbar, limb, axial, or respiratory muscles are affected. This distinction changes urgency, treatment intensity, and counseling: ocular MG can cause disabling diplopia or functional visual impairment from ptosis, while generalized involvement introduces bulbar and respiratory risk. [1][10]"
+          ],
+          "bullets": [
+            "Ptosis may respond better to pyridostigmine than diplopia. [10]",
+            "Use mechanical symptom measures such as lid crutches for ptosis or patching for diplopia when appropriate while diagnostic and medical treatment proceeds. [10]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Testing sequence for suspected myasthenia gravis. [1][17][23]",
+        "columns": [
+          "Test",
+          "Interpretation",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "AChR binding antibody",
+            "Highly specific; sensitivity up to approximately 85% in generalized MG. [17]",
+            "Confirm clinical diagnosis and phenotype; proceed with severity assessment and thymic evaluation. [17]"
+          ],
+          [
+            "MuSK antibody",
+            "Identifies a distinct autoimmune MG subgroup when AChR testing is negative. [1][23]",
+            "Use phenotype-directed immunotherapy planning; do not dismiss MG because AChR is negative. [1][23]"
+          ],
+          [
+            "LRP4 antibody or live cell-based AChR/MuSK assay",
+            "May identify antibodies in some patients negative by routine radioimmunoassay. [1][23]",
+            "Pursue when clinical and electrodiagnostic evidence remains compelling. [23]"
+          ],
+          [
+            "RNS or SFEMG",
+            "RNS decrement or increased SFEMG jitter supports neuromuscular transmission impairment. [1][23]",
+            "Use to support diagnosis in seronegative or diagnostically uncertain disease. [1][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "thymic-assessment",
+      "eyebrow": "Etiologic Branch",
+      "heading": "Evaluate the thymus early and separate thymoma from nonthymomatous disease",
+      "intro": "Thymoma changes oncologic and surgical planning.",
+      "paragraphs": [
+        "Obtain chest imaging to evaluate for thymoma after MG is diagnosed or strongly suspected, because thymoma is a clinically important MG-associated condition and thymectomy is a key therapeutic intervention in thymoma-associated MG. Computed tomography or magnetic resonance imaging can identify thymoma for preoperative risk assessment and surgical planning. [13][14]",
+        "Refer patients with radiologic thymoma for multidisciplinary thoracic surgical and oncology assessment. Thymectomy is not rescue therapy for acute weakness; stabilize active crisis or severe exacerbation first with rapid immunomodulation and respiratory support before elective operative planning. [11][13]",
+        "Before thymectomy, reassess current bulbar symptoms, MG severity classification, prior crisis, and recent IVIG use because each has been incorporated into postoperative myasthenic-crisis prediction models. Postoperative myasthenic crisis is defined in one registry model as crisis occurring within 30 days after thymectomy. [14]"
+      ],
+      "bullets": [
+        "Use chest CT or MRI to identify thymoma. [14]",
+        "Treat thymoma-associated MG with coordinated surgical planning, but do not substitute thymectomy for acute PLEX or IVIG in crisis. [11][13]",
+        "Flag recent bulbar symptoms, MG severity, prior crisis, and preoperative IVIG as perioperative risk variables. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Thymic findings and management implications. [11][13][14]",
+        "columns": [
+          "Finding",
+          "Implication",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Radiologic thymoma",
+            "Thymectomy is a key therapeutic option in thymoma-associated MG. [13]",
+            "Coordinate thoracic surgical evaluation after clinical stabilization. [11][13]"
+          ],
+          [
+            "Active severe weakness or crisis",
+            "Thymectomy does not provide acute rescue. [11]",
+            "Use PLEX or IVIG and respiratory support as needed before elective surgery. [11]"
+          ],
+          [
+            "Recent bulbar symptoms, prior crisis, higher preoperative MG severity",
+            "Variables used in models predicting crisis within 30 days after thymectomy. [14]",
+            "Plan perioperative monitoring and optimization with neuromuscular and surgical teams. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "maintenance-treatment",
+      "eyebrow": "Long-Term Treatment",
+      "heading": "Escalate from symptomatic therapy to immunosuppression based on functional targets",
+      "intro": "Aim for minimal manifestations or better with acceptable treatment toxicity.",
+      "paragraphs": [
+        "Use pyridostigmine as symptomatic therapy for patients seeking medical treatment, particularly in ocular MG; it is generally more effective for ptosis than diplopia. If adequate pyridostigmine treatment does not meet functional goals, add corticosteroids or a nonsteroidal immunosuppressive drug rather than continuing ineffective symptomatic treatment alone. [10][17]",
+        "Corticosteroids benefit most MG subtypes, with improvement beginning at approximately 2 weeks on average and marked improvement reported in more than 80% of patients in retrospective evidence. Reassess response and toxicity early: among patients treated with high-dose corticosteroids, approximately 5% to 20% have inadequate benefit or prohibitive adverse effects after several weeks to 3 months, prompting use of nonsteroidal immunosuppression and avoidance of prolonged high-dose exposure. [17][18]",
+        "Use a nonsteroidal immunosuppressive agent when corticosteroid toxicity, steroid dependence, or insufficient response makes steroid-sparing treatment necessary. Agents used in standard generalized-MG treatment include azathioprine, mycophenolate mofetil, cyclosporine, methotrexate, and tacrolimus; selection should reflect prior treatment response and patient-specific toxicity risk. [2][17][18]",
+        "Define treatment success prospectively. Complete stable remission is generally no MG signs or symptoms without therapy for 1 year, but minimal manifestation status or better with only mild adverse effects is a more realistic target for many patients; minimal manifestation status permits mild examination weakness without functional limitation. [18]"
+      ],
+      "bullets": [
+        "Trial pyridostigmine for symptomatic ocular or generalized disease, recognizing stronger ptosis than diplopia benefit in ocular MG. [10]",
+        "Escalate to corticosteroid or nonsteroidal immunosuppression when pyridostigmine does not achieve treatment goals. [17]",
+        "Reconsider prolonged high-dose corticosteroid treatment when benefit remains inadequate or toxicity is prohibitive after weeks to 3 months. [18]",
+        "Track MG-ADL, QMG, or MGC alongside functional goals before and after escalation. [2][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Refractory generalized MG",
+          "paragraphs": [
+            "For generalized MG with persistent disability despite conventional treatment, management commonly incorporates targeted biologic approaches in addition to standard therapy. Ravulizumab has been used as add-on therapy in anti-AChR-positive generalized MG alongside corticosteroids, pyridostigmine, thymectomy where appropriate, and conventional immunosuppressants; FcRn modulation with efgartigimod is another approved generalized-MG approach. [2][6]"
+          ],
+          "bullets": [
+            "Confirm antibody phenotype and quantify baseline MG-ADL/QMG before switching or adding targeted therapy. [2]",
+            "Seek early neuromuscular-specialist input when treatment requires strategies beyond first-line agents. [18]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Treatment escalation by clinical state and treatment response. [2][10][11][17][18]",
+        "columns": [
+          "Clinical state",
+          "Treatment direction",
+          "Reassessment trigger"
+        ],
+        "rows": [
+          [
+            "Ocular MG with disabling ptosis or diplopia",
+            "Trial pyridostigmine; use patching or lid crutches for symptom control when needed. [10]",
+            "Persistent functional impairment despite symptomatic therapy. [10][17]"
+          ],
+          [
+            "Generalized MG not meeting goals on pyridostigmine",
+            "Add corticosteroid or nonsteroidal immunosuppression. [17]",
+            "Assess functional outcome and treatment toxicity over subsequent weeks to months. [17][18]"
+          ],
+          [
+            "High-dose steroid nonresponse or prohibitive toxicity",
+            "Add or transition toward steroid-sparing nonsteroidal immunosuppression. [18]",
+            "Suboptimal efficacy or adverse effects after several weeks to 3 months. [18]"
+          ],
+          [
+            "Crisis or severe exacerbation",
+            "PLEX or IVIG as rapid rescue treatment. [11]",
+            "Clinical respiratory, bulbar, and generalized-strength trajectory. [1][11]"
+          ],
+          [
+            "Refractory anti-AChR-positive generalized MG",
+            "Consider add-on targeted therapy such as ravulizumab within specialist-directed care. [2]",
+            "MG-ADL, QMG, treatment burden, and conventional-treatment response. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-special-situations",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor function, toxicity, and treatment-triggered deterioration",
+      "intro": "Follow clinical function, not serology alone, when judging treatment response.",
+      "paragraphs": [
+        "At each treatment decision, document ocular, bulbar, limb, and respiratory function and compare MG-ADL, QMG, or MGC with baseline. In generalized-MG studies, MG-ADL was collected at baseline and approximately 1, 3, and 6 months, illustrating a practical framework for objectively tracking early and intermediate treatment response. [2]",
+        "Monitor corticosteroid toxicity proactively, especially weight gain, osteoporosis, dysglycemia, psychiatric effects, and infection risk; these complications were documented drivers of treatment escalation in high-risk MG cohorts. A patient with improved strength but unacceptable steroid toxicity has not achieved an acceptable long-term treatment outcome and should be considered for steroid-sparing therapy. [3][18]",
+        "Patients receiving ICI therapy require a low threshold for reassessment of dyspnea, diplopia, ptosis, weakness, chest symptoms, palpitations, presyncope, or syncope. Neurologic ICI toxicities have a median onset of 4 weeks but may occur from 1 to 68 weeks after exposure; concurrent myocarditis or MG is associated with high mortality. [8][21]"
+      ],
+      "bullets": [
+        "Use MG-ADL, QMG, or MGC serially to distinguish response from subjective fluctuation. [2][12]",
+        "Screen for steroid-associated weight gain, osteoporosis, dysglycemia, psychiatric effects, and infection complications. [3]",
+        "For ICI-associated symptoms, reassess cardiac and skeletal-muscle involvement rather than attributing weakness to isolated MG. [8][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring priorities during MG treatment. [2][3][8][21]",
+        "columns": [
+          "Domain",
+          "Measure",
+          "Actionable finding"
+        ],
+        "rows": [
+          [
+            "Neuromuscular function",
+            "MG-ADL, QMG, or MGC with ocular, bulbar, limb, and respiratory examination. [2][12]",
+            "Worsening score or new bulbar/respiratory weakness should prompt urgent reassessment and escalation consideration. [1][11]"
+          ],
+          [
+            "Corticosteroid tolerability",
+            "Weight, bone complications, glycemic status, psychiatric symptoms, and infection history. [3]",
+            "Clinically important toxicity supports steroid-sparing immunosuppression. [18]"
+          ],
+          [
+            "ICI overlap toxicity",
+            "Troponin, creatine phosphokinase, rhythm/conduction assessment, ventricular function, and clinical symptoms when indicated. [8]",
+            "Abnormal cardiac or skeletal-muscle findings require urgent overlap-syndrome management. [8][21]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Myasthenia gravis - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/238",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "MG is characterized by muscle weakness that increases with exercise (fatigue) and improves on rest. It commonly presents with drooping eyelids, double vision, oropharyngeal and/or appendicular weakness, and shortness of breath.\n\nElevated serum levels of antibodies against the acetylcholine receptor ",
+      "score": 0.7869018
+    },
+    {
+      "number": 2,
+      "title": "C5 complement inhibition versus FcRn modulation in generalised myasthenia gravis",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/jnnp/96/4/310.full.pdf",
+      "authors": "jnnp.bmj.com",
+      "host": "jnnp.bmj.com",
+      "snippet": "## Neuromuscular \n\naddition to standard therapy for the treatment of adult patients with generalised MG (gMG). Ravulizumab was applied as an add- on therapy to standard treatment of anti-AChR- ab- positive patients with gMG. Standard treatment was defined as the use of corticosteroids, thymectomy, p",
+      "score": 0.7050753
+    },
+    {
+      "number": 3,
+      "title": "Induction cyclophosphamide with maintenance immunosuppression in high-risk myasthenia gravis: long-term follow-up and safety profile",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/jnnp/95/12/1096.full.pdf",
+      "authors": "jnnp.bmj.com",
+      "host": "jnnp.bmj.com",
+      "snippet": "> Sex Female Male 12 19 Age (mean) 64 years (range 32\u201383 years) 31 Antibody status AChR only MuSK only AChR+MuSK Seronegative 29 011Previous therapies Prednisolone Azathioprine Mycophenolate mofetil Methotrexate Pyridostigmine Rituximab Intravenous immunoglobulin (IVIg) Plasma exchange (PLEX) IVIg a",
+      "score": 0.61140573
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of acute high-grade ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)00932-5",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Sandoval \u00b7 2023 \u00b7 Cited by 3 \u2014 SITC has specific guidance for NirAE related myasthenia gravis (MG), Guillain-Barre syndrome (GBS), encephalitis, meningitis, and non-GBS peripheral neuropathy",
+      "score": 0.68571854
+    },
+    {
+      "number": 5,
+      "title": "2024 ACC Expert Consensus Decision Pathway on Strategies and Criteria for the Diagnosis and Management of Myocarditis: A Report of the American College of Cardiology Solution Set Oversight Committee",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.10.080",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "to myocarditis, an in-depth discussion is provided in the following text (Section 4.4.1.1). Other persons at risk include those with a personal history of myocarditis; those treated with ICIs; those with thymoma, a tumor associated with myasthenia gravis; those with systemic immune-mediated diseases",
+      "score": 0.60386235
+    },
+    {
+      "number": 6,
+      "title": "Efgartigimod as rescue treatment in acute phase of ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)06452-1",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by Z Li \u00b7 2024 \u00b7 Cited by 18 \u2014 Efgartigimod is a first-in-class novel human immunoglobulin G1 (IgG1) Fc fragment approved for the treatment of generalized myasthenia gravis.",
+      "score": 0.3181784
+    },
+    {
+      "number": 7,
+      "title": "Steroids in Immune Checkpoint Inhibitor Myocarditis",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccao.2024.07.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n11.\n\nSafa H., Johnson D.H., Trinh V.A., et al. Immune checkpoint inhibitor related myasthenia gravis: single center experience and systematic review of the literature. _J Immunother Cancer_. 2019;7:319.\n\nGo to Citation\n\nCrossref\n\nPubMed\n\nGoogle Schol",
+      "score": 0.31636977
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and Management of Cardiovascular Adverse Effects of Targeted Oncology Therapies: Bruton\u2019s Tyrosine Kinase, Immune Checkpoint, and Vascular Endothelial Growth Factor Inhibitors: 2025 ACC Concise Clinical Guidance: A Report of the American College of Cardiology Solution Set Oversight Committee",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.10.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "and myasthenia gravis) syndrome, which is reported to occur in approximately one-third of the patients with ICI-associated myocarditis.82,83 Another feature of ICI-associated myocarditis is the frequent persistent elevation of cTn levels even after clinical stabilization, with median time to normali",
+      "score": 0.21109177
+    },
+    {
+      "number": 9,
+      "title": "Safety of SARS-CoV-2 vaccine in patients with ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)11152-2?uuid=uuid%3A69e3100d-1ccf-494f-8704-ef0f9e54bf8b",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by F Ning \u00b7 2024 \u00b7 Cited by 3 \u2014 Common conditions include multiple sclerosis myasthenia gravis (MG), . Some other studies suggest that vaccination is safe for patients with",
+      "score": 0.109810956
+    },
+    {
+      "number": 10,
+      "title": "Treatment of Ocular Myasthenia Gravis : The Asia-Pacific Journal of Ophthalmology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/apjoo/fulltext/2018/07000/treatment_of_ocular_myasthenia_gravis.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Treatment of Ocular Myasthenia Gravis : The Asia-Pacific Journal of Ophthalmology\nPatients with ocular myasthenia gravis can have disabling diplopia or functional blindness from ptosis and in most cases treatment is required. Like generalized myasthenia gravis, there are a variety of treatmen",
+      "score": 0.7634314
+    },
+    {
+      "number": 11,
+      "title": "Rescue therapy in myasthenia gravis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0074774225000339",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Rescue therapy in myasthenia gravis - ScienceDirect\n# Chapter Seven- Rescue therapy in myasthenia gravis. Myasthenia gravis (MG) is a chronic autoimmune disorder characterized by fluctuating muscle weakness due to impaired neuromuscular transmission. This chapter offers an in-depth overview o",
+      "score": 0.73322314
+    },
+    {
+      "number": 12,
+      "title": "474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0960896625008387",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: 474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India - ScienceDirect\n## Neuromuscular Disorders. # 474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India. Myasthenia gravis (MG) is an autoimmune neuromuscular disorder i",
+      "score": 0.6565047
+    },
+    {
+      "number": 13,
+      "title": "Managing myasthenic crisis after video-assisted thoracoscopic thymectomy with therapeutic plasma exchange - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377123725003375",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Managing myasthenic crisis after video-assisted thoracoscopic thymectomy with therapeutic plasma exchange - ScienceDirect\n## Article preview. ## Medical Journal Armed Forces India. Available online 2 January 2026. Medical Journal Armed Forces India. Author links open overlay panel, , ,. https",
+      "score": 0.6469293
+    },
+    {
+      "number": 14,
+      "title": "Nomogram for predicting the risk of postoperative myasthenic crisis in patients with thymectomy - Ruan - 2023 - Annals of Clinical and Translational Neurology - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/acn3.51752",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This study aimed to develop and validate internally a clinical predictive model, for predicting myasthenic crisis within 30\u2009days after thymectomy in patients with myasthenia gravis. We developed and validated internally a statistical model to predict the occurrence of POMC within 30\u2009days in patients",
+      "score": 0.62330866
+    },
+    {
+      "number": 15,
+      "title": "Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and how - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S030384672500294X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and how - ScienceDirect\n## Clinical Neurology and Neurosurgery. Volume 256, September 2025, 109011. # Review Article Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and ho",
+      "score": 0.56661874
+    },
+    {
+      "number": 16,
+      "title": "Balancing Benefit and Toxicity of Immunotherapy in ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/pdf/10.1200/EDBK_390594",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "Consensus treatment guidelines are useful for treatment ... myasthenia gravis: Single center experience and systematic review of the literature.",
+      "score": 0.59880555
+    },
+    {
+      "number": 17,
+      "title": "Myasthenia gravis: Frequently asked questions | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/2/103",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "## WHEN SHOULD CORTICOSTEROIDS BE USED?\n\nAccording to consensus guidelines,30 corticosteroids or nonsteroidal immunosuppressive drugs should be used in all patients with myasthenia gravis who have not met their treatment goals after an adequate trial of pyridostigmine.\n\nOnly 2 controlled trials have",
+      "score": 0.48996773
+    },
+    {
+      "number": 18,
+      "title": "What are the treatment options for myasthenia gravis if first-line agents fail? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/2/81",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Complete stable remission in MG is typically defined as 1 year with no signs or symptoms of MG without therapy, although some isolated weakness of eyelid closure is generally considered acceptable. Given the difficulty of achieving complete stable remission, an international consensus panel has prop",
+      "score": 0.3408586
+    },
+    {
+      "number": 19,
+      "title": "Caplacizumab in Immune-Mediated Acquired Thrombotic ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/144/Supplement%201/4001/529567/Caplacizumab-in-Immune-Mediated-Acquired",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Consensus Guidance for Management of Myasthenia Gravis: 2020 Update",
+      "score": 0.29796556
+    },
+    {
+      "number": 20,
+      "title": "Latest Article | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/latest?variant=full-text.txt%27&page=43",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "### What are the treatment options for myasthenia gravis if first-line agents fail?\n\nFrom 5% to 20% of patients may have a suboptimal response or prohibitive adverse effects over a period of a few weeks to 3 months.\n\nTOC Icon\n\n### Resistant hypertension: A stepwise approach\n\nThe authors review the d",
+      "score": 0.1722557
+    },
+    {
+      "number": 21,
+      "title": "Management of Immune-Related Adverse Events in ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.21.01440",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "myasthenia gravis\u2013like syndrome and/or myocarditis (see cardiovascular and neurologic sections for further details), which can be life-threatening if respiratory muscles or myocardium are involved. Symptoms of polymyalgia-like syndrome related to ICPi therapy include pain and stiffness in proximal u",
+      "score": 0.1449098
+    },
+    {
+      "number": 22,
+      "title": "2. Diagnosis and Classification of Diabetes: Standards of Care ...",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S27/157566/2-Diagnosis-and-Classification-of-Diabetes",
+      "authors": "diabetesjournals.org",
+      "host": "diabetesjournals.org",
+      "snippet": "Graves disease, celiac disease, Addison disease, vitiligo, autoimmune hepatitis, myasthenia gravis, and pernicious anemia (see Section 4, \u201cComprehensive Medical Evaluation and Assessment of Comorbidities\u201d). Type 1 diabetes can be associated with monogenic polyglandular autoimmune syndromes, includin",
+      "score": 0.1310511
+    },
+    {
+      "number": 23,
+      "title": "Comparison of Fixed and Live Cell-Based Assay for the Detection of AChR and MuSK Antibodies in Myasthenia Gravis",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/NXI.0000000000200038",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "we tested the serum samples from 40 healthy subjects and 60 patients with other neurologic disorders (inflammatory neuropathy, 30; amyotrophic lateral sclerosis, 17; multiple sclerosis, 10; and paraneoplastic neuropathies, 3). In RIA-dSN patients, MG diagnosis was based on typical history and signs ",
+      "score": 0.7474137
+    },
+    {
+      "number": 24,
+      "title": "PDF",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/25/5/pdfs/v25-n5.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "6. AAEM Quality Assurance Committee. American Association of Electrodiagnostic Medicine. Literature review of the usefulness of repetitive nerve stimulation and single fiber EMG in the electrodiagnostic evaluation of patients with suspected myasthenia gravis or Lambert-Eaton myasthenic syndrome. Mus",
+      "score": 0.7293082
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Myasthenia gravis - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/238",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "MG is characterized by muscle weakness that increases with exercise (fatigue) and improves on rest. It commonly presents with drooping eyelids, double vision, oropharyngeal and/or appendicular weakness, and shortness of breath.\n\nElevated serum levels of antibodies against the acetylcholine receptor ",
+      "score": 0.7869018
+    },
+    {
+      "number": 2,
+      "title": "C5 complement inhibition versus FcRn modulation in generalised myasthenia gravis",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/jnnp/96/4/310.full.pdf",
+      "authors": "jnnp.bmj.com",
+      "host": "jnnp.bmj.com",
+      "snippet": "## Neuromuscular \n\naddition to standard therapy for the treatment of adult patients with generalised MG (gMG). Ravulizumab was applied as an add- on therapy to standard treatment of anti-AChR- ab- positive patients with gMG. Standard treatment was defined as the use of corticosteroids, thymectomy, p",
+      "score": 0.7050753
+    },
+    {
+      "number": 3,
+      "title": "Induction cyclophosphamide with maintenance immunosuppression in high-risk myasthenia gravis: long-term follow-up and safety profile",
+      "detail": "jnnp.bmj.com",
+      "url": "https://jnnp.bmj.com/content/jnnp/95/12/1096.full.pdf",
+      "authors": "jnnp.bmj.com",
+      "host": "jnnp.bmj.com",
+      "snippet": "> Sex Female Male 12 19 Age (mean) 64 years (range 32\u201383 years) 31 Antibody status AChR only MuSK only AChR+MuSK Seronegative 29 011Previous therapies Prednisolone Azathioprine Mycophenolate mofetil Methotrexate Pyridostigmine Rituximab Intravenous immunoglobulin (IVIg) Plasma exchange (PLEX) IVIg a",
+      "score": 0.61140573
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of acute high-grade ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)00932-5",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Sandoval \u00b7 2023 \u00b7 Cited by 3 \u2014 SITC has specific guidance for NirAE related myasthenia gravis (MG), Guillain-Barre syndrome (GBS), encephalitis, meningitis, and non-GBS peripheral neuropathy",
+      "score": 0.68571854
+    },
+    {
+      "number": 5,
+      "title": "2024 ACC Expert Consensus Decision Pathway on Strategies and Criteria for the Diagnosis and Management of Myocarditis: A Report of the American College of Cardiology Solution Set Oversight Committee",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.10.080",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "to myocarditis, an in-depth discussion is provided in the following text (Section 4.4.1.1). Other persons at risk include those with a personal history of myocarditis; those treated with ICIs; those with thymoma, a tumor associated with myasthenia gravis; those with systemic immune-mediated diseases",
+      "score": 0.60386235
+    },
+    {
+      "number": 6,
+      "title": "Efgartigimod as rescue treatment in acute phase of ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)06452-1",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by Z Li \u00b7 2024 \u00b7 Cited by 18 \u2014 Efgartigimod is a first-in-class novel human immunoglobulin G1 (IgG1) Fc fragment approved for the treatment of generalized myasthenia gravis.",
+      "score": 0.3181784
+    },
+    {
+      "number": 7,
+      "title": "Steroids in Immune Checkpoint Inhibitor Myocarditis",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccao.2024.07.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n11.\n\nSafa H., Johnson D.H., Trinh V.A., et al. Immune checkpoint inhibitor related myasthenia gravis: single center experience and systematic review of the literature. _J Immunother Cancer_. 2019;7:319.\n\nGo to Citation\n\nCrossref\n\nPubMed\n\nGoogle Schol",
+      "score": 0.31636977
+    },
+    {
+      "number": 8,
+      "title": "Diagnosis and Management of Cardiovascular Adverse Effects of Targeted Oncology Therapies: Bruton\u2019s Tyrosine Kinase, Immune Checkpoint, and Vascular Endothelial Growth Factor Inhibitors: 2025 ACC Concise Clinical Guidance: A Report of the American College of Cardiology Solution Set Oversight Committee",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.10.018",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "and myasthenia gravis) syndrome, which is reported to occur in approximately one-third of the patients with ICI-associated myocarditis.82,83 Another feature of ICI-associated myocarditis is the frequent persistent elevation of cTn levels even after clinical stabilization, with median time to normali",
+      "score": 0.21109177
+    },
+    {
+      "number": 9,
+      "title": "Safety of SARS-CoV-2 vaccine in patients with ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)11152-2?uuid=uuid%3A69e3100d-1ccf-494f-8704-ef0f9e54bf8b",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by F Ning \u00b7 2024 \u00b7 Cited by 3 \u2014 Common conditions include multiple sclerosis myasthenia gravis (MG), . Some other studies suggest that vaccination is safe for patients with",
+      "score": 0.109810956
+    },
+    {
+      "number": 10,
+      "title": "Treatment of Ocular Myasthenia Gravis : The Asia-Pacific Journal of Ophthalmology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/apjoo/fulltext/2018/07000/treatment_of_ocular_myasthenia_gravis.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Treatment of Ocular Myasthenia Gravis : The Asia-Pacific Journal of Ophthalmology\nPatients with ocular myasthenia gravis can have disabling diplopia or functional blindness from ptosis and in most cases treatment is required. Like generalized myasthenia gravis, there are a variety of treatmen",
+      "score": 0.7634314
+    },
+    {
+      "number": 11,
+      "title": "Rescue therapy in myasthenia gravis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0074774225000339",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Rescue therapy in myasthenia gravis - ScienceDirect\n# Chapter Seven- Rescue therapy in myasthenia gravis. Myasthenia gravis (MG) is a chronic autoimmune disorder characterized by fluctuating muscle weakness due to impaired neuromuscular transmission. This chapter offers an in-depth overview o",
+      "score": 0.73322314
+    },
+    {
+      "number": 12,
+      "title": "474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0960896625008387",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: 474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India - ScienceDirect\n## Neuromuscular Disorders. # 474PTemporal trends in management of myasthenia gravis in a tertiary centre in north India. Myasthenia gravis (MG) is an autoimmune neuromuscular disorder i",
+      "score": 0.6565047
+    },
+    {
+      "number": 13,
+      "title": "Managing myasthenic crisis after video-assisted thoracoscopic thymectomy with therapeutic plasma exchange - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377123725003375",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Managing myasthenic crisis after video-assisted thoracoscopic thymectomy with therapeutic plasma exchange - ScienceDirect\n## Article preview. ## Medical Journal Armed Forces India. Available online 2 January 2026. Medical Journal Armed Forces India. Author links open overlay panel, , ,. https",
+      "score": 0.6469293
+    },
+    {
+      "number": 14,
+      "title": "Nomogram for predicting the risk of postoperative myasthenic crisis in patients with thymectomy - Ruan - 2023 - Annals of Clinical and Translational Neurology - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/acn3.51752",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This study aimed to develop and validate internally a clinical predictive model, for predicting myasthenic crisis within 30\u2009days after thymectomy in patients with myasthenia gravis. We developed and validated internally a statistical model to predict the occurrence of POMC within 30\u2009days in patients",
+      "score": 0.62330866
+    },
+    {
+      "number": 15,
+      "title": "Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and how - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S030384672500294X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and how - ScienceDirect\n## Clinical Neurology and Neurosurgery. Volume 256, September 2025, 109011. # Review Article Emergent role of complement inhibitors in myasthenic crisis: Understanding why, when and ho",
+      "score": 0.56661874
+    },
+    {
+      "number": 16,
+      "title": "Balancing Benefit and Toxicity of Immunotherapy in ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/pdf/10.1200/EDBK_390594",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "Consensus treatment guidelines are useful for treatment ... myasthenia gravis: Single center experience and systematic review of the literature.",
+      "score": 0.59880555
+    },
+    {
+      "number": 17,
+      "title": "Myasthenia gravis: Frequently asked questions | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/2/103",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "## WHEN SHOULD CORTICOSTEROIDS BE USED?\n\nAccording to consensus guidelines,30 corticosteroids or nonsteroidal immunosuppressive drugs should be used in all patients with myasthenia gravis who have not met their treatment goals after an adequate trial of pyridostigmine.\n\nOnly 2 controlled trials have",
+      "score": 0.48996773
+    },
+    {
+      "number": 18,
+      "title": "What are the treatment options for myasthenia gravis if first-line agents fail? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/2/81",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Complete stable remission in MG is typically defined as 1 year with no signs or symptoms of MG without therapy, although some isolated weakness of eyelid closure is generally considered acceptable. Given the difficulty of achieving complete stable remission, an international consensus panel has prop",
+      "score": 0.3408586
+    },
+    {
+      "number": 19,
+      "title": "Caplacizumab in Immune-Mediated Acquired Thrombotic ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/144/Supplement%201/4001/529567/Caplacizumab-in-Immune-Mediated-Acquired",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Consensus Guidance for Management of Myasthenia Gravis: 2020 Update",
+      "score": 0.29796556
+    },
+    {
+      "number": 20,
+      "title": "Latest Article | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/latest?variant=full-text.txt%27&page=43",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "### What are the treatment options for myasthenia gravis if first-line agents fail?\n\nFrom 5% to 20% of patients may have a suboptimal response or prohibitive adverse effects over a period of a few weeks to 3 months.\n\nTOC Icon\n\n### Resistant hypertension: A stepwise approach\n\nThe authors review the d",
+      "score": 0.1722557
+    },
+    {
+      "number": 21,
+      "title": "Management of Immune-Related Adverse Events in ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.21.01440",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "myasthenia gravis\u2013like syndrome and/or myocarditis (see cardiovascular and neurologic sections for further details), which can be life-threatening if respiratory muscles or myocardium are involved. Symptoms of polymyalgia-like syndrome related to ICPi therapy include pain and stiffness in proximal u",
+      "score": 0.1449098
+    },
+    {
+      "number": 22,
+      "title": "2. Diagnosis and Classification of Diabetes: Standards of Care ...",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/48/Supplement_1/S27/157566/2-Diagnosis-and-Classification-of-Diabetes",
+      "authors": "diabetesjournals.org",
+      "host": "diabetesjournals.org",
+      "snippet": "Graves disease, celiac disease, Addison disease, vitiligo, autoimmune hepatitis, myasthenia gravis, and pernicious anemia (see Section 4, \u201cComprehensive Medical Evaluation and Assessment of Comorbidities\u201d). Type 1 diabetes can be associated with monogenic polyglandular autoimmune syndromes, includin",
+      "score": 0.1310511
+    },
+    {
+      "number": 23,
+      "title": "Comparison of Fixed and Live Cell-Based Assay for the Detection of AChR and MuSK Antibodies in Myasthenia Gravis",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/NXI.0000000000200038",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "we tested the serum samples from 40 healthy subjects and 60 patients with other neurologic disorders (inflammatory neuropathy, 30; amyotrophic lateral sclerosis, 17; multiple sclerosis, 10; and paraneoplastic neuropathies, 3). In RIA-dSN patients, MG diagnosis was based on typical history and signs ",
+      "score": 0.7474137
+    },
+    {
+      "number": 24,
+      "title": "PDF",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/25/5/pdfs/v25-n5.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "6. AAEM Quality Assurance Committee. American Association of Electrodiagnostic Medicine. Literature review of the usefulness of repetitive nerve stimulation and single fiber EMG in the electrodiagnostic evaluation of patients with suspected myasthenia gravis or Lambert-Eaton myasthenic syndrome. Mus",
+      "score": 0.7293082
+    }
+  ],
+  "publishedAt": "2026-08-21T02:20:38.330800+00:00",
+  "updatedAt": "2026-08-21T02:20:38.330800+00:00",
+  "readingMinutes": 7,
+  "slug": "myasthenia-gravis"
+}

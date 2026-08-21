@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Rheumatology",
+  "title": "Systemic Lupus Erythematosus",
+  "summary": "Manage SLE by confirming a clinical autoimmune phenotype, rapidly identifying renal, neurologic, hematologic, thrombotic, and cardiopulmonary threats, then using hydroxychloroquine and early steroid-sparing therapy to control activity while limiting glucocorticoid damage.",
+  "seoDescription": "Point-of-care guidance for diagnosing and treating systemic lupus erythematosus, including organ-threatening disease, lupus nephritis, and steroid-sparing therapy.",
+  "clinicalQuestion": "How should physicians diagnose SLE, identify organ-threatening involvement, and select disease-modifying treatment while minimizing glucocorticoid exposure?",
+  "specialty": "Rheumatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "systemic lupus erythematosus",
+    "SLE diagnosis",
+    "lupus nephritis",
+    "hydroxychloroquine",
+    "anifrolumab",
+    "belimumab",
+    "antiphospholipid syndrome"
+  ],
+  "keyTakeaways": [
+    "Diagnose SLE clinically; classification criteria support but do not replace clinical judgment, particularly in ANA-negative disease or biopsy-proven lupus nephritis. [2][3][6]",
+    "Use hydroxychloroquine unless contraindicated, targeting no more than 5 mg/kg/day of real body weight while balancing flare prevention against retinal toxicity. [18]",
+    "Treat glucocorticoids as short bridging therapy; aim for prednisone-equivalent maintenance doses of 5 mg/day or less and withdraw when feasible. [18]",
+    "New proteinuria, active urinary sediment, or declining kidney function should trigger urgent evaluation for lupus nephritis and kidney-directed immunosuppression. [18]",
+    "For active lupus nephritis, glucocorticoids plus mycophenolate or low-dose intravenous cyclophosphamide are anchor therapy; belimumab or a calcineurin inhibitor may be added. [18]",
+    "Test for antiphospholipid antibodies when thrombosis or pregnancy morbidity is present; APS requires compatible clinical events plus persistent aPL positivity. [24]"
+  ],
+  "sections": [
+    {
+      "id": "triage-organ-threatening-disease",
+      "eyebrow": "First decision",
+      "heading": "Identify organ-threatening SLE before treating routine manifestations",
+      "intro": "Triage by organ involvement and pace of injury rather than total symptom count.",
+      "paragraphs": [
+        "Prioritize immediate assessment for kidney injury, neuropsychiatric disease, severe cytopenias, thrombosis, pregnancy complications, and cardiopulmonary involvement. Renal and neuropsychiatric manifestations contribute substantially to SLE morbidity and mortality, while immunosuppressive therapy further increases infection risk. [13][16]",
+        "In a patient with suspected active systemic disease, obtain CBC with differential and platelets, serum creatinine, urinalysis with sediment, quantitative proteinuria, serum albumin, complement levels, anti-dsDNA, and targeted testing for antiphospholipid antibodies when thrombosis or obstetric morbidity is present. Low complement, anti-dsDNA, anti-Sm, and antiphospholipid antibodies are diagnostic aids; anti-dsDNA and anti-Sm are relatively specific but insensitive, whereas ANA is sensitive but nonspecific. [2][5]",
+        "New hypertension, edema, substantial proteinuria, lipid casts, fat oval bodies, abnormal urinary sediment, or loss of kidney function should shift management toward possible lupus nephritis rather than attribution to nonspecific SLE activity. A pregnancy-associated renal presentation also requires a competing assessment for preeclampsia, as severe hypertension and proteinuria can occur in that setting. [8][18]"
+      ],
+      "bullets": [
+        "For suspected thrombosis or recurrent fetal loss, order lupus anticoagulant, anticardiolipin antibodies, and anti-beta-2 glycoprotein I antibodies; APS is defined by thrombosis and/or pregnancy morbidity with persistent aPL positivity. [24]",
+        "For suspected pulmonary arterial hypertension, transthoracic echocardiography is a screening test; right-heart catheterization establishes hemodynamics when pulmonary hypertension is being evaluated definitively. [19]",
+        "Do not delay organ-directed treatment planning for failure to satisfy a classification score when the clinical phenotype and objective organ involvement are compelling. [2][3][6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that should redirect the initial SLE evaluation. [8][13][16][18][19][24]",
+        "columns": [
+          "Pattern",
+          "Immediate tests",
+          "Interpretation and next action"
+        ],
+        "rows": [
+          [
+            "Renal syndrome",
+            "Creatinine, urinalysis with sediment, quantitative proteinuria, serum albumin, complement, anti-dsDNA",
+            "Proteinuria, active sediment, or kidney dysfunction raises concern for active lupus nephritis; move to kidney-directed immunosuppressive planning. [18]"
+          ],
+          [
+            "Thrombosis or pregnancy morbidity",
+            "Lupus anticoagulant, anticardiolipin, anti-beta-2 glycoprotein I antibodies",
+            "Compatible events plus persistent aPL support APS; address secondary thrombosis prevention and cardiovascular risk factors. [24][19]"
+          ],
+          [
+            "Cardiopulmonary symptoms with pulmonary hypertension concern",
+            "Echocardiography followed by right-heart catheterization when definitive hemodynamics are needed",
+            "Elevated mean pulmonary arterial pressure and pulmonary vascular resistance with a normal wedge pressure support precapillary pulmonary arterial hypertension. [19]"
+          ],
+          [
+            "Neuropsychiatric presentation",
+            "Focused neurologic and psychiatric evaluation plus assessment for alternative causes",
+            "Neuropsychiatric involvement can occur at any point in SLE and is associated with major morbidity; distinguish inflammatory lupus manifestations from thrombosis, infection, medication effects, and primary neurologic disease before immunosuppression escalation. [13][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Use serology to support a clinical diagnosis, not to substitute for one",
+      "intro": "SLE is diagnosed from a coherent clinical phenotype plus evidence of immune-mediated disease.",
+      "paragraphs": [
+        "The diagnosis of SLE is clinical and supported by laboratory evidence of immune reactivity or inflammatory organ injury. The 2019 EULAR/ACR criteria have favorable sensitivity and specificity among contemporary classification systems, but they are classification criteria rather than diagnostic criteria. [2][3]",
+        "ANA positivity is the EULAR/ACR 2019 entry criterion, but a negative ANA should not automatically exclude SLE when the phenotype is persuasive. In an incident cohort, 18 of 737 patients (2.4%) were ANA-negative at diagnosis; another cohort included ANA-negative patients with biopsy-proven class III, IV, and V lupus nephritis. [4][6]",
+        "Interpret ANA by assay context and pretest probability. ANA is common in SLE but may occur in healthy individuals and other disorders, producing high sensitivity but low specificity; assay differences can also change apparent positivity. Anti-dsDNA and anti-Sm increase diagnostic specificity but do not have sufficient sensitivity to rule out disease. [5]",
+        "When patients do not meet a classification threshold but have a compatible phenotype, document the objective clinical and immunologic evidence, reassess longitudinally, and exclude competing connective-tissue, infectious, thrombotic, drug-related, and organ-specific diagnoses. For ANA-negative suspected SLE, low complement and/or antiphospholipid antibodies may provide an alternative immunologic entry point in a diagnostic algorithm. [2][3]"
+      ],
+      "bullets": [
+        "Use anti-dsDNA, anti-Sm, complement levels, CBC abnormalities, urinalysis, and protein quantification to define the organ pattern and establish a baseline for monitoring. [2][5]",
+        "Avoid using a normal or negative ANA alone to dismiss possible lupus nephritis when biopsy-level renal evidence and the clinical syndrome support SLE. [6]",
+        "Do not use neutrophil-to-lymphocyte ratio as a replacement for diagnostic serology; proposed thresholds and flare-monitoring algorithms require validation before routine practice adoption. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of common immunologic findings in suspected SLE. [2][4][5][6]",
+        "columns": [
+          "Finding",
+          "What it changes",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Positive ANA",
+            "Supports immune-mediated connective-tissue disease and permits entry into 2019 EULAR/ACR classification. [2]",
+            "Low specificity; positivity occurs in healthy persons and other diseases. [5]"
+          ],
+          [
+            "Negative ANA",
+            "Lowers probability but does not exclude clinical SLE, especially with convincing organ disease. [4][6]",
+            "ANA-negative lupus nephritis, including biopsy-proven proliferative disease, has been reported. [6]"
+          ],
+          [
+            "Anti-dsDNA or anti-Sm positivity",
+            "Raises diagnostic confidence in a compatible clinical syndrome. [5]",
+            "Both have low sensitivity; their absence does not rule out SLE. [5]"
+          ],
+          [
+            "Low complement",
+            "Supports immune activity and may help frame ANA-negative suspected SLE. [2][3]",
+            "Interpret with the full clinical phenotype rather than as an isolated diagnostic test. [2]"
+          ],
+          [
+            "Antiphospholipid antibodies",
+            "Prompt assessment for thrombotic and pregnancy morbidity phenotypes. [24]",
+            "APS requires compatible clinical events and persistent antibody positivity. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "baseline-therapy-and-glucocorticoid-sparing",
+      "eyebrow": "Disease control",
+      "heading": "Build treatment around hydroxychloroquine and early glucocorticoid-sparing therapy",
+      "intro": "Select therapy according to active organ involvement, severity, prior response, and toxicity risk.",
+      "paragraphs": [
+        "Use hydroxychloroquine for essentially all patients with SLE unless contraindicated or not tolerated. The EULAR target is 5 mg/kg/day or less using real body weight, individualized against the competing risks of flare and retinal toxicity. [18]",
+        "Use systemic glucocorticoids as bridging treatment during active disease, not as a default chronic maintenance strategy. For maintenance, minimize prednisone-equivalent exposure to 5 mg/day or less and withdraw when possible; prompt use of steroid-sparing immunosuppressive drugs and/or biologic agents facilitates tapering. [18]",
+        "For nonrenal inflammatory disease requiring escalation beyond hydroxychloroquine, consider methotrexate, azathioprine, or mycophenolate, and consider belimumab or anifrolumab when disease remains active or steroid tapering is not achievable. Choice should be driven by the dominant disease domain, reproductive considerations, prior immunosuppressant exposure, infection risk, and the objective need to reduce glucocorticoid exposure. [18]",
+        "Reserve cyclophosphamide for organ-threatening disease and consider rituximab for refractory disease. This distinction matters because cyclophosphamide is positioned for high-severity inflammatory organ injury, whereas rituximab is an option when standard approaches have not achieved control. [18]"
+      ],
+      "bullets": [
+        "Before escalating immunosuppression, distinguish active inflammatory disease from irreversible damage, infection, thrombosis, medication toxicity, or a non-SLE comorbidity; infection risk is amplified by immunosuppressive treatment. [16]",
+        "Reassess treatment response with the same organ-specific abnormalities used at baseline, such as urinary protein and sediment for nephritis, CBC for hematologic disease, and disease-specific clinical findings for cutaneous or musculoskeletal activity. [18]",
+        "Address health-related quality of life, patient participation, and individualized multidisciplinary nonpharmacologic interventions alongside pharmacotherapy. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Medication roles in SLE management. [18]",
+        "columns": [
+          "Clinical role",
+          "Treatment approach",
+          "Key treatment target or limitation"
+        ],
+        "rows": [
+          [
+            "Baseline disease modification",
+            "Hydroxychloroquine at a target dose no greater than 5 mg/kg/day real body weight. [18]",
+            "Balance flare prevention with retinal toxicity risk. [18]"
+          ],
+          [
+            "Short-term control of active disease",
+            "Glucocorticoids as bridging therapy. [18]",
+            "Taper toward 5 mg/day prednisone equivalent or less for maintenance and withdraw if possible. [18]"
+          ],
+          [
+            "Steroid-sparing treatment for active nonrenal disease",
+            "Methotrexate, azathioprine, mycophenolate, belimumab, or anifrolumab, selected by disease pattern and treatment history. [18]",
+            "Initiate early enough to permit glucocorticoid tapering. [18]"
+          ],
+          [
+            "Organ-threatening or refractory disease",
+            "Consider cyclophosphamide for organ-threatening disease and rituximab for refractory disease. [18]",
+            "Confirm active inflammatory disease and exclude infection or thrombotic mimics before escalation. [16][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lupus-nephritis",
+      "eyebrow": "Renal disease",
+      "heading": "Treat suspected active lupus nephritis as a high-priority organ manifestation",
+      "intro": "Renal findings change both urgency and the immunosuppressive regimen.",
+      "paragraphs": [
+        "Active lupus nephritis should be considered when SLE is accompanied by proteinuria, urinary sediment abnormalities, edema, hypertension, hypoalbuminemia, or kidney dysfunction. Quantify proteinuria and assess sediment rather than relying on dipstick results alone; nephrotic-range proteinuria with low albumin and lipid casts or fat oval bodies identifies a nephrotic pattern that warrants focused renal evaluation. [8]",
+        "For active lupus nephritis, use glucocorticoids plus mycophenolate or low-dose intravenous cyclophosphamide as anchor treatment. Consider adding belimumab or a calcineurin inhibitor, specifically voclosporin or tacrolimus, to the anchor regimen. [18]",
+        "Do not classify all proteinuria in pregnancy as active nephritis. Severe hypertension, weight gain, and proteinuria arising late in pregnancy may represent preeclampsia; persistent postpartum proteinuria requires reassessment for an underlying renal process rather than assuming the pregnancy complication fully explains ongoing urinary abnormalities. [8]",
+        "Follow renal response with serial quantitative proteinuria, serum creatinine, urine sediment, serum albumin when nephrotic features are present, blood pressure, and concurrent SLE activity measures. Escalate the diagnostic discussion when renal findings and systemic immune activity diverge, because ANA status and even conventional serologies do not reliably exclude biopsy-proven lupus nephritis. [6][8][18]"
+      ],
+      "bullets": [
+        "Use mycophenolate or low-dose intravenous cyclophosphamide as the principal immunosuppressive anchor for active lupus nephritis rather than treating with hydroxychloroquine alone. [18]",
+        "Consider belimumab or calcineurin inhibitor add-on therapy in active lupus nephritis when selecting a combination approach. [18]",
+        "Interpret pregnancy-associated proteinuria in conjunction with blood pressure, gestational timing, urinary findings, renal function, and postpartum trajectory. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Renal decision points in SLE. [6][8][18]",
+        "columns": [
+          "Clinical finding",
+          "Likely management branch",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Proteinuria with abnormal sediment or kidney dysfunction",
+            "Possible active lupus nephritis",
+            "Quantify proteinuria, assess creatinine and sediment, and initiate kidney-directed treatment planning. [18]"
+          ],
+          [
+            "Nephrotic proteinuria, hypoalbuminemia, lipid casts, or fat oval bodies",
+            "Nephrotic renal pattern",
+            "Perform focused renal assessment and distinguish lupus nephritis from alternative glomerular disease. [8]"
+          ],
+          [
+            "Late-pregnancy hypertension with severe proteinuria and weight gain",
+            "Preeclampsia versus lupus nephritis",
+            "Assess obstetric and renal features jointly; persistent postpartum proteinuria warrants renewed renal evaluation. [8]"
+          ],
+          [
+            "ANA-negative renal inflammatory syndrome with compelling lupus features",
+            "Possible ANA-negative lupus nephritis",
+            "Do not exclude lupus nephritis solely on ANA negativity; integrate renal pathology and the full immune phenotype. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-monitoring-and-risk-reduction",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor objective organ activity, treatment toxicity, thrombosis risk, and patient function",
+      "intro": "Track the abnormality that drove treatment rather than relying on symptoms alone.",
+      "paragraphs": [
+        "At follow-up, repeat disease- and organ-specific measures that were abnormal at presentation: CBC for cytopenias, creatinine and quantitative proteinuria with urine sediment for renal disease, complement and anti-dsDNA as adjunctive immune activity markers, and focused cardiopulmonary or neurologic testing when those organs are involved. This approach separates clinical activity from damage and permits glucocorticoid tapering only when objective control is sustained. [2][18]",
+        "Maintain hydroxychloroquine within the individualized weight-based target and revisit adherence, toxicity, and flare history when disease appears active. Lower hydroxychloroquine blood concentrations have been associated with exacerbations, and long-term hydroxychloroquine exposure requires attention to retinal and cardiac toxicity. [14][18]",
+        "For patients with aPL and prior thrombosis or pregnancy morbidity, manage the patient as possible APS rather than as isolated SLE seropositivity. Secondary thrombosis prevention and modification of cardiovascular risk factors are important because subsequent damage worsens health-related quality of life. [19][24]",
+        "Include structured nonpharmacologic care rather than treating pharmacotherapy as the entire intervention. EULAR emphasizes holistic, multidisciplinary, patient-involved, individualized strategies to improve quality of care and health-related quality of life in SLE. [1]"
+      ],
+      "bullets": [
+        "Reevaluate unexplained deterioration for infection before increasing glucocorticoids or immunosuppression. [16]",
+        "Use the lowest sustainable glucocorticoid exposure; the maintenance target is prednisone equivalent 5 mg/day or less, with withdrawal when feasible. [18]",
+        "In established APS, address tobacco use and oral contraceptive exposure because their combination with aPL increases thrombosis risk. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Longitudinal monitoring priorities in SLE. [1][14][16][18][19][24]",
+        "columns": [
+          "Domain",
+          "Monitoring focus",
+          "Action when abnormal"
+        ],
+        "rows": [
+          [
+            "Renal disease",
+            "Creatinine, quantitative proteinuria, urine sediment, blood pressure, albumin when nephrotic features are present. [18]",
+            "Determine whether abnormalities indicate active nephritis, chronic damage, pregnancy-related disease, or another renal process before altering immunosuppression. [8][18]"
+          ],
+          [
+            "Glucocorticoid exposure",
+            "Current prednisone-equivalent dose and taper feasibility. [18]",
+            "Add or optimize steroid-sparing therapy to reach 5 mg/day or less and withdraw when possible. [18]"
+          ],
+          [
+            "Hydroxychloroquine",
+            "Weight-based dose, adherence, adverse effects, and flare history. [14][18]",
+            "Keep dosing at or below the 5 mg/kg/day real-body-weight target and balance efficacy against retinal toxicity. [18]"
+          ],
+          [
+            "Thrombotic risk",
+            "Clinical thrombosis history, pregnancy morbidity, persistent aPL profile, and cardiovascular risk factors. [19][24]",
+            "Apply APS-directed secondary prevention and risk-factor modification when clinical APS is present. [19][24]"
+          ],
+          [
+            "Immunosuppression safety",
+            "New fever, focal infection symptoms, cytopenias, and unexplained organ dysfunction. [16]",
+            "Evaluate infection and noninflammatory mimics before escalating immunosuppression. [16]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "EULAR recommendations for the non-pharmacological management of systemic lupus erythematosus and systemic sclerosis | Annals of the Rheumatic Diseases",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/83/6/720",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "#### How might this impact on clinical practice?\n\nThese recommendations will provide guidance on non-pharmacological interventions in the management of SLE and SSc in clinical practice and promote their use alongside pharmacotherapy to improve the overall quality of care.\n\n## Introduction [...] Syst",
+      "score": 0.49275014
+    },
+    {
+      "number": 2,
+      "title": "Update \u03bfn the diagnosis and management of systemic lupus erythematosus",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/80/1/14",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Diagnostic approach to a patient with suspected SLE and the use of classification criteria to aid clinical diagnosis. The diagnosis of SLE is clinical, supported by laboratory abnormalities including serologic assays. Diagnostic criteria are not available for SLE and classification criteria are ofte",
+      "score": 0.8409005
+    },
+    {
+      "number": 3,
+      "title": "Update \u03bfn the diagnosis and management of systemic ...",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "4 Diagnostic approach to a patient with suspected SLE and the use of classification criteria to aid clinical diagnosis. The diagnosis of SLE is clinical, supported by laboratory abnormalities including serologic assays. Diagnostic criteria are not available for SLE and classification criteria are of",
+      "score": 0.78054583
+    },
+    {
+      "number": 4,
+      "title": "Sensitivity of classification criteria from time of diagnosis in an incident systemic lupus erythematosus cohort: a population-based study from Norway | RMD Open",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/10/3/e004395",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "## Introduction\n\nSystemic lupus erythematosus (SLE) is a complex, heterogeneous autoimmune disease, with partly overlapping phenotypes that evolve from disease onset and undergo multiple changes across the course of the disease.1\u20133 Immune complexes containing autoantibodies is a hallmark of the dise",
+      "score": 0.75852895
+    },
+    {
+      "number": 5,
+      "title": "Cell-bound complement activation products in SLE",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/lupusscimed/4/1/e000236.full.pdf",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "Ramsey-Goldman R, et al. Lupus Science & Medicine 2017;4. doi:10.1136/lupus-2017-000236 2 Lupus Science & Medicine the diagnosis and classification of SLE and other auto-immune diseases. In particular, ANA, antibodies directed against double-stranded DNA (anti-dsDNA) and Smith antigen (anti-Sm), and",
+      "score": 0.74541736
+    },
+    {
+      "number": 6,
+      "title": "Performance of the proposed ACR\u2013EULAR classification ...",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/rmdopen/5/1/e000895.full.pdf",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "The second explanation relates to limitations we encountered using the proposed ACR\u2013EULAR criteria. First of all, ANA has been proposed as entry criterium. However, in our cohort, we found nine patients with the clinical diagnosis of SLE and a sufficient amount of points for the proposed criteria, b",
+      "score": 0.7067782
+    },
+    {
+      "number": 7,
+      "title": "You may not use this docume",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/annrheumdis/81/1/100/DC1/embed/inline-supplementary-material-1.pdf?download=true",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Criteria for Classification of Systemic Lupus Erythematosus. There are 11 criteria for the classification of systemic lupus erythematosus (SLE).",
+      "score": 0.61668247
+    },
+    {
+      "number": 8,
+      "title": "Interactive case study workshops",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/lupusscimed/9/Suppl_1/A6.2.full.pdf",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "Describe factors predicting exacerbation 14 MANAGEMENT OF LUPUS NEPHRITIS Gabriella Moroni. Department of Biomedical Sciences, Humanitas University, IRCCS Humanitas Research Hospital, Milan, Italy 10.1136/lupus-2022-la.14 Case 1: A 27-year-old female with lupus nephritis A 27-year-old Caucasian fema",
+      "score": 0.55391616
+    },
+    {
+      "number": 9,
+      "title": "NLR outperforms PLR in SLE diagnosis and prognosis: an AI-enhanced meta-analysis of 12 850 patients with ethnicity-specific cut-offs | Lupus Science & Medicine",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/12/2/e001696",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "### Clinical implementation metrics\n\nThe clinical translation of these findings appears highly feasible. A pilot implementation of a web-based tool leveraging our model achieved an AUC of 0.81 (n=150). The model\u2019s explainability via SHAP values was validated by clinicians, with an 85% approval rate ",
+      "score": 0.53692055
+    },
+    {
+      "number": 10,
+      "title": "Urinary markers differentially associate with kidney ...",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/10/1/e000747",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "by A Akhgar \u00b7 2023 \u00b7 Cited by 13 \u2014 Updating the american college of rheumatology revised criteria for the classification of systemic lupus erythematosus.",
+      "score": 0.5081298
+    },
+    {
+      "number": 11,
+      "title": "Development and external validation of a prediction model ...",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/9/4/e003568",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "by H You \u00b7 2023 \u00b7 Cited by 16 \u2014 Derivation and validation of the systemic lupus International collaborating clinics classification criteria for systemic lupus erythematosus.",
+      "score": 0.47957736
+    },
+    {
+      "number": 12,
+      "title": "Systemic Lupus Erythematosus",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJM199406303302608",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "A diagnosis of SLE is easily made when patients have three or four typical manifestations, such as a characteristic rash (see below),",
+      "score": 0.4671622
+    },
+    {
+      "number": 13,
+      "title": "Pediatric SLE\u2014towards a comprehensive management plan | Nature Reviews Rheumatology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrrheum.2011.15.pdf",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Systemic lupus erythematosus (SLE) results from complex abnormalities of the innate and acquired immune systems. For reasons that are currently not well understood, the disease course and phenotype associated with SLE, although quite variable, are generally more severe when the diagnosis is made dur",
+      "score": 0.6133529
+    },
+    {
+      "number": 14,
+      "title": "Effect of hydroxychloroquine blood concentration on the efficacy and ocular toxicity of systemic lupus erythematosus | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-58391-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The most common treatment regimen for SLE patients involves a combination of GCs and immunosuppressants. According to the recommendations of the European League Against Rheumatism (EULAR)15, 736\u2013745 (2019).\"), the management of SLE should aim to relieve or at least lower disease activity and prevent",
+      "score": 0.6100127
+    },
+    {
+      "number": 15,
+      "title": "Adverse effects | Nature Reviews Rheumatology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/adverse-effects/nrrheum",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Hydroxychloroquine dose: balancing toxicity and SLE flare risk. Contemporary guidelines for the management of systemic lupus erythematosus (SLE) recommend",
+      "score": 0.5689194
+    },
+    {
+      "number": 16,
+      "title": "Systemic lupus erythematosus | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrdp201639",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "of the heterogeneity of SLE. Classification criteria have aided clinical trials, but, despite this, only one drug (that is, belimumab) has been approved for use in SLE in the past 60 years. The 10-year mortality has improved and toxic adverse effects of older medications such as cyclophosphamide and",
+      "score": 0.46337196
+    },
+    {
+      "number": 17,
+      "title": "2025 American College of Rheumatology (ACR) Guideline for ...",
+      "detail": "acrjournals.onlinelibrary.wiley.com",
+      "url": "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.25690",
+      "authors": "acrjournals.onlinelibrary.wiley.com",
+      "host": "acrjournals.onlinelibrary.wiley.com",
+      "snippet": "Objective To provide evidence-based and expert guidance for the treatment and management of non-renal systemic lupus erythematosus (SLE);",
+      "score": 0.5976789
+    },
+    {
+      "number": 18,
+      "title": "EULAR recommendations for the management of systemic lupus erythematosus: 2023 update",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0003496724003868",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The Task Force agreed on 5 overarching principles and 13 recommendations, concerning the use of hydroxychloroquine (HCQ), glucocorticoids (GC), immunosuppressive drugs (ISDs) (including methotrexate, mycophenolate, azathioprine, cyclophosphamide (CYC)), calcineurin inhibitors (CNIs, cyclosporine, ta",
+      "score": 0.70944256
+    },
+    {
+      "number": 19,
+      "title": "22nd PANLAR Congress: Miami, FL, August 12-15 2020",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jclinrheum/fulltext/2020/04001/22nd_panlar_congress__miami,_fl,_august_12_15_2020.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Conclusions: Current organ damage accrual in patients with PAPS impairs the physical component of HRQoL. Thrombotic secondary prevention and control of cardiovascular risk factors are important to avoid further deterioration of their HRQoL.\n\nKey words: Antiphospholipid syndrome, DIAPS, SF-36, neurop",
+      "score": 0.57437146
+    },
+    {
+      "number": 20,
+      "title": "Hydroxychloroquine - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/hydroxychloroquine",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Systemic Lupus Erythematosus-Maintenance Dose |\n| Dosage | 200-400 mg daily (155-310 mg base) | mg | p.o. | Product Information Plaquenil (2001) |  |\n| Rheumatoid Arthritis-Initial Dose |\n| Dosage | 400-600 mg (310-465 mg base) daily for 4 to 12 weeks | mg | p.o. | Product Information Plaquenil (2",
+      "score": 0.5008063
+    },
+    {
+      "number": 21,
+      "title": "Review The use of glucocorticoids in Systemic Lupus ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568997212002923",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by RK Luijten \u00b7 2013 \u00b7 Cited by 103 \u2014 The focus of this systematic review is to evaluate the differential glucocorticoid treatment of various SLE manifestations. In addition, some relevant",
+      "score": 0.37018043
+    },
+    {
+      "number": 22,
+      "title": "POSTER PRESENTATION : Indian Journal of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijon/fulltext/2022/32001/poster_presentation.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "BACKGROUND: Systemic lupus erythematosus (SLE) is a chronic autoimmune disease of unknown cause that can affect virtually any organ of the body. Immunologic abnormalities especially the production of a number of antinuclear antibodies (ANA) are a prominent feature of the disease which may be negativ",
+      "score": 0.30299965
+    },
+    {
+      "number": 23,
+      "title": "E-Posters : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2023/18002/e_posters.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "_R Kodali, L Salazar, R Janardhana, B Pinto 1, V Shobha; St Johns Medical College Hospital, 1 Manipal Hospital, Bengaluru, Karnataka, India_\n\nBackground: Depression and anxiety disorders are one of the most common neuropsychiatric (NP) manifestations in Systemic Lupus Erythematosus (SLE) with preval",
+      "score": 0.27124614
+    },
+    {
+      "number": 24,
+      "title": "Antiphospholipid Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/antiphospholipid-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "View article\n\nRead full article\n\nURL:\n\nJournal2021, Heart, Lung and CirculationMariya Kuk MD, ... Girish Dwivedi MD, PhD\n\nChapter\n\n## Thrombophilia and their detection\n\n2020, Hematology and Coagulation (Second Edition)Amer Wahed MD, ... Amitava Dasgupta PhD\n\n### Antiphospholipid syndrome\n\nAntiphosph",
+      "score": 0.39264008
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "EULAR recommendations for the non-pharmacological management of systemic lupus erythematosus and systemic sclerosis | Annals of the Rheumatic Diseases",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/83/6/720",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "#### How might this impact on clinical practice?\n\nThese recommendations will provide guidance on non-pharmacological interventions in the management of SLE and SSc in clinical practice and promote their use alongside pharmacotherapy to improve the overall quality of care.\n\n## Introduction [...] Syst",
+      "score": 0.49275014
+    },
+    {
+      "number": 2,
+      "title": "Update \u03bfn the diagnosis and management of systemic lupus erythematosus",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/80/1/14",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Diagnostic approach to a patient with suspected SLE and the use of classification criteria to aid clinical diagnosis. The diagnosis of SLE is clinical, supported by laboratory abnormalities including serologic assays. Diagnostic criteria are not available for SLE and classification criteria are ofte",
+      "score": 0.8409005
+    },
+    {
+      "number": 3,
+      "title": "Update \u03bfn the diagnosis and management of systemic ...",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/annrheumdis/80/1/14.full.pdf",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "4 Diagnostic approach to a patient with suspected SLE and the use of classification criteria to aid clinical diagnosis. The diagnosis of SLE is clinical, supported by laboratory abnormalities including serologic assays. Diagnostic criteria are not available for SLE and classification criteria are of",
+      "score": 0.78054583
+    },
+    {
+      "number": 4,
+      "title": "Sensitivity of classification criteria from time of diagnosis in an incident systemic lupus erythematosus cohort: a population-based study from Norway | RMD Open",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/10/3/e004395",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "## Introduction\n\nSystemic lupus erythematosus (SLE) is a complex, heterogeneous autoimmune disease, with partly overlapping phenotypes that evolve from disease onset and undergo multiple changes across the course of the disease.1\u20133 Immune complexes containing autoantibodies is a hallmark of the dise",
+      "score": 0.75852895
+    },
+    {
+      "number": 5,
+      "title": "Cell-bound complement activation products in SLE",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/lupusscimed/4/1/e000236.full.pdf",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "Ramsey-Goldman R, et al. Lupus Science & Medicine 2017;4. doi:10.1136/lupus-2017-000236 2 Lupus Science & Medicine the diagnosis and classification of SLE and other auto-immune diseases. In particular, ANA, antibodies directed against double-stranded DNA (anti-dsDNA) and Smith antigen (anti-Sm), and",
+      "score": 0.74541736
+    },
+    {
+      "number": 6,
+      "title": "Performance of the proposed ACR\u2013EULAR classification ...",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/rmdopen/5/1/e000895.full.pdf",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "The second explanation relates to limitations we encountered using the proposed ACR\u2013EULAR criteria. First of all, ANA has been proposed as entry criterium. However, in our cohort, we found nine patients with the clinical diagnosis of SLE and a sufficient amount of points for the proposed criteria, b",
+      "score": 0.7067782
+    },
+    {
+      "number": 7,
+      "title": "You may not use this docume",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/annrheumdis/81/1/100/DC1/embed/inline-supplementary-material-1.pdf?download=true",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Criteria for Classification of Systemic Lupus Erythematosus. There are 11 criteria for the classification of systemic lupus erythematosus (SLE).",
+      "score": 0.61668247
+    },
+    {
+      "number": 8,
+      "title": "Interactive case study workshops",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/lupusscimed/9/Suppl_1/A6.2.full.pdf",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "Describe factors predicting exacerbation 14 MANAGEMENT OF LUPUS NEPHRITIS Gabriella Moroni. Department of Biomedical Sciences, Humanitas University, IRCCS Humanitas Research Hospital, Milan, Italy 10.1136/lupus-2022-la.14 Case 1: A 27-year-old female with lupus nephritis A 27-year-old Caucasian fema",
+      "score": 0.55391616
+    },
+    {
+      "number": 9,
+      "title": "NLR outperforms PLR in SLE diagnosis and prognosis: an AI-enhanced meta-analysis of 12 850 patients with ethnicity-specific cut-offs | Lupus Science & Medicine",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/12/2/e001696",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "### Clinical implementation metrics\n\nThe clinical translation of these findings appears highly feasible. A pilot implementation of a web-based tool leveraging our model achieved an AUC of 0.81 (n=150). The model\u2019s explainability via SHAP values was validated by clinicians, with an 85% approval rate ",
+      "score": 0.53692055
+    },
+    {
+      "number": 10,
+      "title": "Urinary markers differentially associate with kidney ...",
+      "detail": "lupus.bmj.com",
+      "url": "https://lupus.bmj.com/content/10/1/e000747",
+      "authors": "lupus.bmj.com",
+      "host": "lupus.bmj.com",
+      "snippet": "by A Akhgar \u00b7 2023 \u00b7 Cited by 13 \u2014 Updating the american college of rheumatology revised criteria for the classification of systemic lupus erythematosus.",
+      "score": 0.5081298
+    },
+    {
+      "number": 11,
+      "title": "Development and external validation of a prediction model ...",
+      "detail": "rmdopen.bmj.com",
+      "url": "https://rmdopen.bmj.com/content/9/4/e003568",
+      "authors": "rmdopen.bmj.com",
+      "host": "rmdopen.bmj.com",
+      "snippet": "by H You \u00b7 2023 \u00b7 Cited by 16 \u2014 Derivation and validation of the systemic lupus International collaborating clinics classification criteria for systemic lupus erythematosus.",
+      "score": 0.47957736
+    },
+    {
+      "number": 12,
+      "title": "Systemic Lupus Erythematosus",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJM199406303302608",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "A diagnosis of SLE is easily made when patients have three or four typical manifestations, such as a characteristic rash (see below),",
+      "score": 0.4671622
+    },
+    {
+      "number": 13,
+      "title": "Pediatric SLE\u2014towards a comprehensive management plan | Nature Reviews Rheumatology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrrheum.2011.15.pdf",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Systemic lupus erythematosus (SLE) results from complex abnormalities of the innate and acquired immune systems. For reasons that are currently not well understood, the disease course and phenotype associated with SLE, although quite variable, are generally more severe when the diagnosis is made dur",
+      "score": 0.6133529
+    },
+    {
+      "number": 14,
+      "title": "Effect of hydroxychloroquine blood concentration on the efficacy and ocular toxicity of systemic lupus erythematosus | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-58391-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The most common treatment regimen for SLE patients involves a combination of GCs and immunosuppressants. According to the recommendations of the European League Against Rheumatism (EULAR)15, 736\u2013745 (2019).\"), the management of SLE should aim to relieve or at least lower disease activity and prevent",
+      "score": 0.6100127
+    },
+    {
+      "number": 15,
+      "title": "Adverse effects | Nature Reviews Rheumatology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/adverse-effects/nrrheum",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Hydroxychloroquine dose: balancing toxicity and SLE flare risk. Contemporary guidelines for the management of systemic lupus erythematosus (SLE) recommend",
+      "score": 0.5689194
+    },
+    {
+      "number": 16,
+      "title": "Systemic lupus erythematosus | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrdp201639",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "of the heterogeneity of SLE. Classification criteria have aided clinical trials, but, despite this, only one drug (that is, belimumab) has been approved for use in SLE in the past 60 years. The 10-year mortality has improved and toxic adverse effects of older medications such as cyclophosphamide and",
+      "score": 0.46337196
+    },
+    {
+      "number": 17,
+      "title": "2025 American College of Rheumatology (ACR) Guideline for ...",
+      "detail": "acrjournals.onlinelibrary.wiley.com",
+      "url": "https://acrjournals.onlinelibrary.wiley.com/doi/10.1002/acr.25690",
+      "authors": "acrjournals.onlinelibrary.wiley.com",
+      "host": "acrjournals.onlinelibrary.wiley.com",
+      "snippet": "Objective To provide evidence-based and expert guidance for the treatment and management of non-renal systemic lupus erythematosus (SLE);",
+      "score": 0.5976789
+    },
+    {
+      "number": 18,
+      "title": "EULAR recommendations for the management of systemic lupus erythematosus: 2023 update",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0003496724003868",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The Task Force agreed on 5 overarching principles and 13 recommendations, concerning the use of hydroxychloroquine (HCQ), glucocorticoids (GC), immunosuppressive drugs (ISDs) (including methotrexate, mycophenolate, azathioprine, cyclophosphamide (CYC)), calcineurin inhibitors (CNIs, cyclosporine, ta",
+      "score": 0.70944256
+    },
+    {
+      "number": 19,
+      "title": "22nd PANLAR Congress: Miami, FL, August 12-15 2020",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jclinrheum/fulltext/2020/04001/22nd_panlar_congress__miami,_fl,_august_12_15_2020.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Conclusions: Current organ damage accrual in patients with PAPS impairs the physical component of HRQoL. Thrombotic secondary prevention and control of cardiovascular risk factors are important to avoid further deterioration of their HRQoL.\n\nKey words: Antiphospholipid syndrome, DIAPS, SF-36, neurop",
+      "score": 0.57437146
+    },
+    {
+      "number": 20,
+      "title": "Hydroxychloroquine - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/hydroxychloroquine",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "| Systemic Lupus Erythematosus-Maintenance Dose |\n| Dosage | 200-400 mg daily (155-310 mg base) | mg | p.o. | Product Information Plaquenil (2001) |  |\n| Rheumatoid Arthritis-Initial Dose |\n| Dosage | 400-600 mg (310-465 mg base) daily for 4 to 12 weeks | mg | p.o. | Product Information Plaquenil (2",
+      "score": 0.5008063
+    },
+    {
+      "number": 21,
+      "title": "Review The use of glucocorticoids in Systemic Lupus ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568997212002923",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by RK Luijten \u00b7 2013 \u00b7 Cited by 103 \u2014 The focus of this systematic review is to evaluate the differential glucocorticoid treatment of various SLE manifestations. In addition, some relevant",
+      "score": 0.37018043
+    },
+    {
+      "number": 22,
+      "title": "POSTER PRESENTATION : Indian Journal of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijon/fulltext/2022/32001/poster_presentation.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "BACKGROUND: Systemic lupus erythematosus (SLE) is a chronic autoimmune disease of unknown cause that can affect virtually any organ of the body. Immunologic abnormalities especially the production of a number of antinuclear antibodies (ANA) are a prominent feature of the disease which may be negativ",
+      "score": 0.30299965
+    },
+    {
+      "number": 23,
+      "title": "E-Posters : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2023/18002/e_posters.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "_R Kodali, L Salazar, R Janardhana, B Pinto 1, V Shobha; St Johns Medical College Hospital, 1 Manipal Hospital, Bengaluru, Karnataka, India_\n\nBackground: Depression and anxiety disorders are one of the most common neuropsychiatric (NP) manifestations in Systemic Lupus Erythematosus (SLE) with preval",
+      "score": 0.27124614
+    },
+    {
+      "number": 24,
+      "title": "Antiphospholipid Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/antiphospholipid-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "View article\n\nRead full article\n\nURL:\n\nJournal2021, Heart, Lung and CirculationMariya Kuk MD, ... Girish Dwivedi MD, PhD\n\nChapter\n\n## Thrombophilia and their detection\n\n2020, Hematology and Coagulation (Second Edition)Amer Wahed MD, ... Amitava Dasgupta PhD\n\n### Antiphospholipid syndrome\n\nAntiphosph",
+      "score": 0.39264008
+    }
+  ],
+  "publishedAt": "2026-08-21T02:08:34.965504+00:00",
+  "updatedAt": "2026-08-21T02:08:34.965504+00:00",
+  "readingMinutes": 6,
+  "slug": "systemic-lupus-erythematosus"
+}

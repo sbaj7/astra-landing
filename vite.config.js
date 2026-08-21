@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { copyFileSync, mkdirSync, readdirSync } from 'fs'
+import { copyFileSync, mkdirSync, readFileSync } from 'fs'
 import { join } from 'path'
 
 export default defineConfig(({ mode }) => ({
@@ -17,18 +17,16 @@ export default defineConfig(({ mode }) => ({
             'dist/generated_articles/index.json'
           )
 
-          // Also copy all article JSON files
-          const articlesDir = 'generated_articles'
-          const files = readdirSync(articlesDir)
+          // Copy only articles present in the public manifest.
+          const articles = JSON.parse(readFileSync('generated_articles/index.json', 'utf8'))
           let copiedCount = 0
 
-          files.forEach(file => {
-            if (file.endsWith('.json') && file !== 'index.json') {
-              const srcPath = join(articlesDir, file)
-              const destPath = join('dist/generated_articles', file)
-              copyFileSync(srcPath, destPath)
-              copiedCount++
-            }
+          articles.forEach(article => {
+            if (!article?.slug) return
+            const file = `${article.slug}.json`
+            const source = article.source || join('generated_articles', file)
+            copyFileSync(source, join('dist/generated_articles', file))
+            copiedCount++
           })
 
           console.log(`✅ Copied ${copiedCount} article files to dist`)

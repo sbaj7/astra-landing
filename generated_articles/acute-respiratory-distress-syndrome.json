@@ -1,0 +1,818 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Acute Respiratory Distress Syndrome",
+  "summary": "ARDS requires rapid confirmation of acute noncardiogenic pulmonary edema, identification of the precipitating insult, and prompt lung-protective support. Management priorities are low-tidal-volume ventilation, pressure limitation, selective prone positioning, conservative fluid balance after shock control, and timely referral for extracorporeal support when hypoxemia persists.",
+  "seoDescription": "Evidence-based diagnosis, severity assessment, ventilator management, prone positioning, fluid strategy, and ECMO referral for acute respiratory distress syndrome.",
+  "clinicalQuestion": "How should clinicians diagnose, phenotype, and deliver evidence-based respiratory support for adults with acute respiratory distress syndrome?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute respiratory distress syndrome",
+    "ARDS",
+    "lung-protective ventilation",
+    "prone positioning",
+    "PEEP",
+    "ECMO",
+    "acute hypoxemic respiratory failure"
+  ],
+  "keyTakeaways": [
+    "Confirm ARDS by acute timing, bilateral pulmonary opacities, hypoxemia, and edema not primarily attributable to cardiac failure or fluid overload; an identifiable ARDS risk factor reduces diagnostic uncertainty. [8][12]",
+    "Use low-tidal-volume, pressure-limited ventilation for invasively ventilated ARDS; high tidal volumes and inspiratory pressures propagate ventilator-induced lung injury. [12][23]",
+    "For severe ARDS, prone positioning is a high-value intervention; evidence supports prolonged daily prone sessions in patients with severe hypoxemia. [8][12][23]",
+    "Higher PEEP should not be applied indiscriminately: physiologic response and recruitability vary, and aggressive recruitment plus titrated high PEEP increased mortality in a randomized trial. [12][17][23]",
+    "Persistent severe hypoxemia despite optimized conventional management warrants early discussion with an experienced venovenous ECMO center. [8][17][23]"
+  ],
+  "sections": [
+    {
+      "id": "diagnosis-and-severity",
+      "eyebrow": "Recognition",
+      "heading": "Establish the syndrome, then identify the cause",
+      "intro": "ARDS is a clinical syndrome; no single imaging, laboratory, or biomarker test confirms it.",
+      "paragraphs": [
+        "The 2024 global definition retains the core construct of acute hypoxemic respiratory failure with bilateral pulmonary opacities and edema not fully explained by cardiac failure or fluid overload. It accommodates intubated and nonintubated patients and permits chest radiography, CT, or lung ultrasound for imaging assessment. [8]",
+        "At the bedside, diagnosis requires integration of timing, imaging, oxygenation, and the edema mechanism. Pneumonia, aspiration, pulmonary contusion, inhalational injury, drowning, and pulmonary vasculitis are direct insults; nonpulmonary sepsis, pancreatitis, major trauma, burns, shock, drug overdose, transfusion, and transfusion-related acute lung injury are indirect insults. [1][12]",
+        "When no clear ARDS risk factor is present, actively evaluate hydrostatic edema rather than assuming ARDS. The Berlin-derived framework calls for objective assessment when needed to exclude cardiac failure or fluid overload. [1][8]"
+      ],
+      "bullets": [
+        "Obtain or review chest radiography, CT, or lung ultrasound for bilateral opacities not fully explained by effusions, lobar/lung collapse, nodules, or masses. [8]",
+        "Use arterial blood gas analysis when precise PaO2/FiO2 classification or assessment of hypercapnia and acid-base status will change ventilator or rescue decisions. [9]",
+        "Assess and treat the precipitating process in parallel; ARDS support does not replace source control, antimicrobial therapy when indicated, aspiration management, transfusion-reaction evaluation, or shock resuscitation. [1][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical ARDS diagnostic framework. [8][9]",
+        "columns": [
+          "Domain",
+          "Actionable criterion",
+          "Clinical implication"
+        ],
+        "rows": [
+          [
+            "Timing",
+            "Onset within 1 week of a known insult or new/worsening respiratory symptoms. [8]",
+            "Acute timing distinguishes ARDS from chronic diffuse lung disease."
+          ],
+          [
+            "Imaging",
+            "Bilateral opacities on chest radiography or CT, or bilateral B-lines and/or consolidations on ultrasound, not fully explained by common mimics. [8]",
+            "Imaging is required but has interobserver variability; integrate with the full clinical syndrome."
+          ],
+          [
+            "Oxygenation",
+            "PaO2/FiO2 \u2264300 mm Hg or SpO2/FiO2 \u2264315. [8]",
+            "Quantifies hypoxemia and guides severity-oriented escalation."
+          ],
+          [
+            "Edema mechanism",
+            "Respiratory failure not fully explained by cardiac failure or fluid overload. [8]",
+            "If no ARDS risk factor is evident, use objective cardiac assessment to evaluate hydrostatic edema."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "oxygenation-assessment",
+      "eyebrow": "Monitoring",
+      "heading": "Use pulse oximetry thoughtfully, not reflexively",
+      "intro": "SpO2-based indices can broaden recognition but do not replace clinical judgment or blood gas testing when precision matters.",
+      "paragraphs": [
+        "SpO2/FiO2 is a validated noninvasive surrogate for hypoxemia assessment and is incorporated into the global ARDS definition at a threshold of 315. [8] The relationship is most useful when SpO2 is 97% or less; above that level, the oxyhemoglobin dissociation curve is flat and PaO2 cannot be reliably inferred. [9]",
+        "For screening or longitudinal monitoring, calculate SpO2/FiO2 only with a stable oxygen delivery setting and a high-quality oximetry waveform. Confirm with arterial blood gas analysis when the estimate is near a management threshold, the clinical picture and oximetry are discordant, or pulse-oximeter reliability is impaired. [9]"
+      ],
+      "bullets": [
+        "Reduced accuracy is expected with poor perfusion, vasopressor use, severe hypoxemia, acidemia, motion artifact, dyshemoglobinemia, and possibly darker skin pigmentation. [9]",
+        "A ROX index, calculated as SpO2/FiO2 divided by respiratory rate, can aid risk stratification during high-flow nasal oxygen; values above 4.88 predicted high-flow success in the derivation cohort, whereas values below 3.85 predicted failure. Its performance varies by population and should not delay escalation in a deteriorating patient. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Oxygenation measures that can support ARDS recognition and monitoring. [8][9]",
+        "columns": [
+          "Measure",
+          "Use",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "PaO2/FiO2",
+            "Standard arterial measure of hypoxemia severity; threshold \u2264300 mm Hg supports ARDS when other criteria are met. [8]",
+            "Requires arterial sampling and does not continuously track oxygenation."
+          ],
+          [
+            "SpO2/FiO2",
+            "Noninvasive alternative; threshold \u2264315 supports the hypoxemia criterion. [8]",
+            "Interpret preferentially at SpO2 \u226497%; measurement error can misclassify severity. [9]"
+          ],
+          [
+            "ROX index",
+            "Risk stratification for high-flow nasal oxygen: (SpO2/FiO2)/respiratory rate. [9]",
+            "Not an ARDS diagnostic criterion and threshold performance varies across populations. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mechanical-ventilation",
+      "eyebrow": "Core Treatment",
+      "heading": "Make ventilation lung protective from the first controlled breath",
+      "intro": "Ventilator settings should minimize overdistension and cyclic collapse while maintaining adequate gas exchange.",
+      "paragraphs": [
+        "ARDS produces a reduced functional lung volume, regional heterogeneity, alveolar flooding, surfactant dysfunction, and increased susceptibility to ventilator-induced lung injury. High tidal volumes or inspiratory pressures can worsen epithelial and endothelial injury, inflammation, and extra-pulmonary organ dysfunction. [12]",
+        "Low-tidal-volume, plateau-pressure-limited ventilation is the foundation of treatment. Formal ARDS guidelines identify low tidal volume and plateau-pressure limitation as high-certainty recommendations. [23] Contemporary observational data show that this evidence-based strategy remains underused in practice. [24]"
+      ],
+      "bullets": [
+        "Use predicted body weight, not actual body weight, for tidal-volume prescription; the pivotal low-tidal-volume approach used 6 mL/kg predicted body weight, and guideline summaries emphasize low tidal volume with plateau-pressure limitation. [9][23]",
+        "Measure plateau pressure during passive conditions when possible; peak pressure is not an interchangeable surrogate when airway resistance is high. In one contemporary cohort, plateau pressure was measured in only 5 of 200 patients, limiting assessment of lung-protective practice. [24]",
+        "Track driving pressure, mechanical power, respiratory rate, dead-space burden, and patient\u2013ventilator interaction as physiologic risk markers, but supplied sources do not establish a single universally validated bedside target beyond conventional low-tidal-volume and plateau-pressure-limited ventilation. [12][17]",
+        "Avoid assuming that vigorous spontaneous effort is benign; high transpulmonary pressure from strong inspiratory effort may activate injury pathways similar to ventilator-induced lung injury. [12]"
+      ],
+      "subsections": [
+        {
+          "heading": "PEEP and recruitment",
+          "paragraphs": [
+            "PEEP may improve oxygenation by reducing end-expiratory collapse, but the response is heterogeneous. Higher PEEP protocols did not show uniform outcome benefit in major trials, and aggressive recruitment maneuvers with titrated high PEEP increased mortality in a randomized trial. [12][17]",
+            "Use PEEP as an individualized physiologic intervention rather than an oxygenation-only maneuver. Reassess oxygenation, compliance, hemodynamics, plateau pressure, and signs of overdistension after changes. Evidence supports caution rather than routine aggressive recruitment. [12][17]"
+          ],
+          "bullets": [
+            "Consider higher PEEP selectively in moderate-to-severe ARDS after evaluating hemodynamic tolerance and response. [23]",
+            "Do not use prolonged high-pressure recruitment maneuvers routinely. [17][23]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Ventilatory priorities in established ARDS. [12][23][24]",
+        "columns": [
+          "Priority",
+          "Bedside action",
+          "Reason to reassess"
+        ],
+        "rows": [
+          [
+            "Tidal volume",
+            "Use a low tidal volume based on predicted body weight. [9][23]",
+            "Rising plateau pressure, hypercapnia with unsafe acidosis, or dyssynchrony require reassessment of the full ventilatory strategy."
+          ],
+          [
+            "Inspiratory pressure",
+            "Limit plateau pressure with passive measurement when feasible. [23]",
+            "High plateau pressure suggests excessive stress in the remaining aerated lung. [12]"
+          ],
+          [
+            "PEEP",
+            "Use at least enough PEEP to reduce collapse; individualize escalation. [23]",
+            "Worsening hemodynamics, falling compliance, or evidence of overdistension argues against further escalation. [12][17]"
+          ],
+          [
+            "Recruitment",
+            "Avoid routine aggressive recruitment maneuvers. [17][23]",
+            "Mortality increased with an aggressive recruitment plus titrated high-PEEP strategy. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "adjunctive-escalation",
+      "eyebrow": "Severe ARDS",
+      "heading": "Escalate support before refractory hypoxemia becomes irreversible",
+      "intro": "Proning and extracorporeal referral are time-sensitive decisions; neither should await terminal deterioration.",
+      "paragraphs": [
+        "Prone positioning improves oxygenation by redistributing lung density and ventilation-perfusion matching and by making stress distribution more homogeneous. In severe ARDS, prolonged prone sessions reduced mortality in randomized evidence, and formal guidelines identify prone positioning as a high-certainty recommendation. [9][23]",
+        "Use prone positioning in intubated patients with severe hypoxemia after lung-protective ventilation is established. The supplied literature identifies PaO2/FiO2 persistently below 150 mm Hg as the severity range in which prone positioning should be strongly considered, absent contraindications. [9][17]",
+        "For severe ARDS that remains refractory despite optimized conventional ventilation and appropriate adjuncts, discuss venovenous ECMO early with a capable referral center. Trial and meta-analytic evidence support ECMO as a rescue strategy in selected severe ARDS, whereas extracorporeal carbon dioxide removal has not improved mortality and has increased serious adverse events in a randomized trial. [17][23]"
+      ],
+      "bullets": [
+        "Use prolonged prone sessions; the mortality-positive trial applied prone ventilation for approximately 17 hours daily. [17]",
+        "Proning requires a trained team and prevention of pressure injury, tube displacement, vascular-access disruption, and hemodynamic instability. [17][24]",
+        "Do not use high-frequency oscillatory ventilation routinely; formal guidelines recommend against it. [23]",
+        "Use inhaled pulmonary vasodilators only as rescue physiology when appropriate; supplied guidance characterizes nitric oxide as expert opinion rather than a mortality-improving standard therapy. [23]",
+        "Neuromuscular blockade is not a routine default. Short-term use may facilitate lung-protective ventilation or proning in severe dyssynchrony, but trial results differ by sedation and cointervention strategy. [17][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation options for severe ARDS. [17][23]",
+        "columns": [
+          "Intervention",
+          "When to consider",
+          "Evidence boundary"
+        ],
+        "rows": [
+          [
+            "Prone positioning",
+            "Persistent severe hypoxemia, particularly PaO2/FiO2 <150 mm Hg, despite optimized lung-protective ventilation. [9]",
+            "High-certainty guideline-supported intervention when applied for prolonged daily sessions. [23]"
+          ],
+          [
+            "Neuromuscular blockade",
+            "Severe dyssynchrony or inability to achieve lung-protective targets despite optimized analgesia and sedation. [17]",
+            "Routine continuous infusion is not consistently supported; use the shortest effective duration. [17][24]"
+          ],
+          [
+            "Venovenous ECMO",
+            "Severe ARDS with refractory gas-exchange failure despite optimized conventional management and adjuncts. [17][23]",
+            "Requires specialized selection, transport, anticoagulation, and center expertise. [17]"
+          ],
+          [
+            "ECCO2R",
+            "Not routine therapy for ARDS. [17]",
+            "A randomized trial found no 90-day mortality benefit and more serious adverse events. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fluids-and-pharmacotherapy",
+      "eyebrow": "Supportive Care",
+      "heading": "Separate ARDS support from treatment of the precipitating disease",
+      "intro": "No general pharmacologic therapy replaces supportive care and cause-directed treatment.",
+      "paragraphs": [
+        "After initial shock management, avoid ongoing positive fluid balance when possible. Increased hydrostatic pressure worsens edema formation across an injured alveolar-capillary barrier, whereas restrictive fluid management is an established supportive strategy in ARDS. [12]",
+        "Corticosteroid evidence differs by cause and timing. In COVID-19-associated respiratory failure, dexamethasone and selected immunomodulators have demonstrated benefit in defined hospitalized populations; these results should not be generalized to every non-COVID ARDS phenotype. [2][5][12]",
+        "There is no validated routine role for statins, cell therapy, convalescent plasma, IV immunoglobulin, or broad biomarker-directed therapies in unselected ARDS based on the supplied evidence. ARDS subphenotypes are promising for research but are not yet a standard basis for routine bedside drug selection. [12][17]"
+      ],
+      "bullets": [
+        "Treat pneumonia, sepsis, aspiration, pancreatitis, transfusion-related acute lung injury, medication toxicity, or other precipitating conditions directly. [1][12]",
+        "In suspected transfusion-related acute lung injury, distinguish the event from hydrostatic pulmonary edema and other transfusion complications by timing and clinical context; transfusion-related acute lung injury appears in more inclusive ARDS coding categories because clinical distinction may depend on etiology. [1]",
+        "Do not infer that anti-inflammatory therapy effective in COVID-19 ARDS is effective in influenza-associated or noninfectious ARDS. [12][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pharmacologic and fluid-management decisions. [12][17]",
+        "columns": [
+          "Decision",
+          "Practical approach",
+          "Evidence limitation"
+        ],
+        "rows": [
+          [
+            "Fluid management",
+            "After shock is controlled, favor a strategy that avoids excess hydrostatic pressure and ongoing edema formation. [12]",
+            "Individualize for perfusion, renal function, and competing causes of shock."
+          ],
+          [
+            "Corticosteroids",
+            "Use disease-specific evidence; COVID-19 respiratory failure differs from unselected ARDS. [12]",
+            "Supplied sources do not support a uniform corticosteroid regimen for every ARDS cause."
+          ],
+          [
+            "Experimental phenotype-directed therapy",
+            "Restrict to trials or validated disease-specific pathways. [12][17]",
+            "Hyperinflammatory, imaging, and recruitability phenotypes remain investigational for routine selection."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "phenotypes-and-prognosis",
+      "eyebrow": "Prognosis",
+      "heading": "Use phenotype concepts to refine uncertainty, not to overpromise precision medicine",
+      "intro": "ARDS severity is biologically and mechanically heterogeneous.",
+      "paragraphs": [
+        "ARDS results from epithelial and endothelial barrier injury, producing protein-rich alveolar edema, shunt, surfactant dysfunction, atelectasis, decreased compliance, and, in some patients, microvascular thrombosis with increased dead space and right-ventricular stress. [12] These mechanisms explain why oxygenation severity alone is an incomplete marker of clinical trajectory.",
+        "Hyperinflammatory and hypoinflammatory subphenotypes have been replicated in research cohorts. The hyperinflammatory phenotype is associated with more vasopressor use, higher inflammatory biomarker concentrations, fewer ventilator-free days, and greater mortality; post-hoc analyses suggest heterogeneous treatment effects with PEEP, fluid strategy, and simvastatin. [12] These observations should guide trial interpretation rather than trigger off-label phenotype-directed prescribing.",
+        "Radiologic focal and nonfocal patterns may have different responses to recruitment and prone positioning, but classification error can cause harm. In the LIVE trial, 20% of patients were misclassified, and those exposed to a mismatched personalized ventilatory strategy had worse outcomes. [12]"
+      ],
+      "bullets": [
+        "Communicate prognosis using the full trajectory: cause, age and comorbidity, extrapulmonary organ failure, oxygenation trend, respiratory mechanics, vasopressor requirement, and response over the first 24-72 hours. [12]",
+        "Avoid using an ARDS diagnosis code, a single PaO2/FiO2 value, or a machine-learning prediction score as a substitute for bedside adjudication. Administrative-code algorithms have variable positive predictive value and have not been validated in claims databases or with ICD-10 coding. [1]",
+        "Deep-learning chest-radiograph tools remain investigational support tools, not diagnostic replacements; an externally tested model achieved AUROC 0.88 for ARDS-related radiographic findings but assessed imaging rather than the complete clinical syndrome. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of ARDS phenotyping evidence. [11][12]",
+        "columns": [
+          "Phenotype approach",
+          "Potential value",
+          "Current practice limit"
+        ],
+        "rows": [
+          [
+            "Inflammatory subphenotypes",
+            "May identify prognostic and treatment-response heterogeneity. [12]",
+            "No routine rapid, prospectively validated treatment-selection pathway is established."
+          ],
+          [
+            "Focal versus nonfocal morphology",
+            "May predict recruitability and response to prone or recruitment strategies. [12]",
+            "Misclassification is clinically consequential; chest radiography alone is unreliable for this purpose. [12]"
+          ],
+          [
+            "Machine-learning imaging tools",
+            "May improve recognition of bilateral opacities. [11]",
+            "They do not establish edema mechanism, timing, oxygenation, or etiology."
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What oxygenation threshold supports an ARDS diagnosis?",
+      "answer": "Within the appropriate clinical and imaging context, PaO2/FiO2 of 300 mm Hg or less or SpO2/FiO2 of 315 or less supports the hypoxemia criterion. [8]"
+    },
+    {
+      "question": "When should an arterial blood gas be obtained in suspected ARDS?",
+      "answer": "Use arterial blood gas analysis when exact PaO2/FiO2 classification, hypercapnia, acid-base assessment, or confirmation of a borderline or discordant pulse-oximetry result will alter management. [9]"
+    },
+    {
+      "question": "When should prone positioning be used?",
+      "answer": "Consider early prolonged prone sessions in intubated severe ARDS with persistent PaO2/FiO2 below 150 mm Hg despite optimized lung-protective ventilation, if no contraindication exists. [9][17]"
+    },
+    {
+      "question": "Is high PEEP appropriate for every patient with moderate or severe ARDS?",
+      "answer": "No. PEEP response varies; reassess mechanics and hemodynamics. Major trials did not show uniform benefit from higher PEEP, and aggressive recruitment plus titrated high PEEP increased mortality. [12][17]"
+    },
+    {
+      "question": "When should ECMO referral occur?",
+      "answer": "Initiate early consultation with an experienced venovenous ECMO center for severe ARDS with refractory hypoxemia despite optimized lung-protective ventilation, appropriate PEEP, and prone positioning when feasible. [17][23]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "A Structured Review of Electronic Coding Algorithms for ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/193251/download?attachment=",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "E, Major JM, Gilbert McClain LI. National incidence rates for Acute Respiratory Distress Syndrome (ARDS) and ARDS cause-specific factors in the United States (2006-2014). J Crit Care. 2018;47:192-197. 5. Taylor MM. ARDS diagnosis and management: implications for the critical care nurse. Dimens Crit ",
+      "score": 0.54521364
+    },
+    {
+      "number": 2,
+      "title": "fact sheet for healthcare providers: emergency use ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/155050/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "patient by a state-licensed pharmacist for the treatment of mild-to-moderate COVID-19 in adults and pediatric patients (12 years of age and older weighing at least 40 kg) who are at high risk for progression to severe COVID-19, including hospitalization or death, in accordance with the FDA-approved ",
+      "score": 0.5313802
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use MELOXICAM TABLETS safely and effectively. See full prescribing information for MELOXICAM TABLETS.\n <br/>\n      <br/>\n      <br/>\n      <br/>\nMELOXICAM tablets, for oral use\n <br/>\n      <br/>\n      <br/>\n      <br/>\nInitial U.S. Approval: 2000",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/eb64eeb0-e892-7024-e053-2995a90ac82a/eb64eeb0-e892-7024-e053-2995a90ac82a.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |  |  |\n ---  ---  --- |\n| 1  The parameter values in the table are from various studies | | | | | |\n| 2  not under high fat conditions | | | | | |\n| 3   Meloxicam tablets | | | | | |\n| 4  V z/f  = Dose/(AUC\u2022K el) | | | | | |\n|  |  |  |  |  |  |\n ---  ---  --- |\n| Pharmacokinetic    Para",
+      "score": 0.2458994
+    },
+    {
+      "number": 4,
+      "title": "First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 21 | 219283 | Nintedanib Esylate Capsule | Dr. Reddy's Laboratories Limited | Ofev Capsule | 4/2/2026 | For the treatment of adults with idiopathic pulmonary fibrosis (IPF). |\n| 20 | 219819 | Nintedanib Esylate Capsule | Dexcel Pharma Technologies Ltd. | Ofev Capsule | 4/2/2026 | For the treatment",
+      "score": 0.20904993
+    },
+    {
+      "number": 5,
+      "title": "November 9, 2022 Meeting of the Pulmonary-Allergy Drugs ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/162980/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "on room air at screening. Key exclusion criteria were the following: \u2022 Pregnant or breastfeeding. \u2022 Required ventilation + additional organ support \u2013 pressors, renal replacement therapy (RRT), ECMO (WHO Ordinal Scale for Clinical Improvement \u2013 Score of 7) and subjects who required ventilation with a",
+      "score": 0.19420002
+    },
+    {
+      "number": 6,
+      "title": "<content styleCode=\"bold\">These highlights do not include all the information needed to use</content>\n      <content styleCode=\"bold\"> TACROLIMUS CAPSULES safely and effectively. See full prescribing information for TACROLIMUS CAPSULES.</content>\n      <content styleCode=\"bold\">\n         <br/>TACROLIMUS capsules, for oral use</content>\n      <content styleCode=\"bold\">\n         <br/>Initial U.S. Approval: 1994</content>",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/1f9cc1ab-687d-eb66-9b7f-867cca0600fb/1f9cc1ab-687d-eb66-9b7f-867cca0600fb.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |  |  |\n ---  ---  --- |\n| Population  (No. of Patients) | Dose | AUC0-t    (ng\u00b7hr/mL) | t1/2 (hr) | V (L/kg) | CI (L/hr/kg) |\n| Renal Impairment (n=12) | 0.02 mg/kg/4 hr IV | 393\u00b1123  (t=60 hr) | 26.3 \u00b19.2 | 1.07\u00b10.20 | 0.038\u00b10.014 |\n| Mild Hepatic Impairment (n=6) | 0.02 mg/kg/4 hr  IV",
+      "score": 0.18656918
+    },
+    {
+      "number": 7,
+      "title": "a0a74837-332d-4330-9783-76a3efe2b10e.xml",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/a0a74837-332d-4330-9783-76a3efe2b10e/a0a74837-332d-4330-9783-76a3efe2b10e.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "| Intervention: | More frequent serum lithium concentration monitoring. Reduce lithium dosage based on serum lithium concentration and clinical response [see Dosage and Administration ( 2.6)]. |\n| Examples: | indomethacin, ibuprofen, naproxen |\n| Renin-Angiotensin System Antagonists | |\n| Clinical I",
+      "score": 0.16824143
+    },
+    {
+      "number": 8,
+      "title": "Acute respiratory distress syndrome (ARDS) - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/374",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nMatthay MA, Arabi Y, Arroliga AC, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med. 2024 Jan 1;209(1):37-47.Full textAbstract\n\nBos LDJ, Ware LB. Acute respiratory distress syndrome: causes, pathophysiology, and phenot",
+      "score": 0.74161834
+    },
+    {
+      "number": 9,
+      "title": "Pulse oximetry for the diagnosis and management of acute respiratory distress syndrome",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00058-3/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Crossref\n\nScopus (1821)\n\nPubMed\n\nGoogle Scholar\n\n established the following relationship between the SpO 2/FiO 2 ratio (restricted to SpO 2 \u226497%) and the PaO 2/FiO 2 ratio: SpO 2/FiO 2= 64 + 0\u00b784 (PaO 2/FiO 2). A threshold SpO 2/FiO 2 ratio of 315 could be substituted for a PaO 2/FiO 2 ratio of 300 ",
+      "score": 0.68748367
+    },
+    {
+      "number": 10,
+      "title": "Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2673154",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment. Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment. * Editorial Time to Rethink the Approach to Treating Acute Respiratory Distress SyndromeLuciano Gattinoni,MD; John J.Marini,MD; Michael Quintel,MD JAMA.",
+      "score": 0.48264915
+    },
+    {
+      "number": 11,
+      "title": "Deep learning to detect acute respiratory distress syndrome on chest radiographs: a retrospective study with external validation",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00056-X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "|  |  | Training dataset (University of Michigan) | Internal testing dataset (University of Michigan) | External testing dataset (University of Pennsylvania) |\n --- \n| Patients | 1778 | 455 | 431 |\n| Chest radiographs | 8072 | 1560 | 958 |\n| Radiographs with ARDS00056-X/fulltext#tbl1fn1) | 2665 (33%",
+      "score": 0.46016815
+    },
+    {
+      "number": 12,
+      "title": "Acute respiratory distress syndrome: causes, pathophysiology, and phenotypes",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736(22)01485-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Acute respiratory distress syndrome (ARDS) is a common clinical syndrome of acute respiratory failure as a result of diffuse lung inflammation and oedema. ARDS can be precipitated by a variety of causes. The pathophysiology of ARDS is complex and involves the activation and dysregulation of multiple",
+      "score": 0.4017588
+    },
+    {
+      "number": 13,
+      "title": "Acute respiratory distress syndrome in adults: diagnosis, ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(22)01439-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by EA Gorman \u00b7 2022 \u00b7 Cited by 513 \u2014 The requirement for positive-pressure ventilation means many patients with non-cardiogenic acute hypoxaemic respiratory failure and bilateral",
+      "score": 0.38964
+    },
+    {
+      "number": 14,
+      "title": "Role of C5aR2 in prognosis of patients with acute ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(25)00526-2",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Rashid \u00b7 2025 \u00b7 Cited by 1 \u2014 High C5a/C5aR2 ratio was significantly associated with poor prognosis in moderate to severe ARDS patients. \u2022. C5a/C5aR2 ratio had better",
+      "score": 0.42935818
+    },
+    {
+      "number": 15,
+      "title": "Respiratory distress syndrome | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/respiratory-distress-syndrome/srep",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article\n\n14 March 2024 | Open Access\n\n### Image 44 Enhancing pediatric pneumonia diagnosis through masked autoencoders\n\n       Taeyoung Yoon\n       &Daesung Kang\n\n   \nArticle\n\n28 February 2024 | Open Access\n\n### Image 45 Quantifying heterogeneity in an animal model of acute respiratory distress synd",
+      "score": 0.34913373
+    },
+    {
+      "number": 16,
+      "title": "Machine learning for the early prediction of acute respiratory distress syndrome (ARDS) in patients with sepsis in the ICU based on clinical data",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)04174-4",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "were gender (female), PO 2 (106 mmHg), and urine specific gravity (1.015). [...] PubMed\n\nGoogle Scholar\n\n2.\n\nVillar, J. ...\n\nA clinical classification of the acute respiratory distress syndrome for predicting outcome and guiding medical therapy\n\n_Crit. Care Med._ 2015; 43(2):346-353\n\nCrossref\n\nScopu",
+      "score": 0.32178012
+    },
+    {
+      "number": 17,
+      "title": "Advances in acute respiratory distress syndrome: focusing on heterogeneity, pathophysiology, and therapeutic strategies | Signal Transduction and Targeted Therapy",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41392-025-02127-9",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n     CAS \n     PubMed \n     Google Scholar\n150. Griffiths, M. et al. RAND appropriateness panel to determine the applicability of UK guidelines on the management of acute respiratory distress syndrome (ARDS) and other strategies in the context of the COVID-19 pandemic. Thorax 77, 129\u2013135 (2",
+      "score": 0.6407488
+    },
+    {
+      "number": 18,
+      "title": "Acute Respiratory Distress Syndrome Management and ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/acute-respiratory-distress-syndrome-management-and-outcomes",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Management has evolved from uniform high-volume ventilation towards lung-protective strategies using lower tidal volumes, conservative fluid balance and",
+      "score": 0.49113917
+    },
+    {
+      "number": 19,
+      "title": "An Official American Thoracic Society Clinical Practice Guideline",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/209/1/24/8427573",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by N Qadir \u00b7 2024 \u00b7 Cited by 497 \u2014 This guideline updates and adds to recommendations for the management of patients with acute respiratory distress syndrome (ARDS) (Figure 1).",
+      "score": 0.72489023
+    },
+    {
+      "number": 20,
+      "title": "Acute respiratory distress syndrome associated... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2022/02040/acute_respiratory_distress_syndrome_associated.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Laboratory testing at admission showed pancytopenia, hypoalbuminemia, conjugated hyperbilirubinemia (total, 8.7 mg/dL; conjugated, 5.0 mg/dL) and elevated levels of alanine aminotransferase (ALT) (277 U/L), aspartate aminotransferase (AST) (809 U/L), alkaline phosphatase, and lipase (292 U/L). Immun",
+      "score": 0.54521364
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis of acute respiratory distress syndrome and differentiation ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002961000003196",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "It appears that quantitative cultures of the bronchoalveolar lavage effluent is able to distinguish * D.G. Ashbaugh _et al._ ### Acute respiratory distress in adults ### Lancet (1967) ### The adult respiratory distress syndrome a report of survival and modifying factors ### Chest (1992) * C.P. Andre",
+      "score": 0.45667687
+    },
+    {
+      "number": 22,
+      "title": "Acute respiratory distress syndrome in the pediatric patient",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S217357272500253X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The use of minimal effective sedation is crucial to ensure the successful implementation of the ventilatory strategy. Drug dose titration should be performed with specific objectives, such as facilitating mobility and some activity, while also ensuring the promotion of quality sleep during the night",
+      "score": 0.4292146
+    },
+    {
+      "number": 23,
+      "title": "Formal guidelines: management of acute respiratory distress syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025009628",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Fifteen recommendations and a therapeutic algorithm regarding the management of acute respiratory distress syndrome (ARDS) at the early phase in adults are proposed. The Grade of Recommendation Assessment, Development and Evaluation (GRADE) methodology has been followed. Four recommendations (low ti",
+      "score": 0.7355091
+    },
+    {
+      "number": 24,
+      "title": "Management of severe acute respiratory distress syndrome in Australia and New Zealand (SAGE-ANZ): An observational study",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1441277224000139",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "17.   ( Griffiths, D.F. McAuley, G.D. Perkins, N. Barrett, B. Blackwood, A. Boyle, _et al._ Guidelines on the management of acute respiratory distress syndrome  BMJ Open Respir Res, 6 (1) (2019), Article e000420, 10.1136/bmjresp-2019-000420 View in ScopusGoogle Scholar \n18.   ( Fan, L. Del Sorbo, E.",
+      "score": 0.63777614
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "A Structured Review of Electronic Coding Algorithms for ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/193251/download?attachment=",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "E, Major JM, Gilbert McClain LI. National incidence rates for Acute Respiratory Distress Syndrome (ARDS) and ARDS cause-specific factors in the United States (2006-2014). J Crit Care. 2018;47:192-197. 5. Taylor MM. ARDS diagnosis and management: implications for the critical care nurse. Dimens Crit ",
+      "score": 0.54521364
+    },
+    {
+      "number": 2,
+      "title": "fact sheet for healthcare providers: emergency use ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/155050/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "patient by a state-licensed pharmacist for the treatment of mild-to-moderate COVID-19 in adults and pediatric patients (12 years of age and older weighing at least 40 kg) who are at high risk for progression to severe COVID-19, including hospitalization or death, in accordance with the FDA-approved ",
+      "score": 0.5313802
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use MELOXICAM TABLETS safely and effectively. See full prescribing information for MELOXICAM TABLETS.\n <br/>\n      <br/>\n      <br/>\n      <br/>\nMELOXICAM tablets, for oral use\n <br/>\n      <br/>\n      <br/>\n      <br/>\nInitial U.S. Approval: 2000",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/eb64eeb0-e892-7024-e053-2995a90ac82a/eb64eeb0-e892-7024-e053-2995a90ac82a.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |  |  |\n ---  ---  --- |\n| 1  The parameter values in the table are from various studies | | | | | |\n| 2  not under high fat conditions | | | | | |\n| 3   Meloxicam tablets | | | | | |\n| 4  V z/f  = Dose/(AUC\u2022K el) | | | | | |\n|  |  |  |  |  |  |\n ---  ---  --- |\n| Pharmacokinetic    Para",
+      "score": 0.2458994
+    },
+    {
+      "number": 4,
+      "title": "First Generic Drug Approvals | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/drugs/drug-and-biologic-approval-and-ind-activity-reports/first-generic-drug-approvals",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "| 21 | 219283 | Nintedanib Esylate Capsule | Dr. Reddy's Laboratories Limited | Ofev Capsule | 4/2/2026 | For the treatment of adults with idiopathic pulmonary fibrosis (IPF). |\n| 20 | 219819 | Nintedanib Esylate Capsule | Dexcel Pharma Technologies Ltd. | Ofev Capsule | 4/2/2026 | For the treatment",
+      "score": 0.20904993
+    },
+    {
+      "number": 5,
+      "title": "November 9, 2022 Meeting of the Pulmonary-Allergy Drugs ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/162980/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "on room air at screening. Key exclusion criteria were the following: \u2022 Pregnant or breastfeeding. \u2022 Required ventilation + additional organ support \u2013 pressors, renal replacement therapy (RRT), ECMO (WHO Ordinal Scale for Clinical Improvement \u2013 Score of 7) and subjects who required ventilation with a",
+      "score": 0.19420002
+    },
+    {
+      "number": 6,
+      "title": "<content styleCode=\"bold\">These highlights do not include all the information needed to use</content>\n      <content styleCode=\"bold\"> TACROLIMUS CAPSULES safely and effectively. See full prescribing information for TACROLIMUS CAPSULES.</content>\n      <content styleCode=\"bold\">\n         <br/>TACROLIMUS capsules, for oral use</content>\n      <content styleCode=\"bold\">\n         <br/>Initial U.S. Approval: 1994</content>",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/1f9cc1ab-687d-eb66-9b7f-867cca0600fb/1f9cc1ab-687d-eb66-9b7f-867cca0600fb.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "|  |  |  |  |  |  |\n ---  ---  --- |\n| Population  (No. of Patients) | Dose | AUC0-t    (ng\u00b7hr/mL) | t1/2 (hr) | V (L/kg) | CI (L/hr/kg) |\n| Renal Impairment (n=12) | 0.02 mg/kg/4 hr IV | 393\u00b1123  (t=60 hr) | 26.3 \u00b19.2 | 1.07\u00b10.20 | 0.038\u00b10.014 |\n| Mild Hepatic Impairment (n=6) | 0.02 mg/kg/4 hr  IV",
+      "score": 0.18656918
+    },
+    {
+      "number": 7,
+      "title": "a0a74837-332d-4330-9783-76a3efe2b10e.xml",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/spl/data/a0a74837-332d-4330-9783-76a3efe2b10e/a0a74837-332d-4330-9783-76a3efe2b10e.xml",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "| Intervention: | More frequent serum lithium concentration monitoring. Reduce lithium dosage based on serum lithium concentration and clinical response [see Dosage and Administration ( 2.6)]. |\n| Examples: | indomethacin, ibuprofen, naproxen |\n| Renin-Angiotensin System Antagonists | |\n| Clinical I",
+      "score": 0.16824143
+    },
+    {
+      "number": 8,
+      "title": "Acute respiratory distress syndrome (ARDS) - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/374",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nMatthay MA, Arabi Y, Arroliga AC, et al. A new global definition of acute respiratory distress syndrome. Am J Respir Crit Care Med. 2024 Jan 1;209(1):37-47.Full textAbstract\n\nBos LDJ, Ware LB. Acute respiratory distress syndrome: causes, pathophysiology, and phenot",
+      "score": 0.74161834
+    },
+    {
+      "number": 9,
+      "title": "Pulse oximetry for the diagnosis and management of acute respiratory distress syndrome",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(22)00058-3/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Crossref\n\nScopus (1821)\n\nPubMed\n\nGoogle Scholar\n\n established the following relationship between the SpO 2/FiO 2 ratio (restricted to SpO 2 \u226497%) and the PaO 2/FiO 2 ratio: SpO 2/FiO 2= 64 + 0\u00b784 (PaO 2/FiO 2). A threshold SpO 2/FiO 2 ratio of 315 could be substituted for a PaO 2/FiO 2 ratio of 300 ",
+      "score": 0.68748367
+    },
+    {
+      "number": 10,
+      "title": "Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2673154",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment. Acute Respiratory Distress Syndrome: Advances in Diagnosis and Treatment. * Editorial Time to Rethink the Approach to Treating Acute Respiratory Distress SyndromeLuciano Gattinoni,MD; John J.Marini,MD; Michael Quintel,MD JAMA.",
+      "score": 0.48264915
+    },
+    {
+      "number": 11,
+      "title": "Deep learning to detect acute respiratory distress syndrome on chest radiographs: a retrospective study with external validation",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00056-X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "|  |  | Training dataset (University of Michigan) | Internal testing dataset (University of Michigan) | External testing dataset (University of Pennsylvania) |\n --- \n| Patients | 1778 | 455 | 431 |\n| Chest radiographs | 8072 | 1560 | 958 |\n| Radiographs with ARDS00056-X/fulltext#tbl1fn1) | 2665 (33%",
+      "score": 0.46016815
+    },
+    {
+      "number": 12,
+      "title": "Acute respiratory distress syndrome: causes, pathophysiology, and phenotypes",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736(22)01485-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Acute respiratory distress syndrome (ARDS) is a common clinical syndrome of acute respiratory failure as a result of diffuse lung inflammation and oedema. ARDS can be precipitated by a variety of causes. The pathophysiology of ARDS is complex and involves the activation and dysregulation of multiple",
+      "score": 0.4017588
+    },
+    {
+      "number": 13,
+      "title": "Acute respiratory distress syndrome in adults: diagnosis, ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(22)01439-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by EA Gorman \u00b7 2022 \u00b7 Cited by 513 \u2014 The requirement for positive-pressure ventilation means many patients with non-cardiogenic acute hypoxaemic respiratory failure and bilateral",
+      "score": 0.38964
+    },
+    {
+      "number": 14,
+      "title": "Role of C5aR2 in prognosis of patients with acute ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(25)00526-2",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Rashid \u00b7 2025 \u00b7 Cited by 1 \u2014 High C5a/C5aR2 ratio was significantly associated with poor prognosis in moderate to severe ARDS patients. \u2022. C5a/C5aR2 ratio had better",
+      "score": 0.42935818
+    },
+    {
+      "number": 15,
+      "title": "Respiratory distress syndrome | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/respiratory-distress-syndrome/srep",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article\n\n14 March 2024 | Open Access\n\n### Image 44 Enhancing pediatric pneumonia diagnosis through masked autoencoders\n\n       Taeyoung Yoon\n       &Daesung Kang\n\n   \nArticle\n\n28 February 2024 | Open Access\n\n### Image 45 Quantifying heterogeneity in an animal model of acute respiratory distress synd",
+      "score": 0.34913373
+    },
+    {
+      "number": 16,
+      "title": "Machine learning for the early prediction of acute respiratory distress syndrome (ARDS) in patients with sepsis in the ICU based on clinical data",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)04174-4",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "were gender (female), PO 2 (106 mmHg), and urine specific gravity (1.015). [...] PubMed\n\nGoogle Scholar\n\n2.\n\nVillar, J. ...\n\nA clinical classification of the acute respiratory distress syndrome for predicting outcome and guiding medical therapy\n\n_Crit. Care Med._ 2015; 43(2):346-353\n\nCrossref\n\nScopu",
+      "score": 0.32178012
+    },
+    {
+      "number": 17,
+      "title": "Advances in acute respiratory distress syndrome: focusing on heterogeneity, pathophysiology, and therapeutic strategies | Signal Transduction and Targeted Therapy",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41392-025-02127-9",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n     CAS \n     PubMed \n     Google Scholar\n150. Griffiths, M. et al. RAND appropriateness panel to determine the applicability of UK guidelines on the management of acute respiratory distress syndrome (ARDS) and other strategies in the context of the COVID-19 pandemic. Thorax 77, 129\u2013135 (2",
+      "score": 0.6407488
+    },
+    {
+      "number": 18,
+      "title": "Acute Respiratory Distress Syndrome Management and ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/acute-respiratory-distress-syndrome-management-and-outcomes",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Management has evolved from uniform high-volume ventilation towards lung-protective strategies using lower tidal volumes, conservative fluid balance and",
+      "score": 0.49113917
+    },
+    {
+      "number": 19,
+      "title": "An Official American Thoracic Society Clinical Practice Guideline",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/209/1/24/8427573",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by N Qadir \u00b7 2024 \u00b7 Cited by 497 \u2014 This guideline updates and adds to recommendations for the management of patients with acute respiratory distress syndrome (ARDS) (Figure 1).",
+      "score": 0.72489023
+    },
+    {
+      "number": 20,
+      "title": "Acute respiratory distress syndrome associated... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2022/02040/acute_respiratory_distress_syndrome_associated.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Laboratory testing at admission showed pancytopenia, hypoalbuminemia, conjugated hyperbilirubinemia (total, 8.7 mg/dL; conjugated, 5.0 mg/dL) and elevated levels of alanine aminotransferase (ALT) (277 U/L), aspartate aminotransferase (AST) (809 U/L), alkaline phosphatase, and lipase (292 U/L). Immun",
+      "score": 0.54521364
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis of acute respiratory distress syndrome and differentiation ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002961000003196",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "It appears that quantitative cultures of the bronchoalveolar lavage effluent is able to distinguish * D.G. Ashbaugh _et al._ ### Acute respiratory distress in adults ### Lancet (1967) ### The adult respiratory distress syndrome a report of survival and modifying factors ### Chest (1992) * C.P. Andre",
+      "score": 0.45667687
+    },
+    {
+      "number": 22,
+      "title": "Acute respiratory distress syndrome in the pediatric patient",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S217357272500253X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The use of minimal effective sedation is crucial to ensure the successful implementation of the ventilatory strategy. Drug dose titration should be performed with specific objectives, such as facilitating mobility and some activity, while also ensuring the promotion of quality sleep during the night",
+      "score": 0.4292146
+    },
+    {
+      "number": 23,
+      "title": "Formal guidelines: management of acute respiratory distress syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025009628",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Fifteen recommendations and a therapeutic algorithm regarding the management of acute respiratory distress syndrome (ARDS) at the early phase in adults are proposed. The Grade of Recommendation Assessment, Development and Evaluation (GRADE) methodology has been followed. Four recommendations (low ti",
+      "score": 0.7355091
+    },
+    {
+      "number": 24,
+      "title": "Management of severe acute respiratory distress syndrome in Australia and New Zealand (SAGE-ANZ): An observational study",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1441277224000139",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "17.   ( Griffiths, D.F. McAuley, G.D. Perkins, N. Barrett, B. Blackwood, A. Boyle, _et al._ Guidelines on the management of acute respiratory distress syndrome  BMJ Open Respir Res, 6 (1) (2019), Article e000420, 10.1136/bmjresp-2019-000420 View in ScopusGoogle Scholar \n18.   ( Fan, L. Del Sorbo, E.",
+      "score": 0.63777614
+    }
+  ],
+  "publishedAt": "2026-08-20T23:17:59.101471Z",
+  "updatedAt": "2026-08-20T23:17:59.101471Z",
+  "readingMinutes": 7,
+  "slug": "acute-respiratory-distress-syndrome"
+}

@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiac Electrophysiology",
+  "title": "Atrial Fibrillation",
+  "summary": "A practical framework for confirming atrial fibrillation, defining acute stability, completing the initial evaluation, preventing thromboembolism, selecting rate or rhythm control, and identifying patients who benefit from catheter ablation or focused heart-failure management.",
+  "seoDescription": "Physician guide to atrial fibrillation diagnosis, initial evaluation, stroke prevention, rate and rhythm control, ablation, and monitoring.",
+  "clinicalQuestion": "How should clinicians confirm, risk-stratify, and manage atrial fibrillation across acute and longitudinal care?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "atrial fibrillation",
+    "AF",
+    "stroke prevention",
+    "DOAC",
+    "rate control",
+    "rhythm control",
+    "catheter ablation",
+    "HFrEF"
+  ],
+  "keyTakeaways": [
+    "Confirm AF on ECG; irregularly irregular RR intervals, absent distinct P waves, and irregular atrial activity support the diagnosis.[5][6]",
+    "Hemodynamic compromise warrants immediate direct-current cardioversion; stable patients usually undergo ventricular rate control and subsequent individualized rhythm-control assessment.[6]",
+    "For newly diagnosed AF, obtain transthoracic echocardiography plus CBC, metabolic panel, and thyroid testing; do not order routine ischemia or pulmonary embolism testing without suggestive findings.[17]",
+    "Assess annual thromboembolic risk with a validated score. Anticoagulation is recommended at estimated risk \u22652%/year, exemplified by CHA2DS2-VASc \u22652 in men or \u22653 in women; DOACs are preferred over warfarin absent moderate-to-severe mitral stenosis or a mechanical valve.[17]",
+    "Dronedarone is contraindicated in permanent AF and in recent decompensated or NYHA class IV heart failure; it doubles adverse clinical risks in these populations.[1]",
+    "In AF with HFrEF, consider arrhythmia-induced cardiomyopathy and pursue early rhythm-control evaluation; catheter ablation benefits appropriately selected patients receiving guideline-directed HF therapy.[17]"
+  ],
+  "sections": [
+    {
+      "id": "diagnosis-and-initial-evaluation",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm AF and complete the first evaluation",
+      "intro": "Establish the rhythm diagnosis, identify instability, and define factors that change immediate treatment.",
+      "paragraphs": [
+        "AF requires ECG documentation. Typical findings are irregularly irregular R-R intervals when atrioventricular conduction is intact, absent distinct repeating P waves, and irregular fibrillatory atrial activity.[5][6] Device-detected atrial high-rate episodes require visual review to distinguish AF from other atrial tachyarrhythmias, artifact, or oversensing.[5]",
+        "For newly diagnosed AF, order transthoracic echocardiography, CBC, metabolic panel, and thyroid function testing. Echocardiography informs chamber and valve assessment, ventricular function, and downstream antiarrhythmic or ablation selection; laboratory testing identifies renal, hepatic, hematologic, and thyroid factors that alter anticoagulant and antiarrhythmic choices.[17]"
+      ],
+      "bullets": [
+        "Do not use AF alone as an indication for routine protocolized ischemia, acute coronary syndrome, or pulmonary embolism testing; investigate when symptoms, signs, or clinical context support those diagnoses.[17]",
+        "If onset timing is uncertain and cardioversion is contemplated in a hemodynamically stable patient, transesophageal echocardiography is used to exclude left atrial thrombus before cardioversion.[6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial evaluation priorities in newly diagnosed atrial fibrillation.[17]",
+        "columns": [
+          "Question",
+          "Action",
+          "Clinical consequence"
+        ],
+        "rows": [
+          [
+            "Is AF documented?",
+            "Obtain and interpret ECG for AF features.[5][6]",
+            "Confirms diagnosis before disease-specific treatment."
+          ],
+          [
+            "Is the patient unstable?",
+            "Assess blood pressure, ischemia, pulmonary edema, shock, and altered perfusion.",
+            "Hemodynamic compromise prompts immediate direct-current cardioversion.[6]"
+          ],
+          [
+            "Is there structural disease or ventricular dysfunction?",
+            "Order transthoracic echocardiography.[17]",
+            "Influences rate-control drug safety, rhythm strategy, and ablation candidacy."
+          ],
+          [
+            "Are reversible or treatment-modifying factors present?",
+            "Obtain CBC, metabolic panel, and thyroid function testing.[17]",
+            "Guides anticoagulant dosing, bleeding assessment, and treatment of associated conditions."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-management",
+      "eyebrow": "Acute Care",
+      "heading": "Stabilize first, then select rate or rhythm control",
+      "intro": "Urgency is determined by hemodynamics, not simply by a rapid ventricular response.",
+      "paragraphs": [
+        "Most patients with new-onset or acute AF do not require immediate cardioversion. In hemodynamically stable AF, initial ventricular rate control is commonly used while clinicians address triggers, assess thromboembolic risk, and determine whether rhythm control is appropriate.[6]",
+        "For hemodynamically stable AF with rapid ventricular response and ejection fraction >40%, beta-blockers or nondihydropyridine calcium channel blockers such as diltiazem or verapamil are recommended for acute rate control. Do not administer intravenous nondihydropyridine calcium channel blockers in known moderate or severe LV systolic dysfunction, with or without decompensated heart failure.[17]"
+      ],
+      "bullets": [
+        "Use direct-current cardioversion immediately for hemodynamic compromise.[6]",
+        "For stable AF, discuss rate versus rhythm control in the context of symptoms, clinical presentation, comorbidity burden, medication profile, and patient preferences.[17]",
+        "A lenient resting rate target below 110 beats/min produced similar cardiovascular outcomes and symptoms to a strict target below 80 beats/min in hemodynamically stable AF in the cited evidence base.[17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value acute management distinctions.[6][17]",
+        "columns": [
+          "Clinical state",
+          "Preferred next step",
+          "Avoid or reassess"
+        ],
+        "rows": [
+          [
+            "Hemodynamic compromise",
+            "Immediate direct-current cardioversion.[6]",
+            "Do not delay stabilization for routine longitudinal testing."
+          ],
+          [
+            "Stable AF with rapid ventricular response and EF >40%",
+            "Beta-blocker or diltiazem/verapamil for acute rate control.[17]",
+            "Reassess for rhythm-control indications after stabilization."
+          ],
+          [
+            "Rapid ventricular response with moderate/severe LV systolic dysfunction",
+            "Avoid intravenous diltiazem or verapamil.[17]",
+            "Do not assume nondihydropyridine calcium channel blockers are safe in HFrEF."
+          ],
+          [
+            "Uncertain duration before planned cardioversion",
+            "Use transesophageal echocardiography to exclude left atrial thrombus.[6]",
+            "Do not proceed as though onset is known."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stroke-prevention",
+      "eyebrow": "Thromboembolism",
+      "heading": "Base anticoagulation on annual thromboembolic risk",
+      "intro": "AF pattern does not remove the need for risk-based stroke prevention.",
+      "paragraphs": [
+        "Assess annual thromboembolic risk with a validated clinical score such as CHA2DS2-VASc; ATRIA and GARFIELD-AF are alternatives referenced in current U.S. performance measures.[17] Anticoagulation is recommended for estimated annual thromboembolic risk of at least 2%, illustrated by CHA2DS2-VASc \u22652 in men or \u22653 in women. Anticoagulation is reasonable at estimated risk of 1% to <2% per year.[17]",
+        "For anticoagulation candidates without moderate-to-severe rheumatic mitral stenosis or a mechanical heart valve, DOACs are recommended over warfarin to reduce mortality, stroke, systemic embolism, and intracranial hemorrhage.[17] Aspirin alone, or aspirin plus clopidogrel as an alternative to anticoagulation, is not recommended for AF stroke prevention in patients who are anticoagulation candidates.[17]"
+      ],
+      "bullets": [
+        "Use warfarin rather than a DOAC for AF with rheumatic mitral stenosis or mitral stenosis of moderate or greater severity, and avoid DOACs with mechanical heart valves.[17]",
+        "In end-stage CKD with creatinine clearance <15 mL/min or dialysis, the cited U.S. measure identifies warfarin or an evidence-based dose of apixaban as options that may be reasonable; dabigatran and edoxaban are inappropriate in this setting.[17]",
+        "Reassess anticoagulant dose and interacting drugs as renal function, age, body weight, and medication lists change. Real-world data show frequent reduced-dose prescribing and possible undertreatment when label-based criteria are not met.[19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Anticoagulation decisions in atrial fibrillation.[17]",
+        "columns": [
+          "Situation",
+          "Action",
+          "Key limitation or exception"
+        ],
+        "rows": [
+          [
+            "Estimated thromboembolic risk \u22652%/year",
+            "Prescribe anticoagulation unless contraindicated.[17]",
+            "CHA2DS2-VASc \u22652 in men or \u22653 in women is an example threshold.[17]"
+          ],
+          [
+            "Eligible for anticoagulation without significant mitral stenosis or mechanical valve",
+            "Prefer a DOAC over warfarin.[17]",
+            "Use drug-specific FDA labeling for dose selection."
+          ],
+          [
+            "Moderate/severe mitral stenosis or mechanical valve",
+            "Use warfarin rather than a DOAC.[17]",
+            "DOAC use is inappropriate in these populations.[17]"
+          ],
+          [
+            "AF with PCI and an anticoagulation indication",
+            "Use a DOAC plus P2Y12 inhibitor and discontinue aspirin early, generally within 1 to 4 weeks.[17]",
+            "Longer triple therapy may be considered when perceived stent-thrombosis risk is high.[17]"
+          ],
+          [
+            "AF with stable coronary disease beyond 1 year after revascularization and no stent thrombosis",
+            "Use oral anticoagulant monotherapy rather than adding single antiplatelet therapy.[17]",
+            "Document competing coronary or thrombotic indications."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "rhythm-control-and-ablation",
+      "eyebrow": "Rhythm Control",
+      "heading": "Use rhythm control deliberately and refer for ablation when it changes outcomes",
+      "intro": "Rhythm control is increasingly early and outcome-oriented, particularly in HFrEF.",
+      "paragraphs": [
+        "The current U.S. guideline framework emphasizes early and continued management aimed at maintaining sinus rhythm and minimizing AF burden.[18] Shared decision-making should compare rate and rhythm strategies, incorporating symptom burden, comorbidity, drug risks, procedural candidacy, and patient goals.[17]",
+        "Catheter ablation is useful for symptomatic AF when antiarrhythmic drugs are ineffective, contraindicated, not tolerated, or not preferred and rhythm control remains desired. In symptomatic or clinically significant atrial flutter, catheter ablation is also useful for symptom improvement.[17] Pulmonary vein isolation is the recommended primary lesion set for AF ablation unless a different specific trigger is identified.[17]"
+      ],
+      "bullets": [
+        "In selected patients, generally younger individuals with few comorbidities and symptomatic paroxysmal AF who desire rhythm control, catheter ablation is a Class 1 first-line option to improve symptoms and reduce progression to persistent AF.[18]",
+        "Perform AF ablation on uninterrupted therapeutic warfarin with INR 2.0-3.0, or continuous/minimally interrupted DOAC therapy.[17]",
+        "Dronedarone is indicated to reduce AF hospitalization in patients in sinus rhythm with a history of paroxysmal or persistent AF, but is contraindicated in permanent AF and in recent decompensated or NYHA class IV heart failure.[1]"
+      ],
+      "subsections": [
+        {
+          "heading": "AF with HFrEF",
+          "paragraphs": [
+            "In new HFrEF with AF, suspect arrhythmia-induced cardiomyopathy and pursue an early, aggressive rhythm-control approach.[17] In appropriate patients with AF and HFrEF who are receiving guideline-directed therapy and have reasonable expected procedural benefit, catheter ablation improves symptoms, quality of life, ventricular function, and cardiovascular outcomes.[17]",
+            "In CASTLE-AF, catheter ablation reduced the composite of death or heart-failure hospitalization versus medical therapy in a selected HFrEF population; the review reports composite event rates of 28.5% versus 44.6%.[7] Applicability depends on patient selection, AF burden, ventricular function, comorbidity, and procedural access.[7]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Rhythm-control drug safety issues with immediate clinical consequences.[1][17]",
+        "columns": [
+          "Drug or strategy",
+          "Do not use when",
+          "Operational requirement"
+        ],
+        "rows": [
+          [
+            "Flecainide or propafenone",
+            "Previous MI or significant structural heart disease, including HFrEF with LVEF \u226440%.[17]",
+            "Avoid because of worsening HF, proarrhythmia, and increased mortality risk.[17]"
+          ],
+          [
+            "Dronedarone",
+            "Permanent AF; NYHA class IV HF; or symptomatic HF with recent decompensation requiring hospitalization.[1]",
+            "Check rhythm at least every 3 months; discontinue or cardiovert if AF recurs.[1]"
+          ],
+          [
+            "Dofetilide",
+            "Outpatient initiation or dose escalation.[17]",
+            "Initiate or increase dose with at least 3 days of inpatient continuous ECG monitoring, creatinine-clearance calculation, and resuscitation capability.[17]"
+          ],
+          [
+            "AF ablation",
+            "When oral anticoagulation cannot safely be managed without a compelling individualized plan.",
+            "Use uninterrupted warfarin or continuous/minimally interrupted DOAC therapy.[17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-management",
+      "eyebrow": "Longitudinal Care",
+      "heading": "Treat AF as a progressive cardiometabolic disease",
+      "intro": "Prevent recurrence, progression, and complications while monitoring treatment safety.",
+      "paragraphs": [
+        "Lifestyle and risk-factor modification is a central component of AF management. For BMI >27 kg/m\u00b2, target at least 10% weight loss; recommend moderate-to-vigorous activity totaling 210 minutes weekly; provide tobacco-cessation treatment; counsel alcohol minimization or elimination for patients pursuing rhythm control; and optimize blood pressure in patients with hypertension.[17]",
+        "AF discovered during acute medical illness or surgery should not be dismissed as transient. Patients should be counseled about recurrence risk after the acute trigger resolves; cited recurrence estimates are 42% to 68% after acute medical illness and 39% after surgery over five years.[17]"
+      ],
+      "bullets": [
+        "For dronedarone, obtain rhythm surveillance at least every 3 months; discontinue the drug or cardiovert if AF is detected.[1]",
+        "Monitor potassium and magnesium when using potassium-depleting diuretics with dronedarone, and monitor renal function periodically. A small early creatinine rise may reflect inhibited tubular secretion, but marked creatinine increase or renal failure can occur, often with heart failure or hypovolemia.[1]",
+        "Evaluate new dyspnea or nonproductive cough for possible dronedarone pulmonary toxicity; discontinue if confirmed. Evaluate suspected hepatic injury promptly and do not restart without another explanation.[1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Secondary prevention targets in established AF.[17]",
+        "columns": [
+          "Risk domain",
+          "Action",
+          "Target or trigger"
+        ],
+        "rows": [
+          [
+            "Overweight or obesity",
+            "Offer structured weight-loss management.",
+            "BMI >27 kg/m\u00b2; ideal target \u226510% weight loss.[17]"
+          ],
+          [
+            "Physical inactivity",
+            "Prescribe moderate-to-vigorous exercise when clinically appropriate.",
+            "210 minutes weekly.[17]"
+          ],
+          [
+            "Tobacco",
+            "Provide cessation counseling and guideline-directed cessation treatment.",
+            "Any cigarette smoking history in AF.[17]"
+          ],
+          [
+            "Alcohol",
+            "Counsel minimization or elimination when rhythm control is sought.",
+            "Relevant alcohol use in AF.[17]"
+          ],
+          [
+            "Hypertension",
+            "Optimize blood-pressure treatment.",
+            "Confirmed hypertension with AF.[17]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the minimum recommended initial workup for newly diagnosed AF?",
+      "answer": "Obtain a transthoracic echocardiogram, CBC, metabolic panel, and thyroid function testing. Avoid routine ischemia, ACS, or pulmonary embolism testing unless symptoms or signs suggest those disorders.[17]"
+    },
+    {
+      "question": "When is immediate cardioversion indicated in AF?",
+      "answer": "Immediate direct-current cardioversion is indicated for hemodynamic compromise. Most stable patients do not require immediate cardioversion and can first receive rate control and individualized rhythm-control assessment.[6]"
+    },
+    {
+      "question": "When should a DOAC not be used for AF stroke prevention?",
+      "answer": "Avoid DOACs with mechanical heart valves and with rheumatic or moderate-to-severe mitral stenosis; use warfarin in these settings.[17]"
+    },
+    {
+      "question": "When should catheter ablation be discussed in AF with HFrEF?",
+      "answer": "Discuss ablation in appropriate patients with AF and HFrEF receiving guideline-directed medical therapy when procedural benefit is reasonably expected; it can improve symptoms, ventricular function, quality of life, and cardiovascular outcomes.[17]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "These highlights do not include all the information needed to use MULTAQ safely and effectively. See full prescribing information for MULTAQ.\n       MULTAQ\u00ae (dronedarone) tablets, for oral use Initial U.S. Approval: 2009",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7fa41601-7fb5-4155-8e50-2ae903f0d2d6&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "## 8.6 Renal Impairment\n\nPatients with renal impairment were included in clinical studies. Because renal excretion of dronedarone is minimal see [Clinical Pharmacology (12.3)], no dosing alteration is needed.\n\n## 8.7 Hepatic Impairment\n\nDronedarone is extensively metabolized by the liver. There is l",
+      "score": 0.9521621704393395
+    },
+    {
+      "number": 2,
+      "title": "DailyMed - WARFARIN SODIUM tablet",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3f1c3083-91d1-488c-ad07-b198fda21da6",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "# WARNINGS AND PRECAUTIONS\n\n# ADVERSE REACTIONS\n\nMost common adverse reactions to warfarin sodium are fatal and nonfatal hemorrhage from any tissue or organ. (\n6)\n\nTo report SUSPECTED ADVERSE REACTIONS, contact Teva at 1-888-838-2872 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# DRUG INTERACT",
+      "score": 0.9494204263212231
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use LACOSAMIDE TABLETS safely and effectively. See full prescribing information for LACOSAMIDE TABLETS.\n \nLACOSAMIDE film coated tablet, for oral use, CV\n \nInitial U.S. Approval: 2008",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=8d2906e3-d059-425d-b971-29423963c2af&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "No lacosamide dose adjustment based on age is necessary. In elderly patients, dose titration should be performed with caution, usually starting at the lower end of the dosing range, reflecting the greater frequency of decreased hepatic function, decreased renal function, increased cardiac conduction",
+      "score": 0.9475472902479393
+    },
+    {
+      "number": 4,
+      "title": "These highlights do not include all the information needed to use TADLIQ safely and effectively. See full prescribing information for TADLIQ.TADLIQ\u00ae (tadalafil) oral suspensionInitial U.S. Approval: 2003",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7a909b25-3772-403e-a5fe-e4a040293fb7&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "The most common adverse reaction is headache. (6.1)\n\nTo report SUSPECTED ADVERSE REACTIONS, contact CMP Development, LLC at 1-844-321-1443, or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# USE IN SPECIFIC POPULATIONS\n\nRenal Impairment (2.2, 8.6, 12.3)\n\nHepatic Impairment (2.2, 8.7, 12.3)\n\nSee 17",
+      "score": 0.9472460877132848
+    },
+    {
+      "number": 5,
+      "title": "Established atrial fibrillation - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\nWhen viewing this topic in a different language, you may notice some differences in the way the content is structured, but it still reflects the latest evidence-based guidance.\n\n# Established atrial fibrillation\n\nEpidemiology\n\nAetiology\n\nCase history\n\nApproach\n\nHistory and exam\n\nInvestiga",
+      "score": 0.9110539676216046
+    },
+    {
+      "number": 6,
+      "title": "New-onset atrial fibrillation - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/3",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# New-onset atrial fibrillation\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nScreening\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages an",
+      "score": 0.9096057207852625
+    },
+    {
+      "number": 7,
+      "title": "Update on management of atrial fibrillation in heart failure: a focus on ablation | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/108/6/422",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "(combination of endocardial and epicardial ablation).2 45 Complications, however, should be taken into account for these more invasive procedures. Hybrid ablation strategies may improve outcome over single-staged surgical-only strategies, however, large randomised studies including patients with HF ",
+      "score": 0.8944736951019813
+    },
+    {
+      "number": 8,
+      "title": "Risk-Guided Screening for Atrial Fibrillation Using ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.126.079391",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Screening for atrial fibrillation (AF) on the basis of AF risk may be more effective. AF was diagnosed in 5 of 902 (0.6%) Individual Prognosis",
+      "score": 0.9037755709875063
+    },
+    {
+      "number": 9,
+      "title": "Reimagining atrial fibrillation screening beyond age-based thresholds using AI | npj Digital Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-026-02485-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Longer-term monitoring strategies need further exploration. While the two-year prediction interval corresponds well to screening intervals, accumulating serial 1\u2009L ECGs may detect changes in atrial substrate over time10.\"). Continuous or intermittent ECG analysis using devices such as smartwatches c",
+      "score": 0.8910347555106274
+    },
+    {
+      "number": 10,
+      "title": "Atrial fibrillation detection via contactless radio monitoring and knowledge transfer | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-025-59482-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Our model is first built using outpatient data, where the threshold is optimized to achieve the best F1 score on the validation set. During testing, including in the outpatient test and Case Studies 1 and 2, the threshold remains fixed: predictions with a score above the threshold are classified as ",
+      "score": 0.8787356547442428
+    },
+    {
+      "number": 11,
+      "title": "JACC: Asia: Vol 6, No 8_Part_1",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/toc/jacc-asia/6/8_Part_1",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "FULL TEXT\n   | PDF\n\nImage 26: Validated Polygenic Risk Scores Complement Monogenic Testing in South Asian Patients With Familial Hypercholesterolemia\n\n#### Validated Polygenic Risk Scores Complement Monogenic Testing in South Asian Patients With Familial HypercholesterolemiaOpen Access\n\n##### Brief ",
+      "score": 0.8743327462259725
+    },
+    {
+      "number": 12,
+      "title": "Electrocardiographic diagnosis of atrial fibrillation",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/ncpcardio0092",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Rights and permissions. Reprints and permissions. About this article. Cite this article. Electrocardiographic diagnosis of atrial fibrillation.",
+      "score": 0.8645875178154286
+    },
+    {
+      "number": 13,
+      "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001193",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by JA Joglar \u00b7 2024 \u00b7 Cited by 4108 \u2014 The \u201c2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation\u201d provides recommendations to guide clinicians",
+      "score": 0.851326291023959
+    },
+    {
+      "number": 14,
+      "title": "Atrial Fibrillation Detection Using a Novel Cardiac ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/jaha.118.009351",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Long\u2010term continuous cardiac monitoring would aid in the early diagnosis and management of atrial fibrillation (AF).",
+      "score": 0.8403074574562953
+    },
+    {
+      "number": 15,
+      "title": "Atrial Fibrillation Screening During Routine Automated ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.123.22563",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "AF diagnosis requires verification (electrocardiography) before treatment is administered. office, home, and ambulatory automated blood",
+      "score": 0.8352179849446862
+    },
+    {
+      "number": 16,
+      "title": "Management of Atrial Fibrillation in Patients 75 Years and ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.10.037",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Despite their much higher costs, DOACs are generally more cost-effective than VKAs due to better clinical efficacy, simplicity of use, and lack of monitoring requirements. An increase in quality-adjusted life-years at the acceptable cost with DOACs vs warfarin was observed in several meta-analyses t",
+      "score": 0.9271335578669572
+    },
+    {
+      "number": 17,
+      "title": "2026 AHA/ACC Clinical Performance and Quality Measures for Patients With Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.05.032",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| QM-9 (2016 AF performance measures4) | Atrial Fibrillation: Patients Who Underwent Atrial Fibrillation Catheter Ablation Who Were Not Treated With Anticoagulation Therapy During or After a Procedure (Inpatient) | Updated to reflect changes in the 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis a",
+      "score": 0.9117781069707289
+    },
+    {
+      "number": 18,
+      "title": "2023 Atrial Fibrillation Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.10.021",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "## Introduction\n\nThe 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation (ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline) provides guidance for clinicians on the management of patients with atrial fibrillation (AF).1 The guideline emphasizes a rhythm control strat",
+      "score": 0.882008719813316
+    },
+    {
+      "number": 19,
+      "title": "Starting dose and dose adjustment of non-vitamin K antagonist oral anticoagulation agents in a nationwide cohort of patients with atrial fibrillation | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-021-99818-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Inappropriate dosing, and especially under-dosing, has been associated in turn with unfavorable outcomes. The FDA previously expressed concerns regarding off-label under-dosing of anticoagulants28.\"). FDA criteria29, 2071\u20132104 (2014).\"),30, e125\u2013e151 (2019).\") are very similar to ESC/EHRA ones1, 160",
+      "score": 0.9559784777253114
+    },
+    {
+      "number": 20,
+      "title": "Clinical Performance and Quality Measures of Atrial ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/milmed/article/191/5-6/e1033/8313926",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AN Keithler \u00b7 2026 \u2014 This study aims to assess the AF management of United States active duty military service members according to guideline clinical quality measures.",
+      "score": 0.9540538514048211
+    },
+    {
+      "number": 21,
+      "title": "Trigger-induced atrial fibrillation for the hospitalist: a review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0953620526001810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "AF guidelines from the United States and Europe. Further investigation with randomized clinical trials is warranted to better understand the epidemiology and management of trigger-induced AF, as well as its long-term effects and care. [...] Atrial fibrillation (AF) is a common arrhythmia that a hosp",
+      "score": 0.9492975046635727
+    },
+    {
+      "number": 22,
+      "title": "An international physician survey of current ablation practices in atrial fibrillation: An AIM-AF substudy",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1547527124035057",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Section snippets\n\n## Study design\n\nThe AIM-AF study was an online physician survey designed by a steering committee of 9 global experts in AF. Details of the survey and its methodology have been previously reported.5 In brief, practicing physicians with a geographic spread across the United State",
+      "score": 0.9463573583292558
+    },
+    {
+      "number": 23,
+      "title": "Chronic Atrial Fibrillation - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/chronic-atrial-fibrillation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Atrial fibrillation is the most common sustained arrhythmia encountered in clinical medicine and affects more 2 million people in the United States alone.",
+      "score": 0.9388129735592751
+    },
+    {
+      "number": 24,
+      "title": "2017 HRS/EHRA/ECAS/APHRS/SOLAECE expert ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/20/1/157/4158231",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by H Calkins \u00b7 2018 \u00b7 Cited by 4996 \u2014 Contemporary utilization and safety outcomes of catheter ablation of atrial flutter in the United States: Analysis of 89,638 procedures.",
+      "score": 0.9238706893247537
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "These highlights do not include all the information needed to use MULTAQ safely and effectively. See full prescribing information for MULTAQ.\n       MULTAQ\u00ae (dronedarone) tablets, for oral use Initial U.S. Approval: 2009",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7fa41601-7fb5-4155-8e50-2ae903f0d2d6&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "## 8.6 Renal Impairment\n\nPatients with renal impairment were included in clinical studies. Because renal excretion of dronedarone is minimal see [Clinical Pharmacology (12.3)], no dosing alteration is needed.\n\n## 8.7 Hepatic Impairment\n\nDronedarone is extensively metabolized by the liver. There is l",
+      "score": 0.9521621704393395
+    },
+    {
+      "number": 2,
+      "title": "DailyMed - WARFARIN SODIUM tablet",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3f1c3083-91d1-488c-ad07-b198fda21da6",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "# WARNINGS AND PRECAUTIONS\n\n# ADVERSE REACTIONS\n\nMost common adverse reactions to warfarin sodium are fatal and nonfatal hemorrhage from any tissue or organ. (\n6)\n\nTo report SUSPECTED ADVERSE REACTIONS, contact Teva at 1-888-838-2872 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# DRUG INTERACT",
+      "score": 0.9494204263212231
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use LACOSAMIDE TABLETS safely and effectively. See full prescribing information for LACOSAMIDE TABLETS.\n \nLACOSAMIDE film coated tablet, for oral use, CV\n \nInitial U.S. Approval: 2008",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=8d2906e3-d059-425d-b971-29423963c2af&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "No lacosamide dose adjustment based on age is necessary. In elderly patients, dose titration should be performed with caution, usually starting at the lower end of the dosing range, reflecting the greater frequency of decreased hepatic function, decreased renal function, increased cardiac conduction",
+      "score": 0.9475472902479393
+    },
+    {
+      "number": 4,
+      "title": "These highlights do not include all the information needed to use TADLIQ safely and effectively. See full prescribing information for TADLIQ.TADLIQ\u00ae (tadalafil) oral suspensionInitial U.S. Approval: 2003",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7a909b25-3772-403e-a5fe-e4a040293fb7&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "The most common adverse reaction is headache. (6.1)\n\nTo report SUSPECTED ADVERSE REACTIONS, contact CMP Development, LLC at 1-844-321-1443, or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.\n\n# USE IN SPECIFIC POPULATIONS\n\nRenal Impairment (2.2, 8.6, 12.3)\n\nHepatic Impairment (2.2, 8.7, 12.3)\n\nSee 17",
+      "score": 0.9472460877132848
+    },
+    {
+      "number": 5,
+      "title": "Established atrial fibrillation - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\nWhen viewing this topic in a different language, you may notice some differences in the way the content is structured, but it still reflects the latest evidence-based guidance.\n\n# Established atrial fibrillation\n\nEpidemiology\n\nAetiology\n\nCase history\n\nApproach\n\nHistory and exam\n\nInvestiga",
+      "score": 0.9110539676216046
+    },
+    {
+      "number": 6,
+      "title": "New-onset atrial fibrillation - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/3",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# New-onset atrial fibrillation\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nScreening\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages an",
+      "score": 0.9096057207852625
+    },
+    {
+      "number": 7,
+      "title": "Update on management of atrial fibrillation in heart failure: a focus on ablation | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/108/6/422",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "(combination of endocardial and epicardial ablation).2 45 Complications, however, should be taken into account for these more invasive procedures. Hybrid ablation strategies may improve outcome over single-staged surgical-only strategies, however, large randomised studies including patients with HF ",
+      "score": 0.8944736951019813
+    },
+    {
+      "number": 8,
+      "title": "Risk-Guided Screening for Atrial Fibrillation Using ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.126.079391",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Screening for atrial fibrillation (AF) on the basis of AF risk may be more effective. AF was diagnosed in 5 of 902 (0.6%) Individual Prognosis",
+      "score": 0.9037755709875063
+    },
+    {
+      "number": 9,
+      "title": "Reimagining atrial fibrillation screening beyond age-based thresholds using AI | npj Digital Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-026-02485-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Longer-term monitoring strategies need further exploration. While the two-year prediction interval corresponds well to screening intervals, accumulating serial 1\u2009L ECGs may detect changes in atrial substrate over time10.\"). Continuous or intermittent ECG analysis using devices such as smartwatches c",
+      "score": 0.8910347555106274
+    },
+    {
+      "number": 10,
+      "title": "Atrial fibrillation detection via contactless radio monitoring and knowledge transfer | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-025-59482-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Our model is first built using outpatient data, where the threshold is optimized to achieve the best F1 score on the validation set. During testing, including in the outpatient test and Case Studies 1 and 2, the threshold remains fixed: predictions with a score above the threshold are classified as ",
+      "score": 0.8787356547442428
+    },
+    {
+      "number": 11,
+      "title": "JACC: Asia: Vol 6, No 8_Part_1",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/toc/jacc-asia/6/8_Part_1",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "FULL TEXT\n   | PDF\n\nImage 26: Validated Polygenic Risk Scores Complement Monogenic Testing in South Asian Patients With Familial Hypercholesterolemia\n\n#### Validated Polygenic Risk Scores Complement Monogenic Testing in South Asian Patients With Familial HypercholesterolemiaOpen Access\n\n##### Brief ",
+      "score": 0.8743327462259725
+    },
+    {
+      "number": 12,
+      "title": "Electrocardiographic diagnosis of atrial fibrillation",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/ncpcardio0092",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Rights and permissions. Reprints and permissions. About this article. Cite this article. Electrocardiographic diagnosis of atrial fibrillation.",
+      "score": 0.8645875178154286
+    },
+    {
+      "number": 13,
+      "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001193",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by JA Joglar \u00b7 2024 \u00b7 Cited by 4108 \u2014 The \u201c2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation\u201d provides recommendations to guide clinicians",
+      "score": 0.851326291023959
+    },
+    {
+      "number": 14,
+      "title": "Atrial Fibrillation Detection Using a Novel Cardiac ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/jaha.118.009351",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Long\u2010term continuous cardiac monitoring would aid in the early diagnosis and management of atrial fibrillation (AF).",
+      "score": 0.8403074574562953
+    },
+    {
+      "number": 15,
+      "title": "Atrial Fibrillation Screening During Routine Automated ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.123.22563",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "AF diagnosis requires verification (electrocardiography) before treatment is administered. office, home, and ambulatory automated blood",
+      "score": 0.8352179849446862
+    },
+    {
+      "number": 16,
+      "title": "Management of Atrial Fibrillation in Patients 75 Years and ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.10.037",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Despite their much higher costs, DOACs are generally more cost-effective than VKAs due to better clinical efficacy, simplicity of use, and lack of monitoring requirements. An increase in quality-adjusted life-years at the acceptable cost with DOACs vs warfarin was observed in several meta-analyses t",
+      "score": 0.9271335578669572
+    },
+    {
+      "number": 17,
+      "title": "2026 AHA/ACC Clinical Performance and Quality Measures for Patients With Atrial Fibrillation: A Report of the American College of Cardiology/American Heart Association",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.05.032",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| QM-9 (2016 AF performance measures4) | Atrial Fibrillation: Patients Who Underwent Atrial Fibrillation Catheter Ablation Who Were Not Treated With Anticoagulation Therapy During or After a Procedure (Inpatient) | Updated to reflect changes in the 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis a",
+      "score": 0.9117781069707289
+    },
+    {
+      "number": 18,
+      "title": "2023 Atrial Fibrillation Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.10.021",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "## Introduction\n\nThe 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation (ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline) provides guidance for clinicians on the management of patients with atrial fibrillation (AF).1 The guideline emphasizes a rhythm control strat",
+      "score": 0.882008719813316
+    },
+    {
+      "number": 19,
+      "title": "Starting dose and dose adjustment of non-vitamin K antagonist oral anticoagulation agents in a nationwide cohort of patients with atrial fibrillation | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-021-99818-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Inappropriate dosing, and especially under-dosing, has been associated in turn with unfavorable outcomes. The FDA previously expressed concerns regarding off-label under-dosing of anticoagulants28.\"). FDA criteria29, 2071\u20132104 (2014).\"),30, e125\u2013e151 (2019).\") are very similar to ESC/EHRA ones1, 160",
+      "score": 0.9559784777253114
+    },
+    {
+      "number": 20,
+      "title": "Clinical Performance and Quality Measures of Atrial ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/milmed/article/191/5-6/e1033/8313926",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AN Keithler \u00b7 2026 \u2014 This study aims to assess the AF management of United States active duty military service members according to guideline clinical quality measures.",
+      "score": 0.9540538514048211
+    },
+    {
+      "number": 21,
+      "title": "Trigger-induced atrial fibrillation for the hospitalist: a review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0953620526001810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "AF guidelines from the United States and Europe. Further investigation with randomized clinical trials is warranted to better understand the epidemiology and management of trigger-induced AF, as well as its long-term effects and care. [...] Atrial fibrillation (AF) is a common arrhythmia that a hosp",
+      "score": 0.9492975046635727
+    },
+    {
+      "number": 22,
+      "title": "An international physician survey of current ablation practices in atrial fibrillation: An AIM-AF substudy",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1547527124035057",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Section snippets\n\n## Study design\n\nThe AIM-AF study was an online physician survey designed by a steering committee of 9 global experts in AF. Details of the survey and its methodology have been previously reported.5 In brief, practicing physicians with a geographic spread across the United State",
+      "score": 0.9463573583292558
+    },
+    {
+      "number": 23,
+      "title": "Chronic Atrial Fibrillation - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/chronic-atrial-fibrillation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Atrial fibrillation is the most common sustained arrhythmia encountered in clinical medicine and affects more 2 million people in the United States alone.",
+      "score": 0.9388129735592751
+    },
+    {
+      "number": 24,
+      "title": "2017 HRS/EHRA/ECAS/APHRS/SOLAECE expert ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/20/1/157/4158231",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by H Calkins \u00b7 2018 \u00b7 Cited by 4996 \u2014 Contemporary utilization and safety outcomes of catheter ablation of atrial flutter in the United States: Analysis of 89,638 procedures.",
+      "score": 0.9238706893247537
+    }
+  ],
+  "publishedAt": "2026-08-21T00:02:02.738307Z",
+  "updatedAt": "2026-08-21T00:02:02.738307Z",
+  "readingMinutes": 5,
+  "slug": "atrial-fibrillation"
+}

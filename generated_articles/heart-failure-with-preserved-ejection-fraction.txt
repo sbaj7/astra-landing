@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology",
+  "title": "Heart Failure With Preserved Ejection Fraction",
+  "summary": "HFpEF requires objective evidence of heart failure beyond a preserved ejection fraction. Diagnose systematically, exclude cardiac and noncardiac mimics, use stress or invasive hemodynamics when uncertainty persists, decongest judiciously, initiate SGLT2 inhibition, and phenotype-directed therapy for obesity, CKD, atrial fibrillation, and hypertension.",
+  "seoDescription": "Evidence-based diagnosis and management of HFpEF, including diagnostic scores, hemodynamic testing, SGLT2 inhibitors, obesity therapy, and comorbidity care.",
+  "clinicalQuestion": "How should clinicians confirm, phenotype, and manage HFpEF while avoiding diagnostic mimics and treatment-related harm?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "HFpEF",
+    "heart failure with preserved ejection fraction",
+    "H2FPEF",
+    "HFA-PEFF",
+    "SGLT2 inhibitors",
+    "obesity-related HFpEF",
+    "diastolic stress testing"
+  ],
+  "keyTakeaways": [
+    "HFpEF is a clinical syndrome, not an echocardiographic ejection-fraction category: establish symptoms or signs of HF, LVEF at least 50%, and objective evidence of congestion or elevated filling pressure while excluding mimics. [5][7]",
+    "Normal BNP or NT-proBNP does not exclude HFpEF, particularly in obesity; when resting data are nondiagnostic, exercise echocardiography or invasive exercise hemodynamics can demonstrate provokable elevation in filling pressures. [2][5][11]",
+    "Dapagliflozin or empagliflozin is foundational therapy for symptomatic HFpEF without contraindications because both reduce worsening HF events or HF hospitalization across diabetic-status subgroups. [2][5][7]",
+    "For obesity-related HFpEF, semaglutide 2.4 mg weekly improved KCCQ clinical summary score, body weight, and 6-minute walk distance at 52 weeks in patients without diabetes; treatment should accompany exercise and nutritional strategies to preserve muscle function. [1][5]",
+    "Use beta-blockers only for a separate indication such as angina or AF rate control; routine heart-rate lowering may worsen exertional intolerance in patients with chronotropic incompetence. [2][5]"
+  ],
+  "sections": [
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm HF physiology, not just preserved EF",
+      "intro": "A preserved EF does not establish HFpEF.",
+      "paragraphs": [
+        "For ambulatory patients, diagnose HFpEF when symptoms or signs are attributable to structural or functional cardiac abnormality and are supported by elevated natriuretic peptides or objective cardiogenic pulmonary or systemic congestion; HFpEF conventionally requires LVEF at least 50%. [5][7] The practical diagnostic problem is the euvolemic patient with exertional dyspnea, normal or equivocal natriuretic peptides, and no obvious resting congestion.",
+        "Obesity, atrial fibrillation, CKD, lung disease, anemia, deconditioning, and frailty may independently cause dyspnea and may coexist with HFpEF. Do not label isolated diastolic dysfunction as HFpEF. Likewise, identify cardiac conditions with distinct treatment implications before assigning primary HFpEF, including significant valve disease, constrictive pericarditis, ischemia, hypertrophic cardiomyopathy, infiltrative or storage cardiomyopathy, and high-output states. [2][5][7]"
+      ],
+      "bullets": [
+        "Initial evaluation: ECG, chest radiography, transthoracic echocardiography with Doppler assessment, BNP or NT-proBNP, CBC, kidney function and electrolytes; add thyroid, liver, iron, pulmonary, or ischemic evaluation when indicated by phenotype. [5][23]",
+        "Interpret natriuretic peptides in context: values may be lower in obesity and HFpEF and higher with AF or CKD; normal values alone should not exclude HFpEF when clinical probability remains high. [2][5]",
+        "Use clinical history and echocardiography to trigger directed testing for amyloidosis, hypertrophic cardiomyopathy, constriction, pulmonary disease, high-output states, or significant valvular disease. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "Use probability scores to determine who needs definitive testing",
+          "paragraphs": [
+            "The H2FPEF score uses obesity, treatment with at least 2 antihypertensives, AF, estimated pulmonary artery systolic pressure above 35 mm Hg, age above 60 years, and E/e′ above 9. Scores range from 0 to 9; low scores support noncardiac causes, scores of 6 or higher strongly support HFpEF, and intermediate scores should prompt further evaluation. [11]",
+            "HFA-PEFF integrates pretest assessment, natriuretic peptides, echocardiographic structure and function, functional testing, and final etiologic assessment. It is more comprehensive but often produces an intermediate result and requires tests not universally available. The 2026 ACC pathway supports H2FPEF as an accessible initial clinical tool, with HFA-PEFF or advanced testing for discordant or unresolved cases. [5]"
+          ],
+          "bullets": [
+            "Do not overrule high pretest probability with a low score or normal natriuretic peptide level in a patient with obesity and exertional limitation. [5]",
+            "Diagnostic scores estimate likelihood; they do not replace assessment for mimics or direct measurement of filling pressures when results will alter management. [5][11]"
+          ]
+        },
+        {
+          "heading": "Escalate to stress or invasive hemodynamics when rest studies are nondiagnostic",
+          "paragraphs": [
+            "Exercise is critical in suspected early HFpEF because filling pressures can be normal at rest yet rise abnormally with exertion. Invasive right-heart catheterization with exercise remains the reference standard when noninvasive data are equivocal. In the H2FPEF derivation cohort, HFpEF was defined by pulmonary capillary wedge pressure at least 15 mm Hg at rest or at least 25 mm Hg during exercise. [2][11]",
+            "Noninvasive diastolic stress echocardiography can be used when available, but an equivocal stress study should not close the diagnostic evaluation in a patient with persistent exertional symptoms and substantial clinical probability. [2][5]"
+          ],
+          "bullets": [
+            "Proceed directly to definitive testing when the distinction between HFpEF and pulmonary, obesity-related, pericardial, infiltrative, or high-output physiology will change treatment. [5]",
+            "In patients with suspected pulmonary hypertension, right-heart catheterization distinguishes precapillary from postcapillary physiology and informs subsequent management. [5]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "High-yield HFpEF mimics requiring targeted evaluation. [5]",
+        "columns": [
+          "Potential mimic",
+          "Clues that should change the workup",
+          "Directed evaluation"
+        ],
+        "rows": [
+          [
+            "Cardiac amyloidosis",
+            "Increased wall thickness with low-voltage ECG, carpal tunnel syndrome, spinal stenosis, neuropathy or autonomic symptoms. [5]",
+            "Serum and urine immunofixation plus serum free light chains; bone-avid radionuclide scintigraphy only in the setting of a negative monoclonal protein screen; biopsy when indicated. [5]"
+          ],
+          [
+            "Constrictive pericarditis",
+            "Prior pericarditis, cardiac surgery, chest radiation, Kussmaul sign, predominant right-sided congestion. [5]",
+            "Doppler echocardiography; cardiac CT or CMR; right- and left-heart catheterization when confirmation is needed. [5]"
+          ],
+          [
+            "Pulmonary disease or pulmonary vascular disease",
+            "Hypoxemia, chronic cough or wheeze, reduced DLCO, right-heart predominance, thromboembolic risk. [5]",
+            "Pulmonary function testing, chest imaging, V/Q scan or CT pulmonary angiography when appropriate, cardiopulmonary exercise testing, and right-heart catheterization. [5]"
+          ],
+          [
+            "High-output state",
+            "Warm extremities, widened pulse pressure, tachycardia, anemia, hyperthyroidism, liver disease, arteriovenous fistula, or systemic inflammation. [5]",
+            "CBC, TSH, liver testing and imaging, inflammatory evaluation, echocardiography, and hemodynamics when needed. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "foundational-management",
+      "eyebrow": "Treatment",
+      "heading": "Start disease-modifying therapy and titrate congestion treatment to phenotype",
+      "intro": "Treat confirmed symptomatic HFpEF while addressing its dominant drivers.",
+      "paragraphs": [
+        "Use loop diuretics to relieve congestion, titrating to clinical volume status and symptoms. Patients with HFpEF can be sensitive to excessive preload reduction; reassess blood pressure, kidney function, electrolytes, weight trajectory, orthostasis, and residual congestion rather than pursuing a fixed dose. [2][5]",
+        "SGLT2 inhibitors are the core pharmacologic therapy. In EMPEROR-Preserved, empagliflozin reduced cardiovascular death or HF hospitalization versus placebo (hazard ratio 0.79, 95% CI 0.69-0.90), driven largely by fewer HF hospitalizations. In DELIVER, dapagliflozin reduced worsening HF or cardiovascular death (hazard ratio 0.82, 95% CI 0.73-0.92), with benefit evident across prespecified subgroups. [2][5]",
+        "The 2026 ACC pathway recommends dapagliflozin 10 mg orally daily or empagliflozin 10 mg orally daily without titration. Avoid use in type 1 diabetes, pregnancy, lactation, and known hypersensitivity; the pathway lists eGFR below 25 mL/min/1.73 m² for dapagliflozin and below 20 mL/min/1.73 m² for empagliflozin as contraindications or major limitations. Counsel about genital mycotic infection, volume depletion, ketoacidosis risk during acute illness, prolonged fasting, ketogenic diets, excessive alcohol use, or insulin deficiency, and reassess diuretic dose if hypotension or overdiuresis emerges. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "MRA, ARNI, and ARB selection",
+          "paragraphs": [
+            "Finerenone reduced the composite of total worsening HF events and cardiovascular death in FINEARTS-HF (hazard ratio 0.82, 95% CI 0.71-0.94), primarily through fewer worsening HF events. The 2026 ACC pathway identifies finerenone as the preferred MRA in HFpEF, with spironolactone as a reasonable alternative when cost or tolerance limits use. [5]",
+            "Finerenone is started at 10 mg daily for eGFR 25 to less than 60 mL/min/1.73 m² or 20 mg daily for eGFR at least 60 mL/min/1.73 m², with targets of 20 mg and 40 mg daily, respectively. Do not initiate with potassium at least 5.0 mmol/L, eGFR below 25 mL/min/1.73 m², Addison disease, pregnancy, or strong or moderate CYP3A4 inhibitors or inducers. Monitor potassium and kidney function. [5]",
+            "Sacubitril/valsartan did not meet the overall PARAGON-HF primary endpoint, but possible benefit was greater in women and in patients with LVEF below the trial median of 57%. It is reasonable when additional blood pressure lowering is needed, especially in these subgroups. Start 24/26 mg twice daily and target 97/103 mg twice daily if tolerated; avoid with prior angioedema, pregnancy, severe hepatic impairment, or within 36 hours of ACE inhibitor exposure. [5] Candesartan is an alternative when ARNI is not feasible; start 4 to 8 mg daily and target 32 mg daily. [5]"
+          ],
+          "bullets": [
+            "Spironolactone may reduce HF hospitalization but its overall TOPCAT primary endpoint was neutral and regional trial conduct raised interpretive uncertainty. Use only with structured potassium and kidney-function surveillance. [2][5]",
+            "Avoid routine beta-blocker use for HFpEF alone. Restrict it to compelling indications such as angina or AF rate control, and reduce or discontinue if chronotropic limitation or exertional intolerance appears. [5]",
+            "Do not use nitrates solely to improve HFpEF activity tolerance; isosorbide mononitrate reduced activity and did not improve quality of life or submaximal exercise capacity in symptomatic HFpEF. [2][5]"
+          ]
+        },
+        {
+          "heading": "Obesity-related HFpEF merits targeted therapy",
+          "paragraphs": [
+            "Obesity is both a common HFpEF phenotype and a diagnostic confounder. It promotes plasma-volume expansion, elevated exercise filling pressures, inflammation, impaired exercise capacity, and lower natriuretic peptide concentrations. [1][5] Confirm HF physiology before attributing dyspnea solely to body habitus.",
+            "In STEP-HFpEF, adults with HFpEF, BMI at least 30 kg/m², and no diabetes received semaglutide 2.4 mg subcutaneously weekly or placebo for 52 weeks. Semaglutide improved KCCQ clinical summary score by 7.8 points versus placebo, produced a 10.7-percentage-point greater reduction in body weight, and improved 6-minute walk distance by 20.3 m. [1] Initiate at 0.25 mg weekly and increase every 4 weeks as tolerated to 2.4 mg weekly. [1][5]",
+            "Semaglutide and tirzepatide are appropriate considerations for selected patients with obesity-related HFpEF, but the 2026 ACC pathway emphasizes concurrent exercise and nutritional support because incretin-based therapy can reduce lean mass and contribute to sarcopenic obesity. Contraindications include personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2, pregnancy, lactation, and hypersensitivity. [5]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Medication priorities for established symptomatic HFpEF. [5]",
+        "columns": [
+          "Therapy",
+          "Who benefits most",
+          "Practical monitoring or limitation"
+        ],
+        "rows": [
+          [
+            "Dapagliflozin 10 mg daily or empagliflozin 10 mg daily",
+            "Most symptomatic HFpEF patients without contraindications, regardless of diabetes status. [2][5]",
+            "Assess volume status, renal function, genital infection risk, and ketoacidosis risk factors; consider loop-diuretic adjustment after initiation. [5]"
+          ],
+          [
+            "Finerenone",
+            "Eligible HFpEF patients, particularly when cardiovascular-kidney-metabolic disease coexists. [5]",
+            "Check potassium, eGFR, interacting CYP3A4 agents, blood pressure, and concomitant potassium-raising medications. [5]"
+          ],
+          [
+            "Semaglutide 2.4 mg weekly",
+            "Symptomatic obesity-related HFpEF; STEP-HFpEF excluded diabetes. [1]",
+            "Titrate every 4 weeks; monitor gastrointestinal intolerance, hydration, gallbladder or pancreatitis symptoms, nutrition, and lean-mass preservation strategy. [1][5]"
+          ],
+          [
+            "Sacubitril/valsartan",
+            "Women or patients with LVEF below the normal range, especially when additional blood pressure control is needed. [5]",
+            "Monitor blood pressure, kidney function, potassium, and angioedema risk; never coadminister with an ACE inhibitor. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "comorbidity-phenotype-care",
+      "eyebrow": "Phenotype-directed care",
+      "heading": "Treat the comorbid drivers that determine symptoms and events",
+      "intro": "HFpEF care is often determined by cardiovascular-kidney-metabolic disease burden.",
+      "paragraphs": [
+        "Hypertension, AF, CKD, diabetes, obesity, CAD, and sleep-disordered breathing are not ancillary diagnoses in HFpEF; they may drive filling-pressure elevation, functional limitation, and recurrent hospitalization. The 2026 ACC pathway frames management around cardiovascular-kidney-metabolic disease and favors therapies with overlapping cardiac, renal, and metabolic benefit. [5]",
+        "For hypertension, a systolic blood pressure below 130 mm Hg is recommended in most patients, but pooled HFpEF trial data suggest higher risk at both systolic pressure at least 140 mm Hg and below 120 mm Hg; a practical individualized target is 120 to 129 mm Hg when tolerated. [5] Use ARNI or ARB preferentially when indicated for both blood pressure and potential HF benefit, while avoiding indiscriminate beta-blockade. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "Atrial fibrillation",
+          "paragraphs": [
+            "AF is common in HFpEF and is associated with worse symptoms, cardiac dysfunction, hospitalization, and death. Follow contemporary AF guidance for anticoagulation and rhythm or rate control. Aggressive rate slowing can worsen exertional capacity when chronotropic reserve is limited. [5]",
+            "Rhythm control, including catheter ablation in appropriate candidates, is reasonable when AF appears to drive symptoms. The supporting HFpEF evidence is largely observational, subgroup, and meta-analytic rather than definitive dedicated randomized trial evidence; discuss uncertainty explicitly. [2][5]"
+          ],
+          "bullets": [
+            "Evaluate AF-related symptoms separately from HF symptoms before escalating diuretics or HF therapies. [5]",
+            "Address obesity, hypertension, diabetes, and sleep apnea because these factors influence AF burden and HFpEF trajectory. [5]"
+          ]
+        },
+        {
+          "heading": "CKD and diabetes",
+          "paragraphs": [
+            "CKD is common in HFpEF and increases risk of worsening HF and death. SGLT2 inhibitors, renin-angiotensin system blockade when indicated, nonsteroidal MRAs, and GLP-1 receptor agonists in appropriate patients can provide overlapping kidney and cardiovascular benefit. [5]",
+            "Do not stop SGLT2 inhibition solely for a small early creatinine rise without assessing volume status and longer-term renal trajectory. In contrast, hyperkalemia, progressive renal dysfunction, symptomatic hypotension, or volume depletion should trigger reassessment of MRA, ARNI, ARB, diuretic, and potassium-supplement exposure. [2][5]"
+          ],
+          "bullets": [
+            "Avoid thiazolidinediones in HFpEF because of fluid retention and increased HF events. [5]",
+            "Avoid saxagliptin and alogliptin in HFpEF because of increased HF-event concerns. [5]"
+          ]
+        },
+        {
+          "heading": "Exercise, caloric restriction, and selected devices",
+          "paragraphs": [
+            "Exercise training improves exercise capacity and quality of life in HFpEF, although a reduction in HF hospitalization or death has not been consistently demonstrated. Programs should be individualized, include aerobic and resistance components when feasible, and account for frailty and musculoskeletal limitation. [2][5]",
+            "For recurrent hospitalization with persistent NYHA class III symptoms despite optimized therapy, unstable volume status, cardiorenal syndrome, or difficult differentiation of HF from obesity or lung disease, pulmonary artery pressure monitoring may be considered at centers able to manage transmitted data. [5] Interatrial shunting, splanchnic nerve ablation, and rate-adaptive pacing have not established routine benefit in HFpEF. [5]"
+          ]
+        }
+      ],
+      "bullets": [
+        "Screen for obstructive sleep apnea when symptoms, resistant hypertension, AF rhythm-control strategy, nocturnal hypoxemia, or marked obesity raises suspicion; treat for symptom and sleep-quality benefit rather than assuming cardiovascular event reduction. [2][5]",
+        "Evaluate CAD when dyspnea could represent an anginal equivalent. Manage secondary prevention and consider revascularization according to coronary disease indications rather than as routine HFpEF therapy. [5]"
+      ],
+      "table": {
+        "caption": "Monitoring after therapeutic changes in HFpEF. [5]",
+        "columns": [
+          "Clinical situation",
+          "What to reassess",
+          "Finding that should trigger action"
+        ],
+        "rows": [
+          [
+            "After SGLT2 inhibitor initiation",
+            "Volume status, blood pressure, renal function, genital symptoms, diabetes sick-day risk. [5]",
+            "Symptomatic hypotension or volume depletion: reduce loop diuretic or other nonessential antihypertensive therapy before abandoning disease-modifying treatment when clinically appropriate. [2][5]"
+          ],
+          [
+            "After MRA, ARNI, or ARB initiation or titration",
+            "Potassium, creatinine/eGFR, blood pressure, concurrent potassium supplementation, NSAID or trimethoprim exposure. [5]",
+            "Hyperkalemia, clinically meaningful kidney-function decline, or symptomatic hypotension: adjust the responsible agent and interacting therapies. [5]"
+          ],
+          [
+            "Persistent exertional dyspnea despite treatment",
+            "Congestion, AF burden and rate response, ischemia, pulmonary disease, obesity-related limitation, anemia, sleep apnea, and diagnostic certainty. [5]",
+            "Discordant clinical and resting tests: proceed to stress echocardiography, cardiopulmonary exercise testing, or invasive exercise hemodynamics when results will alter management. [5][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prognosis-referral",
+      "eyebrow": "Follow-up",
+      "heading": "Communicate persistent risk and refer when the phenotype is uncertain or unstable",
+      "intro": "A preserved EF does not confer benign prognosis.",
+      "paragraphs": [
+        "HFpEF remains associated with recurrent hospitalization, progressive functional decline, and cardiovascular and noncardiovascular mortality. A U.S. Markov model based on contemporary trial populations estimated that over 10 years, 37% of patients would experience at least 1 HF hospitalization, 26% cardiovascular death, and mean life expectancy of 6.1 years from age 72; these estimates are model-based and may be optimistic relative to routine practice. [3]",
+        "Refer to cardiology or an HF specialist when diagnosis remains uncertain, suspected amyloidosis or other specific cardiomyopathy is present, pulmonary hypertension or right-heart dysfunction is disproportionate, recurrent HF admissions occur, diuretic requirements escalate, hypotension or renal dysfunction complicates therapy, or symptoms persist despite optimized therapy. [2][5]"
+      ],
+      "bullets": [
+        "Use patient-reported health status, functional capacity, weight and congestion trends, blood pressure, kidney function, potassium, AF status, and hospitalizations to guide follow-up intensity. [1][5]",
+        "Introduce supportive and palliative care early for persistent symptom burden, frailty, recurrent admissions, or uncertainty about acceptable treatment tradeoffs; this is not limited to end-of-life care. [7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical features that should prompt reassessment of diagnosis or escalation of care. [5]",
+        "columns": [
+          "Feature",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Persistent dyspnea with low natriuretic peptide levels and obesity",
+            "Do not dismiss HFpEF; reassess objective congestion and consider exercise-based or invasive filling-pressure evaluation. [5]"
+          ],
+          [
+            "Marked wall thickening, neuropathy, carpal tunnel syndrome, spinal stenosis, or discordant ECG voltage",
+            "Evaluate for cardiac amyloidosis before treating as uncomplicated HFpEF. [5]"
+          ],
+          [
+            "Recurrent admissions or NYHA class III symptoms despite therapy",
+            "Confirm adherence, reassess congestion and comorbidity triggers, optimize disease-modifying therapy, and consider pulmonary artery pressure monitoring or HF specialty referral. [5]"
+          ],
+          [
+            "Worsening right-sided dysfunction or pulmonary hypertension",
+            "Reevaluate for postcapillary versus precapillary pulmonary hypertension, lung disease, thromboembolic disease, valve disease, and advanced HFpEF physiology. [5]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can normal BNP or NT-proBNP exclude HFpEF?",
+      "answer": "No. Natriuretic peptide concentrations may be normal or lower than expected in HFpEF, especially with obesity. When clinical probability remains high, use diagnostic scoring and consider stress echocardiography or invasive exercise hemodynamics. [2][5]"
+    },
+    {
+      "question": "What is the first disease-modifying medication for HFpEF?",
+      "answer": "An SGLT2 inhibitor is foundational therapy for most symptomatic patients without contraindications. Dapagliflozin 10 mg daily and empagliflozin 10 mg daily reduced worsening HF outcomes in pivotal HFpEF trials. [2][5]"
+    },
+    {
+      "question": "When should invasive exercise hemodynamics be used?",
+      "answer": "Use it when unexplained exertional symptoms persist despite nondiagnostic resting evaluation and the result will change management. Elevated PCWP at rest or during exercise supports HFpEF physiology. [5][11]"
+    },
+    {
+      "question": "Should beta-blockers be routinely prescribed for HFpEF?",
+      "answer": "No. Use beta-blockers for a separate indication, such as angina or AF rate control. Routine use lacks established HFpEF benefit and can impair exercise tolerance through chronotropic incompetence. [2][5]"
+    },
+    {
+      "question": "Which patients with HFpEF should receive semaglutide?",
+      "answer": "Consider it for obesity-related HFpEF after confirming HF physiology and reviewing contraindications. STEP-HFpEF enrolled patients with BMI at least 30 kg/m² and no diabetes; semaglutide improved symptoms, weight, and 6-minute walk distance. [1]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

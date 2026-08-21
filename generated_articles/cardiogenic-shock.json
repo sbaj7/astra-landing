@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care Cardiology",
+  "title": "Cardiogenic Shock",
+  "summary": "Cardiogenic shock requires immediate recognition of tissue hypoperfusion, rapid identification of a reversible cause, phenotype-directed vasoactive support, serial reassessment, and early escalation or transfer when pharmacologic support cannot preserve end-organ perfusion.",
+  "seoDescription": "Physician guide to cardiogenic shock diagnosis, hemodynamic monitoring, vasoactive support, revascularization, mechanical support, and prognosis.",
+  "clinicalQuestion": "How should clinicians rapidly diagnose, phenotype, stabilize, monitor, and escalate care for adults with cardiogenic shock?",
+  "specialty": "Cardiology and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "cardiogenic shock",
+    "SCAI shock stages",
+    "pulmonary artery catheter",
+    "vasopressors",
+    "inotropes",
+    "mechanical circulatory support",
+    "acute myocardial infarction"
+  ],
+  "keyTakeaways": [
+    "Do not require hypotension to diagnose cardiogenic shock; hypoperfusion may precede or coexist with preserved blood pressure. [9][14]",
+    "Obtain ECG, chest radiography, and urgent transthoracic echocardiography or point-of-care ultrasound while measuring lactate, blood gas, CBC, metabolic panel, troponin, and natriuretic peptides. [19]",
+    "In acute MI-associated shock, urgent culprit-vessel revascularization is the intervention with established mortality benefit. [9][11]",
+    "Use serial clinical, biochemical, and hemodynamic perfusion markers rather than a blood-pressure target alone; no definitive cardiogenic-shock MAP target has been established. [9]",
+    "Norepinephrine is generally favored when vasopressor support is required; dopamine and epinephrine have safety signals including arrhythmia, refractory shock, and lactic acidosis. [9]",
+    "Reassess shock severity within hours and at 24 hours. More than one-half of patients initially classified as SCAI B or C deteriorated by 24 hours in a contemporary registry. [8]"
+  ],
+  "sections": [
+    {
+      "id": "recognition-and-initial-assessment",
+      "eyebrow": "First hour",
+      "heading": "Recognize hypoperfusion and define the immediate phenotype",
+      "intro": "Treat cardiogenic shock as a dynamic syndrome rather than a single blood-pressure threshold.",
+      "paragraphs": [
+        "Cardiogenic shock is low cardiac output with end-organ hypoperfusion. Hypotension is common but not required: patients may have evolving hypoperfusion with initially preserved arterial pressure. The 2025 ACC concise clinical guidance emphasizes early recognition using congestion findings plus hypoperfusion markers and immediate assessment with laboratory testing, ECG, chest radiography, and echocardiography or point-of-care ultrasound when available. [19][14]",
+        "At presentation, determine whether the dominant mechanism is acute MI, acute or acute-on-chronic heart failure, acute valvular or mechanical complication, arrhythmia, myocarditis, right ventricular failure, tamponade, pulmonary embolism, or mixed shock. This distinction changes the urgency of coronary angiography, volume strategy, vasoactive selection, ventilatory approach, and selection of temporary mechanical circulatory support (tMCS). [9][14]",
+        "Assign a SCAI shock stage and document its trajectory. Stages range from A, at risk, to E, extremis; stages C through E identify overt hypoperfusion requiring intervention, treatment failure, or circulatory collapse. Serial staging is more informative than baseline staging alone. [9][8]"
+      ],
+      "bullets": [
+        "Look for hypoperfusion: altered mentation, cool or mottled extremities, oliguria, rising lactate, metabolic acidosis, worsening creatinine, or hepatic injury. [9]",
+        "Assess congestion and ventricular phenotype: jugular venous pressure, pulmonary edema, peripheral edema, focused cardiac and lung ultrasound, and formal echocardiography. [9][19]",
+        "Obtain early lactate and repeat it serially; the ACC guidance cited in the perfusion review supports arterial lactate monitoring every 1 to 4 hours. [9]",
+        "Use arterial-line monitoring and consider early pulmonary artery catheterization when shock is established or phenotype, filling pressures, right ventricular function, or response to therapy is uncertain. [19][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Bedside SCAI shock features relevant to triage and escalation. [9]",
+        "columns": [
+          "Stage",
+          "Operational clinical meaning",
+          "High-value findings"
+        ],
+        "rows": [
+          [
+            "B: Beginning",
+            "Hemodynamic instability without clear hypoperfusion",
+            "SBP <90 mm Hg, MAP <60 mm Hg, or major decline from baseline; normal lactate in the consensus framework. [9]"
+          ],
+          [
+            "C: Classic",
+            "Hypoperfusion requiring treatment beyond volume resuscitation",
+            "Lactate \u22652 mmol/L, renal or hepatic injury, hypotension requiring drugs or devices, or low cardiac output with elevated filling pressures. [9]"
+          ],
+          [
+            "D: Deteriorating",
+            "Failure of initial therapy",
+            "Worsening perfusion despite initial treatment; need for multiple vasopressors or addition of MCS. [9]"
+          ],
+          [
+            "E: Extremis",
+            "Refractory circulatory collapse",
+            "Cardiac arrest, ongoing CPR, profound hypotension despite maximal support, severe acidosis, or marked hyperlactatemia. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-and-hemodynamic-workup",
+      "eyebrow": "Hemodynamic definition",
+      "heading": "Use multimodal monitoring to identify the limiting physiology",
+      "intro": "A normalizing MAP does not prove restoration of tissue perfusion.",
+      "paragraphs": [
+        "Initial testing should identify the precipitant and quantify organ injury: CBC, comprehensive metabolic panel, lactate, arterial or venous blood gas, troponin, natriuretic peptides, ECG, chest radiography, and urgent echocardiography or point-of-care ultrasound. [19] Echocardiography should assess LV and RV systolic function, regional wall-motion abnormalities, acute mitral regurgitation, ventricular septal defect, pericardial effusion, and major valvular disease.",
+        "Pulmonary artery catheterization can distinguish predominant LV, RV, biventricular, and vasodilatory components and guide selection or escalation of vasoactive drugs, diuresis, fluids, ventilation, and tMCS. Observational data associate complete invasive hemodynamic profiling with lower in-hospital mortality, but prospective trials have not established a mortality benefit from hemodynamic-guided resuscitation itself. [9][8]",
+        "Interpret macrocirculatory measures with perfusion markers. MAP, cardiac index, and venous oxygen saturation can improve while microcirculatory hypoperfusion persists. Serial lactate, urine output, renal and hepatic function, mentation, peripheral temperature, and capillary refill remain essential response measures. [9]"
+      ],
+      "bullets": [
+        "Calculate cardiac power output when cardiac output is available: CPO = MAP \u00d7 cardiac output/451; low CPO is associated with mortality and supports concern for severe pump failure. [8][9]",
+        "Assess RV dysfunction with right atrial pressure, pulmonary artery pulsatility index, right atrial pressure/pulmonary capillary wedge pressure ratio, and echocardiography; RV dysfunction is associated with higher mortality. [9]",
+        "Do not treat ScvO2 and mixed venous oxygen saturation as interchangeable during shock; their relationship becomes unreliable with altered regional blood flow and low venous oxygen saturation. [9]",
+        "A falling or persistently elevated lactate after initial stabilization signals inadequate perfusion or impaired clearance and should prompt reassessment of diagnosis, hemodynamics, coronary flow, congestion, and support strategy. [9][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Perfusion-directed monitoring in cardiogenic shock. [9][19]",
+        "columns": [
+          "Domain",
+          "Measure",
+          "Interpretation and action"
+        ],
+        "rows": [
+          [
+            "Clinical",
+            "Mentation, extremity temperature and mottling, jugular venous pressure, pulmonary congestion, urine output",
+            "Persistent hypoperfusion or congestion despite acceptable pressure requires re-phenotyping and escalation of support or decongestion. [9]"
+          ],
+          [
+            "Metabolic",
+            "Lactate, bicarbonate, pH, creatinine, aminotransferases",
+            "Trend rather than single values; worsening lactate or metabolic acidosis indicates failed resuscitation until another explanation is established. [9][8]"
+          ],
+          [
+            "Hemodynamic",
+            "MAP, cardiac output/index, filling pressures, CPO, pulmonary artery pulsatility index, SvO2",
+            "Use to define LV, RV, biventricular, or mixed physiology and to guide vasoactive and device selection. [9][19]"
+          ],
+          [
+            "Imaging",
+            "Urgent echocardiography or point-of-care ultrasound",
+            "Identify ventricular failure, acute ischemic complications, severe valvular disease, tamponade, and congestion. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "immediate-management",
+      "eyebrow": "Stabilization",
+      "heading": "Restore perfusion while treating the cause",
+      "intro": "Support is a bridge to definitive therapy, recovery, advanced heart failure therapy, or an informed transition in goals of care.",
+      "paragraphs": [
+        "Stabilize airway, oxygenation, and ventilation while avoiding unnecessary delays to definitive treatment. Positive-pressure ventilation can improve LV afterload in profound LV failure but may worsen preload-dependent RV failure; ventilatory settings therefore require phenotype-specific hemodynamic reassessment. [9]",
+        "In acute MI-associated shock, pursue urgent coronary angiography and culprit-vessel revascularization. Early revascularization is the treatment with established mortality benefit in this population. [9][11] Concurrently identify mechanical complications and urgent surgical or structural-intervention needs.",
+        "Use vasoactive drugs as temporary support, titrated to arterial pressure and serial indicators of end-organ perfusion. A fixed MAP target is not evidence-based in cardiogenic shock. MAP \u226565 mm Hg is commonly used as an initial pragmatic target, but current guidance emphasizes individualized targets and serial perfusion assessment rather than pressure alone. [9]"
+      ],
+      "bullets": [
+        "Give fluids only when hypovolemia or preload responsiveness is plausible; indiscriminate fluid loading can worsen pulmonary edema and biventricular congestion. [9][14]",
+        "Use diuresis or other decongestive therapy when congestion is prominent and perfusion can be maintained; elevated biventricular filling pressures are associated with higher mortality. [9]",
+        "Correct reversible precipitants: acute coronary occlusion, unstable tachy- or bradyarrhythmia, mechanical complication, severe valve lesion, tamponade, pulmonary embolism, infection, bleeding, or medication-related decompensation. [14][19]",
+        "Engage a multidisciplinary shock team early and arrange transfer when advanced invasive hemodynamics, tMCS, durable mechanical support, or transplant evaluation may be needed. [19][14]"
+      ],
+      "subsections": [
+        {
+          "heading": "Vasoactive therapy",
+          "paragraphs": [
+            "When hypotension and insufficient perfusion pressure require a vasopressor, norepinephrine is generally preferred. In the SOAP II cardiogenic-shock subgroup, dopamine was associated with more arrhythmias and higher 28-day mortality than norepinephrine. In the small OptimaCC trial of acute MI-associated shock, epinephrine was associated with more refractory shock and lactic acidosis than norepinephrine. [9]",
+            "Add an inotrope when impaired contractility and low output persist after adequate perfusion pressure is addressed. Dobutamine and milrinone are commonly used, but the DOREMI randomized trial found no significant difference between them in a composite clinical outcome. Agent choice should therefore be individualized to blood pressure, arrhythmia burden, renal function, beta-blocker exposure, pulmonary vascular/RV physiology, and local familiarity; source material does not provide validated dosing details for this setting. [4][9]"
+          ],
+          "bullets": [
+            "Norepinephrine: preferred vasopressor when low blood pressure compromises organ perfusion; monitor for excessive afterload, ischemia, tachyarrhythmia, and peripheral ischemia. [9]",
+            "Dobutamine or milrinone: consider for persistent low-output physiology; monitor rhythm, blood pressure, lactate trajectory, renal function, and vasopressor requirement. No randomized evidence establishes superiority of one over the other. [4][9]",
+            "Avoid interpreting epinephrine-associated lactate elevation as necessarily improved or worsened perfusion without integrating the entire clinical and hemodynamic trajectory. [9]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Vasoactive selection principles in cardiogenic shock. [9][4]",
+        "columns": [
+          "Clinical problem",
+          "Preferred approach",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Hypotension with inadequate perfusion pressure",
+            "Start norepinephrine and titrate to an individualized pressure and perfusion response. [9]",
+            "No definitive cardiogenic-shock MAP target has been tested in randomized trials. [9]"
+          ],
+          [
+            "Persistent low output despite adequate pressure",
+            "Add an inotrope such as dobutamine or milrinone, selected by phenotype and safety considerations. [4][9]",
+            "DOREMI found no clear outcome difference between milrinone and dobutamine. [4]"
+          ],
+          [
+            "Consideration of dopamine",
+            "Generally avoid as first-line vasopressor when norepinephrine is available. [9]",
+            "Dopamine was associated with more arrhythmias and higher 28-day mortality in the cardiogenic-shock subgroup of SOAP II. [9]"
+          ],
+          [
+            "Consideration of epinephrine in acute MI-associated shock",
+            "Reserve for selected circumstances when alternatives are insufficient. [9]",
+            "Small randomized data found more refractory shock and lactic acidosis versus norepinephrine. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "mechanical-circulatory-support",
+      "eyebrow": "Escalation",
+      "heading": "Escalate to temporary mechanical circulatory support selectively",
+      "intro": "Device selection requires a defined physiologic goal and an exit strategy.",
+      "paragraphs": [
+        "Consider tMCS when end-organ perfusion cannot be maintained with pharmacologic therapy, when vasoactive requirements are escalating, or when a bridge is needed to myocardial recovery, definitive intervention, durable mechanical support, transplant, or diagnostic decision-making. The ACC guidance emphasizes invasive hemodynamic monitoring, continued reassessment, advanced-therapy candidacy, and transfer pathways. [19]",
+        "Routine tMCS for all cardiogenic shock is not supported. A contemporary review notes that randomized trials had not shown survival benefit from routine tMCS, and the ECLS-SHOCK trial found no benefit from routine extracorporeal life support in infarct-related shock. [14][3] Device use should therefore be individualized rather than driven by shock stage alone.",
+        "Choose support according to ventricular involvement, oxygenation requirement, congestion, vascular access, coronary and valvular anatomy, neurologic status, bleeding risk, anticipated duration, and whether the patient has a viable recovery or advanced-therapy pathway. Reassess for device-related bleeding, limb ischemia, stroke, hemolysis, infection, ventricular distension, and inadequate unloading or flow. [14][19]"
+      ],
+      "bullets": [
+        "LV-predominant shock: consider an LV-unloading or forward-flow strategy when severe LV failure persists despite pharmacologic stabilization; selection depends on institutional capability and the intended bridge. [14][22]",
+        "RV-predominant shock: avoid excessive preload reduction and high intrathoracic pressure; define RV failure using echocardiography and invasive hemodynamics before choosing support. [9]",
+        "Biventricular failure or severe hypoxemia: extracorporeal support may provide systemic and respiratory support, but routine use in infarct-related shock has not improved survival. [3][14]",
+        "Before cannulation, document the exit strategy: recovery, revascularization or valve intervention, bridge to durable support or transplant, bridge to decision, or non-escalation based on prognosis and patient preferences. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "When to reassess and escalate support. [8][19][14]",
+        "columns": [
+          "Finding",
+          "Implication",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Rising lactate, worsening acidosis, oliguria, altered mentation, or escalating vasoactive support",
+            "Persistent or worsening hypoperfusion",
+            "Repeat bedside imaging and hemodynamic assessment; address reversible cause and activate shock-team review for tMCS or transfer. [19][14]"
+          ],
+          [
+            "Progression from SCAI B or C within the first 24 hours",
+            "High-risk trajectory",
+            "Escalate monitoring and support rather than waiting for refractory shock. [8]"
+          ],
+          [
+            "Persistent congestion with low output or suspected RV failure",
+            "Phenotype may be misclassified or incompletely treated",
+            "Use pulmonary artery catheter data and echocardiography to guide preload, afterload, inotrope, ventilator, and device decisions. [9][19]"
+          ],
+          [
+            "No viable bridge or irreversible multiorgan or neurologic injury",
+            "Potentially nonbeneficial escalation",
+            "Conduct structured goals-of-care discussion with patient or surrogate and multidisciplinary team. [2][14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prognosis-and-serial-reassessment",
+      "eyebrow": "Prognosis",
+      "heading": "Communicate prognosis using trajectory, phenotype, and patient reserve",
+      "intro": "Avoid prognostication from a single variable or a single early shock stage.",
+      "paragraphs": [
+        "Mortality remains substantial. Contemporary reviews report short-term mortality exceeding 30%, and ACC communications cite an in-hospital mortality range of 30% to 50%. [14][19] In a multicenter registry, unadjusted in-hospital mortality was highest for SCAI stage E at presentation, 59.6%, and was particularly high when patients progressed to stage E by 24 hours. [8]",
+        "The first 24 hours are prognostically decisive. In a registry of 3,268 patients, more than one-half of patients initially classified as SCAI B or C worsened by 24 hours; patients with any stage worsening by 24 hours had 44.6% unadjusted in-hospital mortality. Lower lactate among survivors was a consistent discriminating feature in stages C through E. [8]",
+        "For acute MI-associated shock, longer-term outcomes remain poor even among hospital survivors. In a population cohort, mortality was 40.9% at 1 year and 58.9% at 5 years; among hospital survivors, 47.5% were readmitted within 1 year and 42.0% required greater care support at discharge than before admission. These data are prognostic context, not a substitute for individualized assessment. [11]"
+      ],
+      "bullets": [
+        "Risk modifiers include worsening SCAI stage, elevated lactate, older age, organ dysfunction, frailty or preadmission dependency, and need for renal replacement therapy. [8][11]",
+        "Use risk scores cautiously. A 2026 systematic review found no clearly superior model; CardShock had the highest pooled discrimination, but performance differences from several other scores were small. [13]",
+        "Discuss prognosis iteratively after initial stabilization, serial neurologic assessment when cardiac arrest occurred, response to revascularization or support, and clarification of the feasible exit strategy. [8][14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Trajectory-based prognostic information for discussions with families. [8][11]",
+        "columns": [
+          "Time point",
+          "Observed outcome",
+          "Clinical use"
+        ],
+        "rows": [
+          [
+            "First 24 hours",
+            "Any SCAI-stage worsening was associated with 44.6% unadjusted in-hospital mortality in a multicenter registry. [8]",
+            "Treat worsening as a signal for urgent reassessment and escalation, not merely a prognostic label. [8]"
+          ],
+          [
+            "Acute MI-associated shock hospitalization",
+            "30.2% died in hospital in a 9,789-patient population cohort. [11]",
+            "Frame early uncertainty while emphasizing the importance of definitive revascularization and organ-response trajectory. [11][9]"
+          ],
+          [
+            "One year after acute MI-associated shock",
+            "40.9% overall mortality; among hospital survivors, 47.5% were readmitted within 1 year. [11]",
+            "Plan postdischarge heart-failure, ischemic, renal, functional, and rehabilitation follow-up before discharge. [11]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can cardiogenic shock be present without hypotension?",
+      "answer": "Yes. Hypoperfusion may occur with preserved blood pressure; assess lactate, urine output, mentation, skin perfusion, renal and hepatic injury, congestion, and hemodynamics rather than relying on blood pressure alone. [9][14]"
+    },
+    {
+      "question": "What is the preferred initial vasopressor in cardiogenic shock?",
+      "answer": "Norepinephrine is generally preferred when vasopressor support is needed for inadequate perfusion pressure. Dopamine was associated with more arrhythmias and higher 28-day mortality in the cardiogenic-shock subgroup of SOAP II, while epinephrine caused more refractory shock and lactic acidosis than norepinephrine in a small acute MI-shock trial. [9]"
+    },
+    {
+      "question": "When should a pulmonary artery catheter be used?",
+      "answer": "Consider early pulmonary artery catheterization for established shock, uncertain phenotype, suspected RV or biventricular failure, persistent hypoperfusion, escalating vasoactive requirements, or tMCS decisions. ACC guidance supports invasive hemodynamic monitoring for diagnosis and management, although randomized outcome benefit remains unproven. [19][9]"
+    },
+    {
+      "question": "Does routine mechanical circulatory support improve survival?",
+      "answer": "No. Routine tMCS has not consistently improved survival in randomized studies, and routine extracorporeal life support did not improve outcomes in infarct-related shock. Use devices selectively for refractory hypoperfusion with a clear physiologic objective and exit strategy. [14][3]"
+    },
+    {
+      "question": "What is the most important definitive intervention in acute MI-associated cardiogenic shock?",
+      "answer": "Urgent culprit-vessel revascularization is the intervention with established mortality benefit in acute MI-associated cardiogenic shock. [9][11]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cardiogenic Shock After Acute Myocardial Infarction: A ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2785943",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by MD Samsky \u00b7 2021 \u00b7 Cited by 522 \u2014 This review discusses the pathophysiology, diagnosis, and management of cardiogenic shock associated with acute myocardial infarction.",
+      "score": 0.45754927
+    },
+    {
+      "number": 2,
+      "title": "Cardiogenic Shock",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/abs/10.1056/NEJM199406163302406",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RM Califf \u00b7 1994 \u00b7 Cited by 431 \u2014 The management of this condition requires a rapid, well-organized approach. Avoiding futile intervention that is unlikely to prolong life or",
+      "score": 0.28742817
+    },
+    {
+      "number": 3,
+      "title": "Extracorporeal Life Support in Infarct-Related Cardiogenic ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2307227",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by H Thiele \u00b7 2023 \u00b7 Cited by 876 \u2014 Cardiogenic shock develops in up to 10% of hospitalized patients with acute myocardial infarction and is the leading cause of death among these",
+      "score": 0.236596
+    },
+    {
+      "number": 4,
+      "title": "Milrinone as Compared with Dobutamine in the Treatment ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2026845",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by R Mathew \u00b7 2021 \u00b7 Cited by 372 \u2014 Cardiogenic shock is associated with substantial morbidity and mortality. Although inotropic support is a mainstay of medical therapy for",
+      "score": 0.17372264
+    },
+    {
+      "number": 5,
+      "title": "Shock - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1013",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Shock\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences\n\nPatient infor",
+      "score": 0.32088566
+    },
+    {
+      "number": 6,
+      "title": "Acute heart failure - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/62",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Clinical diagnosis is supported by ancillary tests such as ECG, chest x-ray, B-type natriuretic peptide, and echocardiogram. In cases where echocardiographic images are suboptimal or when an unusual cause of heart failure is suspected, and for diagnosis of specific cardiomyopathies, other tests (e.g",
+      "score": 0.26273942
+    },
+    {
+      "number": 7,
+      "title": "name drug's market exclusivity expires is critical to patient care. ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/183787/jlt0422_1657a_1658.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "The implications of choice: prescribing generic or preferred pharmaceuticals improves medication adherence for chronic conditions. ... ably with cardiogenic shock",
+      "score": 0.30697402
+    },
+    {
+      "number": 8,
+      "title": "Serial Shock Severity Assessment Within 72 Hours After Diagnosis: A Cardiogenic Shock Working Group Report",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.069",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "A total of 3,268 patients (57% HF-CS; 27% MI-CS) were included. At CS diagnosis, CSWG-SCAI stage breakdown was 593 (18.1%) stage B, 528 (16.2%) stage C, 1,659 (50.8%) stage D, and 488 (14.9%) noncardiac arrest stage E. At 24 hours, >50% of stages B and C patients worsened, but 86% of stage D patient",
+      "score": 0.5863576
+    },
+    {
+      "number": 9,
+      "title": "Optimal Perfusion Targets in Cardiogenic Shock",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2022.100034",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "in line with the Kidney Disease: Improving Global Outcomes guidelines.31 The goal with continuous RRT is to reverse life-threatening biochemical abnormalities and support end-organ function while awaiting evidence of renal recovery. There are no specific creatinine or eGFR thresholds yet established",
+      "score": 0.5843666
+    },
+    {
+      "number": 10,
+      "title": "Prognosis in Patients With Cardiogenic Shock Who ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacasi.2022.10.004",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "by T Kondo \u00b7 2023 \u00b7 Cited by 38 \u2014 The in-hospital mortality for patients with CS, overall, was 32.4%. The in-hospital mortality was similar in patients with AMI (30.0%), HF (32.6",
+      "score": 0.45900398
+    },
+    {
+      "number": 11,
+      "title": "Long-Term Outcomes of Cardiogenic Shock Complicating Myocardial Infarction",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.06.026",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Although short-term outcomes have been well described among AMI-CS patients, little is known about long-term outcomes and prognosis. Most cohorts are small, often consisting of a few hundred patients,14 and with few data beyond 1-year.1,15 Attempts at gathering population-based data typically involv",
+      "score": 0.45101276
+    },
+    {
+      "number": 12,
+      "title": "FDA-approved heterocyclic molecules for cancer treatment",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)10380-X",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Hossain \u00b7 2024 \u00b7 Cited by 70 \u2014 REBIC 400 mg daily had serious adverse reactions, including anemia and cardiac failure, whereas 1 % of patients suffered cardiogenic shock as fatal adverse",
+      "score": 0.2617298
+    },
+    {
+      "number": 13,
+      "title": "Predictive Models for Mortality in Cardiogenic... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2026/01000/predictive_models_for_mortality_in_cardiogenic.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cardiogenic shock (CS) is a time-critical medical emergency of low cardiac output state leading to a maladaptive, self-perpetuating cycle of impaired tissue perfusion, tissue hypoxia, and eventually irreversible multiple organ failure (1). Despite therapeutic advances, outcomes remain suboptimal (2,",
+      "score": 0.48469776
+    },
+    {
+      "number": 14,
+      "title": "Advances in the Management of Cardiogenic Shock : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/abstract/10.1097/ccm.0000000000005919~advances-in-the-management-of-cardiogenic-shock",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CS results in short-term mortality exceeding 30% despite standard therapy. While acute myocardial infarction (AMI) has been the focus of most CS research, heart failure-related CS now predominates at many centers. CS can present with a wide spectrum of shock severity, including patients who are norm",
+      "score": 0.41108778
+    },
+    {
+      "number": 15,
+      "title": "Thirty-Year Trends (1975 to 2005) in the Magnitude of, ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/EDHE/00003017-200903100-00009.fulltext",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Patients in whom cardiogenic shock developed had a significantly greater risk of dying during hospitalization (65.4%) than those who did not",
+      "score": 0.16906294
+    },
+    {
+      "number": 16,
+      "title": "Vasopressin in cardiogenic shock: pathophysiology, clinical ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eschf/article/13/1/xvag053/8482915",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Filomia \u00b7 2026 \u00b7 Cited by 1 \u2014 Specific pharmacokinetic studies in patients with hepatic or renal dysfunction are lacking. Notably, vasopressin may retain its",
+      "score": 0.2761819
+    },
+    {
+      "number": 17,
+      "title": "Career Opportunity at ASHP",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajhp/article-pdf/43/6/1538/28370970/ajhp1538.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In patients with renal impairment/ dosage adjustment is necessary. Reduce or discontinue drug dosage until renal function is improved or restored.",
+      "score": 0.20731136
+    },
+    {
+      "number": 18,
+      "title": "Definitions of clinical study outcome measures for ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/46/2/190/7901151",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by C Wilkinson \u00b7 2025 \u00b7 Cited by 37 \u2014 Cardiogenic shock also includes (4) 'escalation' cardiogenic shock which is an increase in the number or intensity of intravenous therapies to address",
+      "score": 0.15870851
+    },
+    {
+      "number": 19,
+      "title": "American College of Cardiology Issues Concise Clinical Guidance on Evaluation and Management of Cardiogenic Shock - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/About-ACC/Press-Releases/2025/03/18/19/19/American-College-of-Cardiology-Issues-Concise-Clinical-Guidance-on-Evaluation-and-Management-of-Cardiogenic-Shock",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "CS is a life-threatening condition that occurs when the heart is unable to pump enough oxygen-rich blood to the body\u2019s organs, resulting in hypotension (low blood pressure) and multi-organ damage or failure. CS has a high in-hospital mortality rate, ranging from 30 to 50%, and is one of the most com",
+      "score": 0.6991933
+    },
+    {
+      "number": 20,
+      "title": "2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/Guidelines/Guidelines/2025/03/17/19/42/Cardiogenic-Shock-Concise-Clinical-Guidance",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "[]( Topics\n\n       Acute Coronary Syndromes \n       Anticoagulation Management \n       Arrhythmias and Clinical EP \n       Cardiac Surgery \n       Cardio-Oncology \n       Cardiovascular Care Team \n       Congenital Heart Disease and Pediatric Cardiology \n       COVID-19 Hub \n       Diabetes and Card",
+      "score": 0.62523276
+    },
+    {
+      "number": 21,
+      "title": "Study Details | NCT03437369 | Efficacy and Safety on Heart Rate Control With Ivabradine on Cardiogenic Shock | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03437369",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Quality control (QC) review National Library of Medicine (NLM) staff perform a limited review of submitted study records for apparent errors, deficiencies, or inconsistencies. NLM staff identify potential major and advisory issues and provide comments directly to the study sponsor or investigator. M",
+      "score": 0.4993414
+    },
+    {
+      "number": 22,
+      "title": "Cardiogenic Shock and Acute Mechanical Circulatory Support",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/education/content-collections/focus/cardiogenic-shock-and-acute-mechanical-circulatory-support",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Table of contents\n\nCardiogenic shock is a life-threatening condition that demands early recognition and timely intervention. Despite advances in acute cardiovascular care, cardiogenic shock remains associated with high mortality, so structured diagnostic and therapeutic strategies are needed. This m",
+      "score": 0.47753036
+    },
+    {
+      "number": 23,
+      "title": "NCT06475456 | Pilot Italian Cardiogenic Shock Initiative",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT06475456",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Human subjects protection review board A group of people who review, approve, and monitor the clinical study's protocol. Their role is to protect the rights and welfare of people participating in a study (referred to as human research subjects), such as reviewing the informed consent form. The group",
+      "score": 0.3725742
+    },
+    {
+      "number": 24,
+      "title": "Study Details | NCT07562932 | Assessing Catecholamine ...",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT07562932",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "stabilization. All administration and monitoring will follow current clinical guidelines for cardiogenic shock. | [...] Choi KH, Kang D, Park H, Park TK, Lee JM, Song YB, Hahn JY, Choi SH, Gwon HC, Cho J, Yang JH. In-hospital and long-term outcomes of cardiogenic shock complicating myocardial infarc",
+      "score": 0.32533884
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Cardiogenic Shock After Acute Myocardial Infarction: A ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2785943",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by MD Samsky \u00b7 2021 \u00b7 Cited by 522 \u2014 This review discusses the pathophysiology, diagnosis, and management of cardiogenic shock associated with acute myocardial infarction.",
+      "score": 0.45754927
+    },
+    {
+      "number": 2,
+      "title": "Cardiogenic Shock",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/abs/10.1056/NEJM199406163302406",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by RM Califf \u00b7 1994 \u00b7 Cited by 431 \u2014 The management of this condition requires a rapid, well-organized approach. Avoiding futile intervention that is unlikely to prolong life or",
+      "score": 0.28742817
+    },
+    {
+      "number": 3,
+      "title": "Extracorporeal Life Support in Infarct-Related Cardiogenic ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2307227",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by H Thiele \u00b7 2023 \u00b7 Cited by 876 \u2014 Cardiogenic shock develops in up to 10% of hospitalized patients with acute myocardial infarction and is the leading cause of death among these",
+      "score": 0.236596
+    },
+    {
+      "number": 4,
+      "title": "Milrinone as Compared with Dobutamine in the Treatment ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2026845",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by R Mathew \u00b7 2021 \u00b7 Cited by 372 \u2014 Cardiogenic shock is associated with substantial morbidity and mortality. Although inotropic support is a mainstay of medical therapy for",
+      "score": 0.17372264
+    },
+    {
+      "number": 5,
+      "title": "Shock - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1013",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "open menu\n\n# Shock\n\nEpidemiology\n\nEtiology\n\nCase history\n\nRecommendations\n\nHistory and exam\n\nTests\n\nDifferentials\n\nCriteria\n\nRecommendations\n\nTreatment algorithm\n\nEmerging\n\nPrevention\n\nPatient discussions\n\nMonitoring\n\nComplications\n\nPrognosis\n\nGuidelines\n\nImages and videos\n\nReferences\n\nPatient infor",
+      "score": 0.32088566
+    },
+    {
+      "number": 6,
+      "title": "Acute heart failure - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/62",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Clinical diagnosis is supported by ancillary tests such as ECG, chest x-ray, B-type natriuretic peptide, and echocardiogram. In cases where echocardiographic images are suboptimal or when an unusual cause of heart failure is suspected, and for diagnosis of specific cardiomyopathies, other tests (e.g",
+      "score": 0.26273942
+    },
+    {
+      "number": 7,
+      "title": "name drug's market exclusivity expires is critical to patient care. ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/183787/jlt0422_1657a_1658.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "The implications of choice: prescribing generic or preferred pharmaceuticals improves medication adherence for chronic conditions. ... ably with cardiogenic shock",
+      "score": 0.30697402
+    },
+    {
+      "number": 8,
+      "title": "Serial Shock Severity Assessment Within 72 Hours After Diagnosis: A Cardiogenic Shock Working Group Report",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.04.069",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "A total of 3,268 patients (57% HF-CS; 27% MI-CS) were included. At CS diagnosis, CSWG-SCAI stage breakdown was 593 (18.1%) stage B, 528 (16.2%) stage C, 1,659 (50.8%) stage D, and 488 (14.9%) noncardiac arrest stage E. At 24 hours, >50% of stages B and C patients worsened, but 86% of stage D patient",
+      "score": 0.5863576
+    },
+    {
+      "number": 9,
+      "title": "Optimal Perfusion Targets in Cardiogenic Shock",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2022.100034",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "in line with the Kidney Disease: Improving Global Outcomes guidelines.31 The goal with continuous RRT is to reverse life-threatening biochemical abnormalities and support end-organ function while awaiting evidence of renal recovery. There are no specific creatinine or eGFR thresholds yet established",
+      "score": 0.5843666
+    },
+    {
+      "number": 10,
+      "title": "Prognosis in Patients With Cardiogenic Shock Who ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacasi.2022.10.004",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "by T Kondo \u00b7 2023 \u00b7 Cited by 38 \u2014 The in-hospital mortality for patients with CS, overall, was 32.4%. The in-hospital mortality was similar in patients with AMI (30.0%), HF (32.6",
+      "score": 0.45900398
+    },
+    {
+      "number": 11,
+      "title": "Long-Term Outcomes of Cardiogenic Shock Complicating Myocardial Infarction",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.06.026",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Although short-term outcomes have been well described among AMI-CS patients, little is known about long-term outcomes and prognosis. Most cohorts are small, often consisting of a few hundred patients,14 and with few data beyond 1-year.1,15 Attempts at gathering population-based data typically involv",
+      "score": 0.45101276
+    },
+    {
+      "number": 12,
+      "title": "FDA-approved heterocyclic molecules for cancer treatment",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)10380-X",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by M Hossain \u00b7 2024 \u00b7 Cited by 70 \u2014 REBIC 400 mg daily had serious adverse reactions, including anemia and cardiac failure, whereas 1 % of patients suffered cardiogenic shock as fatal adverse",
+      "score": 0.2617298
+    },
+    {
+      "number": 13,
+      "title": "Predictive Models for Mortality in Cardiogenic... : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2026/01000/predictive_models_for_mortality_in_cardiogenic.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cardiogenic shock (CS) is a time-critical medical emergency of low cardiac output state leading to a maladaptive, self-perpetuating cycle of impaired tissue perfusion, tissue hypoxia, and eventually irreversible multiple organ failure (1). Despite therapeutic advances, outcomes remain suboptimal (2,",
+      "score": 0.48469776
+    },
+    {
+      "number": 14,
+      "title": "Advances in the Management of Cardiogenic Shock : Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/abstract/10.1097/ccm.0000000000005919~advances-in-the-management-of-cardiogenic-shock",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CS results in short-term mortality exceeding 30% despite standard therapy. While acute myocardial infarction (AMI) has been the focus of most CS research, heart failure-related CS now predominates at many centers. CS can present with a wide spectrum of shock severity, including patients who are norm",
+      "score": 0.41108778
+    },
+    {
+      "number": 15,
+      "title": "Thirty-Year Trends (1975 to 2005) in the Magnitude of, ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/EDHE/00003017-200903100-00009.fulltext",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Patients in whom cardiogenic shock developed had a significantly greater risk of dying during hospitalization (65.4%) than those who did not",
+      "score": 0.16906294
+    },
+    {
+      "number": 16,
+      "title": "Vasopressin in cardiogenic shock: pathophysiology, clinical ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eschf/article/13/1/xvag053/8482915",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Filomia \u00b7 2026 \u00b7 Cited by 1 \u2014 Specific pharmacokinetic studies in patients with hepatic or renal dysfunction are lacking. Notably, vasopressin may retain its",
+      "score": 0.2761819
+    },
+    {
+      "number": 17,
+      "title": "Career Opportunity at ASHP",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajhp/article-pdf/43/6/1538/28370970/ajhp1538.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In patients with renal impairment/ dosage adjustment is necessary. Reduce or discontinue drug dosage until renal function is improved or restored.",
+      "score": 0.20731136
+    },
+    {
+      "number": 18,
+      "title": "Definitions of clinical study outcome measures for ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/46/2/190/7901151",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by C Wilkinson \u00b7 2025 \u00b7 Cited by 37 \u2014 Cardiogenic shock also includes (4) 'escalation' cardiogenic shock which is an increase in the number or intensity of intravenous therapies to address",
+      "score": 0.15870851
+    },
+    {
+      "number": 19,
+      "title": "American College of Cardiology Issues Concise Clinical Guidance on Evaluation and Management of Cardiogenic Shock - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/About-ACC/Press-Releases/2025/03/18/19/19/American-College-of-Cardiology-Issues-Concise-Clinical-Guidance-on-Evaluation-and-Management-of-Cardiogenic-Shock",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "CS is a life-threatening condition that occurs when the heart is unable to pump enough oxygen-rich blood to the body\u2019s organs, resulting in hypotension (low blood pressure) and multi-organ damage or failure. CS has a high in-hospital mortality rate, ranging from 30 to 50%, and is one of the most com",
+      "score": 0.6991933
+    },
+    {
+      "number": 20,
+      "title": "2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/Guidelines/Guidelines/2025/03/17/19/42/Cardiogenic-Shock-Concise-Clinical-Guidance",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "[]( Topics\n\n       Acute Coronary Syndromes \n       Anticoagulation Management \n       Arrhythmias and Clinical EP \n       Cardiac Surgery \n       Cardio-Oncology \n       Cardiovascular Care Team \n       Congenital Heart Disease and Pediatric Cardiology \n       COVID-19 Hub \n       Diabetes and Card",
+      "score": 0.62523276
+    },
+    {
+      "number": 21,
+      "title": "Study Details | NCT03437369 | Efficacy and Safety on Heart Rate Control With Ivabradine on Cardiogenic Shock | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT03437369",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Quality control (QC) review National Library of Medicine (NLM) staff perform a limited review of submitted study records for apparent errors, deficiencies, or inconsistencies. NLM staff identify potential major and advisory issues and provide comments directly to the study sponsor or investigator. M",
+      "score": 0.4993414
+    },
+    {
+      "number": 22,
+      "title": "Cardiogenic Shock and Acute Mechanical Circulatory Support",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/education/content-collections/focus/cardiogenic-shock-and-acute-mechanical-circulatory-support",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Table of contents\n\nCardiogenic shock is a life-threatening condition that demands early recognition and timely intervention. Despite advances in acute cardiovascular care, cardiogenic shock remains associated with high mortality, so structured diagnostic and therapeutic strategies are needed. This m",
+      "score": 0.47753036
+    },
+    {
+      "number": 23,
+      "title": "NCT06475456 | Pilot Italian Cardiogenic Shock Initiative",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT06475456",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Human subjects protection review board A group of people who review, approve, and monitor the clinical study's protocol. Their role is to protect the rights and welfare of people participating in a study (referred to as human research subjects), such as reviewing the informed consent form. The group",
+      "score": 0.3725742
+    },
+    {
+      "number": 24,
+      "title": "Study Details | NCT07562932 | Assessing Catecholamine ...",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT07562932",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "stabilization. All administration and monitoring will follow current clinical guidelines for cardiogenic shock. | [...] Choi KH, Kang D, Park H, Park TK, Lee JM, Song YB, Hahn JY, Choi SH, Gwon HC, Cho J, Yang JH. In-hospital and long-term outcomes of cardiogenic shock complicating myocardial infarc",
+      "score": 0.32533884
+    }
+  ],
+  "publishedAt": "2026-08-21T00:16:05.343062Z",
+  "updatedAt": "2026-08-21T00:16:05.343062Z",
+  "readingMinutes": 7,
+  "slug": "cardiogenic-shock"
+}

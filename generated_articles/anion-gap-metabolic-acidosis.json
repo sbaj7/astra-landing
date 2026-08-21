@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Anion Gap Metabolic Acidosis",
+  "summary": "Use blood gas confirmation, anion-gap classification, potassium, kidney function, and urinary ammonium surrogates to rapidly distinguish life-threatening organic acid accumulation from gastrointestinal bicarbonate loss, renal tubular acidosis, chronic kidney disease, and chloride-related acidosis.",
+  "seoDescription": "Physician guide to evaluating high- and normal-anion-gap metabolic acidosis using blood gases, potassium, renal function, and urine indices.",
+  "clinicalQuestion": "How should clinicians classify and evaluate metabolic acidosis to identify urgent causes and distinguish renal from extrarenal bicarbonate loss?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "metabolic acidosis",
+    "anion gap",
+    "high anion gap metabolic acidosis",
+    "non-anion gap metabolic acidosis",
+    "hyperchloremic acidosis",
+    "renal tubular acidosis",
+    "urine anion gap",
+    "urine osmolal gap"
+  ],
+  "keyTakeaways": [
+    "Confirm a primary metabolic process with low bicarbonate and acidemia; arterial pH below 7.35 defines acidemia, while a low bicarbonate alone can also reflect chronic respiratory alkalosis. [3][13]",
+    "Calculate anion gap as Na \u2212 (Cl + HCO3); an elevated gap directs urgent evaluation for lactate, ketoacids, kidney failure, and toxic alcohol or salicylate exposure. [3][1][14]",
+    "In hyperchloremic metabolic acidosis, serum potassium and renal function are high-yield branch points: hypokalemia favors gastrointestinal bicarbonate loss or type 1/2 renal tubular acidosis, whereas hyperkalemia raises concern for type 4 renal tubular acidosis, hypoaldosteronism, or chronic kidney disease. [16][17][19]",
+    "When the cause of non-anion-gap acidosis remains unclear, directly measure urine ammonium when available or use urine osmolal gap and urine anion gap to distinguish appropriate renal ammonium excretion from impaired renal acidification. [16][19]"
+  ],
+  "sections": [
+    {
+      "id": "first-pass-triage",
+      "eyebrow": "Initial assessment",
+      "heading": "Confirm metabolic acidosis and identify immediately dangerous etiologies",
+      "intro": "Classify the acid-base disorder before attributing a low serum bicarbonate to metabolic acidosis.",
+      "paragraphs": [
+        "Obtain a blood gas with a basic metabolic panel when bicarbonate is low. Metabolic acidosis is supported by reduced plasma bicarbonate with acidemia; arterial pH below 7.35 defines acidemia. A low plasma bicarbonate without acidemia may represent renal compensation for chronic respiratory alkalosis, so urine indices should not be used as a substitute for defining the primary acid-base disorder. [3][13]",
+        "Assess respiratory compensation with Winter formula: expected PCO2 = 1.5 \u00d7 serum HCO3 + 8 \u00b1 2 mmHg. A measured PCO2 above this range indicates concurrent respiratory acidosis; a lower PCO2 indicates concurrent respiratory alkalosis. Mixed disorders are especially relevant in salicylate poisoning, which can produce hyperventilation and a mixed acid-base disturbance. [20][18]",
+        "Treat an elevated-gap acidosis as potentially time-sensitive while the diagnostic evaluation proceeds. Obtain lactate, ketone assessment, creatinine/eGFR, medication and ingestion history, and targeted toxicology testing when exposure is plausible. Diabetic or alcoholic ketoacidosis, lactic acidosis, kidney disease, and ingestion of methanol, ethylene glycol, propylene glycol, salicylates, or chronic acetaminophen-associated 5-oxoproline accumulation are recognized causes of high-anion-gap metabolic acidosis. [1][2][14]",
+        "History should actively seek shock or hypoperfusion, seizure, diabetes or starvation, alcohol use, renal failure, diarrhea or ostomy/fistula output, recent chloride-rich fluid administration, medications, and toxin exposure. A recent tonic-clonic seizure with elevated lactate and clinical evidence of renal failure are examples of history and examination findings that can sharply narrow the differential. [20][4]"
+      ],
+      "bullets": [
+        "Obtain: repeat electrolytes, blood gas, glucose, lactate, ketone assessment, creatinine/eGFR, and serum albumin if available to interpret the anion gap. [3][16][18]",
+        "Review exposures: salicylates, metformin, acetaminophen with chronic use/malnutrition or chronic illness, toxic alcohols, propylene glycol, toluene, and chloride-rich infusions. [1][14][16][24]",
+        "Escalate urgently for suspected toxic alcohol ingestion, salicylate toxicity, diabetic ketoacidosis, severe lactic acidosis, or renal failure with clinically consequential acidosis. [14][18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immediate interpretation of low bicarbonate and acid-base compensation. [3][13][20]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Low HCO3 with pH <7.35",
+            "Metabolic acidosis is present. [3]",
+            "Calculate anion gap and assess compensation. [3][20]"
+          ],
+          [
+            "Low HCO3 without acidemia",
+            "Consider chronic respiratory alkalosis or another mixed disorder rather than assuming metabolic acidosis. [13]",
+            "Interpret blood gas before urine acidification testing. [13]"
+          ],
+          [
+            "PCO2 > Winter-predicted range",
+            "Concurrent respiratory acidosis. [20]",
+            "Evaluate ventilatory failure or impaired respiratory compensation. [20]"
+          ],
+          [
+            "PCO2 < Winter-predicted range",
+            "Concurrent respiratory alkalosis. [20]",
+            "Consider sepsis, salicylate exposure, or other drivers of hyperventilation in the clinical context. [18][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "anion-gap-branch",
+      "eyebrow": "Serum classification",
+      "heading": "Use the anion gap to separate organic acid accumulation from hyperchloremic acidosis",
+      "intro": "The serum anion gap is the initial branching test after confirming a metabolic process.",
+      "paragraphs": [
+        "Calculate serum anion gap as AG = Na \u2212 (Cl + HCO3). The gap represents the difference between unmeasured anions and unmeasured cations; albumin is a major unmeasured anion, so hypoalbuminemia can lower the observed gap and obscure an elevated-gap process. Normal ranges vary by laboratory and assay; cited reference ranges include 4-12 mmol/L, 6-12 mEq/L, and approximately 10-16 mEq/L. Use the local laboratory interval and interpret the result with serum albumin. [3][1][18][5]",
+        "An elevated anion gap indicates accumulation of unmeasured anions, commonly lactate, ketoacids, toxic alcohol metabolites, or retained acids in kidney failure. Obtain the targeted measurement rather than accepting an anion-gap label as a diagnosis: lactate for suspected hypoperfusion or sepsis, ketones for diabetes, starvation, or alcohol-associated ketosis, renal indices for kidney failure, and exposure-directed testing for salicylates or toxic alcohols. [12][14][23]",
+        "A normal-gap metabolic acidosis is usually hyperchloremic: chloride rises as bicarbonate falls, preserving electroneutrality. The dominant mechanisms are gastrointestinal or urinary bicarbonate loss, impaired renal net acid excretion, or chloride gain from chloride-rich solutions. Diarrhea and renal tubular acidosis are leading causes. [12][4][6][24]",
+        "Do not assume a pure disorder from a single normal anion gap. Chronic kidney disease, hyporeninemic hypoaldosteronism, ketoacidosis, toluene exposure, D-lactic acidosis, and severe diarrhea with hypovolemia-related lactic acidosis can produce both gap and nongap components. Compare with baseline anion gap when available and assess albumin to identify a concealed mixed process. [16][17]"
+      ],
+      "bullets": [
+        "High-gap branch: lactate, ketoacids, renal failure, and toxic exposures. [1][12][14]",
+        "Normal-gap branch: gastrointestinal bicarbonate loss, renal tubular acidosis, impaired ammonium excretion, or chloride administration. [4][12][24]",
+        "Mixed-gap branch: consider severe diarrhea with hypovolemia/lactic acidosis, CKD, ketoacidosis, toluene exposure, or D-lactic acidosis. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Anion-gap pattern directs the next diagnostic test. [1][12][14][16]",
+        "columns": [
+          "Pattern",
+          "Principal etiologies",
+          "High-yield next tests"
+        ],
+        "rows": [
+          [
+            "Elevated anion gap",
+            "Lactic acidosis, ketoacidosis, kidney disease, methanol, ethylene glycol, propylene glycol, salicylates, and 5-oxoproline accumulation. [1][2][14]",
+            "Lactate, ketone assessment, renal function, exposure history, and exposure-directed toxicology evaluation. [14][23]"
+          ],
+          [
+            "Normal anion gap with hyperchloremia",
+            "Diarrhea, intestinal fistula or ostomy losses, renal tubular acidosis, hypoaldosteronism, and chloride-rich fluid administration. [4][12][16][24]",
+            "Serum K, eGFR, urine pH, and urine ammonium assessment or validated surrogate indices. [4][16][19]"
+          ],
+          [
+            "Combined elevated- and normal-gap features",
+            "CKD, ketoacidosis, toluene or D-lactic acidosis, or profound diarrhea with hypovolemia-related lactic acidosis. [16][17]",
+            "Evaluate both organic-acid and bicarbonate-loss/renal acidification pathways. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nongap-evaluation",
+      "eyebrow": "Hyperchloremic acidosis",
+      "heading": "Differentiate gastrointestinal bicarbonate loss from impaired renal acidification",
+      "intro": "Use potassium, kidney function, urine pH, and ammonium excretion to localize persistent normal-gap acidosis.",
+      "paragraphs": [
+        "First determine whether the clinical history already establishes an extrarenal bicarbonate loss or chloride load. High-volume diarrhea, ileostomy output, and intestinal fistulae can produce substantial bicarbonate loss; chloride-rich fluid administration can create hyperchloremic acidosis without a primary tubular acidification defect. If these are absent or insufficient to explain the severity, evaluate renal acidification. [4][16][24]",
+        "Serum potassium is a practical discriminator. Hypokalemic normal-gap acidosis is associated with diarrhea, intestinal fistulae, proximal RTA, and distal RTA. Hyperkalemic or high-normal potassium shifts attention toward type 4 RTA, hypoaldosteronism, or renal insufficiency; stage 3-5 CKD with hyperkalemia commonly produces metabolic acidosis. [16][17][19]",
+        "Measure eGFR and review renal function before labeling isolated RTA. Reduced kidney function can impair ammonium excretion and produce a normal-gap component, whereas classic distal or proximal RTA with preserved renal function produces a pure nongap acidosis. A combined gap and nongap acidosis argues against uncomplicated distal or proximal RTA with normal kidney function. [16][17]",
+        "When renal versus gastrointestinal origin remains uncertain, measure urine NH4+ directly if available. If direct measurement is unavailable, calculate urine anion gap, UAG = urine Na + urine K \u2212 urine Cl, and consider urine osmolal gap. During severe diarrhea, high renal NH4Cl excretion makes the UAG negative, approximately \u221230 to \u221250 mEq/L. A positive UAG in metabolic acidosis suggests low urinary ammonium excretion, as occurs in distal RTA, type 4 RTA, renal failure, or hypoaldosteronism; proximal RTA typically retains intact ammonium excretion and can have a negative UAG. [19]",
+        "Use urine osmolal gap when the UAG may be misleading or when a quantitative ammonium surrogate is needed. A urine osmolal gap greater than 200 mEq/L suggests high ammonium excretion and favors a nonrenal cause such as diarrhea, often with values above 300-400 mEq/L; a value below 40 mmol/L in normal-gap acidosis indicates impaired ammonium excretion. Calculate the measured-osmolality gap after accounting for urine sodium, potassium, urea nitrogen, and glucose when glycosuria is present. [19]",
+        "Interpret urine pH in its physiologic setting, not as a stand-alone RTA test. Urine pH should generally fall below 5.5 in acute metabolic acidosis. Persistently higher urine pH can occur with impaired distal H+ secretion, but bicarbonaturia, metabolic alkalosis, inadequate distal sodium delivery, and hepatorenal physiology also prevent urine pH from falling below 5.5. Type 4 RTA can have low urine pH despite reduced net acid excretion because ammonium buffering is deficient. [13]"
+      ],
+      "bullets": [
+        "Obtain urine Na, K, Cl, osmolality, urea nitrogen, glucose when glycosuria is present, and urine pH after confirming normal-gap metabolic acidosis. [16][19]",
+        "A negative UAG supports appropriate ammonium excretion and favors gastrointestinal bicarbonate loss; a positive UAG supports impaired renal ammonium excretion, but must be interpreted with the clinical context. [19]",
+        "A urine osmolal gap below 40 mmol/L supports impaired renal ammonium excretion; a value above 200 mEq/L favors an extrarenal process. [19]"
+      ],
+      "subsections": [
+        {
+          "heading": "Renal tubular acidosis patterns",
+          "paragraphs": [
+            "RTA is characterized by normal-anion-gap metabolic acidosis due to inadequate bicarbonate reclamation, inadequate distal hydrogen secretion, or impaired ammonium excretion. Distal and proximal RTA with normal kidney function generally produce pure nongap acidosis; type 4 RTA is the hyperkalemic pattern linked to reduced aldosterone effect or impaired distal acid excretion. [17][16][19]"
+          ],
+          "bullets": [
+            "Distal RTA: impaired distal H+ secretion, positive UAG from low ammonium excretion, and urine pH that may remain above 5.5 during acidosis. [13][19]",
+            "Proximal RTA: defective bicarbonate reabsorption with preserved ammonium excretion; UAG may be negative. [17][19]",
+            "Type 4 RTA: hyperkalemic acidosis with low ammonium excretion; urine pH may be below 5.5 despite impaired net acid excretion. [13][19]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Practical localization of normal-anion-gap metabolic acidosis. [13][16][19]",
+        "columns": [
+          "Feature",
+          "Gastrointestinal bicarbonate loss",
+          "Distal/type 4 renal acidification defect",
+          "Proximal RTA"
+        ],
+        "rows": [
+          [
+            "Clinical context",
+            "Diarrhea, high-output ileostomy, or intestinal fistula. [4][16]",
+            "No sufficient gastrointestinal loss; consider hypoaldosteronism, renal failure, or distal tubular dysfunction. [16][19]",
+            "Renal bicarbonate wasting with preserved ammonium excretion. [17][19]"
+          ],
+          [
+            "Serum potassium",
+            "Often low with diarrhea. [16]",
+            "Type 4 RTA is hyperkalemic; distal RTA may be hypokalemic. [16][19]",
+            "Low potassium pattern. [16]"
+          ],
+          [
+            "Urine anion gap",
+            "Negative, approximately \u221230 to \u221250 mEq/L in severe diarrhea. [19]",
+            "Positive because ammonium excretion is reduced. [19]",
+            "Negative because ammonium excretion is retained. [19]"
+          ],
+          [
+            "Urine pH during acidosis",
+            "Usually can fall below 5.5 with intact renal acidification. [13]",
+            "Distal H+ secretion defect may keep pH above 5.5; type 4 RTA may have low urine pH. [13]",
+            "Variable; bicarbonaturia can prevent pH below 5.5. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "management-monitoring",
+      "eyebrow": "Treatment priorities",
+      "heading": "Treat the cause, correct volume and electrolyte deficits, and follow the acid-base trajectory",
+      "intro": "Management depends on the mechanism driving the acidosis rather than the anion gap alone.",
+      "paragraphs": [
+        "For high-anion-gap metabolic acidosis, initiate cause-directed emergency management after obtaining the diagnostic samples that will change care. Recognize and address diabetic ketoacidosis, lactic acidosis from hypoperfusion or tissue injury, renal failure, and toxic ingestion promptly; toxic exposure assessment should include medication review because salicylates, metformin, and other agents may be relevant. [14][18]",
+        "For acute normal-gap acidosis, stop or reduce an identified chloride burden when clinically feasible, replace ongoing gastrointestinal volume and electrolyte losses, and address the underlying renal or extrarenal mechanism. Recovery from acute nongap acidosis depends on renal bicarbonate generation and retention of administered base; acute kidney injury can constrain this recovery and may increase the need for clinician-administered base. [15][24]",
+        "Monitor serial bicarbonate, chloride, potassium, creatinine/eGFR, and blood gas values when acidemia is clinically significant or the process is evolving. In high-gap disorders, trend the measured driver\u2014such as lactate or ketone burden\u2014alongside the anion gap; in nongap acidosis, resolution should be accompanied by recovery in bicarbonate and chloride after the ongoing alkali loss, chloride load, or renal acidification defect is addressed. [1][12][15]",
+        "Avoid using bicarbonate concentration alone as the endpoint of diagnostic closure. A persistent low bicarbonate after apparent correction of a high-gap disorder may reflect residual hyperchloremic acidosis, ongoing gastrointestinal losses, renal dysfunction, or a mixed acid-base disorder; repeat the anion gap, potassium, renal indices, and, when needed, urine ammonium assessment. [16][15]"
+      ],
+      "bullets": [
+        "High-gap monitoring: anion gap, bicarbonate, blood gas, lactate or ketones as applicable, and renal function. [1][12][14]",
+        "Nongap monitoring: bicarbonate, chloride, potassium, renal function, volume-loss replacement, and persistence of urine ammonium abnormalities when renal acidification is suspected. [15][16][19]",
+        "Reassess for a mixed disorder when the clinical trajectory and anion-gap pattern diverge. [16][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Cause-directed management and monitoring priorities. [14][15][24]",
+        "columns": [
+          "Etiologic branch",
+          "Immediate priority",
+          "Monitoring endpoint"
+        ],
+        "rows": [
+          [
+            "Lactic acidosis or shock-associated high-gap acidosis",
+            "Identify and reverse hypoperfusion or ongoing tissue injury while trending lactate. [14][18]",
+            "Improving lactate, anion gap, bicarbonate, and acid-base status. [1][18]"
+          ],
+          [
+            "Ketoacidosis",
+            "Identify diabetic, alcoholic, or starvation context and follow ketone burden with the metabolic profile. [1][14]",
+            "Closing anion gap with recovery of bicarbonate and clinical improvement. [1][12]"
+          ],
+          [
+            "Toxic ingestion concern",
+            "Obtain urgent exposure-directed evaluation; identify salicylates, toxic alcohols, or medication-related contributors. [1][14]",
+            "Serial acid-base values, anion gap, renal function, and toxin-directed measures when applicable. [14]"
+          ],
+          [
+            "Diarrheal or ostomy-related nongap acidosis",
+            "Replace ongoing gastrointestinal losses and correct volume/electrolyte deficits; confirm appropriate ammonium excretion when uncertain. [4][15][19]",
+            "Rising bicarbonate, falling chloride, potassium correction, and reduced ongoing losses. [15]"
+          ],
+          [
+            "RTA or renal failure-associated nongap acidosis",
+            "Characterize potassium pattern, eGFR, urine pH, and ammonium excretion to define the renal mechanism. [16][17][19]",
+            "Bicarbonate, potassium, renal function, and persistence or resolution of impaired ammonium excretion. [15][19]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1072",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "| Assessment of metabolic acidosisDifferentials | go to our full topic on Assessment of metabolic acidosis  Metabolic acidosis is indicated by an arterial pH of less than 7.35, a decrease in the plasma bicarbonate level, and/or a marked increase in the anion gap (calculated by subtracting the sum of",
+      "score": 0.7272211
+    },
+    {
+      "number": 2,
+      "title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1072",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "| Evaluation of metabolic acidosis | go to our full topic on Evaluation of metabolic acidosis  Metabolic acidosis is indicated by an arterial pH of less than 7.35, a decrease in the plasma bicarbonate level, and/or a marked increase in the anion gap (calculated by subtracting the sum of major measur",
+      "score": 0.71137124
+    },
+    {
+      "number": 3,
+      "title": "Evaluation of metabolic acidosis - Differential diagnosis of symptoms | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/460",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Calculating serum AG helps to differentiate the cause. Serum AG is calculated by subtracting the sum of major measured anions, chloride (Cl\u00af) and bicarbonate (HCO\u2083\u00af), from the major measured cation, sodium (Na\u207a).\n\nAG = Na\u207a - (Cl\u00af + HCO\u2083\u00af)\n\nNormal serum AG is due to the difference between unmeasured ",
+      "score": 0.65966886
+    },
+    {
+      "number": 4,
+      "title": "Non\u2013Anion Gap Metabolic Acidosis: A Clinical Approach\u00a0to\u00a0Evaluation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272638616305157",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Add to Mendeley\n\nShare\n\nCite\n\n rights and content\n\nAcid-base disturbances can result from kidney or nonkidney disorders. We present a case of high-volume ileostomy output causing large bicarbonate losses and resulting in a non\u2013anion gapmetabolic acidosis. Non\u2013anion gapmetabolic acidosis can present ",
+      "score": 0.8010817
+    },
+    {
+      "number": 5,
+      "title": "Anion Gap - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/anion-gap",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Anion Gap\n\nThe anion gap is clinically useful in the differential diagnosis of acid-base disorders. The anion gap is due to the presence of anions that are not measured in a standard plasma analysis, such as the negative charges associated with proteins. It is calculated as\n\n$\\text{Plasma} \\text",
+      "score": 0.70531887
+    },
+    {
+      "number": 6,
+      "title": "Normal Anion Gap Acidosis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/normal-anion-gap-acidosis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Metabolic Acidosis\n\nThe key to the differential diagnosis of metabolic acidosis is calculating the serum anion gap (Na - [Cl + HCO 3]). This figure, which normally is 10 to 15 mM, represents the unmeasured negative ions, predominantly albumin, in blood. Normal anion gap acidosis (low serum HCO 3",
+      "score": 0.6889923
+    },
+    {
+      "number": 7,
+      "title": "Clinical acid\u2013base pathophysiology: disorders of plasma anion gap",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1521690X0300054X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The plasma anion gap is a frequently used parameter in the clinical diagnosis of a variety of conditions. The commonest application of the anion gap is to classify cases of metabolic acidosis into those that do and those that do not leave unmeasured anions in the plasma. While this algorithm is usef",
+      "score": 0.63723457
+    },
+    {
+      "number": 8,
+      "title": "Acid\u2013base disturbances in intensive care patients",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ndt/article/30/7/1104/2324819",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Al-Jaghbeer \u00b7 2015 \u00b7 Cited by 97 \u2014 Metabolic acidosis can arise when the concentration of organic anions (e.g. lactate or \u03b2-hydroxybutyrate) increases, when there is a loss of sodium bicarbonate",
+      "score": 0.45784017
+    },
+    {
+      "number": 9,
+      "title": "Renal Tubular Acidosis in Horses (1980\u00e2\u2022\ufb011999)",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1939-1676.2001.tb01245.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by MR Aleman \u00b7 2001 \u00b7 Cited by 34 \u2014 The most common causes of metabolic acidosis with an increased anion gap (AG) include lactic acidosis, ketoacidosis, and hypovolemic shock.1",
+      "score": 0.35857818
+    },
+    {
+      "number": 10,
+      "title": "Acid-Base Disorders | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/32/6/240/34669/Acid-Base-Disorders",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Metabolic Acidosis With Normal Anion Gap. Metabolic acidosis with normal AG reflects an imbalance of the measured plasma anions and cations.",
+      "score": 0.47373086
+    },
+    {
+      "number": 11,
+      "title": "Back to Basics: Acidosis and Alkalosis",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/25/10/350/34137/Back-to-BasicsAcidosis-and-Alkalosis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Normal anion gap acidosis is caused by the inability to excrete hydrogen or the loss of bicarbonate from the gastrointestinal or urinary tracts.",
+      "score": 0.3227079
+    },
+    {
+      "number": 12,
+      "title": "Anion Gap and Non-Anion Gap Metabolic Acidosis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=699221f1dda9f256abeb7082",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Anion Gap and Non-Anion Gap Metabolic Acidosis - StatPearls - NCBI Bookshelf\nThrough a systematic approach to interpreting arterial or venous blood gases and calculating the anion gap, participants will develop the skills necessary to accurately diagnose high anion gap and normal anion gap me",
+      "score": 0.7156829
+    },
+    {
+      "number": 13,
+      "title": "Metabolic Acidosis or Respiratory Alkalosis? Evaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5572668?term=%22Am+J+Kidney+Dis%22%5Bjour%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Metabolic Acidosis or Respiratory Alkalosis? Evaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap - PMC\nEvaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap. urine anion gap (UAG), as a surrogate marker of urine ammonium, in the evaluation of a. patient with low plasma",
+      "score": 0.5683445
+    },
+    {
+      "number": 14,
+      "title": "Anion Gap and Non-Anion Gap Metabolic Acidosis - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK448090",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Optimal management of high anion gap metabolic acidosis relies on a cohesive interprofessional strategy that brings together the expertise of physicians, advanced practitioners, nurses, pharmacists, and laboratory staff. Physicians and nurse practitioners are responsible for synthesizing clinical pr",
+      "score": 0.78532547
+    },
+    {
+      "number": 15,
+      "title": "Treatment of acute non-anion gap metabolic acidosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4377741",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The clinical outcome of non-anion gap metabolic acidosis when compared with high anion gap metabolic acidosis has been examined in a few studies. A retrospective review of almost 9000 seriously ill patients hospitalized in an intensive care unit revealed that mortality of those with metabolic acidos",
+      "score": 0.7795405
+    },
+    {
+      "number": 16,
+      "title": "Differential Diagnosis of Nongap Metabolic Acidosis: Value of a Systematic Approach",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3315347",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Individuals with distal and proximal RTA with normal renal function or those given hydrochloric acid precursors have a pure nongap acidosis. By contrast, those with CKD (with or without hyporeninemic hypoaldosteronism), certain organic acidoses such as ketoacidosis, toluene intoxication, and d-lacti",
+      "score": 0.7613083
+    },
+    {
+      "number": 17,
+      "title": "Renal Tubular Acidosis and Management Strategies: A Narrative Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7889554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Metabolic acidosis is defined as an excess in non-volatile acid load that results in a primary decrease in plasma bicarbonate (HCO 3\u2013) associated with a low plasma pH . Metabolic acidosis can have a normal or high anion gap, where the anion gap refers to difference between the number of cations (i.e",
+      "score": 0.7192461
+    },
+    {
+      "number": 18,
+      "title": "Biochemistry, Anion Gap - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539757",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Two of the most common and notable causes of increased anion gap metabolic acidosis\n\nHigh anion gap metabolic acidosis (HAGMA) conditions include diabetic ketoacidosis (DKA) and salicylate poisoning.(#article-17589.r5) Descriptions of their pathophysiology are below. [...] In salicylate poisoning, c",
+      "score": 0.67140645
+    },
+    {
+      "number": 19,
+      "title": "Review of the Diagnostic Evaluation of Normal Anion Gap Metabolic Acidosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5757610",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "glucose [in mg/dL]/18) or (in mmol/L): (2 [Na+] + 2 [K+]) + (urine urea nitrogen) + (urine glucose). In patients without diabetes, the glucose concentration is often omitted from this calculation. A normal urine osmolal gap is approximately 10\u2013100 mosm/kg, with urinary ammonium excretion being appro",
+      "score": 0.5444871
+    },
+    {
+      "number": 20,
+      "title": "Metabolic Acidosis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/metabolic-acidosis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Metabolic acidosis is defined by a depletion of serum bicarbonate or increase in hydrogen ion production, causing acidemia. Two main forms exist, which are typically referred to as anion gap or non\u2013anion gap metabolic acidosis. The importance of making such a distinction is key to determine the unde",
+      "score": 0.6139086
+    },
+    {
+      "number": 21,
+      "title": "The role of the anion gap in detecting and managing mixed ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300595X84800250",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by DA Goodkin \u00b7 1984 \u00b7 Cited by 64 \u2014 The anion gap is used in the differential diagnosis of metabolic acidosis.8\u201310 It can suggest a cause for unmeasured anions.",
+      "score": 0.5769478
+    },
+    {
+      "number": 22,
+      "title": "Diagnosis and management of metabolic acidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025009859",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by B Jung \u00b7 2019 \u00b7 Cited by 145 \u2014 Acute metabolic acidosis may accompany various diseases be used rather than the uncorrected anion gap to differentiate acidosis related to acid load",
+      "score": 0.49143207
+    },
+    {
+      "number": 23,
+      "title": "Use of Anion Gap in the Evaluation of a Patient ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272638614009949",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AA Vichot \u00b7 2014 \u00b7 Cited by 30 \u2014 High anion gap (AG) metabolic acidosis, frequently is due to accumulation of organic acids such as lactic acid, keto acids, alcohol metabolites, and reduced",
+      "score": 0.42907107
+    },
+    {
+      "number": 24,
+      "title": "An Important Cause of Non-Anion Gap Metabolic Acidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467916312227",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JWS Clair \u00b7 2017 \u00b7 Cited by 4 \u2014 The most common mechanisms involve loss of bicarbonate through the gastrointestinal or renal system, excessive chloride administration, Addison's disease, or",
+      "score": 0.30346388
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1072",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "| Assessment of metabolic acidosisDifferentials | go to our full topic on Assessment of metabolic acidosis  Metabolic acidosis is indicated by an arterial pH of less than 7.35, a decrease in the plasma bicarbonate level, and/or a marked increase in the anion gap (calculated by subtracting the sum of",
+      "score": 0.7272211
+    },
+    {
+      "number": 2,
+      "title": "Overview of acid-base and electrolyte disorders - Summary of relevant conditions | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1072",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "| Evaluation of metabolic acidosis | go to our full topic on Evaluation of metabolic acidosis  Metabolic acidosis is indicated by an arterial pH of less than 7.35, a decrease in the plasma bicarbonate level, and/or a marked increase in the anion gap (calculated by subtracting the sum of major measur",
+      "score": 0.71137124
+    },
+    {
+      "number": 3,
+      "title": "Evaluation of metabolic acidosis - Differential diagnosis of symptoms | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/460",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Calculating serum AG helps to differentiate the cause. Serum AG is calculated by subtracting the sum of major measured anions, chloride (Cl\u00af) and bicarbonate (HCO\u2083\u00af), from the major measured cation, sodium (Na\u207a).\n\nAG = Na\u207a - (Cl\u00af + HCO\u2083\u00af)\n\nNormal serum AG is due to the difference between unmeasured ",
+      "score": 0.65966886
+    },
+    {
+      "number": 4,
+      "title": "Non\u2013Anion Gap Metabolic Acidosis: A Clinical Approach\u00a0to\u00a0Evaluation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272638616305157",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Add to Mendeley\n\nShare\n\nCite\n\n rights and content\n\nAcid-base disturbances can result from kidney or nonkidney disorders. We present a case of high-volume ileostomy output causing large bicarbonate losses and resulting in a non\u2013anion gapmetabolic acidosis. Non\u2013anion gapmetabolic acidosis can present ",
+      "score": 0.8010817
+    },
+    {
+      "number": 5,
+      "title": "Anion Gap - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/anion-gap",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Anion Gap\n\nThe anion gap is clinically useful in the differential diagnosis of acid-base disorders. The anion gap is due to the presence of anions that are not measured in a standard plasma analysis, such as the negative charges associated with proteins. It is calculated as\n\n$\\text{Plasma} \\text",
+      "score": 0.70531887
+    },
+    {
+      "number": 6,
+      "title": "Normal Anion Gap Acidosis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/normal-anion-gap-acidosis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Metabolic Acidosis\n\nThe key to the differential diagnosis of metabolic acidosis is calculating the serum anion gap (Na - [Cl + HCO 3]). This figure, which normally is 10 to 15 mM, represents the unmeasured negative ions, predominantly albumin, in blood. Normal anion gap acidosis (low serum HCO 3",
+      "score": 0.6889923
+    },
+    {
+      "number": 7,
+      "title": "Clinical acid\u2013base pathophysiology: disorders of plasma anion gap",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1521690X0300054X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The plasma anion gap is a frequently used parameter in the clinical diagnosis of a variety of conditions. The commonest application of the anion gap is to classify cases of metabolic acidosis into those that do and those that do not leave unmeasured anions in the plasma. While this algorithm is usef",
+      "score": 0.63723457
+    },
+    {
+      "number": 8,
+      "title": "Acid\u2013base disturbances in intensive care patients",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ndt/article/30/7/1104/2324819",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Al-Jaghbeer \u00b7 2015 \u00b7 Cited by 97 \u2014 Metabolic acidosis can arise when the concentration of organic anions (e.g. lactate or \u03b2-hydroxybutyrate) increases, when there is a loss of sodium bicarbonate",
+      "score": 0.45784017
+    },
+    {
+      "number": 9,
+      "title": "Renal Tubular Acidosis in Horses (1980\u00e2\u2022\ufb011999)",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1939-1676.2001.tb01245.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by MR Aleman \u00b7 2001 \u00b7 Cited by 34 \u2014 The most common causes of metabolic acidosis with an increased anion gap (AG) include lactic acidosis, ketoacidosis, and hypovolemic shock.1",
+      "score": 0.35857818
+    },
+    {
+      "number": 10,
+      "title": "Acid-Base Disorders | Pediatrics In Review",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/32/6/240/34669/Acid-Base-Disorders",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Metabolic Acidosis With Normal Anion Gap. Metabolic acidosis with normal AG reflects an imbalance of the measured plasma anions and cations.",
+      "score": 0.47373086
+    },
+    {
+      "number": 11,
+      "title": "Back to Basics: Acidosis and Alkalosis",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/25/10/350/34137/Back-to-BasicsAcidosis-and-Alkalosis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Normal anion gap acidosis is caused by the inability to excrete hydrogen or the loss of bicarbonate from the gastrointestinal or urinary tracts.",
+      "score": 0.3227079
+    },
+    {
+      "number": 12,
+      "title": "Anion Gap and Non-Anion Gap Metabolic Acidosis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=699221f1dda9f256abeb7082",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Anion Gap and Non-Anion Gap Metabolic Acidosis - StatPearls - NCBI Bookshelf\nThrough a systematic approach to interpreting arterial or venous blood gases and calculating the anion gap, participants will develop the skills necessary to accurately diagnose high anion gap and normal anion gap me",
+      "score": 0.7156829
+    },
+    {
+      "number": 13,
+      "title": "Metabolic Acidosis or Respiratory Alkalosis? Evaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5572668?term=%22Am+J+Kidney+Dis%22%5Bjour%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Metabolic Acidosis or Respiratory Alkalosis? Evaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap - PMC\nEvaluation of a Low Plasma Bicarbonate Using the Urine Anion Gap. urine anion gap (UAG), as a surrogate marker of urine ammonium, in the evaluation of a. patient with low plasma",
+      "score": 0.5683445
+    },
+    {
+      "number": 14,
+      "title": "Anion Gap and Non-Anion Gap Metabolic Acidosis - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK448090",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Optimal management of high anion gap metabolic acidosis relies on a cohesive interprofessional strategy that brings together the expertise of physicians, advanced practitioners, nurses, pharmacists, and laboratory staff. Physicians and nurse practitioners are responsible for synthesizing clinical pr",
+      "score": 0.78532547
+    },
+    {
+      "number": 15,
+      "title": "Treatment of acute non-anion gap metabolic acidosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4377741",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The clinical outcome of non-anion gap metabolic acidosis when compared with high anion gap metabolic acidosis has been examined in a few studies. A retrospective review of almost 9000 seriously ill patients hospitalized in an intensive care unit revealed that mortality of those with metabolic acidos",
+      "score": 0.7795405
+    },
+    {
+      "number": 16,
+      "title": "Differential Diagnosis of Nongap Metabolic Acidosis: Value of a Systematic Approach",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3315347",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Individuals with distal and proximal RTA with normal renal function or those given hydrochloric acid precursors have a pure nongap acidosis. By contrast, those with CKD (with or without hyporeninemic hypoaldosteronism), certain organic acidoses such as ketoacidosis, toluene intoxication, and d-lacti",
+      "score": 0.7613083
+    },
+    {
+      "number": 17,
+      "title": "Renal Tubular Acidosis and Management Strategies: A Narrative Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7889554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Metabolic acidosis is defined as an excess in non-volatile acid load that results in a primary decrease in plasma bicarbonate (HCO 3\u2013) associated with a low plasma pH . Metabolic acidosis can have a normal or high anion gap, where the anion gap refers to difference between the number of cations (i.e",
+      "score": 0.7192461
+    },
+    {
+      "number": 18,
+      "title": "Biochemistry, Anion Gap - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK539757",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Two of the most common and notable causes of increased anion gap metabolic acidosis\n\nHigh anion gap metabolic acidosis (HAGMA) conditions include diabetic ketoacidosis (DKA) and salicylate poisoning.(#article-17589.r5) Descriptions of their pathophysiology are below. [...] In salicylate poisoning, c",
+      "score": 0.67140645
+    },
+    {
+      "number": 19,
+      "title": "Review of the Diagnostic Evaluation of Normal Anion Gap Metabolic Acidosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5757610",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "glucose [in mg/dL]/18) or (in mmol/L): (2 [Na+] + 2 [K+]) + (urine urea nitrogen) + (urine glucose). In patients without diabetes, the glucose concentration is often omitted from this calculation. A normal urine osmolal gap is approximately 10\u2013100 mosm/kg, with urinary ammonium excretion being appro",
+      "score": 0.5444871
+    },
+    {
+      "number": 20,
+      "title": "Metabolic Acidosis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/metabolic-acidosis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Metabolic acidosis is defined by a depletion of serum bicarbonate or increase in hydrogen ion production, causing acidemia. Two main forms exist, which are typically referred to as anion gap or non\u2013anion gap metabolic acidosis. The importance of making such a distinction is key to determine the unde",
+      "score": 0.6139086
+    },
+    {
+      "number": 21,
+      "title": "The role of the anion gap in detecting and managing mixed ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300595X84800250",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by DA Goodkin \u00b7 1984 \u00b7 Cited by 64 \u2014 The anion gap is used in the differential diagnosis of metabolic acidosis.8\u201310 It can suggest a cause for unmeasured anions.",
+      "score": 0.5769478
+    },
+    {
+      "number": 22,
+      "title": "Diagnosis and management of metabolic acidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025009859",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by B Jung \u00b7 2019 \u00b7 Cited by 145 \u2014 Acute metabolic acidosis may accompany various diseases be used rather than the uncorrected anion gap to differentiate acidosis related to acid load",
+      "score": 0.49143207
+    },
+    {
+      "number": 23,
+      "title": "Use of Anion Gap in the Evaluation of a Patient ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272638614009949",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AA Vichot \u00b7 2014 \u00b7 Cited by 30 \u2014 High anion gap (AG) metabolic acidosis, frequently is due to accumulation of organic acids such as lactic acid, keto acids, alcohol metabolites, and reduced",
+      "score": 0.42907107
+    },
+    {
+      "number": 24,
+      "title": "An Important Cause of Non-Anion Gap Metabolic Acidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467916312227",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JWS Clair \u00b7 2017 \u00b7 Cited by 4 \u2014 The most common mechanisms involve loss of bicarbonate through the gastrointestinal or renal system, excessive chloride administration, Addison's disease, or",
+      "score": 0.30346388
+    }
+  ],
+  "publishedAt": "2026-08-21T02:23:57.618364+00:00",
+  "updatedAt": "2026-08-21T02:23:57.618364+00:00",
+  "readingMinutes": 7,
+  "slug": "anion-gap-metabolic-acidosis"
+}

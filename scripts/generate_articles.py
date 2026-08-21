@@ -13,6 +13,7 @@ Environment variables (expected):
   SUPABASE_URL          – Supabase project URL (required for uploads)
   SUPABASE_SERVICE_ROLE_KEY – Supabase service role key (required for storage/rest upserts)
   ARTICLE_BUCKET        – Storage bucket name for articles (default: "articles")
+  ARTICLE_GENERATOR_KEY – Secret batch key configured on the researcher edge function
 
 Install requirements (if not already available):
   pip install requests python-slugify
@@ -27,7 +28,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -104,6 +105,22 @@ SUPABASE_ANON_KEY = getenv("SUPABASE_ANON_KEY", DEFAULT_SUPABASE_ANON_KEY)
 SUPABASE_URL = getenv("SUPABASE_URL", DEFAULT_SUPABASE_URL)
 SUPABASE_SERVICE_ROLE_KEY = getenv("SUPABASE_SERVICE_ROLE_KEY", DEFAULT_SUPABASE_SERVICE_ROLE_KEY)
 ARTICLE_BUCKET = getenv("ARTICLE_BUCKET", DEFAULT_ARTICLE_BUCKET)
+ARTICLE_GENERATOR_ANONYMOUS_ID = getenv("ARTICLE_GENERATOR_ANONYMOUS_ID", "astra_article_generator_v2")
+ARTICLE_GENERATOR_KEY = getenv("ARTICLE_GENERATOR_KEY")
+ARTICLE_USAGE_LOG = Path(getenv("ARTICLE_USAGE_LOG", ".article-batch/usage.jsonl"))
+OPENAI_INPUT_COST_PER_MILLION = float(getenv("OPENAI_INPUT_COST_PER_MILLION", "2.0"))
+OPENAI_CACHED_INPUT_COST_PER_MILLION = float(getenv("OPENAI_CACHED_INPUT_COST_PER_MILLION", "0.2"))
+OPENAI_CACHE_WRITE_COST_PER_MILLION = float(getenv("OPENAI_CACHE_WRITE_COST_PER_MILLION", "2.5"))
+OPENAI_OUTPUT_COST_PER_MILLION = float(getenv("OPENAI_OUTPUT_COST_PER_MILLION", "12.0"))
+OPENAI_PLANNER_INPUT_COST_PER_MILLION = float(getenv("OPENAI_PLANNER_INPUT_COST_PER_MILLION", "0.2"))
+OPENAI_PLANNER_CACHED_INPUT_COST_PER_MILLION = float(getenv("OPENAI_PLANNER_CACHED_INPUT_COST_PER_MILLION", "0.02"))
+OPENAI_PLANNER_CACHE_WRITE_COST_PER_MILLION = float(getenv("OPENAI_PLANNER_CACHE_WRITE_COST_PER_MILLION", "0.25"))
+OPENAI_PLANNER_OUTPUT_COST_PER_MILLION = float(getenv("OPENAI_PLANNER_OUTPUT_COST_PER_MILLION", "1.2"))
+ARTICLE_MAX_ESTIMATED_OPENAI_COST_USD = float(getenv("ARTICLE_MAX_ESTIMATED_OPENAI_COST_USD", "0.25"))
+
+
+class CostSafetyError(RuntimeError):
+  pass
 
 
 def build_prompt(topic: str) -> str:
@@ -111,82 +128,97 @@ def build_prompt(topic: str) -> str:
 
   schema_description = json.dumps(
       {
-          "heroLabel": "string",
-          "title": "string",
-          "summary": "string",
-          "updated": "string (e.g. February 2025)",
-          "clinicalQuestion": "string",
-          "tags": ["string"],
-          "heroStats": [{"label": "string", "value": "string"}],
-          "keyMoments": [
-              {
-                  "icon": "Sparkles | Stethoscope | ShieldCheck | Activity | ClipboardList",
-                  "title": "string",
-                  "body": "string"
-              }
-          ],
+          "schemaVersion": 2,
+          "eyebrow": "short specialty label",
+          "title": "concise clinical topic only, usually 2-6 words; no subtitle, colon, or list of covered domains",
+          "summary": "one compelling 35-45 word description answering search intent",
+          "seoDescription": "one natural 120-160 character search description with no citations",
+          "clinicalQuestion": "one sentence, no more than 25 words",
+          "specialty": "string",
+          "audience": "U.S. physicians and medical trainees",
+          "tags": ["specific search terms when useful"],
+          "keyTakeaways": ["concise, practice-changing statements with citations"],
           "sections": [
               {
-                  "type": "steps",
-                  "eyebrow": "string",
-                  "title": "string",
-                  "blurb": "string",
-                  "steps": [{"title": "string", "body": "string"}]
-              },
-              {
-                  "type": "checklists",
-                  "eyebrow": "string",
-                  "title": "string",
-                  "blurb": "string",
-                  "layout": "grid | column",
-                  "maxWidth": "optional number",
-                  "cards": [
+                  "id": "short-kebab-case-id",
+                  "eyebrow": "optional short label",
+                  "heading": "descriptive heading matching real search intent",
+                  "intro": "optional orientation, no more than 20 words",
+                  "paragraphs": ["1-3 concise, decision-focused paragraphs with inline [N] citations"],
+                  "bullets": ["optional practical bullets with citations"],
+                  "subsections": [
                       {
-                          "icon": "TestTube2 | Clock | AlertTriangle | ShieldCheck | ClipboardList | Activity",
-                          "title": "string",
-                          "items": ["string"]
+                          "heading": "string",
+                          "paragraphs": ["use only when essential; concise and decision-focused"],
+                          "bullets": ["optional bullets with inline [N] citations"]
                       }
-                  ]
+                  ],
+                  "table": {
+                      "caption": "accessible caption with citations when it makes a clinical claim",
+                      "columns": ["clear decision-oriented column headings"],
+                      "rows": [["compact cell values with inline [N] citations for clinical claims"]]
+                  }
               }
           ],
-          "references": [
-              {
-                  "title": "string",
-                  "detail": "journal + year + doi",
-                  "url": "https://(journal or PubMed landing page)"
-              }
-          ]
+          "faq": [{"question": "useful physician search question", "answer": "concise decision-relevant answer with citations"}],
+          "references": [],
+          "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
       },
       indent=2
   )
 
-  # CRITICAL: Keep prompt SHORT so query planner can extract topic
-  # Backend searches for topic, then model uses search results to generate JSON
+  # The backend receives `topic` separately as research_query, so these editorial
+  # instructions do not dilute search-query planning.
   return (
       f"{topic}\n\n"
       f"Output JSON: {schema_description}\n"
-      "Use search results [1]-[N] for references. No markdown fences."
+      "Create an original point-of-care article for U.S. physicians. Aim for roughly 1,800 words, usually 1,500-2,200 when the topic warrants it. Start at the "
+      "decision layer: assume the reader already knows basic definitions and common symptoms. Every paragraph must add a named test, threshold, interpretation, "
+      "drug and source-supported dose, procedure indication, timing rule, quantified risk, exception, tradeoff, or next step. Delete any sentence that merely "
+      "sounds medical without changing a decision. "
+      "For a syndrome or umbrella topic, build an actionable branching framework: immediate threats, the initial workup, the major etiologic patterns and how to "
+      "distinguish them, when pathology or specialist escalation is needed, immediate supportive management, and cause-directed next steps. Name the actual diseases, "
+      "tests, serologies, imaging, pathology patterns, agents, and monitoring parameters supported by the sources. For narrower topics, use only the domains that matter. "
+      "Do not narrate the research process or complain about evidence retrieval. Never write 'the supplied evidence,' 'the supplied sources,' 'the available results,' "
+      "or similar source commentary. If a specific detail is unsupported, omit it. Discuss uncertainty only when it is a real clinical controversy that changes care. "
+      "Avoid throat-clearing, generic background, vague advice, repeated summaries, and duplicated facts across takeaways, prose, tables, and FAQs. Use tables only to "
+      "compress a true differential, threshold comparison, treatment selection, or monitoring algorithm. FAQs are optional and should be empty unless they add a decision "
+      "not already answered. Use a short title containing only the recognized clinical topic. "
+      "Return references as an empty array because the API attaches them separately. Cite every pathophysiologic, quantitative, diagnostic, prognostic, testing, "
+      "dosing, procedural, and treatment claim as [N], including claims in tables. Write multiple citations as separate markers such as [1][8][9][12], never "
+      "inside one bracket such as [1,8,9,12]. Prefer primary guidelines, FDA labels, systematic reviews, and pivotal trials. "
+      "Use only supplied search results [1]-[N]. Never invent evidence, numbers, doses, thresholds, or recommendations, and never make a claim stronger than its "
+      "source. Return only valid JSON with no markdown fences."
   )
 
 
-def call_researcher(prompt: str) -> Tuple[str, List[Dict[str, Any]]]:
+def build_research_query(topic: str) -> str:
+  return f"{topic}"
+
+
+def call_researcher(prompt: str, research_query: str) -> Tuple[str, List[Dict[str, Any]], Dict[str, Any]]:
   if not RESEARCHER_ENDPOINT:
     raise RuntimeError("RESEARCHER_ENDPOINT environment variable is required")
   if not SUPABASE_ANON_KEY:
     raise RuntimeError("SUPABASE_ANON_KEY environment variable is required")
+  if not ARTICLE_GENERATOR_KEY:
+    raise RuntimeError("ARTICLE_GENERATOR_KEY environment variable is required")
 
   headers = {
       "Content-Type": "application/json",
       "Authorization": f"Bearer {SUPABASE_ANON_KEY}",
-      "apikey": SUPABASE_ANON_KEY
+      "apikey": SUPABASE_ANON_KEY,
+      "x-astra-article-key": ARTICLE_GENERATOR_KEY
   }
   payload = {
       "query": prompt,
-      "mode": "search",
+      "research_query": research_query,
+      "mode": "article-research",
       "isClinical": False,
       "isReason": False,
       "isWrite": False,
-      "stream": True
+      "stream": True,
+      "anonymous_id": ARTICLE_GENERATOR_ANONYMOUS_ID
   }
 
   LOGGER.info("Requesting article from researcher endpoint …")
@@ -196,6 +228,7 @@ def call_researcher(prompt: str) -> Tuple[str, List[Dict[str, Any]]]:
 
   citations: List[Dict[str, Any]] = []
   content_parts: List[str] = []
+  usage: Dict[str, Any] = {}
 
   try:
     for raw_line in response.iter_lines(decode_unicode=False):
@@ -224,6 +257,10 @@ def call_researcher(prompt: str) -> Tuple[str, List[Dict[str, Any]]]:
         citations = new_citations or citations
         continue
 
+      if isinstance(payload_json, dict) and "usage" in payload_json:
+        usage = payload_json
+        continue
+
       if LOGGER.isEnabledFor(logging.DEBUG):
         LOGGER.debug("SSE payload: %s", json.dumps(payload_json, indent=2))
 
@@ -245,7 +282,80 @@ def call_researcher(prompt: str) -> Tuple[str, List[Dict[str, Any]]]:
   if not content:
     raise ValueError("No article content returned from researcher endpoint")
 
-  return content, citations
+  return content, citations, usage
+
+
+def estimate_usage_cost(
+    usage: Dict[str, Any],
+    input_rate: float,
+    cached_input_rate: float,
+    cache_write_rate: float,
+    output_rate: float
+) -> float:
+  input_tokens = int(usage.get("input_tokens") or 0)
+  output_tokens = int(usage.get("output_tokens") or 0)
+  input_details = usage.get("input_tokens_details") or {}
+  cached_tokens = min(input_tokens, int(input_details.get("cached_tokens") or 0))
+  cache_write_tokens = min(
+      input_tokens - cached_tokens,
+      int(input_details.get("cache_write_tokens") or 0)
+  )
+  uncached_tokens = input_tokens - cached_tokens - cache_write_tokens
+  long_context = input_tokens > 272_000
+  input_multiplier = 2.0 if long_context else 1.0
+  output_multiplier = 1.5 if long_context else 1.0
+  return (
+      uncached_tokens * input_rate * input_multiplier
+      + cached_tokens * cached_input_rate * input_multiplier
+      + cache_write_tokens * cache_write_rate * input_multiplier
+      + output_tokens * output_rate * output_multiplier
+  ) / 1_000_000
+
+
+def estimate_openai_cost(usage_event: Dict[str, Any]) -> float:
+  article_cost = estimate_usage_cost(
+      usage_event.get("usage") or {},
+      OPENAI_INPUT_COST_PER_MILLION,
+      OPENAI_CACHED_INPUT_COST_PER_MILLION,
+      OPENAI_CACHE_WRITE_COST_PER_MILLION,
+      OPENAI_OUTPUT_COST_PER_MILLION
+  )
+  planner_cost = estimate_usage_cost(
+      usage_event.get("plannerUsage") or {},
+      OPENAI_PLANNER_INPUT_COST_PER_MILLION,
+      OPENAI_PLANNER_CACHED_INPUT_COST_PER_MILLION,
+      OPENAI_PLANNER_CACHE_WRITE_COST_PER_MILLION,
+      OPENAI_PLANNER_OUTPUT_COST_PER_MILLION
+  )
+  return article_cost + planner_cost
+
+
+def record_usage(topic: str, usage_event: Dict[str, Any]) -> float:
+  if not usage_event:
+    raise CostSafetyError(f"No usage event returned for {topic}; stopping to prevent unmetered generation")
+  estimated_cost = estimate_openai_cost(usage_event)
+  entry = {
+      "timestamp": datetime.now(timezone.utc).isoformat(),
+      "topic": topic,
+      **usage_event,
+      "estimatedOpenAICostUsd": round(estimated_cost, 6)
+  }
+  ARTICLE_USAGE_LOG.parent.mkdir(parents=True, exist_ok=True)
+  with ARTICLE_USAGE_LOG.open("a", encoding="utf-8") as usage_file:
+    usage_file.write(json.dumps(entry, ensure_ascii=False) + "\n")
+  usage = usage_event.get("usage") or {}
+  LOGGER.info(
+      "💵 Usage: %s input tokens, %s output tokens, approximately $%.4f OpenAI",
+      usage.get("input_tokens", 0),
+      usage.get("output_tokens", 0),
+      estimated_cost
+  )
+  if estimated_cost > ARTICLE_MAX_ESTIMATED_OPENAI_COST_USD:
+    raise CostSafetyError(
+        f"Estimated OpenAI cost ${estimated_cost:.4f} exceeded the "
+        f"${ARTICLE_MAX_ESTIMATED_OPENAI_COST_USD:.2f} per-article safety limit"
+    )
+  return estimated_cost
 
 
 def extract_json_payload(text: str) -> Dict[str, Any]:
@@ -328,28 +438,46 @@ def ensure_references(article: Dict[str, Any], citations: Iterable[Dict[str, Any
   elif not article.get("references"):
     article["references"] = []
 
-def validate_article(article: Dict[str, Any]) -> None:
-  required_top_level = ["title", "summary", "heroStats", "keyMoments", "sections", "references"]
-  for key in required_top_level:
-    if key not in article or not article[key]:
-      raise ValueError(f"Article missing required field: {key}")
 
-  for stat in article.get("heroStats", []):
-    if "label" not in stat or "value" not in stat:
-      raise ValueError("Each hero stat requires label and value")
+def normalize_grouped_citations(value: Any) -> Any:
+  if isinstance(value, str):
+    return re.sub(
+        r"\[((?:\d+\s*,\s*)+\d+)\]",
+        lambda match: "".join(f"[{number}]" for number in re.findall(r"\d+", match.group(1))),
+        value
+    )
+  if isinstance(value, list):
+    return [normalize_grouped_citations(item) for item in value]
+  if isinstance(value, dict):
+    return {key: normalize_grouped_citations(item) for key, item in value.items()}
+  return value
 
-  for moment in article.get("keyMoments", []):
-    if "title" not in moment or "body" not in moment:
-      raise ValueError("Each key moment requires title and body")
+def article_editorial_word_count(article: Dict[str, Any]) -> int:
+  text_parts: List[str] = [article.get("summary", ""), article.get("clinicalQuestion", "")]
+  text_parts.extend(article.get("keyTakeaways", []))
 
   for section in article.get("sections", []):
-    section_type = section.get("type")
-    if section_type not in {"steps", "checklists", "highlights"}:
-      raise ValueError(f"Unsupported section type: {section_type}")
-    if section_type == "steps" and not section.get("steps"):
-      raise ValueError("Step sections require a steps array")
-    if section_type == "checklists" and not section.get("cards"):
-      raise ValueError("Checklist sections require cards array")
+    text_parts.extend([section.get("heading", ""), section.get("intro", "")])
+    text_parts.extend(section.get("paragraphs", []))
+    text_parts.extend(section.get("bullets", []))
+
+    for subsection in section.get("subsections", []):
+      text_parts.append(subsection.get("heading", ""))
+      text_parts.extend(subsection.get("paragraphs", []))
+      text_parts.extend(subsection.get("bullets", []))
+
+    table = section.get("table") or {}
+    text_parts.append(table.get("caption", ""))
+    text_parts.extend(table.get("columns", []))
+    for row in table.get("rows", []):
+      text_parts.extend(row)
+
+  for item in article.get("faq", []):
+    text_parts.extend([item.get("question", ""), item.get("answer", "")])
+
+  text = " ".join(str(part) for part in text_parts if part)
+  text = re.sub(r"\[\d+(?:\s*[,–-]\s*\d+)*\]", "", text)
+  return len(text.split())
 
 
 def slugify_article(article: Dict[str, Any]) -> str:
@@ -385,8 +513,12 @@ def update_manifest(slug: str, article: Dict[str, Any]) -> None:
           "slug": slug,
           "title": article.get("title"),
           "summary": article.get("summary"),
-          "updated": article.get("updated"),
-          "generatedAt": datetime.now(datetime.UTC).isoformat() if hasattr(datetime, 'UTC') else datetime.utcnow().isoformat() + "Z",
+          "seoDescription": article.get("seoDescription"),
+          "specialty": article.get("specialty"),
+          "tags": article.get("tags", []),
+          "publishedAt": article.get("publishedAt"),
+          "updatedAt": article.get("updatedAt"),
+          "generatedAt": article.get("updatedAt"),
           "source": f"generated_articles/{slug}.json"
       }
   )
@@ -416,31 +548,34 @@ def upload_to_storage(slug: str, article: Dict[str, Any]) -> Optional[str]:
   return storage_path
 
 
-def upsert_article_row(slug: str, article: Dict[str, Any], storage_path: Optional[str]) -> None:
+def upload_manifest_to_storage() -> None:
   if not (SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY):
     return
 
-  url = f"{SUPABASE_URL}/rest/v1/articles"
+  url = f"{SUPABASE_URL}/storage/v1/object/{ARTICLE_BUCKET}/index.json"
   headers = {
       "Content-Type": "application/json",
       "Authorization": f"Bearer {SUPABASE_SERVICE_ROLE_KEY}",
       "apikey": SUPABASE_SERVICE_ROLE_KEY,
-      "Prefer": "resolution=merge-duplicates"
+      "x-upsert": "true"
   }
-  payload = {
-      "slug": slug,
-      "title": article.get("title"),
-      "summary": article.get("summary"),
-      "hero_stats": article.get("heroStats"),
-      "tags": article.get("tags"),
-      "storage_path": storage_path,
-      "references": article.get("references"),
-      "updated_at": datetime.now(datetime.UTC).isoformat() if hasattr(datetime, 'UTC') else datetime.utcnow().isoformat() + "Z"
-  }
-  response = requests.post(url, headers=headers, params={"select": "slug"}, json=payload, timeout=60)
+  response = requests.put(url, headers=headers, data=MANIFEST_PATH.read_bytes(), timeout=60)
   if response.status_code not in {200, 201}:
-    raise RuntimeError(f"Failed to upsert article row ({response.status_code}): {response.text}")
-  LOGGER.info("Upserted article metadata for slug %s", slug)
+    raise RuntimeError(f"Manifest upload failed ({response.status_code}): {response.text}")
+  LOGGER.info("Uploaded article manifest to %s/index.json", ARTICLE_BUCKET)
+
+
+def estimate_reading_minutes(article: Dict[str, Any]) -> int:
+  text_parts: List[str] = [article.get("summary", "")]
+  text_parts.extend(article.get("keyTakeaways", []))
+  for section in article.get("sections", []):
+    text_parts.extend(section.get("paragraphs", []))
+    text_parts.extend(section.get("bullets", []))
+    for subsection in section.get("subsections", []):
+      text_parts.extend(subsection.get("paragraphs", []))
+      text_parts.extend(subsection.get("bullets", []))
+  word_count = len(" ".join(str(part) for part in text_parts).split())
+  return max(1, round(word_count / 220))
 
 
 def load_topics(args: argparse.Namespace) -> List[str]:
@@ -455,21 +590,57 @@ def load_topics(args: argparse.Namespace) -> List[str]:
   return topics
 
 
-def generate_articles(topics: Iterable[str], delay: float = 2.0) -> None:
+def normalize_topic(value: str) -> str:
+  return re.sub(r"\s+", " ", value).strip().casefold()
+
+
+def load_completed_topics(path: Optional[Path]) -> set[str]:
+  if not path or not path.exists():
+    return set()
+  return {normalize_topic(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()}
+
+
+def record_completed_topic(path: Optional[Path], topic: str) -> None:
+  if not path:
+    return
+  path.parent.mkdir(parents=True, exist_ok=True)
+  with path.open("a", encoding="utf-8") as progress_file:
+    progress_file.write(f"{topic.strip()}\n")
+    progress_file.flush()
+
+
+def generate_articles(topics: Iterable[str], delay: float = 2.0, resume_file: Optional[Path] = None) -> None:
   failed_topics = []
   successful_count = 0
+  skipped_count = 0
+  completed_topics = load_completed_topics(resume_file)
 
   for topic in topics:
+    if normalize_topic(topic) in completed_topics:
+      LOGGER.info("Skipping completed topic: %s", topic)
+      skipped_count += 1
+      continue
     try:
       LOGGER.info("Processing topic: %s", topic)
       prompt = build_prompt(topic)
-      raw_text, citations = call_researcher(prompt)
+      raw_text, citations, usage = call_researcher(prompt, build_research_query(topic))
+      record_usage(topic, usage)
       LOGGER.info("🔍 Backend sent %d citations", len(citations))
-      article = extract_json_payload(raw_text)
+      article = normalize_grouped_citations(extract_json_payload(raw_text))
       LOGGER.info("📄 Model generated article with %d references", len(article.get('references', [])))
       ensure_references(article, citations)
+      article = normalize_grouped_citations(article)
       LOGGER.info("✅ After ensure_references: %d references", len(article.get('references', [])))
-      validate_article(article)
+      now = datetime.now(timezone.utc).isoformat()
+      article["schemaVersion"] = 2
+      article.setdefault("publishedAt", now)
+      article["updatedAt"] = now
+      article["readingMinutes"] = estimate_reading_minutes(article)
+      article.setdefault("audience", "U.S. physicians and medical trainees")
+      article.setdefault("editorialNote", "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.")
+      article["slug"] = _slugify(article.get("title") or topic)
+      editorial_word_count = article_editorial_word_count(article)
+      LOGGER.info("📝 Editorial word count: %d", editorial_word_count)
       slug = slugify_article(article)
       article["slug"] = slug
 
@@ -479,13 +650,19 @@ def generate_articles(topics: Iterable[str], delay: float = 2.0) -> None:
       storage_path = None
       try:
         storage_path = upload_to_storage(slug, article)
-        upsert_article_row(slug, article, storage_path)
+        if storage_path:
+          upload_manifest_to_storage()
       except Exception as exc:  # pragma: no cover - optional upload path
         LOGGER.error("Supabase upload failed: %s", exc)
 
       LOGGER.info("✅ Topic complete: %s", topic)
       successful_count += 1
+      completed_topics.add(normalize_topic(topic))
+      record_completed_topic(resume_file, topic)
 
+    except CostSafetyError as exc:
+      LOGGER.critical("🛑 Cost safety stop: %s", exc)
+      raise
     except Exception as exc:
       LOGGER.error("❌ Failed to generate article for '%s': %s", topic, exc)
       failed_topics.append((topic, str(exc)))
@@ -499,6 +676,7 @@ def generate_articles(topics: Iterable[str], delay: float = 2.0) -> None:
   LOGGER.info("=" * 60)
   LOGGER.info("Generation Summary:")
   LOGGER.info("  ✅ Successful: %d", successful_count)
+  LOGGER.info("  ⏭️ Skipped: %d", skipped_count)
   LOGGER.info("  ❌ Failed: %d", len(failed_topics))
   if failed_topics:
     LOGGER.info("")
@@ -514,6 +692,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
   parser.add_argument("--topic", action="append", help="Topic to generate (can be repeated)")
   parser.add_argument("--topics-file", help="File with one topic per line")
   parser.add_argument("--delay", type=float, default=2.0, help="Pause between requests in seconds (default: 2.0)")
+  parser.add_argument("--resume-file", help="Append completed topics here and skip them on restart")
   parser.add_argument("--log-level", default="INFO", help="Logging level (default: INFO)")
   return parser.parse_args(argv)
 
@@ -531,7 +710,7 @@ def main(argv: Optional[List[str]] = None) -> int:
   configure_logging(args.log_level)
   try:
     topics = load_topics(args)
-    generate_articles(topics, delay=args.delay)
+    generate_articles(topics, delay=args.delay, resume_file=Path(args.resume_file) if args.resume_file else None)
   except KeyboardInterrupt:
     LOGGER.warning("Interrupted by user")
     return 130

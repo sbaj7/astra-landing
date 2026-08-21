@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematologic Oncology",
+  "title": "Multiple Myeloma",
+  "summary": "Multiple myeloma management requires confirmation of a myeloma-defining event, urgent control of organ-threatening complications, risk-informed induction and transplant planning, and sequencing of cellular or T-cell–redirecting therapies at relapse.",
+  "seoDescription": "Physician guide to diagnosing and managing multiple myeloma, including SLiM-CRAB criteria, induction, transplant, relapse therapy, and cellular immunotherapy.",
+  "clinicalQuestion": "How should physicians diagnose, stabilize, stage, and select initial and relapse treatment for multiple myeloma?",
+  "specialty": "Hematology-Oncology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "multiple myeloma",
+    "SLiM-CRAB",
+    "autologous stem cell transplant",
+    "daratumumab",
+    "CAR T-cell therapy",
+    "bispecific antibodies",
+    "light-chain cast nephropathy"
+  ],
+  "keyTakeaways": [
+    "Treat active myeloma when clonal marrow plasma cells are at least 10% or a plasmacytoma is present with CRAB end-organ injury, or when a SLiM biomarker defines active disease: marrow plasma cells at least 60%, involved/uninvolved free light-chain ratio at least 100, or more than one MRI focal lesion at least 5 mm.[10][11][12]",
+    "In newly diagnosed disease, three-drug induction is generally superior to two-drug induction; transplant-eligible patients increasingly receive a CD38 antibody plus proteasome inhibitor, immunomodulatory drug, and dexamethasone quadruplet.[2][6]",
+    "Autologous stem-cell transplantation improves progression-free survival when incorporated early, although trials summarized by the FDA show no overall-survival difference versus deferred transplantation in the cited comparisons.[2]",
+    "At relapse, select therapy by prior exposure and refractoriness; lenalidomide-refractory disease can be approached with pomalidomide-, proteasome inhibitor-, or anti-CD38–containing combinations, whereas triple-class refractory disease is a setting for BCMA CAR T-cell therapy or T-cell–redirecting bispecific antibodies.[2]",
+    "Before CAR T-cell therapy, identify extramedullary disease, high-risk cytogenetics, cytopenias, and inflammatory markers because these features predict inferior disease control or higher infectious and hematologic toxicity.[7]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-active-myeloma",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm active myeloma before initiating systemic therapy",
+      "intro": "Separate MGUS and smoldering disease from myeloma requiring treatment.",
+      "paragraphs": [
+        "Establish the monoclonal protein and clone with serum protein electrophoresis, serum immunofixation, serum free light chains, and urine protein electrophoresis/immunofixation. Immunofixation identifies the immunoglobulin type, while serum free light-chain testing is particularly important when the clone produces little or no intact immunoglobulin; light-chain disease may be missed by serum electrophoresis alone.[11][13]",
+        "Obtain bone marrow aspirate and biopsy to quantify clonal plasma cells and assess cytogenetic risk, and image for osseous, marrow, and soft-tissue involvement. The diagnostic pivot is a clonal plasma-cell process with a myeloma-defining event rather than the mere presence of an M-protein.[4][10][11]",
+        "Classify as active myeloma when marrow clonal plasma cells are at least 10% or a biopsy-proven bony or extramedullary plasmacytoma is present plus attributable CRAB injury: calcium greater than 11 mg/dL, estimated GFR below 40 mL/min, anemia with hemoglobin at least 2 g/dL below normal, or myeloma-related bone disease. In the absence of CRAB injury, the IMWG biomarker-defined criteria are marrow plasma cells at least 60%, involved/uninvolved serum free light-chain ratio at least 100, or more than one MRI focal lesion at least 5 mm.[10][11][12]"
+      ],
+      "bullets": [
+        "MGUS: serum monoclonal protein below 3 g/dL, marrow monoclonal plasma cells below 10%, and no symptoms or attributable end-organ injury.[11]",
+        "Smoldering myeloma: serum monoclonal protein at least 3 g/dL and/or marrow monoclonal plasma cells 10% to 60%, without myeloma-defining end-organ injury.[11]",
+        "Reassess an apparently biomarker-only case for evolving organ injury before treatment, because contemporary cohorts show improved prognosis for patients meeting the marrow plasma-cell or free light-chain SLiM criteria alone.[12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Diagnostic classification hinges on clonality, burden, and a myeloma-defining event.[10][11][12]",
+        "columns": [
+          "Category",
+          "Key threshold",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "MGUS",
+            "M-protein <3 g/dL; marrow plasma cells <10%; asymptomatic.[11]",
+            "Do not treat as myeloma; monitor for progression."
+          ],
+          [
+            "Smoldering myeloma",
+            "M-protein ≥3 g/dL and/or marrow plasma cells 10%–60% without myeloma-defining event.[11]",
+            "Surveillance; distinguish from SLiM-defined active disease."
+          ],
+          [
+            "Active myeloma by CRAB",
+            "Clonal process plus attributable hypercalcemia >11 mg/dL, eGFR <40 mL/min, anemia, or bone disease.[10][11]",
+            "Stabilize the affected organ and initiate myeloma-directed therapy."
+          ],
+          [
+            "Active myeloma by SLiM",
+            "Marrow plasma cells ≥60%, free light-chain ratio ≥100, or >1 MRI focal lesion ≥5 mm.[12]",
+            "Confirm disease assessment and plan systemic treatment."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stabilize-organ-threatening-disease",
+      "eyebrow": "Urgent Management",
+      "heading": "Address kidney injury, hypercalcemia, cytopenias, and skeletal disease in parallel",
+      "intro": "Organ complications should accelerate—not delay—diagnostic confirmation and treatment planning.",
+      "paragraphs": [
+        "In acute kidney injury, quantify serum free light chains and obtain serum and urine electrophoresis with immunofixation while evaluating competing renal diagnoses with urinalysis and urine sediment examination. KDIGO specifically includes serum free light chains and serum/urine electrophoresis-immunofixation in the evaluation of kidney disease when a monoclonal process is suspected.[18] Symptomatic myeloma-associated acute kidney injury warrants coordinated nephrology and hematology management because renal dysfunction may reflect light-chain-mediated injury requiring prompt control of the plasma-cell clone.[16]",
+        "For hypercalcemia, establish whether the biochemical pattern is consistent with myeloma and identify immediate contributors such as dehydration and reduced renal function. A cited case of severe hypercalcemia with creatinine 2.7 mg/dL improved after hydration and bisphosphonate therapy, illustrating the need to correct volume depletion while lowering calcium in clinically significant disease.[21]",
+        "Use imaging to define myeloma-related bone disease, marrow involvement, and soft-tissue or extramedullary disease at baseline. Imaging is also relevant during follow-up when clinical or biochemical findings suggest progression, particularly when disease biology may become less reliably represented by a single serologic marker.[4][7]",
+        "Document anemia, renal impairment, bone disease, and immunoparesis at presentation because these manifestations identify symptomatic disease and affect treatment tolerance. For patients being considered for CAR T-cell therapy later in their course, pre-lymphodepletion cytopenias and elevated CRP or ferritin identify a higher-risk group with longer severe neutropenia and substantially more severe infection.[7]"
+      ],
+      "bullets": [
+        "Acute kidney injury with a suspected monoclonal process: order serum free light chains, serum and urine protein electrophoresis/immunofixation, urinalysis, and urine sediment examination.[18]",
+        "Severe or symptomatic hypercalcemia: hydrate and use a bisphosphonate while initiating evaluation and control of active myeloma.[21]",
+        "New focal pain, fracture concern, neurologic symptoms, or suspected extramedullary progression: obtain imaging directed at bone, marrow, and soft tissue.[4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Organ-threatening patterns change the immediate workup and treatment sequence.[4][16][18][21]",
+        "columns": [
+          "Clinical pattern",
+          "Immediate tests",
+          "Next management step"
+        ],
+        "rows": [
+          [
+            "Acute kidney injury with suspected light-chain disease",
+            "Serum free light chains; serum and urine electrophoresis/immunofixation; urinalysis and sediment.[18]",
+            "Expedite myeloma-directed management with nephrology involvement.[16]"
+          ],
+          [
+            "Hypercalcemia with dehydration or renal dysfunction",
+            "Calcium, renal function, and assessment for active myeloma.",
+            "Hydration plus bisphosphonate therapy for clinically significant hypercalcemia.[21]"
+          ],
+          [
+            "Bone, marrow, or soft-tissue concern",
+            "Myeloma-directed imaging for osseous, marrow, and soft-tissue involvement.[4]",
+            "Use findings to confirm myeloma-related disease and define disease extent."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-treatment-and-transplant",
+      "eyebrow": "Newly Diagnosed Disease",
+      "heading": "Select induction around transplant eligibility and treatment fitness",
+      "intro": "Use multidrug induction while planning stem-cell collection and transplant strategy early.",
+      "paragraphs": [
+        "For newly diagnosed active myeloma, induction with three drugs is generally superior to two drugs. Contemporary induction is moving toward quadruplets that combine a proteasome inhibitor, an immunomodulatory drug, a CD38-directed antibody, and dexamethasone for transplant-eligible patients.[2][6] Daratumumab is FDA-labeled in combination with lenalidomide and dexamethasone for newly diagnosed adult multiple myeloma, supporting its role in first-line combination treatment.[1]",
+        "Assess autologous stem-cell transplant eligibility before finalizing the treatment sequence. In the trials summarized by the FDA, early transplant after RVd induction prolonged median progression-free survival compared with deferred transplant: 47.3 versus 35 months in IFM-2009 and 67.5 versus 46.2 months in DETERMINATION. Overall survival was similar in the reported comparisons, with 8-year survival of 62.2% versus 60.2% and 5-year survival of 80.7% versus 79.2%, respectively.[2] This supports an individualized discussion of earlier disease control versus reserving transplant for relapse.",
+        "Maintenance therapy is a core component after initial therapy and transplantation in the FDA summary of current management, with lenalidomide used for two years in IFM-2009 and indefinitely in DETERMINATION.[2] High-risk biology, frailty, organ dysfunction, baseline neuropathy, and treatment response should shape regimen selection and the intensity of follow-up rather than relying on transplant eligibility alone.[7][24]",
+        "Minimal residual disease negativity is consistently associated with superior survival outcomes and is increasingly used as an efficacy endpoint, including in patients with high-risk cytogenetics. It should inform prognostic discussion and clinical-trial strategy, but MRD-guided discontinuation or de-escalation remains an evolving treatment paradigm.[23][24]"
+      ],
+      "bullets": [
+        "Transplant-eligible: consider a CD38 antibody/proteasome inhibitor/immunomodulatory drug/dexamethasone induction strategy, stem-cell collection, and early versus deferred autologous transplant discussion.[2][6]",
+        "Transplant-ineligible or frail: tailor combination intensity to frailty and organ tolerance; the FDA treatment landscape notes daratumumab monotherapy for frail patients.[2]",
+        "Maintenance: incorporate lenalidomide-based maintenance planning after initial therapy; duration differed between major early-versus-deferred transplant trials.[2]"
+      ],
+      "subsections": [
+        {
+          "heading": "Risk features that should alter counseling",
+          "paragraphs": [
+            "Adverse cytogenetics, extramedullary myeloma, and high-risk R-ISS disease predict less favorable outcomes despite modern proteasome inhibitor, immunomodulatory drug, and antibody-based therapy.[7] Reassess risk dynamically during therapy using disease response, marrow findings when indicated, imaging, and evolving clinical features rather than treating baseline stage as immutable.[24]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Initial strategy is driven principally by transplant eligibility, disease risk, and treatment tolerance.[2][6][24]",
+        "columns": [
+          "Decision point",
+          "Evidence-supported approach",
+          "Tradeoff or monitoring focus"
+        ],
+        "rows": [
+          [
+            "Induction intensity",
+            "Three-drug induction generally outperforms two-drug induction; quadruplets incorporating PI, IMiD, CD38 antibody, and dexamethasone are emerging for transplant-eligible patients.[2][6]",
+            "Balance depth of response against frailty, organ dysfunction, and toxicity."
+          ],
+          [
+            "Timing of ASCT",
+            "Early ASCT improved PFS versus deferred ASCT in IFM-2009 and DETERMINATION.[2]",
+            "Reported overall survival was similar in the cited early-versus-deferred comparisons.[2]"
+          ],
+          [
+            "Maintenance",
+            "Lenalidomide maintenance was used for two years in IFM-2009 and indefinitely in DETERMINATION.[2]",
+            "Define intended duration and reassess tolerability and relapse risk."
+          ],
+          [
+            "MRD assessment",
+            "MRD negativity is associated with improved survival and is an important endpoint.[23][24]",
+            "Do not assume MRD status alone establishes a universal stop-treatment rule."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "relapsed-refractory-disease",
+      "eyebrow": "Relapse",
+      "heading": "Sequence relapse therapy by exposure, refractoriness, and urgency of disease control",
+      "intro": "Document what failed, what remains active, and whether an immediately available therapy is required.",
+      "paragraphs": [
+        "At each relapse, define refractoriness to lenalidomide, bortezomib, anti-CD38 therapy, and other prior classes before choosing the next regimen. The FDA treatment landscape lists lenalidomide-sensitive options such as KRd, DRd, ERd, and IRd; for lenalidomide-refractory but bortezomib-sensitive disease, it includes pomalidomide-based combinations such as DPd and IsaPd as well as proteasome inhibitor–based regimens such as DVd, DKd, IsaKd, KCd, CyBorD, and Kd.[2]",
+        "For disease refractory to both lenalidomide and bortezomib, the listed options remain centered on pomalidomide-, carfilzomib-, and anti-CD38–containing combinations, including DPd, IsaPd, DKd, IsaKd, KCd, and KPd. Other listed approaches include selinexor-containing therapy, VD-PACE or VdCEP, cyclophosphamide-based regimens, and autologous transplant in selected circumstances.[2] Use intensive cytoreductive regimens when the clinical tempo requires rapid control, not merely because the patient has accumulated prior lines.",
+        "Venetoclax is not FDA approved for multiple myeloma; the FDA management summary restricts its use to patients with t(11;14), including a venetoclax-bortezomib-dexamethasone option.[2] Confirm t(11;14) before considering this targeted off-label strategy.",
+        "After refractoriness to an immunomodulatory drug, proteasome inhibitor, and anti-CD38 monoclonal antibody, refer promptly for BCMA-directed CAR T-cell therapy or T-cell–redirecting therapy planning. The FDA landscape lists idecabtagene vicleucel, ciltacabtagene autoleucel, teclistamab, talquetamab, and elranatamab in this heavily pretreated setting.[2]"
+      ],
+      "bullets": [
+        "Lenalidomide-sensitive relapse: consider class combinations listed as KRd, DRd, ERd, or IRd.[2]",
+        "Lenalidomide-refractory, bortezomib-sensitive relapse: consider DPd, IsaPd, PCd, EPd, VPd, KPd, DVd, DKd, IsaKd, KCd, CyBorD, or Kd according to prior exposure and patient factors.[2]",
+        "t(11;14): venetoclax is an off-label option in the FDA treatment landscape; do not extrapolate its use to unselected myeloma.[2]",
+        "Triple-class refractory disease: begin referral and bridging planning for CAR T-cell or bispecific therapy before clinical deterioration narrows eligibility.[2][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Relapse therapy requires explicit classification of prior drug resistance.[2]",
+        "columns": [
+          "Relapse phenotype",
+          "Listed treatment families or regimens",
+          "Selection constraint"
+        ],
+        "rows": [
+          [
+            "Lenalidomide-sensitive",
+            "KRd, DRd, ERd, IRd.[2]",
+            "Choose based on prior exposure, comorbidity, and disease tempo."
+          ],
+          [
+            "Lenalidomide-refractory, bortezomib-sensitive",
+            "DPd, IsaPd, PCd, EPd, VPd, KPd; DVd, DKd, IsaKd, KCd, CyBorD, Kd.[2]",
+            "Match the regimen to retained class sensitivity."
+          ],
+          [
+            "Lenalidomide- and bortezomib-refractory",
+            "DPd, EPd, IsaPd, KPd; DKd, IsaKd, KCd; selinexor- or intensive chemotherapy-based approaches.[2]",
+            "Consider urgency, toxicity tolerance, and cellular-therapy planning."
+          ],
+          [
+            "IMiD-, PI-, and anti-CD38-refractory",
+            "Ide-cel, cilta-cel, teclistamab, talquetamab, elranatamab.[2]",
+            "Refer early; assess cytopenias, inflammation, and extramedullary disease."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cellular-and-t-cell-redirecting-therapy",
+      "eyebrow": "Advanced Therapy",
+      "heading": "Plan CAR T-cell and bispecific therapy before end-stage clinical decline",
+      "intro": "Cellular therapy selection requires disease-control planning and toxicity risk assessment.",
+      "paragraphs": [
+        "BCMA-directed CAR T-cell therapy is a major option for heavily pretreated relapsed/refractory myeloma. In the phase II KarMMa experience with idecabtagene vicleucel, overall response rate was 73%, complete response rate 33%, median progression-free survival 8.6 months, and median overall survival 24 months; the median time to first response was one month.[5] These outcomes support referral before rapidly progressive disease, organ failure, or poor performance status complicate the pathway to cell therapy.",
+        "Expect cytokine-release syndrome and neurotoxicity after CAR T-cell infusion. In KarMMa, cytokine-release syndrome occurred in 84% of patients with a median onset of one day, while neurotoxicity occurred in 18% with a median onset of two days; grade 3 cytopenias were common.[5] Build monitoring capacity around early postinfusion inflammatory and neurologic complications and anticipate prolonged hematologic support needs.",
+        "Extramedullary disease and high-risk cytogenetics predict poorer CAR T-cell outcomes. A meta-analysis summarized in a contemporary review found extramedullary disease associated with a 44% higher risk of relapse, progression, or death after CAR T-cell treatment; high-risk cytogenetics reduced overall response rate and increased the risk of progression, relapse, or death by 70%.[7] These factors should prompt realistic counseling and consideration of clinical trials or alternate sequencing strategies.",
+        "Pre-lymphodepletion cytopenias plus elevated CRP or ferritin identify a clinically important high-risk toxicity phenotype: severe neutropenia lasted 9 versus 3 days, severe infection occurred in 40% versus 5%, and one-year non-relapse mortality was 13% versus 2% compared with lower-risk patients.[7] Obtain CBC, CRP, and ferritin during candidacy assessment and use the result to intensify infection-risk planning and post-treatment surveillance."
+      ],
+      "bullets": [
+        "CAR T candidates with extramedullary disease or high-risk cytogenetics need counseling regarding lower response durability and higher progression risk.[7]",
+        "After CAR T infusion, anticipate cytokine-release syndrome beginning around day 1 and neurotoxicity around day 2 in the cited ide-cel trial experience.[5]",
+        "Before lymphodepletion, assess CBC, CRP, and ferritin; cytopenias plus inflammatory marker elevation predict more severe neutropenia, infection, and non-relapse mortality.[7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "CAR T-cell therapy requires risk assessment for both efficacy and post-treatment toxicity.[5][7]",
+        "columns": [
+          "Finding",
+          "Clinical implication",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Extramedullary disease",
+            "44% higher risk of relapse, progression, or death after CAR T-cell therapy in a cited meta-analysis.[7]",
+            "Counsel regarding reduced durability and consider trial options."
+          ],
+          [
+            "High-risk cytogenetics",
+            "Lower overall response rate and 70% higher risk of progression, relapse, or death after CAR T-cell therapy.[7]",
+            "Use in prognosis and sequencing discussions."
+          ],
+          [
+            "Cytopenias plus elevated CRP or ferritin before lymphodepletion",
+            "Severe neutropenia 9 versus 3 days; severe infection 40% versus 5%; one-year non-relapse mortality 13% versus 2%.[7]",
+            "Intensify infection-risk mitigation and hematologic monitoring."
+          ],
+          [
+            "Early postinfusion period",
+            "Ide-cel CRS occurred in 84% at median day 1; neurotoxicity occurred in 18% at median day 2.[5]",
+            "Monitor closely for inflammatory and neurologic toxicity."
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

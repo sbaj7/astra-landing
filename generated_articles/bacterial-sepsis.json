@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Bacterial Sepsis",
+  "summary": "Bacterial sepsis requires immediate recognition of infection-associated organ dysfunction, parallel microbiologic evaluation and resuscitation, prompt empiric antibiotics when illness is critical, source-directed control, and repeated reassessment to narrow therapy and identify noninfectious mimics.",
+  "seoDescription": "Clinical approach to suspected bacterial sepsis: recognition of organ dysfunction, cultures, lactate, empiric antibiotics, monitoring, and antimicrobial reassessment.",
+  "clinicalQuestion": "How should physicians recognize, evaluate, and initially manage adults with suspected bacterial sepsis while minimizing unnecessary antimicrobial exposure?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "bacterial sepsis",
+    "septic shock",
+    "sepsis diagnosis",
+    "empiric antibiotics",
+    "blood cultures",
+    "lactate",
+    "antimicrobial stewardship"
+  ],
+  "keyTakeaways": [
+    "Sepsis is life-threatening organ dysfunction caused by a dysregulated host response to infection; no single diagnostic test is definitive. [9][11]",
+    "In critically ill patients with suspected bacterial sepsis, obtain blood cultures and relevant source specimens without creating a meaningful delay in empiric intravenous antibiotics. [10][11]",
+    "Treat septic shock and rapidly deteriorating sepsis as medical emergencies requiring coordinated antimicrobial therapy, assessment of perfusion, fluids when circulatory insufficiency is present, oxygen as needed, and frequent reassessment. [11][15]",
+    "Broad empiric therapy should cover likely pathogens and be narrowed when microbiology, susceptibility data, or clinical evolution permits. [10]",
+    "Procalcitonin may provide prognostic information in severe sepsis or septic shock, but supplied evidence does not establish it as a stand-alone test for diagnosis or antibiotic duration. [1]"
+  ],
+  "sections": [
+    {
+      "id": "clinical-recognition",
+      "eyebrow": "Recognition",
+      "heading": "Identify infection-associated organ dysfunction, not infection alone",
+      "intro": "Use bedside trajectory and organ dysfunction to determine urgency.",
+      "paragraphs": [
+        "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection. Septic shock is a high-acuity subset of sepsis, but neither sepsis nor septic shock has a diagnostic gold standard. [9][11]",
+        "Suspected bacterial infection must be interpreted alongside evolving physiologic impairment and alternative explanations for organ dysfunction. Conventional clinical criteria and biomarkers have important limitations for confirming infection or predicting deterioration; therefore, serial examination and repeated reassessment are essential. [9][18]",
+        "Patients with septic shock, rapid clinical deterioration, or a high initial illness-severity score warrant immediate escalation. In one acute-care framework, NEWS2 of 7 or greater identifies high risk of severe illness or death from sepsis, although NEWS2 is not a U.S.-specific diagnostic definition and must be interpreted clinically. [11][24]"
+      ],
+      "bullets": [
+        "Prioritize immediate management when suspected infection is accompanied by hemodynamic instability, worsening organ dysfunction, or rapid deterioration. [10][11]",
+        "Do not use a normal or low single biomarker result to exclude sepsis when clinical concern remains high; no single biomarker resolves infection status, pathogen class, and severity simultaneously. [13]",
+        "Actively reconsider noninfectious causes of shock and organ dysfunction, because distinguishing sepsis from noninfectious etiologies remains difficult. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational triage for suspected bacterial sepsis based on supplied acute-care guidance. [10][11][24]",
+        "columns": [
+          "Clinical state",
+          "Immediate priorities",
+          "Monitoring emphasis"
+        ],
+        "rows": [
+          [
+            "Septic shock or rapidly deteriorating suspected sepsis",
+            "Obtain cultures and source-directed specimens promptly; begin intravenous broad-spectrum antibiotics after cultures if feasible; assess lactate, circulation, oxygen need, and urine output. [11]",
+            "Frequent reassessment of clinical trajectory, hemodynamics, urine output, laboratory data, and response to resuscitation. [11]"
+          ],
+          [
+            "Suspected infection with organ dysfunction but without immediate shock",
+            "Evaluate for infectious source and organ dysfunction; obtain microbiologic testing and institute treatment according to illness severity and likelihood of bacterial infection. [10][11]",
+            "Repeat clinical assessment because deterioration can be rapid and scores do not replace judgment. [18][24]"
+          ],
+          [
+            "Possible infection without clear organ dysfunction",
+            "Assess competing diagnoses and likelihood of bacterial infection before exposing the patient to unnecessary antibiotics. [1][5]",
+            "Reassess if new organ dysfunction, circulatory insufficiency, or clinical decline develops. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-evaluation",
+      "eyebrow": "Diagnostic Workup",
+      "heading": "Perform microbiologic evaluation and perfusion assessment in parallel with treatment",
+      "intro": "Testing should identify a source and guide de-escalation without delaying emergency care.",
+      "paragraphs": [
+        "For critically ill adults with suspected sepsis, obtain two sets of blood cultures, measure serum lactate, and assess hourly urine output. Obtain additional specimens and imaging based on the suspected source. Blood cultures should precede antibiotics when this can be done promptly; antimicrobial delivery should not be delayed in a critically ill patient. [11]",
+        "The practical diagnostic objective is not merely to label sepsis but to establish whether infection is present, identify its source and pathogen when possible, characterize organ dysfunction, and detect a need for urgent source control or critical-care support. Traditional diagnostics may have low yield and can be slow, which contributes to empiric treatment in severe presentations. [1][13]",
+        "Procalcitonin is an adjunct rather than a replacement for clinical assessment. FDA material reports that, among patients with severe sepsis or septic shock, a decline of 80% or less from diagnosis to day 4 was associated with higher 28-day all-cause mortality than a decline greater than 80%; this is prognostic information and does not establish a validated treatment-duration rule. [1]"
+      ],
+      "bullets": [
+        "Document suspected anatomic source before or at the time empiric therapy is started, because source and host factors determine antimicrobial spectrum and the need for procedural intervention. [10]",
+        "Trend lactate, urine output, examination findings, and hemodynamics rather than interpreting one measurement in isolation. [11]",
+        "Use microbiology and susceptibility results to convert broad empiric therapy to targeted therapy. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-yield initial evaluation in critically ill suspected sepsis. [11][13]",
+        "columns": [
+          "Test or assessment",
+          "Decision value",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Two sets of blood cultures",
+            "May identify bloodstream pathogen and enable targeted therapy. [11]",
+            "Cultures should not materially delay antimicrobial therapy in critical illness. [11]"
+          ],
+          [
+            "Source-directed cultures or specimens",
+            "Support localization and de-escalation when an infectious focus is suspected. [10]",
+            "Negative results do not independently exclude infection. [1][13]"
+          ],
+          [
+            "Serum lactate",
+            "Assesses physiologic severity and should be included in initial critical-illness evaluation. [11]",
+            "No supplied source supports use of a single lactate threshold as a standalone diagnostic rule."
+          ],
+          [
+            "Hourly urine output",
+            "Provides ongoing assessment of organ perfusion and organ dysfunction. [11]",
+            "Must be integrated with the full hemodynamic and renal clinical context. [11]"
+          ],
+          [
+            "Procalcitonin trend",
+            "May contribute prognostic information in severe sepsis or septic shock. [1]",
+            "Supplied evidence does not support it as a definitive diagnostic test or independent antibiotic stop rule. [1][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "early-management",
+      "eyebrow": "Emergency Management",
+      "heading": "Start empiric therapy promptly in critical illness and reassess continuously",
+      "intro": "Initial management is simultaneous resuscitation, infection treatment, and diagnostic clarification.",
+      "paragraphs": [
+        "For patients with critical illness at presentation, including septic shock or rapidly deteriorating sepsis, acute-care guidance recommends obtaining cultures, measuring lactate, monitoring urine output, administering intravenous broad-spectrum antibiotics after cultures when bacterial infection is evident, giving intravenous fluids for circulatory insufficiency, and providing oxygen when needed. [11]",
+        "Empiric antibiotics should cover likely pathogens, with consideration of bacterial and, when risk factors justify it, viral or fungal causes. Older Surviving Sepsis Campaign guidance summarized in the supplied literature recommended two agents from different classes for septic shock when directed at the most likely pathogens, while noting that bacteremia, neutropenic sepsis, and sepsis without shock do not routinely require combination therapy. [10]",
+        "The evidence base for exact antimicrobial strategies and durations in sepsis remains limited. Regimen selection, dose, infusion strategy, renal adjustment, and treatment duration should therefore be driven by the suspected source, local antibiogram, prior microbiology, allergy history, organ function, host immune status, source control, culture results, and clinical response; the supplied sources do not support a universal empiric regimen or dose. [16]"
+      ],
+      "bullets": [
+        "Treat suspected septic shock as an emergency; coordinated early antimicrobial and resuscitative care is central to sepsis pathways. [10][15]",
+        "Obtain cultures before antibiotics when feasible, but do not defer needed therapy in an unstable patient to complete diagnostic testing. [11]",
+        "Reassess empiric coverage when source, organism, and susceptibility data become available; narrow therapy with clinical improvement or microbiologic clarification. [10]",
+        "Avoid antibiotics when bacterial infection is not proven or strongly suspected, because unnecessary exposure promotes resistant bacteria and may not benefit the patient. [2][5]"
+      ],
+      "subsections": [
+        {
+          "heading": "Antimicrobial stewardship after the first dose",
+          "paragraphs": [
+            "Initial broad coverage is a time-sensitive risk-management decision, not a commitment to a fixed regimen. Review the working diagnosis, culture results, susceptibility data, source control status, organ dysfunction, and response daily. De-escalate or discontinue antibacterial therapy when evidence no longer supports bacterial infection, and narrow therapy when a pathogen and susceptibilities are established. [10][5]",
+            "Do not extrapolate drug-specific renal-adjustment information across antimicrobial classes. For example, cefprozil labeling recommends 50% of the standard dose at creatinine clearance 0 to 29 mL/min and administration after hemodialysis, whereas cefixime labeling also requires renal adjustment but does not provide a universal cephalosporin rule. [2][5]"
+          ],
+          "bullets": [
+            "Monitor renal function and other organ dysfunction when selecting and continuing renally cleared antimicrobials. [2][5]",
+            "Consider Clostridioides difficile infection when diarrhea develops during or after antibacterial exposure; discontinue nonessential antibacterials and treat confirmed infection as clinically indicated. [5]",
+            "For cefixime, monitor prothrombin time in patients at risk for reduced prothrombin activity, including those with renal or hepatic impairment, poor nutritional status, prolonged antimicrobial exposure, or anticoagulant treatment. [5]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Antimicrobial decision points in bacterial sepsis. [10][16]",
+        "columns": [
+          "Time point",
+          "Decision",
+          "Evidence-informed action"
+        ],
+        "rows": [
+          [
+            "Initial recognition of critical illness",
+            "Need for empiric treatment",
+            "Administer intravenous broad-spectrum antibiotics promptly after cultures when feasible in critically ill patients with evidence of bacterial infection. [11]"
+          ],
+          [
+            "Before regimen selection",
+            "Spectrum and combination therapy",
+            "Match coverage to likely source, pathogens, and host risk; supplied guidance supports combination empiric therapy principally for septic shock, not routine combination therapy for sepsis without shock. [10]"
+          ],
+          [
+            "After microbiology and clinical reassessment",
+            "De-escalation",
+            "Narrow therapy when pathogen and susceptibility data are known or when clinical evolution supports a more focused regimen. [10]"
+          ],
+          [
+            "During ongoing treatment",
+            "Duration",
+            "Individualize to source, source control, microbiology, and response; optimal antimicrobial treatment strategies in sepsis remain insufficiently defined. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "source-control-and-escalation",
+      "eyebrow": "Ongoing Care",
+      "heading": "Find the source and escalate when physiology fails to improve",
+      "intro": "Clinical improvement depends on more than antimicrobial selection.",
+      "paragraphs": [
+        "The initial evaluation should repeatedly seek an actionable infectious focus. Persistent instability, recurrent fever, worsening organ dysfunction, or failure to improve despite apparently appropriate empiric coverage should prompt reassessment of the diagnosis, adequacy of source control, antimicrobial activity, drug exposure, and noninfectious mimics. The supplied literature emphasizes early identification, tailored antibiotics, laboratory evaluation, and coordinated resuscitative care. [10][11]",
+        "Frequent monitoring is required because sepsis severity is dynamic. Ongoing bedside assessment, urine output, lactate measurement, oxygen requirement, hemodynamics, and microbiologic data should inform escalation or de-escalation. [11][18]"
+      ],
+      "bullets": [
+        "Involve critical care early for shock, escalating organ support needs, or rapid deterioration. [11][15]",
+        "Engage infectious diseases expertise when resistant pathogens, uncertain source, persistent bacteremia, complex immunocompromise, or inability to narrow therapy complicate management; this is a practical inference from the need for tailored therapy and de-escalation. [10]",
+        "Do not regard clinical improvement alone as proof of bacterial infection; use the evolving diagnosis to limit avoidable antimicrobial exposure. [1][5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Reassessment triggers in suspected bacterial sepsis. [10][11][18]",
+        "columns": [
+          "Trigger",
+          "Reassess",
+          "Potential next action"
+        ],
+        "rows": [
+          [
+            "Persistent or worsening organ dysfunction",
+            "Source, microbiology, antimicrobial adequacy, resuscitation response, and alternative diagnoses. [10][18]",
+            "Escalate monitoring and specialty support; pursue source-directed diagnostic evaluation. [11][18]"
+          ],
+          [
+            "Culture identification and susceptibility results",
+            "Whether broad empiric coverage remains necessary. [10]",
+            "Narrow to targeted therapy when appropriate. [10]"
+          ],
+          [
+            "Clinical improvement without microbiologic confirmation",
+            "Probability of bacterial infection and need for continued antibacterial exposure. [1][5]",
+            "Consider de-escalation or discontinuation when bacterial infection is no longer strongly suspected. [5]"
+          ],
+          [
+            "Diarrhea during or after antibiotics",
+            "Possibility of C. difficile infection. [5]",
+            "Discontinue nonessential antibacterials and manage confirmed C. difficile infection as clinically indicated. [5]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does a low procalcitonin exclude bacterial sepsis?",
+      "answer": "No. The supplied evidence indicates that no single biomarker can determine infection presence, pathogen type, and severity. Procalcitonin trends may add prognostic information in severe sepsis or septic shock but should not override clinical assessment. [1][13]"
+    },
+    {
+      "question": "Should blood cultures delay antibiotics in suspected septic shock?",
+      "answer": "No. Obtain blood cultures promptly before antibiotics when feasible, but critically ill patients should receive prompt intravenous broad-spectrum therapy rather than waiting for delayed diagnostic testing. [11]"
+    },
+    {
+      "question": "Is empiric combination antibiotic therapy required for all sepsis?",
+      "answer": "No. Supplied guidance supports empiric combination therapy principally for septic shock; bacteremia, neutropenic sepsis, and sepsis without shock were not considered to require routine combination therapy. [10]"
+    },
+    {
+      "question": "How should empiric antibiotics be managed after cultures return?",
+      "answer": "Review source, organism, susceptibility, source control, and clinical response, then narrow therapy when possible. The supplied evidence does not support a universal antibiotic duration for sepsis. [10][16]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "FDA Executive Summary",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/100879/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "septic shock than PCT levels below 0.5 ng/mL. A PCT level that declines \u2264 80% from the day that severe sepsis or septic shock was clinically diagnosed (Day 0) to four days after clinical diagnosis (Day 4) is 2 More detailed information on CLIA waiver applications is available on FDA\u2019s website at:  F",
+      "score": 0.2958098
+    },
+    {
+      "number": 2,
+      "title": "PRESCRIBING INFORMATION CEFPROZIL TABLETS  Rx only Cefprozil Tablets 250 mg and 500 mg To reduce the development of drug-resistant bacteria and maintain the effectiveness of cefprozil and other antibacterial drugs, cefprozil should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria.",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=dc3e9cae-6f4f-4045-a11e-2fbf7f94c3c0&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "In patients with impaired hepatic function, the half-life increases to approximately 2 hours. The magnitude of the changes does not warrant a dosage adjustment for patients with impaired hepatic function.  \n  \n Healthy geriatric volunteers (\u226565 years old) who received a single 1-g dose of cefprozil ",
+      "score": 0.42520002
+    },
+    {
+      "number": 3,
+      "title": "See full prescribing information for complete boxed warning",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=84c6f6bb-8924-4da5-9629-126197195f83&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  |  |  |  |  |\n ---  --- \n| Pharmacokinetic Parameters for Renal Impairment | | | | |\n|  | Dose | T max(h) | C max  (mcg/mL) | AUC(0-96h)    (mcg\u2022h/mL) |\n| Healthy Volunteers   GFR greater than 80 mL/min/1.73 m 2(n=6) | 1 g | 0.75     (\u00b10.27) | 25.3     (\u00b17.99) | 45.0     (\u00b122.6) |\n| Mild Renal Im",
+      "score": 0.34013495
+    },
+    {
+      "number": 4,
+      "title": "highlights of prescribing information",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eaf135b6-e378-4f62-a1e7-db45e23668c7&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "| Ibuprofen (400 mg) | 850 mg | \u21915%\u00a7 | \u21917%\u00a7 |\n| Drugs eliminated by renal tubular secretion may increase the accumulation of metformin see [Drug Interactions (7)]. | | | |\n| Cimetidine (400 mg) | 850 mg | \u219140% | \u219160% | [...] Assess renal function more frequently. (8.5, 8.6)  \u2022  Renal Impairment: Hig",
+      "score": 0.31811485
+    },
+    {
+      "number": 5,
+      "title": "These highlights do not include all the information needed to use CEFIXIME safely and effectively. See full prescribing information for CEFIXIME.\n      CEFIXIME for oral suspension, 100 mg/5 mLCEFIXIME for oral suspension, 200 mg/5 mLCEFIXIME capsules, 400 mgFor oral administration\n      Initial U.S. Approval: 1986",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=6d68dbd9-7d75-4ff1-91db-79ff8ae879ec&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "If CDAD is suspected or confirmed, ongoing antibacterial drug use not directed against C. difficile may need to be discontinued. Appropriate fluid and electrolyte management, protein supplementation, antibacterial drug treatment of C. difficile, and surgical evaluation should be instituted as clinic",
+      "score": 0.28711322
+    },
+    {
+      "number": 6,
+      "title": "Approval Label_220934s003lbl - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/220934s003lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "patients with severe hepatic impairment. (8.6) See 17 for PATIENT COUNSELING INFORMATION and Medication Guide. Revised: 07/2026 Reference ID: 5842935 FULL PRESCRIBING INFORMATION: CONTENTS WARNING: RISK OF THYROID C-CELL TUMORS 1 INDICATIONS AND USAGE 2 DOSAGE AND ADMINISTRATION 2.1 Recommended Dosa",
+      "score": 0.17100613
+    },
+    {
+      "number": 7,
+      "title": "- IIER - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/219962Orig1s000Lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "\"ll U1\"11~0.!I 0110lh I OilO::Oq ~~Cl) \u00b7~ o,opoj P'J::8JIP lllll.11'4' ' '\"\u00b5n tlllH~a.d LIi Sf!JOIII\"\"' o, ~ wnpo, w:,:0.!le, Oil qpu\u00b5~~dw1~1'P<da\u2022~1\u00b7,., \u2022~pq ~\"'l\"lijoll Ul'\"I '\"'''~IOIJ\"l'\"IIIII \u2022 p 1h l 11 ~an~iuro)S'l~:llimG Reference ID 5840292 ------------------------------\u00b7,(1>){4) READ AND K",
+      "score": 0.16353923
+    },
+    {
+      "number": 8,
+      "title": "Sepsis Prediction Model vs SIRS, qSOFA, and SOFA",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2808756",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by AR Schertz \u00b7 2023 \u00b7 Cited by 99 \u2014 Within the vendor recommended threshold PSS range of 5 to 8, PSS of 8 or greater had the highest balanced accuracy for classifying a sepsis",
+      "score": 0.4250568
+    },
+    {
+      "number": 9,
+      "title": "Assessment of Clinical Criteria for Sepsis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492875",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by CW Seymour \u00b7 2016 \u00b7 Cited by 5476 \u2014 Like many syndromes, there is no \u201cgold standard\u201d diagnostic test for sepsis. mortality was low (4%). similar mortality (5%) and proportion",
+      "score": 0.28410947
+    },
+    {
+      "number": 10,
+      "title": "Update in sepsis guidelines: what is really new?",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/2/1/e000088",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "The 2016 guidelines recommend administering empiric broad-spectrum antimicrobials that cover all likely pathogens, including bacteria and potentially viruses/fungi (depending on the risk factors of the patient). The initial empiric antibiotic regimen for patients in septic shock should include at le",
+      "score": 0.4877716
+    },
+    {
+      "number": 11,
+      "title": "Sepsis in adults - Symptoms, diagnosis and treatment",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/245",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Within 1 hour of the risk being recognised for patients with critical illness on presentation (including those with septic shock, sepsis associated with rapid deterioration, or a NEWS2 score \u22657 on initial assessment in the accident and emergency department or on ward deterioration): take two sets of",
+      "score": 0.47986987
+    },
+    {
+      "number": 12,
+      "title": "What's new in the management of neonatal early-onset ...",
+      "detail": "fn.bmj.com",
+      "url": "https://fn.bmj.com/content/108/1/10",
+      "authors": "fn.bmj.com",
+      "host": "fn.bmj.com",
+      "snippet": "The updated guidelines represent an authoritative and carefully written document based on a careful review of the literature through 2020. The NICE guideline uses \u2018red flags\u2019 and other \u2018non-red flag\u2019 risk factors and clinical indicators to identify which infants require a sepsis evaluation and treat",
+      "score": 0.35723165
+    },
+    {
+      "number": 13,
+      "title": "Clinical validation of an AI-based blood testing device for ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Taylor et al.23.\") recently surveyed 153 US clinicians responding to real-world derived vignettes of suspected sepsis to analyze decision thresholds to treat or not with antibiotics, using infection prediction models and varying case severities. Although the overall threshold to treat was 69% probab",
+      "score": 0.55883324
+    },
+    {
+      "number": 14,
+      "title": "Compliance with SEP-1 guidelines is associated ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X22000408",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by SNB Sloan \u00b7 2022 \u00b7 Cited by 28 \u2014 The data suggest when physicians follow the SEP-1 guidelines there are lower rates of mortality and therefore, a greater probability of survival in patients",
+      "score": 0.38207284
+    },
+    {
+      "number": 15,
+      "title": "Implementation of an adult code sepsis protocol and its impact on SEP-1 core measure perfect score attainment in the ED",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675719304498",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care Med (2017) \n   D.C. Angus _et al._\n### Epidemiology of severe sepsis in the United States: analysis of incidence, outcome, and associated costs of care\n\n### Crit Care Med (2001) \n   D. Mozaffarian _et al._\n### Heart disease and stroke statistics\u20142015 update: a report from the American ",
+      "score": 0.22431062
+    },
+    {
+      "number": 16,
+      "title": "Antimicrobial Treatment Duration in Sepsis and Serious ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jid/article/222/Supplement_2/S142/5874160",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by LM Busch \u00b7 2020 \u00b7 Cited by 67 \u2014 The evidence regarding optimal antimicrobial treatment strategies for sepsis is conspicuously lacking and thus guideline recommendations remain",
+      "score": 0.17698465
+    },
+    {
+      "number": 17,
+      "title": "The JAID/JSC guidelines for management of infectious ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1341321X1930368X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Author links open overlay panel The Japanese Association for Infectious Diseases/Japanese Society of Chemotherapy, The JAID/JSC Guide/Guidelines to Clinical Management of Infectious Disease Preparing Committee, Sepsis working group, Soichi Arakawa a, Masashi Kasai b, Shin Kawai c, Hiroshi Sakata d, ",
+      "score": 0.16791369
+    },
+    {
+      "number": 18,
+      "title": "Challenges in early detection and prognostication of sepsis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2589537026001112",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In this narrative review, we aimed to provide a comprehensive overview of emerging diagnostic strategies and precision medicine approaches in sepsis, while explicitly acknowledging the heterogeneity of clinical contexts. In the Emergency Department (ED), timely recognition of infection and sepsis re",
+      "score": 0.15422338
+    },
+    {
+      "number": 19,
+      "title": "Why IDSA Did Not Endorse the Surviving Sepsis Campaign ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/66/10/1631/4645414",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The guidelines suggest that treating septic shock with 2 antibiotics, both active against a patient's known pathogens, for \u201cseveral days\u201d is likely to be",
+      "score": 0.13926782
+    },
+    {
+      "number": 20,
+      "title": "CDC's Hospital Sepsis Program Core Elements are ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/212/3/537/8435560",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by HC Prescott \u00b7 2026 \u2014 The Core Elements serve as a high-level guide for running an effective hospital or health system program to improve management and outcomes of",
+      "score": 0.112006456
+    },
+    {
+      "number": 21,
+      "title": "Sepsis National Hospital Inpatient Quality Measure (SEP-1)",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/65/9/1565/3966709",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by EJ Septimus \u00b7 2017 \u00b7 Cited by 53 \u2014 The SEP-1 performance measure requires, among other critical interventions, timely administration of antibiotics to patients with sepsis or septic shock.",
+      "score": 0.08716692
+    },
+    {
+      "number": 22,
+      "title": "Identification and management of maternal sepsis during and following pregnancy (Green-top Guideline No. 64) | RCOG",
+      "detail": "www.rcog.org.uk",
+      "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/identification-and-management-of-maternal-sepsis-during-and-following-pregnancy-green-top-guideline-no-64",
+      "authors": "www.rcog.org.uk",
+      "host": "www.rcog.org.uk",
+      "snippet": "This guideline replaces the 2012 Green-top Guidelines No. 64a Bacterial Sepsis in Pregnancy and No. 64b Bacterial Sepsis following Pregnancy.\n\n### COVID disclaimer\n\nThis guideline was developed as part of the regular programme of Green-top Guidelines, as outlined in our Developing a Green-top Guidel",
+      "score": 0.45682228
+    },
+    {
+      "number": 23,
+      "title": "Suspected sepsis",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng254/evidence/b-managing-and-treating-suspected-sepsis-in-acute-hospital-settings-antibiotic-treatment-in-people-pdf-15494510703",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "2 and 3 word blocks) in the titles and abstracts of papers marked as being \u2018includes\u2019 or \u2018excludes\u2019 during the title and abstract screening process, and re-orders the remaining records from most likely to least likely to be an include, based on that algorithm. This re-ordering of the remaining recor",
+      "score": 0.41705835
+    },
+    {
+      "number": 24,
+      "title": "Suspected sepsis in people aged 16 or over",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng253/resources/suspected-sepsis-in-people-aged-16-or-over-recognition-assessment-and-early-management-pdf-66144015386053",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Page 75 of 76 Update information January 2026: We have amended the recommendations to refer to 'learning disabilities' rather than 'learning difficulties'. November 2025: We have split the sepsis guideline, that covered all age groups, into 3 guidelines (including this one). See also NICE's guidelin",
+      "score": 0.4108041
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "FDA Executive Summary",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/100879/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "septic shock than PCT levels below 0.5 ng/mL. A PCT level that declines \u2264 80% from the day that severe sepsis or septic shock was clinically diagnosed (Day 0) to four days after clinical diagnosis (Day 4) is 2 More detailed information on CLIA waiver applications is available on FDA\u2019s website at:  F",
+      "score": 0.2958098
+    },
+    {
+      "number": 2,
+      "title": "PRESCRIBING INFORMATION CEFPROZIL TABLETS  Rx only Cefprozil Tablets 250 mg and 500 mg To reduce the development of drug-resistant bacteria and maintain the effectiveness of cefprozil and other antibacterial drugs, cefprozil should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria.",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=dc3e9cae-6f4f-4045-a11e-2fbf7f94c3c0&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "In patients with impaired hepatic function, the half-life increases to approximately 2 hours. The magnitude of the changes does not warrant a dosage adjustment for patients with impaired hepatic function.  \n  \n Healthy geriatric volunteers (\u226565 years old) who received a single 1-g dose of cefprozil ",
+      "score": 0.42520002
+    },
+    {
+      "number": 3,
+      "title": "See full prescribing information for complete boxed warning",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=84c6f6bb-8924-4da5-9629-126197195f83&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  |  |  |  |  |\n ---  --- \n| Pharmacokinetic Parameters for Renal Impairment | | | | |\n|  | Dose | T max(h) | C max  (mcg/mL) | AUC(0-96h)    (mcg\u2022h/mL) |\n| Healthy Volunteers   GFR greater than 80 mL/min/1.73 m 2(n=6) | 1 g | 0.75     (\u00b10.27) | 25.3     (\u00b17.99) | 45.0     (\u00b122.6) |\n| Mild Renal Im",
+      "score": 0.34013495
+    },
+    {
+      "number": 4,
+      "title": "highlights of prescribing information",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=eaf135b6-e378-4f62-a1e7-db45e23668c7&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "| Ibuprofen (400 mg) | 850 mg | \u21915%\u00a7 | \u21917%\u00a7 |\n| Drugs eliminated by renal tubular secretion may increase the accumulation of metformin see [Drug Interactions (7)]. | | | |\n| Cimetidine (400 mg) | 850 mg | \u219140% | \u219160% | [...] Assess renal function more frequently. (8.5, 8.6)  \u2022  Renal Impairment: Hig",
+      "score": 0.31811485
+    },
+    {
+      "number": 5,
+      "title": "These highlights do not include all the information needed to use CEFIXIME safely and effectively. See full prescribing information for CEFIXIME.\n      CEFIXIME for oral suspension, 100 mg/5 mLCEFIXIME for oral suspension, 200 mg/5 mLCEFIXIME capsules, 400 mgFor oral administration\n      Initial U.S. Approval: 1986",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=6d68dbd9-7d75-4ff1-91db-79ff8ae879ec&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "If CDAD is suspected or confirmed, ongoing antibacterial drug use not directed against C. difficile may need to be discontinued. Appropriate fluid and electrolyte management, protein supplementation, antibacterial drug treatment of C. difficile, and surgical evaluation should be instituted as clinic",
+      "score": 0.28711322
+    },
+    {
+      "number": 6,
+      "title": "Approval Label_220934s003lbl - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/220934s003lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "patients with severe hepatic impairment. (8.6) See 17 for PATIENT COUNSELING INFORMATION and Medication Guide. Revised: 07/2026 Reference ID: 5842935 FULL PRESCRIBING INFORMATION: CONTENTS WARNING: RISK OF THYROID C-CELL TUMORS 1 INDICATIONS AND USAGE 2 DOSAGE AND ADMINISTRATION 2.1 Recommended Dosa",
+      "score": 0.17100613
+    },
+    {
+      "number": 7,
+      "title": "- IIER - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/219962Orig1s000Lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "\"ll U1\"11~0.!I 0110lh I OilO::Oq ~~Cl) \u00b7~ o,opoj P'J::8JIP lllll.11'4' ' '\"\u00b5n tlllH~a.d LIi Sf!JOIII\"\"' o, ~ wnpo, w:,:0.!le, Oil qpu\u00b5~~dw1~1'P<da\u2022~1\u00b7,., \u2022~pq ~\"'l\"lijoll Ul'\"I '\"'''~IOIJ\"l'\"IIIII \u2022 p 1h l 11 ~an~iuro)S'l~:llimG Reference ID 5840292 ------------------------------\u00b7,(1>){4) READ AND K",
+      "score": 0.16353923
+    },
+    {
+      "number": 8,
+      "title": "Sepsis Prediction Model vs SIRS, qSOFA, and SOFA",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2808756",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by AR Schertz \u00b7 2023 \u00b7 Cited by 99 \u2014 Within the vendor recommended threshold PSS range of 5 to 8, PSS of 8 or greater had the highest balanced accuracy for classifying a sepsis",
+      "score": 0.4250568
+    },
+    {
+      "number": 9,
+      "title": "Assessment of Clinical Criteria for Sepsis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2492875",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by CW Seymour \u00b7 2016 \u00b7 Cited by 5476 \u2014 Like many syndromes, there is no \u201cgold standard\u201d diagnostic test for sepsis. mortality was low (4%). similar mortality (5%) and proportion",
+      "score": 0.28410947
+    },
+    {
+      "number": 10,
+      "title": "Update in sepsis guidelines: what is really new?",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/2/1/e000088",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "The 2016 guidelines recommend administering empiric broad-spectrum antimicrobials that cover all likely pathogens, including bacteria and potentially viruses/fungi (depending on the risk factors of the patient). The initial empiric antibiotic regimen for patients in septic shock should include at le",
+      "score": 0.4877716
+    },
+    {
+      "number": 11,
+      "title": "Sepsis in adults - Symptoms, diagnosis and treatment",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/245",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Within 1 hour of the risk being recognised for patients with critical illness on presentation (including those with septic shock, sepsis associated with rapid deterioration, or a NEWS2 score \u22657 on initial assessment in the accident and emergency department or on ward deterioration): take two sets of",
+      "score": 0.47986987
+    },
+    {
+      "number": 12,
+      "title": "What's new in the management of neonatal early-onset ...",
+      "detail": "fn.bmj.com",
+      "url": "https://fn.bmj.com/content/108/1/10",
+      "authors": "fn.bmj.com",
+      "host": "fn.bmj.com",
+      "snippet": "The updated guidelines represent an authoritative and carefully written document based on a careful review of the literature through 2020. The NICE guideline uses \u2018red flags\u2019 and other \u2018non-red flag\u2019 risk factors and clinical indicators to identify which infants require a sepsis evaluation and treat",
+      "score": 0.35723165
+    },
+    {
+      "number": 13,
+      "title": "Clinical validation of an AI-based blood testing device for ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Taylor et al.23.\") recently surveyed 153 US clinicians responding to real-world derived vignettes of suspected sepsis to analyze decision thresholds to treat or not with antibiotics, using infection prediction models and varying case severities. Although the overall threshold to treat was 69% probab",
+      "score": 0.55883324
+    },
+    {
+      "number": 14,
+      "title": "Compliance with SEP-1 guidelines is associated ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X22000408",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by SNB Sloan \u00b7 2022 \u00b7 Cited by 28 \u2014 The data suggest when physicians follow the SEP-1 guidelines there are lower rates of mortality and therefore, a greater probability of survival in patients",
+      "score": 0.38207284
+    },
+    {
+      "number": 15,
+      "title": "Implementation of an adult code sepsis protocol and its impact on SEP-1 core measure perfect score attainment in the ED",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675719304498",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care Med (2017) \n   D.C. Angus _et al._\n### Epidemiology of severe sepsis in the United States: analysis of incidence, outcome, and associated costs of care\n\n### Crit Care Med (2001) \n   D. Mozaffarian _et al._\n### Heart disease and stroke statistics\u20142015 update: a report from the American ",
+      "score": 0.22431062
+    },
+    {
+      "number": 16,
+      "title": "Antimicrobial Treatment Duration in Sepsis and Serious ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jid/article/222/Supplement_2/S142/5874160",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by LM Busch \u00b7 2020 \u00b7 Cited by 67 \u2014 The evidence regarding optimal antimicrobial treatment strategies for sepsis is conspicuously lacking and thus guideline recommendations remain",
+      "score": 0.17698465
+    },
+    {
+      "number": 17,
+      "title": "The JAID/JSC guidelines for management of infectious ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1341321X1930368X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Author links open overlay panel The Japanese Association for Infectious Diseases/Japanese Society of Chemotherapy, The JAID/JSC Guide/Guidelines to Clinical Management of Infectious Disease Preparing Committee, Sepsis working group, Soichi Arakawa a, Masashi Kasai b, Shin Kawai c, Hiroshi Sakata d, ",
+      "score": 0.16791369
+    },
+    {
+      "number": 18,
+      "title": "Challenges in early detection and prognostication of sepsis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2589537026001112",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In this narrative review, we aimed to provide a comprehensive overview of emerging diagnostic strategies and precision medicine approaches in sepsis, while explicitly acknowledging the heterogeneity of clinical contexts. In the Emergency Department (ED), timely recognition of infection and sepsis re",
+      "score": 0.15422338
+    },
+    {
+      "number": 19,
+      "title": "Why IDSA Did Not Endorse the Surviving Sepsis Campaign ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/66/10/1631/4645414",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The guidelines suggest that treating septic shock with 2 antibiotics, both active against a patient's known pathogens, for \u201cseveral days\u201d is likely to be",
+      "score": 0.13926782
+    },
+    {
+      "number": 20,
+      "title": "CDC's Hospital Sepsis Program Core Elements are ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/212/3/537/8435560",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by HC Prescott \u00b7 2026 \u2014 The Core Elements serve as a high-level guide for running an effective hospital or health system program to improve management and outcomes of",
+      "score": 0.112006456
+    },
+    {
+      "number": 21,
+      "title": "Sepsis National Hospital Inpatient Quality Measure (SEP-1)",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/65/9/1565/3966709",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by EJ Septimus \u00b7 2017 \u00b7 Cited by 53 \u2014 The SEP-1 performance measure requires, among other critical interventions, timely administration of antibiotics to patients with sepsis or septic shock.",
+      "score": 0.08716692
+    },
+    {
+      "number": 22,
+      "title": "Identification and management of maternal sepsis during and following pregnancy (Green-top Guideline No. 64) | RCOG",
+      "detail": "www.rcog.org.uk",
+      "url": "https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/identification-and-management-of-maternal-sepsis-during-and-following-pregnancy-green-top-guideline-no-64",
+      "authors": "www.rcog.org.uk",
+      "host": "www.rcog.org.uk",
+      "snippet": "This guideline replaces the 2012 Green-top Guidelines No. 64a Bacterial Sepsis in Pregnancy and No. 64b Bacterial Sepsis following Pregnancy.\n\n### COVID disclaimer\n\nThis guideline was developed as part of the regular programme of Green-top Guidelines, as outlined in our Developing a Green-top Guidel",
+      "score": 0.45682228
+    },
+    {
+      "number": 23,
+      "title": "Suspected sepsis",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng254/evidence/b-managing-and-treating-suspected-sepsis-in-acute-hospital-settings-antibiotic-treatment-in-people-pdf-15494510703",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "2 and 3 word blocks) in the titles and abstracts of papers marked as being \u2018includes\u2019 or \u2018excludes\u2019 during the title and abstract screening process, and re-orders the remaining records from most likely to least likely to be an include, based on that algorithm. This re-ordering of the remaining recor",
+      "score": 0.41705835
+    },
+    {
+      "number": 24,
+      "title": "Suspected sepsis in people aged 16 or over",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng253/resources/suspected-sepsis-in-people-aged-16-or-over-recognition-assessment-and-early-management-pdf-66144015386053",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Page 75 of 76 Update information January 2026: We have amended the recommendations to refer to 'learning disabilities' rather than 'learning difficulties'. November 2025: We have split the sepsis guideline, that covered all age groups, into 3 guidelines (including this one). See also NICE's guidelin",
+      "score": 0.4108041
+    }
+  ],
+  "publishedAt": "2026-08-21T00:26:35.910217+00:00",
+  "updatedAt": "2026-08-21T00:26:35.910217+00:00",
+  "readingMinutes": 5,
+  "slug": "bacterial-sepsis"
+}

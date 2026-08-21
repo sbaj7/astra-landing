@@ -1,0 +1,22 @@
+.article-library { width: min(100% - 40px, 980px); margin: 0 auto; padding: clamp(60px, 9vw, 112px) 0 96px; }
+.article-library-hero { max-width: 760px; }
+.article-library-hero h1 { margin: 0; font-family: var(--article-display); font-size: clamp(48px, 8vw, 84px); font-weight: 400; letter-spacing: -0.035em; line-height: 0.98; }
+.article-library-hero > p:last-child { max-width: 660px; margin: 26px 0 0; color: var(--article-muted); font-family: var(--article-text); font-size: clamp(20px, 2.5vw, 25px); line-height: 1.45; }
+.article-library-search { margin: 64px 0 36px; }
+.article-library-search label { display: block; margin-bottom: 10px; font-size: 13px; font-weight: 700; }
+.article-library-search input { width: 100%; padding: 15px 0; border: 0; border-bottom: 1px solid var(--article-ink); border-radius: 0; background: transparent; color: var(--article-ink); font: inherit; font-size: 18px; }
+.article-library-search p { margin: 10px 0 0; color: var(--article-muted); font-size: 12px; }
+.article-library-list { border-top: 1px solid var(--article-line); }
+.article-library-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--article-line); }
+.article-library-item p { margin: 0 0 8px; color: var(--article-accent); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.article-library-item h2 { margin: 0; font-family: var(--article-display); font-size: clamp(25px, 3vw, 32px); font-weight: 400; line-height: 1.12; }
+.article-library-item h2 a, .article-library-read { color: var(--article-ink); text-decoration: none; }
+.article-library-item h2 a:hover, .article-library-item h2 a:focus-visible, .article-library-read:hover, .article-library-read:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.article-library-item span { display: -webkit-box; margin-top: 10px; overflow: hidden; color: var(--article-muted); line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.article-library-read { white-space: nowrap; font-size: 13px; }
+
+@media (max-width: 640px) {
+  .article-library { width: min(100% - 32px, 980px); padding-top: 52px; }
+  .article-library-search { margin-top: 48px; }
+  .article-library-item { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+}

@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pediatric Pulmonology",
+  "title": "Pediatric Asthma",
+  "summary": "Confirm variable airflow limitation when feasible, treat exacerbations promptly with bronchodilation and early corticosteroids, and adjust long-term therapy according to current control, exacerbation risk, adherence, inhaler technique, and age-specific treatment options.",
+  "seoDescription": "Point-of-care guidance for diagnosing, treating, monitoring, and escalating care for pediatric asthma, including spirometry, FeNO, exacerbations, and SMART.",
+  "clinicalQuestion": "How should clinicians objectively confirm, treat, monitor, and escalate therapy for asthma in children?",
+  "specialty": "Pediatrics",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "pediatric asthma",
+    "childhood asthma",
+    "spirometry",
+    "FeNO",
+    "asthma exacerbation",
+    "inhaled corticosteroids",
+    "SMART therapy"
+  ],
+  "keyTakeaways": [
+    "In children aged 5 years or older, obtain spirometry with bronchodilator testing when possible; normal spirometry does not exclude asthma because airflow limitation is variable. [10][11][22]",
+    "Bronchodilator reversibility is supported by an FEV1 increase of more than 12% in children and adolescents after a short-acting bronchodilator, but absent reversibility does not rule out asthma. [10][21]",
+    "When spirometry is normal but the clinical probability remains high, document variability with peak-flow monitoring or proceed to bronchoprovocation testing rather than assigning asthma solely from symptoms. [10][22]",
+    "Daily inhaled corticosteroid therapy remains preferred controller treatment across pediatric age groups; assess control and future risk periodically before stepping treatment up or down. [6][23]",
+    "For moderate or severe pediatric exacerbations, give systemic corticosteroids early; prednisone, prednisolone, or methylprednisolone may be dosed at 1-2 mg/kg/day, up to 60 mg/day. [12][24]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-the-diagnosis",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm asthma with objective evidence of variable airflow limitation",
+      "intro": "Symptoms establish suspicion; lung function testing determines whether the working diagnosis is sufficiently supported.",
+      "paragraphs": [
+        "For children aged 5 years or older with recurrent wheeze, cough, dyspnea, or exercise-related respiratory symptoms, obtain quality spirometry before committing to long-term asthma treatment when the child can perform acceptable maneuvers. Pediatric guidelines consistently recommend spirometry and reversibility testing from age 5 years. [11] A reduced FEV1/FVC ratio supports obstruction; interpret the ratio with FVC and age-appropriate reference values rather than using FEV1 alone. [21]",
+        "Perform post-bronchodilator spirometry when baseline obstruction is present or asthma remains suspected. In children and adolescents aged 5-18 years, improvement in FEV1 or FVC of more than 12% after a short-acting bronchodilator supports reversible airflow limitation. [21] Do not use a negative bronchodilator response to exclude asthma: reversibility is neither diagnostic by itself nor required for asthma, particularly when the child is asymptomatic at testing. [10]",
+        "Normal baseline spirometry is common in symptomatic children and does not exclude asthma. [10][22] If pretest probability remains high, document variability with serial peak expiratory flow monitoring or refer for bronchoprovocation testing; methacholine challenge is particularly useful when normal spirometry makes an alternative diagnosis plausible. [10][22] Peak-flow measurements should not be treated as interchangeable with FEV1 measurements. [10]"
+      ],
+      "bullets": [
+        "A low FVC is below the fifth percentile in adults and below 80% predicted in children and adolescents aged 5-18 years; interpret a reduced FVC alongside FEV1/FVC to distinguish obstructive from restrictive or mixed patterns. [21]",
+        "A response to asthma treatment supports the diagnosis, but objective confirmation is especially important when the clinical history is atypical or treatment response is suboptimal. [22]",
+        "If symptoms improve away from work or a suspected exposure, evaluate for occupational asthma with serial lung-function assessment; improvement after 10 or more days away from work supports a work-related mechanism. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Objective testing strategy for suspected asthma in children able to perform lung-function maneuvers. [10][21][22]",
+        "columns": [
+          "Clinical result",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Reduced FEV1/FVC ratio [21]",
+            "Obstructive ventilatory pattern is suspected. [21]",
+            "Perform bronchodilator testing and assess for clinical variability. [21]"
+          ],
+          [
+            "Post-bronchodilator FEV1 or FVC increase >12% [21]",
+            "Supports reversible airflow limitation. [21]",
+            "Integrate with symptom pattern and exclude competing diagnoses. [21][22]"
+          ],
+          [
+            "Normal spirometry with ongoing typical symptoms [10][22]",
+            "A normal result does not exclude variable asthma. [10][22]",
+            "Use serial peak-flow monitoring or bronchoprovocation testing. [10][22]"
+          ],
+          [
+            "Symptoms improve after at least 10 days away from work [22]",
+            "Supports possible occupational asthma. [22]",
+            "Obtain exposure history and consider work-related objective testing or specialist evaluation. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "use-feno-and-clinical-patterns",
+      "eyebrow": "Phenotyping",
+      "heading": "Use FeNO and symptom context to refine\u2014not replace\u2014the diagnosis",
+      "intro": "Airway inflammation measures can increase diagnostic confidence but require clinical interpretation.",
+      "paragraphs": [
+        "Fractional exhaled nitric oxide can identify eosinophilic airway inflammation and may support an asthma diagnosis in the appropriate symptom context. [15] A FeNO value of 35 parts per billion or greater was incorporated into a pediatric diagnostic algorithm, although cohort data questioned the performance and sequence of the proposed thresholds. [1] Use FeNO as one component of an objective assessment rather than as a stand-alone diagnostic test.",
+        "In children with normal spirometry in the NICE sequential algorithm, diagnosis required both FeNO of at least 35 parts per billion and peak expiratory flow variability greater than 20%. [1] This approach is not a substitute for clinical judgment: in a multicenter assessment of children referred for diagnostic testing, many symptomatic children had normal spirometry and normal FeNO values. [2] Persistent discordance between symptoms and testing should prompt reassessment of the diagnosis and consideration of alternate causes of cough, exertional dyspnea, wheeze, or episodic respiratory distress."
+      ],
+      "bullets": [
+        "FeNO reflects eosinophilic airway inflammation; raised sputum eosinophils are associated with corticosteroid responsiveness in adults, but sputum eosinophil findings should not be extrapolated as a pediatric treatment threshold. [15]",
+        "Peak expiratory flow variability greater than 20% is one objective marker used in pediatric diagnostic algorithms when spirometry is normal. [1]",
+        "Do not equate poor symptom control with demonstrable obstruction: among referred children with abnormal Asthma Control Test scores of 19 or less, most had normal spirometry and many had normal FeNO in one quality-improvement cohort. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How objective results modify the next diagnostic step in suspected pediatric asthma. [1][2][10][22]",
+        "columns": [
+          "Finding",
+          "What it changes",
+          "Practical next step"
+        ],
+        "rows": [
+          [
+            "FeNO \u226535 ppb [1]",
+            "Increases support for eosinophilic airway inflammation in a compatible presentation. [1][15]",
+            "Combine with spirometry, bronchodilator response, and symptom variability. [1]"
+          ],
+          [
+            "Peak-flow variability >20% [1]",
+            "Documents variable airflow physiology. [1]",
+            "Use as corroboration when spirometry is normal or unavailable. [1][10]"
+          ],
+          [
+            "Normal spirometry and normal FeNO despite symptoms [2]",
+            "Does not establish asthma and should widen the differential. [2]",
+            "Reassess symptom pattern, repeat objective testing during symptoms, or use bronchoprovocation when appropriate. [10][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "treat-acute-exacerbations",
+      "eyebrow": "Acute Care",
+      "heading": "Treat moderate and severe exacerbations with early systemic corticosteroids",
+      "intro": "Triage severity and respiratory-failure risk before deciding outpatient, emergency department, or intensive care disposition.",
+      "paragraphs": [
+        "For an acute exacerbation, first determine severity and risk for respiratory failure through repeated assessment of work of breathing, ventilation, oxygenation, mental status, and response to initial bronchodilator therapy. [20] Give inhaled short-acting beta-agonist therapy as acute bronchodilator treatment and reassess after treatment rather than relying on the presenting examination alone. Combined inhaled beta-agonist and anticholinergic therapy has been evaluated for emergency management of acute asthma. [12]",
+        "In children with moderate or severe exacerbations, administer systemic corticosteroids early because early administration reduces hospital admission rates. [12] Prednisone, prednisolone, or methylprednisolone can be dosed at 1-2 mg/kg/day, given once daily or divided twice daily, with a maximum of 60 mg/day. [24] Triage nurse initiation of systemic corticosteroids has also been associated with improved emergency department efficiency. [12]",
+        "Escalate children with persistent or worsening respiratory distress, impaired ventilation, altered mental status, or inadequate response to initial therapy to an emergency or critical-care pathway. Evidence for noninvasive positive-pressure ventilation in pediatric acute asthma is limited, and ICU management has fewer validated recommendations than emergency department care. [12] Do not add azithromycin routinely for an asthma exacerbation; a randomized trial evaluated azithromycin in acute exacerbations without establishing it as standard exacerbation therapy. [12]"
+      ],
+      "bullets": [
+        "Moderate or severe exacerbation: initiate systemic corticosteroid treatment early. [12]",
+        "Systemic corticosteroid dose: prednisone, prednisolone, or methylprednisolone 1-2 mg/kg/day; maximum 60 mg/day. [24]",
+        "Reassess after bronchodilator therapy for trajectory and disposition rather than treating a single initial severity label as static. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Acute pediatric asthma actions supported by the cited literature. [12][20][24]",
+        "columns": [
+          "Decision point",
+          "Action",
+          "Reason or limitation"
+        ],
+        "rows": [
+          [
+            "Initial assessment [20]",
+            "Identify exacerbation severity and risk factors for respiratory failure. [20]",
+            "Severity determines need for escalation and intensity of monitoring. [20]"
+          ],
+          [
+            "Moderate or severe exacerbation [12][24]",
+            "Give systemic corticosteroids early: prednisone, prednisolone, or methylprednisolone 1-2 mg/kg/day, maximum 60 mg/day. [12][24]",
+            "Early corticosteroids reduce pediatric hospital admissions. [12]"
+          ],
+          [
+            "Persistent severe illness despite initial treatment [12]",
+            "Use an emergency or critical-care escalation pathway. [12]",
+            "Pediatric ICU evidence is limited; noninvasive ventilation evidence is insufficient for routine use. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "select-controller-therapy",
+      "eyebrow": "Long-Term Treatment",
+      "heading": "Base controller changes on control, risk, and treatment implementation",
+      "intro": "Step therapy up only after confirming the diagnosis and resolving modifiable barriers to response.",
+      "paragraphs": [
+        "Use a control-based strategy: assess current impairment and future exacerbation risk, implement therapy, then monitor periodically to determine whether treatment should be maintained, stepped up, or stepped down. [6][7] Asthma severity reflects underlying disease intensity, whereas control describes the extent to which manifestations are minimized and treatment goals are met. [6] This distinction matters because an apparent need for more therapy may instead reflect poor adherence, ineffective inhaler use, exposure-related symptoms, or an incorrect diagnosis.",
+        "Daily inhaled corticosteroids remain preferred controller treatment for children of all ages. [23] For children who require maintenance ICS-long-acting beta-agonist treatment, single maintenance and reliever therapy with an ICS-formoterol regimen is a candidate strategy at treatment steps corresponding to NAEPP or GINA steps 3 or 4. [18] Apply this approach only when the selected inhaler and the child's age are appropriate for the intended regimen.",
+        "For inadequately controlled asthma, do not make a sustained step-up solely from symptom report. Reconfirm the diagnosis objectively when possible, review exacerbations and reliever use, verify medication access and administration, and assess whether the child is in an age group for which the proposed treatment strategy is supported. Pediatric treatment recommendations differ among children 5 years or younger, school-age children, and adolescents. [7]"
+      ],
+      "bullets": [
+        "Preferred pediatric controller foundation: daily ICS. [23]",
+        "Consider SMART only for patients who already require maintenance ICS-LABA therapy, corresponding to NAEPP or GINA steps 3 or 4. [18]",
+        "Before stepping up: reassess diagnosis, control, exacerbation risk, adherence, inhaler technique, and age-specific suitability. [6][7][22]",
+        "After sustained control: consider step-down rather than indefinite escalation, with periodic reassessment because asthma control changes over time. [4][6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Controller-treatment decisions in pediatric asthma. [4][6][7][18][23]",
+        "columns": [
+          "Clinical state",
+          "Controller decision",
+          "Required check before changing therapy"
+        ],
+        "rows": [
+          [
+            "Persistent asthma requiring controller treatment [23]",
+            "Use daily inhaled corticosteroid therapy as the preferred foundation. [23]",
+            "Confirm the diagnosis and ensure the child can use the prescribed device. [22]"
+          ],
+          [
+            "Needs maintenance ICS-LABA therapy [18]",
+            "Consider ICS-formoterol SMART at NAEPP or GINA step 3 or 4. [18]",
+            "Confirm age-appropriate regimen selection and maintenance-treatment indication. [18]"
+          ],
+          [
+            "Inadequately controlled symptoms [6][7]",
+            "Consider step-up only after addressing modifiable barriers. [6][7]",
+            "Review impairment, risk, adherence, technique, and diagnostic certainty. [6][7][22]"
+          ],
+          [
+            "Sustained control [4][6]",
+            "Consider step-down rather than continuing unnecessary intensity. [4][6]",
+            "Monitor for loss of control after adjustment. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor control longitudinally and refer difficult disease before labeling treatment failure",
+      "intro": "Repeated objective assessment distinguishes variable asthma from persistent symptoms caused by another condition or inadequate treatment delivery.",
+      "paragraphs": [
+        "At follow-up, document symptom burden, exacerbations requiring urgent care or systemic corticosteroids, reliever use, adherence, and inhaler technique; then repeat spirometry when feasible to monitor lung function and treatment response. Office spirometry can provide diagnostic information comparable to pulmonary-function laboratory testing when high quality, and it can monitor disease progression and response to therapy. [21] The treatment target is durable control with the least treatment intensity that maintains that state. [6]",
+        "Refer for pediatric pulmonary or allergy evaluation when the diagnosis remains uncertain after spirometry and appropriate additional objective testing, when symptoms persist despite an optimized controller strategy, or when high-intensity treatment is being considered. Specialty evaluation is particularly important when work-related or allergen sensitization is suspected: skin-prick testing or serum specific-IgE testing may help document sensitization to high-molecular-weight occupational agents such as flour or animal dander. [22]",
+        "Children receiving high-dose ICS or ICS-LABA for severe persistent disease require periodic reassessment of indication and response rather than automatic continuation. High-dose ICS and long-acting bronchodilators have been described as preferred therapies for children with severe persistent asthma, but treatment intensity should follow confirmed disease, observed control, and response to therapy. [17][6]"
+      ],
+      "bullets": [
+        "Use repeat spirometry to monitor lung-function trajectory and response when the child can perform acceptable testing. [21]",
+        "A persistent poor response should trigger diagnostic reassessment and objective testing, not reflexive escalation alone. [22]",
+        "For suspected occupational asthma, pair exposure history with serial physiology and, when appropriate, allergen sensitization testing. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Triggers to reassess diagnosis or escalate pediatric asthma evaluation. [6][17][21][22]",
+        "columns": [
+          "Trigger",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Persisting symptoms with normal spirometry [22]",
+            "Asthma remains possible, but alternate diagnoses require reconsideration. [22]",
+            "Obtain serial peak-flow data or bronchoprovocation testing when clinically appropriate. [10][22]"
+          ],
+          [
+            "Poor response to optimized therapy [22]",
+            "May reflect incorrect diagnosis, inadequate delivery, or persistent uncontrolled asthma. [22]",
+            "Review adherence and technique; repeat objective testing and refer if uncertainty persists. [21][22]"
+          ],
+          [
+            "Requirement for high-dose ICS or ICS-LABA [17]",
+            "Suggests severe persistent disease or unresolved treatment barriers. [17]",
+            "Reassess indication, control, and response at regular follow-up. [6][17]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Diagnosis of asthma in symptomatic children based on measures of lung function: an analysis of data from a population-based birth cohort study",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(17)30008-1/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Diagnosis of asthma in symptomatic children based on measures of lung function: an analysis of data from a population-based birth cohort study - The Lancet Child & Adolescent Health. The UK National Institute of Health and Care Excellence (NICE) proposed a new diagnostic algorithm applying four lung",
+      "score": 0.75442725
+    },
+    {
+      "number": 2,
+      "title": "6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019 | Archives of Disease in Childhood",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/109/Suppl_1/A206.1",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "Title: 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019 | Archives of Disease in Childhood\n* 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019. 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to con",
+      "score": 0.73778254
+    },
+    {
+      "number": 3,
+      "title": "P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/79/Suppl_2/A247.1.abstract",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "* P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds. P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds. 1. 1School of Sport, Exercise and Rehabilitation Sciences, University of Hull, Hull, UK. 2. 2Manches",
+      "score": 0.6102915
+    },
+    {
+      "number": 4,
+      "title": "Randomized Comparison of Strategies for Reducing ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa070013",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Treatment guidelines recommend the use of inhaled corticosteroids in patients with asthma who have persistent symptoms and the \u201cstepping down\u201d",
+      "score": 0.4051433
+    },
+    {
+      "number": 5,
+      "title": "Article Implementing an Evidence-Based, Asthma Decision ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0891524518303687",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by G Thapa \u00b7 2019 \u00b7 Cited by 1 \u2014 NAEPP asthma guideline (NHLBI, 2007) was published. aligns with the NAEPP (NHLBI, 2007) and GINA (2017) asthma guidelines. National Association of Pediatric",
+      "score": 0.65359193
+    },
+    {
+      "number": 6,
+      "title": "Expert Panel Report 3 (EPR-3): Guidelines for the Diagnosis and Management of Asthma\u2013Summary Report 2007",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0091674907018234",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "More than 22 million Americans have asthma, and it is one of the most common chronic diseases of childhood, affecting an estimated 6 million children. The burden of asthma affects the patients, their families, and society in terms of lost work and school, lessened quality of life, and avoidable emer",
+      "score": 0.6420965
+    },
+    {
+      "number": 7,
+      "title": "The pediatric asthma yardstick: Practical recommendations for a sustained step-up in asthma therapy for children with inadequately controlled asthma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1081120618302539",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Current asthma guidelines recommend a control-based approach to management involving assessment of impairment and risk followed by implementation of treatment strategies individualized according to the patient's needs and preferences. However, for children with asthma, achieving control can be elusi",
+      "score": 0.61363083
+    },
+    {
+      "number": 8,
+      "title": "Asthma Management and Prevention: Current Perspectives",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1098359709620366",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Key Guidelines for Diagnosing and Managing Asthma: NAEPP and GINA. The National Asthma Education and Prevention Program (NAEPP), under the auspices of the",
+      "score": 0.57637566
+    },
+    {
+      "number": 9,
+      "title": "Spirometry in the diagnosis of asthma in children",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-pulmonarymedicine/fulltext/2006/01000/spirometry_in_the_diagnosis_of_asthma_in_children.7.aspx?Ppt=Article%7Cco-pulmonarymedicine%3A2006%3A01000%3A00007%7C10.1097%2F01.mcp.0000199809.42011.58%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Response to a bronchodilator may be demonstrated by an increase in forced expiratory flows, including peak expiratory flow, and volumes, and a change in shape",
+      "score": 0.64585793
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for diagnosis and management of... : Lung India",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201532001-00002",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "If spirometry is not available, bronchodilator reversibility may be assessed with peak expiratory flow (PEF) meters. (3B)\n\n   Presence of bronchodilator reversibility is neither diagnostic of asthma nor its absence rules out asthma. (1A)\n\n### 4. What is the role of PEF monitoring in asthma?\n\n   PEF ",
+      "score": 0.5128152
+    },
+    {
+      "number": 11,
+      "title": "The quality of paediatric asthma guidelines: evidence ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/fampra/article/41/4/460/7169412",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by ET Thomas \u00b7 2024 \u00b7 Cited by 5 \u2014 All guidelines recommended the use of spirometry and reversibility testing for children aged \u22655 years, however, the recommended spirometry",
+      "score": 0.49245724
+    },
+    {
+      "number": 12,
+      "title": "Implementation of a Critical Care Asthma Pathway... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/02000/implementation_of_a_critical_care_asthma_pathway.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Bhogal SK, McGillivray D, Bourbeau J, et al. Early administration of systemic corticosteroids reduces hospital admission rates for children with moderate and severe asthma exacerbation. Ann Emerg Med. 2012; 60:84\u201391.e3Cited HereFull TextCrossRefPubMedGoogle Scholar \n   ## 24.\n\nZemek R, Plint A, Osmo",
+      "score": 0.6211049
+    },
+    {
+      "number": 13,
+      "title": "2020 NAEPP Guidelines Update and GINA 2021-Asthma ...",
+      "detail": "www.jaci-inpractice.org",
+      "url": "https://www.jaci-inpractice.org/article/S2213-2198(21)01183-1/pdf",
+      "authors": "www.jaci-inpractice.org",
+      "host": "www.jaci-inpractice.org",
+      "snippet": "by BE Chipps \u00b7 2022 \u00b7 Cited by 104 \u2014 The NHLBI guidelines condi- tionally recommend (moderate certainty of evidence) the use of. SCIT as an adjunctive treatment to standard",
+      "score": 0.562874
+    },
+    {
+      "number": 14,
+      "title": "diagnosis, monitoring and chronic asthma management ( ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng245/resources/asthma-diagnosis-monitoring-and-chronic-asthma-management-bts-nice-sign-pdf-66143958279109",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Page 4 of 64 This guideline replaces NG80. This guideline is the basis of QS181 and QS25. This guideline should be read in conjunction with NG244. Overview This guideline covers diagnosing, monitoring and managing asthma in adults, young people and children. It aims to improve the accuracy of diagno",
+      "score": 0.5622973
+    },
+    {
+      "number": 15,
+      "title": "Omalizumab for the treatment of severe persistent allergic ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ta278/documents/asthma-severe-persistent-patients-aged-6-adults-omalizumab-rev-ta133-ta201-assessment-report2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "(PEF) 3. exhaled nitric oxide (FeNO) which is related to eosinophilic airway inflammation and eosinophil differential count in induced sputum \u2013 raised sputum count associated with responsiveness to corticosteroids in adults.11 3.2 Current service provision Treatment of asthma to achieve control is b",
+      "score": 0.5518883
+    },
+    {
+      "number": 16,
+      "title": "Overview | Asthma: diagnosis, monitoring and chronic asthma management (BTS, NICE, SIGN) | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng245",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Asthma: diagnosis, monitoring and chronic asthma management (BTS, NICE, SIGN)\n\n## Overview\n\nThis guideline covers diagnosing, monitoring and managing asthma in adults, young people and children. It aims to improve the accuracy of diagnosis, help people to control their asthma and re",
+      "score": 0.53415143
+    },
+    {
+      "number": 17,
+      "title": "New Treatments for Asthma | Pediatrics In Review",
+      "detail": "pedsinreview.aappublications.org",
+      "url": "https://pedsinreview.aappublications.org/content/24/7/222",
+      "authors": "pedsinreview.aappublications.org",
+      "host": "pedsinreview.aappublications.org",
+      "snippet": "High-dose inhaled corticosteroids and long-acting bronchodilators are the preferred therapies for children who have severe persistent asthma.",
+      "score": 0.43655056
+    },
+    {
+      "number": 18,
+      "title": "A Practical Guide to Implementing SMART in Asthma ...",
+      "detail": "www.jaci-inpractice.org",
+      "url": "https://www.jaci-inpractice.org/article/S2213-2198(21)01128-4/fulltext",
+      "authors": "www.jaci-inpractice.org",
+      "host": "www.jaci-inpractice.org",
+      "snippet": "by HK Reddel \u00b7 2022 \u00b7 Cited by 135 \u2014 Candidates for SMART treatment should require maintenance treatment with ICS-LABA (ie, 2020 NAEPP Asthma Update or GINA 2021 steps 3 or 4). No recognized",
+      "score": 0.43237552
+    },
+    {
+      "number": 19,
+      "title": "Overview | Asthma pathway (BTS, NICE, SIGN) | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng244",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Asthma pathway (BTS, NICE, SIGN)\n\n## Overview\n\nThis asthma pathway signposts recommendations and resources from the British Thoracic Society (BTS), National Institute for Health and Care Excellence (NICE) and Scottish Intercollegiate Guidelines Network (SIGN) on diagnosing, monitori",
+      "score": 0.39187187
+    },
+    {
+      "number": 20,
+      "title": "Asthma Outcomes and Management During Pregnancy",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)31485-X/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by CA Bonham \u00b7 2018 \u00b7 Cited by 174 \u2014 The first step in management is to identify the severity of the exacerbation and risk factors for respiratory failure. If close clinical. NAEPP expert panel",
+      "score": 0.3645971
+    },
+    {
+      "number": 21,
+      "title": "Office Spirometry: Indications and Interpretation - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&db=PubMed&term=Langan++%5BAU%5D+AND+2020+%5BDP%5D+AND++Am+Fam+Physician++%5BTA%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a federal. official website and that any information you provide is encrypted. ## Save citation to file. #",
+      "score": 0.62906903
+    },
+    {
+      "number": 22,
+      "title": "Diagnosis of asthma in adults - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2774375",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Diagnosis of asthma in adults - PMC\nA good response to asthma treatment in a patient with a typical history of asthma supports a diagnosis of asthma.1 However, objective confirmation of the variable airflow obstruction characteristic of asthma, using spirometry or peak expiratory flow monitor",
+      "score": 0.45449692
+    },
+    {
+      "number": 23,
+      "title": "Asthma | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396134/1508/Asthma",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Daily inhaled corticosteroids (ICS) remain the preferred therapy to control asthma at all ages. Single maintenance and reliever therapy (SMART)",
+      "score": 0.5832277
+    },
+    {
+      "number": 24,
+      "title": "Acute Asthma Exacerbation",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1482020/aap_9781581108101-part23-ch88.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Administer systemic corticosteroids, such as prednisone, prednisolone, methylprednisolone (1\u20132 mg/kg/day given every day or divided twice a day,. 60 mg/day",
+      "score": 0.522617
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Diagnosis of asthma in symptomatic children based on measures of lung function: an analysis of data from a population-based birth cohort study",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanchi/article/PIIS2352-4642(17)30008-1/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Diagnosis of asthma in symptomatic children based on measures of lung function: an analysis of data from a population-based birth cohort study - The Lancet Child & Adolescent Health. The UK National Institute of Health and Care Excellence (NICE) proposed a new diagnostic algorithm applying four lung",
+      "score": 0.75442725
+    },
+    {
+      "number": 2,
+      "title": "6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019 | Archives of Disease in Childhood",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/109/Suppl_1/A206.1",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "Title: 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019 | Archives of Disease in Childhood\n* 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to confirm the diagnosis of asthma\u2019. 6754\u2005\u2018Dear colleague, please perform spirometry/FeNO tests to con",
+      "score": 0.73778254
+    },
+    {
+      "number": 3,
+      "title": "P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/79/Suppl_2/A247.1.abstract",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "* P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds. P232\u2005The diagnosis of asthma: sensitivity and specificity of different diagnostic test thresholds. 1. 1School of Sport, Exercise and Rehabilitation Sciences, University of Hull, Hull, UK. 2. 2Manches",
+      "score": 0.6102915
+    },
+    {
+      "number": 4,
+      "title": "Randomized Comparison of Strategies for Reducing ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa070013",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Treatment guidelines recommend the use of inhaled corticosteroids in patients with asthma who have persistent symptoms and the \u201cstepping down\u201d",
+      "score": 0.4051433
+    },
+    {
+      "number": 5,
+      "title": "Article Implementing an Evidence-Based, Asthma Decision ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0891524518303687",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by G Thapa \u00b7 2019 \u00b7 Cited by 1 \u2014 NAEPP asthma guideline (NHLBI, 2007) was published. aligns with the NAEPP (NHLBI, 2007) and GINA (2017) asthma guidelines. National Association of Pediatric",
+      "score": 0.65359193
+    },
+    {
+      "number": 6,
+      "title": "Expert Panel Report 3 (EPR-3): Guidelines for the Diagnosis and Management of Asthma\u2013Summary Report 2007",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0091674907018234",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "More than 22 million Americans have asthma, and it is one of the most common chronic diseases of childhood, affecting an estimated 6 million children. The burden of asthma affects the patients, their families, and society in terms of lost work and school, lessened quality of life, and avoidable emer",
+      "score": 0.6420965
+    },
+    {
+      "number": 7,
+      "title": "The pediatric asthma yardstick: Practical recommendations for a sustained step-up in asthma therapy for children with inadequately controlled asthma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1081120618302539",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Current asthma guidelines recommend a control-based approach to management involving assessment of impairment and risk followed by implementation of treatment strategies individualized according to the patient's needs and preferences. However, for children with asthma, achieving control can be elusi",
+      "score": 0.61363083
+    },
+    {
+      "number": 8,
+      "title": "Asthma Management and Prevention: Current Perspectives",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1098359709620366",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Key Guidelines for Diagnosing and Managing Asthma: NAEPP and GINA. The National Asthma Education and Prevention Program (NAEPP), under the auspices of the",
+      "score": 0.57637566
+    },
+    {
+      "number": 9,
+      "title": "Spirometry in the diagnosis of asthma in children",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-pulmonarymedicine/fulltext/2006/01000/spirometry_in_the_diagnosis_of_asthma_in_children.7.aspx?Ppt=Article%7Cco-pulmonarymedicine%3A2006%3A01000%3A00007%7C10.1097%2F01.mcp.0000199809.42011.58%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Response to a bronchodilator may be demonstrated by an increase in forced expiratory flows, including peak expiratory flow, and volumes, and a change in shape",
+      "score": 0.64585793
+    },
+    {
+      "number": 10,
+      "title": "Guidelines for diagnosis and management of... : Lung India",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-201532001-00002",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "If spirometry is not available, bronchodilator reversibility may be assessed with peak expiratory flow (PEF) meters. (3B)\n\n   Presence of bronchodilator reversibility is neither diagnostic of asthma nor its absence rules out asthma. (1A)\n\n### 4. What is the role of PEF monitoring in asthma?\n\n   PEF ",
+      "score": 0.5128152
+    },
+    {
+      "number": 11,
+      "title": "The quality of paediatric asthma guidelines: evidence ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/fampra/article/41/4/460/7169412",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by ET Thomas \u00b7 2024 \u00b7 Cited by 5 \u2014 All guidelines recommended the use of spirometry and reversibility testing for children aged \u22655 years, however, the recommended spirometry",
+      "score": 0.49245724
+    },
+    {
+      "number": 12,
+      "title": "Implementation of a Critical Care Asthma Pathway... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/02000/implementation_of_a_critical_care_asthma_pathway.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Bhogal SK, McGillivray D, Bourbeau J, et al. Early administration of systemic corticosteroids reduces hospital admission rates for children with moderate and severe asthma exacerbation. Ann Emerg Med. 2012; 60:84\u201391.e3Cited HereFull TextCrossRefPubMedGoogle Scholar \n   ## 24.\n\nZemek R, Plint A, Osmo",
+      "score": 0.6211049
+    },
+    {
+      "number": 13,
+      "title": "2020 NAEPP Guidelines Update and GINA 2021-Asthma ...",
+      "detail": "www.jaci-inpractice.org",
+      "url": "https://www.jaci-inpractice.org/article/S2213-2198(21)01183-1/pdf",
+      "authors": "www.jaci-inpractice.org",
+      "host": "www.jaci-inpractice.org",
+      "snippet": "by BE Chipps \u00b7 2022 \u00b7 Cited by 104 \u2014 The NHLBI guidelines condi- tionally recommend (moderate certainty of evidence) the use of. SCIT as an adjunctive treatment to standard",
+      "score": 0.562874
+    },
+    {
+      "number": 14,
+      "title": "diagnosis, monitoring and chronic asthma management ( ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng245/resources/asthma-diagnosis-monitoring-and-chronic-asthma-management-bts-nice-sign-pdf-66143958279109",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Page 4 of 64 This guideline replaces NG80. This guideline is the basis of QS181 and QS25. This guideline should be read in conjunction with NG244. Overview This guideline covers diagnosing, monitoring and managing asthma in adults, young people and children. It aims to improve the accuracy of diagno",
+      "score": 0.5622973
+    },
+    {
+      "number": 15,
+      "title": "Omalizumab for the treatment of severe persistent allergic ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ta278/documents/asthma-severe-persistent-patients-aged-6-adults-omalizumab-rev-ta133-ta201-assessment-report2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "(PEF) 3. exhaled nitric oxide (FeNO) which is related to eosinophilic airway inflammation and eosinophil differential count in induced sputum \u2013 raised sputum count associated with responsiveness to corticosteroids in adults.11 3.2 Current service provision Treatment of asthma to achieve control is b",
+      "score": 0.5518883
+    },
+    {
+      "number": 16,
+      "title": "Overview | Asthma: diagnosis, monitoring and chronic asthma management (BTS, NICE, SIGN) | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng245",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Asthma: diagnosis, monitoring and chronic asthma management (BTS, NICE, SIGN)\n\n## Overview\n\nThis guideline covers diagnosing, monitoring and managing asthma in adults, young people and children. It aims to improve the accuracy of diagnosis, help people to control their asthma and re",
+      "score": 0.53415143
+    },
+    {
+      "number": 17,
+      "title": "New Treatments for Asthma | Pediatrics In Review",
+      "detail": "pedsinreview.aappublications.org",
+      "url": "https://pedsinreview.aappublications.org/content/24/7/222",
+      "authors": "pedsinreview.aappublications.org",
+      "host": "pedsinreview.aappublications.org",
+      "snippet": "High-dose inhaled corticosteroids and long-acting bronchodilators are the preferred therapies for children who have severe persistent asthma.",
+      "score": 0.43655056
+    },
+    {
+      "number": 18,
+      "title": "A Practical Guide to Implementing SMART in Asthma ...",
+      "detail": "www.jaci-inpractice.org",
+      "url": "https://www.jaci-inpractice.org/article/S2213-2198(21)01128-4/fulltext",
+      "authors": "www.jaci-inpractice.org",
+      "host": "www.jaci-inpractice.org",
+      "snippet": "by HK Reddel \u00b7 2022 \u00b7 Cited by 135 \u2014 Candidates for SMART treatment should require maintenance treatment with ICS-LABA (ie, 2020 NAEPP Asthma Update or GINA 2021 steps 3 or 4). No recognized",
+      "score": 0.43237552
+    },
+    {
+      "number": 19,
+      "title": "Overview | Asthma pathway (BTS, NICE, SIGN) | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng244",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Asthma pathway (BTS, NICE, SIGN)\n\n## Overview\n\nThis asthma pathway signposts recommendations and resources from the British Thoracic Society (BTS), National Institute for Health and Care Excellence (NICE) and Scottish Intercollegiate Guidelines Network (SIGN) on diagnosing, monitori",
+      "score": 0.39187187
+    },
+    {
+      "number": 20,
+      "title": "Asthma Outcomes and Management During Pregnancy",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)31485-X/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "by CA Bonham \u00b7 2018 \u00b7 Cited by 174 \u2014 The first step in management is to identify the severity of the exacerbation and risk factors for respiratory failure. If close clinical. NAEPP expert panel",
+      "score": 0.3645971
+    },
+    {
+      "number": 21,
+      "title": "Office Spirometry: Indications and Interpretation - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&db=PubMed&term=Langan++%5BAU%5D+AND+2020+%5BDP%5D+AND++Am+Fam+Physician++%5BTA%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a federal. official website and that any information you provide is encrypted. ## Save citation to file. #",
+      "score": 0.62906903
+    },
+    {
+      "number": 22,
+      "title": "Diagnosis of asthma in adults - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2774375",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Diagnosis of asthma in adults - PMC\nA good response to asthma treatment in a patient with a typical history of asthma supports a diagnosis of asthma.1 However, objective confirmation of the variable airflow obstruction characteristic of asthma, using spirometry or peak expiratory flow monitor",
+      "score": 0.45449692
+    },
+    {
+      "number": 23,
+      "title": "Asthma | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396134/1508/Asthma",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Daily inhaled corticosteroids (ICS) remain the preferred therapy to control asthma at all ages. Single maintenance and reliever therapy (SMART)",
+      "score": 0.5832277
+    },
+    {
+      "number": 24,
+      "title": "Acute Asthma Exacerbation",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1482020/aap_9781581108101-part23-ch88.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Administer systemic corticosteroids, such as prednisone, prednisolone, methylprednisolone (1\u20132 mg/kg/day given every day or divided twice a day,. 60 mg/day",
+      "score": 0.522617
+    }
+  ],
+  "publishedAt": "2026-08-21T02:22:10.430706+00:00",
+  "updatedAt": "2026-08-21T02:22:10.430706+00:00",
+  "readingMinutes": 7,
+  "slug": "pediatric-asthma"
+}

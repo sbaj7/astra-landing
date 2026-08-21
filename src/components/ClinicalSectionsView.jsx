@@ -9,8 +9,9 @@ import { InlineText } from './DifferentialDiagnosisView.jsx';
    anything else (prose, tables) falls through to the markdown renderer.
    ========================= */
 
-const SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif';
 const TEXT_SANS = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif';
+const DISPLAY = '"Iowan Old Style", Baskerville, Palatino, Georgia, serif';
+const BODY = 'Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif';
 
 // "– **Label** — detail", with an optional bullet or list number in front.
 const STEP_RE = /^(?:[–—\-•*]|\d+[.)])?\s*\*\*(.+?)\*\*\s*[:—–-]+\s*(.+)$/;
@@ -112,8 +113,8 @@ const StepList = ({ steps, theme, isDark, citations, isMobile }) => {
                 style={{
                   display: 'block',
                   color: theme.textPrimary,
-                  fontFamily: TEXT_SANS,
-                  fontSize: isMobile ? 13.5 : 14,
+                  fontFamily: BODY,
+                  fontSize: isMobile ? 15.5 : 16.5,
                   fontWeight: 600,
                   letterSpacing: '-0.011em',
                   lineHeight: 1.45,
@@ -126,11 +127,12 @@ const StepList = ({ steps, theme, isDark, citations, isMobile }) => {
               style={{
                 display: 'block',
                 marginTop: step.label ? 3 : 0,
-                color: theme.textSecondary,
-                fontFamily: TEXT_SANS,
-                fontSize: 13.5,
-                letterSpacing: '-0.008em',
-                lineHeight: 1.6,
+                color: theme.textPrimary,
+                fontFamily: BODY,
+                fontSize: isMobile ? 15.5 : 16.5,
+                fontWeight: 400,
+                letterSpacing: 0,
+                lineHeight: 1.62,
               }}
             >
               <InlineText citations={citations} theme={theme}>{step.detail}</InlineText>
@@ -177,10 +179,10 @@ const ClinicalSectionsView = ({
                     margin: 0,
                     flexShrink: 0,
                     color: theme.textPrimary,
-                    fontFamily: SANS,
-                    fontSize: isMobile ? 16 : 17,
-                    fontWeight: 600,
-                    letterSpacing: '-0.015em',
+                    fontFamily: DISPLAY,
+                    fontSize: isMobile ? 20 : 22,
+                    fontWeight: 400,
+                    letterSpacing: '-0.018em',
                   }}
                 >
                   {section.title}

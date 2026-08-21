@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular emergency",
+  "title": "ST-Segment Elevation Myocardial Infarction",
+  "summary": "ST-segment elevation myocardial infarction requires immediate ECG-based activation, reperfusion-centered care, and early recognition of shock, failed fibrinolysis, mechanical complications, and nonatherothrombotic mimics that alter acute management.",
+  "seoDescription": "Point-of-care review of STEMI diagnosis, ECG thresholds, reperfusion timing, antithrombotic therapy, complications, and postinfarction management.",
+  "clinicalQuestion": "How should physicians rapidly diagnose, reperfuse, and stabilize patients with suspected STEMI?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "STEMI",
+    "acute coronary syndrome",
+    "primary PCI",
+    "fibrinolysis",
+    "ST-segment elevation",
+    "cardiogenic shock"
+  ],
+  "keyTakeaways": [
+    "Obtain and interpret a 12-lead ECG within 10 minutes of first medical contact; persistent ischemic ST elevation or an ECG equivalent is a working diagnosis requiring immediate reperfusion planning, not troponin confirmation. [15]",
+    "Primary PCI is the preferred reperfusion strategy for ischemic symptoms lasting less than 12 hours; target PCI within 90 minutes at a PCI-capable hospital or within 120 minutes when transfer is required. [15]",
+    "When PCI cannot be delivered within 120 minutes, initiate fibrinolysis within 30 minutes of hospital arrival when appropriate, transfer promptly to a PCI-capable center, and perform rescue PCI for failed reperfusion or reinfarction. [15]",
+    "Cardiogenic shock or acute severe heart failure warrants primary PCI regardless of elapsed time from infarct onset. [15]",
+    "Do not let bedside echocardiography, CT, or serial biomarkers delay catheterization when acute coronary occlusion is likely; use imaging when diagnosis is uncertain or a competing emergency is plausible. [15]"
+  ],
+  "sections": [
+    {
+      "id": "initial-recognition",
+      "eyebrow": "Immediate action",
+      "heading": "Recognize STEMI and activate reperfusion without waiting for biomarkers",
+      "intro": "Treat the initial ECG as a time-critical triage test.",
+      "paragraphs": [
+        "For acute chest discomfort or an ischemic equivalent, obtain a resting 12-lead ECG immediately and have it interpreted within 10 minutes of first medical contact. Persistent ST-segment elevation or an ECG equivalent in an ischemic clinical context establishes a working diagnosis of STEMI and should trigger a reperfusion pathway; troponin supports infarction diagnosis but should not delay catheterization laboratory activation. [15]",
+        "STEMI commonly reflects acute coronary atherothrombosis after plaque disruption, platelet activation, and occlusive thrombus formation. However, a STEMI-pattern presentation can result from spontaneous coronary artery dissection, coronary spasm, coronary embolism, hypercoagulability, or noncoronary disorders; angiography and, when needed, intravascular imaging establish the mechanism. [9][15]"
+      ],
+      "bullets": [
+        "Place on continuous cardiac monitoring, obtain intravenous access, and assess blood pressure, perfusion, pulmonary edema, new murmur, and neurologic status while reperfusion logistics proceed. [15]",
+        "Obtain a focused history for symptom onset, prior coronary disease, bleeding risk, anticoagulants or antiplatelets, cocaine or other drug exposure, and symptoms suggesting aortic dissection or pulmonary embolism. [15]",
+        "Give supplemental oxygen for hypoxemia or risk of hypoxemia; routine oxygen in normoxemic myocardial infarction may be harmful. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ECG findings supporting a STEMI working diagnosis and immediate action. [15]",
+        "columns": [
+          "Finding",
+          "Threshold or context",
+          "Action"
+        ],
+        "rows": [
+          [
+            "ST elevation in contiguous leads",
+            "New J-point elevation >0.1 mV in 2 contiguous leads, except V2-V3. [15]",
+            "Activate reperfusion pathway when clinical presentation is ischemic. [15]"
+          ],
+          [
+            "ST elevation in V2-V3",
+            ">0.2 mV in men aged 40 years or older; >0.25 mV in men younger than 40 years; >0.15 mV in women. [15]",
+            "Activate reperfusion pathway when clinical presentation is ischemic. [15]"
+          ],
+          [
+            "LBBB with suspected occlusion",
+            "Concordant ST elevation ≥1 mm, concordant ST depression ≥1 mm in V1-V3, or discordant ST elevation ≥5 mm are original Sgarbossa criteria; sensitivity is limited. [15]",
+            "Integrate symptoms, serial ECGs, prior ECGs, and urgent cardiology assessment; do not use a nondiagnostic ECG alone to exclude acute occlusion. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-refinement",
+      "eyebrow": "Do not delay reperfusion",
+      "heading": "Use adjunctive testing to confirm injury, define complications, and identify mimics",
+      "intro": "Testing should answer a management question rather than create delay.",
+      "paragraphs": [
+        "Obtain high-sensitivity cardiac troponin in all suspected acute coronary syndrome presentations. In an ischemic presentation, a rise or fall with at least one value above the 99th percentile supports myocardial infarction; 0/1-hour algorithms are preferred when STEMI or very-high-risk non-ST-elevation ACS has been excluded. [15]",
+        "Use transthoracic echocardiography when the diagnosis is uncertain, hemodynamics deteriorate, or a mechanical complication is suspected. New regional wall-motion abnormality supports ongoing ischemia, while echocardiography can identify acute severe mitral regurgitation, ventricular septal defect, tamponade, or alternative pathology. It must not materially delay catheterization for suspected acute coronary occlusion. [15]",
+        "CT is appropriate when aortic dissection or pulmonary embolism is a credible competing diagnosis, but is generally not indicated when ongoing coronary occlusion is the leading diagnosis and immediate invasive angiography is available. [15]"
+      ],
+      "bullets": [
+        "Repeat ECGs when symptoms persist, recur, or have resolved before the initial tracing; compare with prior ECGs when available. [15]",
+        "Use coronary angiography to define culprit anatomy and provide revascularization; consider intravascular imaging when angiography suggests dissection, embolism, or another nonatherosclerotic mechanism. [9][15]",
+        "Consider myocarditis, pericarditis, stress cardiomyopathy, early repolarization, ventricular aneurysm, vasospasm, electrolyte abnormalities, Brugada syndrome, and LBBB among ST-elevation mimics. [8][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-value diagnostic tests after STEMI pathway activation. [15]",
+        "columns": [
+          "Test",
+          "Role",
+          "Operational caution"
+        ],
+        "rows": [
+          [
+            "High-sensitivity cardiac troponin",
+            "Confirms myocardial injury and supports infarction diagnosis through a rise or fall above the 99th percentile. [15]",
+            "Do not await results before reperfusion for diagnostic STEMI. [15]"
+          ],
+          [
+            "Transthoracic echocardiography",
+            "Assesses regional dysfunction, ventricular function, and mechanical complications. [15]",
+            "Use when uncertainty or instability justifies it; avoid catheterization delay. [15]"
+          ],
+          [
+            "Coronary angiography",
+            "Identifies culprit anatomy and enables PCI. [15]",
+            "Priority test for suspected ongoing coronary occlusion. [15]"
+          ],
+          [
+            "CT angiography",
+            "Evaluates selected lethal alternatives such as acute aortic disease or pulmonary embolism. [15]",
+            "Not a routine substitute for invasive angiography in likely coronary occlusion. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reperfusion-strategy",
+      "eyebrow": "Time-dependent treatment",
+      "heading": "Choose primary PCI whenever timely delivery is feasible",
+      "intro": "The central decision is the fastest effective route to reperfusion.",
+      "paragraphs": [
+        "For STEMI with ischemic symptoms lasting less than 12 hours, primary PCI is recommended to improve survival. At a PCI-capable hospital, the target is PCI within 90 minutes of presentation; when transfer is needed, the target is PCI within 120 minutes. Regional systems that permit EMS identification, prearrival notification, direct transport, and rapid catheterization team activation are integral to achieving these intervals. [15][8]",
+        "Primary PCI remains indicated for cardiogenic shock or acute severe heart failure regardless of time from symptom onset. Immediate invasive assessment is also required after unsuccessful fibrinolysis, recurrent ST elevation, or reinfarction. [15]",
+        "Routine manual thrombus aspiration before PCI is not supported: subsequent trials and meta-analyses found no meaningful clinical benefit and identified excess stroke risk. Selective use for high thrombus burden may be considered by the interventional team, but it is not routine care. [15]"
+      ],
+      "bullets": [
+        "For multivessel STEMI, trial evidence supports fractional flow reserve-guided PCI of nonculprit lesions compared with culprit-only PCI, but the supplied evidence does not establish an individualized timing strategy for every patient. [3]",
+        "Following out-of-hospital cardiac arrest without ST-segment elevation, immediate coronary angiography did not improve outcomes over delayed angiography in the COACT trial; this does not apply to patients with STEMI, for whom immediate angiography with PCI is recommended. [1]",
+        "Avoid routine delays for transfer through a non-PCI emergency department when direct EMS transport to a PCI center is feasible within the reperfusion window. [8][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Reperfusion decisions for STEMI. [15]",
+        "columns": [
+          "Clinical scenario",
+          "Preferred action",
+          "Required follow-through"
+        ],
+        "rows": [
+          [
+            "PCI available within target interval",
+            "Primary PCI within 90 minutes of presentation at a PCI-capable hospital or within 120 minutes when transfer is required. [15]",
+            "Continue antithrombotic therapy and monitor for reperfusion complications. [15]"
+          ],
+          [
+            "PCI unavailable within 120 minutes",
+            "Initiate fibrinolysis within 30 minutes of hospital arrival if no contraindication. [15]",
+            "Transfer promptly to a PCI-capable center. [15]"
+          ],
+          [
+            "Failed fibrinolysis or recurrent ischemia",
+            "Immediate angiography and rescue PCI. [15]",
+            "Do not administer additional fibrinolytic therapy. [15]"
+          ],
+          [
+            "Apparently successful fibrinolysis",
+            "Early angiography within 2 to 24 hours is advised. [15]",
+            "Assess for recurrent ischemia, reinfarction, and bleeding. [15]"
+          ],
+          [
+            "Cardiogenic shock or acute severe heart failure",
+            "Primary PCI regardless of time since infarct onset. [15]",
+            "Escalate hemodynamic and critical care support while pursuing revascularization. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pharmacotherapy",
+      "eyebrow": "Antithrombotic and secondary prevention therapy",
+      "heading": "Match antiplatelet therapy to the reperfusion strategy and bleeding risk",
+      "intro": "Drug selection should not delay reperfusion.",
+      "paragraphs": [
+        "Start aspirin promptly, followed by maintenance aspirin 75 to 100 mg once daily. Most patients with acute coronary syndrome should receive dual antiplatelet therapy with aspirin plus a potent P2Y12 inhibitor; ticagrelor or prasugrel is preferred over clopidogrel after PCI in the supplied review. Prasugrel is contraindicated with prior transient ischemic attack or stroke. [15]",
+        "For fibrinolysis, use clopidogrel rather than ticagrelor or prasugrel according to the supplied source. Initiate procedural anticoagulation with unfractionated heparin, low-molecular-weight heparin, bivalirudin, or fondaparinux; agent selection should follow the local PCI or fibrinolysis protocol and renal function because dosing details were not provided in the supplied evidence. [15]",
+        "Initiate high-intensity statin therapy early, ideally before planned PCI, using the highest tolerated dose. ACE inhibitor therapy improves outcomes after myocardial infarction in patients with heart failure, LVEF 40% or less, diabetes, chronic kidney disease, or hypertension. Evidence for chronic beta-blockers is strongest with reduced LVEF; benefit after uncomplicated ACS with LVEF above 40% is less certain. [15]"
+      ],
+      "bullets": [
+        "Avoid nitroglycerin with recent phosphodiesterase inhibitor exposure or right ventricular infarction. [15]",
+        "Morphine may be used for refractory pain after nitroglycerin, but routine use is discouraged because of adverse outcome associations. [15]",
+        "Do not administer routine oxygen to normoxemic patients. [15]",
+        "The supplied sources support early high-intensity statin therapy but do not provide a source-supported dose, LDL-C target, or duration of dual antiplatelet therapy; use current institutional and guideline protocols for those decisions. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Medication decisions supported by the supplied evidence. [15]",
+        "columns": [
+          "Therapy",
+          "Use",
+          "Key limitation or precaution"
+        ],
+        "rows": [
+          [
+            "Aspirin",
+            "Administer early; continue 75-100 mg once daily as maintenance. [15]",
+            "Use with a P2Y12 inhibitor for dual antiplatelet therapy in most ACS patients. [15]"
+          ],
+          [
+            "Ticagrelor or prasugrel",
+            "Preferred over clopidogrel for patients undergoing PCI in the supplied review. [15]",
+            "Prasugrel is contraindicated with prior TIA or stroke. [15]"
+          ],
+          [
+            "Clopidogrel",
+            "Use with fibrinolytic therapy; consider when potent P2Y12 inhibitors are contraindicated, unavailable, or bleeding risk is high. [15]",
+            "Has less potent and more variable platelet inhibition than ticagrelor or prasugrel. [15]"
+          ],
+          [
+            "Anticoagulant",
+            "Use unfractionated heparin, low-molecular-weight heparin, bivalirudin, or fondaparinux with antiplatelet therapy. [15]",
+            "Select and dose using the reperfusion strategy, renal function, and institutional protocol; supplied evidence does not provide dosing. [15]"
+          ],
+          [
+            "High-intensity statin",
+            "Initiate early, ideally before PCI, at the highest tolerated dose. [15]",
+            "Monitor tolerability and use contemporary lipid-management pathways after discharge. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "complications-and-disposition",
+      "eyebrow": "Critical care and follow-up",
+      "heading": "Monitor actively for shock, arrhythmia, and mechanical complications",
+      "intro": "Clinical deterioration after reperfusion demands immediate reassessment.",
+      "paragraphs": [
+        "Monitor continuously for ventricular arrhythmia, recurrent ischemia, heart failure, cardiogenic shock, and mechanical complications. A new systolic murmur, abrupt pulmonary edema, hypotension, or escalating vasopressor requirement should prompt urgent echocardiography and cardiothoracic consultation for acute severe mitral regurgitation, ventricular septal rupture, or free-wall rupture. [15]",
+        "Mechanical complications carry very high mortality. Free-wall rupture occurs within 5 days in approximately half of cases and within 2 weeks in 90% of cases, with mortality exceeding 80%; ventricular septal rupture typically occurs 3 to 5 days after infarction and has mortality exceeding 70%. Acute severe ischemic mitral regurgitation has reported 30-day survival of 24%. [15]",
+        "Before discharge, assess ventricular function, reconcile antithrombotic therapy, ensure high-intensity statin and appropriate neurohormonal therapy, and refer to cardiac rehabilitation. Rehabilitation supports exercise training, secondary prevention education, psychosocial support, and medication titration. [7][11][12]"
+      ],
+      "bullets": [
+        "Failed fibrinolysis is suggested by recurrent ischemia or ST elevation; even with apparent success, early angiography within 2 to 24 hours is advised. [15]",
+        "TIMI risk scoring estimates 30-day mortality; the score incorporates age, diabetes, hypertension or angina history, systolic blood pressure, heart rate, Killip class, and low body weight. [15]",
+        "Reported 30-day STEMI mortality ranges from 2.5% to 10%; prognosis is worsened by shock, heart failure, reduced LVEF, and mechanical complications. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-STEMI deterioration requiring urgent reassessment. [15]",
+        "columns": [
+          "Clinical change",
+          "Immediate concern",
+          "Next diagnostic action"
+        ],
+        "rows": [
+          [
+            "Hypotension, cool extremities, oliguria, altered mentation",
+            "Cardiogenic shock. [15]",
+            "Urgent hemodynamic assessment, bedside echocardiography, and immediate revascularization strategy if not already completed. [15]"
+          ],
+          [
+            "New loud murmur with pulmonary edema or shock",
+            "Acute severe mitral regurgitation or ventricular septal rupture. [15]",
+            "Urgent echocardiography and cardiothoracic consultation. [15]"
+          ],
+          [
+            "Recurrent chest pain or ST elevation after fibrinolysis",
+            "Failed reperfusion, reocclusion, or reinfarction. [15]",
+            "Immediate angiography and rescue PCI. [15]"
+          ],
+          [
+            "Syncope, pulselessness, or unstable rhythm",
+            "Ventricular arrhythmia or other electrical complication. [15]",
+            "Continuous monitoring and advanced cardiac life support-directed management. [15]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should troponin results be awaited before activating the catheterization laboratory for STEMI?",
+      "answer": "No. Persistent ischemic ST elevation or an ECG equivalent is a working STEMI diagnosis requiring immediate reperfusion planning; troponin supports myocardial infarction diagnosis but should not delay catheterization. [15]"
+    },
+    {
+      "question": "When is fibrinolysis appropriate for STEMI?",
+      "answer": "When timely PCI cannot be achieved within 120 minutes, initiate fibrinolysis within 30 minutes of hospital arrival if no contraindication, then transfer promptly to a PCI-capable center. Perform rescue PCI for failed reperfusion or reinfarction. [15]"
+    },
+    {
+      "question": "What indicates successful fibrinolysis?",
+      "answer": "The supplied review describes more than 50% ST-segment resolution at 60 to 90 minutes, typical reperfusion arrhythmias, and relief of chest pain as signs of apparent success; early angiography within 2 to 24 hours is still advised. [15]"
+    },
+    {
+      "question": "Is new left bundle branch block alone diagnostic of STEMI?",
+      "answer": "No. LBBB complicates ECG interpretation. Use Sgarbossa-type concordant or excessive discordant ST changes together with ischemic symptoms, serial ECGs, prior tracings, and urgent clinical assessment; original criteria are highly specific but have limited sensitivity. [15]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

@@ -8,6 +8,7 @@ import {
   statusForError
 } from "../_shared/requestIdentity.ts";
 import { consumeRateLimit, getChatAllowance } from "../_shared/rateLimits.ts";
+import { sanitizeSearchQuery } from "./searchPrivacy.js";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, accept",
@@ -116,6 +117,7 @@ const trustedDomains = [
   // Guidelines, Evidence Databases, Trial Repositories
   "cochranelibrary.com",
   "ncbi.nlm.nih.gov",
+  "dailymed.nlm.nih.gov",
   "clinicaltrials.gov",
   "nice.org.uk",
   "ema.europa.eu",
@@ -225,6 +227,28 @@ TONE:
 TARGET: 5000 words
 REMEMBER: NO BULLETS, NO LISTS - only flowing paragraphs.`;
 }
+const PATIENT_GROUNDING_RULES = `
+
+## Patient-data grounding (highest priority)
+
+These rules override every template, example, formatting instruction, and contextual source above:
+
+- Treat only facts explicitly present in the user's input or supplied patient record as facts about this patient.
+- Never invent, infer, assume, or silently complete patient-specific demographics, history, symptoms, review of systems, negative findings, diagnoses, exam findings, vital signs, laboratory or imaging results, medications, allergies, procedures, dates, treatment responses, prior treatment failures, contraindications, functional limitations, preferences, clinician details, insurance details, or disposition.
+- Absence of information is not a negative finding. Do not turn missing information into statements such as "denies," "normal," "negative," "no history of," or "without contraindications."
+- Preserve every section and field required by the selected note template, in its original order. When a section or field has no corresponding source information, keep its heading or label and leave its content blank. Never omit the section and never fill it with "not provided," "unknown," bracketed placeholders, template boilerplate, or plausible-sounding content.
+- Examples are for structure and style only. Never copy clinical facts, diagnoses, treatments, scores, measurements, or patient characteristics from an example into the output.
+- Retrieved trials, guidelines, ICD hints, and other contextual material are reference knowledge, not facts about the patient.
+- Do not claim that a diagnosis is confirmed, a criterion is met, a score has a value, a treatment failed, an order was placed, a procedure occurred, or a recommendation was accepted unless the supplied patient information establishes it.
+- Preserve uncertainty. Clearly distinguish supplied facts from clinical interpretation.
+- If the selected mode requests an Assessment and Plan, differential, next steps, orders, or disposition, you may generate clinically reasonable assessments and proposed management from the supplied facts. Present new management as recommendations or a proposed plan, never as patient history or as actions already completed.
+- A proposed treatment plan may include appropriate medications, tests, referrals, monitoring, and follow-up, but its rationale must remain anchored to the supplied patient facts. Do not fabricate patient characteristics to justify the plan.
+`;
+
+function withPatientGrounding(systemPrompt: string) {
+  return `${systemPrompt}\n${PATIENT_GROUNDING_RULES}`;
+}
+
 function getPlanRole() {
   return `You are a hospital physician writing the real Assessment and Plan (A/P) section of a patient note. Follow these formatting rules exactly.:
 
@@ -1542,7 +1566,7 @@ function getResearchRole() {
 - Use markdown tables where you can.
 
 ROLE
-You are an academic research assistant for physicians. Provide accurate, evidence-based answers from top-tier sources (NEJM, JAMA, Lancet, BMJ, Circulation, etc.).
+You are an academic research assistant for US board certified physicians. Provide accurate, evidence-based answers from top-tier sources (NEJM, JAMA, Lancet, BMJ, Circulation, etc.). You are speaking to experts in their fields be information dense, focusing on clinically relevant material include specifics on pathology, drugs, dosing, testing, treatment, interventions, etc.
 When no single study answers the question, synthesize across multiple credible studies. Use as many sources as possible to support claims, try to use all given if possible.
 
 WRITING PRINCIPLES
@@ -1556,6 +1580,31 @@ WRITING PRINCIPLES
 - Avoid pre-set section names; let the content dictate headings or paragraph breaks.
 `;
 }
+
+function getArticleResearchRole() {
+  return `You are a senior U.S. physician-editor producing evidence-grounded point-of-care articles for other physicians.
+
+The user supplies the article topic, editorial requirements, and an exact JSON schema. Follow that schema and return only valid JSON with no markdown fence or surrounding commentary.
+
+DECISION-DENSITY STANDARD
+- Write a working clinical reference, not a textbook overview, patient handout, literature review, or explanation of your research process.
+- Start at the physician decision layer. Assume the reader knows definitions, common symptoms, and foundational physiology.
+- Every paragraph must earn its space with at least one actionable discriminator: a named test, threshold, interpretation, drug and dose, procedure indication, timing rule, risk estimate, exception, tradeoff, or next step.
+- For syndromes and umbrella topics, organize the article around the major actionable etiologic branches. Show how history, examination, laboratory patterns, imaging, pathology, or response to treatment changes the differential and next action.
+- Distinguish immediate stabilization, diagnostic workup, definitive treatment, and monitoring when all four are relevant. Do not force any of them when they are not.
+- Replace vague categories such as “additional testing,” “supportive care,” “appropriate therapy,” or “specialist evaluation” with the specific actions a physician would take.
+- Never discuss the supplied results, search corpus, retrieval quality, or missing sources. Do not write phrases such as “the supplied evidence does not support.” If a detail is not supported, omit it; describe genuine clinical uncertainty only when it changes care.
+- Avoid repetition across summary, takeaways, prose, tables, and FAQs. Tables must compress a comparison or algorithm that would otherwise take more words. FAQs are optional and must add a decision not already covered.
+
+CLINICAL SPECIFICITY
+- Use a short title that is only the recognized clinical topic. Do not add a subtitle, colon, question, or list of covered domains.
+- Infer whether the topic is primarily diagnostic, pharmacologic, procedural, preventive, prognostic, mechanistic, or mixed. Emphasize only the clinically relevant domains; never force drugs, procedures, treatment algorithms, tables, or FAQs where they do not help.
+- Use topic-appropriate specificity: exact tests and thresholds for diagnostic questions; named agents and source-supported dosing when pharmacotherapy matters; indications, selection, timing, and complications for procedures; quantified risk and time horizons for prognosis; eligibility and intervals for prevention; mechanism linked to clinical consequence for pathophysiology.
+- Prefer current U.S. guidelines, FDA labeling, pivotal trials, and high-quality syntheses. Clearly identify off-label use and meaningful disagreement.
+- Use only the supplied search results. Cite supported claims as [N], including claims in tables. Never invent evidence, doses, thresholds, outcomes, or recommendations.
+- Write multiple citations as separate markers such as [1][8][9][12], never inside one bracket such as [1,8,9,12].
+- Follow the user's approximate length request as editorial guidance, not as a validation gate. Prefer 4-6 distinct decision-focused sections for complex topics and fewer for narrow topics. Remove filler and conclusions that merely restate the article.`;
+}
 // ==============================
 // SEARCH FUNCTIONS
 // ==============================
@@ -1563,25 +1612,6 @@ function getTavilyApiKey() {
   const apiKey = Deno.env.get("TAVILY_API_KEY")?.trim();
   if (!apiKey) throw new Error("TAVILY_API_KEY not configured");
   return apiKey;
-}
-
-function sanitizeSearchQuery(input: unknown) {
-  let query = String(input || "").split("=== VISION ANALYSIS")[0];
-
-  query = query
-    .replace(/data:[^,\s]+;base64,[A-Za-z0-9+/=]+/gi, " ")
-    .replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, " ")
-    .replace(/\b(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, " ")
-    .replace(/\b\d{3}-\d{2}-\d{4}\b/g, " ")
-    .replace(/\b(?:MRN|medical record(?: number)?|patient ID|member ID|account ID)\s*[:#=-]?\s*[A-Z0-9/-]{2,}\b/gi, " ")
-    .replace(/\b(?:DOB|date of birth|born)\s*(?:on|[:#=-])?\s*\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b/gi, " ")
-    .replace(/\b(?:patient\s+(?:named|name is)|name\s*[:=])\s+[A-Z][A-Za-z'’\-]+(?:\s+[A-Z][A-Za-z'’\-]+){1,2}\b/g, "patient")
-    .replace(/\b\d{1,5}\s+[A-Za-z0-9.'\-]+(?:\s+[A-Za-z0-9.'\-]+){0,4}\s+(?:Street|St|Avenue|Ave|Road|Rd|Boulevard|Blvd|Lane|Ln|Drive|Dr|Court|Ct|Way)\b/gi, " ")
-    .replace(/\b[A-Z0-9]{12,}\b/gi, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  return query.slice(0, 300);
 }
 
 // Deterministic 3-query fan-out — replaces the old LLM query planner.
@@ -1611,15 +1641,159 @@ function buildQueryPlan(userQuery: string) {
     searchFocus: "primary + trials + guidelines"
   };
 }
-async function searchWithTavily(queryPlan: { primaryQuery: string; secondaryQueries?: string[]; searchFocus: string }) {
+
+function buildArticleFallbackQueryPlan(userQuery: string) {
+  const q = sanitizeSearchQuery(userQuery);
+  const exactTopic = `"${q.replace(/["“”]/g, "")}"`;
+  return {
+    primaryQuery: `${exactTopic} diagnosis testing thresholds`,
+    secondaryQueries: q ? [
+      `${exactTopic} treatment management monitoring guideline`,
+      `${exactTopic} pathophysiology prognosis complications review`,
+      `${exactTopic} pharmacotherapy dosing procedures contraindications`
+    ] : [],
+    searchFocus: "exact-topic diagnostic + management + topic-specific evidence",
+    coreTopic: q,
+    plannerUsage: null
+  };
+}
+
+function extractResponseOutputText(data: any) {
+  const textParts: string[] = [];
+  for (const item of data?.output || []) {
+    for (const content of item?.content || []) {
+      if (typeof content?.text === "string") textParts.push(content.text);
+    }
+  }
+  return textParts.join("").trim();
+}
+
+async function buildArticleQueryPlan(userQuery: string) {
+  const fallbackPlan = buildArticleFallbackQueryPlan(userQuery);
+  try {
+    const response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${Deno.env.get("OPENAI_API_KEY")}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "gpt-5.6-luna",
+        instructions: `You plan literature searches for dense point-of-care physician articles. Return four independently useful queries that retrieve: (1) current guidelines and high-quality clinical reviews; (2) exact diagnostic tests, interpretation, and decision thresholds; (3) specific management, procedures, dosing, monitoring, contraindications, and complications; and (4) the most important topic-specific evidence domain. For syndromes or umbrella topics, search the major actionable etiologies by name rather than repeating the umbrella label in every query. For example, a nephritic-syndrome plan should retrieve glomerulonephritis evaluation plus ANCA-associated, anti-GBM, immune-complex, infection-related, IgA, and lupus pathways. Set coreTopic to the recognized topic plus at most one close clinical synonym; do not add generic descriptors. Do not let phrases such as "clinical practice guideline" become the subject. Use U.S. evidence where available without excluding important international evidence.`,
+        input: fallbackPlan.coreTopic,
+        reasoning: { effort: "none" },
+        text: {
+          format: {
+            type: "json_schema",
+            name: "article_search_plan",
+            strict: true,
+            schema: {
+              type: "object",
+              properties: {
+                coreTopic: { type: "string" },
+                queries: {
+                  type: "array",
+                  minItems: 4,
+                  maxItems: 4,
+                  items: { type: "string" }
+                }
+              },
+              required: ["coreTopic", "queries"],
+              additionalProperties: false
+            }
+          }
+        },
+        max_output_tokens: 500,
+        store: false
+      })
+    });
+    if (!response.ok) throw new Error(`Article search planning failed: ${response.status}`);
+    const data = await response.json();
+    const plan = JSON.parse(extractResponseOutputText(data));
+    const coreTopic = sanitizeSearchQuery(plan.coreTopic || fallbackPlan.coreTopic);
+    const queries = (plan.queries || [])
+      .map((query: unknown) => sanitizeSearchQuery(query))
+      .filter(Boolean)
+      .slice(0, 4);
+    if (!coreTopic || queries.length !== 4) throw new Error("Article search planner returned an invalid plan");
+    return {
+      primaryQuery: queries[0],
+      secondaryQueries: queries.slice(1),
+      searchFocus: "model-planned topic-specific physician evidence search",
+      coreTopic,
+      plannerUsage: data.usage || null
+    };
+  } catch (error) {
+    console.error("Article search planner failed; using exact-topic fallback:", error instanceof Error ? error.message : "UnknownError");
+    return fallbackPlan;
+  }
+}
+
+const ARTICLE_TOPIC_STOPWORDS = new Set([
+  "acute", "adult", "adults", "assessment", "children", "clinical", "disease",
+  "evaluation", "management", "overview", "patient", "patients", "screening", "syndrome"
+]);
+
+function articleTopicTokens(topic: string) {
+  return sanitizeSearchQuery(topic)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .split(" ")
+    .filter((token) => token.length >= 3 && !ARTICLE_TOPIC_STOPWORDS.has(token));
+}
+
+function isArticleResultRelevant(result: any, topic: string) {
+  const tokens = articleTopicTokens(topic);
+  if (tokens.length === 0) return true;
+  const haystack = `${result?.title || ""} ${result?.content || ""}`.toLowerCase();
+  const matches = tokens.filter((token) => haystack.includes(token)).length;
+  return matches >= Math.max(1, Math.ceil(tokens.length * 0.5));
+}
+
+function selectArticleResults(results: any[], limit = 24) {
+  const regulatory = results.filter((result) => {
+    const host = hostOf(result.url);
+    return host === "fda.gov" || host.endsWith(".fda.gov") || host === "dailymed.nlm.nih.gov";
+  });
+  const ordered = [...regulatory, ...results];
+  const selected: any[] = [];
+  const seenUrls = new Set<string>();
+  const hostCounts = new Map<string, number>();
+
+  for (const result of ordered) {
+    if (selected.length >= limit) break;
+    if (!result?.url || seenUrls.has(result.url)) continue;
+    const host = hostOf(result.url);
+    if ((hostCounts.get(host) || 0) >= 4) continue;
+    selected.push(result);
+    seenUrls.add(result.url);
+    hostCounts.set(host, (hostCounts.get(host) || 0) + 1);
+  }
+
+  if (selected.length < limit) {
+    for (const result of ordered) {
+      if (selected.length >= limit) break;
+      if (!result?.url || seenUrls.has(result.url)) continue;
+      selected.push(result);
+      seenUrls.add(result.url);
+    }
+  }
+
+  return selected;
+}
+
+async function searchWithTavily(
+  queryPlan: { primaryQuery: string; secondaryQueries?: string[]; searchFocus: string },
+  searchOptions: { includeRawContent?: boolean; includeAnswer?: boolean; searchDepth?: string } = {}
+) {
   try {
     const tavilyApiKey = getTavilyApiKey();
     // Tavily bills per SEARCH, not per result, so a higher max_results is free
     // headroom — same credit cost, ~2.5x the sources. 20 is the practical
     // ceiling: asking for 30 measurably degrades the response (returns ~10).
     const searchPromises = [
-      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 20),
-      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 15))
+      performTavilySearch(queryPlan.primaryQuery, tavilyApiKey, 20, searchOptions),
+      ...(queryPlan.secondaryQueries || []).map((q) => performTavilySearch(q, tavilyApiKey, 15, searchOptions))
     ];
     const searchResults = await Promise.all(searchPromises);
     const allResults = searchResults.flat().filter(Boolean);
@@ -1639,7 +1813,8 @@ async function searchWithTavily(queryPlan: { primaryQuery: string; secondaryQuer
     const rankedResults = rankAndFilterResults(uniqueResults);
     return {
       results: rankedResults,
-      searchStrategy: queryPlan.searchFocus
+      searchStrategy: queryPlan.searchFocus,
+      queries: [queryPlan.primaryQuery, ...(queryPlan.secondaryQueries || [])]
     };
   } catch (error) {
     console.error("Enhanced Tavily search failed:", error instanceof Error ? error.name : "UnknownError");
@@ -1684,10 +1859,10 @@ async function performTavilySearch(
         query: safeQuery,
         max_results: maxResults,
         search_depth: searchDepth,
+        chunks_per_source: searchDepth === "advanced" ? 3 : undefined,
         include_domains: trustedDomains,
         include_answer: includeAnswer,
-        include_raw_content: includeRawContent,
-        max_tokens: includeRawContent ? 1500 : 800
+        include_raw_content: includeRawContent
       })
     });
     if (!response.ok) throw new Error(`Tavily API error: ${response.status}`);
@@ -1964,10 +2139,23 @@ serve(async (req) => {
     });
   }
   try {
-    let { query, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], anonymous_id = null } = body;
+    let { query, research_query = null, isClinical = false, isReason = false, isWrite = false, mode = "search", stream = false, rawSearch = false, simpleSearch = false, structuredSearch = false, images = [], anonymous_id = null } = body;
 
     query = typeof query === "string" ? query.slice(0, 50_000) : "";
+    research_query = typeof research_query === "string" ? research_query.slice(0, 1_000) : "";
     mode = typeof mode === "string" ? mode.slice(0, 80) : "search";
+    const isArticleResearch = mode === "article-research";
+    const configuredArticleGeneratorKey = Deno.env.get("ARTICLE_GENERATOR_KEY")?.trim() || "";
+    const providedArticleGeneratorKey = req.headers.get("x-astra-article-key")?.trim() || "";
+    const isAuthorizedArticleGenerator = isArticleResearch
+      && configuredArticleGeneratorKey.length >= 32
+      && providedArticleGeneratorKey === configuredArticleGeneratorKey;
+    if (isArticleResearch && !isAuthorizedArticleGenerator) {
+      return new Response(JSON.stringify({ error: "Article generator authorization required" }), {
+        status: 403,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      });
+    }
     if (!Array.isArray(images) || images.length > 4) {
       throw new HttpError(400, "Invalid image payload");
     }
@@ -2004,7 +2192,7 @@ serve(async (req) => {
       serviceClient,
       identity.rateLimitKey,
       "chat_minute",
-      identity.kind === "authenticated" ? 20 : 8,
+      isAuthorizedArticleGenerator ? 20 : identity.kind === "authenticated" ? 20 : 8,
       60
     );
     if (!burstLimit.allowed) {
@@ -2016,7 +2204,7 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
       });
     }
-    if (identity.kind === "anonymous") {
+    if (identity.kind === "anonymous" && !isAuthorizedArticleGenerator) {
       const networkKey = await deriveRequestFingerprint(req, "quick-api-anonymous-network");
       const networkLimit = await consumeRateLimit(
         serviceClient,
@@ -2051,8 +2239,9 @@ serve(async (req) => {
       }
     }
     const { limit } = await getChatAllowance(serviceClient, identity);
-    const usage = Number.isFinite(limit)
-      ? await consumeRateLimit(serviceClient, identity.rateLimitKey, "chat_daily", limit)
+    const dailyLimit = isAuthorizedArticleGenerator ? 2000 : limit;
+    const usage = Number.isFinite(dailyLimit)
+      ? await consumeRateLimit(serviceClient, identity.rateLimitKey, "chat_daily", dailyLimit)
       : null;
     if (usage && !usage.allowed) {
       return new Response(JSON.stringify({
@@ -2407,6 +2596,8 @@ Use professional medical terminology while remaining clear. If the image quality
     let messages: any[];
     let systemPrompt;
     let citationsArray: any[] = [];
+    let articlePlannerUsage: any = null;
+    let articleSearchQueries: string[] = [];
     let requiresIcdHints = false;
     if (shouldUseClinical) {
       // Select appropriate system prompt based on mode
@@ -2517,6 +2708,7 @@ Use professional medical terminology while remaining clear. If the image quality
       } else {
         systemPrompt = getPlanRole();
       }
+      systemPrompt = withPatientGrounding(systemPrompt);
       requiresIcdHints = icdHintModes.has(mode) || !mode && !isReason && !isWrite;
       let retrievedTrials = "";
       try {
@@ -2543,13 +2735,47 @@ Use professional medical terminology while remaining clear. If the image quality
         }
       ];
     } else {
-      systemPrompt = getResearchRole();
+      systemPrompt = isArticleResearch ? getArticleResearchRole() : getResearchRole();
       let searchResults: any = null;
       try {
+        const queryPlan: any = isArticleResearch
+          ? await buildArticleQueryPlan(research_query || query)
+          : buildQueryPlan(research_query || query);
         searchResults = wantsRawSearch
           ? await simpleRawSearch(query)
-          : await searchWithTavily(buildQueryPlan(query));
+          : await searchWithTavily(queryPlan,
+          isArticleResearch
+            ? { includeRawContent: false, includeAnswer: false, searchDepth: "advanced" }
+            : {});
+        if (isArticleResearch && searchResults?.results) {
+          articlePlannerUsage = queryPlan.plannerUsage || null;
+          articleSearchQueries = searchResults.queries || [];
+          let relevantResults = searchResults.results.filter((result: any) =>
+            isArticleResultRelevant(result, queryPlan.coreTopic || research_query || query));
+          if (relevantResults.length < 8) {
+            const fallbackPlan = buildArticleFallbackQueryPlan(queryPlan.coreTopic || research_query || query);
+            const fallbackResults = await searchWithTavily(fallbackPlan, {
+              includeRawContent: false,
+              includeAnswer: false,
+              searchDepth: "advanced"
+            });
+            articleSearchQueries.push(...(fallbackResults?.queries || []));
+            const mergedResults = [
+              ...searchResults.results,
+              ...(fallbackResults?.results || [])
+            ].filter((result, index, results) =>
+              result?.url && results.findIndex((candidate) => candidate?.url === result.url) === index);
+            relevantResults = rankAndFilterResults(mergedResults).filter((result: any) =>
+              isArticleResultRelevant(result, fallbackPlan.coreTopic));
+            searchResults.searchStrategy += "; exact-topic fallback search";
+          }
+          searchResults.results = selectArticleResults(relevantResults);
+          searchResults.searchStrategy += "; capped to 24 diverse topic-relevant source excerpts";
+        }
       } catch { }
+      if (isArticleResearch && (!searchResults?.results || searchResults.results.length < 6)) {
+        throw new HttpError(422, `Insufficient topic-specific evidence retrieved for ${research_query || query}`);
+      }
       let contextualInfo = "";
       if (searchResults && searchResults.results) {
         if (wantsRawSearch) {
@@ -2574,9 +2800,10 @@ Use professional medical terminology while remaining clear. If the image quality
           contextualInfo = `Search Strategy: ${searchResults.searchStrategy}\n\nSearch Results:\n\n`;
           searchResults.results.forEach((result: any, index: number) => {
             const citationNumber = index + 1;
+            const sourceContent = String(result.content || result.raw_content || "").slice(0, 1800);
             contextualInfo += `[${citationNumber}] ${result.title}\n`;
             contextualInfo += `URL: ${result.url}\n`;
-            contextualInfo += `Content: ${result.raw_content || result.content || ""}\n\n`;
+            contextualInfo += `Content: ${sourceContent}\n\n`;
             const hostname = result.url ? new URL(result.url).hostname : "Unknown";
             const snippet = (result.content || "").slice(0, 300);
             citationsArray.push({
@@ -2606,7 +2833,8 @@ Use professional medical terminology while remaining clear. If the image quality
     }
     // Model selection
     let model;
-    if (isReason || mode === "reason") model = "gpt-5.6";
+    if (isArticleResearch) model = "gpt-5.6-terra";
+    else if (isReason || mode === "reason") model = "gpt-5.6";
     else if (isWrite || mode === "write") model = "gpt-5-mini";
     else if (mode === "prior-auth-appeal" || mode === "medical-necessity" || mode === "disability-fmla" || mode === "dme" || mode === "peer-to-peer" || mode === "specialty-referral") {
       model = "gpt-5-mini";
@@ -2624,6 +2852,9 @@ Use professional medical terminology while remaining clear. If the image quality
     // ============================================
     const finalInstructions = messages.find((m: any) => m.role === "system")?.content || "";
     const finalInput = messages.filter((m: any) => m.role !== "system").map((m: any) => m.content).join("\n\n") || "";
+    if (isArticleResearch && finalInput.length > 80_000) {
+      throw new Error(`Article research input exceeded the 80,000-character safety limit (${finalInput.length})`);
+    }
 
     // Determine reasoning effort based on mode
     let reasoningEffort = "low"; // Default for clinical modes
@@ -2641,7 +2872,7 @@ Use professional medical terminology while remaining clear. If the image quality
       reasoning: {
         effort: reasoningEffort
       },
-      max_output_tokens: 5000,
+      max_output_tokens: isArticleResearch ? 10_000 : 12_000,
       store: false
     };
     if (stream) requestBody.stream = true;
@@ -2722,6 +2953,18 @@ Use professional medical terminology while remaining clear. If the image quality
                 } else if (eventType === "response.error") {
                   controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: "Model response failed" })}\n\n`));
                 } else if (eventType === "response.completed") {
+                  const payload = JSON.parse(dataJson);
+                  const completedResponse = payload.response || {};
+                  const usage = completedResponse.usage || null;
+                  console.log(`Article usage: model=${completedResponse.model || model}, input_chars=${finalInput.length}, input_tokens=${usage?.input_tokens || 0}, output_tokens=${usage?.output_tokens || 0}`);
+                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({
+                    usage,
+                    model: completedResponse.model || model,
+                    inputCharacters: finalInput.length,
+                    sourceCount: citationsArray.length,
+                    plannerUsage: articlePlannerUsage,
+                    searchQueries: articleSearchQueries
+                  })}\n\n`));
                   controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
                   controller.close();
                   return;
