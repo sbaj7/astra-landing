@@ -105,27 +105,36 @@ export const useTheme = () => {
 
 // MARK: - Theme Provider Component
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [themePreference, setThemePreference] = useState('system');
+  const [systemDark, setSystemDark] = useState(false);
 
   useEffect(() => {
-    // Check system preference
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDark(mediaQuery.matches);
+    const savedPreference = window.localStorage.getItem('astra-article-theme');
+    if (savedPreference === 'light' || savedPreference === 'dark') {
+      setThemePreference(savedPreference);
+    }
+    setSystemDark(mediaQuery.matches);
 
-    const handleChange = (e) => setIsDark(e.matches);
+    const handleChange = (event) => setSystemDark(event.matches);
     mediaQuery.addEventListener('change', handleChange);
-    
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const toggleTheme = () => setIsDark(!isDark);
-  
+  const isDark = themePreference === 'dark' || (themePreference === 'system' && systemDark);
+  const toggleTheme = () => {
+    const nextPreference = isDark ? 'light' : 'dark';
+    setThemePreference(nextPreference);
+    window.localStorage.setItem('astra-article-theme', nextPreference);
+  };
+
   const colors = isDark ? colorDefinitions.dark : colorDefinitions.light;
 
   const value = {
     isDark,
     colors,
     toggleTheme,
+    themePreference,
     // Additional utility functions
     hexToRgb,
     rgbToHex,

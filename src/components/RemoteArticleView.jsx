@@ -4,7 +4,7 @@ import { reorderArticleCitations } from '../utils/reorderArticleCitations.js';
 
 const resolveSupabaseUrl = () => import.meta?.env?.VITE_SUPABASE_URL || 'https://shwitfgtpfszjjoczbxp.supabase.co';
 
-const RemoteArticleView = ({ slug, bucket = 'articles', objectPath }) => {
+const RemoteArticleView = ({ slug, bucket = 'articles', objectPath, themeMode }) => {
   const preloaded = typeof window !== 'undefined' && window.__PRERENDERED_ARTICLE__?.slug === slug ? window.__PRERENDERED_ARTICLE__ : null;
   const [article, setArticle] = useState(preloaded?.article ? reorderArticleCitations(preloaded.article) : null);
   const [relatedArticles, setRelatedArticles] = useState(preloaded?.relatedArticles || []);
@@ -78,7 +78,7 @@ const RemoteArticleView = ({ slug, bucket = 'articles', objectPath }) => {
 
   if (isLoading) return <main className="article-main"><p>Loading article…</p></main>;
   if (error || !article) return <main className="article-main"><h1>Article unavailable</h1><p>{error}</p><a href="/articles">Browse the clinical library</a></main>;
-  return <ClinicalArticleView article={article} relatedArticles={relatedArticles} />;
+  return <ClinicalArticleView article={article} relatedArticles={relatedArticles} themeMode={themeMode} />;
 };
 
 export default RemoteArticleView;

@@ -49,6 +49,7 @@ import { getEffectiveSubscriptionPlan } from '../utils/subscriptionPlan.js';
 import FirstPageExperience from './FirstPageExperience.jsx';
 import DifferentialDiagnosisView from './DifferentialDiagnosisView.jsx';
 import ClinicalSectionsView from './ClinicalSectionsView.jsx';
+import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -84,6 +85,22 @@ const ALLOWED_THEME_VALUES = new Set(['system', 'light', 'dark']);
 const ALLOWED_ACCENT_VALUES = new Set(Object.keys(ACCENT_COLOR_MAP));
 const ALLOWED_LANGUAGE_VALUES = new Set(['auto', 'en-US', 'en-GB', 'es-ES', 'fr-FR']);
 const ALLOWED_SPOKEN_LANGUAGE_VALUES = new Set(['auto', 'en', 'es', 'fr', 'de']);
+const APP_SETTINGS_STORAGE_KEY = 'astra-app-settings';
+
+const readCachedAppSettings = () => {
+  if (typeof window === 'undefined') return DEFAULT_APP_SETTINGS;
+  try {
+    const cached = JSON.parse(window.localStorage.getItem(APP_SETTINGS_STORAGE_KEY) || '{}');
+    return {
+      theme: ALLOWED_THEME_VALUES.has(cached.theme) ? cached.theme : DEFAULT_APP_SETTINGS.theme,
+      accentColor: ALLOWED_ACCENT_VALUES.has(cached.accentColor) ? cached.accentColor : DEFAULT_APP_SETTINGS.accentColor,
+      language: ALLOWED_LANGUAGE_VALUES.has(cached.language) ? cached.language : DEFAULT_APP_SETTINGS.language,
+      spokenLanguage: ALLOWED_SPOKEN_LANGUAGE_VALUES.has(cached.spokenLanguage) ? cached.spokenLanguage : DEFAULT_APP_SETTINGS.spokenLanguage
+    };
+  } catch {
+    return DEFAULT_APP_SETTINGS;
+  }
+};
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -5305,10 +5322,15 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
    ========================= */
 const AstraApp = () => {
   const navigate = useNavigate();
-  const [appSettings, setAppSettings] = useState(DEFAULT_APP_SETTINGS);
+  const [appSettings, setAppSettings] = useState(readCachedAppSettings);
   const { colors: theme, isDark } = useTheme(appSettings);
   const speechRecognition = useSpeechRecognition();
   const isMobile = useIsMobile();
+  useDocumentChromeTheme(theme.backgroundPrimary, isDark);
+
+  useEffect(() => {
+    window.localStorage.setItem(APP_SETTINGS_STORAGE_KEY, JSON.stringify(appSettings));
+  }, [appSettings]);
 
   // Supabase auth
   const {
@@ -5503,13 +5525,9 @@ const AstraApp = () => {
   }, [authLoading, isAuthenticated, user]);
 
   useEffect(() => {
-    if (!accountProfile || !accountProfile.metadata) {
-      setAppSettings((prev) => (areSettingsEqual(prev, DEFAULT_APP_SETTINGS) ? prev : DEFAULT_APP_SETTINGS));
-      setHasLoadedSubscription(false);
-      return;
-    }
+    if (!accountProfile) return;
 
-    const storedSettings = sanitizeSettings(accountProfile.metadata.settings);
+    const storedSettings = sanitizeSettings(accountProfile.metadata?.settings);
     setAppSettings((prev) => (areSettingsEqual(prev, storedSettings) ? prev : storedSettings));
   }, [accountProfile, sanitizeSettings, areSettingsEqual]);
 
@@ -6800,7 +6818,7 @@ const AstraApp = () => {
         >
           <RemoteArticleView
             slug={selectedArticle.slug}
-            theme={theme}
+            themeMode={isDark ? 'dark' : 'light'}
             onBack={handleCloseArticle}
           />
         </div>

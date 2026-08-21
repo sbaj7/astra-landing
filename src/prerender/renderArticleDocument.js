@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import ClinicalArticleView from '../components/ClinicalArticleView.jsx';
 import ArticlesIndexPage from '../routes/ArticlesIndexPage.jsx';
 import { normalizeClinicalArticle } from '../articles/articleSchema.js';
+import { ThemeProvider } from '../components/Themes+Styles.jsx';
 
 const escapeAttribute = (value = '') => String(value)
   .replace(/&/g, '&amp;')
@@ -68,14 +69,20 @@ const renderDocument = ({ title, description, canonicalUrl, jsonLd, markup, asse
     <meta name="twitter:description" content="${escapeAttribute(description)}" />
     <meta name="twitter:image" content="${escapeAttribute(image)}" />
     <meta name="twitter:image:alt" content="${escapeAttribute(imageAlt)}" />
-    <meta name="theme-color" content="#fbfbf9" />
+    <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
+    <style>
+      html, body, #root { min-height: 100%; background: #fbfbf9; color: #20201f; }
+      @media (prefers-color-scheme: dark) { html, body, #root { background: #121417; color: #f2f3f4; } }
+    </style>
     ${renderAssets(assets)}
   </head>
-  <body style="margin:0;background:#fbfbf9;color:#20201f">
+  <body style="margin:0">
     <div id="root">${markup}</div>
+    <script src="/article-theme.js" defer></script>
     ${clientScript ? `<script src="${escapeAttribute(clientScript)}" defer></script>` : ''}
   </body>
 </html>`;
@@ -164,7 +171,7 @@ export const renderArticleDocument = ({ article: sourceArticle, relatedArticles 
     description,
     canonicalUrl,
     jsonLd,
-    markup: renderToString(React.createElement(ClinicalArticleView, { article: sourceArticle, relatedArticles })),
+    markup: renderToString(React.createElement(ThemeProvider, null, React.createElement(ClinicalArticleView, { article: sourceArticle, relatedArticles }))),
     assets,
     pageType: 'article',
     image: images.openGraph,
@@ -205,7 +212,7 @@ export const renderArticleIndexDocument = ({ articles, baseUrl, assets }) => {
     description,
     canonicalUrl,
     jsonLd,
-    markup: renderToString(React.createElement(ArticlesIndexPage, { initialArticles: articles })),
+    markup: renderToString(React.createElement(ThemeProvider, null, React.createElement(ArticlesIndexPage, { initialArticles: articles }))),
     assets,
     image: `${baseUrl.replace(/\/$/, '')}/og-image.png`,
     imageAlt: 'Astra MD clinical research and reasoning',

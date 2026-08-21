@@ -257,7 +257,6 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
                 color: theme.textPrimary,
                 fontFamily: 'inherit'
               }}
-              autoFocus
             />
             {searchQuery && (
               <button

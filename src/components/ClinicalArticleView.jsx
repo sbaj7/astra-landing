@@ -4,6 +4,8 @@ import remarkGfm from 'remark-gfm';
 import '@fontsource/newsreader/latin-400.css';
 import '@fontsource/newsreader/latin-600.css';
 import { normalizeClinicalArticle } from '../articles/articleSchema.js';
+import { useTheme } from './Themes+Styles.jsx';
+import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
 import './ClinicalArticleView.css';
 
 const ArticleCitationContext = createContext([]);
@@ -225,14 +227,31 @@ const MarkdownText = ({ children, className = '', inline = false }) => {
   );
 };
 
-const ArticleHeader = () => (
+const ArticleThemeIcon = () => (
+  <span className="article-theme-icons" aria-hidden="true">
+  <svg className="article-theme-icon-dark" viewBox="0 0 24 24">
+    <path d="M20.2 15.2A8.4 8.4 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z" />
+  </svg>
+  <svg className="article-theme-icon-light" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="3.75" />
+    <path d="M12 2.25v2M12 19.75v2M2.25 12h2M19.75 12h2M5.1 5.1l1.4 1.4M17.5 17.5l1.4 1.4M18.9 5.1l-1.4 1.4M6.5 17.5l-1.4 1.4" />
+  </svg>
+  </span>
+);
+
+export const ArticleHeader = ({ isDark, onToggleTheme, showLibraryLink = true }) => (
   <header className="article-site-header">
     <a className="article-brand" href="/" aria-label="Astra MD home">
       <img src="/Astra-Mark-Material.svg" alt="" aria-hidden="true" />
       <span>Astra</span>
     </a>
     <nav className="article-header-nav" aria-label="Article navigation">
-      <a className="article-header-link article-library-label" href="/articles">Clinical library</a>
+      {onToggleTheme && (
+        <button className="article-theme-toggle" type="button" onClick={onToggleTheme} aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`} title={`Switch to ${isDark ? 'light' : 'dark'} mode`} data-article-theme-toggle>
+          <ArticleThemeIcon />
+        </button>
+      )}
+      {showLibraryLink && <a className="article-header-link article-library-label" href="/articles">Clinical library</a>}
       <a className="article-header-link" href="/">Open Astra</a>
     </nav>
   </header>
@@ -323,8 +342,14 @@ const ArticleTableOfContents = ({ article }) => {
   );
 };
 
-const ClinicalArticleView = ({ article: sourceArticle, relatedArticles = [] }) => {
+const ClinicalArticleView = ({ article: sourceArticle, relatedArticles = [], themeMode }) => {
   const [shareStatus, setShareStatus] = useState('');
+  const articleTheme = useTheme();
+  const resolvedThemeMode = themeMode || articleTheme.themePreference;
+  const isDark = resolvedThemeMode === 'dark' || (resolvedThemeMode === 'system' && articleTheme.isDark);
+  const backgroundColor = isDark ? '#121417' : '#fbfbf9';
+  useDocumentChromeTheme(backgroundColor, isDark);
+
   useEffect(() => {
     if (typeof window.__initializeAstraArticle === 'function') {
       window.__initializeAstraArticle();
@@ -371,9 +396,9 @@ const ClinicalArticleView = ({ article: sourceArticle, relatedArticles = [] }) =
 
   return (
     <ArticleCitationContext.Provider value={article.references}>
-    <div className="article-page">
+    <div className="article-page" data-theme={resolvedThemeMode}>
       <a className="article-skip-link" href="#article-content">Skip to article</a>
-      <ArticleHeader />
+      <ArticleHeader isDark={isDark} onToggleTheme={themeMode ? undefined : articleTheme.toggleTheme} />
       <main className="article-main" id="article-content">
         <nav className="article-breadcrumbs" aria-label="Breadcrumb">
           <ol>

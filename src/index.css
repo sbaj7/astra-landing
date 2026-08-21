@@ -9,6 +9,21 @@ html, body, #root {
   height: 100%;
 }
 
+html {
+  background-color: #FAFAF9;
+}
+
+body,
+#root {
+  background-color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #121417;
+  }
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;

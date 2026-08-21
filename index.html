@@ -9,8 +9,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <!-- Primary Meta Tags -->
-<title>Astra MD — AI Clinical Decision Support for Healthcare Professionals</title>
-<meta name="title" content="Astra MD — AI Clinical Decision Support for Healthcare Professionals">
+<title>Astra</title>
+<meta name="title" content="Astra">
 <meta name="description" content="Uncertainty ends here. Astra is an AI-powered clinical reasoning platform with 55+ modes, 31M+ indexed articles, and structured citations. Literature review, differential diagnosis, and clinical note writing in one HIPAA-compliant workspace.">
 <meta name="keywords" content="clinical decision support, medical AI, differential diagnosis, literature review, clinical notes, evidence-based medicine, HIPAA compliant, healthcare AI, DDx, A&P notes, medical research, clinical reasoning, EBM, physician tools">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Astra MD">
 <meta property="og:url" content="https://astramd.org/">
-<meta property="og:title" content="Astra MD — AI Clinical Decision Support for Healthcare Professionals">
+<meta property="og:title" content="Astra">
 <meta property="og:description" content="Uncertainty ends here. 55+ clinical modes, 31M+ indexed articles, retrieval-augmented reasoning with structured citations—one HIPAA-compliant workspace.">
 <meta property="og:image" content="https://astramd.org/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -28,11 +28,22 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://astramd.org/">
-<meta name="twitter:title" content="Astra MD — AI Clinical Decision Support">
+<meta name="twitter:title" content="Astra">
 <meta name="twitter:description" content="55+ clinical modes, 31M+ articles, structured citations. Literature review, DDx, and clinical notes in one workspace.">
 <meta name="twitter:image" content="https://astramd.org/og-image.png">
 <!-- Additional -->
 <meta name="theme-color" content="#4A6B7D">
+<script>
+  try {
+    const cachedSettings = JSON.parse(localStorage.getItem('astra-app-settings') || '{}');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = cachedSettings.theme === 'dark' || (cachedSettings.theme !== 'light' && systemDark);
+    const initialBackground = isDark ? '#121417' : '#FAFAF9';
+    document.documentElement.style.backgroundColor = initialBackground;
+    document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', initialBackground);
+  } catch {}
+</script>
 <link rel="canonical" href="https://astramd.org/">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <!-- Structured Data -->

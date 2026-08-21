@@ -1,4 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { ArticleHeader } from '../components/ClinicalArticleView.jsx';
+import { useTheme } from '../components/Themes+Styles.jsx';
+import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
 import '../components/ClinicalArticleView.css';
 import './ArticlesIndexPage.css';
 
@@ -7,6 +10,8 @@ const ArticlesIndexPage = ({ initialArticles }) => {
   const [articles, setArticles] = useState(Array.isArray(preloaded) ? preloaded : []);
   const [query, setQuery] = useState('');
   const [error, setError] = useState('');
+  const articleTheme = useTheme();
+  useDocumentChromeTheme(articleTheme.isDark ? '#121417' : '#fbfbf9', articleTheme.isDark);
 
   useEffect(() => {
     if (articles.length) {
@@ -33,17 +38,9 @@ const ArticlesIndexPage = ({ initialArticles }) => {
   }, [articles, query]);
 
   return (
-    <div className="article-page article-library-page">
+    <div className="article-page article-library-page" data-theme={articleTheme.themePreference}>
       <a className="article-skip-link" href="#article-library">Skip to library</a>
-      <header className="article-site-header">
-        <a className="article-brand" href="/" aria-label="Astra MD home">
-          <img src="/Astra-Mark-Material.svg" alt="" aria-hidden="true" />
-          <span>Astra</span>
-        </a>
-        <nav className="article-header-nav" aria-label="Library navigation">
-          <a className="article-header-link" href="/">Open Astra</a>
-        </nav>
-      </header>
+      <ArticleHeader isDark={articleTheme.isDark} onToggleTheme={articleTheme.toggleTheme} showLibraryLink={false} />
       <main className="article-library" id="article-library">
         <header className="article-library-hero">
           <p className="article-eyebrow">Astra Clinical Library</p>
