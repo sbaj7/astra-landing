@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary Medicine",
+  "title": "Pleural Effusion",
+  "summary": "Evaluate pleural effusion by identifying instability or pleural infection, obtaining paired pleural-serum studies when sampling is indicated, and using fluid patterns to direct microbiology, cytology, biopsy, drainage, fibrinolysis, surgery, or durable symptom control.",
+  "seoDescription": "Physician guide to pleural effusion evaluation, Light’s criteria, pleural infection drainage, malignancy assessment, and indwelling catheter decisions.",
+  "clinicalQuestion": "How should clinicians classify, investigate, drain, and treat pleural effusion according to its highest-risk and most actionable cause?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "pleural effusion",
+    "thoracentesis",
+    "Light's criteria",
+    "pleural infection",
+    "empyema",
+    "malignant pleural effusion",
+    "intrapleural tPA DNase"
+  ],
+  "keyTakeaways": [
+    "In pneumonia or unexplained sepsis, actively investigate any pleural effusion because occult pleural infection requires source control rather than antibiotics alone. [21]",
+    "Classify sampled fluid with paired serum protein and LDH using Light’s criteria, but interpret borderline results cautiously because analytical-platform variation can change classification and diuretic-treated transudates may be mislabeled as exudates. [1][19]",
+    "For pleural infection with residual collection after chest-tube drainage has ceased, consider intrapleural tPA 10 mg plus DNase 5 mg twice daily for 3 days; do not use either agent alone. [2]",
+    "For recurrent symptomatic malignant pleural effusion with trapped lung, failed pleurodesis, or poor suitability for pleurodesis, an indwelling pleural catheter provides outpatient intermittent drainage and dyspnea control. [18]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-initial-sampling",
+      "eyebrow": "First decision",
+      "heading": "Identify infection and obtain a diagnostic specimen when etiology is not secure",
+      "intro": "Prioritize pleural infection and select testing that changes drainage, tissue diagnosis, or durable palliation.",
+      "paragraphs": [
+        "In a patient with pneumonia or otherwise unexplained sepsis, investigate a concurrent pleural effusion for pleural infection. This branch is time-sensitive because a complicated parapneumonic effusion or empyema may require drainage escalation in addition to antimicrobial treatment. [21]",
+        "When diagnostic thoracentesis is performed, send paired pleural-fluid and serum total protein and LDH to classify the effusion, and obtain pleural-fluid glucose, pH measured on a blood-gas analyzer, cell count with differential, microbiologic studies, and cytology when infection or malignancy is plausible. Routine fluid assessment commonly includes protein, LDH, glucose, cytology, and microbiology. [13][24]",
+        "Use thoracic ultrasound to identify septations or fibrin strands and to assess whether a collection is complex or loculated; these findings, together with clinical infection and adverse pleural-fluid chemistry, increase concern for inadequate drainage. In one pleural-infection protocol, poor drainage was defined as chest-tube output of 150 mL or less after 24 hours, with complex effusion defined sonographically by fibrin strands or septations. [22]"
+      ],
+      "bullets": [
+        "Send microbiologic testing promptly when pleural infection is suspected; Gram stain or culture positivity establishes a microbiologic pleural-space process. [22]",
+        "Treat frank pus as pleural infection requiring drainage assessment rather than as an isolated diagnostic laboratory finding. [22]",
+        "Use pleural-fluid pH below 7.2, glucose below 3.3 mmol/L, or LDH above 900 U/L as high-risk pleural-fluid features in a compatible infectious presentation. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial pleural-fluid findings that direct the next diagnostic or source-control step. [10][13][22][24]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Frank pus, positive Gram stain/culture, pH <7.2, glucose <3.3 mmol/L, or LDH >900 U/L with clinical infection [22]",
+            "Complicated parapneumonic effusion or empyema is likely [22]",
+            "Assess tube drainage and ultrasound-defined loculation; escalate if residual infected fluid remains. [2][22]"
+          ],
+          [
+            "Lymphocyte-predominant fluid with lymphoma in the differential [10]",
+            "Flow cytometry has greatest diagnostic utility in this setting [10]",
+            "Add pleural-fluid flow cytometry rather than relying on routine chemistry alone. [10]"
+          ],
+          [
+            "Pleural-fluid amylase markedly elevated; pancreaticopleural fistula may exceed 100,000 IU/L [10]",
+            "Pancreatic source becomes a leading etiologic branch [10]",
+            "Direct subsequent evaluation toward pancreatitis or pancreaticopleural fistula. [10]"
+          ],
+          [
+            "Pleural-fluid protein ≥7.0 g/dL [10]",
+            "Consider Waldenström macroglobulinemia, multiple myeloma, or cholesterol effusion [10]",
+            "Pursue disease-specific hematologic or lipid/cholesterol evaluation. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classify-transudate-or-exudate",
+      "eyebrow": "Fluid classification",
+      "heading": "Use Light’s criteria, then reconcile discordant clinical context",
+      "intro": "Classification narrows the etiologic branch but does not establish a final diagnosis.",
+      "paragraphs": [
+        "Classify pleural fluid as exudative when any Light criterion is met: pleural-fluid to serum total-protein ratio greater than 0.5, pleural-fluid to serum LDH ratio greater than 0.6, or pleural-fluid LDH greater than two-thirds the upper reference limit for serum LDH. If none is met, classify as transudative. [5]",
+        "Do not treat a Light classification as immutable when results are near a threshold. In paired specimens with pleural-fluid protein 25 to 35 g/L, classification across three analytical platforms was discordant in 18%; variation was attributed principally to assay behavior for LDH in pleural fluid. [1]",
+        "Reassess an apparent exudate in a patient receiving diuretics for heart failure, cirrhosis, or renal hydrothorax. Light’s criteria may misclassify 20% to 30% of transudates as exudates in diuretic-treated patients; a serum-pleural albumin gradient is among proposed adjunctive approaches in that situation. [19]"
+      ],
+      "bullets": [
+        "A transudative pattern should focus the etiologic evaluation on systemic hydrostatic or oncotic disorders, including heart failure, cirrhosis-related hydrothorax, and renal/nephrotic states. [19]",
+        "An exudative pattern should trigger focused testing for infection, malignancy, tuberculosis, pancreatic disease, and hematologic disease rather than an undifferentiated expanded panel. [5][10][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Light’s criteria and common interpretation traps. [1][5][19]",
+        "columns": [
+          "Criterion or context",
+          "Decision",
+          "Clinical caveat"
+        ],
+        "rows": [
+          [
+            "Pleural-fluid/serum protein ratio >0.5 [5]",
+            "Exudate if any one Light criterion is positive [5]",
+            "Use paired serum obtained with pleural sampling. [1][5]"
+          ],
+          [
+            "Pleural-fluid/serum LDH ratio >0.6 [5]",
+            "Exudate if positive [5]",
+            "Analytical platform differences can alter LDH-based classification. [1]"
+          ],
+          [
+            "Pleural-fluid LDH > two-thirds serum upper reference limit [5]",
+            "Exudate if positive [5]",
+            "Borderline values require correlation with the clinical syndrome and other fluid studies. [1]"
+          ],
+          [
+            "Diuretic-treated systemic-volume disorder with an apparent exudate [19]",
+            "Reconsider pseudoexudate rather than reflexively pursuing invasive exudate workup [19]",
+            "A serum-pleural albumin gradient is a proposed adjunct. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiology-directed-workup",
+      "eyebrow": "Etiologic branches",
+      "heading": "Match fluid pattern to microbiology, cytology, and pleural tissue",
+      "intro": "The key next test is determined by the most likely actionable cause, not by exudate status alone.",
+      "paragraphs": [
+        "For suspected malignant pleural effusion, establish the diagnosis by malignant cells in pleural fluid or pleural biopsy. If cytology is negative but clinical suspicion persists, proceed to pleural biopsy rather than accepting a paramalignant explanation without excluding pleural malignancy; repeated fluid cytology and pleural biopsy have been useful diagnostic approaches for malignant effusions. [5][20]",
+        "For suspected tuberculous pleuritis, pursue mycobacterial culture or nucleic-acid testing of pleural fluid and obtain pleural tissue when needed. Tuberculous pleural effusion can be established by positive Mycobacterium tuberculosis culture or nucleic-acid amplification testing, granulomatous pleural inflammation after exclusion of other granulomatous disorders, or compatible clinical and imaging resolution after empiric antituberculosis therapy when direct confirmation is unavailable. [8][20]",
+        "In an exudative lymphocyte-predominant effusion, add flow cytometry when lymphoma is a realistic possibility. In an amylase-rich effusion, evaluate for acute pancreatitis and pancreaticopleural fistula; the latter may produce pleural-fluid amylase greater than 100,000 IU/L. [10]",
+        "Use pleural-fluid cell burden and biochemical extremes as prioritization tools. Nucleated-cell counts above 10,000/µL occur most often with parapneumonic effusion, acute pancreatitis, subdiaphragmatic hepatic or splenic abscess, and splenic infarction; this pattern should prompt an anatomic search for the corresponding thoracic or subdiaphragmatic process. [10]"
+      ],
+      "bullets": [
+        "Do not equate an effusion in a patient with known cancer with malignant pleural effusion unless malignant cells are identified in fluid or tissue; a paramalignant effusion can result from another mechanism such as atelectasis. [10]",
+        "Pleural biopsy with histology and culture is particularly useful when tuberculosis remains likely despite nondiagnostic fluid studies. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiology-directed testing after an exudative pattern is identified. [8][10][20]",
+        "columns": [
+          "Clinical-fluid pattern",
+          "Highest-yield confirmatory direction",
+          "Result that establishes or strongly redirects diagnosis"
+        ],
+        "rows": [
+          [
+            "Known or suspected cancer; recurrent exudative effusion [5][10]",
+            "Pleural-fluid cytology, followed by pleural biopsy when needed [5][20]",
+            "Malignant cells in fluid or pleural biopsy confirm malignant pleural effusion. [5]"
+          ],
+          [
+            "Tuberculosis risk with exudative pleuritis [8][20]",
+            "Pleural-fluid mycobacterial culture/NAAT and pleural biopsy [8][20]",
+            "Positive culture or NAAT, or granulomatous pleural inflammation after exclusion of other granulomatous disease. [8]"
+          ],
+          [
+            "Lymphocyte-predominant effusion with possible lymphoma [10]",
+            "Pleural-fluid flow cytometry [10]",
+            "Flow cytometry is most useful when lymphoma is in the differential. [10]"
+          ],
+          [
+            "Amylase-rich effusion [10]",
+            "Evaluate for pancreatitis or pancreaticopleural fistula [10]",
+            "Very high amylase, including values >100,000 IU/L, supports pancreaticopleural fistula. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pleural-infection-source-control",
+      "eyebrow": "Source control",
+      "heading": "Escalate pleural infection when tube drainage leaves residual collection",
+      "intro": "Drainage failure, residual loculation, and organized pleural disease drive the choice between intrapleural therapy and surgery.",
+      "paragraphs": [
+        "For pleural infection, insert and monitor a chest drain when infected fluid requires evacuation, then reassess drainage and residual collection. When initial chest-tube drainage has ceased but a residual collection remains, consider combination intrapleural tPA and DNase. [2]",
+        "Use the randomized-trial-based regimen of tPA 10 mg intrapleurally twice daily plus DNase 5 mg intrapleurally twice daily for 3 days. A lower-dose regimen of tPA 5 mg twice daily plus DNase 5 mg twice daily for 3 days may be used when necessary; reduced tPA doses may be considered when bleeding risk is higher, including therapeutic anticoagulation that cannot be temporarily stopped. Obtain consent before treatment. [2]",
+        "Do not use tPA alone, DNase alone, or streptokinase for pleural infection. If tPA/DNase and surgery are unsuitable, saline irrigation is an alternative consideration. [2]",
+        "Escalate early to thoracic surgery when drainage remains inadequate and the effusion is organized or pleural thickening is substantial, because full recovery and lung re-expansion are less likely without surgery in these patterns. Exact surgical timing and selection remain unsettled because randomized trials have not defined an optimal threshold; local multidisciplinary review should explicitly weigh operative fitness, pleural organization, and response to drainage or intrapleural therapy. [3]"
+      ],
+      "bullets": [
+        "Before tPA/DNase, identify major bleeding-risk features; trial exclusion criteria included active gastrointestinal bleeding, significant bleeding diathesis, INR greater than 2, aPTT greater than 100 seconds, platelet count below 50,000/µL, major surgery within 5 days, acute stroke, pregnancy, and bronchopleural fistula. [22]",
+        "Use ultrasound evidence of septations or fibrin strands to recognize a complex collection that may drain poorly through a single catheter. [22]",
+        "Follow clinical infection markers, drain output, and residual pleural collection after each drainage strategy; persistent sepsis or persistent collection should prompt reassessment for additional drainage, intrapleural therapy, or surgery. [2][21][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pleural infection escalation after initial drainage. [2][3][22]",
+        "columns": [
+          "Situation",
+          "Preferred next step",
+          "Important limitation or exception"
+        ],
+        "rows": [
+          [
+            "Residual pleural collection after chest-tube drainage has ceased [2]",
+            "Consider tPA 10 mg plus DNase 5 mg intrapleurally twice daily for 3 days. [2]",
+            "Do not use either drug alone. [2]"
+          ],
+          [
+            "Higher bleeding risk, including anticoagulation that cannot be temporarily ceased [2]",
+            "Consider reduced-dose tPA; 5 mg twice daily with DNase 5 mg twice daily for 3 days is an option. [2]",
+            "Screen for major coagulopathy and other bleeding contraindications. [22]"
+          ],
+          [
+            "tPA/DNase or surgery unsuitable [2]",
+            "Consider saline irrigation. [2]",
+            "This is a conditional option rather than a replacement for adequate drainage assessment. [2]"
+          ],
+          [
+            "Organized effusion or substantial pleural thickening with incomplete re-expansion expected [3]",
+            "Obtain thoracic surgical assessment for operative management. [3]",
+            "Optimal timing and patient selection are not established by randomized trials. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "malignant-effusion-symptom-control",
+      "eyebrow": "Recurrent malignancy",
+      "heading": "Choose indwelling catheter when pleurodesis is unlikely to succeed",
+      "intro": "The procedural goal is durable dyspnea relief with a strategy compatible with lung expandability and performance status.",
+      "paragraphs": [
+        "For recurrent symptomatic malignant pleural effusion, select an indwelling pleural catheter when the lung remains trapped after fluid evacuation, pleurodesis has failed, or the patient has poor performance status or comorbidity that makes pleurodesis unsuitable. Outpatient intermittent drainage through a tunneled catheter can relieve dyspnea in these settings. [18]",
+        "Avoid talc pleurodesis when the lung does not re-expand after evacuation or when chest-tube drainage remains greater than 300 mL/day, because these conditions predict pleurodesis failure. Talc slurry through a chest tube and talc insufflation at thoracoscopy are effective options when pleurodesis is otherwise feasible. [18]",
+        "When catheter removal is a patient priority, recommend daily indwelling-catheter drainage because it produces higher pleurodesis rates than symptom-guided or alternate-day drainage. Daily drainage is not required solely for symptom relief. [2]"
+      ],
+      "bullets": [
+        "Confirm malignant involvement with cytology or pleural biopsy before labeling an effusion malignant when the diagnosis remains uncertain. [5][20]",
+        "Use intermittent outpatient catheter drainage as a symptom-control strategy when trapped lung precludes successful pleural apposition. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Procedure selection for recurrent symptomatic malignant pleural effusion. [2][18]",
+        "columns": [
+          "Clinical circumstance",
+          "Procedure strategy",
+          "Drainage objective"
+        ],
+        "rows": [
+          [
+            "Trapped lung after fluid evacuation [18]",
+            "Indwelling pleural catheter [18]",
+            "Intermittent outpatient drainage for dyspnea control. [18]"
+          ],
+          [
+            "Prior pleurodesis failure or poor candidacy because of performance status/comorbidity [18]",
+            "Indwelling pleural catheter [18]",
+            "Symptom-directed drainage; daily drainage is unnecessary solely for relief. [2][18]"
+          ],
+          [
+            "Pleurodesis feasible with re-expanding lung [18]",
+            "Talc slurry via chest tube or talc insufflation by thoracoscopy [18]",
+            "Achieve pleural symphysis and reduce recurrent fluid accumulation. [18]"
+          ],
+          [
+            "Indwelling catheter in place and removal is a priority [2]",
+            "Daily catheter drainage [2]",
+            "Increase likelihood of pleurodesis and catheter removal. [2]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

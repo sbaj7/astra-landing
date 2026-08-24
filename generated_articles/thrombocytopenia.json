@@ -1,0 +1,759 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "Thrombocytopenia",
+  "summary": "A platelet count below 150 \u00d7 10^9/L requires rapid confirmation, bleeding and thrombosis triage, and pattern-based evaluation for pseudothrombocytopenia, consumption, microangiopathy, drug-mediated disease, immune destruction, or impaired production.",
+  "seoDescription": "Physician-focused approach to thrombocytopenia: confirm the count, identify emergencies, distinguish DIC, TMA, HIT, ITP, and production failure.",
+  "clinicalQuestion": "How should clinicians confirm, triage, and rapidly distinguish dangerous causes of thrombocytopenia?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "thrombocytopenia",
+    "platelet count",
+    "pseudothrombocytopenia",
+    "DIC",
+    "TTP",
+    "HUS",
+    "HIT",
+    "immune thrombocytopenia",
+    "peripheral smear"
+  ],
+  "keyTakeaways": [
+    "Confirm an unexpected low automated platelet count with peripheral-smear review; EDTA-dependent clumping or platelet satellitism can produce spurious thrombocytopenia and should prompt a citrate-tube count. [9][17]",
+    "Thrombocytopenia with microangiopathic hemolytic anemia should trigger an urgent thrombotic microangiopathy versus DIC assessment; coagulation abnormalities favor DIC, whereas TTP, HUS, and other TMAs require time-sensitive disease-specific treatment. [11][13][15]",
+    "In heparin-exposed patients, use the 4Ts score before laboratory testing; a low score has high negative predictive value, whereas intermediate or high probability warrants prompt HIT-directed evaluation and action. [1][11]",
+    "An increased immature platelet fraction supports increased peripheral platelet destruction or consumption; a low or normal value supports reduced platelet production, but IPF does not establish a specific diagnosis. [10][16]",
+    "For adults with ITP requiring initial corticosteroids, avoid prolonged or recurrent exposure; guidelines summarized in the literature limit initial steroid treatment to no more than 6 weeks and favor durable second-line strategies when further treatment is needed. [24]"
+  ],
+  "sections": [
+    {
+      "id": "first-hours-triage",
+      "eyebrow": "Immediate decisions",
+      "heading": "Identify bleeding, thrombosis, and microangiopathy before assigning a diagnosis",
+      "intro": "The platelet count alone does not distinguish bleeding risk from thrombotic emergencies.",
+      "paragraphs": [
+        "Escalate immediately when thrombocytopenia accompanies active major bleeding, new thrombosis, organ dysfunction, or evidence of microangiopathic hemolytic anemia (MAHA). Thrombosis despite thrombocytopenia is a defining clinical pattern in HIT, vaccine-induced immune thrombotic thrombocytopenia, antiphospholipid syndrome, paroxysmal nocturnal hemoglobinuria, thrombotic microangiopathy, and DIC; treatment differs materially across these disorders and should not await a fully finalized diagnosis when delay threatens organ outcome. [14]",
+        "In sepsis, a platelet count below 50 \u00d7 10^9/L is strongly associated with poor outcome and should heighten concern for sepsis-associated DIC and microcirculatory organ dysfunction. Assess coagulation testing and the blood smear concurrently because DIC commonly overlaps clinically with MAHA and thrombotic microangiopathies. [13][11]",
+        "If thrombocytopenia and MAHA are present, obtain ADAMTS13 testing while urgently evaluating for TTP, Shiga toxin-mediated HUS, atypical HUS, and secondary TMA. TMA is characterized by MAHA, thrombocytopenia, and platelet aggregates in capillaries and small vessels; abnormal coagulation studies help separate the common DIC phenotype from TMA. [13][15]"
+      ],
+      "bullets": [
+        "Treat thrombosis with thrombocytopenia as a diagnostic emergency rather than reassurance from a low platelet count. [14]",
+        "In suspected severe TTP, initiate plasma exchange rapidly; one sepsis-associated DIC differential algorithm recommends initiation within 4-8 hours when indicated while ADAMTS13 confirmation is pending. [13]",
+        "Use the temporal relationship between platelet decline, acute illness, medications, procedures, and heparin exposure to prioritize the initial branch of the differential. [11][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Emergency patterns that redirect the first diagnostic and therapeutic action. [11][13][14][15]",
+        "columns": [
+          "Pattern",
+          "Priority diagnostic discriminator",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "Sepsis, thrombocytopenia, abnormal coagulation profile, organ dysfunction",
+            "Evaluate for sepsis-associated DIC; systemic coagulation activation is central to its pathogenesis. [13]",
+            "Treat sepsis and manage DIC-directed critical illness; assess for concurrent MAHA/TMA when the presentation is discordant. [11][13]"
+          ],
+          [
+            "Thrombocytopenia plus MAHA",
+            "Send ADAMTS13 and evaluate TTP, HUS, atypical HUS, and secondary TMA; abnormal coagulation favors DIC. [13][15]",
+            "Do not defer urgent TTP-directed plasma exchange in a severe compatible presentation while awaiting confirmation. [13]"
+          ],
+          [
+            "Thrombocytopenia after heparin exposure with thrombosis",
+            "Calculate 4Ts score and pursue HIT evaluation when probability is not low. [1][11]",
+            "Treat as a prothrombotic drug-associated immune syndrome rather than as isolated bleeding-risk thrombocytopenia. [11]"
+          ],
+          [
+            "Low platelet count with thrombosis after relevant immune trigger",
+            "Consider thrombosis with thrombocytopenia syndromes, including HIT, vaccine-induced immune thrombotic thrombocytopenia, APS, PNH, TMA, and DIC. [14]",
+            "Select syndrome-specific testing and treatment urgently because mortality and organ prognosis depend on prompt intervention. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-the-count",
+      "eyebrow": "Step one",
+      "heading": "Exclude pseudothrombocytopenia before invasive testing or treatment",
+      "intro": "A discrepant analyzer result can represent an in vitro artifact rather than true thrombocytopenia.",
+      "paragraphs": [
+        "Review a peripheral blood smear in every patient with newly identified thrombocytopenia. Platelet clumping in an EDTA specimen supports EDTA-dependent pseudothrombocytopenia; repeat the count using citrate anticoagulant before initiating platelet transfusion, corticosteroids, bone marrow biopsy, splenectomy, or other thrombocytopenia-directed interventions. [9][17]",
+        "Platelet satellitism is another EDTA-associated in vitro cause of a falsely low automated platelet count. The smear shows platelets surrounding granulocytes, often with otherwise normal hemoglobin and leukocyte counts; recognize this pattern as spurious thrombocytopenia rather than peripheral platelet destruction. [17]",
+        "A major EDTA-dependent discrepancy can be clinically decisive: a reported EDTA platelet count of 42 \u00d7 10^9/L compared with 191 \u00d7 10^9/L in citrate confirmed pseudothrombocytopenia in a published case. Use the alternative-anticoagulant count to establish whether true thrombocytopenia is present. [9]"
+      ],
+      "bullets": [
+        "Order: repeat CBC, manual peripheral-smear review, and citrate-tube platelet count when clumping or satellitism is seen. [9][17]",
+        "Do not label a patient with ITP or pursue marrow evaluation until an EDTA-related artifact has been excluded in an unexplained isolated low count. [9][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Smear findings that change the interpretation of a low platelet count. [9][17]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Platelet clumps in EDTA specimen",
+            "EDTA-dependent pseudothrombocytopenia is likely. [9]",
+            "Repeat platelet count in citrate anticoagulant. [9]"
+          ],
+          [
+            "Platelets surrounding granulocytes",
+            "Platelet satellitism, an EDTA-associated in vitro phenomenon causing spurious thrombocytopenia. [17]",
+            "Report smear artifact and avoid unnecessary thrombocytopenia-directed treatment. [17]"
+          ],
+          [
+            "No artifact, thrombocytopenia confirmed",
+            "Proceed to destruction/consumption versus production framework. [10][12][16]",
+            "Integrate CBC lineages, smear, illness context, medications, heparin exposure, coagulation testing, and hemolysis assessment. [11][12][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pattern-based-workup",
+      "eyebrow": "Diagnostic framework",
+      "heading": "Classify confirmed thrombocytopenia by consumption, destruction, or impaired production",
+      "intro": "The smear, other cell lines, coagulation profile, and platelet-production signal narrow the next test.",
+      "paragraphs": [
+        "Begin with CBC and smear, then determine whether the count is isolated or accompanied by anemia, leukocyte abnormalities, schistocytes, or other morphologic clues. Thrombocytopenia can result from autoimmune disease, infection, drug reactions, malignancy, perioperative causes, and other systemic disorders; CBC, peripheral smear, targeted serology, and selected bone marrow studies are core components of etiologic evaluation. [12]",
+        "Use the immature platelet fraction (IPF) as a physiologic branch point when available. IPF reflects thrombopoietic activity: increased values support increased peripheral platelet destruction or consumption, whereas low or normal values support decreased platelet production. Increased IPF occurs in ITP and has also been observed with infection/sepsis, gestational thrombocytopenia, systemic lupus erythematosus, and MAHA; interpret it with the clinical syndrome rather than as a stand-alone diagnostic test. [10][16]",
+        "When the platelet decline occurs in a patient receiving heparin, calculate the 4Ts score rather than relying on clinical impression alone. HIT results from platelet-activating IgG antibodies directed at PF4/heparin complexes, is prothrombotic, and is uncommon despite the frequent coexistence of heparin exposure and thrombocytopenia in critically ill patients. A low 4Ts score has high negative predictive value in adults and children. [11][1]"
+      ],
+      "bullets": [
+        "MAHA plus thrombocytopenia: prioritize TMA and DIC differentiation using coagulation testing and ADAMTS13-directed evaluation. [13][15]",
+        "Thrombocytopenia plus heparin exposure: apply 4Ts scoring before escalating HIT testing and management. [1][11]",
+        "Isolated thrombocytopenia with high IPF: consider immune-mediated destruction or other peripheral consumption after excluding pseudothrombocytopenia and emergency syndromes. [10][16]",
+        "Low or normal IPF: investigate impaired platelet production, including marrow-related processes, in the context of the CBC and smear. [16][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "Antiplatelet antibody testing",
+          "paragraphs": [
+            "Do not use a negative antiplatelet IgG assay to exclude immune thrombocytopenia. Flow-cytometric antiplatelet IgG testing has reported specificity above 90% but sensitivity of approximately 53%, and its role in thrombocytopenia evaluation remains debated. [18]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Pattern-based interpretation of confirmed thrombocytopenia. [10][11][12][13][15][16]",
+        "columns": [
+          "Clinical-laboratory pattern",
+          "Most useful discriminator",
+          "Next diagnostic direction"
+        ],
+        "rows": [
+          [
+            "High IPF with isolated thrombocytopenia",
+            "Increased thrombopoiesis supports peripheral destruction or consumption. [10][16]",
+            "Evaluate immune-mediated and consumptive causes in clinical context; exclude ITP mimics. [12][16]"
+          ],
+          [
+            "Low or normal IPF",
+            "Reduced thrombopoietic signal supports impaired production. [16]",
+            "Use CBC, smear, and selected marrow or serologic studies to evaluate production failure. [12]"
+          ],
+          [
+            "Schistocytes/MAHA with thrombocytopenia",
+            "TMA versus DIC; abnormal coagulation favors DIC. [13][15]",
+            "Send ADAMTS13 and evaluate TTP, HUS, atypical HUS, or secondary TMA. [13][15]"
+          ],
+          [
+            "Heparin exposure, platelet fall, thrombosis or compatible timing",
+            "4Ts probability assessment. [1][11]",
+            "If probability is not low, pursue HIT-directed evaluation and management. [1][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "high-consequence-etiologies",
+      "eyebrow": "Etiologic branches",
+      "heading": "Differentiate DIC, TMA, HIT, and immune thrombocytopenia by their treatment consequence",
+      "intro": "These entities can all lower platelet counts but demand different immediate management pathways.",
+      "paragraphs": [
+        "Sepsis-associated DIC is driven by systemic coagulation activation and can produce thrombocytopenia with organ dysfunction from microcirculatory disturbance. In contrast, platelet aggregation is central in TTP, whereas endothelial injury is the hallmark of HUS; this mechanistic separation explains why an abnormal coagulation profile supports DIC while MAHA without that pattern should intensify TMA evaluation. [13]",
+        "TTP should not be excluded because the classic pentad is incomplete. TTP can present with thrombocytopenia and MAHA before the full combination of fever, neurologic abnormalities, renal abnormalities, and hemolysis is evident; ADAMTS13 testing is central to diagnostic classification and disease monitoring. [15][23]",
+        "HIT is a platelet-activating, prothrombotic immune reaction to PF4/heparin complexes. Because heparin use and non-HIT thrombocytopenia are common in critical illness but confirmed HIT is rare, the 4Ts score is the key initial filter: low pretest probability argues strongly against HIT, while a higher-probability pattern should redirect management toward HIT-specific evaluation. [11][1]",
+        "Primary ITP is an autoimmune disorder in which antibodies target platelets and promote platelet destruction; it remains a diagnosis of exclusion. Secondary immune thrombocytopenia occurs in association with conditions such as autoimmune disorders, infections, malignancy, and drug reactions, so the diagnostic label should follow focused evaluation for those contexts rather than precede it. [5][12]"
+      ],
+      "bullets": [
+        "DIC and TMA can overlap clinically; use coagulation results and MAHA assessment rather than platelet count severity alone. [11][13][15]",
+        "Suspected TTP: obtain ADAMTS13 testing but do not postpone plasma exchange in a severe compatible presentation. [13][15]",
+        "Suspected HIT: interpret the platelet count as a thrombosis signal, not simply a bleeding-risk marker. [11][14]",
+        "Suspected ITP: establish isolated immune thrombocytopenia only after excluding artifact, consumption, drug-associated disease, infection, autoimmune disease, and malignancy-associated causes. [5][9][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-consequence causes of thrombocytopenia and their differentiating features. [11][13][14][15][23]",
+        "columns": [
+          "Condition",
+          "Dominant pattern",
+          "Discriminating action"
+        ],
+        "rows": [
+          [
+            "Sepsis-associated DIC",
+            "Systemic coagulation activation, thrombocytopenia, and organ dysfunction; platelet count below 50 \u00d7 10^9/L in sepsis is associated with poor outcome. [13]",
+            "Assess coagulation abnormalities and treat the sepsis-associated process while excluding concurrent TMA when MAHA is prominent. [11][13]"
+          ],
+          [
+            "TTP",
+            "TMA with thrombocytopenia and MAHA; the complete classic pentad is often absent. [15][23]",
+            "Obtain ADAMTS13 testing and urgently initiate plasma exchange in severe compatible disease. [13][15]"
+          ],
+          [
+            "HUS/aHUS/secondary TMA",
+            "TMA with MAHA and thrombocytopenia; endothelial damage is central in HUS. [13][15]",
+            "Differentiate from TTP and DIC with ADAMTS13 assessment, coagulation findings, and etiologic context. [13][15]"
+          ],
+          [
+            "HIT",
+            "Heparin exposure plus platelet-activating PF4/heparin antibodies; thrombosis is a major consequence. [11][13]",
+            "Use 4Ts pretest probability to guide HIT workup and urgent management. [1][11]"
+          ],
+          [
+            "ITP",
+            "Diagnosis-of-exclusion immune platelet destruction. [5][12]",
+            "Exclude secondary and nonimmune causes before committing to chronic ITP-directed treatment. [5][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "itp-treatment-boundaries",
+      "eyebrow": "Immune thrombocytopenia",
+      "heading": "Limit corticosteroid exposure and move to durable ITP strategies when treatment is still required",
+      "intro": "Initial response does not justify repeated or prolonged corticosteroid courses.",
+      "paragraphs": [
+        "Corticosteroids remain an important first-line treatment for adults with ITP because they are inexpensive and commonly yield initial responses, but extended or recurrent exposure has substantial toxicity. More than 95% of corticosteroid-treated patients in survey data reported adverse effects, and more than one-third required dose reduction or discontinuation. [24]",
+        "For adults receiving initial corticosteroids for ITP, limit treatment duration to no more than 6 weeks. If further therapy is required, favor options intended for longer-term disease control rather than repeated steroid courses; cited guideline-based options include thrombopoietin receptor agonists, rituximab, other immune-modulating medications, and splenectomy. [24]",
+        "Do not transfer this treatment pathway to an unconfirmed low platelet count. Before immunosuppression or splenectomy, confirm true thrombocytopenia in a non-EDTA sample when appropriate and reassess for alternative causes, especially HIT, DIC, TMA, infection-associated thrombocytopenia, autoimmune disease, malignancy, and drug-related disease. [9][12][13]"
+      ],
+      "bullets": [
+        "Use prolonged or recurrent corticosteroid exposure as a trigger to reassess diagnosis, disease trajectory, toxicity, and transition to a steroid-sparing strategy. [24]",
+        "Reserve splenectomy and other durable ITP-directed interventions for patients in whom immune thrombocytopenia has been appropriately established. [5][9][12][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Treatment boundary for adult ITP corticosteroid use. [24]",
+        "columns": [
+          "Clinical situation",
+          "Decision",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "Initial ITP treatment with corticosteroids",
+            "Limit total corticosteroid treatment to no more than 6 weeks. [24]",
+            "Extended exposure is associated with substantial treatment burden and toxicity. [24]"
+          ],
+          [
+            "Need for additional therapy after initial treatment",
+            "Use a longer-term control strategy rather than repeated steroid courses. [24]",
+            "Guideline-based options cited include thrombopoietin receptor agonists, rituximab, other immune-modulating medications, and splenectomy. [24]"
+          ],
+          [
+            "Apparent refractory ITP",
+            "Reconfirm the diagnosis and exclude pseudothrombocytopenia and secondary causes. [5][9][12]",
+            "Misclassification can expose patients to unnecessary corticosteroids, marrow biopsy, splenectomy, or platelet transfusion. [9]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Accuracy of Diagnosing Heparin-Induced Thrombocytopenia",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2816742",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by EL Larsen \u00b7 2024 \u00b7 Cited by 28 \u2014 This diagnostic study evaluates the current diagnostic practices for managing suspected heparin-induced thrombocytopenia.",
+      "score": 0.41463867
+    },
+    {
+      "number": 2,
+      "title": "2\u2010year follow\u2010up",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ajh.25086",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by A Schifferli \u00b7 2018 \u00b7 Cited by 79 \u2014 Comparative clinical studies of children and adults with immune thrombocytopenia (ITP) are poorly ... accordance with current guidelines.9,10. 4.4 | Limitations.",
+      "score": 0.72675586
+    },
+    {
+      "number": 3,
+      "title": "Using a standardised protocol was effective in reducing ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apa.13859",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by R Labrosse \u00b7 2017 \u00b7 Cited by 12 \u2014 ... current guidelines suggest that most patients are just ... Newly diagnosed immune thrombocytopenia in children and adults: a",
+      "score": 0.63125396
+    },
+    {
+      "number": 4,
+      "title": "An update on pediatric ITP: differentiating primary ITP, IPD, ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0006497121015597",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by RF Grace \u00b7 2022 \u00b7 Cited by 67 \u2014 ... current guidelines. She had an ... Outcomes 5 years after response to rituximab therapy in children and adults with immune thrombocytopenia.",
+      "score": 0.6161283
+    },
+    {
+      "number": 5,
+      "title": "Thrombocytopenic Purpura - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/thrombocytopenic-purpura",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thrombotic thrombocytopenia purpura (TTP) is a disseminated thrombotic microangiopathy that can be triggered by infection, drugs (e.g., clopidogrel), autoimmune disease, or without a known risk factor. Autoimmune thrombocytopenic purpura (AITP), also known as *idiopathic thrombocytopenic purpura* (I",
+      "score": 0.5911811
+    },
+    {
+      "number": 6,
+      "title": "Protocol for the study and treatment of primary immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2341287919301152",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by E Monteagudo \u00b7 2019 \u00b7 Cited by 19 \u2014 ... current guidelines, bibliographic review, clinical assays, and member consensus. ... Raj, et al. Romiplostim in children with immune thrombocytopenia: a phase 3",
+      "score": 0.58465123
+    },
+    {
+      "number": 7,
+      "title": "Unmasking the link: pulmonary embolism risk and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783626002813",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Consistent with current guidelines ... Severe bleeding events in adults and children with primary immune thrombocytopenia: a systematic review.",
+      "score": 0.572078
+    },
+    {
+      "number": 8,
+      "title": "Differential diagnoses for sepsis\u2010induced disseminated ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jth.14354",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Important examples include hemolytic uremic syndrome (HUS), thrombotic thrombocytopenic purpura (TTP), HELLP syndrome (hemolysis, elevated liver enzymes and low platelets) and heparin-induced thrombocytopenia (HIT) (Table\u00a01). Classification and major causes of thrombocytopenic diseases that need to ",
+      "score": 0.5079833
+    },
+    {
+      "number": 9,
+      "title": "EDTA-dependent pseudothrombocytopenia mimicking... : Annals of Medicine and Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annals-of-medicine-and-surgery/fulltext/2025/11000/edta_dependent_pseudothrombocytopenia_mimicking.115.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: EDTA-dependent pseudothrombocytopenia mimicking... : Annals of Medicine and Surgery\n# EDTA-dependent pseudothrombocytopenia mimicking dengue-associated severe thrombocytopenia: a case report. We report a case of suspected dengue fever that was ultimately diagnosed as ethylenediaminetetraaceti",
+      "score": 0.42276734
+    },
+    {
+      "number": 10,
+      "title": "Immature platelet fraction as a useful predictor of the... : The Egyptian Journal of Haematology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/egjh/fulltext/2025/01000/immature_platelet_fraction_as_a_useful_predictor.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Immature platelet fraction as a useful predictor of the... : The Egyptian Journal of Haematology\nThe immature platelet fraction (IPF) (IPF%, the ratio of immature platelets to the total number of platelets in a patient\u2019s blood) has emerged as a useful, easy, fast parameter for assessing throm",
+      "score": 0.39936703
+    },
+    {
+      "number": 11,
+      "title": "Where have all the platelets gone? HIT, DIC, or something else? | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2023/1/43/506434/Where-have-all-the-platelets-gone-HIT-DIC-or",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Where have all the platelets gone? HIT, DIC, or something else? | Hematology, ASH Education Program | American Society of Hematology\nMicroangiopathic hemolytic anemia (MAHA) is a common nonimmune mechanism of thrombocytopenia that can arise from overlapping syndromes of disseminated intravasc",
+      "score": 0.67321366
+    },
+    {
+      "number": 12,
+      "title": "Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542208",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Thrombocytopenia is a hematologic condition defined by platelet counts below 150,000/\u00b5L. Platelets play a vital role in hemostasis and wound repair, and low levels can increase risks of bleeding and, paradoxically, thrombosis. This course reviews the clinical presentation of thrombocytopenia which v",
+      "score": 0.5993685
+    },
+    {
+      "number": 13,
+      "title": "Sepsis-associated disseminated intravascular coagulation and its differential diagnoses - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6528221",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "For example, the activation of coagulation is at the core of the pathogenesis of sepsis-associated DIC, while platelet aggregation is the essential mechanism in thrombotic thrombocytopenic purpura and endothelial damage is the hallmark of hemolytic uremic syndrome. **Keywords:** Disseminated intrava",
+      "score": 0.52086246
+    },
+    {
+      "number": 14,
+      "title": "How We Interpret Thrombosis with Thrombocytopenia Syndrome? - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/38732176",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site. The ** ensures that you are connecting to the official website and that any information you provide is encr",
+      "score": 0.49318945
+    },
+    {
+      "number": 15,
+      "title": "Consensus on the standardization of terminology in thrombotic thrombocytopenic purpura and related thrombotic microangiopathies - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/27868334",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Consensus on the standardization of terminology in thrombotic thrombocytopenic purpura and related thrombotic microangiopathies - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensi",
+      "score": 0.45973158
+    },
+    {
+      "number": 16,
+      "title": "The Immature Platelet Fraction in HIV Patients with Thrombocytopenia. | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/110/11/2095/56491/The-Immature-Platelet-Fraction-in-HIV-Patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "# The Immature Platelet Fraction in HIV Patients with Thrombocytopenia. Kickler2; The Immature Platelet Fraction in HIV Patients with Thrombocytopenia.. Given the number of possible etiologies of thrombocytopenia in a patient with known HIV, a peripheral blood test effective in determining the likel",
+      "score": 0.58721006
+    },
+    {
+      "number": 17,
+      "title": "Platelet satellitism as a cause of spurious thrombocytopenia | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/119/18/4100/30039/Platelet-satellitism-as-a-cause-of-spurious",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Platelet satellitism as a cause of spurious thrombocytopenia | Blood | American Society of Hematology\n# Platelet satellitism as a cause of spurious thrombocytopenia *Free*. Doll; Platelet satellitism as a cause of spurious thrombocytopenia. However, routine blood count showed a platelet count",
+      "score": 0.4233394
+    },
+    {
+      "number": 18,
+      "title": "Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/146/Supplement%201/4825/553741/Immature-platelet-fraction-as-a-pre-test",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia | Blood | American Society of Hematology\n# Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia *Free*. Afonso Cardoso, ",
+      "score": 0.36888355
+    },
+    {
+      "number": 19,
+      "title": "Controversies in the treatment of paediatric immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2341287918301418",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by R Berrueco \u00b7 2018 \u00b7 Cited by 17 \u2014 ... current guidelines before the ... Godeau, et al. Outcomes 5 years after response to rituximab therapy in children and adults with immune thrombocytopenia.",
+      "score": 0.54521364
+    },
+    {
+      "number": 20,
+      "title": "Excessive expressions of T cell activation markers in ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384819302452",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by Y Chen \u00b7 2019 \u00b7 Cited by 13 \u2014 Immune thrombocytopenia (ITP) is an immune-mediated bleeding disorder in children. ... Current guidelines recommend that ITP children with no bleeding or",
+      "score": 0.5315261
+    },
+    {
+      "number": 21,
+      "title": "Predicting development of pediatric chronic immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0006497126002922",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by K Hillier \u00b7 2026 \u00b7 Cited by 4 \u2014 Current guidelines ... KMJ Heitink-Polle et al. Clinical and laboratory predictors of chronic immune thrombocytopenia in children: a systematic",
+      "score": 0.5232017
+    },
+    {
+      "number": 22,
+      "title": "Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384820305442",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies - ScienceDirect\n# Review Article Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies. Some patients with inherited thrombocytopenia have low platelet counts, but t",
+      "score": 0.507544
+    },
+    {
+      "number": 23,
+      "title": "Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272271209000146",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia - ScienceDirect\n# Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia. Much has been le",
+      "score": 0.49582586
+    },
+    {
+      "number": 24,
+      "title": "Corticosteroid overuse in adults with immune thrombocytopenia: Cause for concern",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2475037922014509",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "practice guidelines recommend treatments more suitable for long\u2010term disease control such as thrombopoietin receptor agonists, rituximab, other immune\u2010modulating medications, or splenectomy, rather than repeated courses of corticosteroids. Despite these recommendations, real\u2010world evidence suggests ",
+      "score": 0.49260366
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Accuracy of Diagnosing Heparin-Induced Thrombocytopenia",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2816742",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by EL Larsen \u00b7 2024 \u00b7 Cited by 28 \u2014 This diagnostic study evaluates the current diagnostic practices for managing suspected heparin-induced thrombocytopenia.",
+      "score": 0.41463867
+    },
+    {
+      "number": 2,
+      "title": "2\u2010year follow\u2010up",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ajh.25086",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by A Schifferli \u00b7 2018 \u00b7 Cited by 79 \u2014 Comparative clinical studies of children and adults with immune thrombocytopenia (ITP) are poorly ... accordance with current guidelines.9,10. 4.4 | Limitations.",
+      "score": 0.72675586
+    },
+    {
+      "number": 3,
+      "title": "Using a standardised protocol was effective in reducing ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/apa.13859",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by R Labrosse \u00b7 2017 \u00b7 Cited by 12 \u2014 ... current guidelines suggest that most patients are just ... Newly diagnosed immune thrombocytopenia in children and adults: a",
+      "score": 0.63125396
+    },
+    {
+      "number": 4,
+      "title": "An update on pediatric ITP: differentiating primary ITP, IPD, ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0006497121015597",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by RF Grace \u00b7 2022 \u00b7 Cited by 67 \u2014 ... current guidelines. She had an ... Outcomes 5 years after response to rituximab therapy in children and adults with immune thrombocytopenia.",
+      "score": 0.6161283
+    },
+    {
+      "number": 5,
+      "title": "Thrombocytopenic Purpura - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/thrombocytopenic-purpura",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thrombotic thrombocytopenia purpura (TTP) is a disseminated thrombotic microangiopathy that can be triggered by infection, drugs (e.g., clopidogrel), autoimmune disease, or without a known risk factor. Autoimmune thrombocytopenic purpura (AITP), also known as *idiopathic thrombocytopenic purpura* (I",
+      "score": 0.5911811
+    },
+    {
+      "number": 6,
+      "title": "Protocol for the study and treatment of primary immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2341287919301152",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by E Monteagudo \u00b7 2019 \u00b7 Cited by 19 \u2014 ... current guidelines, bibliographic review, clinical assays, and member consensus. ... Raj, et al. Romiplostim in children with immune thrombocytopenia: a phase 3",
+      "score": 0.58465123
+    },
+    {
+      "number": 7,
+      "title": "Unmasking the link: pulmonary embolism risk and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783626002813",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Consistent with current guidelines ... Severe bleeding events in adults and children with primary immune thrombocytopenia: a systematic review.",
+      "score": 0.572078
+    },
+    {
+      "number": 8,
+      "title": "Differential diagnoses for sepsis\u2010induced disseminated ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jth.14354",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Important examples include hemolytic uremic syndrome (HUS), thrombotic thrombocytopenic purpura (TTP), HELLP syndrome (hemolysis, elevated liver enzymes and low platelets) and heparin-induced thrombocytopenia (HIT) (Table\u00a01). Classification and major causes of thrombocytopenic diseases that need to ",
+      "score": 0.5079833
+    },
+    {
+      "number": 9,
+      "title": "EDTA-dependent pseudothrombocytopenia mimicking... : Annals of Medicine and Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annals-of-medicine-and-surgery/fulltext/2025/11000/edta_dependent_pseudothrombocytopenia_mimicking.115.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: EDTA-dependent pseudothrombocytopenia mimicking... : Annals of Medicine and Surgery\n# EDTA-dependent pseudothrombocytopenia mimicking dengue-associated severe thrombocytopenia: a case report. We report a case of suspected dengue fever that was ultimately diagnosed as ethylenediaminetetraaceti",
+      "score": 0.42276734
+    },
+    {
+      "number": 10,
+      "title": "Immature platelet fraction as a useful predictor of the... : The Egyptian Journal of Haematology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/egjh/fulltext/2025/01000/immature_platelet_fraction_as_a_useful_predictor.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Immature platelet fraction as a useful predictor of the... : The Egyptian Journal of Haematology\nThe immature platelet fraction (IPF) (IPF%, the ratio of immature platelets to the total number of platelets in a patient\u2019s blood) has emerged as a useful, easy, fast parameter for assessing throm",
+      "score": 0.39936703
+    },
+    {
+      "number": 11,
+      "title": "Where have all the platelets gone? HIT, DIC, or something else? | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2023/1/43/506434/Where-have-all-the-platelets-gone-HIT-DIC-or",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Where have all the platelets gone? HIT, DIC, or something else? | Hematology, ASH Education Program | American Society of Hematology\nMicroangiopathic hemolytic anemia (MAHA) is a common nonimmune mechanism of thrombocytopenia that can arise from overlapping syndromes of disseminated intravasc",
+      "score": 0.67321366
+    },
+    {
+      "number": 12,
+      "title": "Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542208",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Thrombocytopenia is a hematologic condition defined by platelet counts below 150,000/\u00b5L. Platelets play a vital role in hemostasis and wound repair, and low levels can increase risks of bleeding and, paradoxically, thrombosis. This course reviews the clinical presentation of thrombocytopenia which v",
+      "score": 0.5993685
+    },
+    {
+      "number": 13,
+      "title": "Sepsis-associated disseminated intravascular coagulation and its differential diagnoses - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6528221",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "For example, the activation of coagulation is at the core of the pathogenesis of sepsis-associated DIC, while platelet aggregation is the essential mechanism in thrombotic thrombocytopenic purpura and endothelial damage is the hallmark of hemolytic uremic syndrome. **Keywords:** Disseminated intrava",
+      "score": 0.52086246
+    },
+    {
+      "number": 14,
+      "title": "How We Interpret Thrombosis with Thrombocytopenia Syndrome? - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/38732176",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you\u2019re on a federal government site. The ** ensures that you are connecting to the official website and that any information you provide is encr",
+      "score": 0.49318945
+    },
+    {
+      "number": 15,
+      "title": "Consensus on the standardization of terminology in thrombotic thrombocytopenic purpura and related thrombotic microangiopathies - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/27868334",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Consensus on the standardization of terminology in thrombotic thrombocytopenic purpura and related thrombotic microangiopathies - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensi",
+      "score": 0.45973158
+    },
+    {
+      "number": 16,
+      "title": "The Immature Platelet Fraction in HIV Patients with Thrombocytopenia. | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/110/11/2095/56491/The-Immature-Platelet-Fraction-in-HIV-Patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "# The Immature Platelet Fraction in HIV Patients with Thrombocytopenia. Kickler2; The Immature Platelet Fraction in HIV Patients with Thrombocytopenia.. Given the number of possible etiologies of thrombocytopenia in a patient with known HIV, a peripheral blood test effective in determining the likel",
+      "score": 0.58721006
+    },
+    {
+      "number": 17,
+      "title": "Platelet satellitism as a cause of spurious thrombocytopenia | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/119/18/4100/30039/Platelet-satellitism-as-a-cause-of-spurious",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Platelet satellitism as a cause of spurious thrombocytopenia | Blood | American Society of Hematology\n# Platelet satellitism as a cause of spurious thrombocytopenia *Free*. Doll; Platelet satellitism as a cause of spurious thrombocytopenia. However, routine blood count showed a platelet count",
+      "score": 0.4233394
+    },
+    {
+      "number": 18,
+      "title": "Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/146/Supplement%201/4825/553741/Immature-platelet-fraction-as-a-pre-test",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia | Blood | American Society of Hematology\n# Immature platelet fraction as a pre\u2011test probability marker for anti\u2011platelet IgG positivity in thrombocytopenia *Free*. Afonso Cardoso, ",
+      "score": 0.36888355
+    },
+    {
+      "number": 19,
+      "title": "Controversies in the treatment of paediatric immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2341287918301418",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by R Berrueco \u00b7 2018 \u00b7 Cited by 17 \u2014 ... current guidelines before the ... Godeau, et al. Outcomes 5 years after response to rituximab therapy in children and adults with immune thrombocytopenia.",
+      "score": 0.54521364
+    },
+    {
+      "number": 20,
+      "title": "Excessive expressions of T cell activation markers in ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384819302452",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by Y Chen \u00b7 2019 \u00b7 Cited by 13 \u2014 Immune thrombocytopenia (ITP) is an immune-mediated bleeding disorder in children. ... Current guidelines recommend that ITP children with no bleeding or",
+      "score": 0.5315261
+    },
+    {
+      "number": 21,
+      "title": "Predicting development of pediatric chronic immune ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0006497126002922",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by K Hillier \u00b7 2026 \u00b7 Cited by 4 \u2014 Current guidelines ... KMJ Heitink-Polle et al. Clinical and laboratory predictors of chronic immune thrombocytopenia in children: a systematic",
+      "score": 0.5232017
+    },
+    {
+      "number": 22,
+      "title": "Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384820305442",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies - ScienceDirect\n# Review Article Why thromboembolism occurs in some patients with thrombocytopenia and treatment strategies. Some patients with inherited thrombocytopenia have low platelet counts, but t",
+      "score": 0.507544
+    },
+    {
+      "number": 23,
+      "title": "Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0272271209000146",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia - ScienceDirect\n# Thrombotic Thrombocytopenic Purpura and Heparin-Induced Thrombocytopenia: Two Unique Causes of Life-Threatening Thrombocytopenia. Much has been le",
+      "score": 0.49582586
+    },
+    {
+      "number": 24,
+      "title": "Corticosteroid overuse in adults with immune thrombocytopenia: Cause for concern",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2475037922014509",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "practice guidelines recommend treatments more suitable for long\u2010term disease control such as thrombopoietin receptor agonists, rituximab, other immune\u2010modulating medications, or splenectomy, rather than repeated courses of corticosteroids. Despite these recommendations, real\u2010world evidence suggests ",
+      "score": 0.49260366
+    }
+  ],
+  "publishedAt": "2026-08-24T17:37:03.966827+00:00",
+  "updatedAt": "2026-08-24T17:37:03.966827+00:00",
+  "readingMinutes": 6,
+  "slug": "thrombocytopenia"
+}

@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Rheumatology",
+  "title": "Polymyalgia Rheumatica",
+  "summary": "Manage suspected polymyalgia rheumatica by excluding concurrent giant cell arteritis and mimics before committing to prolonged glucocorticoids, then use individualized prednisone tapering with serial assessment of disease activity, inflammatory markers, and treatment toxicity.",
+  "seoDescription": "Physician guide to diagnosing and treating polymyalgia rheumatica, recognizing giant cell arteritis, excluding mimics, and tapering prednisone.",
+  "clinicalQuestion": "How should clinicians confirm, treat, taper, and monitor polymyalgia rheumatica while avoiding missed giant cell arteritis and diagnostic mimics?",
+  "specialty": "Rheumatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "polymyalgia rheumatica",
+    "PMR",
+    "prednisone taper",
+    "giant cell arteritis",
+    "shoulder girdle stiffness",
+    "glucocorticoid monitoring"
+  ],
+  "keyTakeaways": [
+    "Before treating presumed PMR, actively screen for giant cell arteritis; headache, visual symptoms, scalp tenderness, temporal artery abnormalities, or ischemic symptoms shift management toward urgent GCA evaluation rather than routine PMR treatment. [1][20]",
+    "PMR remains a clinical diagnosis supported by inflammatory markers and longitudinal response; use the 2012 EULAR/ACR criteria as classification support, not as a substitute for exclusion of mimics. [7][12][23]",
+    "Oral glucocorticoids are standard initial therapy; a commonly described standardized starting regimen is prednisone 15 mg/day, with diagnosis reassessed when the expected clinical course is not achieved. [7]",
+    "Individualize glucocorticoid tapering and monitor disease activity, laboratory markers, and adverse events regularly; taper to prednisone 10 mg/day within 4-8 weeks, then by 1 mg every 4 weeks if remission persists. [3]",
+    "At relapse, return prednisone to the pre-relapse dose, then reduce gradually over 4-8 weeks to the dose at which relapse occurred. [3]",
+    "Monitor actively for glucocorticoid complications, including hypertension, osteoporosis, weight gain, cataracts, insomnia, bruising, and skin thinning. [20]"
+  ],
+  "sections": [
+    {
+      "id": "first-visit-triage",
+      "eyebrow": "Immediate decision",
+      "heading": "Separate isolated PMR from giant cell arteritis before routine treatment",
+      "intro": "The first decision is whether the presentation may represent GCA with an ischemic complication.",
+      "paragraphs": [
+        "At every initial PMR assessment, ask specifically about new localized headache, scalp tenderness, temporal artery tenderness or reduced pulse, visual change or visual loss, and other ischemia-related symptoms. These are cranial GCA features used in FDA-reviewed GCA trial eligibility criteria and should trigger urgent GCA-directed assessment rather than an assumption of uncomplicated PMR. [1]",
+        "Check for a PMR-GCA overlap even when the presenting complaint is proximal stiffness: PMR features are present in 40%-60% of patients with GCA at diagnosis, and approximately 22% of patients with PMR have concurrent GCA reported in referral literature. [4][11] A patient with visual symptoms, new headache, scalp tenderness, or fever should not be managed solely with a low-dose PMR glucocorticoid regimen. [1][20]",
+        "Age helps frame the differential but does not establish the diagnosis. PMR is a disorder of older adults; age younger than 50 years is an atypical feature that should intensify evaluation for an alternative explanation of polymyalgic symptoms. [7][9]"
+      ],
+      "bullets": [
+        "Document GCA screen at baseline: new localized headache, scalp tenderness, temporal artery tenderness or diminished pulse, visual symptoms or vision loss, and fever. [1][20]",
+        "If cranial or ischemic GCA features are present, expedite specialist-directed GCA evaluation; do not use a clinical response to moderate-dose prednisone as reassurance that GCA has been excluded. [1][11]",
+        "If no GCA features are present, proceed with a structured PMR workup and reassess the diagnosis during follow-up. [7][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial triage features that change the next diagnostic and treatment pathway. [1][4][7][9][20]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "New localized headache, scalp tenderness, temporal artery tenderness or reduced pulse, visual symptoms, or ischemia-related visual loss",
+            "Cranial features compatible with GCA. [1]",
+            "Urgently evaluate and manage as suspected GCA rather than isolated PMR. [1][20]"
+          ],
+          [
+            "Proximal girdle syndrome plus GCA symptoms",
+            "PMR manifestations occur in 40%-60% of GCA cases at diagnosis. [4]",
+            "Treat the vasculitis concern as the management priority. [4]"
+          ],
+          [
+            "Age younger than 50 years, asymmetric or limited typical-site involvement, ESR <40 mm/hour, or ESR >100 mm/hour",
+            "Atypical for straightforward PMR and should prompt a broader differential. [9]",
+            "Do not finalize PMR on symptoms alone; investigate mimics and reassess longitudinally. [7][9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-framework",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm a polymyalgic syndrome, then test the competing diagnoses",
+      "intro": "Use criteria and treatment response to support\u2014not replace\u2014clinical exclusion of mimics.",
+      "paragraphs": [
+        "Use the 2012 EULAR/ACR provisional classification criteria as a structured aid in patients with suspected PMR; the ACR lists these criteria as PMR classification criteria. [23] They are not a definitive diagnostic test: retrospective validation work found that a modified version can identify valid PMR diagnoses in surveys, while the broader diagnostic literature emphasizes a polymyalgic syndrome that may arise from PMR or another disease. [7][12]",
+        "Obtain ESR and CRP at baseline and interpret them as part of a syndrome-level assessment, not as standalone proof. In a pivotal GCA program, historical ESR at least 50 mm/hour or CRP at least 2.45 mg/dL was used as an inflammatory entry criterion for GCA, underscoring why elevated acute-phase reactants in a patient with polymyalgic symptoms should also prompt an explicit GCA screen. [1] ESR below 40 mm/hour or above 100 mm/hour is an atypical PMR pattern that warrants renewed attention to alternatives. [9]",
+        "The principal diagnostic safeguard is deliberate consideration of inflammatory rheumatic disease, systemic infection, and malignancy. Rheumatoid arthritis and other inflammatory articular diseases can present with a polymyalgic syndrome, while systemic infections and malignancy can mimic PMR. [7][9] Limited or asymmetric involvement of the usual sites, age under 50 years, and discordant ESR values are practical flags to pause before initiating a prolonged PMR treatment course. [9]",
+        "Musculoskeletal ultrasound can increase the specificity of the 2012 EULAR/ACR criteria when distinguishing PMR from rheumatoid arthritis and other inflammatory articular diseases. [9] Reserve PET/CT for selected unresolved cases or when another process remains plausible; it can assist in differentiating PMR/GCA from mimics but entails substantial cost, with an average Medicare reimbursement cited at approximately $1,377. [2]"
+      ],
+      "bullets": [
+        "Record baseline ESR and CRP before treatment when this does not delay care for suspected GCA. [1][3]",
+        "Use targeted examination and history to identify peripheral inflammatory arthritis or other findings that favor rheumatoid arthritis or another inflammatory arthropathy. [7][9]",
+        "Broaden the evaluation for infection or malignancy when the pattern is atypical or the subsequent clinical course is inconsistent with PMR. [7][9]",
+        "Use musculoskeletal ultrasound when discrimination from rheumatoid arthritis or another inflammatory articular disease is a key unresolved question. [9]"
+      ],
+      "subsections": [
+        {
+          "heading": "Use treatment response as longitudinal diagnostic evidence",
+          "paragraphs": [
+            "A standardized approach described in diagnostic literature uses prednisone 15 mg/day, but durable diagnostic confidence develops through follow-up rather than through a single steroid-response test. One review describes confirmation only after 12-18 months of treatment, full recovery, and discontinuation of glucocorticoids. [7] Failure to achieve or maintain the anticipated course should reopen the differential rather than automatically prompt escalating glucocorticoid exposure. [7][9]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Patterns that should broaden the differential beyond uncomplicated PMR. [7][9]",
+        "columns": [
+          "Pattern",
+          "Alternative concern",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Peripheral inflammatory articular findings or uncertain distinction from inflammatory arthritis",
+            "Rheumatoid arthritis or another inflammatory articular disease. [7][9]",
+            "Use focused rheumatologic assessment; musculoskeletal ultrasound can increase classification specificity. [9]"
+          ],
+          [
+            "Systemic features or course inconsistent with PMR",
+            "Systemic infection or malignancy. [9]",
+            "Investigate the competing process before accepting prolonged glucocorticoid treatment as PMR. [7][9]"
+          ],
+          [
+            "Age <50 years, asymmetric disease, restricted typical-site involvement, ESR <40 mm/hour, or ESR >100 mm/hour",
+            "Atypical PMR phenotype. [9]",
+            "Reassess diagnosis and search for mimics. [7][9]"
+          ],
+          [
+            "Symptoms suggesting GCA",
+            "Concurrent cranial or large-vessel vasculitis. [1][4]",
+            "Urgently switch from the isolated-PMR pathway to GCA evaluation and treatment. [1][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "glucocorticoid-treatment",
+      "eyebrow": "Treatment",
+      "heading": "Start oral glucocorticoids and prescribe the taper at the same visit",
+      "intro": "The therapeutic objective is disease control with the lowest sustainable glucocorticoid exposure.",
+      "paragraphs": [
+        "Oral glucocorticoid therapy is the standard treatment for established PMR. [7][8][24] A diagnostic-treatment approach describes prednisone 15 mg/day as the standardized initial regimen; this dose applies to suspected isolated PMR, not to patients in whom GCA remains a concern. [7]",
+        "Individualize the starting plan and subsequent taper according to disease activity, laboratory markers, comorbidities, and treatment adverse events. The EULAR/ACR management recommendation strongly endorses individualized tapering with regular monitoring of all three domains. [3] This is particularly important in older adults, in whom even low-dose corticosteroids can cause clinically meaningful toxicity. [20]",
+        "For initial tapering, reduce to prednisone-equivalent 10 mg/day within 4-8 weeks. [3] Once remission is achieved, reduce by 1 mg/day every 4 weeks until discontinuation if remission is maintained; an alternative cited approach uses 1.25-mg decrements through alternating daily schedules such as 10 mg and 7.5 mg on alternate days. [3]",
+        "Treat clinical relapse by increasing prednisone to the pre-relapse dose, then gradually reducing over 4-8 weeks to the dose at which relapse occurred. [3] Do not use a rigid taper when symptoms, inflammatory markers, or adverse events argue for a different pace; the recommendation specifically prioritizes regular reassessment over a fixed schedule. [3]"
+      ],
+      "bullets": [
+        "Initial regimen described for PMR: prednisone 15 mg/day. [7]",
+        "Initial taper target: prednisone-equivalent 10 mg/day by 4-8 weeks. [3]",
+        "Maintenance taper in sustained remission: decrease by 1 mg/day every 4 weeks. [3]",
+        "Relapse: return to the pre-relapse dose, then reduce over 4-8 weeks to the relapse dose. [3]",
+        "Do not extrapolate an isolated-PMR dose strategy to a patient with possible GCA. [1][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "EULAR/ACR glucocorticoid tapering framework for established PMR. [3]",
+        "columns": [
+          "Clinical stage",
+          "Prednisone-equivalent action",
+          "Required reassessment"
+        ],
+        "rows": [
+          [
+            "Initial treatment",
+            "Individualize treatment and taper; reduce to 10 mg/day within 4-8 weeks. [3]",
+            "Assess disease activity, laboratory markers, and adverse events regularly. [3]"
+          ],
+          [
+            "Remission after initial therapy",
+            "Reduce by 1 mg/day every 4 weeks until discontinuation while remission persists. [3]",
+            "Slow, pause, or otherwise individualize the taper if clinical or safety findings require it. [3]"
+          ],
+          [
+            "Relapse",
+            "Increase to the pre-relapse dose, then reduce gradually over 4-8 weeks to the dose at which relapse occurred. [3]",
+            "Reassess disease activity, inflammatory markers, and glucocorticoid toxicity. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-escalation",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor relapse, reconsider the diagnosis, and prevent treatment harm",
+      "intro": "Each follow-up visit should assess active disease, emergent GCA, and cumulative steroid toxicity.",
+      "paragraphs": [
+        "At follow-up, assess clinical disease activity, repeat the laboratory markers used at baseline, and review adverse events at intervals matched to the taper. [3] A rising inflammatory marker without concordant symptoms should not by itself define relapse, but discordance between symptoms, markers, and the expected taper trajectory should trigger reassessment for an alternative diagnosis or concurrent GCA. [3][7][9]",
+        "Repeat the GCA symptom screen throughout treatment: headache, visual changes, scalp tenderness, temporal artery findings, and fever remain management-changing symptoms because PMR may coexist with GCA. [1][4][20] New visual symptoms or ischemic features require urgent escalation rather than adjustment of a routine PMR taper. [1]",
+        "Build glucocorticoid toxicity surveillance into every visit. The ACR patient guidance identifies hypertension, osteoporosis, weight gain, cataracts, insomnia, bruising, and skin thinning as adverse effects requiring regular check-ups, and notes that older patients may require osteoporosis medications to prevent fractures. [20] A taper that controls symptoms but produces unacceptable toxicity should be revisited using the guideline principle of individualized dosing and adverse-event monitoring. [3][20]",
+        "Reopen the diagnostic process when response is incomplete, relapse occurs repeatedly, inflammatory markers are atypical, or the symptom distribution becomes asymmetric or limited. PMR is not confirmed simply because symptoms transiently improve on prednisone; rheumatic disorders, infection, and malignancy can present as a polymyalgic syndrome and may declare themselves during follow-up. [7][9]"
+      ],
+      "bullets": [
+        "At each visit: document stiffness and functional trajectory, assess GCA symptoms, review ESR/CRP in clinical context, and screen for glucocorticoid adverse effects. [3][20]",
+        "Escalate promptly for new headache, visual symptoms, scalp tenderness, temporal artery abnormalities, or fever. [1][20]",
+        "Consider osteoporosis-prevention treatment in older adults receiving corticosteroids, particularly when fracture risk warrants it. [20]",
+        "Reassess for rheumatoid arthritis or other inflammatory arthropathy, infection, or malignancy when the clinical course is not convincingly PMR. [7][9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up findings and the management response. [1][3][7][9][20]",
+        "columns": [
+          "Follow-up finding",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Sustained remission during taper",
+            "Taper may continue if remission is maintained. [3]",
+            "Continue 1-mg reductions every 4 weeks with regular clinical, laboratory, and toxicity monitoring. [3]"
+          ],
+          [
+            "Clinical relapse",
+            "Active PMR is possible; diagnostic reassessment remains necessary if the course is atypical. [3][7]",
+            "Return to the pre-relapse prednisone dose, then taper over 4-8 weeks to the relapse dose. [3]"
+          ],
+          [
+            "New headache, visual change, scalp tenderness, temporal artery findings, or fever",
+            "Potential GCA. [1][20]",
+            "Urgently evaluate as suspected GCA. [1]"
+          ],
+          [
+            "Hypertension, osteoporosis, cataracts, insomnia, weight gain, bruising, or skin thinning",
+            "Glucocorticoid treatment toxicity. [20]",
+            "Address the specific complication and individualize ongoing glucocorticoid exposure. [3][20]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "125276Orig1s112 | FDA",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2017/125276Orig1s112.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Mukhtyar C, Guillevin L, Cid M, et al. EULAR recommendations for the management of large vessel vasculitis. Ann Rheum Dis 2009;68(3):318-323. Roche NE, Fulbright JW, Wagner AD, et al. Correlation of interleukin-6 production and disease activity in polymyalgia rheumatica and giant cell arteritis. Art",
+      "score": 0.44116792
+    },
+    {
+      "number": 2,
+      "title": "Polymyalgia Rheumatica and Giant Cell Arteritis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/2770392/jama_buttgereit_2020_it_200019_1599242807.07847.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "ses that mimic PMR or GCA should be ruled out. Some disadvantages of PET/CT are the high cost of the test (average Medicare reimburse- ment was about $1377",
+      "score": 0.6205532
+    },
+    {
+      "number": 3,
+      "title": "2015 Recommendations for the management of polymyalgia rheumatica: a European League Against Rheumatism/American College of Rheumatology collaborative initiative | Annals of the Rheumatic Diseases",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/74/10/1799",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Recommendation 4: (PICO 6) The panel strongly recommends individualising dose-tapering schedules, based on regular monitoring of patient disease activity, laboratory markers and adverse events.\n\nThe following principles of GC dose tapering are suggested:\n\nInitial tapering: Taper dose to an oral dose",
+      "score": 0.7125728
+    },
+    {
+      "number": 4,
+      "title": "Medium- and Large-Vessel Vasculitis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.120.046657",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Features of polymyalgia rheumatica occur in 40% to 60% of patients with GCA at diagnosis. The main cranial manifestations of GCA are headache,",
+      "score": 0.53342235
+    },
+    {
+      "number": 5,
+      "title": "Aortic Diseases",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.760686",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by HL Gornik \u00b7 2008 \u00b7 Cited by 652 \u2014 Epide- miologic and immunogenetic aspects of polymyalgia rheumatica and giant cell arteritis in northern Italy. Arthritis Rheum. 1991;34:351",
+      "score": 0.32405406
+    },
+    {
+      "number": 6,
+      "title": "Advances in Therapies and Imaging for Systemic Vasculitis",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/ATVBAHA.118.310957",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by TE Farrah \u00b7 2019 \u00b7 Cited by 34 \u2014 Current treatments for vasculitis, such as glucocorticoids and alkylating agents, are associated with significant side effects. /polymyalgia rheumatica: Risk",
+      "score": 0.2860351
+    },
+    {
+      "number": 7,
+      "title": "Current diagnosis and treatment of polymyalgia rheumatica",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1297319X13002960",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Advances in the field of PMR can be credited to an ACR-EULAR task force  that has been working for 15 years to dissect the clinical, diagnostic, and therapeutic aspects of PMR and to develop management guidelines, as well as criteria sets for diagnosing polymyalgic syndrome and PMR. Their work does ",
+      "score": 0.7306941
+    },
+    {
+      "number": 8,
+      "title": "Frequency, diagnosis, and management of polymyalgia ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumatology/article/64/11/5818/8191109",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by WA Schmidt \u00b7 2025 \u00b7 Cited by 9 \u2014 According to the 2015 EULAR/ACR recommendations, standard therapy for PMR is oral glucocorticoid (GC) treatment with initial prednisolone doses",
+      "score": 0.57723385
+    },
+    {
+      "number": 9,
+      "title": "Polymyalgia Rheumatica - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/polymyalgia-rheumatica",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Show more\n\nView chapterExplore book\n\nRead full chapter\n\nURL:\n\nBookImage 6: Pain Management (Second Edition) 2011, Pain Management (Second Edition)Steven D. Waldman\n\nReview article\n\n## Proceedings from the 7th Annual International Society for Musculoskeletal Imaging in Rheumatology (ISEMIR) conferenc",
+      "score": 0.5518883
+    },
+    {
+      "number": 10,
+      "title": "A systematic literature review to inform the 2025 EULAR ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S3050708126000832",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Dey \u00b7 2026 \u00b7 Cited by 1 \u2014 EULAR recommendations for polymyalgia rheumatica (PMR) and large vessel vasculitis (LVV) were published in 2015 and 2020, respectively.",
+      "score": 0.4993414
+    },
+    {
+      "number": 11,
+      "title": "Concurrent baseline diagnosis of giant cell arteritis and polymyalgia rheumatica \u2013 A systematic review and meta-analysis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0049017222001202",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "should be referred for specialist evaluation using rapid access strategies, (4) in individuals with suspected PMR who are referred via rapid access, the commencement of glucocorticoid therapy should be deferred until after specialist evaluation and (5) individuals diagnosed with PMR in specialist ca",
+      "score": 0.4959723
+    },
+    {
+      "number": 12,
+      "title": "Validity of polymyalgia rheumatica diagnoses and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumap/article/3/2/rkz033/5555423",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by C Fors \u00b7 2019 \u00b7 Cited by 18 \u2014 A modified version of the ACR/EULAR criteria can be used to identify patients with a valid PMR diagnosis in retrospective surveys but does not",
+      "score": 0.4604593
+    },
+    {
+      "number": 13,
+      "title": "Treatment of polymyalgia rheumatica: British Society for ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumap/article/8/1/rkae002/7606885",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Toyoda \u00b7 2024 \u00b7 Cited by 9 \u2014 PMR is a common condition that causes pain, stiffness, fatigue and difficulty in doing everyday activities. PMR is usually treated with",
+      "score": 0.33235425
+    },
+    {
+      "number": 14,
+      "title": "ePosters - Case Reports : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2023/18002/eposters___case_reports.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CRP (46 mg/dl), ESR (103 mm/hr) EULAR criteria for Polymyalgia Rheumatica. A PET-CT taken for the workup of PUO did not show any focal abnormality",
+      "score": 0.72042775
+    },
+    {
+      "number": 15,
+      "title": "Autoimmune Adrenal Insufficiency Mimicking...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/nuclearmed/fulltext/2011/05000/autoimmune_adrenal_insufficiency_mimicking.27.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by JK Blazak \u00b7 2011 \u00b7 Cited by 1 \u2014 PET/CT in Giant Cell Arteritis and Polymyalgia Rheumatica Outcomes of Radiotherapy With or Without Dose Escalation to Lymph Node Metastases Detected by PET",
+      "score": 0.54695654
+    },
+    {
+      "number": 16,
+      "title": "PET Scanning Used for Monitoring Treatment...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/nuclearmed/fulltext/2009/11000/pet_scanning_used_for_monitoring_treatment.22.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by J Drijkoningen \u00b7 2009 \u00b7 Cited by 6 \u2014 PET scanning has proved to be useful in differentiating between benign and malignant pulmonary nodules. Giant Cell Arteritis and Polymyalgia Rheumatica",
+      "score": 0.54274267
+    },
+    {
+      "number": 17,
+      "title": "Poster Presentations : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2018/13002/poster_presentations.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "arteritis with polymyalgia rheumatica \u2026 severe computed tomography (PET/CT) helps in early monitoring of the response to RA therapy. FDG-PET/magnetic resonance",
+      "score": 0.42176673
+    },
+    {
+      "number": 18,
+      "title": "an initiative from the international giant cell arteritis and ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)66537-4/abstract",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by KK Keller \u00b7 2024 \u00b7 Cited by 60 \u2014 BSR and BHPR guidelines for the management of polymyalgia rheumatica Rheumatology (Oxford). Assessment of the new 2012 EULAR/ACR clinical classification",
+      "score": 0.6964752
+    },
+    {
+      "number": 19,
+      "title": "Polymyalgia rheumatica: crafting the future of a simple (but not ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)00354-6/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by M Bond \u00b7 2024 \u00b7 Cited by 13 \u2014 BSR and BHPR guidelines for the management of Polymyalgia Rheumatica ... review and meta-analysis informing the 2023 update of the EULAR recommendations.",
+      "score": 0.67501575
+    },
+    {
+      "number": 20,
+      "title": "Polymyalgia Rheumatica | American College of Rheumatology",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/patients/polymyalgia-rheumatica",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "Global Community\n\nJoinLog In\n\nGo HomeAmerican College of Rheumatology\n\n Global Community\n\nLog inJoin\n\n## Clinical Tools & Guidelines\n\n## Clinical Practice Guidelines\n\n Call for Letters of Interest\n Axial Spondyloarthritis\n Glucocorticoid-Induced Osteoporosis\n Gout\n Integrative RA Treatment\n Intersti",
+      "score": 0.52583206
+    },
+    {
+      "number": 21,
+      "title": "2015 Recommendations for the management of polymyalgia ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)02544-5/abstract",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by C Dejaco \u00b7 2015 \u00b7 Cited by 592 \u2014 In this paper, we report the 2015 European League Against Rheumatism (EULAR)/American College of Rheumatology (ACR) recommendations for the management of PMR.",
+      "score": 0.5248093
+    },
+    {
+      "number": 22,
+      "title": "Recommendations Management",
+      "detail": "www.eular.org",
+      "url": "https://www.eular.org/recommendations-management",
+      "authors": "www.eular.org",
+      "host": "www.eular.org",
+      "snippet": "2015 Recommendations for the management of polymyalgia rheumatica: a European League Against Rheumatism/American College of Rheumatology collaborative initiative  \nAnn Rheum Dis  2015;74:1799-1807   doi:10.1136/annrheumdis-2015-207492  \nRead recommendation  \nLay summary [...] ##### 2026\n\nChetan B. M",
+      "score": 0.512376
+    },
+    {
+      "number": 23,
+      "title": "ACR-Endorsed Criteria",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/criteria",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "2012 EULAR/ACR Provisional Classification Criteria\n\n Polymyalgia Rheumatica Article 2012\n Polymyalgia Rheumatica Editorial 2012\n Polymyalgia Rheumatica Slides 2012\n\n#### Rheumatoid Arthritis Classification\n\n2010 ACR/EULAR Classification Criteria\n\n Rheumatoid Arthritis Excerpt 2010\n Rheumatoid Arthri",
+      "score": 0.47606868
+    },
+    {
+      "number": 24,
+      "title": "Understanding the immunopathophysiology of polymyalgia ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(25)04386-9/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by EH Choy \u00b7 2026 \u00b7 Cited by 12 \u2014 Glucocorticoids (GCs) have been the standard of care for PMR for several decades. As per the 2015 ACR/EULAR recommendations, GCs have been the mainstay of PMR",
+      "score": 0.35066646
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "125276Orig1s112 | FDA",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2017/125276Orig1s112.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Mukhtyar C, Guillevin L, Cid M, et al. EULAR recommendations for the management of large vessel vasculitis. Ann Rheum Dis 2009;68(3):318-323. Roche NE, Fulbright JW, Wagner AD, et al. Correlation of interleukin-6 production and disease activity in polymyalgia rheumatica and giant cell arteritis. Art",
+      "score": 0.44116792
+    },
+    {
+      "number": 2,
+      "title": "Polymyalgia Rheumatica and Giant Cell Arteritis",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/articlepdf/2770392/jama_buttgereit_2020_it_200019_1599242807.07847.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "ses that mimic PMR or GCA should be ruled out. Some disadvantages of PET/CT are the high cost of the test (average Medicare reimburse- ment was about $1377",
+      "score": 0.6205532
+    },
+    {
+      "number": 3,
+      "title": "2015 Recommendations for the management of polymyalgia rheumatica: a European League Against Rheumatism/American College of Rheumatology collaborative initiative | Annals of the Rheumatic Diseases",
+      "detail": "ard.bmj.com",
+      "url": "https://ard.bmj.com/content/74/10/1799",
+      "authors": "ard.bmj.com",
+      "host": "ard.bmj.com",
+      "snippet": "Recommendation 4: (PICO 6) The panel strongly recommends individualising dose-tapering schedules, based on regular monitoring of patient disease activity, laboratory markers and adverse events.\n\nThe following principles of GC dose tapering are suggested:\n\nInitial tapering: Taper dose to an oral dose",
+      "score": 0.7125728
+    },
+    {
+      "number": 4,
+      "title": "Medium- and Large-Vessel Vasculitis | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.120.046657",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Features of polymyalgia rheumatica occur in 40% to 60% of patients with GCA at diagnosis. The main cranial manifestations of GCA are headache,",
+      "score": 0.53342235
+    },
+    {
+      "number": 5,
+      "title": "Aortic Diseases",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/circulationaha.107.760686",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by HL Gornik \u00b7 2008 \u00b7 Cited by 652 \u2014 Epide- miologic and immunogenetic aspects of polymyalgia rheumatica and giant cell arteritis in northern Italy. Arthritis Rheum. 1991;34:351",
+      "score": 0.32405406
+    },
+    {
+      "number": 6,
+      "title": "Advances in Therapies and Imaging for Systemic Vasculitis",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/ATVBAHA.118.310957",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by TE Farrah \u00b7 2019 \u00b7 Cited by 34 \u2014 Current treatments for vasculitis, such as glucocorticoids and alkylating agents, are associated with significant side effects. /polymyalgia rheumatica: Risk",
+      "score": 0.2860351
+    },
+    {
+      "number": 7,
+      "title": "Current diagnosis and treatment of polymyalgia rheumatica",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1297319X13002960",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Advances in the field of PMR can be credited to an ACR-EULAR task force  that has been working for 15 years to dissect the clinical, diagnostic, and therapeutic aspects of PMR and to develop management guidelines, as well as criteria sets for diagnosing polymyalgic syndrome and PMR. Their work does ",
+      "score": 0.7306941
+    },
+    {
+      "number": 8,
+      "title": "Frequency, diagnosis, and management of polymyalgia ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumatology/article/64/11/5818/8191109",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by WA Schmidt \u00b7 2025 \u00b7 Cited by 9 \u2014 According to the 2015 EULAR/ACR recommendations, standard therapy for PMR is oral glucocorticoid (GC) treatment with initial prednisolone doses",
+      "score": 0.57723385
+    },
+    {
+      "number": 9,
+      "title": "Polymyalgia Rheumatica - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/polymyalgia-rheumatica",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Show more\n\nView chapterExplore book\n\nRead full chapter\n\nURL:\n\nBookImage 6: Pain Management (Second Edition) 2011, Pain Management (Second Edition)Steven D. Waldman\n\nReview article\n\n## Proceedings from the 7th Annual International Society for Musculoskeletal Imaging in Rheumatology (ISEMIR) conferenc",
+      "score": 0.5518883
+    },
+    {
+      "number": 10,
+      "title": "A systematic literature review to inform the 2025 EULAR ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S3050708126000832",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Dey \u00b7 2026 \u00b7 Cited by 1 \u2014 EULAR recommendations for polymyalgia rheumatica (PMR) and large vessel vasculitis (LVV) were published in 2015 and 2020, respectively.",
+      "score": 0.4993414
+    },
+    {
+      "number": 11,
+      "title": "Concurrent baseline diagnosis of giant cell arteritis and polymyalgia rheumatica \u2013 A systematic review and meta-analysis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0049017222001202",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "should be referred for specialist evaluation using rapid access strategies, (4) in individuals with suspected PMR who are referred via rapid access, the commencement of glucocorticoid therapy should be deferred until after specialist evaluation and (5) individuals diagnosed with PMR in specialist ca",
+      "score": 0.4959723
+    },
+    {
+      "number": 12,
+      "title": "Validity of polymyalgia rheumatica diagnoses and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumap/article/3/2/rkz033/5555423",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by C Fors \u00b7 2019 \u00b7 Cited by 18 \u2014 A modified version of the ACR/EULAR criteria can be used to identify patients with a valid PMR diagnosis in retrospective surveys but does not",
+      "score": 0.4604593
+    },
+    {
+      "number": 13,
+      "title": "Treatment of polymyalgia rheumatica: British Society for ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/rheumap/article/8/1/rkae002/7606885",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Toyoda \u00b7 2024 \u00b7 Cited by 9 \u2014 PMR is a common condition that causes pain, stiffness, fatigue and difficulty in doing everyday activities. PMR is usually treated with",
+      "score": 0.33235425
+    },
+    {
+      "number": 14,
+      "title": "ePosters - Case Reports : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2023/18002/eposters___case_reports.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CRP (46 mg/dl), ESR (103 mm/hr) EULAR criteria for Polymyalgia Rheumatica. A PET-CT taken for the workup of PUO did not show any focal abnormality",
+      "score": 0.72042775
+    },
+    {
+      "number": 15,
+      "title": "Autoimmune Adrenal Insufficiency Mimicking...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/nuclearmed/fulltext/2011/05000/autoimmune_adrenal_insufficiency_mimicking.27.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by JK Blazak \u00b7 2011 \u00b7 Cited by 1 \u2014 PET/CT in Giant Cell Arteritis and Polymyalgia Rheumatica Outcomes of Radiotherapy With or Without Dose Escalation to Lymph Node Metastases Detected by PET",
+      "score": 0.54695654
+    },
+    {
+      "number": 16,
+      "title": "PET Scanning Used for Monitoring Treatment...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/nuclearmed/fulltext/2009/11000/pet_scanning_used_for_monitoring_treatment.22.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by J Drijkoningen \u00b7 2009 \u00b7 Cited by 6 \u2014 PET scanning has proved to be useful in differentiating between benign and malignant pulmonary nodules. Giant Cell Arteritis and Polymyalgia Rheumatica",
+      "score": 0.54274267
+    },
+    {
+      "number": 17,
+      "title": "Poster Presentations : Indian Journal of Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijru/fulltext/2018/13002/poster_presentations.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "arteritis with polymyalgia rheumatica \u2026 severe computed tomography (PET/CT) helps in early monitoring of the response to RA therapy. FDG-PET/magnetic resonance",
+      "score": 0.42176673
+    },
+    {
+      "number": 18,
+      "title": "an initiative from the international giant cell arteritis and ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)66537-4/abstract",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by KK Keller \u00b7 2024 \u00b7 Cited by 60 \u2014 BSR and BHPR guidelines for the management of polymyalgia rheumatica Rheumatology (Oxford). Assessment of the new 2012 EULAR/ACR clinical classification",
+      "score": 0.6964752
+    },
+    {
+      "number": 19,
+      "title": "Polymyalgia rheumatica: crafting the future of a simple (but not ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)00354-6/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by M Bond \u00b7 2024 \u00b7 Cited by 13 \u2014 BSR and BHPR guidelines for the management of Polymyalgia Rheumatica ... review and meta-analysis informing the 2023 update of the EULAR recommendations.",
+      "score": 0.67501575
+    },
+    {
+      "number": 20,
+      "title": "Polymyalgia Rheumatica | American College of Rheumatology",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/patients/polymyalgia-rheumatica",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "Global Community\n\nJoinLog In\n\nGo HomeAmerican College of Rheumatology\n\n Global Community\n\nLog inJoin\n\n## Clinical Tools & Guidelines\n\n## Clinical Practice Guidelines\n\n Call for Letters of Interest\n Axial Spondyloarthritis\n Glucocorticoid-Induced Osteoporosis\n Gout\n Integrative RA Treatment\n Intersti",
+      "score": 0.52583206
+    },
+    {
+      "number": 21,
+      "title": "2015 Recommendations for the management of polymyalgia ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(24)02544-5/abstract",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by C Dejaco \u00b7 2015 \u00b7 Cited by 592 \u2014 In this paper, we report the 2015 European League Against Rheumatism (EULAR)/American College of Rheumatology (ACR) recommendations for the management of PMR.",
+      "score": 0.5248093
+    },
+    {
+      "number": 22,
+      "title": "Recommendations Management",
+      "detail": "www.eular.org",
+      "url": "https://www.eular.org/recommendations-management",
+      "authors": "www.eular.org",
+      "host": "www.eular.org",
+      "snippet": "2015 Recommendations for the management of polymyalgia rheumatica: a European League Against Rheumatism/American College of Rheumatology collaborative initiative  \nAnn Rheum Dis  2015;74:1799-1807   doi:10.1136/annrheumdis-2015-207492  \nRead recommendation  \nLay summary [...] ##### 2026\n\nChetan B. M",
+      "score": 0.512376
+    },
+    {
+      "number": 23,
+      "title": "ACR-Endorsed Criteria",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/criteria",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "2012 EULAR/ACR Provisional Classification Criteria\n\n Polymyalgia Rheumatica Article 2012\n Polymyalgia Rheumatica Editorial 2012\n Polymyalgia Rheumatica Slides 2012\n\n#### Rheumatoid Arthritis Classification\n\n2010 ACR/EULAR Classification Criteria\n\n Rheumatoid Arthritis Excerpt 2010\n Rheumatoid Arthri",
+      "score": 0.47606868
+    },
+    {
+      "number": 24,
+      "title": "Understanding the immunopathophysiology of polymyalgia ...",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(25)04386-9/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "by EH Choy \u00b7 2026 \u00b7 Cited by 12 \u2014 Glucocorticoids (GCs) have been the standard of care for PMR for several decades. As per the 2015 ACR/EULAR recommendations, GCs have been the mainstay of PMR",
+      "score": 0.35066646
+    }
+  ],
+  "publishedAt": "2026-08-24T16:44:00.270387+00:00",
+  "updatedAt": "2026-08-24T16:44:00.270387+00:00",
+  "readingMinutes": 6,
+  "slug": "polymyalgia-rheumatica"
+}

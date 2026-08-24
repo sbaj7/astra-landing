@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Ventilator-Associated Pneumonia",
+  "summary": "Ventilator-associated pneumonia requires prompt empiric treatment when clinical suspicion is high, while respiratory sampling, serial reassessment, and culture-directed de-escalation limit overtreatment in a syndrome with imperfect diagnostic tests.",
+  "seoDescription": "Point-of-care approach to ventilator-associated pneumonia: diagnostic uncertainty, respiratory sampling, empiric therapy risks, de-escalation, and prevention.",
+  "clinicalQuestion": "How should clinicians diagnose, treat, reassess, and prevent suspected ventilator-associated pneumonia in mechanically ventilated adults?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "ventilator-associated pneumonia",
+    "VAP",
+    "hospital-acquired pneumonia",
+    "mechanical ventilation",
+    "endotracheal aspirate",
+    "bronchoalveolar lavage",
+    "antimicrobial stewardship"
+  ],
+  "keyTakeaways": [
+    "Treat VAP as a clinical syndrome arising more than 48 hours after intubation, but do not equate a positive airway culture with pneumonia because clinical diagnosis and microbiologic reference standards are imperfect. [8][10][18]",
+    "Obtain a lower-respiratory specimen promptly when VAP is suspected; semiquantitative endotracheal aspirate cultures are a practical option, and bronchoscopic BAL has not shown better mortality, ventilator-duration, or ICU-length-of-stay outcomes. [10]",
+    "Use culture results and clinical trajectory to narrow or stop empiric antibiotics; antibiotic overuse in suspected VAP promotes resistance and avoidable toxicity. [24]",
+    "Avoid tigecycline for hospital-acquired or ventilator-associated pneumonia when alternatives are suitable: an HAP/VAP trial failed to establish efficacy, and mortality was higher in ventilator-associated pneumonia. [1][2]"
+  ],
+  "sections": [
+    {
+      "id": "clinical-decision-and-immediate-actions",
+      "eyebrow": "Initial response",
+      "heading": "Act on suspected VAP while testing competing explanations",
+      "intro": "VAP begins more than 48 hours after invasive ventilation.",
+      "paragraphs": [
+        "New or worsening oxygenation impairment, purulent endotracheal secretions, fever or leukocytosis, and a new or progressive infiltrate should trigger a focused VAP assessment, but no single clinical feature reliably establishes the diagnosis. Clinical diagnosis remains inaccurate, and approximately one quarter to one third of patients with clinically suspected VAP may have true infection. [7][8]",
+        "At the bedside, first identify instability requiring immediate management: escalating oxygen or ventilator support, shock, or rapidly progressive respiratory failure should prompt prompt pneumonia-directed antimicrobial therapy after respiratory sampling when this does not delay treatment. Simultaneously reassess noninfectious and alternative infectious causes of infiltrates and hypoxemia, because false-positive VAP diagnoses expose patients to unnecessary antibiotic toxicity and selection of resistant organisms. [10][24]",
+        "Send a lower-respiratory specimen before or at antibiotic initiation when feasible. Endotracheal aspirate sampling is less invasive than bronchoscopic techniques; evidence comparing BAL or protected specimen brush with endotracheal aspirate has not shown reductions in mortality, ICU length of stay, or duration of mechanical ventilation. [10]"
+      ],
+      "bullets": [
+        "Document the time from intubation: VAP is conventionally pneumonia arising after at least 48 hours of mechanical ventilation. [18]",
+        "Review prior antibiotics, duration of ventilation, prior respiratory cultures, and local susceptibility data before selecting empiric coverage; later-onset VAP is more often associated with multidrug-resistant organisms, although timing alone is not determinative. [24]",
+        "Obtain a chest radiograph to evaluate a new infiltrate in the suspected hospital-acquired pneumonia syndrome. [23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Sampling and diagnostic tools should support\u2014not replace\u2014clinical reassessment in suspected VAP. [8][10]",
+        "columns": [
+          "Tool",
+          "Decision value",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Semiquantitative endotracheal aspirate culture",
+            "Practical lower-airway microbiology approach; guidelines discussed in contemporary review favor semiquantitative cultures because they are faster and require fewer laboratory resources than quantitative cultures. [10]",
+            "Airway colonization can yield false-positive results; interpret with clinical course. [10]"
+          ],
+          [
+            "Bronchoalveolar lavage",
+            "May provide quantitative culture and cell differential data when bronchoscopy is otherwise indicated or diagnostic uncertainty remains high. [6][10]",
+            "Compared with endotracheal aspirate, BAL has not reduced mortality, ventilation duration, or ICU stay. [10]"
+          ],
+          [
+            "Protected specimen brush",
+            "Alternative bronchoscopic sampling method. Reported sensitivity is 61.4% and specificity 76.5%, with wide confidence intervals. [10]",
+            "No accepted universal diagnostic reference standard; performance estimates are uncertain. [10]"
+          ],
+          [
+            "Clinical Pulmonary Infection Score",
+            "A score greater than 6 has reported sensitivity of 73.8% and specificity of 66.4% for VAP. [10]",
+            "Accuracy varies with reference standard and CPIS modifications; do not use as the sole basis for treatment. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpret-microbiology-and-reassess",
+      "eyebrow": "Diagnostic stewardship",
+      "heading": "Use cultures and trajectory to distinguish infection from colonization",
+      "intro": "A respiratory isolate requires clinical context before it becomes a treatment target.",
+      "paragraphs": [
+        "Interpret respiratory cultures against the full trajectory: changing oxygenation, secretion burden, leukocyte count, chest radiography, and response to therapy are components used in a Day 10 clinical-cure framework. Persistent or recurrent deterioration despite active therapy should prompt reassessment for an untreated pathogen, inadequate drug exposure, a nonpulmonary source, or a noninfectious pulmonary process rather than automatic antibiotic extension. [6]",
+        "Quantitative microbiology can refine probability but does not resolve diagnostic uncertainty. In one ICU research definition, bacterial pneumonia required a positive quantitative culture above 100 CFU/mL, bacterial PCR from BAL fluid, or a positive urine antigen in the appropriate clinical setting; this is a study definition, not a universal treatment threshold. [11]",
+        "BAL neutrophil percentage, quantitative culture burden, and pathogen genomic load are being evaluated as predictors of VAP treatment failure, but these biomarkers should not yet replace standard clinical and microbiologic assessment. [5][6]"
+      ],
+      "bullets": [
+        "If cultures identify an organism, narrow therapy to the susceptible pathogen and reassess whether the respiratory syndrome remains consistent with pneumonia. [24]",
+        "If microbiology is unrevealing and clinical features improve, reassess the need for continued pneumonia-directed antibiotics rather than treating airway colonization. [6][24]",
+        "Do not use procalcitonin alone to diagnose VAP; its diagnostic role has been studied, but clinical diagnosis remains problematic and no definitive biomarker standard is established. [8][12]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "antimicrobial-treatment",
+      "eyebrow": "Therapeutic decisions",
+      "heading": "Start empiric therapy for high-probability VAP, then de-escalate",
+      "intro": "The core treatment sequence is adequate initial therapy followed by culture-directed narrowing.",
+      "paragraphs": [
+        "For a patient with high clinical probability of VAP, select empiric antibiotics using the local ICU antibiogram, prior respiratory isolates, recent antibiotic exposure, and risk for multidrug-resistant organisms. Early VAP, defined in one review as occurring within 4 days of intubation, is more often attributed to antibiotic-susceptible pathogens, whereas VAP emerging after 4 days is more often associated with multidrug-resistant bacteria; use this as a risk modifier rather than a stand-alone rule. [24]",
+        "Once microbiology and susceptibility data return, de-escalate to the narrowest active regimen and align treatment duration with clinical and bacteriologic progress. This limits resistance, adverse effects, and toxicity from empiric broad-spectrum therapy. [24]",
+        "Do not select tigecycline for VAP when suitable alternatives exist. The FDA label reports that a hospital-acquired pneumonia trial, including ventilator-associated pneumonia, failed to demonstrate efficacy; among ventilator-associated pneumonia patients, mortality was 19.1% with tigecycline versus 12.3% with comparator treatment. [1][2]"
+      ],
+      "bullets": [
+        "If tigecycline is being considered for another labeled indication, standard adult dosing is 100 mg IV once followed by 50 mg IV every 12 hours, infused over 30 to 60 minutes; this dosing does not overcome its unfavorable VAP evidence. [2]",
+        "In severe hepatic impairment (Child-Pugh C), the tigecycline label specifies 100 mg initially followed by 25 mg every 12 hours, with caution and monitoring of treatment response. [1]",
+        "Avoid tigecycline in patients with known tetracycline-class hypersensitivity because life-threatening anaphylactic reactions have been reported. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Antibiotic decisions in suspected VAP should be revisited when respiratory microbiology and clinical response are available. [24]",
+        "columns": [
+          "Treatment phase",
+          "Required decision",
+          "Avoidable error"
+        ],
+        "rows": [
+          [
+            "Initial suspicion",
+            "Obtain a respiratory specimen and begin empiric therapy promptly in clinically high-probability or unstable VAP, guided by individual resistance risk and local susceptibility patterns. [24]",
+            "Delaying treatment in a deteriorating patient or using a fixed regimen without local resistance context. [24]"
+          ],
+          [
+            "Microbiology review",
+            "Target recovered susceptible pathogens and reassess whether the isolate represents infection rather than colonization. [10][24]",
+            "Continuing broad empiric therapy despite culture and clinical data supporting narrowing. [24]"
+          ],
+          [
+            "Clinical improvement",
+            "Use improvement in oxygenation, secretions, leukocyte count, and radiography with microbiologic information to decide whether to stop pneumonia-directed therapy. [6]",
+            "Extending therapy solely because a ventilated airway culture remains positive. [6][10]"
+          ],
+          [
+            "Tigecycline consideration",
+            "Choose an alternative when available for VAP. [1][2]",
+            "Using tigecycline as a routine VAP regimen despite failed efficacy and higher mortality in the VAP subgroup. [1][2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-treatment-failure",
+      "eyebrow": "Reassessment",
+      "heading": "Define response and investigate failure rather than escalating reflexively",
+      "intro": "Trend objective respiratory and systemic measures after therapy begins.",
+      "paragraphs": [
+        "Monitor oxygenation and ventilator requirements, endotracheal secretion burden, white blood cell count, and chest radiography after initiating treatment. A clinical-cure framework at Day 10 requires survival without planned comfort-only care plus either discontinuation of pneumonia antibiotics without recurrence within 48 hours or continued therapy with stable or improved pneumonia signs and symptoms. [6]",
+        "Failure to stabilize or improve should trigger a diagnostic reset: review whether the recovered organism is susceptible to the selected regimen, whether the respiratory sample represents colonization, and whether another pulmonary or extrapulmonary process better explains the deterioration. The absence of a universally accepted VAP reference standard means discordance between clinical and microbiologic findings is common. [10]",
+        "Escalating to repeat BAL, quantitative culture, or advanced biomarker testing should be selective. Quantitative cultures have not demonstrated improvement in mortality, ICU stay, mechanical-ventilation duration, or antibiotic-change rates compared with qualitative cultures, so invasive sampling is most useful when it is expected to alter a specific management decision. [10]"
+      ],
+      "bullets": [
+        "Record antibiotic stop dates and reassess daily for de-escalation or discontinuation. [24]",
+        "If antibiotics are stopped, monitor for recurrence during the subsequent 48 hours as part of clinical-cure assessment. [6]",
+        "When treatment failure is suspected, obtain targeted repeat microbiology only if the result will change antimicrobial selection or clarify an alternative diagnosis. [10]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "prevention",
+      "eyebrow": "Prevention",
+      "heading": "Reduce ventilator exposure and avoid unproven routine prophylaxis",
+      "intro": "Prevention strategies should be embedded in mechanical-ventilation care.",
+      "paragraphs": [
+        "Apply evidence-based hospital practices intended to prevent pneumonia in ventilated patients and reassess the continuing need for invasive ventilation, because VAP is defined by its occurrence after prolonged mechanical ventilation. Current guideline-based prevention practices are used in hospitalized patients, although specific bundle components should follow institutional protocols. [3][18]",
+        "Inhaled amikacin has been studied as a preventive intervention: among patients mechanically ventilated for at least 3 days, a subsequent 3-day course reduced the burden of VAP. This finding supports consideration only within a protocolized prevention strategy; it does not establish inhaled amikacin as treatment for established VAP or replace standard prevention practices. [4]",
+        "Do not confuse prevention with indiscriminate antimicrobial exposure. Antibiotic overuse in suspected VAP contributes to resistance and toxicity; prevention programs should preserve diagnostic stewardship and prompt de-escalation when VAP is not confirmed clinically. [24]"
+      ],
+      "bullets": [
+        "Track VAP events and prevention-process adherence as ICU quality measures, recognizing that VAP rates are commonly used as quality indicators. [16]",
+        "Use local prevention policies that address secretion drainage and bacterial colonization, two targets emphasized in preventive-strategy discussions. [17]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "211158Orig1s000 | FDA - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/211158Orig1s000Lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "intra-abdominal infections is 5 days to 14 days. The recommended duration of treatment with Tigecycline for injection for community-acquired bacterial pneumonia is 7 days to 14 days. The duration of therapy should be guided by the severity and site of the infection and the patient\u2019s clinical and bac",
+      "score": 0.27481502
+    },
+    {
+      "number": 2,
+      "title": "[PDF] 4139875 This label may not be the latest approved by FDA. For ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/205645s001lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Recommended Adult Dosage The recommended dosage regimen for tigecycline for injection is an initial dose of 100 mg, followed by 50 mg every 12 hours. Intravenous infusions of tigecycline for injection should be administered over approximately 30 to 60 minutes every 12 hours. The recommended duration",
+      "score": 0.23189282
+    },
+    {
+      "number": 3,
+      "title": "Health Care\u2013Associated Infections in U.S. Hospitals, 2023 ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2510881",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Current guidelines include evidence-based practices to prevent pneumonia in hospitalized patients,34 \u2026 respiratory therapy lowered the",
+      "score": 0.4543517
+    },
+    {
+      "number": 4,
+      "title": "Inhaled Amikacin to Prevent Ventilator-Associated ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2310307",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by S Ehrmann \u00b7 2023 \u00b7 Cited by 118 \u2014 Among patients who had undergone mechanical ventilation for at least 3 days, a subsequent 3-day course of inhaled amikacin reduced the burden",
+      "score": 0.16783185
+    },
+    {
+      "number": 5,
+      "title": "Ventilator-associated pneumonia biomarker evaluation ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/15/9/e110019",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "by O Albin \u00b7 2025 \u00b7 Cited by 2 \u2014 The ventilator-associated pneumonia biomarker evaluation study posits that alveolar biomarkers\u2014including quantitative respiratory culture bioburden,",
+      "score": 0.48030865
+    },
+    {
+      "number": 6,
+      "title": "associated pneumonia biomarker evaluation (VIBE) study: ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/bmjopen/15/9/e110019.full.pdf",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Patient eligibility criteria and recruitment VIBE Study eligibility criteria are shown in Box 1. Adult patients aged \u226518 years receiving invasive mechan-ical ventilation via endotracheal tube or tracheostomy within study ICUs will be enrolled if they meet clinical and microbiological criteria for VA",
+      "score": 0.44695392
+    },
+    {
+      "number": 7,
+      "title": "Diagnostic importance of pulmonary interleukin-1 ... - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/early/2009/10/12/thx.2009.122291.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "A, Levy B, et al. Soluble TREM-1 and the diagnosis of pneumonia. N Engl J Med. 2004;350:451-8. 11. Seligman R, Papassotiriou J, Morgenthaler N, et al. Copeptin, a novel prognostic biomarker in ventilator-associated pneumonia. Crit Care. 2008;12:R11. 12. Duflo F, Debon R, Monneret G, et al. Alveolar ",
+      "score": 0.35200182
+    },
+    {
+      "number": 8,
+      "title": "Diagnostic importance of pulmonary interleukin-1\u03b2 and ...",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/65/3/201",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "by A Conway Morris \u00b7 2010 \u00b7 Cited by 183 \u2014 Ventilator-associated pneumonia (VAP) is the most commonly fatal nosocomial infection. Clinical diagnosis of VAP remains notoriously inaccurate.",
+      "score": 0.25539052
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic importance of pulmonary interleukin-1b ... - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/65/3/201.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "by A Conway Morris \u00b7 2010 \u00b7 Cited by 183 \u2014 Ventilator-associated pneumonia (VAP) is the most commonly fatal nosocomial infection. Clinical diagnosis of VAP remains notoriously inaccurate.",
+      "score": 0.23720509
+    },
+    {
+      "number": 10,
+      "title": "Ventilator-associated pneumonia: pathobiological heterogeneity and diagnostic challenges | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-50805-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "However, these findings should be interpreted with caution, as there is still no overall evidence that quantitative cultures reduce mortality, ICU length of stay, period of mechanical ventilation or rates of antibiotic change compared to qualitative cultures in patients with VAP74.\"),108.\"). Quantit",
+      "score": 0.7837407
+    },
+    {
+      "number": 11,
+      "title": "Circuits between infected macrophages and T cells in SARS-CoV-2 pneumonia | Nature",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41586-020-03148-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "aureus (MRSA) PCR (MRSA/SA SSTI) and the BioFire FilmArray Respiratory 2 (RP2) panel and Pneumonia panels. SARS-CoV-2 was detected with a variety of assay platforms including the Cepheid Gene Expert, Abbott ID NOW, Becton Dickinson, and a locally developed and validated PCR. For some patients withou",
+      "score": 0.6072213
+    },
+    {
+      "number": 12,
+      "title": "Pneumonia | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-021-00259-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "CAS \n     PubMed \n     Google Scholar\n203. Luyt, C.-E. et al. Usefulness of procalcitonin for the diagnosis of ventilator-associated pneumonia. Intensive Care Med. 34, 1434\u20131440 (2008).\n\n     PubMed \n     Google Scholar\n204. Schuetz, P. et al. Procalcitonin (PCT)-guided antibiotic stewardship: an in",
+      "score": 0.36107516
+    },
+    {
+      "number": 13,
+      "title": "Longitudinal multicompartment characterization of host ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-48819-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by GD Kitsios \u00b7 2024 \u00b7 Cited by 46 \u2014 Management of adults with hospital-acquired and ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by the Infectious",
+      "score": 0.14887464
+    },
+    {
+      "number": 14,
+      "title": "Pneumonia after Solid Organ Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019574-202604000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Kalil A C Metersky M L Klompas M Management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the Infectious Diseases Society of America and the American Thoracic Society Clin Infect Dis 2016 63 05 e61 e111 Full TextCrossRefPubMedGoogle Schola",
+      "score": 0.5863576
+    },
+    {
+      "number": 15,
+      "title": "Hospital antibiotic stewardship",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-infectiousdiseases/fulltext/2008/08000/hospital_antibiotic_stewardship.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Implementation of guidelines and clinical pathways has demonstrated positive benefit in the management of hospital-associated or ventilator-associated pneumonia",
+      "score": 0.4977301
+    },
+    {
+      "number": 16,
+      "title": "The Centers for Disease Control and Prevention's...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2015/11000/the_centers_for_disease_control_and_prevention_s.22.aspx?Ppt=Article%7Cccmjournal%3A2015%3A11000%3A00022%7C10.1097%2Fccm.0000000000001261%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The rate of ventilator-associated pneumonia (VAP) commonly is used as a quality indicator for patients receiving mechanical ventilation. A concern is that",
+      "score": 0.30881572
+    },
+    {
+      "number": 17,
+      "title": "Ventilator Associated Pneumonia",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jpcr/fulltext/2019/06040/ventilator_associated_pneumonia.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "New preventive strategies are focused on the improvement of secretions drainage and prevention of bacterial colonization. The influence of gravity on mucus flow",
+      "score": 0.3017019
+    },
+    {
+      "number": 18,
+      "title": "Ventilator-Associated Pneumonia - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/ventilator-associated-pneumonia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Ventilator-associated pneumonia (VAP) is defined as pneumonia that occurs in patients who have been mechanically ventilated for at least 48 hours,\u00a0...Read more",
+      "score": 0.39578846
+    },
+    {
+      "number": 19,
+      "title": "Consensus document on controversial issues for the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1201971210023660",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by F Franzetti \u00b7 2010 \u00b7 Cited by 13 \u2014 Ventilator-associated pneumonia caused by potentially drug-resistant bacteria \u2026 15 days of antibiotic therapy for ventilator-associated pneumonia in adults:",
+      "score": 0.3934788
+    },
+    {
+      "number": 20,
+      "title": "European Journal of Pharmaceutical Sciences",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0928098719301952",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Jaruratanasirikul \u00b7 2019 \u00b7 Cited by 63 \u2014 Ventilator-associated pneumonia (VAP) caused by multidrug-resistant (MDR) high dosage combination regimens are required for the treatment of",
+      "score": 0.38214198
+    },
+    {
+      "number": 21,
+      "title": "Management of Non-Ventilated hospital acquired pneumonia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590170224000104",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Non-ventilated hospital acquired pneumonia (NV-HAP) is defined as pneumonia that develops at least 48 h after hospital admission in the non-invasively ventilated patient. Guidance in the management of NV-HAP has historically used extrapolated research from the wider field of HAP, which includes pati",
+      "score": 0.32852995
+    },
+    {
+      "number": 22,
+      "title": "Prevention of ventilator-associated pneumonia in the ...",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(14)01224-0/pdf",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "by ND Andersen \u00b7 2014 \u00b7 Cited by 1 \u2014 Comprehensive evidence-based clinical practice guidelines for ventilator-associated pneumonia: diagnosis and treatment.",
+      "score": 0.53502613
+    },
+    {
+      "number": 23,
+      "title": "antimicrobial prescribing - Pneumonia (hospital- acquired)",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng250/evidence/evidence-review-antimicrobial-prescribing-guideline-for-hospital-acquired-pneumonia-september-pdf-15432555423",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Antibiotic dosage, duration and route of administration No systematic reviews or RCTs met the inclusion criteria. Pneumonia (hospital-acquired): antimicrobial prescribing guideline Terms used in the guideline \u00a9 NICE 2019 All rights reserved. Subject to Notice of rights. 21 4 Terms used in the guidel",
+      "score": 0.52627033
+    },
+    {
+      "number": 24,
+      "title": "Ventilator-associated pneumonia in the ICU - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4056625",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Microbiology\n\nThe type of organism that causes VAP usually depends on the duration of mechanical ventilation. In general, early VAP is caused by pathogens that are sensitive to anti\u00acbiotics, whereas late onset VAP is caused by multi-drug resistant and more difficult to treat bacteria. However, th",
+      "score": 0.7311551
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "211158Orig1s000 | FDA - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/211158Orig1s000Lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "intra-abdominal infections is 5 days to 14 days. The recommended duration of treatment with Tigecycline for injection for community-acquired bacterial pneumonia is 7 days to 14 days. The duration of therapy should be guided by the severity and site of the infection and the patient\u2019s clinical and bac",
+      "score": 0.27481502
+    },
+    {
+      "number": 2,
+      "title": "[PDF] 4139875 This label may not be the latest approved by FDA. For ...",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/205645s001lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Recommended Adult Dosage The recommended dosage regimen for tigecycline for injection is an initial dose of 100 mg, followed by 50 mg every 12 hours. Intravenous infusions of tigecycline for injection should be administered over approximately 30 to 60 minutes every 12 hours. The recommended duration",
+      "score": 0.23189282
+    },
+    {
+      "number": 3,
+      "title": "Health Care\u2013Associated Infections in U.S. Hospitals, 2023 ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2510881",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Current guidelines include evidence-based practices to prevent pneumonia in hospitalized patients,34 \u2026 respiratory therapy lowered the",
+      "score": 0.4543517
+    },
+    {
+      "number": 4,
+      "title": "Inhaled Amikacin to Prevent Ventilator-Associated ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2310307",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by S Ehrmann \u00b7 2023 \u00b7 Cited by 118 \u2014 Among patients who had undergone mechanical ventilation for at least 3 days, a subsequent 3-day course of inhaled amikacin reduced the burden",
+      "score": 0.16783185
+    },
+    {
+      "number": 5,
+      "title": "Ventilator-associated pneumonia biomarker evaluation ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/15/9/e110019",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "by O Albin \u00b7 2025 \u00b7 Cited by 2 \u2014 The ventilator-associated pneumonia biomarker evaluation study posits that alveolar biomarkers\u2014including quantitative respiratory culture bioburden,",
+      "score": 0.48030865
+    },
+    {
+      "number": 6,
+      "title": "associated pneumonia biomarker evaluation (VIBE) study: ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/bmjopen/15/9/e110019.full.pdf",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Patient eligibility criteria and recruitment VIBE Study eligibility criteria are shown in Box 1. Adult patients aged \u226518 years receiving invasive mechan-ical ventilation via endotracheal tube or tracheostomy within study ICUs will be enrolled if they meet clinical and microbiological criteria for VA",
+      "score": 0.44695392
+    },
+    {
+      "number": 7,
+      "title": "Diagnostic importance of pulmonary interleukin-1 ... - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/early/2009/10/12/thx.2009.122291.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "A, Levy B, et al. Soluble TREM-1 and the diagnosis of pneumonia. N Engl J Med. 2004;350:451-8. 11. Seligman R, Papassotiriou J, Morgenthaler N, et al. Copeptin, a novel prognostic biomarker in ventilator-associated pneumonia. Crit Care. 2008;12:R11. 12. Duflo F, Debon R, Monneret G, et al. Alveolar ",
+      "score": 0.35200182
+    },
+    {
+      "number": 8,
+      "title": "Diagnostic importance of pulmonary interleukin-1\u03b2 and ...",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/65/3/201",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "by A Conway Morris \u00b7 2010 \u00b7 Cited by 183 \u2014 Ventilator-associated pneumonia (VAP) is the most commonly fatal nosocomial infection. Clinical diagnosis of VAP remains notoriously inaccurate.",
+      "score": 0.25539052
+    },
+    {
+      "number": 9,
+      "title": "Diagnostic importance of pulmonary interleukin-1b ... - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/65/3/201.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "by A Conway Morris \u00b7 2010 \u00b7 Cited by 183 \u2014 Ventilator-associated pneumonia (VAP) is the most commonly fatal nosocomial infection. Clinical diagnosis of VAP remains notoriously inaccurate.",
+      "score": 0.23720509
+    },
+    {
+      "number": 10,
+      "title": "Ventilator-associated pneumonia: pathobiological heterogeneity and diagnostic challenges | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-50805-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "However, these findings should be interpreted with caution, as there is still no overall evidence that quantitative cultures reduce mortality, ICU length of stay, period of mechanical ventilation or rates of antibiotic change compared to qualitative cultures in patients with VAP74.\"),108.\"). Quantit",
+      "score": 0.7837407
+    },
+    {
+      "number": 11,
+      "title": "Circuits between infected macrophages and T cells in SARS-CoV-2 pneumonia | Nature",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41586-020-03148-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "aureus (MRSA) PCR (MRSA/SA SSTI) and the BioFire FilmArray Respiratory 2 (RP2) panel and Pneumonia panels. SARS-CoV-2 was detected with a variety of assay platforms including the Cepheid Gene Expert, Abbott ID NOW, Becton Dickinson, and a locally developed and validated PCR. For some patients withou",
+      "score": 0.6072213
+    },
+    {
+      "number": 12,
+      "title": "Pneumonia | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-021-00259-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "CAS \n     PubMed \n     Google Scholar\n203. Luyt, C.-E. et al. Usefulness of procalcitonin for the diagnosis of ventilator-associated pneumonia. Intensive Care Med. 34, 1434\u20131440 (2008).\n\n     PubMed \n     Google Scholar\n204. Schuetz, P. et al. Procalcitonin (PCT)-guided antibiotic stewardship: an in",
+      "score": 0.36107516
+    },
+    {
+      "number": 13,
+      "title": "Longitudinal multicompartment characterization of host ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-48819-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by GD Kitsios \u00b7 2024 \u00b7 Cited by 46 \u2014 Management of adults with hospital-acquired and ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by the Infectious",
+      "score": 0.14887464
+    },
+    {
+      "number": 14,
+      "title": "Pneumonia after Solid Organ Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019574-202604000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Kalil A C Metersky M L Klompas M Management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the Infectious Diseases Society of America and the American Thoracic Society Clin Infect Dis 2016 63 05 e61 e111 Full TextCrossRefPubMedGoogle Schola",
+      "score": 0.5863576
+    },
+    {
+      "number": 15,
+      "title": "Hospital antibiotic stewardship",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-infectiousdiseases/fulltext/2008/08000/hospital_antibiotic_stewardship.3.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Implementation of guidelines and clinical pathways has demonstrated positive benefit in the management of hospital-associated or ventilator-associated pneumonia",
+      "score": 0.4977301
+    },
+    {
+      "number": 16,
+      "title": "The Centers for Disease Control and Prevention's...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/2015/11000/the_centers_for_disease_control_and_prevention_s.22.aspx?Ppt=Article%7Cccmjournal%3A2015%3A11000%3A00022%7C10.1097%2Fccm.0000000000001261%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The rate of ventilator-associated pneumonia (VAP) commonly is used as a quality indicator for patients receiving mechanical ventilation. A concern is that",
+      "score": 0.30881572
+    },
+    {
+      "number": 17,
+      "title": "Ventilator Associated Pneumonia",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jpcr/fulltext/2019/06040/ventilator_associated_pneumonia.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "New preventive strategies are focused on the improvement of secretions drainage and prevention of bacterial colonization. The influence of gravity on mucus flow",
+      "score": 0.3017019
+    },
+    {
+      "number": 18,
+      "title": "Ventilator-Associated Pneumonia - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/ventilator-associated-pneumonia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Ventilator-associated pneumonia (VAP) is defined as pneumonia that occurs in patients who have been mechanically ventilated for at least 48 hours,\u00a0...Read more",
+      "score": 0.39578846
+    },
+    {
+      "number": 19,
+      "title": "Consensus document on controversial issues for the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1201971210023660",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by F Franzetti \u00b7 2010 \u00b7 Cited by 13 \u2014 Ventilator-associated pneumonia caused by potentially drug-resistant bacteria \u2026 15 days of antibiotic therapy for ventilator-associated pneumonia in adults:",
+      "score": 0.3934788
+    },
+    {
+      "number": 20,
+      "title": "European Journal of Pharmaceutical Sciences",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0928098719301952",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Jaruratanasirikul \u00b7 2019 \u00b7 Cited by 63 \u2014 Ventilator-associated pneumonia (VAP) caused by multidrug-resistant (MDR) high dosage combination regimens are required for the treatment of",
+      "score": 0.38214198
+    },
+    {
+      "number": 21,
+      "title": "Management of Non-Ventilated hospital acquired pneumonia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2590170224000104",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Non-ventilated hospital acquired pneumonia (NV-HAP) is defined as pneumonia that develops at least 48 h after hospital admission in the non-invasively ventilated patient. Guidance in the management of NV-HAP has historically used extrapolated research from the wider field of HAP, which includes pati",
+      "score": 0.32852995
+    },
+    {
+      "number": 22,
+      "title": "Prevention of ventilator-associated pneumonia in the ...",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(14)01224-0/pdf",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "by ND Andersen \u00b7 2014 \u00b7 Cited by 1 \u2014 Comprehensive evidence-based clinical practice guidelines for ventilator-associated pneumonia: diagnosis and treatment.",
+      "score": 0.53502613
+    },
+    {
+      "number": 23,
+      "title": "antimicrobial prescribing - Pneumonia (hospital- acquired)",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng250/evidence/evidence-review-antimicrobial-prescribing-guideline-for-hospital-acquired-pneumonia-september-pdf-15432555423",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Antibiotic dosage, duration and route of administration No systematic reviews or RCTs met the inclusion criteria. Pneumonia (hospital-acquired): antimicrobial prescribing guideline Terms used in the guideline \u00a9 NICE 2019 All rights reserved. Subject to Notice of rights. 21 4 Terms used in the guidel",
+      "score": 0.52627033
+    },
+    {
+      "number": 24,
+      "title": "Ventilator-associated pneumonia in the ICU - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4056625",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Microbiology\n\nThe type of organism that causes VAP usually depends on the duration of mechanical ventilation. In general, early VAP is caused by pathogens that are sensitive to anti\u00acbiotics, whereas late onset VAP is caused by multi-drug resistant and more difficult to treat bacteria. However, th",
+      "score": 0.7311551
+    }
+  ],
+  "publishedAt": "2026-08-24T16:14:33.991194+00:00",
+  "updatedAt": "2026-08-24T16:14:33.991194+00:00",
+  "readingMinutes": 5,
+  "slug": "ventilator-associated-pneumonia"
+}

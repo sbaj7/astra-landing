@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Prerenal Kidney Failure",
+  "summary": "Prerenal kidney failure requires rapid separation of reversible renal hypoperfusion from acute tubular injury, obstruction, and congestive cardiorenal physiology. Use trajectory, volume assessment, urine studies, medication review, targeted fluid challenge, and serial creatinine and urine output to restore perfusion without causing harmful fluid accumulation.",
+  "seoDescription": "Point-of-care evaluation and management of prerenal kidney failure, including urine indices, fluid challenge, cardiorenal differentiation, and monitoring.",
+  "clinicalQuestion": "How should clinicians identify reversible renal hypoperfusion and manage prerenal kidney failure while excluding intrinsic and postrenal AKI?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "prerenal AKI",
+    "prerenal azotemia",
+    "acute kidney injury",
+    "fractional excretion of sodium",
+    "urine sodium",
+    "cardiorenal syndrome",
+    "fluid challenge"
+  ],
+  "keyTakeaways": [
+    "Diagnose AKI when serum creatinine rises by at least 0.3 mg/dL within 48 hours, reaches at least 1.5 times baseline within 7 days, or urine output is below 0.5 mL/kg/hour for 6 hours. [13][14]",
+    "Low urine sodium (<20 mEq/L), urine osmolality >500 mOsm/kg, and fractional excretion of sodium (FENa) <1% support sodium-avid renal hypoperfusion but do not by themselves establish volume depletion. [1][2][11]",
+    "A monitored fluid challenge is the practical diagnostic-therapeutic test for suspected volume-responsive prerenal AKI when fluid administration is not contraindicated; improved urine output or renal function supports renal hypoperfusion. [20]",
+    "Do not reflexively give fluids to a congested patient with acute heart failure: acute cardiorenal syndrome can produce prerenal urine indices despite hypervolemia, and recent weight trend, fluid losses, and congestion assessment direct opposite treatment. [22]",
+    "Stop or avoid nephrotoxins and reassess drugs that reduce renal function during hypotension or dehydration, including NSAIDs, aminoglycosides, and ACE inhibitors. [1][20]",
+    "Persistent AKI after restoration of perfusion should redirect the evaluation toward acute tubular necrosis, glomerular or interstitial disease, obstruction, or mixed injury; AKI survivors require reassessment for CKD at 3 months. [10][16][20]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-and-triage",
+      "eyebrow": "Immediate assessment",
+      "heading": "Confirm AKI and identify patients who cannot wait for a fluid trial",
+      "intro": "Establish severity, trajectory, and immediately reversible threats before assigning a prerenal mechanism.",
+      "paragraphs": [
+        "Use KDIGO-compatible criteria to establish AKI: serum creatinine increase of at least 0.3 mg/dL within 48 hours, increase to at least 1.5 times baseline within 7 days, or urine output below 0.5 mL/kg/hour for 6 hours. Obtain serial creatinine and accurately measured urine output rather than relying on a single creatinine value, because the syndrome evolves over hours to days. [2][13][14]",
+        "Treat hemodynamic instability as a perfusion emergency while the cause is being defined. In hypovolemia, prompt crystalloid administration is recommended; in vasomotor shock or risk of AKI, fluids and vasopressors are used to support perfusion. Do not presume that all AKI with low urine sodium is volume depletion: fluids may be detrimental in cardiogenic shock or obstructive AKI. [1][18]",
+        "Review the preceding 24 to 48 hours for hemorrhage, vomiting, diarrhea, sweating, inadequate replacement of ongoing losses, sepsis, burns, pancreatitis, major surgery, hypotension, iodinated contrast exposure, and new or intensified medications. Contrast exposure, ACE inhibitor or ARB use, and NSAID exposure may be co-contributors; identify whether the medication timeline matches the creatinine rise. [2][20]"
+      ],
+      "bullets": [
+        "Measure blood pressure, heart rate, daily or recent weight trend, intake/output, and current diuretic exposure before deciding whether low effective arterial volume reflects depletion or congestion. [22]",
+        "Immediately stop or avoid NSAIDs and aminoglycosides; during hypotension or dehydration, reassess ACE inhibitors and other agents that may reduce kidney function. [1]",
+        "If oliguria, rising creatinine, or systemic illness persists despite initial perfusion correction, broaden the evaluation rather than repeating unstructured fluid boluses. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical initial distinctions among low-perfusion and competing AKI mechanisms. [2][11][16][20][22]",
+        "columns": [
+          "Pattern",
+          "Discriminators",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Volume-responsive renal hypoperfusion",
+            "Recent gastrointestinal, hemorrhagic, or insensible losses; urine sodium <20 mEq/L; urine osmolality >500 mOsm/kg; often FENa <1%. [1][2][11]",
+            "If no contraindication, give a monitored crystalloid fluid challenge and follow urine output and renal function. [20]"
+          ],
+          [
+            "Acute cardiorenal syndrome",
+            "Congestive heart failure physiology may coexist with FENa <1% and fractional excretion of urea <35%; weight trend and recent fluid loss or diuretic excess help distinguish congestion from depletion. [22]",
+            "Do not use urine indices alone to prescribe fluids; define congestion and hemodynamics before changing diuretic or volume strategy. [22]"
+          ],
+          [
+            "Intrinsic tubular or inflammatory injury",
+            "Absent renal recovery after perfusion is restored; sepsis, nephrotoxins, ischemia, rhabdomyolysis, glomerular disease, or interstitial nephritis may be present. [16][20]",
+            "Reassess urine sediment, exposures, systemic features, and need for kidney-directed diagnostic escalation. [18][20]"
+          ],
+          [
+            "Postrenal AKI",
+            "Urinary tract obstruction can produce AKI and makes indiscriminate fluid administration potentially harmful. [18]",
+            "Evaluate promptly for obstruction and correct the obstructive process. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "test-hypoperfusion",
+      "eyebrow": "Diagnostic branch",
+      "heading": "Use urine studies as supporting evidence, not as a substitute for clinical hemodynamics",
+      "intro": "Prerenal physiology preserves tubular sodium and water reabsorption early in the course.",
+      "paragraphs": [
+        "Order urinalysis with microscopy, urine sodium, urine creatinine, serum sodium, serum creatinine, and urine osmolality when the result will alter the hypoperfusion-versus-intrinsic branch. A urine sodium concentration below 20 mEq/L and urine osmolality above 500 mOsm/kg support intact tubular sodium retention and concentration in renal hypoperfusion. Recent iodinated contrast can confound interpretation of high urine osmolality. [1][2]",
+        "Calculate FENa as (urine sodium \u00d7 plasma creatinine) divided by (plasma sodium \u00d7 urine creatinine) \u00d7100. A FENa below 1% indicates sodium avidity and preserved tubular integrity; values above 2% to 3% favor tubular injury. Interpret this as a time-sensitive physiologic clue rather than a definitive etiologic test, because urine chemistries vary with the phase of AKI and extreme sodium avidity can produce FENa below 1% even when AKI is present. [11]",
+        "The definitive bedside discriminator for suspected volume-responsive prerenal AKI is response to a carefully monitored fluid challenge when there is no contraindication. Improvement in urine output or renal function after fluids supports renal hypoperfusion; lack of improvement should prompt reassessment for acute tubular necrosis or another intrinsic or postrenal process rather than assuming a larger fluid deficit. [20]"
+      ],
+      "bullets": [
+        "A low FENa does not distinguish true intravascular depletion from low effective arterial volume in acute heart failure; both can show a prerenal pattern. [22]",
+        "In advanced cirrhosis, FENa below 1% is common because of marked sodium avidity and should not be used alone to discriminate AKI mechanisms. [11]",
+        "Novel biomarkers such as urinary NGAL, KIM-1, and TIMP-2/IGFBP7 remain adjunctive rather than routine replacements for clinical assessment, serial creatinine, urine output, and conventional testing. [3][13][21][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Urine indices that support, but do not independently prove, prerenal physiology. [1][2][11][22]",
+        "columns": [
+          "Test",
+          "Prerenal-supportive result",
+          "Critical limitation"
+        ],
+        "rows": [
+          [
+            "Urine sodium",
+            "<20 mEq/L suggests avid sodium retention. [2]",
+            "Reflects renal sodium handling, not necessarily absolute volume depletion. [22]"
+          ],
+          [
+            "Urine osmolality",
+            ">500 mOsm/kg supports preserved concentrating ability. [1]",
+            "Interpret cautiously after iodinated contrast. [1]"
+          ],
+          [
+            "FENa",
+            "<1% supports sodium avidity; >2% to 3% suggests tubular injury. [11]",
+            "May remain <1% in advanced cirrhosis and changes with AKI phase. [11]"
+          ],
+          [
+            "Fractional excretion of urea",
+            "<35% often accompanies prerenal physiology in acute cardiorenal syndrome. [22]",
+            "Cannot separate congestive cardiorenal physiology from hypovolemia by itself. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "define-the-low-perfusion-state",
+      "eyebrow": "Etiologic branches",
+      "heading": "Separate fluid loss, low cardiac output, and impaired autoregulation",
+      "intro": "The same low-perfusion urine pattern has different treatment implications across the major prerenal branches.",
+      "paragraphs": [
+        "In extracellular fluid loss, the key decision is whether ongoing losses exceed replacement. Hemorrhage, vomiting, diarrhea, sweating, burns, sepsis, pancreatitis, and insufficient hospital fluid replacement all support this branch. Give crystalloid promptly when hypovolemia is present, monitor urine output and creatinine response, and continue to replace documented ongoing losses rather than using creatinine alone as the endpoint. [1][2]",
+        "In reduced cardiac output or acute cardiorenal syndrome, renal hypoperfusion can coexist with excess total body volume. Patients with stable heart failure are often mildly hypervolemic but may become hypovolemic after overaggressive diuresis, severe diarrhea, or other losses. Compare recent weight, diuretic changes, and loss history with evidence of congestion before administering fluid; misclassification can lead to fluid administration in a congested patient or unnecessary diuresis in a depleted patient. [22]",
+        "Impaired renal autoregulation is a medication-sensitive branch. NSAIDs can impair autoregulation, while ACE inhibitors and ARBs may contribute to AKI during an acute hemodynamic insult. Temporarily withholding kidney-hemodynamically active drugs in hypotension or dehydration, eliminating nephrotoxins, and adjusting medication doses to renal function are immediate actions while the precipitant is corrected. [1][16][20]",
+        "Cirrhosis requires a separate diagnostic frame because prerenal AKI, acute tubular necrosis, and hepatorenal syndrome have materially different prognosis and treatment. AKI occurs in approximately 20% of hospitalized patients with cirrhosis, and hepatorenal syndrome has the worst prognosis among these common causes, with reported survival of 35%. A low FENa is not sufficiently discriminating in advanced cirrhosis; persistent AKI after correction of reversible contributors warrants focused evaluation for ATN versus hepatorenal syndrome. [11][21]"
+      ],
+      "bullets": [
+        "Consider mixed injury when an initially volume-responsive presentation has concurrent sepsis, rhabdomyolysis, hypercalcemia, or cardiac surgery exposure; each can combine reduced perfusion with direct tubular toxicity or obstruction. [16]",
+        "Recognize that sepsis-associated AKI may occur without hypotension, so a normal blood pressure does not exclude intrinsic or mixed renal injury. [16]",
+        "Avoid diagnosing isolated prerenal AKI solely because kidney function improves partially; prerenal and intrinsic tubular injury frequently overlap. [16][20]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "exclude-competing-akI",
+      "eyebrow": "Failure to respond",
+      "heading": "Escalate when renal function does not improve after perfusion is restored",
+      "intro": "Persistence shifts the working diagnosis away from uncomplicated reversible hypoperfusion.",
+      "paragraphs": [
+        "If renal function and urine output do not improve after correction of a credible hemodynamic insult, reassess the three-category framework: intrinsic renal disease, obstruction, or ongoing low effective perfusion. Acute tubular necrosis may recover slowly over weeks to months, whereas prerenal physiology should improve when renal blood flow is restored. [20]",
+        "Use urinalysis and urine microscopy to seek evidence of intrinsic disease, and reconnect abnormalities to the exposure and systemic history. Ischemia, nephrotoxins, sepsis, rhabdomyolysis, glomerular disease, and acute interstitial nephritis are recognized intrinsic causes; contrast exposure and medication timing are especially important in hospitalized AKI. [16][20]",
+        "Evaluate for postrenal disease early when the history or clinical setting permits obstruction. Obstructive AKI belongs in the initial differential of every AKI evaluation, and fluids may be harmful when obstruction is the mechanism. Prompt relief of obstruction, not continued volume expansion, is the corrective intervention. [18][20]",
+        "In acute heart failure with uncertain volume status, routine pulmonary artery catheterization is not supported, although elevated filling pressures can be demonstrated invasively. Reserve invasive hemodynamic assessment for cases in which noninvasive clinical data do not resolve a management-critical uncertainty. [22]"
+      ],
+      "bullets": [
+        "Consult nephrology when AKI persists despite correction of suspected hypoperfusion, when intrinsic renal disease is suspected, or when the diagnosis remains unclear after medication review, urinalysis, urine studies, and obstruction assessment. [18][20]",
+        "For severe oliguric tubular injury with significant volume overload, diuretics may be required for volume management; they do not establish or reverse the underlying tubular injury. [20]",
+        "Do not wait for novel biomarkers to address reversible hypoperfusion, obstruction, drug toxicity, or sepsis; their clinical role remains limited or adjunctive in routine practice. [13][21]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "monitor-recovery",
+      "eyebrow": "Follow-up",
+      "heading": "Track early recovery and screen for chronic sequelae",
+      "intro": "Recovery timing informs prognosis and determines the need for longitudinal kidney surveillance.",
+      "paragraphs": [
+        "Monitor serum creatinine and urine output after the intervention that corrected the suspected perfusion defect. Absence of AKI by both creatinine and urine-output criteria within 7 days defines recovery; reversal within 48 hours is transient AKI, whereas recovery in 2 to 7 days is persistent AKI. Lack of recovery within 7 days is termed acute kidney disease. [10]",
+        "Arrange clinical reassessment at 3 months after an AKI episode to determine whether new or worsening CKD has developed. This follow-up remains appropriate even when pre-AKI kidney function was normal, because AKI is linked to subsequent CKD through maladaptive repair and fibrosis pathways. [10]"
+      ],
+      "bullets": [
+        "At follow-up, compare creatinine with the pre-AKI baseline and determine whether renal function has returned to baseline or represents new CKD. [10]",
+        "Document the apparent precipitant, medication changes during the event, degree and duration of AKI, and whether recovery occurred by 48 hours, 7 days, or remained incomplete. [10][20]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Acute kidney injury - Diagnosis recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/83/diagnosis-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "High urine osmolality (>500 mOsm/kg) suggests pre-kidney AKI with preservation of tubule function (assuming no recent administration of iodinated contrast).(#referencePop1)Kidney disease: improving global outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute ki",
+      "score": 0.6546525
+    },
+    {
+      "number": 2,
+      "title": "Acute kidney injury - Diagnosis recommendations | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/83/diagnosis-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Urine volume <0.5 mL/kg/hour for 6 hours.\n\nAKI should then be staged according to severity criteria using KDIGO, RIFLE, or AKIN classifications.(#referencePop1)Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute kidney injury.",
+      "score": 0.57894874
+    },
+    {
+      "number": 3,
+      "title": "Cardiorenal Syndrome",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.07.051",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 1. Protein Biomarkers for the Early Detection of Acute Kidney Injury\n\n| Biomarker | Associated Injury |\n --- |\n| Cystatin C | Proximal tubule injury |\n| KIM-1 | Ischemia and nephrotoxins |\n| NGAL (lipocalin) | Ischemia and nephrotoxins |\n| NHE3 | Ischemia, pre-renal, post-renal",
+      "score": 0.6643884
+    },
+    {
+      "number": 4,
+      "title": "Cardiac and Vascular Surgery\u2013Associated Acute Kidney ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.118.008834?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Urinary TIMP\u20102 and IGFBP7 as early biomarkers of acute kidney injury and renal recovery following cardiac surgery. ... Hepatorenal syndrome, MELD",
+      "score": 0.6391287
+    },
+    {
+      "number": 5,
+      "title": "Cardiorenal Syndrome Revisited | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.117.028814",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Several biomarkers of renal injury are being evaluated for their utility to detect kidney injury and to differentiate it from functional",
+      "score": 0.5082762
+    },
+    {
+      "number": 6,
+      "title": "Renal Effects of Intensive Volume Removal in Heart Failure ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.118.005552",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by VS Rao \u00b7 2019 \u00b7 Cited by 79 \u2014 Admission kidney tubule biomarkers do not predict acute kidney injury or in-hospital adverse events in acute heart failure, Nephrology",
+      "score": 0.5041753
+    },
+    {
+      "number": 7,
+      "title": "KDOQI US Commentary on the 2012 KDIGO Clinical Practice Guideline for Acute Kidney Injury",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S027263861300471X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "KDIGO (Kidney Disease: Improving Global Outcomes) is an international initiative to develop and implement clinical practice guidelines for patients with kidney disease. In March 2012, KDIGO published its guideline for the evaluation and management of acute kidney injury (AKI).1 This guideline covers",
+      "score": 0.6786044
+    },
+    {
+      "number": 8,
+      "title": "Acute Kidney Injury - Surgical Critical Care and Emergency Surgery - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119756781.ch17",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "## Acute Kidney Injury. This chapter contains clinical questions and answers for those involved in critical care and acute surgery, focusing on the unique problems and complications of acute kidney injury. Diagnostic criteria for acute kidney injury. Acute kidney injury 2016: diagnosis and diagnosti",
+      "score": 0.6747586
+    },
+    {
+      "number": 9,
+      "title": "Acute Kidney Injury in Adults: An Underdiagnosed Condition",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1555415517306505",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(2016) \n   S. Gilbert _et al._\n### National Kidney Foundation\u2019s Primer on Kidney Disease\n\n(2014) \n   National Institute of Diabetes and Digestive and Kidney Diseases. Kidney Disease statistics for the United States....\n   S. Dirkes\n### Acute kidney injury: not just acute renal failure anymore?\n\n### ",
+      "score": 0.4893821
+    },
+    {
+      "number": 10,
+      "title": "Defining Early Recovery of Acute Kidney Injury : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/fulltext/2020/09000/defining_early_recovery_of_acute_kidney_injury.22.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## References\n\n   ## 1\n\nKidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute kidney injury. Kidney Int Suppl 2: 1\u2013138, 2012 Cited HereGoogle Scholar \n   ## 2\n\nChawla LS, Eggers PW, Star RA, Kimmel PL: Acute kidney injury and ch",
+      "score": 0.47329262
+    },
+    {
+      "number": 11,
+      "title": "Excretion Fraction - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/excretion-fraction",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The fractional excretion of sodium (FENa), defined as [(urine sodium \u00d7 plasma creatinine)/plasma sodium \u00d7x urine creatinine) \u00d7 100], has historically been used to distinguish between prerenal azotemia (functional AKI) and ATN (structural AKI). A FENa <1% indicates both increased sodium avidity and t",
+      "score": 0.6947383
+    },
+    {
+      "number": 12,
+      "title": "Hallmarks of acute kidney injury: molecular endotypes, ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352396426003208",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Fractional excretion of sodium (FENa) helps differentiate prerenal (<1%) from intrinsic AKI (>2%), urea are useful tools in the evaluation of AKI:",
+      "score": 0.6894943
+    },
+    {
+      "number": 13,
+      "title": "Acute kidney injury: current concepts and new insights",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4729334",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Epidemiology\n\nIn the Kidney Disease Improving Global Outcome (KDIGO) clinical practice guidelines, AKI is defined as any of the following: increase in serum creatinine (sCr) by\u22650.3 mg/dl (\u226526.5 umol/l) within 48 hours; or an increase in serum creatinine to \u22651.5 times baseline, which is known or pres",
+      "score": 0.6654328
+    },
+    {
+      "number": 14,
+      "title": "Prerenal Kidney Failure - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560678",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Introduction\n\nPrerenal kidney failure, also known as acute renal failure (ARF), or acute kidney injury (AKI), is an extensively researched concept that has undergone numerous revisions in the diagnosis over the last decade. There are at least 30 biochemical definitions that have existed for AKI. ",
+      "score": 0.6601948
+    },
+    {
+      "number": 15,
+      "title": "Reading between the (guide)lines\u2014the KDIGO practice guideline on acute kidney injury in the individual patient",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3877708",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "PMC Copyright notice\n\nPMCID: PMC3877708 PMID: 24067436\n\n##  are designed to assist health-care providers around the world in managing patients with AKI. Clinical guidelines are intended to help the clinician make an informed decision based on review of the currently available evidence. Due to the ge",
+      "score": 0.6279746
+    },
+    {
+      "number": 16,
+      "title": "Acute kidney injury\u2014an overview of diagnostic methods and clinical management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5466115",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Prerenal AKI\n\nPrerenal AKI occurs because plasma flow and intraglomerular pressure are inadequate to maintain filtration capacity. The most common cause is hypovolemia, followed by a decreased cardiac output or impaired autoregulation, which may be induced by NSAIDs. Prerenal AKI is usually reve",
+      "score": 0.6041426
+    },
+    {
+      "number": 17,
+      "title": "[PDF] CLINICAL STUDY PROTOCOL - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/33/NCT07688733/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "to improve outcomes in acute kidney injury. Crit Care 11:R31 3. Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group (2012) KDIGO clinical practice guideline for acute kidney injury. Kidney Int 2:1\u2013138 4. Goyal, A., Daneshpajouhnejad, P., Hashmi, M. F., & Bashir, K. (2021",
+      "score": 0.595987
+    },
+    {
+      "number": 18,
+      "title": "Treatment of Acute Kidney Injury: A Review of Current ... - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11084889",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### 2.2. How Can We Achieve Blood Pressure Targets?\n\nUnderstanding how to raise blood pressure and achieve MAP targets is crucial in AKI management. Mainly, we employ fluids and vasopressors. Guidelines such as the KDIGO Clinical Practice Guideline for Acute Kidney Injury and Surviving Sepsis Campai",
+      "score": 0.5928793
+    },
+    {
+      "number": 19,
+      "title": "Overview | Acute kidney injury: prevention, detection and management | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng148",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Acute kidney injury: prevention, detection and management\n\n## Overview\n\nThis guideline covers preventing, detecting and managing acute kidney injury in children, young people and adults. It aims to improve assessment and detection by non-specialists, and specifies when people should",
+      "score": 0.51325434
+    },
+    {
+      "number": 20,
+      "title": "Acute Kidney Injury - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441896",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The prerenal form of AKI is due to any cause of reduced blood flow to the kidney. This may be part of systemic hypoperfusion resulting from hypovolemia or due to selective hypoperfusion of the kidneys, such as resulting from renal artery stenosis or aortic dissection. However, tubular and glomerular",
+      "score": 0.49260366
+    },
+    {
+      "number": 21,
+      "title": "Why are patients with cirrhosis susceptible to hepatorenal syndrome (HRS)? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-are-patients-cirrhosis-susceptible-hepatorenal",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "There has been a growing interest in novel kidney injury biomarkers that have the potential to differentiate between ATN and other causes of AKI in cirrhosis. Urinary neutrophil gelatinase-associated lipocalin (NGAL) has demonstrated great performance, and cut offs for NGAL have been proposed to ass",
+      "score": 0.68090034
+    },
+    {
+      "number": 22,
+      "title": "Acute cardiorenal syndrome: Mechanisms and clinical implications | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/3/231",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Biomarkers of cell-cycle arrest such as urine insulinlike growth factor-binding protein 7 and tissue inhibitor of metalloproteinase 2 have recently been shown to identify patients with acute heart failure at risk of developing acute cardiorenal syndrome.20\n\n### Acute cardiorenal syndrome vs renal in",
+      "score": 0.5243709
+    },
+    {
+      "number": 23,
+      "title": "Some biomarkers of acute kidney injury are increased in ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0085253815552496",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Nejat \u00b7 2012 \u00b7 Cited by 250 \u2014 Pre-renal AKI was identified in 61 patients as acute injury with recovery within 48 h and a fractional sodium excretion <1%.",
+      "score": 0.6737291
+    },
+    {
+      "number": 24,
+      "title": "Prerenal acute kidney injury diagnosed by urinary indices ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S221425092600096X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Early markers like low FeNa and high urine osmolality help distinguish prerenal AKI. Early detection using urine sodium, urine osmolality, and fractional",
+      "score": 0.6543875
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Acute kidney injury - Diagnosis recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/83/diagnosis-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "High urine osmolality (>500 mOsm/kg) suggests pre-kidney AKI with preservation of tubule function (assuming no recent administration of iodinated contrast).(#referencePop1)Kidney disease: improving global outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute ki",
+      "score": 0.6546525
+    },
+    {
+      "number": 2,
+      "title": "Acute kidney injury - Diagnosis recommendations | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/83/diagnosis-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Urine volume <0.5 mL/kg/hour for 6 hours.\n\nAKI should then be staged according to severity criteria using KDIGO, RIFLE, or AKIN classifications.(#referencePop1)Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute kidney injury.",
+      "score": 0.57894874
+    },
+    {
+      "number": 3,
+      "title": "Cardiorenal Syndrome",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.07.051",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 1. Protein Biomarkers for the Early Detection of Acute Kidney Injury\n\n| Biomarker | Associated Injury |\n --- |\n| Cystatin C | Proximal tubule injury |\n| KIM-1 | Ischemia and nephrotoxins |\n| NGAL (lipocalin) | Ischemia and nephrotoxins |\n| NHE3 | Ischemia, pre-renal, post-renal",
+      "score": 0.6643884
+    },
+    {
+      "number": 4,
+      "title": "Cardiac and Vascular Surgery\u2013Associated Acute Kidney ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/JAHA.118.008834?url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org&rfr_dat=cr_pub%3Dpubmed",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Urinary TIMP\u20102 and IGFBP7 as early biomarkers of acute kidney injury and renal recovery following cardiac surgery. ... Hepatorenal syndrome, MELD",
+      "score": 0.6391287
+    },
+    {
+      "number": 5,
+      "title": "Cardiorenal Syndrome Revisited | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.117.028814",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Several biomarkers of renal injury are being evaluated for their utility to detect kidney injury and to differentiate it from functional",
+      "score": 0.5082762
+    },
+    {
+      "number": 6,
+      "title": "Renal Effects of Intensive Volume Removal in Heart Failure ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.118.005552",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by VS Rao \u00b7 2019 \u00b7 Cited by 79 \u2014 Admission kidney tubule biomarkers do not predict acute kidney injury or in-hospital adverse events in acute heart failure, Nephrology",
+      "score": 0.5041753
+    },
+    {
+      "number": 7,
+      "title": "KDOQI US Commentary on the 2012 KDIGO Clinical Practice Guideline for Acute Kidney Injury",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S027263861300471X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "KDIGO (Kidney Disease: Improving Global Outcomes) is an international initiative to develop and implement clinical practice guidelines for patients with kidney disease. In March 2012, KDIGO published its guideline for the evaluation and management of acute kidney injury (AKI).1 This guideline covers",
+      "score": 0.6786044
+    },
+    {
+      "number": 8,
+      "title": "Acute Kidney Injury - Surgical Critical Care and Emergency Surgery - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119756781.ch17",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "## Acute Kidney Injury. This chapter contains clinical questions and answers for those involved in critical care and acute surgery, focusing on the unique problems and complications of acute kidney injury. Diagnostic criteria for acute kidney injury. Acute kidney injury 2016: diagnosis and diagnosti",
+      "score": 0.6747586
+    },
+    {
+      "number": 9,
+      "title": "Acute Kidney Injury in Adults: An Underdiagnosed Condition",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1555415517306505",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(2016) \n   S. Gilbert _et al._\n### National Kidney Foundation\u2019s Primer on Kidney Disease\n\n(2014) \n   National Institute of Diabetes and Digestive and Kidney Diseases. Kidney Disease statistics for the United States....\n   S. Dirkes\n### Acute kidney injury: not just acute renal failure anymore?\n\n### ",
+      "score": 0.4893821
+    },
+    {
+      "number": 10,
+      "title": "Defining Early Recovery of Acute Kidney Injury : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/fulltext/2020/09000/defining_early_recovery_of_acute_kidney_injury.22.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## References\n\n   ## 1\n\nKidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group. KDIGO clinical practice guideline for acute kidney injury. Kidney Int Suppl 2: 1\u2013138, 2012 Cited HereGoogle Scholar \n   ## 2\n\nChawla LS, Eggers PW, Star RA, Kimmel PL: Acute kidney injury and ch",
+      "score": 0.47329262
+    },
+    {
+      "number": 11,
+      "title": "Excretion Fraction - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/excretion-fraction",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The fractional excretion of sodium (FENa), defined as [(urine sodium \u00d7 plasma creatinine)/plasma sodium \u00d7x urine creatinine) \u00d7 100], has historically been used to distinguish between prerenal azotemia (functional AKI) and ATN (structural AKI). A FENa <1% indicates both increased sodium avidity and t",
+      "score": 0.6947383
+    },
+    {
+      "number": 12,
+      "title": "Hallmarks of acute kidney injury: molecular endotypes, ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352396426003208",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Fractional excretion of sodium (FENa) helps differentiate prerenal (<1%) from intrinsic AKI (>2%), urea are useful tools in the evaluation of AKI:",
+      "score": 0.6894943
+    },
+    {
+      "number": 13,
+      "title": "Acute kidney injury: current concepts and new insights",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4729334",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Epidemiology\n\nIn the Kidney Disease Improving Global Outcome (KDIGO) clinical practice guidelines, AKI is defined as any of the following: increase in serum creatinine (sCr) by\u22650.3 mg/dl (\u226526.5 umol/l) within 48 hours; or an increase in serum creatinine to \u22651.5 times baseline, which is known or pres",
+      "score": 0.6654328
+    },
+    {
+      "number": 14,
+      "title": "Prerenal Kidney Failure - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560678",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Introduction\n\nPrerenal kidney failure, also known as acute renal failure (ARF), or acute kidney injury (AKI), is an extensively researched concept that has undergone numerous revisions in the diagnosis over the last decade. There are at least 30 biochemical definitions that have existed for AKI. ",
+      "score": 0.6601948
+    },
+    {
+      "number": 15,
+      "title": "Reading between the (guide)lines\u2014the KDIGO practice guideline on acute kidney injury in the individual patient",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3877708",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "PMC Copyright notice\n\nPMCID: PMC3877708 PMID: 24067436\n\n##  are designed to assist health-care providers around the world in managing patients with AKI. Clinical guidelines are intended to help the clinician make an informed decision based on review of the currently available evidence. Due to the ge",
+      "score": 0.6279746
+    },
+    {
+      "number": 16,
+      "title": "Acute kidney injury\u2014an overview of diagnostic methods and clinical management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5466115",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Prerenal AKI\n\nPrerenal AKI occurs because plasma flow and intraglomerular pressure are inadequate to maintain filtration capacity. The most common cause is hypovolemia, followed by a decreased cardiac output or impaired autoregulation, which may be induced by NSAIDs. Prerenal AKI is usually reve",
+      "score": 0.6041426
+    },
+    {
+      "number": 17,
+      "title": "[PDF] CLINICAL STUDY PROTOCOL - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/33/NCT07688733/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "to improve outcomes in acute kidney injury. Crit Care 11:R31 3. Kidney Disease: Improving Global Outcomes (KDIGO) Acute Kidney Injury Work Group (2012) KDIGO clinical practice guideline for acute kidney injury. Kidney Int 2:1\u2013138 4. Goyal, A., Daneshpajouhnejad, P., Hashmi, M. F., & Bashir, K. (2021",
+      "score": 0.595987
+    },
+    {
+      "number": 18,
+      "title": "Treatment of Acute Kidney Injury: A Review of Current ... - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11084889",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### 2.2. How Can We Achieve Blood Pressure Targets?\n\nUnderstanding how to raise blood pressure and achieve MAP targets is crucial in AKI management. Mainly, we employ fluids and vasopressors. Guidelines such as the KDIGO Clinical Practice Guideline for Acute Kidney Injury and Surviving Sepsis Campai",
+      "score": 0.5928793
+    },
+    {
+      "number": 19,
+      "title": "Overview | Acute kidney injury: prevention, detection and management | Guidance | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng148",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "You are here:\n\n# Acute kidney injury: prevention, detection and management\n\n## Overview\n\nThis guideline covers preventing, detecting and managing acute kidney injury in children, young people and adults. It aims to improve assessment and detection by non-specialists, and specifies when people should",
+      "score": 0.51325434
+    },
+    {
+      "number": 20,
+      "title": "Acute Kidney Injury - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441896",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The prerenal form of AKI is due to any cause of reduced blood flow to the kidney. This may be part of systemic hypoperfusion resulting from hypovolemia or due to selective hypoperfusion of the kidneys, such as resulting from renal artery stenosis or aortic dissection. However, tubular and glomerular",
+      "score": 0.49260366
+    },
+    {
+      "number": 21,
+      "title": "Why are patients with cirrhosis susceptible to hepatorenal syndrome (HRS)? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-are-patients-cirrhosis-susceptible-hepatorenal",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "There has been a growing interest in novel kidney injury biomarkers that have the potential to differentiate between ATN and other causes of AKI in cirrhosis. Urinary neutrophil gelatinase-associated lipocalin (NGAL) has demonstrated great performance, and cut offs for NGAL have been proposed to ass",
+      "score": 0.68090034
+    },
+    {
+      "number": 22,
+      "title": "Acute cardiorenal syndrome: Mechanisms and clinical implications | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/3/231",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Biomarkers of cell-cycle arrest such as urine insulinlike growth factor-binding protein 7 and tissue inhibitor of metalloproteinase 2 have recently been shown to identify patients with acute heart failure at risk of developing acute cardiorenal syndrome.20\n\n### Acute cardiorenal syndrome vs renal in",
+      "score": 0.5243709
+    },
+    {
+      "number": 23,
+      "title": "Some biomarkers of acute kidney injury are increased in ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0085253815552496",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Nejat \u00b7 2012 \u00b7 Cited by 250 \u2014 Pre-renal AKI was identified in 61 patients as acute injury with recovery within 48 h and a fractional sodium excretion <1%.",
+      "score": 0.6737291
+    },
+    {
+      "number": 24,
+      "title": "Prerenal acute kidney injury diagnosed by urinary indices ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S221425092600096X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Early markers like low FeNa and high urine osmolality help distinguish prerenal AKI. Early detection using urine sodium, urine osmolality, and fractional",
+      "score": 0.6543875
+    }
+  ],
+  "publishedAt": "2026-08-24T16:53:11.006012+00:00",
+  "updatedAt": "2026-08-24T16:53:11.006012+00:00",
+  "readingMinutes": 7,
+  "slug": "prerenal-kidney-failure"
+}

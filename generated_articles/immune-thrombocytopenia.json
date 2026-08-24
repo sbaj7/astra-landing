@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "Immune Thrombocytopenia",
+  "summary": "Diagnose ITP only after confirming true isolated thrombocytopenia and excluding urgent thrombotic, marrow, infectious, drug-related, and pregnancy-specific causes. Management is driven by bleeding, platelet trajectory, treatment requirements, comorbidity, and durability goals rather than platelet count alone.",
+  "seoDescription": "Point-of-care approach to immune thrombocytopenia: emergency assessment, diagnostic exclusion, corticosteroids, IVIG, and second-line treatment selection.",
+  "clinicalQuestion": "How should physicians confirm ITP, triage bleeding risk, and select initial and subsequent therapy?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "immune thrombocytopenia",
+    "ITP",
+    "isolated thrombocytopenia",
+    "ITP treatment",
+    "romiplostim",
+    "IVIG",
+    "corticosteroids"
+  ],
+  "keyTakeaways": [
+    "ITP is a diagnosis of exclusion defined by platelet count below 100 \u00d7 10^9/L with otherwise isolated thrombocytopenia; confirm the result and review a peripheral smear before attributing thrombocytopenia to ITP. [3][12][16][20][23]",
+    "Life-threatening bleeding warrants immediate combination treatment with corticosteroids, IVIG, and platelet transfusion irrespective of the platelet count. [3]",
+    "In adults without major bleeding, treatment decisions should incorporate bleeding, platelet trend, antiplatelet or anticoagulant exposure, trauma or procedure needs, and comorbid hemostatic defects; bleeding risk rises particularly below 20 \u00d7 10^9/L. [8][16][19]",
+    "Use a short corticosteroid course for newly diagnosed adult ITP requiring treatment; prednisone 1 mg/kg daily, maximum 80 mg, for 2 weeks with discontinuation by 6 to 8 weeks, or dexamethasone 40 mg daily for 4 days are cited regimens. [8][24]",
+    "Persistent or chronic disease after first-line therapy should trigger reassessment for a misdiagnosis or secondary cause and a shared choice among thrombopoietin-receptor agonists, rituximab, fostamatinib, or splenectomy. [12][22][24]"
+  ],
+  "sections": [
+    {
+      "id": "triage-bleeding-and-urgent-alternatives",
+      "eyebrow": "Immediate decisions",
+      "heading": "Triage bleeding and exclude thrombocytopenic emergencies",
+      "intro": "Treat active critical bleeding while the diagnostic evaluation proceeds.",
+      "paragraphs": [
+        "For intracranial, gastrointestinal, hemodynamically significant, or otherwise life-threatening bleeding in suspected ITP, give corticosteroids, IVIG, and platelet transfusion as combination therapy regardless of the presenting platelet count. [3] Obtain a CBC with differential and manual peripheral smear immediately; ITP should show isolated thrombocytopenia, whereas anemia, leukopenia, abnormal leukocytes, schistocytes, or dysplastic cells redirect the evaluation. [12][21][23]",
+        "Do not label a patient as having ITP until pseudothrombocytopenia has been excluded. Repeat the CBC to confirm thrombocytopenia and inspect the smear for platelet clumping or rosette formation. [12][20][22] Schistocytes should prompt evaluation for thrombotic microangiopathy rather than empiric ITP treatment; pregnancy-associated thrombocytopenia requires urgent consideration of hypertensive disorders of pregnancy and thrombotic thrombocytopenic purpura. [14][20][23]",
+        "Bleeding risk is not determined by a single platelet threshold, but risk increases below 20 \u00d7 10^9/L. [8] In a patient with platelets above 50 \u00d7 10^9/L and no bleeding, observation is generally appropriate unless an invasive intervention or concomitant antiplatelet therapy necessitates a higher count. [19] A platelet count near or above 30 \u00d7 10^9/L may be acceptable in selected adults without bleeding or additional hemostatic risks, while treatment is rarely indicated above that level in the absence of platelet dysfunction, another hemostatic defect, trauma, or planned surgery. [15][16]"
+      ],
+      "bullets": [
+        "Escalate beyond an ITP pathway when smear review shows schistocytes, blasts, immature leukocytes, dysplasia, marked giant platelets, or platelet clumping. [12][21][22][23]",
+        "Treat a bleeding phenotype and procedural requirement, not the platelet number in isolation. [8][16][19]",
+        "In pregnancy, first distinguish gestational thrombocytopenia from hypertensive disorders, thrombotic thrombocytopenic purpura, and other pregnancy-related causes before diagnosing ITP. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Findings that should interrupt a presumptive ITP diagnosis and change the next diagnostic action. [12][14][20][21][22][23]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Platelet clumping or rosette formation on smear",
+            "Pseudothrombocytopenia is possible. [12][22]",
+            "Repeat CBC and verify a true platelet count before treatment. [20]"
+          ],
+          [
+            "Schistocytes",
+            "Consider thrombotic microangiopathy rather than isolated immune-mediated platelet destruction. [12][20][23]",
+            "Urgently evaluate for thrombotic thrombocytopenic purpura or hemolytic uremic syndrome. [20]"
+          ],
+          [
+            "Blasts, immature leukocytes, dysplastic cells, or unexplained cytopenias",
+            "Marrow disease, including myelodysplastic syndrome or hematologic malignancy, becomes more likely. [12][21][22]",
+            "Obtain hematology assessment and consider bone marrow examination. [21][22]"
+          ],
+          [
+            "Marked giant platelets",
+            "Consider inherited macrothrombocytopenia or marrow-failure syndromes. [12][21][22]",
+            "Review personal and family history and pursue directed hematologic evaluation. [12][22]"
+          ],
+          [
+            "Pregnancy with thrombocytopenia",
+            "ITP is only one diagnostic branch; hypertensive disorders and thrombotic thrombocytopenic purpura require exclusion. [14]",
+            "Apply a pregnancy-specific thrombocytopenia evaluation before assigning ITP. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-diagnosis-and-identify-secondary-itp",
+      "eyebrow": "Diagnostic workup",
+      "heading": "Confirm isolated thrombocytopenia and search for secondary ITP",
+      "intro": "No platelet autoantibody assay establishes the diagnosis.",
+      "paragraphs": [
+        "Use the clinical pattern of platelet count below 100 \u00d7 10^9/L, history, physical examination, CBC, and peripheral smear to establish a presumptive diagnosis after alternative causes have been excluded. [3][12][16][22][23] Typical ITP has reduced platelet number with normal or increased platelet size and no schistocytes or other major smear abnormalities. [22][23]",
+        "Obtain HIV and hepatitis C testing in the initial evaluation of isolated thrombocytopenia. [19][20][22] HIV, hepatitis B and C serologies, antinuclear antibody testing, and serum protein electrophoresis can identify clinical settings associated with secondary ITP; additional tests should be driven by the history, examination, and laboratory pattern. [19] A recent infection or vaccination may coincide with platelet decline, but an ITP attribution requires exclusion of other causes of thrombocytopenia. [15]",
+        "Do not routinely order platelet-antigen antibody testing: limited sensitivity and specificity make it unsuitable as a routine diagnostic test, and antiplatelet antibodies are detected in only about 50% to 60% of patients with ITP. [19][22] Failure to respond to first-line therapy should reopen the diagnosis and prompt a targeted review for autoimmune disease, infection, iatrogenic thrombocytopenia, marrow disease, and inherited thrombocytopenia rather than automatic sequential ITP therapy. [12][22]",
+        "Bone marrow examination is not a default test for typical isolated thrombocytopenia, but pursue it when anemia is unexplained by bleeding or iron deficiency, leukocyte count is below 3,000/\u00b5L or at least 10,000/\u00b5L, neutrophils are reduced, lymphocytes are elevated, or the smear shows immature or morphologically abnormal leukocytes. [21] Older adults and patients with apparent refractory ITP merit particular attention to myelodysplastic syndrome with isolated thrombocytopenia. [22]"
+      ],
+      "bullets": [
+        "Document medication exposures, including heparin and other drugs temporally associated with thrombocytopenia, before diagnosing primary ITP. [16][20]",
+        "Use liver-function tests, lactate dehydrogenase, and inflammatory markers when the clinical pattern suggests systemic disease; liver dysfunction, elevated lactate dehydrogenase, and inflammatory findings are atypical enough to require focused reassessment. [21]",
+        "Classify as secondary ITP when an associated disorder or drug exposure is identified, because treating the underlying condition may alter the platelet strategy. [3][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Focused initial evaluation for suspected adult ITP. [12][19][20][21][22][23]",
+        "columns": [
+          "Test or assessment",
+          "Decision use",
+          "Abnormal result that redirects care"
+        ],
+        "rows": [
+          [
+            "Repeat CBC with differential",
+            "Confirms thrombocytopenia and identifies anemia or leukocyte abnormalities. [20][23]",
+            "Non-isolated cytopenias require evaluation beyond ITP. [21][22]"
+          ],
+          [
+            "Manual peripheral smear",
+            "Excludes clumping and detects morphologic alternatives. [12][23]",
+            "Schistocytes, blasts, dysplasia, or giant platelets redirect toward thrombotic microangiopathy, malignancy or MDS, or inherited thrombocytopenia. [12][21][22]"
+          ],
+          [
+            "HIV and hepatitis C serologies",
+            "Recommended testing in isolated thrombocytopenia. [19][20][22]",
+            "Positive results support a secondary cause requiring condition-directed management. [16][19]"
+          ],
+          [
+            "Hepatitis B serology, ANA, serum protein electrophoresis",
+            "Use to identify selected secondary ITP contexts. [19]",
+            "Abnormal findings should prompt disease-specific assessment rather than assuming primary ITP. [19]"
+          ],
+          [
+            "Bone marrow examination",
+            "Reserve for atypical counts or smear findings and diagnostic uncertainty. [21][22]",
+            "Marrow abnormalities support an alternative diagnosis such as MDS or marrow failure. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-treatment",
+      "eyebrow": "Newly diagnosed ITP",
+      "heading": "Select observation, corticosteroids, IVIG, or rescue therapy",
+      "intro": "Choose treatment intensity by bleeding, urgency of platelet rise, and treatment toxicity.",
+      "paragraphs": [
+        "For adults requiring first-line treatment, use a short corticosteroid course rather than prolonged exposure. [8][24] A cited prednisone regimen is 1 mg/kg daily, maximum 80 mg, for 2 weeks; if platelet response exceeds 50 \u00d7 10^9/L, taper with a goal of stopping by 6 weeks and no later than 8 weeks. [8] Dexamethasone 40 mg daily for 4 days, repeated up to three times, is an alternative regimen. [8]",
+        "Use IVIG when corticosteroids are contraindicated, when a more rapid platelet increase is needed, or as part of combination treatment for life-threatening bleeding. [3][24] Anti-D immunoglobulin is also identified as an alternative first-line option in patients who cannot take or do not respond to corticosteroids. [24] Define a platelet response as at least 30 \u00d7 10^9/L with at least a twofold increase from baseline and absence of bleeding; a platelet count of at least 100 \u00d7 10^9/L is typically considered a complete response. [24]",
+        "In children with no or mild bleeding, observe regardless of platelet count, with bleeding and platelet monitoring by a pediatric hematologist; approximately 50% to 70% recover within 3 to 6 months without intervention. [17] For pediatric non-life-threatening mucosal bleeding or impaired health-related quality of life, prednisone 2 to 4 mg/kg/day, maximum 120 mg/day, for 5 to 7 days is a cited regimen; guidance summarized from U.S. recommendations favors corticosteroid courses no longer than 7 days. [2][17]"
+      ],
+      "bullets": [
+        "Before prescribing corticosteroids, weigh diabetes, psychiatric vulnerability, infection risk, and anticipated need for repeated therapy; older adults may be particularly susceptible to treatment-related infection. [19]",
+        "Use IVIG with corticosteroids and platelet transfusion for life-threatening bleeding; do not delay platelet transfusion while waiting for immune-directed treatment to act. [3]",
+        "For pediatric ITP, bleeding and health-related quality of life\u2014not platelet count alone\u2014determine whether treatment is needed. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial management choices by bleeding severity and clinical urgency. [3][8][17][24]",
+        "columns": [
+          "Clinical scenario",
+          "Management",
+          "Key decision point"
+        ],
+        "rows": [
+          [
+            "Life-threatening bleeding",
+            "Corticosteroids plus IVIG plus platelet transfusion. [3]",
+            "Treat immediately regardless of platelet count. [3]"
+          ],
+          [
+            "Adult requiring outpatient first-line treatment",
+            "Prednisone 1 mg/kg/day, maximum 80 mg, for 2 weeks with taper and discontinuation by 6 to 8 weeks; or dexamethasone 40 mg/day for 4 days. [8]",
+            "Avoid prolonged corticosteroid exposure. [24]"
+          ],
+          [
+            "Need for rapid rise or corticosteroid contraindication",
+            "IVIG; anti-D immunoglobulin is another identified first-line alternative. [24]",
+            "Use when clinical urgency or corticosteroid intolerance changes the risk-benefit balance. [24]"
+          ],
+          [
+            "Child with no or mild bleeding",
+            "Observation with platelet and bleeding monitoring. [17]",
+            "Observation is recommended regardless of platelet count. [17]"
+          ],
+          [
+            "Child with non-life-threatening mucosal bleeding or impaired quality of life",
+            "Prednisone 2 to 4 mg/kg/day, maximum 120 mg/day, for 5 to 7 days. [17]",
+            "Use a short course rather than extended corticosteroids. [2][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "persistent-chronic-and-refractory-itp",
+      "eyebrow": "Subsequent therapy",
+      "heading": "Reassess diagnosis before selecting second-line treatment",
+      "intro": "Persistent thrombocytopenia after steroids is both a treatment and diagnostic decision point.",
+      "paragraphs": [
+        "For persistent or chronic ITP after failure of first-line therapy, reassess the smear, secondary-cause testing, medication history, and need for bone marrow examination before assigning refractory disease. [12][21][22] Refractoriness particularly raises concern for misclassified myelodysplastic syndrome, inherited thrombocytopenia, autoimmune disease, infection, or iatrogenic thrombocytopenia. [12][22]",
+        "Second-line options used in adult chronic ITP include thrombopoietin-receptor agonists\u2014eltrombopag, romiplostim, and avatrombopag\u2014rituximab, fostamatinib, and splenectomy. [24] Treatment selection should prioritize the required platelet target, desire to avoid surgery or immunosuppression, prior response, infection risk, thrombotic risk, and patient preference because durable remission, treatment burden, and adverse-effect tradeoffs differ among approaches. [7][9][19][24]",
+        "Romiplostim is FDA-indicated for adults with ITP who have had an insufficient response to corticosteroids, immunoglobulins, or splenectomy. [1] In placebo-controlled adult trials, overall platelet response occurred in 88% of nonsplenectomized and 79% of splenectomized romiplostim-treated patients, compared with 14% and 0% with placebo; durable responses occurred in 61% and 38%, respectively. [1] Its labeling includes warnings regarding thrombotic and thromboembolic complications and loss of response. [1]",
+        "For children with non-life-threatening mucosal bleeding or impaired quality of life that is unresponsive to first-line therapy, or with chronic ITP, consider a thrombopoietin-receptor agonist such as eltrombopag or romiplostim; if no response occurs, rituximab is the next cited therapy. [17] In older adults, the infection consequences of corticosteroids, immunosuppressants, rituximab, and splenectomy should carry extra weight in treatment selection. [19]"
+      ],
+      "bullets": [
+        "Do not treat a low count solely to normalize it; the clinical goals are bleeding control and prevention of severe bleeding. [8]",
+        "Review thrombotic risk before and during thrombopoietin-receptor agonist treatment because romiplostim labeling warns of thrombotic and thromboembolic complications. [1]",
+        "Reconsider splenectomy only after discussing irreversible procedural risk and increased infection susceptibility; infection risk in ITP is increased with immunosuppression and splenectomy. [19]"
+      ],
+      "subsections": [
+        {
+          "heading": "Monitoring response and failure",
+          "paragraphs": [
+            "Monitor platelet count and bleeding symptoms after each treatment change; response requires a platelet count of at least 30 \u00d7 10^9/L, at least a twofold increase from baseline, and no bleeding, whereas complete response is typically at least 100 \u00d7 10^9/L. [24] A declining count after an initial response should trigger review of adherence, concurrent infection or medication exposure, treatment toxicity, and the underlying diagnosis. [12][15][22]"
+          ],
+          "bullets": [
+            "Monitor for infection during corticosteroid, rituximab, other immunosuppressive therapy, and after splenectomy, particularly in older adults. [19]",
+            "With romiplostim, monitor for thrombotic or thromboembolic complications and loss of response. [1]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Second-line treatment framework for persistent or chronic ITP. [1][17][19][24]",
+        "columns": [
+          "Option",
+          "When it fits",
+          "Important tradeoff or monitoring"
+        ],
+        "rows": [
+          [
+            "Eltrombopag, romiplostim, or avatrombopag",
+            "Options for adult chronic ITP after first-line failure; eltrombopag and romiplostim are options for children with persistent symptoms or chronic ITP after first-line therapy. [17][24]",
+            "Monitor platelet response; romiplostim labeling warns of thrombotic or thromboembolic complications and loss of response. [1]"
+          ],
+          [
+            "Rituximab",
+            "An adult subsequent-treatment option and the cited next option for children not responding to a thrombopoietin-receptor agonist. [17][24]",
+            "Infection risk is important, especially in older adults. [19]"
+          ],
+          [
+            "Fostamatinib",
+            "An adult chronic ITP option after first-line therapies fail. [24]",
+            "Select according to individual treatment goals and prior therapy. [24]"
+          ],
+          [
+            "Splenectomy",
+            "An adult chronic ITP option after first-line failure. [24]",
+            "Balance procedural irreversibility with increased infection risk. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pregnancy-and-special-populations",
+      "eyebrow": "Special situations",
+      "heading": "Adapt the ITP pathway in pregnancy and older adults",
+      "intro": "Pregnancy and age change both the differential diagnosis and treatment harms.",
+      "paragraphs": [
+        "In pregnancy, ITP may present for the first time or relapse; first rule out urgent pregnancy-related thrombocytopenic conditions before treating presumed ITP. [14] Treatment may be required for severe thrombocytopenia, bleeding, or preparation for delivery or neuraxial analgesia. [14] Prednisone or methylprednisolone and IVIG are first-line options described in pregnancy, with IVIG having a favorable pregnancy safety profile. [14]",
+        "For pregnancy-associated ITP requiring additional therapy, thrombopoietin-receptor agonists, rituximab, and selected immunosuppressants such as azathioprine have been used as second-line options, but selection should be individualized around maternal bleeding risk, delivery planning, and fetal considerations. [14] Avoid assuming that a platelet decline during pregnancy is ITP without evaluating for hypertensive disorders and thrombotic thrombocytopenic purpura. [14]",
+        "In older adults, use the same diagnostic fundamentals but lower the threshold for revisiting marrow disease and secondary causes when the presentation is atypical or treatment response is inadequate. [19][22] Bleeding is unusual above 50 \u00d7 10^9/L, supporting observation in the absence of a required higher platelet count for intervention; antiplatelet therapy may justify a higher platelet target, although the optimal target is uncertain. [19]"
+      ],
+      "bullets": [
+        "Coordinate delivery and neuraxial planning early when pregnancy-associated ITP requires platelet-directed therapy. [14]",
+        "In older adults, explicitly weigh infection risk from corticosteroids, immunosuppressive drugs, rituximab, and splenectomy before choosing subsequent therapy. [19]",
+        "When antiplatelet drugs are necessary, individualized platelet targets may exceed those used for uncomplicated ITP. [19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Situations in which standard ITP decision thresholds require modification. [14][19][22]",
+        "columns": [
+          "Situation",
+          "Diagnostic modification",
+          "Management modification"
+        ],
+        "rows": [
+          [
+            "Pregnancy",
+            "Exclude hypertensive disorders of pregnancy and thrombotic thrombocytopenic purpura before diagnosing ITP. [14]",
+            "Treat for severe thrombocytopenia, bleeding, or delivery and neuraxial needs; prednisone or methylprednisolone and IVIG are first-line options. [14]"
+          ],
+          [
+            "Older adult",
+            "Reconsider MDS and secondary causes when findings are atypical or disease appears refractory. [19][22]",
+            "Give additional weight to infection risks of corticosteroids, immunosuppression, rituximab, and splenectomy. [19]"
+          ],
+          [
+            "Antiplatelet therapy or invasive intervention",
+            "Assess the need for a platelet target above an observation threshold. [16][19]",
+            "A higher platelet count may be needed; the optimal target with antiplatelet therapy remains uncertain. [19]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "These highlights do not include all the information needed to use NPLATE safely and effectively.\n      \u00a0\n      See full prescribing information for NPLATE.\n      \n      \u00a0\n      \n      N\n      PLATE\n      \n         \u00ae\n      \n       (romiplostim)\n       for injection\n      , for subcutaneous \n      use\n      \n      Initial U.S. Approval: 2008",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=c45f9a58-37c1-4f76-8e36-97d38c577037&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | HIGHLIGHTS OF PRESCRIBING INFORMATION These highlights do not include all the information needed to use NPLATE safely and effectively. See full prescribing information for NPLATE.       NPLATE\u00ae (romiplostim) for injection, for subcutaneous use   Initial U.S. Approval: 2008  RECENT MAJOR CHANGES",
+      "score": 0.391802
+    },
+    {
+      "number": 2,
+      "title": "298\u2005Overview on the current management guidelines of immune thrombocytopenia in children | Archives of Disease in Childhood",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/106/Suppl_2/A126.1",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "Title: 298\u2005Overview on the current management guidelines of immune thrombocytopenia in children | Archives of Disease in Childhood\n* 298\u2005Overview on the current management guidelines of immune thrombocytopenia in children. 298\u2005Overview on the current management guidelines of immune thrombocytopenia ",
+      "score": 0.80442166
+    },
+    {
+      "number": 3,
+      "title": "Immune thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/zh-cn/138",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "# Immune thrombocytopenia. Immune thrombocytopenia (ITP) in children typically presents with a preceding viral illness and an abrupt onset. There is a female preponderance among adults, who may present with thrombocytopenia with or without bleeding. Complete blood count and peripheral blood smear sh",
+      "score": 0.72395444
+    },
+    {
+      "number": 4,
+      "title": "Rilzabrutinib, an Oral BTK Inhibitor, in Immune ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2110297",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by DJ Kuter \u00b7 2022 \u00b7 Cited by 188 \u2014 Rituximab as second-line treatment for adult immune thrombocytopenia (the RITP trial): a multicentre, randomised, double-blind, placebo",
+      "score": 0.7161595
+    },
+    {
+      "number": 5,
+      "title": "Ianalumab plus Eltrombopag in Immune Thrombocytopenia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2515168",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "In this phase 3, randomized, double-blind trial, we assigned, in a 1:1:1 ratio, adults with primary ITP and an insufficient response or a",
+      "score": 0.58976424
+    },
+    {
+      "number": 6,
+      "title": "A chronic refractory ITP case report: Heliyon",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)00669-2",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by G Auteri \u00b7 2023 \u00b7 Cited by 10 \u2014 In this case report, we describe the story of a woman with a multirefractory immune thrombocytopenia (steroids, splenectomy, rituximab, both",
+      "score": 0.39033696
+    },
+    {
+      "number": 7,
+      "title": "International consensus report on the investigation and management of primary immune thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0006497120493486",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: International consensus report on the investigation and management of primary immune thrombocytopenia - ScienceDirect\n## Blood. Volume 115, Issue 2, 14 January 2010, Pages 168-186. # REVIEW ARTICLE International consensus report on the investigation and management of primary immune thrombocyt",
+      "score": 0.8455478
+    },
+    {
+      "number": 8,
+      "title": "Current approaches for the diagnosis and management of immune thrombocytopenia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620522004125",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This narrative review focuses on the diagnosis and treatment of ITP in adults. The recommendations throughout this review are based mainly on two major international guidelines that were published in recent years and provide updated evidence and guidance on the treatment of adults with newly diagnos",
+      "score": 0.8184036
+    },
+    {
+      "number": 9,
+      "title": "Standardized Clinical Assessment and Management Plans (SCAMPs): Perspectives on a New Method to Understand Treatment Decisions and Outcomes in Immune Thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S003719631300036X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Standardized Clinical Assessment and Management Plans (SCAMPs): Perspectives on a New Method to Understand Treatment Decisions and Outcomes in Immune Thrombocytopenia. Modern evidence based guidelines in immune thrombocytopenia (ITP) are mostly based on expert opinion. Standardized clinical assess",
+      "score": 0.7797419
+    },
+    {
+      "number": 10,
+      "title": "The new era of primary immune thrombocytopenia management in adults: A narrative review of current and emerging treatments",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0268960X25000451",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "American Society of Hematology guidelines and the Revised International Consensus guidelines\u2014since these are globally recognized and widely used in clinical practice. Overall, our review highlights both traditional and innovative treatments for ITP, with promising new therapies in development that o",
+      "score": 0.7752821
+    },
+    {
+      "number": 11,
+      "title": "Primary Immune Thrombocytopenia",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781444323160.ch49",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by D Provan \u00b7 2010 \u00b7 Cited by 6 \u2014 Thrombocytopenia occurs fairly commonly in pregnancy, and a small proportion will be due to ITP. The bleeding risk in pregnancy affects both the",
+      "score": 0.35180137
+    },
+    {
+      "number": 12,
+      "title": "Primary immune thrombocytopenia: a \u2018diagnosis of... : Blood Coagulation & Fibrinolysis",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/bloodcoagulation/fulltext/2022/09000/primary_immune_thrombocytopenia__a__diagnosis_of.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The diagnosis of ITP continues to be presumptive and empirical. As there is no diagnostic test for ITP, the clinician is best served by a comprehensive physical examination, examination of the peripheral blood smear (for morphological abnormalities) and assess initial treatment response. When patien",
+      "score": 0.7036111
+    },
+    {
+      "number": 13,
+      "title": "Guidelines for Pediatric Immune Thrombocytopenia - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK603670",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The 2019 ASH guidelines focused on adults and children with ITP (newly diagnosed, persistent, and chronic ITP refractory to first-line treatment) and non\u2013life-threatening bleeding. Intended users were patients, clinicians, policy-makers, and other decision-makers.1\n\nThe 2019 updated international co",
+      "score": 0.8539252
+    },
+    {
+      "number": 14,
+      "title": "A practical approach to immune thrombocytopenia in pregnancy | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2025/1/503/556840/A-practical-approach-to-immune-thrombocytopenia-in",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "* Establishing the diagnosis of thrombocytopenia in pregnancy. * Gestational thrombocytopenia (or physiologic thrombocytopenia of pregnancy). # A practical approach to immune thrombocytopenia in pregnancy. Arnold; A practical approach to immune thrombocytopenia in pregnancy. Immune thrombocytopenia ",
+      "score": 0.8025714
+    },
+    {
+      "number": 15,
+      "title": "Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination | ASH Clinical News | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/ashclinicalnews/news/6974/Consensus-Guidelines-Outline-Treatment-of-ITP",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination | ASH Clinical News | American Society of Hematology\n# Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination *Free*. A group of experts from Spain recently released ",
+      "score": 0.7449724
+    },
+    {
+      "number": 16,
+      "title": "Immune Thrombocytopenia | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2010/1/377/278337/Immune-Thrombocytopenia",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Immune Thrombocytopenia | Hematology, ASH Education Program | American Society of Hematology\nImmune thrombocytopenia (ITP) is an autoimmune syndrome involving antibody- and cell-mediated destruction of platelets and suppression of platelet production that may predispose to bleeding.1 Recent r",
+      "score": 0.70214266
+    },
+    {
+      "number": 17,
+      "title": "Immune Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562282",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nInitial Management\n\nThe ASH 2019 ITP guidelines recommend adult and pediatric algorithms based on the need for treatment and inpatient management. The following variables must first be determined: [...] Second-Line Therapies\n\nThe ASH 2019 guidelines recommend that children",
+      "score": 0.6897452
+    },
+    {
+      "number": 18,
+      "title": "Study Details | NCT07297563 | Anti-CD38 Monoclonal Antibody Versus Rituximab in the Management of Primary Immune Thrombocytopenia (ITP) | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT07297563",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Age \u226518 years, male or female.\n   Before enrollment, the subjects have been clinically diagnosed with primary immune thrombocytopenia for no less than three months according to the American Society of Hematology guidelines 2011 Evidence-Based Practice Guideline (Neunert et al. 2011) or the Internati",
+      "score": 0.45188335
+    },
+    {
+      "number": 19,
+      "title": "Older Adults and Immune Thrombocytopenia - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9885884",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Patient history, physical examination, complete blood count and peripheral blood smear examination are the cornerstone of ITP diagnosis. In addition, some exams of interest to identify particular situations or secondary ITP include serologies for HIV, hepatitis C and B virus, antinuclear antibodies ",
+      "score": 0.7065353
+    },
+    {
+      "number": 20,
+      "title": "Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542208",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nAssessment of Isolated Thrombocytopenia\n\nEvaluation of patients with isolated thrombocytopenia begins with a complete blood count (CBC), peripheral blood smear, and testing for HIV and hepatitis C virus. A repeat CBC helps confirm thrombocytopenia and rule out laboratory error.\n\nAsses",
+      "score": 0.6897452
+    },
+    {
+      "number": 21,
+      "title": "Reference guide for the diagnosis of adult primary immune thrombocytopenia, 2023 edition",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10770234",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## \n\nFig. 1\nImage 15: Fig. 1\n\nOpen in a new tab\n\nFlowchart of ITP diagnosis Anemia due to bleeding and iron deficiency anemia should be excluded. Bone marrow examination is strongly recommneded in the event of any of the following: leukocyte count < 3000/\u03bcL or \u2265 10,000/\u03bcL, immature or morphological ",
+      "score": 0.6864757
+    },
+    {
+      "number": 22,
+      "title": "The Challenge for a Correct Diagnosis of Refractory Thrombocytopenia: ITP or MDS with Isolated Thrombocytopenia?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11048195",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "the complete blood count in a patient with ITP results in isolated thrombocytopenia, whereas the peripheral-blood smear shows reduced numbers of platelets\u2014normal or increased in size\u2014with no other abnormalities (e.g., schistocytes, dysplastic cells). The presence of giant or small platelets may indi",
+      "score": 0.6824261
+    },
+    {
+      "number": 23,
+      "title": "Assessment and Management of Immune Thrombocytopenia (ITP) in the Emergency Department: Current Perspectives",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8809484",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is characterized by a platelet count less than 100 \u00d7 10^9/L without anemia or leukopenia. Patients with ITP may be asymptomatic, or they may have mild bleeding like petechiae, purpura, or epistaxis. In rare cases, they may present to the emergency department (ED) with life-threatening bleeding a",
+      "score": 0.6643884
+    },
+    {
+      "number": 24,
+      "title": "Treatment of Adult Patients With Chronic Immune Thrombocytopenia After Failure of First-Line Therapies - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK595123",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "First-line therapy for newly diagnosed adult patients, according to both the American Society of Hematology 2019 Guidelines for Immune Thrombocytopenia8 and the Updated international consensus report on the investigation and management of primary immune thrombocytopenia,18 is a short course (approxi",
+      "score": 0.6580885
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "These highlights do not include all the information needed to use NPLATE safely and effectively.\n      \u00a0\n      See full prescribing information for NPLATE.\n      \n      \u00a0\n      \n      N\n      PLATE\n      \n         \u00ae\n      \n       (romiplostim)\n       for injection\n      , for subcutaneous \n      use\n      \n      Initial U.S. Approval: 2008",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=c45f9a58-37c1-4f76-8e36-97d38c577037&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "|  | HIGHLIGHTS OF PRESCRIBING INFORMATION These highlights do not include all the information needed to use NPLATE safely and effectively. See full prescribing information for NPLATE.       NPLATE\u00ae (romiplostim) for injection, for subcutaneous use   Initial U.S. Approval: 2008  RECENT MAJOR CHANGES",
+      "score": 0.391802
+    },
+    {
+      "number": 2,
+      "title": "298\u2005Overview on the current management guidelines of immune thrombocytopenia in children | Archives of Disease in Childhood",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/106/Suppl_2/A126.1",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "Title: 298\u2005Overview on the current management guidelines of immune thrombocytopenia in children | Archives of Disease in Childhood\n* 298\u2005Overview on the current management guidelines of immune thrombocytopenia in children. 298\u2005Overview on the current management guidelines of immune thrombocytopenia ",
+      "score": 0.80442166
+    },
+    {
+      "number": 3,
+      "title": "Immune thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/zh-cn/138",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "# Immune thrombocytopenia. Immune thrombocytopenia (ITP) in children typically presents with a preceding viral illness and an abrupt onset. There is a female preponderance among adults, who may present with thrombocytopenia with or without bleeding. Complete blood count and peripheral blood smear sh",
+      "score": 0.72395444
+    },
+    {
+      "number": 4,
+      "title": "Rilzabrutinib, an Oral BTK Inhibitor, in Immune ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2110297",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by DJ Kuter \u00b7 2022 \u00b7 Cited by 188 \u2014 Rituximab as second-line treatment for adult immune thrombocytopenia (the RITP trial): a multicentre, randomised, double-blind, placebo",
+      "score": 0.7161595
+    },
+    {
+      "number": 5,
+      "title": "Ianalumab plus Eltrombopag in Immune Thrombocytopenia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2515168",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "In this phase 3, randomized, double-blind trial, we assigned, in a 1:1:1 ratio, adults with primary ITP and an insufficient response or a",
+      "score": 0.58976424
+    },
+    {
+      "number": 6,
+      "title": "A chronic refractory ITP case report: Heliyon",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)00669-2",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "by G Auteri \u00b7 2023 \u00b7 Cited by 10 \u2014 In this case report, we describe the story of a woman with a multirefractory immune thrombocytopenia (steroids, splenectomy, rituximab, both",
+      "score": 0.39033696
+    },
+    {
+      "number": 7,
+      "title": "International consensus report on the investigation and management of primary immune thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0006497120493486",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: International consensus report on the investigation and management of primary immune thrombocytopenia - ScienceDirect\n## Blood. Volume 115, Issue 2, 14 January 2010, Pages 168-186. # REVIEW ARTICLE International consensus report on the investigation and management of primary immune thrombocyt",
+      "score": 0.8455478
+    },
+    {
+      "number": 8,
+      "title": "Current approaches for the diagnosis and management of immune thrombocytopenia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620522004125",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This narrative review focuses on the diagnosis and treatment of ITP in adults. The recommendations throughout this review are based mainly on two major international guidelines that were published in recent years and provide updated evidence and guidance on the treatment of adults with newly diagnos",
+      "score": 0.8184036
+    },
+    {
+      "number": 9,
+      "title": "Standardized Clinical Assessment and Management Plans (SCAMPs): Perspectives on a New Method to Understand Treatment Decisions and Outcomes in Immune Thrombocytopenia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S003719631300036X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Standardized Clinical Assessment and Management Plans (SCAMPs): Perspectives on a New Method to Understand Treatment Decisions and Outcomes in Immune Thrombocytopenia. Modern evidence based guidelines in immune thrombocytopenia (ITP) are mostly based on expert opinion. Standardized clinical assess",
+      "score": 0.7797419
+    },
+    {
+      "number": 10,
+      "title": "The new era of primary immune thrombocytopenia management in adults: A narrative review of current and emerging treatments",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0268960X25000451",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "American Society of Hematology guidelines and the Revised International Consensus guidelines\u2014since these are globally recognized and widely used in clinical practice. Overall, our review highlights both traditional and innovative treatments for ITP, with promising new therapies in development that o",
+      "score": 0.7752821
+    },
+    {
+      "number": 11,
+      "title": "Primary Immune Thrombocytopenia",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781444323160.ch49",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by D Provan \u00b7 2010 \u00b7 Cited by 6 \u2014 Thrombocytopenia occurs fairly commonly in pregnancy, and a small proportion will be due to ITP. The bleeding risk in pregnancy affects both the",
+      "score": 0.35180137
+    },
+    {
+      "number": 12,
+      "title": "Primary immune thrombocytopenia: a \u2018diagnosis of... : Blood Coagulation & Fibrinolysis",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/bloodcoagulation/fulltext/2022/09000/primary_immune_thrombocytopenia__a__diagnosis_of.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The diagnosis of ITP continues to be presumptive and empirical. As there is no diagnostic test for ITP, the clinician is best served by a comprehensive physical examination, examination of the peripheral blood smear (for morphological abnormalities) and assess initial treatment response. When patien",
+      "score": 0.7036111
+    },
+    {
+      "number": 13,
+      "title": "Guidelines for Pediatric Immune Thrombocytopenia - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK603670",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The 2019 ASH guidelines focused on adults and children with ITP (newly diagnosed, persistent, and chronic ITP refractory to first-line treatment) and non\u2013life-threatening bleeding. Intended users were patients, clinicians, policy-makers, and other decision-makers.1\n\nThe 2019 updated international co",
+      "score": 0.8539252
+    },
+    {
+      "number": 14,
+      "title": "A practical approach to immune thrombocytopenia in pregnancy | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2025/1/503/556840/A-practical-approach-to-immune-thrombocytopenia-in",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "* Establishing the diagnosis of thrombocytopenia in pregnancy. * Gestational thrombocytopenia (or physiologic thrombocytopenia of pregnancy). # A practical approach to immune thrombocytopenia in pregnancy. Arnold; A practical approach to immune thrombocytopenia in pregnancy. Immune thrombocytopenia ",
+      "score": 0.8025714
+    },
+    {
+      "number": 15,
+      "title": "Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination | ASH Clinical News | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/ashclinicalnews/news/6974/Consensus-Guidelines-Outline-Treatment-of-ITP",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination | ASH Clinical News | American Society of Hematology\n# Consensus Guidelines Outline Treatment of ITP Related to SARS-CoV-2 Infection, Vaccination *Free*. A group of experts from Spain recently released ",
+      "score": 0.7449724
+    },
+    {
+      "number": 16,
+      "title": "Immune Thrombocytopenia | Hematology, ASH Education Program | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2010/1/377/278337/Immune-Thrombocytopenia",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Immune Thrombocytopenia | Hematology, ASH Education Program | American Society of Hematology\nImmune thrombocytopenia (ITP) is an autoimmune syndrome involving antibody- and cell-mediated destruction of platelets and suppression of platelet production that may predispose to bleeding.1 Recent r",
+      "score": 0.70214266
+    },
+    {
+      "number": 17,
+      "title": "Immune Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562282",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nInitial Management\n\nThe ASH 2019 ITP guidelines recommend adult and pediatric algorithms based on the need for treatment and inpatient management. The following variables must first be determined: [...] Second-Line Therapies\n\nThe ASH 2019 guidelines recommend that children",
+      "score": 0.6897452
+    },
+    {
+      "number": 18,
+      "title": "Study Details | NCT07297563 | Anti-CD38 Monoclonal Antibody Versus Rituximab in the Management of Primary Immune Thrombocytopenia (ITP) | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT07297563",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "Age \u226518 years, male or female.\n   Before enrollment, the subjects have been clinically diagnosed with primary immune thrombocytopenia for no less than three months according to the American Society of Hematology guidelines 2011 Evidence-Based Practice Guideline (Neunert et al. 2011) or the Internati",
+      "score": 0.45188335
+    },
+    {
+      "number": 19,
+      "title": "Older Adults and Immune Thrombocytopenia - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9885884",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Patient history, physical examination, complete blood count and peripheral blood smear examination are the cornerstone of ITP diagnosis. In addition, some exams of interest to identify particular situations or secondary ITP include serologies for HIV, hepatitis C and B virus, antinuclear antibodies ",
+      "score": 0.7065353
+    },
+    {
+      "number": 20,
+      "title": "Thrombocytopenia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542208",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Evaluation\n\nAssessment of Isolated Thrombocytopenia\n\nEvaluation of patients with isolated thrombocytopenia begins with a complete blood count (CBC), peripheral blood smear, and testing for HIV and hepatitis C virus. A repeat CBC helps confirm thrombocytopenia and rule out laboratory error.\n\nAsses",
+      "score": 0.6897452
+    },
+    {
+      "number": 21,
+      "title": "Reference guide for the diagnosis of adult primary immune thrombocytopenia, 2023 edition",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10770234",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## \n\nFig. 1\nImage 15: Fig. 1\n\nOpen in a new tab\n\nFlowchart of ITP diagnosis Anemia due to bleeding and iron deficiency anemia should be excluded. Bone marrow examination is strongly recommneded in the event of any of the following: leukocyte count < 3000/\u03bcL or \u2265 10,000/\u03bcL, immature or morphological ",
+      "score": 0.6864757
+    },
+    {
+      "number": 22,
+      "title": "The Challenge for a Correct Diagnosis of Refractory Thrombocytopenia: ITP or MDS with Isolated Thrombocytopenia?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11048195",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "the complete blood count in a patient with ITP results in isolated thrombocytopenia, whereas the peripheral-blood smear shows reduced numbers of platelets\u2014normal or increased in size\u2014with no other abnormalities (e.g., schistocytes, dysplastic cells). The presence of giant or small platelets may indi",
+      "score": 0.6824261
+    },
+    {
+      "number": 23,
+      "title": "Assessment and Management of Immune Thrombocytopenia (ITP) in the Emergency Department: Current Perspectives",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8809484",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is characterized by a platelet count less than 100 \u00d7 10^9/L without anemia or leukopenia. Patients with ITP may be asymptomatic, or they may have mild bleeding like petechiae, purpura, or epistaxis. In rare cases, they may present to the emergency department (ED) with life-threatening bleeding a",
+      "score": 0.6643884
+    },
+    {
+      "number": 24,
+      "title": "Treatment of Adult Patients With Chronic Immune Thrombocytopenia After Failure of First-Line Therapies - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK595123",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "First-line therapy for newly diagnosed adult patients, according to both the American Society of Hematology 2019 Guidelines for Immune Thrombocytopenia8 and the Updated international consensus report on the investigation and management of primary immune thrombocytopenia,18 is a short course (approxi",
+      "score": 0.6580885
+    }
+  ],
+  "publishedAt": "2026-08-24T17:34:12.527099+00:00",
+  "updatedAt": "2026-08-24T17:34:12.527099+00:00",
+  "readingMinutes": 8,
+  "slug": "immune-thrombocytopenia"
+}

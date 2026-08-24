@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology and Hematology",
+  "title": "Hemolytic Uremic Syndrome",
+  "summary": "Hemolytic uremic syndrome is a thrombotic microangiopathy requiring immediate confirmation of hemolysis and kidney injury, exclusion of severe ADAMTS13 deficiency and Shiga toxin infection, identification of secondary triggers, and rapid complement-directed treatment when complement-mediated disease remains likely.",
+  "seoDescription": "Point-of-care approach to hemolytic uremic syndrome: confirm thrombotic microangiopathy, distinguish STEC-HUS, TTP, complement-mediated and secondary causes.",
+  "clinicalQuestion": "How should physicians rapidly classify and manage hemolytic uremic syndrome within the broader thrombotic microangiopathy differential?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hemolytic uremic syndrome",
+    "HUS",
+    "thrombotic microangiopathy",
+    "STEC-HUS",
+    "complement-mediated HUS",
+    "atypical HUS",
+    "ADAMTS13",
+    "eculizumab"
+  ],
+  "keyTakeaways": [
+    "Treat the triad of thrombocytopenia, nonimmune microangiopathic hemolytic anemia, and acute kidney injury as thrombotic microangiopathy until the cause is defined. [1][17][23]",
+    "Send ADAMTS13 activity and Shiga toxin testing promptly; severe ADAMTS13 deficiency supports TTP, whereas detectable activity above 10% was present in a reported adult STEC-HUS cohort. [5][21]",
+    "After TTP and Shiga toxin-associated HUS are excluded, complement-mediated HUS is a clinical diagnosis of exclusion and complement inhibition with eculizumab is the disease-directed treatment approach. [5][9][17]",
+    "A diarrheal prodrome does not by itself establish STEC-HUS; microbiologic confirmation of Shiga toxin is required before assigning the thrombotic microangiopathy to STEC. [23]",
+    "Review medications, malignancy, systemic disease, transplantation, invasive pneumococcal infection, and metabolic causes because HUS may be secondary to these triggers rather than primary complement dysregulation. [1][13][18]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-and-stabilize-tma",
+      "eyebrow": "Immediate assessment",
+      "heading": "Confirm thrombotic microangiopathy and define organ-threatening disease",
+      "intro": "Act before etiologic labeling when hemolysis, thrombocytopenia, and kidney injury coexist.",
+      "paragraphs": [
+        "Establish thrombotic microangiopathy (TMA) with a complete blood count, peripheral smear for schistocytes, creatinine, urinalysis, reticulocyte count, and hemolysis testing including haptoglobin. HUS is classically defined by nonimmune microangiopathic hemolytic anemia, thrombocytopenia, and acute kidney injury; schistocytes are a critical diagnostic smear finding. [1][17][22]",
+        "Quantify kidney involvement at presentation with creatinine trend, urine output, urinalysis, and protein measurement when urine is available. Hematuria, hemoglobinuria, and substantial proteinuria can accompany complement-mediated HUS; persistent proteinuria despite hematologic improvement should prompt assessment for renal TMA or an alternative glomerular process. [12]",
+        "Assess neurologic symptoms, blood pressure, volume status, gastrointestinal symptoms, and evidence of systemic infection while drawing the discriminating tests. Confusion or seizures and severe hypertension increase urgency for monitored care and parallel hematology-nephrology management; HUS may present with decreased urine output, hematuria, bloody diarrhea, edema, and neurologic symptoms. [22]"
+      ],
+      "bullets": [
+        "Obtain a medication exposure history, specifically including drugs temporally associated with TMA, and ask about malignancy, systemic disease, hematopoietic stem-cell transplantation, kidney transplantation, and immune checkpoint inhibitor exposure. [1][13][22][24]",
+        "Order a direct antiglobulin test; a positive test argues against the usual nonimmune MAHA pattern and should redirect the hemolysis evaluation. [11][24]",
+        "Check coagulation studies, fibrinogen, and fibrin-related markers when DIC is plausible; an ISTH DIC score of 5 or greater is compatible with overt DIC, whereas a score below 5 warrants repeat assessment within 1 to 2 days if clinically indicated. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial diagnostic branch points in a patient with suspected HUS/TMA. [1][5][13][21][23]",
+        "columns": [
+          "Finding or test",
+          "Interpretation",
+          "Immediate next action"
+        ],
+        "rows": [
+          [
+            "Schistocytes with thrombocytopenia, hemolysis, and AKI",
+            "Confirms a TMA phenotype compatible with HUS but not a specific cause. [1][17][22]",
+            "Send ADAMTS13 activity and Shiga toxin testing while assessing secondary triggers. [5][13][22]"
+          ],
+          [
+            "ADAMTS13 activity <5%",
+            "Known familial or acquired ADAMTS13 deficiency; this finding is used to exclude patients from complement-mediated HUS trials. [24]",
+            "Manage as ADAMTS13-deficient TTP rather than assigning primary complement-mediated HUS. [13][24]"
+          ],
+          [
+            "Stool or other specimen PCR positive for stx1 and/or stx2",
+            "Supports Shiga toxin-associated HUS when TMA and AKI are present. [23]",
+            "Classify as STEC-HUS and provide supportive management; do not infer complement-mediated HUS from complement test abnormalities alone. [14][21][23]"
+          ],
+          [
+            "TTP and Shiga toxin-associated HUS excluded",
+            "Raises complement-mediated HUS, a clinical diagnosis of exclusion. [5][13]",
+            "Evaluate secondary causes and proceed urgently with complement-mediated HUS management when no alternative cause is established. [5][9][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiologic-classification",
+      "eyebrow": "Diagnostic branching",
+      "heading": "Separate STEC-HUS, TTP, complement-mediated HUS, and secondary TMA",
+      "intro": "Etiology determines whether supportive care, plasma exchange, trigger withdrawal, or complement inhibition is appropriate.",
+      "paragraphs": [
+        "Test for Shiga toxin-producing organisms in any compatible diarrheal or foodborne illness, but do not restrict testing to children: STEC-associated HUS also occurs in adults. In a CDC adult cohort, diagnosis required thrombocytopenia below 150,000 cells/\u00b5L, hemoglobin below 12 g/dL, AKI, and PCR detection of stx1, stx2, or both. [21][23]",
+        "Do not use C3, C4, CH50, factor H, factor I, or CD46 abnormalities alone to diagnose complement-mediated HUS in the acute setting. Among adults with STEC-HUS, low CH50 occurred in 38.8% and low CD46 in 65.7%, and the investigators noted that acute kidney injury and inflammation can confound complement measurements. [21][23]",
+        "Prioritize exclusion of TTP because it changes acute treatment. In a clinical diagnostic approach to atypical HUS, TTP and Shiga toxin HUS should be excluded within approximately 48 hours before eculizumab is started; severe ADAMTS13 deficiency should redirect the diagnosis toward TTP. [5][13]",
+        "If Shiga toxin testing is negative and ADAMTS13 is not severely deficient, search systematically for secondary TMA before diagnosing primary complement-mediated HUS. Relevant associations include medications, cancer, systemic disease, hematopoietic stem-cell transplantation, invasive pneumococcal infection, Haemophilus influenzae infection, and cobalamin C defect. [1][13][18][24]"
+      ],
+      "bullets": [
+        "Order C3, C4, CH50, and anti-complement factor H antibody testing as part of the complement-mediated HUS evaluation; interpret results alongside microbiology, ADAMTS13, exposure history, and organ phenotype. [22][23]",
+        "Obtain plasma homocysteine and methylmalonic acid when cobalamin C defect is in the differential, particularly in pediatric or atypical presentations. [13][22]",
+        "Pursue complement genetic evaluation after exclusion of competing diagnoses, especially in children and recurrent or otherwise unexplained complement-mediated HUS phenotypes. Variants implicated in this setting include CFH, CFI, CFB, C3, CD46, thrombomodulin, and PLG. [13][16]"
+      ],
+      "subsections": [
+        {
+          "heading": "When kidney biopsy changes management",
+          "paragraphs": [
+            "Consider kidney biopsy when the diagnosis remains uncertain, hematologic abnormalities improve but kidney dysfunction or proteinuria persists, or an underlying glomerulonephritis must be distinguished from renal-limited TMA. Glomerular TMA without evidence of underlying glomerulonephritis was documented in a complement-mediated HUS presentation with persistent nephrotic-range proteinuria. [12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Etiologic patterns that redirect management in HUS/TMA. [1][5][13][14][17][18][23]",
+        "columns": [
+          "Etiologic branch",
+          "Discriminator",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "STEC-HUS",
+            "TMA with AKI plus stx1/stx2 PCR positivity. [23]",
+            "Supportive care is the treatment backbone. [14]"
+          ],
+          [
+            "TTP",
+            "Severe ADAMTS13 deficiency; activity <5% identifies known familial or acquired deficiency in a complement-mediated HUS trial exclusion framework. [24]",
+            "Do not label as complement-mediated HUS; use TTP-directed treatment pathways. [13][24]"
+          ],
+          [
+            "Complement-mediated HUS",
+            "TTP and Shiga toxin HUS excluded, with no alternative secondary cause; alternative-pathway dysregulation drives endothelial injury and microvascular thrombosis. [5][9][17]",
+            "Initiate complement-directed therapy with eculizumab in the appropriate clinical context. [5][17]"
+          ],
+          [
+            "Secondary HUS/TMA",
+            "Medication, cancer, systemic disease, transplantation, invasive pneumococcal disease, or other recognized trigger. [1][13][18][24]",
+            "Treat or remove the precipitating condition; do not assume inherited complement dysregulation. [1][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stec-hus-management",
+      "eyebrow": "Infection-associated disease",
+      "heading": "Manage STEC-HUS with renal-focused supportive care",
+      "intro": "STEC-HUS is the dominant pediatric phenotype, but confirmed adult disease follows the same etiologic principle.",
+      "paragraphs": [
+        "For confirmed STEC-HUS, provide supportive management directed at AKI, volume status, hypertension, electrolyte abnormalities, and neurologic complications; supportive care remains the backbone of therapy. STEC-associated HUS accounts for approximately 90% of pediatric HUS cases. [14][20]",
+        "Do not diagnose complement-mediated HUS solely because complement studies are abnormal during STEC-HUS. Acute complement findings may reflect kidney injury or inflammation, and routine complement-gene screening is not generally performed in pediatric STEC-HUS. [21][23]",
+        "Eculizumab has been used in severe STEC-HUS, including during the 2011 German outbreak, but the cited outbreak analysis describes its widespread use rather than establishing routine benefit. A 2024 literature review identified 80 eculizumab-treated STEC-HUS cases, with complete neurologic symptom resolution reported in 68.7%; this uncontrolled evidence should not substitute for confirmation of complement-mediated disease. [3][10]"
+      ],
+      "bullets": [
+        "Send stool testing for Shiga toxin genes even when culture is unrevealing; PCR targeting stx1 and stx2 was used to establish STEC-HUS in the CDC adult cohort. [23]",
+        "Reassess the diagnosis if the clinical course is recurrent, unexplained, or disproportionate to documented infection, because complement-mediated HUS and secondary TMAs require different therapy. [5][13][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "complement-mediated-hus",
+      "eyebrow": "Disease-directed therapy",
+      "heading": "Treat likely complement-mediated HUS promptly after exclusion testing",
+      "intro": "Complement-mediated HUS reflects alternative-pathway dysregulation and causes endothelial injury with microvascular thrombosis.",
+      "paragraphs": [
+        "Complement-mediated HUS, historically termed atypical HUS, is driven by overactivation of the alternative complement pathway. Genetic abnormalities can involve complement regulatory proteins or complement activators, while acquired disease can involve anti-factor H antibodies. [1][9][16]",
+        "Once TTP and Shiga toxin HUS have been excluded, eculizumab is the principal complement-directed treatment described for complement-mediated HUS. A clinical review recommends beginning eculizumab after those exclusions, which should be achievable within 48 hours; anti-complement therapy has transformed outcomes in this disease category. [5][17]",
+        "The outbreak schedule of eculizumab reported for severe Shiga toxin-associated HUS was 900 mg on days 0, 7, 14, and 21, followed by 1,200 mg thereafter; this regimen was reported in an outbreak context and should not be extrapolated as a general dosing recommendation for all HUS phenotypes. [3]",
+        "If anti-factor H antibodies are identified, the disease mechanism is acquired complement dysregulation rather than solely inherited complement dysfunction. Reports cited in the literature describe improved outcomes with prompt plasma exchange and immunosuppression in pediatric anti-factor H antibody-associated HUS, supporting early recognition of this subgroup. [15][16]"
+      ],
+      "bullets": [
+        "Trend platelet count, hemoglobin, creatinine, urine output, and proteinuria to assess hematologic and renal response; persistent renal abnormalities may require biopsy or renewed evaluation for concurrent glomerular disease. [12]",
+        "Document complement testing and pursue genetic testing after acute stabilization to inform recurrence counseling and transplant planning. [13][16]",
+        "In kidney transplantation, recurrence is reported as infrequent after diarrhea-associated HUS but may be as high as 80% in atypical HUS; factor H, I, or B variants are associated with particularly high recurrence risk. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up priorities after suspected or confirmed complement-mediated HUS. [12][13][16]",
+        "columns": [
+          "Clinical issue",
+          "Monitoring or test",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Hematologic activity",
+            "Platelet count, hemoglobin, hemolysis markers, and smear assessment for schistocytes. [12][22]",
+            "Persistent or recurrent MAHA supports ongoing TMA activity and requires reassessment of cause and treatment response. [12][13]"
+          ],
+          [
+            "Kidney recovery",
+            "Creatinine, urine output, urinalysis, and protein quantification. [12][22]",
+            "Persistent proteinuria or kidney dysfunction should prompt consideration of kidney biopsy and competing glomerular disease. [12]"
+          ],
+          [
+            "Recurrence and transplantation planning",
+            "Complement genetic evaluation after other causes are excluded. [13][16]",
+            "Variant-specific recurrence risk influences transplant planning, particularly with factor H, I, or B abnormalities. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "secondary-tma-and-consultation",
+      "eyebrow": "Avoid misclassification",
+      "heading": "Identify secondary TMA before committing to a primary HUS diagnosis",
+      "intro": "A trigger-directed strategy is essential when TMA occurs with another systemic condition.",
+      "paragraphs": [
+        "Secondary HUS/TMA may occur with medications, malignancy, systemic diseases, transplantation, and invasive bacterial infections. A trigger should not be treated as incidental: define whether the timing and phenotype support a causal role, discontinue a plausible offending medication when feasible, and treat the associated disease while completing TTP and Shiga toxin exclusion. [1][13][18][24]",
+        "In patients receiving immune checkpoint inhibitors, a protocol-based HUS workup includes CBC, blood smear morphology, creatinine, ADAMTS13, homocysteine, methylmalonic acid, C3, C4, CH50, and complement inhibitory antibodies when familial disease is suspected. The same protocol advises hematology involvement and plasma exchange according to existing guidance for severe immune-mediated hematologic toxicity. [22]",
+        "Engage nephrology and hematology early when AKI, marked thrombocytopenia, neurologic findings, uncertain TMA subtype, or suspected complement-mediated HUS is present. The key operational goal is not merely to name HUS, but to exclude ADAMTS13-deficient TTP and STEC-HUS quickly enough that complement-directed therapy is not delayed when indicated. [5][13][17]"
+      ],
+      "bullets": [
+        "For suspected transplant-associated TMA, document transplant type and timing; hematopoietic stem-cell transplantation within 12 months was an exclusion criterion in a complement-mediated HUS study population, reflecting its status as a competing TMA diagnosis. [24]",
+        "For invasive pneumococcal disease or Haemophilus influenzae infection, classify the syndrome as infection-associated secondary HUS rather than automatically as primary complement-mediated HUS. [13][18]",
+        "If the direct antiglobulin test is positive, revisit alternative causes of anemia before interpreting the full syndrome as classic nonimmune MAHA. [11][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Hemolytic uremic syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/470",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Atypical HUS can occur due to genetic or acquired abnormalities in the alternative complement regulatory pathway. HUS can also occur as a secondary phenomenon due to medications, cancer, and other systemic diseases.\n\n### Definition\n\nHemolytic uremic syndrome (HUS) is characterized by microangiopathi",
+      "score": 0.7827459
+    },
+    {
+      "number": 2,
+      "title": "Disease severity of Shiga toxin-producing E. coli O157 and ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/6/1/e009933",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "by N Launders \u00b7 2016 \u00b7 Cited by 87 \u2014 New insights into Shiga toxin-mediated endothelial dysfunction in hemolytic uremic syndrome. ... Hemolytic-uremic syndrome during an outbreak of Escherichia coli",
+      "score": 0.63750535
+    },
+    {
+      "number": 3,
+      "title": "Validation of treatment strategies for enterohaemorrhagic ...",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/bmj/345/bmj.e4565.full.pdf",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "by guest on 7 March 2026  Downloaded from 19 July 2012. 10.1136/bmj.e4565 on BMJ: first published as BMJ | RESEARCH 13 of 13 RESEARCH 13 Pennington H. Escherichia coli O157. Lancet 2010;376:1428-35.\n14 Lapeyraque AL, Malina M, Fremeaux-Bacchi V, Boppel T, Kirschfink M, Oualha M, et al. Eculizumab in",
+      "score": 0.6320719
+    },
+    {
+      "number": 4,
+      "title": "Atypical Hemolytic\u2010Uremic Syndrome: An Update on ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1744-9987.12763",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The condition is associated with poor clinical outcomes with high morbidity and mortality. olytic Uremic Syndrome \u30fb due to Shiga toxin",
+      "score": 0.64344186
+    },
+    {
+      "number": 5,
+      "title": "Atypical hemolytic uremic syndrome - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/12/3/338/5062946",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by BE Berger \u00b7 2019 \u00b7 Cited by 36 \u2014 aHUS is a clinical diagnosis. Once TTP and shiga toxin HUS are excluded (which should be possible by 48 h), therapy with eculizimab is begun.",
+      "score": 0.56258565
+    },
+    {
+      "number": 6,
+      "title": "first report of the Brazilian aHUS Registry - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/15/8/1601/6566371",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by MH Vaisbich \u00b7 2022 \u00b7 Cited by 14 \u2014 Shiga toxin-mediated hemolytic uremic syndrome (ST-HUS): related to Shiga toxin. Shiga toxins are produced by Shigella dysenteriae and some",
+      "score": 0.49392182
+    },
+    {
+      "number": 7,
+      "title": "Intermediate Follow-up of Pediatric Patients With Hemolytic ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/64/12/1637/3067340",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Loos \u00b7 2017 \u00b7 Cited by 63 \u2014 Shiga toxin\u2013producing E. coli HUS must be differentiated from atypical HUS, The key component in the pathogenesis of HUS is Shiga toxin (Stx).",
+      "score": 0.48162505
+    },
+    {
+      "number": 8,
+      "title": "Pediatric Hemolytic Uremic Syndrome in North-Eastern ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/13/8/ofag433/8736887",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Shiga toxin\u2013producing Escherichia coli (STEC)\u2013associated hemolytic uremic syndrome (HUS) is a leading cause of pediatric acute kidney injury.",
+      "score": 0.4581311
+    },
+    {
+      "number": 9,
+      "title": "Complement\u2010driven hemolytic uremic syndrome",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.26854",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Leon \u00b7 2023 \u00b7 Cited by 73 \u2014 Abstract. Overactivation of the complement alternative pathway drives the pathogenesis of primary atypical hemolytic uremic syndrome (aHUS).",
+      "score": 0.43856934
+    },
+    {
+      "number": 10,
+      "title": "Eculizumab for Shiga\u2010toxin\u2010induced hemolytic uremic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/jha2.902",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by BJ Lee \u00b7 2024 \u00b7 Cited by 2 \u2014 Eighty patients with STEC-HUS treated with eculizumab were identified in the literature, 68.7% had complete resolution of neurological symptoms.",
+      "score": 0.33875546
+    },
+    {
+      "number": 11,
+      "title": "Development of Atypical Hemolytic Uremic Syndrome...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/2020/10001/development_of_atypical_hemolytic_uremic_syndrome.2056.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Direct coombs test was negative, peripheral smear showed schistocytes, ADAMTS13 level was 65%, consistent with diagnosis of atypical hemolytic uremic syndrome.",
+      "score": 0.55767727
+    },
+    {
+      "number": 12,
+      "title": "Complement-Mediated Hemolytic Uremic Syndrome... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/10.1681/asn.20223311s177c~complement-mediated-hemolytic-uremic-syndrome-presenting",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "and extensive evaluation for an autoimmune, infectious or hematologic etiology was negative. Renal biopsy findings were consistent with glomerular TMA (Figure 1) without evidence of underlying GN or IgA nephropathy. High dose steroids were administered with resolution of his AKI and proteinuria. Gen",
+      "score": 0.43856934
+    },
+    {
+      "number": 13,
+      "title": "Does Severe ADAMTS13 Deficiency in Thrombotic... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/10.4103/1319-2442.261349",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Discussion\n\nThe term aHUS is now reserved preferentially for hemolytic uremic syndrome without any coexisting disease. Mutations in various complement pathway regulators such as C3, CFH, CFB, CFI, and thrombomodulin have been implicated in the pathogenesis of aHUS. According to the diagnostic alg",
+      "score": 0.40952834
+    },
+    {
+      "number": 14,
+      "title": "Hemolytic Uremic Syndrome - ScienceDirect",
+      "detail": "sciencedirect.com",
+      "url": "https://sciencedirect.com/science/article/pii/S0031395518301494",
+      "authors": "sciencedirect.com",
+      "host": "sciencedirect.com",
+      "snippet": "Title: Hemolytic Uremic Syndrome - ScienceDirect\n# Hemolytic Uremic Syndrome. Shiga toxin\u2013associated hemolytic uremic syndrome (HUS) is responsible for approximately 90% of cases of HUS in children, and supportive care remains the backbone of therapy. ### Clinical and laboratory consequences of plat",
+      "score": 0.8755427
+    },
+    {
+      "number": 15,
+      "title": "Pathophysiology and treatment of typical and atypical hemolytic uremic syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0369811415000176",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Pathophysiology and treatment of typical and atypical hemolytic uremic syndrome - ScienceDirect\n# Pathophysiology and treatment of typical and atypical hemolytic uremic syndromePhysiopathologie et traitement du syndrome h\u00e9molytique ur\u00e9mique typique et atypique. This review summarizes the curr",
+      "score": 0.838376
+    },
+    {
+      "number": 16,
+      "title": "Hemolytic Uremic Syndrome - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hemolytic-uremic-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Hemolytic uremic syndrome (HUS) is defined as a serious condition that can arise from infection with Shiga toxin-producing Escherichia coli, characterized by non-specific diarrhea, acute renal failure, and potential long-term renal dysfunction, particularly in children. Historically, hemolytic uremi",
+      "score": 0.83742094
+    },
+    {
+      "number": 17,
+      "title": "Haemolytic uraemic syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0140673622012028",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Haemolytic uraemic syndrome (HUS) is a heterogeneous group of diseases that result in a common pathology, thrombotic microangiopathy, which is classically characterised by the triad of non-immune microangiopathic haemolytic anaemia, thrombocytopenia, and acute kidney injury. In this Seminar, differe",
+      "score": 0.81524754
+    },
+    {
+      "number": 18,
+      "title": "Hemolytic Uremic Syndrome | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396169/1596/Hemolytic-Uremic-Syndrome",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Typical HUS generally refers to HUS secondary to infection with Shiga toxin\u2013producing Escherichia coli (STEC) or invasive pneumococcal disease.",
+      "score": 0.49875546
+    },
+    {
+      "number": 19,
+      "title": "Hemolytic-Uremic Syndrome (Chapter 263)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5781128/Hemolytic-Uremic-Syndrome-Chapter-263",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "HUS is the most serious complication resulting from EHEC infection. The Shiga toxin (ST) produced by EHECs is structurally similar to toxins produced by other",
+      "score": 0.4703723
+    },
+    {
+      "number": 20,
+      "title": "An Overview of Pediatric Hemolytic Uremic Syndrome",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/46/1/3/200509/An-Overview-of-Pediatric-Hemolytic-Uremic-Syndrome",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "A total 90% of HUS cases are related to Shiga toxin\u2013producing bacteria (E. coli, Shigella dysenteriae), 5% of cases are attributed to S.",
+      "score": 0.41463867
+    },
+    {
+      "number": 21,
+      "title": "Shiga Toxin\u2013Associated Hemolytic Uremic Syndrome in Adults, ...",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/27/7/pdfs/20-4638.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "CAP measurements during the acute phase of ill-ness were recorded in 69 patients. Of these patients, 36 (52.2%) had values within the reference range (Table 2). Less than 10% of patients had low levels of C3, C4, factor H, or factor I, whereas 26 (38.8%) pa-tients had low levels of CH50. CD46 levels",
+      "score": 0.6947383
+    },
+    {
+      "number": 22,
+      "title": "Protocol Amendment 2 Anonymized",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/80/NCT04349280/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "of hemolytic uremic syndrome can include: Bloody diarrhea Decreased urination or blood in the urine Abdominal pain, vomiting, and occasionally fever Pallor Small, unexplained bruises or bleeding from the nose and mouth Fatigue and irritability Confusion or seizures High blood pressure Swelling of th",
+      "score": 0.6271529
+    },
+    {
+      "number": 23,
+      "title": "Shiga Toxin\u2013Associated Hemolytic Uremic Syndrome in Adults, France, 2009\u20132017 - Volume 27, Number 7\u2014July 2021 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/27/7/20-4638_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "We observed CAP abnormalities similar to those previously reported in a cohort of 113 cases of STEC-associated HUS in children (16). We found that 65.7% of patients had low CD46 and 38.8% had low CH50 levels. However, a decrease in the concentration of complement factors, the interpretation of which",
+      "score": 0.5852203
+    },
+    {
+      "number": 24,
+      "title": "TITLE PAGE",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/04/NCT04743804/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "levels of a fibrin-related marker a (eg, D-dimer, fibrin degradation products) No increase 0 Moderate increase 2 Severe increase 3 Prolonged prothrombin time, seconds < 3 0 3 to < 6 1 \u2265 6 2 Fibrinogen level, g/L \u2265 1 0 < 1 1 a Use laboratory-specific cutoff values. Interpretation Score Diagnosis < 5 ",
+      "score": 0.5568099
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Hemolytic uremic syndrome - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/470",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Atypical HUS can occur due to genetic or acquired abnormalities in the alternative complement regulatory pathway. HUS can also occur as a secondary phenomenon due to medications, cancer, and other systemic diseases.\n\n### Definition\n\nHemolytic uremic syndrome (HUS) is characterized by microangiopathi",
+      "score": 0.7827459
+    },
+    {
+      "number": 2,
+      "title": "Disease severity of Shiga toxin-producing E. coli O157 and ...",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/6/1/e009933",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "by N Launders \u00b7 2016 \u00b7 Cited by 87 \u2014 New insights into Shiga toxin-mediated endothelial dysfunction in hemolytic uremic syndrome. ... Hemolytic-uremic syndrome during an outbreak of Escherichia coli",
+      "score": 0.63750535
+    },
+    {
+      "number": 3,
+      "title": "Validation of treatment strategies for enterohaemorrhagic ...",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/bmj/345/bmj.e4565.full.pdf",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "by guest on 7 March 2026  Downloaded from 19 July 2012. 10.1136/bmj.e4565 on BMJ: first published as BMJ | RESEARCH 13 of 13 RESEARCH 13 Pennington H. Escherichia coli O157. Lancet 2010;376:1428-35.\n14 Lapeyraque AL, Malina M, Fremeaux-Bacchi V, Boppel T, Kirschfink M, Oualha M, et al. Eculizumab in",
+      "score": 0.6320719
+    },
+    {
+      "number": 4,
+      "title": "Atypical Hemolytic\u2010Uremic Syndrome: An Update on ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/1744-9987.12763",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The condition is associated with poor clinical outcomes with high morbidity and mortality. olytic Uremic Syndrome \u30fb due to Shiga toxin",
+      "score": 0.64344186
+    },
+    {
+      "number": 5,
+      "title": "Atypical hemolytic uremic syndrome - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/12/3/338/5062946",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by BE Berger \u00b7 2019 \u00b7 Cited by 36 \u2014 aHUS is a clinical diagnosis. Once TTP and shiga toxin HUS are excluded (which should be possible by 48 h), therapy with eculizimab is begun.",
+      "score": 0.56258565
+    },
+    {
+      "number": 6,
+      "title": "first report of the Brazilian aHUS Registry - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/15/8/1601/6566371",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by MH Vaisbich \u00b7 2022 \u00b7 Cited by 14 \u2014 Shiga toxin-mediated hemolytic uremic syndrome (ST-HUS): related to Shiga toxin. Shiga toxins are produced by Shigella dysenteriae and some",
+      "score": 0.49392182
+    },
+    {
+      "number": 7,
+      "title": "Intermediate Follow-up of Pediatric Patients With Hemolytic ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/64/12/1637/3067340",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Loos \u00b7 2017 \u00b7 Cited by 63 \u2014 Shiga toxin\u2013producing E. coli HUS must be differentiated from atypical HUS, The key component in the pathogenesis of HUS is Shiga toxin (Stx).",
+      "score": 0.48162505
+    },
+    {
+      "number": 8,
+      "title": "Pediatric Hemolytic Uremic Syndrome in North-Eastern ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/13/8/ofag433/8736887",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Shiga toxin\u2013producing Escherichia coli (STEC)\u2013associated hemolytic uremic syndrome (HUS) is a leading cause of pediatric acute kidney injury.",
+      "score": 0.4581311
+    },
+    {
+      "number": 9,
+      "title": "Complement\u2010driven hemolytic uremic syndrome",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.26854",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Leon \u00b7 2023 \u00b7 Cited by 73 \u2014 Abstract. Overactivation of the complement alternative pathway drives the pathogenesis of primary atypical hemolytic uremic syndrome (aHUS).",
+      "score": 0.43856934
+    },
+    {
+      "number": 10,
+      "title": "Eculizumab for Shiga\u2010toxin\u2010induced hemolytic uremic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/jha2.902",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by BJ Lee \u00b7 2024 \u00b7 Cited by 2 \u2014 Eighty patients with STEC-HUS treated with eculizumab were identified in the literature, 68.7% had complete resolution of neurological symptoms.",
+      "score": 0.33875546
+    },
+    {
+      "number": 11,
+      "title": "Development of Atypical Hemolytic Uremic Syndrome...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/2020/10001/development_of_atypical_hemolytic_uremic_syndrome.2056.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Direct coombs test was negative, peripheral smear showed schistocytes, ADAMTS13 level was 65%, consistent with diagnosis of atypical hemolytic uremic syndrome.",
+      "score": 0.55767727
+    },
+    {
+      "number": 12,
+      "title": "Complement-Mediated Hemolytic Uremic Syndrome... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/10.1681/asn.20223311s177c~complement-mediated-hemolytic-uremic-syndrome-presenting",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "and extensive evaluation for an autoimmune, infectious or hematologic etiology was negative. Renal biopsy findings were consistent with glomerular TMA (Figure 1) without evidence of underlying GN or IgA nephropathy. High dose steroids were administered with resolution of his AKI and proteinuria. Gen",
+      "score": 0.43856934
+    },
+    {
+      "number": 13,
+      "title": "Does Severe ADAMTS13 Deficiency in Thrombotic... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/10.4103/1319-2442.261349",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Discussion\n\nThe term aHUS is now reserved preferentially for hemolytic uremic syndrome without any coexisting disease. Mutations in various complement pathway regulators such as C3, CFH, CFB, CFI, and thrombomodulin have been implicated in the pathogenesis of aHUS. According to the diagnostic alg",
+      "score": 0.40952834
+    },
+    {
+      "number": 14,
+      "title": "Hemolytic Uremic Syndrome - ScienceDirect",
+      "detail": "sciencedirect.com",
+      "url": "https://sciencedirect.com/science/article/pii/S0031395518301494",
+      "authors": "sciencedirect.com",
+      "host": "sciencedirect.com",
+      "snippet": "Title: Hemolytic Uremic Syndrome - ScienceDirect\n# Hemolytic Uremic Syndrome. Shiga toxin\u2013associated hemolytic uremic syndrome (HUS) is responsible for approximately 90% of cases of HUS in children, and supportive care remains the backbone of therapy. ### Clinical and laboratory consequences of plat",
+      "score": 0.8755427
+    },
+    {
+      "number": 15,
+      "title": "Pathophysiology and treatment of typical and atypical hemolytic uremic syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0369811415000176",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Pathophysiology and treatment of typical and atypical hemolytic uremic syndrome - ScienceDirect\n# Pathophysiology and treatment of typical and atypical hemolytic uremic syndromePhysiopathologie et traitement du syndrome h\u00e9molytique ur\u00e9mique typique et atypique. This review summarizes the curr",
+      "score": 0.838376
+    },
+    {
+      "number": 16,
+      "title": "Hemolytic Uremic Syndrome - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hemolytic-uremic-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Hemolytic uremic syndrome (HUS) is defined as a serious condition that can arise from infection with Shiga toxin-producing Escherichia coli, characterized by non-specific diarrhea, acute renal failure, and potential long-term renal dysfunction, particularly in children. Historically, hemolytic uremi",
+      "score": 0.83742094
+    },
+    {
+      "number": 17,
+      "title": "Haemolytic uraemic syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0140673622012028",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Haemolytic uraemic syndrome (HUS) is a heterogeneous group of diseases that result in a common pathology, thrombotic microangiopathy, which is classically characterised by the triad of non-immune microangiopathic haemolytic anaemia, thrombocytopenia, and acute kidney injury. In this Seminar, differe",
+      "score": 0.81524754
+    },
+    {
+      "number": 18,
+      "title": "Hemolytic Uremic Syndrome | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396169/1596/Hemolytic-Uremic-Syndrome",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Typical HUS generally refers to HUS secondary to infection with Shiga toxin\u2013producing Escherichia coli (STEC) or invasive pneumococcal disease.",
+      "score": 0.49875546
+    },
+    {
+      "number": 19,
+      "title": "Hemolytic-Uremic Syndrome (Chapter 263)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5781128/Hemolytic-Uremic-Syndrome-Chapter-263",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "HUS is the most serious complication resulting from EHEC infection. The Shiga toxin (ST) produced by EHECs is structurally similar to toxins produced by other",
+      "score": 0.4703723
+    },
+    {
+      "number": 20,
+      "title": "An Overview of Pediatric Hemolytic Uremic Syndrome",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatricsinreview/article/46/1/3/200509/An-Overview-of-Pediatric-Hemolytic-Uremic-Syndrome",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "A total 90% of HUS cases are related to Shiga toxin\u2013producing bacteria (E. coli, Shigella dysenteriae), 5% of cases are attributed to S.",
+      "score": 0.41463867
+    },
+    {
+      "number": 21,
+      "title": "Shiga Toxin\u2013Associated Hemolytic Uremic Syndrome in Adults, ...",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/27/7/pdfs/20-4638.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "CAP measurements during the acute phase of ill-ness were recorded in 69 patients. Of these patients, 36 (52.2%) had values within the reference range (Table 2). Less than 10% of patients had low levels of C3, C4, factor H, or factor I, whereas 26 (38.8%) pa-tients had low levels of CH50. CD46 levels",
+      "score": 0.6947383
+    },
+    {
+      "number": 22,
+      "title": "Protocol Amendment 2 Anonymized",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/80/NCT04349280/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "of hemolytic uremic syndrome can include: Bloody diarrhea Decreased urination or blood in the urine Abdominal pain, vomiting, and occasionally fever Pallor Small, unexplained bruises or bleeding from the nose and mouth Fatigue and irritability Confusion or seizures High blood pressure Swelling of th",
+      "score": 0.6271529
+    },
+    {
+      "number": 23,
+      "title": "Shiga Toxin\u2013Associated Hemolytic Uremic Syndrome in Adults, France, 2009\u20132017 - Volume 27, Number 7\u2014July 2021 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/27/7/20-4638_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "We observed CAP abnormalities similar to those previously reported in a cohort of 113 cases of STEC-associated HUS in children (16). We found that 65.7% of patients had low CD46 and 38.8% had low CH50 levels. However, a decrease in the concentration of complement factors, the interpretation of which",
+      "score": 0.5852203
+    },
+    {
+      "number": 24,
+      "title": "TITLE PAGE",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/04/NCT04743804/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "levels of a fibrin-related marker a (eg, D-dimer, fibrin degradation products) No increase 0 Moderate increase 2 Severe increase 3 Prolonged prothrombin time, seconds < 3 0 3 to < 6 1 \u2265 6 2 Fibrinogen level, g/L \u2265 1 0 < 1 1 a Use laboratory-specific cutoff values. Interpretation Score Diagnosis < 5 ",
+      "score": 0.5568099
+    }
+  ],
+  "publishedAt": "2026-08-24T17:48:51.162588+00:00",
+  "updatedAt": "2026-08-24T17:48:51.162588+00:00",
+  "readingMinutes": 6,
+  "slug": "hemolytic-uremic-syndrome"
+}

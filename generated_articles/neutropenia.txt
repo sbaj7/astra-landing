@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "Neutropenia",
+  "summary": "Use absolute neutrophil count, trajectory, accompanying cytopenias, infection burden, and exposure history to distinguish transient acquired neutropenia from chronic immune, congenital, marrow, or treatment-related disease and to determine when marrow evaluation, G-CSF, or urgent infection management is warranted.",
+  "seoDescription": "Physician-focused approach to neutropenia: ANC thresholds, chronic-neutropenia evaluation, marrow testing, and filgrastim use.",
+  "clinicalQuestion": "How should clinicians triage, evaluate, and manage neutropenia according to severity, chronicity, cause, and infection risk?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "absolute neutrophil count",
+    "severe neutropenia",
+    "chronic neutropenia",
+    "febrile neutropenia",
+    "filgrastim",
+    "bone marrow biopsy",
+    "congenital neutropenia",
+    "autoimmune neutropenia"
+  ],
+  "keyTakeaways": [
+    "Anchor risk assessment to the absolute neutrophil count (ANC), calculated from the total white blood cell count and segmented neutrophil plus band percentages; ANC below 500/µL is severe neutropenia. [17][18]",
+    "Patients with otherwise unexplained chronic neutropenia generally require marrow morphology, cytogenetics, and myeloid-malignancy gene testing; stable, long-standing mild isolated neutropenia is an adult exception. [12]",
+    "Obtain marrow evaluation before starting G-CSF in chronic neutropenia, except where a guideline-defined exception applies. [12]",
+    "For symptomatic severe chronic neutropenia, chronic daily filgrastim is individualized to clinical course and ANC; reported median daily doses differ substantially by congenital, cyclic, and idiopathic subtype. [2][3][4]",
+    "In patients receiving myelosuppressive anticancer therapy, G-CSF reduces chemotherapy-related neutropenia, and long-acting G-CSF agents are used for primary prophylaxis in high-risk settings. [9][10][11]"
+  ],
+  "sections": [
+    {
+      "id": "triage-by-anc-and-context",
+      "eyebrow": "Initial decisions",
+      "heading": "Triage by ANC, fever, and clinical trajectory",
+      "intro": "The first decision is whether the low count represents an immediate infectious threat or an outpatient diagnostic problem.",
+      "paragraphs": [
+        "Calculate ANC rather than interpreting the neutrophil percentage alone: ANC equals total WBC count multiplied by the proportion of segmented neutrophils plus bands. A low total WBC can therefore produce severe neutropenia despite a seemingly normal relative neutrophil percentage. [17]",
+        "Classify ANC below 1,500/µL as neutropenia and ANC below 500/µL as severe neutropenia. Infection susceptibility rises with severity and duration; use the nadir, trend, and duration rather than a single recovered value to judge near-term risk. [16][17][18]",
+        "Treat fever or focal infection in a patient with severe neutropenia as an urgent infectious syndrome rather than waiting for etiologic classification. Chemotherapy-associated febrile neutropenia is commonly managed with broad-spectrum antibiotics and hospital admission until fever and neutropenia resolve; outpatient pathways for selected children remain limited by the absence of a fully validated clinical decision rule. [15][23]"
+      ],
+      "bullets": [
+        "Confirm the result with repeat CBC and differential when the finding is unexpected or discordant with the clinical condition; review the peripheral smear because instrument counts and morphologic assessment together improve initial diagnostic interpretation. [17]",
+        "Escalate evaluation when neutropenia coexists with anemia, thrombocytopenia, abnormal smear findings, recurrent clinically significant infections, oral ulcers, or a progressive decline in ANC; these patterns shift concern toward marrow disease, congenital disease, or systemic immune disease. [12][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ANC categories used to frame infection risk and urgency. [16][17][18]",
+        "columns": [
+          "ANC",
+          "Category",
+          "Decision implication"
+        ],
+        "rows": [
+          [
+            "1,000-1,500/µL",
+            "Mild neutropenia [16][18]",
+            "Confirm persistence and assess for isolated versus multilineage cytopenia. [12][16]"
+          ],
+          [
+            "500-1,000/µL",
+            "Moderate neutropenia [18]",
+            "Increase urgency of exposure, infection, medication, and marrow-focused assessment, particularly when persistent or recurrent. [12][18]"
+          ],
+          [
+            "<500/µL",
+            "Severe neutropenia [16][17][18]",
+            "Assess immediately for fever or infection and determine whether urgent antimicrobial management and inpatient care are required. [15][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "establish-pattern-and-cause",
+      "eyebrow": "Diagnostic framework",
+      "heading": "Establish whether neutropenia is transient, chronic, isolated, or marrow-associated",
+      "intro": "Duration and accompanying hematologic abnormalities determine the scope of testing.",
+      "paragraphs": [
+        "Define chronic neutropenia as persistence beyond 6 months. For an isolated low count, serial CBCs establish persistence, cyclicity, recovery, and development of additional cytopenias before labeling the condition idiopathic. [17]",
+        "Start with acquired causes. Medication-associated neutropenia, recent or active infection, autoimmune disease, nutritional deficiency including copper deficiency, and myeloid disorders are major acquired branches; history should specifically identify temporal drug exposure, systemic infectious symptoms, autoimmune features, dietary or malabsorptive risk, and cytotoxic therapy. [16][18]",
+        "A patient with rheumatoid arthritis and neutropenia warrants directed consideration of drug-related suppression, Felty syndrome, and T-cell large granular lymphocytic leukemia; severe rheumatoid disease and immunosuppression may each contribute to the low ANC. [18]",
+        "Chronic idiopathic and autoimmune neutropenia are common chronic causes in both children and adults, but these diagnoses require exclusion of congenital, medication-related, systemic autoimmune, and marrow causes when the clinical pattern is atypical or infections recur. [14][12]"
+      ],
+      "bullets": [
+        "Use a peripheral smear with the CBC differential during initial assessment, especially when the automated count is unexpected or another blood-line abnormality is present. [17]",
+        "Obtain a focused medication and treatment history, including myelosuppressive chemotherapy and other potential drug exposures; drug-induced neutropenia is an exception to routine marrow testing in the European chronic-neutropenia guideline. [12]",
+        "Consider congenital neutropenia when severe or moderate neutropenia begins in childhood, is persistent, or is associated with recurrent infections; congenital disease has different monitoring requirements from isolated acquired neutropenia. [2][12]"
+      ],
+      "subsections": [
+        {
+          "heading": "When autoimmune neutropenia is plausible",
+          "paragraphs": [
+            "In pediatric patients with suspected primary autoimmune neutropenia and positive antigranulocyte antibodies, marrow testing may be deferred. In contrast, suspected autoimmune neutropenia with negative granulocyte antibody testing and recurrent infections should prompt diagnostic marrow examination. [12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Pattern-based branches that change the next diagnostic step. [12][14][16][18]",
+        "columns": [
+          "Pattern",
+          "High-priority etiologies",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "New or transient isolated neutropenia",
+            "Drug exposure, infection, nutritional deficiency, autoimmune disease [16]",
+            "Repeat CBC with differential; review medications, infectious context, dietary or malabsorption risk, and peripheral smear. [16][17]"
+          ],
+          [
+            "Chronic isolated mild neutropenia, stable over time",
+            "Chronic idiopathic or autoimmune neutropenia; stable constitutional variants may be considered clinically [14][12]",
+            "In adults, stable long-standing mild isolated neutropenia is an exception to routine diagnostic marrow examination. [12]"
+          ],
+          [
+            "Chronic moderate or severe neutropenia in a child",
+            "Congenital neutropenia, marrow failure, autoimmune neutropenia [2][12]",
+            "Perform diagnostic marrow morphology, cytogenetics, and myeloid-malignancy gene testing unless primary autoimmune neutropenia with positive antigranulocyte antibodies or drug-induced neutropenia applies. [12]"
+          ],
+          [
+            "Adult unexplained chronic neutropenia",
+            "Autoimmune or idiopathic neutropenia, myeloid malignancy, marrow failure [12][14][16]",
+            "Perform marrow morphology, cytogenetics, and next-generation sequencing for genes related to myeloid malignancies unless the stable mild isolated exception applies. [12]"
+          ],
+          [
+            "Rheumatoid arthritis with neutropenia",
+            "Immunosuppressive drug effect, Felty syndrome, T-cell LGL leukemia [18]",
+            "Assess the rheumatologic and medication context and evaluate for the named associated disorders. [18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marrow-evaluation-and-surveillance",
+      "eyebrow": "Hematology escalation",
+      "heading": "Use marrow testing to exclude marrow failure and myeloid neoplasia",
+      "intro": "Marrow evaluation is not a reflex for every low ANC, but it is central in unexplained persistent or severe disease.",
+      "paragraphs": [
+        "For chronic neutropenia requiring marrow evaluation, obtain bone marrow morphology, conventional cytogenetics, and next-generation sequencing of genes related to myeloid malignancies. This combination is recommended for adults with unexplained chronic neutropenia and for pediatric severe or moderate chronic neutropenia, subject to specified exceptions. [12]",
+        "Perform diagnostic marrow testing before initiating G-CSF in chronic neutropenia. This establishes a baseline and helps distinguish congenital, immune, and marrow-based disorders before treatment changes the neutrophil count. [12]",
+        "Plan annual marrow and cytogenetic follow-up for congenital bone marrow failure syndromes regardless of ANC or G-CSF treatment status. This surveillance requirement differs from stable mild isolated adult neutropenia, for which routine diagnostic marrow testing may be unnecessary. [12]"
+      ],
+      "bullets": [
+        "Do not treat an unexplained chronic neutropenia diagnosis as secure when smear abnormalities, additional cytopenias, recurrent infections, or progressive severity emerge; reconsider marrow disease and repeat the diagnostic assessment. [12][17]",
+        "For children with primary autoimmune neutropenia and positive antigranulocyte antibodies, defer marrow testing unless the clinical course no longer fits the expected benign pattern or alternative marrow disease becomes a concern. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Situations in which marrow examination or surveillance changes management. [12]",
+        "columns": [
+          "Clinical situation",
+          "Marrow action",
+          "Exception or follow-up"
+        ],
+        "rows": [
+          [
+            "Adult unexplained chronic neutropenia",
+            "Bone marrow morphology, cytogenetics, and myeloid-malignancy gene NGS. [12]",
+            "May defer in long-standing, mild, isolated, stable neutropenia. [12]"
+          ],
+          [
+            "Pediatric moderate or severe chronic neutropenia",
+            "Bone marrow morphology, cytogenetics, and myeloid-malignancy gene NGS. [12]",
+            "Exception: primary autoimmune neutropenia with positive antigranulocyte antibodies and drug-induced neutropenia. [12]"
+          ],
+          [
+            "Suspected autoimmune neutropenia with negative antibody testing and recurrent infection",
+            "Diagnostic bone marrow examination. [12]",
+            "Reassess for alternative immune or marrow pathology. [12]"
+          ],
+          [
+            "Before G-CSF in chronic neutropenia",
+            "Diagnostic bone marrow examination. [12]",
+            "Use as baseline before chronic growth-factor exposure. [12]"
+          ],
+          [
+            "Congenital marrow failure syndrome",
+            "Annual marrow and cytogenetic follow-up. [12]",
+            "Applies independent of ANC and G-CSF treatment. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g-csf-in-chronic-neutropenia",
+      "eyebrow": "Cause-directed treatment",
+      "heading": "Use filgrastim for symptomatic severe chronic neutropenia",
+      "intro": "G-CSF is a chronic, individualized intervention for selected patients, not a substitute for defining the underlying disorder.",
+      "paragraphs": [
+        "Filgrastim is indicated to reduce fever, infections, and oropharyngeal ulcers in symptomatic adult and pediatric patients with congenital, cyclic, or idiopathic severe chronic neutropenia. In the pivotal randomized trial, febrile neutropenia occurred in 40% of filgrastim-treated patients versus 76% of placebo-treated patients; severe neutropenia, hospital admission, and antibiotic-use duration were also reduced. [2][3][4]",
+        "Chronic daily administration is required to maintain clinical benefit in severe chronic neutropenia. Individualize the dose to clinical course and ANC, with CBC monitoring used for dose adjustment. [2][3][4]",
+        "Reported median daily filgrastim doses in postmarketing surveillance were 6 mcg/kg for congenital neutropenia, 2.1 mcg/kg for cyclic neutropenia, and 1.2 mcg/kg for idiopathic neutropenia. Rare patients with congenital neutropenia required at least 100 mcg/kg/day, illustrating the need for disease-specific dose titration rather than a fixed regimen. [3][4]"
+      ],
+      "bullets": [
+        "Establish marrow morphology, cytogenetics, and appropriate molecular assessment before chronic G-CSF when chronic neutropenia is unexplained. [12]",
+        "Use recurrent clinically significant infections, fever, oropharyngeal ulcers, and ANC response to determine whether long-term filgrastim is providing meaningful clinical benefit. [2][3][4]",
+        "Do not extrapolate severe chronic neutropenia dosing to chemotherapy prophylaxis or stem-cell mobilization; these are distinct labeled use settings with different regimens. [3][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Filgrastim dose experience in severe chronic neutropenia. [3][4]",
+        "columns": [
+          "Severe chronic neutropenia subtype",
+          "Reported median daily filgrastim dose",
+          "Monitoring and treatment principle"
+        ],
+        "rows": [
+          [
+            "Congenital neutropenia",
+            "6 mcg/kg/day; rare patients required ≥100 mcg/kg/day. [3][4]",
+            "Chronic daily therapy; individualize to ANC and clinical course with CBC monitoring. [3][4]"
+          ],
+          [
+            "Cyclic neutropenia",
+            "2.1 mcg/kg/day. [3][4]",
+            "Chronic daily therapy; individualize to ANC and clinical course with CBC monitoring. [3][4]"
+          ],
+          [
+            "Idiopathic neutropenia",
+            "1.2 mcg/kg/day. [3][4]",
+            "Chronic daily therapy; individualize to ANC and clinical course with CBC monitoring. [3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "chemotherapy-associated-neutropenia",
+      "eyebrow": "Oncology",
+      "heading": "Prevent chemotherapy-associated neutropenia with regimen-appropriate G-CSF",
+      "intro": "Chemotherapy-associated neutropenia requires prevention planning before the expected nadir and urgent management when fever develops.",
+      "paragraphs": [
+        "Recombinant G-CSF reduces chemotherapy-related neutropenia. In breast cancer treatment settings, long-acting G-CSFs are standard for primary prophylaxis against chemotherapy-induced neutropenia, and G-CSF prophylaxis may be used when febrile-neutropenia risk is high. [10][9][11]",
+        "Ryzneuta is an FDA-approved leukocyte growth factor for adults with nonmyeloid malignancies receiving myelosuppressive anticancer drugs associated with a clinically significant incidence of febrile neutropenia; administer one subcutaneous injection approximately 24 hours after cytotoxic chemotherapy. In metastatic breast cancer trials, cycle-1 mean duration of severe neutropenia was 1.4 days with Ryzneuta versus 4.3 days with placebo, and was noninferior to pegfilgrastim in a second study. [6]",
+        "For pediatric patients 1 month to younger than 17 years with nonmyeloid malignancies receiving myelosuppressive anticancer drugs associated with clinically significant febrile-neutropenia incidence, tbo-filgrastim labeling supports established safety and effectiveness; pediatric evaluation included a 5 mcg/kg/day study regimen. [1][5]"
+      ],
+      "bullets": [
+        "Select a G-CSF product and schedule according to the chemotherapy regimen, labeled population, and timing after cytotoxic therapy; do not use severe chronic neutropenia maintenance regimens as oncology prophylaxis regimens. [3][4][6]",
+        "For autologous peripheral-blood progenitor-cell mobilization, filgrastim is dosed at 10 mcg/kg/day subcutaneously for at least 4 days before the first leukapheresis and continued until the last leukapheresis; monitor neutrophils after 4 days and discontinue if WBC exceeds 100,000/mm3. [3][4]",
+        "In relapsed or refractory multiple myeloma, intermittent G-CSF has been reported for neutropenia management; tailor use to the treatment regimen and recurrent neutropenia pattern. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "G-CSF use settings with source-supported timing or dosing. [3][4][5][6]",
+        "columns": [
+          "Clinical setting",
+          "Agent or regimen",
+          "Operational rule"
+        ],
+        "rows": [
+          [
+            "Adult chemotherapy prophylaxis in nonmyeloid malignancy",
+            "Ryzneuta, subcutaneous injection. [6]",
+            "Administer once approximately 24 hours after cytotoxic chemotherapy. [6]"
+          ],
+          [
+            "Pediatric nonmyeloid malignancy receiving myelosuppressive chemotherapy",
+            "Tbo-filgrastim; pediatric study regimen 5 mcg/kg/day. [1][5]",
+            "Use within the labeled pediatric age range and chemotherapy context. [1][5]"
+          ],
+          [
+            "Autologous PBPC mobilization",
+            "Filgrastim 10 mcg/kg/day subcutaneously. [3][4]",
+            "Start at least 4 days before first leukapheresis; continue through last collection; discontinue if WBC >100,000/mm3 after monitoring. [3][4]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When can bone marrow evaluation be deferred in chronic neutropenia?",
+      "answer": "A diagnostic marrow examination may be deferred in adults with long-standing, mild, isolated neutropenia that remains stable over time and in pediatric primary autoimmune neutropenia with positive antigranulocyte antibodies; recurrent infections with negative antibody testing warrant marrow evaluation. [12]"
+    },
+    {
+      "question": "What ANC should trigger concern for severe neutropenia?",
+      "answer": "An ANC below 500/µL defines severe neutropenia and should prompt immediate assessment for fever, focal infection, anticipated further decline, and need for urgent antimicrobial management. [16][17][18][23]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

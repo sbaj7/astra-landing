@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Sleep Medicine",
+  "title": "Sleep Apnea Syndrome",
+  "summary": "Confirm suspected obstructive sleep apnea with polysomnography or appropriate home testing, stratify severity by respiratory-event burden, and match treatment to anatomy, positive-airway-pressure tolerance, and cardiometabolic risk.",
+  "seoDescription": "Physician guide to diagnosing and managing obstructive sleep apnea with PSG or home testing, CPAP, oral appliances, and hypoglossal nerve stimulation.",
+  "clinicalQuestion": "How should physicians confirm, stratify, and select treatment for adult obstructive sleep apnea?",
+  "specialty": "Sleep Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "obstructive sleep apnea",
+    "OSA diagnosis",
+    "polysomnography",
+    "home sleep apnea testing",
+    "CPAP",
+    "hypoglossal nerve stimulation"
+  ],
+  "keyTakeaways": [
+    "Diagnose OSA when symptoms accompany an apnea-hypopnea index (AHI) or respiratory event index (REI) of at least 5 events/hour, or when AHI/REI is at least 15 events/hour regardless of symptoms. [4]",
+    "Use AHI/REI to grade OSA: mild 5 to <15, moderate 15 to 30, and severe >30 events/hour. [4]",
+    "CPAP improves sleep measures in patients with at least moderate OSA (AHI ≥15 events/hour) and remains the principal noninvasive treatment against which alternatives are considered. [3]",
+    "Consider hypoglossal nerve stimulation only after CPAP intolerance in carefully selected predominantly obstructive moderate-to-severe OSA; historical FDA criteria included AHI 15-65 events/hour, central/mixed events <25%, and BMI ≤32 kg/m². [13]"
+  ],
+  "sections": [
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm OSA with objective respiratory-event testing",
+      "intro": "Questionnaires can identify risk but do not establish the diagnosis.",
+      "paragraphs": [
+        "Obtain overnight multichannel polysomnography (PSG) or a home sleep apnea test (HSAT) when the clinical history suggests sleep-disordered breathing. PSG records sleep and physiologic channels including electroencephalography, airflow, respiratory effort, oxygenation, electrocardiography, body position, and potentially carbon dioxide monitoring; it remains the reference diagnostic study. [4][8]",
+        "Interpret the AHI or REI in the clinical context. OSA is diagnosed with nocturnal breathing disturbances or unexplained daytime sleepiness/fatigue plus AHI/REI ≥5 events/hour; an AHI/REI ≥15 events/hour establishes OSA even without symptoms. Classify 5 to <15 as mild, 15-30 as moderate, and >30 events/hour as severe. [4]",
+        "Use PSG rather than relying on a short-term screening technology when sleep staging, arousals, respiratory effort characterization, gas-exchange assessment, or differentiation from central sleep apnea is clinically important. HSAT is most useful in patients with high pretest probability of moderate-to-severe OSA; a non-diagnostic HSAT should not end evaluation when clinical suspicion remains high. [4][8]"
+      ],
+      "bullets": [
+        "Record the event phenotype: central and mixed events materially affect candidacy for hypoglossal nerve stimulation. [13]",
+        "Document oxygen metrics beyond AHI when available, including nadir oxygen saturation and percentage of sleep time with oxygen saturation <90%. [4]",
+        "Use a formal study rather than consumer or smart-bed output to establish diagnosis; investigational smart-bed algorithms have been evaluated against PSG but are not the diagnostic reference standard. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "AHI/REI thresholds used to diagnose and grade adult OSA. [4]",
+        "columns": [
+          "AHI or REI",
+          "Interpretation",
+          "Clinical consequence"
+        ],
+        "rows": [
+          [
+            "<5 events/hour",
+            "Does not meet the stated OSA threshold. [4]",
+            "If suspicion remains high, reassess study adequacy and alternative sleep-disordered breathing phenotypes. [4]"
+          ],
+          [
+            "≥5 events/hour with compatible symptoms",
+            "OSA diagnosis. [4]",
+            "Grade severity and select therapy according to symptom burden, event pattern, and treatment feasibility. [4]"
+          ],
+          [
+            "5 to <15 events/hour",
+            "Mild OSA. [4]",
+            "Treat clinically consequential symptoms and relevant comorbidity after shared treatment selection. [4]"
+          ],
+          [
+            "15-30 events/hour",
+            "Moderate OSA. [4]",
+            "CPAP has demonstrated improvement in sleep measures in this severity range. [3][4]"
+          ],
+          [
+            ">30 events/hour",
+            "Severe OSA. [4]",
+            "Prioritize effective therapy and adherence assessment because untreated moderate-to-severe OSA is associated with adverse cardiovascular and mortality risk. [1][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-and-clinical-prioritization",
+      "eyebrow": "Risk Stratification",
+      "heading": "Identify patients in whom untreated OSA changes cardiovascular and perioperative management",
+      "intro": "Severity alone is insufficient; prioritize symptoms, hypoxemia, comorbidity, and upcoming procedural risk.",
+      "paragraphs": [
+        "Actively evaluate OSA in patients with cardiovascular disease, hypertension, heart failure, atrial fibrillation, coronary disease, or unexplained resistant cardiometabolic risk. OSA is associated with hypertension, cardiovascular disease, cognitive impairment, and metabolic abnormalities; recurrent upper-airway obstruction produces intermittent hypoxemia, hypercapnia, and sleep fragmentation. [10][11][14]",
+        "In patients with atrial fibrillation, maintain a low threshold for OSA evaluation because OSA-associated intermittent hypoxia, negative intrathoracic pressure, atrial stretch, neurohumoral activation, and coexisting hypertension/metabolic disease promote atrial remodeling and an arrhythmogenic substrate. [11]",
+        "During preoperative assessment, identify known or suspected OSA and communicate it to anesthesia and surgical teams. OSA is associated with increased perioperative risk, and anesthesiology guidance supports routine preoperative screening; perioperative planning should account for the patient's established airway-pressure treatment and postoperative respiratory risk. [20]"
+      ],
+      "bullets": [
+        "Escalate diagnostic and treatment urgency for excessive daytime sleepiness, moderate-to-severe event burden, substantial nocturnal desaturation, or high-risk cardiovascular disease. [1][4][10][12]",
+        "Document established PAP use before surgery and avoid treating a screening result as equivalent to an objectively confirmed diagnosis. [4][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "first-line-therapy",
+      "eyebrow": "Treatment",
+      "heading": "Use positive airway pressure as the primary therapy for clinically significant OSA",
+      "intro": "Treatment selection should favor the modality that controls events and the patient can use consistently.",
+      "paragraphs": [
+        "Offer continuous positive airway pressure (CPAP) for moderate OSA and severe OSA unless a contraindication or inability to tolerate therapy redirects management. CPAP improves sleep measures compared with control or sham therapy in patients with AHI ≥15 events/hour and relieves upper-airway obstruction, hypoxemia, and hypercapnia. [3][14]",
+        "At follow-up, obtain device data and address specific barriers rather than labeling a patient globally “nonadherent.” Review nightly use, residual respiratory events, mask leak, interface tolerance, and patient-reported sleepiness. Timely download review and targeted adjustments are identified as important steps for patients experiencing CPAP side effects. [21]",
+        "Use adjunctive risk-factor measures alongside device therapy when relevant: weight loss and avoidance of alcohol or sedatives are emphasized in OSA management. These measures do not replace objective reassessment when symptoms persist or when treatment efficacy is uncertain. [5]"
+      ],
+      "bullets": [
+        "If residual symptoms or events persist on CPAP, verify the treated event pattern before moving to surgical alternatives. [1][21]",
+        "If a patient cannot tolerate CPAP, document the intolerance and consider an oral mandibular advancement device or, in selected patients, hypoglossal nerve stimulation. [13][14]",
+        "Do not infer cardiovascular event reduction from symptomatic improvement alone; cardiovascular outcomes with hypoglossal nerve stimulation require further study. [1]"
+      ],
+      "subsections": [
+        {
+          "heading": "Oral appliance alternative",
+          "paragraphs": [
+            "A mandibular advancement device is a non-PAP alternative for selected OSA patients, particularly when CPAP cannot be tolerated. Comparative evidence evaluates MAD against CPAP, but CPAP directly corrects obstructive events and gas-exchange abnormalities; confirm effectiveness of an oral appliance with follow-up sleep testing when clinically needed. [14][16]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Practical treatment selection after objective OSA confirmation. [3][13][14][21]",
+        "columns": [
+          "Clinical scenario",
+          "Preferred next step",
+          "Key tradeoff or monitoring"
+        ],
+        "rows": [
+          [
+            "Moderate or severe OSA",
+            "Initiate CPAP. [3][4]",
+            "Review device downloads, residual events, leak, tolerance, and symptom response. [21]"
+          ],
+          [
+            "CPAP side effects or inadequate tolerance",
+            "Perform targeted PAP troubleshooting before abandoning therapy. [21]",
+            "Objective use and efficacy data distinguish interface or setting problems from treatment failure. [21]"
+          ],
+          [
+            "Persistent CPAP intolerance",
+            "Consider mandibular advancement device or evaluate candidacy for hypoglossal nerve stimulation. [13][14][16]",
+            "Alternative therapy requires selection by event phenotype, anatomy, and objective outcome testing. [13][21]"
+          ],
+          [
+            "Predominantly central or mixed respiratory events",
+            "Do not route directly to hypoglossal nerve stimulation. [13]",
+            "Historical HNS criteria required central and mixed apneas to comprise <25% of total AHI. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hypoglossal-nerve-stimulation",
+      "eyebrow": "Procedural Therapy",
+      "heading": "Select hypoglossal nerve stimulation only after structured CPAP failure assessment",
+      "intro": "Hypoglossal nerve stimulation is an implanted treatment for selected CPAP-intolerant obstructive disease.",
+      "paragraphs": [
+        "Refer for hypoglossal nerve stimulation (HNS) evaluation when moderate-to-severe OSA remains clinically important and CPAP is not tolerated. Historical FDA approval criteria for Inspire included AHI 15-65 events/hour, predominantly obstructive events with central and mixed apneas <25% of total AHI, and BMI ≤32 kg/m². [13]",
+        "HNS electrically activates upper-airway musculature through hypoglossal nerve stimulation, addressing tongue-base contribution to upper-airway collapse. Pooled patient-level data showed clinically significant improvement in OSA severity, daytime sleepiness, and sleep-related quality of life, but evidence for cardiovascular end points remains incomplete. [1][18][19]",
+        "Use a longitudinal implant pathway rather than judging outcome immediately after surgery. A reported standardized pathway activates the device approximately 4 weeks after implantation, allows 6-8 weeks for accommodation and adjustments, then performs objective sleep testing; in-laboratory PSG for efficacy assessment and setting refinement is commonly scheduled about 12 weeks after activation. [21]"
+      ],
+      "bullets": [
+        "Before referral, verify that the diagnostic study documents predominantly obstructive rather than central sleep apnea. [13]",
+        "After activation, monitor comfort, adherence, patient-reported outcomes, and objective residual OSA; adjust therapy settings during the accommodation period. [21]",
+        "Treat HNS as an alternative to CPAP for selected patients, not as a universal first-line replacement for PAP. [13][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "HNS decision pathway and follow-up timing. [13][21]",
+        "columns": [
+          "Phase",
+          "Required decision",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Pre-referral",
+            "Confirm moderate-to-severe, predominantly obstructive OSA and document CPAP intolerance; assess whether historical AHI, central/mixed-event, and BMI criteria are met. [13]",
+            "Before implantation. [13]"
+          ],
+          [
+            "Post-implant activation",
+            "Activate the device and begin patient education and programmed therapy accommodation. [21]",
+            "Approximately 4 weeks after implantation. [21]"
+          ],
+          [
+            "Accommodation",
+            "Adjust settings and assess comfort, use, and symptomatic response. [21]",
+            "Approximately 6-8 weeks after activation. [21]"
+          ],
+          [
+            "Objective efficacy assessment",
+            "Perform sleep testing and refine settings based on residual OSA and treatment tolerance. [21]",
+            "Approximately 12 weeks after activation for in-laboratory PSG in the described pathway. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-monitoring",
+      "eyebrow": "Follow-up",
+      "heading": "Measure treatment efficacy with objective data and clinical response",
+      "intro": "Persistent symptoms require reassessment of residual respiratory events, treatment use, and alternate sleep pathology.",
+      "paragraphs": [
+        "For CPAP, use device download data to evaluate actual use, residual events, and leak, then make targeted interface or treatment adjustments. For HNS, pair adherence and symptom assessment with post-activation sleep testing to determine whether programmed stimulation adequately reduces OSA. [21]",
+        "When repeat testing is performed, interpret results with awareness of how the study was obtained. In HNS cohorts, 12-month AHI results have differed depending on whether testing used an untreated-setting sleep study versus a titration study segment at optimal stimulation parameters; efficacy testing should therefore be clinically interpretable and linked to the device settings used. [1]",
+        "Continue management of associated cardiovascular disease and hypertension rather than assuming OSA therapy alone resolves risk. Severe untreated OSA has been associated with cardiovascular mortality in women, while adequate CPAP treatment may reduce that risk; causal cardiovascular benefit remains an area requiring patient-specific interpretation. [12]"
+      ],
+      "bullets": [
+        "Repeat objective testing after HNS programming to guide setting refinement. [21]",
+        "Reconsider central sleep apnea or another sleep disorder when obstructive-event control does not explain persistent symptoms. [4][13]",
+        "Track daytime sleepiness and sleep-related quality of life alongside physiologic endpoints, particularly after HNS. [1][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

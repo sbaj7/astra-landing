@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology and Nephrology",
+  "title": "Cardiorenal Syndrome",
+  "summary": "Cardiorenal syndrome requires phenotype-based management: distinguish congestion from hypoperfusion, establish whether cardiac, renal, or systemic disease is primary, and pursue decongestion without reflexively abandoning therapy for a creatinine rise.",
+  "seoDescription": "Point-of-care approach to cardiorenal syndrome: classify the phenotype, assess congestion and perfusion, treat diuretic resistance, and escalate appropriately.",
+  "clinicalQuestion": "How should clinicians classify, evaluate, and manage acute and chronic cardiorenal syndrome while balancing decongestion and kidney function?",
+  "specialty": "Cardiology and Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "cardiorenal syndrome",
+    "acute cardiorenal syndrome",
+    "cardiorenal syndrome type 1",
+    "venous congestion",
+    "diuretic resistance",
+    "ultrafiltration",
+    "acute heart failure",
+    "acute kidney injury"
+  ],
+  "keyTakeaways": [
+    "Classify cardiorenal syndrome by primary organ insult and acuity: acute cardiac-to-kidney (type 1), chronic cardiac-to-kidney (type 2), acute kidney-to-heart (type 3), chronic kidney-to-heart (type 4), or simultaneous systemic injury (type 5). [10][11]",
+    "In acute heart failure with kidney dysfunction, determine whether venous congestion or low-output hypoperfusion is the dominant hemodynamic problem; renal venous congestion can directly contribute to organ injury. [4][5]",
+    "For congestion-predominant acute cardiorenal syndrome, intravenous loop diuretics are first-line; a creatinine increase during aggressive decongestion does not by itself establish tubular injury or require stopping decongestion. [13][16]",
+    "If loop-diuretic response is inadequate, first verify adherence and sodium exposure, then increase loop dose or frequency and add sequential nephron blockade rather than using a non-loop diuretic alone. [16][18]",
+    "Reserve ultrafiltration or kidney replacement therapy for refractory volume overload or conventional renal indications after reassessing perfusion, congestion, diuretic delivery, and reversible kidney insults. [16][19]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-phenotype",
+      "eyebrow": "First decision",
+      "heading": "Identify the dominant hemodynamic phenotype before treating the creatinine",
+      "intro": "The immediate branch is congestion-predominant versus hypoperfusion-predominant disease.",
+      "paragraphs": [
+        "Treat acute cardiorenal syndrome as a hemodynamic syndrome rather than as an isolated creatinine problem. Cardiac dysfunction can reduce effective circulating volume and renal perfusion, while elevated venous pressure can impair renal function; sympathetic activation, renin-angiotensin-aldosterone system activation, inflammation, and oxidative stress may compound injury. [4][1]",
+        "Urgently identify cardiogenic shock or another low-output state when hypotension, altered mentation, cool extremities, oliguria, or biochemical evidence of systemic hypoperfusion accompanies acute cardiac illness. In this phenotype, prioritize restoration of central hemodynamics by optimizing preload, afterload, and contractility; renal support is secondary to correcting the circulatory failure. [20]",
+        "When systemic venous congestion predominates despite preserved or stabilized perfusion, pursue decongestion. Bedside assessment should be supplemented by point-of-care ultrasound when the volume phenotype is uncertain: Doppler evaluation of hepatic, portal, and intrarenal venous flow can identify abnormal venous velocity profiles associated with clinically significant systemic venous congestion. [5]"
+      ],
+      "bullets": [
+        "Congestion-predominant pattern: acute decompensated heart failure with volume overload and kidney dysfunction; use intravenous loop-diuretic\u2013based decongestion. [16]",
+        "Hypoperfusion-predominant pattern: cardiogenic shock with low cardiac output and systemic hypoperfusion; correct central hemodynamics before pursuing aggressive fluid removal. [20]",
+        "Mixed pattern: reassess serially because venous congestion and reduced effective circulating volume may coexist. [4][5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Hemodynamic patterns that alter the immediate management priority. [4][5][16][20]",
+        "columns": [
+          "Pattern",
+          "Clinical interpretation",
+          "Immediate priority"
+        ],
+        "rows": [
+          [
+            "Venous congestion with acceptable perfusion",
+            "Venous hypertension may mediate renal dysfunction; abnormal hepatic, portal, or intrarenal venous Doppler profiles can support systemic congestion. [5]",
+            "Intravenous loop-diuretic decongestion; monitor response and kidney function. [16]"
+          ],
+          [
+            "Low-output cardiogenic shock",
+            "Low cardiac output produces systemic hypoperfusion and may cause acute kidney injury. [20]",
+            "Optimize preload, afterload, and contractility to restore central hemodynamics. [20]"
+          ],
+          [
+            "Mixed congestion and hypoperfusion",
+            "Both reduced effective circulating volume and renal venous congestion can contribute to kidney injury. [4]",
+            "Stabilize perfusion while using carefully monitored decongestion. [4][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classification-and-causal-branching",
+      "eyebrow": "Etiologic framework",
+      "heading": "Classify by temporal sequence to direct the workup",
+      "intro": "The five-type classification is most useful when it identifies the initiating organ or systemic process.",
+      "paragraphs": [
+        "Type 1 cardiorenal syndrome is acute cardiac dysfunction causing acute kidney injury, classically during acute decompensated heart failure, myocardial infarction, or another acute cardiac illness. The near-term task is to identify the cardiac trigger and determine whether renal dysfunction is linked predominantly to congestion, low output, or both. [10][17][23]",
+        "Type 2 is chronic heart failure contributing to chronic kidney disease. Use the longitudinal record\u2014heart-failure trajectory, prior creatinine values, recurrent congestion, and diuretic requirements\u2014to distinguish progressive chronic interaction from a new superimposed acute kidney insult. [10][23]",
+        "Type 3 is acute kidney injury precipitating acute cardiac dysfunction, whereas type 4 is chronic kidney disease contributing to cardiac dysfunction, including left ventricular diastolic dysfunction. In these renal-primary phenotypes, identify the kidney insult or chronic kidney disease complication driving cardiac instability rather than assuming worsening heart failure is the original event. [10][23]",
+        "Type 5 denotes concurrent cardiac and renal injury from a systemic condition. This category should prompt an active search for an extrarenal driver because neither organ is necessarily the primary therapeutic target. [10][11]"
+      ],
+      "bullets": [
+        "Type 1: acute heart-to-kidney injury. [10][17]",
+        "Type 2: chronic heart-to-kidney injury. [10]",
+        "Type 3: acute kidney-to-heart injury. [10]",
+        "Type 4: chronic kidney-to-heart injury. [10][23]",
+        "Type 5: systemic disease causing concurrent heart and kidney dysfunction. [10][11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Cardiorenal syndrome classification and the clinical question each type should trigger. [10][11][23]",
+        "columns": [
+          "Type",
+          "Direction and course",
+          "Next diagnostic question"
+        ],
+        "rows": [
+          [
+            "1",
+            "Acute cardiac dysfunction causing acute kidney injury. [10][17]",
+            "Is acute cardiac illness causing congestion, hypoperfusion, or both? [4][5]"
+          ],
+          [
+            "2",
+            "Chronic cardiac dysfunction contributing to chronic kidney disease. [10]",
+            "Is chronic heart-failure burden temporally linked to progressive kidney decline? [10][23]"
+          ],
+          [
+            "3",
+            "Acute kidney injury aggravating cardiac dysfunction. [10]",
+            "What acute renal process is provoking cardiac decompensation? [10]"
+          ],
+          [
+            "4",
+            "Chronic kidney disease aggravating cardiac dysfunction. [10][23]",
+            "Which chronic kidney disease complication is contributing to cardiac dysfunction? [23]"
+          ],
+          [
+            "5",
+            "Systemic disease causing concurrent cardiac and renal dysfunction. [10][11]",
+            "What systemic disorder requires cause-directed treatment? [10][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-evaluation",
+      "eyebrow": "Diagnostic workup",
+      "heading": "Confirm acuity, exclude competing kidney injury, and measure treatment response",
+      "intro": "Use serial findings rather than a single creatinine value to interpret kidney deterioration.",
+      "paragraphs": [
+        "Establish the timeline with prior creatinine values, baseline chronic kidney disease status, recent heart-failure admissions, acute coronary or arrhythmic events, hypotension, medication changes, and diuretic exposure. The classification depends on whether cardiac dysfunction, kidney dysfunction, or a systemic illness occurred first; a single simultaneous creatinine and cardiac measurement cannot establish directionality. [10][11]",
+        "In acute cardiac illness with rising creatinine, assess congestion and perfusion in parallel. Serum creatinine has recognized limitations as an early marker of kidney injury, so a creatinine rise must be interpreted with urine output, hemodynamics, venous congestion findings, and the trajectory during treatment. [11][5]",
+        "Screen for a non-cardiorenal contributor when the renal course is disproportionate to the hemodynamic phenotype. Medication nonadherence, high sodium intake, electrolyte disturbances, reduced renal blood flow, reduced functional nephron mass, and pharmacokinetic or pharmacodynamic changes can all produce apparent or true diuretic resistance and should be corrected before labeling a patient refractory. [18]",
+        "Use serial urine output as an actionable measure of diuretic effect. Urine output-guided diuretic therapy has been reported to outperform standard diuretic therapy, supporting early adjustment when the desired response is not achieved rather than waiting for prolonged ineffective treatment. [16]"
+      ],
+      "bullets": [
+        "Review prior kidney function and cardiac trajectory to establish acute versus chronic disease and the direction of injury. [10][11]",
+        "Evaluate systemic congestion clinically and, when uncertainty persists, with hepatic, portal, and intrarenal venous Doppler profiles. [5]",
+        "Assess for low-output physiology and shock in any patient with hypotension or systemic hypoperfusion. [20]",
+        "Track urine output after intravenous diuretic administration and use inadequate response to trigger dose optimization or combination therapy. [16]",
+        "Before escalating for resistance, verify sodium exposure, adherence, renal perfusion, electrolyte status, and adequate loop-diuretic dosing. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of worsening kidney function during acute heart-failure treatment. [13][16]",
+        "columns": [
+          "Finding during therapy",
+          "Interpretation",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Creatinine rise during aggressive decongestion",
+            "Aggressive diuresis-associated worsening renal function was not associated with tubular injury in the cited acute heart-failure study. [13]",
+            "Do not use creatinine change alone to terminate needed decongestion; integrate congestion, perfusion, and urine-output response. [13][16]"
+          ],
+          [
+            "Inadequate urine output after loop diuretic",
+            "Suggests insufficient diuretic response and may reflect diuretic resistance. [16][18]",
+            "Optimize loop dose or frequency; consider sequential nephron blockade after reversible contributors are addressed. [16][18]"
+          ],
+          [
+            "Hypoperfusion with kidney dysfunction",
+            "Suggests low-output circulatory failure rather than isolated congestion. [20]",
+            "Prioritize hemodynamic optimization rather than reflexively escalating fluid removal. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "decongestion-and-diuretic-resistance",
+      "eyebrow": "Acute treatment",
+      "heading": "Use intravenous loop diuretics first and escalate by response",
+      "intro": "For congestion-predominant acute cardiorenal syndrome, fluid removal is the therapeutic cornerstone.",
+      "paragraphs": [
+        "Use intravenous loop diuretics as first-line therapy for fluid removal in acute cardiorenal syndrome. Loop diuretics are the most potent diuretic class for this setting; non-loop agents should not be used alone as a substitute for loop-diuretic therapy. [16]",
+        "Escalate according to urine-output response. In severe renal insufficiency, the cited ceiling dose for an intravenous furosemide bolus is 160 to 200 mg, compared with 40 to 80 mg in preserved renal function. Dose selection remains individualized to prior exposure, renal function, hemodynamics, and observed diuretic effect. [16]",
+        "When response to high-dose loop therapy remains inadequate, use sequential nephron blockade with a loop diuretic plus a second diuretic class. Combination therapy is a next step after failure to achieve the intended response with high-dose loop monotherapy, not a reason to stop loop therapy. [16]",
+        "In severe renal impairment, higher thiazide doses may be necessary; the cited hydrochlorothiazide dose when creatinine clearance is below 20 mL/min is 100 to 200 mg daily. Monitor closely for electrolyte disturbance and worsening kidney function when combination diuresis is used. [16]"
+      ],
+      "bullets": [
+        "Start with intravenous loop diuresis for congestion-predominant acute cardiorenal syndrome. [16]",
+        "Use serial urine output to determine whether the diuretic regimen is effective. [16]",
+        "For inadequate response, confirm adherence and sodium restriction barriers, then increase loop dose or frequency before or alongside sequential nephron blockade. [18][16]",
+        "Do not equate an isolated creatinine rise during effective aggressive decongestion with intrinsic tubular injury. [13]"
+      ],
+      "subsections": [
+        {
+          "heading": "Approach to apparent diuretic resistance",
+          "paragraphs": [
+            "Differentiate inadequate delivery or counterregulatory sodium retention from true pharmacologic resistance. High sodium intake, missed medication, electrolyte abnormalities, reduced renal blood flow, nephron loss, and altered pharmacokinetics or pharmacodynamics can each blunt response; correcting these factors may restore loop-diuretic effectiveness without extracorporeal therapy. [18]",
+            "If a high-dose intravenous loop regimen still produces inadequate urine output, add sequential nephron blockade and monitor volume status, renal function, and electrolytes during escalation. This strategy is specifically described as an important treatment for diuretic resistance. [16][18]"
+          ],
+          "bullets": [
+            "Assess adherence and dietary sodium exposure. [18]",
+            "Correct electrolyte disturbances and reassess renal perfusion. [18]",
+            "Increase loop-diuretic dose and/or frequency. [18]",
+            "Add a second diuretic class to a loop diuretic rather than using it alone. [16][18]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Escalation of decongestive therapy in acute cardiorenal syndrome. [16][18]",
+        "columns": [
+          "Step",
+          "Action",
+          "Decision trigger"
+        ],
+        "rows": [
+          [
+            "1",
+            "Administer an intravenous loop diuretic. [16]",
+            "Congestion-predominant acute cardiorenal syndrome. [16]"
+          ],
+          [
+            "2",
+            "Measure urine output and reassess congestion, perfusion, renal function, and electrolytes. [16]",
+            "Determine whether the desired diuretic response occurred. [16]"
+          ],
+          [
+            "3",
+            "Increase loop-diuretic dose or frequency after assessing adherence, sodium exposure, electrolyte status, and renal perfusion. [18]",
+            "Inadequate response to usual loop-diuretic dosing. [18]"
+          ],
+          [
+            "4",
+            "Use sequential nephron blockade with the loop diuretic. [16][18]",
+            "Inadequate response to high-dose loop monotherapy. [16]"
+          ],
+          [
+            "5",
+            "Consider ultrafiltration or kidney replacement therapy selectively. [16][19]",
+            "Refractory congestion after reassessment of hemodynamics and pharmacologic options. [16][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ultrafiltration-and-longitudinal-management",
+      "eyebrow": "Escalation and follow-up",
+      "heading": "Select ultrafiltration cautiously and address the primary chronic disease",
+      "intro": "Extracorporeal fluid removal is not a routine substitute for optimized pharmacologic decongestion.",
+      "paragraphs": [
+        "Ultrafiltration is an option for fluid removal in acute cardiorenal syndrome, but pharmacologic diuresis remains the first-line approach. Use extracorporeal fluid removal selectively when congestion persists despite appropriate loop-diuretic optimization and combination therapy, while reassessing whether inadequate perfusion or a reversible cause of poor diuretic response is driving the presentation. [16][18]",
+        "Slow continuous ultrafiltration may be physiologically plausible in critically ill adults with dominant venous or interstitial congestion, acceptable or stabilized perfusion, and insufficient diuretic response, but its routine, automated, or broadly generalizable use in the ICU is not validated. [19]",
+        "For type 2 and type 4 disease, longitudinal management requires coordinated control of chronic heart failure, chronic kidney disease, recurrent volume overload, and medication interactions. The treatment focus is improving heart function, reducing volume overload, and managing both heart failure and chronic kidney disease rather than treating either organ in isolation. [22][9]",
+        "For type 3, type 4, or type 5 phenotypes, the definitive next step is treatment of the renal-primary or systemic cause identified by the temporal and hemodynamic workup. The cardiorenal label should not replace disease-specific evaluation when kidney injury precedes cardiac dysfunction or a systemic illness affects both organs. [10][11]"
+      ],
+      "bullets": [
+        "Use ultrafiltration for selected refractory congestion after pharmacologic strategies and hemodynamic reassessment. [16][19]",
+        "Avoid routine SCUF in critically ill patients solely because congestion is present; select patients with stabilized perfusion and inadequate diuretic response. [19]",
+        "Coordinate chronic heart-failure and chronic kidney-disease management in type 2 and type 4 disease, with ongoing surveillance for volume overload and medication tradeoffs. [9][22]",
+        "Reopen the systemic differential in type 5 rather than attributing all deterioration to heart failure or chronic kidney disease. [10][11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "When to favor continued pharmacologic decongestion versus extracorporeal fluid removal. [16][19]",
+        "columns": [
+          "Clinical situation",
+          "Preferred direction",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Congestion with an achievable response to intravenous loop diuretics",
+            "Continue loop-based diuresis and titrate to urine-output response. [16]",
+            "Creatinine change alone should not override the overall congestion and perfusion assessment. [13]"
+          ],
+          [
+            "Inadequate response to high-dose loop therapy",
+            "Address reversible contributors and add sequential nephron blockade. [16][18]",
+            "Combination therapy requires renal-function and electrolyte monitoring. [16]"
+          ],
+          [
+            "Persistent refractory congestion with acceptable or stabilized perfusion",
+            "Consider selective ultrafiltration. [16][19]",
+            "Evidence does not support routine, automated, or broadly generalized SCUF use in critical illness. [19]"
+          ],
+          [
+            "Cardiogenic shock or active systemic hypoperfusion",
+            "Prioritize hemodynamic restoration. [20]",
+            "Aggressive fluid removal can be inappropriate before perfusion is stabilized. [20]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cardiorenal Syndrome: Classification, Pathophysiology ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000664",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by J Rangaswami \u00b7 2019 \u00b7 Cited by 1626 \u2014 Loop diuretics have multiple effects on neurohormonal activation and renal and systemic hemodynamics that can predispose to kidney injury.",
+      "score": 0.42935818
+    },
+    {
+      "number": 2,
+      "title": "Cardiorenal Syndrome",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000000664",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by J Rangaswami \u00b7 2019 \u00b7 Cited by 1626 \u2014 CARRESS-HF, high-dose loop diuretic therapy did not result in RAAS activation greater than that with low- dose diuretic therapy. In fact",
+      "score": 0.4199102
+    },
+    {
+      "number": 3,
+      "title": "Cardiorenal Syndrome: An Evolutionary Appraisal",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.123.011510",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "May 17, 2024 \u2014 The cardiorenal syndrome is a significant part of the cardiovascular-kidney-metabolic syndrome and contributes to health care cost, disability, ...Read more",
+      "score": 0.31579977
+    },
+    {
+      "number": 4,
+      "title": "Acute kidney injury - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0140673624023857",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Acute kidney injury - ScienceDirect\n## Article preview. # Acute kidney injury. Acute kidney injury (AKI) is a common, heterogeneous, multifactorial condition, which is part of the overarching syndrome of acute kidney diseases and disorders. This creatinine clearance value can be measured by d",
+      "score": 0.5971152
+    },
+    {
+      "number": 5,
+      "title": "Venous Doppler to Assess Congestion: A Comprehensive Review of Current Evidence and Nomenclature - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0301562922005038",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Organ congestion from venous hypertension is an important pathophysiological mechanism mediating organ injury in several clinical contexts including critical illness, congestive heart failure and end-stage chronic kidney disease. Point-of-care ultrasound (POCUS) enables the clinician to assess venou",
+      "score": 0.45231876
+    },
+    {
+      "number": 6,
+      "title": "Diuretics in the Management of Cardiorenal Syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1548559518301423",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by C Chitturi \u00b7 2018 \u00b7 Cited by 41 \u2014 Common treatment measures include increasing in the diuretic dose and/or frequency, sequential nephron blockade,using new diuretics, ultrafiltration treatment,",
+      "score": 0.75616
+    },
+    {
+      "number": 7,
+      "title": "Emerging Device Therapies for Cardiorenal Syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2772930323012127",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Nathan \u00b7 2023 \u00b7 Cited by 17 \u2014 ... loop diuretics, has been proposed as a solution for the latter mechanism of DR and is sometimes referred to as \u201csequential nephron blockade.\u201d Other diuretic",
+      "score": 0.63152665
+    },
+    {
+      "number": 8,
+      "title": "Therapeutic Options for the Management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.4061/2011/194910",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by K Koniari \u00b7 2011 \u00b7 Cited by 59 \u2014 The cardiorenal syndrome is the worsening of renal function, which is accelerated by worsening of heart failure or acute decompensated heart failure. Although",
+      "score": 0.52393246
+    },
+    {
+      "number": 9,
+      "title": "Cardiorenal syndrome: Multi\u2010organ dysfunction involving the ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.15065",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "Challenges include limiting the contradictory effects of multi-organ targeted drug prescriptions and continuous monitoring of volume overload.",
+      "score": 0.32357296
+    },
+    {
+      "number": 10,
+      "title": "Cardiorenal Syndrome: An Updated Classification Based on Clinical Hallmarks",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9146647",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is defined as progressive, combined cardiac and renal dysfunction. In this mini review, a historical note on CRS is presented, the pathomechanisms and clinical hallmarks of both chronic heart failure and chronic kidney disease are discussed, and an updated classification of CRS is proposed. The ",
+      "score": 0.767847
+    },
+    {
+      "number": 11,
+      "title": "Cardiorenal Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542305",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Cardiorenal syndrome (CRS) encompasses a spectrum of disorders involving acute or chronic dysfunction of the heart and kidneys, where the failure of one organ system contributes to dysfunction of the other. Based on the Acute Dialysis Quality Initiative consensus, CRS is classified into 5 subtypes, ",
+      "score": 0.7402687
+    },
+    {
+      "number": 12,
+      "title": "Cardiorenal Interactions: A Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9568715",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "90.Bagshaw S.M., Cruz D.N., Aspromonte N., _et al_. Epidemiology of cardio-renal syndromes: workgroup statements from the 7th ADQI Consensus Conference. _Nephrol Dial Transplant_. 2010. 25:1406-1416. doi: 10.1093/ndt/gfq066 [DOI] [PubMed] [Google Scholar]\n   91.Campbell R.C., Sui X., Filippatos G., ",
+      "score": 0.7156829
+    },
+    {
+      "number": 13,
+      "title": "Cardiorenal syndrome-Pathophysiology",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6658134",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "25.Cruz DN, Schmidt-Ott KM, Vescovo G, et al. Pathophysiology of cardiorenal syndrome type 2 in stable chronic heart failure: workgroup statements from the eleventh consensus conference of the Acute Dialysis Quality Initiative (ADQI). Contrib Nephrol 2013;182:117\u2013136. doi: 10.1159/000349968 [DOI] [P",
+      "score": 0.7038554
+    },
+    {
+      "number": 14,
+      "title": "Heart Failure and Cardiorenal Syndrome: A Narrative Review on Pathophysiology, Diagnostic and Therapeutic Regimens\u2014From a Cardiologist\u2019s View - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9741317",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "96.McDonagh T.A., Metra M., Adamo M., Gardner R.S., Baumbach A., Bohm M., Burri H., Butler J., Celutkiene J., Chioncel O., et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur. Heart J. 2021;42:3599\u20133726. doi: 10.1093/eurheartj/ehab368. [DOI] [PubMed] [G",
+      "score": 0.68697983
+    },
+    {
+      "number": 15,
+      "title": "Heart Failure and Cardiorenal Syndrome: A Narrative ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.3390%2Fjcm11237041&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by AC Mitsas \u00b7 2022 \u00b7 Cited by 107 \u2014 Urine IL-18 is an early diagnostic marker for acute kidney injury and predicts mortality in the intensive care unit.",
+      "score": 0.64047897
+    },
+    {
+      "number": 16,
+      "title": "Acute cardiorenal syndrome: Mechanisms and clinical ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/3/231",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Combination diuretic therapy. Sequential nephron blockade with combination diuretic therapy is an important therapeutic strategy against diuretic resistance. Notably, urine output-guided diuretic therapy has been shown to be superior to standard diuretic therapy.28 Such therapeutic protocols may emp",
+      "score": 0.6326168
+    },
+    {
+      "number": 17,
+      "title": "Cardiorenal syndrome type 1: pathophysiological crosstalk ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22840531",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by C Ronco \u00b7 2012 \u00b7 Cited by 576 \u2014 Cardiorenal syndrome (CRS) type 1 is characterized as the development of acute kidney injury (AKI) and dysfunction in the patient with acute",
+      "score": 0.56489134
+    },
+    {
+      "number": 18,
+      "title": "Diuretic resistance in patients with kidney disease: Challenges and opportunities",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0753332222014470",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Diuretic resistance in cardiorenal syndrome: mechanisms, monitoring and phenotype-tailored management [...] diet (electrolyte disturbance and hypoproteinemia due to patients' failure to limit diet according to correct sodium, chlorine, potassium, and protein level) and poor drug compliance (the ",
+      "score": 0.53473455
+    },
+    {
+      "number": 19,
+      "title": "Consensus document on the diagnosis and treatment of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2013251426000027",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "its physiological plausibility, the role of slow continuous ultrafiltration (SCUF) as a selective decongestive strategy in critically ill patients remains uncertain. The objective of this critical narrative review was to analyze the pathophysiological rationale, available clinical evidence, physiolo",
+      "score": 0.31497744
+    },
+    {
+      "number": 20,
+      "title": "Management of non-Cardiac Organ Failure in cardiogenic shock",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666602225000527",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Abbreviations\n\nAKI\n\nacute kidney injury\n\nALI\n\nacute cardiogenic liver injury\n\nAMI-CS\n\nacute myocardial infarction complicated by cardiogenic shock\n\nARDS\n\nacute respiratory distress syndrome\n\nBiPAP\n\nbilevel positive airway pressure\n\nCPAP\n\ncontinuous positive airway pressure\n\nCPE\n\ncardiogenic pulmo",
+      "score": 0.28079185
+    },
+    {
+      "number": 21,
+      "title": "Cardiorenal Syndrome Type 1: Pathophysiological ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109712019559",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by C Ronco \u00b7 2012 \u00b7 Cited by 576 \u2014 Cardiorenal syndrome (CRS) type 1 is characterized as the development of acute kidney injury (AKI) and dysfunction in the patient with acute cardiac illness,",
+      "score": 0.5855047
+    },
+    {
+      "number": 22,
+      "title": "Cardiorenal syndrome: review of our current understanding",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4724773",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "by S Hadjiphilippou \u00b7 2016 \u00b7 Cited by 74 \u2014 Management of this syndrome focuses on improving heart function, reducing volume overload, and managing heart failure and chronic kidney disease.",
+      "score": 0.6546525
+    },
+    {
+      "number": 23,
+      "title": "Cardiorenal Syndrome: A Literature Review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10389294",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Cardiorenal syndrome (CRS) is a condition characterized by the intricate two-way relationship between the heart and kidneys, which can lead to acute or chronic dysfunction in these organs. The interplay between cardiorenal connectors and both hemodynamic and non-hemodynamic factors is crucial to und",
+      "score": 0.64986813
+    },
+    {
+      "number": 24,
+      "title": "Cardiorenal Syndrome: Challenges in Everyday Clinical Practice and Key Points towards a Better Management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10321054",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "117..Ponikowski P., Voors A.A., Anker S.D., Bueno H., Cleland J.G.F., Coats A.J.S., Falk V., Gonz\u00e1lez-Juanatey J.R., Harjola V.-P., Jankowska E.A., _et al_. 2016 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure: The Task Force for the diagnosis and treatment of acute",
+      "score": 0.6058229
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Cardiorenal Syndrome: Classification, Pathophysiology ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000664",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by J Rangaswami \u00b7 2019 \u00b7 Cited by 1626 \u2014 Loop diuretics have multiple effects on neurohormonal activation and renal and systemic hemodynamics that can predispose to kidney injury.",
+      "score": 0.42935818
+    },
+    {
+      "number": 2,
+      "title": "Cardiorenal Syndrome",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000000664",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "by J Rangaswami \u00b7 2019 \u00b7 Cited by 1626 \u2014 CARRESS-HF, high-dose loop diuretic therapy did not result in RAAS activation greater than that with low- dose diuretic therapy. In fact",
+      "score": 0.4199102
+    },
+    {
+      "number": 3,
+      "title": "Cardiorenal Syndrome: An Evolutionary Appraisal",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.123.011510",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "May 17, 2024 \u2014 The cardiorenal syndrome is a significant part of the cardiovascular-kidney-metabolic syndrome and contributes to health care cost, disability, ...Read more",
+      "score": 0.31579977
+    },
+    {
+      "number": 4,
+      "title": "Acute kidney injury - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0140673624023857",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Acute kidney injury - ScienceDirect\n## Article preview. # Acute kidney injury. Acute kidney injury (AKI) is a common, heterogeneous, multifactorial condition, which is part of the overarching syndrome of acute kidney diseases and disorders. This creatinine clearance value can be measured by d",
+      "score": 0.5971152
+    },
+    {
+      "number": 5,
+      "title": "Venous Doppler to Assess Congestion: A Comprehensive Review of Current Evidence and Nomenclature - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0301562922005038",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Organ congestion from venous hypertension is an important pathophysiological mechanism mediating organ injury in several clinical contexts including critical illness, congestive heart failure and end-stage chronic kidney disease. Point-of-care ultrasound (POCUS) enables the clinician to assess venou",
+      "score": 0.45231876
+    },
+    {
+      "number": 6,
+      "title": "Diuretics in the Management of Cardiorenal Syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1548559518301423",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by C Chitturi \u00b7 2018 \u00b7 Cited by 41 \u2014 Common treatment measures include increasing in the diuretic dose and/or frequency, sequential nephron blockade,using new diuretics, ultrafiltration treatment,",
+      "score": 0.75616
+    },
+    {
+      "number": 7,
+      "title": "Emerging Device Therapies for Cardiorenal Syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2772930323012127",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by S Nathan \u00b7 2023 \u00b7 Cited by 17 \u2014 ... loop diuretics, has been proposed as a solution for the latter mechanism of DR and is sometimes referred to as \u201csequential nephron blockade.\u201d Other diuretic",
+      "score": 0.63152665
+    },
+    {
+      "number": 8,
+      "title": "Therapeutic Options for the Management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.4061/2011/194910",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by K Koniari \u00b7 2011 \u00b7 Cited by 59 \u2014 The cardiorenal syndrome is the worsening of renal function, which is accelerated by worsening of heart failure or acute decompensated heart failure. Although",
+      "score": 0.52393246
+    },
+    {
+      "number": 9,
+      "title": "Cardiorenal syndrome: Multi\u2010organ dysfunction involving the ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.15065",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "Challenges include limiting the contradictory effects of multi-organ targeted drug prescriptions and continuous monitoring of volume overload.",
+      "score": 0.32357296
+    },
+    {
+      "number": 10,
+      "title": "Cardiorenal Syndrome: An Updated Classification Based on Clinical Hallmarks",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9146647",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  is defined as progressive, combined cardiac and renal dysfunction. In this mini review, a historical note on CRS is presented, the pathomechanisms and clinical hallmarks of both chronic heart failure and chronic kidney disease are discussed, and an updated classification of CRS is proposed. The ",
+      "score": 0.767847
+    },
+    {
+      "number": 11,
+      "title": "Cardiorenal Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542305",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Cardiorenal syndrome (CRS) encompasses a spectrum of disorders involving acute or chronic dysfunction of the heart and kidneys, where the failure of one organ system contributes to dysfunction of the other. Based on the Acute Dialysis Quality Initiative consensus, CRS is classified into 5 subtypes, ",
+      "score": 0.7402687
+    },
+    {
+      "number": 12,
+      "title": "Cardiorenal Interactions: A Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9568715",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "90.Bagshaw S.M., Cruz D.N., Aspromonte N., _et al_. Epidemiology of cardio-renal syndromes: workgroup statements from the 7th ADQI Consensus Conference. _Nephrol Dial Transplant_. 2010. 25:1406-1416. doi: 10.1093/ndt/gfq066 [DOI] [PubMed] [Google Scholar]\n   91.Campbell R.C., Sui X., Filippatos G., ",
+      "score": 0.7156829
+    },
+    {
+      "number": 13,
+      "title": "Cardiorenal syndrome-Pathophysiology",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6658134",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "25.Cruz DN, Schmidt-Ott KM, Vescovo G, et al. Pathophysiology of cardiorenal syndrome type 2 in stable chronic heart failure: workgroup statements from the eleventh consensus conference of the Acute Dialysis Quality Initiative (ADQI). Contrib Nephrol 2013;182:117\u2013136. doi: 10.1159/000349968 [DOI] [P",
+      "score": 0.7038554
+    },
+    {
+      "number": 14,
+      "title": "Heart Failure and Cardiorenal Syndrome: A Narrative Review on Pathophysiology, Diagnostic and Therapeutic Regimens\u2014From a Cardiologist\u2019s View - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9741317",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "96.McDonagh T.A., Metra M., Adamo M., Gardner R.S., Baumbach A., Bohm M., Burri H., Butler J., Celutkiene J., Chioncel O., et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur. Heart J. 2021;42:3599\u20133726. doi: 10.1093/eurheartj/ehab368. [DOI] [PubMed] [G",
+      "score": 0.68697983
+    },
+    {
+      "number": 15,
+      "title": "Heart Failure and Cardiorenal Syndrome: A Narrative ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.3390%2Fjcm11237041&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "by AC Mitsas \u00b7 2022 \u00b7 Cited by 107 \u2014 Urine IL-18 is an early diagnostic marker for acute kidney injury and predicts mortality in the intensive care unit.",
+      "score": 0.64047897
+    },
+    {
+      "number": 16,
+      "title": "Acute cardiorenal syndrome: Mechanisms and clinical ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/3/231",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Combination diuretic therapy. Sequential nephron blockade with combination diuretic therapy is an important therapeutic strategy against diuretic resistance. Notably, urine output-guided diuretic therapy has been shown to be superior to standard diuretic therapy.28 Such therapeutic protocols may emp",
+      "score": 0.6326168
+    },
+    {
+      "number": 17,
+      "title": "Cardiorenal syndrome type 1: pathophysiological crosstalk ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22840531",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by C Ronco \u00b7 2012 \u00b7 Cited by 576 \u2014 Cardiorenal syndrome (CRS) type 1 is characterized as the development of acute kidney injury (AKI) and dysfunction in the patient with acute",
+      "score": 0.56489134
+    },
+    {
+      "number": 18,
+      "title": "Diuretic resistance in patients with kidney disease: Challenges and opportunities",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0753332222014470",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Diuretic resistance in cardiorenal syndrome: mechanisms, monitoring and phenotype-tailored management [...] diet (electrolyte disturbance and hypoproteinemia due to patients' failure to limit diet according to correct sodium, chlorine, potassium, and protein level) and poor drug compliance (the ",
+      "score": 0.53473455
+    },
+    {
+      "number": 19,
+      "title": "Consensus document on the diagnosis and treatment of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2013251426000027",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "its physiological plausibility, the role of slow continuous ultrafiltration (SCUF) as a selective decongestive strategy in critically ill patients remains uncertain. The objective of this critical narrative review was to analyze the pathophysiological rationale, available clinical evidence, physiolo",
+      "score": 0.31497744
+    },
+    {
+      "number": 20,
+      "title": "Management of non-Cardiac Organ Failure in cardiogenic shock",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666602225000527",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Abbreviations\n\nAKI\n\nacute kidney injury\n\nALI\n\nacute cardiogenic liver injury\n\nAMI-CS\n\nacute myocardial infarction complicated by cardiogenic shock\n\nARDS\n\nacute respiratory distress syndrome\n\nBiPAP\n\nbilevel positive airway pressure\n\nCPAP\n\ncontinuous positive airway pressure\n\nCPE\n\ncardiogenic pulmo",
+      "score": 0.28079185
+    },
+    {
+      "number": 21,
+      "title": "Cardiorenal Syndrome Type 1: Pathophysiological ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109712019559",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by C Ronco \u00b7 2012 \u00b7 Cited by 576 \u2014 Cardiorenal syndrome (CRS) type 1 is characterized as the development of acute kidney injury (AKI) and dysfunction in the patient with acute cardiac illness,",
+      "score": 0.5855047
+    },
+    {
+      "number": 22,
+      "title": "Cardiorenal syndrome: review of our current understanding",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4724773",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "by S Hadjiphilippou \u00b7 2016 \u00b7 Cited by 74 \u2014 Management of this syndrome focuses on improving heart function, reducing volume overload, and managing heart failure and chronic kidney disease.",
+      "score": 0.6546525
+    },
+    {
+      "number": 23,
+      "title": "Cardiorenal Syndrome: A Literature Review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10389294",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Cardiorenal syndrome (CRS) is a condition characterized by the intricate two-way relationship between the heart and kidneys, which can lead to acute or chronic dysfunction in these organs. The interplay between cardiorenal connectors and both hemodynamic and non-hemodynamic factors is crucial to und",
+      "score": 0.64986813
+    },
+    {
+      "number": 24,
+      "title": "Cardiorenal Syndrome: Challenges in Everyday Clinical Practice and Key Points towards a Better Management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10321054",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "117..Ponikowski P., Voors A.A., Anker S.D., Bueno H., Cleland J.G.F., Coats A.J.S., Falk V., Gonz\u00e1lez-Juanatey J.R., Harjola V.-P., Jankowska E.A., _et al_. 2016 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure: The Task Force for the diagnosis and treatment of acute",
+      "score": 0.6058229
+    }
+  ],
+  "publishedAt": "2026-08-24T17:47:03.619000+00:00",
+  "updatedAt": "2026-08-24T17:47:03.619000+00:00",
+  "readingMinutes": 7,
+  "slug": "cardiorenal-syndrome"
+}

@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "Heparin-Induced Thrombocytopenia",
+  "summary": "Use the 4Ts score to identify clinically meaningful HIT, stop every heparin exposure immediately when probability is intermediate or high, begin therapeutic non-heparin anticoagulation, and confirm with PF4 antibody testing plus a functional assay when indicated.",
+  "seoDescription": "Point-of-care approach to suspected heparin-induced thrombocytopenia: 4Ts assessment, laboratory confirmation, anticoagulant selection, and special situations.",
+  "clinicalQuestion": "How should clinicians diagnose, anticoagulate, and transition patients with suspected or confirmed heparin-induced thrombocytopenia?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "heparin-induced thrombocytopenia",
+    "HIT",
+    "4Ts score",
+    "PF4 antibody",
+    "serotonin-release assay",
+    "argatroban",
+    "bivalirudin",
+    "fondaparinux"
+  ],
+  "keyTakeaways": [
+    "Investigate HIT when platelet count falls by at least 50% and/or new thrombosis occurs on days 5-14 after heparin initiation, including after heparin has been stopped. [7]",
+    "A low-probability 4Ts score can exclude HIT without laboratory testing; intermediate- or high-probability presentations require immediate withdrawal of all heparin and non-heparin anticoagulation while testing proceeds. [16][2]",
+    "Do not manage acute HIT by stopping heparin alone or by initiating warfarin alone; both thrombosis prevention and interruption of heparin-dependent platelet activation are required. [2][7]",
+    "For acute HIT requiring PCI, bivalirudin is the preferred non-heparin anticoagulant option in ASH guidance; for dialysis-circuit anticoagulation in acute HIT, use argatroban, danaparoid, or bivalirudin. [24]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-and-triage",
+      "eyebrow": "Immediate decision",
+      "heading": "Recognize the platelet pattern that warrants HIT action",
+      "intro": "Treat suspected HIT as a thrombotic emergency rather than an isolated platelet-count abnormality.",
+      "paragraphs": [
+        "Suspect HIT when a patient exposed to unfractionated heparin or low-molecular-weight heparin develops a platelet fall of at least 50% from baseline, particularly with new arterial or venous thrombosis between days 5 and 14 after starting heparin. This timing rule applies even when thrombocytopenia or thrombosis develops after heparin has already been discontinued. [7][12]",
+        "Typical immune HIT begins 5-10 days after exposure, with a reported range of 4-15 days; delayed-onset presentations may occur after exposure has ended. A new thrombosis during this interval increases pretest probability and should prompt both diagnostic testing and immediate anticoagulant substitution rather than observation for platelet recovery. [2][5][7]",
+        "Obtain a current platelet count, review the pre-heparin baseline and daily trajectory, identify every heparin source, and assess for new thrombosis. The immediate clinical decision is driven by the 4Ts domains: magnitude of thrombocytopenia, timing, thrombosis or other sequelae, and competing causes of thrombocytopenia. [16]"
+      ],
+      "bullets": [
+        "Count all exposures: therapeutic UFH, prophylactic UFH, LMWH, procedural heparin, heparinized flushes, and dialysis-circuit heparin. In suspected HIT, discontinue all heparin products, including LMWH. [2]",
+        "Act urgently for limb ischemia, acute arterial occlusion, pulmonary embolism, or progressive venous thrombosis; HIT can produce life- and limb-threatening arterial or venous thromboembolism. [2]",
+        "If the patient is receiving heparin and estimated HIT risk exceeds 1%, monitor platelet counts every 2-3 days from day 4 through day 14, or until heparin is stopped. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical triggers for HIT evaluation and immediate action. [2][7][16]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Platelet fall \u226550% and/or thrombosis on days 5-14 after heparin initiation",
+            "Compatible with HIT, including when heparin has already been stopped. [7]",
+            "Calculate 4Ts score; if intermediate or high probability, stop all heparin and begin a non-heparin anticoagulant. [2][16]"
+          ],
+          [
+            "Platelet fall 5-10 days after UFH or LMWH exposure",
+            "Typical immune HIT timing. [2]",
+            "Send HIT laboratory testing if 4Ts probability is not low; do not wait for results before changing anticoagulation. [2][16]"
+          ],
+          [
+            "Low-probability 4Ts score",
+            "HIT can be excluded without laboratory investigation. [16]",
+            "Pursue alternative causes of thrombocytopenia rather than empiric HIT treatment. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-testing",
+      "eyebrow": "Diagnostic pathway",
+      "heading": "Use clinical probability before PF4 testing",
+      "intro": "PF4 antibodies establish laboratory support only in the correct clinical context.",
+      "paragraphs": [
+        "Apply the 4Ts score before ordering or interpreting HIT assays. Its four components are thrombocytopenia severity, timing relative to heparin, thrombosis or other HIT sequelae, and the likelihood of another explanation. A low score supports excluding HIT without laboratory testing; a non-low score requires laboratory evaluation alongside therapeutic action. [16]",
+        "Order a PF4/heparin antibody immunoassay for intermediate- or high-probability HIT. A positive immunoassay does not independently establish HIT because the diagnosis requires a compatible clinical syndrome plus heparin-dependent platelet-activating antibodies; antibody positivity without clinical manifestations is insufficient. [2]",
+        "Use a functional platelet-activation assay, such as the serotonin-release assay (SRA), to establish whether detected antibodies are pathogenic when immunoassay findings and clinical probability require confirmation. The SRA detects pathogenic HIT antibodies, and quantitative PF4 enzyme-immunoassay optical-density interpretation may help contextualize results, but neither should override the clinical picture. [17][14]"
+      ],
+      "bullets": [
+        "Document the platelet nadir and percentage fall rather than relying on whether the absolute platelet count crosses a laboratory lower limit; HIT is typically associated with a substantial platelet decline. [15][12]",
+        "Reassess competing explanations at the bedside, including the temporal relationship of surgery, infection, medications, and thrombosis, because the alternative-cause domain materially changes the 4Ts estimate. [16]",
+        "Do not diagnose HIT from a PF4 immunoassay alone; require clinical compatibility and evidence of platelet-activating antibodies. [2]"
+      ],
+      "subsections": [
+        {
+          "heading": "Distinguish HIT from vaccine-induced immune thrombotic thrombocytopenia",
+          "paragraphs": [
+            "In a patient with thrombocytopenia and thrombosis but no heparin exposure, a positive PF4 antibody immunoassay should raise concern for vaccine-induced immune thrombotic thrombocytopenia (VITT) rather than HIT. In suspected VITT, obtain urgent complete blood count and symptom-directed imaging to identify thrombosis; markedly elevated D-dimer supports the diagnosis in societal guidance. [11]"
+          ],
+          "bullets": [
+            "After adenoviral-vector COVID-19 vaccination, VITT presentations have been reported 5-28 days after vaccination; do not attribute this pattern to HIT without a compatible heparin exposure. [18]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Laboratory interpretation in suspected HIT. [2][14][16][17]",
+        "columns": [
+          "Test or assessment",
+          "What it answers",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "4Ts score",
+            "Pretest probability based on platelet fall, timing, thrombosis, and alternative causes. [16]",
+            "Low probability can exclude HIT without laboratory testing; non-low probability prompts laboratory evaluation and immediate management. [16][2]"
+          ],
+          [
+            "PF4/heparin antibody immunoassay",
+            "Detects heparin-dependent antibodies. [2]",
+            "Interpret only with clinical probability; positivity alone is insufficient for diagnosis. [2]"
+          ],
+          [
+            "Serotonin-release assay",
+            "Detects pathogenic platelet-activating HIT antibodies. [17]",
+            "Use to clarify or confirm clinically suspected, immunoassay-supported HIT. [14][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-management",
+      "eyebrow": "Treatment",
+      "heading": "Stop heparin and provide therapeutic non-heparin anticoagulation",
+      "intro": "The treatment threshold is clinical suspicion at intermediate or high 4Ts probability.",
+      "paragraphs": [
+        "For suspected HIT with at least intermediate 4Ts probability, immediately stop all heparin exposures and start a non-heparin anticoagulant. Do not await confirmatory testing, because stopping heparin alone is inadequate to prevent ongoing thrombotic risk. [2]",
+        "Do not initiate or continue a vitamin K antagonist as sole therapy in acute HIT. ACCP guidance recommends an alternative non-heparin anticoagulant over continued UFH or LMWH and over initiation or continuation of vitamin K antagonist therapy in strongly suspected or confirmed HIT, whether or not thrombosis is present. [7]",
+        "Choose the non-heparin anticoagulant according to acuity, procedure needs, renal replacement therapy, organ function, monitoring capability, and formulary availability. U.S.-available agents described for HIT include intravenous argatroban and bivalirudin, which require laboratory-based dose adjustment, and subcutaneous fondaparinux, which does not require routine monitoring. [3]"
+      ],
+      "bullets": [
+        "Use a parenteral non-heparin anticoagulant when urgent titration, procedures, critical illness, or dialysis-circuit anticoagulation requires a rapidly adjustable agent. [3][24]",
+        "Fondaparinux is considered a non-heparin anticoagulant despite rare reports of fondaparinux-induced HIT; observational data describe successful treatment use. [2]",
+        "Direct oral anticoagulants are increasingly used in HIT, but optimal dosing and safety in severe renal impairment remain poorly defined. [22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Avoid incomplete treatment",
+          "paragraphs": [
+            "Heparin cessation removes the antigenic driver but does not by itself prevent thrombosis from established platelet activation. Likewise, warfarin alone is not sufficient in acute HIT. Maintain therapeutic anticoagulation with a non-heparin agent while diagnostic status and the appropriate transition strategy are determined. [2][7]"
+          ],
+          "bullets": [
+            "For prophylaxis in a patient with HIT when fondaparinux is selected, a cited prophylactic regimen is fondaparinux 2.5 mg subcutaneously once daily. [18]",
+            "For treatment-intensity anticoagulation, use agent-specific institutional protocols and laboratory adjustment for intravenous argatroban or bivalirudin; the cited evidence identifies monitoring-based dose adjustment but does not provide a universal regimen. [3]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Non-heparin anticoagulant selection in special HIT settings. [3][22][24]",
+        "columns": [
+          "Clinical setting",
+          "Preferred or supported approach",
+          "Important limitation"
+        ],
+        "rows": [
+          [
+            "Acute HIT requiring PCI",
+            "Use bivalirudin rather than another non-heparin anticoagulant. [24]",
+            "ASH recommendation is conditional with low-certainty evidence. [24]"
+          ],
+          [
+            "Acute HIT requiring dialysis-circuit anticoagulation",
+            "Use argatroban, danaparoid, or bivalirudin rather than other non-heparin anticoagulants. [24]",
+            "Recommendation is conditional with very low-certainty evidence. [24]"
+          ],
+          [
+            "Subacute or remote HIT requiring dialysis-circuit anticoagulation without another anticoagulation indication",
+            "Use regional citrate rather than heparin or another non-heparin anticoagulant. [24]",
+            "Applies after acute HIT rather than to active acute HIT. [24]"
+          ],
+          [
+            "Clinically stable patient in whom subcutaneous therapy is suitable",
+            "Fondaparinux is an observed treatment option and does not require routine laboratory monitoring. [2][3][23]",
+            "Rare fondaparinux-associated HIT has been reported. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "transition-and-special-situations",
+      "eyebrow": "Ongoing management",
+      "heading": "Plan transition and future anticoagulation by HIT phase and procedural need",
+      "intro": "The acute treatment decision differs from anticoagulation choices after platelet recovery or remote HIT.",
+      "paragraphs": [
+        "When transitioning from parenteral therapy to a direct oral anticoagulant, reported timing is within 2 hours after stopping argatroban or bivalirudin, 8-12 hours after stopping danaparoid, and 24 hours after the last fondaparinux dose. In severe renal impairment, DOAC dose selection and safety remain uncertain, favoring individualized selection of an alternative regimen when necessary. [22]",
+        "If warfarin is selected after acute HIT, overlap with parenteral non-heparin anticoagulation for at least 5 days and until the target INR is reached. Argatroban and bivalirudin can prolong the INR, so interpret INR during transition with this pharmacologic effect in mind. [22]",
+        "For remote HIT requiring VTE treatment or prophylaxis, ASH recommends a non-heparin anticoagulant rather than UFH or LMWH; listed options include apixaban, dabigatran, edoxaban, rivaroxaban, fondaparinux, danaparoid, and a vitamin K antagonist. [24]"
+      ],
+      "bullets": [
+        "For subacute HIT A, subacute HIT B, or remote HIT requiring cardiac surgery, intraoperative heparin is recommended over a non-heparin anticoagulant, plasma exchange plus heparin, or heparin combined with an antiplatelet agent; monitor platelets afterward for delayed-onset HIT. [22]",
+        "For patients with a history of HIT who need ongoing renal replacement therapy after the acute phase and have no other anticoagulation indication, use citrate or another non-heparin method for circuit thrombosis prevention rather than heparin. [22][24]",
+        "Record HIT prominently in the medication allergy/adverse-reaction history and differentiate acute, subacute, and remote phase when planning future procedures because heparin acceptability changes by phase. [22][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Transition and re-exposure decisions by clinical phase. [22][24]",
+        "columns": [
+          "Situation",
+          "Action",
+          "Timing or constraint"
+        ],
+        "rows": [
+          [
+            "Transition from argatroban or bivalirudin to a DOAC",
+            "Start the DOAC after stopping the parenteral agent. [22]",
+            "Within 2 hours. [22]"
+          ],
+          [
+            "Transition from fondaparinux to a DOAC",
+            "Start the DOAC after the final fondaparinux dose. [22]",
+            "Wait 24 hours. [22]"
+          ],
+          [
+            "Warfarin transition after acute HIT",
+            "Continue parenteral non-heparin anticoagulation during warfarin initiation. [22]",
+            "Overlap at least 5 days and until target INR; account for argatroban or bivalirudin INR elevation. [22]"
+          ],
+          [
+            "Remote HIT requiring VTE prophylaxis or treatment",
+            "Select a non-heparin anticoagulant rather than UFH or LMWH. [24]",
+            "Options include DOACs, fondaparinux, danaparoid, or VKA. [24]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Joint Clinical and Statistical Review sNDA 021345/S052 ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/185512/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "common technical document ETASU elements to assure safe use FDA Food and Drug Administration FDAAA Food and Drug Administration Amendments Act of 2007 FDASIA Food and Drug Administration Safety and Innovation Act GCP good clinical practice Reference ID: 5501848 Joint Clinical and Statistical Review ",
+      "score": 0.61363083
+    },
+    {
+      "number": 2,
+      "title": "Heparin-induced thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1202?locale=ar",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Heparin-induced thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice\n# Heparin-induced thrombocytopenia. Heparin-induced thrombocytopenia (HIT) is a severe drug reaction to heparin that can lead to life- and limb-threatening venous and/or arterial thromboembolism. Diagnosi",
+      "score": 0.83290404
+    },
+    {
+      "number": 3,
+      "title": "Fondaparinux for Heparin-Induced Thrombocytopenia | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/fondaparinux-heparin-induced-thrombocytopenia-nejm-jw.NA42738",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# Fondaparinux for Heparin-Induced Thrombocytopenia",
+      "score": 0.6786044
+    },
+    {
+      "number": 4,
+      "title": "Subcutaneous Enoxaparin Once or Twice Daily Compared ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/abs/10.7326/0003-4819-134-3-200102060-00009",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by G Merli \u00b7 2001 \u00b7 Cited by 478 \u2014 American Society of Hematology 2021 guidelines for management of venous thromboembolism: Heparin-Induced Thrombocytopenia Long-term efficacy",
+      "score": 0.45072258
+    },
+    {
+      "number": 5,
+      "title": "Delayed-Onset Heparin-Induced Thrombocytopenia",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-136-3-200202050-00009",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Heparin-induced thrombocytopenia presents 5 to 12 days after heparin exposure, with or without arterial or venous thromboemboli.",
+      "score": 0.4179133
+    },
+    {
+      "number": 6,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition)",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369208601221",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "received heparin within the previous 2 weeks, we recommend investigating for a diagnosis of HIT if the platelet count falls by \u2265 50%, and/or a thrombotic event occurs, between days 5 and 14 (inclusive) following initiation of heparin, even if the patient is no longer receiving heparin therapy when t",
+      "score": 0.8215175
+    },
+    {
+      "number": 7,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition) - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369208601221",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Supplement Antithrombotic and Thrombolytic Therapy, 8th ED: ACCP Guidelines Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition). This chapter about the recognition, treatment, and prevention of",
+      "score": 0.79196626
+    },
+    {
+      "number": 8,
+      "title": "Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384818302949",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument - ScienceDirect\n# Full Length Article Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument. Despite the availabili",
+      "score": 0.75290436
+    },
+    {
+      "number": 9,
+      "title": "Heparin-Induced Thrombocytopenia in Chronic... : Clinical & Applied Thrombosis/Hemostasis",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045529-202329000-00078",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Treatment\n\nThe management of HIT is centered around 2 main objectives: stopping platelet activation as quickly as possible and providing therapeutic anticoagulation with non-heparin products to address the initial risk of thrombosis.62\n\nIt is crucial to immediately discontinue all heparin product",
+      "score": 0.74161834
+    },
+    {
+      "number": 10,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369212601305",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Treatment and Prevention of Heparin-Induced Thrombocytopenia: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines - ScienceDirect\n# Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American C",
+      "score": 0.73868835
+    },
+    {
+      "number": 11,
+      "title": "Comparison of Published Guidelines for the... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/09000/comparison_of_published_guidelines_for_the.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CVST = cerebral venous sinus thrombosis, ELISA = enzyme-linked immunosorbent assay, HIT = heparin-induced thrombocytopenia, PF4 = platelet factor 4, VITT = vaccine-induced immune thrombotic thrombocytopenia.\n\nIf a PF4 antibody immunoassay test is positive and patients do not have a history of hepari",
+      "score": 0.5585443
+    },
+    {
+      "number": 12,
+      "title": "Heparin-Induced Thrombocytopenia in Patients...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2024/07000/heparin_induced_thrombocytopenia_in_patients.26.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "This condition is characterized by a reduction in platelet count greater than 50% from baseline 5\u201310 days following exposure to heparin, evidence of specific",
+      "score": 0.38276476
+    },
+    {
+      "number": 13,
+      "title": "Impact of Baseline Thrombocytopenia on Early... : American Journal Of Hematology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/01445364-202503000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Our comprehensive analysis of VTE outcomes in patients with thrombocytopenia provides significant insights that challenge and expand upon the existing paradigms of VTE management. The heightened risk of early fatal PE, major bleeding, and recurrent VTE in patients with baseline thrombocytopenia, esp",
+      "score": 0.38075948
+    },
+    {
+      "number": 14,
+      "title": "Serotonin\u2010release assay\u2010positive but platelet factor 4 ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.26075",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by TE Warkentin \u00b7 2021 \u00b7 Cited by 19 \u2014 HIT (4Ts score, five points, based upon Thrombocytopenia = two points, The EIA results are shown as optical density OD units. The SRA results",
+      "score": 0.6654328
+    },
+    {
+      "number": 15,
+      "title": "The platelet serotonin\u2010release assay",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.24006",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by TE Warkentin \u00b7 2015 \u00b7 Cited by 230 \u2014 HIT is strongly associated with thrombocytopenia (typically, a \u223c75% platelet count fall to a median platelet count nadir of \u223c50 \u00d7 109/l) and",
+      "score": 0.5035894
+    },
+    {
+      "number": 16,
+      "title": "Guidelines on the diagnosis and management of heparin\u2010induced thrombocytopenia: second edition",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/bjh.12059",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Pouplard, C., Gueret, P., Fouassier, M., Ternisien, C., Trossaert, M., Regina, S.&Gruel, Y. (2007) Prospective evaluation of the \u20184Ts\u2019 score and particle gel immunoassay specific to heparin/PF4 for the diagnosis of heparin-induced thrombocytopenia. _Journal of Thrombosis and Haemostasis_, 5, 1373\u201313",
+      "score": 0.47066417
+    },
+    {
+      "number": 17,
+      "title": "Serotonin\u2010release assay\u2010negative heparin\u2010induced ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ajh.25660",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Pathogenic HIT antibodies can be detected by the serotonin-release assay (SRA), Quantitative interpretation of optical density measurements",
+      "score": 0.4526091
+    },
+    {
+      "number": 18,
+      "title": "Current Key Questions on COVID-19 and Cardiovascular Disease - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2021/03/01/01/42/current-key-questions-on-covid-19-and-cardiovascular-disease",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "All patients hospitalized with COVID-19 should receive pharmacologic prophylaxis for VTE unless contraindicated (e.g., active bleeding) Current guidelines recommend standard prophylactic dosing of LMWH or UFH in most patients (those with creatinine clearance >30 mL/min and BMI <40 kg/m2) admitted wi",
+      "score": 0.61168414
+    },
+    {
+      "number": 19,
+      "title": "viscoelastic monitoring of argatroban in the critically ill",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(25)00814-1/pdf",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by J Gratz \u00b7 2026 \u00b7 Cited by 3 \u2014 American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia.",
+      "score": 0.57952
+    },
+    {
+      "number": 20,
+      "title": "Perioperative thrombocytopenia: evidence, evaluation, and ...",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(18)30753-0/fulltext",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by A Nagrebetsky \u00b7 2019 \u00b7 Cited by 149 \u2014 Heparin-induced thrombocytopenia (HIT) occurs in up to 2.5% of inpatients receiving heparin and is most common in surgical patients",
+      "score": 0.40098447
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis and management of heparin-induced ...",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(26)00889-5/fulltext",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "by S Chatterjee \u00b7 Cited by 1 \u2014 Figure 2 Adapted Thrombocytopenia, Timing, Thrombosis, oTher cause (4Ts) scoring system for the evaluation of suspected heparin-induced thrombocytopenia (HIT)",
+      "score": 0.40839532
+    },
+    {
+      "number": 22,
+      "title": "Management of Heparin-Induced Thrombocytopenia - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11355627",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In acute HIT patients undergoing renal replacement therapy (RRT), a parenteral non-heparin anticoagulant is suggested over heparin and citrate. The options are argatroban, danaparoid, or bivalirudin. After the acute phase, patients requiring ongoing RRT without other indications for anticoagulation ",
+      "score": 0.8127637
+    },
+    {
+      "number": 23,
+      "title": "Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin-Induced Thrombocytopenia: A Propensity Score Analysis. | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/120/21/2262/85619/Fondaparinux-Versus-Argatroban-and-Danaparoid-for",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin-Induced Thrombocytopenia: A Propensity Score Analysis. | Blood | American Society of Hematology\n# Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin",
+      "score": 0.79254496
+    },
+    {
+      "number": 24,
+      "title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia | Blood Advances | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article-abstract/2/22/3360/16129/American-Society-of-Hematology-2018-guidelines-for",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia | Blood Advances | American Society of Hematology\nIn patients with acute HIT or subacute HIT A who require PCI, the ASH guideline panel *suggests* treatment with bivalirud",
+      "score": 0.75852895
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Joint Clinical and Statistical Review sNDA 021345/S052 ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/185512/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "common technical document ETASU elements to assure safe use FDA Food and Drug Administration FDAAA Food and Drug Administration Amendments Act of 2007 FDASIA Food and Drug Administration Safety and Innovation Act GCP good clinical practice Reference ID: 5501848 Joint Clinical and Statistical Review ",
+      "score": 0.61363083
+    },
+    {
+      "number": 2,
+      "title": "Heparin-induced thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/1202?locale=ar",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Heparin-induced thrombocytopenia - Symptoms, diagnosis and treatment | BMJ Best Practice\n# Heparin-induced thrombocytopenia. Heparin-induced thrombocytopenia (HIT) is a severe drug reaction to heparin that can lead to life- and limb-threatening venous and/or arterial thromboembolism. Diagnosi",
+      "score": 0.83290404
+    },
+    {
+      "number": 3,
+      "title": "Fondaparinux for Heparin-Induced Thrombocytopenia | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/fondaparinux-heparin-induced-thrombocytopenia-nejm-jw.NA42738",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# Fondaparinux for Heparin-Induced Thrombocytopenia",
+      "score": 0.6786044
+    },
+    {
+      "number": 4,
+      "title": "Subcutaneous Enoxaparin Once or Twice Daily Compared ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/abs/10.7326/0003-4819-134-3-200102060-00009",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by G Merli \u00b7 2001 \u00b7 Cited by 478 \u2014 American Society of Hematology 2021 guidelines for management of venous thromboembolism: Heparin-Induced Thrombocytopenia Long-term efficacy",
+      "score": 0.45072258
+    },
+    {
+      "number": 5,
+      "title": "Delayed-Onset Heparin-Induced Thrombocytopenia",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-136-3-200202050-00009",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Heparin-induced thrombocytopenia presents 5 to 12 days after heparin exposure, with or without arterial or venous thromboemboli.",
+      "score": 0.4179133
+    },
+    {
+      "number": 6,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition)",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369208601221",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "received heparin within the previous 2 weeks, we recommend investigating for a diagnosis of HIT if the platelet count falls by \u2265 50%, and/or a thrombotic event occurs, between days 5 and 14 (inclusive) following initiation of heparin, even if the patient is no longer receiving heparin therapy when t",
+      "score": 0.8215175
+    },
+    {
+      "number": 7,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition) - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369208601221",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Supplement Antithrombotic and Thrombolytic Therapy, 8th ED: ACCP Guidelines Treatment and Prevention of Heparin-Induced Thrombocytopenia: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines (8th Edition). This chapter about the recognition, treatment, and prevention of",
+      "score": 0.79196626
+    },
+    {
+      "number": 8,
+      "title": "Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384818302949",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument - ScienceDirect\n# Full Length Article Heparin-induced thrombocytopenia: A critical appraisal of clinical practice guidelines with the AGREE II instrument. Despite the availabili",
+      "score": 0.75290436
+    },
+    {
+      "number": 9,
+      "title": "Heparin-Induced Thrombocytopenia in Chronic... : Clinical & Applied Thrombosis/Hemostasis",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045529-202329000-00078",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Treatment\n\nThe management of HIT is centered around 2 main objectives: stopping platelet activation as quickly as possible and providing therapeutic anticoagulation with non-heparin products to address the initial risk of thrombosis.62\n\nIt is crucial to immediately discontinue all heparin product",
+      "score": 0.74161834
+    },
+    {
+      "number": 10,
+      "title": "Treatment and Prevention of Heparin-Induced Thrombocytopenia: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369212601305",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Treatment and Prevention of Heparin-Induced Thrombocytopenia: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines - ScienceDirect\n# Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American C",
+      "score": 0.73868835
+    },
+    {
+      "number": 11,
+      "title": "Comparison of Published Guidelines for the... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2021/09000/comparison_of_published_guidelines_for_the.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "CVST = cerebral venous sinus thrombosis, ELISA = enzyme-linked immunosorbent assay, HIT = heparin-induced thrombocytopenia, PF4 = platelet factor 4, VITT = vaccine-induced immune thrombotic thrombocytopenia.\n\nIf a PF4 antibody immunoassay test is positive and patients do not have a history of hepari",
+      "score": 0.5585443
+    },
+    {
+      "number": 12,
+      "title": "Heparin-Induced Thrombocytopenia in Patients...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2024/07000/heparin_induced_thrombocytopenia_in_patients.26.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "This condition is characterized by a reduction in platelet count greater than 50% from baseline 5\u201310 days following exposure to heparin, evidence of specific",
+      "score": 0.38276476
+    },
+    {
+      "number": 13,
+      "title": "Impact of Baseline Thrombocytopenia on Early... : American Journal Of Hematology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/01445364-202503000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Our comprehensive analysis of VTE outcomes in patients with thrombocytopenia provides significant insights that challenge and expand upon the existing paradigms of VTE management. The heightened risk of early fatal PE, major bleeding, and recurrent VTE in patients with baseline thrombocytopenia, esp",
+      "score": 0.38075948
+    },
+    {
+      "number": 14,
+      "title": "Serotonin\u2010release assay\u2010positive but platelet factor 4 ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.26075",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by TE Warkentin \u00b7 2021 \u00b7 Cited by 19 \u2014 HIT (4Ts score, five points, based upon Thrombocytopenia = two points, The EIA results are shown as optical density OD units. The SRA results",
+      "score": 0.6654328
+    },
+    {
+      "number": 15,
+      "title": "The platelet serotonin\u2010release assay",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ajh.24006",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by TE Warkentin \u00b7 2015 \u00b7 Cited by 230 \u2014 HIT is strongly associated with thrombocytopenia (typically, a \u223c75% platelet count fall to a median platelet count nadir of \u223c50 \u00d7 109/l) and",
+      "score": 0.5035894
+    },
+    {
+      "number": 16,
+      "title": "Guidelines on the diagnosis and management of heparin\u2010induced thrombocytopenia: second edition",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/bjh.12059",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Pouplard, C., Gueret, P., Fouassier, M., Ternisien, C., Trossaert, M., Regina, S.&Gruel, Y. (2007) Prospective evaluation of the \u20184Ts\u2019 score and particle gel immunoassay specific to heparin/PF4 for the diagnosis of heparin-induced thrombocytopenia. _Journal of Thrombosis and Haemostasis_, 5, 1373\u201313",
+      "score": 0.47066417
+    },
+    {
+      "number": 17,
+      "title": "Serotonin\u2010release assay\u2010negative heparin\u2010induced ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ajh.25660",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Pathogenic HIT antibodies can be detected by the serotonin-release assay (SRA), Quantitative interpretation of optical density measurements",
+      "score": 0.4526091
+    },
+    {
+      "number": 18,
+      "title": "Current Key Questions on COVID-19 and Cardiovascular Disease - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2021/03/01/01/42/current-key-questions-on-covid-19-and-cardiovascular-disease",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "All patients hospitalized with COVID-19 should receive pharmacologic prophylaxis for VTE unless contraindicated (e.g., active bleeding) Current guidelines recommend standard prophylactic dosing of LMWH or UFH in most patients (those with creatinine clearance >30 mL/min and BMI <40 kg/m2) admitted wi",
+      "score": 0.61168414
+    },
+    {
+      "number": 19,
+      "title": "viscoelastic monitoring of argatroban in the critically ill",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(25)00814-1/pdf",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by J Gratz \u00b7 2026 \u00b7 Cited by 3 \u2014 American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia.",
+      "score": 0.57952
+    },
+    {
+      "number": 20,
+      "title": "Perioperative thrombocytopenia: evidence, evaluation, and ...",
+      "detail": "www.bjanaesthesia.org",
+      "url": "https://www.bjanaesthesia.org/article/S0007-0912(18)30753-0/fulltext",
+      "authors": "www.bjanaesthesia.org",
+      "host": "www.bjanaesthesia.org",
+      "snippet": "by A Nagrebetsky \u00b7 2019 \u00b7 Cited by 149 \u2014 Heparin-induced thrombocytopenia (HIT) occurs in up to 2.5% of inpatients receiving heparin and is most common in surgical patients",
+      "score": 0.40098447
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis and management of heparin-induced ...",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(26)00889-5/fulltext",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "by S Chatterjee \u00b7 Cited by 1 \u2014 Figure 2 Adapted Thrombocytopenia, Timing, Thrombosis, oTher cause (4Ts) scoring system for the evaluation of suspected heparin-induced thrombocytopenia (HIT)",
+      "score": 0.40839532
+    },
+    {
+      "number": 22,
+      "title": "Management of Heparin-Induced Thrombocytopenia - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11355627",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In acute HIT patients undergoing renal replacement therapy (RRT), a parenteral non-heparin anticoagulant is suggested over heparin and citrate. The options are argatroban, danaparoid, or bivalirudin. After the acute phase, patients requiring ongoing RRT without other indications for anticoagulation ",
+      "score": 0.8127637
+    },
+    {
+      "number": 23,
+      "title": "Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin-Induced Thrombocytopenia: A Propensity Score Analysis. | Blood | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/120/21/2262/85619/Fondaparinux-Versus-Argatroban-and-Danaparoid-for",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin-Induced Thrombocytopenia: A Propensity Score Analysis. | Blood | American Society of Hematology\n# Fondaparinux Versus Argatroban and Danaparoid for the Treatment of Suspected or Confirmed Heparin",
+      "score": 0.79254496
+    },
+    {
+      "number": 24,
+      "title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia | Blood Advances | American Society of Hematology",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article-abstract/2/22/3360/16129/American-Society-of-Hematology-2018-guidelines-for",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Title: American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia | Blood Advances | American Society of Hematology\nIn patients with acute HIT or subacute HIT A who require PCI, the ASH guideline panel *suggests* treatment with bivalirud",
+      "score": 0.75852895
+    }
+  ],
+  "publishedAt": "2026-08-24T18:14:22.381356+00:00",
+  "updatedAt": "2026-08-24T18:14:22.381356+00:00",
+  "readingMinutes": 5,
+  "slug": "heparin-induced-thrombocytopenia"
+}

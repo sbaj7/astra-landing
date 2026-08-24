@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Diseases",
+  "title": "Influenza",
+  "summary": "A decision-focused approach to influenza testing, empiric antiviral treatment, agent selection, chemoprophylaxis, and outbreak control, emphasizing patients in whom treatment should not await confirmatory testing and those for whom testing changes management.",
+  "seoDescription": "Point-of-care influenza guidance for U.S. clinicians: testing, empiric antivirals, drug selection, renal adjustment, prophylaxis, and outbreak response.",
+  "clinicalQuestion": "How should clinicians diagnose, treat, and prevent seasonal influenza across outpatient, inpatient, and high-risk exposure settings?",
+  "specialty": "Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "influenza",
+    "oseltamivir",
+    "baloxavir",
+    "zanamivir",
+    "peramivir",
+    "influenza testing",
+    "chemoprophylaxis",
+    "post-exposure prophylaxis"
+  ],
+  "keyTakeaways": [
+    "Start empiric antiviral therapy immediately for hospitalized patients, patients with severe, complicated, or progressive disease, and outpatients at increased risk for complications; do not wait for test results or withhold treatment because of vaccination history.[8][18][23]",
+    "Oral oseltamivir is the preferred agent for hospitalized, severe, complicated, and high-risk influenza when oral or enteric administration is feasible; adjust treatment dosing when creatinine clearance is 10-60 mL/min.[18][24]",
+    "A negative rapid influenza diagnostic test does not rule out influenza during high community activity because sensitivity is only 20%-70%; obtain molecular testing when confirmation will alter care.[21]",
+    "For uncomplicated illness in otherwise healthy outpatients, antiviral treatment is optional and most useful when initiated within 48 hours; oseltamivir or baloxavir are practical oral options when age and indication permit.[8][18][23]",
+    "Reserve antiviral post-exposure prophylaxis for selected high-risk exposure situations; when given promptly within 48 hours, oseltamivir, zanamivir, laninamivir, and baloxavir reduce symptomatic influenza in people at high risk for severe disease.[7][11][24]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-empiric-treatment",
+      "eyebrow": "Initial decision",
+      "heading": "Identify patients who require treatment without waiting for testing",
+      "intro": "Disposition and antiviral timing take priority over diagnostic confirmation in priority groups.",
+      "paragraphs": [
+        "Treat suspected or confirmed influenza as soon as possible, irrespective of illness duration, in any hospitalized patient; any outpatient with severe, complicated, or progressive illness; and any outpatient at higher risk for influenza complications. Prior-season vaccination does not exclude influenza and should not delay treatment.[8][18][23]",
+        "Use immediate clinical escalation for pneumonia, sepsis, hypoxemic respiratory illness, or exacerbation of an underlying chronic disease associated with suspected influenza. Hospitalized patients with severe respiratory disease should also be assessed for possible influenza and SARS-CoV-2 coinfection, using multiplex testing when the result will guide isolation or pathogen-directed management.[17][18]",
+        "For a previously healthy outpatient without high-risk conditions, treatment is discretionary rather than mandatory. Consider empiric antiviral therapy only when it can begin within 48 hours of symptom onset, including after telemedicine assessment when the clinical syndrome and local circulation make influenza likely.[8][13][23]"
+      ],
+      "bullets": [
+        "Hospitalized respiratory illness: initiate oral or enteric oseltamivir now; collect testing without delaying treatment.[18][23]",
+        "Outpatient with progressive disease, pneumonia, sepsis, or worsening chronic cardiopulmonary disease: initiate oseltamivir regardless of symptom duration.[17][18][23]",
+        "High-risk outpatient with any acute respiratory symptoms, with or without fever: initiate empiric therapy promptly rather than await testing.[18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Patients in whom empiric influenza antiviral treatment should not await laboratory confirmation.[8][18][23]",
+        "columns": [
+          "Clinical setting",
+          "Action",
+          "Timing rule"
+        ],
+        "rows": [
+          [
+            "Hospitalized patient with respiratory illness",
+            "Start oral or enteric oseltamivir; obtain influenza testing concurrently.[18][23]",
+            "Treat immediately, regardless of symptom duration.[8][18]"
+          ],
+          [
+            "Outpatient with severe, complicated, or progressive illness",
+            "Start oseltamivir and evaluate the complication driving acuity, including pneumonia or sepsis.[17][18][23]",
+            "Treat immediately, regardless of symptom duration.[18]"
+          ],
+          [
+            "Outpatient at increased risk for influenza complications",
+            "Start oseltamivir; baloxavir is also an oral option when indicated by age and uncomplicated presentation.[18][23]",
+            "Do not await test results.[18]"
+          ],
+          [
+            "Previously healthy outpatient with uncomplicated illness",
+            "Consider oseltamivir or baloxavir based on clinical judgment.[8][23]",
+            "Initiate within 48 hours of onset.[8][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "testing-strategy",
+      "eyebrow": "Diagnosis",
+      "heading": "Test when the result will change management",
+      "intro": "Testing should support an action: treatment, alternate diagnosis, infection control, or prophylaxis.",
+      "paragraphs": [
+        "Most outpatients with uncomplicated illness compatible with influenza during active community circulation do not require testing solely to make an empiric treatment decision. Test when the result will determine antiviral use in a nonpriority patient, trigger additional evaluation, modify infection-control actions, or guide chemoprophylaxis for contacts.[13][18]",
+        "Interpret rapid influenza diagnostic tests in the context of local prevalence. RIDTs have high specificity, generally greater than 90%, but low-to-moderate sensitivity of 20%-70% compared with more sensitive methods. During high influenza activity, a negative RIDT should not be used to withhold treatment from a patient who otherwise meets a treatment indication.[21]",
+        "If definitive confirmation is necessary after a negative RIDT, use RT-PCR or another molecular assay rather than repeating antigen testing. A positive RIDT is more reliable when influenza activity is high; during low activity, its positive predictive value falls and a positive result requires more cautious interpretation.[21]"
+      ],
+      "bullets": [
+        "Do not order a test before treating a hospitalized, severe, progressive, or high-risk patient when influenza is clinically suspected.[18]",
+        "Use molecular influenza testing when a negative antigen result would otherwise change isolation, antiviral, exposure-management, or diagnostic decisions.[21]",
+        "During periods of high influenza activity, clinical diagnosis can be sufficient for empiric outpatient management when testing will not alter the plan.[13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical interpretation of influenza diagnostic testing.[13][18][21]",
+        "columns": [
+          "Clinical context",
+          "Test interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "High community influenza activity; positive RIDT",
+            "A positive antigen result is generally reliable because RIDTs have high specificity.[21]",
+            "Treat and apply infection-control actions according to clinical setting.[21]"
+          ],
+          [
+            "High community influenza activity; negative RIDT",
+            "Sensitivity is limited; a negative result does not exclude influenza.[21]",
+            "Treat if clinical indication is present; obtain RT-PCR if confirmation changes care.[21]"
+          ],
+          [
+            "Low community influenza activity; positive RIDT",
+            "Positive predictive value is lower when prevalence is low.[21]",
+            "Seek molecular confirmation when the diagnosis will drive consequential management.[21]"
+          ],
+          [
+            "Uncomplicated outpatient during active circulation",
+            "Testing is unnecessary when it will not affect treatment or infection-control decisions.[13][18]",
+            "Use clinical judgment; consider antiviral treatment only if it can start within 48 hours in non-high-risk patients.[8][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "antiviral-selection",
+      "eyebrow": "Treatment",
+      "heading": "Select antiviral therapy by illness severity, route, age, and contraindications",
+      "intro": "For severe disease, favor oseltamivir; for uncomplicated illness, match drug route and labeling to the patient.",
+      "paragraphs": [
+        "Use oral or enteric oseltamivir as the preferred treatment for patients who are hospitalized, have severe or complicated influenza, or are at increased risk for complications and can tolerate enteral therapy. CDC identifies oseltamivir as the recommended treatment across all ages; 2025-2026 CDC materials specify twice-daily administration for 5 days for treatment.[18][23]",
+        "For uncomplicated influenza, FDA-approved options include oral oseltamivir, inhaled zanamivir, intravenous peramivir, and oral single-dose baloxavir, with age restrictions that determine selection. Oseltamivir is FDA-approved for early uncomplicated treatment from age 2 weeks; peramivir from age 6 months; zanamivir from age 7 years; and baloxavir from age 5 years, with baloxavir approval in ages 5 to under 12 years limited to otherwise healthy children and use in all persons aged 12 years or older.[22][23]",
+        "Avoid inhaled zanamivir in patients with chronic respiratory disease because bronchospasm may occur. Consider intravenous peramivir for a patient unable to tolerate or absorb oral antiviral therapy, recognizing that it is administered as a single infusion and requires dose reduction when baseline creatinine clearance is below 50 mL/min.[1][18][23][24]",
+        "Counsel according to agent-specific adverse effects: oseltamivir commonly causes nausea and vomiting, zanamivir can cause bronchospasm, and peramivir can cause diarrhea. These risks matter most when choosing an alternative agent for a patient with active vomiting, obstructive lung disease, or difficulty maintaining enteral intake.[1]"
+      ],
+      "bullets": [
+        "Oseltamivir: preferred for hospitalized, severe, complicated, or high-risk influenza when enteral therapy is feasible.[18]",
+        "Baloxavir: oral single-dose option for acute uncomplicated influenza in eligible patients aged 5 years and older; there are no treatment data during pregnancy or in immunocompromised patients.[22][24]",
+        "Zanamivir: inhaled option for eligible uncomplicated influenza or prophylaxis, but avoid with underlying chronic respiratory disease.[18][22]",
+        "Peramivir: intravenous single-infusion option from age 6 months, particularly when oral absorption or administration is not feasible.[18][22][23]"
+      ],
+      "subsections": [
+        {
+          "heading": "Renal function and agent choice",
+          "paragraphs": [
+            "For adult oseltamivir treatment, use 75 mg twice daily when creatinine clearance is 61-90 mL/min, 30 mg twice daily when creatinine clearance is 31-60 mL/min, and 30 mg once daily when creatinine clearance is 11-30 mL/min. Dose adjustment is recommended for creatinine clearance 10-60 mL/min and for end-stage renal disease receiving hemodialysis or continuous peritoneal dialysis; oseltamivir is not recommended in end-stage renal disease without dialysis.[24]"
+          ],
+          "bullets": [
+            "No renal dose adjustment is recommended for a 5-day zanamivir treatment course.[24]",
+            "Baloxavir pharmacokinetics were not meaningfully affected when creatinine clearance was at least 50 mL/min; severe renal impairment has not been evaluated.[24]",
+            "Reduce peramivir dose when baseline creatinine clearance is below 50 mL/min.[24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Antiviral selection for influenza treatment in the United States.[18][22][23][24]",
+        "columns": [
+          "Agent",
+          "Route and usual treatment schedule",
+          "Age/clinical role",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Oseltamivir",
+            "Oral or enteric; twice daily for 5 days.[23]",
+            "All ages; preferred for hospitalized, severe, complicated, and high-risk disease.[18][23]",
+            "Adjust for creatinine clearance 10-60 mL/min and dialysis-dependent ESRD; nausea and vomiting are common.[1][24]"
+          ],
+          [
+            "Zanamivir",
+            "Inhaled; twice daily for 5 days.[23]",
+            "Treatment from age 7 years; prophylaxis from age 5 years.[18][22]",
+            "Do not use with chronic respiratory disease because of bronchospasm risk.[1][18]"
+          ],
+          [
+            "Peramivir",
+            "Intravenous; single infusion.[23]",
+            "Treatment from age 6 months; consider when oral therapy cannot be tolerated or absorbed.[18][22]",
+            "Reduce dose if baseline creatinine clearance is below 50 mL/min; diarrhea may occur.[1][24]"
+          ],
+          [
+            "Baloxavir",
+            "Oral; single dose.[23]",
+            "Acute uncomplicated influenza from age 5 years; high-risk indication applies from age 12 years.[18][22]",
+            "No treatment data in pregnancy or immunocompromised patients; severe renal impairment has not been evaluated.[24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "chemoprophylaxis-and-outbreaks",
+      "eyebrow": "Prevention",
+      "heading": "Use antiviral prophylaxis selectively after meaningful exposure",
+      "intro": "Vaccination remains central; prophylaxis is most valuable when the exposed person has very high risk or vaccine protection is inadequate.",
+      "paragraphs": [
+        "Do not use routine chemoprophylaxis for all exposed contacts. Prompt post-exposure prophylaxis within 48 hours with oseltamivir, zanamivir, laninamivir, or baloxavir probably reduces symptomatic influenza in people at high risk for severe disease, but does not achieve an important reduction among low-risk people in the same evidence synthesis.[7]",
+        "Consider seasonal pre-exposure prophylaxis for adults and children aged 3 months or older at very high risk for complications when vaccination is contraindicated, unavailable, or expected to have low effectiveness, such as severely immunocompromised patients. Start when influenza activity is detected locally and continue for the duration of community activity; hematopoietic stem-cell transplant recipients in the first 6-12 months after transplant and lung-transplant recipients are specifically identified as candidates for consideration.[11]",
+        "For persons receiving pre-exposure prophylaxis who develop influenza-like symptoms, test for influenza and switch from prophylaxis to treatment dosing. If feasible, select an antiviral with a different resistance profile, provided there is no contraindication.[11]",
+        "If prophylaxis is used while a close contact of a high-risk person awaits vaccine response, continue it for 2 weeks after vaccination; children aged 6 months to under 9 years who require two vaccine doses need 6 weeks. Do not administer antiviral chemoprophylaxis for 2 weeks after live attenuated influenza vaccine.[8]",
+        "In long-term care facilities, begin antiviral treatment immediately for symptomatic residents during an outbreak assessment rather than waiting for trial-level certainty. Vaccinate unvaccinated staff and residents, but do not treat vaccination as an acute outbreak-control substitute because seroprotection requires approximately 14 days.[14]"
+      ],
+      "bullets": [
+        "Baloxavir is FDA-approved for post-exposure prophylaxis in people aged 5 years and older when given within 48 hours of contact with an individual with influenza.[24]",
+        "For very high-risk patients with poor expected vaccine response, seasonal prophylaxis is an adjunct to\u2014not a replacement for\u2014vaccination planning and surveillance.[11]",
+        "During institutional outbreaks, pair prompt treatment of symptomatic residents with exposure assessment, vaccination of eligible unvaccinated persons, and infection-control measures.[14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "When influenza antiviral prophylaxis is most likely to change outcomes.[7][8][11][14][24]",
+        "columns": [
+          "Scenario",
+          "Recommended decision",
+          "Operational timing"
+        ],
+        "rows": [
+          [
+            "High-risk person exposed to seasonal influenza",
+            "Consider post-exposure prophylaxis with an effective antiviral rather than routine observation alone.[7]",
+            "Give promptly, for example within 48 hours of exposure.[7]"
+          ],
+          [
+            "Low-risk exposed person",
+            "Routine prophylaxis has no important demonstrated reduction in symptomatic influenza.[7]",
+            "Use clinical observation and prompt testing/treatment if symptoms develop.[7]"
+          ],
+          [
+            "Very high-risk patient with contraindicated, unavailable, or poorly effective vaccine",
+            "Consider pre-exposure prophylaxis for the season.[11]",
+            "Start when community influenza activity is detected; continue while activity persists.[11]"
+          ],
+          [
+            "Person receiving pre-exposure prophylaxis becomes symptomatic",
+            "Test and change to treatment dosing; consider a drug with a different resistance profile.[11]",
+            "Act at symptom onset.[11]"
+          ],
+          [
+            "Close contact receiving prophylaxis while awaiting vaccine response",
+            "Continue prophylaxis through expected immune response.[8]",
+            "Two weeks after vaccination; 6 weeks for children 6 months to under 9 years requiring two doses.[8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-escalation",
+      "eyebrow": "Follow-up",
+      "heading": "Reassess for complications and treatment failure",
+      "intro": "Antiviral prescribing does not replace evaluation of lower-respiratory, systemic, or chronic-disease complications.",
+      "paragraphs": [
+        "Reassess patients with progressive dyspnea, pneumonia, sepsis, worsening chronic cardiopulmonary disease, or inability to maintain oral intake because these syndromes shift management toward acute-care evaluation, oxygen and respiratory support when indicated, and treatment of the identified complication alongside influenza antiviral therapy.[17][18]",
+        "In hospitalized patients with severe influenza, evidence from randomized trials remains uncertain for mortality and other major outcomes despite possible reductions in length of stay with oseltamivir or peramivir. This uncertainty supports prompt guideline-concordant treatment while maintaining active surveillance for bacterial pneumonia, respiratory failure, hemodynamic instability, and other causes of clinical deterioration rather than attributing worsening solely to influenza.[2][8][18]",
+        "If a patient receiving prophylaxis becomes symptomatic, obtain influenza testing and transition to treatment dosing rather than continuing prophylaxis dosing. For patients on oseltamivir or peramivir with impaired renal function, verify creatinine clearance before finalizing the regimen and revise dosing if renal function changes.[11][24]"
+      ],
+      "bullets": [
+        "Escalate from outpatient management when influenza is associated with pneumonia, sepsis, progressive respiratory illness, or decompensation of an underlying chronic disorder.[17][18]",
+        "For severe respiratory disease requiring hospitalization, evaluate for influenza and SARS-CoV-2 coinfection rather than assuming a single viral pathogen.[18]",
+        "Check renal function before and during renally cleared neuraminidase-inhibitor use when kidney function is impaired or changing.[24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up triggers that require a management change.[11][17][18][24]",
+        "columns": [
+          "Trigger",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Worsening dyspnea, pneumonia, sepsis, or chronic-disease exacerbation",
+            "Complicated or progressive influenza syndrome.[17][18]",
+            "Urgently reassess acuity; initiate or continue oseltamivir and provide condition-specific acute support.[17][18]"
+          ],
+          [
+            "Severe hospitalized respiratory illness",
+            "Influenza and SARS-CoV-2 coinfection is possible.[18]",
+            "Use appropriate influenza and SARS-CoV-2 testing, including multiplex testing when available and actionable.[18]"
+          ],
+          [
+            "Symptoms during antiviral prophylaxis",
+            "Breakthrough influenza must be considered.[11]",
+            "Test and switch to treatment dosing; consider an agent with a different resistance profile if appropriate.[11]"
+          ],
+          [
+            "Declining renal function during oseltamivir or peramivir use",
+            "Exposure may increase with renal impairment.[24]",
+            "Recalculate creatinine clearance and adjust oseltamivir or peramivir regimen as indicated.[24]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Comparison of Antiviral Agents for Seasonal Influenza ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2782995",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by JW Liu \u00b7 2021 \u00b7 Cited by 100 \u2014 The most common adverse effects of oseltamivir are nausea and vomiting; zanamivir may cause bronchospasm; and peramivir may cause diarrhea.",
+      "score": 0.43611822
+    },
+    {
+      "number": 2,
+      "title": "Antiviral treatment and prophylaxis for influenza - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01698-2/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Antivirals for treatment of severe influenza: a systematic review and network meta-analysis of randomised controlled trials01307-2/fulltext \"Antivirals for treatment of severe influenza: a systematic review and network meta-analysis of randomised controlled trials\"). *The Lancet*August 24, 2024. Ant",
+      "score": 0.6461259
+    },
+    {
+      "number": 3,
+      "title": "Treat or test first? Decision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1386653200001827#!",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Treat or test first? Decision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results - ScienceDirect\nDecision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results. *Obje",
+      "score": 0.52290934
+    },
+    {
+      "number": 4,
+      "title": "Peramivir - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/peramivir",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Peramivir - an overview | ScienceDirect Topics\nPeramivir achieves exceptionally high maximum concentrations (~45\u2009000\u202fng/mL after 600\u202fmg intravenous dose) with excellent concentrations of drug in the nasal and pharyngeal secrections.61 Peramivir is predominately eliminated unchanged by renal e",
+      "score": 0.6543875
+    },
+    {
+      "number": 5,
+      "title": "A Phase 3 Safety and Efficacy Study of Baloxavir Marboxil... : The Pediatric Infectious Disease Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pidj/fulltext/2025/07000/a_phase_3_safety_and_efficacy_study_of_baloxavir.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In a Phase I/II clinical study of oseltamivir in patients <1 year old, the most common adverse events (AEs) were vomiting and diarrhea, and the majority of gastrointestinal AEs were unrelated to treatment.8 Overall, gastrointestinal disorders are the most common class of adverse reactions reported f",
+      "score": 0.54608524
+    },
+    {
+      "number": 6,
+      "title": "Baloxavir - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/baloxavir",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Baloxavir - an overview | ScienceDirect Topics\nBaloxavir marboxil is a prodrug that is metabolized to its active form, baloxavir acid, and the first cap-dependent endonuclease enzyme inhibitor that can block influenza virus replication.43 Most clinical studies have focused on its efficacy in ",
+      "score": 0.49582586
+    },
+    {
+      "number": 7,
+      "title": "Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0140673624013576",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis - ScienceDirect\n# Articles Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis. Antiviral post-exposure prophylaxis with neuraminidase inhibito",
+      "score": 0.64047897
+    },
+    {
+      "number": 8,
+      "title": "Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenzaa",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6653685",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Annual influenza vaccination can prevent influenza, but influenza vaccine effectiveness has ranged from low to moderate in preventing medically attended outpatient visits and hospitalizations, and may have lower effectiveness in immunocompromised patients, who may also experience prolonged influenza",
+      "score": 0.8095324
+    },
+    {
+      "number": 9,
+      "title": "Influenza Antivirals: Do We Need More Evidence?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12404181",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , Centers for Disease Control and Prevention (CDC), and the Infectious Disease Society of America (IDSA) recommend prompt antiviral use, regardless of duration of symptoms, in hospitalized children with influenza, those with severe or prolonged illness, and those at high-risk for influenza compli",
+      "score": 0.76321954
+    },
+    {
+      "number": 10,
+      "title": "Clinical practice guidelines for influenza",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/9789240097759",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "Home\n\n# Clinical practice guidelines for influenza\n\nClinical practice guidelines \r\nfor influenza\n\n### Overview\n\nThis WHO Clinical practice guideline for influenzais an update and expansion from the previously published WHO guideline on the clinical management of patients with severe influenza or at ",
+      "score": 0.7568076
+    },
+    {
+      "number": 11,
+      "title": "Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenza - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6769232",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### Recommendations\n\n38. Clinicians should administer preexposure antiviral chemoprophylaxis for adults and children aged \u22653 months who are at very high risk of developing complications from influenza (eg, severely immunocompromised persons such as hematopoietic stem cell transplant recipients) for",
+      "score": 0.7520312
+    },
+    {
+      "number": 12,
+      "title": "Clinical practice guidelines for influenza - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK607904",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "# Clinical practice guidelines for influenza\n\n## Overview\n\nThis WHO Clinical practice guideline for influenza is an update and expansion from the previously published WHO guideline on the clinical management of patients with severe influenza or at risk of severe influenza.\n\nThese updated guidelines ",
+      "score": 0.7163977
+    },
+    {
+      "number": 13,
+      "title": "Influenza in Children and Adolescents: Epidemiology, Management, and Prevention",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10676733",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In general, most patients with influenza will have a self-limiting course regardless of treatment with antiviral medications. The AAP, CDC, and IDSA recommend that clinicians treat influenza in all cases, regardless of symptom duration, in individuals at high risk for influenza complications (Table ",
+      "score": 0.7050753
+    },
+    {
+      "number": 14,
+      "title": "Prevention and control of outbreaks of seasonal influenza ...",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/04a6428d-0790-47d1-b9cc-f209710ec13c/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "Rationale: There is a paucity of evidence available to guide clinicians on antiviral treatment of people in high-risk groups, including the elderly and those living in LTCFs, so decisions need to be based on clinical judgement and outbreak severity (20). A recent ECDC expert opinion on the use of an",
+      "score": 0.6211049
+    },
+    {
+      "number": 15,
+      "title": "Summary of WHO clinical practice guidelines for influenza",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41760115",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by PO Vandvik \u00b7 2026 \u00b7 Cited by 2 \u2014 There are 29 recommendations; 21 related to antiviral medications and six to adjunctive therapies to prevent and treat influenza.",
+      "score": 0.6063825
+    },
+    {
+      "number": 16,
+      "title": "Influenza (seasonal)",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "## Treatment\n\nMost people will recover from influenza on their own. People with severe symptoms or other medical conditions should seek medical care.\n\nPeople with mild symptoms should:\n\nPeople at high risk or with severe symptoms should be treated with antiviral medications as soon as possible. They",
+      "score": 0.57894874
+    },
+    {
+      "number": 17,
+      "title": "WHO EMRO - COVID-19 and influenza",
+      "detail": "www.emro.who.int",
+      "url": "https://www.emro.who.int/health-topics/influenza/covid-19-and-influenza.html",
+      "authors": "www.emro.who.int",
+      "host": "www.emro.who.int",
+      "snippet": "COVID-19 vs influenza treatment\n\nFor influenza, there are oral antiviral medications available that can be used to supplement symptomatic treatment. Patients that are known to be in a group at high risk for developing severe or complicated illness should be treated with antivirals in addition to sym",
+      "score": 0.5524679
+    },
+    {
+      "number": 18,
+      "title": "Influenza - CDC Yellow Book, 2026 edition - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK620922",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Oseltamivir is the recommended treatment for people of all ages and is the preferred agent to treat patients who can tolerate oral medications who are hospitalized, have severe or complicated influenza illness, or who are at higher risk of influenza complications. Peramivir is approved and recommend",
+      "score": 0.4504325
+    },
+    {
+      "number": 19,
+      "title": "Review of Recent Publications on Avian and Pandemic ... - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/bitstreams/d04f3ce7-b642-4e37-9868-ae388eb7c894/download",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "by World Health Organization \u00b7 2006 \u2014 Physicians have several treatment options for influenza, including vaccination and various antiviral therapies. However, the optimal influenza prevention.",
+      "score": 0.4485476
+    },
+    {
+      "number": 20,
+      "title": "Methods for assessing influenza vaccination coverage ... - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/af8700fe-60ae-4c10-8b3e-73a6825daed2/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "WHO recommends that Member States target a number of high-risk groups for influenza vaccination, including elderly people, children aged 6 months\u20135 years, pregnant women, people with underlying chronic diseases and health care personnel (1,7).\nWhile vaccination coverage rates vary by country, most c",
+      "score": 0.42520002
+    },
+    {
+      "number": 21,
+      "title": "Antiviral Agents for the Treatment and Chemoprophylaxis of Influenza",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6001a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "The limitations of RIDTs must be understood for results to be interpreted properly. Positive rapid influenza diagnostic test results are generally reliable when community influenza activity is high and might be useful in deciding whether to initiate antiviral treatment. Negative rapid test results a",
+      "score": 0.66777676
+    },
+    {
+      "number": 22,
+      "title": "About Influenza Antiviral Medications | Influenza (Flu) | CDC",
+      "detail": "cdc.gov",
+      "url": "https://cdc.gov/flu/hcp/antivirals/index.html",
+      "authors": "cdc.gov",
+      "host": "cdc.gov",
+      "snippet": "Clinical Guidance Clinical Signs and Symptoms of Influenza Guidance for Influenza Vaccination Vaccine Product Information Clinical Testing and Diagnosis About Influenza Antiviral Medications Infection Control Guidance Laboratory Testing View Menu. # About Influenza Antiviral Medications. The informa",
+      "score": 0.4478231
+    },
+    {
+      "number": 23,
+      "title": "CoCA Slides for December 11, 2025",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/coca/media/pdfs/2025/12/COCA-Call-Slides_12.11.25.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Influenza Antiviral Treatment Recommended Antivirals for Treatment of Influenza, U.S. 2025-2026 Four FDA-approved antivirals are recommended (no evidence of resistance among circulating seasonal influenza A and B viruses) \u25aaAll demonstrated efficacy in randomized clinical trials (RCTs), FDA-approved ",
+      "score": 0.7568076
+    },
+    {
+      "number": 24,
+      "title": "Influenza Antiviral Medications: Summary for Clinicians | Influenza (Flu) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fflu%2Fprofessionals%2Fantivirals%2Fsummary-clinicians.htm.",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "No dose adjustment is recommended for inhaled zanamivir for a 5-day course of treatment for patients with renal impairment. Pharmacokinetic analysis did not identify a clinically meaningful effect of renal function on the pharmacokinetics of baloxavir in patients with creatinine clearance 50 mL/min ",
+      "score": 0.7318455
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Comparison of Antiviral Agents for Seasonal Influenza ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2782995",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by JW Liu \u00b7 2021 \u00b7 Cited by 100 \u2014 The most common adverse effects of oseltamivir are nausea and vomiting; zanamivir may cause bronchospasm; and peramivir may cause diarrhea.",
+      "score": 0.43611822
+    },
+    {
+      "number": 2,
+      "title": "Antiviral treatment and prophylaxis for influenza - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01698-2/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Antivirals for treatment of severe influenza: a systematic review and network meta-analysis of randomised controlled trials01307-2/fulltext \"Antivirals for treatment of severe influenza: a systematic review and network meta-analysis of randomised controlled trials\"). *The Lancet*August 24, 2024. Ant",
+      "score": 0.6461259
+    },
+    {
+      "number": 3,
+      "title": "Treat or test first? Decision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1386653200001827#!",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Treat or test first? Decision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results - ScienceDirect\nDecision analysis of empirical antiviral treatment of influenza virus infection versus treatment based on rapid test results. *Obje",
+      "score": 0.52290934
+    },
+    {
+      "number": 4,
+      "title": "Peramivir - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/peramivir",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Peramivir - an overview | ScienceDirect Topics\nPeramivir achieves exceptionally high maximum concentrations (~45\u2009000\u202fng/mL after 600\u202fmg intravenous dose) with excellent concentrations of drug in the nasal and pharyngeal secrections.61 Peramivir is predominately eliminated unchanged by renal e",
+      "score": 0.6543875
+    },
+    {
+      "number": 5,
+      "title": "A Phase 3 Safety and Efficacy Study of Baloxavir Marboxil... : The Pediatric Infectious Disease Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pidj/fulltext/2025/07000/a_phase_3_safety_and_efficacy_study_of_baloxavir.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In a Phase I/II clinical study of oseltamivir in patients <1 year old, the most common adverse events (AEs) were vomiting and diarrhea, and the majority of gastrointestinal AEs were unrelated to treatment.8 Overall, gastrointestinal disorders are the most common class of adverse reactions reported f",
+      "score": 0.54608524
+    },
+    {
+      "number": 6,
+      "title": "Baloxavir - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/baloxavir",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Baloxavir - an overview | ScienceDirect Topics\nBaloxavir marboxil is a prodrug that is metabolized to its active form, baloxavir acid, and the first cap-dependent endonuclease enzyme inhibitor that can block influenza virus replication.43 Most clinical studies have focused on its efficacy in ",
+      "score": 0.49582586
+    },
+    {
+      "number": 7,
+      "title": "Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0140673624013576",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis - ScienceDirect\n# Articles Antivirals for post-exposure prophylaxis of influenza: a systematic review and network meta-analysis. Antiviral post-exposure prophylaxis with neuraminidase inhibito",
+      "score": 0.64047897
+    },
+    {
+      "number": 8,
+      "title": "Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenzaa",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6653685",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Annual influenza vaccination can prevent influenza, but influenza vaccine effectiveness has ranged from low to moderate in preventing medically attended outpatient visits and hospitalizations, and may have lower effectiveness in immunocompromised patients, who may also experience prolonged influenza",
+      "score": 0.8095324
+    },
+    {
+      "number": 9,
+      "title": "Influenza Antivirals: Do We Need More Evidence?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12404181",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , Centers for Disease Control and Prevention (CDC), and the Infectious Disease Society of America (IDSA) recommend prompt antiviral use, regardless of duration of symptoms, in hospitalized children with influenza, those with severe or prolonged illness, and those at high-risk for influenza compli",
+      "score": 0.76321954
+    },
+    {
+      "number": 10,
+      "title": "Clinical practice guidelines for influenza",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/publications/i/item/9789240097759",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "Home\n\n# Clinical practice guidelines for influenza\n\nClinical practice guidelines \r\nfor influenza\n\n### Overview\n\nThis WHO Clinical practice guideline for influenzais an update and expansion from the previously published WHO guideline on the clinical management of patients with severe influenza or at ",
+      "score": 0.7568076
+    },
+    {
+      "number": 11,
+      "title": "Clinical Practice Guidelines by the Infectious Diseases Society of America: 2018 Update on Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management of Seasonal Influenza - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6769232",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### Recommendations\n\n38. Clinicians should administer preexposure antiviral chemoprophylaxis for adults and children aged \u22653 months who are at very high risk of developing complications from influenza (eg, severely immunocompromised persons such as hematopoietic stem cell transplant recipients) for",
+      "score": 0.7520312
+    },
+    {
+      "number": 12,
+      "title": "Clinical practice guidelines for influenza - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK607904",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "# Clinical practice guidelines for influenza\n\n## Overview\n\nThis WHO Clinical practice guideline for influenza is an update and expansion from the previously published WHO guideline on the clinical management of patients with severe influenza or at risk of severe influenza.\n\nThese updated guidelines ",
+      "score": 0.7163977
+    },
+    {
+      "number": 13,
+      "title": "Influenza in Children and Adolescents: Epidemiology, Management, and Prevention",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10676733",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In general, most patients with influenza will have a self-limiting course regardless of treatment with antiviral medications. The AAP, CDC, and IDSA recommend that clinicians treat influenza in all cases, regardless of symptom duration, in individuals at high risk for influenza complications (Table ",
+      "score": 0.7050753
+    },
+    {
+      "number": 14,
+      "title": "Prevention and control of outbreaks of seasonal influenza ...",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/04a6428d-0790-47d1-b9cc-f209710ec13c/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "Rationale: There is a paucity of evidence available to guide clinicians on antiviral treatment of people in high-risk groups, including the elderly and those living in LTCFs, so decisions need to be based on clinical judgement and outbreak severity (20). A recent ECDC expert opinion on the use of an",
+      "score": 0.6211049
+    },
+    {
+      "number": 15,
+      "title": "Summary of WHO clinical practice guidelines for influenza",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41760115",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by PO Vandvik \u00b7 2026 \u00b7 Cited by 2 \u2014 There are 29 recommendations; 21 related to antiviral medications and six to adjunctive therapies to prevent and treat influenza.",
+      "score": 0.6063825
+    },
+    {
+      "number": 16,
+      "title": "Influenza (seasonal)",
+      "detail": "www.who.int",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+      "authors": "www.who.int",
+      "host": "www.who.int",
+      "snippet": "## Treatment\n\nMost people will recover from influenza on their own. People with severe symptoms or other medical conditions should seek medical care.\n\nPeople with mild symptoms should:\n\nPeople at high risk or with severe symptoms should be treated with antiviral medications as soon as possible. They",
+      "score": 0.57894874
+    },
+    {
+      "number": 17,
+      "title": "WHO EMRO - COVID-19 and influenza",
+      "detail": "www.emro.who.int",
+      "url": "https://www.emro.who.int/health-topics/influenza/covid-19-and-influenza.html",
+      "authors": "www.emro.who.int",
+      "host": "www.emro.who.int",
+      "snippet": "COVID-19 vs influenza treatment\n\nFor influenza, there are oral antiviral medications available that can be used to supplement symptomatic treatment. Patients that are known to be in a group at high risk for developing severe or complicated illness should be treated with antivirals in addition to sym",
+      "score": 0.5524679
+    },
+    {
+      "number": 18,
+      "title": "Influenza - CDC Yellow Book, 2026 edition - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK620922",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Oseltamivir is the recommended treatment for people of all ages and is the preferred agent to treat patients who can tolerate oral medications who are hospitalized, have severe or complicated influenza illness, or who are at higher risk of influenza complications. Peramivir is approved and recommend",
+      "score": 0.4504325
+    },
+    {
+      "number": 19,
+      "title": "Review of Recent Publications on Avian and Pandemic ... - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/bitstreams/d04f3ce7-b642-4e37-9868-ae388eb7c894/download",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "by World Health Organization \u00b7 2006 \u2014 Physicians have several treatment options for influenza, including vaccination and various antiviral therapies. However, the optimal influenza prevention.",
+      "score": 0.4485476
+    },
+    {
+      "number": 20,
+      "title": "Methods for assessing influenza vaccination coverage ... - IRIS",
+      "detail": "iris.who.int",
+      "url": "https://iris.who.int/server/api/core/bitstreams/af8700fe-60ae-4c10-8b3e-73a6825daed2/content",
+      "authors": "iris.who.int",
+      "host": "iris.who.int",
+      "snippet": "WHO recommends that Member States target a number of high-risk groups for influenza vaccination, including elderly people, children aged 6 months\u20135 years, pregnant women, people with underlying chronic diseases and health care personnel (1,7).\nWhile vaccination coverage rates vary by country, most c",
+      "score": 0.42520002
+    },
+    {
+      "number": 21,
+      "title": "Antiviral Agents for the Treatment and Chemoprophylaxis of Influenza",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6001a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "The limitations of RIDTs must be understood for results to be interpreted properly. Positive rapid influenza diagnostic test results are generally reliable when community influenza activity is high and might be useful in deciding whether to initiate antiviral treatment. Negative rapid test results a",
+      "score": 0.66777676
+    },
+    {
+      "number": 22,
+      "title": "About Influenza Antiviral Medications | Influenza (Flu) | CDC",
+      "detail": "cdc.gov",
+      "url": "https://cdc.gov/flu/hcp/antivirals/index.html",
+      "authors": "cdc.gov",
+      "host": "cdc.gov",
+      "snippet": "Clinical Guidance Clinical Signs and Symptoms of Influenza Guidance for Influenza Vaccination Vaccine Product Information Clinical Testing and Diagnosis About Influenza Antiviral Medications Infection Control Guidance Laboratory Testing View Menu. # About Influenza Antiviral Medications. The informa",
+      "score": 0.4478231
+    },
+    {
+      "number": 23,
+      "title": "CoCA Slides for December 11, 2025",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/coca/media/pdfs/2025/12/COCA-Call-Slides_12.11.25.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Influenza Antiviral Treatment Recommended Antivirals for Treatment of Influenza, U.S. 2025-2026 Four FDA-approved antivirals are recommended (no evidence of resistance among circulating seasonal influenza A and B viruses) \u25aaAll demonstrated efficacy in randomized clinical trials (RCTs), FDA-approved ",
+      "score": 0.7568076
+    },
+    {
+      "number": 24,
+      "title": "Influenza Antiviral Medications: Summary for Clinicians | Influenza (Flu) | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fflu%2Fprofessionals%2Fantivirals%2Fsummary-clinicians.htm.",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "No dose adjustment is recommended for inhaled zanamivir for a 5-day course of treatment for patients with renal impairment. Pharmacokinetic analysis did not identify a clinically meaningful effect of renal function on the pharmacokinetics of baloxavir in patients with creatinine clearance 50 mL/min ",
+      "score": 0.7318455
+    }
+  ],
+  "publishedAt": "2026-08-24T16:29:14.578197+00:00",
+  "updatedAt": "2026-08-24T16:29:14.578197+00:00",
+  "readingMinutes": 7,
+  "slug": "influenza"
+}

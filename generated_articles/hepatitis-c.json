@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hepatology and Infectious Disease",
+  "title": "Hepatitis C",
+  "summary": "Confirm viremia with HCV RNA, stage fibrosis without delaying therapy, identify cirrhosis and drug interactions, and treat nearly all nonpregnant patients with direct-acting antivirals. Cure is defined by undetectable HCV RNA 12 weeks after treatment completion.",
+  "seoDescription": "Physician guide to hepatitis C testing, fibrosis staging, direct-acting antiviral treatment, special populations, and post-treatment cure assessment.",
+  "clinicalQuestion": "How should clinicians confirm, stage, treat, and monitor hepatitis C virus infection in adults and selected special populations?",
+  "specialty": "Hepatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hepatitis C",
+    "HCV RNA",
+    "direct-acting antivirals",
+    "FIB-4",
+    "transient elastography",
+    "SVR12",
+    "HCV HIV coinfection"
+  ],
+  "keyTakeaways": [
+    "Treat detectable HCV RNA with oral direct-acting antiviral therapy without waiting for spontaneous clearance, except during pregnancy and in children younger than 3 years. [12]",
+    "Use noninvasive fibrosis assessment to identify advanced fibrosis or cirrhosis; ultrasound-based elastography or magnetic resonance elastography is recommended when available, and biopsy is generally unnecessary solely for HCV staging. [13]",
+    "Do not withhold HCV treatment because additional fibrosis staging is unavailable; fibrosis assessment directs follow-up intensity but should not become a treatment barrier. [13]",
+    "Document cure with undetectable HCV RNA 12 weeks after treatment completion; modern oral DAA regimens cure more than 95% of patients within 8-12 weeks. [12]",
+    "In HIV/HCV coinfection, select DAAs after a formal antiretroviral interaction review; most patients can receive pangenotypic DAA therapy, but selected antiretroviral regimens preclude simplified treatment. [16]"
+  ],
+  "sections": [
+    {
+      "id": "case-finding-and-confirmation",
+      "eyebrow": "Diagnosis",
+      "heading": "Screen broadly and confirm current infection with HCV RNA",
+      "intro": "Antibody establishes exposure; HCV RNA establishes current infection and treatment eligibility.",
+      "paragraphs": [
+        "Offer one-time HCV screening to all adults and screen all pregnant patients during each pregnancy, except in settings where HCV prevalence is less than 0.1%. Risk-based testing alone misses a substantial proportion of infections. [17][19]",
+        "Use an FDA-approved anti-HCV immunoassay as the initial test. A reactive antibody result requires nucleic-acid testing for HCV RNA to establish current infection; treatment decisions should be based on detectable RNA rather than antibody status. [16][18]",
+        "For persons with HIV, perform routine HCV screening at entry into HIV care. Repeat anti-HCV testing at least annually for HCV-seronegative men who have sex with men and persons who inject drugs, or sooner after a compatible exposure, risk activity, or clinical presentation. [16]",
+        "For occupational exposure, test the exposed health care personnel as soon as possible, preferably within 48 hours, concurrently with source-patient testing. If the source has detectable HCV RNA, link the source patient to evaluation and treatment; CDC guidance incorporates early HCV viral dynamics and treatment of acute infection. [11]"
+      ],
+      "bullets": [
+        "Reactive anti-HCV plus detectable HCV RNA: current HCV infection; proceed to pretreatment assessment and DAA selection. [12][16]",
+        "Reactive anti-HCV alone: do not label active infection or initiate antiviral treatment until RNA testing documents viremia. [16][18]",
+        "Detectable HCV RNA after a potential exposure: evaluate for treatment rather than observing solely for possible spontaneous clearance. [11][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Testing decisions for common HCV care settings. [11][16][18][19]",
+        "columns": [
+          "Clinical setting",
+          "Test and timing",
+          "Decision triggered"
+        ],
+        "rows": [
+          [
+            "Adult screening",
+            "Anti-HCV immunoassay; confirm a reactive result with HCV RNA. [16][19]",
+            "Detectable RNA establishes current infection and prompts treatment assessment. [12][16]"
+          ],
+          [
+            "Pregnancy",
+            "Screen during each pregnancy, except where prevalence is below 0.1%. [19]",
+            "Detectable RNA identifies current infection; defer DAA treatment during pregnancy. [12]"
+          ],
+          [
+            "HIV care entry",
+            "Perform routine HCV screening; repeat annually for at-risk antibody-negative persons. [16]",
+            "Review antiretroviral-DAA interactions before treatment. [16]"
+          ],
+          [
+            "Perinatal exposure",
+            "Use HCV RNA NAT to document infection; children with detectable RNA at or after age 2 months require expert pediatric follow-up. [18]",
+            "Repeat RNA before DAA therapy; treatment can begin at age 3 years. [18]"
+          ],
+          [
+            "Occupational exposure",
+            "Test exposed personnel promptly, preferably within 48 hours, with concurrent source testing. [11]",
+            "Use the CDC follow-up algorithm when the source is RNA-positive, antibody-positive with unavailable RNA, or cannot be tested. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pretreatment-risk-stratification",
+      "eyebrow": "Pretreatment Assessment",
+      "heading": "Stage fibrosis and separate uncomplicated infection from cirrhosis",
+      "intro": "The central pretreatment branch is absence versus presence of advanced fibrosis or cirrhosis.",
+      "paragraphs": [
+        "Calculate FIB-4 from age, AST, ALT, and platelet count, and consider APRI, which is based on AST and platelets, as accessible blood-based fibrosis assessment. These tests are most useful for identifying advanced disease rather than finely discriminating fibrosis stages; indeterminate results require a second noninvasive modality when it will change management. [3][7]",
+        "Use vibration-controlled transient elastography, shear-wave elastography, or magnetic resonance elastography when available to refine fibrosis assessment. Transient elastography measures liver stiffness and has reported sensitivity and specificity near 90% for advanced fibrosis in chronic HCV, but obesity and acute hepatitis can impair interpretation. [3][13]",
+        "Do not perform liver biopsy solely to stage HCV-related fibrosis in routine care. Reserve biopsy for another diagnostic indication, such as a competing liver disease requiring histology; do not delay antiviral therapy because elastography or additional staging is inaccessible. [13]",
+        "Treat fibrosis assessment as a management triage tool: advanced fibrosis or cirrhosis changes the need for cirrhosis-focused evaluation and follow-up, whereas absence of cirrhosis supports a simplified treatment pathway in otherwise eligible patients. HIV infection does not itself preclude simplified treatment, but antiretroviral interactions and specified clinical exclusions require individualized selection. [13][16]"
+      ],
+      "bullets": [
+        "Interpret discordant or indeterminate FIB-4/APRI results with elastography rather than assuming a precise histologic stage. [3][7][13]",
+        "Avoid overinterpreting liver stiffness during acute hepatitis or in obesity because both can limit transient-elastography accuracy. [3]",
+        "Assess alcohol exposure and counsel abstinence because alcohol accelerates liver disease progression in HCV infection. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Noninvasive fibrosis tools and practical limitations in chronic HCV. [3][7][13]",
+        "columns": [
+          "Modality",
+          "Inputs or output",
+          "Best clinical use",
+          "Limitation or action"
+        ],
+        "rows": [
+          [
+            "FIB-4",
+            "Age, AST, ALT, and platelets. [3][7]",
+            "Initial blood-based assessment for advanced fibrosis risk. [7][13]",
+            "Intermediate values have limited ability to distinguish fibrosis stage; use a second modality when needed. [3]"
+          ],
+          [
+            "APRI",
+            "AST and platelet count. [3]",
+            "Accessible initial assessment, particularly to help identify patients without advanced fibrosis. [7]",
+            "Indeterminate scores do not reliably resolve stage; pair with FIB-4 or elastography. [3]"
+          ],
+          [
+            "Transient elastography",
+            "Liver stiffness measurement. [3]",
+            "Refines assessment of advanced fibrosis when available. [3][13]",
+            "Obesity and acute hepatitis can reduce interpretability. [3]"
+          ],
+          [
+            "Magnetic resonance elastography",
+            "Imaging-based liver stiffness assessment. [13]",
+            "Alternative noninvasive staging modality when available. [13]",
+            "Do not delay antiviral treatment if access is limited. [13]"
+          ],
+          [
+            "Liver biopsy",
+            "Histologic fibrosis assessment. [13]",
+            "Use only when another diagnostic indication exists. [13]",
+            "Not routinely recommended for HCV fibrosis staging. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "antiviral-treatment",
+      "eyebrow": "Treatment",
+      "heading": "Treat current HCV infection with oral direct-acting antivirals",
+      "intro": "DAA therapy is the default for current infection; regimen selection depends on cirrhosis status, prior treatment, and interactions.",
+      "paragraphs": [
+        "Treat nonpregnant patients with detectable HCV RNA using oral DAA therapy rather than interferon-based treatment. CDC recommends treatment without waiting for spontaneous resolution, and contemporary oral regimens cure more than 95% of patients within 8-12 weeks. [12]",
+        "Use a pangenotypic, highly efficacious, well-tolerated DAA regimen for most patients, selected through current AASLD/IDSA guidance for the patient\u2019s prior-treatment status and liver disease stage. Two pangenotypic regimens are described as preferred therapy for almost all persons with HIV/HCV coinfection; regimen and monitoring principles are otherwise similar to those for HCV monoinfection. [13][16]",
+        "Do not use ribavirin with interferon or peginterferon for routine HCV treatment; these regimens are no longer recommended because of poor efficacy and high adverse-effect burden compared with DAAs. [12]",
+        "Before prescribing DAAs in HIV/HCV coinfection, screen every antiretroviral regimen for clinically significant interactions. Certain antiretroviral regimens or interaction-prone clinical circumstances exclude simplified treatment, so coordinate any antiretroviral modification with the HIV clinician rather than interrupting effective HIV therapy without a plan. [16]"
+      ],
+      "bullets": [
+        "Detectable HCV RNA: initiate DAA-treatment planning now; do not defer solely to observe for spontaneous clearance. [12]",
+        "Pregnancy: do not apply the routine universal DAA-treatment recommendation during pregnancy. [12]",
+        "Children: DAA therapy can begin at age 3 years after RNA confirmation; involve a clinician experienced in pediatric HCV management for perinatally infected children. [18]",
+        "HIV/HCV coinfection: use the HIV-specific HCV interaction framework before finalizing therapy. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "Treatment barriers that should not delay cure",
+          "paragraphs": [
+            "Limited access to elastography, magnetic resonance elastography, or biopsy should not prevent DAA treatment. Use available noninvasive data to identify likely advanced disease and arrange longitudinal liver care when indicated, while proceeding with antiviral therapy. [13]",
+            "DAA therapy is highly effective even in populations historically undertreated because of interferon toxicity. The decisive operational step is completing RNA confirmation, interaction review, fibrosis triage, and linkage to a prescriber able to select the appropriate current regimen. [12][17]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Treatment-selection branches supported by current clinical guidance excerpts. [12][13][16][18]",
+        "columns": [
+          "Patient branch",
+          "Treatment approach",
+          "Key constraint"
+        ],
+        "rows": [
+          [
+            "Nonpregnant adult with detectable HCV RNA",
+            "Treat with oral DAA therapy; do not wait for spontaneous resolution. [12]",
+            "Choose the regimen after cirrhosis and drug-interaction assessment. [13][16]"
+          ],
+          [
+            "Adult with HIV/HCV coinfection",
+            "Use preferred pangenotypic DAA therapy for most patients. [13][16]",
+            "Review antiretroviral-DAA interactions; some regimens exclude simplified treatment. [16]"
+          ],
+          [
+            "Pregnant patient",
+            "Screen in every pregnancy, but routine DAA treatment recommendation excludes pregnancy. [12][19]",
+            "Plan postpartum linkage for RNA-confirmed infection. [12]"
+          ],
+          [
+            "Child with perinatally acquired HCV",
+            "Confirm current infection with HCV RNA before therapy; DAA treatment can start at age 3 years. [18]",
+            "Use pediatric HCV expertise for follow-up and regimen selection. [18]"
+          ],
+          [
+            "Patient without access to additional fibrosis staging",
+            "Proceed with treatment rather than withholding DAAs. [13]",
+            "Use available clinical and noninvasive data to determine liver follow-up needs. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-cure",
+      "eyebrow": "Follow-up",
+      "heading": "Document SVR12 and prevent reinfection or ongoing liver injury",
+      "intro": "The required virologic endpoint is HCV RNA testing 12 weeks after treatment.",
+      "paragraphs": [
+        "Order quantitative or qualitative HCV RNA 12 weeks after completion of DAA therapy. Undetectable RNA at that point defines sustained virologic response and is the clinical cure endpoint. [12]",
+        "Explain that cure does not prevent reinfection. Reinforce practices that prevent HCV transmission during treatment and reinfection after cure, particularly for patients with ongoing exposure risk; repeat testing should be driven by risk activity or new compatible clinical presentation. [12][16]",
+        "Continue liver-risk modification after cure. Alcohol accelerates HCV-associated liver disease progression, so counsel complete avoidance, especially when fibrosis assessment suggests advanced disease. [13]",
+        "DAA-induced HCV eradication is associated with lower risk of all-cause mortality, end-stage liver disease, and hepatocellular carcinoma in observational Medicare data, but patients with advanced fibrosis or cirrhosis require ongoing liver-directed management rather than discharge solely on the basis of SVR. [17]"
+      ],
+      "bullets": [
+        "SVR12 test: HCV RNA at 12 weeks after treatment completion. [12]",
+        "Detectable RNA at SVR12 assessment: do not call the patient cured; reassess adherence, reinfection risk, and need for specialist-directed retreatment. [12]",
+        "Ongoing risk after cure: repeat HCV testing based on risk activity, exposure, or compatible presentation. [12][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-treatment actions after DAA therapy. [12][13][16][17]",
+        "columns": [
+          "Time point or finding",
+          "Action",
+          "Interpretation"
+        ],
+        "rows": [
+          [
+            "During treatment",
+            "Counsel on practices that prevent transmission and subsequent reinfection. [12]",
+            "Viral cure does not confer protection from future infection. [12]"
+          ],
+          [
+            "12 weeks after treatment completion",
+            "Obtain HCV RNA. [12]",
+            "Undetectable RNA defines SVR and clinical cure. [12]"
+          ],
+          [
+            "After SVR with ongoing exposure risk",
+            "Repeat testing according to risk activity, exposure, or clinical presentation. [16]",
+            "A future infection can occur despite prior cure. [12]"
+          ],
+          [
+            "After SVR with advanced fibrosis or cirrhosis",
+            "Continue liver-directed follow-up and risk reduction. [13][17]",
+            "SVR reduces important liver outcomes but does not eliminate the need to manage established advanced liver disease. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "special-populations",
+      "eyebrow": "Special Populations",
+      "heading": "Apply distinct pathways for HIV coinfection, pregnancy, children, and exposure management",
+      "intro": "These groups require modified testing, timing, or interaction decisions rather than a different definition of cure.",
+      "paragraphs": [
+        "In HIV/HCV coinfection, noninvasive ultrasound-based or imaging-based elastography is recommended when available, and liver biopsy is not recommended solely for HCV staging. Treating HCV should not be withheld because additional staging is unavailable, but DAA selection must account for antiretroviral interactions. [13][16]",
+        "For perinatally exposed children, CDC recommends HCV RNA NAT to identify current infection, with expert pediatric follow-up for children with detectable RNA at or after age 2 months. Retest RNA before treatment because spontaneous clearance can occur in childhood; DAA therapy may begin at age 3 years. [18]",
+        "For health care personnel after exposure, conduct prompt baseline testing and follow the CDC source-patient and exposed-person algorithm rather than using HCV antibody testing alone to determine current source infectivity. A source with detectable HCV RNA should be referred for evaluation and treatment. [11]"
+      ],
+      "bullets": [
+        "HIV: annual repeat anti-HCV screening for at-risk seronegative individuals, with earlier testing for exposure or compatible symptoms. [16]",
+        "Pregnancy: screen during each pregnancy; arrange follow-up for RNA-confirmed infection because routine DAA treatment guidance excludes pregnancy. [12][19]",
+        "Pediatric infection: confirm RNA before treatment and use pediatric HCV expertise. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Population-specific HCV decisions. [11][12][16][18][19]",
+        "columns": [
+          "Population",
+          "Primary decision",
+          "Operational next step"
+        ],
+        "rows": [
+          [
+            "Person with HIV",
+            "Assess DAA-antiretroviral interactions before choosing therapy. [16]",
+            "Use HIV-specific HCV treatment guidance; most can receive pangenotypic DAAs. [16]"
+          ],
+          [
+            "Pregnant patient",
+            "Screen each pregnancy, but defer routine DAA therapy during pregnancy. [12][19]",
+            "Confirm RNA and establish postpartum treatment linkage. [12]"
+          ],
+          [
+            "Perinatally exposed child",
+            "Use RNA NAT and confirm current infection before treatment. [18]",
+            "Refer for pediatric HCV management; treatment may start at age 3 years. [18]"
+          ],
+          [
+            "Exposed health care personnel",
+            "Obtain testing promptly, preferably within 48 hours. [11]",
+            "Follow CDC source and exposed-person testing algorithm. [11]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Management of hepatitis C virus infection in the Asia ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(16)30080-2/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by SG Lim \u00b7 2017 \u00b7 Cited by 66 \u2014 Hepatitis C guidance: AASLD-IDSA recommendations for testing, managing, and treating adults infected with hepatitis C virus.",
+      "score": 0.5489884
+    },
+    {
+      "number": 2,
+      "title": "Reconsidering the management of patients with cancer with viral ...",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/8/2/e000943.full.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "Blood 2016;128:2527\u201332. 84 Kanwal F , Kramer J, Asch SM, et al. Risk of hepatocellular cancer in HCV patients treated with direct-\u00ad acting antiviral agents. Gastroenterology 2017;153:e1001:996\u20131005. 85 Ioannou GN, Green PK, Berry K. HCV eradication induced by direct-\u00ad acting antiviral agents reduces",
+      "score": 0.53415143
+    },
+    {
+      "number": 3,
+      "title": "Relationship of FIB-4 index with transient elastography in... : Journal of Family Medicine and Primary Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jfmpc/fulltext/2020/09110/relationship_of_fib_4_index_with_transient.25.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Relationship of FIB-4 index with transient elastography in... : Journal of Family Medicine and Primary Care\nWe aimed to study the extent of liver fibrosis in chronic hepatitis C patients with indeterminate APRI score of \u2265 0.5 - \u22642 (between higher and lower cut off value) and correlate it to t",
+      "score": 0.6437107
+    },
+    {
+      "number": 4,
+      "title": "Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, HBV+HDV, and HCV infections - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2772431X25000590",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, HBV+HDV, and HCV infections - ScienceDirect\n## Infectious Medicine. Volume 4, Issue 4, December 2025, 100220. # Original Article Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, ",
+      "score": 0.6194488
+    },
+    {
+      "number": 5,
+      "title": "Category Index : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/10.1097/hep.0000000000001075~category-index",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "improvement of fibrosis in patients with hepatitis C. Implementing Hepatitis C Reflex Testing Within UNM. Hepatitis C Virus (HCV) Utilizing FIB-4 and transient",
+      "score": 0.6102915
+    },
+    {
+      "number": 6,
+      "title": "Accuracy of blood-based biomarkers for staging liver... : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/2025/01000/accuracy_of_blood_based_biomarkers_for_staging.30.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Accuracy of blood-based biomarkers for staging liver... : Hepatology\nIn adult patients with chronic liver disease, including hepatocellular (HCV, HIV-HCV, HBV, HIV-HBV, NAFLD, and ALD) or cholestatic (PSC, PBC) disorders, are blood-based biomarker panels accurate in staging hepatic fibrosis (",
+      "score": 0.5414337
+    },
+    {
+      "number": 7,
+      "title": "APRI and FIB-4 performance to assess liver fibrosis against ... : Journal of Family Medicine and Primary Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jfmpc/fulltext/2021/11000/apri_and_fib_4_performance_to_assess_liver.23.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: APRI and FIB-4 performance to assess liver fibrosis against ... : Journal of Family Medicine and Primary Care\nAPRI and FIB-4 performance to assess liver fibrosis against predefined Fibroscan values in chronic hepatitis C virus infection. The cut-off values of FIB-4 and APRI for significant fi",
+      "score": 0.5402697
+    },
+    {
+      "number": 8,
+      "title": "Validation of a machine learning approach using FIB-4 and APRI scores assessed by the metavir scoring system: A cohort study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1687197921000228",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Validation of a machine learning approach using FIB-4 and APRI scores assessed by the metavir scoring system: A cohort study - ScienceDirect\n### Background and Study Aim. The study aim was to improve and validate the accuracy of the fibrosis-4 (FIB-4) and aspartate aminotransferase-to-platele",
+      "score": 0.534443
+    },
+    {
+      "number": 9,
+      "title": "Hepatocellular Carcinoma Is a Negative Predictor of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0041134519316598",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by T Cieciura \u00b7 2020 \u00b7 Cited by 1 \u2014 Treatment with direct-acting antivirals (DAA) for hepatitis C (HCV) in liver transplant (LTX) recipients is very effective, Overall sustained viral response 24",
+      "score": 0.71088976
+    },
+    {
+      "number": 10,
+      "title": "Effectiveness of hepatitis C antiviral treatment in a USA ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168827817301265",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by LA Beste \u00b7 2017 \u00b7 Cited by 181 \u2014 It was unclear whether direct-acting antiviral treatment-induced sustained virologic response reduces the risk of liver cancer in patients with HCV infection.",
+      "score": 0.7018975
+    },
+    {
+      "number": 11,
+      "title": "Guidelines for Health Care Personnel Exposed to Hepatitis C Virus | Hepatitis C | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-c/hcp/infection-control/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## About the recommendations\n\nThe 2020 CDC guidance, based on expert opinion, reflects current understanding of the viral dynamics of early HCV infection, as well as recent guidance from AASLD and IDSA, which recommends treatment of acute HCV infection.\n\n### Get full details and a downloadable guide",
+      "score": 0.6944897
+    },
+    {
+      "number": 12,
+      "title": "Clinical Care of Hepatitis C",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-c/hcp/clinical-care/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Treatment recommendations\n\nExcept for pregnant patients and children under 3, clinicians should treat people with detectable HCV RNA in their blood with oral DAA therapy. There is no need to wait for potential spontaneous viral resolution.\n\nClinicians should also:\n\nFor more information about mana",
+      "score": 0.63723457
+    },
+    {
+      "number": 13,
+      "title": "Hepatitis C Virus Infection",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/sites/g/files/mnhszr391/files/guidelines/documents/adult-adolescent-oi/hepatitis-c-virus-hcv-adult-adolescent-oi.pdf",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "provide little benefit over FIB-4 (BII).88,89 Non-invasive ultrasound-based (e.g., shear wave elastography or vibration controlled transient elastography) or imaging-based (e.g., magnetic resonance elastography) modalities are recommended if available (BII). Liver biopsy is no longer recommended for",
+      "score": 0.63316137
+    },
+    {
+      "number": 14,
+      "title": "Cascade of Care for Alaska Native People With Chronic ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/85474/cdc_85474_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by BJ McMahon \u00b7 2020 \u00b7 Cited by 15 \u2014 AASLD/IDSA HCV Guidance Panel. Hepatitis C guidance: AASLD-IDSA recommendations for testing, managing, and treating adults infected with hepatitis C virus.",
+      "score": 0.5996498
+    },
+    {
+      "number": 15,
+      "title": "Special Populations: Hepatitis C Virus | HIV Coinfection | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/perinatal/special-populations-hepatitis-c-virus-hiv-coinfection",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "For additional information on HCV and HIV, see Hepatitis C Virus Infection in the Pediatric Opportunistic Infection Guidelines, Hepatitis C Virus/HIV Coinfection in the Adult and Adolescent Antiretroviral Guidelines, and Hepatitis C Virus in the Adult and Adolescent Opportunistic Infection Guideline",
+      "score": 0.568057
+    },
+    {
+      "number": 16,
+      "title": "Hepatitis C Virus Infection: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/hepatitis-c-virus",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "#### Simplified Approach to HCV Treatment\n\nThe current AASLD/IDSA HCV guidance for simplified HCV treatment of treatment-naive adults (without cirrhosis or with compensated cirrhosis) excludes persons with HIV. The Panel on Guidelines for the Prevention and Treatment of Opportunistic Infections in A",
+      "score": 0.5660431
+    },
+    {
+      "number": 17,
+      "title": "Advancing Hepatitis C Elimination through Opt-Out Universal Screening and Treatment in Carceral Settings, United States - Volume 30, Supplement\u2014March 2024 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/30/13/23-0859_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "Guidelines for testing and screening for HCV in the United States have evolved since the original recommendations were first published by the Centers for Disease Control and Prevention (CDC) in 1991 (Figure). Although risk-based HCV testing was recommended in 2003, it missed a substantial proportion",
+      "score": 0.5354634
+    },
+    {
+      "number": 18,
+      "title": "CDC Recommendations for Hepatitis C Testing Among Perinatally Exposed Infants and Children \u2014 United States, 2023  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/72/rr/rr7204a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Because spontaneous clearance occurs among up to 65.9% of children by age 5 years (37,60\u201365), the American Association for the Study of Liver Diseases and the Infectious Diseases Society of America (AASLD-IDSA) guidelines recommend a NAT for HCV RNA to confirm current infection before initiation of ",
+      "score": 0.5035894
+    },
+    {
+      "number": 19,
+      "title": "CDC Recommendations for Hepatitis C Screening Among ...",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/69/rr/rr6902a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "CDC determined that the new recommendations constituted scientific information that will have a clear and substantial impact on important public policies and private sector decisions. Therefore, the Information Quality Act required peer review by specialists in the field who were not involved in the",
+      "score": 0.45827657
+    },
+    {
+      "number": 20,
+      "title": "Hepatitis C Virus: Pediatric OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/hepatitis-c-virus-infection",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "Because treatment of HIV/HCV coinfection includes the challenge of dosing separate multidrug regimens, many studies have examined potential drug interactions. The Patients With HIV/HCV Coinfection section of the AASLD/IDSA HCV Guidance offers a detailed discussion of these potential interactions and",
+      "score": 0.43712714
+    },
+    {
+      "number": 21,
+      "title": "Hepatitis C | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/755/chapter/14077966/Hepatitis-C",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The American Association for the Study of Liver Disease (AASLD) summarize recommended antiviral drug treatment for adults (www.hcvguidelines.org) and children",
+      "score": 0.42591617
+    },
+    {
+      "number": 22,
+      "title": "Hepatitis C: Review of the Epidemiology, Clinical Care, ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/47530/cdc_47530_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by AJ Millman \u00b7 2017 \u00b7 Cited by 90 \u2014 Purpose of Review\u2014This review highlights key studies and recently published data, policies, and recommendations related to hepatitis C virus (",
+      "score": 0.34066117
+    },
+    {
+      "number": 23,
+      "title": "Viral Hepatitis Elimination 2022",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2022/02/Viral-Hepatitis-Elimination-2022-Abstract-book.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Method: Known HCV RNA-positive clients were contacted and completed initial telephone assessment. If available, historical venous blood results (within last 6 months) were used to confirm ongoing HCV RNA positivity and HCV genotype and to assess liver fibrosis using APRI and FIB-4. For clients witho",
+      "score": 0.54985875
+    },
+    {
+      "number": 24,
+      "title": "Status of Direct-Acting Antiviral Therapy for Hepatitis C ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(18)35155-2/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by TF Baumert \u00b7 2019 \u00b7 Cited by 238 \u2014 Two oral DAA regimens have been approved for 8-week treatment duration in selected patients with chronic HCV infection: 1) sofosbuvir and ledipasvir and 2)",
+      "score": 0.62687886
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Management of hepatitis C virus infection in the Asia ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(16)30080-2/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by SG Lim \u00b7 2017 \u00b7 Cited by 66 \u2014 Hepatitis C guidance: AASLD-IDSA recommendations for testing, managing, and treating adults infected with hepatitis C virus.",
+      "score": 0.5489884
+    },
+    {
+      "number": 2,
+      "title": "Reconsidering the management of patients with cancer with viral ...",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/8/2/e000943.full.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "Blood 2016;128:2527\u201332. 84 Kanwal F , Kramer J, Asch SM, et al. Risk of hepatocellular cancer in HCV patients treated with direct-\u00ad acting antiviral agents. Gastroenterology 2017;153:e1001:996\u20131005. 85 Ioannou GN, Green PK, Berry K. HCV eradication induced by direct-\u00ad acting antiviral agents reduces",
+      "score": 0.53415143
+    },
+    {
+      "number": 3,
+      "title": "Relationship of FIB-4 index with transient elastography in... : Journal of Family Medicine and Primary Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jfmpc/fulltext/2020/09110/relationship_of_fib_4_index_with_transient.25.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Relationship of FIB-4 index with transient elastography in... : Journal of Family Medicine and Primary Care\nWe aimed to study the extent of liver fibrosis in chronic hepatitis C patients with indeterminate APRI score of \u2265 0.5 - \u22642 (between higher and lower cut off value) and correlate it to t",
+      "score": 0.6437107
+    },
+    {
+      "number": 4,
+      "title": "Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, HBV+HDV, and HCV infections - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2772431X25000590",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, HBV+HDV, and HCV infections - ScienceDirect\n## Infectious Medicine. Volume 4, Issue 4, December 2025, 100220. # Original Article Comparative analysis of non-invasive fibrosis markers: Insights from chronic HBV, ",
+      "score": 0.6194488
+    },
+    {
+      "number": 5,
+      "title": "Category Index : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/10.1097/hep.0000000000001075~category-index",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "improvement of fibrosis in patients with hepatitis C. Implementing Hepatitis C Reflex Testing Within UNM. Hepatitis C Virus (HCV) Utilizing FIB-4 and transient",
+      "score": 0.6102915
+    },
+    {
+      "number": 6,
+      "title": "Accuracy of blood-based biomarkers for staging liver... : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/2025/01000/accuracy_of_blood_based_biomarkers_for_staging.30.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Accuracy of blood-based biomarkers for staging liver... : Hepatology\nIn adult patients with chronic liver disease, including hepatocellular (HCV, HIV-HCV, HBV, HIV-HBV, NAFLD, and ALD) or cholestatic (PSC, PBC) disorders, are blood-based biomarker panels accurate in staging hepatic fibrosis (",
+      "score": 0.5414337
+    },
+    {
+      "number": 7,
+      "title": "APRI and FIB-4 performance to assess liver fibrosis against ... : Journal of Family Medicine and Primary Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jfmpc/fulltext/2021/11000/apri_and_fib_4_performance_to_assess_liver.23.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: APRI and FIB-4 performance to assess liver fibrosis against ... : Journal of Family Medicine and Primary Care\nAPRI and FIB-4 performance to assess liver fibrosis against predefined Fibroscan values in chronic hepatitis C virus infection. The cut-off values of FIB-4 and APRI for significant fi",
+      "score": 0.5402697
+    },
+    {
+      "number": 8,
+      "title": "Validation of a machine learning approach using FIB-4 and APRI scores assessed by the metavir scoring system: A cohort study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1687197921000228",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Validation of a machine learning approach using FIB-4 and APRI scores assessed by the metavir scoring system: A cohort study - ScienceDirect\n### Background and Study Aim. The study aim was to improve and validate the accuracy of the fibrosis-4 (FIB-4) and aspartate aminotransferase-to-platele",
+      "score": 0.534443
+    },
+    {
+      "number": 9,
+      "title": "Hepatocellular Carcinoma Is a Negative Predictor of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0041134519316598",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by T Cieciura \u00b7 2020 \u00b7 Cited by 1 \u2014 Treatment with direct-acting antivirals (DAA) for hepatitis C (HCV) in liver transplant (LTX) recipients is very effective, Overall sustained viral response 24",
+      "score": 0.71088976
+    },
+    {
+      "number": 10,
+      "title": "Effectiveness of hepatitis C antiviral treatment in a USA ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168827817301265",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by LA Beste \u00b7 2017 \u00b7 Cited by 181 \u2014 It was unclear whether direct-acting antiviral treatment-induced sustained virologic response reduces the risk of liver cancer in patients with HCV infection.",
+      "score": 0.7018975
+    },
+    {
+      "number": 11,
+      "title": "Guidelines for Health Care Personnel Exposed to Hepatitis C Virus | Hepatitis C | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-c/hcp/infection-control/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## About the recommendations\n\nThe 2020 CDC guidance, based on expert opinion, reflects current understanding of the viral dynamics of early HCV infection, as well as recent guidance from AASLD and IDSA, which recommends treatment of acute HCV infection.\n\n### Get full details and a downloadable guide",
+      "score": 0.6944897
+    },
+    {
+      "number": 12,
+      "title": "Clinical Care of Hepatitis C",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-c/hcp/clinical-care/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Treatment recommendations\n\nExcept for pregnant patients and children under 3, clinicians should treat people with detectable HCV RNA in their blood with oral DAA therapy. There is no need to wait for potential spontaneous viral resolution.\n\nClinicians should also:\n\nFor more information about mana",
+      "score": 0.63723457
+    },
+    {
+      "number": 13,
+      "title": "Hepatitis C Virus Infection",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/sites/g/files/mnhszr391/files/guidelines/documents/adult-adolescent-oi/hepatitis-c-virus-hcv-adult-adolescent-oi.pdf",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "provide little benefit over FIB-4 (BII).88,89 Non-invasive ultrasound-based (e.g., shear wave elastography or vibration controlled transient elastography) or imaging-based (e.g., magnetic resonance elastography) modalities are recommended if available (BII). Liver biopsy is no longer recommended for",
+      "score": 0.63316137
+    },
+    {
+      "number": 14,
+      "title": "Cascade of Care for Alaska Native People With Chronic ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/85474/cdc_85474_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by BJ McMahon \u00b7 2020 \u00b7 Cited by 15 \u2014 AASLD/IDSA HCV Guidance Panel. Hepatitis C guidance: AASLD-IDSA recommendations for testing, managing, and treating adults infected with hepatitis C virus.",
+      "score": 0.5996498
+    },
+    {
+      "number": 15,
+      "title": "Special Populations: Hepatitis C Virus | HIV Coinfection | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/perinatal/special-populations-hepatitis-c-virus-hiv-coinfection",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "For additional information on HCV and HIV, see Hepatitis C Virus Infection in the Pediatric Opportunistic Infection Guidelines, Hepatitis C Virus/HIV Coinfection in the Adult and Adolescent Antiretroviral Guidelines, and Hepatitis C Virus in the Adult and Adolescent Opportunistic Infection Guideline",
+      "score": 0.568057
+    },
+    {
+      "number": 16,
+      "title": "Hepatitis C Virus Infection: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/hepatitis-c-virus",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "#### Simplified Approach to HCV Treatment\n\nThe current AASLD/IDSA HCV guidance for simplified HCV treatment of treatment-naive adults (without cirrhosis or with compensated cirrhosis) excludes persons with HIV. The Panel on Guidelines for the Prevention and Treatment of Opportunistic Infections in A",
+      "score": 0.5660431
+    },
+    {
+      "number": 17,
+      "title": "Advancing Hepatitis C Elimination through Opt-Out Universal Screening and Treatment in Carceral Settings, United States - Volume 30, Supplement\u2014March 2024 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/30/13/23-0859_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "Guidelines for testing and screening for HCV in the United States have evolved since the original recommendations were first published by the Centers for Disease Control and Prevention (CDC) in 1991 (Figure). Although risk-based HCV testing was recommended in 2003, it missed a substantial proportion",
+      "score": 0.5354634
+    },
+    {
+      "number": 18,
+      "title": "CDC Recommendations for Hepatitis C Testing Among Perinatally Exposed Infants and Children \u2014 United States, 2023  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/72/rr/rr7204a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Because spontaneous clearance occurs among up to 65.9% of children by age 5 years (37,60\u201365), the American Association for the Study of Liver Diseases and the Infectious Diseases Society of America (AASLD-IDSA) guidelines recommend a NAT for HCV RNA to confirm current infection before initiation of ",
+      "score": 0.5035894
+    },
+    {
+      "number": 19,
+      "title": "CDC Recommendations for Hepatitis C Screening Among ...",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/69/rr/rr6902a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "CDC determined that the new recommendations constituted scientific information that will have a clear and substantial impact on important public policies and private sector decisions. Therefore, the Information Quality Act required peer review by specialists in the field who were not involved in the",
+      "score": 0.45827657
+    },
+    {
+      "number": 20,
+      "title": "Hepatitis C Virus: Pediatric OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-pediatric-opportunistic-infections/hepatitis-c-virus-infection",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "Because treatment of HIV/HCV coinfection includes the challenge of dosing separate multidrug regimens, many studies have examined potential drug interactions. The Patients With HIV/HCV Coinfection section of the AASLD/IDSA HCV Guidance offers a detailed discussion of these potential interactions and",
+      "score": 0.43712714
+    },
+    {
+      "number": 21,
+      "title": "Hepatitis C | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/755/chapter/14077966/Hepatitis-C",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The American Association for the Study of Liver Disease (AASLD) summarize recommended antiviral drug treatment for adults (www.hcvguidelines.org) and children",
+      "score": 0.42591617
+    },
+    {
+      "number": 22,
+      "title": "Hepatitis C: Review of the Epidemiology, Clinical Care, ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/47530/cdc_47530_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by AJ Millman \u00b7 2017 \u00b7 Cited by 90 \u2014 Purpose of Review\u2014This review highlights key studies and recently published data, policies, and recommendations related to hepatitis C virus (",
+      "score": 0.34066117
+    },
+    {
+      "number": 23,
+      "title": "Viral Hepatitis Elimination 2022",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2022/02/Viral-Hepatitis-Elimination-2022-Abstract-book.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Method: Known HCV RNA-positive clients were contacted and completed initial telephone assessment. If available, historical venous blood results (within last 6 months) were used to confirm ongoing HCV RNA positivity and HCV genotype and to assess liver fibrosis using APRI and FIB-4. For clients witho",
+      "score": 0.54985875
+    },
+    {
+      "number": 24,
+      "title": "Status of Direct-Acting Antiviral Therapy for Hepatitis C ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(18)35155-2/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by TF Baumert \u00b7 2019 \u00b7 Cited by 238 \u2014 Two oral DAA regimens have been approved for 8-week treatment duration in selected patients with chronic HCV infection: 1) sofosbuvir and ledipasvir and 2)",
+      "score": 0.62687886
+    }
+  ],
+  "publishedAt": "2026-08-24T16:41:15.527540+00:00",
+  "updatedAt": "2026-08-24T16:41:15.527540+00:00",
+  "readingMinutes": 6,
+  "slug": "hepatitis-c"
+}

@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hepatology",
+  "title": "Hepatitis B",
+  "summary": "Use triple-panel serology to identify infection, immunity, and reactivation risk; stage confirmed chronic infection with HBV DNA, liver assessment, and fibrosis testing; then select durable antiviral suppression, pregnancy prevention measures, or surveillance based on cirrhosis and host risk.",
+  "seoDescription": "Physician guide to hepatitis B serology, chronic HBV staging, antiviral selection, pregnancy management, reactivation risk, and cirrhosis care.",
+  "clinicalQuestion": "How should physicians diagnose, stage, treat, and monitor acute and chronic hepatitis B infection?",
+  "specialty": "Hepatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hepatitis B",
+    "HBV serology",
+    "chronic hepatitis B",
+    "HBV DNA",
+    "tenofovir",
+    "entecavir",
+    "HBV reactivation",
+    "HBV pregnancy"
+  ],
+  "keyTakeaways": [
+    "Screen adults at least once with HBsAg, total anti-HBc, and anti-HBs; screen HBsAg during every pregnancy.[1][18][23]",
+    "HBsAg positivity with IgM anti-HBc indicates acute infection, whereas HBsAg positivity with total anti-HBc positivity and IgM anti-HBc negativity indicates chronic infection.[18]",
+    "At chronic HBV entry to care, obtain quantitative HBV DNA, HBeAg/anti-HBe, CBC, liver chemistries, synthetic-function tests, viral coinfection testing, abdominal ultrasound, and fibrosis assessment.[23]",
+    "For patients requiring therapy, entecavir, tenofovir disoproxil fumarate, and tenofovir alafenamide are preferred high-barrier nucleos(t)ide analogues.[9][14][17][24]",
+    "Cirrhosis changes urgency: use nucleos(t)ide analogue therapy rather than pegylated interferon in decompensated disease, assess transplant eligibility, and continue HCC surveillance despite viral suppression.[24]",
+    "An isolated anti-HBc result requires interpretation for waned resolved infection, occult HBV, false positivity, or passive maternal antibody; management differs by context and immunosuppression exposure.[18]"
+  ],
+  "sections": [
+    {
+      "id": "screen-and-interpret-serology",
+      "eyebrow": "Diagnosis",
+      "heading": "Screen with a triple panel and act on the serologic pattern",
+      "intro": "Use HBsAg, total anti-HBc, and anti-HBs as the initial adult screening panel.",
+      "paragraphs": [
+        "Screen all adults aged 18 years or older at least once with HBsAg, total anti-HBc, and anti-HBs. Test HBsAg during each pregnancy. A positive HBsAg identifies current infection but does not distinguish acute from chronic disease; order IgM anti-HBc when current infection is identified or clinically suspected.[1][18][23]",
+        "Interpret HBsAg positive, total anti-HBc positive, IgM anti-HBc positive, and anti-HBs negative as acute HBV infection. HBsAg positive, total anti-HBc positive, IgM anti-HBc negative, and anti-HBs negative indicates chronic HBV infection; link either pattern to hepatitis B care rather than treating serology alone as proof of disease activity.[18]",
+        "Interpret HBsAg negative, total anti-HBc positive, and anti-HBs positive as resolved infection. Counsel these patients that prior HBV exposure creates reactivation risk, particularly before immunosuppressive therapy. HBsAg negative, total anti-HBc negative, and anti-HBs negative indicates susceptibility when prior completion of a vaccine series is not documented; offer hepatitis B vaccination.[1][18]"
+      ],
+      "bullets": [
+        "Order IgM anti-HBc to distinguish acute or recently acquired HBV from chronic infection when HBsAg and total anti-HBc are positive.[18][21]",
+        "Do not diagnose vaccine-derived immunity from anti-HBs alone if a complete vaccine series is undocumented; complete vaccination when indicated.[18]"
+      ],
+      "subsections": [
+        {
+          "heading": "Isolated anti-HBc requires a context-specific next test",
+          "paragraphs": [
+            "For HBsAg-negative, total anti-HBc-positive, anti-HBs-negative results, consider waned anti-HBs after resolved infection, occult HBV infection, false-positive anti-HBc, passive transfer to an infant born to an HBsAg-positive parent, or an HBsAg mutant not detected by the assay. Before immunosuppression, obtain the triple panel if chronic HBV is not already known and evaluate this pattern for occult infection or reactivation risk rather than assuming susceptibility.[18][23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "HBV screening-pattern interpretation and immediate action.[18]",
+        "columns": [
+          "HBsAg",
+          "Total anti-HBc / IgM anti-HBc",
+          "Anti-HBs",
+          "Interpretation",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Positive",
+            "Total positive; IgM positive",
+            "Negative",
+            "Acute HBV infection.[18]",
+            "Link to hepatitis B care.[18]"
+          ],
+          [
+            "Positive",
+            "Total positive; IgM negative",
+            "Negative",
+            "Chronic HBV infection.[18]",
+            "Stage virologic activity and liver disease.[23]"
+          ],
+          [
+            "Negative",
+            "Total positive; IgM not required",
+            "Positive",
+            "Resolved infection.[18]",
+            "Document reactivation risk before immunosuppression.[18]"
+          ],
+          [
+            "Negative",
+            "Total negative",
+            "Positive",
+            "Vaccine-derived immunity if a complete series is documented.[18]",
+            "Complete vaccine series if vaccination is not documented.[18]"
+          ],
+          [
+            "Negative",
+            "Total positive",
+            "Negative",
+            "Isolated anti-HBc; possibilities include resolved infection with waned anti-HBs, occult HBV, false positivity, or passive antibody.[18]",
+            "Determine context; assess for occult infection or reactivation risk when relevant.[18][23]"
+          ],
+          [
+            "Negative",
+            "Total negative",
+            "Negative",
+            "Susceptible if no documented completed vaccination series.[18]",
+            "Offer hepatitis B vaccination.[18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stage-confirmed-chronic-hbv",
+      "eyebrow": "Initial evaluation",
+      "heading": "Stage chronic HBV before deciding on antiviral therapy",
+      "intro": "Treatment decisions require viral replication, inflammatory activity, fibrosis stage, and cirrhosis status.",
+      "paragraphs": [
+        "At the first chronic HBV visit, obtain quantitative HBV DNA and HBeAg/anti-HBe, then assess hepatic injury and reserve with CBC, ALT, AST, albumin, total bilirubin, alkaline phosphatase, and INR. Obtain HAV IgG to determine vaccination need; test HCV antibody with reflex HCV RNA if positive; test HDV antibody with reflex HDV RNA if positive. Perform abdominal ultrasound and fibrosis assessment with transient elastography or a serum fibrosis marker; individualize liver biopsy when noninvasive findings and the treatment decision remain discordant.[23]",
+        "Do not use an apparently normal aminotransferase value to exclude fibrosis. In chronic HBV, guideline-relevant ALT elevations may begin above 30 U/L in men and 19 U/L in women, and significant fibrosis can occur with normal liver enzymes. Use fibrosis staging to distinguish lower-risk infection from active or advanced liver disease requiring treatment consideration.[5]",
+        "Classify disease by HBeAg status, HBV DNA, ALT, and fibrosis rather than using a single measurement. HBeAg positivity or detectable HBV DNA indicates viral replication; anti-HBe generally corresponds to lower replication, but does not exclude HBeAg-negative chronic hepatitis. Repeated HBV DNA and ALT measurements are needed when activity is uncertain or treatment is deferred.[22][9][10]"
+      ],
+      "bullets": [
+        "Use transient elastography or a validated serum fibrosis marker at baseline; reserve biopsy for an individualized question that noninvasive testing cannot resolve.[23]",
+        "Calculate FIB-4 as age \u00d7 AST divided by platelet count \u00d7 square root of ALT; a reported advanced-fibrosis threshold is FIB-4 at least 3.25.[6]",
+        "Evaluate every chronic HBV patient for clinical evidence of cirrhosis or HCC and obtain abdominal ultrasound as part of initial assessment.[23]"
+      ],
+      "subsections": [
+        {
+          "heading": "Recognize the phase patterns that change follow-up intensity",
+          "paragraphs": [
+            "HBeAg-positive patients with high HBV DNA but normal ALT and no advanced fibrosis may be in HBeAg-positive chronic infection, whereas elevated ALT or clinically important fibrosis supports HBeAg-positive chronic hepatitis. HBeAg-negative patients with normal ALT, low HBV DNA, and absent or mild fibrosis fit a lower-replicative pattern; elevated HBV DNA with biochemical or fibrotic disease supports HBeAg-negative chronic hepatitis.[6][9]",
+            "If treatment is deferred in immune-tolerant chronic HBV, measure ALT at least every 6 months to identify transition toward active hepatitis. In compensated cirrhosis with low-level viremia when treatment is not initiated, monitor HBV DNA and for decompensation every 3 to 6 months; begin therapy if HBV DNA rises or clinical decompensation occurs.[10][24]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Baseline chronic HBV assessment organized by the decision it informs.[23][5][6]",
+        "columns": [
+          "Decision",
+          "Required assessment",
+          "Decision-changing interpretation"
+        ],
+        "rows": [
+          [
+            "Current replication",
+            "Quantitative HBV DNA; HBeAg and anti-HBe.[23]",
+            "High replication, particularly with elevated ALT or fibrosis, supports active chronic hepatitis and antiviral-treatment assessment.[9][22]"
+          ],
+          [
+            "Inflammatory activity",
+            "Serial ALT and AST; consider ALT >30 U/L in men or >19 U/L in women clinically significant in chronic HBV.[5]",
+            "Normal ALT does not exclude significant fibrosis; integrate with fibrosis testing.[5]"
+          ],
+          [
+            "Fibrosis or cirrhosis",
+            "Transient elastography or serum fibrosis marker; individualized biopsy when needed.[23]",
+            "FIB-4 \u22653.25 is a reported advanced-fibrosis threshold.[6]"
+          ],
+          [
+            "Coinfection and preventive needs",
+            "HAV IgG; HCV antibody with HCV RNA if positive; HDV antibody with HDV RNA if positive.[23]",
+            "Coinfection or absent HAV immunity changes disease management or vaccination planning.[23]"
+          ],
+          [
+            "Structural disease",
+            "Abdominal ultrasound.[23]",
+            "Evaluate for cirrhosis or HCC at entry to care.[23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "treat-chronic-hbv",
+      "eyebrow": "Antiviral therapy",
+      "heading": "Use high-barrier nucleos(t)ide analogues for patients with active or advanced disease",
+      "intro": "Treat cirrhosis and patients with high HBV DNA plus active or advanced liver disease.",
+      "paragraphs": [
+        "Antiviral therapy is recommended for patients with cirrhosis or with high HBV DNA plus active or advanced liver disease. The practical treatment goal is durable HBV replication suppression to prevent disease progression and HCC; sustained HBsAg loss is the optimal endpoint but is not the usual immediate endpoint of nucleos(t)ide analogue therapy.[4][9]",
+        "For treatment-naive chronic HBV requiring therapy, choose a high-resistance-barrier agent: entecavir, tenofovir disoproxil fumarate, or tenofovir alafenamide. Tenofovir and entecavir are preferred because of potency and minimal resistance risk; avoid low-genetic-barrier antivirals when resistance could precipitate decompensation.[9][14][17][24]",
+        "Pegylated interferon alfa can be considered in selected patients with mild to moderate chronic hepatitis B who can tolerate an interferon-based finite course. Do not use pegylated interferon in decompensated cirrhosis; nucleos(t)ide analogues are safer in cirrhosis, and transplant evaluation should proceed concurrently for eligible patients with decompensation.[9][24]"
+      ],
+      "bullets": [
+        "Avoid entecavir as the preferred option when there is prior lamivudine resistance.[24]",
+        "Avoid pegylated interferon in autoimmune disease, uncontrolled psychiatric illness, cytopenias, severe cardiac disease, uncontrolled seizures, and decompensated cirrhosis.[24]",
+        "Do not routinely combine antiviral agents solely to improve chronic HBV suppression; combination therapy is generally not recommended.[9]"
+      ],
+      "subsections": [
+        {
+          "heading": "Cirrhosis and HIV override routine treatment deferral",
+          "paragraphs": [
+            "In decompensated cirrhosis, start a nucleos(t)ide analogue and assess transplant eligibility; pegylated interferon is contraindicated. Monitor clinical status and laboratory values closely because advanced decompensation increases vulnerability to adverse outcomes, including reported lactic acidosis with some nucleos(t)ide analogues.[24]",
+            "For HIV with chronic HBV, use an antiretroviral regimen containing TDF or TAF plus either lamivudine or emtricitabine, regardless of HBV DNA level. Do not manage HBV in HIV as a separate monotherapy decision when antiretroviral regimen composition can expose HBV to inadequate activity.[23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Chronic HBV treatment selection by clinical setting.[9][14][23][24]",
+        "columns": [
+          "Clinical setting",
+          "Preferred approach",
+          "Avoid or add"
+        ],
+        "rows": [
+          [
+            "Treatment-naive chronic HBV requiring therapy",
+            "Entecavir, TDF, or TAF.[9][14][17][24]",
+            "Avoid low-resistance-barrier antiviral monotherapy.[24]"
+          ],
+          [
+            "Compensated cirrhosis",
+            "High-barrier nucleos(t)ide analogue; continued monitoring for disease progression and HCC.[24]",
+            "Pegylated interferon is not contraindicated but nucleos(t)ide analogues are safer.[24]"
+          ],
+          [
+            "Decompensated cirrhosis",
+            "Nucleos(t)ide analogue and concurrent transplant evaluation if eligible.[24]",
+            "Do not use pegylated interferon.[24]"
+          ],
+          [
+            "Prior lamivudine resistance",
+            "Select therapy other than entecavir as the preferred agent.[24]",
+            "Account for prior resistance when choosing antiviral therapy.[24]"
+          ],
+          [
+            "HIV and chronic HBV",
+            "TDF or TAF plus 3TC or FTC within ART.[23]",
+            "Treat regardless of HBV DNA level.[23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-prevent-complications",
+      "eyebrow": "Longitudinal care",
+      "heading": "Continue surveillance and prevent transmission despite virologic suppression",
+      "intro": "Suppression reduces progression risk but does not remove the need for longitudinal liver care.",
+      "paragraphs": [
+        "Monitor treated patients for treatment response and adherence, and continue HCC surveillance because antiviral therapy does not eliminate HCC risk. Monitor untreated patients according to their phase and fibrosis risk; at minimum, immune-tolerant adults need ALT testing every 6 months, while compensated cirrhosis with untreated low-level viremia requires HBV DNA and decompensation assessment every 3 to 6 months.[9][10][24]",
+        "For patients with resolved infection, document anti-HBc positivity and counsel regarding HBV reactivation before future chemotherapy or immunosuppressive therapy. In people with HIV who will receive immunosuppressive therapy, perform triple-panel HBV screening before treatment unless chronic HBV is already known.[18][23]",
+        "Vaccination prevents chronic carriage and liver cancer at the population level. In Taiwan, universal infant vaccination reduced childhood HBsAg carriage from 10% to less than 1% over 10 years, and childhood HCC incidence declined 6 to 10 years after program initiation. Offer vaccination to susceptible patients identified by triple-panel testing.[7][18]"
+      ],
+      "bullets": [
+        "Continue HCC surveillance after antiviral initiation; viral suppression does not eliminate risk.[24]",
+        "Vaccinate patients with HBsAg negative, total anti-HBc negative, and anti-HBs negative serology when no completed series is documented.[18]",
+        "For HBsAg-negative, anti-HBc-positive patients, flag reactivation risk in the medical record before immunosuppression.[18]"
+      ],
+      "subsections": [
+        {
+          "heading": "Pregnancy requires repeated screening and postpartum follow-up",
+          "paragraphs": [
+            "Test HBsAg during every pregnancy. In pregnant patients with chronic HBV, monitor frequently during pregnancy and through 6 months postpartum so antiviral therapy can be initiated when indicated and postpartum disease activity is detected.[1][16]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Monitoring and prevention actions by HBV status.[10][16][18][24]",
+        "columns": [
+          "Status or setting",
+          "Action",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Immune-tolerant chronic HBV without treatment",
+            "Check ALT for transition to active disease.[10]",
+            "At least every 6 months.[10]"
+          ],
+          [
+            "Compensated cirrhosis with low-level viremia when treatment is not initiated",
+            "Assess HBV DNA and clinical decompensation; initiate treatment if either worsens.[24]",
+            "Every 3 to 6 months.[24]"
+          ],
+          [
+            "On antiviral therapy",
+            "Monitor response and adherence; continue HCC surveillance.[9][24]",
+            "Longitudinally throughout treatment.[9][24]"
+          ],
+          [
+            "Resolved HBV infection",
+            "Counsel on reactivation risk before immunosuppression.[18]",
+            "Before immunosuppressive therapy.[18]"
+          ],
+          [
+            "Pregnancy with chronic HBV",
+            "Monitor disease activity and reassess postpartum.[16]",
+            "During pregnancy and up to 6 months postpartum.[16]"
+          ],
+          [
+            "Susceptible serology",
+            "Offer hepatitis B vaccine.[18]",
+            "At identification of susceptibility.[18]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Potential Hepatitis B Virus (HBV) Device Reclassification",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/172296/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "4 HBV Diagnosis (Ref 4) \u2022 Adults: Screen all adults aged 18 years and older for HBV infection at least once during their lifetime (HBsAg, anti-HBs, and anti-HBc) \u2022 Pregnant: Screen all pregnant people for HBsAg during each pregnancy Test and Result Interpretation Action HBsAg\u2014Positive Total anti-HBc",
+      "score": 0.7393665
+    },
+    {
+      "number": 2,
+      "title": "IMMULITE - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf/P010053c.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "relieve symptoms is available. Results have shown positive response to treatment in 40-50% of selected individuals with chronic active hepatitis B.'.5 Classification of a hepatitis B infection requires the identification of several serological markers expressed during three phases (incubation, acute",
+      "score": 0.43943515
+    },
+    {
+      "number": 3,
+      "title": "Clinical outcomes of untreated adults living with chronic ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(24)00226-7/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by G Ndow \u00b7 2024 \u00b7 Cited by 11 \u2014 Indications for antiviral therapy among people living with chronic hepatitis B virus (HBV) infection are restrictive and based on complex criteria using tests",
+      "score": 0.400703
+    },
+    {
+      "number": 4,
+      "title": "Hepatitis B",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01468-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Treatment is recommended for patients with cirrhosis or with high HBV DNA levels and active or advanced liver disease. New antiviral and",
+      "score": 0.27526775
+    },
+    {
+      "number": 5,
+      "title": "Guidelines on the management of abnormal liver blood tests",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/67/1/6",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "Moreover, the current upper limit of normal for many of the liver enzymes (for example ALT) may be too high, which is probably a consequence of patients with occult NAFLD being included in the generation of normal serum ALT ranges.22 This is perhaps best appreciated in patients with chronic hepatiti",
+      "score": 0.40938663
+    },
+    {
+      "number": 6,
+      "title": "EASL 2025 indications revisited: phase-specific outcomes with and without nucleos(t)ide analogue therapy in chronic hepatitis B virus infection | Gut",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/early/2025/10/27/gutjnl-2025-335449",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "From local EMR systems, we extracted patient-level data, including: registered residence, sex, age, marital status, family history of liver cancer, clinical diagnosis, HBsAg and HBeAg status, HBV DNA levels, ALT, aspartate aminotransferase (AST), gamma-glutamyltransferase (GGT), albumin, total bilir",
+      "score": 0.37188962
+    },
+    {
+      "number": 7,
+      "title": "Universal Hepatitis B Vaccination in Taiwan and the Incidence of Hepatocellular Carcinoma in Children | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199706263362602",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "# Universal Hepatitis B Vaccination in Taiwan and the Incidence of Hepatocellular Carcinoma in Children. To assess the effect of the program on the development of hepatocellular carcinoma, we studied the incidence of this cancer in children in Taiwan from 1981 to 1994. Since the institution of Taiwa",
+      "score": 0.68140936
+    },
+    {
+      "number": 8,
+      "title": "EASL Clinical Practice Guidelines on the management of hepatitis B virus infection",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168827825001746",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The updated EASL Clinical Practice Guidelines on the management of hepatitis B virus (HBV) infection provide comprehensive, evidence-based recommendations for its management. Spanning ten thematic sections, the guidelines address diagnostics, treatment goals, treatment indications, therapeutic optio",
+      "score": 0.798643
+    },
+    {
+      "number": 9,
+      "title": "EASL Clinical Practice Guidelines: Management of chronic hepatitis B virus infection",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168827812001675",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2017, Journal of Hepatology  Show abstract Hepatitis B virus (HBV) infection remains a global public health problem with changing epidemiology due to several factors including vaccination policies and migration. This Clinical Practice Guideline presents updated recommendations for the optimal manage",
+      "score": 0.7559439
+    },
+    {
+      "number": 10,
+      "title": "AASLD guidelines for treatment of chronic hepatitis B",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.28156",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2016 \u00b7 Cited by 2677 \u2014 The AASLD suggests that ALT levels be tested at least every 6 months for adults with immune-tolerant CHB to monitor for potential transition to",
+      "score": 0.6742441
+    },
+    {
+      "number": 11,
+      "title": "Hepatitis B Virus Genotype B - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/hepatitis-b-virus-genotype-b",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "At the time of this writing, seven agents are globally approved for the treatment of CHB, they are standard interferon-\u03b1 (IFN-\u03b1) or pegylated interferon-\u03b1 (PEG-IFN-\u03b1) and five nucleos(t)ide analogs (NAs), including lamivudine (LAM), telbivudine (LdT), entecavir (ETV), adefovir dipivoxil (ADV) and te",
+      "score": 0.6469293
+    },
+    {
+      "number": 12,
+      "title": "Update on prevention, diagnosis, and treatment of chronic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.29800",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2018 \u00b7 Cited by 5648 \u2014 Since the publication of the 2016 AASLD Hepatitis B Guidelines, tenofovir alafenamide (TAF) has been approved for treatment of CHB in adults.",
+      "score": 0.64585793
+    },
+    {
+      "number": 13,
+      "title": "ALEH position statement on the management of hepatitis B virus infection 2025",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S166526812600013X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Show full outline\n\n## Figures (1)\n\n1.   Image 3: Fig. 1. Current algorithm for the treatment of chronic hepatitis B\n\n## Tables (10)\n\n1.   Table 1\n2.   Table 2\n3.   Table 3\n4.   Table 4 , EASL (2025) , and AASLD (2025) .\")\n5.   Table 5 , EASL (2025) , and AASLD (2025) .\")\n6.   Table 6 , EASL (2025) ,",
+      "score": 0.6186197
+    },
+    {
+      "number": 14,
+      "title": "AASLD 2018 Hepatitis B Guidance",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/hep.29800",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2018 \u00b7 Cited by 5546 \u2014 HBV antiviral therapy should be started concurrently with DAA therapy.(140) Ente- cavir, TDF, or TAF are the preferred antivirals.",
+      "score": 0.5780915
+    },
+    {
+      "number": 15,
+      "title": "Chronic Hepatitis B Infection: Patient Guidance",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jgh.70177",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This patient guidance document is intended for all people at risk of or living with chronic hepatitis B (CHB) infection.",
+      "score": 0.49611887
+    },
+    {
+      "number": 16,
+      "title": "Management of chronic hepatitis B during pregnancy",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/gastro/article/6/4/257/5057986",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Aslam \u00b7 2018 \u00b7 Cited by 45 \u2014 Frequent monitoring during pregnancy and up to 6 months postpartum is recommended so antiviral therapy can be initiated in a timely manner.",
+      "score": 0.5437604
+    },
+    {
+      "number": 17,
+      "title": "Hepatitis B | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/347/chapter/5752538/Hepatitis-B",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Tenofovir disoproxil fumarate, tenofovir alafenamide fumarate, entecavir, and pegylated interferon alfa-2a are preferred in adults as first-line therapy",
+      "score": 0.33287454
+    },
+    {
+      "number": 18,
+      "title": "Clinical Testing and Diagnosis for Hepatitis B | Hepatitis B | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-b/hcp/diagnosis-testing/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Test outcome | Interpretation | Action |\n --- \n| HBsAg \u2014 Positive  Total anti-HBc \u2014 Positive  IgM anti-HBc \u2014 Positive\\  Anti-HBs \u2014 Negative | Acute infection | Link to hepatitis B care |\n| HBsAg \u2014 Positive  Total anti-HBc \u2014 Positive  IgM anti-HBc \u2014 Negative  Anti-HBs \u2014 Negative | Chronic infection",
+      "score": 0.8010817
+    },
+    {
+      "number": 19,
+      "title": "Seroprevalence of Hepatitis B Surface Antigen (HBsAg) ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/10940/cdc_10940_DS9.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by C Rossi \u00b7 2012 \u00b7 Cited by 229 \u2014 Interpretation of diagnostic test results for HBV (HBsAg, anti-HBs, total anti-HBc, +/- anti-HBc. IgM). Primary tests. Optional tests.",
+      "score": 0.7343678
+    },
+    {
+      "number": 20,
+      "title": "Hepatitis B Surveillance Guidance",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis/php/surveillance-guidance/hepatitis-b.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Interpreting Hepatitis B Laboratory Results\n\nMany jurisdictions have regulations requiring laboratories to report all positive HBsAg, HBeAg, HBV DNA, and anti-HBc IgM laboratory results to the HD while a subset might also routinely receive positive total anti-HBc and anti-HBs results. [...] | HB",
+      "score": 0.70944256
+    },
+    {
+      "number": 21,
+      "title": "Sexually Transmitted Diseases Treatment Guidelines, 2015",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6403a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| TABLE 3. Interpretation of serologic test results\\ for HBV infection | | | | |\n ---  --- \n| Serologic marker | | | | Interpretation |\n| HBsAg | Total anti-HBc | IgM anti-HBc | Anti-HBs |\n| \u2013 | \u2013 | \u2013 | \u2013 | Never infected |\n| +\u2020 | \u2013 | \u2013 | \u2013 | Early acute infection; transient (up to 18 days) after va",
+      "score": 0.6944897
+    },
+    {
+      "number": 22,
+      "title": "Recommendations for Identification and Public \r\nHealth Management of Persons with Chronic Hepatitis B Virus Infection",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5708a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "FIGURE 1. Typical serologic course of acute hepatitis B virus\r\ninfection with recovery\nTABLE 2. Typical interpretation of serologic test results for hepatitis B virus infection\r\nSerologic marker\r\nHBsAg Total anti-HBc IgM anti-HBc Anti-HBs Interpretation\r\n    Never infected and no evidence of immuniz",
+      "score": 0.6690754
+    },
+    {
+      "number": 23,
+      "title": "Hepatitis B Virus Infection: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/hepatitis-b-virus",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "### Diagnosis\n\nCenters for Disease Control and Prevention (CDC) recommends universal hepatitis B screening at least once during a lifetime for all people over the age of 18, including those with HIV.17 Screening should include three serologic tests (triple panel screening): HBsAg, total hepatitis B ",
+      "score": 0.6172364
+    },
+    {
+      "number": 24,
+      "title": "AASLD Guidelines for Treatment of Chronic Hepatitis B - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5987259",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1. Tenofovir and entecavir are preferred because of their potency and minimal risk of resistance. Antivirals with a low genetic barrier to resistance should not be used because the emergence of resistance can lead to decompensation.\n2. Peg-IFN is not contraindicated in persons with compensated cirrh",
+      "score": 0.81204927
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Potential Hepatitis B Virus (HBV) Device Reclassification",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/172296/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "4 HBV Diagnosis (Ref 4) \u2022 Adults: Screen all adults aged 18 years and older for HBV infection at least once during their lifetime (HBsAg, anti-HBs, and anti-HBc) \u2022 Pregnant: Screen all pregnant people for HBsAg during each pregnancy Test and Result Interpretation Action HBsAg\u2014Positive Total anti-HBc",
+      "score": 0.7393665
+    },
+    {
+      "number": 2,
+      "title": "IMMULITE - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf/P010053c.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "relieve symptoms is available. Results have shown positive response to treatment in 40-50% of selected individuals with chronic active hepatitis B.'.5 Classification of a hepatitis B infection requires the identification of several serological markers expressed during three phases (incubation, acute",
+      "score": 0.43943515
+    },
+    {
+      "number": 3,
+      "title": "Clinical outcomes of untreated adults living with chronic ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(24)00226-7/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by G Ndow \u00b7 2024 \u00b7 Cited by 11 \u2014 Indications for antiviral therapy among people living with chronic hepatitis B virus (HBV) infection are restrictive and based on complex criteria using tests",
+      "score": 0.400703
+    },
+    {
+      "number": 4,
+      "title": "Hepatitis B",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01468-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Treatment is recommended for patients with cirrhosis or with high HBV DNA levels and active or advanced liver disease. New antiviral and",
+      "score": 0.27526775
+    },
+    {
+      "number": 5,
+      "title": "Guidelines on the management of abnormal liver blood tests",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/67/1/6",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "Moreover, the current upper limit of normal for many of the liver enzymes (for example ALT) may be too high, which is probably a consequence of patients with occult NAFLD being included in the generation of normal serum ALT ranges.22 This is perhaps best appreciated in patients with chronic hepatiti",
+      "score": 0.40938663
+    },
+    {
+      "number": 6,
+      "title": "EASL 2025 indications revisited: phase-specific outcomes with and without nucleos(t)ide analogue therapy in chronic hepatitis B virus infection | Gut",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/early/2025/10/27/gutjnl-2025-335449",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "From local EMR systems, we extracted patient-level data, including: registered residence, sex, age, marital status, family history of liver cancer, clinical diagnosis, HBsAg and HBeAg status, HBV DNA levels, ALT, aspartate aminotransferase (AST), gamma-glutamyltransferase (GGT), albumin, total bilir",
+      "score": 0.37188962
+    },
+    {
+      "number": 7,
+      "title": "Universal Hepatitis B Vaccination in Taiwan and the Incidence of Hepatocellular Carcinoma in Children | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199706263362602",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "# Universal Hepatitis B Vaccination in Taiwan and the Incidence of Hepatocellular Carcinoma in Children. To assess the effect of the program on the development of hepatocellular carcinoma, we studied the incidence of this cancer in children in Taiwan from 1981 to 1994. Since the institution of Taiwa",
+      "score": 0.68140936
+    },
+    {
+      "number": 8,
+      "title": "EASL Clinical Practice Guidelines on the management of hepatitis B virus infection",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168827825001746",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The updated EASL Clinical Practice Guidelines on the management of hepatitis B virus (HBV) infection provide comprehensive, evidence-based recommendations for its management. Spanning ten thematic sections, the guidelines address diagnostics, treatment goals, treatment indications, therapeutic optio",
+      "score": 0.798643
+    },
+    {
+      "number": 9,
+      "title": "EASL Clinical Practice Guidelines: Management of chronic hepatitis B virus infection",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168827812001675",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2017, Journal of Hepatology  Show abstract Hepatitis B virus (HBV) infection remains a global public health problem with changing epidemiology due to several factors including vaccination policies and migration. This Clinical Practice Guideline presents updated recommendations for the optimal manage",
+      "score": 0.7559439
+    },
+    {
+      "number": 10,
+      "title": "AASLD guidelines for treatment of chronic hepatitis B",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.28156",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2016 \u00b7 Cited by 2677 \u2014 The AASLD suggests that ALT levels be tested at least every 6 months for adults with immune-tolerant CHB to monitor for potential transition to",
+      "score": 0.6742441
+    },
+    {
+      "number": 11,
+      "title": "Hepatitis B Virus Genotype B - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/hepatitis-b-virus-genotype-b",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "At the time of this writing, seven agents are globally approved for the treatment of CHB, they are standard interferon-\u03b1 (IFN-\u03b1) or pegylated interferon-\u03b1 (PEG-IFN-\u03b1) and five nucleos(t)ide analogs (NAs), including lamivudine (LAM), telbivudine (LdT), entecavir (ETV), adefovir dipivoxil (ADV) and te",
+      "score": 0.6469293
+    },
+    {
+      "number": 12,
+      "title": "Update on prevention, diagnosis, and treatment of chronic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.29800",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2018 \u00b7 Cited by 5648 \u2014 Since the publication of the 2016 AASLD Hepatitis B Guidelines, tenofovir alafenamide (TAF) has been approved for treatment of CHB in adults.",
+      "score": 0.64585793
+    },
+    {
+      "number": 13,
+      "title": "ALEH position statement on the management of hepatitis B virus infection 2025",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S166526812600013X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Show full outline\n\n## Figures (1)\n\n1.   Image 3: Fig. 1. Current algorithm for the treatment of chronic hepatitis B\n\n## Tables (10)\n\n1.   Table 1\n2.   Table 2\n3.   Table 3\n4.   Table 4 , EASL (2025) , and AASLD (2025) .\")\n5.   Table 5 , EASL (2025) , and AASLD (2025) .\")\n6.   Table 6 , EASL (2025) ,",
+      "score": 0.6186197
+    },
+    {
+      "number": 14,
+      "title": "AASLD 2018 Hepatitis B Guidance",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/hep.29800",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by NA Terrault \u00b7 2018 \u00b7 Cited by 5546 \u2014 HBV antiviral therapy should be started concurrently with DAA therapy.(140) Ente- cavir, TDF, or TAF are the preferred antivirals.",
+      "score": 0.5780915
+    },
+    {
+      "number": 15,
+      "title": "Chronic Hepatitis B Infection: Patient Guidance",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jgh.70177",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This patient guidance document is intended for all people at risk of or living with chronic hepatitis B (CHB) infection.",
+      "score": 0.49611887
+    },
+    {
+      "number": 16,
+      "title": "Management of chronic hepatitis B during pregnancy",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/gastro/article/6/4/257/5057986",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Aslam \u00b7 2018 \u00b7 Cited by 45 \u2014 Frequent monitoring during pregnancy and up to 6 months postpartum is recommended so antiviral therapy can be initiated in a timely manner.",
+      "score": 0.5437604
+    },
+    {
+      "number": 17,
+      "title": "Hepatitis B | Red Book",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/redbook/book/347/chapter/5752538/Hepatitis-B",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Tenofovir disoproxil fumarate, tenofovir alafenamide fumarate, entecavir, and pegylated interferon alfa-2a are preferred in adults as first-line therapy",
+      "score": 0.33287454
+    },
+    {
+      "number": 18,
+      "title": "Clinical Testing and Diagnosis for Hepatitis B | Hepatitis B | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis-b/hcp/diagnosis-testing/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Test outcome | Interpretation | Action |\n --- \n| HBsAg \u2014 Positive  Total anti-HBc \u2014 Positive  IgM anti-HBc \u2014 Positive\\  Anti-HBs \u2014 Negative | Acute infection | Link to hepatitis B care |\n| HBsAg \u2014 Positive  Total anti-HBc \u2014 Positive  IgM anti-HBc \u2014 Negative  Anti-HBs \u2014 Negative | Chronic infection",
+      "score": 0.8010817
+    },
+    {
+      "number": 19,
+      "title": "Seroprevalence of Hepatitis B Surface Antigen (HBsAg) ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/10940/cdc_10940_DS9.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by C Rossi \u00b7 2012 \u00b7 Cited by 229 \u2014 Interpretation of diagnostic test results for HBV (HBsAg, anti-HBs, total anti-HBc, +/- anti-HBc. IgM). Primary tests. Optional tests.",
+      "score": 0.7343678
+    },
+    {
+      "number": 20,
+      "title": "Hepatitis B Surveillance Guidance",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/hepatitis/php/surveillance-guidance/hepatitis-b.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "### Interpreting Hepatitis B Laboratory Results\n\nMany jurisdictions have regulations requiring laboratories to report all positive HBsAg, HBeAg, HBV DNA, and anti-HBc IgM laboratory results to the HD while a subset might also routinely receive positive total anti-HBc and anti-HBs results. [...] | HB",
+      "score": 0.70944256
+    },
+    {
+      "number": 21,
+      "title": "Sexually Transmitted Diseases Treatment Guidelines, 2015",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6403a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| TABLE 3. Interpretation of serologic test results\\ for HBV infection | | | | |\n ---  --- \n| Serologic marker | | | | Interpretation |\n| HBsAg | Total anti-HBc | IgM anti-HBc | Anti-HBs |\n| \u2013 | \u2013 | \u2013 | \u2013 | Never infected |\n| +\u2020 | \u2013 | \u2013 | \u2013 | Early acute infection; transient (up to 18 days) after va",
+      "score": 0.6944897
+    },
+    {
+      "number": 22,
+      "title": "Recommendations for Identification and Public \r\nHealth Management of Persons with Chronic Hepatitis B Virus Infection",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5708a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "FIGURE 1. Typical serologic course of acute hepatitis B virus\r\ninfection with recovery\nTABLE 2. Typical interpretation of serologic test results for hepatitis B virus infection\r\nSerologic marker\r\nHBsAg Total anti-HBc IgM anti-HBc Anti-HBs Interpretation\r\n    Never infected and no evidence of immuniz",
+      "score": 0.6690754
+    },
+    {
+      "number": 23,
+      "title": "Hepatitis B Virus Infection: Adult and Adolescent OIs | NIH",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/hepatitis-b-virus",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "### Diagnosis\n\nCenters for Disease Control and Prevention (CDC) recommends universal hepatitis B screening at least once during a lifetime for all people over the age of 18, including those with HIV.17 Screening should include three serologic tests (triple panel screening): HBsAg, total hepatitis B ",
+      "score": 0.6172364
+    },
+    {
+      "number": 24,
+      "title": "AASLD Guidelines for Treatment of Chronic Hepatitis B - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5987259",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1. Tenofovir and entecavir are preferred because of their potency and minimal risk of resistance. Antivirals with a low genetic barrier to resistance should not be used because the emergence of resistance can lead to decompensation.\n2. Peg-IFN is not contraindicated in persons with compensated cirrh",
+      "score": 0.81204927
+    }
+  ],
+  "publishedAt": "2026-08-24T16:40:12.307192+00:00",
+  "updatedAt": "2026-08-24T16:40:12.307192+00:00",
+  "readingMinutes": 6,
+  "slug": "hepatitis-b"
+}

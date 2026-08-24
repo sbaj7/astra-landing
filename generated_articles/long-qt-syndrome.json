@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiac Electrophysiology",
+  "title": "Long QT Syndrome",
+  "summary": "A practical framework for confirming congenital long QT syndrome, excluding acquired QT prolongation, identifying concealed disease, initiating genotype-informed arrhythmic risk reduction, and escalating to sympathetic denervation or defibrillator-based protection when breakthrough events persist.",
+  "seoDescription": "Physician guide to diagnosing congenital long QT syndrome, excluding acquired causes, using genetic testing, and reducing torsades and sudden-death risk.",
+  "clinicalQuestion": "How should clinicians diagnose, risk-stratify, and manage suspected or confirmed congenital long QT syndrome?",
+  "specialty": "Cardiology and Cardiac Electrophysiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "congenital long QT syndrome",
+    "QTc prolongation",
+    "torsades de pointes",
+    "LQT1",
+    "LQT2",
+    "LQT3",
+    "Schwartz score",
+    "beta blocker",
+    "left cardiac sympathetic denervation"
+  ],
+  "keyTakeaways": [
+    "Confirm that QT prolongation is persistent and not attributable to a QT-prolonging medication, electrolyte abnormality, bradyarrhythmia, eating disorder, or coronary disease before labeling congenital LQTS. [7]",
+    "A QTc of at least 480 ms contributes 3 points to the Schwartz score; a score of 4 or more indicates high clinical probability of LQTS. [12]",
+    "Normal resting QTc does not exclude inherited disease: approximately 25% of genotype-positive patients may have a normal QTc interval. [15]",
+    "For suspected concealed LQTS, obtain an exercise test with QT assessment through extended recovery; exercise-associated QTc prolongation is particularly informative for LQT1. [15]",
+    "The major genotype-defined syndromes are LQT1 (KCNQ1), LQT2 (KCNH2), and LQT3 (SCN5A), which together account for approximately 80% to 90% of LQTS cases. [7]",
+    "Beta-blockers are foundational antiarrhythmic therapy; LCSD is an option for breakthrough cardiac events on effective beta-blockade or when beta-blocker intolerance limits treatment. [2][5][6]",
+    "Refer patients with recurrent arrhythmic events despite therapy, prior aborted cardiac arrest, or consideration of ICD or LCSD to an inherited-arrhythmia electrophysiology program. [1][2][5]"
+  ],
+  "sections": [
+    {
+      "id": "urgent-assessment",
+      "eyebrow": "Immediate decisions",
+      "heading": "Identify torsades risk and reversible QT prolongation first",
+      "intro": "Treat unstable ventricular arrhythmia and correct acquired contributors before assigning an inherited diagnosis.",
+      "paragraphs": [
+        "In a patient with syncope, polymorphic ventricular tachycardia, aborted cardiac arrest, or marked QT prolongation, obtain a 12-lead ECG and immediately review all prescribed, over-the-counter, and administered drugs for QT-prolonging exposure. Acquired long QT may result from medications, electrolyte abnormalities, eating disorders, coronary artery disease, and bradyarrhythmia; these conditions must be addressed before interpreting QTc as evidence of congenital LQTS. [7]",
+        "Document the presenting rhythm whenever possible. Torsades de pointes is a diagnostic component of the Schwartz score, but do not double-count torsades and syncope in that score because they are mutually exclusive criteria. [12] A history of syncope during stress carries more diagnostic weight than syncope without stress, supporting an adrenergically mediated inherited arrhythmia phenotype. [12]",
+        "Patients with known or suspected congenital LQTS warrant particular caution with ondansetron and other QT-prolonging agents because congenital LQTS is a recognized substrate for drug-associated torsades. [23] If QT-prolonging therapy cannot be avoided, reassess the ECG and correct modifiable acquired factors before exposure."
+      ],
+      "bullets": [
+        "Obtain a medication and substance exposure history, including recently administered antiemetics and other QT-prolonging therapies. [7][23]",
+        "Measure and correct electrolyte abnormalities and assess for clinically relevant bradyarrhythmia before diagnosing congenital LQTS. [7]",
+        "Elicit exertional or emotional-stress syncope, documented torsades, congenital deafness, definite LQTS in relatives, and unexplained sudden death before age 30 years in immediate relatives. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial branch point: acquired versus inherited QT prolongation. [7][12]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "QT prolongation with QT-prolonging medication exposure",
+            "Acquired long QT is possible. [7]",
+            "Stop or substitute the culprit drug when feasible; reassess QTc after reversible factors are addressed. [7]"
+          ],
+          [
+            "QT prolongation with electrolyte abnormality, bradyarrhythmia, eating disorder, or coronary disease",
+            "These are recognized acquired contributors. [7]",
+            "Correct the contributor and repeat ECG assessment before concluding congenital LQTS. [7]"
+          ],
+          [
+            "Persistent QTc prolongation without acquired cause plus stress syncope, torsades, or suggestive family history",
+            "Clinical probability of congenital LQTS rises. [12]",
+            "Calculate Schwartz score, obtain inherited-arrhythmia evaluation, and consider genetic testing. [12][15]"
+          ],
+          [
+            "Normal resting QTc but convincing personal or family history",
+            "Concealed LQTS remains possible. [15]",
+            "Perform exercise testing with QT evaluation during prolonged recovery and consider genetic testing. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Diagnostic workup",
+      "heading": "Confirm phenotype with QTc, Schwartz scoring, and targeted provocation",
+      "intro": "Use serial, carefully measured ECG data rather than a single automated QTc result.",
+      "paragraphs": [
+        "Obtain a high-quality resting 12-lead ECG after reversible acquired causes have been addressed. Bazett correction is commonly used: QTc equals QT divided by the square root of the RR interval. [12][13] In pediatric diagnostic assessment, measure QT across multiple leads and average RR intervals over several beats; computer QT measurement is unreliable for this purpose. [15]",
+        "Apply the Schwartz score only when ECG findings are not explained by medications or disorders that alter repolarization. QTc of at least 480 ms scores 3 points; QTc 460 to 470 ms scores 2 points; and QTc 450 ms scores 1 point. Torsades de pointes scores 2 points, T-wave alternans and notched T waves in three leads each score 1 point, and resting heart rate below the second percentile for age scores 0.5 point. [12]",
+        "A Schwartz score of 4 or greater indicates high probability, 2 to 3 intermediate probability, and 1 or less low probability of LQTS. [12] Clinical history modifies the result: stress-related syncope scores 2 points, nonstress syncope 1 point, congenital deafness 0.5 point, a family member with definite LQTS 1 point, and unexplained sudden death before age 30 years in an immediate family member 0.5 point. [12]",
+        "Do not dismiss a patient with a normal baseline QTc when the phenotype is compelling. Approximately 25% of patients with a pathogenic LQTS variant may have normal QTc intervals. [15] Exercise testing or epinephrine infusion can support assessment of concealed LQTS, but neither provocative approach has adequate sensitivity or specificity to establish the diagnosis in isolation. [15]"
+      ],
+      "bullets": [
+        "For exercise testing, continue QT evaluation through an extended recovery period rather than relying only on the peak-exercise tracing. [15]",
+        "Use provocative testing as a phenotype-enhancing test in high-suspicion, nondiagnostic cases\u2014not as a stand-alone exclusion or confirmation strategy. [15]",
+        "Refer high-probability, intermediate-probability, and phenotype-discordant cases for inherited-arrhythmia interpretation of ECG, exercise, and genetic findings. [1][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Schwartz diagnostic elements and probability categories. [12]",
+        "columns": [
+          "Domain",
+          "Criterion",
+          "Points"
+        ],
+        "rows": [
+          [
+            "ECG",
+            "QTc \u2265480 ms",
+            "3 [12]"
+          ],
+          [
+            "ECG",
+            "QTc 460\u2013470 ms",
+            "2 [12]"
+          ],
+          [
+            "ECG",
+            "QTc 450 ms",
+            "1 [12]"
+          ],
+          [
+            "ECG",
+            "Torsades de pointes",
+            "2 [12]"
+          ],
+          [
+            "Clinical history",
+            "Syncope with stress; syncope without stress",
+            "2; 1 [12]"
+          ],
+          [
+            "Family history",
+            "Definite LQTS in a family member; unexplained sudden death before age 30 years in an immediate relative",
+            "1; 0.5 [12]"
+          ],
+          [
+            "Interpretation",
+            "Low, intermediate, and high probability",
+            "\u22641; 2\u20133; \u22654 [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "genetic-and-phenotypic-branches",
+      "eyebrow": "Etiologic branches",
+      "heading": "Use genotype and trigger pattern to refine counseling and treatment",
+      "intro": "Genetic results inform disease classification but do not replace clinical phenotype assessment.",
+      "paragraphs": [
+        "Prioritize the three major autosomal-dominant phenotypes\u2014LQT1, LQT2, and LQT3\u2014during inherited-arrhythmia assessment. LQT1 is associated with KCNQ1, LQT2 with KCNH2, and LQT3 with SCN5A; these three subtypes account for approximately 80% to 90% of LQTS cases. [1][7] The remainder includes less common genes, while at least 30% of clinically clear LQTS can remain genotype-elusive. [7][9]",
+        "Use the clinical trigger pattern to guide evaluation of a borderline phenotype. LQT1 commonly shows marked QTc prolongation with exercise, making exercise testing with extended recovery particularly useful when baseline ECG is nondiagnostic. [15] LQT3 is linked to SCN5A and has bradycardia-triggered arrhythmia mechanisms, so review resting rate, sleep/rest events, and bradyarrhythmia as part of phenotype assignment. [3]",
+        "Order genetic testing in clinically probable LQTS and in selected high-suspicion concealed cases, with pre- and post-test counseling. A pathogenic variant can clarify diagnosis and permit cascade evaluation of relatives; however, a variant of uncertain significance does not independently establish disease, and a negative result does not exclude LQTS. [9][15] Evaluate relatives of affected patients because phenotype may be absent at a single assessment despite genetic predisposition. [20]"
+      ],
+      "bullets": [
+        "LQT1: KCNQ1; assess exercise-associated QT behavior. [7][15]",
+        "LQT2: KCNH2; integrate ECG phenotype, symptoms, and molecular findings rather than genotype alone. [1][7]",
+        "LQT3: SCN5A; assess for bradycardia-associated arrhythmia features and consider genotype-directed therapy in an inherited-arrhythmia program. [3]",
+        "Genotype-negative disease remains clinically actionable when phenotype and family history support LQTS. [9][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Major LQTS branches that alter diagnostic emphasis. [1][3][7][15]",
+        "columns": [
+          "Subtype",
+          "Principal gene",
+          "Useful clinical discriminator",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "LQT1",
+            "KCNQ1 [7]",
+            "Marked QTc prolongation may occur with exercise. [15]",
+            "Use exercise testing with extended recovery when baseline ECG is nondiagnostic. [15]"
+          ],
+          [
+            "LQT2",
+            "KCNH2 [7]",
+            "Classify using integrated ECG, symptom, family, and genetic data. [1][7]",
+            "Institute arrhythmic risk reduction and avoid acquired QT stressors. [2][7]"
+          ],
+          [
+            "LQT3",
+            "SCN5A [7]",
+            "Bradycardia-triggered arrhythmia mechanisms are described. [3]",
+            "Discuss genotype-specific therapy, including mexiletine evidence, with an inherited-arrhythmia specialist. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "arrhythmic-risk-reduction",
+      "eyebrow": "Definitive management",
+      "heading": "Reduce recurrent ventricular arrhythmia risk with beta-blockade and escalation pathways",
+      "intro": "Therapy intensity should follow prior events, treatment tolerance, and breakthrough arrhythmia burden.",
+      "paragraphs": [
+        "Initiate beta-blocker therapy for congenital LQTS as the core preventive treatment strategy; beta-blocker efficacy has been evaluated in high-risk LQT1 and LQT2 populations and is incorporated in U.S. ventricular-arrhythmia guidance. [2] In infants and children, the paradoxical use of beta-blockers for LQTS is specifically directed at prevention of ventricular arrhythmias. [24] Select agent and dose through electrophysiology or inherited-arrhythmia care because the cited evidence does not provide a universal dose regimen.",
+        "Define a breakthrough cardiac event as syncope, sustained ventricular arrhythmia, aborted cardiac arrest, or other clinician-adjudicated LQTS-associated event occurring despite effective pharmacotherapy. Such events should trigger confirmation of adherence, reassessment for QT-prolonging drugs and acquired contributors, review of genotype and trigger pattern, and referral for treatment intensification. [5][6][7]",
+        "For LQT3, mexiletine has gene-specific evidence for reducing arrhythmic events in affected patients. [3] Use this as genotype-directed management rather than empiric therapy for unclassified QT prolongation, and monitor treatment response within an inherited-arrhythmia program."
+      ],
+      "bullets": [
+        "Continue avoidance of QT-prolonging medications and promptly correct acquired QT-prolonging conditions throughout follow-up. [7][23]",
+        "At each follow-up, document interval syncope, palpitations, resuscitated arrest, medication adherence, resting ECG/QTc, and new drug exposures. [5][7]",
+        "Escalate after breakthrough events rather than assuming a single syncopal episode represents beta-blocker failure without reassessing competing causes and treatment implementation. [5][6]"
+      ],
+      "subsections": [
+        {
+          "heading": "When to consider ICD-based protection",
+          "paragraphs": [
+            "The 2017 AHA/ACC/HRS ventricular-arrhythmia guideline includes specific recommendations for congenital LQTS and cites long-term ICD outcome studies in high-risk LQTS. [2] Refer patients with prior aborted cardiac arrest, recurrent life-threatening arrhythmia despite medical therapy, or complex decisions regarding ICD candidacy to electrophysiology; device selection must weigh arrhythmic protection against the long-term burden of device complications and shocks. [1][2]"
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "When to use left cardiac sympathetic denervation",
+          "paragraphs": [
+            "Consider left cardiac sympathetic denervation (LCSD) as treatment intensification for patients with LQTS who experience breakthrough cardiac events while receiving effective beta-blocker therapy. [5][6] LCSD is also used as adjunctive therapy when beta-blocker adverse effects limit dosing and dose reduction is needed. [5][6]",
+            "LCSD can be performed through a minimally invasive video-assisted thoracic approach, typically removing sympathetic chain/ganglia from T4 to T1 including the lower half of the left stellate ganglion. [5] Discuss expected autonomic adverse effects, including unilateral hand dryness, facial color or temperature asymmetry, and abnormal sweating. [5]"
+          ],
+          "bullets": [
+            "Do not present LCSD monotherapy as routine first-line care; published monotherapy use has focused on selected patients unable to tolerate beta-blockers and requires individualized specialist assessment. [5][6]",
+            "Use LCSD to reduce arrhythmic burden; it is an antifibrillatory intervention and does not eliminate the need for continued phenotype-based risk assessment. [5][6]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Treatment escalation for established congenital LQTS. [2][3][5][6]",
+        "columns": [
+          "Clinical state",
+          "Action",
+          "Key limitation or tradeoff"
+        ],
+        "rows": [
+          [
+            "Established LQTS without documented breakthrough event",
+            "Begin and maintain beta-blocker-based arrhythmic prevention. [2][24]",
+            "Avoid QT-prolonging drugs and acquired QT stressors; monitor symptoms and QTc. [7][23]"
+          ],
+          [
+            "LQT3 with genotype-confirmed disease",
+            "Discuss mexiletine as gene-specific therapy in specialist care. [3]",
+            "Do not extrapolate genotype-directed treatment to unclassified QT prolongation. [3]"
+          ],
+          [
+            "Breakthrough cardiac event on effective beta-blocker therapy",
+            "Reassess adherence and reversible factors; consider LCSD as treatment intensification. [5][6]",
+            "LCSD causes autonomic side effects and requires surgical expertise. [5]"
+          ],
+          [
+            "Prior aborted cardiac arrest or recurrent life-threatening arrhythmia",
+            "Urgent electrophysiology evaluation for high-risk management, including ICD consideration. [1][2]",
+            "Balance arrhythmic protection with long-term device complications and shock burden. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "family-and-longitudinal-care",
+      "eyebrow": "Longitudinal care",
+      "heading": "Screen relatives and make activity decisions through shared risk assessment",
+      "intro": "A single normal ECG does not reliably exclude familial disease.",
+      "paragraphs": [
+        "Construct a three-generation pedigree that specifically captures definite LQTS, unexplained sudden death before age 30 years, syncope, seizures of uncertain cause, and resuscitated cardiac arrest. The Schwartz score assigns points for definite LQTS in a family member and young unexplained sudden death in an immediate relative, making family history diagnostically consequential rather than merely descriptive. [12]",
+        "Offer clinical and genetic evaluation to relatives when a familial pathogenic variant or convincing clinical phenotype is present. Concealed inherited arrhythmia syndromes may remain undiagnosed because phenotype can be absent at the time of assessment, and LQTS may manifest around physiologic autonomic changes such as immediately after exercise. [20] Repeat phenotype assessment should be guided by age, symptoms, family genotype, and inherited-arrhythmia specialist recommendations.",
+        "Do not apply blanket sports exclusion solely from the diagnostic label. Return-to-play decisions for athletes with LQTS require individualized assessment within national and international guidance, integrating clinical events, treatment adherence, QT phenotype, genotype, sport setting, and emergency-action planning. [4]"
+      ],
+      "bullets": [
+        "Provide written documentation of the diagnosis or suspected diagnosis for medication reconciliation, emergency care, perioperative planning, and sports discussions. [13][23]",
+        "Reassess medication lists at every encounter because exposure to QT-prolonging drugs can convert a stable phenotype into acquired torsades risk. [7][23]",
+        "Direct family screening and athlete participation decisions to clinicians experienced in inherited arrhythmias when the phenotype is concealed, genotype results are uncertain, or prior arrhythmic events have occurred. [1][4][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up decisions in familial or suspected concealed LQTS. [4][12][15][20]",
+        "columns": [
+          "Scenario",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Relative has normal resting QTc but a familial LQTS variant or strong pedigree",
+            "Normal QTc does not exclude inherited LQTS. [15][20]",
+            "Arrange inherited-arrhythmia assessment, genetic counseling, and phenotype-directed testing. [15][20]"
+          ],
+          [
+            "Borderline QTc with stress syncope or young sudden death in family",
+            "Schwartz scoring may move the patient into intermediate or high probability. [12]",
+            "Calculate score, exclude acquired causes, and pursue specialized evaluation. [12][15]"
+          ],
+          [
+            "Athlete with confirmed or suspected LQTS",
+            "Participation is an individualized decision rather than a label-based automatic exclusion. [4]",
+            "Use shared decision-making with inherited-arrhythmia and sports cardiology input. [4]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Congenital Long QT Syndrome",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.02.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n42.\n\nPriori S.G., Wilde A.A., Horie M., et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. _Heart Rhythm_ 2013;10:1932-1963.\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n   ",
+      "score": 0.6899958
+    },
+    {
+      "number": 2,
+      "title": "2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.10.053",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "#### 6.9.1 Specific Cardiac Channelopathy Syndromes\n\n##### 6.9.1.1 Congenital Long QT Syndrome\n\nRecommendations for Long QT Syndrome [...] Crossref\n\nPubMed\n\nGoogle Scholar\n\nS6.9-9.\n\nZareba W., Moss A.J., Daubert J.P. et al: Implantable cardioverter defibrillator in high-risk long QT syndrome patient",
+      "score": 0.63397753
+    },
+    {
+      "number": 3,
+      "title": "Clinical Spectrum of SCN5A Mutations: Long QT Syndrome, Brugada Syndrome, and\u00a0Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2018.03.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n12.\n\nPriori S.G., Wilde A.A., Horie M. et al: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes: document endorsed by HRS, EHRA, and APHRS in May 2013 and by ACCF, AHA, PACES, and AEPC i",
+      "score": 0.614464
+    },
+    {
+      "number": 4,
+      "title": "Return-to-Play for Athletes With Long QT Syndrome or Genetic Heart Diseases Predisposing to Sudden Death",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.04.026",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "4.\n\nPelliccia A., Fagard R., Bj\u00f8rnstad H.H., et al. Recommendations for competitive sports participation in athletes with cardiovascular disease: a consensus document from the Study Group of Sports Cardiology of the Working Group of Cardiac Rehabilitation and Exercise Physiology and the Working Grou",
+      "score": 0.5835125
+    },
+    {
+      "number": 5,
+      "title": "Left Cardiac Sympathetic Denervation Monotherapy in Patients With Congenital Long QT Syndrome | Circulation: Arrhythmia and Electrophysiology",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008830",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Videoscopic left cardiac sympathetic denervation (LCSD) is an effective antifibrillatory, minimally invasive therapy for patients with potentially life-threatening arrhythmia syndromes like long QT syndrome (LQTS). Although initially used primarily for treatment intensification following documented ",
+      "score": 0.65173227
+    },
+    {
+      "number": 6,
+      "title": "Left Cardiac Sympathetic Denervation Monotherapy in Patients With Congenital Long QT Syndrome",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008830?doi=10.1161%2FCIRCEP.120.008830",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Videoscopic left cardiac sympathetic denervation (LCSD) is an effective antifibrillatory, minimally invasive therapy for patients with potentially life-threatening arrhythmia syndromes like long QT syndrome (LQTS). Although initially used primarily for treatment intensification following documented ",
+      "score": 0.6356076
+    },
+    {
+      "number": 7,
+      "title": "Ion channel traffic jams: the significance of trafficking deficiency in long QT syndrome | Cell Discovery",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41421-024-00738-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The normal QT interval depends on age, gender, and other physiological conditions, but a QT interval \u2265 470\u2013480\u2009ms, in men and women respectively, is sufficient to suspect LQTS3.\") (Fig. 1). Whereas aLQTS may be due to drugs, electrolyte abnormalities, eating disorders, coronary artery disease, brady",
+      "score": 0.5501488
+    },
+    {
+      "number": 8,
+      "title": "The long QT syndrome family of cardiac ion channelopathies",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/gim200626",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by SM Modell \u00b7 2006 \u00b7 Cited by 263 \u2014 The \u201cfamily\u201d concept of syndromes has been applied to the multiple LQTS genotypes, LQT1-8, which exhibit converging mechanisms leading to QT",
+      "score": 0.52510154
+    },
+    {
+      "number": 9,
+      "title": "Clinical utility gene card for: Long-QT syndrome",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41431-021-00904-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by BM Beckmann \u00b7 2021 \u00b7 Cited by 7 \u2014 At least 30% of patients with clinical clear LQTS are genotype elusive. Common variations likely contribute to phenotype. Genotype-phenotype",
+      "score": 0.5065188
+    },
+    {
+      "number": 10,
+      "title": "Clinical utility gene card for: Long-QT Syndrome (types 1\u201313)",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/ejhg201328",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by BM Beckmann \u00b7 2013 \u00b7 Cited by 19 \u2014 Long-QT syndrome. The mutation detection rate is about 70%. dependent on variable factors such as age or family history. Genetic risk",
+      "score": 0.45522344
+    },
+    {
+      "number": 11,
+      "title": "Perinatal Management of Andersen\u2013Tawil Syndrome Using a ...",
+      "detail": "obgyn.onlinelibrary.wiley.com",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1111/jog.70181?af=R",
+      "authors": "obgyn.onlinelibrary.wiley.com",
+      "host": "obgyn.onlinelibrary.wiley.com",
+      "snippet": "Andersen\u2013Tawil syndrome (ATS), also known as congenital long QT syndrome type 7 (LQT7), is a rare inherited channelopathy caused by KCNJ2",
+      "score": 0.37038535
+    },
+    {
+      "number": 12,
+      "title": "QTc Interval - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/qtc-interval",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Table 2. Schwartz score for diagnosis of LQTS [2][9][21].\n\n| Diagnostic criteria | Points a |\n --- |\n| _ECG findings_ b |\n| A. QT c c |  |\n| \u2a7e480 ms 1/2 | 3 |\n| 460\u2013470 ms 1/2 | 2 |\n| 450 ms 1/2 | 1 |\n| B. Torsade de points d | 2 |\n| C. T-wave alternans | 1 |\n| D. Notched T wave in 3 leads | 1 |\n| E. ",
+      "score": 0.58721006
+    },
+    {
+      "number": 13,
+      "title": "Long QT Syndrome and Perioperative Torsades de Pointes",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1053077020313562",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by N Niimi \u00b7 2022 \u00b7 Cited by 42 \u2014 The most common method of calculating QTc is the Bazett formula19: QTc = QT / ( RR ) 1 / 2 where QT is the measured QT interval and RR is the RR interval.",
+      "score": 0.5818027
+    },
+    {
+      "number": 14,
+      "title": "Improving long QT syndrome diagnosis by a polynomial- ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1547527120300011",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by BJM Hermans \u00b7 2020 \u00b7 Cited by 36 \u2014 Current guidelines recommend diagnosing LQTS based on either the QT interval corrected for heart rate using the Bazett formula (QTc), DNA testing, or the",
+      "score": 0.55709904
+    },
+    {
+      "number": 15,
+      "title": "RR Interval - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rr-interval",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "These provocative tests may be useful in making a diagnosis of \u201cconcealed\u201d LQTS in scenarios of high clinical suspicion but normal baseline ECG. The provocative tests in our current armamentarium, however, do not have adequate sensitivity or specificity to be used in isolation to make a diagnosis of",
+      "score": 0.5515985
+    },
+    {
+      "number": 16,
+      "title": "Long QT Syndrome : New England Journal of Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00006024-202511200-00008",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Long QT Syndrome\n\n## Long QT Syndrome\n\nThis review summarizes the genetics, diagnosis, and treatment of long QT syndrome, a major cause of sudden death in young people. Risk stratification and genotype-guided therapy are essential.\n\n## Related Articles\n\n## Readers Of ",
+      "score": 0.391802
+    },
+    {
+      "number": 17,
+      "title": "Clinical Characteristics and Genetic Background of ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/kidney360/01337493-201002000-00004.fulltext",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by H Horigome \u00b7 2010 \u00b7 Cited by 151 \u2014 In LQT1 patients, clues to diagnosis were mostly sinus bradycardia or family history of LQTS. Sudden cardiac death/aborted cardiac arrest (n=14)",
+      "score": 0.5135471
+    },
+    {
+      "number": 18,
+      "title": "Targeted next generation sequencing revealed a novel deletion- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2020/04170/targeted_next_generation_sequencing_revealed_a.56.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Long QT syndrome (LQTS) is electrocardiographically characterized by a prolonged QT interval and manifests predisposition to life-threatening arrhythmia",
+      "score": 0.28957805
+    },
+    {
+      "number": 19,
+      "title": "Heart Rate and Rhythm Disorders | Pediatrics In Review",
+      "detail": "pedsinreview.aappublications.org",
+      "url": "https://pedsinreview.aappublications.org/content/38/6/243",
+      "authors": "pedsinreview.aappublications.org",
+      "host": "pedsinreview.aappublications.org",
+      "snippet": "Long QT syndrome is a channelopathy, or a disease caused by disturbed function of an ion channel involved in myocardial contraction.",
+      "score": 0.445506
+    },
+    {
+      "number": 20,
+      "title": "1 IRAS: 330619 Version 4 Date: 02/04/2024",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/89/NCT06988189/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "clinical evaluation (2). These patients and their relatives, who are likely to harbour a genetic predisposition for life-threatening arrhythmias, can remain undiagnosed for years as phenotypic changes may not be apparent at the time of their assessment. Patients with these concealed arrhythmia syndr",
+      "score": 0.4186262
+    },
+    {
+      "number": 21,
+      "title": "A Review of Long QT Syndrome: Everything a Hospitalist ...",
+      "detail": "hosppeds.aappublications.org",
+      "url": "https://hosppeds.aappublications.org/content/10/4/369",
+      "authors": "hosppeds.aappublications.org",
+      "host": "hosppeds.aappublications.org",
+      "snippet": "In this article, we will review various aspects of long QT syndrome (LQTS) necessary for hospitalists who care for children, adolescents, and",
+      "score": 0.31681347
+    },
+    {
+      "number": 22,
+      "title": "Sudden Death in the Young: Information for the Primary ...",
+      "detail": "pediatrics.aappublications.org",
+      "url": "https://pediatrics.aappublications.org/content/148/1/e2021052044",
+      "authors": "pediatrics.aappublications.org",
+      "host": "pediatrics.aappublications.org",
+      "snippet": "Long QT syndrome (LQTS): prolongation of the corrected QT interval (QTc) with abnormalities in T-wave morphology, some of which are associated",
+      "score": 0.24735554
+    },
+    {
+      "number": 23,
+      "title": "Ondansetron and the Risk of Cardiac Arrhythmias",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(13)01545-X/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by SB Freedman \u00b7 2014 \u00b7 Cited by 161 \u2014 Patients at particular risk for developing torsade include those with underlying heart conditions, such as congenital long-QT syndrome, those who are",
+      "score": 0.24073485
+    },
+    {
+      "number": 24,
+      "title": "Evaluation and Management of Common Neonatal ...",
+      "detail": "neoreviews.aappublications.org",
+      "url": "https://neoreviews.aappublications.org/content/21/9/e605",
+      "authors": "neoreviews.aappublications.org",
+      "host": "neoreviews.aappublications.org",
+      "snippet": "Treatment for long QT syndrome paradoxically consists of \u03b2-blockers, which prevent ventricular arrhythmias. In a select subset of patients,",
+      "score": 0.23306905
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Congenital Long QT Syndrome",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.02.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n42.\n\nPriori S.G., Wilde A.A., Horie M., et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. _Heart Rhythm_ 2013;10:1932-1963.\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n   ",
+      "score": 0.6899958
+    },
+    {
+      "number": 2,
+      "title": "2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2017.10.053",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "#### 6.9.1 Specific Cardiac Channelopathy Syndromes\n\n##### 6.9.1.1 Congenital Long QT Syndrome\n\nRecommendations for Long QT Syndrome [...] Crossref\n\nPubMed\n\nGoogle Scholar\n\nS6.9-9.\n\nZareba W., Moss A.J., Daubert J.P. et al: Implantable cardioverter defibrillator in high-risk long QT syndrome patient",
+      "score": 0.63397753
+    },
+    {
+      "number": 3,
+      "title": "Clinical Spectrum of SCN5A Mutations: Long QT Syndrome, Brugada Syndrome, and\u00a0Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2018.03.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n12.\n\nPriori S.G., Wilde A.A., Horie M. et al: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes: document endorsed by HRS, EHRA, and APHRS in May 2013 and by ACCF, AHA, PACES, and AEPC i",
+      "score": 0.614464
+    },
+    {
+      "number": 4,
+      "title": "Return-to-Play for Athletes With Long QT Syndrome or Genetic Heart Diseases Predisposing to Sudden Death",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.04.026",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "4.\n\nPelliccia A., Fagard R., Bj\u00f8rnstad H.H., et al. Recommendations for competitive sports participation in athletes with cardiovascular disease: a consensus document from the Study Group of Sports Cardiology of the Working Group of Cardiac Rehabilitation and Exercise Physiology and the Working Grou",
+      "score": 0.5835125
+    },
+    {
+      "number": 5,
+      "title": "Left Cardiac Sympathetic Denervation Monotherapy in Patients With Congenital Long QT Syndrome | Circulation: Arrhythmia and Electrophysiology",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008830",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Videoscopic left cardiac sympathetic denervation (LCSD) is an effective antifibrillatory, minimally invasive therapy for patients with potentially life-threatening arrhythmia syndromes like long QT syndrome (LQTS). Although initially used primarily for treatment intensification following documented ",
+      "score": 0.65173227
+    },
+    {
+      "number": 6,
+      "title": "Left Cardiac Sympathetic Denervation Monotherapy in Patients With Congenital Long QT Syndrome",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCEP.120.008830?doi=10.1161%2FCIRCEP.120.008830",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Videoscopic left cardiac sympathetic denervation (LCSD) is an effective antifibrillatory, minimally invasive therapy for patients with potentially life-threatening arrhythmia syndromes like long QT syndrome (LQTS). Although initially used primarily for treatment intensification following documented ",
+      "score": 0.6356076
+    },
+    {
+      "number": 7,
+      "title": "Ion channel traffic jams: the significance of trafficking deficiency in long QT syndrome | Cell Discovery",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41421-024-00738-0",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The normal QT interval depends on age, gender, and other physiological conditions, but a QT interval \u2265 470\u2013480\u2009ms, in men and women respectively, is sufficient to suspect LQTS3.\") (Fig. 1). Whereas aLQTS may be due to drugs, electrolyte abnormalities, eating disorders, coronary artery disease, brady",
+      "score": 0.5501488
+    },
+    {
+      "number": 8,
+      "title": "The long QT syndrome family of cardiac ion channelopathies",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/gim200626",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by SM Modell \u00b7 2006 \u00b7 Cited by 263 \u2014 The \u201cfamily\u201d concept of syndromes has been applied to the multiple LQTS genotypes, LQT1-8, which exhibit converging mechanisms leading to QT",
+      "score": 0.52510154
+    },
+    {
+      "number": 9,
+      "title": "Clinical utility gene card for: Long-QT syndrome",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41431-021-00904-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by BM Beckmann \u00b7 2021 \u00b7 Cited by 7 \u2014 At least 30% of patients with clinical clear LQTS are genotype elusive. Common variations likely contribute to phenotype. Genotype-phenotype",
+      "score": 0.5065188
+    },
+    {
+      "number": 10,
+      "title": "Clinical utility gene card for: Long-QT Syndrome (types 1\u201313)",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/ejhg201328",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by BM Beckmann \u00b7 2013 \u00b7 Cited by 19 \u2014 Long-QT syndrome. The mutation detection rate is about 70%. dependent on variable factors such as age or family history. Genetic risk",
+      "score": 0.45522344
+    },
+    {
+      "number": 11,
+      "title": "Perinatal Management of Andersen\u2013Tawil Syndrome Using a ...",
+      "detail": "obgyn.onlinelibrary.wiley.com",
+      "url": "https://obgyn.onlinelibrary.wiley.com/doi/10.1111/jog.70181?af=R",
+      "authors": "obgyn.onlinelibrary.wiley.com",
+      "host": "obgyn.onlinelibrary.wiley.com",
+      "snippet": "Andersen\u2013Tawil syndrome (ATS), also known as congenital long QT syndrome type 7 (LQT7), is a rare inherited channelopathy caused by KCNJ2",
+      "score": 0.37038535
+    },
+    {
+      "number": 12,
+      "title": "QTc Interval - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/qtc-interval",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Table 2. Schwartz score for diagnosis of LQTS [2][9][21].\n\n| Diagnostic criteria | Points a |\n --- |\n| _ECG findings_ b |\n| A. QT c c |  |\n| \u2a7e480 ms 1/2 | 3 |\n| 460\u2013470 ms 1/2 | 2 |\n| 450 ms 1/2 | 1 |\n| B. Torsade de points d | 2 |\n| C. T-wave alternans | 1 |\n| D. Notched T wave in 3 leads | 1 |\n| E. ",
+      "score": 0.58721006
+    },
+    {
+      "number": 13,
+      "title": "Long QT Syndrome and Perioperative Torsades de Pointes",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1053077020313562",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by N Niimi \u00b7 2022 \u00b7 Cited by 42 \u2014 The most common method of calculating QTc is the Bazett formula19: QTc = QT / ( RR ) 1 / 2 where QT is the measured QT interval and RR is the RR interval.",
+      "score": 0.5818027
+    },
+    {
+      "number": 14,
+      "title": "Improving long QT syndrome diagnosis by a polynomial- ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1547527120300011",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by BJM Hermans \u00b7 2020 \u00b7 Cited by 36 \u2014 Current guidelines recommend diagnosing LQTS based on either the QT interval corrected for heart rate using the Bazett formula (QTc), DNA testing, or the",
+      "score": 0.55709904
+    },
+    {
+      "number": 15,
+      "title": "RR Interval - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/rr-interval",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "These provocative tests may be useful in making a diagnosis of \u201cconcealed\u201d LQTS in scenarios of high clinical suspicion but normal baseline ECG. The provocative tests in our current armamentarium, however, do not have adequate sensitivity or specificity to be used in isolation to make a diagnosis of",
+      "score": 0.5515985
+    },
+    {
+      "number": 16,
+      "title": "Long QT Syndrome : New England Journal of Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00006024-202511200-00008",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Long QT Syndrome\n\n## Long QT Syndrome\n\nThis review summarizes the genetics, diagnosis, and treatment of long QT syndrome, a major cause of sudden death in young people. Risk stratification and genotype-guided therapy are essential.\n\n## Related Articles\n\n## Readers Of ",
+      "score": 0.391802
+    },
+    {
+      "number": 17,
+      "title": "Clinical Characteristics and Genetic Background of ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/kidney360/01337493-201002000-00004.fulltext",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by H Horigome \u00b7 2010 \u00b7 Cited by 151 \u2014 In LQT1 patients, clues to diagnosis were mostly sinus bradycardia or family history of LQTS. Sudden cardiac death/aborted cardiac arrest (n=14)",
+      "score": 0.5135471
+    },
+    {
+      "number": 18,
+      "title": "Targeted next generation sequencing revealed a novel deletion- ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2020/04170/targeted_next_generation_sequencing_revealed_a.56.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Long QT syndrome (LQTS) is electrocardiographically characterized by a prolonged QT interval and manifests predisposition to life-threatening arrhythmia",
+      "score": 0.28957805
+    },
+    {
+      "number": 19,
+      "title": "Heart Rate and Rhythm Disorders | Pediatrics In Review",
+      "detail": "pedsinreview.aappublications.org",
+      "url": "https://pedsinreview.aappublications.org/content/38/6/243",
+      "authors": "pedsinreview.aappublications.org",
+      "host": "pedsinreview.aappublications.org",
+      "snippet": "Long QT syndrome is a channelopathy, or a disease caused by disturbed function of an ion channel involved in myocardial contraction.",
+      "score": 0.445506
+    },
+    {
+      "number": 20,
+      "title": "1 IRAS: 330619 Version 4 Date: 02/04/2024",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/89/NCT06988189/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "clinical evaluation (2). These patients and their relatives, who are likely to harbour a genetic predisposition for life-threatening arrhythmias, can remain undiagnosed for years as phenotypic changes may not be apparent at the time of their assessment. Patients with these concealed arrhythmia syndr",
+      "score": 0.4186262
+    },
+    {
+      "number": 21,
+      "title": "A Review of Long QT Syndrome: Everything a Hospitalist ...",
+      "detail": "hosppeds.aappublications.org",
+      "url": "https://hosppeds.aappublications.org/content/10/4/369",
+      "authors": "hosppeds.aappublications.org",
+      "host": "hosppeds.aappublications.org",
+      "snippet": "In this article, we will review various aspects of long QT syndrome (LQTS) necessary for hospitalists who care for children, adolescents, and",
+      "score": 0.31681347
+    },
+    {
+      "number": 22,
+      "title": "Sudden Death in the Young: Information for the Primary ...",
+      "detail": "pediatrics.aappublications.org",
+      "url": "https://pediatrics.aappublications.org/content/148/1/e2021052044",
+      "authors": "pediatrics.aappublications.org",
+      "host": "pediatrics.aappublications.org",
+      "snippet": "Long QT syndrome (LQTS): prolongation of the corrected QT interval (QTc) with abnormalities in T-wave morphology, some of which are associated",
+      "score": 0.24735554
+    },
+    {
+      "number": 23,
+      "title": "Ondansetron and the Risk of Cardiac Arrhythmias",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(13)01545-X/pdf",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "by SB Freedman \u00b7 2014 \u00b7 Cited by 161 \u2014 Patients at particular risk for developing torsade include those with underlying heart conditions, such as congenital long-QT syndrome, those who are",
+      "score": 0.24073485
+    },
+    {
+      "number": 24,
+      "title": "Evaluation and Management of Common Neonatal ...",
+      "detail": "neoreviews.aappublications.org",
+      "url": "https://neoreviews.aappublications.org/content/21/9/e605",
+      "authors": "neoreviews.aappublications.org",
+      "host": "neoreviews.aappublications.org",
+      "snippet": "Treatment for long QT syndrome paradoxically consists of \u03b2-blockers, which prevent ventricular arrhythmias. In a select subset of patients,",
+      "score": 0.23306905
+    }
+  ],
+  "publishedAt": "2026-08-24T17:15:38.816625+00:00",
+  "updatedAt": "2026-08-24T17:15:38.816625+00:00",
+  "readingMinutes": 7,
+  "slug": "long-qt-syndrome"
+}

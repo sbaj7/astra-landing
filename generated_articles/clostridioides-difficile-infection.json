@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Diseases",
+  "title": "Clostridioides difficile Infection",
+  "summary": "Diagnose clinically meaningful infection only in patients with new unexplained diarrhea, rapidly identify fulminant disease, select fidaxomicin or vancomycin by episode and severity, and prevent recurrence with risk-directed adjunctive and microbiota-based strategies.",
+  "seoDescription": "Point-of-care diagnosis, severity triage, treatment, recurrence prevention, and microbiota-based therapy for adult Clostridioides difficile infection.",
+  "clinicalQuestion": "How should adult clinicians diagnose, triage, treat, and prevent recurrent Clostridioides difficile infection?",
+  "specialty": "Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "Clostridioides difficile infection",
+    "C difficile",
+    "CDI",
+    "fidaxomicin",
+    "oral vancomycin",
+    "recurrent CDI",
+    "bezlotoxumab",
+    "fecal microbiota"
+  ],
+  "keyTakeaways": [
+    "Test for CDI only when new unexplained diarrhea is present; a practical diagnostic threshold is at least 3 unformed stools in 24 hours, with toxin testing helping distinguish infection from colonization. [1][14]",
+    "For an initial nonfulminant CDI episode, IDSA/SHEA conditionally prefers fidaxomicin over vancomycin because fidaxomicin lowers recurrence; vancomycin remains an acceptable alternative when access or cost limits fidaxomicin. [19][20]",
+    "Treat fulminant CDI with vancomycin 500 mg orally or by nasogastric tube 4 times daily; urgent surgical assessment is warranted when aggressive medical management fails or complications such as perforation or toxic megacolon are suspected. [19][1]",
+    "At recurrence, favor fidaxomicin when feasible; vancomycin taper-and-pulse regimens remain options, while patients at high recurrence risk receiving CDI antibiotics may benefit from bezlotoxumab. [2][3][19]",
+    "FDA-approved microbiota-based products are used after antibacterial treatment to prevent recurrent CDI, not as treatment for an untreated acute CDI episode. [3]"
+  ],
+  "sections": [
+    {
+      "id": "test-the-right-patient",
+      "eyebrow": "Diagnosis",
+      "heading": "Test only symptomatic patients and interpret positive results clinically",
+      "intro": "A positive assay identifies toxigenic organisms or toxin; it does not independently establish active colitis.",
+      "paragraphs": [
+        "Send stool testing when the patient has new-onset, unexplained diarrhea, operationalized as at least 3 unformed stools in 24 hours without an alternative etiology. Evaluate competing causes before attributing symptoms to CDI, particularly when diarrhea follows enteral feeding, laxatives, inflammatory bowel disease activity, ischemic colitis, other enteric infection, or medication exposure. [1][14]",
+        "Use the laboratory's multistep algorithm when available. A glutamate dehydrogenase assay with toxin A/B enzyme immunoassay, with nucleic acid amplification test (NAAT) adjudication of discordant specimens, links toxin detection to clinical disease more effectively than NAAT alone. NAAT is highly sensitive for toxigenic C. difficile but cannot distinguish colonization from infection and can drive unnecessary treatment when ordered in patients with low pretest probability. [14][17]",
+        "A toxin-negative, NAAT-positive result requires bedside reassessment rather than reflex treatment. Continue evaluating non-CDI causes if the stool frequency, abdominal findings, and clinical trajectory do not support toxin-mediated disease; toxin EIA added to molecular testing can help differentiate clinical disease from colonization. [14][15][16]"
+      ],
+      "bullets": [
+        "Do not use a positive molecular assay alone to explain diarrhea when an alternative cause is more likely. [14]",
+        "Document stool frequency and abdominal examination at diagnosis; these become the response-to-treatment comparator and identify evolving severe colitis. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of common CDI testing patterns. [14][17]",
+        "columns": [
+          "Testing pattern",
+          "Interpretation",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "Toxin detected in a patient with at least 3 unformed stools in 24 hours",
+            "Supports active toxin-mediated CDI. [1][17]",
+            "Assess for fulminant features and begin episode-appropriate therapy. [19]"
+          ],
+          [
+            "NAAT positive with toxin not detected",
+            "Detects toxigenic C. difficile but may represent colonization rather than active CDI. [14][17]",
+            "Reassess pretest probability and alternative causes before treating. [14][16]"
+          ],
+          [
+            "Multistep assay negative",
+            "Does not support CDI in the tested specimen. [17]",
+            "Pursue alternative diarrheal diagnoses and reassess if the clinical syndrome changes."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "triage-fulminant-disease",
+      "eyebrow": "Immediate Threats",
+      "heading": "Identify fulminant colitis before choosing routine outpatient therapy",
+      "intro": "Hemodynamic deterioration, ileus, megacolon, and perforation shift management toward resuscitation, high-dose enteral therapy, and surgical involvement.",
+      "paragraphs": [
+        "At presentation and at least daily in hospitalized patients, assess volume status, blood pressure, abdominal distension and tenderness, stool output, and the possibility of ileus. Severe diarrhea can cause dehydration, electrolyte loss, kidney failure, and hypotension; CDI can progress to toxic megacolon, colonic rupture, peritonitis, septicemia, and death. [1][3]",
+        "Classify disease as fulminant when hypotension or shock, ileus, or megacolon is present. These features matter because the fidaxomicin trials excluded fulminant disease, and guideline-directed treatment remains high-dose oral or nasogastric vancomycin rather than fidaxomicin. [19]",
+        "Obtain urgent surgical input for suspected toxic megacolon, perforation, peritonitis, or clinical decline despite aggressive medical management. Colectomy may be required when medical therapy fails; do not defer consultation until perforation or refractory shock develops. [1][4]"
+      ],
+      "bullets": [
+        "Restore intravascular volume and correct electrolyte losses while initiating CDI-directed therapy. [1][2]",
+        "Stop the inciting antibacterial agent whenever the underlying infection permits; this is a core component of initial management. [2][4]",
+        "If ileus limits drug delivery to the colon, recognize that guideline discussions include rectally delivered vancomycin or metronidazole as management options. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Triage actions by clinical presentation. [1][19]",
+        "columns": [
+          "Presentation",
+          "Immediate action",
+          "Escalation trigger"
+        ],
+        "rows": [
+          [
+            "New diarrhea with stable hemodynamics and no ileus or megacolon",
+            "Confirm clinically meaningful CDI and start nonfulminant episode therapy. [1][19]",
+            "Worsening pain, distension, hypotension, or declining stool output suggests progression or ileus. [1]"
+          ],
+          [
+            "Hypotension or shock, ileus, or megacolon",
+            "Treat as fulminant CDI with vancomycin 500 mg orally or by nasogastric tube 4 times daily. [19]",
+            "Obtain urgent surgical assessment for toxic megacolon, perforation, peritonitis, or failure of aggressive medical therapy. [1][4]"
+          ],
+          [
+            "Marked fluid losses or acute kidney injury",
+            "Provide fluid and electrolyte replacement while treating CDI and reassessing hemodynamics. [1][2]",
+            "Hypotension or worsening abdominal findings requires fulminant-disease management. [1][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "treat-initial-episode",
+      "eyebrow": "Initial Episode",
+      "heading": "Choose fidaxomicin or vancomycin for nonfulminant CDI",
+      "intro": "Drug selection should prioritize recurrence prevention while accounting for severity, fulminant features, availability, and cost.",
+      "paragraphs": [
+        "For adults with an initial nonfulminant CDI episode, use fidaxomicin in preference to vancomycin when resources permit. IDSA/SHEA made this a conditional recommendation after randomized trial data showed lower recurrence with fidaxomicin; the guideline retains vancomycin as an acceptable alternative. [19][20]",
+        "Do not substitute fidaxomicin for the established fulminant CDI regimen. The focused guideline preserves vancomycin 500 mg orally or by nasogastric tube 4 times daily for fulminant disease because supporting fidaxomicin studies excluded this population. [19]",
+        "Metronidazole has a limited role relative to fidaxomicin and vancomycin. Contemporary guidance and reviews describe fidaxomicin or oral vancomycin as preferred initial agents, with metronidazole reserved as an alternative in selected patients or settings rather than routine first-line therapy. [4][12][19]"
+      ],
+      "bullets": [
+        "Choose fidaxomicin when preventing another episode is a high priority and access is feasible. [19][20]",
+        "Choose oral vancomycin when fidaxomicin is inaccessible or unaffordable, or use high-dose vancomycin when disease is fulminant. [19][20]",
+        "Reassess the need for concomitant antibiotics at every transition of care because discontinuation of the inciting antimicrobial is part of CDI management. [2][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Antibacterial treatment selection for adult CDI. [2][4][19][20]",
+        "columns": [
+          "Clinical branch",
+          "Preferred approach",
+          "Key limitation or alternative"
+        ],
+        "rows": [
+          [
+            "Initial nonfulminant episode",
+            "Fidaxomicin is conditionally preferred because it lowers recurrence. [19][20]",
+            "Oral vancomycin is an acceptable alternative, particularly when cost or access precludes fidaxomicin. [19][20]"
+          ],
+          [
+            "Fulminant episode",
+            "Vancomycin 500 mg orally or by nasogastric tube 4 times daily. [19]",
+            "Fidaxomicin evidence does not extend to fulminant CDI because trials excluded this population. [19]"
+          ],
+          [
+            "Initial episode where preferred agents cannot be used",
+            "Metronidazole may be an alternative in certain patients or locations. [4]",
+            "Do not treat it as equivalent to fidaxomicin or vancomycin for routine first-line management. [12][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "manage-recurrence",
+      "eyebrow": "Recurrence",
+      "heading": "Escalate recurrence prevention after each new episode",
+      "intro": "Recurrence should trigger review of the prior regimen, potentially modifiable antibiotic exposure, and eligibility for adjunctive biologic or microbiota-based prevention.",
+      "paragraphs": [
+        "For a first recurrence, select fidaxomicin when feasible; a 10-day course or a tapered-and-pulsed fidaxomicin regimen may be used. Vancomycin given as a standard 10-day course or as a tapered-and-pulsed regimen remains an alternative, particularly when the prior episode was treated with a different agent or fidaxomicin is unavailable. [2][3][19]",
+        "For multiple recurrences, avoid repeating identical short-course therapy without a prevention plan. Options described in guidance and FDA reviews include tapered-and-pulsed fidaxomicin or vancomycin, a vancomycin course followed by rifaximin, bezlotoxumab during antibacterial treatment for eligible high-risk adults, and microbiota-based therapy after antibacterial treatment. [2][3][19]",
+        "Bezlotoxumab is a human monoclonal antibody directed against C. difficile toxin B and is indicated to reduce recurrence in adults receiving antibacterial treatment for CDI who are at high risk of recurrence. Consider it during the antibacterial treatment course rather than after another recurrence has already occurred, using patient-level recurrence risk and feasibility to guide use. [2][3][19]",
+        "Microbiota-based therapy is a recurrence-prevention intervention after completion of antibacterial treatment, not rescue therapy for untreated fulminant colitis. REBYOTA is fecal microbiota, live-jslm, and was licensed for prevention of recurrent CDI; VOWST studies and labeling materials similarly focus on prevention after clinical response to antibacterial treatment. [1][3]"
+      ],
+      "bullets": [
+        "Before treating recurrence, reconfirm that recurrent diarrhea meets clinical CDI criteria and is not postinfectious bowel dysfunction, medication-related diarrhea, or another colitis. [1][14]",
+        "For each recurrence, review non-CDI antibiotic exposure and discontinue or narrow antibiotics whenever clinically safe. [2][4]",
+        "Do not offer microbiota-based therapy as a replacement for acute antibacterial treatment in an active CDI episode. [1][3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Recurrence-directed treatment and prevention options. [2][3][19]",
+        "columns": [
+          "Episode pattern",
+          "Antibacterial approach",
+          "Recurrence-prevention addition"
+        ],
+        "rows": [
+          [
+            "First recurrence",
+            "Fidaxomicin, including a 10-day or tapered-and-pulsed regimen, is preferred when feasible; standard or tapered-and-pulsed vancomycin is an alternative. [2][3][19]",
+            "Assess high-risk adults for bezlotoxumab while receiving CDI antibacterial therapy. [2][3][19]"
+          ],
+          [
+            "Multiple recurrences",
+            "Use tapered-and-pulsed fidaxomicin or vancomycin; a vancomycin course followed by rifaximin is another described option. [2][3]",
+            "Plan microbiota-based recurrence prevention after antibacterial treatment; consider bezlotoxumab for high-risk eligible adults. [2][3][19]"
+          ],
+          [
+            "Recurrence with fulminant features",
+            "Manage immediately as fulminant CDI with high-dose oral or nasogastric vancomycin rather than as a routine recurrence. [19]",
+            "Defer preventive microbiota therapy until the acute episode is controlled. [1][3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-response-and-prevent-harm",
+      "eyebrow": "Monitoring",
+      "heading": "Follow clinical response, not test-of-cure assays",
+      "intro": "The meaningful endpoints are stool frequency, hemodynamics, abdominal findings, hydration, and recurrence after clinical response.",
+      "paragraphs": [
+        "Track unformed stool frequency, ability to maintain oral intake, blood pressure, abdominal pain or distension, and renal and electrolyte consequences of diarrhea. A response after CDI therapy is reflected clinically by fewer than 3 unformed stools in 24 hours for at least 2 consecutive days in VOWST trial definitions; use stool trajectory together with overall clinical improvement rather than molecular positivity to judge response. [1]",
+        "Do not use NAAT positivity alone as a treatment-response endpoint. Molecular tests detect toxigenic organisms and may remain positive despite resolution; repeat testing should be driven by recurrent compatible diarrhea, not by a desire to document eradication. [14][16]",
+        "At discharge, specify the completed CDI regimen, whether non-CDI antibiotics were stopped or narrowed, warning signs of fulminant colitis, and the recurrence-prevention plan. Patients with recurrent CDI account for substantial morbidity and prolonged hospital stays, so early follow-up should focus on recurrent diarrhea and antibiotic exposure rather than routine stool retesting. [3]"
+      ],
+      "bullets": [
+        "Escalate promptly for new hypotension, worsening abdominal distension, ileus, peritoneal findings, or inability to maintain hydration. [1][19]",
+        "Treat a new compatible diarrheal syndrome after response as a clinical reassessment problem; repeat testing only when the syndrome again supports CDI. [1][14]",
+        "Avoid unnecessary antibiotics after treatment because ongoing antimicrobial exposure is a modifiable driver of recurrent disease management. [2][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical monitoring targets after CDI treatment. [1][14][19]",
+        "columns": [
+          "Time point",
+          "Assess",
+          "Action if abnormal"
+        ],
+        "rows": [
+          [
+            "During acute treatment",
+            "Stool frequency, hydration, blood pressure, abdominal pain and distension, renal and electrolyte status. [1]",
+            "Resuscitate fluid or electrolyte losses; evaluate for fulminant CDI if hypotension, ileus, or megacolon develops. [1][19]"
+          ],
+          [
+            "After apparent clinical response",
+            "Recurrence of at least 3 unformed stools in 24 hours and alternative causes of diarrhea. [1][14]",
+            "Retest and treat only if the recurrent syndrome supports CDI; do not use NAAT as a test of cure. [14][16]"
+          ],
+          [
+            "After recurrent CDI",
+            "Need for systemic antibiotics and suitability for bezlotoxumab or microbiota-based recurrence prevention. [2][3][19]",
+            "Implement the selected prevention strategy after antibacterial treatment and reassess promptly if diarrhea recurs. [1][3]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Clinical Review Memo - VOWST",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/168274/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "cramping and tenderness. CDI complications include dehydration and kidney failure from significant loss of fluids and electrolytes due to severe diarrhea, which can result in hypotension. Other complications include bowel perforation, peritonitis, and death from even mild to moderate infection if no",
+      "score": 0.48908922
+    },
+    {
+      "number": 2,
+      "title": "Clinical Review Memo, November 30, 2022 - REBYOTA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/164040/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "or a tapered and pulsed fidaxomicin or vancomycin regimen. Treatment options are similar for patients with more than one recurrence, although they may also include a course of rifaximin if a standard course of vancomycin is used.13 Bezlotoxumab (Zinplava), a human monoclonal antibody directed agains",
+      "score": 0.71137124
+    },
+    {
+      "number": 3,
+      "title": "REBYOTA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/163879/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "5 diarrhea and rarely toxic megacolon, colonic rupture, septicemia and death. The cost associated with recurrent CDI was estimated to be $2.8 billion in the United States due to considerable morbidity and prolonged hospital stays.7 Treatment options for recurrent CDI are limited and depend on the in",
+      "score": 0.6816637
+    },
+    {
+      "number": 4,
+      "title": "Clostridioides difficile-associated disease - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/230",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Johnson S, Lavergne V, Skinner AM, et al. Clinical practice guideline by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. Clin Infect Dis. 2021 Ju",
+      "score": 0.83932644
+    },
+    {
+      "number": 5,
+      "title": "Clostridioides difficile-associated disease - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/230?q=Clostridium+difficile&c=suggested",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nMcDonald LC, Gerding DN, Johnson S, et al. Clinical practice guidelines for Clostridium difficile infection in adults and children: 2017 update by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA). Clin Infe",
+      "score": 0.82254606
+    },
+    {
+      "number": 6,
+      "title": "Predicting Clostridioides difficile infection outcomes with ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(24)00280-9/fulltext?ref=gestor-saude-news.mxm.com.br",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by GR Madden \u00b7 2024 \u00b7 Cited by 21 \u2014 IDSA/SHEA C. difficile guidelines. 17. McDonald ... (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults.Read more",
+      "score": 0.7447496
+    },
+    {
+      "number": 7,
+      "title": "Initial Vancomycin Taper for the Prevention of Recurrent ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2845599",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by EG McDonald \u00b7 2026 \u00b7 Cited by 8 \u2014 ... (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. \ufeff Clin Infect Dis. 2021;73(5):e1029-e1044. doi:10.1093 ...Read more",
+      "score": 0.74318707
+    },
+    {
+      "number": 8,
+      "title": "How Would You Manage This Patient With Clostridioides ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M23-0754",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "recurrence rates have been reported with 10. 2021 Focused Update Guidelines on Management of Clostridioides difficile Infection in Adults. ACG",
+      "score": 0.78670514
+    },
+    {
+      "number": 9,
+      "title": "The New Epidemic of Clostridium difficile\u2013Associated ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/article/730466/narrative-review-new-epidemic-clostridium-difficile-associated-enteric-disease",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by JG Bartlett \u00b7 2006 \u00b7 Cited by 863 \u2014 Standard treatment of C. difficile infection includes withdrawal of the inducing agent and use of oral metronidazole or oral vancomycin;",
+      "score": 0.38324937
+    },
+    {
+      "number": 10,
+      "title": "Clostridioides difficile infection: Position paper of the Catalan Society of Gastroenterology - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2444382426000672",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Clostridioides difficile infection: Position paper of the Catalan Society of Gastroenterology - ScienceDirect\n# Clinical practice guidelines *Clostridioides difficile* infection: Position paper of the Catalan Society of GastroenterologyInfecci\u00f3n por *Clostridioides difficile*: Documento de po",
+      "score": 0.8745175
+    },
+    {
+      "number": 11,
+      "title": "Treating Helicobacter pylori and Recurrent Clostridioides... : ACG Case Reports Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/acgcr/fulltext/2024/06000/treating_helicobacter_pylori_and_recurrent.4.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Treating Helicobacter pylori and Recurrent Clostridioides... : ACG Case Reports Journal\n# Treating _Helicobacter pylori_ and Recurrent _Clostridioides difficile_ Coinfection: A Delicate Balance in Management and a Need for Guidelines. Treating _Helicobacter pylori_ and _Clostridioides diffici",
+      "score": 0.8524574
+    },
+    {
+      "number": 12,
+      "title": "Recommendations and guidelines for the treatment of Clostridioides difficile infection in Taiwan",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1684118220300128",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Diagnosis of CDI relies on the detection of toxigenic C. difficile, its toxins or toxin genes in stool.9,11 Metronidazole was suggested for mild CDI and vancomycin was recommended for severe CDI.8 Nevertheless, oral vancomycin and fidaxomicin have been suggested to replace metronidazole as the thera",
+      "score": 0.6010557
+    },
+    {
+      "number": 13,
+      "title": "Microbiological features, epidemiology, and clinical presentation of Clostridioides difficile strains from MLST Clade 2: A narrative review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S107599642100038X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# *Clostridioides difficile* (including epidemiology) Microbiological features, epidemiology, and clinical presentation of *C**lostridioides* *difficile* strains from MLST Clade 2: A narrative review. difficile* MLST Clade 2 has been regarded as the \u201chypervirulent\u201d clade because it includes the NAP1",
+      "score": 0.5366292
+    },
+    {
+      "number": 14,
+      "title": "Trends in Clostridioides difficile diagnosis before and after a change in testing algorithm - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167701221000579",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Trends in Clostridioides difficile diagnosis before and after a change in testing algorithm - ScienceDirect\n# Trends in *Clostridioides difficile* diagnosis before and after a change in testing algorithm. *Clostridioides difficile (Clostridium difficile)* (CD) infection remains a challenging ",
+      "score": 0.7014069
+    },
+    {
+      "number": 15,
+      "title": "S814 \u2022 OFID 2019:6 (Suppl 2) \u2022 Poster Abstracts",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article-pdf/6/Supplement_2/S814/30275103/ofz360.2042.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Diagnosis of Clostridioides difficile infection (CDI) is problematic. Adding toxin enzyme immunoassay (EIA) to molecular tests may differentiate disease.",
+      "score": 0.5313802
+    },
+    {
+      "number": 16,
+      "title": "Pediatric Clostridioides difficile Infection: Diagnosis and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jpids/article/10/Supplement_3/S16/6430226",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by HT Schwenk \u00b7 2021 \u00b7 Cited by 10 \u2014 CDI remains a clinical diagnosis and clinical judgment is essential when interpreting test results, regardless of the methods used.",
+      "score": 0.4882108
+    },
+    {
+      "number": 17,
+      "title": "Toxin Enzyme Immunoassays Detect Clostridioides difficile ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/69/10/1667/5274659",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AY Guh \u00b7 2019 \u00b7 Cited by 65 \u2014 Specimens discordant for GDH and toxin were further tested by NAAT and were considered positive for C. difficile if NAAT was positive, and negative for C.",
+      "score": 0.4766533
+    },
+    {
+      "number": 18,
+      "title": "Impact of the Reverse 2-Step Algorithm for Clostridioides ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/11/5/ofae244/7659312",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by EE Hilt \u00b7 2024 \u00b7 Cited by 8 \u2014 Implementing reflex testing for Clostridioides difficile infection (CDI) diagnosis significantly decreases hospital-onset CDI rates, but antibiotic use red.",
+      "score": 0.41492313
+    },
+    {
+      "number": 19,
+      "title": "SHEA/IDSA 2021 Clinical Practice Guideline Update for the Management of Clostridioides difficile Infection in Adults",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "This clinical practice guideline is a focused update on management of Clostridioides difficile infection (CDI) in adults specifically addressing the use of fidaxomicin and bezlotoxumab for the treatment of CDI. This guideline was developed by a multidisciplinary panel representing the Infectious Dis",
+      "score": 0.86303437
+    },
+    {
+      "number": 20,
+      "title": "Clinician Management Preferences for Clostridioides difficile ...",
+      "detail": "ein.idsociety.org",
+      "url": "https://ein.idsociety.org/media/resources/publications/papers/2025/2025_CdiffAdult_OFID.pdf",
+      "authors": "ein.idsociety.org",
+      "host": "ein.idsociety.org",
+      "snippet": "Open Forum Infectious Diseases\u00ae Published by Oxford University Press on behalf of Infectious Diseases Society of America 2025. This work is written by (a) US Government employee(s) and is in the public domain in the US.  The Infectious Diseases Society of America (IDSA) and Society for Healthcare Ep",
+      "score": 0.8025714
+    },
+    {
+      "number": 21,
+      "title": "Vancomycin | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5393/Vancomycin",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "... Epidemiology of America (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. Clin Infect Dis. 2021;73(5):",
+      "score": 0.73914057
+    },
+    {
+      "number": 22,
+      "title": "Evaluating Disparities in Recurrent Clostridioides difficile ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(25)00882-0/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by N Mehta \u00b7 2025 \u2014 Focused Update Guidelines on Management of Clostridioides difficile infection in adults Clin Infect Dis. 2021;",
+      "score": 0.72605723
+    },
+    {
+      "number": 23,
+      "title": "AGA Clinical Practice Update on Management of ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(26)00245-3/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by S Khanna \u00b7 Cited by 1 \u2014 2021 focused update guidelines on management of Clostridioides difficile infection in adults Clin Infect Dis. 2021; 73:755-757",
+      "score": 0.7180613
+    },
+    {
+      "number": 24,
+      "title": "MetroNIDAZOLE (Systemic) | Drug Lookup | Pediatric Care ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5962/MetroNIDAZOLE-Systemic",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Oral: 500 mg 3 times daily for 10 to 14 days \u2026 2021 focused update guidelines on management of Clostridioides difficile infection in adults.",
+      "score": 0.64344186
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Clinical Review Memo - VOWST",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/168274/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "cramping and tenderness. CDI complications include dehydration and kidney failure from significant loss of fluids and electrolytes due to severe diarrhea, which can result in hypotension. Other complications include bowel perforation, peritonitis, and death from even mild to moderate infection if no",
+      "score": 0.48908922
+    },
+    {
+      "number": 2,
+      "title": "Clinical Review Memo, November 30, 2022 - REBYOTA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/164040/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "or a tapered and pulsed fidaxomicin or vancomycin regimen. Treatment options are similar for patients with more than one recurrence, although they may also include a course of rifaximin if a standard course of vancomycin is used.13 Bezlotoxumab (Zinplava), a human monoclonal antibody directed agains",
+      "score": 0.71137124
+    },
+    {
+      "number": 3,
+      "title": "REBYOTA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/163879/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "5 diarrhea and rarely toxic megacolon, colonic rupture, septicemia and death. The cost associated with recurrent CDI was estimated to be $2.8 billion in the United States due to considerable morbidity and prolonged hospital stays.7 Treatment options for recurrent CDI are limited and depend on the in",
+      "score": 0.6816637
+    },
+    {
+      "number": 4,
+      "title": "Clostridioides difficile-associated disease - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/230",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Johnson S, Lavergne V, Skinner AM, et al. Clinical practice guideline by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. Clin Infect Dis. 2021 Ju",
+      "score": 0.83932644
+    },
+    {
+      "number": 5,
+      "title": "Clostridioides difficile-associated disease - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/230?q=Clostridium+difficile&c=suggested",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "### References\n\n#### Key articles\n\nMcDonald LC, Gerding DN, Johnson S, et al. Clinical practice guidelines for Clostridium difficile infection in adults and children: 2017 update by the Infectious Diseases Society of America (IDSA) and Society for Healthcare Epidemiology of America (SHEA). Clin Infe",
+      "score": 0.82254606
+    },
+    {
+      "number": 6,
+      "title": "Predicting Clostridioides difficile infection outcomes with ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(24)00280-9/fulltext?ref=gestor-saude-news.mxm.com.br",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by GR Madden \u00b7 2024 \u00b7 Cited by 21 \u2014 IDSA/SHEA C. difficile guidelines. 17. McDonald ... (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults.Read more",
+      "score": 0.7447496
+    },
+    {
+      "number": 7,
+      "title": "Initial Vancomycin Taper for the Prevention of Recurrent ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2845599",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by EG McDonald \u00b7 2026 \u00b7 Cited by 8 \u2014 ... (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. \ufeff Clin Infect Dis. 2021;73(5):e1029-e1044. doi:10.1093 ...Read more",
+      "score": 0.74318707
+    },
+    {
+      "number": 8,
+      "title": "How Would You Manage This Patient With Clostridioides ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M23-0754",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "recurrence rates have been reported with 10. 2021 Focused Update Guidelines on Management of Clostridioides difficile Infection in Adults. ACG",
+      "score": 0.78670514
+    },
+    {
+      "number": 9,
+      "title": "The New Epidemic of Clostridium difficile\u2013Associated ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/article/730466/narrative-review-new-epidemic-clostridium-difficile-associated-enteric-disease",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by JG Bartlett \u00b7 2006 \u00b7 Cited by 863 \u2014 Standard treatment of C. difficile infection includes withdrawal of the inducing agent and use of oral metronidazole or oral vancomycin;",
+      "score": 0.38324937
+    },
+    {
+      "number": 10,
+      "title": "Clostridioides difficile infection: Position paper of the Catalan Society of Gastroenterology - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2444382426000672",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Clostridioides difficile infection: Position paper of the Catalan Society of Gastroenterology - ScienceDirect\n# Clinical practice guidelines *Clostridioides difficile* infection: Position paper of the Catalan Society of GastroenterologyInfecci\u00f3n por *Clostridioides difficile*: Documento de po",
+      "score": 0.8745175
+    },
+    {
+      "number": 11,
+      "title": "Treating Helicobacter pylori and Recurrent Clostridioides... : ACG Case Reports Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/acgcr/fulltext/2024/06000/treating_helicobacter_pylori_and_recurrent.4.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Treating Helicobacter pylori and Recurrent Clostridioides... : ACG Case Reports Journal\n# Treating _Helicobacter pylori_ and Recurrent _Clostridioides difficile_ Coinfection: A Delicate Balance in Management and a Need for Guidelines. Treating _Helicobacter pylori_ and _Clostridioides diffici",
+      "score": 0.8524574
+    },
+    {
+      "number": 12,
+      "title": "Recommendations and guidelines for the treatment of Clostridioides difficile infection in Taiwan",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1684118220300128",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Diagnosis of CDI relies on the detection of toxigenic C. difficile, its toxins or toxin genes in stool.9,11 Metronidazole was suggested for mild CDI and vancomycin was recommended for severe CDI.8 Nevertheless, oral vancomycin and fidaxomicin have been suggested to replace metronidazole as the thera",
+      "score": 0.6010557
+    },
+    {
+      "number": 13,
+      "title": "Microbiological features, epidemiology, and clinical presentation of Clostridioides difficile strains from MLST Clade 2: A narrative review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S107599642100038X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# *Clostridioides difficile* (including epidemiology) Microbiological features, epidemiology, and clinical presentation of *C**lostridioides* *difficile* strains from MLST Clade 2: A narrative review. difficile* MLST Clade 2 has been regarded as the \u201chypervirulent\u201d clade because it includes the NAP1",
+      "score": 0.5366292
+    },
+    {
+      "number": 14,
+      "title": "Trends in Clostridioides difficile diagnosis before and after a change in testing algorithm - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167701221000579",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Trends in Clostridioides difficile diagnosis before and after a change in testing algorithm - ScienceDirect\n# Trends in *Clostridioides difficile* diagnosis before and after a change in testing algorithm. *Clostridioides difficile (Clostridium difficile)* (CD) infection remains a challenging ",
+      "score": 0.7014069
+    },
+    {
+      "number": 15,
+      "title": "S814 \u2022 OFID 2019:6 (Suppl 2) \u2022 Poster Abstracts",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article-pdf/6/Supplement_2/S814/30275103/ofz360.2042.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Diagnosis of Clostridioides difficile infection (CDI) is problematic. Adding toxin enzyme immunoassay (EIA) to molecular tests may differentiate disease.",
+      "score": 0.5313802
+    },
+    {
+      "number": 16,
+      "title": "Pediatric Clostridioides difficile Infection: Diagnosis and ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jpids/article/10/Supplement_3/S16/6430226",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by HT Schwenk \u00b7 2021 \u00b7 Cited by 10 \u2014 CDI remains a clinical diagnosis and clinical judgment is essential when interpreting test results, regardless of the methods used.",
+      "score": 0.4882108
+    },
+    {
+      "number": 17,
+      "title": "Toxin Enzyme Immunoassays Detect Clostridioides difficile ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/69/10/1667/5274659",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by AY Guh \u00b7 2019 \u00b7 Cited by 65 \u2014 Specimens discordant for GDH and toxin were further tested by NAAT and were considered positive for C. difficile if NAAT was positive, and negative for C.",
+      "score": 0.4766533
+    },
+    {
+      "number": 18,
+      "title": "Impact of the Reverse 2-Step Algorithm for Clostridioides ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ofid/article/11/5/ofae244/7659312",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by EE Hilt \u00b7 2024 \u00b7 Cited by 8 \u2014 Implementing reflex testing for Clostridioides difficile infection (CDI) diagnosis significantly decreases hospital-onset CDI rates, but antibiotic use red.",
+      "score": 0.41492313
+    },
+    {
+      "number": 19,
+      "title": "SHEA/IDSA 2021 Clinical Practice Guideline Update for the Management of Clostridioides difficile Infection in Adults",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "This clinical practice guideline is a focused update on management of Clostridioides difficile infection (CDI) in adults specifically addressing the use of fidaxomicin and bezlotoxumab for the treatment of CDI. This guideline was developed by a multidisciplinary panel representing the Infectious Dis",
+      "score": 0.86303437
+    },
+    {
+      "number": 20,
+      "title": "Clinician Management Preferences for Clostridioides difficile ...",
+      "detail": "ein.idsociety.org",
+      "url": "https://ein.idsociety.org/media/resources/publications/papers/2025/2025_CdiffAdult_OFID.pdf",
+      "authors": "ein.idsociety.org",
+      "host": "ein.idsociety.org",
+      "snippet": "Open Forum Infectious Diseases\u00ae Published by Oxford University Press on behalf of Infectious Diseases Society of America 2025. This work is written by (a) US Government employee(s) and is in the public domain in the US.  The Infectious Diseases Society of America (IDSA) and Society for Healthcare Ep",
+      "score": 0.8025714
+    },
+    {
+      "number": 21,
+      "title": "Vancomycin | Drug Lookup | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5393/Vancomycin",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "... Epidemiology of America (SHEA): 2021 focused update guidelines on management of Clostridioides difficile infection in adults. Clin Infect Dis. 2021;73(5):",
+      "score": 0.73914057
+    },
+    {
+      "number": 22,
+      "title": "Evaluating Disparities in Recurrent Clostridioides difficile ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(25)00882-0/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by N Mehta \u00b7 2025 \u2014 Focused Update Guidelines on Management of Clostridioides difficile infection in adults Clin Infect Dis. 2021;",
+      "score": 0.72605723
+    },
+    {
+      "number": 23,
+      "title": "AGA Clinical Practice Update on Management of ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(26)00245-3/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by S Khanna \u00b7 Cited by 1 \u2014 2021 focused update guidelines on management of Clostridioides difficile infection in adults Clin Infect Dis. 2021; 73:755-757",
+      "score": 0.7180613
+    },
+    {
+      "number": 24,
+      "title": "MetroNIDAZOLE (Systemic) | Drug Lookup | Pediatric Care ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/5962/MetroNIDAZOLE-Systemic",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Oral: 500 mg 3 times daily for 10 to 14 days \u2026 2021 focused update guidelines on management of Clostridioides difficile infection in adults.",
+      "score": 0.64344186
+    }
+  ],
+  "publishedAt": "2026-08-24T17:08:51.429496+00:00",
+  "updatedAt": "2026-08-24T17:08:51.429496+00:00",
+  "readingMinutes": 5,
+  "slug": "clostridioides-difficile-infection"
+}

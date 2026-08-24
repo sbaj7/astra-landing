@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Preventive Medicine",
+  "title": "Cancer Screening",
+  "summary": "Select cancer screening by organ-specific eligibility, expected benefit, test performance, downstream diagnostic capacity, and patient ability to complete follow-up. Screening tests are not interchangeable: an abnormal stool, imaging, or biomarker result generally requires diagnostic evaluation rather than repeat screening.",
+  "seoDescription": "Point-of-care cancer screening guide for U.S. clinicians covering colorectal, lung, prostate, thyroid, and skin screening decisions.",
+  "clinicalQuestion": "Which cancer screening tests should U.S. clinicians offer, avoid, or individualize in asymptomatic adults?",
+  "specialty": "Preventive Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "cancer screening",
+    "colorectal cancer screening",
+    "lung cancer screening",
+    "PSA screening",
+    "thyroid cancer screening",
+    "skin cancer screening"
+  ],
+  "keyTakeaways": [
+    "For average-risk, asymptomatic adults, colorectal cancer screening begins at age 45; choose a modality the patient can complete repeatedly and for which diagnostic colonoscopy is feasible after an abnormal result.[1][4][23]",
+    "A positive FIT, stool DNA-FIT, or other stool-based colorectal screening result should trigger colonoscopic evaluation rather than repetition of the screening test.[2][4]",
+    "Annual low-dose CT lung screening is appropriate only within a structured program that can manage positive findings and limit unnecessary invasive procedures; stop when smoking cessation reaches 15 years or competing illness limits life expectancy.[5]",
+    "PSA-based screening in men aged 55 to 69 requires individualized discussion of potential benefit, false-positive findings, biopsy, and overtreatment; USPSTF recommends against PSA-based screening at age 70 years or older.[3]",
+    "Do not screen asymptomatic adults for thyroid cancer with neck palpation or thyroid ultrasound.[6][8]",
+    "Routine clinician visual skin examination for skin cancer screening has insufficient evidence of net benefit in asymptomatic adolescents and adults.[7]"
+  ],
+  "sections": [
+    {
+      "id": "screening-decision-framework",
+      "eyebrow": "Clinical approach",
+      "heading": "Apply screening only to asymptomatic patients who can complete the diagnostic pathway",
+      "intro": "Screening is a multistep intervention, not an isolated test.",
+      "paragraphs": [
+        "First establish that the patient is asymptomatic and is being considered for preventive screening rather than diagnostic evaluation. Organ-specific symptoms, an abnormal examination, or prior abnormal screening findings require a diagnostic pathway; for colorectal testing, blood or cancer-associated DNA detected in stool warrants visual evaluation, usually colonoscopy, rather than serial stool testing.[2][4]",
+        "Before ordering any screening modality, verify that the patient can complete its downstream steps. For colorectal screening, selection should account for required test frequency, access, bowel-preparation tolerance, ability to undergo sedation or anesthesia when relevant, and the risks of follow-up procedures after abnormal findings.[1] For lung screening, use a program with diagnostic accuracy, defined follow-up protocols for positive results, and criteria for invasive procedures rather than ordering an isolated low-dose CT scan.[5]",
+        "Separate average-risk screening from risk-directed surveillance. Earlier colorectal screening may be needed with inflammatory bowel disease or a family history of colorectal cancer; average-risk intervals should not be applied automatically to these populations.[2][4]"
+      ],
+      "bullets": [
+        "Document the intended screening test, interval, and the plan for diagnostic follow-up of an abnormal result before ordering.[1][4][5]",
+        "Avoid substituting a screening test for diagnostic evaluation when symptoms or abnormal clinical findings are present.[2][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational questions that determine whether a screening order is actionable.[1][4][5]",
+        "columns": [
+          "Decision point",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Patient has symptoms or an abnormal finding",
+            "Use diagnostic evaluation rather than an average-risk screening pathway.[2][4]"
+          ],
+          [
+            "Patient cannot complete test-specific follow-up",
+            "Choose a feasible alternative screening strategy or address barriers before testing; abnormal results require downstream evaluation.[1][4]"
+          ],
+          [
+            "Patient has elevated colorectal cancer risk",
+            "Do not default to average-risk timing; assess family history and inflammatory bowel disease as indications for earlier screening consideration.[2][4]"
+          ],
+          [
+            "Lung screening is contemplated",
+            "Refer to a structured low-dose CT program with positive-result and invasive-procedure protocols.[5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "colorectal-cancer",
+      "eyebrow": "Highest-yield preventive decision",
+      "heading": "Choose colorectal screening by interval, invasiveness, and follow-up capacity",
+      "intro": "Offer screening from age 45 in average-risk asymptomatic adults.",
+      "paragraphs": [
+        "Colorectal cancer screening is recommended for average-risk adults beginning at age 45 who have no signs or symptoms of colorectal cancer.[1][4][23] Screening detects colorectal cancer and precursor polyps; colonoscopy can biopsy suspicious lesions and remove polyps during the procedure.[2]",
+        "Use annual FIT or high-sensitivity guaiac fecal occult blood testing when a noninvasive annual strategy is most likely to be completed. FIT is commonly interpreted at a quantitative cutoff of 20 micrograms hemoglobin per gram of stool in the United States; in a meta-analysis of asymptomatic average-risk adults, one-time FIT sensitivity and specificity for colorectal cancer were 79% and 94%, respectively. A negative FIT does not reliably exclude advanced adenoma or sessile serrated lesions, for which one-time test sensitivity is substantially lower.[24]",
+        "Use colonoscopy every 10 years when direct whole-colon visualization, biopsy capability, and same-procedure polypectomy are desired and bowel preparation plus sedation or anesthesia are acceptable.[1][2] Stool DNA-FIT is an alternative every 1 to 3 years; CT colonography is repeated every 5 years; flexible sigmoidoscopy is repeated every 5 years; and flexible sigmoidoscopy every 10 years can be paired with annual FIT.[1]",
+        "After any abnormal stool-based test, arrange diagnostic colonoscopy or another visual evaluation as clinically appropriate. Do not treat a positive stool test as a completed screening encounter: its value depends on completion of the diagnostic examination that identifies the bleeding source, cancer, or precancerous lesion.[2][4]"
+      ],
+      "bullets": [
+        "Annual FIT: practical option when yearly stool collection and colonoscopy after a positive result are realistic.[1][24]",
+        "Stool DNA-FIT: repeat every 1 to 3 years; select only if the patient will complete colonoscopy for an abnormal result.[1][4]",
+        "CT colonography: repeat every 5 years; abnormal findings may require follow-up colonoscopy.[1][2]",
+        "Colonoscopy: repeat every 10 years for screening; permits biopsy and polypectomy during the examination.[1][2]"
+      ],
+      "subsections": [
+        {
+          "heading": "Blood-based colorectal tests",
+          "paragraphs": [
+            "Cell-free DNA blood testing is described as an every-3-year option with CMS coverage for Guardant Shield, but the optimal interval has not been established. Compared with stool-based tests or colonoscopy, reported concerns include very low sensitivity for advanced precancerous lesions, lower sensitivity for stage I than later-stage cancer, uncertain real-world adherence to repeat testing and diagnostic follow-up, and potentially lower expected colorectal cancer mortality reduction.[23]"
+          ],
+          "bullets": [
+            "If considering a blood-based option, explicitly discuss its lower sensitivity for advanced precancerous lesions and the need for diagnostic colonoscopy after an abnormal result.[23]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "USPSTF-listed colorectal cancer screening intervals and key operational distinctions.[1][2][4][24]",
+        "columns": [
+          "Strategy",
+          "Interval",
+          "Decision-relevant feature"
+        ],
+        "rows": [
+          [
+            "FIT or high-sensitivity guaiac FOBT",
+            "Every year.[1]",
+            "Noninvasive, but requires annual adherence; an abnormal result requires diagnostic visual evaluation.[2][4]"
+          ],
+          [
+            "Stool DNA-FIT",
+            "Every 1 to 3 years.[1]",
+            "Abnormal stool DNA or blood result requires colonoscopy or other visual evaluation.[4]"
+          ],
+          [
+            "CT colonography",
+            "Every 5 years.[1]",
+            "Radiologic visualization; abnormalities may require follow-up colonoscopy.[2]"
+          ],
+          [
+            "Flexible sigmoidoscopy",
+            "Every 5 years, or every 10 years with annual FIT.[1]",
+            "Does not inspect the entire colon.[2]"
+          ],
+          [
+            "Colonoscopy",
+            "Every 10 years.[1]",
+            "Whole-colon examination with capability for biopsy and polypectomy.[2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lung-cancer",
+      "eyebrow": "Imaging-based screening",
+      "heading": "Use low-dose CT only in an organized lung screening pathway",
+      "intro": "The benefit-risk balance depends on eligibility and follow-up infrastructure.",
+      "paragraphs": [
+        "Annual low-dose CT is recommended for eligible adults with a substantial smoking history in the age range and pack-year criteria specified by the applicable USPSTF recommendation. The cited USPSTF summary describes annual screening for adults aged 55 to 80 years with at least a 30-pack-year smoking history who currently smoke or quit within the prior 15 years.[5]",
+        "Stop low-dose CT screening after 15 years of smoking abstinence and do not screen patients with medical conditions that limit life expectancy.[5] These stopping rules prevent screening from proceeding when a detected cancer is unlikely to yield meaningful benefit from curative evaluation or treatment.",
+        "Order low-dose CT through an established screening program, not as an unstructured imaging request. False-positive results and overdiagnosis are recognized harms; programs should have high diagnostic accuracy, formal protocols for positive findings, and explicit thresholds for invasive diagnostic procedures.[5] A meta-analysis of lung screening trials reported a pooled lung cancer mortality relative rate of 0.84 (95% CI, 0.76-0.92) with low-dose CT screening.[11]"
+      ],
+      "bullets": [
+        "Confirm current smoking status, cumulative pack-years, and years since quitting before referral.[5]",
+        "Confirm that the patient remains a candidate for evaluation and treatment before continuing annual screening.[5]",
+        "Refer to a program with standardized management of positive low-dose CT findings and invasive-workup criteria.[5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Key low-dose CT lung screening decision points.[5][11]",
+        "columns": [
+          "Clinical variable",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Age 55 to 80 years, at least 30 pack-years, current smoker or quit within 15 years",
+            "Annual low-dose CT within a structured screening program.[5]"
+          ],
+          [
+            "Quit smoking 15 years or more ago",
+            "Discontinue screening.[5]"
+          ],
+          [
+            "Condition limits life expectancy",
+            "Do not screen.[5]"
+          ],
+          [
+            "No organized positive-result pathway",
+            "Do not use screening as a stand-alone scan; seek a program with follow-up and invasive-procedure criteria.[5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prostate-cancer",
+      "eyebrow": "Shared decision-making",
+      "heading": "Individualize PSA-based prostate cancer screening",
+      "intro": "PSA testing can detect early disease but may identify indolent cancers.",
+      "paragraphs": [
+        "For men aged 55 to 69 years, make PSA-based screening an individualized decision after discussion of benefits and harms.[3] The discussion should include the possibility that PSA testing detects slow-growing prostate cancer that may never require treatment, creating risk of overtreatment.[3]",
+        "Interpret PSA in clinical context rather than as an isolated cancer diagnosis. Factors that may affect risk assessment include age, race, family history, prostate size, urinary tract infection or irritation, medications, and PSA rate of rise.[3] An abnormal PSA therefore requires diagnostic risk assessment rather than automatic treatment.",
+        "Do not routinely offer PSA-based screening to men age 70 years or older under USPSTF recommendations because screening harms outweigh expected benefit in this group.[3] Screening-related harms include false-positive findings, anxiety, biopsy, and treatment complications for cancers that may never have affected health.[15]"
+      ],
+      "bullets": [
+        "For ages 55 to 69 years, document an individualized discussion before initiating PSA-based screening.[3]",
+        "Assess potentially confounding clinical factors, including urinary tract infection or irritation and prostate size, when interpreting PSA results.[3]",
+        "Avoid PSA-based routine screening at age 70 years or older.[3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "PSA screening decisions by age and downstream consequence.[3][15]",
+        "columns": [
+          "Patient group",
+          "Screening decision",
+          "Key counseling point"
+        ],
+        "rows": [
+          [
+            "Men aged 55 to 69 years",
+            "Individualize PSA-based screening after risk-benefit discussion.[3]",
+            "PSA may identify slow-growing cancer and can lead to overtreatment.[3]"
+          ],
+          [
+            "Men aged 70 years or older",
+            "Do not offer PSA-based routine screening.[3]",
+            "False-positive results, biopsy, and treatment-related harms are important concerns.[3][15]"
+          ],
+          [
+            "Abnormal PSA result",
+            "Interpret with age, race, family history, prostate size, infection or irritation, medications, and PSA kinetics.[3]",
+            "PSA is a detection tool, not a stand-alone treatment indication.[3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "screening-not-recommended-or-uncertain",
+      "eyebrow": "Avoid low-value testing",
+      "heading": "Do not screen for thyroid cancer; recognize uncertainty for routine skin examination",
+      "intro": "Avoid converting asymptomatic examinations into unproven screening programs.",
+      "paragraphs": [
+        "Do not screen asymptomatic adults for thyroid cancer using neck palpation or thyroid ultrasound.[6][8] The USPSTF concluded that potential benefit is no greater than small, citing thyroid cancer rarity, apparent lack of outcome differences between treatment and monitoring for the most common tumor types, and observational evidence showing no mortality change after a mass screening program.[8]",
+        "Do not order thyroid ultrasound solely to screen an asymptomatic adult without a clinical indication. Screening exposes patients to downstream diagnostic and treatment harms without established health-outcome benefit.[8]",
+        "For clinician visual skin examination in asymptomatic adolescents and adults, the USPSTF found insufficient evidence to determine the balance of benefits and harms.[7] This is an I statement rather than a recommendation for or against examination; use diagnostic skin evaluation when a lesion or symptom creates a clinical indication, rather than labeling the encounter routine population screening."
+      ],
+      "bullets": [
+        "Do not use neck palpation or ultrasound as a population thyroid cancer screening strategy in asymptomatic adults.[6][8]",
+        "Do not represent a routine visual skin examination as an evidence-established population cancer screening intervention.[7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Cancer screening areas where routine testing should be avoided or is not established.[6][7][8]",
+        "columns": [
+          "Screening target",
+          "Asymptomatic population recommendation",
+          "Practical action"
+        ],
+        "rows": [
+          [
+            "Thyroid cancer",
+            "USPSTF recommends against screening with neck palpation or ultrasound.[6][8]",
+            "Do not order screening thyroid ultrasound or implement routine thyroid palpation as a screening program.[8]"
+          ],
+          [
+            "Skin cancer",
+            "Evidence is insufficient to assess benefits and harms of clinician visual skin examination.[7]",
+            "Distinguish diagnostic lesion assessment from routine population screening.[7]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "MCGP May 23, 2024 FDA Presentation",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/178970/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "\u2013 Risk of follow-up procedures for abnormal findings. (USPSTF Recommendation Statement, JAMA 2021). 13 CRC Screening Guidelines (USPSTF) A variety of testing strategies are currently recommended by the USPSTF, with specified timepoints for repeat testing. These include: \u2013 High-sensitivity guaiac fec",
+      "score": 0.5715041
+    },
+    {
+      "number": 2,
+      "title": "Colorectal Cancer",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/157811/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Colonoscopy is a screening method where a doctor examines the inside of the colon and rectum using a long, slender tube attached to a video camera. If something suspicious is observed, the doctor can pass surgical tools through the tube to take a tissue sample for further analysis, called a biopsy. ",
+      "score": 0.38567597
+    },
+    {
+      "number": 3,
+      "title": "Prostate Cancer Symptoms, Tests and Treatments | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/consumers/consumer-updates/prostate-cancer-symptoms-tests-and-treatments",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Because of the widespread use of PSA testing in the U.S., prostate cancer is often detected early. In some cases, the prostate cancer found can be very slow-growing, and this can lead to overtreatment.\n\n\u201cIn most of these cases, the prostate cancer may not require treatment, and the use of PSA testin",
+      "score": 0.358174
+    },
+    {
+      "number": 4,
+      "title": "Colorectal Cancer: What You Should Know About Screening | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/consumers/consumer-updates/colorectal-cancer-what-you-should-know-about-screening",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "The benefits of screening are so great that doctors recommend most people start colorectal cancer screening by age 45. Some people who are at higher risk may need to start screening before age 45.\n\n## Your Colorectal Cancer Screening Choices\n\nDifferent screening approaches for colorectal cancer have",
+      "score": 0.28771326
+    },
+    {
+      "number": 5,
+      "title": "USPSTF Finalizes Recommendation for Lung Cancer Screening | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-finalizes-recommendation-lung-cancer-screening-nejm-jw.NA33375",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# USPSTF Finalizes Recommendation for Lung Cancer S",
+      "score": 0.6747586
+    },
+    {
+      "number": 6,
+      "title": "USPSTF Finalizes Recommendation Against Thyroid Cancer Screening | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-finalizes-recommendation-against-thyroid-cancer-screening-nejm-jw.FW112859",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# USPSTF Finalizes Recommendation Against Thyroid C",
+      "score": 0.6044228
+    },
+    {
+      "number": 7,
+      "title": "Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2803797",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement. Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement. * US Preventive Services Task Force USPSTF Review: Skin Cancer ScreeningNora B.Henrikson,PhD, MPH; Ilya Ivlev,MD, PhD, MBI; Pa",
+      "score": 0.50915486
+    },
+    {
+      "number": 8,
+      "title": "Screening for Thyroid Cancer: US Preventive Services Task Force Recommendation Statement",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2625325",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Evidence Review**The USPSTF reviewed the evidence on the benefits and harms of screening for thyroid cancer in asymptomatic adults, the diagnostic accuracy of screening (including neck palpation and ultrasound), and the benefits and harms of treatment of screen-detected thyroid cancer. **Findings*",
+      "score": 0.48235655
+    },
+    {
+      "number": 9,
+      "title": "Breast, Cervical, and Colorectal Cancer Screening Rates ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2849096",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by JC Spencer \u00b7 2026 \u00b7 Cited by 2 \u2014 This cross-sectional study investigates patterns of recommended screening for breast, cervical, and colorectal cancer in US women aged 45 to",
+      "score": 0.38484335
+    },
+    {
+      "number": 10,
+      "title": "Clinical Validation of a Vaginal Cervical Cancer Screening ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834245",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by MB Fitzpatrick \u00b7 2025 \u00b7 Cited by 31 \u2014 This nonrandomized clinical trial assesses the clinical validity, accuracy, and safety of a self-collection method for cervical cancer",
+      "score": 0.38172707
+    },
+    {
+      "number": 11,
+      "title": "Lung cancer mortality reduction by LDCT screening: UKLS ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(21)00156-3/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by JK Field \u00b7 2021 \u00b7 Cited by 321 \u2014 The meta-analysis indicated a significant reduction in lung cancer mortality with a pooled overall relative rate of 0.84 (95% CI 0.76\u20130.92)",
+      "score": 0.38221118
+    },
+    {
+      "number": 12,
+      "title": "Mapping the readiness landscape for prostate cancer ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00346-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The available evidence consistently demonstrated growing interest in organised risk-stratified prostate cancer screening as a strategy to",
+      "score": 0.29143488
+    },
+    {
+      "number": 13,
+      "title": "Cancer screening in China: a steep road from evidence to ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00186-X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by C Xia \u00b7 2023 \u00b7 Cited by 198 \u2014 Cancer screening has the potential to decrease mortality from several common cancer types. The first cancer screening programme in China was",
+      "score": 0.25463912
+    },
+    {
+      "number": 14,
+      "title": "Acceptability and perceptions of personalised risk-based ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(24)00278-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by NQP Tan \u00b7 2025 \u00b7 Cited by 23 \u2014 Personalised risk-based screening (PRBS) can enhance the efficiency of cancer screening programnes, but little is known about support for its implementation",
+      "score": 0.24284291
+    },
+    {
+      "number": 15,
+      "title": "Screening for Prostate Cancer: Recommendation and Rationale | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-137-11-200212030-00013",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "# Screening for Prostate Cancer: Recommendation and RationaleFREE. Author: U.S. Preventive Services Task Force\\*Author, Article, & Disclosure Information. This statement summarizes the current U.S. Preventive Services Task Force (USPSTF) recommendations on screening for prostate cancer and updates t",
+      "score": 0.4905535
+    },
+    {
+      "number": 16,
+      "title": "Advances in pancreatic cancer early diagnosis, prevention ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.70035",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "by A Mannucci \u00b7 2026 \u00b7 Cited by 90 \u2014 The Cancer of the Pancreas Screening Study CAPS5 study demonstrated that surveillance enables early detection, with nearly 80% of cases",
+      "score": 0.33079588
+    },
+    {
+      "number": 17,
+      "title": "Radiomics: Current Applications and Future Directions",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/mco2.70773",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Shao \u00b7 2026 \u00b7 Cited by 1 \u2014 This review outlines the unified technical pipeline of radiomics across solid tumors, highlights cancer-specific imaging considerations, and",
+      "score": 0.27674964
+    },
+    {
+      "number": 18,
+      "title": "Colorectal cancer statistics, 2026 - Siegel",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70067",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "Colorectal cancer (CRC) is the second most common cancer-related death in the United States and ranks first in adults younger than 50 years.",
+      "score": 0.17519945
+    },
+    {
+      "number": 19,
+      "title": "low, go slow,\u201d a strategy to tailor treatment dosing in older ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1879406824004260",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by G Aleixo \u00b7 2025 \u00b7 Cited by 13 \u2014 \u201cStart low, go slow,\u201d a strategy to tailor treatment dosing in older or vulnerable adults with advanced solid cancer: A systematic review and meta-analysis.",
+      "score": 0.13286321
+    },
+    {
+      "number": 20,
+      "title": "Navigating the complexity of PI3K/AKT pathway in HER-2 ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1040842824001471",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Sirico \u00b7 2024 \u00b7 Cited by 17 \u2014 Clinical Practice Guideline for the Diagnosis, Staging and Treatment of Patients with Metastatic Breast Cancer Ann. Oncol.,",
+      "score": 0.11394409
+    },
+    {
+      "number": 21,
+      "title": "Circulating blood biomarkers for minimal residual disease ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305737225000301",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by E Galli \u00b7 2025 \u00b7 Cited by 28 \u2014 Detection of minimal residual disease (MRD) in liver cancer (HCC) is warranted. \u2022 Circulating tumor cells and circulating tumor DNA are promising MRD markers",
+      "score": 0.1137077
+    },
+    {
+      "number": 22,
+      "title": "Validation of rule-based algorithms to determine colorectal ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2211335521002898",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AJL Macek \u00b7 2021 \u00b7 Cited by 12 \u2014 This study validates an algorithm that can effectively determine patient adherence to colorectal cancer, breast cancer, and cervical cancer screening",
+      "score": 0.6186197
+    },
+    {
+      "number": 23,
+      "title": "Colorectal cancer screening: An update to the American Cancer Society guideline, 2026",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70083",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "| Cell-free DNA blood testsb | Every 3 years (CMS coverage for Guardant Shield) |  Prospective cross-sectional validation with colonoscopy reference standard  Good sensitivity for CRC detection, lower than for mt-sDNA test  Fair to good specificity for ACN, lower than for stool-based tests |  Very l",
+      "score": 0.604703
+    },
+    {
+      "number": 24,
+      "title": "ACG Clinical Guidelines: Colorectal Cancer... : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/10.14309/ajg.0000000000001122~acg-clinical-guidelines-colorectal-cancer-screening-2021",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "FIT sensitivity of 86% (95% CI 31%\u201399%) and specificity of 91% (95% CI 89%\u201393%) for CRC; for advanced neoplasia, sensitivity was 46% (95% CI 37%\u201356%) and specificity was 93% (95% CI 90%\u201395%). [...] that FIT has greater sensitivity for detecting CRC and advanced adenomas than both standard and high s",
+      "score": 0.55883324
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "MCGP May 23, 2024 FDA Presentation",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/178970/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "\u2013 Risk of follow-up procedures for abnormal findings. (USPSTF Recommendation Statement, JAMA 2021). 13 CRC Screening Guidelines (USPSTF) A variety of testing strategies are currently recommended by the USPSTF, with specified timepoints for repeat testing. These include: \u2013 High-sensitivity guaiac fec",
+      "score": 0.5715041
+    },
+    {
+      "number": 2,
+      "title": "Colorectal Cancer",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/157811/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Colonoscopy is a screening method where a doctor examines the inside of the colon and rectum using a long, slender tube attached to a video camera. If something suspicious is observed, the doctor can pass surgical tools through the tube to take a tissue sample for further analysis, called a biopsy. ",
+      "score": 0.38567597
+    },
+    {
+      "number": 3,
+      "title": "Prostate Cancer Symptoms, Tests and Treatments | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/consumers/consumer-updates/prostate-cancer-symptoms-tests-and-treatments",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Because of the widespread use of PSA testing in the U.S., prostate cancer is often detected early. In some cases, the prostate cancer found can be very slow-growing, and this can lead to overtreatment.\n\n\u201cIn most of these cases, the prostate cancer may not require treatment, and the use of PSA testin",
+      "score": 0.358174
+    },
+    {
+      "number": 4,
+      "title": "Colorectal Cancer: What You Should Know About Screening | FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/consumers/consumer-updates/colorectal-cancer-what-you-should-know-about-screening",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "The benefits of screening are so great that doctors recommend most people start colorectal cancer screening by age 45. Some people who are at higher risk may need to start screening before age 45.\n\n## Your Colorectal Cancer Screening Choices\n\nDifferent screening approaches for colorectal cancer have",
+      "score": 0.28771326
+    },
+    {
+      "number": 5,
+      "title": "USPSTF Finalizes Recommendation for Lung Cancer Screening | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-finalizes-recommendation-lung-cancer-screening-nejm-jw.NA33375",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# USPSTF Finalizes Recommendation for Lung Cancer S",
+      "score": 0.6747586
+    },
+    {
+      "number": 6,
+      "title": "USPSTF Finalizes Recommendation Against Thyroid Cancer Screening | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/uspstf-finalizes-recommendation-against-thyroid-cancer-screening-nejm-jw.FW112859",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# USPSTF Finalizes Recommendation Against Thyroid C",
+      "score": 0.6044228
+    },
+    {
+      "number": 7,
+      "title": "Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2803797",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement. Screening for Skin Cancer: US Preventive Services Task Force Recommendation Statement. * US Preventive Services Task Force USPSTF Review: Skin Cancer ScreeningNora B.Henrikson,PhD, MPH; Ilya Ivlev,MD, PhD, MBI; Pa",
+      "score": 0.50915486
+    },
+    {
+      "number": 8,
+      "title": "Screening for Thyroid Cancer: US Preventive Services Task Force Recommendation Statement",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2625325",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Evidence Review**The USPSTF reviewed the evidence on the benefits and harms of screening for thyroid cancer in asymptomatic adults, the diagnostic accuracy of screening (including neck palpation and ultrasound), and the benefits and harms of treatment of screen-detected thyroid cancer. **Findings*",
+      "score": 0.48235655
+    },
+    {
+      "number": 9,
+      "title": "Breast, Cervical, and Colorectal Cancer Screening Rates ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2849096",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by JC Spencer \u00b7 2026 \u00b7 Cited by 2 \u2014 This cross-sectional study investigates patterns of recommended screening for breast, cervical, and colorectal cancer in US women aged 45 to",
+      "score": 0.38484335
+    },
+    {
+      "number": 10,
+      "title": "Clinical Validation of a Vaginal Cervical Cancer Screening ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834245",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by MB Fitzpatrick \u00b7 2025 \u00b7 Cited by 31 \u2014 This nonrandomized clinical trial assesses the clinical validity, accuracy, and safety of a self-collection method for cervical cancer",
+      "score": 0.38172707
+    },
+    {
+      "number": 11,
+      "title": "Lung cancer mortality reduction by LDCT screening: UKLS ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(21)00156-3/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by JK Field \u00b7 2021 \u00b7 Cited by 321 \u2014 The meta-analysis indicated a significant reduction in lung cancer mortality with a pooled overall relative rate of 0.84 (95% CI 0.76\u20130.92)",
+      "score": 0.38221118
+    },
+    {
+      "number": 12,
+      "title": "Mapping the readiness landscape for prostate cancer ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(26)00346-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The available evidence consistently demonstrated growing interest in organised risk-stratified prostate cancer screening as a strategy to",
+      "score": 0.29143488
+    },
+    {
+      "number": 13,
+      "title": "Cancer screening in China: a steep road from evidence to ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(23)00186-X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by C Xia \u00b7 2023 \u00b7 Cited by 198 \u2014 Cancer screening has the potential to decrease mortality from several common cancer types. The first cancer screening programme in China was",
+      "score": 0.25463912
+    },
+    {
+      "number": 14,
+      "title": "Acceptability and perceptions of personalised risk-based ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(24)00278-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by NQP Tan \u00b7 2025 \u00b7 Cited by 23 \u2014 Personalised risk-based screening (PRBS) can enhance the efficiency of cancer screening programnes, but little is known about support for its implementation",
+      "score": 0.24284291
+    },
+    {
+      "number": 15,
+      "title": "Screening for Prostate Cancer: Recommendation and Rationale | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-137-11-200212030-00013",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "# Screening for Prostate Cancer: Recommendation and RationaleFREE. Author: U.S. Preventive Services Task Force\\*Author, Article, & Disclosure Information. This statement summarizes the current U.S. Preventive Services Task Force (USPSTF) recommendations on screening for prostate cancer and updates t",
+      "score": 0.4905535
+    },
+    {
+      "number": 16,
+      "title": "Advances in pancreatic cancer early diagnosis, prevention ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/caac.70035",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "by A Mannucci \u00b7 2026 \u00b7 Cited by 90 \u2014 The Cancer of the Pancreas Screening Study CAPS5 study demonstrated that surveillance enables early detection, with nearly 80% of cases",
+      "score": 0.33079588
+    },
+    {
+      "number": 17,
+      "title": "Radiomics: Current Applications and Future Directions",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/mco2.70773",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Shao \u00b7 2026 \u00b7 Cited by 1 \u2014 This review outlines the unified technical pipeline of radiomics across solid tumors, highlights cancer-specific imaging considerations, and",
+      "score": 0.27674964
+    },
+    {
+      "number": 18,
+      "title": "Colorectal cancer statistics, 2026 - Siegel",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70067",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "Colorectal cancer (CRC) is the second most common cancer-related death in the United States and ranks first in adults younger than 50 years.",
+      "score": 0.17519945
+    },
+    {
+      "number": 19,
+      "title": "low, go slow,\u201d a strategy to tailor treatment dosing in older ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1879406824004260",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by G Aleixo \u00b7 2025 \u00b7 Cited by 13 \u2014 \u201cStart low, go slow,\u201d a strategy to tailor treatment dosing in older or vulnerable adults with advanced solid cancer: A systematic review and meta-analysis.",
+      "score": 0.13286321
+    },
+    {
+      "number": 20,
+      "title": "Navigating the complexity of PI3K/AKT pathway in HER-2 ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1040842824001471",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by M Sirico \u00b7 2024 \u00b7 Cited by 17 \u2014 Clinical Practice Guideline for the Diagnosis, Staging and Treatment of Patients with Metastatic Breast Cancer Ann. Oncol.,",
+      "score": 0.11394409
+    },
+    {
+      "number": 21,
+      "title": "Circulating blood biomarkers for minimal residual disease ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0305737225000301",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by E Galli \u00b7 2025 \u00b7 Cited by 28 \u2014 Detection of minimal residual disease (MRD) in liver cancer (HCC) is warranted. \u2022 Circulating tumor cells and circulating tumor DNA are promising MRD markers",
+      "score": 0.1137077
+    },
+    {
+      "number": 22,
+      "title": "Validation of rule-based algorithms to determine colorectal ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2211335521002898",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AJL Macek \u00b7 2021 \u00b7 Cited by 12 \u2014 This study validates an algorithm that can effectively determine patient adherence to colorectal cancer, breast cancer, and cervical cancer screening",
+      "score": 0.6186197
+    },
+    {
+      "number": 23,
+      "title": "Colorectal cancer screening: An update to the American Cancer Society guideline, 2026",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70083",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "| Cell-free DNA blood testsb | Every 3 years (CMS coverage for Guardant Shield) |  Prospective cross-sectional validation with colonoscopy reference standard  Good sensitivity for CRC detection, lower than for mt-sDNA test  Fair to good specificity for ACN, lower than for stool-based tests |  Very l",
+      "score": 0.604703
+    },
+    {
+      "number": 24,
+      "title": "ACG Clinical Guidelines: Colorectal Cancer... : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/10.14309/ajg.0000000000001122~acg-clinical-guidelines-colorectal-cancer-screening-2021",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "FIT sensitivity of 86% (95% CI 31%\u201399%) and specificity of 91% (95% CI 89%\u201393%) for CRC; for advanced neoplasia, sensitivity was 46% (95% CI 37%\u201356%) and specificity was 93% (95% CI 90%\u201395%). [...] that FIT has greater sensitivity for detecting CRC and advanced adenomas than both standard and high s",
+      "score": 0.55883324
+    }
+  ],
+  "publishedAt": "2026-08-24T17:05:08.765155+00:00",
+  "updatedAt": "2026-08-24T17:05:08.765155+00:00",
+  "readingMinutes": 6,
+  "slug": "cancer-screening"
+}

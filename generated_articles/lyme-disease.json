@@ -1,0 +1,791 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Diseases",
+  "title": "Lyme Disease",
+  "summary": "Diagnose Lyme disease from syndrome-specific pretest probability, use validated two-tier serology when confirmation changes management, recognize carditis and neurologic emergencies, and select short, manifestation-directed antibiotic courses while avoiding unnecessary prolonged therapy.",
+  "seoDescription": "Point-of-care guidance for diagnosing and treating Lyme disease, including erythema migrans, serology, carditis, neurologic disease, arthritis, prophylaxis, and persistent symptoms.",
+  "clinicalQuestion": "How should clinicians diagnose, triage, treat, and monitor suspected Lyme disease across its major clinical manifestations?",
+  "specialty": "Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "Lyme disease",
+    "Borrelia burgdorferi",
+    "erythema migrans",
+    "Lyme serology",
+    "Lyme carditis",
+    "Lyme neuroborreliosis",
+    "Lyme arthritis",
+    "tick bite prophylaxis"
+  ],
+  "keyTakeaways": [
+    "In an endemic setting, a classic erythema migrans lesion is a clinical diagnosis; treat without waiting for serology. [22]",
+    "For atypical skin lesions or extracutaneous disease, order FDA-cleared standard or modified two-tier serology; a negative first-tier assay ends the testing algorithm. [14][17]",
+    "Interpret isolated IgM positivity cautiously after 30 days of illness; late disease should have an expanded IgG response, and antibodies can remain positive for years after infection. [15][16][18]",
+    "Hospitalize Lyme carditis with symptomatic conduction disease or risk of severe atrioventricular block; patients not requiring hospitalization can receive oral doxycycline, amoxicillin, or cefuroxime for 14-21 days. [4][21]",
+    "Treat Lyme arthritis initially with 28 days of oral doxycycline; minimal or absent response supports intravenous ceftriaxone for 2-4 weeks, whereas persistent postantibiotic synovitis requires rheumatologic rather than repeated antibiotic management. [22]",
+    "Offer single-dose doxycycline prophylaxis only after a high-risk Ixodes exposure when treatment can begin within 72 hours of removal; do not substitute another antibiotic when doxycycline is contraindicated. [23]"
+  ],
+  "sections": [
+    {
+      "id": "clinical-triage",
+      "eyebrow": "Initial decision",
+      "heading": "Triage by manifestation before ordering tests",
+      "intro": "Identify conduction disease, meningitis, radiculopathy, and inflammatory arthritis before interpreting serology.",
+      "paragraphs": [
+        "Treat a patient with one or more classic erythema migrans lesions in an endemic area clinically, without laboratory confirmation. Serology is often insensitive early in infection, whereas an atypical expanding lesion or extracutaneous syndrome warrants validated two-tier testing because these presentations overlap with other illnesses. [6][15][22]",
+        "Obtain a 12-lead ECG promptly for palpitations, presyncope or syncope, dyspnea, chest pain, or other concern for Lyme carditis. Lyme carditis affects the cardiac conduction system and can produce arrhythmia, poor cardiac function, hypotension, or syncope; symptomatic patients or those with clinically important conduction disease need hospital-level monitoring rather than outpatient empiric treatment alone. [21]",
+        "For acute facial palsy, painful radiculopathy, peripheral neuropathy, or meningitic symptoms after compatible tick exposure, distinguish peripheral neuroborreliosis from alternative infectious and inflammatory neuropathies. Neurologic manifestations have been reported in 3%-12% of Lyme disease cases and may occur with intense pain, facial palsy, radiculopathy, neuropathy, or meningitis. [7]",
+        "An acute or subacute large-joint inflammatory effusion, particularly a knee-predominant pattern, raises Lyme arthritis but should not defer arthrocentesis when septic arthritis remains plausible. Serology is the preferred diagnostic test for suspected Lyme arthritis; antibody testing of synovial fluid is not recommended. [15][17]"
+      ],
+      "bullets": [
+        "Classic erythema migrans: begin oral treatment; do not delay for testing. [22]",
+        "Atypical rash or nonspecific febrile illness: assess exposure geography and competing diagnoses, then use two-tier serum serology only when pretest probability is meaningful. [15][17]",
+        "Syncope, chest pain, palpitations, dyspnea, or documented heart block: obtain ECG and evaluate for monitored admission. [21]",
+        "Acute monoarthritis with systemic toxicity or marked pain with passive motion: aspirate the joint and pursue septic arthritis evaluation before attributing findings to Lyme disease."
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Syndrome-based first action in suspected Lyme disease. [4][15][17][21][22]",
+        "columns": [
+          "Presentation",
+          "Immediate action",
+          "Testing and interpretation",
+          "Treatment direction"
+        ],
+        "rows": [
+          [
+            "Classic erythema migrans in an endemic area",
+            "Treat clinically. [22]",
+            "Do not require serology before treatment. [22]",
+            "Doxycycline for 10 days or amoxicillin or cefuroxime axetil for 14 days. [22]"
+          ],
+          [
+            "Atypical expanding lesion or extracutaneous syndrome",
+            "Estimate epidemiologic and syndrome-specific pretest probability. [17]",
+            "Order standard or modified two-tier serum testing. [14][17]",
+            "Treat according to the confirmed clinical manifestation. [4][22]"
+          ],
+          [
+            "Palpitations, syncope, dyspnea, chest pain, conduction abnormality",
+            "Obtain ECG; assess need for hospitalization and monitoring. [21]",
+            "Evaluate for Lyme carditis in a compatible exposure setting; exclude other causes of arrhythmia. [21]",
+            "Oral doxycycline, amoxicillin, or cefuroxime if not hospitalized; total antibiotic duration 14-21 days. [4]"
+          ],
+          [
+            "Large-joint inflammatory arthritis",
+            "Exclude septic arthritis when clinically indicated.",
+            "Use serum serology; avoid synovial-fluid antibody assays. [15][17]",
+            "Oral doxycycline for 28 days initially. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "serologic-diagnosis",
+      "eyebrow": "Diagnostic testing",
+      "heading": "Use two-tier serology and interpret it in clinical time",
+      "intro": "A positive antibody result is meaningful only when the clinical syndrome and exposure risk support Lyme disease.",
+      "paragraphs": [
+        "Use the CDC two-step algorithm for patients whose presentation requires laboratory confirmation. Standard two-tier testing uses a first-tier EIA followed, when the screen is positive or equivocal, by IgM and IgG immunoblotting; modified two-tier testing uses two different EIAs. The overall result is positive only when both tiers meet the assay-specific positivity criteria. If the first-tier test is negative, do not perform additional serologic testing in that specimen. [14][17]",
+        "Modified two-tier algorithms offer sensitivity comparable to conventional EIA-immunoblot testing and avoid subjective immunoblot interpretation. Their key limitation in late manifestations is that polyvalent EIAs may not distinguish IgM from IgG or show whether the IgG response is expanded, information that can be useful when evaluating suspected late Lyme arthritis. [13][17]",
+        "Time serology to the biology of the syndrome. Two-tier testing has low sensitivity in early infection, so a negative result does not exclude early erythema migrans; initially seronegative infected patients typically become strongly seropositive when retested several weeks later. Conversely, current assays do not distinguish active from remote infection, and seropositivity may persist for years. [15][17]",
+        "Do not diagnose late Lyme disease from isolated IgM reactivity. IgM is relevant primarily during illness of less than 1 month; CDC case-definition criteria direct low-incidence states to disregard IgM results obtained more than 30 days after symptom onset. For conventional immunoblots, IgM positivity requires at least two of three designated bands, while IgG positivity requires at least five of ten designated bands. [15][18]"
+      ],
+      "bullets": [
+        "Positive or equivocal first-tier EIA: reflex to the designated second-tier immunoblot or a different EIA in a modified two-tier algorithm. [14]",
+        "Negative first-tier EIA: stop serologic testing unless a new specimen is justified by evolving early compatible illness. [14][17]",
+        "Symptoms exceeding 30 days with IgM-only immunoblot reactivity: seek an alternative diagnosis or objective evidence of recent infection rather than treating the IgM result as late Lyme disease. [15][16][18]",
+        "Avoid nonvalidated specialty assays and nonstandard immunoblot interpretation because they reduce specificity without documented sensitivity advantage. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical interpretation of Lyme laboratory testing. [14][15][17][18]",
+        "columns": [
+          "Result or setting",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Classic erythema migrans",
+            "Early serology may be negative and is not required for diagnosis. [15][22]",
+            "Treat clinically. [22]"
+          ],
+          [
+            "Negative first-tier EIA",
+            "CDC two-step testing is negative; no second step is recommended. [14]",
+            "Reassess pretest probability and alternate diagnoses; repeat after several weeks only if early compatible illness remains plausible. [17]"
+          ],
+          [
+            "Positive/equivocal first-tier EIA with negative second tier",
+            "Does not establish seropositivity in the two-tier algorithm. [13][14]",
+            "Do not diagnose Lyme disease from the screening assay alone; reassess timing and differential."
+          ],
+          [
+            "Two-tier positive result",
+            "Supports exposure or infection in the appropriate clinical setting but does not prove active infection. [15][17]",
+            "Match treatment to an objective compatible manifestation."
+          ],
+          [
+            "IgM-only positivity after >30 days",
+            "High risk of misleading interpretation; late disease assessment should rely on IgG evidence. [15][16][18]",
+            "Evaluate alternate diagnoses and avoid treating based on isolated late IgM."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "manifestation-directed-treatment",
+      "eyebrow": "Antimicrobial therapy",
+      "heading": "Choose treatment by objective manifestation and response",
+      "intro": "Use short, syndrome-directed courses; escalation depends on objective disease rather than residual nonspecific symptoms.",
+      "paragraphs": [
+        "For erythema migrans without cardiovascular or neurologic involvement, use doxycycline for 10 days or amoxicillin or cefuroxime axetil for 14 days. Azithromycin for 5-10 days is a second-line option when the preferred agents cannot be used. Erythema migrans usually resolves within 1-2 weeks, while systemic symptoms can improve more slowly. [22][23]",
+        "Treat Lyme carditis for 14-21 days. Patients who do not require hospitalization can receive oral doxycycline, amoxicillin, or cefuroxime. Symptoms indicating conduction-system involvement require ECG-based triage and inpatient management when severe conduction disease or hemodynamic consequences are present. [4][21]",
+        "Treat Lyme arthritis with oral doxycycline for 28 days. A partial response can justify a second oral course, whereas minimal or absent response supports intravenous ceftriaxone for 2-4 weeks. After an oral course and an intravenous course, persistent inflammatory arthritis is postantibiotic Lyme arthritis; refer to rheumatology for consideration of intra-articular corticosteroid injection, disease-modifying antirheumatic therapy, or other advanced anti-inflammatory treatment rather than serial antibiotic courses. [22]",
+        "Counsel patients beginning antibiotics about Jarisch-Herxheimer reaction: transient fever, chills, myalgias, headache, and worsening of skin lesions can begin within 1-12 hours, usually resolves within 24-48 hours, and occurs in approximately 5%-15% of treated patients. Continue antibiotics and use acetaminophen or an oral NSAID for symptom control unless another acute process is suspected. [21][22]"
+      ],
+      "bullets": [
+        "Erythema migrans: doxycycline 10 days; amoxicillin or cefuroxime axetil 14 days. [22]",
+        "Lyme carditis managed outpatient: doxycycline, amoxicillin, or cefuroxime; total duration 14-21 days. [4]",
+        "Lyme arthritis: doxycycline 28 days initially; intravenous ceftriaxone for 2-4 weeks if response to oral therapy is minimal or absent. [22]",
+        "Persistent synovitis after oral and intravenous therapy: switch the management frame from active infection to postantibiotic inflammatory arthritis and involve rheumatology. [22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Persistent symptoms after treatment",
+          "paragraphs": [
+            "Do not use persistence of fatigue, pain, or cognitive complaints alone as evidence of treatment failure. After early Lyme disease treatment, systemic complaints may persist at 3 months in approximately one in four patients, although most improve over time; reassess for objective recurrent or new Lyme manifestations and for non-Lyme explanations before considering further antimicrobial therapy. [23]",
+            "Available controlled trials of prolonged antibiotic treatment in patients with persistent symptoms and a history of Lyme disease have been cited in neurologic reviews, while standard management sources describe typical treatment courses of 2-4 weeks and note no convincing evidence supporting prolonged treatment. [3][9]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Manifestation-directed treatment and reassessment. [4][22][23]",
+        "columns": [
+          "Manifestation",
+          "Initial regimen",
+          "Duration",
+          "Reassessment trigger"
+        ],
+        "rows": [
+          [
+            "Erythema migrans without neurologic or cardiac involvement",
+            "Doxycycline; alternatives amoxicillin or cefuroxime axetil. [22]",
+            "Doxycycline 10 days; amoxicillin or cefuroxime 14 days. [22]",
+            "New neurologic, cardiac, or objective articular findings require syndrome-specific reassessment."
+          ],
+          [
+            "Lyme carditis not requiring hospitalization",
+            "Oral doxycycline, amoxicillin, or cefuroxime. [4]",
+            "14-21 days. [4]",
+            "Syncope, dyspnea, chest pain, palpitations, or conduction disease warrants monitored evaluation. [21]"
+          ],
+          [
+            "Lyme arthritis",
+            "Oral doxycycline. [22]",
+            "28 days. [22]",
+            "Partial response may support a second oral course; minimal or no response supports intravenous ceftriaxone for 2-4 weeks. [22]"
+          ],
+          [
+            "Postantibiotic Lyme arthritis",
+            "Rheumatologic anti-inflammatory strategy, including possible intra-articular corticosteroid or DMARD-based treatment. [22]",
+            "Individualized.",
+            "Avoid repeated antibiotic cycles after oral and intravenous treatment have failed to resolve synovitis. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tick-bite-prophylaxis",
+      "eyebrow": "Prevention",
+      "heading": "Restrict post-exposure prophylaxis to high-risk Ixodes bites",
+      "intro": "Prophylaxis is not routine after every tick bite.",
+      "paragraphs": [
+        "Offer antibiotic prophylaxis only when all high-risk criteria are satisfied: the removed tick is identified as adult or nymphal Ixodes scapularis, estimated attachment exceeds 36 hours, local tick infection prevalence with Borrelia burgdorferi exceeds 20%, doxycycline can be started within 72 hours of removal, and doxycycline is not contraindicated. The recommended regimen is a single dose of doxycycline. [23]",
+        "Do not substitute another antibiotic for prophylaxis when doxycycline cannot be used, including pregnancy, lactation, or children younger than 8 years in the guideline criteria. Instead, provide symptom surveillance and instruct the patient to seek evaluation for erythema migrans, fever, facial palsy, new monoarthritis, or cardiopulmonary symptoms. [23]",
+        "A negative history of a recognized tick bite should not exclude Lyme disease when an epidemiologically compatible syndrome is present; patient-recognized attachment is an imperfect exposure marker. Conversely, treating all nonspecific symptoms after a bite drives false-positive testing and unnecessary antibiotics because test specificity matters most in low-pretest-probability populations. [15]"
+      ],
+      "bullets": [
+        "Prophylaxis timing: begin single-dose doxycycline within 72 hours of tick removal. [23]",
+        "Attachment threshold: more than 36 hours. [23]",
+        "Ecologic threshold: local tick infection rate greater than 20%. [23]",
+        "If high-risk criteria are not met: observe for compatible illness rather than prescribing an alternative prophylactic regimen. [23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Eligibility screen for Lyme post-exposure prophylaxis. [23]",
+        "columns": [
+          "Required criterion",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Adult or nymphal Ixodes scapularis identified",
+            "If uncertain or not Ixodes, do not classify as high-risk prophylaxis exposure. [23]"
+          ],
+          [
+            "Estimated attachment >36 hours",
+            "Shorter attachment does not meet the cited prophylaxis criterion. [23]"
+          ],
+          [
+            "Doxycycline can start within 72 hours of removal",
+            "Later presentation does not meet the cited prophylaxis timing criterion. [23]"
+          ],
+          [
+            "Local Borrelia burgdorferi infection rate >20%",
+            "Use local ecologic information rather than geography alone. [23]"
+          ],
+          [
+            "No doxycycline contraindication",
+            "Do not use substitute prophylactic antibiotics; observe for early disease. [23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-diagnostic-pitfalls",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor clinical endpoints, not antibody clearance",
+      "intro": "Persistent seropositivity is expected and should not determine cure or retreatment.",
+      "paragraphs": [
+        "Follow erythema migrans by lesion evolution and systemic symptom trajectory, carditis by symptoms and ECG findings, and arthritis by joint examination and function. Do not order serial serology to document response because antibodies can persist for years and available assays cannot distinguish active from inactive infection. [15]",
+        "If fever is prominent with thrombocytopenia or other laboratory abnormalities after Ixodes exposure, evaluate for tick-borne coinfection rather than attributing all findings to Lyme disease. A reported tick-borne case with fever and thrombocytopenia illustrates potential diagnostic overlap with ehrlichial illness, and Ixodes ticks may harbor Borrelia miyamotoi in addition to Lyme spirochetes. [5][19]",
+        "For persistent or recurrent symptoms, re-anchor the diagnosis to objective evidence: a new erythema migrans lesion, a documented conduction abnormality, a compatible neurologic syndrome, or persistent inflammatory synovitis. In the absence of objective evidence, broaden the differential rather than using an isolated positive serologic result as proof of ongoing infection. [15][17]"
+      ],
+      "bullets": [
+        "Do not use antibody titers to assess microbiologic cure. [15]",
+        "Repeat ECG-based assessment when carditis symptoms recur or persist. [21]",
+        "Reevaluate fever with thrombocytopenia for non-Lyme tick-borne infection or coinfection. [5][19]",
+        "Escalate persistent arthritis after oral and intravenous treatment to rheumatology-directed anti-inflammatory management. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common diagnostic errors and corrective actions. [15][17][18][22]",
+        "columns": [
+          "Error",
+          "Why it misleads",
+          "Corrective action"
+        ],
+        "rows": [
+          [
+            "Testing a classic erythema migrans lesion before treating",
+            "Early serology has limited sensitivity and testing is unnecessary for a classic lesion. [15][22]",
+            "Treat clinically with the recommended short oral regimen. [22]"
+          ],
+          [
+            "Calling a first-tier EIA alone positive",
+            "Two-tier testing requires concordant second-tier testing. [14]",
+            "Complete the two-step algorithm before interpreting serostatus. [14]"
+          ],
+          [
+            "Using isolated late IgM as evidence of active Lyme disease",
+            "IgM has limited relevance after the first month and can be falsely interpreted. [15][16][18]",
+            "Assess IgG pattern, clinical syndrome, and alternate diagnoses."
+          ],
+          [
+            "Using repeat antibodies to explain ongoing symptoms",
+            "Seropositivity can persist for years and does not establish active infection. [15]",
+            "Base retreatment decisions on new objective manifestations."
+          ],
+          [
+            "Repeating antibiotics for refractory synovitis after oral and intravenous therapy",
+            "Persistent disease may be postantibiotic inflammatory arthritis. [22]",
+            "Refer for rheumatologic management, including consideration of intra-articular corticosteroid or DMARD therapy. [22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Clinical characteristics and serological profiles of Lyme ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00312-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by BM Greiter \u00b7 2025 \u00b7 Cited by 15 \u2014 Lyme arthritis. \u201carthritis\u201d, or \u201ccarditis\u201d. Review of European and American guidelines for the diagnosis of Lyme borreliosis Med Mal Infect.",
+      "score": 0.5837973
+    },
+    {
+      "number": 2,
+      "title": "Systematic comparisons between Lyme disease and post ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(23)00089-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by MK Chung \u00b7 2023 \u00b7 Cited by 19 \u2014 The clinical assessment, treatment, and prevention of Lyme ... (ACR): 2020 guidelines for the prevention, diagnosis and treatment of Lyme disease.",
+      "score": 0.4977301
+    },
+    {
+      "number": 3,
+      "title": "Lyme borreliosis",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(11)60103-7/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by G Stanek \u00b7 2012 \u00b7 Cited by 2544 \u2014 Diagnosed cases are usually treated with antibiotics for 2\u20134 weeks and most patients make an uneventful recovery. No convincing evidence",
+      "score": 0.20215988
+    },
+    {
+      "number": 4,
+      "title": "Lyme disease - Management Approach | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/224/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b Patients with Lyme carditis who do not need to be hospitalised are treated with oral antibiotics.(#referencePop25)Lantos PM, Rumbaugh J, Bockenstedt LK, et al. Clinical practice puidelines by the Infectious Diseases Society of America (IDSA), American Academy of Neurology (AAN), and American Coll",
+      "score": 0.68318754
+    },
+    {
+      "number": 5,
+      "title": "Supplementary appendix 1",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S2666-5247(23)00396-8/attachment/0ef17008-4ffa-4738-8327-9bb05f3bc9d2/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Supplementary table 13: The coinfection of Borrelia miyamotoi with Lyme disease spirochete in ticks. Relapsing fever group Borrelia. Borrelia burgdorferi sensu.",
+      "score": 0.3394777
+    },
+    {
+      "number": 6,
+      "title": "Rapid single-tier serodiagnosis of Lyme disease | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-51067-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n   PubMed \n   Google Scholar\n9. Lantos, P. M. et al. Clinical practice guidelines by the Infectious Diseases Society of America (IDSA), American Academy of Neurology (AAN), and American College of Rheumatology (ACR): 2020 guidelines for the prevention, diagnosis, and treatment of Lyme disea",
+      "score": 0.6342494
+    },
+    {
+      "number": 7,
+      "title": "Lyme Disease Patient Trajectories Learned from Electronic Medical Data for Stratification of Disease Risk and Therapeutic Response | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-019-41128-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n   PubMed \n   Google Scholar\n9. Wormser, G. P. et al. The clinical assessment, treatment, and prevention of lyme disease, human granulocytic anaplasmosis, and babesiosis: clinical practice guidelines by the Infectious Diseases Society of America. Clin Infect Dis 43, 1089\u20131134,  (2006).\n\n   ",
+      "score": 0.3839421
+    },
+    {
+      "number": 8,
+      "title": "Pilot study of psilocybin in patients with post-treatment lyme disease | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-38091-9",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "To be eligible to participate in this trial, volunteers were required to meet the following criteria: be \u2265 18 years of age; capable of providing written informed consent; willing to allow the study team to review past medical records; and have medical record documentation of meeting the CDC case def",
+      "score": 0.2951999
+    },
+    {
+      "number": 9,
+      "title": "An ultra-high-density protein microarray for high throughput ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-75036-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by V Jayaraman \u00b7 2020 \u00b7 Cited by 9 \u2014 Current serological immunoassays have inherent limitations for certain infectious diseases such as Lyme disease, a bacterial infection",
+      "score": 0.12658015
+    },
+    {
+      "number": 10,
+      "title": "Infectious Neuropathies",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2014/10000/infectious_neuropathies.15.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Google Scholar\n\n66.\n\nKlempner MS, Hu LT, Evans J, et al. Two controlled trials of antibiotic treatment in patients with persistent symptoms and a history of Lyme disease. N Engl J Med 2001; 345 (2): 85\u201392.\n\nGoogle Scholar\n\n67.\n\nCraft JE, Grodzicki RL, Steere AC. The antibody response in Lyme disease",
+      "score": 0.418341
+    },
+    {
+      "number": 11,
+      "title": "Lyme disease : Current Opinion in Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-rheumatology/fulltext/2000/07000/lyme_disease.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The results of two large clinical trials reported that vaccination using recombinant OspA preparations was safe and efficacious. LYMErix (SmithKline Beecham,",
+      "score": 0.2569606
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of Modified 2-Tiered Serodiagnostic Testing Algorithms for Early Lyme Disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5399943",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conventional 2-tiered testing for Lyme disease (LD) begins with a whole-cell sonicate (WCS) enzyme immunoassay (EIA) or immunofluorescence assay (IFA). If the first-tier test is positive or equivocal, the specimen is further analyzed using standardized immunoglobulin M (IgM) and immunoglobulin G (Ig",
+      "score": 0.73642004
+    },
+    {
+      "number": 13,
+      "title": "Laboratory Diagnosis of Lyme Borreliosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7849240",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##### FIG 7.\n\nOpen in a new tab\n\nModified two-tiered serologic testing for the diagnosis of Lyme borreliosis, using one polyvalent (total antibody) EIA, one IgM-specific EIA, and one IgG-specific EIA. The polyvalent assay can be used in the first tier, followed by orthogonal IgM- and IgG-specific as",
+      "score": 0.7036111
+    },
+    {
+      "number": 14,
+      "title": "Clinical Testing and Diagnosis for Lyme Disease | Lyme Disease | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/lyme/hcp/diagnosis-testing/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Recommended tests\n\nCDC currently recommends a two-step testing process for Lyme disease serologic testing. Both steps are required and can be done using the same blood sample. If this first step is negative, no further testing is recommended. If the first step is positive or indeterminate (someti",
+      "score": 0.6929958
+    },
+    {
+      "number": 15,
+      "title": "Laboratory Diagnosis of Lyme Disease - Advances and Challenges",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4441761",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The use of specialty laboratories offering non-validated Lyme diagnostic tests, including unique interpretation of western blot results, is discouraged. They offer no documented advantage in terms of sensitivity while there is a large decrease in specificity61. The use of antibody assays in synovial",
+      "score": 0.6747586
+    },
+    {
+      "number": 16,
+      "title": "Immunoblot Criteria for Diagnosis of Lyme Disease: A Comparison of CDC Criteria to Alternative Interpretive Approaches",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10674374",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Utilizing the Viramed ViraStripe line blot (LSR) dataset, we report the performance of two-tiered CDC criteria using both IgG and IgM immunoblots, two different MTT (all-EIA) approaches, and alternative immunoblot criteria (Table 12). Because the latter dataset includes controls from individuals wit",
+      "score": 0.67140645
+    },
+    {
+      "number": 17,
+      "title": "Lyme Disease",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/lyme-disease",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Modified 2-tiered testing algorithms, which make use of 2 different enzyme immunoassays either sequentially or concurrently, provide similarly high sensitivity compared with conventional 2-tiered testing with immunoblotting [20][246][247][249][342]. A limitation of this approach for the diagnosis of",
+      "score": 0.6337056
+    },
+    {
+      "number": 18,
+      "title": "Lyme Disease (Borrelia burgdorferi) 2022 Case Definition | CDC",
+      "detail": "ndc.services.cdc.gov",
+      "url": "https://ndc.services.cdc.gov/case-definitions/lyme-disease-2022",
+      "authors": "ndc.services.cdc.gov",
+      "host": "ndc.services.cdc.gov",
+      "snippet": "2. Modified two-tier test (MTTT): positive or equivocal first-tier screen, followed by a different, sequential positive or equivocal EIA in lieu of an immunoblot as a second-tier test4. [...] 2 IgM Western Blot (WB) is considered positive when at least two of the following three bands are present: 2",
+      "score": 0.5792344
+    },
+    {
+      "number": 19,
+      "title": "PDF - 8.24 MB - 183 pages",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/22/5/pdfs/v22-n5.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "Case-patient 1 was 24-year-old man (landscaper) from New Jersey who had nausea, vomiting, and fevers in August 2014. The patient had no known tick bites and no major underlying concurrent illnesses. At the time of presentation, his temperature was 102\u00b0F; results of a physi-cal examination were other",
+      "score": 0.2799643
+    },
+    {
+      "number": 20,
+      "title": "Lyme disease: diagnosis and management - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542111",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "July 2018: A correction was made to table 2 for the duration of treatment for Lyme\narthritis or acrodermatitis chronica atrophicans in children aged 9 to\n12 with a severe infection. Maximum doses for intravenous ceftriaxone\ntreatment in children under 12 were also added.\n\nMay 2018: The definition fo",
+      "score": 0.60358196
+    },
+    {
+      "number": 21,
+      "title": "Lyme disease: diagnosis and management",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK578127/bin/bm3.pdf",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Causes include low blood pressure (hypotension), poor cardiac function due to an arrthymia and sepsis. Heart block See arrhythmia. IR6 The domain in the VlsE protein antibodies, which some of the recommended diagnostic tests in this guideline are designed to detect, is the IR6 domain. This is often ",
+      "score": 0.4562407
+    },
+    {
+      "number": 22,
+      "title": "Lyme Disease - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK431066",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Arthritis:Lyme arthritis should be treated with oral doxycycline for 28 days. A second course of oral antibiotics may be administered to those with a partial response. For those who have had minimal or no response, IV ceftriaxone for 2 to 4 weeks can be administered.(#article-24539.r17) For patients",
+      "score": 0.4457955
+    },
+    {
+      "number": 23,
+      "title": "Commissioned Papers - Critical Needs and Gaps in Understanding Prevention, Amelioration, and Resolution of Lyme and Other Tick-Borne Diseases - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK57015",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Approximately 15% of patients experience a Jarisch Herxheimer-like reaction in the first 24 hours of starting treatment. This involves worsening of systemic symptoms and an increase in the size and intensity of skin lesions. The majority of patients notice improvement by the end of the course of tre",
+      "score": 0.38574538
+    },
+    {
+      "number": 24,
+      "title": "IDSA 2020 Guideline on Diagnosis and Management of Babesiosis",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/babesiosis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "In a prospective, nonblinded, randomized trial in immunocompetent patients with non life-threatening babesiosis due to B. microti, atovaquone plus azithromycin was compared with clindamycin plus quinine (Table 2) . All medications were prescribed orally for a 7-day treatment course. Based on time to",
+      "score": 0.56719416
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Clinical characteristics and serological profiles of Lyme ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00312-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by BM Greiter \u00b7 2025 \u00b7 Cited by 15 \u2014 Lyme arthritis. \u201carthritis\u201d, or \u201ccarditis\u201d. Review of European and American guidelines for the diagnosis of Lyme borreliosis Med Mal Infect.",
+      "score": 0.5837973
+    },
+    {
+      "number": 2,
+      "title": "Systematic comparisons between Lyme disease and post ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(23)00089-0/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by MK Chung \u00b7 2023 \u00b7 Cited by 19 \u2014 The clinical assessment, treatment, and prevention of Lyme ... (ACR): 2020 guidelines for the prevention, diagnosis and treatment of Lyme disease.",
+      "score": 0.4977301
+    },
+    {
+      "number": 3,
+      "title": "Lyme borreliosis",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(11)60103-7/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "by G Stanek \u00b7 2012 \u00b7 Cited by 2544 \u2014 Diagnosed cases are usually treated with antibiotics for 2\u20134 weeks and most patients make an uneventful recovery. No convincing evidence",
+      "score": 0.20215988
+    },
+    {
+      "number": 4,
+      "title": "Lyme disease - Management Approach | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/224/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b Patients with Lyme carditis who do not need to be hospitalised are treated with oral antibiotics.(#referencePop25)Lantos PM, Rumbaugh J, Bockenstedt LK, et al. Clinical practice puidelines by the Infectious Diseases Society of America (IDSA), American Academy of Neurology (AAN), and American Coll",
+      "score": 0.68318754
+    },
+    {
+      "number": 5,
+      "title": "Supplementary appendix 1",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S2666-5247(23)00396-8/attachment/0ef17008-4ffa-4738-8327-9bb05f3bc9d2/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Supplementary table 13: The coinfection of Borrelia miyamotoi with Lyme disease spirochete in ticks. Relapsing fever group Borrelia. Borrelia burgdorferi sensu.",
+      "score": 0.3394777
+    },
+    {
+      "number": 6,
+      "title": "Rapid single-tier serodiagnosis of Lyme disease | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-024-51067-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n   PubMed \n   Google Scholar\n9. Lantos, P. M. et al. Clinical practice guidelines by the Infectious Diseases Society of America (IDSA), American Academy of Neurology (AAN), and American College of Rheumatology (ACR): 2020 guidelines for the prevention, diagnosis, and treatment of Lyme disea",
+      "score": 0.6342494
+    },
+    {
+      "number": 7,
+      "title": "Lyme Disease Patient Trajectories Learned from Electronic Medical Data for Stratification of Disease Risk and Therapeutic Response | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-019-41128-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \n   PubMed \n   Google Scholar\n9. Wormser, G. P. et al. The clinical assessment, treatment, and prevention of lyme disease, human granulocytic anaplasmosis, and babesiosis: clinical practice guidelines by the Infectious Diseases Society of America. Clin Infect Dis 43, 1089\u20131134,  (2006).\n\n   ",
+      "score": 0.3839421
+    },
+    {
+      "number": 8,
+      "title": "Pilot study of psilocybin in patients with post-treatment lyme disease | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-38091-9",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "To be eligible to participate in this trial, volunteers were required to meet the following criteria: be \u2265 18 years of age; capable of providing written informed consent; willing to allow the study team to review past medical records; and have medical record documentation of meeting the CDC case def",
+      "score": 0.2951999
+    },
+    {
+      "number": 9,
+      "title": "An ultra-high-density protein microarray for high throughput ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-020-75036-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "by V Jayaraman \u00b7 2020 \u00b7 Cited by 9 \u2014 Current serological immunoassays have inherent limitations for certain infectious diseases such as Lyme disease, a bacterial infection",
+      "score": 0.12658015
+    },
+    {
+      "number": 10,
+      "title": "Infectious Neuropathies",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2014/10000/infectious_neuropathies.15.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Google Scholar\n\n66.\n\nKlempner MS, Hu LT, Evans J, et al. Two controlled trials of antibiotic treatment in patients with persistent symptoms and a history of Lyme disease. N Engl J Med 2001; 345 (2): 85\u201392.\n\nGoogle Scholar\n\n67.\n\nCraft JE, Grodzicki RL, Steere AC. The antibody response in Lyme disease",
+      "score": 0.418341
+    },
+    {
+      "number": 11,
+      "title": "Lyme disease : Current Opinion in Rheumatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-rheumatology/fulltext/2000/07000/lyme_disease.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The results of two large clinical trials reported that vaccination using recombinant OspA preparations was safe and efficacious. LYMErix (SmithKline Beecham,",
+      "score": 0.2569606
+    },
+    {
+      "number": 12,
+      "title": "Evaluation of Modified 2-Tiered Serodiagnostic Testing Algorithms for Early Lyme Disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5399943",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conventional 2-tiered testing for Lyme disease (LD) begins with a whole-cell sonicate (WCS) enzyme immunoassay (EIA) or immunofluorescence assay (IFA). If the first-tier test is positive or equivocal, the specimen is further analyzed using standardized immunoglobulin M (IgM) and immunoglobulin G (Ig",
+      "score": 0.73642004
+    },
+    {
+      "number": 13,
+      "title": "Laboratory Diagnosis of Lyme Borreliosis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7849240",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##### FIG 7.\n\nOpen in a new tab\n\nModified two-tiered serologic testing for the diagnosis of Lyme borreliosis, using one polyvalent (total antibody) EIA, one IgM-specific EIA, and one IgG-specific EIA. The polyvalent assay can be used in the first tier, followed by orthogonal IgM- and IgG-specific as",
+      "score": 0.7036111
+    },
+    {
+      "number": 14,
+      "title": "Clinical Testing and Diagnosis for Lyme Disease | Lyme Disease | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/lyme/hcp/diagnosis-testing/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Recommended tests\n\nCDC currently recommends a two-step testing process for Lyme disease serologic testing. Both steps are required and can be done using the same blood sample. If this first step is negative, no further testing is recommended. If the first step is positive or indeterminate (someti",
+      "score": 0.6929958
+    },
+    {
+      "number": 15,
+      "title": "Laboratory Diagnosis of Lyme Disease - Advances and Challenges",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4441761",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The use of specialty laboratories offering non-validated Lyme diagnostic tests, including unique interpretation of western blot results, is discouraged. They offer no documented advantage in terms of sensitivity while there is a large decrease in specificity61. The use of antibody assays in synovial",
+      "score": 0.6747586
+    },
+    {
+      "number": 16,
+      "title": "Immunoblot Criteria for Diagnosis of Lyme Disease: A Comparison of CDC Criteria to Alternative Interpretive Approaches",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10674374",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Utilizing the Viramed ViraStripe line blot (LSR) dataset, we report the performance of two-tiered CDC criteria using both IgG and IgM immunoblots, two different MTT (all-EIA) approaches, and alternative immunoblot criteria (Table 12). Because the latter dataset includes controls from individuals wit",
+      "score": 0.67140645
+    },
+    {
+      "number": 17,
+      "title": "Lyme Disease",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/lyme-disease",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Modified 2-tiered testing algorithms, which make use of 2 different enzyme immunoassays either sequentially or concurrently, provide similarly high sensitivity compared with conventional 2-tiered testing with immunoblotting [20][246][247][249][342]. A limitation of this approach for the diagnosis of",
+      "score": 0.6337056
+    },
+    {
+      "number": 18,
+      "title": "Lyme Disease (Borrelia burgdorferi) 2022 Case Definition | CDC",
+      "detail": "ndc.services.cdc.gov",
+      "url": "https://ndc.services.cdc.gov/case-definitions/lyme-disease-2022",
+      "authors": "ndc.services.cdc.gov",
+      "host": "ndc.services.cdc.gov",
+      "snippet": "2. Modified two-tier test (MTTT): positive or equivocal first-tier screen, followed by a different, sequential positive or equivocal EIA in lieu of an immunoblot as a second-tier test4. [...] 2 IgM Western Blot (WB) is considered positive when at least two of the following three bands are present: 2",
+      "score": 0.5792344
+    },
+    {
+      "number": 19,
+      "title": "PDF - 8.24 MB - 183 pages",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/22/5/pdfs/v22-n5.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "Case-patient 1 was 24-year-old man (landscaper) from New Jersey who had nausea, vomiting, and fevers in August 2014. The patient had no known tick bites and no major underlying concurrent illnesses. At the time of presentation, his temperature was 102\u00b0F; results of a physi-cal examination were other",
+      "score": 0.2799643
+    },
+    {
+      "number": 20,
+      "title": "Lyme disease: diagnosis and management - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK542111",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "July 2018: A correction was made to table 2 for the duration of treatment for Lyme\narthritis or acrodermatitis chronica atrophicans in children aged 9 to\n12 with a severe infection. Maximum doses for intravenous ceftriaxone\ntreatment in children under 12 were also added.\n\nMay 2018: The definition fo",
+      "score": 0.60358196
+    },
+    {
+      "number": 21,
+      "title": "Lyme disease: diagnosis and management",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK578127/bin/bm3.pdf",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Causes include low blood pressure (hypotension), poor cardiac function due to an arrthymia and sepsis. Heart block See arrhythmia. IR6 The domain in the VlsE protein antibodies, which some of the recommended diagnostic tests in this guideline are designed to detect, is the IR6 domain. This is often ",
+      "score": 0.4562407
+    },
+    {
+      "number": 22,
+      "title": "Lyme Disease - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK431066",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Arthritis:Lyme arthritis should be treated with oral doxycycline for 28 days. A second course of oral antibiotics may be administered to those with a partial response. For those who have had minimal or no response, IV ceftriaxone for 2 to 4 weeks can be administered.(#article-24539.r17) For patients",
+      "score": 0.4457955
+    },
+    {
+      "number": 23,
+      "title": "Commissioned Papers - Critical Needs and Gaps in Understanding Prevention, Amelioration, and Resolution of Lyme and Other Tick-Borne Diseases - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK57015",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Approximately 15% of patients experience a Jarisch Herxheimer-like reaction in the first 24 hours of starting treatment. This involves worsening of systemic symptoms and an increase in the size and intensity of skin lesions. The majority of patients notice improvement by the end of the course of tre",
+      "score": 0.38574538
+    },
+    {
+      "number": 24,
+      "title": "IDSA 2020 Guideline on Diagnosis and Management of Babesiosis",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/babesiosis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "In a prospective, nonblinded, randomized trial in immunocompetent patients with non life-threatening babesiosis due to B. microti, atovaquone plus azithromycin was compared with clindamycin plus quinine (Table 2) . All medications were prescribed orally for a 7-day treatment course. Based on time to",
+      "score": 0.56719416
+    }
+  ],
+  "publishedAt": "2026-08-24T17:39:10.200965+00:00",
+  "updatedAt": "2026-08-24T17:39:10.200965+00:00",
+  "readingMinutes": 7,
+  "slug": "lyme-disease"
+}

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Emergency Medicine",
+  "title": "Thermal Burns",
+  "summary": "Evaluate thermal burns by confirming airway risk, measuring partial- and full-thickness TBSA accurately, initiating response-titrated resuscitation for major injury, controlling pain, protecting wounds, and transferring patients whose size, depth, location, or inhalation risk requires burn-center care.",
+  "seoDescription": "Point-of-care evaluation and management of acute thermal burns, including TBSA measurement, airway risk, fluid resuscitation, wound closure, and transfer.",
+  "clinicalQuestion": "How should physicians triage, quantify, resuscitate, and arrange definitive care for acute thermal burns?",
+  "specialty": "Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "thermal burns",
+    "burn resuscitation",
+    "TBSA",
+    "Parkland formula",
+    "inhalation injury",
+    "burn center referral",
+    "burn wound excision"
+  ],
+  "keyTakeaways": [
+    "Use partial- and full-thickness burn area, rather than erythema alone, to estimate TBSA because this measurement directs resuscitation and disposition decisions.[19][20]",
+    "For adults with burns exceeding approximately 20% to 25% TBSA, begin lactated Ringer resuscitation promptly; use a formula only as an initial estimate and titrate to clinical response and urine output.[22][10]",
+    "In adults, urine output of approximately 0.3 to 0.5 mL/kg/hour is a practical resuscitation endpoint; persistent output below this range suggests inadequate intravascular resuscitation.[10]",
+    "Inhalation injury, electrical injury, delayed resuscitation, and high opioid requirements may increase fluid needs; avoid reflexive volume escalation without reassessing perfusion and complications of over-resuscitation.[10][24]",
+    "Deep partial-thickness and full-thickness burns require early burn-surgeon assessment for excision and grafting; early tangential excision and grafting improved mortality and reduced hospitalization in a trial of deep second-degree burns.[9]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-triage",
+      "eyebrow": "First decisions",
+      "heading": "Identify airway threat, major burn physiology, and transfer needs",
+      "intro": "Manage significant burns as trauma while establishing injury size, depth, mechanism, and airway risk.[22]",
+      "paragraphs": [
+        "Begin with airway, breathing, circulation, exposure, analgesia, and removal from the heat source. In a severe flame burn, specifically assess for inhalation injury; inhalation injury increases fluid requirements, pulmonary complications, and mortality when it accompanies cutaneous thermal trauma.[22][24]",
+        "Do not attribute early hypotension solely to a burn. Burn shock develops during the first hours after injury; immediate hypotension should prompt evaluation for concurrent hemorrhage, traumatic injury, or another cause of shock.[22]",
+        "Arrange specialized burn-center transfer for severe injury, including burns exceeding 10% TBSA and full-thickness burns, while continuing initial stabilization and resuscitation rather than delaying transfer for definitive wound procedures.[1]"
+      ],
+      "bullets": [
+        "Record time of injury because the first-day resuscitation calculation and rate must be interpreted against elapsed time since the burn.[21][22]",
+        "Document thermal mechanism, enclosed-space or flame exposure, associated trauma, and suspected inhalation injury; these factors alter airway surveillance, expected fluid requirement, and destination planning.[10][24]",
+        "Treat burns as tetanus-prone wounds and assess tetanus immunization status; provide prophylaxis when the last dose was more than 5 years earlier.[22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial risk patterns that change immediate management.[10][22][24]",
+        "columns": [
+          "Finding",
+          "Clinical implication",
+          "Immediate next step"
+        ],
+        "rows": [
+          [
+            "Hemodynamic instability immediately after injury",
+            "Burn shock usually develops over hours; early hypotension warrants evaluation for nonburn causes such as associated trauma.[22]",
+            "Resuscitate while assessing for hemorrhage and other traumatic injuries.[22]"
+          ],
+          [
+            "Severe flame injury or suspected inhalation injury",
+            "Inhalation injury is associated with greater fluid requirements and pulmonary complications.[24]",
+            "Prioritize airway assessment, monitor respiratory status, and anticipate higher—but response-titrated—resuscitation needs.[10][24]"
+          ],
+          [
+            "Large partial- or full-thickness burn",
+            "Major injury can produce substantial fluid loss and burn shock.[19][22]",
+            "Measure TBSA, establish IV access, begin lactated Ringer resuscitation when threshold is met, and transfer to a burn center.[22][1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tbsa-and-depth",
+      "eyebrow": "Quantify injury",
+      "heading": "Estimate TBSA accurately before committing to a fluid rate",
+      "intro": "TBSA error can cause both under-resuscitation and clinically important fluid overload.[18][19]",
+      "paragraphs": [
+        "Estimate TBSA using partial-thickness and full-thickness areas. The Rule of Nines is rapid for adult initial assessment, whereas the Lund-Browder chart adjusts for the age-related body proportions of infants and children. Use the patient’s palm including fingers as approximately 1% TBSA for scattered or small burns.[17][18][19]",
+        "Use the Lund-Browder chart rather than unmodified adult proportions in children because head and leg surface-area proportions vary with age. Reassess TBSA after exposure, cleaning, and serial examination when the initial estimate is uncertain; Rule of Nines estimates may overestimate TBSA and assessment varies materially by examiner experience.[18][5][20]",
+        "Treat formula-derived volumes as estimates, not proof of adequate resuscitation. Underestimation risks progressive shock and end-organ injury; overestimation increases the risk of pulmonary edema, acute respiratory distress syndrome, and abdominal compartment syndrome.[19][20]"
+      ],
+      "bullets": [
+        "Use Rule of Nines for a rapid adult field or emergency estimate.[17][19]",
+        "Use Lund-Browder for pediatric assessment and whenever a more anatomically adjusted estimate is needed.[18]",
+        "Use the palm method for irregular, patchy, or geographically separated areas.[18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "TBSA methods and their highest-yield use cases.[17][18][19]",
+        "columns": [
+          "Method",
+          "Best use",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Wallace Rule of Nines",
+            "Rapid initial adult estimate using body regions expressed as multiples of 9.[17][18]",
+            "Adult regional proportions require modification in children and infants.[18]"
+          ],
+          [
+            "Lund-Browder chart",
+            "Pediatric burns and more structured surface-area mapping; incorporates age-specific head and leg proportions.[18]",
+            "Requires diagram-based calculation and may be slower in the earliest resuscitation phase.[18]"
+          ],
+          [
+            "Palm method",
+            "Small or scattered burns; the patient's palm including fingers approximates 1% TBSA.[18]",
+            "Interpretation varies among clinicians and should not substitute for careful mapping of extensive injury.[5][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fluid-resuscitation",
+      "eyebrow": "Burn shock",
+      "heading": "Start lactated Ringer resuscitation, then titrate to perfusion",
+      "intro": "Major burns require early but continuously adjusted resuscitation rather than formula-only management.[10][22]",
+      "paragraphs": [
+        "For adults with burns exceeding 20% to 25% TBSA, initiate aggressive IV fluid resuscitation to prevent burn shock. A common starting calculation is the Parkland formula: 4 mL lactated Ringer solution × body weight in kilograms × percent TBSA over the first 24 hours.[22][21]",
+        "Use the calculated volume as an initial guide, not a fixed prescription. Place an indwelling urinary catheter for major resuscitations and titrate fluid against urine output and serial clinical perfusion assessment. In adults, a urine output target of approximately 0.3 to 0.5 mL/kg/hour is commonly used; output below this range during the first 48 hours usually indicates inadequate resuscitation.[10]",
+        "Avoid treating a rising calculated requirement as an automatic indication for unlimited crystalloid. Excess fluid contributes to edema and can produce pulmonary complications; the central resuscitation principle is the minimum volume that maintains organ perfusion.[10][18][19]",
+        "Expect increased requirements in patients with inhalation injury, electrical injuries, delayed resuscitation, advanced age, or greater opioid exposure, but adjust the rate to urine output and clinical response rather than applying a separate fixed multiplier.[10][24]"
+      ],
+      "bullets": [
+        "Calculate initial 24-hour volume: 4 mL × kg × %TBSA, using lactated Ringer solution.[22][21]",
+        "Use an indwelling catheter and target adult urine output of about 0.3 to 0.5 mL/kg/hour.[10]",
+        "Reassess volume status and respiratory consequences repeatedly; formulas are starting points, not absolute protocols.[10]",
+        "Escalate monitoring and burn-center coordination when inhalation injury coexists because these patients may require substantially more fluid than patients with comparable cutaneous burns alone.[24]"
+      ],
+      "subsections": [
+        {
+          "heading": "Resuscitation failure patterns",
+          "paragraphs": [
+            "Low urine output despite ongoing crystalloid should trigger reassessment of TBSA accuracy, elapsed time since injury, line function, concurrent hemorrhage, and inhalation or electrical injury before simply accepting a larger formula-based volume. Persistent under-resuscitation risks hypoperfusion; over-resuscitation risks respiratory and compartment complications.[10][19][22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Adult major-burn resuscitation workflow.[10][21][22]",
+        "columns": [
+          "Decision point",
+          "Action",
+          "Monitoring interpretation"
+        ],
+        "rows": [
+          [
+            "Burn exceeds 20% to 25% TBSA",
+            "Start lactated Ringer resuscitation using 4 mL × kg × %TBSA as a 24-hour initial estimate.[22][21]",
+            "Formula establishes a starting volume only.[10]"
+          ],
+          [
+            "During active resuscitation",
+            "Use an indwelling urinary catheter and adjust fluid delivery to urine output and clinical perfusion.[10]",
+            "Adult urine output around 0.3 to 0.5 mL/kg/hour is an accepted target.[10]"
+          ],
+          [
+            "Urine output remains below target",
+            "Increase evaluation for inadequate resuscitation and contributors such as delayed care, inhalation injury, or electrical injury.[10][24]",
+            "Do not rely on TBSA calculation alone; reassess the patient and calculation.[10][19]"
+          ],
+          [
+            "Edema or pulmonary complications emerge",
+            "Reevaluate for excessive fluid administration and reduce unnecessary volume while maintaining organ perfusion.[10][19]",
+            "Volume excess can contribute to ARDS and abdominal compartment syndrome.[19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wound-and-operative-care",
+      "eyebrow": "Definitive care",
+      "heading": "Match wound depth to closure strategy and burn-center surgery",
+      "intro": "Depth and location determine whether a wound can be managed conservatively or requires operative closure planning.[9][18]",
+      "paragraphs": [
+        "After stabilization, characterize burn depth and reassess it serially because depth assessment drives wound-closure planning. Full-thickness burns and deep partial-thickness injuries should prompt early burn-surgeon involvement for excision and grafting strategy, especially when the area is extensive or functionally important.[1][9]",
+        "Early excision of eschar followed by grafting is a major definitive therapy for deep burns. A randomized study cited in a historical synthesis found that early tangential excision and grafting of deep second-degree burns improved mortality and reduced hospitalization compared with conservative treatment.[9]",
+        "In patients with third-degree burns exceeding 30% TBSA, the mortality benefit of early excision was not uniform across subgroups in one randomized trial: benefit was reported among patients aged 17 to 30 years without inhalation injury, but not among older adults in that report. Use burn-center multidisciplinary assessment to balance operative burden, donor-site availability, inhalation injury, and physiologic reserve.[9][3]"
+      ],
+      "bullets": [
+        "Use IV analgesia for severe burns and for painful early procedures; pain control in major burns is best managed intravenously.[22]",
+        "Plan definitive wound closure after physiologic stabilization and formal depth assessment; early closure commonly requires excision followed by graft coverage.[2][9]",
+        "Prioritize specialized center management for massive burns, where multidisciplinary burn care is commonly required.[3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Depth-directed definitive management decisions.[1][9]",
+        "columns": [
+          "Wound pattern",
+          "Disposition or operative implication",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "Deep partial-thickness burn",
+            "Obtain early burn-surgeon evaluation for tangential excision and grafting consideration.[9]",
+            "Early tangential excision and grafting improved mortality and reduced hospitalization versus conservative treatment in a cited randomized study.[9]"
+          ],
+          [
+            "Full-thickness burn",
+            "Refer for specialized burn care and definitive excision/grafting planning.[1][9]",
+            "Full-thickness burns meet criteria for specialized burn-center referral.[1]"
+          ],
+          [
+            "Massive burn",
+            "Transfer or coordinate care in a multidisciplinary burn center.[3]",
+            "Most survivors with massive injuries in one series were managed in specialized multidisciplinary centers.[3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ongoing-and-chronic-care",
+      "eyebrow": "Longitudinal care",
+      "heading": "Monitor for complications and preserve function after survival",
+      "intro": "Long-term outcome depends on wound closure, rehabilitation planning, and ongoing multidisciplinary follow-up.[3][11]",
+      "paragraphs": [
+        "After acute shock and wound-closure decisions, continue surveillance for respiratory failure, burn infection, nutritional demands, wound healing problems, and scarring. Severe-burn care programs incorporate wound treatment, infection prevention and treatment, nutrition therapy, organ support, and rehabilitation because complications extend beyond the resuscitation interval.[11]",
+        "For older adults, avoid nihilistic disposition decisions based on age alone. In one outcome report, standard burn treatment was associated with survival above 70%, and at least 60% of older survivors were fully functional at 6 months; individual prognosis still depends on burn extent, inhalation injury, comorbidity, and operative feasibility.[23]",
+        "Use follow-up to identify hypertrophic scarring, functional limitation, and the need for reconstructive or rehabilitation interventions. Burn-care advances include rehabilitation as a core treatment domain, not an afterthought once epithelialization occurs.[11]"
+      ],
+      "bullets": [
+        "Coordinate rehabilitation early when burns threaten range of motion, hand function, mobility, or other daily activity domains.[11]",
+        "Continue multidisciplinary burn follow-up after large burns, particularly after grafting or prolonged critical illness.[3][11]",
+        "Discuss prognosis in older adults using injury-specific factors rather than chronological age alone.[23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-acute priorities after major thermal injury.[3][11][23]",
+        "columns": [
+          "Phase",
+          "Priority",
+          "Decision trigger"
+        ],
+        "rows": [
+          [
+            "After initial resuscitation",
+            "Monitor respiratory, infectious, nutritional, and organ-support needs.[11]",
+            "Severe burns have multisystem consequences requiring continuing critical-care assessment.[11]"
+          ],
+          [
+            "After wound closure planning",
+            "Implement rehabilitation and monitor healing and scar-related impairment.[11]",
+            "Functional risks persist after survival and epithelial closure.[11]"
+          ],
+          [
+            "Older adult recovery",
+            "Use individualized prognostication and functional follow-up.[23]",
+            "More than 70% survival and at least 60% full function at 6 months were reported with standard treatment in one cohort.[23]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

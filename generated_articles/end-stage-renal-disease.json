@@ -1,0 +1,724 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "End-Stage Renal Disease",
+  "summary": "Manage kidney failure by identifying emergent dialysis indications, separating chronic uremic symptoms from reversible mimics, preparing renal replacement options before crisis, and initiating dialysis for refractory clinical complications rather than an isolated eGFR threshold.",
+  "seoDescription": "Point-of-care guidance for recognizing kidney failure, urgent dialysis indications, symptom-based initiation, modality preparation, and renal function assessment.",
+  "clinicalQuestion": "How should physicians evaluate, prepare, and initiate kidney replacement therapy in patients with kidney failure?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "end-stage renal disease",
+    "kidney failure",
+    "dialysis initiation",
+    "uremia",
+    "hemodialysis",
+    "peritoneal dialysis",
+    "kidney replacement therapy"
+  ],
+  "keyTakeaways": [
+    "Do not initiate maintenance dialysis solely for a low eGFR; start when kidney-failure symptoms, refractory metabolic abnormalities, uncontrolled volume or blood pressure, nutritional decline, or cognitive impairment cannot be managed medically. [11][12][20]",
+    "Treat uremic encephalopathy, symptomatic pericardial effusion, refractory hyperkalemia, or refractory metabolic acidosis as indications for immediate dialysis. [18]",
+    "Before attributing anorexia, fatigue, pruritus, cognitive complaints, or weight loss to uremia, evaluate and correct reversible causes and comorbid conditions that mimic the uremic syndrome. [10][21]",
+    "Begin kidney failure education and planning by CKD stage 4 (eGFR 15-29 mL/min/1.73 m\u00b2), including transplantation, home or in-center hemodialysis, peritoneal dialysis, and conservative management. [12][14]",
+    "Use creatinine-based eGFR cautiously in severe chronic illness, muscle wasting, or extreme body composition; cystatin C or measured GFR can resolve clinically consequential uncertainty. [10]"
+  ],
+  "sections": [
+    {
+      "id": "recognize-urgent-kidney-failure",
+      "eyebrow": "Immediate decisions",
+      "heading": "Identify indications for urgent dialysis",
+      "intro": "Escalate for refractory complications, not for creatinine or eGFR alone.",
+      "paragraphs": [
+        "Arrange immediate dialysis for uremic encephalopathy, symptomatic pericardial effusion, refractory hyperkalemia, or metabolic acidosis that persists despite medical management. Symptomatic uremia with nausea or vomiting also warrants dialysis when medical measures fail, irrespective of the measured GFR. [18]",
+        "For acute volume-related deterioration, determine whether pulmonary congestion, severe hypertension, or both remain uncontrolled despite medical therapy. Uncontrolled volume status or blood pressure is a kidney replacement therapy indication when medical management cannot achieve a safe clinical state. [11][12][21]",
+        "When possible, start dialysis gently in severe uremia because rapid solute removal can precipitate dialysis disequilibrium syndrome. The need for urgent treatment should not be deferred because residual kidney function appears numerically higher than expected for dialysis. [18][20]"
+      ],
+      "bullets": [
+        "Assess mental status and examine for pericardial symptoms or effusion when encephalopathy, chest symptoms, or otherwise unexplained clinical deterioration occurs. [18]",
+        "Obtain serum potassium and bicarbonate promptly when weakness, arrhythmia concern, nausea, dyspnea, or altered mentation raises concern for electrolyte or acid-base complications. [18]",
+        "Assess weight trajectory, edema, blood pressure, and response to medical volume management before labeling fluid overload refractory. [11][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical triggers for dialysis escalation [11][18][21]",
+        "columns": [
+          "Clinical finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Uremic encephalopathy or symptomatic pericardial effusion",
+            "Uremic emergency [18]",
+            "Initiate immediate dialysis; avoid overly aggressive initial solute removal when feasible. [18]"
+          ],
+          [
+            "Hyperkalemia or metabolic acidosis refractory to medical therapy",
+            "Life-threatening metabolic indication [18]",
+            "Initiate immediate dialysis. [18]"
+          ],
+          [
+            "Volume overload or hypertension not controlled with medication",
+            "Refractory cardiorenal complication [11][21]",
+            "Initiate dialysis when medical therapy cannot establish safe volume status or blood pressure. [11][21]"
+          ],
+          [
+            "Progressive nutritional decline despite dietary intervention",
+            "Kidney-failure complication requiring reassessment of conservative management [11][12]",
+            "Initiate or intensify preparation for dialysis after excluding reversible contributors. [11][12][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-chronicity-and-assess-reversibility",
+      "eyebrow": "Initial assessment",
+      "heading": "Confirm kidney failure and exclude reversible contributors",
+      "intro": "Distinguish advanced chronic disease from superimposed acute injury and symptom mimics.",
+      "paragraphs": [
+        "Classify kidney failure at eGFR below 15 mL/min/1.73 m\u00b2, but establish whether the deterioration is chronic, acute, or acute-on-chronic before committing to long-term kidney replacement planning. CKD requires a structural or functional kidney abnormality present for more than 3 months; acute kidney injury is defined by a rise in serum creatinine rather than by a fixed eGFR category. [9][15]",
+        "For a patient with suspected uremic symptoms, obtain urinalysis with microscopy, hemoglobin, calcium, phosphate, parathyroid hormone, albumin, potassium, and bicarbonate to assess potentially actionable contributors to symptoms and kidney-failure complications. [18]",
+        "Do not equate fatigue, anorexia, nausea, pruritus, sleepiness, impaired concentration, weight loss, or poor energy automatically with uremia. Correct reversible causes and evaluate competing comorbid disease before dialysis is chosen principally for nonspecific symptoms. This distinction is especially important in severe chronic illness and cardiorenal syndrome, in which muscle wasting can make creatinine-based eGFR misleadingly high. [10][21]"
+      ],
+      "bullets": [
+        "Use eGFR plus urine protein or albumin quantification as the practical core of renal-function assessment. [17]",
+        "When creatinine- and cystatin C-based estimates disagree, body composition is extreme, or a high-stakes kidney replacement or drug-dosing decision depends on true filtration, obtain cystatin C-based assessment or measured GFR with an exogenous marker such as iohexol. [10]",
+        "For renal drug dosing, recognize that impaired filtration and tubular function prolong exposure to renally eliminated drugs and can cause bioaccumulation with repeated dosing. [1]"
+      ],
+      "subsections": [
+        {
+          "heading": "Interpret reduced GFR in clinical context",
+          "paragraphs": [
+            "An eGFR of 5-10 mL/min/1.73 m\u00b2 is a common, but not obligatory, range at which dialysis begins when clinical indications develop. In an asymptomatic patient, no absolute GFR mandates dialysis; conversely, refractory uremic symptoms, hyperkalemia, or volume overload justify dialysis even if eGFR is above that range. [11][20]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Testing that changes the interpretation of advanced CKD symptoms [10][17][18][21]",
+        "columns": [
+          "Problem",
+          "Test or assessment",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Possible uremic syndrome",
+            "Urinalysis with microscopy; hemoglobin, calcium, phosphate, parathyroid hormone, albumin, potassium, and bicarbonate [18]",
+            "Identify metabolic, hematologic, or urinary abnormalities that require targeted correction or support kidney-failure assessment. [18]"
+          ],
+          [
+            "eGFR likely biased by muscle wasting or unusual body composition",
+            "Cystatin C or measured GFR, including iohexol-based measurement when necessary [10]",
+            "Avoid misclassification and improve decisions about kidney replacement therapy or renally cleared drugs. [10]"
+          ],
+          [
+            "Nonspecific fatigue, anorexia, pruritus, or cognitive symptoms",
+            "Evaluate reversible causes and comorbid conditions before attributing symptoms to uremia [21]",
+            "Avoid dialysis initiation for symptoms that may not improve with kidney replacement therapy. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "choose-timing-of-maintenance-dialysis",
+      "eyebrow": "Timing",
+      "heading": "Initiate maintenance dialysis by clinical indication",
+      "intro": "Use symptom burden, refractory complications, nutritional trajectory, and patient goals.",
+      "paragraphs": [
+        "Initiate maintenance dialysis when one or more complications attributable to kidney failure persist despite conservative treatment: uremic symptoms or signs, acid-base or electrolyte abnormalities, inability to control volume status or blood pressure, progressive nutritional deterioration despite dietary intervention, or cognitive impairment. [11][12]",
+        "Avoid a preemptive eGFR-based start in otherwise asymptomatic advanced CKD. In a randomized trial of 828 stage 5 patients assigned to an early eGFR target of 10-15 versus a late target of 5-7 mL/min/1.73 m\u00b2, survival and adverse outcomes did not differ; patients assigned to later initiation often started earlier because of fluid overload or other complications. [14]",
+        "For patients without clear symptoms or refractory complications, continue close clinical surveillance and use shared decision-making rather than forcing dialysis at a fixed filtration threshold. NICE advises considering dialysis for the impact of uremic symptoms on daily living, biochemical abnormalities, uncontrollable fluid overload, or an eGFR of approximately 5-7 mL/min/1.73 m\u00b2 in the absence of symptoms. [11]"
+      ],
+      "bullets": [
+        "Document whether symptoms impair daily function and whether a reversible nonrenal cause has been addressed before offering dialysis principally for symptom relief. [11][21]",
+        "Track nutritional status longitudinally; progressive deterioration refractory to dietary intervention is a dialysis indication rather than a reason to wait for a lower eGFR. [11][12]",
+        "Reassess the treatment plan promptly after an unplanned hospitalization for fluid overload, hyperkalemia, acidosis, or uremic manifestations. [18][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Maintenance dialysis timing framework [11][12][14][20]",
+        "columns": [
+          "Clinical state",
+          "Dialysis timing",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "Asymptomatic advanced CKD without refractory metabolic or volume complication",
+            "Defer dialysis while preparing a kidney replacement plan and monitoring closely. [20]",
+            "No absolute GFR requires dialysis in the absence of clinical indications. [20]"
+          ],
+          [
+            "Persistent uremic manifestations, nutritional decline, cognitive impairment, or medically uncontrolled volume or blood pressure",
+            "Initiate maintenance dialysis. [11][12]",
+            "These are symptom- and complication-based indications for kidney replacement therapy. [11][12]"
+          ],
+          [
+            "eGFR approximately 5-7 mL/min/1.73 m\u00b2 without symptoms",
+            "Consider dialysis in the broader clinical context. [11]",
+            "This is a consideration threshold, not a replacement for clinical assessment. [11][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prepare-kidney-replacement-pathway",
+      "eyebrow": "Planned transition",
+      "heading": "Prepare modality, access, and conservative care before crisis",
+      "intro": "Advance planning reduces the need for emergent dialysis starts.",
+      "paragraphs": [
+        "At CKD stage 4, defined by eGFR 15-29 mL/min/1.73 m\u00b2, provide structured counseling on kidney transplantation, peritoneal dialysis, home hemodialysis, in-center hemodialysis, and conservative management. Include family members and caregivers when appropriate because modality decisions affect home support, logistics, and goals of care. [12][14]",
+        "For a patient choosing hemodialysis, discuss vascular access and obtain vein mapping during stage 4; vascular access is generally placed at that stage when dialysis is anticipated. For peritoneal dialysis, plan access months before kidney replacement is expected to avoid complications associated with an emergent start. [14][18]",
+        "Refer transplant-eligible patients for transplant evaluation during progressive CKD rather than waiting until dialysis dependence. In patients who are clear progressors, discussion of renal replacement options should begin in late stage 3, tailored to the individual trajectory and candidacy. [14]"
+      ],
+      "bullets": [
+        "Use the 4-variable Kidney Failure Risk Equation as an adjunct to eGFR and albuminuria when estimating the likelihood of kidney replacement therapy and structuring referral. [13][15]",
+        "A 5-year kidney replacement therapy risk greater than 5% is a specialist-referral criterion in NICE guidance, with comorbidities and patient wishes incorporated into the decision. [15]",
+        "If long-term conservative management is selected, continue active symptom assessment and revise the plan when refractory volume, metabolic, nutritional, or uremic complications emerge. [12][18]"
+      ],
+      "subsections": [
+        {
+          "heading": "Medication safety during transition",
+          "paragraphs": [
+            "Review all renally eliminated medications at each major decline in kidney function and before dialysis initiation. Reduced glomerular filtration and tubular function increase drug half-life and total exposure; mitigate accumulation by lowering the dose or reducing dosing frequency when supported by the individual drug regimen. [1]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Planned kidney-failure transition actions [12][14][15][18]",
+        "columns": [
+          "Timing or trigger",
+          "Action",
+          "Purpose"
+        ],
+        "rows": [
+          [
+            "CKD stage 4, eGFR 15-29 mL/min/1.73 m\u00b2",
+            "Counsel regarding transplant, peritoneal dialysis, home or in-center hemodialysis, and conservative management. [12]",
+            "Enable informed modality selection before urgent treatment is required. [12]"
+          ],
+          [
+            "Stage 4 with anticipated hemodialysis",
+            "Discuss access and obtain vein mapping; usually place vascular access at this stage. [14]",
+            "Reduce dependence on emergent dialysis access. [14]"
+          ],
+          [
+            "Progressive CKD with transplant candidacy",
+            "Refer for transplant-program consideration. [14]",
+            "Allow assessment before dialysis dependence. [14]"
+          ],
+          [
+            "4-variable KFRE 5-year risk greater than 5%",
+            "Refer for specialist assessment while considering wishes and comorbidities. [15]",
+            "Risk-based referral supplements eGFR and albuminuria assessment. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-complications-and-response",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor complications that drive dialysis decisions",
+      "intro": "Trend clinical status and correct reversible complications before escalating chronic therapy.",
+      "paragraphs": [
+        "At each advanced CKD review, reassess volume status, blood pressure, uremic symptom burden, cognition, dietary intake, weight trajectory, potassium, and bicarbonate. Dialysis decisions should follow failure to safely manage these abnormalities medically, not a single laboratory or eGFR value. [11][12][20]",
+        "Monitor hemoglobin, calcium, phosphate, parathyroid hormone, and albumin alongside potassium and bicarbonate when evaluating uremia or progression toward kidney replacement therapy. These measures help identify anemia, mineral-metabolic abnormalities, impaired nutrition, electrolyte derangement, and acid-base disturbance that may require targeted management or accelerate the need for dialysis. [18]",
+        "For anemia-related iron assessment, NICE recommends testing every 3 months, or every 1-3 months in people receiving hemodialysis. If available with sample processing within 6 hours, a hypochromic red-cell percentage above 6% supports iron deficiency assessment; otherwise, reticulocyte hemoglobin content below 29 pg or an equivalent assay may be used. [15]"
+      ],
+      "bullets": [
+        "Escalate the treatment plan when medical therapy no longer controls hyperkalemia, acidosis, hypertension, or volume overload. [11][18]",
+        "Reassess symptom attribution after correcting anemia, metabolic disturbances, and other reversible contributors; persistent symptoms that remain attributable to kidney failure support dialysis initiation. [18][21]",
+        "Repeat renal drug review when eGFR changes materially, during acute illness, and when starting medications with narrow therapeutic windows or critical renal elimination. [1][10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Longitudinal monitoring tied to management decisions [1][11][15][18]",
+        "columns": [
+          "Domain",
+          "Measure",
+          "Actionable interpretation"
+        ],
+        "rows": [
+          [
+            "Metabolic and acid-base status",
+            "Potassium and bicarbonate [18]",
+            "Refractory hyperkalemia or acidosis is an urgent dialysis indication. [18]"
+          ],
+          [
+            "Volume and blood pressure",
+            "Weight trajectory, examination, and blood pressure [11][21]",
+            "Failure of medical management to control volume or blood pressure supports dialysis initiation. [11][21]"
+          ],
+          [
+            "Nutrition and uremic burden",
+            "Dietary intake, weight loss, albumin, and cognitive or uremic symptom assessment [11][18]",
+            "Progressive deterioration despite intervention supports kidney replacement therapy. [11][12]"
+          ],
+          [
+            "Iron status in CKD anemia",
+            "Every 3 months; every 1-3 months during hemodialysis; % hypochromic red cells, reticulocyte hemoglobin content, or equivalent [15]",
+            "Use % hypochromic red cells above 6% when timely processing is available, or reticulocyte hemoglobin content below 29 pg when it is not. [15]"
+          ],
+          [
+            "Medication accumulation",
+            "Medication reconciliation and renal-function assessment [1]",
+            "Reduce dose or dosing frequency of inadequately cleared drugs as appropriate to limit bioaccumulation. [1]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Nonvitamin K Anticoagulant Agents in\u00a0Patients With Advanced Chronic Kidney\u00a0Disease or on Dialysis With AF",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.02.082",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Renal elimination of drugs occurs predominantly through glomerular filtration and occasionally through tubular secretion and reabsorption. When the glomerular filtration rate and tubular function are impaired by renal disease, the clearance of drugs eliminated by these mechanisms will be decreased, ",
+      "score": 0.2579197
+    },
+    {
+      "number": 2,
+      "title": "Hemodialysis vascular access flow surveillance",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jcma/_layouts/15/oaks.journals/downloadpdf.aspx?an=02118582-202511000-00004",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by TH Chen \u00b7 2025 \u00b7 Cited by 1 \u2014 Vascular access is the lifeline for patients with end-stage kidney dis- ease (ESKD) undergoing maintenance hemodialysis.",
+      "score": 0.47270843
+    },
+    {
+      "number": 3,
+      "title": "Advancing Transplantation : Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/transplantjournal/fulltext/2017/02001/advancing_transplantation__new_questions,_new.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "PROGRAF dose regimen may take several days before steady state is achieved. Most patients can be managed successfully if tacrolimus blood concentrations are maintained below 20 ng/mL. In clinical practice, whole blood trough levels have been 5-20 ng/mL in liver transplant recipients and 10-20 ng/mL ",
+      "score": 0.40825373
+    },
+    {
+      "number": 4,
+      "title": "Long\u2010Term Outcome Analysis of Peritoneal Dialysis... : Hemodialysis International",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/01052346-202510000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Long\u2010Term Outcome Analysis of Peritoneal Dialysis and Hemodialysis in Patients With End\u2010Stage Kidney Disease\n\n## A Real\u2010World Data Analysis\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\nwk-ovid-logo\nprivacy policy options",
+      "score": 0.26466635
+    },
+    {
+      "number": 5,
+      "title": "Chronic kidney disease\u2013mineral and bone disorder: conclusions from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S008525382400810X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "disease before ever progressing to kidney failure. Since 2019, large randomised trials have identified several effective treatments that both slow progressive kidney function decline and reduce cardiovascular risk, greatly expanding available treatments for chronic kidney disease. The wide range of ",
+      "score": 0.65359193
+    },
+    {
+      "number": 6,
+      "title": "Dialysis initiation, modality choice, access, and prescription: conclusions from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0085253819301383",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2023, Kidney International  Show abstract Individuals with kidney failure undergoing maintenance dialysis frequently report a high symptom burden that can interfere with functioning and diminish life satisfaction. Until recently, the focus of nephrology care for dialysis patients has been related pr",
+      "score": 0.53269315
+    },
+    {
+      "number": 7,
+      "title": "Chronic Kidney Disease-Mineral and Bone Disorder",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/chronic-kidney-disease-mineral-and-bone-disorder",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Summary: Chronic kidney disease mineral bone disorder (CKD-MBD) is common in end-stage renal disease and is associated with an increased risk of cardiovascular",
+      "score": 0.4896749
+    },
+    {
+      "number": 8,
+      "title": "Early Versus Late Initiation of Dialysis in CKD Stage 5",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468024924019508",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by EM Abdel-Rahman \u00b7 2025 \u00b7 Cited by 9 \u2014 Early initiation of dialysis fails to prolong survival in patients with end-stage renal failure ... patients with end-stage renal disease in China: a cohort study.",
+      "score": 0.27899823
+    },
+    {
+      "number": 9,
+      "title": "Imaging Patients with Kidney Failure",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/pdf/10.1148/rg.220116",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Chronic kidney disease affects approximately 15% of adults in the United States or nearly 37 million people (1). The Kid-ney Disease Improving Global Outcomes (KDIGO) practice guidelines define chronic kidney disease as abnormalities in kidney structure or function that are present for greater than ",
+      "score": 0.53968745
+    },
+    {
+      "number": 10,
+      "title": "Assessment of kidney function: clinical indications for measured GFR",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8323140",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  have severely reduced ejection fraction and here the exclusive use of creatinine-based methods has been found to be inaccurate for predicting eGFR . Kervella _et al._  found a substantially overestimated eGFR in a cohort of patients with cardiorenal syndrome, characterized as CHF leading to CKD,",
+      "score": 0.5354634
+    },
+    {
+      "number": 11,
+      "title": "Early Versus Late Initiation of Dialysis in CKD Stage 5: Time for a Consensus",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11725814",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "on an assessment of signs and/or symptoms associated with uremia, evidence of protein-energy wasting, and the ability to safely manage metabolic abnormalities and/or volume overload with medical therapy rather than on a specific level of kidney function in the absence of such signs and symptoms.KDIG",
+      "score": 0.52451706
+    },
+    {
+      "number": 12,
+      "title": "Hemodialysis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563296",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Kidney failure, defined by an estimated glomerular filtration rate below 15 mL/min/1.73 m\u00b2, represents the terminal stage of chronic kidney disease and requires renal replacement therapy or supportive care. Dialysis is a cornerstone treatment that removes metabolic waste products and excess fluid wh",
+      "score": 0.4813325
+    },
+    {
+      "number": 13,
+      "title": "Risk-based versus GFR threshold criteria for nephrology ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9613424",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A recent retrospective study  compared referral volume based on the estimated risk of kidney failure and laboratory criteria. About 18% of CKD patients met laboratory indications for referral (eGFR<30 mL/min/1.73 m 2), where most were not truly referred in the following year and the median 2-year ri",
+      "score": 0.45638612
+    },
+    {
+      "number": 14,
+      "title": "Chronic kidney disease in the elderly: evaluation and management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4291282",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In CKD patients who are clearly progressing, discussion about options in renal replacement therapy should start in late stage 3, depending on the individual patient. Referral to a transplant program is considered for those who are surgical candidates. In stage 4, for those electing dialysis, access ",
+      "score": 0.43640643
+    },
+    {
+      "number": 15,
+      "title": "Chronic kidney disease: assessment and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng203/chapter/recommendations",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Full details of the evidence and the committee's discussion are in evidence review I: eGFR threshold for the investigation of anaemia due to CKD.\n\n#### Diagnostic tests to determine iron status and predict response to iron therapy\n\n##### 1.7.3\n\nCarry out testing to diagnose iron deficiency and deter",
+      "score": 0.3446204
+    },
+    {
+      "number": 16,
+      "title": "When to initiate dialysis for end-stage kidney disease",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30208820",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by T Chen \u00b7 2018 \u00b7 Cited by 26 \u2014 ESKD-related symptoms and signs are the most common indications for dialysis initiation. Creatinine-based formulae to estimate glomerular",
+      "score": 0.33228928
+    },
+    {
+      "number": 17,
+      "title": "Renal Function Tests - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK507821",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Indications for assessing renal function vary, ranging from acute emergency to chronic settings. Primarily, renal function tests are performed to identify renal disease, determine appropriate patient management, and prevent further deterioration of renal function. Further indications in patients in ",
+      "score": 0.32530668
+    },
+    {
+      "number": 18,
+      "title": "Uremia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441859",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In addition, preparation for renal replacement therapy, such as hemodialysis or peritoneal dialysis access, should be initiated months before renal replacement is needed to avoid potential complications from emergently starting dialysis. Most studies show no improvement with initiating dialysis at h",
+      "score": 0.3231563
+    },
+    {
+      "number": 19,
+      "title": "Timing of Dialysis Initiation: What Has Changed Since ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0270929516301383",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by MB Rivara \u00b7 2017 \u00b7 Cited by 67 \u2014 The optimal timing of initiation of maintenance dialysis in patients with end-stage renal disease currently is unknown. This transition period is one of",
+      "score": 0.27217552
+    },
+    {
+      "number": 20,
+      "title": "Timing of Dialysis Initiation - What Has Changed Since IDEAL?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5407409",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and recommends that the decision to initiation maintenance dialysis should be based primarily upon assessment of specific complications of kidney disease, including signs and symptoms of uremia, protein-energy wasting, metabolic abnormalities, and volume overload, rather than based on a specific lev",
+      "score": 0.3431001
+    },
+    {
+      "number": 21,
+      "title": "Chinese Clinical Practice Guideline for the Management of \u201cCKD-PeriDialysis\u201d-the Periods Prior to and in the Early-Stage of Initial Dialysis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9782818",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1.2 The presence of one or more of the following uremic clinical manifestations is an indication to initiate emergency dialysis treatment:53, 54, 55\n\n1.2.1 Signs and symptoms, including neurological signs and symptoms caused by uremia, pericarditis, anorexia, refractory acid-base imbalance or electr",
+      "score": 0.32588568
+    },
+    {
+      "number": 22,
+      "title": "Assessment and management of heart failure in patients with chronic kidney disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10942934",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "| Biomarker | HF type | Prognosis | Cut-off | Cut-off adjusted according to eGFR |\n ---  --- \n| NT-ProBNP | AHF/CHF | Short- and long-term cardiovascular events and all-cause death | AHF: 300 pg/mL | As diagnostic value: |\n|  |  |  | CHF: 125 pg/mL | -AHF and CKD stage 3\u20135: 1200\u20136000 pg/mL |\n|  |  |",
+      "score": 0.32069415
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Nonvitamin K Anticoagulant Agents in\u00a0Patients With Advanced Chronic Kidney\u00a0Disease or on Dialysis With AF",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.02.082",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Renal elimination of drugs occurs predominantly through glomerular filtration and occasionally through tubular secretion and reabsorption. When the glomerular filtration rate and tubular function are impaired by renal disease, the clearance of drugs eliminated by these mechanisms will be decreased, ",
+      "score": 0.2579197
+    },
+    {
+      "number": 2,
+      "title": "Hemodialysis vascular access flow surveillance",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jcma/_layouts/15/oaks.journals/downloadpdf.aspx?an=02118582-202511000-00004",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by TH Chen \u00b7 2025 \u00b7 Cited by 1 \u2014 Vascular access is the lifeline for patients with end-stage kidney dis- ease (ESKD) undergoing maintenance hemodialysis.",
+      "score": 0.47270843
+    },
+    {
+      "number": 3,
+      "title": "Advancing Transplantation : Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/transplantjournal/fulltext/2017/02001/advancing_transplantation__new_questions,_new.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "PROGRAF dose regimen may take several days before steady state is achieved. Most patients can be managed successfully if tacrolimus blood concentrations are maintained below 20 ng/mL. In clinical practice, whole blood trough levels have been 5-20 ng/mL in liver transplant recipients and 10-20 ng/mL ",
+      "score": 0.40825373
+    },
+    {
+      "number": 4,
+      "title": "Long\u2010Term Outcome Analysis of Peritoneal Dialysis... : Hemodialysis International",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/01052346-202510000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Long\u2010Term Outcome Analysis of Peritoneal Dialysis and Hemodialysis in Patients With End\u2010Stage Kidney Disease\n\n## A Real\u2010World Data Analysis\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\nwk-ovid-logo\nprivacy policy options",
+      "score": 0.26466635
+    },
+    {
+      "number": 5,
+      "title": "Chronic kidney disease\u2013mineral and bone disorder: conclusions from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S008525382400810X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "disease before ever progressing to kidney failure. Since 2019, large randomised trials have identified several effective treatments that both slow progressive kidney function decline and reduce cardiovascular risk, greatly expanding available treatments for chronic kidney disease. The wide range of ",
+      "score": 0.65359193
+    },
+    {
+      "number": 6,
+      "title": "Dialysis initiation, modality choice, access, and prescription: conclusions from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0085253819301383",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2023, Kidney International  Show abstract Individuals with kidney failure undergoing maintenance dialysis frequently report a high symptom burden that can interfere with functioning and diminish life satisfaction. Until recently, the focus of nephrology care for dialysis patients has been related pr",
+      "score": 0.53269315
+    },
+    {
+      "number": 7,
+      "title": "Chronic Kidney Disease-Mineral and Bone Disorder",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/chronic-kidney-disease-mineral-and-bone-disorder",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Summary: Chronic kidney disease mineral bone disorder (CKD-MBD) is common in end-stage renal disease and is associated with an increased risk of cardiovascular",
+      "score": 0.4896749
+    },
+    {
+      "number": 8,
+      "title": "Early Versus Late Initiation of Dialysis in CKD Stage 5",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468024924019508",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by EM Abdel-Rahman \u00b7 2025 \u00b7 Cited by 9 \u2014 Early initiation of dialysis fails to prolong survival in patients with end-stage renal failure ... patients with end-stage renal disease in China: a cohort study.",
+      "score": 0.27899823
+    },
+    {
+      "number": 9,
+      "title": "Imaging Patients with Kidney Failure",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/pdf/10.1148/rg.220116",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Chronic kidney disease affects approximately 15% of adults in the United States or nearly 37 million people (1). The Kid-ney Disease Improving Global Outcomes (KDIGO) practice guidelines define chronic kidney disease as abnormalities in kidney structure or function that are present for greater than ",
+      "score": 0.53968745
+    },
+    {
+      "number": 10,
+      "title": "Assessment of kidney function: clinical indications for measured GFR",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8323140",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  have severely reduced ejection fraction and here the exclusive use of creatinine-based methods has been found to be inaccurate for predicting eGFR . Kervella _et al._  found a substantially overestimated eGFR in a cohort of patients with cardiorenal syndrome, characterized as CHF leading to CKD,",
+      "score": 0.5354634
+    },
+    {
+      "number": 11,
+      "title": "Early Versus Late Initiation of Dialysis in CKD Stage 5: Time for a Consensus",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11725814",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "on an assessment of signs and/or symptoms associated with uremia, evidence of protein-energy wasting, and the ability to safely manage metabolic abnormalities and/or volume overload with medical therapy rather than on a specific level of kidney function in the absence of such signs and symptoms.KDIG",
+      "score": 0.52451706
+    },
+    {
+      "number": 12,
+      "title": "Hemodialysis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563296",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Kidney failure, defined by an estimated glomerular filtration rate below 15 mL/min/1.73 m\u00b2, represents the terminal stage of chronic kidney disease and requires renal replacement therapy or supportive care. Dialysis is a cornerstone treatment that removes metabolic waste products and excess fluid wh",
+      "score": 0.4813325
+    },
+    {
+      "number": 13,
+      "title": "Risk-based versus GFR threshold criteria for nephrology ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9613424",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A recent retrospective study  compared referral volume based on the estimated risk of kidney failure and laboratory criteria. About 18% of CKD patients met laboratory indications for referral (eGFR<30 mL/min/1.73 m 2), where most were not truly referred in the following year and the median 2-year ri",
+      "score": 0.45638612
+    },
+    {
+      "number": 14,
+      "title": "Chronic kidney disease in the elderly: evaluation and management",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4291282",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In CKD patients who are clearly progressing, discussion about options in renal replacement therapy should start in late stage 3, depending on the individual patient. Referral to a transplant program is considered for those who are surgical candidates. In stage 4, for those electing dialysis, access ",
+      "score": 0.43640643
+    },
+    {
+      "number": 15,
+      "title": "Chronic kidney disease: assessment and management",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng203/chapter/recommendations",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Full details of the evidence and the committee's discussion are in evidence review I: eGFR threshold for the investigation of anaemia due to CKD.\n\n#### Diagnostic tests to determine iron status and predict response to iron therapy\n\n##### 1.7.3\n\nCarry out testing to diagnose iron deficiency and deter",
+      "score": 0.3446204
+    },
+    {
+      "number": 16,
+      "title": "When to initiate dialysis for end-stage kidney disease",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30208820",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "by T Chen \u00b7 2018 \u00b7 Cited by 26 \u2014 ESKD-related symptoms and signs are the most common indications for dialysis initiation. Creatinine-based formulae to estimate glomerular",
+      "score": 0.33228928
+    },
+    {
+      "number": 17,
+      "title": "Renal Function Tests - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK507821",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Indications for assessing renal function vary, ranging from acute emergency to chronic settings. Primarily, renal function tests are performed to identify renal disease, determine appropriate patient management, and prevent further deterioration of renal function. Further indications in patients in ",
+      "score": 0.32530668
+    },
+    {
+      "number": 18,
+      "title": "Uremia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441859",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In addition, preparation for renal replacement therapy, such as hemodialysis or peritoneal dialysis access, should be initiated months before renal replacement is needed to avoid potential complications from emergently starting dialysis. Most studies show no improvement with initiating dialysis at h",
+      "score": 0.3231563
+    },
+    {
+      "number": 19,
+      "title": "Timing of Dialysis Initiation: What Has Changed Since ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0270929516301383",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by MB Rivara \u00b7 2017 \u00b7 Cited by 67 \u2014 The optimal timing of initiation of maintenance dialysis in patients with end-stage renal disease currently is unknown. This transition period is one of",
+      "score": 0.27217552
+    },
+    {
+      "number": 20,
+      "title": "Timing of Dialysis Initiation - What Has Changed Since IDEAL?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5407409",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and recommends that the decision to initiation maintenance dialysis should be based primarily upon assessment of specific complications of kidney disease, including signs and symptoms of uremia, protein-energy wasting, metabolic abnormalities, and volume overload, rather than based on a specific lev",
+      "score": 0.3431001
+    },
+    {
+      "number": 21,
+      "title": "Chinese Clinical Practice Guideline for the Management of \u201cCKD-PeriDialysis\u201d-the Periods Prior to and in the Early-Stage of Initial Dialysis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9782818",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1.2 The presence of one or more of the following uremic clinical manifestations is an indication to initiate emergency dialysis treatment:53, 54, 55\n\n1.2.1 Signs and symptoms, including neurological signs and symptoms caused by uremia, pericarditis, anorexia, refractory acid-base imbalance or electr",
+      "score": 0.32588568
+    },
+    {
+      "number": 22,
+      "title": "Assessment and management of heart failure in patients with chronic kidney disease - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10942934",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "| Biomarker | HF type | Prognosis | Cut-off | Cut-off adjusted according to eGFR |\n ---  --- \n| NT-ProBNP | AHF/CHF | Short- and long-term cardiovascular events and all-cause death | AHF: 300 pg/mL | As diagnostic value: |\n|  |  |  | CHF: 125 pg/mL | -AHF and CKD stage 3\u20135: 1200\u20136000 pg/mL |\n|  |  |",
+      "score": 0.32069415
+    }
+  ],
+  "publishedAt": "2026-08-24T17:47:59.025721+00:00",
+  "updatedAt": "2026-08-24T17:47:59.025721+00:00",
+  "readingMinutes": 6,
+  "slug": "end-stage-renal-disease"
+}

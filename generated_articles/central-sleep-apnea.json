@@ -1,0 +1,689 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Sleep Medicine",
+  "title": "Central Sleep Apnea",
+  "summary": "Central sleep apnea requires phenotype confirmation and cause-directed management. Distinguish central from obstructive events on sleep testing, optimize heart failure or remove respiratory depressants, and avoid adaptive servo-ventilation in symptomatic heart failure with left ventricular ejection fraction 45% or less.",
+  "seoDescription": "Physician guide to central sleep apnea diagnosis, etiologic phenotyping, heart failure management, positive airway pressure selection, and ASV safety.",
+  "clinicalQuestion": "How should clinicians confirm, phenotype, and manage central sleep apnea while avoiding harmful therapy in systolic heart failure?",
+  "specialty": "Sleep Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "central sleep apnea",
+    "Cheyne-Stokes respiration",
+    "heart failure",
+    "adaptive servo-ventilation",
+    "phrenic nerve stimulation",
+    "opioid-induced central sleep apnea"
+  ],
+  "keyTakeaways": [
+    "Confirm central rather than obstructive sleep-disordered breathing with attended polysomnography when diagnostic certainty will affect device selection; central events have absent or inadequate respiratory effort. [3][5]",
+    "In heart failure, prioritize guideline-based optimization of the underlying cardiac disease before adding CSA-directed therapy. [3]",
+    "Do not use adaptive servo-ventilation for predominant CSA in chronic symptomatic heart failure with LVEF 45% or less: SERVE-HF reduced AHI but increased all-cause and cardiovascular mortality. [1][13][15]",
+    "Consider transvenous unilateral phrenic nerve stimulation for selected patients with persistent CSA when a device-based approach is appropriate; studies report lower CSA severity and improved sleep-related quality-of-life measures. [4][14][21]",
+    "Medication-induced CSA warrants a focused review of opioids and other respiratory-depressant exposures, because chronic opioid use is a recognized etiologic branch. [10][18]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-and-phenotype",
+      "eyebrow": "Diagnostic strategy",
+      "heading": "Confirm the event type before selecting therapy",
+      "intro": "PAP mode selection and safety depend on distinguishing central from obstructive events.",
+      "paragraphs": [
+        "Use sleep testing that records airflow, respiratory effort, oxygen saturation, and sleep state when possible to establish whether recurrent events occur with absent or insufficient ventilatory effort, the defining physiologic feature of CSA. In-laboratory polysomnography provides sleep staging and simultaneous respiratory measurements; ambulatory or unattended testing and overnight oximetry can support screening, but abbreviated recordings may miss obstructive events or incompletely characterize mixed disease. [3][5][8]",
+        "At the interpretation visit, classify the dominant pattern rather than treating the apnea-hypopnea index alone. Cheyne-Stokes respiration, awake periodic breathing, hyperventilation with hypocapnia, and periodic breathing during exercise point toward a heart-failure-associated high-loop-gain phenotype; persistent obstructive events require a different airway-directed approach. [3][11]",
+        "Obtain a focused etiologic history before prescribing a ventilatory device: chronic heart failure, opioid exposure, high-altitude exposure, and apparently idiopathic disease are recognized settings for central respiratory events. Medication-induced CSA is a distinct clinical entity; identify chronic opioid use specifically and reassess whether the exposure can be reduced, discontinued, or replaced in coordination with the prescribing clinician. [10][18]"
+      ],
+      "bullets": [
+        "Review prior echocardiography or obtain current left ventricular ejection fraction before considering adaptive servo-ventilation. An LVEF of 45% or less changes the safety decision. [13][15]",
+        "Ask about paroxysmal nocturnal dyspnea, witnessed apnea, frequent awakenings, daytime fatigue or hypersomnolence, and prior PAP treatment; in heart failure, these findings should prompt consideration of CSA/CSR and formal sleep evaluation. [3]",
+        "Do not infer CSA from nocturnal desaturation alone; use effort and airflow signals to distinguish central events from obstruction. [3][5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic phenotype directs the next diagnostic and therapeutic action. [3][10][11][18]",
+        "columns": [
+          "Phenotype",
+          "Discriminators",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Heart-failure-associated CSA/CSR",
+            "Heart failure, paroxysmal nocturnal dyspnea, atrial fibrillation or mitral regurgitation; awake CSR, exercise periodic breathing, hyperventilation with hypocapnia. [3]",
+            "Assess current LVEF and optimize heart-failure treatment; avoid ASV if LVEF is 45% or less. [3][13][15]"
+          ],
+          [
+            "Medication-induced CSA",
+            "Chronic opioid exposure is a recognized cause of CSA. [10][18]",
+            "Reconcile medications and pursue exposure reduction, discontinuation, or substitution when clinically feasible; reassess residual CSA after the causal intervention. [10][18]"
+          ],
+          [
+            "Mixed central and obstructive sleep-disordered breathing",
+            "Polysomnography identifies both central loss of effort and obstructive events with continued effort. [3][5]",
+            "Do not select CSA-directed therapy until the dominant event type and cardiac phenotype are established. [3][15]"
+          ],
+          [
+            "Non-heart-failure CSA",
+            "CSA can occur with high altitude or without an identified secondary cause. [18]",
+            "Individualize treatment to symptoms, oxygenation, comorbidity, and persistence after reversible causes are addressed. [5][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "heart-failure-associated-csa",
+      "eyebrow": "High-risk phenotype",
+      "heading": "Manage CSA in heart failure by treating the heart failure first",
+      "intro": "CSA in heart failure is both common and prognostically important.",
+      "paragraphs": [
+        "CSA occurs in approximately 35% of patients with heart failure across ejection-fraction categories, and estimates in HFrEF range from approximately 30% to 50%. In a patient with known heart failure and sleep-related symptoms or periodic breathing, establish the sleep phenotype and reassess cardiac status rather than attributing symptoms solely to congestion, insomnia, or obstructive apnea. [4][12]",
+        "Optimize guideline-based heart-failure management as the first therapeutic step for heart-failure-associated CSA. The AHA/ACCF statement lists optimization of heart-failure treatment, positive airway pressure, and supplemental oxygen among management options; the choice of any sleep-directed intervention should follow confirmation of central predominance and LVEF assessment. [3]",
+        "Treat awake or upright Cheyne-Stokes respiration as a marker of a higher-risk physiologic phenotype rather than a standalone target for empiric ventilatory escalation. In one heart-failure cohort assessed with brief supine and upright polygraphy, 14% had CSR that persisted upright, and upright CSR independently predicted 8-year mortality; this association supports careful heart-failure assessment and risk-oriented follow-up, not unproven treatment of the breathing pattern itself. [2]"
+      ],
+      "bullets": [
+        "Reassess rhythm history, especially atrial fibrillation, and structural contributors such as mitral regurgitation because both are associated with CSA/CSR in heart failure. [3]",
+        "If the study shows predominantly obstructive rather than central events, manage the obstructive phenotype rather than extrapolating the ASV safety signal to all sleep apnea in heart failure. [15]",
+        "Use follow-up sleep testing or device-derived respiratory data to verify suppression of clinically relevant events after a treatment change; improvement in AHI alone does not establish cardiovascular benefit. [1][13][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Heart-failure CSA treatment selection requires LVEF and event phenotype. [1][3][13][15]",
+        "columns": [
+          "Clinical finding",
+          "Management implication",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Predominant CSA with chronic symptomatic HF and LVEF 45% or less",
+            "Optimize heart-failure therapy; do not prescribe ASV. [3][13][15]",
+            "ASV lowered mean AHI to 6.6 events/hour at 12 months in SERVE-HF but did not improve the primary composite endpoint and increased all-cause and cardiovascular mortality. [1][13][15]"
+          ],
+          [
+            "Heart failure with suspected sleep apnea but uncertain event type",
+            "Perform diagnostic sleep evaluation that differentiates central from obstructive events before device choice. [3][5]",
+            "Ambulatory polygraphy may incompletely identify obstructive apnea compared with full polysomnography. [2][3]"
+          ],
+          [
+            "Persistent symptomatic CSA after cardiac optimization",
+            "Consider a phenotype-specific discussion of PAP, supplemental oxygen, or transvenous phrenic nerve stimulation. [3][4][14]",
+            "Clinical benefit should be judged by symptoms, sleep quality, and patient-centered outcomes, not AHI alone. [1][14][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "device-and-oxygen-therapy",
+      "eyebrow": "Therapy selection",
+      "heading": "Choose respiratory therapy by phenotype and cardiac safety",
+      "intro": "No device should be selected before the cause and LVEF are known.",
+      "paragraphs": [
+        "Positive airway pressure options for CSA include CPAP, bilevel PAP, and ASV, while supplemental oxygen is another noninvasive option in heart-failure-associated CSA. CPAP and bilevel PAP have been reported to be more effective than no treatment for CSA management in heart failure and opioid use, but modality choice should be individualized to the central phenotype, coexisting obstruction, tolerance, and cardiac safety profile. [3][14]",
+        "ASV delivers servo-controlled inspiratory pressure support on top of expiratory positive airway pressure and can markedly suppress central events. That physiologic efficacy must not be used as a surrogate for safety in HFrEF: in SERVE-HF, adults with LVEF 45% or less, NYHA class II-IV symptoms, AHI at least 15 events/hour, and predominantly central events had increased all-cause and cardiovascular mortality with ASV despite improved AHI. [1][13][15]",
+        "For persistent CSA in an appropriate candidate, transvenous unilateral phrenic nerve stimulation is an implantable alternative intended to restore a more physiologic nocturnal breathing pattern. Prospective data support feasibility and reduction in CSA severity, and subsequent reports describe improved sleep quality and quality of life regardless of prior PAP treatment or heart-failure status. Evaluate the procedural tradeoff against noninvasive options, ongoing device follow-up, and the patient\u2019s symptom burden. [4][14][21]"
+      ],
+      "bullets": [
+        "Before ASV, document that the patient does not meet the SERVE-HF high-risk profile of chronic symptomatic heart failure with LVEF 45% or less and predominant CSA. [13][15]",
+        "After any PAP or oxygen intervention, reassess residual respiratory events, nocturnal oxygenation, sleep continuity, daytime sleepiness, and adherence rather than relying on the prescription alone. [3][14]",
+        "Discuss phrenic nerve stimulation when CSA remains clinically consequential despite management of reversible drivers and when an implantable therapy is acceptable to the patient. [4][14][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "CSA-directed interventions have different mechanisms and safety constraints. [1][3][4][13][14][15][21]",
+        "columns": [
+          "Intervention",
+          "Potential role",
+          "Critical selection rule"
+        ],
+        "rows": [
+          [
+            "CPAP or bilevel PAP",
+            "Noninvasive options used in CSA, including heart-failure- and opioid-associated disease. [14]",
+            "Confirm the event phenotype and evaluate coexisting obstruction, treatment response, and adherence. [3][14]"
+          ],
+          [
+            "Supplemental oxygen",
+            "Listed as a treatment option for CSA in heart failure. [3]",
+            "Use with follow-up assessment of oxygenation and clinical response. [3]"
+          ],
+          [
+            "Adaptive servo-ventilation",
+            "Effectively suppresses CSA through variable inspiratory pressure support over expiratory positive airway pressure. [1][13]",
+            "Avoid in chronic symptomatic HF with LVEF 45% or less and predominant CSA because mortality increased in SERVE-HF. [1][13][15]"
+          ],
+          [
+            "Transvenous phrenic nerve stimulation",
+            "Implantable therapy that stimulates one phrenic nerve to restore nocturnal breathing; associated with lower CSA severity and improved sleep-related outcomes. [4][14][21]",
+            "Reserve for selected patients after etiologic evaluation and individualized procedural/device counseling. [4][14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "non-cardiac-and-medication-associated-csa",
+      "eyebrow": "Cause-directed care",
+      "heading": "Address medication and reversible etiologic drivers",
+      "intro": "Central events may resolve when the precipitating condition is corrected.",
+      "paragraphs": [
+        "For opioid-associated CSA, make medication reconciliation a treatment intervention rather than merely a documentation task. Determine the opioid agent, total daily exposure, timing relative to sleep, coadministration of other sedating drugs, and whether pain, palliative, or addiction-treatment goals permit dose reduction or substitution. Chronic opioid use is an established setting for CSA, and persistent sleep-related respiratory symptoms should be reassessed after the exposure strategy changes. [10][18]",
+        "For CSA occurring outside heart failure or opioid exposure, identify high-altitude exposure and consider whether central events persist after removal of a reversible trigger. Idiopathic CSA remains a diagnostic category only after clinically relevant secondary conditions have been considered; treatment decisions should be individualized because some CSA cases resolve spontaneously. [5][18]",
+        "Pharmacologic approaches, including acetazolamide, have been studied for CSA, including in heart failure, but the cited evidence base does not provide a dose or a routine first-line regimen. Do not extrapolate a drug dose from unrelated indications; use pharmacotherapy only with a defined phenotype, a specific therapeutic target, and planned follow-up of respiratory response and adverse effects. [18][19]"
+      ],
+      "bullets": [
+        "Repeat or review sleep testing after a reversible cause has been addressed when treatment escalation would otherwise involve long-term PAP, oxygen, or an implanted device. [5][10][18]",
+        "Do not assume a central pattern is permanent: spontaneous resolution has been reported in up to 20% of CSA cases, depending on the cause. [5]",
+        "When symptoms or central events persist despite cause-directed intervention, re-evaluate for unrecognized heart failure, mixed obstructive disease, or ongoing medication exposure before changing device modality. [3][10][18]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "monitoring-and-escalation",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor patient-centered response and escalate persistent disease",
+      "intro": "AHI reduction is useful but insufficient as the sole treatment endpoint.",
+      "paragraphs": [
+        "At follow-up, document treatment adherence, residual respiratory-event burden, nocturnal oxygenation, sleep disruption, and daytime sleepiness. A therapy that reduces AHI but fails to improve symptoms, sleep quality, or clinically meaningful outcomes should trigger reassessment of event classification, cardiac status, exposure to opioids or sedatives, and treatment tolerability. SERVE-HF demonstrates why normalized respiratory indices cannot substitute for safety and outcome assessment. [1][13][15]",
+        "Escalate to a sleep specialist and cardiology collaboration when CSA occurs with symptomatic heart failure, when CSR is observed awake or upright, when an implantable phrenic nerve stimulation system is being considered, or when mixed central-obstructive findings leave the optimal PAP strategy uncertain. Sleep testing should be reviewed at the signal level when the diagnosis determines whether ASV is excluded by LVEF. [2][3][13][15]",
+        "Counsel patients with heart failure explicitly that ASV is not a benign escalation for central events in the LVEF 45% or less population. In SERVE-HF, the primary composite outcome occurred in 54.1% of the ASV group and 50.8% of controls, while all-cause and cardiovascular mortality increased with ASV; avoid reassuring patients based solely on improved device-reported AHI. [1][13]"
+      ],
+      "bullets": [
+        "Recheck LVEF if heart-failure status has changed before revisiting a previously deferred ASV decision. [13][15]",
+        "For phrenic nerve stimulation, follow both device-related care and clinical outcomes including daytime sleepiness, arousal burden, sleep quality, and quality of life. [14][21]",
+        "Reassess central-event burden after heart-failure optimization or medication changes before committing to long-term device therapy. [3][10][18]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1506459",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Adaptive servo-ventilation had no significant effect on the primary end point in patients who had heart failure with reduced ejection fraction and predominantly central sleep apnea, but all-cause and cardiovascular mortality were both increased with this therapy. Adaptive servo-ventilation is a noni",
+      "score": 0.70871735
+    },
+    {
+      "number": 2,
+      "title": "Upright Cheyne-Stokes Respiration in Heart Failure: Look But Don\u2019t Touch\u2217",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.04.055",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The diagnosis of sleep apnea was made using ambulatory polygraphy, a cost-effective alternative to the gold standard in-laboratory polysomnography. They performed short-term polygraphy recordings during wakefulness: first over 15 min of supine rest and, if CSR was evident, subjects then underwent 15",
+      "score": 0.44565076
+    },
+    {
+      "number": 3,
+      "title": "Sleep Apnea and Cardiovascular Disease: An American Heart Association/American College of Cardiology Foundation Scientific Statement From the American Heart Association Council for High Blood Pressure Research Professional Education Committee, Council on Clinical Cardiology, Stroke Council, and Council on Cardiovascular Nursing In Collaboration With the National Heart, Lung, and Blood Institute National Center on Sleep Disorders Research (National Institutes of Health)",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.05.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 3. Central Sleep Apnea\n\nSigns, symptoms, and risk factors\nCongestive heart failure\nParoxysmal nocturnal dyspnea\nWitnessed apnea\nFatigue/hypersomnolence\nOther signs and symptoms include male gender, older age, mitral regurgitation, atrial fibrillation, CSR while awake, periodic ",
+      "score": 0.38964
+    },
+    {
+      "number": 4,
+      "title": "Phrenic Nerve Stimulation for the Treatment of Central Sleep Apnea | JACC: Heart Failure",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jchf.2014.12.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The aim of this study was to evaluate chronic, transvenous, unilateral phrenic nerve stimulation to treat central sleep apnea (CSA) in a prospective, multicenter, nonrandomized study. Central sleep apnea (CSA) occurs in approximately 35% of patients with heart failure regardless of ejection fraction",
+      "score": 0.5758033
+    },
+    {
+      "number": 5,
+      "title": "Central Sleep Apnea - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/central-sleep-apnea",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "apneas and hypopneas when compared to CPAP. This has been especially studied in patients with heart failure and Cheyne-Stokes breathing.87,88 Adaptive servoventilation has recently been suggested as a strategy for treating CSA, particularly Cheyne-Stokes breathing. The device provides a fixed end-ex",
+      "score": 0.54913354
+    },
+    {
+      "number": 6,
+      "title": "A State-of-the-Art Review on Sleep Apnea Syndrome and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002914923001029",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by F Piccirillo \u00b7 2023 \u00b7 Cited by 28 \u2014 Treatment with CPAP in patients with OSA and HF prevents episodes of apnea and hypopneas, reduces nocturnal blood pressure and heart rate, and\u00a0...Read more",
+      "score": 0.4977301
+    },
+    {
+      "number": 7,
+      "title": "A novel therapeutic approach for the treatment of central ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1553838914000888",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by R Germany \u00b7 2014 \u00b7 Cited by 5 \u2014 Central sleep apnea (CSA) A new therapy, the remed\u0113\u00ae System, providing phrenic nerve stimulation intended to restore a more normal breathing pattern. opioid-",
+      "score": 0.44956237
+    },
+    {
+      "number": 8,
+      "title": "Central Sleep Apnea Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/central-sleep-apnea-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Central sleep apnea syndrome (CSA) is defined as a condition characterized by a cessation or decrease of ventilatory effort during sleep, often associated",
+      "score": 0.35447827
+    },
+    {
+      "number": 9,
+      "title": "Treatment of Central Sleep Apnea Syndromes in Adults ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/35/1/17/2453874",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RN Aurora \u00b7 2012 \u00b7 Cited by 483 \u2014 Much of the evidence comes from investigations on CSAS related to congestive heart failure (CHF), but other subtypes of CSAS appear to respond to CPAP as well.",
+      "score": 0.4497074
+    },
+    {
+      "number": 10,
+      "title": "Medication-induced central sleep apnea - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/47/8/zsae119/7676264",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Baillieul \u00b7 2024 \u00b7 Cited by 3 \u2014 Central sleep apnea (CSA) in adults encompasses a group of sleep-related breathing disorders, Cheyne-Stokes Breathing. The most archetypical",
+      "score": 0.44825777
+    },
+    {
+      "number": 11,
+      "title": "Central sleep apnea: pathophysiologic classification",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article-pdf/doi/10.1093/sleep/zsac113/49453318/zsac113.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Javaheri \u00b7 2023 \u00b7 Cited by 103 \u2014 In some conditions, such as heart failure, central apneic events are due to transient inhibition of ventilatory motor output during sleep, owing",
+      "score": 0.44666424
+    },
+    {
+      "number": 12,
+      "title": "Current and future developments in the field of central sleep ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/18/8/1123/2467139",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Bekfani \u00b7 2016 \u00b7 Cited by 27 \u2014 Central sleep apnoea (CSA) occurs in \u223c30\u201350% of patients with heart failure (HF) with reduced left ventricular ejection fraction (LVEF) and in",
+      "score": 0.42663267
+    },
+    {
+      "number": 13,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed?term=10.1056%2FNEJMoa1506459",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PubMed\nFederal government websites often end in .gov or .mil. ## Save citation to file. # Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure. # Adaptive Servo-Ventilation for Central Sleep",
+      "score": 0.72465646
+    },
+    {
+      "number": 14,
+      "title": "Central Sleep Apnea - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK578199?report=printable",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Adaptive servo-ventilation (ASV) is a therapy modality that delivers servo-controlled inspiratory pressure support on top of expiratory positive airway pressure. A recent study in 2015 showed that in patients with heart failure with reduced EF, ASV was associated with increased all-cause and cardiov",
+      "score": 0.6994397
+    },
+    {
+      "number": 15,
+      "title": "Treatment of Sleep-Disordered Breathing With Predominant Central Sleep Apnea by Adaptive Servo-Ventilation in Patients With Heart Failure - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/clinical-trials/2015/08/31/10/22/serve-hf",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "References\n\n## Description:\n\nThe goal of the trial was to evaluate treatment with adaptive servo-ventilation among subjects with heart failure with reduced ejection fraction and central sleep apnea. Adaptive servo-ventilation uses inspiratory pressure support, plus expiratory positive airway pressur",
+      "score": 0.694241
+    },
+    {
+      "number": 16,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4779593",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Adaptive servo-ventilation had no significant effect on the primary end point in patients who had heart failure with reduced ejection fraction and predominantly central sleep apnea, but all-cause and cardiovascular mortality were both increased with this therapy. Adaptive servo-ventilation is a noni",
+      "score": 0.69024646
+    },
+    {
+      "number": 17,
+      "title": "ESC 365 - Main results of the soluble guanylate cyclase stimulator in patients with heart failure and preserved ejection fraction (SOCRATES-PRESERVED) study.\r\n\r\nPatient-reported outcomes in SOCRATES-PRESERVED  study.",
+      "detail": "esc365.escardio.org",
+      "url": "https://esc365.escardio.org/presentation/136195",
+      "authors": "esc365.escardio.org",
+      "host": "esc365.escardio.org",
+      "snippet": "Title: ESC 365 - Main results of the soluble guanylate cyclase stimulator in patients with heart failure and preserved ejection fraction (SOCRATES-PRESERVED) study.\r\n\r\nPatient-reported outcomes in SOCRATES-PRESERVED  study.\n##### Menu. #### Main results of the soluble guanylate cyclase stimulator in",
+      "score": 0.45536873
+    },
+    {
+      "number": 18,
+      "title": "Pharmacological treatment for central sleep apnoea in ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012922.pub2/pdf/full",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "by A Rocha \u00b7 2023 \u00b7 Cited by 14 \u2014 Central respiratory events may emerge from distinct conditions such as chronic heart failure (CHF), chronic abuse of opioids, idiopathic disease, and high",
+      "score": 0.53298485
+    },
+    {
+      "number": 19,
+      "title": "Pharmacological treatment for central sleep apnoea in adults",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012922.pub2/references",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Acetazolamide improves central sleep apnea in heart failure: a double-blind, prospective study. American Journal of Respiratory and Critical Care Medicine 2006;",
+      "score": 0.35300484
+    },
+    {
+      "number": 20,
+      "title": "\u65e0\u521b\u6b63\u538b\u901a\u6c14\u6cbb\u7597\u6210\u4eba\u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438\u6682\u505c",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012889.pub2/full/zh_HANS",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "\u7814\u7a76\u80cc\u666f. \u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438\u6682\u505c\uff08Central sleep apnoea, CSA\uff09\u7684\u7279\u70b9\u4e3a\u56e0\u547c\u5438\u4e2d\u67a2\u9a71\u52a8\u529f\u80fd\u5931\u8c03\u800c\u5bfc\u81f4\u7761\u7720\u671f\u95f4\u7684\u5f02\u5e38\u901a\u6c14\u6a21\u5f0f\u3002\u56e0\u6b64\uff0c\u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438",
+      "score": 0.30204147
+    },
+    {
+      "number": 21,
+      "title": "Multidimensional phenotyping to distinguish among central ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1389945724004611",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JL P\u00e9pin \u00b7 2024 \u00b7 Cited by 16 \u2014 Transvenous phrenic nerve stimulation improves central sleep apnea, sleep quality, and quality of life regardless of prior positive airway pressure treatment",
+      "score": 0.3460776
+    },
+    {
+      "number": 22,
+      "title": "Central sleep apnea and atrial fibrillation: A review on ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352906719302775",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AM Sanchez \u00b7 2020 \u00b7 Cited by 50 \u2014 ASV combined with OMT has demonstrated a reduction in arrhythmias, including AF when compared to OMT alone. \u2022. Better tolerated by patients compared to PAP as",
+      "score": 0.31643313
+    },
+    {
+      "number": 23,
+      "title": "Deciphering loop gain complexity: a primer for ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611124002956",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(CPAP) or oral appliances compared to those with normal LG, or they can be treated with specific drugs or combination therapies. Thus, understanding LG becomes paramount for precise assessment of OSA patients and is fundamental for optimizing a personalized and effective treatment approach. [...] 20",
+      "score": 0.15126614
+    },
+    {
+      "number": 24,
+      "title": "Sleep Deficiency in Obstructive Sleep Apnea",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/am/pii/S1556407X24000778",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by O Adekolu \u00b7 2024 \u00b7 Cited by 33 \u2014 Sleep deficiency in patients with obstructive sleep apnea includes abnormal quality, timing, and duration of sleep, and the presence of other sleep disorders.",
+      "score": 0.14153068
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1506459",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Adaptive servo-ventilation had no significant effect on the primary end point in patients who had heart failure with reduced ejection fraction and predominantly central sleep apnea, but all-cause and cardiovascular mortality were both increased with this therapy. Adaptive servo-ventilation is a noni",
+      "score": 0.70871735
+    },
+    {
+      "number": 2,
+      "title": "Upright Cheyne-Stokes Respiration in Heart Failure: Look But Don\u2019t Touch\u2217",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.04.055",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The diagnosis of sleep apnea was made using ambulatory polygraphy, a cost-effective alternative to the gold standard in-laboratory polysomnography. They performed short-term polygraphy recordings during wakefulness: first over 15 min of supine rest and, if CSR was evident, subjects then underwent 15",
+      "score": 0.44565076
+    },
+    {
+      "number": 3,
+      "title": "Sleep Apnea and Cardiovascular Disease: An American Heart Association/American College of Cardiology Foundation Scientific Statement From the American Heart Association Council for High Blood Pressure Research Professional Education Committee, Council on Clinical Cardiology, Stroke Council, and Council on Cardiovascular Nursing In Collaboration With the National Heart, Lung, and Blood Institute National Center on Sleep Disorders Research (National Institutes of Health)",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.05.002",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Open in Viewer\n\nTable 3. Central Sleep Apnea\n\nSigns, symptoms, and risk factors\nCongestive heart failure\nParoxysmal nocturnal dyspnea\nWitnessed apnea\nFatigue/hypersomnolence\nOther signs and symptoms include male gender, older age, mitral regurgitation, atrial fibrillation, CSR while awake, periodic ",
+      "score": 0.38964
+    },
+    {
+      "number": 4,
+      "title": "Phrenic Nerve Stimulation for the Treatment of Central Sleep Apnea | JACC: Heart Failure",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jchf.2014.12.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The aim of this study was to evaluate chronic, transvenous, unilateral phrenic nerve stimulation to treat central sleep apnea (CSA) in a prospective, multicenter, nonrandomized study. Central sleep apnea (CSA) occurs in approximately 35% of patients with heart failure regardless of ejection fraction",
+      "score": 0.5758033
+    },
+    {
+      "number": 5,
+      "title": "Central Sleep Apnea - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/central-sleep-apnea",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "apneas and hypopneas when compared to CPAP. This has been especially studied in patients with heart failure and Cheyne-Stokes breathing.87,88 Adaptive servoventilation has recently been suggested as a strategy for treating CSA, particularly Cheyne-Stokes breathing. The device provides a fixed end-ex",
+      "score": 0.54913354
+    },
+    {
+      "number": 6,
+      "title": "A State-of-the-Art Review on Sleep Apnea Syndrome and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002914923001029",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by F Piccirillo \u00b7 2023 \u00b7 Cited by 28 \u2014 Treatment with CPAP in patients with OSA and HF prevents episodes of apnea and hypopneas, reduces nocturnal blood pressure and heart rate, and\u00a0...Read more",
+      "score": 0.4977301
+    },
+    {
+      "number": 7,
+      "title": "A novel therapeutic approach for the treatment of central ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1553838914000888",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by R Germany \u00b7 2014 \u00b7 Cited by 5 \u2014 Central sleep apnea (CSA) A new therapy, the remed\u0113\u00ae System, providing phrenic nerve stimulation intended to restore a more normal breathing pattern. opioid-",
+      "score": 0.44956237
+    },
+    {
+      "number": 8,
+      "title": "Central Sleep Apnea Syndrome - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/central-sleep-apnea-syndrome",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Central sleep apnea syndrome (CSA) is defined as a condition characterized by a cessation or decrease of ventilatory effort during sleep, often associated",
+      "score": 0.35447827
+    },
+    {
+      "number": 9,
+      "title": "Treatment of Central Sleep Apnea Syndromes in Adults ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/35/1/17/2453874",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by RN Aurora \u00b7 2012 \u00b7 Cited by 483 \u2014 Much of the evidence comes from investigations on CSAS related to congestive heart failure (CHF), but other subtypes of CSAS appear to respond to CPAP as well.",
+      "score": 0.4497074
+    },
+    {
+      "number": 10,
+      "title": "Medication-induced central sleep apnea - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/47/8/zsae119/7676264",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Baillieul \u00b7 2024 \u00b7 Cited by 3 \u2014 Central sleep apnea (CSA) in adults encompasses a group of sleep-related breathing disorders, Cheyne-Stokes Breathing. The most archetypical",
+      "score": 0.44825777
+    },
+    {
+      "number": 11,
+      "title": "Central sleep apnea: pathophysiologic classification",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article-pdf/doi/10.1093/sleep/zsac113/49453318/zsac113.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by S Javaheri \u00b7 2023 \u00b7 Cited by 103 \u2014 In some conditions, such as heart failure, central apneic events are due to transient inhibition of ventilatory motor output during sleep, owing",
+      "score": 0.44666424
+    },
+    {
+      "number": 12,
+      "title": "Current and future developments in the field of central sleep ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/18/8/1123/2467139",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Bekfani \u00b7 2016 \u00b7 Cited by 27 \u2014 Central sleep apnoea (CSA) occurs in \u223c30\u201350% of patients with heart failure (HF) with reduced left ventricular ejection fraction (LVEF) and in",
+      "score": 0.42663267
+    },
+    {
+      "number": 13,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed?term=10.1056%2FNEJMoa1506459",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PubMed\nFederal government websites often end in .gov or .mil. ## Save citation to file. # Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure. # Adaptive Servo-Ventilation for Central Sleep",
+      "score": 0.72465646
+    },
+    {
+      "number": 14,
+      "title": "Central Sleep Apnea - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK578199?report=printable",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Adaptive servo-ventilation (ASV) is a therapy modality that delivers servo-controlled inspiratory pressure support on top of expiratory positive airway pressure. A recent study in 2015 showed that in patients with heart failure with reduced EF, ASV was associated with increased all-cause and cardiov",
+      "score": 0.6994397
+    },
+    {
+      "number": 15,
+      "title": "Treatment of Sleep-Disordered Breathing With Predominant Central Sleep Apnea by Adaptive Servo-Ventilation in Patients With Heart Failure - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/clinical-trials/2015/08/31/10/22/serve-hf",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "References\n\n## Description:\n\nThe goal of the trial was to evaluate treatment with adaptive servo-ventilation among subjects with heart failure with reduced ejection fraction and central sleep apnea. Adaptive servo-ventilation uses inspiratory pressure support, plus expiratory positive airway pressur",
+      "score": 0.694241
+    },
+    {
+      "number": 16,
+      "title": "Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4779593",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Adaptive servo-ventilation had no significant effect on the primary end point in patients who had heart failure with reduced ejection fraction and predominantly central sleep apnea, but all-cause and cardiovascular mortality were both increased with this therapy. Adaptive servo-ventilation is a noni",
+      "score": 0.69024646
+    },
+    {
+      "number": 17,
+      "title": "ESC 365 - Main results of the soluble guanylate cyclase stimulator in patients with heart failure and preserved ejection fraction (SOCRATES-PRESERVED) study.\r\n\r\nPatient-reported outcomes in SOCRATES-PRESERVED  study.",
+      "detail": "esc365.escardio.org",
+      "url": "https://esc365.escardio.org/presentation/136195",
+      "authors": "esc365.escardio.org",
+      "host": "esc365.escardio.org",
+      "snippet": "Title: ESC 365 - Main results of the soluble guanylate cyclase stimulator in patients with heart failure and preserved ejection fraction (SOCRATES-PRESERVED) study.\r\n\r\nPatient-reported outcomes in SOCRATES-PRESERVED  study.\n##### Menu. #### Main results of the soluble guanylate cyclase stimulator in",
+      "score": 0.45536873
+    },
+    {
+      "number": 18,
+      "title": "Pharmacological treatment for central sleep apnoea in ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012922.pub2/pdf/full",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "by A Rocha \u00b7 2023 \u00b7 Cited by 14 \u2014 Central respiratory events may emerge from distinct conditions such as chronic heart failure (CHF), chronic abuse of opioids, idiopathic disease, and high",
+      "score": 0.53298485
+    },
+    {
+      "number": 19,
+      "title": "Pharmacological treatment for central sleep apnoea in adults",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012922.pub2/references",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Acetazolamide improves central sleep apnea in heart failure: a double-blind, prospective study. American Journal of Respiratory and Critical Care Medicine 2006;",
+      "score": 0.35300484
+    },
+    {
+      "number": 20,
+      "title": "\u65e0\u521b\u6b63\u538b\u901a\u6c14\u6cbb\u7597\u6210\u4eba\u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438\u6682\u505c",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012889.pub2/full/zh_HANS",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "\u7814\u7a76\u80cc\u666f. \u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438\u6682\u505c\uff08Central sleep apnoea, CSA\uff09\u7684\u7279\u70b9\u4e3a\u56e0\u547c\u5438\u4e2d\u67a2\u9a71\u52a8\u529f\u80fd\u5931\u8c03\u800c\u5bfc\u81f4\u7761\u7720\u671f\u95f4\u7684\u5f02\u5e38\u901a\u6c14\u6a21\u5f0f\u3002\u56e0\u6b64\uff0c\u4e2d\u67a2\u6027\u7761\u7720\u547c\u5438",
+      "score": 0.30204147
+    },
+    {
+      "number": 21,
+      "title": "Multidimensional phenotyping to distinguish among central ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1389945724004611",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JL P\u00e9pin \u00b7 2024 \u00b7 Cited by 16 \u2014 Transvenous phrenic nerve stimulation improves central sleep apnea, sleep quality, and quality of life regardless of prior positive airway pressure treatment",
+      "score": 0.3460776
+    },
+    {
+      "number": 22,
+      "title": "Central sleep apnea and atrial fibrillation: A review on ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352906719302775",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by AM Sanchez \u00b7 2020 \u00b7 Cited by 50 \u2014 ASV combined with OMT has demonstrated a reduction in arrhythmias, including AF when compared to OMT alone. \u2022. Better tolerated by patients compared to PAP as",
+      "score": 0.31643313
+    },
+    {
+      "number": 23,
+      "title": "Deciphering loop gain complexity: a primer for ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611124002956",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "(CPAP) or oral appliances compared to those with normal LG, or they can be treated with specific drugs or combination therapies. Thus, understanding LG becomes paramount for precise assessment of OSA patients and is fundamental for optimizing a personalized and effective treatment approach. [...] 20",
+      "score": 0.15126614
+    },
+    {
+      "number": 24,
+      "title": "Sleep Deficiency in Obstructive Sleep Apnea",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/am/pii/S1556407X24000778",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by O Adekolu \u00b7 2024 \u00b7 Cited by 33 \u2014 Sleep deficiency in patients with obstructive sleep apnea includes abnormal quality, timing, and duration of sleep, and the presence of other sleep disorders.",
+      "score": 0.14153068
+    }
+  ],
+  "publishedAt": "2026-08-24T16:45:59.636583+00:00",
+  "updatedAt": "2026-08-24T16:45:59.636583+00:00",
+  "readingMinutes": 6,
+  "slug": "central-sleep-apnea"
+}

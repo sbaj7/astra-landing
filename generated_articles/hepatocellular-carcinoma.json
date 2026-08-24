@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hepatology Oncology",
+  "title": "Hepatocellular Carcinoma",
+  "summary": "Manage hepatocellular carcinoma through risk-based surveillance, multiphasic imaging diagnosis in at-risk livers, integrated tumor and hepatic-reserve staging, and multidisciplinary selection among resection, transplantation, ablation, locoregional therapy, radiation, and systemic therapy.",
+  "seoDescription": "Physician guide to hepatocellular carcinoma surveillance, LI-RADS diagnosis, staging, transplant selection, locoregional treatment, and systemic therapy.",
+  "clinicalQuestion": "How should physicians surveil, diagnose, stage, and select treatment for hepatocellular carcinoma?",
+  "specialty": "Hepatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hepatocellular carcinoma",
+    "HCC surveillance",
+    "LI-RADS",
+    "liver transplantation",
+    "TACE",
+    "locoregional therapy"
+  ],
+  "keyTakeaways": [
+    "Perform HCC surveillance with liver ultrasound plus alpha-fetoprotein every 6 months in at-risk patients; do not substitute CT or MRI for routine primary surveillance. [1][3]",
+    "For a suspicious surveillance finding, obtain multiphasic CT or multiphasic MRI; LI-RADS is intended for CT/MRI interpretation in patients with cirrhosis and supports standardized noninvasive diagnosis. [12][13][15]",
+    "Treatment selection requires parallel assessment of tumor burden and spread, hepatic reserve, portal hypertension, performance status, and transplant eligibility rather than tumor anatomy alone. [1][2][19]",
+    "Resection, transplantation, and percutaneous ablation are potentially curative options; TACE, TARE, SBRT, and systemic therapy are selected according to stage, liver function, vascular invasion, extrahepatic disease, and feasibility. [1][2][19][24]",
+    "Discuss complex cases in a multidisciplinary liver tumor board, particularly when downstaging, radiation, portal-vein tumor thrombus, minimally invasive surgery, or sequential locoregional and systemic treatment is being considered. [10][19]"
+  ],
+  "sections": [
+    {
+      "id": "surveillance-and-triggered-workup",
+      "eyebrow": "Detection",
+      "heading": "Who needs surveillance and what should trigger diagnostic imaging?",
+      "intro": "Use surveillance to identify tumors while curative treatment remains feasible.",
+      "paragraphs": [
+        "HCC usually develops in cirrhosis of any cause, but it can occur without cirrhosis, particularly in chronic hepatitis B virus infection and metabolic dysfunction-associated steatotic liver disease. Continue structured surveillance in patients with hepatitis C virus-related cirrhosis after virologic cure. [1][2][3]",
+        "Use liver ultrasound with alpha-fetoprotein (AFP) at 6-month intervals for primary surveillance in at-risk patients. CT and MRI are diagnostic and staging tests rather than routine first-line surveillance modalities. [1][3]",
+        "Do not interpret a normal AFP as exclusion of HCC. AFP-nonproducing HCC occurs, and AFP status may add prognostic and transplant-selection information only when integrated with radiologic and clinical assessment. [4]",
+        "When surveillance identifies a focal lesion or the clinical picture raises concern for HCC, proceed to dedicated multiphasic CT or multiphasic MRI rather than repeating routine ultrasound. Ultrasound performance is operator dependent and can be limited by inadequate liver visualization, making cross-sectional imaging especially important when surveillance quality is poor or a lesion is suspected. [8][15]"
+      ],
+      "bullets": [
+        "At each surveillance visit, document whether ultrasound visualization is technically adequate; impaired visualization should lower the threshold for diagnostic cross-sectional imaging after an abnormal or indeterminate examination. [8]",
+        "Use the same 6-month surveillance interval after hepatitis C cure when cirrhosis persists. [3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Surveillance-to-diagnostic transition for patients at risk of HCC. [1][3][8][15]",
+        "columns": [
+          "Clinical situation",
+          "Next test",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "At-risk patient without a known lesion",
+            "Ultrasound plus AFP every 6 months [1][3]",
+            "Continue surveillance while the patient remains an appropriate candidate for HCC-directed management. [1][3]"
+          ],
+          [
+            "Suspicious focal lesion or concerning surveillance result",
+            "Multiphasic CT or multiphasic MRI [15]",
+            "Apply standardized imaging interpretation and determine whether noninvasive HCC diagnosis is established. [12][13]"
+          ],
+          [
+            "Inadequate ultrasound visualization",
+            "Diagnostic cross-sectional imaging when clinical or surveillance concern persists [8][15]",
+            "Avoid reassurance based solely on technically limited ultrasound. [8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnosis-and-staging",
+      "eyebrow": "Diagnosis",
+      "heading": "Establish HCC diagnosis and stage both tumor and liver",
+      "intro": "Noninvasive imaging diagnosis applies only in the appropriate at-risk population.",
+      "paragraphs": [
+        "Use either multiphasic CT or multiphasic MRI for diagnostic evaluation because AASLD guidance recognizes similar diagnostic performance. Interpret studies with LI-RADS, which standardizes reporting and is applicable to multiphasic CT or MRI in patients with cirrhosis. [12][13][15]",
+        "Do not extrapolate LI-RADS-based noninvasive diagnostic conclusions to patients outside its intended high-risk population. In noncirrhotic patients, atypical lesions, and cases in which imaging cannot establish the diagnosis or would alter treatment selection, obtain multidisciplinary review and consider tumor biopsy. Updated EASL guidance emphasizes an expanding role for tumor biopsy in selected scenarios. [12][19]",
+        "Stage beyond lesion size and number. Determine intrahepatic tumor distribution, macrovascular invasion, extrahepatic spread, liver function, portal-hypertension consequences, performance status, and feasibility of curative therapy. BCLC stage links prognosis and treatment strategy from very early/early disease through intermediate, advanced, and end-stage disease. [2][10]",
+        "Treat portal-vein tumor thrombus as an advanced, high-complexity phenotype requiring careful multidisciplinary selection. Evidence supporting TACE plus durvalumab and bevacizumab or lenvatinib plus pembrolizumab in phase III trials does not directly establish benefit in portal-vein tumor thrombus because those trials excluded such patients. [7]"
+      ],
+      "bullets": [
+        "Document whether the patient is within a potentially curative pathway: resection, transplant, or local ablation. [1][2]",
+        "Before any arterial therapy, define vascular invasion and hepatic reserve because these features change procedure risk and treatment sequencing. [7][24]",
+        "Use tumor board review when imaging, pathology, transplant candidacy, liver function, and procedural feasibility point to different options. [10][19]"
+      ],
+      "subsections": [
+        {
+          "heading": "When pathology changes management",
+          "paragraphs": [
+            "Biopsy is most useful when imaging is indeterminate, the patient is outside a population in which imaging can establish HCC noninvasively, or histology could identify an alternative malignancy and redirect treatment. Avoid routine biopsy of an imaging-defined transplant candidate solely to confirm HCC, because biopsy has historically been avoided in transplant candidates. [12][17][19]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Decision domains that should accompany imaging diagnosis and BCLC-oriented treatment planning. [2][10][19]",
+        "columns": [
+          "Domain",
+          "Assess",
+          "Why it changes management"
+        ],
+        "rows": [
+          [
+            "Tumor extent",
+            "Solitary versus multifocal disease, size, vascular invasion, extrahepatic spread [2][10]",
+            "Separates potentially curative local treatment from locoregional or systemic strategies. [1][2]"
+          ],
+          [
+            "Liver reserve",
+            "Cirrhosis severity and functional reserve [1][2]",
+            "Constrains resection, embolotherapy, transplantation, and systemic-treatment tolerance. [1][24]"
+          ],
+          [
+            "Technical feasibility",
+            "Resectability, ablation access, arterial anatomy, radiation feasibility, transplant candidacy [1][19]",
+            "Determines which local modality can be delivered with acceptable morbidity. [19]"
+          ],
+          [
+            "Patient fitness",
+            "Performance status and competing vulnerability factors [10]",
+            "Identifies patients more likely to benefit from active anticancer therapy versus symptom-focused care. [2][10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "curative-intent-treatment",
+      "eyebrow": "Early Stage",
+      "heading": "Select resection, transplantation, or ablation for curative-intent treatment",
+      "intro": "Choose the curative modality that addresses both tumor control and the underlying liver disease.",
+      "paragraphs": [
+        "For very early or early HCC with good liver function, evaluate surgical resection first when adequate liver reserve and operative candidacy permit. BCLC stage 0-A identifies patients who may be surgical candidates, while selection must still account for hepatic function and postoperative decompensation risk. [2]",
+        "Evaluate liver transplantation when it can provide tumor control while replacing a cirrhotic liver at risk for decompensation and future tumors. Downstage selected tumors to within Milan criteria before wait-list inclusion; guideline-based reviews describe a 6-month interval after successful downstaging before listing. [9][19]",
+        "Use percutaneous local ablation as a curative alternative for small tumors when resection is unsuitable. Local ablation is an acceptable alternative to resection for HCC smaller than 3 cm in Child-Pugh A or B disease, whereas resection is preferred over ablation for resectable 3- to 5-cm tumors in Child-Pugh A liver function. [24]",
+        "Do not treat procedure selection as interchangeable. Resection may be favored for a resectable lesion in well-compensated liver disease, while transplantation addresses both tumor and liver failure risk; ablation may preserve parenchyma when surgical reserve is limited. Newer guidance also supports minimally invasive surgical approaches in selected patients. [19][24]"
+      ],
+      "bullets": [
+        "Refer a potentially transplant-eligible patient early, before locoregional treatment or progression forecloses a transplant pathway. [1][9]",
+        "Use locoregional therapy as a downstaging strategy when tumor burden initially exceeds transplant criteria but may become eligible after response. [9][19]",
+        "For a small lesion, choose between resection and ablation by integrating size, liver function, lesion access, and procedural risk rather than size alone. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Curative-intent treatment selection. [1][2][9][19][24]",
+        "columns": [
+          "Clinical pattern",
+          "Preferred strategic consideration",
+          "Key limitation or next step"
+        ],
+        "rows": [
+          [
+            "Very early or early HCC with good liver function",
+            "Assess for surgical resection. [2]",
+            "Confirm sufficient hepatic reserve and operative feasibility before proceeding. [2]"
+          ],
+          [
+            "Cirrhosis with tumor suitable for transplant pathway",
+            "Assess transplantation and use downstaging when needed to reach Milan criteria. [9][19]",
+            "Successful downstaging is followed by a 6-month interval before wait-list inclusion. [9]"
+          ],
+          [
+            "Small HCC smaller than 3 cm with Child-Pugh A/B disease",
+            "Consider local ablation when resection is unsuitable or less favorable. [24]",
+            "Ablation is an alternative, not an automatic replacement for resection. [24]"
+          ],
+          [
+            "Resectable 3- to 5-cm HCC with Child-Pugh A function",
+            "Favor resection over ablation. [24]",
+            "Reassess for recurrence and transplant implications within a longitudinal liver-cancer program. [1][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "locoregional-and-radiation-treatment",
+      "eyebrow": "Liver-Directed Therapy",
+      "heading": "Use locoregional therapy for unresectable liver-limited disease and treatment bridging",
+      "intro": "Match arterial and radiation therapies to tumor distribution, vascular anatomy, liver reserve, and treatment goal.",
+      "paragraphs": [
+        "For unresectable large or multifocal HCC without vascular invasion or extrahepatic spread and with satisfactory Child-Pugh A or B liver function, TACE is an established first-line locoregional option. Its mechanism combines selective arterial occlusion with high local chemotherapy delivery. [7][24]",
+        "Consider TARE and external-beam approaches such as SBRT when anatomy, tumor distribution, prior treatment, or embolization tolerance makes them preferable. Comparative safety data suggest TARE has the lowest complication rate among evaluated arterial approaches, while drug-eluting bead TACE had a better side-effect profile than conventional TACE except for fatigue. [18]",
+        "Use SBRT as a selected alternative or complement to established liver-directed modalities, not merely as salvage by default. Contemporary guidance recognizes expanding roles for internal and external radiation approaches and for transitions among surgery, locoregional therapy, and systemic treatment. [19]",
+        "Do not persist with repeated locoregional procedures when disease pattern, liver function, or treatment response indicates a shift to systemic treatment. The treatment plan should be reassessed after each modality based on viable tumor, new vascular invasion or spread, hepatic reserve, and candidacy for curative conversion or transplantation. [19]"
+      ],
+      "bullets": [
+        "Use TACE primarily for unresectable liver-confined, multifocal disease without vascular invasion or extrahepatic spread and with preserved enough liver function for embolization. [24]",
+        "Consider TARE when a lower procedure-complication profile is important in the modality comparison, while recognizing that individualized selection remains necessary. [18]",
+        "Use radiation planning as a multidisciplinary decision involving hepatology, interventional oncology, radiation oncology, surgery, and medical oncology. [19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Liver-directed modalities and their principal selection logic. [7][18][19][24]",
+        "columns": [
+          "Modality",
+          "Most relevant clinical use",
+          "Decision-limiting feature"
+        ],
+        "rows": [
+          [
+            "TACE",
+            "Unresectable large or multifocal HCC without vascular invasion or extrahepatic spread, with satisfactory Child-Pugh A/B function. [24]",
+            "Reconsider when vascular invasion, extrahepatic progression, worsening liver function, or inadequate response changes the therapeutic balance. [19][24]"
+          ],
+          [
+            "TARE",
+            "Selected liver-directed treatment when arterial therapy is appropriate and safety profile influences modality choice. [18]",
+            "Requires individualized assessment of anatomy, tumor distribution, and hepatic reserve. [19]"
+          ],
+          [
+            "SBRT",
+            "Selected alternative or complement to surgery and locoregional therapy. [19]",
+            "Requires radiation feasibility assessment and coordination with other treatment pathways. [19]"
+          ],
+          [
+            "Downstaging locoregional therapy",
+            "Patients initially beyond transplant criteria who may be brought within Milan criteria. [9][19]",
+            "Wait-list inclusion after successful downstaging includes a 6-month interval. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "advanced-disease-and-follow-up",
+      "eyebrow": "Advanced Disease",
+      "heading": "Transition to systemic therapy and monitor for treatment opportunity or liver failure",
+      "intro": "Advanced HCC requires systemic-treatment planning without losing reassessment for local control or transplant conversion.",
+      "paragraphs": [
+        "For advanced-stage HCC, use a multidisciplinary systemic-therapy strategy informed by performance status, liver function, macrovascular invasion, extrahepatic spread, prior liver-directed therapy, and bleeding or procedural risks. Current guidance highlights combination immunotherapies as a major component of contemporary advanced-stage management. [1][19][21]",
+        "Avoid applying trial results to portal-vein tumor thrombus without checking eligibility. EMERALD-1 reported progression-free survival benefit with TACE plus durvalumab and bevacizumab, and LEAP-012 reported similar benefit with TACE plus lenvatinib and pembrolizumab, but both trials excluded portal-vein tumor thrombus. [7]",
+        "For HCC with portal-vein tumor thrombus, recognize that multimodal regimens remain unsettled. A 2025 meta-analysis found better tumor response and survival with locoregional therapy added to targeted therapy plus immunotherapy than with targeted therapy plus immunotherapy alone; HAIC-based approaches were associated with better overall survival and radiotherapy-based approaches with better progression-free survival than TACE-based approaches. These findings require individualized interpretation because randomized multicenter trials are still needed to define optimal regimen and sequencing. [7]",
+        "After any treatment, reassess radiographic response, intrahepatic progression, vascular invasion, extrahepatic disease, liver function, functional status, and candidacy for the next treatment line. A radiologic complete response after combined locoregional therapy and immunotherapy can be durable in selected unresectable HCC cohorts, but observation after complete response should be applied within structured oncologic follow-up rather than presumed cure. [5]"
+      ],
+      "bullets": [
+        "At progression after locoregional therapy, determine whether progression is liver-limited and technically treatable or represents a systemic-treatment transition. [19]",
+        "In portal-vein tumor thrombus, avoid assuming TACE-based trial evidence applies when the pivotal combination trials excluded this population. [7]",
+        "For durable radiographic complete response after combination therapy, maintain surveillance because a watch-and-wait approach is supported by selected cohort data rather than a universal curative endpoint. [5]"
+      ],
+      "subsections": [
+        {
+          "heading": "When to prioritize symptom-focused care",
+          "paragraphs": [
+            "For end-stage disease or patients unable to tolerate anticancer treatment because of poor hepatic reserve or functional status, shift the treatment objective toward symptom control and goals-concordant care. BCLC stage D is the end-stage category, and patient vulnerability should be incorporated into treatment decisions alongside tumor stage. [2][10]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Advanced-disease reassessment framework. [2][5][7][10][19]",
+        "columns": [
+          "Finding during treatment",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "New macrovascular invasion or extrahepatic spread",
+            "Disease is no longer confined to a straightforward local-curative pathway. [2][10]",
+            "Reassess for systemic therapy and multidisciplinary treatment sequencing. [19][21]"
+          ],
+          [
+            "Portal-vein tumor thrombus",
+            "High-complexity subgroup not represented in EMERALD-1 or LEAP-012. [7]",
+            "Use individualized multidisciplinary planning; do not directly extrapolate excluded-trial populations. [7]"
+          ],
+          [
+            "Radiologic complete response after locoregional therapy plus immunotherapy",
+            "Durable survival has been reported in a selected cohort. [5]",
+            "Continue structured imaging follow-up and reassess promptly if viable tumor recurs. [5]"
+          ],
+          [
+            "Poor functional status or end-stage disease",
+            "Anticancer-treatment burden may exceed expected benefit. [2][10]",
+            "Prioritize symptom-directed and goals-concordant management. [2][10]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/369",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Singal AG, Llovet JM, Yarchoan M, et al. AASLD practice guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023 Dec 1;78(6):1922-65.Full text\n\nVogel A, Chan SL, Dawson LA, et al. Hepatocellular carcinoma: ESMO clinical practice guideline for diagnosis, treatmen",
+      "score": 0.8116913
+    },
+    {
+      "number": 2,
+      "title": "Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "www.bestpractice.bmj.com",
+      "url": "http://www.bestpractice.bmj.com/topics/en-gb/369",
+      "authors": "www.bestpractice.bmj.com",
+      "host": "www.bestpractice.bmj.com",
+      "snippet": "Title: Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice\n# Hepatocellular carcinoma. Hepatocellular carcinoma (HCC) usually arises in patients with liver cirrhosis due to any cause. Patients at risk of HCC should receive surveillance with an ultrasound of the liver and",
+      "score": 0.8098936
+    },
+    {
+      "number": 3,
+      "title": "Updated Practice Guidance on Diagnosis and Management of Hepatocellular Carcinoma | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/updated-practice-guidance-diagnosis-management-hepatocellular-carcinoma-nejm-jw.NA46564",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# Updated Practice Guidance on Diagnosis and Manage",
+      "score": 0.79522943
+    },
+    {
+      "number": 4,
+      "title": "Hepatocellular Carcinomas That Do Not Produce \u03b1- ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/2559966",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by VG Agopian \u00b7 2017 \u00b7 Cited by 101 \u2014 Stratifying patients with HCC by AFP status in addition to radiologic criteria may improve transplant candidate selection and prioritization.",
+      "score": 0.29527614
+    },
+    {
+      "number": 5,
+      "title": "Complete Response to Locoregional Therapy Plus Immunotherapy for Hepatocellular Carcinoma",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2824197",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Question**What are the long-term oncologic outcomes in patients with locally advanced hepatocellular carcinoma who are placed on a watch-and-wait protocol after achieving radiologic complete remission (CR) with combined locoregional therapy (LRT) and immunotherapy (IO)? **Importance**Previous stud",
+      "score": 0.78650844
+    },
+    {
+      "number": 6,
+      "title": "Characteristics and Survival Outcomes of Hepatocellular Carcinoma After the Fontan Operation",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2025.101646",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "This was a multicenter, retrospective case-control study of patients \u226518 years old with FC followed in participating centers of the Alliance for Adult Research in Congenital Cardiology between 2005 and 2021. HCC cases were identified by either histology (biopsy, hepatectomy, liver explant, or autops",
+      "score": 0.6369636
+    },
+    {
+      "number": 7,
+      "title": "Locoregional therapy combined with targeted therapy and immunotherapy for hepatocellular carcinoma with portal vein tumor thrombosis: a systematic review and meta-analysis | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-23027-6",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "TACE has long been the standard treatment for unresectable HCC, exerting anticancer effects through selective arterial occlusion and high-concentration chemotherapy delivery. Recent phase III trials support combining TACE with targeted therapy and immunotherapy for advanced HCC: EMERALD-1 demonstrat",
+      "score": 0.8652358
+    },
+    {
+      "number": 8,
+      "title": "The Diagnosis and Staging of Hepatocellular Carcinoma: A Review of Current Practices - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1089326124000862",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# The Diagnosis and Staging of Hepatocellular Carcinoma: A Review of Current Practices. The early detection and diagnosis of hepatocellular carcinoma (HCC) is a critical strategy that allows for greater access to curative treatments. Ultrasound (US) abdominal imaging, as a screening test for hepatoc",
+      "score": 0.8989177
+    },
+    {
+      "number": 9,
+      "title": "Review Article Hepatocellular carcinoma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0748798323009514",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Currently, EASL [7] and AASLD [11] guidelines recommend downstaging to within Milan criteria to be included on the waiting list for LT after a six-month",
+      "score": 0.8565368
+    },
+    {
+      "number": 10,
+      "title": "EASL Clinical Practice Guidelines on the management of hepatocellular carcinoma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S016882782402508X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Liver cancer is the third leading cause of cancer-related deaths worldwide, with hepatocellular carcinoma (HCC) accounting for approximately 90% of primary liver cancers. Advances in diagnostic and therapeutic tools, along with improved understanding of their application, are transforming patient tr",
+      "score": 0.8482825
+    },
+    {
+      "number": 11,
+      "title": "Hepatocellular carcinoma surveillance: Current challenges ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1665268125001607",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by J Pages \u00b7 2025 \u00b7 Cited by 4 \u2014 AASLD Guidelines for the Treatment of Hepatocellular Carcinoma 2017. ian clinical practice guideline for surveillance, diagnosis, staging and treatment of",
+      "score": 0.83932644
+    },
+    {
+      "number": 12,
+      "title": "Diagnostic Criteria and li- raDs for Hepatocellular Carcinoma",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/cld.1075",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by YT Lee \u00b7 2021 \u00b7 Cited by 64 \u2014 LI- RADS for diagnosis of HCC can be applied only to multiphasic CT or MRI performed in patients with cirrhosis.4,5",
+      "score": 0.7522497
+    },
+    {
+      "number": 13,
+      "title": "Surveillance and Diagnosis of Hepatocellular Carcinoma",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/cld.761",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Lim \u00b7 2019 \u00b7 Cited by 45 \u2014 The AASLD guidelines endorse the use of LI-RADS, a comprehensive system that aims to standardize the interpretation and reporting for",
+      "score": 0.63234437
+    },
+    {
+      "number": 14,
+      "title": "Diagnostic Performance of the 2018 EASL vs. LI\u2010RADS for ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jmri.28716",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Shin \u00b7 2023 \u00b7 Cited by 9 \u2014 LI-RADS for Hepatocellular Carcinoma Using CT and MRI: Data System (LI-RADS) for noninvasive-diagnosis of HCC. other non-invasive liver MRI",
+      "score": 0.55275756
+    },
+    {
+      "number": 15,
+      "title": "Diagnosis, Staging, and Management of Hepatocellular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.29913",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by JA Marrero \u00b7 2018 \u00b7 Cited by 5276 \u2014 The AASLD recommends diagnostic evaluation for HCC with either multiphase CT or multiphase MRI because of similar diagnostic performance",
+      "score": 0.5246632
+    },
+    {
+      "number": 16,
+      "title": "Biomarkers in Liver Transplantation for Hepatocellular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/apt.70793",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The use of biomarkers such as AFP, AFP-L3, and PIVKA-II has greatly improved posttransplantation survival in liver transplantation for HCC. In",
+      "score": 0.32798085
+    },
+    {
+      "number": 17,
+      "title": "Liver transplantation for hepatocellular carcinoma",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/lt.21326",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by F Durand \u00b7 2007 \u00b7 Cited by 52 \u2014 The transplant community has commonly believed that ultrasound (US)-guided biopsy should be avoided in candidates for transplantation with HCC. It has been.",
+      "score": 0.2837893
+    },
+    {
+      "number": 18,
+      "title": "Role of interventional oncology in hepatocellular carcinoma ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjr/article/95/1138/20220379/7451350",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by P Goyal \u00b7 2022 \u00b7 Cited by 17 \u2014 With regard to safety, TARE had the lowest complication rate, and with the exception of fatigue, DEB-TACE had a better side-effect profile compared to cTACE.",
+      "score": 0.5357549
+    },
+    {
+      "number": 19,
+      "title": "New EASL Clinical Practice Guidelines on Hepatocellular Carcinoma - EASL-The Home of Hepatology.",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/news/easl-cpgs-hcc",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Significant developments have shaped the field of HCC management since the previous guidelines in 2018. Surveillance has shifted towards more tailored approaches, utilising advanced imaging techniques to detect liver cancer at earlier stages. Diagnostics have benefited from standardisation through s",
+      "score": 0.8571119
+    },
+    {
+      "number": 20,
+      "title": "Comparison of international guidelines for noninvasive diagnosis of hepatocellular carcinoma: 2018 update - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/30759967",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Comparison of international guidelines for noninvasive diagnosis of hepatocellular carcinoma: 2018 update - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any infor",
+      "score": 0.81097376
+    },
+    {
+      "number": 21,
+      "title": "Management of Advanced Hepatocellular Carcinoma",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/OP-24-00872",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "European Association for the Study of the Liver: EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma. J Hepatol 69:182",
+      "score": 0.71377134
+    },
+    {
+      "number": 22,
+      "title": "Abbreviated\u2010protocol screening MRI vs. complete ...",
+      "detail": "uat.ajnr.org",
+      "url": "https://uat.ajnr.org/lookup/external-ref?access_num=10.1002%2Fjmri.26835&link_type=DOI",
+      "authors": "uat.ajnr.org",
+      "host": "uat.ajnr.org",
+      "snippet": "LI-RADS for CT diagnosis of hepatocellular carcinoma: Performance of major and ancillary features. Abdom Radiol (NY) 2019; 44: 517\u2013528",
+      "score": 0.55709904
+    },
+    {
+      "number": 23,
+      "title": "Phase 3 Validation of PAaM for Hepatocellular Carcinoma ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085%2824%2905660-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by N Fujiwara \u00b7 2025 \u00b7 Cited by 29 \u2014 Evidence supporting LI-RADS major features for CT- and MR imaging-based diagnosis of hepatocellular carcinoma: a systematic review Radiology.",
+      "score": 0.55362654
+    },
+    {
+      "number": 24,
+      "title": "Hong Kong Consensus Statements for the Management of Unresectable Hepatocellular Carcinoma - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5892367",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Hong Kong Consensus Statements for the Management of Unresectable Hepatocellular Carcinoma - PMC\nHCC is treated in Hong Kong by surgical approaches, including liver resection, liver transplantation, and local ablation, and nonsurgical approaches such as transcatheter arterial chemoembolizatio",
+      "score": 0.6964752
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/369",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Singal AG, Llovet JM, Yarchoan M, et al. AASLD practice guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023 Dec 1;78(6):1922-65.Full text\n\nVogel A, Chan SL, Dawson LA, et al. Hepatocellular carcinoma: ESMO clinical practice guideline for diagnosis, treatmen",
+      "score": 0.8116913
+    },
+    {
+      "number": 2,
+      "title": "Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice",
+      "detail": "www.bestpractice.bmj.com",
+      "url": "http://www.bestpractice.bmj.com/topics/en-gb/369",
+      "authors": "www.bestpractice.bmj.com",
+      "host": "www.bestpractice.bmj.com",
+      "snippet": "Title: Hepatocellular carcinoma - Symptoms, diagnosis and treatment | BMJ Best Practice\n# Hepatocellular carcinoma. Hepatocellular carcinoma (HCC) usually arises in patients with liver cirrhosis due to any cause. Patients at risk of HCC should receive surveillance with an ultrasound of the liver and",
+      "score": 0.8098936
+    },
+    {
+      "number": 3,
+      "title": "Updated Practice Guidance on Diagnosis and Management of Hepatocellular Carcinoma | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/updated-practice-guidance-diagnosis-management-hepatocellular-carcinoma-nejm-jw.NA46564",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "Copyright \u00a9 2026\n\nMassachusetts Medical Society.\n\nAll rights reserved, including those for text and data mining, AI training, and similar technologies.\n\nElectronic ISSN 3067-1876\n\nThe content of this site is intended for health care professionals.\n\n# Updated Practice Guidance on Diagnosis and Manage",
+      "score": 0.79522943
+    },
+    {
+      "number": 4,
+      "title": "Hepatocellular Carcinomas That Do Not Produce \u03b1- ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/2559966",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by VG Agopian \u00b7 2017 \u00b7 Cited by 101 \u2014 Stratifying patients with HCC by AFP status in addition to radiologic criteria may improve transplant candidate selection and prioritization.",
+      "score": 0.29527614
+    },
+    {
+      "number": 5,
+      "title": "Complete Response to Locoregional Therapy Plus Immunotherapy for Hepatocellular Carcinoma",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaoncology/fullarticle/2824197",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Question**What are the long-term oncologic outcomes in patients with locally advanced hepatocellular carcinoma who are placed on a watch-and-wait protocol after achieving radiologic complete remission (CR) with combined locoregional therapy (LRT) and immunotherapy (IO)? **Importance**Previous stud",
+      "score": 0.78650844
+    },
+    {
+      "number": 6,
+      "title": "Characteristics and Survival Outcomes of Hepatocellular Carcinoma After the Fontan Operation",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2025.101646",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "This was a multicenter, retrospective case-control study of patients \u226518 years old with FC followed in participating centers of the Alliance for Adult Research in Congenital Cardiology between 2005 and 2021. HCC cases were identified by either histology (biopsy, hepatectomy, liver explant, or autops",
+      "score": 0.6369636
+    },
+    {
+      "number": 7,
+      "title": "Locoregional therapy combined with targeted therapy and immunotherapy for hepatocellular carcinoma with portal vein tumor thrombosis: a systematic review and meta-analysis | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-23027-6",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "TACE has long been the standard treatment for unresectable HCC, exerting anticancer effects through selective arterial occlusion and high-concentration chemotherapy delivery. Recent phase III trials support combining TACE with targeted therapy and immunotherapy for advanced HCC: EMERALD-1 demonstrat",
+      "score": 0.8652358
+    },
+    {
+      "number": 8,
+      "title": "The Diagnosis and Staging of Hepatocellular Carcinoma: A Review of Current Practices - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1089326124000862",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# The Diagnosis and Staging of Hepatocellular Carcinoma: A Review of Current Practices. The early detection and diagnosis of hepatocellular carcinoma (HCC) is a critical strategy that allows for greater access to curative treatments. Ultrasound (US) abdominal imaging, as a screening test for hepatoc",
+      "score": 0.8989177
+    },
+    {
+      "number": 9,
+      "title": "Review Article Hepatocellular carcinoma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0748798323009514",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Currently, EASL [7] and AASLD [11] guidelines recommend downstaging to within Milan criteria to be included on the waiting list for LT after a six-month",
+      "score": 0.8565368
+    },
+    {
+      "number": 10,
+      "title": "EASL Clinical Practice Guidelines on the management of hepatocellular carcinoma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S016882782402508X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Liver cancer is the third leading cause of cancer-related deaths worldwide, with hepatocellular carcinoma (HCC) accounting for approximately 90% of primary liver cancers. Advances in diagnostic and therapeutic tools, along with improved understanding of their application, are transforming patient tr",
+      "score": 0.8482825
+    },
+    {
+      "number": 11,
+      "title": "Hepatocellular carcinoma surveillance: Current challenges ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1665268125001607",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by J Pages \u00b7 2025 \u00b7 Cited by 4 \u2014 AASLD Guidelines for the Treatment of Hepatocellular Carcinoma 2017. ian clinical practice guideline for surveillance, diagnosis, staging and treatment of",
+      "score": 0.83932644
+    },
+    {
+      "number": 12,
+      "title": "Diagnostic Criteria and li- raDs for Hepatocellular Carcinoma",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/cld.1075",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by YT Lee \u00b7 2021 \u00b7 Cited by 64 \u2014 LI- RADS for diagnosis of HCC can be applied only to multiphasic CT or MRI performed in patients with cirrhosis.4,5",
+      "score": 0.7522497
+    },
+    {
+      "number": 13,
+      "title": "Surveillance and Diagnosis of Hepatocellular Carcinoma",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/cld.761",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Lim \u00b7 2019 \u00b7 Cited by 45 \u2014 The AASLD guidelines endorse the use of LI-RADS, a comprehensive system that aims to standardize the interpretation and reporting for",
+      "score": 0.63234437
+    },
+    {
+      "number": 14,
+      "title": "Diagnostic Performance of the 2018 EASL vs. LI\u2010RADS for ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jmri.28716",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by J Shin \u00b7 2023 \u00b7 Cited by 9 \u2014 LI-RADS for Hepatocellular Carcinoma Using CT and MRI: Data System (LI-RADS) for noninvasive-diagnosis of HCC. other non-invasive liver MRI",
+      "score": 0.55275756
+    },
+    {
+      "number": 15,
+      "title": "Diagnosis, Staging, and Management of Hepatocellular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/hep.29913",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by JA Marrero \u00b7 2018 \u00b7 Cited by 5276 \u2014 The AASLD recommends diagnostic evaluation for HCC with either multiphase CT or multiphase MRI because of similar diagnostic performance",
+      "score": 0.5246632
+    },
+    {
+      "number": 16,
+      "title": "Biomarkers in Liver Transplantation for Hepatocellular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/apt.70793",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The use of biomarkers such as AFP, AFP-L3, and PIVKA-II has greatly improved posttransplantation survival in liver transplantation for HCC. In",
+      "score": 0.32798085
+    },
+    {
+      "number": 17,
+      "title": "Liver transplantation for hepatocellular carcinoma",
+      "detail": "aasldpubs.onlinelibrary.wiley.com",
+      "url": "https://aasldpubs.onlinelibrary.wiley.com/doi/pdf/10.1002/lt.21326",
+      "authors": "aasldpubs.onlinelibrary.wiley.com",
+      "host": "aasldpubs.onlinelibrary.wiley.com",
+      "snippet": "by F Durand \u00b7 2007 \u00b7 Cited by 52 \u2014 The transplant community has commonly believed that ultrasound (US)-guided biopsy should be avoided in candidates for transplantation with HCC. It has been.",
+      "score": 0.2837893
+    },
+    {
+      "number": 18,
+      "title": "Role of interventional oncology in hepatocellular carcinoma ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/bjr/article/95/1138/20220379/7451350",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by P Goyal \u00b7 2022 \u00b7 Cited by 17 \u2014 With regard to safety, TARE had the lowest complication rate, and with the exception of fatigue, DEB-TACE had a better side-effect profile compared to cTACE.",
+      "score": 0.5357549
+    },
+    {
+      "number": 19,
+      "title": "New EASL Clinical Practice Guidelines on Hepatocellular Carcinoma - EASL-The Home of Hepatology.",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/news/easl-cpgs-hcc",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Significant developments have shaped the field of HCC management since the previous guidelines in 2018. Surveillance has shifted towards more tailored approaches, utilising advanced imaging techniques to detect liver cancer at earlier stages. Diagnostics have benefited from standardisation through s",
+      "score": 0.8571119
+    },
+    {
+      "number": 20,
+      "title": "Comparison of international guidelines for noninvasive diagnosis of hepatocellular carcinoma: 2018 update - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/30759967",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Comparison of international guidelines for noninvasive diagnosis of hepatocellular carcinoma: 2018 update - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any infor",
+      "score": 0.81097376
+    },
+    {
+      "number": 21,
+      "title": "Management of Advanced Hepatocellular Carcinoma",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/OP-24-00872",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "European Association for the Study of the Liver: EASL Clinical Practice Guidelines: Management of hepatocellular carcinoma. J Hepatol 69:182",
+      "score": 0.71377134
+    },
+    {
+      "number": 22,
+      "title": "Abbreviated\u2010protocol screening MRI vs. complete ...",
+      "detail": "uat.ajnr.org",
+      "url": "https://uat.ajnr.org/lookup/external-ref?access_num=10.1002%2Fjmri.26835&link_type=DOI",
+      "authors": "uat.ajnr.org",
+      "host": "uat.ajnr.org",
+      "snippet": "LI-RADS for CT diagnosis of hepatocellular carcinoma: Performance of major and ancillary features. Abdom Radiol (NY) 2019; 44: 517\u2013528",
+      "score": 0.55709904
+    },
+    {
+      "number": 23,
+      "title": "Phase 3 Validation of PAaM for Hepatocellular Carcinoma ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085%2824%2905660-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by N Fujiwara \u00b7 2025 \u00b7 Cited by 29 \u2014 Evidence supporting LI-RADS major features for CT- and MR imaging-based diagnosis of hepatocellular carcinoma: a systematic review Radiology.",
+      "score": 0.55362654
+    },
+    {
+      "number": 24,
+      "title": "Hong Kong Consensus Statements for the Management of Unresectable Hepatocellular Carcinoma - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5892367",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Hong Kong Consensus Statements for the Management of Unresectable Hepatocellular Carcinoma - PMC\nHCC is treated in Hong Kong by surgical approaches, including liver resection, liver transplantation, and local ablation, and nonsurgical approaches such as transcatheter arterial chemoembolizatio",
+      "score": 0.6964752
+    }
+  ],
+  "publishedAt": "2026-08-24T17:07:04.280074+00:00",
+  "updatedAt": "2026-08-24T17:07:04.280074+00:00",
+  "readingMinutes": 7,
+  "slug": "hepatocellular-carcinoma"
+}

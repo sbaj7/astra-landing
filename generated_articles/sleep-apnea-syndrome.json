@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Sleep Medicine",
+  "title": "Sleep Apnea Syndrome",
+  "summary": "Confirm suspected obstructive sleep apnea with polysomnography or appropriate home testing, stratify severity by respiratory-event burden, and match treatment to anatomy, positive-airway-pressure tolerance, and cardiometabolic risk.",
+  "seoDescription": "Physician guide to diagnosing and managing obstructive sleep apnea with PSG or home testing, CPAP, oral appliances, and hypoglossal nerve stimulation.",
+  "clinicalQuestion": "How should physicians confirm, stratify, and select treatment for adult obstructive sleep apnea?",
+  "specialty": "Sleep Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "obstructive sleep apnea",
+    "OSA diagnosis",
+    "polysomnography",
+    "home sleep apnea testing",
+    "CPAP",
+    "hypoglossal nerve stimulation"
+  ],
+  "keyTakeaways": [
+    "Diagnose OSA when symptoms accompany an apnea-hypopnea index (AHI) or respiratory event index (REI) of at least 5 events/hour, or when AHI/REI is at least 15 events/hour regardless of symptoms. [4]",
+    "Use AHI/REI to grade OSA: mild 5 to <15, moderate 15 to 30, and severe >30 events/hour. [4]",
+    "CPAP improves sleep measures in patients with at least moderate OSA (AHI \u226515 events/hour) and remains the principal noninvasive treatment against which alternatives are considered. [3]",
+    "Consider hypoglossal nerve stimulation only after CPAP intolerance in carefully selected predominantly obstructive moderate-to-severe OSA; historical FDA criteria included AHI 15-65 events/hour, central/mixed events <25%, and BMI \u226432 kg/m\u00b2. [13]"
+  ],
+  "sections": [
+    {
+      "id": "diagnostic-confirmation",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm OSA with objective respiratory-event testing",
+      "intro": "Questionnaires can identify risk but do not establish the diagnosis.",
+      "paragraphs": [
+        "Obtain overnight multichannel polysomnography (PSG) or a home sleep apnea test (HSAT) when the clinical history suggests sleep-disordered breathing. PSG records sleep and physiologic channels including electroencephalography, airflow, respiratory effort, oxygenation, electrocardiography, body position, and potentially carbon dioxide monitoring; it remains the reference diagnostic study. [4][8]",
+        "Interpret the AHI or REI in the clinical context. OSA is diagnosed with nocturnal breathing disturbances or unexplained daytime sleepiness/fatigue plus AHI/REI \u22655 events/hour; an AHI/REI \u226515 events/hour establishes OSA even without symptoms. Classify 5 to <15 as mild, 15-30 as moderate, and >30 events/hour as severe. [4]",
+        "Use PSG rather than relying on a short-term screening technology when sleep staging, arousals, respiratory effort characterization, gas-exchange assessment, or differentiation from central sleep apnea is clinically important. HSAT is most useful in patients with high pretest probability of moderate-to-severe OSA; a non-diagnostic HSAT should not end evaluation when clinical suspicion remains high. [4][8]"
+      ],
+      "bullets": [
+        "Record the event phenotype: central and mixed events materially affect candidacy for hypoglossal nerve stimulation. [13]",
+        "Document oxygen metrics beyond AHI when available, including nadir oxygen saturation and percentage of sleep time with oxygen saturation <90%. [4]",
+        "Use a formal study rather than consumer or smart-bed output to establish diagnosis; investigational smart-bed algorithms have been evaluated against PSG but are not the diagnostic reference standard. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "AHI/REI thresholds used to diagnose and grade adult OSA. [4]",
+        "columns": [
+          "AHI or REI",
+          "Interpretation",
+          "Clinical consequence"
+        ],
+        "rows": [
+          [
+            "<5 events/hour",
+            "Does not meet the stated OSA threshold. [4]",
+            "If suspicion remains high, reassess study adequacy and alternative sleep-disordered breathing phenotypes. [4]"
+          ],
+          [
+            "\u22655 events/hour with compatible symptoms",
+            "OSA diagnosis. [4]",
+            "Grade severity and select therapy according to symptom burden, event pattern, and treatment feasibility. [4]"
+          ],
+          [
+            "5 to <15 events/hour",
+            "Mild OSA. [4]",
+            "Treat clinically consequential symptoms and relevant comorbidity after shared treatment selection. [4]"
+          ],
+          [
+            "15-30 events/hour",
+            "Moderate OSA. [4]",
+            "CPAP has demonstrated improvement in sleep measures in this severity range. [3][4]"
+          ],
+          [
+            ">30 events/hour",
+            "Severe OSA. [4]",
+            "Prioritize effective therapy and adherence assessment because untreated moderate-to-severe OSA is associated with adverse cardiovascular and mortality risk. [1][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-and-clinical-prioritization",
+      "eyebrow": "Risk Stratification",
+      "heading": "Identify patients in whom untreated OSA changes cardiovascular and perioperative management",
+      "intro": "Severity alone is insufficient; prioritize symptoms, hypoxemia, comorbidity, and upcoming procedural risk.",
+      "paragraphs": [
+        "Actively evaluate OSA in patients with cardiovascular disease, hypertension, heart failure, atrial fibrillation, coronary disease, or unexplained resistant cardiometabolic risk. OSA is associated with hypertension, cardiovascular disease, cognitive impairment, and metabolic abnormalities; recurrent upper-airway obstruction produces intermittent hypoxemia, hypercapnia, and sleep fragmentation. [10][11][14]",
+        "In patients with atrial fibrillation, maintain a low threshold for OSA evaluation because OSA-associated intermittent hypoxia, negative intrathoracic pressure, atrial stretch, neurohumoral activation, and coexisting hypertension/metabolic disease promote atrial remodeling and an arrhythmogenic substrate. [11]",
+        "During preoperative assessment, identify known or suspected OSA and communicate it to anesthesia and surgical teams. OSA is associated with increased perioperative risk, and anesthesiology guidance supports routine preoperative screening; perioperative planning should account for the patient's established airway-pressure treatment and postoperative respiratory risk. [20]"
+      ],
+      "bullets": [
+        "Escalate diagnostic and treatment urgency for excessive daytime sleepiness, moderate-to-severe event burden, substantial nocturnal desaturation, or high-risk cardiovascular disease. [1][4][10][12]",
+        "Document established PAP use before surgery and avoid treating a screening result as equivalent to an objectively confirmed diagnosis. [4][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    },
+    {
+      "id": "first-line-therapy",
+      "eyebrow": "Treatment",
+      "heading": "Use positive airway pressure as the primary therapy for clinically significant OSA",
+      "intro": "Treatment selection should favor the modality that controls events and the patient can use consistently.",
+      "paragraphs": [
+        "Offer continuous positive airway pressure (CPAP) for moderate OSA and severe OSA unless a contraindication or inability to tolerate therapy redirects management. CPAP improves sleep measures compared with control or sham therapy in patients with AHI \u226515 events/hour and relieves upper-airway obstruction, hypoxemia, and hypercapnia. [3][14]",
+        "At follow-up, obtain device data and address specific barriers rather than labeling a patient globally \u201cnonadherent.\u201d Review nightly use, residual respiratory events, mask leak, interface tolerance, and patient-reported sleepiness. Timely download review and targeted adjustments are identified as important steps for patients experiencing CPAP side effects. [21]",
+        "Use adjunctive risk-factor measures alongside device therapy when relevant: weight loss and avoidance of alcohol or sedatives are emphasized in OSA management. These measures do not replace objective reassessment when symptoms persist or when treatment efficacy is uncertain. [5]"
+      ],
+      "bullets": [
+        "If residual symptoms or events persist on CPAP, verify the treated event pattern before moving to surgical alternatives. [1][21]",
+        "If a patient cannot tolerate CPAP, document the intolerance and consider an oral mandibular advancement device or, in selected patients, hypoglossal nerve stimulation. [13][14]",
+        "Do not infer cardiovascular event reduction from symptomatic improvement alone; cardiovascular outcomes with hypoglossal nerve stimulation require further study. [1]"
+      ],
+      "subsections": [
+        {
+          "heading": "Oral appliance alternative",
+          "paragraphs": [
+            "A mandibular advancement device is a non-PAP alternative for selected OSA patients, particularly when CPAP cannot be tolerated. Comparative evidence evaluates MAD against CPAP, but CPAP directly corrects obstructive events and gas-exchange abnormalities; confirm effectiveness of an oral appliance with follow-up sleep testing when clinically needed. [14][16]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Practical treatment selection after objective OSA confirmation. [3][13][14][21]",
+        "columns": [
+          "Clinical scenario",
+          "Preferred next step",
+          "Key tradeoff or monitoring"
+        ],
+        "rows": [
+          [
+            "Moderate or severe OSA",
+            "Initiate CPAP. [3][4]",
+            "Review device downloads, residual events, leak, tolerance, and symptom response. [21]"
+          ],
+          [
+            "CPAP side effects or inadequate tolerance",
+            "Perform targeted PAP troubleshooting before abandoning therapy. [21]",
+            "Objective use and efficacy data distinguish interface or setting problems from treatment failure. [21]"
+          ],
+          [
+            "Persistent CPAP intolerance",
+            "Consider mandibular advancement device or evaluate candidacy for hypoglossal nerve stimulation. [13][14][16]",
+            "Alternative therapy requires selection by event phenotype, anatomy, and objective outcome testing. [13][21]"
+          ],
+          [
+            "Predominantly central or mixed respiratory events",
+            "Do not route directly to hypoglossal nerve stimulation. [13]",
+            "Historical HNS criteria required central and mixed apneas to comprise <25% of total AHI. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hypoglossal-nerve-stimulation",
+      "eyebrow": "Procedural Therapy",
+      "heading": "Select hypoglossal nerve stimulation only after structured CPAP failure assessment",
+      "intro": "Hypoglossal nerve stimulation is an implanted treatment for selected CPAP-intolerant obstructive disease.",
+      "paragraphs": [
+        "Refer for hypoglossal nerve stimulation (HNS) evaluation when moderate-to-severe OSA remains clinically important and CPAP is not tolerated. Historical FDA approval criteria for Inspire included AHI 15-65 events/hour, predominantly obstructive events with central and mixed apneas <25% of total AHI, and BMI \u226432 kg/m\u00b2. [13]",
+        "HNS electrically activates upper-airway musculature through hypoglossal nerve stimulation, addressing tongue-base contribution to upper-airway collapse. Pooled patient-level data showed clinically significant improvement in OSA severity, daytime sleepiness, and sleep-related quality of life, but evidence for cardiovascular end points remains incomplete. [1][18][19]",
+        "Use a longitudinal implant pathway rather than judging outcome immediately after surgery. A reported standardized pathway activates the device approximately 4 weeks after implantation, allows 6-8 weeks for accommodation and adjustments, then performs objective sleep testing; in-laboratory PSG for efficacy assessment and setting refinement is commonly scheduled about 12 weeks after activation. [21]"
+      ],
+      "bullets": [
+        "Before referral, verify that the diagnostic study documents predominantly obstructive rather than central sleep apnea. [13]",
+        "After activation, monitor comfort, adherence, patient-reported outcomes, and objective residual OSA; adjust therapy settings during the accommodation period. [21]",
+        "Treat HNS as an alternative to CPAP for selected patients, not as a universal first-line replacement for PAP. [13][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "HNS decision pathway and follow-up timing. [13][21]",
+        "columns": [
+          "Phase",
+          "Required decision",
+          "Timing"
+        ],
+        "rows": [
+          [
+            "Pre-referral",
+            "Confirm moderate-to-severe, predominantly obstructive OSA and document CPAP intolerance; assess whether historical AHI, central/mixed-event, and BMI criteria are met. [13]",
+            "Before implantation. [13]"
+          ],
+          [
+            "Post-implant activation",
+            "Activate the device and begin patient education and programmed therapy accommodation. [21]",
+            "Approximately 4 weeks after implantation. [21]"
+          ],
+          [
+            "Accommodation",
+            "Adjust settings and assess comfort, use, and symptomatic response. [21]",
+            "Approximately 6-8 weeks after activation. [21]"
+          ],
+          [
+            "Objective efficacy assessment",
+            "Perform sleep testing and refine settings based on residual OSA and treatment tolerance. [21]",
+            "Approximately 12 weeks after activation for in-laboratory PSG in the described pathway. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "longitudinal-monitoring",
+      "eyebrow": "Follow-up",
+      "heading": "Measure treatment efficacy with objective data and clinical response",
+      "intro": "Persistent symptoms require reassessment of residual respiratory events, treatment use, and alternate sleep pathology.",
+      "paragraphs": [
+        "For CPAP, use device download data to evaluate actual use, residual events, and leak, then make targeted interface or treatment adjustments. For HNS, pair adherence and symptom assessment with post-activation sleep testing to determine whether programmed stimulation adequately reduces OSA. [21]",
+        "When repeat testing is performed, interpret results with awareness of how the study was obtained. In HNS cohorts, 12-month AHI results have differed depending on whether testing used an untreated-setting sleep study versus a titration study segment at optimal stimulation parameters; efficacy testing should therefore be clinically interpretable and linked to the device settings used. [1]",
+        "Continue management of associated cardiovascular disease and hypertension rather than assuming OSA therapy alone resolves risk. Severe untreated OSA has been associated with cardiovascular mortality in women, while adequate CPAP treatment may reduce that risk; causal cardiovascular benefit remains an area requiring patient-specific interpretation. [12]"
+      ],
+      "bullets": [
+        "Repeat objective testing after HNS programming to guide setting refinement. [21]",
+        "Reconsider central sleep apnea or another sleep disorder when obstructive-event control does not explain persistent symptoms. [4][13]",
+        "Track daytime sleepiness and sleep-related quality of life alongside physiologic endpoints, particularly after HNS. [1][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "",
+        "columns": [],
+        "rows": []
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Evaluation of Hypoglossal Nerve Stimulation Treatment in Obstructive Sleep Apnea",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaotolaryngology/fullarticle/2751546",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Conclusions and Relevance**Hypoglossal nerve stimulation demonstrated clinically significant improvements in obstructive sleep apnea severity, daytime sleepiness, and sleep-related quality of life in this pooled cohort of patient-level results. This was a pooled analysis of all available patient-l",
+      "score": 0.63125396
+    },
+    {
+      "number": 2,
+      "title": "Treatment of Anemia in Patients With Heart Disease",
+      "detail": "annals.org",
+      "url": "https://annals.org/article.aspx?articleid=1784292",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 2013 \u00b7 Cited by 216 \u2014 Effect of non\u2010invasive neuroelectric stimulation of oral cavity for obstructive sleep apnoea: A systematic review. Muhammad Ozair Awan,; Aahan",
+      "score": 0.52203226
+    },
+    {
+      "number": 3,
+      "title": "Management of Obstructive Sleep Apnea in Adults",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/fullarticle/1742606/management%20-obstructive-sleep-apnea-adults-clinical-practice%20-guideline-from-american",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 Cited by 612 \u2014 CPAP improves sleep measures compared with control or sham devices in patients with at least moderate OSA (AHI score \u226515 events/h), there was",
+      "score": 0.4611872
+    },
+    {
+      "number": 4,
+      "title": "Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000988",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "OSA is often suspected on the basis of symptoms and confirmed with diagnostic testing (Figure 1). Diagnostic testing can be performed by overnight in-laboratory, multichannel polysomnography, or home sleep apnea tests. Diagnosis requires the patient to have (1) reported nocturnal breathing disturban",
+      "score": 0.82895297
+    },
+    {
+      "number": 5,
+      "title": "Obstructive Sleep Apnea Diagnosis and Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/obstructive-sleep-apnea-diagnosis-and-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Obstructive sleep apnoea (OSA) is a highly prevalent disorder in which repetitive collapse of the upper airway during sleep leads to apnoea and hypopnoea, intermittent hypoxia and sleep fragmentation. Risk factors include obesity, craniofacial anatomy, neuromuscular tone and fluid redistribution. Th",
+      "score": 0.7882741
+    },
+    {
+      "number": 6,
+      "title": "Towards automatic home-based sleep apnea estimation using deep learning",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-024-01139-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Typically, the diagnosis and detection of sleep apnea and hypopnea are based on polysomnography (PSG) tests conducted in a sleep facility or at home5.\"). PSG requires the overnight recording and monitoring of several physiological signals, including electroencephalogram (EEG), electrocardiogram (ECG",
+      "score": 0.72814995
+    },
+    {
+      "number": 7,
+      "title": "Diagnosis of Obstructive Sleep Apnea in Adults",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/M12-3187",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by A Qaseem \u00b7 2014 \u00b7 Cited by 444 \u2014 Polysomnography and portable monitors measure or estimate the apnea\u2013hypopnea index (AHI), a measure of the number of apnea or hypopnea events per hour during.",
+      "score": 0.6638657
+    },
+    {
+      "number": 8,
+      "title": "Validating a smart bed against polysomnography for sleep apnea detection | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-07336-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Currently, the diagnosis of OSA primarily relies on in-laboratory PSG, regarded as the gold standard, despite its inconvenience and requirement for specialized technical personnel10, 479\u2013504 (2017).\"),11, 463\u2013469 (1995).\"). Home sleep apnea tests (HSATs) offer a more convenient alternative, and thei",
+      "score": 0.6490677
+    },
+    {
+      "number": 9,
+      "title": "Whom to Screen and How to Screen for Obstructive Sleep ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.122.060899",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The diagnosis of OSA requires a threshold frequency of respiratory events (respiratory disturbance index) of \u22655 events per hour on a sleep",
+      "score": 0.62248284
+    },
+    {
+      "number": 10,
+      "title": "Diagnosis of Obstructive Sleep Apnea in Adults: A Clinical ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/fullarticle/1892620/diagnosis-obstructive-sleep-apnea-adults-clinical-practice-guideline-from-american",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 2014 \u00b7 Cited by 444 \u2014 OSA is associated with adverse clinical outcomes, including cardiovascular disease (5\u20138); hypertension (9\u201311); cognitive impairment and metabolic abnormalities,",
+      "score": 0.6063825
+    },
+    {
+      "number": 11,
+      "title": "Obstructive sleep apnea -related hypertension: a review of the literature and clinical management strategy | Hypertension Research",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41440-024-01852-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Obstructive sleep apnea (OSA) is characterized by recurrent episodes of complete or partial collapse of the upper airway during sleep, resulting in apnea or hypopnea, and is recognized as an independent risk factor for cardiovascular disease such as hypertension, heart failure, arrhythmia, and coron",
+      "score": 0.5829428
+    },
+    {
+      "number": 12,
+      "title": "Cardiovascular Mortality in Women With Obstructive Sleep ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/article/1033296/cardiovascular-mortality-women-obstructive-sleep-apnea-without-continuous-positive-airway",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by F Campos-Rodriguez \u00b7 2012 \u00b7 Cited by 530 \u2014 Severe OSA is associated with cardiovascular death in women, and adequate CPAP treatment may reduce this risk. Maternal and fetal outcomes in",
+      "score": 0.3546794
+    },
+    {
+      "number": 13,
+      "title": "Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OSA \u2013 Overview of Treatment, Including Diagnostic and Patient Criteria and Procedural Terminology Codes - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369221010667",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OSA \u2013 Overview of Treatment, Including Diagnostic and Patient Criteria and Procedural Terminology Codes - ScienceDirect\n# Education and Clinical Practice: CHEST Reviews Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OS",
+      "score": 0.86358756
+    },
+    {
+      "number": 14,
+      "title": "Continuous positive airway pressure versus mandibular advancement device in the treatment of obstructive sleep apnea: a systematic review and meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1389945720301271",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Continuous positive airway pressure versus mandibular advancement device in the treatment of obstructive sleep apnea: a systematic review and meta-analysis - ScienceDirect\n# Review Article Continuous positive airway pressure *versus* mandibular advancement device in the treatment of obstructi",
+      "score": 0.818055
+    },
+    {
+      "number": 15,
+      "title": "Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369225051608",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA - ScienceDirect\n# Sleep: Original Research Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA. Hypoglossal nerve stimulation (HNS) to treat OSA currently requires placement of ",
+      "score": 0.7140107
+    },
+    {
+      "number": 16,
+      "title": "Sleep apnea and prosthodontic implications",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jips/fulltext/2020/20040/sleep_apnea_and_prosthodontic_implications.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by NG Chander \u00b7 2020 \u00b7 Cited by 1 \u2014 Clinical practice guideline for the treatment of obstructive sleep apnea and snoring with oral appliance therapy: An update for 2015 J Clin Sleep Med.",
+      "score": 0.7023877
+    },
+    {
+      "number": 17,
+      "title": "Sleep Disorders in Childhood",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2023/08000/sleep_disorders_in_childhood.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n40.\n\nSocarras MA, Landau BP, Durr ML. Diagnostic techniques and surgical outcomes for persistent pediatric obstructive sleep apnea after adenotonsillectomy: A systematic review and meta-analysis. _Int J Pediatr Otorhinolaryngol_ 2019;121:179\u2013187.\n\nCrossref\n\nGoogle Scholar\n\n",
+      "score": 0.64880073
+    },
+    {
+      "number": 18,
+      "title": "Physiology of hypoglossal nerve stimulation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1043181015000391",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2020, Frontiers in Pediatrics  Show abstract Non-invasive ventilation (NIV) and continuous positive airway pressure (CPAP) are effective treatments for children with severe sleep disordered breathing (SBD). However, some patients may present too severe SDB that do not respond to NIV/CPAP or insuffic",
+      "score": 0.59089786
+    },
+    {
+      "number": 19,
+      "title": "Upper airway muscles: influence on obstructive...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-pulmonarymedicine/fulltext/2021/11000/upper_airway_muscles__influence_on_obstructive.4.aspx?Ppt=Article%7Cco-pulmonarymedicine%3A2021%3A11000%3A00004%7C10.1097%2Fmcp.0000000000000818%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Among the nonpharmacological treatments, hypoglossal nerve stimulation aims to increase upper airway muscle phasic activity during sleep through electrical",
+      "score": 0.52612424
+    },
+    {
+      "number": 20,
+      "title": "A Systemic Review of Obstructive Sleep Apnea and... : Anesthesia & Analgesia",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/anesthesia-analgesia/fulltext/10.1213/ane.0b013e318187c83a~a-systemic-review-of-obstructive-sleep-apnea-and-its",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Journals\nlogo\n\nCrossmark: Check for updates\n\n# A Systemic Review of Obstructive Sleep Apnea and Its Implications for Anesthesiologists\n\n## BACKGROUND:\n\nObstructive sleep apnea (OSA) is present in a significant proportion of the population, but the majority of patients remain undiagnosed. It is cruci",
+      "score": 0.5062259
+    },
+    {
+      "number": 21,
+      "title": "Post-implant care pathway: lessons learned and recommendations after 5 years of clinical implementation of hypoglossal nerve stimulation therapy | SLEEP | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/44/Supplement_1/S4/6031660",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Hypoglossal nerve stimulation (HNS) therapy is now an established and widely-available obstructive sleep apnea (OSA) treatment alternative for continuous positive airway pressure (CPAP)-intolerant patients. Post-implant patient management (therapy titration, troubleshooting, adjustments, and adheren",
+      "score": 0.7323053
+    },
+    {
+      "number": 22,
+      "title": "Hypoglossal Nerve Stimulation for Obstructive Sleep Apnea and Comorbid Neuromuscular Disorders - Choi - 2025 - The Laryngoscope - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/lary.32050",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Hypoglossal nerve stimulation (HGNS) is an effective surgical treatment for many patients with moderate-to-severe obstructive sleep apnea (OSA) who are unable to tolerate continuous positive airway pressure. Mean apnea-hypopnea index (AHI) improved significantly from preoperative baseline (34.9 to 8",
+      "score": 0.6353361
+    },
+    {
+      "number": 23,
+      "title": "Optimizing Inspire Hypoglossal Nerve Stimulator Settings in Pediatric Obstructive Sleep Apnea - Marcus - 2024 - The Laryngoscope - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/lary.31600",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Optimizing Inspire Hypoglossal Nerve Stimulator Settings in Pediatric Obstructive Sleep Apnea. Department of Otolaryngology-Head and Neck Surgery, Massachusetts Eye and Ear, Boston, Massachusetts, U.S.A. Search for more papers by this author. Department of Otolaryngology-Head and Neck Surgery, Mas",
+      "score": 0.54695654
+    },
+    {
+      "number": 24,
+      "title": "Novel and Emerging Nonpositive Airway Pressure Therapies for Sleep Apnea",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(15)48708-2/abstract",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Novel and Emerging Nonpositive Airway Pressure Therapies for Sleep Apnea - CHEST. #### Management of Central Airway Obstruction: An American College of Chest Physicians Clinical Practice Guideline04614-2/fulltext). park.john@mayo.edu \u2219 Timothy M.Morgenthaler, MD, FCCP48708-2/abstract#). \u2219 Peter C.Ga",
+      "score": 0.7060491
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Evaluation of Hypoglossal Nerve Stimulation Treatment in Obstructive Sleep Apnea",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamaotolaryngology/fullarticle/2751546",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "**Conclusions and Relevance**Hypoglossal nerve stimulation demonstrated clinically significant improvements in obstructive sleep apnea severity, daytime sleepiness, and sleep-related quality of life in this pooled cohort of patient-level results. This was a pooled analysis of all available patient-l",
+      "score": 0.63125396
+    },
+    {
+      "number": 2,
+      "title": "Treatment of Anemia in Patients With Heart Disease",
+      "detail": "annals.org",
+      "url": "https://annals.org/article.aspx?articleid=1784292",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 2013 \u00b7 Cited by 216 \u2014 Effect of non\u2010invasive neuroelectric stimulation of oral cavity for obstructive sleep apnoea: A systematic review. Muhammad Ozair Awan,; Aahan",
+      "score": 0.52203226
+    },
+    {
+      "number": 3,
+      "title": "Management of Obstructive Sleep Apnea in Adults",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/fullarticle/1742606/management%20-obstructive-sleep-apnea-adults-clinical-practice%20-guideline-from-american",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 Cited by 612 \u2014 CPAP improves sleep measures compared with control or sham devices in patients with at least moderate OSA (AHI score \u226515 events/h), there was",
+      "score": 0.4611872
+    },
+    {
+      "number": 4,
+      "title": "Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000988",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "OSA is often suspected on the basis of symptoms and confirmed with diagnostic testing (Figure 1). Diagnostic testing can be performed by overnight in-laboratory, multichannel polysomnography, or home sleep apnea tests. Diagnosis requires the patient to have (1) reported nocturnal breathing disturban",
+      "score": 0.82895297
+    },
+    {
+      "number": 5,
+      "title": "Obstructive Sleep Apnea Diagnosis and Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/obstructive-sleep-apnea-diagnosis-and-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Obstructive sleep apnoea (OSA) is a highly prevalent disorder in which repetitive collapse of the upper airway during sleep leads to apnoea and hypopnoea, intermittent hypoxia and sleep fragmentation. Risk factors include obesity, craniofacial anatomy, neuromuscular tone and fluid redistribution. Th",
+      "score": 0.7882741
+    },
+    {
+      "number": 6,
+      "title": "Towards automatic home-based sleep apnea estimation using deep learning",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41746-024-01139-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Typically, the diagnosis and detection of sleep apnea and hypopnea are based on polysomnography (PSG) tests conducted in a sleep facility or at home5.\"). PSG requires the overnight recording and monitoring of several physiological signals, including electroencephalogram (EEG), electrocardiogram (ECG",
+      "score": 0.72814995
+    },
+    {
+      "number": 7,
+      "title": "Diagnosis of Obstructive Sleep Apnea in Adults",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/M12-3187",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "by A Qaseem \u00b7 2014 \u00b7 Cited by 444 \u2014 Polysomnography and portable monitors measure or estimate the apnea\u2013hypopnea index (AHI), a measure of the number of apnea or hypopnea events per hour during.",
+      "score": 0.6638657
+    },
+    {
+      "number": 8,
+      "title": "Validating a smart bed against polysomnography for sleep apnea detection | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-07336-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Currently, the diagnosis of OSA primarily relies on in-laboratory PSG, regarded as the gold standard, despite its inconvenience and requirement for specialized technical personnel10, 479\u2013504 (2017).\"),11, 463\u2013469 (1995).\"). Home sleep apnea tests (HSATs) offer a more convenient alternative, and thei",
+      "score": 0.6490677
+    },
+    {
+      "number": 9,
+      "title": "Whom to Screen and How to Screen for Obstructive Sleep ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.122.060899",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The diagnosis of OSA requires a threshold frequency of respiratory events (respiratory disturbance index) of \u22655 events per hour on a sleep",
+      "score": 0.62248284
+    },
+    {
+      "number": 10,
+      "title": "Diagnosis of Obstructive Sleep Apnea in Adults: A Clinical ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/fullarticle/1892620/diagnosis-obstructive-sleep-apnea-adults-clinical-practice-guideline-from-american",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by A Qaseem \u00b7 2014 \u00b7 Cited by 444 \u2014 OSA is associated with adverse clinical outcomes, including cardiovascular disease (5\u20138); hypertension (9\u201311); cognitive impairment and metabolic abnormalities,",
+      "score": 0.6063825
+    },
+    {
+      "number": 11,
+      "title": "Obstructive sleep apnea -related hypertension: a review of the literature and clinical management strategy | Hypertension Research",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41440-024-01852-y",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Obstructive sleep apnea (OSA) is characterized by recurrent episodes of complete or partial collapse of the upper airway during sleep, resulting in apnea or hypopnea, and is recognized as an independent risk factor for cardiovascular disease such as hypertension, heart failure, arrhythmia, and coron",
+      "score": 0.5829428
+    },
+    {
+      "number": 12,
+      "title": "Cardiovascular Mortality in Women With Obstructive Sleep ...",
+      "detail": "annals.org",
+      "url": "https://annals.org/aim/article/1033296/cardiovascular-mortality-women-obstructive-sleep-apnea-without-continuous-positive-airway",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "by F Campos-Rodriguez \u00b7 2012 \u00b7 Cited by 530 \u2014 Severe OSA is associated with cardiovascular death in women, and adequate CPAP treatment may reduce this risk. Maternal and fetal outcomes in",
+      "score": 0.3546794
+    },
+    {
+      "number": 13,
+      "title": "Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OSA \u2013 Overview of Treatment, Including Diagnostic and Patient Criteria and Procedural Terminology Codes - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369221010667",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OSA \u2013 Overview of Treatment, Including Diagnostic and Patient Criteria and Procedural Terminology Codes - ScienceDirect\n# Education and Clinical Practice: CHEST Reviews Hypoglossal Nerve Stimulator: A Novel Treatment Approach for OS",
+      "score": 0.86358756
+    },
+    {
+      "number": 14,
+      "title": "Continuous positive airway pressure versus mandibular advancement device in the treatment of obstructive sleep apnea: a systematic review and meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1389945720301271",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Continuous positive airway pressure versus mandibular advancement device in the treatment of obstructive sleep apnea: a systematic review and meta-analysis - ScienceDirect\n# Review Article Continuous positive airway pressure *versus* mandibular advancement device in the treatment of obstructi",
+      "score": 0.818055
+    },
+    {
+      "number": 15,
+      "title": "Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369225051608",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA - ScienceDirect\n# Sleep: Original Research Effect of Novel Hypoglossal Stimulation on Airflow and Airway Collapsibility in OSA. Hypoglossal nerve stimulation (HNS) to treat OSA currently requires placement of ",
+      "score": 0.7140107
+    },
+    {
+      "number": 16,
+      "title": "Sleep apnea and prosthodontic implications",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jips/fulltext/2020/20040/sleep_apnea_and_prosthodontic_implications.1.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "by NG Chander \u00b7 2020 \u00b7 Cited by 1 \u2014 Clinical practice guideline for the treatment of obstructive sleep apnea and snoring with oral appliance therapy: An update for 2015 J Clin Sleep Med.",
+      "score": 0.7023877
+    },
+    {
+      "number": 17,
+      "title": "Sleep Disorders in Childhood",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2023/08000/sleep_disorders_in_childhood.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n40.\n\nSocarras MA, Landau BP, Durr ML. Diagnostic techniques and surgical outcomes for persistent pediatric obstructive sleep apnea after adenotonsillectomy: A systematic review and meta-analysis. _Int J Pediatr Otorhinolaryngol_ 2019;121:179\u2013187.\n\nCrossref\n\nGoogle Scholar\n\n",
+      "score": 0.64880073
+    },
+    {
+      "number": 18,
+      "title": "Physiology of hypoglossal nerve stimulation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1043181015000391",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2020, Frontiers in Pediatrics  Show abstract Non-invasive ventilation (NIV) and continuous positive airway pressure (CPAP) are effective treatments for children with severe sleep disordered breathing (SBD). However, some patients may present too severe SDB that do not respond to NIV/CPAP or insuffic",
+      "score": 0.59089786
+    },
+    {
+      "number": 19,
+      "title": "Upper airway muscles: influence on obstructive...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-pulmonarymedicine/fulltext/2021/11000/upper_airway_muscles__influence_on_obstructive.4.aspx?Ppt=Article%7Cco-pulmonarymedicine%3A2021%3A11000%3A00004%7C10.1097%2Fmcp.0000000000000818%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Among the nonpharmacological treatments, hypoglossal nerve stimulation aims to increase upper airway muscle phasic activity during sleep through electrical",
+      "score": 0.52612424
+    },
+    {
+      "number": 20,
+      "title": "A Systemic Review of Obstructive Sleep Apnea and... : Anesthesia & Analgesia",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/anesthesia-analgesia/fulltext/10.1213/ane.0b013e318187c83a~a-systemic-review-of-obstructive-sleep-apnea-and-its",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Journals\nlogo\n\nCrossmark: Check for updates\n\n# A Systemic Review of Obstructive Sleep Apnea and Its Implications for Anesthesiologists\n\n## BACKGROUND:\n\nObstructive sleep apnea (OSA) is present in a significant proportion of the population, but the majority of patients remain undiagnosed. It is cruci",
+      "score": 0.5062259
+    },
+    {
+      "number": 21,
+      "title": "Post-implant care pathway: lessons learned and recommendations after 5 years of clinical implementation of hypoglossal nerve stimulation therapy | SLEEP | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/sleep/article/44/Supplement_1/S4/6031660",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Hypoglossal nerve stimulation (HNS) therapy is now an established and widely-available obstructive sleep apnea (OSA) treatment alternative for continuous positive airway pressure (CPAP)-intolerant patients. Post-implant patient management (therapy titration, troubleshooting, adjustments, and adheren",
+      "score": 0.7323053
+    },
+    {
+      "number": 22,
+      "title": "Hypoglossal Nerve Stimulation for Obstructive Sleep Apnea and Comorbid Neuromuscular Disorders - Choi - 2025 - The Laryngoscope - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/lary.32050",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Hypoglossal nerve stimulation (HGNS) is an effective surgical treatment for many patients with moderate-to-severe obstructive sleep apnea (OSA) who are unable to tolerate continuous positive airway pressure. Mean apnea-hypopnea index (AHI) improved significantly from preoperative baseline (34.9 to 8",
+      "score": 0.6353361
+    },
+    {
+      "number": 23,
+      "title": "Optimizing Inspire Hypoglossal Nerve Stimulator Settings in Pediatric Obstructive Sleep Apnea - Marcus - 2024 - The Laryngoscope - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/lary.31600",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Optimizing Inspire Hypoglossal Nerve Stimulator Settings in Pediatric Obstructive Sleep Apnea. Department of Otolaryngology-Head and Neck Surgery, Massachusetts Eye and Ear, Boston, Massachusetts, U.S.A. Search for more papers by this author. Department of Otolaryngology-Head and Neck Surgery, Mas",
+      "score": 0.54695654
+    },
+    {
+      "number": 24,
+      "title": "Novel and Emerging Nonpositive Airway Pressure Therapies for Sleep Apnea",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(15)48708-2/abstract",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Novel and Emerging Nonpositive Airway Pressure Therapies for Sleep Apnea - CHEST. #### Management of Central Airway Obstruction: An American College of Chest Physicians Clinical Practice Guideline04614-2/fulltext). park.john@mayo.edu \u2219 Timothy M.Morgenthaler, MD, FCCP48708-2/abstract#). \u2219 Peter C.Ga",
+      "score": 0.7060491
+    }
+  ],
+  "publishedAt": "2026-08-24T16:21:13.842143+00:00",
+  "updatedAt": "2026-08-24T16:21:13.842143+00:00",
+  "readingMinutes": 5,
+  "slug": "sleep-apnea-syndrome"
+}

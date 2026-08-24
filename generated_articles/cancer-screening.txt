@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Preventive Medicine",
+  "title": "Cancer Screening",
+  "summary": "Select cancer screening by organ-specific eligibility, expected benefit, test performance, downstream diagnostic capacity, and patient ability to complete follow-up. Screening tests are not interchangeable: an abnormal stool, imaging, or biomarker result generally requires diagnostic evaluation rather than repeat screening.",
+  "seoDescription": "Point-of-care cancer screening guide for U.S. clinicians covering colorectal, lung, prostate, thyroid, and skin screening decisions.",
+  "clinicalQuestion": "Which cancer screening tests should U.S. clinicians offer, avoid, or individualize in asymptomatic adults?",
+  "specialty": "Preventive Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "cancer screening",
+    "colorectal cancer screening",
+    "lung cancer screening",
+    "PSA screening",
+    "thyroid cancer screening",
+    "skin cancer screening"
+  ],
+  "keyTakeaways": [
+    "For average-risk, asymptomatic adults, colorectal cancer screening begins at age 45; choose a modality the patient can complete repeatedly and for which diagnostic colonoscopy is feasible after an abnormal result.[1][4][23]",
+    "A positive FIT, stool DNA-FIT, or other stool-based colorectal screening result should trigger colonoscopic evaluation rather than repetition of the screening test.[2][4]",
+    "Annual low-dose CT lung screening is appropriate only within a structured program that can manage positive findings and limit unnecessary invasive procedures; stop when smoking cessation reaches 15 years or competing illness limits life expectancy.[5]",
+    "PSA-based screening in men aged 55 to 69 requires individualized discussion of potential benefit, false-positive findings, biopsy, and overtreatment; USPSTF recommends against PSA-based screening at age 70 years or older.[3]",
+    "Do not screen asymptomatic adults for thyroid cancer with neck palpation or thyroid ultrasound.[6][8]",
+    "Routine clinician visual skin examination for skin cancer screening has insufficient evidence of net benefit in asymptomatic adolescents and adults.[7]"
+  ],
+  "sections": [
+    {
+      "id": "screening-decision-framework",
+      "eyebrow": "Clinical approach",
+      "heading": "Apply screening only to asymptomatic patients who can complete the diagnostic pathway",
+      "intro": "Screening is a multistep intervention, not an isolated test.",
+      "paragraphs": [
+        "First establish that the patient is asymptomatic and is being considered for preventive screening rather than diagnostic evaluation. Organ-specific symptoms, an abnormal examination, or prior abnormal screening findings require a diagnostic pathway; for colorectal testing, blood or cancer-associated DNA detected in stool warrants visual evaluation, usually colonoscopy, rather than serial stool testing.[2][4]",
+        "Before ordering any screening modality, verify that the patient can complete its downstream steps. For colorectal screening, selection should account for required test frequency, access, bowel-preparation tolerance, ability to undergo sedation or anesthesia when relevant, and the risks of follow-up procedures after abnormal findings.[1] For lung screening, use a program with diagnostic accuracy, defined follow-up protocols for positive results, and criteria for invasive procedures rather than ordering an isolated low-dose CT scan.[5]",
+        "Separate average-risk screening from risk-directed surveillance. Earlier colorectal screening may be needed with inflammatory bowel disease or a family history of colorectal cancer; average-risk intervals should not be applied automatically to these populations.[2][4]"
+      ],
+      "bullets": [
+        "Document the intended screening test, interval, and the plan for diagnostic follow-up of an abnormal result before ordering.[1][4][5]",
+        "Avoid substituting a screening test for diagnostic evaluation when symptoms or abnormal clinical findings are present.[2][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational questions that determine whether a screening order is actionable.[1][4][5]",
+        "columns": [
+          "Decision point",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Patient has symptoms or an abnormal finding",
+            "Use diagnostic evaluation rather than an average-risk screening pathway.[2][4]"
+          ],
+          [
+            "Patient cannot complete test-specific follow-up",
+            "Choose a feasible alternative screening strategy or address barriers before testing; abnormal results require downstream evaluation.[1][4]"
+          ],
+          [
+            "Patient has elevated colorectal cancer risk",
+            "Do not default to average-risk timing; assess family history and inflammatory bowel disease as indications for earlier screening consideration.[2][4]"
+          ],
+          [
+            "Lung screening is contemplated",
+            "Refer to a structured low-dose CT program with positive-result and invasive-procedure protocols.[5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "colorectal-cancer",
+      "eyebrow": "Highest-yield preventive decision",
+      "heading": "Choose colorectal screening by interval, invasiveness, and follow-up capacity",
+      "intro": "Offer screening from age 45 in average-risk asymptomatic adults.",
+      "paragraphs": [
+        "Colorectal cancer screening is recommended for average-risk adults beginning at age 45 who have no signs or symptoms of colorectal cancer.[1][4][23] Screening detects colorectal cancer and precursor polyps; colonoscopy can biopsy suspicious lesions and remove polyps during the procedure.[2]",
+        "Use annual FIT or high-sensitivity guaiac fecal occult blood testing when a noninvasive annual strategy is most likely to be completed. FIT is commonly interpreted at a quantitative cutoff of 20 micrograms hemoglobin per gram of stool in the United States; in a meta-analysis of asymptomatic average-risk adults, one-time FIT sensitivity and specificity for colorectal cancer were 79% and 94%, respectively. A negative FIT does not reliably exclude advanced adenoma or sessile serrated lesions, for which one-time test sensitivity is substantially lower.[24]",
+        "Use colonoscopy every 10 years when direct whole-colon visualization, biopsy capability, and same-procedure polypectomy are desired and bowel preparation plus sedation or anesthesia are acceptable.[1][2] Stool DNA-FIT is an alternative every 1 to 3 years; CT colonography is repeated every 5 years; flexible sigmoidoscopy is repeated every 5 years; and flexible sigmoidoscopy every 10 years can be paired with annual FIT.[1]",
+        "After any abnormal stool-based test, arrange diagnostic colonoscopy or another visual evaluation as clinically appropriate. Do not treat a positive stool test as a completed screening encounter: its value depends on completion of the diagnostic examination that identifies the bleeding source, cancer, or precancerous lesion.[2][4]"
+      ],
+      "bullets": [
+        "Annual FIT: practical option when yearly stool collection and colonoscopy after a positive result are realistic.[1][24]",
+        "Stool DNA-FIT: repeat every 1 to 3 years; select only if the patient will complete colonoscopy for an abnormal result.[1][4]",
+        "CT colonography: repeat every 5 years; abnormal findings may require follow-up colonoscopy.[1][2]",
+        "Colonoscopy: repeat every 10 years for screening; permits biopsy and polypectomy during the examination.[1][2]"
+      ],
+      "subsections": [
+        {
+          "heading": "Blood-based colorectal tests",
+          "paragraphs": [
+            "Cell-free DNA blood testing is described as an every-3-year option with CMS coverage for Guardant Shield, but the optimal interval has not been established. Compared with stool-based tests or colonoscopy, reported concerns include very low sensitivity for advanced precancerous lesions, lower sensitivity for stage I than later-stage cancer, uncertain real-world adherence to repeat testing and diagnostic follow-up, and potentially lower expected colorectal cancer mortality reduction.[23]"
+          ],
+          "bullets": [
+            "If considering a blood-based option, explicitly discuss its lower sensitivity for advanced precancerous lesions and the need for diagnostic colonoscopy after an abnormal result.[23]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "USPSTF-listed colorectal cancer screening intervals and key operational distinctions.[1][2][4][24]",
+        "columns": [
+          "Strategy",
+          "Interval",
+          "Decision-relevant feature"
+        ],
+        "rows": [
+          [
+            "FIT or high-sensitivity guaiac FOBT",
+            "Every year.[1]",
+            "Noninvasive, but requires annual adherence; an abnormal result requires diagnostic visual evaluation.[2][4]"
+          ],
+          [
+            "Stool DNA-FIT",
+            "Every 1 to 3 years.[1]",
+            "Abnormal stool DNA or blood result requires colonoscopy or other visual evaluation.[4]"
+          ],
+          [
+            "CT colonography",
+            "Every 5 years.[1]",
+            "Radiologic visualization; abnormalities may require follow-up colonoscopy.[2]"
+          ],
+          [
+            "Flexible sigmoidoscopy",
+            "Every 5 years, or every 10 years with annual FIT.[1]",
+            "Does not inspect the entire colon.[2]"
+          ],
+          [
+            "Colonoscopy",
+            "Every 10 years.[1]",
+            "Whole-colon examination with capability for biopsy and polypectomy.[2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lung-cancer",
+      "eyebrow": "Imaging-based screening",
+      "heading": "Use low-dose CT only in an organized lung screening pathway",
+      "intro": "The benefit-risk balance depends on eligibility and follow-up infrastructure.",
+      "paragraphs": [
+        "Annual low-dose CT is recommended for eligible adults with a substantial smoking history in the age range and pack-year criteria specified by the applicable USPSTF recommendation. The cited USPSTF summary describes annual screening for adults aged 55 to 80 years with at least a 30-pack-year smoking history who currently smoke or quit within the prior 15 years.[5]",
+        "Stop low-dose CT screening after 15 years of smoking abstinence and do not screen patients with medical conditions that limit life expectancy.[5] These stopping rules prevent screening from proceeding when a detected cancer is unlikely to yield meaningful benefit from curative evaluation or treatment.",
+        "Order low-dose CT through an established screening program, not as an unstructured imaging request. False-positive results and overdiagnosis are recognized harms; programs should have high diagnostic accuracy, formal protocols for positive findings, and explicit thresholds for invasive diagnostic procedures.[5] A meta-analysis of lung screening trials reported a pooled lung cancer mortality relative rate of 0.84 (95% CI, 0.76-0.92) with low-dose CT screening.[11]"
+      ],
+      "bullets": [
+        "Confirm current smoking status, cumulative pack-years, and years since quitting before referral.[5]",
+        "Confirm that the patient remains a candidate for evaluation and treatment before continuing annual screening.[5]",
+        "Refer to a program with standardized management of positive low-dose CT findings and invasive-workup criteria.[5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Key low-dose CT lung screening decision points.[5][11]",
+        "columns": [
+          "Clinical variable",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Age 55 to 80 years, at least 30 pack-years, current smoker or quit within 15 years",
+            "Annual low-dose CT within a structured screening program.[5]"
+          ],
+          [
+            "Quit smoking 15 years or more ago",
+            "Discontinue screening.[5]"
+          ],
+          [
+            "Condition limits life expectancy",
+            "Do not screen.[5]"
+          ],
+          [
+            "No organized positive-result pathway",
+            "Do not use screening as a stand-alone scan; seek a program with follow-up and invasive-procedure criteria.[5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prostate-cancer",
+      "eyebrow": "Shared decision-making",
+      "heading": "Individualize PSA-based prostate cancer screening",
+      "intro": "PSA testing can detect early disease but may identify indolent cancers.",
+      "paragraphs": [
+        "For men aged 55 to 69 years, make PSA-based screening an individualized decision after discussion of benefits and harms.[3] The discussion should include the possibility that PSA testing detects slow-growing prostate cancer that may never require treatment, creating risk of overtreatment.[3]",
+        "Interpret PSA in clinical context rather than as an isolated cancer diagnosis. Factors that may affect risk assessment include age, race, family history, prostate size, urinary tract infection or irritation, medications, and PSA rate of rise.[3] An abnormal PSA therefore requires diagnostic risk assessment rather than automatic treatment.",
+        "Do not routinely offer PSA-based screening to men age 70 years or older under USPSTF recommendations because screening harms outweigh expected benefit in this group.[3] Screening-related harms include false-positive findings, anxiety, biopsy, and treatment complications for cancers that may never have affected health.[15]"
+      ],
+      "bullets": [
+        "For ages 55 to 69 years, document an individualized discussion before initiating PSA-based screening.[3]",
+        "Assess potentially confounding clinical factors, including urinary tract infection or irritation and prostate size, when interpreting PSA results.[3]",
+        "Avoid PSA-based routine screening at age 70 years or older.[3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "PSA screening decisions by age and downstream consequence.[3][15]",
+        "columns": [
+          "Patient group",
+          "Screening decision",
+          "Key counseling point"
+        ],
+        "rows": [
+          [
+            "Men aged 55 to 69 years",
+            "Individualize PSA-based screening after risk-benefit discussion.[3]",
+            "PSA may identify slow-growing cancer and can lead to overtreatment.[3]"
+          ],
+          [
+            "Men aged 70 years or older",
+            "Do not offer PSA-based routine screening.[3]",
+            "False-positive results, biopsy, and treatment-related harms are important concerns.[3][15]"
+          ],
+          [
+            "Abnormal PSA result",
+            "Interpret with age, race, family history, prostate size, infection or irritation, medications, and PSA kinetics.[3]",
+            "PSA is a detection tool, not a stand-alone treatment indication.[3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "screening-not-recommended-or-uncertain",
+      "eyebrow": "Avoid low-value testing",
+      "heading": "Do not screen for thyroid cancer; recognize uncertainty for routine skin examination",
+      "intro": "Avoid converting asymptomatic examinations into unproven screening programs.",
+      "paragraphs": [
+        "Do not screen asymptomatic adults for thyroid cancer using neck palpation or thyroid ultrasound.[6][8] The USPSTF concluded that potential benefit is no greater than small, citing thyroid cancer rarity, apparent lack of outcome differences between treatment and monitoring for the most common tumor types, and observational evidence showing no mortality change after a mass screening program.[8]",
+        "Do not order thyroid ultrasound solely to screen an asymptomatic adult without a clinical indication. Screening exposes patients to downstream diagnostic and treatment harms without established health-outcome benefit.[8]",
+        "For clinician visual skin examination in asymptomatic adolescents and adults, the USPSTF found insufficient evidence to determine the balance of benefits and harms.[7] This is an I statement rather than a recommendation for or against examination; use diagnostic skin evaluation when a lesion or symptom creates a clinical indication, rather than labeling the encounter routine population screening."
+      ],
+      "bullets": [
+        "Do not use neck palpation or ultrasound as a population thyroid cancer screening strategy in asymptomatic adults.[6][8]",
+        "Do not represent a routine visual skin examination as an evidence-established population cancer screening intervention.[7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Cancer screening areas where routine testing should be avoided or is not established.[6][7][8]",
+        "columns": [
+          "Screening target",
+          "Asymptomatic population recommendation",
+          "Practical action"
+        ],
+        "rows": [
+          [
+            "Thyroid cancer",
+            "USPSTF recommends against screening with neck palpation or ultrasound.[6][8]",
+            "Do not order screening thyroid ultrasound or implement routine thyroid palpation as a screening program.[8]"
+          ],
+          [
+            "Skin cancer",
+            "Evidence is insufficient to assess benefits and harms of clinician visual skin examination.[7]",
+            "Distinguish diagnostic lesion assessment from routine population screening.[7]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Emergency Medicine",
+  "title": "Thermal Burns",
+  "summary": "Evaluate thermal burns by confirming airway risk, measuring partial- and full-thickness TBSA accurately, initiating response-titrated resuscitation for major injury, controlling pain, protecting wounds, and transferring patients whose size, depth, location, or inhalation risk requires burn-center care.",
+  "seoDescription": "Point-of-care evaluation and management of acute thermal burns, including TBSA measurement, airway risk, fluid resuscitation, wound closure, and transfer.",
+  "clinicalQuestion": "How should physicians triage, quantify, resuscitate, and arrange definitive care for acute thermal burns?",
+  "specialty": "Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "thermal burns",
+    "burn resuscitation",
+    "TBSA",
+    "Parkland formula",
+    "inhalation injury",
+    "burn center referral",
+    "burn wound excision"
+  ],
+  "keyTakeaways": [
+    "Use partial- and full-thickness burn area, rather than erythema alone, to estimate TBSA because this measurement directs resuscitation and disposition decisions.[19][20]",
+    "For adults with burns exceeding approximately 20% to 25% TBSA, begin lactated Ringer resuscitation promptly; use a formula only as an initial estimate and titrate to clinical response and urine output.[22][10]",
+    "In adults, urine output of approximately 0.3 to 0.5 mL/kg/hour is a practical resuscitation endpoint; persistent output below this range suggests inadequate intravascular resuscitation.[10]",
+    "Inhalation injury, electrical injury, delayed resuscitation, and high opioid requirements may increase fluid needs; avoid reflexive volume escalation without reassessing perfusion and complications of over-resuscitation.[10][24]",
+    "Deep partial-thickness and full-thickness burns require early burn-surgeon assessment for excision and grafting; early tangential excision and grafting improved mortality and reduced hospitalization in a trial of deep second-degree burns.[9]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-triage",
+      "eyebrow": "First decisions",
+      "heading": "Identify airway threat, major burn physiology, and transfer needs",
+      "intro": "Manage significant burns as trauma while establishing injury size, depth, mechanism, and airway risk.[22]",
+      "paragraphs": [
+        "Begin with airway, breathing, circulation, exposure, analgesia, and removal from the heat source. In a severe flame burn, specifically assess for inhalation injury; inhalation injury increases fluid requirements, pulmonary complications, and mortality when it accompanies cutaneous thermal trauma.[22][24]",
+        "Do not attribute early hypotension solely to a burn. Burn shock develops during the first hours after injury; immediate hypotension should prompt evaluation for concurrent hemorrhage, traumatic injury, or another cause of shock.[22]",
+        "Arrange specialized burn-center transfer for severe injury, including burns exceeding 10% TBSA and full-thickness burns, while continuing initial stabilization and resuscitation rather than delaying transfer for definitive wound procedures.[1]"
+      ],
+      "bullets": [
+        "Record time of injury because the first-day resuscitation calculation and rate must be interpreted against elapsed time since the burn.[21][22]",
+        "Document thermal mechanism, enclosed-space or flame exposure, associated trauma, and suspected inhalation injury; these factors alter airway surveillance, expected fluid requirement, and destination planning.[10][24]",
+        "Treat burns as tetanus-prone wounds and assess tetanus immunization status; provide prophylaxis when the last dose was more than 5 years earlier.[22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial risk patterns that change immediate management.[10][22][24]",
+        "columns": [
+          "Finding",
+          "Clinical implication",
+          "Immediate next step"
+        ],
+        "rows": [
+          [
+            "Hemodynamic instability immediately after injury",
+            "Burn shock usually develops over hours; early hypotension warrants evaluation for nonburn causes such as associated trauma.[22]",
+            "Resuscitate while assessing for hemorrhage and other traumatic injuries.[22]"
+          ],
+          [
+            "Severe flame injury or suspected inhalation injury",
+            "Inhalation injury is associated with greater fluid requirements and pulmonary complications.[24]",
+            "Prioritize airway assessment, monitor respiratory status, and anticipate higher\u2014but response-titrated\u2014resuscitation needs.[10][24]"
+          ],
+          [
+            "Large partial- or full-thickness burn",
+            "Major injury can produce substantial fluid loss and burn shock.[19][22]",
+            "Measure TBSA, establish IV access, begin lactated Ringer resuscitation when threshold is met, and transfer to a burn center.[22][1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "tbsa-and-depth",
+      "eyebrow": "Quantify injury",
+      "heading": "Estimate TBSA accurately before committing to a fluid rate",
+      "intro": "TBSA error can cause both under-resuscitation and clinically important fluid overload.[18][19]",
+      "paragraphs": [
+        "Estimate TBSA using partial-thickness and full-thickness areas. The Rule of Nines is rapid for adult initial assessment, whereas the Lund-Browder chart adjusts for the age-related body proportions of infants and children. Use the patient\u2019s palm including fingers as approximately 1% TBSA for scattered or small burns.[17][18][19]",
+        "Use the Lund-Browder chart rather than unmodified adult proportions in children because head and leg surface-area proportions vary with age. Reassess TBSA after exposure, cleaning, and serial examination when the initial estimate is uncertain; Rule of Nines estimates may overestimate TBSA and assessment varies materially by examiner experience.[18][5][20]",
+        "Treat formula-derived volumes as estimates, not proof of adequate resuscitation. Underestimation risks progressive shock and end-organ injury; overestimation increases the risk of pulmonary edema, acute respiratory distress syndrome, and abdominal compartment syndrome.[19][20]"
+      ],
+      "bullets": [
+        "Use Rule of Nines for a rapid adult field or emergency estimate.[17][19]",
+        "Use Lund-Browder for pediatric assessment and whenever a more anatomically adjusted estimate is needed.[18]",
+        "Use the palm method for irregular, patchy, or geographically separated areas.[18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "TBSA methods and their highest-yield use cases.[17][18][19]",
+        "columns": [
+          "Method",
+          "Best use",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Wallace Rule of Nines",
+            "Rapid initial adult estimate using body regions expressed as multiples of 9.[17][18]",
+            "Adult regional proportions require modification in children and infants.[18]"
+          ],
+          [
+            "Lund-Browder chart",
+            "Pediatric burns and more structured surface-area mapping; incorporates age-specific head and leg proportions.[18]",
+            "Requires diagram-based calculation and may be slower in the earliest resuscitation phase.[18]"
+          ],
+          [
+            "Palm method",
+            "Small or scattered burns; the patient's palm including fingers approximates 1% TBSA.[18]",
+            "Interpretation varies among clinicians and should not substitute for careful mapping of extensive injury.[5][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fluid-resuscitation",
+      "eyebrow": "Burn shock",
+      "heading": "Start lactated Ringer resuscitation, then titrate to perfusion",
+      "intro": "Major burns require early but continuously adjusted resuscitation rather than formula-only management.[10][22]",
+      "paragraphs": [
+        "For adults with burns exceeding 20% to 25% TBSA, initiate aggressive IV fluid resuscitation to prevent burn shock. A common starting calculation is the Parkland formula: 4 mL lactated Ringer solution \u00d7 body weight in kilograms \u00d7 percent TBSA over the first 24 hours.[22][21]",
+        "Use the calculated volume as an initial guide, not a fixed prescription. Place an indwelling urinary catheter for major resuscitations and titrate fluid against urine output and serial clinical perfusion assessment. In adults, a urine output target of approximately 0.3 to 0.5 mL/kg/hour is commonly used; output below this range during the first 48 hours usually indicates inadequate resuscitation.[10]",
+        "Avoid treating a rising calculated requirement as an automatic indication for unlimited crystalloid. Excess fluid contributes to edema and can produce pulmonary complications; the central resuscitation principle is the minimum volume that maintains organ perfusion.[10][18][19]",
+        "Expect increased requirements in patients with inhalation injury, electrical injuries, delayed resuscitation, advanced age, or greater opioid exposure, but adjust the rate to urine output and clinical response rather than applying a separate fixed multiplier.[10][24]"
+      ],
+      "bullets": [
+        "Calculate initial 24-hour volume: 4 mL \u00d7 kg \u00d7 %TBSA, using lactated Ringer solution.[22][21]",
+        "Use an indwelling catheter and target adult urine output of about 0.3 to 0.5 mL/kg/hour.[10]",
+        "Reassess volume status and respiratory consequences repeatedly; formulas are starting points, not absolute protocols.[10]",
+        "Escalate monitoring and burn-center coordination when inhalation injury coexists because these patients may require substantially more fluid than patients with comparable cutaneous burns alone.[24]"
+      ],
+      "subsections": [
+        {
+          "heading": "Resuscitation failure patterns",
+          "paragraphs": [
+            "Low urine output despite ongoing crystalloid should trigger reassessment of TBSA accuracy, elapsed time since injury, line function, concurrent hemorrhage, and inhalation or electrical injury before simply accepting a larger formula-based volume. Persistent under-resuscitation risks hypoperfusion; over-resuscitation risks respiratory and compartment complications.[10][19][22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Adult major-burn resuscitation workflow.[10][21][22]",
+        "columns": [
+          "Decision point",
+          "Action",
+          "Monitoring interpretation"
+        ],
+        "rows": [
+          [
+            "Burn exceeds 20% to 25% TBSA",
+            "Start lactated Ringer resuscitation using 4 mL \u00d7 kg \u00d7 %TBSA as a 24-hour initial estimate.[22][21]",
+            "Formula establishes a starting volume only.[10]"
+          ],
+          [
+            "During active resuscitation",
+            "Use an indwelling urinary catheter and adjust fluid delivery to urine output and clinical perfusion.[10]",
+            "Adult urine output around 0.3 to 0.5 mL/kg/hour is an accepted target.[10]"
+          ],
+          [
+            "Urine output remains below target",
+            "Increase evaluation for inadequate resuscitation and contributors such as delayed care, inhalation injury, or electrical injury.[10][24]",
+            "Do not rely on TBSA calculation alone; reassess the patient and calculation.[10][19]"
+          ],
+          [
+            "Edema or pulmonary complications emerge",
+            "Reevaluate for excessive fluid administration and reduce unnecessary volume while maintaining organ perfusion.[10][19]",
+            "Volume excess can contribute to ARDS and abdominal compartment syndrome.[19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wound-and-operative-care",
+      "eyebrow": "Definitive care",
+      "heading": "Match wound depth to closure strategy and burn-center surgery",
+      "intro": "Depth and location determine whether a wound can be managed conservatively or requires operative closure planning.[9][18]",
+      "paragraphs": [
+        "After stabilization, characterize burn depth and reassess it serially because depth assessment drives wound-closure planning. Full-thickness burns and deep partial-thickness injuries should prompt early burn-surgeon involvement for excision and grafting strategy, especially when the area is extensive or functionally important.[1][9]",
+        "Early excision of eschar followed by grafting is a major definitive therapy for deep burns. A randomized study cited in a historical synthesis found that early tangential excision and grafting of deep second-degree burns improved mortality and reduced hospitalization compared with conservative treatment.[9]",
+        "In patients with third-degree burns exceeding 30% TBSA, the mortality benefit of early excision was not uniform across subgroups in one randomized trial: benefit was reported among patients aged 17 to 30 years without inhalation injury, but not among older adults in that report. Use burn-center multidisciplinary assessment to balance operative burden, donor-site availability, inhalation injury, and physiologic reserve.[9][3]"
+      ],
+      "bullets": [
+        "Use IV analgesia for severe burns and for painful early procedures; pain control in major burns is best managed intravenously.[22]",
+        "Plan definitive wound closure after physiologic stabilization and formal depth assessment; early closure commonly requires excision followed by graft coverage.[2][9]",
+        "Prioritize specialized center management for massive burns, where multidisciplinary burn care is commonly required.[3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Depth-directed definitive management decisions.[1][9]",
+        "columns": [
+          "Wound pattern",
+          "Disposition or operative implication",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "Deep partial-thickness burn",
+            "Obtain early burn-surgeon evaluation for tangential excision and grafting consideration.[9]",
+            "Early tangential excision and grafting improved mortality and reduced hospitalization versus conservative treatment in a cited randomized study.[9]"
+          ],
+          [
+            "Full-thickness burn",
+            "Refer for specialized burn care and definitive excision/grafting planning.[1][9]",
+            "Full-thickness burns meet criteria for specialized burn-center referral.[1]"
+          ],
+          [
+            "Massive burn",
+            "Transfer or coordinate care in a multidisciplinary burn center.[3]",
+            "Most survivors with massive injuries in one series were managed in specialized multidisciplinary centers.[3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ongoing-and-chronic-care",
+      "eyebrow": "Longitudinal care",
+      "heading": "Monitor for complications and preserve function after survival",
+      "intro": "Long-term outcome depends on wound closure, rehabilitation planning, and ongoing multidisciplinary follow-up.[3][11]",
+      "paragraphs": [
+        "After acute shock and wound-closure decisions, continue surveillance for respiratory failure, burn infection, nutritional demands, wound healing problems, and scarring. Severe-burn care programs incorporate wound treatment, infection prevention and treatment, nutrition therapy, organ support, and rehabilitation because complications extend beyond the resuscitation interval.[11]",
+        "For older adults, avoid nihilistic disposition decisions based on age alone. In one outcome report, standard burn treatment was associated with survival above 70%, and at least 60% of older survivors were fully functional at 6 months; individual prognosis still depends on burn extent, inhalation injury, comorbidity, and operative feasibility.[23]",
+        "Use follow-up to identify hypertrophic scarring, functional limitation, and the need for reconstructive or rehabilitation interventions. Burn-care advances include rehabilitation as a core treatment domain, not an afterthought once epithelialization occurs.[11]"
+      ],
+      "bullets": [
+        "Coordinate rehabilitation early when burns threaten range of motion, hand function, mobility, or other daily activity domains.[11]",
+        "Continue multidisciplinary burn follow-up after large burns, particularly after grafting or prolonged critical illness.[3][11]",
+        "Discuss prognosis in older adults using injury-specific factors rather than chronological age alone.[23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-acute priorities after major thermal injury.[3][11][23]",
+        "columns": [
+          "Phase",
+          "Priority",
+          "Decision trigger"
+        ],
+        "rows": [
+          [
+            "After initial resuscitation",
+            "Monitor respiratory, infectious, nutritional, and organ-support needs.[11]",
+            "Severe burns have multisystem consequences requiring continuing critical-care assessment.[11]"
+          ],
+          [
+            "After wound closure planning",
+            "Implement rehabilitation and monitor healing and scar-related impairment.[11]",
+            "Functional risks persist after survival and epithelial closure.[11]"
+          ],
+          [
+            "Older adult recovery",
+            "Use individualized prognostication and functional follow-up.[23]",
+            "More than 70% survival and at least 60% full function at 6 months were reported with standard treatment in one cohort.[23]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Adherence to Burn Center Referral Criteria for Pediatric ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844973",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by E Gus \u00b7 2026 \u00b7 Cited by 1 \u2014 Referral to specialized burn centers is recommended for severe injuries, burns over more than 10% of the total body surface area, full-",
+      "score": 0.24386787
+    },
+    {
+      "number": 2,
+      "title": "Burn Care: Results of Technical and Organizational Progress",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/data/Journals/JAMA/4891/JCT30009.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Care of serious burns progresses through 4 phases, (3) definitive wound closure; An effective surgi- cal procedure for burn wounds re- mains the most powerful",
+      "score": 0.15637554
+    },
+    {
+      "number": 3,
+      "title": "Long-term Outcome of Children Surviving Massive Burns",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192257",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by RL Sheridan \u00b7 2000 \u00b7 Cited by 378 \u2014 Approximately 75% of those with massive injuries are managed in specialized multidisciplinary burn centers and the remainder are cared for in critical care",
+      "score": 0.13772976
+    },
+    {
+      "number": 4,
+      "title": "Reduction of Resuscitation Fluid Volumes in Severely ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/390538",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by H Tanaka \u00b7 2000 \u00b7 Cited by 635 \u2014 The study inclusion criteria are as follows: older than 16 years; thermal injury within 2 hours before admission; burn covering greater than 30% of TBSA;",
+      "score": 0.13065127
+    },
+    {
+      "number": 5,
+      "title": "A comparison study of methods for estimation of a burn surface area: Lund and Browder, e-burn and Mersey Burns",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305417919304681",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "A lack of information on who evaluated the burns and on the clinical evaluation methods means that we do not know whether or not the comparisons were apt. Accuracy of clinical burn evaluation is highly dependent on both the evaluator\u2019s clinical experience with burns , on the clinical evaluation meth",
+      "score": 0.51735204
+    },
+    {
+      "number": 6,
+      "title": "The relationships between routine admission blood tests ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0929664622002170",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by EK Yeong \u00b7 2022 \u00b7 Cited by 17 \u2014 Lund-Browder Chart, \u201cRule of Nines\u201d and the palm method are common methods used.4, Nines and Lund-Browder diagrams underestimate the extent of burns involving",
+      "score": 0.49919498
+    },
+    {
+      "number": 7,
+      "title": "Burn size estimation: A remarkable history with clinical practice implications",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468912224000014",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "of Embase and MEDLINE (January 1, 1990\u2013August 20, 2023) was conducted to identify studies reporting accuracy or inter-rater reliability for computer- or smartphone-based digital %TBSA estimation tools. 20 studies (2006\u20132023) evaluating 16 unique digital tools met the inclusion criteria. Against an e",
+      "score": 0.47168615
+    },
+    {
+      "number": 8,
+      "title": "Appraising current methods for preclinical calculation of burn size \u2013 A pre-hospital perspective",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030541791630208X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "If guidance is indicated, use of the Rule of Nines is recommended. This method is simple, applicable across a variety of contexts and is a commonly used burn estimation tool used in pre-hospital environments . Modern technology (for example mobile \u2018Apps\u2019) has greatly increased the options available ",
+      "score": 0.42763633
+    },
+    {
+      "number": 9,
+      "title": "History and Advancement of Burn Treatments : Annals of Plastic Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annalsplasticsurgery/fulltext/2017/02001/history_and_advancement_of_burn_treatments.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: History and Advancement of Burn Treatments : Annals of Plastic Surgery\nThe principal modalities of and approaches to burn treatment include dressings, antimicrobials, fluid resuscitation, burn wound excision, skin grafting, and use of skin substitutes. Pruitt et al56 achieved a remarkable imp",
+      "score": 0.42190963
+    },
+    {
+      "number": 10,
+      "title": "Fluid Resuscitation in Adult Burns : Current Medical Issues",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmii/fulltext/2021/19020/fluid_resuscitation_in_adult_burns.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## WHICH IS THE BEST FORMULA?\n\nThe experts have no consensus on which formula or which fluid is the best. However, there is an agreement on two important principles. First, the minimum amount of fluid required to maintain organ perfusion should be used. Second, the fluid infused should be continuous",
+      "score": 0.35173458
+    },
+    {
+      "number": 11,
+      "title": "progress of Chinese burn medicine from the Third Military Medical University\u2014in memory of its pioneer, Professor Li Ao | Burns & Trauma | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/burnstrauma/article/doi/10.1186/s41038-017-0082-z/5680311",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "These achievements mainly included the Chinese Rule of Nine, fluid resuscitation protocol, experience in inhalation injury, wound treatment strategies, prevention and treatment of burn infections, nutrition therapy, organ support therapies, and rehabilitation. These studies have covered basic mechan",
+      "score": 0.3386898
+    },
+    {
+      "number": 12,
+      "title": "Pain Management in Pediatric Burns: A Review of the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/9950870",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Appropriate sedation and analgesia are crucial for managing the pain, anxiety, and fear associated with burn injuries and their treatment [20].",
+      "score": 0.1619425
+    },
+    {
+      "number": 13,
+      "title": "Review Article Pain Management in Pediatric Burns",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1155/2023/9950870",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by B Ciornei \u00b7 2023 \u00b7 Cited by 58 \u2014 Appropriate sedation and anal- gesia are crucial for managing the pain, anxiety, and fear associated with burn injuries and their treatment [20]",
+      "score": 0.15414697
+    },
+    {
+      "number": 14,
+      "title": "Development of nursing care guideline for burned hands",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/nop2.475",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by M Lotfi \u00b7 2020 \u00b7 Cited by 15 \u2014 By improvement in the management of patients with severe burns, including fluid resuscitation, pain management, modern dressing products,",
+      "score": 0.13565545
+    },
+    {
+      "number": 15,
+      "title": "Antibiotic prophylaxis for preventing burn wound infection - Barajas\u2010Nava, LA - 2013 | Cochrane Library",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008738.pub2/references",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "(% TBSA): (mean):  Group 1: < 20% TBSA: 14% \u00b1 5, 20\u201040% TBSA: 29% \u00b1 7, >40% TBSA: 47% \u00b1 6.  Group 2: < 20% TBSA: 11% \u00b1 3, 20\u201040% TBSA: 28% \u00b1 6, >40% TBSA: 53% \u00b1 16.  Group 3: < 20% TBSA: 13% \u00b1 5, 20\u201040% TBSA: 30% \u00b1 6, >40% TBSA: 52% \u00b1 11.  Inhalation injury: Group 1: 5 (33.3%), Group 2: 4 (22.2%), G",
+      "score": 0.26235652
+    },
+    {
+      "number": 16,
+      "title": "Recombinant human growth hormone for treating burns ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008990",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "We will include trials including people of any age who have a burn wound covering more than 20% TBSA and more than 10% full\u2010thickness (3rd",
+      "score": 0.065563075
+    },
+    {
+      "number": 17,
+      "title": "Assessment | Diagnosis | Burns and scalds - CKS - NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/burns-scalds/diagnosis/assessment",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "There are three main methods for estimating TBSA: the Lund and Browder method, Wallace's Rule of Nines, and the Rule of Palm.",
+      "score": 0.64478505
+    },
+    {
+      "number": 18,
+      "title": "Introduction | Mersey Burns for calculating fluid resuscitation volume when managing burns | Advice | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/advice/mib58/chapter/introduction",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Appropriate burn injury assessment and management is critical to ensure the best outcomes for patients. The severity of a burn injury is assessed by its depth, extent and location, the patient's age and the presence of other injuries or diseases. The extent of a burn is expressed as the percentage o",
+      "score": 0.6391287
+    },
+    {
+      "number": 19,
+      "title": "Rule of Nines - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513287",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The Rule of Nines is a tool healthcare professionals use to assess the total body surface area involved in burn patients. The healthcare team's initial burn surface area measurement is essential in estimating fluid resuscitation requirements. Patients should have resuscitation started promptly due t",
+      "score": 0.5393963
+    },
+    {
+      "number": 20,
+      "title": "EMS Burn Rule of Tens - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK597343",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "EMS traditionally employs the \"Rule of Nines\" tool to assess the TBSA affected by burns in patients with second- and third-degree burns. The Rule of Nines assigns each body part a percentage, usually 9%, or a multiple thereof 9 (see Image. Diagram of the Rule of 9s for Adults). These percentages can",
+      "score": 0.4054258
+    },
+    {
+      "number": 21,
+      "title": "EMS Burn Rule of Tens - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/37983357",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: EMS Burn Rule of Tens - PubMed\n## Save citation to file. # EMS Burn Rule of Tens. # EMS Burn Rule of Tens. Emergency medical services (EMS) should assess the extent and severity of burns through visual inspection and calculation of the affected total body surface area (TBSA) before commencing",
+      "score": 0.38470465
+    },
+    {
+      "number": 22,
+      "title": "Burn Resuscitation and Management(Archived) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=6993283650bd6f6bffe614c6",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Burn Resuscitation and Management(Archived) - StatPearls - NCBI Bookshelf\nThis\u00a0topic\u00a0focuses on the initial resuscitation and management of severe burns. Patients are classified as having severe burns if they have any of the following;. Severe burns cause not only significant injury at the lo",
+      "score": 0.56575525
+    },
+    {
+      "number": 23,
+      "title": "Outcome for Older Burn Patients | Trauma and Injury",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/390543",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by V McGill \u00b7 2000 \u00b7 Cited by 107 \u2014 With standard treatment of burns, older patients will have a survival rate of more than 70%, with at least 60% of patients becoming fully functional 6 months",
+      "score": 0.08504601
+    },
+    {
+      "number": 24,
+      "title": "Effect of inhalation injury on fluid resuscitation requirements after thermal injury - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/0002961085904155",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Scientific paper Effect of inhalation injury on fluid resuscitation requirements after thermal injury\u2606. The presence of inhalation injury has been reported to increase fluid requirements for resuscitation from burn shock after thermal injury. To evaluate the effect of inhalation injury on the magn",
+      "score": 0.5300668
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Adherence to Burn Center Referral Criteria for Pediatric ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2844973",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by E Gus \u00b7 2026 \u00b7 Cited by 1 \u2014 Referral to specialized burn centers is recommended for severe injuries, burns over more than 10% of the total body surface area, full-",
+      "score": 0.24386787
+    },
+    {
+      "number": 2,
+      "title": "Burn Care: Results of Technical and Organizational Progress",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/data/Journals/JAMA/4891/JCT30009.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Care of serious burns progresses through 4 phases, (3) definitive wound closure; An effective surgi- cal procedure for burn wounds re- mains the most powerful",
+      "score": 0.15637554
+    },
+    {
+      "number": 3,
+      "title": "Long-term Outcome of Children Surviving Massive Burns",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/192257",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by RL Sheridan \u00b7 2000 \u00b7 Cited by 378 \u2014 Approximately 75% of those with massive injuries are managed in specialized multidisciplinary burn centers and the remainder are cared for in critical care",
+      "score": 0.13772976
+    },
+    {
+      "number": 4,
+      "title": "Reduction of Resuscitation Fluid Volumes in Severely ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/390538",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by H Tanaka \u00b7 2000 \u00b7 Cited by 635 \u2014 The study inclusion criteria are as follows: older than 16 years; thermal injury within 2 hours before admission; burn covering greater than 30% of TBSA;",
+      "score": 0.13065127
+    },
+    {
+      "number": 5,
+      "title": "A comparison study of methods for estimation of a burn surface area: Lund and Browder, e-burn and Mersey Burns",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305417919304681",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "A lack of information on who evaluated the burns and on the clinical evaluation methods means that we do not know whether or not the comparisons were apt. Accuracy of clinical burn evaluation is highly dependent on both the evaluator\u2019s clinical experience with burns , on the clinical evaluation meth",
+      "score": 0.51735204
+    },
+    {
+      "number": 6,
+      "title": "The relationships between routine admission blood tests ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0929664622002170",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by EK Yeong \u00b7 2022 \u00b7 Cited by 17 \u2014 Lund-Browder Chart, \u201cRule of Nines\u201d and the palm method are common methods used.4, Nines and Lund-Browder diagrams underestimate the extent of burns involving",
+      "score": 0.49919498
+    },
+    {
+      "number": 7,
+      "title": "Burn size estimation: A remarkable history with clinical practice implications",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468912224000014",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "of Embase and MEDLINE (January 1, 1990\u2013August 20, 2023) was conducted to identify studies reporting accuracy or inter-rater reliability for computer- or smartphone-based digital %TBSA estimation tools. 20 studies (2006\u20132023) evaluating 16 unique digital tools met the inclusion criteria. Against an e",
+      "score": 0.47168615
+    },
+    {
+      "number": 8,
+      "title": "Appraising current methods for preclinical calculation of burn size \u2013 A pre-hospital perspective",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030541791630208X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "If guidance is indicated, use of the Rule of Nines is recommended. This method is simple, applicable across a variety of contexts and is a commonly used burn estimation tool used in pre-hospital environments . Modern technology (for example mobile \u2018Apps\u2019) has greatly increased the options available ",
+      "score": 0.42763633
+    },
+    {
+      "number": 9,
+      "title": "History and Advancement of Burn Treatments : Annals of Plastic Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annalsplasticsurgery/fulltext/2017/02001/history_and_advancement_of_burn_treatments.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: History and Advancement of Burn Treatments : Annals of Plastic Surgery\nThe principal modalities of and approaches to burn treatment include dressings, antimicrobials, fluid resuscitation, burn wound excision, skin grafting, and use of skin substitutes. Pruitt et al56 achieved a remarkable imp",
+      "score": 0.42190963
+    },
+    {
+      "number": 10,
+      "title": "Fluid Resuscitation in Adult Burns : Current Medical Issues",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmii/fulltext/2021/19020/fluid_resuscitation_in_adult_burns.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## WHICH IS THE BEST FORMULA?\n\nThe experts have no consensus on which formula or which fluid is the best. However, there is an agreement on two important principles. First, the minimum amount of fluid required to maintain organ perfusion should be used. Second, the fluid infused should be continuous",
+      "score": 0.35173458
+    },
+    {
+      "number": 11,
+      "title": "progress of Chinese burn medicine from the Third Military Medical University\u2014in memory of its pioneer, Professor Li Ao | Burns & Trauma | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/burnstrauma/article/doi/10.1186/s41038-017-0082-z/5680311",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "These achievements mainly included the Chinese Rule of Nine, fluid resuscitation protocol, experience in inhalation injury, wound treatment strategies, prevention and treatment of burn infections, nutrition therapy, organ support therapies, and rehabilitation. These studies have covered basic mechan",
+      "score": 0.3386898
+    },
+    {
+      "number": 12,
+      "title": "Pain Management in Pediatric Burns: A Review of the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/9950870",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Appropriate sedation and analgesia are crucial for managing the pain, anxiety, and fear associated with burn injuries and their treatment [20].",
+      "score": 0.1619425
+    },
+    {
+      "number": 13,
+      "title": "Review Article Pain Management in Pediatric Burns",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1155/2023/9950870",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by B Ciornei \u00b7 2023 \u00b7 Cited by 58 \u2014 Appropriate sedation and anal- gesia are crucial for managing the pain, anxiety, and fear associated with burn injuries and their treatment [20]",
+      "score": 0.15414697
+    },
+    {
+      "number": 14,
+      "title": "Development of nursing care guideline for burned hands",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/nop2.475",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by M Lotfi \u00b7 2020 \u00b7 Cited by 15 \u2014 By improvement in the management of patients with severe burns, including fluid resuscitation, pain management, modern dressing products,",
+      "score": 0.13565545
+    },
+    {
+      "number": 15,
+      "title": "Antibiotic prophylaxis for preventing burn wound infection - Barajas\u2010Nava, LA - 2013 | Cochrane Library",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008738.pub2/references",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "(% TBSA): (mean):  Group 1: < 20% TBSA: 14% \u00b1 5, 20\u201040% TBSA: 29% \u00b1 7, >40% TBSA: 47% \u00b1 6.  Group 2: < 20% TBSA: 11% \u00b1 3, 20\u201040% TBSA: 28% \u00b1 6, >40% TBSA: 53% \u00b1 16.  Group 3: < 20% TBSA: 13% \u00b1 5, 20\u201040% TBSA: 30% \u00b1 6, >40% TBSA: 52% \u00b1 11.  Inhalation injury: Group 1: 5 (33.3%), Group 2: 4 (22.2%), G",
+      "score": 0.26235652
+    },
+    {
+      "number": 16,
+      "title": "Recombinant human growth hormone for treating burns ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD008990",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "We will include trials including people of any age who have a burn wound covering more than 20% TBSA and more than 10% full\u2010thickness (3rd",
+      "score": 0.065563075
+    },
+    {
+      "number": 17,
+      "title": "Assessment | Diagnosis | Burns and scalds - CKS - NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/burns-scalds/diagnosis/assessment",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "There are three main methods for estimating TBSA: the Lund and Browder method, Wallace's Rule of Nines, and the Rule of Palm.",
+      "score": 0.64478505
+    },
+    {
+      "number": 18,
+      "title": "Introduction | Mersey Burns for calculating fluid resuscitation volume when managing burns | Advice | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/advice/mib58/chapter/introduction",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Appropriate burn injury assessment and management is critical to ensure the best outcomes for patients. The severity of a burn injury is assessed by its depth, extent and location, the patient's age and the presence of other injuries or diseases. The extent of a burn is expressed as the percentage o",
+      "score": 0.6391287
+    },
+    {
+      "number": 19,
+      "title": "Rule of Nines - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513287",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The Rule of Nines is a tool healthcare professionals use to assess the total body surface area involved in burn patients. The healthcare team's initial burn surface area measurement is essential in estimating fluid resuscitation requirements. Patients should have resuscitation started promptly due t",
+      "score": 0.5393963
+    },
+    {
+      "number": 20,
+      "title": "EMS Burn Rule of Tens - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK597343",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "EMS traditionally employs the \"Rule of Nines\" tool to assess the TBSA affected by burns in patients with second- and third-degree burns. The Rule of Nines assigns each body part a percentage, usually 9%, or a multiple thereof 9 (see Image. Diagram of the Rule of 9s for Adults). These percentages can",
+      "score": 0.4054258
+    },
+    {
+      "number": 21,
+      "title": "EMS Burn Rule of Tens - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/37983357",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: EMS Burn Rule of Tens - PubMed\n## Save citation to file. # EMS Burn Rule of Tens. # EMS Burn Rule of Tens. Emergency medical services (EMS) should assess the extent and severity of burns through visual inspection and calculation of the affected total body surface area (TBSA) before commencing",
+      "score": 0.38470465
+    },
+    {
+      "number": 22,
+      "title": "Burn Resuscitation and Management(Archived) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/portal/utils/pageresolver.fcgi?recordid=6993283650bd6f6bffe614c6",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Burn Resuscitation and Management(Archived) - StatPearls - NCBI Bookshelf\nThis\u00a0topic\u00a0focuses on the initial resuscitation and management of severe burns. Patients are classified as having severe burns if they have any of the following;. Severe burns cause not only significant injury at the lo",
+      "score": 0.56575525
+    },
+    {
+      "number": 23,
+      "title": "Outcome for Older Burn Patients | Trauma and Injury",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamasurgery/fullarticle/390543",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by V McGill \u00b7 2000 \u00b7 Cited by 107 \u2014 With standard treatment of burns, older patients will have a survival rate of more than 70%, with at least 60% of patients becoming fully functional 6 months",
+      "score": 0.08504601
+    },
+    {
+      "number": 24,
+      "title": "Effect of inhalation injury on fluid resuscitation requirements after thermal injury - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/0002961085904155",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Scientific paper Effect of inhalation injury on fluid resuscitation requirements after thermal injury\u2606. The presence of inhalation injury has been reported to increase fluid requirements for resuscitation from burn shock after thermal injury. To evaluate the effect of inhalation injury on the magn",
+      "score": 0.5300668
+    }
+  ],
+  "publishedAt": "2026-08-24T16:56:14.909117+00:00",
+  "updatedAt": "2026-08-24T16:56:14.909117+00:00",
+  "readingMinutes": 5,
+  "slug": "thermal-burns"
+}
