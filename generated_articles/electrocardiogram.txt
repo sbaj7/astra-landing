@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular diagnosis",
+  "title": "Electrocardiogram",
+  "summary": "Use the 12-lead electrocardiogram as a time-sensitive diagnostic test for ischemia, rhythm and conduction disorders, then escalate discordant or high-risk findings with targeted monitoring, imaging, electrophysiology, or repeat acquisition.",
+  "seoDescription": "A physician-focused approach to 12-lead ECG acquisition, interpretation, high-risk patterns, ambulatory monitoring, screening limits, and escalation.",
+  "clinicalQuestion": "How should physicians acquire, interpret, and act on a 12-lead electrocardiogram in diagnostic and screening practice?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "12-lead ECG",
+    "electrocardiography",
+    "ECG interpretation",
+    "ambulatory ECG",
+    "Brugada syndrome",
+    "pre-excitation",
+    "ECG screening"
+  ],
+  "keyTakeaways": [
+    "Use a standard 12-lead ECG early when myocardial ischemia or infarction is suspected; it is the key initial clinical test for these diagnoses. [10]",
+    "Interpret computer-generated ECG statements as decision support, not a final diagnosis; physician ECG interpretation has measurable accuracy limitations, and clinical context improves interpretation. [1][7]",
+    "A short PR interval below 120 ms with a delta wave indicates ventricular pre-excitation; label Wolff-Parkinson-White syndrome only when tachyarrhythmia or compatible palpitations are present. [4]",
+    "Type 1 Brugada morphology is coved ST-segment elevation of at least 2 mm in at least one right precordial lead, including V1-V2 positioned in the second through fourth intercostal spaces. [4][17]",
+    "Do not treat a normal resting ECG as exclusion of intermittent arrhythmia; select ambulatory ECG monitoring when the diagnostic question is rhythm capture over time. [7][8]"
+  ],
+  "sections": [
+    {
+      "id": "acquire-and-triage",
+      "eyebrow": "Initial test",
+      "heading": "When a 12-lead ECG changes immediate management",
+      "intro": "Obtain the tracing for a specific diagnostic question and interpret it in clinical context.",
+      "paragraphs": [
+        "Obtain a standard 12-lead ECG promptly when acute myocardial ischemia or infarction is in the differential; the ECG is considered the single most important initial clinical test for diagnosing myocardial ischemia and infarction. A nondiagnostic tracing does not resolve persistent clinical concern, because the 12-lead recording is a brief sample of electrical activity and must be integrated with symptoms, examination, and other testing. [10][8]",
+        "Use the 12-lead ECG to identify arrhythmias, conduction disturbance, acute coronary syndromes, chamber hypertrophy or enlargement patterns, and electrical effects of drugs or electrolyte disturbances. Each abnormality should trigger a targeted next test rather than a nonspecific cardiac workup: rhythm concern favors ambulatory ECG; suspected structural disease favors echocardiography or cardiac magnetic resonance imaging; and suspected coronary disease may require anatomic or functional coronary evaluation. [8][6]",
+        "Review the actual waveforms and lead placement before acting on an automated interpretation. Clinical information improves the usefulness of ECG interpretation, while occasional interpretation practice can lead to missed or incorrectly diagnosed arrhythmia; the ACC/AHA competence statement recommends at least 100 ECG interpretations annually to maintain competence. [7]"
+      ],
+      "bullets": [
+        "For suspected ischemia or infarction: obtain and interpret a 12-lead ECG as the initial clinical test. [10]",
+        "For transient palpitations, episodic presyncope, or suspected intermittent arrhythmia with no diagnostic resting tracing: use ambulatory ECG monitoring designed to capture the event. [7][8]",
+        "For an ECG pattern suggesting structural, inflammatory, or infiltrative disease: direct the next study toward echocardiography, coronary imaging, cardiac magnetic resonance imaging, endomyocardial biopsy, or electrophysiology study according to the working diagnosis. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ECG finding-to-next-step framework. [4][6][7][8][10][17]",
+        "columns": [
+          "ECG or clinical scenario",
+          "Interpretation",
+          "Actionable next step"
+        ],
+        "rows": [
+          [
+            "Suspected acute myocardial ischemia or infarction",
+            "The 12-lead ECG is the principal initial clinical test. [10]",
+            "Interpret immediately in the clinical presentation and pursue the acute coronary syndrome pathway when findings and presentation support it. [10]"
+          ],
+          [
+            "Symptoms suggesting intermittent arrhythmia; resting ECG nondiagnostic",
+            "A short resting tracing may not capture episodic rhythm disturbance. [7][8]",
+            "Order ambulatory ECG monitoring and review the full-disclosure tracing when available. [7]"
+          ],
+          [
+            "PR interval <120 ms plus delta wave",
+            "Manifest ventricular pre-excitation from antegrade accessory-pathway conduction. [4]",
+            "Determine whether tachyarrhythmia or palpitations are present; those features establish WPW syndrome rather than isolated pre-excitation. [4]"
+          ],
+          [
+            "Coved right-precordial ST elevation ≥2 mm with inverted T wave",
+            "Type 1 Brugada ECG pattern. [4][17]",
+            "Confirm appropriate V1-V2 positioning, assess symptoms and family history of sudden cardiac death, and consider specialist risk assessment. [4]"
+          ],
+          [
+            "ECG raises concern for structural or arrhythmogenic substrate",
+            "Electrical abnormality may require multimodality evaluation. [6][8]",
+            "Select echocardiography, cardiac magnetic resonance imaging, coronary angiography or CT, endomyocardial biopsy, or electrophysiology study based on the suspected disease. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpretation-workflow",
+      "eyebrow": "Interpretation",
+      "heading": "A reproducible reading workflow that avoids consequential errors",
+      "intro": "Use a fixed sequence before assigning a rhythm or disease label.",
+      "paragraphs": [
+        "First verify technical adequacy and reconcile the tracing with the patient’s age, symptoms, medications, electrolyte status, prior ECGs, and recording conditions. The ECG records body-surface potential differences from prescribed electrode sites, so acquisition and lead placement are integral to interpretation rather than clerical details. [11][15]",
+        "Then read rate and rhythm, PR interval, QRS duration and axis, ST-T-U morphology, and QT interval in a consistent order. This structure separates primary rhythm and conduction diagnoses from repolarization abnormalities that may reflect ischemia, drugs, electrolyte disturbance, or congenital channelopathy. Standardized interpretation statements specifically address ST segment, T wave, U wave, and QT interval assessment. [8][14][15]",
+        "When the tracing conflicts with the clinical syndrome, repeat the 12-lead ECG with attention to lead positioning and obtain serial or ambulatory recordings when the suspected process is dynamic. Full-disclosure ambulatory systems are preferred by many clinicians because the tracing can be read similarly to a 12-lead ECG and technical failures can be assessed. [7]"
+      ],
+      "bullets": [
+        "Compare with prior ECGs before calling a pattern new when prior tracings are available. [7]",
+        "Document whether interpretation is based on the waveform review, automated statement, or both; machine output should not replace physician adjudication. [1][7][8]",
+        "Escalate uncertain high-risk patterns for expert over-read rather than relying on limited-frequency interpretation experience. [1][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Structured ECG interpretation targets and common decision consequences. [7][8][14][15]",
+        "columns": [
+          "Reading domain",
+          "Question to answer",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Acquisition",
+            "Are the leads and recording technically credible? [11][15]",
+            "Repeat an inadequate or clinically discordant tracing before assigning a durable diagnosis. [7][11]"
+          ],
+          [
+            "Rhythm",
+            "Is the rhythm diagnostic on this brief recording? [8]",
+            "If symptoms are episodic and the ECG is unrevealing, use ambulatory monitoring. [7][8]"
+          ],
+          [
+            "Conduction",
+            "Is there pre-excitation or intraventricular conduction disturbance? [4][14]",
+            "Use the morphology to direct arrhythmia risk assessment or structural evaluation. [4][6][14]"
+          ],
+          [
+            "ST-T-U and QT",
+            "Is repolarization abnormality present and clinically concordant? [15]",
+            "Evaluate ischemic, drug-related, electrolyte-related, and inherited-channelopathy possibilities according to the pattern. [8][15][17]"
+          ],
+          [
+            "Clinical integration",
+            "Does the ECG fit symptoms, family history, and examination? [7]",
+            "Discordance requires repeat acquisition, serial testing, ambulatory recording, or targeted imaging rather than reassurance from a single tracing. [6][7][8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "preexcitation-and-brugada",
+      "eyebrow": "High-risk patterns",
+      "heading": "Act on pre-excitation and Brugada patterns without overdiagnosing syndromes",
+      "intro": "Separate an ECG pattern from a syndrome defined by symptoms or arrhythmic events.",
+      "paragraphs": [
+        "Diagnose ventricular pre-excitation on the resting ECG when there is a PR interval below 120 ms and a delta wave, reflecting antegrade accessory-pathway conduction that bypasses the AV node partly or completely. Do not equate that isolated ECG finding with Wolff-Parkinson-White syndrome: the syndrome requires tachyarrhythmia or palpitations. This distinction changes counseling, diagnostic framing, and the urgency of rhythm-focused evaluation. [4]",
+        "Identify a type 1 Brugada pattern by coved ST-segment elevation of at least 2 mm in at least one right precordial lead, followed by T-wave inversion; assess V1-V2 in the second, third, or fourth intercostal space. A type 1 pattern may be spontaneous or induced by a class I antiarrhythmic provocative test such as ajmaline or flecainide. [4][17]",
+        "For Brugada-pattern ECGs, prioritize history of syncope or arrhythmic events, spontaneous versus provoked type 1 morphology, sex, family history of sudden cardiac death, and spontaneous atrial fibrillation in risk assessment. Spontaneous type 1 morphology is associated with the greatest likelihood of clinical sequelae among asymptomatic individuals. The value of electrophysiology study inducibility for ventricular arrhythmia risk remains controversial. [4]"
+      ],
+      "bullets": [
+        "In Brugada syndrome, advise avoidance of potentially proarrhythmic drugs, avoidance of excessive alcohol consumption, and prompt fever reduction; the cited aircrew guidance gives paracetamol as an example. [4]",
+        "Do not use fragmented QRS or ventricular effective refractory period below 200 ms as established stand-alone Brugada risk markers; both remain under investigation. [4]",
+        "For a suspected concealed inherited repolarization disorder, exercise recovery measurements may add diagnostic discrimination: in one study, a delta RT greater than 25 ms at 1 minute of recovery had sensitivity of 73% and specificity of 92% for congenital long-QT syndrome. [17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Long-QT evaluation when the baseline ECG is equivocal",
+          "paragraphs": [
+            "In relatives of patients with congenital long-QT syndrome, combine resting QTc with QTc measured 4 minutes after exercise recovery when evaluating for carrier status. One cited family study reported 94% sensitivity and 90% specificity for the combined approach; this is a diagnostic adjunct, not a substitute for phenotype, family assessment, and genotype-informed interpretation. [17]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Selected inherited-arrhythmia and pre-excitation ECG thresholds. [4][17]",
+        "columns": [
+          "Pattern",
+          "Threshold or defining feature",
+          "Interpretation and action"
+        ],
+        "rows": [
+          [
+            "Manifest pre-excitation",
+            "PR interval <120 ms plus delta wave. [4]",
+            "Accessory-pathway antegrade conduction; determine whether palpitations or tachyarrhythmia establish WPW syndrome. [4]"
+          ],
+          [
+            "Brugada type 1",
+            "Coved ST elevation ≥2 mm in ≥1 right precordial lead with inverted T wave; evaluate V1-V2 in the second through fourth intercostal spaces. [4][17]",
+            "Assess for spontaneous pattern, symptoms, family history of sudden cardiac death, and atrial fibrillation; consider specialist evaluation. [4]"
+          ],
+          [
+            "Brugada type 2",
+            "Saddleback ST elevation with ST-end trough ≥1 mm. [17]",
+            "Not type 1 morphology; interpret with the full clinical and ECG context. [17]"
+          ],
+          [
+            "Brugada type 3",
+            "Saddleback ST elevation with ST-end trough <1 mm. [17]",
+            "Not type 1 morphology; do not assign type 1 risk implications from this pattern alone. [17]"
+          ],
+          [
+            "Exercise recovery adjunct for congenital long-QT syndrome",
+            "Delta RT >25 ms at 1 minute after recovery. [17]",
+            "Reported sensitivity 73% and specificity 92% in the cited study; use as part of an inherited-arrhythmia assessment. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ambulatory-ecg",
+      "eyebrow": "Intermittent symptoms",
+      "heading": "When ambulatory ECG adds more than a resting tracing",
+      "intro": "Use ambulatory monitoring when the diagnosis depends on rhythm behavior over time.",
+      "paragraphs": [
+        "Order ambulatory ECG when the presenting complaint is episodic and a standard ECG does not establish the rhythm diagnosis. Long-term monitoring primarily provides rhythm and repolarization information, whereas the standard 12-lead ECG provides broader assessment of electrical activity, including conduction and ischemic patterns. [8]",
+        "Choose an ambulatory system that permits assessment of technical failures and, when feasible, full-disclosure waveform review. Full-disclosure capability allows clinicians to read the ambulatory tracing similarly to a 12-lead ECG and is preferred by many interpreters for this reason. [7]",
+        "Use the baseline 12-lead ECG as an adjunct to ambulatory interpretation rather than treating the two tests as interchangeable. The standard tracing may identify conduction or repolarization features that change interpretation of ambulatory rhythm events. [7][8]"
+      ],
+      "bullets": [
+        "A nondiagnostic resting ECG in a patient with intermittent palpitations or suspected paroxysmal arrhythmia is an indication to pursue longer-duration rhythm capture rather than conclude that no arrhythmia exists. [7][8]",
+        "Review raw or full-disclosure data when an automated ambulatory classification is discordant with symptoms or the baseline ECG. [7]",
+        "Use the 12-lead ECG to define broader electrical phenotype and ambulatory monitoring to establish temporal rhythm correlation. [7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Resting versus ambulatory ECG: complementary diagnostic roles. [7][8]",
+        "columns": [
+          "Modality",
+          "Best-supported role",
+          "Interpretive limitation"
+        ],
+        "rows": [
+          [
+            "Standard 12-lead ECG",
+            "Broad snapshot of arrhythmias, conduction disturbance, acute coronary syndromes, chamber abnormality patterns, and drug or electrolyte effects. [8]",
+            "Brief recording may miss episodic rhythm disorders. [7][8]"
+          ],
+          [
+            "Ambulatory ECG",
+            "Longitudinal rhythm and repolarization assessment, particularly when symptoms are intermittent. [7][8]",
+            "Technical failure and algorithmic interpretation require waveform review; full-disclosure capability facilitates this. [7]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "screening-and-quality",
+      "eyebrow": "Appropriate use",
+      "heading": "Use ECG screening selectively and protect against interpretation error",
+      "intro": "Screening value depends on the population, downstream testing burden, and interpreter expertise.",
+      "paragraphs": [
+        "Do not assume that a 12-lead ECG is a universal screening test simply because it is low cost and widely available. The AHA has issued a detailed evidence critique of ECG screening in healthy populations aged 12 to 25 years, and athlete pre-participation ECG implementation remains controversial. Apply screening decisions to the specific population and program rather than extrapolating diagnostic-test use in symptomatic patients. [12][22][23]",
+        "In athletes with ventricular extrasystoles, begin with targeted history rather than ECG morphology alone: exertional symptoms, family history, race and ethnicity, geographic exposure relevant to endemic disease, performance-enhancing or recreational drug use, and comorbidities all alter the probability of an arrhythmogenic substrate and the next diagnostic test. [22]",
+        "Formal quality processes should include ongoing case volume, access to expert over-read for difficult tracings, and clinical correlation. The ACC/AHA competence statement recommends 100 annual 12-lead ECG interpretations to maintain competence, while a systematic review documents variability in physician interpretation accuracy. [1][7]"
+      ],
+      "bullets": [
+        "For athlete ECG screening, use established athlete-specific interpretation criteria and recognize that program-level implementation remains debated. [22][23]",
+        "For ventricular extrasystoles in athletes, integrate exercise symptoms, family history, substances, comorbidities, and ECG findings before determining the extent of evaluation. [22]",
+        "Use automated ECG interpretation to support triage and workflow, but retain clinician waveform review and contextual adjudication. [1][7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Screening and quality-control decisions for ECG programs. [1][7][12][22][23]",
+        "columns": [
+          "Setting",
+          "Decision point",
+          "Practical response"
+        ],
+        "rows": [
+          [
+            "Healthy young people",
+            "Population ECG screening has both potential benefits and harms requiring evidence-based program design. [12]",
+            "Do not generalize diagnostic ECG indications to mass screening without considering the screening-specific evidence. [12]"
+          ],
+          [
+            "Competitive athletes",
+            "Pre-participation ECG implementation remains controversial. [22][23]",
+            "Use standardized athlete interpretation approaches when an ECG is included in a screening program. [23]"
+          ],
+          [
+            "Athlete with ventricular extrasystoles",
+            "Clinical risk depends on exercise symptoms, family history, substances, comorbidity, and ECG context. [22]",
+            "Use an algorithmic risk assessment rather than ECG morphology in isolation. [22]"
+          ],
+          [
+            "Low-volume ECG interpreter",
+            "Infrequent interpretation increases risk of missed or inappropriate arrhythmia diagnosis. [7]",
+            "Arrange expert over-read or structured quality review; maintain at least 100 annual interpretations when serving as an ECG interpreter. [7]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should a computerized ECG interpretation be accepted without physician review?",
+      "answer": "No. Physician interpretation has documented accuracy limitations, and interpretation is more clinically useful when integrated with patient data. Review the waveform, acquisition quality, symptoms, medications, and prior ECGs before acting on an automated statement. [1][7][8]"
+    },
+    {
+      "question": "Does pre-excitation on ECG establish Wolff-Parkinson-White syndrome?",
+      "answer": "No. A PR interval below 120 ms with a delta wave indicates pre-excitation, but WPW syndrome requires tachyarrhythmia or symptoms of palpitations. [4]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

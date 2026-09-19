@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Hypernatremia Free Water Replacement",
+  "summary": "A volume-status and duration-based approach to calculate free water deficit, select enteral or intravenous replacement, protect perfusion first, account for ongoing losses, and titrate serum sodium monitoring to avoid both undercorrection and unsafe overcorrection.",
+  "seoDescription": "Calculate and replace free water in hypernatremia using volume status, duration, sodium targets, fluid selection, and serial sodium monitoring.",
+  "clinicalQuestion": "How should clinicians calculate, prescribe, and monitor free water replacement for adult hypernatremia?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hypernatremia",
+    "free water deficit",
+    "D5W",
+    "0.45% saline",
+    "diabetes insipidus",
+    "sodium correction rate"
+  ],
+  "keyTakeaways": [
+    "Restore intravascular volume with 0.9% saline or balanced crystalloid before hypotonic replacement when shock or hypotension is present, regardless of the sodium concentration. [16]",
+    "Estimate water deficit as total body water × ((serum sodium/140) − 1), then add ongoing renal, gastrointestinal, and insensible water losses to the prescription. [16][20]",
+    "For hypernatremia present for more than 48 hours or of unknown duration, a conventional target is a sodium decrease below 0.5 mmol/L/hour and no more than 12 mmol/L/day; excessively slow correction below 0.25 mmol/L/hour has been associated with higher adult mortality. [11]",
+    "Treat acute symptomatic sodium-loading hypernatremia within 48 hours more rapidly: lower sodium by 1–2 mmol/L/hour for the first 6–8 hours and target 145 mmol/L within 24 hours. [11]",
+    "Use D5W or enteral water for electrolyte-free water replacement; use D5W plus diuresis for hypervolemic hypernatremia rather than D5W alone. [16][23]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First decision",
+      "heading": "Stabilize circulation before calculating free water",
+      "intro": "Volume status determines the first fluid, not the serum sodium alone.",
+      "paragraphs": [
+        "Assess blood pressure, perfusion, mental status, urine output, recent fluid balance, medication exposure, and sodium administration immediately. Hypernatremia reflects hypertonicity and cellular dehydration, but the immediate management branch is hypovolemic, euvolemic, or hypervolemic disease. [3][16]",
+        "In shock or hypotension, give 0.9% saline or a balanced crystalloid until intravascular volume is restored; do not defer resuscitation because the sodium is high. Once perfusion is restored, switch to a hypotonic strategy for the remaining free water deficit. [16][23]",
+        "Manage severe or acute hypernatremia in hospital. Escalate to ICU-level monitoring when altered mental status, seizures, hemodynamic instability, rapidly changing sodium, severe renal dysfunction, or a requirement for frequent fluid titration prevents safe ward management. [1]"
+      ],
+      "bullets": [
+        "Stop or reverse the precipitant when identifiable: discontinue sodium sources, treat fever, relieve urinary obstruction, give insulin for hyperglycemic osmotic diuresis, and stop an offending medication when feasible. [1]",
+        "Obtain serial serum sodium and glucose during active correction; use urine volume and urine osmolality to distinguish renal water loss from extrarenal loss. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial fluid selection follows hemodynamics and extracellular volume status. [16][23]",
+        "columns": [
+          "Clinical state",
+          "Initial fluid action",
+          "Free water strategy after stabilization"
+        ],
+        "rows": [
+          [
+            "Shock or hypotension",
+            "0.9% saline or balanced crystalloid until volume restoration. [16]",
+            "Then calculate deficit and replace with hypotonic fluid. [16]"
+          ],
+          [
+            "Hypovolemic but hemodynamically stable",
+            "0.45% saline or D5W can replace free water while addressing volume depletion. [16][23]",
+            "Include ongoing renal, gastrointestinal, and insensible losses. [16]"
+          ],
+          [
+            "Euvolemic hypernatremia",
+            "Evaluate for water diuresis, especially central or nephrogenic diabetes insipidus. [16][17]",
+            "Use enteral water or IV D5W; treat the cause of water diuresis. [16]"
+          ],
+          [
+            "Hypervolemic hypernatremia",
+            "Avoid D5W alone because it worsens volume overload. [23]",
+            "Give D5W with a loop diuretic to provide free water while promoting sodium removal. [16][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "calculate-deficit",
+      "eyebrow": "Prescription",
+      "heading": "Calculate the deficit and convert it into a daily water order",
+      "intro": "The calculated deficit is only the baseline requirement.",
+      "paragraphs": [
+        "Estimate total body water as 0.6 × body weight in kilograms for men and 0.5 × body weight for women, then calculate free water deficit: total body water × ((serum sodium/140) − 1). This estimates the positive water balance needed to return sodium to 140 mEq/L. [20][14]",
+        "Example: a 60-kg woman with serum sodium 168 mEq/L has estimated total body water of 30 L and a calculated deficit of 6 L: 30 × ((168/140) − 1). Use this result as a starting point, not a complete daily order, because the estimate can understate deficit when hypernatremia results from hypotonic fluid loss. [14][20]",
+        "Add expected insensible losses and measured ongoing renal or extrarenal losses to the calculated deficit. In polyuric states, reassess urine output frequently rather than assuming a fixed loss rate; failure to replace ongoing losses is a common reason sodium does not fall as predicted. [16][1]"
+      ],
+      "bullets": [
+        "If the patient can safely drink or receive enteral water, oral or enteral water is an electrolyte-free replacement option. [16][18]",
+        "For IV therapy, D5W provides electrolyte-free water after glucose metabolism; 0.45% saline provides less free water per liter and may be preferable when some sodium replacement is needed. [16][23]",
+        "A fixed D5W starting regimen described for adults is 1.35 mL/kg/hour; another is 3 mL/kg/hour, based on the approximation that a 1 mmol/L sodium decrease requires 3 mL/kg of electrolyte-free water. Adjust either regimen for the intended correction rate and concurrent losses. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "Use the calculated deficit cautiously",
+          "paragraphs": [
+            "The formula assumes a target sodium of 140 mEq/L and is most reliable for predominant water loss. In hypovolemic hypernatremia from hypotonic fluid loss, the calculation may underestimate total replacement needs; serial sodium and fluid balance, rather than the initial equation alone, must determine subsequent rates. [14]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Free water prescription components should be ordered separately and revised against serial sodium values. [16]",
+        "columns": [
+          "Component",
+          "How to determine it",
+          "What changes the order"
+        ],
+        "rows": [
+          [
+            "Baseline water deficit",
+            "Total body water × ((serum sodium/140) − 1). [20]",
+            "Recalculate the expected remaining deficit as sodium changes. [16]"
+          ],
+          [
+            "Planned correction interval",
+            "Set from acute versus chronic or unknown duration and neurologic severity. [11]",
+            "Shorten only for acute symptomatic sodium loading; use slower correction for chronic or unknown duration. [11]"
+          ],
+          [
+            "Ongoing renal loss",
+            "Track urine output and urine osmolality. [17]",
+            "Polyuria with dilute urine suggests water diuresis requiring cause-directed treatment. [16][17]"
+          ],
+          [
+            "Extrarenal and insensible loss",
+            "Add gastrointestinal and insensible losses to daily water delivery. [16]",
+            "Fever and continued gastrointestinal loss increase replacement requirements. [1][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "correction-rate",
+      "eyebrow": "Timing",
+      "heading": "Set the sodium correction target by duration and mechanism",
+      "intro": "Acute sodium gain and chronic water deficit should not receive the same correction target.",
+      "paragraphs": [
+        "For acute symptomatic hypernatremia occurring within 48 hours from sodium loading, lower plasma sodium by 1–2 mmol/L/hour during the first 6–8 hours and restore sodium to 145 mmol/L within 24 hours. Rapid treatment in this branch is intended to reverse severe hypertonicity without increasing cerebral edema risk. [11][24]",
+        "For hypernatremia lasting more than 48 hours or of unknown duration, use a conventional maximum fall below 0.5 mmol/L/hour, or 12 mmol/L/day. This cautious target derives principally from pediatric data because sustained hypernatremia permits neuronal osmolyte adaptation and overly rapid water replacement can cause cerebral edema. [11][3]",
+        "Adult observational data complicate the traditional limit: correction above 0.5 mmol/L/hour has not been associated with increased neurologic injury or mortality in reported adult studies, whereas correction below 0.25 mmol/L/hour, approximately 6 mmol/L/day, has been associated with higher mortality. A practical target under study is 6–11 mmol/L during the first 24 hours. [11]"
+      ],
+      "bullets": [
+        "If sodium falls faster than intended in chronic or unknown-duration hypernatremia, reduce or pause electrolyte-free water and recheck sodium; therapeutic re-raising of serum sodium is not recommended. [11]",
+        "Avoid allowing the sodium to plateau because the initial deficit was ordered without replacing continued urinary, gastrointestinal, or insensible losses. [16]",
+        "Interpret sodium during treatment of severe hyperglycemia in clinical context, because insulin-mediated glucose reduction and treatment-related osmotic diuresis can alter the sodium trajectory. [23][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Correction targets differ by chronicity and sodium-loading mechanism. [11][24]",
+        "columns": [
+          "Presentation",
+          "Target sodium fall",
+          "Operational consequence"
+        ],
+        "rows": [
+          [
+            "Acute symptomatic sodium loading within 48 hours",
+            "1–2 mmol/L/hour for first 6–8 hours; sodium 145 mmol/L within 24 hours. [11]",
+            "Use aggressive electrolyte-free water replacement with close inpatient monitoring. [24]"
+          ],
+          [
+            "More than 48 hours or unknown duration",
+            "Below 0.5 mmol/L/hour; no more than 12 mmol/L/day. [11]",
+            "Distribute deficit, ongoing losses, and insensible losses across the selected correction interval. [16]"
+          ],
+          [
+            "Adult correction slower than 0.25 mmol/L/hour",
+            "Associated with higher mortality in observational studies. [11]",
+            "Reassess inadequate water delivery, continued loss, and incorrect etiologic classification. [11][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "identify-water-loss",
+      "eyebrow": "Etiologic branch",
+      "heading": "Use urine output and urine osmolality to identify the ongoing loss",
+      "intro": "Persistent hypernatremia despite replacement usually reflects an uncorrected water loss or sodium gain.",
+      "paragraphs": [
+        "Classify the physiology with plasma osmolality, urine volume, and urine osmolality. In diabetes insipidus, urine is inappropriately dilute relative to plasma, with urine osmolality below serum osmolality despite hypernatremia; central and nephrogenic diabetes insipidus are key causes of renal water diuresis. [17]",
+        "When hypernatremia accompanies high urine output and hypotonic urine, review for central diabetes insipidus after head trauma, cranial neoplasm, or pituitary infiltrative disease, and for nephrogenic diabetes insipidus from lithium, foscarnet, demeclocycline, or inherited disease. [17]",
+        "A response to a vasopressin agonist helps distinguish central from nephrogenic diabetes insipidus: central disease produces lower urine volume and increased urine osmolality, whereas nephrogenic disease has a subnormal renal response. Water-deprivation testing can confirm central diabetes insipidus when clinically appropriate. [21][17]"
+      ],
+      "bullets": [
+        "Treat central diabetes insipidus with desmopressin while monitoring sodium and water intake to avoid water intoxication and hyponatremia. Parenteral desmopressin doses of 0.5–2 micrograms subcutaneously, intramuscularly, or intravenously are described for acute management. [8][17]",
+        "For nephrogenic diabetes insipidus, remove a precipitating drug when possible and continue free water replacement while the water diuresis persists. [14][17]",
+        "In adipsic diabetes insipidus, prescribe both desmopressin and scheduled water rather than relying on thirst; absent thirst prevents prompt compensation for rising osmolality. [22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Separate osmotic diuresis from diabetes insipidus",
+          "paragraphs": [
+            "Hyperglycemia, mannitol, and other solute loads can cause osmotic diuresis and substantial free water loss. In diabetic ketoacidosis or hyperosmolar states, combine volume resuscitation and insulin with serial sodium reassessment; after initial isotonic resuscitation, 0.45% saline is used in patients with eunatremia or hypernatremia, and dextrose is added once glucose falls below 200 mg/dL in DKA or 300 mg/dL in HHS while insulin continues. [17][23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Urine findings direct treatment toward ongoing water loss versus sodium gain. [16][17][21]",
+        "columns": [
+          "Pattern",
+          "Likely mechanism",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Polyuria with urine osmolality below serum osmolality",
+            "Central or nephrogenic diabetes insipidus. [17]",
+            "Assess response to vasopressin agonist; treat central disease with desmopressin and remove nephrogenic triggers when possible. [21][14]"
+          ],
+          [
+            "Hyperglycemia or mannitol exposure with high urine losses",
+            "Osmotic diuresis. [17]",
+            "Treat the solute disorder and replace ongoing free water loss. [1][23]"
+          ],
+          [
+            "Low intake, fever, gastrointestinal loss, or increased insensible loss",
+            "Extrarenal water loss or inadequate access to water. [1][17]",
+            "Provide scheduled oral, enteral, or IV free water and correct the precipitant. [1][16]"
+          ],
+          [
+            "Recent hypertonic sodium administration or ingestion",
+            "Hypertonic sodium gain. [16][17]",
+            "Use acute sodium-loading correction targets; consider sodium removal strategies if water requirement would cause volume overload. [11][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Reassessment",
+      "heading": "Titrate to the measured sodium trajectory and fluid balance",
+      "intro": "A fluid rate is provisional until the next sodium measurement.",
+      "paragraphs": [
+        "Monitor serum sodium repeatedly during active replacement and adjust the infusion or enteral water order to the observed rate of decline. The replacement plan must account for calculated deficit, the desired correction rate, and ongoing free water losses; relying on a one-time calculation risks both persistent hypernatremia and unintended rapid correction. [1][16]",
+        "Record intake, urine output, gastrointestinal losses, daily weight when feasible, glucose, and the changing volume examination. D5W can cause hyperglycemia, while desmopressin plus excessive hypotonic fluid can cause profound hyponatremia; each requires prompt reassessment of free water delivery and antidiuretic exposure. [8][15]",
+        "For hypervolemic hypernatremia or sodium intoxication, the free water requirement may be too large to administer safely. Combine D5W with loop diuresis to promote sodium removal; consider dialysis when sodium removal is required and volume overload limits medical therapy. [16][17]"
+      ],
+      "bullets": [
+        "Do not use D5W alone in a volume-overloaded patient; pair it with a sodium-removal strategy. [23]",
+        "Consider renal replacement therapy in severe kidney injury when conventional hypotonic replacement is not feasible; dialysis can lower sodium rapidly, so the planned sodium trajectory requires close supervision. [4]",
+        "If altered mental status persists despite improving glucose and sodium management, reassess for concurrent neurologic disease rather than assuming hypernatremia is the only cause. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring findings that should change the free water prescription. [1][8][11][16]",
+        "columns": [
+          "Finding during treatment",
+          "Interpretation",
+          "Immediate adjustment"
+        ],
+        "rows": [
+          [
+            "Sodium falling faster than planned in chronic or unknown-duration hypernatremia",
+            "Electrolyte-free water delivery exceeds the intended correction trajectory. [11]",
+            "Reduce or pause free water and repeat sodium measurement; do not therapeutically re-raise sodium. [11]"
+          ],
+          [
+            "Sodium falls less than planned",
+            "Deficit, ongoing losses, or both are underestimated. [1][16]",
+            "Increase replacement after quantifying urine, gastrointestinal, and insensible losses. [16]"
+          ],
+          [
+            "New edema or worsening oxygenation",
+            "Free water replacement is aggravating volume overload. [23]",
+            "Avoid D5W alone; pair D5W with loop diuresis and consider dialysis when needed. [16][23]"
+          ],
+          [
+            "Marked polyuria continues after water replacement",
+            "Persistent renal water diuresis is likely. [16][17]",
+            "Measure urine osmolality and evaluate for diabetes insipidus or osmotic diuresis. [17][21]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is enteral free water equivalent to IV D5W for ICU-acquired hypernatremia?",
+      "answer": "Both are main replacement strategies for electrolyte-free water. A retrospective ICU cohort evaluated enteral free water and parenteral D5W for sodium lowering, but route selection should also reflect enteral access, aspiration risk, glycemic effects, fluid tolerance, and the ability to titrate therapy. [18]"
+    },
+    {
+      "question": "When should dialysis be considered for hypernatremia?",
+      "answer": "Consider dialysis when severe kidney injury or sodium intoxication makes the required free water volume unsafe or ineffective, particularly with volume overload. Because renal replacement can correct sodium rapidly, use close monitoring and a controlled plan. [4][17]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

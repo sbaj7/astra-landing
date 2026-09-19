@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Preventive Medicine",
+  "title": "Adult Immunization",
+  "summary": "A point-of-care framework for reconciling adult vaccine history, identifying condition-specific indications, safely administering vaccines, and managing key timing decisions for COVID-19, zoster, RSV, meningococcal, MMR, Tdap, and influenza immunization.",
+  "seoDescription": "Physician guide to adult immunization: vaccine reconciliation, immunocompromise, pregnancy, RSV, COVID-19, zoster, meningococcal risk, and contraindications.",
+  "clinicalQuestion": "How should clinicians reconcile and deliver adult immunizations when age, pregnancy, immune status, and exposure risk modify vaccine indications?",
+  "specialty": "Internal Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "adult immunization schedule",
+    "immunocompromised vaccination",
+    "COVID-19 vaccine",
+    "RSV vaccine",
+    "Shingrix",
+    "MMR contraindications",
+    "meningococcal vaccination",
+    "Tdap pregnancy"
+  ],
+  "keyTakeaways": [
+    "For incomplete or unknown adult vaccine histories, administer indicated vaccines; do not restart a series because intervals were prolonged. [18]",
+    "Adults aged 65 years and older should receive a second 2024-2025 COVID-19 vaccine dose 6 months after the prior dose; the minimum interval is 2 months. [6]",
+    "Adults who are moderately or severely immunocompromised may receive additional 2024-2025 COVID-19 doses at least 2 months after the latest dose through shared clinical decision-making. [6][18]",
+    "Give recombinant zoster vaccine as a 2-dose series 2-6 months apart to adults aged 50 years and older and adults aged 19 years and older who are or will be immunocompromised. [5][24]",
+    "Do not administer live MMR vaccine during pregnancy or severe immunodeficiency; defer after recent antibody-containing blood products for the product-specific interval. [23]",
+    "Meningococcal B vaccination for persons aged 10 years and older at increased risk is a 3-dose MenB-4C series at 0, 1-2, and 6 months. [17]"
+  ],
+  "sections": [
+    {
+      "id": "reconcile-before-vaccinating",
+      "eyebrow": "Visit Workflow",
+      "heading": "Reconcile vaccine status without delaying indicated doses",
+      "intro": "Use the adult schedule, its notes, appendix, and addendum together for each immunization decision.",
+      "paragraphs": [
+        "At every preventive, chronic-care, preconception, transplant, dialysis, oncology, HIV, and medication-management visit, document age, prior vaccine products and dates, pregnancy status, immune status, occupational exposure, travel or outbreak exposure, asplenia, complement deficiency or complement-inhibitor therapy, and prior severe vaccine reactions. The ACIP adult schedule is a consolidated summary, but its tables, notes, appendix, and interim addendum must be used together because indications and contraindications are vaccine-specific. [7][22]",
+        "When documentation is incomplete or unavailable, administer vaccines indicated by age, risk, or condition rather than waiting to reconstruct the record. Do not restart or add doses solely because the interval since a previous dose exceeded the recommended interval. [18]",
+        "Before any live vaccine, actively screen for pregnancy, severe immunodeficiency, recent antibody-containing blood products, and\u2014in the case of varicella-containing vaccines\u2014recent acyclovir, famciclovir, or valacyclovir exposure. These factors change whether vaccination should proceed, be deferred, or require a product-specific timing plan. [23]"
+      ],
+      "bullets": [
+        "Use the medical-condition schedule to identify vaccines that are routine, risk-based, shared clinical decision-making options, precautions, or contraindications for pregnancy, immunocompromise, HIV, asplenia, cardiopulmonary disease, kidney failure, liver disease, diabetes, and health care personnel. [22]",
+        "Use a contraindication and precaution screening checklist before administration; CDC directs vaccinators to formal contraindication and precaution resources. [8]",
+        "Keep immediate treatment available for anaphylaxis whenever administering vaccines. This is explicitly required in the Adacel prescribing information. [3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-yield reconciliation branches for adult vaccine encounters. [18][22][23]",
+        "columns": [
+          "Clinical finding",
+          "Immediate action",
+          "What changes next"
+        ],
+        "rows": [
+          [
+            "History incomplete or unknown",
+            "Administer age- and risk-indicated vaccines; do not restart delayed series. [18]",
+            "Create a dated record and schedule only the remaining required doses. [18]"
+          ],
+          [
+            "Pregnancy",
+            "Give Tdap once during each pregnancy; delay RZV until after pregnancy when feasible. [22][5]",
+            "Do not administer MMR during pregnancy. [23]"
+          ],
+          [
+            "Moderate or severe immunocompromise",
+            "Review condition-specific schedule and avoid live MMR in severe immunodeficiency. [22][23]",
+            "Use the enhanced COVID-19 schedule and give RZV beginning at age 19 years if indicated. [6][5]"
+          ],
+          [
+            "Functional or anatomic asplenia, complement deficiency, or complement-inhibitor use",
+            "Assess MenB indication. [17]",
+            "Use MenB-4C at 0, 1-2, and 6 months for increased-risk persons aged 10 years and older. [17]"
+          ],
+          [
+            "Recent antibody-containing blood product",
+            "Defer MMR or varicella-containing vaccine for the product-specific interval. [23]",
+            "Reschedule live vaccination after the applicable interval rather than treating this as permanent ineligibility. [23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "immunocompromised-adults",
+      "eyebrow": "High-Risk Hosts",
+      "heading": "Modify vaccination for immunocompromise and HIV",
+      "intro": "Separate nonlive vaccine intensification from live-vaccine contraindications.",
+      "paragraphs": [
+        "For adults with moderate or severe immunocompromise, use the condition-specific adult schedule rather than a generic age-only pathway. The schedule specifically distinguishes immunocompromise excluding HIV from HIV categories stratified by CD4 percentage and count, and flags circumstances in which additional doses may be needed. [22]",
+        "For 2024-2025 COVID-19 vaccination, adults aged 6 months through 64 years with moderate or severe immunocompromise are recommended to receive a second dose 6 months after the first dose, with a minimum interval of 2 months. Additional doses\u2014three or more during the season\u2014may be given through shared clinical decision-making at intervals of at least 2 months after the most recent dose. Protection against COVID-19-associated emergency department, urgent care, and hospital care waned to approximately zero by 4-6 months in older-adult analyses, supporting attention to interval timing in patients at highest consequence of infection. [6]",
+        "Give recombinant zoster vaccine to adults aged 19 years and older who are or will be immunocompromised, including persons with HIV regardless of CD4 count, as 2 doses separated by 2-6 months; the minimum interval is 4 weeks. Repeat a dose given sooner than the minimum interval. [5]",
+        "For HIV care, determine hepatitis A immunity with HAV IgG when relevant. In patients who are HAV IgG-negative, give HepA as 2 doses at 0 and 6-12 months with Havrix or at 0 and 6-18 months with Vaqta. For patients without immunity to both HAV and HBV, an option is HepA plus 2 doses of HepB-CpG; if HepB-CpG is unavailable, use combined HepA-HepB vaccine at 0, 1, and 6 months. [16]",
+        "Do not equate all HIV infection with a live-vaccine contraindication, but do not give MMR to patients with severe immunodeficiency. The adult condition schedule separates HIV strata by CD4 percentage and absolute count, and the MMR contraindication includes severely immunocompromised HIV infection. [22][23]"
+      ],
+      "bullets": [
+        "Document the immunocompromising diagnosis and current treatment before assessing live-vaccine eligibility; chemotherapy, hematologic or solid tumors, congenital immunodeficiency, and long-term immunosuppressive therapy are listed examples of severe immunodeficiency. [23]",
+        "For solid-organ transplant recipients, use the schedule notes rather than extrapolating from general immunocompromise categories. [22]",
+        "For HIV-positive travelers considering yellow fever vaccine, pregnancy and age 60 years or older increase complication risk; if travel documentation is the only reason for vaccination, issue a medical waiver rather than vaccinating. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immunocompromised-host actions supported by current schedule and HIV guidance. [5][6][16][22][23]",
+        "columns": [
+          "Situation",
+          "Vaccine action",
+          "Interval or restriction"
+        ],
+        "rows": [
+          [
+            "Moderate or severe immunocompromise",
+            "Give second 2024-2025 COVID-19 dose. [6]",
+            "6 months after the first dose; minimum 2 months. [6]"
+          ],
+          [
+            "Moderate or severe immunocompromise",
+            "Consider additional 2024-2025 COVID-19 doses using shared decision-making. [6][18]",
+            "At least 2 months after the latest dose. [6][18]"
+          ],
+          [
+            "Immunocompromised adult aged 19 years or older, including HIV regardless of CD4 count",
+            "Give RZV. [5]",
+            "2 doses 2-6 months apart; minimum 4 weeks. [5]"
+          ],
+          [
+            "Severe immunodeficiency",
+            "Do not administer MMR. [23]",
+            "Reassess only if immune status changes and vaccine eligibility is established. [23]"
+          ],
+          [
+            "HIV with HAV IgG negative",
+            "Give HepA vaccine. [16]",
+            "Havrix: 0 and 6-12 months; Vaqta: 0 and 6-18 months. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "age-based-respiratory-vaccines",
+      "eyebrow": "Respiratory Prevention",
+      "heading": "Apply current age and risk rules for influenza, COVID-19, and RSV vaccines",
+      "intro": "Use annual influenza vaccination and then layer COVID-19 and RSV recommendations by age and risk.",
+      "paragraphs": [
+        "For influenza prevention, administer 1 dose of inactivated or recombinant influenza vaccine annually to adults, including persons with HIV and patients with medical conditions represented in the adult condition schedule. The schedule identifies live attenuated influenza vaccine as an option only for adults aged 19-49 years in the listed eligible populations; use the appendix and product-specific contraindications before selecting a live product. [22][23]",
+        "For adults aged 65 years and older, schedule a second 2024-2025 COVID-19 vaccine dose 6 months after the prior dose, with a minimum interval of 2 months. Do not apply obsolete booster schedules in place of the current seasonal recommendation. [6]",
+        "For RSV prevention, adults aged 50-59 years who are at increased risk of severe RSV disease should receive a single RSV vaccine dose. Adults already vaccinated against RSV are not recommended to receive another dose at this time. RSV vaccine may be administered with any licensed product in this age group. [5][17]",
+        "Discuss neurologic safety when RSV vaccination is being considered in a patient with prior Guillain-Barr\u00e9 syndrome or an individual concern about neurologic events. ACIP noted a small number of inflammatory neurologic events, particularly Guillain-Barr\u00e9 syndrome, in clinical trials of both GSK and Pfizer RSV vaccines in older adults; this is a risk-benefit conversation rather than a blanket contraindication in the cited guidance. [24]"
+      ],
+      "bullets": [
+        "Offer RSV vaccination as a single dose\u2014not a recurring annual series\u2014under the current recommendation. [5]",
+        "When giving multiple vaccines at one encounter, follow product-specific instructions and preserve the ability to identify the vaccine associated with a local reaction by documenting site and arm. Adacel clinical studies monitored injection-site events at the Adacel arm. [3]",
+        "Inspect vaccine preparations for particulate matter or discoloration when the product and container permit; do not administer an abnormal preparation. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Respiratory vaccine timing decisions in adults. [5][6][22][24]",
+        "columns": [
+          "Vaccine",
+          "Who",
+          "Actionable timing or limit"
+        ],
+        "rows": [
+          [
+            "Influenza, inactivated or recombinant",
+            "Adults, including HIV and specified medical-condition groups. [22]",
+            "1 dose annually. [22]"
+          ],
+          [
+            "COVID-19, 2024-2025",
+            "Adults aged 65 years and older. [6]",
+            "Second dose 6 months after prior dose; minimum 2 months. [6]"
+          ],
+          [
+            "COVID-19, 2024-2025",
+            "Moderately or severely immunocompromised adults. [6]",
+            "Second dose at 6 months; further doses through shared decision-making at least 2 months apart. [6]"
+          ],
+          [
+            "RSV",
+            "Adults aged 50-59 years at increased risk of severe RSV disease. [5][17]",
+            "One dose; no repeat dose currently recommended after prior RSV vaccination. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "live-vaccines-and-pregnancy",
+      "eyebrow": "Contraindications",
+      "heading": "Avoid preventable errors with MMR, pregnancy, and biologic-product timing",
+      "intro": "Confirm that a live vaccine is appropriate before preparing it.",
+      "paragraphs": [
+        "Do not administer MMR to a patient with prior severe allergic reaction to a vaccine component or prior dose, severe immunodeficiency, or pregnancy. Severe immunodeficiency includes hematologic and solid tumors, chemotherapy, congenital immunodeficiency, long-term immunosuppressive therapy, and severely immunocompromised HIV infection. [23]",
+        "If MMR is otherwise indicated but the patient received an antibody-containing blood product within the preceding 11 months, defer vaccination for the product-specific interval. A history of thrombocytopenia or thrombocytopenic purpura and a need for tuberculin skin testing or interferon-gamma release assay are precautions requiring timing review rather than automatic exclusion. [23]",
+        "For pregnancy, give 1 dose of Tdap during each pregnancy. Do not use MMR during pregnancy; manage nonimmune status by vaccinating after pregnancy when indicated. RZV has no ACIP recommendation for use during pregnancy, and delaying it until after pregnancy should be considered. [22][23][5]",
+        "For M-M-R II, administer a 0.5 mL dose by intramuscular or subcutaneous route. The routine labeled childhood schedule is first dose at 12-15 months and second dose at 4-6 years; when a second dose is given before age 4 years, maintain a minimum interval of 1 month. After reconstitution, administer immediately or refrigerate at 2-8\u00b0C protected from light for no more than 8 hours, then discard. [1]"
+      ],
+      "bullets": [
+        "Do not administer a vaccine to a patient with known anaphylaxis to a component; known anaphylaxis is a contraindication. [14]",
+        "For MMRV specifically, HIV infection of any severity is a contraindication; this product-specific restriction should not be generalized to standalone MMR without assessing immune status. [23]",
+        "Do not administer a reconstituted M-M-R II dose if particulate matter or discoloration is present. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-consequence live-vaccine decisions. [1][5][22][23]",
+        "columns": [
+          "Finding before vaccination",
+          "Decision",
+          "Operational next step"
+        ],
+        "rows": [
+          [
+            "Pregnancy",
+            "Do not give MMR. [23]",
+            "Give Tdap during the pregnancy; arrange indicated MMR after pregnancy. [22][23]"
+          ],
+          [
+            "Severe immunodeficiency",
+            "Do not give MMR. [23]",
+            "Use nonlive indicated vaccines according to the condition-specific schedule. [22]"
+          ],
+          [
+            "Antibody-containing blood product within 11 months",
+            "Defer MMR for the product-specific interval. [23]",
+            "Schedule a future vaccination date based on the product received. [23]"
+          ],
+          [
+            "RZV requested during pregnancy",
+            "Consider deferring. [5]",
+            "Revisit after pregnancy because ACIP has no recommendation for RZV use in pregnancy. [5]"
+          ],
+          [
+            "M-M-R II reconstituted but not used",
+            "Discard after 8 hours. [1]",
+            "Store at 2-8\u00b0C and protect from light only during the allowable 8-hour period. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-based-vaccination",
+      "eyebrow": "Exposure and Anatomic Risk",
+      "heading": "Target meningococcal and hepatitis vaccination to defined risk states",
+      "intro": "Risk-based indications require explicit documentation of the exposure or host factor.",
+      "paragraphs": [
+        "For persons aged 10 years and older at increased risk for serogroup B meningococcal disease, administer MenB-4C as a 3-dose series at 0, 1-2, and 6 months. Increased-risk groups include anatomic or functional asplenia, complement component deficiencies, complement-inhibitor use, routine microbiology exposure to Neisseria meningitidis isolates, and persons at increased risk during an outbreak. [17]",
+        "For healthy persons aged 16-23 years, MenB vaccination is a shared clinical decision-making option. When both MenACWY and MenB are indicated at the same visit, a MenABCWY product may be used. Do not substitute the shared-decision pathway for the higher-risk primary series in asplenia, complement disorders, complement-inhibitor therapy, laboratory exposure, or outbreak settings. [17]",
+        "For HIV patients without HAV immunity, choose a documented HepA formulation and schedule rather than simply recording a nonspecific hepatitis vaccine recommendation: Havrix is given at 0 and 6-12 months, whereas Vaqta is given at 0 and 6-18 months. If both HAV and HBV immunity are absent, HepA plus two doses of HepB-CpG is an option; combined HepA-HepB at 0, 1, and 6 months is an alternative when HepB-CpG is unavailable. [16]"
+      ],
+      "bullets": [
+        "Record complement-inhibitor therapy and asplenia in the problem list because each creates a meningococcal risk-based indication. [17]",
+        "For a patient covered by a current outbreak recommendation, use the increased-risk MenB series rather than relying on age alone. [17]",
+        "When using a combined HepA-HepB product, schedule all 3 doses before closing the series. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Meningococcal and hepatitis actions driven by specific risk factors. [16][17]",
+        "columns": [
+          "Risk factor",
+          "Vaccine strategy",
+          "Schedule"
+        ],
+        "rows": [
+          [
+            "Asplenia, complement deficiency, complement-inhibitor use, microbiologist exposure, or outbreak risk",
+            "MenB-4C. [17]",
+            "3 doses at 0, 1-2, and 6 months. [17]"
+          ],
+          [
+            "Healthy age 16-23 years",
+            "MenB through shared clinical decision-making. [17]",
+            "Use the applicable product schedule. [17]"
+          ],
+          [
+            "Both MenACWY and MenB indicated at one visit",
+            "MenABCWY may be used. [17]",
+            "Use when both component indications are present. [17]"
+          ],
+          [
+            "HIV with HAV IgG negative",
+            "HepA. [16]",
+            "Havrix: 0 and 6-12 months; Vaqta: 0 and 6-18 months. [16]"
+          ],
+          [
+            "HIV without HAV and HBV immunity",
+            "HepA plus HepB-CpG, or combined HepA-HepB if HepB-CpG unavailable. [16]",
+            "Combined HepA-HepB: 0, 1, and 6 months. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "administration-and-documentation",
+      "eyebrow": "Implementation",
+      "heading": "Prevent administration, storage, and follow-up failures",
+      "intro": "Product handling and contemporaneous documentation are part of effective immunization.",
+      "paragraphs": [
+        "Inspect injectable vaccine products visually for particulate matter and discoloration whenever the solution and container permit; do not administer a vaccine if either is present. For multidose influenza vaccine preparations, return the vial to 2-8\u00b0C between uses, do not freeze, and follow the labeled discard requirements. [2]",
+        "For M-M-R II, use the entire approximately 0.5 mL reconstituted dose and administer by intramuscular or subcutaneous route. If reconstitution is not immediately followed by administration, retain the dose at 2-8\u00b0C, protect it from light, and discard it after 8 hours. [1]",
+        "Document product, dose, route, site, date, indication, planned next dose, and any precaution reviewed. For patients needing serial doses, schedule the next date before they leave; this is particularly important for RZV, COVID-19 vaccination in immunocompromised persons, MenB-4C, HepA, and combined HepA-HepB regimens. [5][6][16][17]"
+      ],
+      "bullets": [
+        "When giving Tdap, ensure treatment for anaphylaxis is immediately available. [3]",
+        "For suspected adverse reactions after influenza vaccination, the product labeling directs reporting to VAERS. [2]",
+        "Do not rely on a single schedule table to resolve contraindications; use the applicable schedule notes and appendix. [7][18][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational checks before closing an immunization encounter. [1][2][3][5][6][16][17]",
+        "columns": [
+          "Check",
+          "Required action",
+          "Reason for next step"
+        ],
+        "rows": [
+          [
+            "Product appearance",
+            "Inspect for particulate matter or discoloration; do not administer an abnormal product. [1][2]",
+            "Replace the preparation before vaccinating. [1][2]"
+          ],
+          [
+            "Emergency readiness",
+            "Ensure immediate treatment is available for anaphylaxis. [3]",
+            "Proceed only in a setting prepared for acute allergic reactions. [3]"
+          ],
+          [
+            "RZV series",
+            "Schedule dose 2. [5]",
+            "Target 2-6 months after dose 1; minimum 4 weeks. [5]"
+          ],
+          [
+            "MenB-4C increased-risk series",
+            "Schedule remaining doses. [17]",
+            "Dose 2 at 1-2 months and dose 3 at 6 months. [17]"
+          ],
+          [
+            "COVID-19 in moderate or severe immunocompromise",
+            "Document last seasonal dose and plan reassessment. [6]",
+            "Second dose at 6 months; additional doses may be considered at intervals of at least 2 months. [6]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should an adult vaccine series be restarted after a long lapse between doses?",
+      "answer": "No. When vaccination history is incomplete or unknown, administer indicated vaccines, but do not restart or add doses because intervals between doses were extended. [18]"
+    },
+    {
+      "question": "Can RZV be given to a patient with HIV and a low CD4 count?",
+      "answer": "Yes. ACIP recommends the 2-dose RZV series for immunocompromised adults aged 19 years and older, including persons with HIV regardless of CD4 count; give doses 2-6 months apart, with a 4-week minimum interval. [5]"
+    },
+    {
+      "question": "When is MenB-4C a three-dose series rather than a shared-decision vaccine?",
+      "answer": "Use the 0, 1-2, and 6-month MenB-4C series in persons aged 10 years and older with asplenia, complement deficiency, complement-inhibitor use, routine meningococcal laboratory exposure, or outbreak-related increased risk. [17]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] Package Insert - Measles, Mumps, and Rubella Virus Vaccine Live",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/files/vaccines%2C%20blood%20%26%20biologics/published/Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "reconstituted vaccine if particulates are present or if it appears discolored. Withdraw and administer the entire volume of the reconstituted vaccine. 3 Administer M-M-R II immediately after reconstitution. If not used immediately, the reconstituted vaccine may be stored between 36\u00b0F to 46\u00b0F (2\u00b0C to",
+      "score": 0.37168434
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Individuals using assistive technology may not be able to fully - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/downloads/BiologicsBloodVaccines/Vaccines/ApprovedProducts/UCM619588.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "administer at least 4 weeks apart 9 years of age and older One dose, 0.5 mL Not Applicable 1 1 or 2 doses depends on vaccination history as per Advisory Committee on Immunization Practices annual recommendations on prevention and control of influenza with vaccines. Administration Shake the syringe v",
+      "score": 0.35086665
+    },
+    {
+      "number": 3,
+      "title": "[PDF] Package Insert - Adacel - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/119862/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Adacel Given Concomitantly with Hepatitis B Vaccine In the concomitant vaccination study with Adacel (first vaccination) and Hepatitis B vaccine [Recombivax HB] (Td501) [See Clinical Studies (14)], injection site and systemic adverse events were monitored daily for 14 days post-vaccination using a d",
+      "score": 0.33522078
+    },
+    {
+      "number": 4,
+      "title": "Immunization Strategies to Span the Spectrum of Immunocompromised Adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025619619307657",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Pediatr\n\n### Vaccination of patients with haematological malignancies who did not have transplantations: guidelines from the 2017 European Conference on Infections in Leukaemia (ECIL 7)\n\n### Lancet Infect Dis\n\n### 2013 IDSA clinical practice guideline for vaccination of the immunocompromised h",
+      "score": 0.5709301
+    },
+    {
+      "number": 5,
+      "title": "[PDF] Recommended Adult Immunization Schedule | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/downloads/adult/adult-combined-schedule.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Special situations y Pregnancy: There is currently no ACIP recommendation for RZV use in pregnancy. Consider delaying RZV until after pregnancy. y Immunocompromising conditions (including persons with HIV regardless of CD4 count): 2-dose series recombinant zoster vaccine (RZV, Shingrix) 2\u20136 months a",
+      "score": 0.8127637
+    },
+    {
+      "number": 6,
+      "title": "Advisory Committee on Immunization Practices (ACIP) Evidence to Recommendations (EtR) for Use of Additional Doses of 2024-2025 COVID-19 Vaccines in Older Adults and People who are Moderately or Severely Immunocompromised | ACIP | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/evidence-to-recommendations/covid-19-2024-2025-additional-dose.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "On October 23, 2024, ACIP voted that, in addition to previously recommended 2024\u20132025 vaccination, all adults aged \u226565 years and people aged 6 months\u201364 years who are moderately or severely immunocompromised are recommended to receive a second dose of 2024-2025 COVID-19 vaccine (recommended interval",
+      "score": 0.7707586
+    },
+    {
+      "number": 7,
+      "title": "Advisory Committee on Immunization Practices Recommended Immunization Schedule for Adults Aged 19 Years or Older \u2014 United States, 2025  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/74/wr/mm7402a3.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "At its October 2024 meeting, the Advisory Committee on Immunization Practices\\ (ACIP) approved the Recommended Immunization Schedule for Adults Ages 19 Years or Older, United States, 2025. The schedule supports health care providers, as well as public health and other professionals, by providing a c",
+      "score": 0.73846215
+    },
+    {
+      "number": 8,
+      "title": "Vaccine Administration Resources | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/administration/resources.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Vaccine administration resources Pink Book Web-on-demand Series.\n\n## Immunization Schedules\n\nGet the current immunization schedules that have been approved by The Advisory Committee on Immunization Practices (ACIP) and adopted by the CDC Director.\n\nProvider Schedules\n\nPatient Friendly Schedules\n\n## ",
+      "score": 0.7166357
+    },
+    {
+      "number": 9,
+      "title": "Recommendations from the Combined Immunization Schedule WG for the 2024 Immunization Schedules for Children/Adolescents and Adults",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/134681",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "20222023 Mpox Outbreak  Situational Awareness and Updates\n2024 adult schedule revisions\n2024 child and adolescent schedule revisions\nACIP Adult RSV Work Group Considerations  Respiratory Syncytial Virus RSV in Adults  Use of RSV vaccines in adults aged 5059 years\nACIP COVID19 Vaccines Work Group\nACI",
+      "score": 0.68798697
+    },
+    {
+      "number": 10,
+      "title": "ACIP Recommended Immunization Schedules: 2023 Updates",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/153398",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "U.S. flag\n\nA .gov website belongs to an official government\norganization in the United States.\n\nA lock (  ) or  means\nyou've safely connected to the .gov website. Share sensitive\ninformation only on official, secure websites.\n\nCDC\n\n# ACIP Recommended Immunization Schedules: 2023 Updates\n\nDownload Ic",
+      "score": 0.61779
+    },
+    {
+      "number": 11,
+      "title": "2017 immunization schedule for children 0 through 18 years of age",
+      "detail": "stacks.cdc.gov",
+      "url": "http://stacks.cdc.gov/view/cdc/82072",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "2Dose HPV vaccination schedules  review of evidence\nChanges in invasive pneumococcal disease IPD following 5 years of 13valent pneumococcal conjugate vaccine use in the US\nConsiderations for use of 2and 3dose schedules of MenBFHbp Trumenba\nEpidemiology and impact of RSV in older adults\nGuidance on t",
+      "score": 0.5954225
+    },
+    {
+      "number": 12,
+      "title": "Advisory Committee on Immunization Practices Recommended Immunization Schedule for Adults Aged 19 Years or Older \u2014 United States, 2018",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/55112",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "#### Exit Notification/Disclaimer Policy\n\nCDC STACKS serves as an archival repository of CDC-published products including\nscientific findings,\njournal articles, guidelines, recommendations, or other public health information authored or\nco-authored by CDC or funded partners.\n  \n  \nAs a repository, C",
+      "score": 0.54521364
+    },
+    {
+      "number": 13,
+      "title": "Active Immunization - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1298145/aap_9781610021470-part01-active.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Recommendations for dose, vaccine storage and handling (see Vaccine Handling and Storage, p 20), route and technique of administration",
+      "score": 0.4800161
+    },
+    {
+      "number": 14,
+      "title": "Immunizations - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1317950/aap_9781581108514-part02-ch034.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "A contraindication means that a vaccine should not be administered. An example of a contraindication is known ana- phylaxis to any component of the vaccine.",
+      "score": 0.44189036
+    },
+    {
+      "number": 15,
+      "title": "Vaccinations Part 2: Practical Steps to Providing Immunization",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/first1000days/module/22792/section/7a57181c-5636-4698-9ca9-0feba9603f97?target=module-content",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Adverse Effects: Management of Anaphylaxis After Vaccination 6a. immunization is the most effective biomedical intervention to reduce early",
+      "score": 0.4135014
+    },
+    {
+      "number": 16,
+      "title": "Immunizations for Preventable Diseases in Adults and Adolescents ...",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/immunizations",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "For people who are not immune to hepatitis A virus (HAV) (i.e., immunoglobulin G [IgG] negative), administer a two-dose series of HepA vaccine. The dosing interval depends on the vaccine used: at 0 and 6\u2013\u200d12 months for Havrix (AII) or 0 and 6\u201318 months for Vaqta (AIII).\n   For those who are not immu",
+      "score": 0.3402007
+    },
+    {
+      "number": 17,
+      "title": "ACIP Recommendations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/vaccine-recommendations/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ACIP recommends MenB-4C (Bexsero\u00ae) be administered as a 3-dose series at 0, 1\u20132, and 6 months when given to persons aged \u226510 years at increased risk for serogroup B meningococcal disease (i.e., persons with anatomic or functional asplenia, complement component deficiencies, or complement inhibitor u",
+      "score": 0.7144891
+    },
+    {
+      "number": 18,
+      "title": "Adult Immunization Schedule Notes | Vaccines & Immunizations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Special situations\n\n\\\\Note: If there is no documented history of varicella, varicella vaccination, or herpes zoster, providers should refer to the clinical considerations for use of RZV in immunocompromised adults aged \u226519 years and the ACIP varicella vaccine recommendations for further guidance:",
+      "score": 0.7016523
+    },
+    {
+      "number": 19,
+      "title": "Advisory Committee on Immunization Practices Recommended ...",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/74/wr/mm7402a2.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ACIP\u2019s recommendations for use of each vaccine and other immunizing agents are developed after in-depth reviews of current product-related data, including the epidemiology and societal impacts of the vaccine-preventable disease; efficacy, effectiveness, and safety of the vaccine or other immunizing ",
+      "score": 0.6917478
+    },
+    {
+      "number": 20,
+      "title": "ACIP Update to the Evidence to Recommendations for a 2nd COVID-19 Booster Dose in Adults Ages 50 Years and Older and Immunocompromised Individuals | ACIP | CDC",
+      "detail": "www.cdc.gov",
+      "url": "http://www.cdc.gov/acip/evidence-to-recommendations/covid-19-second-booster-dose-etr.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Following FDA\u2019s regulatory action on March 29, 2022, CDC updated its COVID-19 vaccination guidance to allow certain immunocompromised individuals and people over the age of 50 who received an initial booster dose at least 4 months ago to be eligible for another mRNA booster to increase their protect",
+      "score": 0.67321366
+    },
+    {
+      "number": 21,
+      "title": "Schedule Changes & Guidance | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/changes-guidance.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "# Schedule Changes & Guidance\n\nThis page\u2019s contents are being revised to reflect updated recommendations recently made by ACIP and approved by CDC. More information about COVID-19 and MMRV vaccine recommendation updates can be found at CDC Immunization Schedule Adopts Individual-Based Decision-Makin",
+      "score": 0.6698534
+    },
+    {
+      "number": 22,
+      "title": "Adult Immunization Schedule by Medical Condition and Other Indication\u00a0(Addendum updated July 2, 2025) | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-medical-condition.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Vaccine | Pregnancy | Immuno-compromised  (excluding HIV infection) | HIV infection CD4  percentage and count | | Men who have sex with men | Asplenia, complement deficiency | Heart or lung disease | Kidney failure, End-stage renal disease or on dialysis | Chronic liver disease; alcoholisma | Diab",
+      "score": 0.65914243
+    },
+    {
+      "number": 23,
+      "title": "Child Immunization Schedule Appendix | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-appendix.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Varicella (VAR)   Measles, mumps, rubella, and varicella (MMRV) |  Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a vaccine component3  Severe immunodeficiency (e.g., hematologic and solid tumors, receipt of chemotherapy, congenital immunodeficiency, long-term immunosuppr",
+      "score": 0.58408195
+    },
+    {
+      "number": 24,
+      "title": "[PDF] RSV Vaccination in Older Adults: Work Group Interpretations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/downloads/slides-2024-02-28-29/08-RSV-Adults-Britton-508.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "The initial RSV vaccine recommendation for adults 60 years and older was made in the setting of a small number of cases of inflammatory neurologic events (particularly GBS) observed in the clinical trials for both GSK and Pfizer\u2019s RSV vaccines for older adults. 6 February May June November December-",
+      "score": 0.54666615
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] Package Insert - Measles, Mumps, and Rubella Virus Vaccine Live",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/files/vaccines%2C%20blood%20%26%20biologics/published/Package-Insert-Measles-Mumps-and-Rubella-Virus-Vaccine-Live_2.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "reconstituted vaccine if particulates are present or if it appears discolored. Withdraw and administer the entire volume of the reconstituted vaccine. 3 Administer M-M-R II immediately after reconstitution. If not used immediately, the reconstituted vaccine may be stored between 36\u00b0F to 46\u00b0F (2\u00b0C to",
+      "score": 0.37168434
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Individuals using assistive technology may not be able to fully - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/downloads/BiologicsBloodVaccines/Vaccines/ApprovedProducts/UCM619588.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "administer at least 4 weeks apart 9 years of age and older One dose, 0.5 mL Not Applicable 1 1 or 2 doses depends on vaccination history as per Advisory Committee on Immunization Practices annual recommendations on prevention and control of influenza with vaccines. Administration Shake the syringe v",
+      "score": 0.35086665
+    },
+    {
+      "number": 3,
+      "title": "[PDF] Package Insert - Adacel - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/119862/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Adacel Given Concomitantly with Hepatitis B Vaccine In the concomitant vaccination study with Adacel (first vaccination) and Hepatitis B vaccine [Recombivax HB] (Td501) [See Clinical Studies (14)], injection site and systemic adverse events were monitored daily for 14 days post-vaccination using a d",
+      "score": 0.33522078
+    },
+    {
+      "number": 4,
+      "title": "Immunization Strategies to Span the Spectrum of Immunocompromised Adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025619619307657",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Pediatr\n\n### Vaccination of patients with haematological malignancies who did not have transplantations: guidelines from the 2017 European Conference on Infections in Leukaemia (ECIL 7)\n\n### Lancet Infect Dis\n\n### 2013 IDSA clinical practice guideline for vaccination of the immunocompromised h",
+      "score": 0.5709301
+    },
+    {
+      "number": 5,
+      "title": "[PDF] Recommended Adult Immunization Schedule | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/downloads/adult/adult-combined-schedule.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Special situations y Pregnancy: There is currently no ACIP recommendation for RZV use in pregnancy. Consider delaying RZV until after pregnancy. y Immunocompromising conditions (including persons with HIV regardless of CD4 count): 2-dose series recombinant zoster vaccine (RZV, Shingrix) 2\u20136 months a",
+      "score": 0.8127637
+    },
+    {
+      "number": 6,
+      "title": "Advisory Committee on Immunization Practices (ACIP) Evidence to Recommendations (EtR) for Use of Additional Doses of 2024-2025 COVID-19 Vaccines in Older Adults and People who are Moderately or Severely Immunocompromised | ACIP | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/evidence-to-recommendations/covid-19-2024-2025-additional-dose.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "On October 23, 2024, ACIP voted that, in addition to previously recommended 2024\u20132025 vaccination, all adults aged \u226565 years and people aged 6 months\u201364 years who are moderately or severely immunocompromised are recommended to receive a second dose of 2024-2025 COVID-19 vaccine (recommended interval",
+      "score": 0.7707586
+    },
+    {
+      "number": 7,
+      "title": "Advisory Committee on Immunization Practices Recommended Immunization Schedule for Adults Aged 19 Years or Older \u2014 United States, 2025  | MMWR",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/74/wr/mm7402a3.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "At its October 2024 meeting, the Advisory Committee on Immunization Practices\\ (ACIP) approved the Recommended Immunization Schedule for Adults Ages 19 Years or Older, United States, 2025. The schedule supports health care providers, as well as public health and other professionals, by providing a c",
+      "score": 0.73846215
+    },
+    {
+      "number": 8,
+      "title": "Vaccine Administration Resources | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/administration/resources.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Vaccine administration resources Pink Book Web-on-demand Series.\n\n## Immunization Schedules\n\nGet the current immunization schedules that have been approved by The Advisory Committee on Immunization Practices (ACIP) and adopted by the CDC Director.\n\nProvider Schedules\n\nPatient Friendly Schedules\n\n## ",
+      "score": 0.7166357
+    },
+    {
+      "number": 9,
+      "title": "Recommendations from the Combined Immunization Schedule WG for the 2024 Immunization Schedules for Children/Adolescents and Adults",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/134681",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "20222023 Mpox Outbreak  Situational Awareness and Updates\n2024 adult schedule revisions\n2024 child and adolescent schedule revisions\nACIP Adult RSV Work Group Considerations  Respiratory Syncytial Virus RSV in Adults  Use of RSV vaccines in adults aged 5059 years\nACIP COVID19 Vaccines Work Group\nACI",
+      "score": 0.68798697
+    },
+    {
+      "number": 10,
+      "title": "ACIP Recommended Immunization Schedules: 2023 Updates",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/153398",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "U.S. flag\n\nA .gov website belongs to an official government\norganization in the United States.\n\nA lock (  ) or  means\nyou've safely connected to the .gov website. Share sensitive\ninformation only on official, secure websites.\n\nCDC\n\n# ACIP Recommended Immunization Schedules: 2023 Updates\n\nDownload Ic",
+      "score": 0.61779
+    },
+    {
+      "number": 11,
+      "title": "2017 immunization schedule for children 0 through 18 years of age",
+      "detail": "stacks.cdc.gov",
+      "url": "http://stacks.cdc.gov/view/cdc/82072",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "2Dose HPV vaccination schedules  review of evidence\nChanges in invasive pneumococcal disease IPD following 5 years of 13valent pneumococcal conjugate vaccine use in the US\nConsiderations for use of 2and 3dose schedules of MenBFHbp Trumenba\nEpidemiology and impact of RSV in older adults\nGuidance on t",
+      "score": 0.5954225
+    },
+    {
+      "number": 12,
+      "title": "Advisory Committee on Immunization Practices Recommended Immunization Schedule for Adults Aged 19 Years or Older \u2014 United States, 2018",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/55112",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "#### Exit Notification/Disclaimer Policy\n\nCDC STACKS serves as an archival repository of CDC-published products including\nscientific findings,\njournal articles, guidelines, recommendations, or other public health information authored or\nco-authored by CDC or funded partners.\n  \n  \nAs a repository, C",
+      "score": 0.54521364
+    },
+    {
+      "number": 13,
+      "title": "Active Immunization - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1298145/aap_9781610021470-part01-active.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Recommendations for dose, vaccine storage and handling (see Vaccine Handling and Storage, p 20), route and technique of administration",
+      "score": 0.4800161
+    },
+    {
+      "number": 14,
+      "title": "Immunizations - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/book/chapter-pdf/1317950/aap_9781581108514-part02-ch034.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "A contraindication means that a vaccine should not be administered. An example of a contraindication is known ana- phylaxis to any component of the vaccine.",
+      "score": 0.44189036
+    },
+    {
+      "number": 15,
+      "title": "Vaccinations Part 2: Practical Steps to Providing Immunization",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/first1000days/module/22792/section/7a57181c-5636-4698-9ca9-0feba9603f97?target=module-content",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Adverse Effects: Management of Anaphylaxis After Vaccination 6a. immunization is the most effective biomedical intervention to reduce early",
+      "score": 0.4135014
+    },
+    {
+      "number": 16,
+      "title": "Immunizations for Preventable Diseases in Adults and Adolescents ...",
+      "detail": "clinicalinfo.hiv.gov",
+      "url": "https://clinicalinfo.hiv.gov/en/guidelines/hiv-clinical-guidelines-adult-and-adolescent-opportunistic-infections/immunizations",
+      "authors": "clinicalinfo.hiv.gov",
+      "host": "clinicalinfo.hiv.gov",
+      "snippet": "For people who are not immune to hepatitis A virus (HAV) (i.e., immunoglobulin G [IgG] negative), administer a two-dose series of HepA vaccine. The dosing interval depends on the vaccine used: at 0 and 6\u2013\u200d12 months for Havrix (AII) or 0 and 6\u201318 months for Vaqta (AIII).\n   For those who are not immu",
+      "score": 0.3402007
+    },
+    {
+      "number": 17,
+      "title": "ACIP Recommendations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/vaccine-recommendations/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ACIP recommends MenB-4C (Bexsero\u00ae) be administered as a 3-dose series at 0, 1\u20132, and 6 months when given to persons aged \u226510 years at increased risk for serogroup B meningococcal disease (i.e., persons with anatomic or functional asplenia, complement component deficiencies, or complement inhibitor u",
+      "score": 0.7144891
+    },
+    {
+      "number": 18,
+      "title": "Adult Immunization Schedule Notes | Vaccines & Immunizations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Special situations\n\n\\\\Note: If there is no documented history of varicella, varicella vaccination, or herpes zoster, providers should refer to the clinical considerations for use of RZV in immunocompromised adults aged \u226519 years and the ACIP varicella vaccine recommendations for further guidance:",
+      "score": 0.7016523
+    },
+    {
+      "number": 19,
+      "title": "Advisory Committee on Immunization Practices Recommended ...",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/volumes/74/wr/mm7402a2.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "ACIP\u2019s recommendations for use of each vaccine and other immunizing agents are developed after in-depth reviews of current product-related data, including the epidemiology and societal impacts of the vaccine-preventable disease; efficacy, effectiveness, and safety of the vaccine or other immunizing ",
+      "score": 0.6917478
+    },
+    {
+      "number": 20,
+      "title": "ACIP Update to the Evidence to Recommendations for a 2nd COVID-19 Booster Dose in Adults Ages 50 Years and Older and Immunocompromised Individuals | ACIP | CDC",
+      "detail": "www.cdc.gov",
+      "url": "http://www.cdc.gov/acip/evidence-to-recommendations/covid-19-second-booster-dose-etr.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "Following FDA\u2019s regulatory action on March 29, 2022, CDC updated its COVID-19 vaccination guidance to allow certain immunocompromised individuals and people over the age of 50 who received an initial booster dose at least 4 months ago to be eligible for another mRNA booster to increase their protect",
+      "score": 0.67321366
+    },
+    {
+      "number": 21,
+      "title": "Schedule Changes & Guidance | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/changes-guidance.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "# Schedule Changes & Guidance\n\nThis page\u2019s contents are being revised to reflect updated recommendations recently made by ACIP and approved by CDC. More information about COVID-19 and MMRV vaccine recommendation updates can be found at CDC Immunization Schedule Adopts Individual-Based Decision-Makin",
+      "score": 0.6698534
+    },
+    {
+      "number": 22,
+      "title": "Adult Immunization Schedule by Medical Condition and Other Indication\u00a0(Addendum updated July 2, 2025) | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-medical-condition.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Vaccine | Pregnancy | Immuno-compromised  (excluding HIV infection) | HIV infection CD4  percentage and count | | Men who have sex with men | Asplenia, complement deficiency | Heart or lung disease | Kidney failure, End-stage renal disease or on dialysis | Chronic liver disease; alcoholisma | Diab",
+      "score": 0.65914243
+    },
+    {
+      "number": 23,
+      "title": "Child Immunization Schedule Appendix | Vaccines & Immunizations | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-appendix.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "| Varicella (VAR)   Measles, mumps, rubella, and varicella (MMRV) |  Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a vaccine component3  Severe immunodeficiency (e.g., hematologic and solid tumors, receipt of chemotherapy, congenital immunodeficiency, long-term immunosuppr",
+      "score": 0.58408195
+    },
+    {
+      "number": 24,
+      "title": "[PDF] RSV Vaccination in Older Adults: Work Group Interpretations - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/acip/downloads/slides-2024-02-28-29/08-RSV-Adults-Britton-508.pdf",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "The initial RSV vaccine recommendation for adults 60 years and older was made in the setting of a small number of cases of inflammatory neurologic events (particularly GBS) observed in the clinical trials for both GSK and Pfizer\u2019s RSV vaccines for older adults. 6 February May June November December-",
+      "score": 0.54666615
+    }
+  ],
+  "publishedAt": "2026-09-16T01:17:34.382941+00:00",
+  "updatedAt": "2026-09-16T01:17:34.382941+00:00",
+  "readingMinutes": 8,
+  "slug": "adult-immunization"
+}

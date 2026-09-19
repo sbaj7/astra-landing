@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Sedation Selection",
+  "summary": "For mechanically ventilated adults, set a measurable light-sedation target, treat pain and reversible agitation drivers, and generally select propofol or dexmedetomidine rather than benzodiazepine infusions. Hemodynamic trajectory, need for rapid awakening, and bradycardia risk determine the preferred nonbenzodiazepine agent.",
+  "seoDescription": "Choose propofol, dexmedetomidine, or benzodiazepines for ventilated adults using sedation targets, dosing, hemodynamic risks, and weaning goals.",
+  "clinicalQuestion": "How should clinicians select and titrate sedatives for mechanically ventilated adults while minimizing oversedation and facilitating liberation?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "mechanical ventilation sedation",
+    "ICU sedation",
+    "propofol",
+    "dexmedetomidine",
+    "RASS",
+    "benzodiazepines",
+    "spontaneous awakening trial"
+  ],
+  "keyTakeaways": [
+    "For most critically ill mechanically ventilated adults, choose propofol or dexmedetomidine rather than a benzodiazepine infusion; this is a conditional recommendation supported by low-quality evidence. [7]",
+    "Use an explicit sedation target and serial Richmond Agitation-Sedation Scale (RASS) assessment; RASS -2 to 0 is an appropriate target range for many mechanically ventilated patients. [16]",
+    "Start propofol at 5 mcg/kg/min (0.3 mg/kg/h), adjust by 5-10 mcg/kg/min no more often than every 5 minutes, and usually maintain 5-50 mcg/kg/min. [1][2]",
+    "Dexmedetomidine-associated hypotension and bradycardia require active hemodynamic surveillance; in ICU sedation studies, hypotension occurred in 24%-28% and bradycardia in 5%-7% of treated adults. [4]",
+    "Link sedation reduction to ventilator liberation planning rather than abruptly stopping propofol before weaning or sedation assessment. [1]"
+  ],
+  "sections": [
+    {
+      "id": "set-the-sedation-target",
+      "eyebrow": "First decision",
+      "heading": "Set a measurable target before selecting an infusion",
+      "intro": "Choose the depth required for the current ventilator and procedural objective.",
+      "paragraphs": [
+        "Document a target using RASS or the Riker Sedation-Agitation Scale (SAS), then titrate to that target rather than to an unstructured impression of comfort. RASS ranges from +4 (combative) to -5 (unarousable), whereas SAS ranges from 7 (dangerous agitation) to 1 (unarousable). For many mechanically ventilated adults, a RASS target of -2 to 0 or SAS 3 to 4 is appropriate. [12][16]",
+        "Reassess sedation at least every shift and whenever agitation, ventilator dyssynchrony, hypotension, neurologic change, or a weaning transition occurs. A bundle implementation that increased RASS assessments and reduced benzodiazepine infusion use was associated with lower ICU delirium prevalence, 0.6 fewer ventilator days, and 0.5 fewer ICU days, although these observational implementation data do not establish an agent-specific causal effect. [9]",
+        "Before escalating a hypnotic infusion for agitation, reassess pain and delirium. Use a structured delirium screen such as CAM-ICU when the patient can be evaluated; ICU practice data describe daily delirium screening, most commonly with CAM-ICU, alongside daily consideration of sedation holds. [16]"
+      ],
+      "bullets": [
+        "Use RASS -2 to 0 when light sedation is compatible with the respiratory and procedural plan. [16]",
+        "Treat a new RASS increase as a reassessment trigger, not an automatic indication to increase sedative dose. [9][16]",
+        "If a patient is deeply sedated or unarousable, determine whether this is intentional before performing delirium assessment. [12][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Sedation scales and practical target ranges for ventilated ICU adults. [12][16]",
+        "columns": [
+          "Instrument",
+          "Range",
+          "Usual target for many ventilated adults",
+          "Action when outside target"
+        ],
+        "rows": [
+          [
+            "RASS",
+            "+4 combative to -5 unarousable [12][16]",
+            "-2 to 0 [16]",
+            "Adjust sedative exposure toward the prescribed target; reassess pain, delirium, and ventilator factors before escalation. [9][16]"
+          ],
+          [
+            "Riker SAS",
+            "7 dangerous agitation to 1 unarousable [12][16]",
+            "3 to 4 [16]",
+            "Use the same scale consistently to guide bedside titration and sedation-hold decisions. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "choose-a-first-line-agent",
+      "eyebrow": "Agent selection",
+      "heading": "Choose propofol or dexmedetomidine over benzodiazepine infusions",
+      "intro": "Select between the two preferred classes according to hemodynamics and anticipated awakening needs.",
+      "paragraphs": [
+        "In critically ill mechanically ventilated adults, the Society of Critical Care Medicine guideline suggests either propofol or dexmedetomidine instead of benzodiazepines. The recommendation is conditional and based on low-quality evidence, but it directly supports a nonbenzodiazepine default when no patient-specific indication favors another strategy. [7]",
+        "Propofol is an appropriate option when a continuously titratable infusion is needed. Its FDA labeling directs slow initiation in intubated, mechanically ventilated adults to minimize hypotension and calls for individualization using clinical response, vital signs, and blood lipid profile. [1][2]",
+        "Dexmedetomidine is FDA-indicated for sedation of initially intubated, mechanically ventilated adults in an ICU setting. Its central tradeoff is cardiovascular intolerance: hypotension, bradycardia, and dry mouth are the most frequent adverse reactions in the label. [4][5]",
+        "Reserve a benzodiazepine infusion for situations in which the anticipated advantage outweighs the guideline preference for propofol or dexmedetomidine. Do not use a benzodiazepine solely because deeper sedation is desired without first confirming the intended target and assessing whether the depth is still required. [7][16]"
+      ],
+      "bullets": [
+        "Favor propofol when rapid, minute-to-minute titration is the dominant need, while monitoring for hypotension and lipid-related concerns. [1][2]",
+        "Favor dexmedetomidine when a nonbenzodiazepine strategy is desired but monitor closely for bradycardia and hypotension. [4][5][7]",
+        "Do not interpret the guideline as a mandate to use either nonbenzodiazepine agent when patient-specific adverse-effect risk is unacceptable. [4][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical selection between commonly used continuous sedatives for mechanically ventilated adults. [1][2][4][5][7]",
+        "columns": [
+          "Agent",
+          "When it fits",
+          "Principal tradeoff",
+          "Bedside monitoring"
+        ],
+        "rows": [
+          [
+            "Propofol",
+            "Mechanically ventilated adult requiring a titratable ICU sedative infusion. [1][2]",
+            "Hypotension risk; labeling requires individualized use based on vital signs and blood lipid profile. [1][2]",
+            "RASS or SAS target, blood pressure, heart rate, and blood lipid profile. [1][2][16]"
+          ],
+          [
+            "Dexmedetomidine",
+            "Initially intubated, mechanically ventilated adult receiving ICU sedation. [4][5]",
+            "Hypotension and bradycardia are frequent adverse reactions. [4]",
+            "RASS or SAS target, blood pressure, heart rate, and perfusion during titration. [4][16]"
+          ],
+          [
+            "Midazolam or lorazepam infusion",
+            "Use selectively when a nonbenzodiazepine strategy is not suitable or does not meet the clinical requirement. [7]",
+            "Guidelines suggest propofol or dexmedetomidine over benzodiazepines for most ventilated adults. [7]",
+            "RASS or SAS target and daily need for ongoing infusion. [7][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "propofol-titration-and-safety",
+      "eyebrow": "Propofol",
+      "heading": "How to initiate and titrate propofol in ventilated adults",
+      "intro": "Use incremental titration and allow time for peak effect.",
+      "paragraphs": [
+        "For ICU sedation of an intubated, mechanically ventilated adult, start propofol at 5 mcg/kg/min (0.3 mg/kg/h) when initiation is indicated. Increase by 5-10 mcg/kg/min (0.3-0.6 mg/kg/h) per adjustment, allowing at least 5 minutes between changes for peak effect. Most adults require 5-50 mcg/kg/min (0.3-3 mg/kg/h), although some require higher rates. [1][2]",
+        "Avoid routine infusion rates above 4 mg/kg/h unless the benefit outweighs the risk. Titrate slowly, particularly in a patient with limited hemodynamic reserve, because the label specifically frames gradual initiation as a strategy to minimize hypotension. [1][2]",
+        "Check vital signs continuously or at ICU-standard intervals during initiation and rate changes, and incorporate blood lipid profile into ongoing individualized management. If blood pressure falls after an escalation, reduce the propofol rate toward the lowest dose that maintains the prescribed RASS or SAS target and reassess whether the target depth remains necessary. [1][2][16]",
+        "Do not abruptly discontinue propofol before a planned weaning attempt or daily sedation-level evaluation. The label warns that abrupt discontinuation may produce rapid awakening with anxiety, agitation, and resistance to mechanical ventilation; instead, adjust the infusion to maintain the minimum sedation needed during weaning and assessment. [1]"
+      ],
+      "bullets": [
+        "Initiate: 5 mcg/kg/min (0.3 mg/kg/h). [1][2]",
+        "Titrate: increase 5-10 mcg/kg/min, waiting at least 5 minutes between adjustments. [1][2]",
+        "Typical maintenance: 5-50 mcg/kg/min (0.3-3 mg/kg/h). [1][2]",
+        "Avoid exceeding 4 mg/kg/h unless benefit outweighs risk. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "FDA-labeled propofol ICU sedation titration for intubated, mechanically ventilated adults. [1][2]",
+        "columns": [
+          "Step",
+          "Dose or interval",
+          "Operational instruction"
+        ],
+        "rows": [
+          [
+            "Initiation",
+            "5 mcg/kg/min (0.3 mg/kg/h) [1][2]",
+            "Start slowly and titrate to clinical effect to reduce hypotension risk. [1][2]"
+          ],
+          [
+            "Adjustment",
+            "Increase by 5-10 mcg/kg/min (0.3-0.6 mg/kg/h) [1][2]",
+            "Wait at least 5 minutes before the next adjustment. [1][2]"
+          ],
+          [
+            "Maintenance",
+            "Usually 5-50 mcg/kg/min (0.3-3 mg/kg/h) [1][2]",
+            "Use the lowest rate that maintains the prescribed sedation target. [1][2][16]"
+          ],
+          [
+            "High-dose threshold",
+            ">4 mg/kg/h [1]",
+            "Use only when expected benefit outweighs risk. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "dexmedetomidine-hemodynamic-selection",
+      "eyebrow": "Dexmedetomidine",
+      "heading": "Use dexmedetomidine with a bradycardia and hypotension plan",
+      "intro": "Its indication fits ventilated ICU adults, but cardiovascular adverse effects often determine tolerability.",
+      "paragraphs": [
+        "Dexmedetomidine is indicated for sedation of initially intubated and mechanically ventilated adults during ICU treatment. Use a prescribed RASS or SAS target to judge effectiveness rather than escalating solely for an isolated episode of restlessness. [5][12][16]",
+        "Before initiating or increasing dexmedetomidine, review baseline heart rate, blood pressure, recent vasopressor requirement, and whether the patient has already developed clinically meaningful bradycardia or hypotension. In adult ICU sedation populations treated with dexmedetomidine, hypotension was reported in 24%-28% and bradycardia in 5%-7%; these labeled adverse-event frequencies make a worsening hemodynamic trajectory a practical reason to avoid escalation or select an alternative. [4]",
+        "If clinically significant bradycardia or hypotension develops temporally with dexmedetomidine titration, reassess infusion necessity and dose immediately while evaluating concurrent causes such as hypovolemia and other medications. The label also reports hypovolemia among treatment-emergent adverse events, reinforcing the need to distinguish drug-associated hemodynamic intolerance from an evolving shock state. [4]"
+      ],
+      "bullets": [
+        "Monitor blood pressure and heart rate during initiation and dose changes because hypotension and bradycardia are among the most frequent adverse reactions. [4]",
+        "Use a nonbenzodiazepine default only when the patient tolerates its hemodynamic effects. [4][7]",
+        "When dexmedetomidine causes hemodynamic intolerance, reduce or discontinue the contributing infusion rather than accepting a deeper-than-needed sedation target. [4][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Dexmedetomidine adverse-event frequencies in adult ICU sedation populations. [4]",
+        "columns": [
+          "Adverse event",
+          "Reported frequency",
+          "Selection implication"
+        ],
+        "rows": [
+          [
+            "Hypotension",
+            "24% in all dexmedetomidine-treated ICU patients; 28% in randomized dexmedetomidine recipients versus 13% with placebo. [4]",
+            "Avoid uncritical escalation in patients with worsening blood pressure or limited hemodynamic reserve. [4]"
+          ],
+          [
+            "Bradycardia",
+            "5% in all dexmedetomidine-treated ICU patients; 7% in randomized dexmedetomidine recipients versus 3% with placebo. [4]",
+            "Monitor heart rate closely and reassess the infusion if bradycardia emerges. [4]"
+          ],
+          [
+            "Dry mouth",
+            "4% in all dexmedetomidine-treated ICU patients. [4]",
+            "Usually does not drive ICU agent selection but may be relevant as sedation lightens. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "integrate-sedation-with-liberation",
+      "eyebrow": "Liberation",
+      "heading": "Link sedation reduction to spontaneous awakening and breathing evaluation",
+      "intro": "Sedative choice should preserve an intentional path to assessment and extubation.",
+      "paragraphs": [
+        "For patients approaching liberation, coordinate sedation management with daily consideration of a sedation hold and ventilator-weaning assessment. ICU practice data report that 94% of units considered a daily sedation hold for sedated patients, and a mechanically ventilated patient workflow described daily interruption of continuous sedation paired with respiratory-therapist-managed weaning. [16][18]",
+        "For propofol, do not equate sedation assessment with abrupt cessation. Maintain the minimum level of sedation needed through weaning and sedation-level assessment to avoid rapid awakening, anxiety, agitation, and ventilator resistance. [1]",
+        "A failed wake-up or breathing evaluation should prompt reassessment of the sedation target, pain, delirium screen, and ventilator requirements before returning automatically to the prior infusion rate. RASS-guided protocols and CAM-ICU screening are practical tools for separating agitation, oversedation, and delirium-related barriers to liberation. [9][12][16]"
+      ],
+      "bullets": [
+        "Consider a sedation hold daily when clinically appropriate. [16]",
+        "Coordinate sedation adjustment with spontaneous breathing evaluation rather than treating them as separate workflows. [18]",
+        "After a weaning-related agitation episode, reassess target depth and reversible contributors before escalating hypnotic dose. [1][9][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Sedation-to-liberation workflow for a mechanically ventilated adult. [1][16][18]",
+        "columns": [
+          "Clinical stage",
+          "Sedation action",
+          "Measurement guiding the next step"
+        ],
+        "rows": [
+          [
+            "Ongoing ventilation",
+            "Titrate to the documented RASS or SAS target using the lowest effective infusion exposure. [12][16]",
+            "RASS -2 to 0 or SAS 3 to 4 for many patients. [16]"
+          ],
+          [
+            "Daily readiness review",
+            "Consider a sedation hold and coordinate with ventilator-weaning assessment. [16][18]",
+            "Ability to awaken safely and tolerate the weaning process. [16][18]"
+          ],
+          [
+            "Propofol during weaning",
+            "Avoid abrupt discontinuation; adjust to minimal sedation through assessment. [1]",
+            "Anxiety, agitation, and ventilator resistance after rapid awakening. [1]"
+          ],
+          [
+            "Agitation during liberation",
+            "Reassess pain, delirium, sedation target, and ventilator factors before increasing sedative dose. [9][16]",
+            "RASS/SAS trend and CAM-ICU when assessable. [9][12][16]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "DIPRIVAN (propofol) injectable emulsion, USP",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/Label/2017/019627s066lbl.Pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "please visit  46 Sedation). For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be initiated slowly with a continuous infusion in order to titrate to desired clinical effect and minimize hypotension. When indicated, initiation of sedation should begin at ",
+      "score": 0.769306
+    },
+    {
+      "number": 2,
+      "title": "These highlights do not include all the information needed to use PROPOFOL INJECTABLE EMULSION safely and effectively. See full prescribing information for PROPOFOL INJECTABLE EMULSION. PROPOFOL INJECTABLE EMULSION, USP, for intravenous use Initial U.S. Approval: 1991",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fdb77e13-f5a7-4c4a-9f8e-338b702239c8",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Propofol should be individualized according to the patient's condition and response, blood lipid profile, and vital signs see Warnings and Precautions ([5.8, 5.9, and 5.10)]. For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be initiated slowly with a c",
+      "score": 0.7316155
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use PROPOFOL INJECTABLE EMULSION safely and effectively. See full prescribing information for PROPOFOL INJECTABLE EMULSION.\n      \n      PROPOFOL injectable emulsion, for intravenous use\n  \nInitial U.S. Approval: 1991",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f23fe3c5-aa37-4ecc-ad76-f13c1a1dabe2&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "propofol injectable emulsion should be individualized according to the patient's condition and response, blood lipid profile, and vital signs \nsee Warnings and Precautions (\n[5.8,\n5.9, and\n5.10)\n]. For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be in",
+      "score": 0.71377134
+    },
+    {
+      "number": 4,
+      "title": "[PDF] dexmedetomidine injection, solution - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=714cc0d2-8a4c-40c0-8ef0-dcfde4c46989&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "The most frequent adverse reactions were hypotension, bradycardia and dry mouth [see Warnings and Precautions (5.2)]. Table 3: Adverse Reactions with an Incidence >2%-Adult Intensive Care Unit Sedation Population <24 hours Adverse Event All Dexmedetomidine (N = 1,007) (%) Randomized Dexmedetomidine ",
+      "score": 0.694241
+    },
+    {
+      "number": 5,
+      "title": "DEXMEDETOMIDINE INJECTION",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=ebdfe2e8-30ca-4f18-935a-41bcbbce4937&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Dexmedetomidine injection is an alpha2-adrenergic receptor agonist indicated for: \u2022: Sedation of initially intubated and mechanically ventilated adult ...Read more",
+      "score": 0.55478466
+    },
+    {
+      "number": 6,
+      "title": "[PDF] N21-038S022; S021 Dexmedetomidine Clinical BPCA - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/files/drugs/published/N21-038S022-S021-Dexmedetomidine-Clinical-BPCA.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "previous scheduled blood pressure, and therefore a six hour period without vital sign documentation preceded this episode of extreme hypotension that was not considered an adverse event. Concomitant Medications Extensively discussed in Section 6 Review of Efficacy is the absence of detailed informat",
+      "score": 0.53692055
+    },
+    {
+      "number": 7,
+      "title": "Clinical Practice Guidelines for the Prevention... : Critical Care ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/10.1097/ccm.0000000000003299~clinical-practice-guidelines-for-the-prevention-and",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Critically ill adults may require sedation to reduce anxiety and stress and to facilitate invasive procedures and mechanical ventilation. Sedation indication, goal, clinical pharmacology, and acquisition cost are important determinants in choosing a sedative agent. The 2013 PAD guidelines suggest (i",
+      "score": 0.7961819
+    },
+    {
+      "number": 8,
+      "title": "Impact of critical care pharmacist\u2010led... : JACCP: Journal of the American College of Clinical Pharmacy",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02102005-202309000-00010",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Impact of critical care pharmacist\u2010led interventions on pain, agitation, and delirium in mechanically ventilated adults\n\n## A systematic review\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\nwk-ovid-logo\nprivacy policy options",
+      "score": 0.2971695
+    },
+    {
+      "number": 9,
+      "title": "Improving Outcomes in Mechanically Ventilated... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2024/01000/improving_outcomes_in_mechanically_ventilated.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "rates were very low at baseline (< 2%) and did not significantly increase (p = 0.23, R2 = 0.11). RASS assessments significantly increased (p < 0.01, R2 = 0.45). Use of benzodiazepine infusions for sedation significantly decreased (p < 0.01, R2 = 0.57); non-benzodiazepine use did not significantly ch",
+      "score": 0.7555112
+    },
+    {
+      "number": 10,
+      "title": "Feasibility of a sedation wake-up trial and spontaneous breathing trial in critically ill trauma patients: A secondary analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0964339712000523",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Intensive Care Med\n\n### Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU)\n\n### JAMA\n\n### Evaluation of delirium in critically ill patients: validation of the Confusion Assessment Method for the Intensiv",
+      "score": 0.5968332
+    },
+    {
+      "number": 11,
+      "title": "Principles and Practice of Sedation in Intensive Care Unit (ICU) - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0976001611600446",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care Med\n\n### The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients\n\n### Am J Respir Crit Care Med\n\n### Monitoring sedation status over time in ICU patients: reliability and validity of the Richmond Agitation-Sedation Scale (RASS)\n\n### JAMA\n\n#",
+      "score": 0.5441965
+    },
+    {
+      "number": 12,
+      "title": "Comparison and Agreement Between the Richmond Agitation-Sedation Scale and the Riker Sedation-Agitation Scale in Evaluating Patients' Eligibility for Delirium Assessment in the ICU - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369212603882",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Based on reading popularity\n\n## Cited by (87)\n\nThe SCCM PAD guidelines recommend the use of the Riker Sedation-Agitation Scale (SAS) or the Richmond Agitation-Sedation Scale (RASS)18 (Table 3). The SAS has 7 individual tiers ranging from 1 (unarousable) to 7 (dangerous agitation),39 whereas the ",
+      "score": 0.48381975
+    },
+    {
+      "number": 13,
+      "title": "Delirium detection in the emergency department: A diagnostic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/acem.14935",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU).",
+      "score": 0.42419788
+    },
+    {
+      "number": 14,
+      "title": "The effect of dexmedetomidine on delirium and agitation in patients ...",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/pdf/10.1111/anae.14472",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "host": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "snippet": "Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care units (CAM-ICU)",
+      "score": 0.39690995
+    },
+    {
+      "number": 15,
+      "title": "Cost effectiveness of a benzodiazepine vs a nonbenzodiazepine-based sedation regimen for mechanically ventilated, critically ill adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944114002214",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Clin Pharmacol\n\n### Clinical practice guidelines for the management of pain, agitation and delirium in the adult ICU paitents\n\n### Crit Care Med\n\n### Midazolam versus propofol or long-term sedation in the ICU: a randomized prospective comparison\n\n### Intensive Care Med\n\n### A randomized trial of",
+      "score": 0.7982658
+    },
+    {
+      "number": 16,
+      "title": "Background and research question - Alpha-2 agonists for sedation of mechanically ventilated adults in intensive care units: a systematic review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK355231",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "used a sedation scale/score for assessing the depth of sedation in patients. The RASS was the most frequently reported scale in use (65% of units), followed by the RSS (25%). Small proportions of units reported the use of the Riker SAS (3.5%), the modified RSS (3%), the Bloomsbury Sedation Scale (1%",
+      "score": 0.7447496
+    },
+    {
+      "number": 17,
+      "title": "How We Prevent and Treat Delirium in the ICU - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(21)01091-6/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "**Diagnostic and Statistical Manual of Mental Disorders, 5th edition** American Psychiatric Society, Washington, DC, 2013 **Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU)** _JAMA._ 2001; **286**:2703-271",
+      "score": 0.63615024
+    },
+    {
+      "number": 18,
+      "title": "Study Details | NCT02528513 | Midazolam Used Alone or Sequential Use of Midazolam and Propofol/Dexmedetomidine in Mechanically Ventilated Patients | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT02528513",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "the dosage adjusted to RASS score (-3 to 0).  Other Names:  Liyuxi Drug: Fentanyl  Fentanyl is used with bolus dosage of 1-2ug/kg and maintenance dosage of 1-2ug/kg/h, with the dosage adjusted to critical care pain observation tool\uff08CPOT\uff09score(0-1). Drug: Dexmedetomidine  After the spontaneous breath",
+      "score": 0.6934942
+    },
+    {
+      "number": 19,
+      "title": "Sedation in in Critical Care - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/sedation-in-in-critical-care",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The MENDS study enrolled 106 patients in a double-blind randomized controlled trial comparing lorazepam (maximal dose, 10 mg/h\u22121) and dexmedetomidine (maximal dose, 1.5 \u03bcg/kg\u22121/h\u22121) infusions (maximal duration, 120 hours) on the incidence of delirium and coma in mechanically ventilated patients in t",
+      "score": 0.7938904
+    },
+    {
+      "number": 20,
+      "title": "Clinical benefits of dexmedetomidine versus propofol in adult intensive care unit patients: a meta-analysis of randomized clinical trials - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022480413006859",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Optimizing sustained use of sedation in mechanically ventilated patients: focus on safety\n\n### Curr Drug Saf\n\n### Dexmedetomidine use in general anaesthesia\n\n### Curr Drug Targets\n\n### Sedation in the neurologic intensive care unit\n\n### Curr Treat Options Neurol\n\n### The pharmacol",
+      "score": 0.77137923
+    },
+    {
+      "number": 21,
+      "title": "Associations Between Different Sedatives and Ventilator-Associated Events, Length of Stay, and Mortality in Patients Who Were Mechanically Ventilated - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369215000677",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### JAMA\n\n### Dexmedetomidine versus propofol/midazolam for long-term sedation during mechanical ventilation\n\n### Intensive Care Med\n\n### Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized controlled trials\n\n### JAMA\n\n### A randomized trial ",
+      "score": 0.7644879
+    },
+    {
+      "number": 22,
+      "title": "Propofol versus midazolam sedation in patients with cardiogenic shock - an observational propensity-matched study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944122000806",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Anesth Analg\n\n### Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized controlled trials\n\n### JAMA\n\n## Cited by (17)\n\n### Comparative risks and clinical outcomes of midazolam versus other intravenous sedatives in critically ill mechanicall",
+      "score": 0.70823324
+    },
+    {
+      "number": 23,
+      "title": "Analgesia-first sedation in critically ill adults: A U.S. pilot, randomized controlled trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944119304319",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Remifentanil provides an increased proportion of time under light sedation than fentanyl when combined with dexmedetomidine for mechanical ventilation\n\n## Recommended articles\n\n### Staff education, regular sedation and analgesia quality feedback, and a sedation monitoring technology for improvin",
+      "score": 0.5726516
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "DIPRIVAN (propofol) injectable emulsion, USP",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/Label/2017/019627s066lbl.Pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "please visit  46 Sedation). For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be initiated slowly with a continuous infusion in order to titrate to desired clinical effect and minimize hypotension. When indicated, initiation of sedation should begin at ",
+      "score": 0.769306
+    },
+    {
+      "number": 2,
+      "title": "These highlights do not include all the information needed to use PROPOFOL INJECTABLE EMULSION safely and effectively. See full prescribing information for PROPOFOL INJECTABLE EMULSION. PROPOFOL INJECTABLE EMULSION, USP, for intravenous use Initial U.S. Approval: 1991",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fdb77e13-f5a7-4c4a-9f8e-338b702239c8",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Propofol should be individualized according to the patient's condition and response, blood lipid profile, and vital signs see Warnings and Precautions ([5.8, 5.9, and 5.10)]. For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be initiated slowly with a c",
+      "score": 0.7316155
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use PROPOFOL INJECTABLE EMULSION safely and effectively. See full prescribing information for PROPOFOL INJECTABLE EMULSION.\n      \n      PROPOFOL injectable emulsion, for intravenous use\n  \nInitial U.S. Approval: 1991",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f23fe3c5-aa37-4ecc-ad76-f13c1a1dabe2&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "propofol injectable emulsion should be individualized according to the patient's condition and response, blood lipid profile, and vital signs \nsee Warnings and Precautions (\n[5.8,\n5.9, and\n5.10)\n]. For intubated, mechanically ventilated adult patients, Intensive Care Unit (ICU) sedation should be in",
+      "score": 0.71377134
+    },
+    {
+      "number": 4,
+      "title": "[PDF] dexmedetomidine injection, solution - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=714cc0d2-8a4c-40c0-8ef0-dcfde4c46989&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "The most frequent adverse reactions were hypotension, bradycardia and dry mouth [see Warnings and Precautions (5.2)]. Table 3: Adverse Reactions with an Incidence >2%-Adult Intensive Care Unit Sedation Population <24 hours Adverse Event All Dexmedetomidine (N = 1,007) (%) Randomized Dexmedetomidine ",
+      "score": 0.694241
+    },
+    {
+      "number": 5,
+      "title": "DEXMEDETOMIDINE INJECTION",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=ebdfe2e8-30ca-4f18-935a-41bcbbce4937&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Dexmedetomidine injection is an alpha2-adrenergic receptor agonist indicated for: \u2022: Sedation of initially intubated and mechanically ventilated adult ...Read more",
+      "score": 0.55478466
+    },
+    {
+      "number": 6,
+      "title": "[PDF] N21-038S022; S021 Dexmedetomidine Clinical BPCA - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/files/drugs/published/N21-038S022-S021-Dexmedetomidine-Clinical-BPCA.pdf",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "previous scheduled blood pressure, and therefore a six hour period without vital sign documentation preceded this episode of extreme hypotension that was not considered an adverse event. Concomitant Medications Extensively discussed in Section 6 Review of Efficacy is the absence of detailed informat",
+      "score": 0.53692055
+    },
+    {
+      "number": 7,
+      "title": "Clinical Practice Guidelines for the Prevention... : Critical Care ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/fulltext/10.1097/ccm.0000000000003299~clinical-practice-guidelines-for-the-prevention-and",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Critically ill adults may require sedation to reduce anxiety and stress and to facilitate invasive procedures and mechanical ventilation. Sedation indication, goal, clinical pharmacology, and acquisition cost are important determinants in choosing a sedative agent. The 2013 PAD guidelines suggest (i",
+      "score": 0.7961819
+    },
+    {
+      "number": 8,
+      "title": "Impact of critical care pharmacist\u2010led... : JACCP: Journal of the American College of Clinical Pharmacy",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02102005-202309000-00010",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Impact of critical care pharmacist\u2010led interventions on pain, agitation, and delirium in mechanically ventilated adults\n\n## A systematic review\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\nwk-ovid-logo\nprivacy policy options",
+      "score": 0.2971695
+    },
+    {
+      "number": 9,
+      "title": "Improving Outcomes in Mechanically Ventilated... : Critical Care Explorations",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccejournal/fulltext/2024/01000/improving_outcomes_in_mechanically_ventilated.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "rates were very low at baseline (< 2%) and did not significantly increase (p = 0.23, R2 = 0.11). RASS assessments significantly increased (p < 0.01, R2 = 0.45). Use of benzodiazepine infusions for sedation significantly decreased (p < 0.01, R2 = 0.57); non-benzodiazepine use did not significantly ch",
+      "score": 0.7555112
+    },
+    {
+      "number": 10,
+      "title": "Feasibility of a sedation wake-up trial and spontaneous breathing trial in critically ill trauma patients: A secondary analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0964339712000523",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Intensive Care Med\n\n### Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU)\n\n### JAMA\n\n### Evaluation of delirium in critically ill patients: validation of the Confusion Assessment Method for the Intensiv",
+      "score": 0.5968332
+    },
+    {
+      "number": 11,
+      "title": "Principles and Practice of Sedation in Intensive Care Unit (ICU) - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0976001611600446",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care Med\n\n### The Richmond Agitation-Sedation Scale: validity and reliability in adult intensive care unit patients\n\n### Am J Respir Crit Care Med\n\n### Monitoring sedation status over time in ICU patients: reliability and validity of the Richmond Agitation-Sedation Scale (RASS)\n\n### JAMA\n\n#",
+      "score": 0.5441965
+    },
+    {
+      "number": 12,
+      "title": "Comparison and Agreement Between the Richmond Agitation-Sedation Scale and the Riker Sedation-Agitation Scale in Evaluating Patients' Eligibility for Delirium Assessment in the ICU - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369212603882",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Based on reading popularity\n\n## Cited by (87)\n\nThe SCCM PAD guidelines recommend the use of the Riker Sedation-Agitation Scale (SAS) or the Richmond Agitation-Sedation Scale (RASS)18 (Table 3). The SAS has 7 individual tiers ranging from 1 (unarousable) to 7 (dangerous agitation),39 whereas the ",
+      "score": 0.48381975
+    },
+    {
+      "number": 13,
+      "title": "Delirium detection in the emergency department: A diagnostic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/acem.14935",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU).",
+      "score": 0.42419788
+    },
+    {
+      "number": 14,
+      "title": "The effect of dexmedetomidine on delirium and agitation in patients ...",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/pdf/10.1111/anae.14472",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "host": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "snippet": "Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care units (CAM-ICU)",
+      "score": 0.39690995
+    },
+    {
+      "number": 15,
+      "title": "Cost effectiveness of a benzodiazepine vs a nonbenzodiazepine-based sedation regimen for mechanically ventilated, critically ill adults - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944114002214",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Clin Pharmacol\n\n### Clinical practice guidelines for the management of pain, agitation and delirium in the adult ICU paitents\n\n### Crit Care Med\n\n### Midazolam versus propofol or long-term sedation in the ICU: a randomized prospective comparison\n\n### Intensive Care Med\n\n### A randomized trial of",
+      "score": 0.7982658
+    },
+    {
+      "number": 16,
+      "title": "Background and research question - Alpha-2 agonists for sedation of mechanically ventilated adults in intensive care units: a systematic review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK355231",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "used a sedation scale/score for assessing the depth of sedation in patients. The RASS was the most frequently reported scale in use (65% of units), followed by the RSS (25%). Small proportions of units reported the use of the Riker SAS (3.5%), the modified RSS (3%), the Bloomsbury Sedation Scale (1%",
+      "score": 0.7447496
+    },
+    {
+      "number": 17,
+      "title": "How We Prevent and Treat Delirium in the ICU - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(21)01091-6/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "**Diagnostic and Statistical Manual of Mental Disorders, 5th edition** American Psychiatric Society, Washington, DC, 2013 **Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU)** _JAMA._ 2001; **286**:2703-271",
+      "score": 0.63615024
+    },
+    {
+      "number": 18,
+      "title": "Study Details | NCT02528513 | Midazolam Used Alone or Sequential Use of Midazolam and Propofol/Dexmedetomidine in Mechanically Ventilated Patients | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT02528513",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "the dosage adjusted to RASS score (-3 to 0).  Other Names:  Liyuxi Drug: Fentanyl  Fentanyl is used with bolus dosage of 1-2ug/kg and maintenance dosage of 1-2ug/kg/h, with the dosage adjusted to critical care pain observation tool\uff08CPOT\uff09score(0-1). Drug: Dexmedetomidine  After the spontaneous breath",
+      "score": 0.6934942
+    },
+    {
+      "number": 19,
+      "title": "Sedation in in Critical Care - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/sedation-in-in-critical-care",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The MENDS study enrolled 106 patients in a double-blind randomized controlled trial comparing lorazepam (maximal dose, 10 mg/h\u22121) and dexmedetomidine (maximal dose, 1.5 \u03bcg/kg\u22121/h\u22121) infusions (maximal duration, 120 hours) on the incidence of delirium and coma in mechanically ventilated patients in t",
+      "score": 0.7938904
+    },
+    {
+      "number": 20,
+      "title": "Clinical benefits of dexmedetomidine versus propofol in adult intensive care unit patients: a meta-analysis of randomized clinical trials - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022480413006859",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Optimizing sustained use of sedation in mechanically ventilated patients: focus on safety\n\n### Curr Drug Saf\n\n### Dexmedetomidine use in general anaesthesia\n\n### Curr Drug Targets\n\n### Sedation in the neurologic intensive care unit\n\n### Curr Treat Options Neurol\n\n### The pharmacol",
+      "score": 0.77137923
+    },
+    {
+      "number": 21,
+      "title": "Associations Between Different Sedatives and Ventilator-Associated Events, Length of Stay, and Mortality in Patients Who Were Mechanically Ventilated - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369215000677",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### JAMA\n\n### Dexmedetomidine versus propofol/midazolam for long-term sedation during mechanical ventilation\n\n### Intensive Care Med\n\n### Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized controlled trials\n\n### JAMA\n\n### A randomized trial ",
+      "score": 0.7644879
+    },
+    {
+      "number": 22,
+      "title": "Propofol versus midazolam sedation in patients with cardiogenic shock - an observational propensity-matched study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944122000806",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Anesth Analg\n\n### Dexmedetomidine vs midazolam or propofol for sedation during prolonged mechanical ventilation: two randomized controlled trials\n\n### JAMA\n\n## Cited by (17)\n\n### Comparative risks and clinical outcomes of midazolam versus other intravenous sedatives in critically ill mechanicall",
+      "score": 0.70823324
+    },
+    {
+      "number": 23,
+      "title": "Analgesia-first sedation in critically ill adults: A U.S. pilot, randomized controlled trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944119304319",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Remifentanil provides an increased proportion of time under light sedation than fentanyl when combined with dexmedetomidine for mechanical ventilation\n\n## Recommended articles\n\n### Staff education, regular sedation and analgesia quality feedback, and a sedation monitoring technology for improvin",
+      "score": 0.5726516
+    }
+  ],
+  "publishedAt": "2026-09-15T18:22:46.951666+00:00",
+  "updatedAt": "2026-09-15T18:22:46.951666+00:00",
+  "readingMinutes": 5,
+  "slug": "sedation-selection"
+}

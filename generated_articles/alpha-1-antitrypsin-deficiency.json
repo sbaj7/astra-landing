@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonology and Hepatology",
+  "title": "Alpha-1 Antitrypsin Deficiency",
+  "summary": "Test adults with fixed airflow obstruction, unexplained bronchiectasis, or unexplained liver disease; confirm deficiency genetically and direct management toward smoking cessation, standard organ-specific care, selective augmentation, and transplant evaluation for end-stage organ disease.",
+  "seoDescription": "Physician guide to testing, confirming, and managing alpha-1 antitrypsin deficiency with emphysema, liver disease, augmentation therapy, and transplantation.",
+  "clinicalQuestion": "How should clinicians identify, confirm, stage, and treat alpha-1 antitrypsin deficiency affecting the lung or liver?",
+  "specialty": "Pulmonology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "alpha-1 antitrypsin deficiency",
+    "AATD",
+    "SERPINA1",
+    "PiZZ",
+    "emphysema",
+    "augmentation therapy",
+    "AATD liver disease"
+  ],
+  "keyTakeaways": [
+    "Test every adult with symptomatic fixed airflow obstruction, including patients labeled as COPD or asthma, and test patients with unexplained bronchiectasis or liver disease. [8]",
+    "Use serum AAT measurement with genotype or phenotype confirmation; a serum AAT concentration below 11 micromolar identifies severe deficiency relevant to augmentation decisions. [6][9][10]",
+    "Treat AATD-related COPD with usual COPD measures, but reserve intravenous augmentation primarily for severe deficiency with emphysema after smoking cessation and optimized standard management. [8][9][12]",
+    "Do not use intravenous AAT augmentation to treat AATD liver disease; hepatic injury reflects intracellular polymerized AAT accumulation rather than low circulating AAT. [8]",
+    "Liver transplantation is definitive therapy for severe AATD liver disease and restores circulating AAT levels; lung transplantation is an option for selected end-stage lung disease. [13]"
+  ],
+  "sections": [
+    {
+      "id": "who-to-test",
+      "eyebrow": "Case Finding",
+      "heading": "Who should be tested for alpha-1 antitrypsin deficiency?",
+      "intro": "Use broad targeted testing rather than phenotype-based clinical exclusion.",
+      "paragraphs": [
+        "Order AATD testing in every adult with symptomatic fixed airflow obstruction, whether the working label is COPD or asthma. Clinical appearance alone does not reliably distinguish AATD-related COPD from usual COPD, and failure to test misses a cause that changes family counseling and can alter disease-specific treatment decisions. [8][19]",
+        "Also test patients with unexplained bronchiectasis or unexplained liver disease. These presentations can be the initial clinically recognized manifestation of AATD, particularly when respiratory obstruction is absent or not yet documented. [8]",
+        "Once an index case is confirmed, offer testing to first-degree relatives. Family testing is the most efficient detection strategy and identifies individuals who may benefit from smoking avoidance, organ-specific surveillance, and reproductive or genetic counseling. [8]"
+      ],
+      "bullets": [
+        "Prioritize testing in COPD diagnosed before age 65 years or in a patient with fewer than 20 pack-years of smoking exposure. [9]",
+        "Do not exclude AATD because a patient has substantial smoking exposure: smoking accelerates lung-function decline in affected individuals, but it does not explain away hereditary deficiency. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical triggers for AATD testing. [8][9][19]",
+        "columns": [
+          "Presentation",
+          "Action",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Symptomatic fixed airflow obstruction labeled COPD or asthma",
+            "Order AATD testing. [8]",
+            "Identifies severe deficiency and potential eligibility for augmentation therapy if emphysema is present. [8][12]"
+          ],
+          [
+            "COPD before age 65 years or smoking history under 20 pack-years",
+            "Targeted AATD testing is specifically supported. [9]",
+            "Raises pretest probability in an otherwise nonspecific COPD phenotype. [9]"
+          ],
+          [
+            "Unexplained bronchiectasis",
+            "Order AATD testing. [8]",
+            "Clarifies a hereditary contributor and prompts family testing. [8]"
+          ],
+          [
+            "Unexplained liver disease",
+            "Order AATD testing. [8]",
+            "Distinguishes an AAT polymer-accumulation phenotype from isolated pulmonary deficiency. [8]"
+          ],
+          [
+            "First-degree relative of a confirmed case",
+            "Offer family testing. [8]",
+            "Enables preventive risk reduction before clinically apparent organ injury. [8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-and-phenotype",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm deficiency and define the lung-versus-liver phenotype",
+      "intro": "A serum level establishes severity; genotype or phenotype testing establishes inherited risk.",
+      "paragraphs": [
+        "Measure serum AAT and obtain confirmatory genotype or phenotype testing rather than treating an isolated serum value as a complete diagnosis. Diagnostic approaches include genotyping, isoelectric-focusing phenotype analysis, and sequencing when needed to characterize rare variants. [8][11][13]",
+        "Interpret an AAT concentration below 11 micromolar as severe deficiency for augmentation-therapy assessment. The postulated protective threshold is 11 micromolar; PiSZ and PiZZ phenotypes average approximately 8 to 16 micromolar, so genotype and phenotype materially refine interpretation near that threshold. [6][9][10]",
+        "Separate low-circulating-AAT lung disease from polymer-retention liver disease. Severe PiZZ disease predisposes both to loss-of-function lung injury and gain-of-function hepatic injury; this distinction prevents the erroneous use of augmentation as liver-directed therapy. [4][8][17]",
+        "For pulmonary staging, obtain spirometry and establish whether emphysema is present; augmentation recommendations are tied to documented AATD-associated lung impairment rather than genotype alone. A chest CT can assess emphysema and has been used to measure lung-density progression in augmentation studies. [10][11][23][24]"
+      ],
+      "bullets": [
+        "PiZZ is the most common severe genotype and is associated with lung and liver disease. [7][19]",
+        "PiSZ and PiMZ genotypes can also be associated with lung or liver disease, particularly with additional exposures or cofactors; do not assign augmentation eligibility from genotype alone. [7][10]",
+        "If liver involvement is suspected, obtain aminotransferases, alkaline phosphatase, and bilirubin; annual assessment of these measures is recommended in clinical reference guidance for high-risk genotypes. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "When to escalate liver evaluation",
+          "paragraphs": [
+            "Escalate a confirmed AATD patient with persistent biochemical liver abnormalities or suspected fibrosis to hepatology for noninvasive fibrosis assessment. Transient-elastography liver stiffness and the AST-to-platelet ratio index have been used to assess fibrosis in adult PiZZ cohorts. [17]"
+          ],
+          "bullets": [
+            "Consider liver biopsy when noninvasive assessment does not resolve the diagnosis or when histologic staging will change transplant or competing-diagnosis decisions; AATD liver disease is driven by hepatocellular accumulation of polymerized AAT. [8][17]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Interpretation framework after an abnormal AAT evaluation. [6][8][10][17]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Serum AAT below 11 micromolar",
+            "Severe deficiency threshold used in augmentation assessments. [6][9][10]",
+            "Confirm genotype or phenotype; assess spirometry, emphysema, smoking status, and liver involvement. [8][10]"
+          ],
+          [
+            "PiZZ with emphysema",
+            "High-risk pulmonary and hepatic genotype. [4][7]",
+            "Optimize COPD care; determine augmentation candidacy and assess liver biochemistries. [8][10][16]"
+          ],
+          [
+            "PiZZ with abnormal liver tests or suspected fibrosis",
+            "Possible polymer-accumulation liver phenotype. [8][17]",
+            "Obtain fibrosis assessment and refer to hepatology for staging and transplant-directed planning when severe. [13][17]"
+          ],
+          [
+            "AAT level above 11 micromolar in a heterozygous phenotype",
+            "Augmentation is not recommended on this basis. [16]",
+            "Manage the pulmonary or hepatic disorder by standard disease-specific care and reduce modifiable exposures. [8][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lung-management",
+      "eyebrow": "Pulmonary Disease",
+      "heading": "Manage AATD-associated emphysema with standard COPD care plus selective augmentation",
+      "intro": "Establish emphysema, stop smoking, optimize usual COPD care, then assess disease-specific infusion therapy.",
+      "paragraphs": [
+        "Treat AATD-associated COPD with standard COPD interventions: bronchodilators, inhaled corticosteroids when otherwise indicated, supplemental oxygen, preventive vaccinations, and pulmonary rehabilitation. These measures remain foundational whether or not augmentation is used. [19][9]",
+        "Smoking cessation is a prerequisite for a favorable augmentation decision. Current smokers were excluded from randomized augmentation trials, and multiple guidelines do not recommend augmentation in patients who continue to smoke. [9][10][12][16]",
+        "Consider intravenous pooled human AAT augmentation for a nonsmoking or former-smoking patient with documented severe deficiency, established emphysema, and optimized pharmacologic and nonpharmacologic COPD management. Augmentation raises serum and epithelial lining-fluid AAT, restores anti-elastase capacity, and reduces loss of CT-measured lung density over time. [9][11][12]",
+        "Use the FDA-labeled weekly dose of 60 mg/kg for alpha1-proteinase inhibitor products. Weekly treatment is the labeled regimen referenced by the FDA; do not substitute intermittent dosing without a product-specific rationale. [1]",
+        "FEV1 thresholds differ across guidelines. COPD Foundation guidance recommends augmentation when FEV1 is 65% predicted or lower and advises a benefit-cost discussion when FEV1 exceeds 65%; GOLD considers patients with FEV1 35% to 60% predicted the most suitable group, while Canadian guidance supports consideration at FEV1 25% to 80% predicted in eligible ex-smokers or nonsmokers. [12][9]"
+      ],
+      "bullets": [
+        "Do not use augmentation for isolated bronchiectasis without airflow obstruction or emphysema. [12]",
+        "Do not use augmentation for AATD-related liver disease. [8]",
+        "Do not use augmentation in current smokers or in patients after liver transplantation. [10][12]",
+        "Intravenous infusion adverse effects are uncommon, but assess prior infusion tolerance and monitor during administration. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "Advanced pulmonary disease",
+          "paragraphs": [
+            "Refer selected patients with end-stage AATD lung disease for lung-transplant evaluation; transplantation can improve survival and quality of life in severe disease. Do not routinely pursue lung-volume-reduction therapy as an AATD-specific strategy because evidence is insufficient to support it. [13][16]"
+          ],
+          "bullets": [
+            "Use serial spirometry and clinical exacerbation assessment for routine pulmonary follow-up; CT densitometry is a progression endpoint in trials but is not required to establish eligibility for usual COPD care. [11][23][24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Selection for intravenous AAT augmentation in AATD-associated lung disease. [1][9][10][12][16]",
+        "columns": [
+          "Clinical feature",
+          "Effect on decision",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Severe deficiency with serum AAT below 11 micromolar",
+            "Supports consideration if emphysema is established. [9][10]",
+            "Confirm genotype or phenotype and characterize lung disease. [8][10]"
+          ],
+          [
+            "Established emphysema with optimized COPD therapy",
+            "Core treatment phenotype for augmentation. [9][11][13]",
+            "Discuss weekly intravenous alpha1-proteinase inhibitor at 60 mg/kg. [1]"
+          ],
+          [
+            "Current smoking",
+            "Augmentation not recommended. [10][12][16]",
+            "Deliver smoking-cessation treatment and reassess only after sustained cessation. [9][10]"
+          ],
+          [
+            "FEV1 65% predicted or lower",
+            "COPD Foundation guideline-supported treatment range. [12]",
+            "Offer augmentation discussion after confirming emphysema and severe deficiency. [12]"
+          ],
+          [
+            "FEV1 above 65% predicted",
+            "Guidance favors individualized benefit-cost discussion rather than automatic treatment. [12]",
+            "Discuss uncertainty, cost, lung-density evidence, and patient preferences. [12]"
+          ],
+          [
+            "Heterozygous phenotype or AAT above 11 micromolar",
+            "Augmentation not recommended. [16]",
+            "Treat coexisting COPD according to standard guidance. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "liver-management",
+      "eyebrow": "Hepatic Disease",
+      "heading": "Manage AATD liver disease as a protein-accumulation disorder",
+      "intro": "Do not extrapolate pulmonary augmentation logic to hepatic disease.",
+      "paragraphs": [
+        "AATD liver disease results from hepatocellular retention of polymerized abnormal AAT, not from inadequate circulating antiprotease activity. Therefore, intravenous augmentation is not recommended to treat liver disease; clinical guidance reports that liver disease neither improves nor worsens with augmentation used for coexisting pulmonary disease. [8]",
+        "In adults with severe-risk genotypes, follow liver biochemistries with aminotransferases, alkaline phosphatase, and bilirubin at least annually. Abnormal tests, clinical evidence of chronic liver disease, or suspected fibrosis should prompt hepatology assessment with noninvasive fibrosis testing such as transient elastography and APRI. [16][17]",
+        "Refer patients with severe AATD liver disease for transplant evaluation. Liver transplantation is the definitive treatment and restores circulating AAT levels, unlike augmentation therapy, which replaces plasma antiprotease but does not remove the hepatic source of polymerized protein. [13][8]"
+      ],
+      "bullets": [
+        "Do not interpret normal pulmonary function as reassurance against hepatic involvement in PiZZ disease; the genotype can produce independent lung and liver phenotypes. [4][7]",
+        "Evaluate concurrent metabolic and other liver disease contributors when liver tests are abnormal because PiSZ and PiMZ-associated organ disease is particularly influenced by coexisting factors. [7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Liver-directed decisions in confirmed AATD. [8][13][16][17]",
+        "columns": [
+          "Clinical situation",
+          "Assessment",
+          "Management decision"
+        ],
+        "rows": [
+          [
+            "Confirmed high-risk AATD without known liver disease",
+            "Measure aminotransferases, alkaline phosphatase, and bilirubin annually. [16]",
+            "Continue surveillance and address modifiable hepatic cofactors. [7][16]"
+          ],
+          [
+            "Persistent abnormal liver biochemistries or suspected fibrosis",
+            "Use transient elastography and/or APRI as noninvasive fibrosis assessment tools. [17]",
+            "Refer to hepatology for staging and management. [17]"
+          ],
+          [
+            "AATD-associated liver disease with coexisting emphysema",
+            "Assess pulmonary augmentation candidacy independently. [8][10]",
+            "Do not prescribe augmentation as liver treatment. [8]"
+          ],
+          [
+            "Severe liver disease",
+            "Assess transplant candidacy. [13]",
+            "Liver transplantation is definitive and restores AAT levels. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "extrapulmonary-and-follow-up",
+      "eyebrow": "Longitudinal Care",
+      "heading": "Address panniculitis, family risk, and organ-specific follow-up",
+      "intro": "A confirmed genotype changes care beyond the initial pulmonary visit.",
+      "paragraphs": [
+        "For AATD-associated panniculitis, use dapsone or doxycycline; if disease is refractory, high-dose intravenous AAT augmentation is indicated in GeneReviews management guidance. This indication is distinct from emphysema-based augmentation selection and should prompt dermatology collaboration when diagnosis is uncertain or ulcerative disease is extensive. [13]",
+        "At diagnosis, document smoking status, pulmonary impairment, emphysema status, liver biochemical testing, and first-degree relatives requiring testing. Management should then be directed to the affected organ system: usual COPD care and selective augmentation for severe deficient emphysema, versus fibrosis staging and transplant planning for clinically significant liver disease. [8][12][13][16]"
+      ],
+      "bullets": [
+        "Reassess smoking status at each pulmonary follow-up because continued smoking excludes augmentation and accelerates lung-function decline. [9][10][16]",
+        "Use spirometry to follow obstructive lung disease and liver biochemical testing for hepatic surveillance; add fibrosis assessment when clinical or laboratory findings indicate possible progressive liver disease. [16][17]",
+        "Offer first-degree relative testing even when the index patient presents through hepatology rather than pulmonology. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up priorities after confirmation of AATD. [8][9][16][17]",
+        "columns": [
+          "Domain",
+          "Monitor",
+          "Trigger for action"
+        ],
+        "rows": [
+          [
+            "Smoking exposure",
+            "Smoking status at follow-up. [9][16]",
+            "Current smoking: provide cessation treatment; do not initiate augmentation while smoking continues. [10][12][16]"
+          ],
+          [
+            "Pulmonary disease",
+            "Spirometry and clinical COPD status. [11][16]",
+            "Documented emphysema plus severe deficiency: assess augmentation eligibility. [9][10][12]"
+          ],
+          [
+            "Liver disease",
+            "Aminotransferases, alkaline phosphatase, and bilirubin annually. [16]",
+            "Abnormal results or fibrosis concern: hepatology evaluation with noninvasive fibrosis assessment. [17]"
+          ],
+          [
+            "Family risk",
+            "First-degree relatives. [8]",
+            "Offer diagnostic testing and preventive counseling. [8]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] Patient-Focused Drug Development for Alpha-1 Antitrypsin Deficiency",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/136516/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "current approaches to treatment 1. What are you currently doing to treat your condition or its symptoms? (Examples may include: (a) For lung disease: inhaled bronchodilators, inhaled corticosteroids, intravenous augmentation therapy with A1-PI (Human) on a regular or intermittent basis; (b) Liver Di",
+      "score": 0.6836946
+    },
+    {
+      "number": 2,
+      "title": "Public Meeting on Patient-Focused Drug Development for ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/136515/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "ROSS PIERCE, M.D. 15 Medical Officer, Division of Hematology Clinical Review 16 OBRR, CBER, FDA 17 Overview of Discussion Format 18 DONNA LIPSCOMB Office of Communication, Outreach 19 and Development Center for Biologics Evaluation and Research 20 (CBER) FDA 21 Topic 1: The effects of Alpha-1 Antitr",
+      "score": 0.97919
+    },
+    {
+      "number": 3,
+      "title": "Supplemental material",
+      "detail": "jmg.bmj.com",
+      "url": "https://jmg.bmj.com/content/jmedgenet/58/11/720/DC1/embed/inline-supplementary-material-1.pdf?download=true",
+      "authors": "jmg.bmj.com",
+      "host": "jmg.bmj.com",
+      "snippet": "1 genotypes 1 PI*ZZ genotype was associated with increased risk of empyema, pneumothorax, cachexia, polycythaemia, alpha-1 antitrypsin deficiency genotypes.",
+      "score": 0.6554468
+    },
+    {
+      "number": 4,
+      "title": "Longitudinal Evaluation of Individuals With Severe Alpha-1 ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0016508524055720",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Severe alpha-1 antitrypsin deficiency in subjects with Pi\u2217ZZ genotype strongly predisposes to the loss-of-function lung and gain-of-function liver injury,",
+      "score": 0.78493005
+    },
+    {
+      "number": 5,
+      "title": "Frequency of alleles and genotypes associated with alpha-1 antitrypsin deficiency in clinical and general populations: Revelations about underdiagnosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2531043722000307",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Frequency of alleles and genotypes associated with alpha-1 antitrypsin deficiency in clinical and general populations: Revelations about underdiagnosis - ScienceDirect\n## Pulmonology. Volume 29, Issue 3, May\u2013June 2023, Pages 214-220. # Original article Frequency of alleles and genotypes assoc",
+      "score": 0.767638
+    },
+    {
+      "number": 6,
+      "title": "Distinguishing alpha1-antitrypsin deficiency from asthma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1081120613007199",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The postulated protective threshold of serum AAT is 11 \u03bcmol/L.1 In patients with the PiSZ and PiZZ phenotypes, the AAT concentrations average 8 to 16 \u03bcmol/L",
+      "score": 0.76173395
+    },
+    {
+      "number": 7,
+      "title": "Review Alpha-1 antitrypsin deficiency-associated liver disease",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666967625000303",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The PI*ZZ genotype is the most common and severe, but even milder genotypes like PI*SZ and PI*MZ can lead to lung and liver disease, particularly when combined",
+      "score": 0.7555112
+    },
+    {
+      "number": 8,
+      "title": "The Diagnosis and Management of Alpha-1 Antitrypsin Deficiency in ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5556762",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conclusions: The major recommendations continue to endorse and reinforce the importance of testing for AATD in all adults with symptomatic fixed airflow obstruction, whether clinically labeled as COPD or asthma. Individuals with unexplained bronchiectasis or liver disease also should be tested. Fami",
+      "score": 0.8900749
+    },
+    {
+      "number": 9,
+      "title": "Alpha-1 antitrypsin deficiency targeted testing and augmentation therapy: A Canadian Thoracic Society clinical practice guideline - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3373286",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As highlighted, the present evidence-based clinical guideline statement presupposes that appropriate and optimal pharmacological as well as nonpharmacological therapies have been and continue to be used in the management of all COPD patients with A1AT deficiency (13\u201315,47). In this setting, it is mi",
+      "score": 0.8868231
+    },
+    {
+      "number": 10,
+      "title": "Management of lung disease in alpha-1 antitrypsin deficiency: what we do and what we do not know",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8367208",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Augmentation therapy is currently recommended only for patients with severe AATD genotypes, for example, PIZZ (European and US guidelines) and PISZ (US guidelines only), or those with an FEV 1 \u2a7d65%, as there is well-documented benefit in these patients.2,3,10,106, augmentation therapy is not recomme",
+      "score": 0.8706085
+    },
+    {
+      "number": 11,
+      "title": "Diagnosis and augmentation therapy for alpha-1 antitrypsin deficiency: current knowledge and future potential",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10379007",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "AATD remains as an underdiagnosed genetic disease4 despite awareness regarding its diagnosis and management through the development of national and international guidelines. The first guideline was published by the American Thoracic Society/European Respiratory Society in 2003.12 Since then, several",
+      "score": 0.8687491
+    },
+    {
+      "number": 12,
+      "title": "Alpha1-Proteinase Inhibitors for the Treatment of Alpha1-Antitrypsin Deficiency: A Review of Clinical Effectiveness, Cost-Effectiveness, and Guidelines - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK526295",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Global Initiative for Chronic Obstructive Lung Disease (GOLD),15 Canadian Thoracic Society (CTS),1 and Spanish Society of Pulmonology and Thoracic Surgery (SEPAR)14 guidelines all state that AAT augmentation therapy may be considered in non-smokers or previous smokers with AAT deficiency with COPD w",
+      "score": 0.83225065
+    },
+    {
+      "number": 13,
+      "title": "Alpha-1 Antitrypsin Deficiency - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK1519",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### Management.\n\nTreatment of manifestations: COPD is treated with standard therapy. Augmentation therapy with periodic intravenous infusion of pooled human serum alpha-1 antitrypsin (AAT) is used in individuals who have established emphysema. Lung transplantation may be an appropriate option for i",
+      "score": 0.80405265
+    },
+    {
+      "number": 14,
+      "title": "Multi-Society Expert Panel Consensus Guidance Regarding Clinical Assessment and Clinical Trial Endpoints in Adults With Alpha-1 Antitrypsin Deficiency-Associated Liver Disease. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41390004",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "MED: 38516814    \n\n  \n\n   ### Diagnosis and Monitoring Pathways Using Non-Invasive Tests in Patients With Alpha-1 Antitrypsin Deficiency-Associated Liver Disease: Results From an Expert Delphi Panel.\n\nClark VC, Price MA, Russo J, Loomba R, Turner AM, Strnad P\n\nUnited European Gastroenterol J, (8):14",
+      "score": 0.70726365
+    },
+    {
+      "number": 15,
+      "title": "standards for the diagnosis and management of ... - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14522813",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "American Thoracic Society/European Respiratory Society statement: standards for the diagnosis and management of individuals with alpha-1 antitrypsin deficiency.",
+      "score": 0.6690754
+    },
+    {
+      "number": 16,
+      "title": "Alpha-1 Antitrypsin Deficiency - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK442030",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Augmentation therapy is not recommended for patients with heterozygous phenotypes, whose plasma AAT level exceeds 11 \u03bcmols/L, or current smokers. Side effects associated with intravenous AAT infusion are uncommon, and no long-term reactions have been noted. However, some side effects can occur, incl",
+      "score": 0.6455898
+    },
+    {
+      "number": 17,
+      "title": "Alpha-1 Antitrypsin Augmentation and the Liver Phenotype of Adults With Alpha-1 Antitrypsin Deficiency (Genotype Pi\u2217ZZ) - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/37716616",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any information you provide is encrypted. ## Save citation to file. ## Email citation. ### Add to Collections. ### Add to My Biblio",
+      "score": 0.70531887
+    },
+    {
+      "number": 18,
+      "title": "Liver Fibrosis and Metabolic Alterations in Adults With alpha-1 ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(19)40894-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Alpha-1 antitrypsin deficiency (AATD) is among the most common genetic disorders. Pi*ZZ carriers may develop lung and liver diseases. carriers often develop",
+      "score": 0.98539
+    },
+    {
+      "number": 19,
+      "title": "Alpha-1 antitrypsin deficiency: An underrecognized, treatable cause of COPD | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/83/7/507",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "People who are homozygous for the Z allele of the gene that codes for alpha-1 antitrypsin are at increased risk of lung and liver disease. * Chronic obstructive pulmonary disease (COPD) due to alpha-1 antitrypsin deficiency is difficult to distinguish from \u201cusual\u201d COPD on a clinical basis, but blood",
+      "score": 0.98148
+    },
+    {
+      "number": 20,
+      "title": "Multi-Society Expert Panel Consensus Guidance Regarding Clinical ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(25)06621-1/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Liver disease is an underrecognized complication of alpha-1 antitrypsin deficiency (AATD), especially in adults with the PiZZ genotype, due in part to a lack of",
+      "score": 0.9752
+    },
+    {
+      "number": 21,
+      "title": "Prediction of Lobar Emphysema Progression with a CT- ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.252958",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by AH Curiale \u00b7 2026 \u00b7 Cited by 1 \u2014 Exploring the role of CT densitometry: a randomised study of augmentation therapy in alpha 1-antitrypsin deficiency. Eur Respir J 2009;33(6): ...Read more",
+      "score": 0.97422
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Alpha-1 antitrypsin deficiency: An underrecognized, treatable cause ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/83/7/507.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "People who are homozygous for the Z allele of the gene that codes for alpha-1 antitrypsin are at increased risk of lung and liver disease.",
+      "score": 0.97006
+    },
+    {
+      "number": 23,
+      "title": "Predicting Emphysema Progression in the CanCOLD Study",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/pdf/10.1148/radiol.233265",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by S Virdee \u00b7 2024 \u00b7 Cited by 4 \u2014 CT also aids in assessing treatment efficacy for em- physema related to alpha-1 antitrypsin deficiency (7,12). A randomized clinical trial of",
+      "score": 0.96838
+    },
+    {
+      "number": 24,
+      "title": "Quantification of Emphysema Progression at CT Using ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.231632",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Jan 2, 2024 \u2014 Intravenous augmentation treatment and lung density in severe \u03b11 antitrypsin deficiency (RAPID): a randomised, double-blind, placebo-controlled ...Read more",
+      "score": 0.96448
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] Patient-Focused Drug Development for Alpha-1 Antitrypsin Deficiency",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/136516/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "current approaches to treatment 1. What are you currently doing to treat your condition or its symptoms? (Examples may include: (a) For lung disease: inhaled bronchodilators, inhaled corticosteroids, intravenous augmentation therapy with A1-PI (Human) on a regular or intermittent basis; (b) Liver Di",
+      "score": 0.6836946
+    },
+    {
+      "number": 2,
+      "title": "Public Meeting on Patient-Focused Drug Development for ...",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/136515/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "ROSS PIERCE, M.D. 15 Medical Officer, Division of Hematology Clinical Review 16 OBRR, CBER, FDA 17 Overview of Discussion Format 18 DONNA LIPSCOMB Office of Communication, Outreach 19 and Development Center for Biologics Evaluation and Research 20 (CBER) FDA 21 Topic 1: The effects of Alpha-1 Antitr",
+      "score": 0.97919
+    },
+    {
+      "number": 3,
+      "title": "Supplemental material",
+      "detail": "jmg.bmj.com",
+      "url": "https://jmg.bmj.com/content/jmedgenet/58/11/720/DC1/embed/inline-supplementary-material-1.pdf?download=true",
+      "authors": "jmg.bmj.com",
+      "host": "jmg.bmj.com",
+      "snippet": "1 genotypes 1 PI*ZZ genotype was associated with increased risk of empyema, pneumothorax, cachexia, polycythaemia, alpha-1 antitrypsin deficiency genotypes.",
+      "score": 0.6554468
+    },
+    {
+      "number": 4,
+      "title": "Longitudinal Evaluation of Individuals With Severe Alpha-1 ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0016508524055720",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Severe alpha-1 antitrypsin deficiency in subjects with Pi\u2217ZZ genotype strongly predisposes to the loss-of-function lung and gain-of-function liver injury,",
+      "score": 0.78493005
+    },
+    {
+      "number": 5,
+      "title": "Frequency of alleles and genotypes associated with alpha-1 antitrypsin deficiency in clinical and general populations: Revelations about underdiagnosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2531043722000307",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Frequency of alleles and genotypes associated with alpha-1 antitrypsin deficiency in clinical and general populations: Revelations about underdiagnosis - ScienceDirect\n## Pulmonology. Volume 29, Issue 3, May\u2013June 2023, Pages 214-220. # Original article Frequency of alleles and genotypes assoc",
+      "score": 0.767638
+    },
+    {
+      "number": 6,
+      "title": "Distinguishing alpha1-antitrypsin deficiency from asthma",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1081120613007199",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The postulated protective threshold of serum AAT is 11 \u03bcmol/L.1 In patients with the PiSZ and PiZZ phenotypes, the AAT concentrations average 8 to 16 \u03bcmol/L",
+      "score": 0.76173395
+    },
+    {
+      "number": 7,
+      "title": "Review Alpha-1 antitrypsin deficiency-associated liver disease",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2666967625000303",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The PI*ZZ genotype is the most common and severe, but even milder genotypes like PI*SZ and PI*MZ can lead to lung and liver disease, particularly when combined",
+      "score": 0.7555112
+    },
+    {
+      "number": 8,
+      "title": "The Diagnosis and Management of Alpha-1 Antitrypsin Deficiency in ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5556762",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Conclusions: The major recommendations continue to endorse and reinforce the importance of testing for AATD in all adults with symptomatic fixed airflow obstruction, whether clinically labeled as COPD or asthma. Individuals with unexplained bronchiectasis or liver disease also should be tested. Fami",
+      "score": 0.8900749
+    },
+    {
+      "number": 9,
+      "title": "Alpha-1 antitrypsin deficiency targeted testing and augmentation therapy: A Canadian Thoracic Society clinical practice guideline - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3373286",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As highlighted, the present evidence-based clinical guideline statement presupposes that appropriate and optimal pharmacological as well as nonpharmacological therapies have been and continue to be used in the management of all COPD patients with A1AT deficiency (13\u201315,47). In this setting, it is mi",
+      "score": 0.8868231
+    },
+    {
+      "number": 10,
+      "title": "Management of lung disease in alpha-1 antitrypsin deficiency: what we do and what we do not know",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8367208",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Augmentation therapy is currently recommended only for patients with severe AATD genotypes, for example, PIZZ (European and US guidelines) and PISZ (US guidelines only), or those with an FEV 1 \u2a7d65%, as there is well-documented benefit in these patients.2,3,10,106, augmentation therapy is not recomme",
+      "score": 0.8706085
+    },
+    {
+      "number": 11,
+      "title": "Diagnosis and augmentation therapy for alpha-1 antitrypsin deficiency: current knowledge and future potential",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10379007",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "AATD remains as an underdiagnosed genetic disease4 despite awareness regarding its diagnosis and management through the development of national and international guidelines. The first guideline was published by the American Thoracic Society/European Respiratory Society in 2003.12 Since then, several",
+      "score": 0.8687491
+    },
+    {
+      "number": 12,
+      "title": "Alpha1-Proteinase Inhibitors for the Treatment of Alpha1-Antitrypsin Deficiency: A Review of Clinical Effectiveness, Cost-Effectiveness, and Guidelines - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK526295",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Global Initiative for Chronic Obstructive Lung Disease (GOLD),15 Canadian Thoracic Society (CTS),1 and Spanish Society of Pulmonology and Thoracic Surgery (SEPAR)14 guidelines all state that AAT augmentation therapy may be considered in non-smokers or previous smokers with AAT deficiency with COPD w",
+      "score": 0.83225065
+    },
+    {
+      "number": 13,
+      "title": "Alpha-1 Antitrypsin Deficiency - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK1519",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### Management.\n\nTreatment of manifestations: COPD is treated with standard therapy. Augmentation therapy with periodic intravenous infusion of pooled human serum alpha-1 antitrypsin (AAT) is used in individuals who have established emphysema. Lung transplantation may be an appropriate option for i",
+      "score": 0.80405265
+    },
+    {
+      "number": 14,
+      "title": "Multi-Society Expert Panel Consensus Guidance Regarding Clinical Assessment and Clinical Trial Endpoints in Adults With Alpha-1 Antitrypsin Deficiency-Associated Liver Disease. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41390004",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "MED: 38516814    \n\n  \n\n   ### Diagnosis and Monitoring Pathways Using Non-Invasive Tests in Patients With Alpha-1 Antitrypsin Deficiency-Associated Liver Disease: Results From an Expert Delphi Panel.\n\nClark VC, Price MA, Russo J, Loomba R, Turner AM, Strnad P\n\nUnited European Gastroenterol J, (8):14",
+      "score": 0.70726365
+    },
+    {
+      "number": 15,
+      "title": "standards for the diagnosis and management of ... - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14522813",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "American Thoracic Society/European Respiratory Society statement: standards for the diagnosis and management of individuals with alpha-1 antitrypsin deficiency.",
+      "score": 0.6690754
+    },
+    {
+      "number": 16,
+      "title": "Alpha-1 Antitrypsin Deficiency - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK442030",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Augmentation therapy is not recommended for patients with heterozygous phenotypes, whose plasma AAT level exceeds 11 \u03bcmols/L, or current smokers. Side effects associated with intravenous AAT infusion are uncommon, and no long-term reactions have been noted. However, some side effects can occur, incl",
+      "score": 0.6455898
+    },
+    {
+      "number": 17,
+      "title": "Alpha-1 Antitrypsin Augmentation and the Liver Phenotype of Adults With Alpha-1 Antitrypsin Deficiency (Genotype Pi\u2217ZZ) - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/37716616",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "An official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any information you provide is encrypted. ## Save citation to file. ## Email citation. ### Add to Collections. ### Add to My Biblio",
+      "score": 0.70531887
+    },
+    {
+      "number": 18,
+      "title": "Liver Fibrosis and Metabolic Alterations in Adults With alpha-1 ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(19)40894-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Alpha-1 antitrypsin deficiency (AATD) is among the most common genetic disorders. Pi*ZZ carriers may develop lung and liver diseases. carriers often develop",
+      "score": 0.98539
+    },
+    {
+      "number": 19,
+      "title": "Alpha-1 antitrypsin deficiency: An underrecognized, treatable cause of COPD | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/83/7/507",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "People who are homozygous for the Z allele of the gene that codes for alpha-1 antitrypsin are at increased risk of lung and liver disease. * Chronic obstructive pulmonary disease (COPD) due to alpha-1 antitrypsin deficiency is difficult to distinguish from \u201cusual\u201d COPD on a clinical basis, but blood",
+      "score": 0.98148
+    },
+    {
+      "number": 20,
+      "title": "Multi-Society Expert Panel Consensus Guidance Regarding Clinical ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(25)06621-1/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Liver disease is an underrecognized complication of alpha-1 antitrypsin deficiency (AATD), especially in adults with the PiZZ genotype, due in part to a lack of",
+      "score": 0.9752
+    },
+    {
+      "number": 21,
+      "title": "Prediction of Lobar Emphysema Progression with a CT- ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.252958",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by AH Curiale \u00b7 2026 \u00b7 Cited by 1 \u2014 Exploring the role of CT densitometry: a randomised study of augmentation therapy in alpha 1-antitrypsin deficiency. Eur Respir J 2009;33(6): ...Read more",
+      "score": 0.97422
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Alpha-1 antitrypsin deficiency: An underrecognized, treatable cause ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/83/7/507.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "People who are homozygous for the Z allele of the gene that codes for alpha-1 antitrypsin are at increased risk of lung and liver disease.",
+      "score": 0.97006
+    },
+    {
+      "number": 23,
+      "title": "Predicting Emphysema Progression in the CanCOLD Study",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/pdf/10.1148/radiol.233265",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "by S Virdee \u00b7 2024 \u00b7 Cited by 4 \u2014 CT also aids in assessing treatment efficacy for em- physema related to alpha-1 antitrypsin deficiency (7,12). A randomized clinical trial of",
+      "score": 0.96838
+    },
+    {
+      "number": 24,
+      "title": "Quantification of Emphysema Progression at CT Using ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/radiol.231632",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Jan 2, 2024 \u2014 Intravenous augmentation treatment and lung density in severe \u03b11 antitrypsin deficiency (RAPID): a randomised, double-blind, placebo-controlled ...Read more",
+      "score": 0.96448
+    }
+  ],
+  "publishedAt": "2026-09-15T17:27:58.288863+00:00",
+  "updatedAt": "2026-09-15T17:27:58.288863+00:00",
+  "readingMinutes": 6,
+  "slug": "alpha-1-antitrypsin-deficiency"
+}

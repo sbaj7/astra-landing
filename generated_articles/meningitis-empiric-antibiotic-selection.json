@@ -1,0 +1,725 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Infectious Diseases",
+  "title": "Meningitis Empiric Antibiotic Selection",
+  "summary": "Choose empiric therapy by acquisition setting, age, immune status, and neurosurgical hardware exposure; obtain blood cultures and CSF promptly, but do not delay antibiotics for imaging or lumbar puncture when either will defer treatment.",
+  "seoDescription": "Point-of-care empiric antibiotic selection for suspected bacterial meningitis, including community-acquired, Listeria-risk, and healthcare-associated regimens.",
+  "clinicalQuestion": "Which empiric antibiotic regimen should be started for suspected bacterial meningitis before microbiologic confirmation?",
+  "specialty": "Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "bacterial meningitis",
+    "empiric antibiotics",
+    "ceftriaxone",
+    "vancomycin",
+    "ampicillin",
+    "Listeria meningitis",
+    "healthcare-associated ventriculitis"
+  ],
+  "keyTakeaways": [
+    "For suspected community-acquired bacterial meningitis, obtain blood cultures immediately and start empiric antimicrobials without waiting for CSF Gram stain, culture, or susceptibility results. [5][12]",
+    "In immunocompetent adults through age 50 years, use vancomycin plus ceftriaxone or cefotaxime; add ampicillin for age over 50 years or cell-mediated immunodeficiency to cover Listeria monocytogenes. [22]",
+    "For healthcare-associated ventriculitis or meningitis, use vancomycin plus cefepime, ceftazidime, or meropenem, chosen using local gram-negative susceptibility patterns. [19]",
+    "If meningococcal disease is confirmed or strongly suspected, a third-generation cephalosporin is appropriate; determine susceptibility before narrowing to penicillin or ampicillin because U.S. penicillin resistance is emerging. [12]"
+  ],
+  "sections": [
+    {
+      "id": "first-hour-regimen-selection",
+      "eyebrow": "Immediate action",
+      "heading": "Start antibiotics after blood cultures; do not wait for lumbar puncture",
+      "intro": "Acquisition setting determines the initial regimen.",
+      "paragraphs": [
+        "In suspected bacterial meningitis, draw blood cultures immediately and perform lumbar puncture for CSF microscopy, Gram stain, culture, and pathogen testing when feasible; initiate empiric treatment before CSF results return. [5][12] If neuroimaging or another barrier delays lumbar puncture, obtain blood cultures and give broad, age- and risk-appropriate antimicrobials rather than defer treatment. [6]",
+        "For suspected community-acquired disease in immunocompetent adults age 50 years or younger, start vancomycin plus either ceftriaxone 2 g IV every 12 hours or cefotaxime 2 g IV every 4 hours. This combination covers the predominant adult pathogens, Streptococcus pneumoniae and Neisseria meningitidis, while addressing concern for cephalosporin-nonsusceptible pneumococci. [21][22]"
+      ],
+      "bullets": [
+        "Use meningitis, rather than routine infection, doses for drugs with limited CSF penetration; ceftriaxone for pneumococcal meningitis is dosed at 2 g IV every 12 hours. [22]",
+        "Tailor therapy promptly to CSF Gram stain, culture, and susceptibility results. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial empiric antimicrobial selection by clinical setting. [19][22]",
+        "columns": [
+          "Clinical setting",
+          "Initial regimen",
+          "Selection rationale"
+        ],
+        "rows": [
+          [
+            "Community-acquired; immunocompetent adult age 50 years or younger",
+            "Vancomycin plus ceftriaxone 2 g IV every 12 hours or cefotaxime 2 g IV every 4 hours [22]",
+            "Covers common adult pneumococcal and meningococcal disease and resistant pneumococci. [21][22]"
+          ],
+          [
+            "Community-acquired; age over 50 years or cell-mediated immunodeficiency",
+            "Vancomycin plus ceftriaxone or cefotaxime, plus ampicillin 2 g IV every 4 hours [22]",
+            "Add ampicillin for L. monocytogenes coverage. [22]"
+          ],
+          [
+            "Healthcare-associated ventriculitis or meningitis",
+            "Vancomycin plus cefepime, ceftazidime, or meropenem [19]",
+            "Select the antipseudomonal beta-lactam according to local in vitro susceptibility patterns. [19]"
+          ],
+          [
+            "Severe beta-lactam anaphylaxis with healthcare-associated disease and meropenem contraindicated",
+            "Vancomycin plus aztreonam or ciprofloxacin for gram-negative coverage [19]",
+            "IDSA alternative when beta-lactams cannot be used. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "community-acquired-branching",
+      "eyebrow": "Community acquired",
+      "heading": "Add ampicillin when Listeria risk changes the regimen",
+      "intro": "Age and cellular immune status are the practical discriminators.",
+      "paragraphs": [
+        "Add ampicillin 2 g IV every 4 hours to vancomycin plus ceftriaxone or cefotaxime for patients older than 50 years and for those with cell-mediated immunodeficiency. [22] Do not rely on a third-generation cephalosporin alone when Listeria is a credible pathogen, because the treatment branch specifically requires ampicillin coverage. [5][22]",
+        "Vancomycin is included empirically because pneumococcal resistance can compromise beta-lactam-only therapy. [21][22] A cited adult regimen uses vancomycin 45-60 mg/kg/day IV divided every 6 or 8 hours to improve CSF concentrations. [22] Once an organism and susceptibility profile are available, narrow the regimen rather than continuing broad combination therapy by default. [22]"
+      ],
+      "bullets": [
+        "If pneumococcal cefotaxime or ceftriaxone MIC is 0.5 micrograms/mL or less, cefotaxime or ceftriaxone is probably adequate; if MIC is 1 microgram/mL or more, vancomycin is identified as the treatment of choice in the cited review. [5]",
+        "Some experts add rifampin to vancomycin plus an expanded-spectrum cephalosporin when a pneumococcal isolate is likely highly resistant based on local resistance patterns; clinical efficacy data for this addition are lacking. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Microbiology results that alter empiric treatment. [5][12][22]",
+        "columns": [
+          "Result or clinical determination",
+          "Action"
+        ],
+        "rows": [
+          [
+            "N. meningitidis confirmed or suspected",
+            "Continue a third-generation cephalosporin initially; obtain isolate susceptibility before changing to penicillin or ampicillin. [12]"
+          ],
+          [
+            "Pneumococcal cefotaxime or ceftriaxone MIC 0.5 micrograms/mL or less",
+            "Cefotaxime or ceftriaxone is probably adequate. [5]"
+          ],
+          [
+            "Pneumococcal cefotaxime or ceftriaxone MIC 1 microgram/mL or more",
+            "Use vancomycin as the treatment of choice described in the cited review. [5]"
+          ],
+          [
+            "Culture and susceptibility available",
+            "Tailor antimicrobial therapy to the identified pathogen and susceptibility profile. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "healthcare-associated-coverage",
+      "eyebrow": "Postprocedural disease",
+      "heading": "Use antipseudomonal gram-negative coverage after neurosurgical exposure",
+      "intro": "Do not apply the community-acquired regimen to hardware-associated infection.",
+      "paragraphs": [
+        "For healthcare-associated ventriculitis or meningitis, initiate vancomycin plus cefepime, ceftazidime, or meropenem. [19] This branch applies when the epidemiology is iatrogenic or postneurosurgical rather than community acquired, where gram-negative pathogens including Pseudomonas must be covered empirically. [5][19]",
+        "Choose cefepime, ceftazidime, or meropenem using local in vitro susceptibility data, and broaden or modify empiric coverage when the patient is colonized or infected elsewhere with a highly antimicrobial-resistant pathogen. [19] In seriously ill adults receiving intermittent-bolus vancomycin, maintain a trough concentration of 15-20 micrograms/mL. [19]"
+      ],
+      "bullets": [
+        "For beta-lactam anaphylaxis when meropenem is contraindicated, use aztreonam or ciprofloxacin for gram-negative coverage alongside vancomycin. [19]",
+        "Obtain microbiologic confirmation and revise therapy to organism-directed treatment when culture and susceptibility data become available. [19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Healthcare-associated empiric regimen modifications. [19]",
+        "columns": [
+          "Problem",
+          "Empiric action",
+          "Monitoring or adjustment"
+        ],
+        "rows": [
+          [
+            "Standard healthcare-associated ventriculitis or meningitis",
+            "Vancomycin plus cefepime, ceftazidime, or meropenem. [19]",
+            "Choose the beta-lactam from local susceptibility patterns. [19]"
+          ],
+          [
+            "Known colonization or infection with a highly resistant organism",
+            "Adjust the empiric regimen to cover that organism. [19]",
+            "Reassess after microbiologic results. [19]"
+          ],
+          [
+            "Seriously ill adult receiving intermittent vancomycin",
+            "Target vancomycin trough 15-20 micrograms/mL. [19]",
+            "Use trough monitoring to maintain the recommended range. [19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-results-and-de-escalation",
+      "eyebrow": "Microbiologic direction",
+      "heading": "Use CSF Gram stain, culture, and PCR to narrow therapy",
+      "intro": "Negative culture after prior antibiotics does not exclude bacterial meningitis.",
+      "paragraphs": [
+        "Send CSF for microscopic examination, Gram stain, and culture, with pathogen-specific PCR when meningococcal disease is suspected. N. meningitidis may be confirmed by culture or PCR from a normally sterile site such as blood or CSF; Gram stain provides rapid presumptive identification but is not confirmatory. [12][13]",
+        "Prior antibacterial therapy can reduce culture yield. In a 451-specimen study of pneumococcal, meningococcal, and H. influenzae meningitis, culture was positive in 17.7% and real-time PCR in 25.1%; latent-class sensitivity estimates were 81.3% for culture, 98.2% for Gram stain, and 95.7% for real-time PCR. [11] Therefore, retain clinically appropriate empiric treatment while interpreting negative cultures in patients who received antibiotics before CSF collection. [11]",
+        "Consider broad-range 16S rRNA PCR with sequencing for selected complex infections involving normally sterile fluids or tissues when conventional testing fails to identify a pathogen; it can detect fastidious bacteria and may support antimicrobial stewardship, although diagnostic yield varies by specimen and patient characteristics. [14]"
+      ],
+      "bullets": [
+        "Report meningococcal disease promptly to state or local public health authorities. [12]",
+        "For confirmed or probable meningococcal disease, arrange close-contact chemoprophylaxis as soon as possible, ideally within 24 hours after identification of the index patient; prophylaxis given more than 14 days after illness onset is likely of limited or no value. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of microbiologic tests in suspected bacterial meningitis. [11][12][13][14]",
+        "columns": [
+          "Test",
+          "Interpretation",
+          "Immediate treatment implication"
+        ],
+        "rows": [
+          [
+            "CSF Gram stain",
+            "Rapid presumptive organism identification; not confirmatory for N. meningitidis. [13]",
+            "Use the result to direct early narrowing only with the clinical context and confirmatory testing. [13]"
+          ],
+          [
+            "CSF or blood culture",
+            "Diagnostic reference method but sensitivity is limited after prior antibiotics. [11]",
+            "Use isolate susceptibility to tailor therapy. [22]"
+          ],
+          [
+            "Pathogen-specific real-time PCR",
+            "For three common bacterial pathogens, sensitivity remained high in CSF with antibiotic activity in the cited study. [11]",
+            "Supports microbiologic diagnosis when culture is negative after pretreatment. [11]"
+          ],
+          [
+            "16S rRNA PCR and sequencing",
+            "May identify bacteria in normally sterile specimens when conventional tests are unrevealing; yield is variable. [14]",
+            "Consider in complex culture-negative infection rather than as routine first-line testing. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "meningococcal-public-health-actions",
+      "eyebrow": "Meningococcal disease",
+      "heading": "Separate index-patient treatment from contact prophylaxis",
+      "intro": "Organism confirmation triggers immediate public health action.",
+      "paragraphs": [
+        "For the index patient with suspected meningococcal meningitis, a third-generation cephalosporin is recommended empirically. [12] If dexamethasone was started for suspected bacterial meningitis, it can be discontinued when meningococcal meningitis is confirmed or suspected. [12]",
+        "For close contacts, rifampin, ciprofloxacin, and ceftriaxone are acceptable chemoprophylaxis agents and reduce nasopharyngeal meningococcal carriage by 90%-95%. [13] Treat eligible contacts promptly; microbiologically unconfirmed cases require case-by-case prophylaxis decisions based on the source patient's epidemiologic and clinical likelihood of meningococcal disease. [13]"
+      ],
+      "bullets": [],
+      "subsections": [],
+      "table": {
+        "caption": "Meningococcal management decisions. [12][13]",
+        "columns": [
+          "Decision point",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Suspected meningococcal meningitis",
+            "Use a third-generation cephalosporin empirically. [12]"
+          ],
+          [
+            "Considering penicillin or ampicillin de-escalation",
+            "First determine meningococcal isolate susceptibility. [12]"
+          ],
+          [
+            "Close contact identified",
+            "Provide chemoprophylaxis ideally within 24 hours of index-patient identification. [13]"
+          ],
+          [
+            "More than 14 days after index illness onset",
+            "Chemoprophylaxis is probably of limited or no value. [13]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] 209445Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/209445Orig1s000MultidisciplineR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Dellinger, A Artigas, C Schorr, and MM Levy, 2014, Empiric antibiotic treatment reduces mortality in severe sepsis and septic shock from the first hour: results from a guideline-based performance improvement program, Crit Care Med, 42(8):1749-1755. Gales, AC, H Seifert, D Gur, M Castanheira, RN Jone",
+      "score": 0.3400692
+    },
+    {
+      "number": 2,
+      "title": "Empirical vancomycin therapy in childhood meningitis may not be necessary: Response to recent NICE guidelines | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/rapid-response/2011/11/02/empirical-vancomycin-therapy-childhood-meningitis-may-not-be-necessary-res",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "3. Empirical vancomycin therapy in childhood meningitis may not be necessary: Response to recent NICE guidelines. # Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. ### Empirical vancomycin therapy in childhood meningitis may no",
+      "score": 0.7050753
+    },
+    {
+      "number": 3,
+      "title": "Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/340/bmj.c3209/rapid-responses",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "3. Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. # Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. ### Empirical vancomycin therapy in childhood meningi",
+      "score": 0.6407488
+    },
+    {
+      "number": 4,
+      "title": "Opportunistic etiological agents causing lung infections - Cell Press",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/pdf/S2405-8440(22)03908-1.pdf",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "Despite available guidelines, the treatment is mainly empirical. meningitis, and nosocomial infection, adaptively resistant to many antibiotics.",
+      "score": 0.27214286
+    },
+    {
+      "number": 5,
+      "title": "Bacterial Meningitis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/bacterial-meningitis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "When bacterial meningitis is suspected, antimicrobial therapy is initiated immediately after blood cultures are obtained and before the results of CSF Gram stain, culture, and antimicrobial susceptibility tests are known. Empiric therapy should be based on the possibility that the patient has penici",
+      "score": 0.8156003
+    },
+    {
+      "number": 6,
+      "title": "Epidemic Meningitis - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/epidemic-meningitis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Table 3. Empiric intravenous antibiotic therapy\n\n| Patient age | Treatment |\n --- |\n| &lt;1 mo | Cefotaxime and ampicillin (vancomycin and ceftazidime if the infant is preterm, has a low birth weight, and there is an increased risk for nosocomial infections with gram-negative and staphylococcal orga",
+      "score": 0.7395922
+    },
+    {
+      "number": 7,
+      "title": "Update on community-acquired bacterial meningitis: guidance and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X17302306",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The ESCMID guideline advises to start empiric treatment within one hour of arrival in all suspected meningitis cases, and choice of antibiotics needs to be",
+      "score": 0.6829338
+    },
+    {
+      "number": 8,
+      "title": "Role of cephalosporins in the treatment of bacterial meningitis in adults: Overview with special emphasis on ceftazidime - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/0002934385902621",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Recommended articles\n\n## Cited by (50)\n\nCurrent recommendations from the Infectious Diseases Society of America (IDSA) regarding empirical antimicrobial therapy for postneurosurgical meningitis, are for intravenous vancomycin plus either cefepime, ceftazidime, or meropenem.69 Published experience",
+      "score": 0.6426349
+    },
+    {
+      "number": 9,
+      "title": "Efficacy of Antibiotic Regimens for Meningitis in Young Infants Aged ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/154/Supplement%201/e2024066588H/198468/Efficacy-of-Antibiotic-Regimens-for-Meningitis-in",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The American Association of Pediatrics clinical practice guidelines recommend IV ampicillin with ceftazidime for treatment of meningitis in",
+      "score": 0.4400126
+    },
+    {
+      "number": 10,
+      "title": "Meningitis | Pediatric Care Online - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396196/1623/Meningitis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Cefotaxime and. Cefotaxime plus ampicillin (to empirically treat Listeria) should be used to treat suspected neonatal meningitis.",
+      "score": 0.43842506
+    },
+    {
+      "number": 11,
+      "title": "[PDF] Accuracy of real-time PCR, Gram stain and culture for ... - CDC Stacks",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/21472/cdc_21472_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "Results: Among 451 CSF specimens, 80 (17.7%) had culture isolation of one of the three pathogens (40 S. pneumoniae, 36 N. meningitidis, and 4 H. influenzae), and 113 (25.1%) were real-time PCR positive (51 S. pneumoniae, 57 N.\nmeningitidis, and 5 H. influenzae). Compared to culture, real-time PCR se",
+      "score": 0.6654328
+    },
+    {
+      "number": 12,
+      "title": "Meningococcal Disease | CDC Yellow Book\u2122",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/meningococcal-disease.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Diagnosis\n\nEarly diagnosis and treatment are critical. If bacterial meningitis is suspected, collect blood for culture right away and perform a lumbar puncture (LP) to collect cerebrospinal fluid (CSF) for microscopic examination and Gram stain. In general, diagnosis is made by isolating N. menin",
+      "score": 0.43194416
+    },
+    {
+      "number": 13,
+      "title": "Meningococcal Disease | Infection Control - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/infection-control/hcp/healthcare-personnel-epidemiology-control/meningococcal-disease.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Testing and Diagnosis\n\nDiagnosis of meningococcal disease can pose challenges because its initial clinical manifestations are similar to more common, but less serious, illnesses12. Hence, laboratory testing is helpful in confirming the diagnosis. N. meningitidis is confirmed through culture or po",
+      "score": 0.3337208
+    },
+    {
+      "number": 14,
+      "title": "16S Ribosomal RNA Gene PCR and Sequencing for Pediatric Infection Diagnosis, United States, 2020\u20132023 - Volume 31, Supplement\u2014May 2025 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/31/13/24-1101_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "We categorized cerebrospinal fluid, ovarian fluid, pericardial fluid, peritoneal fluid, pleural fluid, subdural fluid, synovial fluid, and vitreous fluid as fluid specimens and other specimens (e.g., bone) as tissue specimens. We collected the results of conventional testing, which included Gram sta",
+      "score": 0.19488862
+    },
+    {
+      "number": 15,
+      "title": "Diagnostic test accuracy of jolt accentuation for headache in acute ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012824/full",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Antibiotics are the mainstay of treatment for bacterial meningitis, targeted at the specific causative organism. Corticosteroids may reduce",
+      "score": 0.1819457
+    },
+    {
+      "number": 16,
+      "title": "[PDF] NG240 Meningitis (bacterial) and meningococcal disease - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/evidence/d3-antibiotics-for-bacterial-meningitis-before-or-in-the-absence-of-identifying-causative-infecting-organism-in-adults-pdf-481072534169",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "cefotaxime or ceftriaxone, meropenem versus cefotaxime plus ampicillin); or hearing impairment (ceftriaxone versus benzylpenicillin sodium, meropenem versus cefotaxime or ceftriaxone). No eligible studies were identified that reported functional impairment, epilepsy or seizures, serious intervention",
+      "score": 0.74541736
+    },
+    {
+      "number": 17,
+      "title": "[PDF] Meningitis (bacterial) and meningococcal disease - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/documents/evidence-review-2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "32 (16%); Streptococcus pneumoniae: 13 (6.5%); other: 2 (1%); unknown: 7 (3.5%) Intervention(s)/control Cefotaxime: Intravenous infusion of cefotaxime (150 mg/kg/day in 4 divided doses) for 7 days Ceftriaxone: Intravenous infusion of ceftriaxone (100 mg/kg once daily) for 7 days Ampicillin: Intraven",
+      "score": 0.69399214
+    },
+    {
+      "number": 18,
+      "title": "[PDF] Meningitis (bacterial) and meningococcal disease: recognition ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/evidence/e2-antibiotics-for-bacterial-meningitis-caused-by-haemophilus-influenzae-pdf-481072534171",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "agent of interest: \u2022 Cefotaxime \u2022 Ceftriaxone \u2022 Amoxicillin \u2022 Ampicillin \u2022 Meropenem \u2022 Chloramphenicol \u2022 Aztreonam Comparison Stage 1 (all antibiotic agents of interest): \u2022 Antibiotic agent A (single or combination) vs Antibiotic agent B (single or combination) Stage 2 (antibiotic agents identified ",
+      "score": 0.63750535
+    },
+    {
+      "number": 19,
+      "title": "IDSA 2017 Clinical Practice Guidelines for Healthcare-Associated Ventriculitis and Meningitis",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/healthcare-associated-ventriculitis-and-meningitis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Vancomycin plus an anti-pseudomonal beta-lactam (such as cefepime, ceftazidime, or meropenem) is recommended as empiric therapy for healthcare-associated ventriculitis and meningitis; the choice of empiric beta-lactam agent should be based on local in vitro susceptibility patterns (strong, low).\n",
+      "score": 0.44145688
+    },
+    {
+      "number": 20,
+      "title": "Skin and Soft Tissue Infections - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Hospitalization and empiric antibacterial therapy with vancomycin plus antipseudomonal antibiotics such as cefepime, a carbapenem (imipenem-cilastatin or meropenem or doripenem) or piperacillin-tazobactam is recommended (strong, high).\n2. Documented clinical and microbiologic SSTIs should be trea",
+      "score": 0.28274098
+    },
+    {
+      "number": 21,
+      "title": "Epidemiology, Diagnosis, and Antimicrobial Treatment of Acute Bacterial Meningitis - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2901656",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The increase of drug-resistant pneumococci has become an emerging problem worldwide (52, 320, 349), with a reported prevalence of penicillin-resistant strains of up to 35% in some regions of the United States (52). Penicillin resistance in pneumococci often coincides with a decreased susceptibility ",
+      "score": 0.71305263
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Acute community-acquired bacterial meningitis in adults",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/79/6/393.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "the death rate was 45%, and if it started from 8 to 10 hours after presentation, the death rate was 75%. Most physicians would agree that starting antimi-crobials early would be beneficial. CSF concentrations of most antimicrobial drugs are considerably less than in the serum due to poor penetration",
+      "score": 0.5057865
+    },
+    {
+      "number": 23,
+      "title": "[PDF] Scientific advice under Article 107(6) of Regulation (EU)",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/system/files/documents/regulatory-procedural-guideline/vet_reg_cascade_list_report_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "activity than penicillin G, and are ineffective for enterococci, Listeria, and Neisseria spp. They have no activity against Gram-negative bacteria . They are used for treatment of penicillin-resistant methicillin susceptible staphylococcal infections such as bacteraemia, skin and soft tissue infecti",
+      "score": 0.35374123
+    },
+    {
+      "number": 24,
+      "title": "Adult bacterial meningitis: aetiology, penicillin susceptibility, risk ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X14627671",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Ceftriaxone plus penicillin as empirical treatment was appropriate in 97% of ABM cases in the study population, and in 99.6% of nationally notified cases. The",
+      "score": 0.6246834
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] 209445Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/209445Orig1s000MultidisciplineR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "Dellinger, A Artigas, C Schorr, and MM Levy, 2014, Empiric antibiotic treatment reduces mortality in severe sepsis and septic shock from the first hour: results from a guideline-based performance improvement program, Crit Care Med, 42(8):1749-1755. Gales, AC, H Seifert, D Gur, M Castanheira, RN Jone",
+      "score": 0.3400692
+    },
+    {
+      "number": 2,
+      "title": "Empirical vancomycin therapy in childhood meningitis may not be necessary: Response to recent NICE guidelines | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/rapid-response/2011/11/02/empirical-vancomycin-therapy-childhood-meningitis-may-not-be-necessary-res",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "3. Empirical vancomycin therapy in childhood meningitis may not be necessary: Response to recent NICE guidelines. # Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. ### Empirical vancomycin therapy in childhood meningitis may no",
+      "score": 0.7050753
+    },
+    {
+      "number": 3,
+      "title": "Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/340/bmj.c3209/rapid-responses",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "3. Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. # Management of bacterial meningitis and meningococcal septicaemia in children and young people: summary of NICE guidance. ### Empirical vancomycin therapy in childhood meningi",
+      "score": 0.6407488
+    },
+    {
+      "number": 4,
+      "title": "Opportunistic etiological agents causing lung infections - Cell Press",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/pdf/S2405-8440(22)03908-1.pdf",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "Despite available guidelines, the treatment is mainly empirical. meningitis, and nosocomial infection, adaptively resistant to many antibiotics.",
+      "score": 0.27214286
+    },
+    {
+      "number": 5,
+      "title": "Bacterial Meningitis - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/bacterial-meningitis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "When bacterial meningitis is suspected, antimicrobial therapy is initiated immediately after blood cultures are obtained and before the results of CSF Gram stain, culture, and antimicrobial susceptibility tests are known. Empiric therapy should be based on the possibility that the patient has penici",
+      "score": 0.8156003
+    },
+    {
+      "number": 6,
+      "title": "Epidemic Meningitis - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/epidemic-meningitis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Table 3. Empiric intravenous antibiotic therapy\n\n| Patient age | Treatment |\n --- |\n| &lt;1 mo | Cefotaxime and ampicillin (vancomycin and ceftazidime if the infant is preterm, has a low birth weight, and there is an increased risk for nosocomial infections with gram-negative and staphylococcal orga",
+      "score": 0.7395922
+    },
+    {
+      "number": 7,
+      "title": "Update on community-acquired bacterial meningitis: guidance and ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X17302306",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The ESCMID guideline advises to start empiric treatment within one hour of arrival in all suspected meningitis cases, and choice of antibiotics needs to be",
+      "score": 0.6829338
+    },
+    {
+      "number": 8,
+      "title": "Role of cephalosporins in the treatment of bacterial meningitis in adults: Overview with special emphasis on ceftazidime - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/0002934385902621",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Recommended articles\n\n## Cited by (50)\n\nCurrent recommendations from the Infectious Diseases Society of America (IDSA) regarding empirical antimicrobial therapy for postneurosurgical meningitis, are for intravenous vancomycin plus either cefepime, ceftazidime, or meropenem.69 Published experience",
+      "score": 0.6426349
+    },
+    {
+      "number": 9,
+      "title": "Efficacy of Antibiotic Regimens for Meningitis in Young Infants Aged ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatrics/article/154/Supplement%201/e2024066588H/198468/Efficacy-of-Antibiotic-Regimens-for-Meningitis-in",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "The American Association of Pediatrics clinical practice guidelines recommend IV ampicillin with ceftazidime for treatment of meningitis in",
+      "score": 0.4400126
+    },
+    {
+      "number": 10,
+      "title": "Meningitis | Pediatric Care Online - AAP Publications",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/article/doi/10.1542/aap.ppcqr.396196/1623/Meningitis",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Cefotaxime and. Cefotaxime plus ampicillin (to empirically treat Listeria) should be used to treat suspected neonatal meningitis.",
+      "score": 0.43842506
+    },
+    {
+      "number": 11,
+      "title": "[PDF] Accuracy of real-time PCR, Gram stain and culture for ... - CDC Stacks",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/21472/cdc_21472_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "Results: Among 451 CSF specimens, 80 (17.7%) had culture isolation of one of the three pathogens (40 S. pneumoniae, 36 N. meningitidis, and 4 H. influenzae), and 113 (25.1%) were real-time PCR positive (51 S. pneumoniae, 57 N.\nmeningitidis, and 5 H. influenzae). Compared to culture, real-time PCR se",
+      "score": 0.6654328
+    },
+    {
+      "number": 12,
+      "title": "Meningococcal Disease | CDC Yellow Book\u2122",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/meningococcal-disease.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Diagnosis\n\nEarly diagnosis and treatment are critical. If bacterial meningitis is suspected, collect blood for culture right away and perform a lumbar puncture (LP) to collect cerebrospinal fluid (CSF) for microscopic examination and Gram stain. In general, diagnosis is made by isolating N. menin",
+      "score": 0.43194416
+    },
+    {
+      "number": 13,
+      "title": "Meningococcal Disease | Infection Control - CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/infection-control/hcp/healthcare-personnel-epidemiology-control/meningococcal-disease.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Testing and Diagnosis\n\nDiagnosis of meningococcal disease can pose challenges because its initial clinical manifestations are similar to more common, but less serious, illnesses12. Hence, laboratory testing is helpful in confirming the diagnosis. N. meningitidis is confirmed through culture or po",
+      "score": 0.3337208
+    },
+    {
+      "number": 14,
+      "title": "16S Ribosomal RNA Gene PCR and Sequencing for Pediatric Infection Diagnosis, United States, 2020\u20132023 - Volume 31, Supplement\u2014May 2025 - Emerging Infectious Diseases journal - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/article/31/13/24-1101_article",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "We categorized cerebrospinal fluid, ovarian fluid, pericardial fluid, peritoneal fluid, pleural fluid, subdural fluid, synovial fluid, and vitreous fluid as fluid specimens and other specimens (e.g., bone) as tissue specimens. We collected the results of conventional testing, which included Gram sta",
+      "score": 0.19488862
+    },
+    {
+      "number": 15,
+      "title": "Diagnostic test accuracy of jolt accentuation for headache in acute ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012824/full",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Antibiotics are the mainstay of treatment for bacterial meningitis, targeted at the specific causative organism. Corticosteroids may reduce",
+      "score": 0.1819457
+    },
+    {
+      "number": 16,
+      "title": "[PDF] NG240 Meningitis (bacterial) and meningococcal disease - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/evidence/d3-antibiotics-for-bacterial-meningitis-before-or-in-the-absence-of-identifying-causative-infecting-organism-in-adults-pdf-481072534169",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "cefotaxime or ceftriaxone, meropenem versus cefotaxime plus ampicillin); or hearing impairment (ceftriaxone versus benzylpenicillin sodium, meropenem versus cefotaxime or ceftriaxone). No eligible studies were identified that reported functional impairment, epilepsy or seizures, serious intervention",
+      "score": 0.74541736
+    },
+    {
+      "number": 17,
+      "title": "[PDF] Meningitis (bacterial) and meningococcal disease - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/documents/evidence-review-2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "32 (16%); Streptococcus pneumoniae: 13 (6.5%); other: 2 (1%); unknown: 7 (3.5%) Intervention(s)/control Cefotaxime: Intravenous infusion of cefotaxime (150 mg/kg/day in 4 divided doses) for 7 days Ceftriaxone: Intravenous infusion of ceftriaxone (100 mg/kg once daily) for 7 days Ampicillin: Intraven",
+      "score": 0.69399214
+    },
+    {
+      "number": 18,
+      "title": "[PDF] Meningitis (bacterial) and meningococcal disease: recognition ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng240/evidence/e2-antibiotics-for-bacterial-meningitis-caused-by-haemophilus-influenzae-pdf-481072534171",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "agent of interest: \u2022 Cefotaxime \u2022 Ceftriaxone \u2022 Amoxicillin \u2022 Ampicillin \u2022 Meropenem \u2022 Chloramphenicol \u2022 Aztreonam Comparison Stage 1 (all antibiotic agents of interest): \u2022 Antibiotic agent A (single or combination) vs Antibiotic agent B (single or combination) Stage 2 (antibiotic agents identified ",
+      "score": 0.63750535
+    },
+    {
+      "number": 19,
+      "title": "IDSA 2017 Clinical Practice Guidelines for Healthcare-Associated Ventriculitis and Meningitis",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/healthcare-associated-ventriculitis-and-meningitis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Vancomycin plus an anti-pseudomonal beta-lactam (such as cefepime, ceftazidime, or meropenem) is recommended as empiric therapy for healthcare-associated ventriculitis and meningitis; the choice of empiric beta-lactam agent should be based on local in vitro susceptibility patterns (strong, low).\n",
+      "score": 0.44145688
+    },
+    {
+      "number": 20,
+      "title": "Skin and Soft Tissue Infections - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Hospitalization and empiric antibacterial therapy with vancomycin plus antipseudomonal antibiotics such as cefepime, a carbapenem (imipenem-cilastatin or meropenem or doripenem) or piperacillin-tazobactam is recommended (strong, high).\n2. Documented clinical and microbiologic SSTIs should be trea",
+      "score": 0.28274098
+    },
+    {
+      "number": 21,
+      "title": "Epidemiology, Diagnosis, and Antimicrobial Treatment of Acute Bacterial Meningitis - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2901656",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The increase of drug-resistant pneumococci has become an emerging problem worldwide (52, 320, 349), with a reported prevalence of penicillin-resistant strains of up to 35% in some regions of the United States (52). Penicillin resistance in pneumococci often coincides with a decreased susceptibility ",
+      "score": 0.71305263
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Acute community-acquired bacterial meningitis in adults",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/79/6/393.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "the death rate was 45%, and if it started from 8 to 10 hours after presentation, the death rate was 75%. Most physicians would agree that starting antimi-crobials early would be beneficial. CSF concentrations of most antimicrobial drugs are considerably less than in the serum due to poor penetration",
+      "score": 0.5057865
+    },
+    {
+      "number": 23,
+      "title": "[PDF] Scientific advice under Article 107(6) of Regulation (EU)",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/system/files/documents/regulatory-procedural-guideline/vet_reg_cascade_list_report_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "activity than penicillin G, and are ineffective for enterococci, Listeria, and Neisseria spp. They have no activity against Gram-negative bacteria . They are used for treatment of penicillin-resistant methicillin susceptible staphylococcal infections such as bacteraemia, skin and soft tissue infecti",
+      "score": 0.35374123
+    },
+    {
+      "number": 24,
+      "title": "Adult bacterial meningitis: aetiology, penicillin susceptibility, risk ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X14627671",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Ceftriaxone plus penicillin as empirical treatment was appropriate in 97% of ABM cases in the study population, and in 99.6% of nationally notified cases. The",
+      "score": 0.6246834
+    }
+  ],
+  "publishedAt": "2026-09-15T21:12:30.014751+00:00",
+  "updatedAt": "2026-09-15T21:12:30.014751+00:00",
+  "readingMinutes": 4,
+  "slug": "meningitis-empiric-antibiotic-selection"
+}

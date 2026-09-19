@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "High-Flow Nasal Oxygen Escalation",
+  "summary": "Escalate beyond high-flow nasal oxygen when oxygenation, respiratory effort, mental status, or hemodynamics worsen despite treatment; serial ROX assessment can identify patients needing prompt intubation evaluation before prolonged noninvasive support masks clinical deterioration.",
+  "seoDescription": "Practical escalation criteria for high-flow nasal oxygen in acute hypoxemic respiratory failure, including ROX monitoring and intubation triggers.",
+  "clinicalQuestion": "When should clinicians escalate high-flow nasal oxygen to noninvasive ventilation or endotracheal intubation?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "high-flow nasal oxygen",
+    "HFNO",
+    "HFNC",
+    "acute hypoxemic respiratory failure",
+    "ROX index",
+    "intubation"
+  ],
+  "keyTakeaways": [
+    "HFNO is a reasonable initial strategy for hospitalized adults with acute hypoxemic respiratory failure; ACP conditionally suggests HFNO rather than NIV for initial management. [8]",
+    "Reassess clinical response early and repeatedly; a falling or low ROX index, calculated as (SpO2/FiO2)/respiratory rate, is associated with HFNO failure and should prompt escalation planning. [13]",
+    "Do not continue HFNO through progressive respiratory distress, declining consciousness, hemodynamic instability, or refractory hypoxemia; these findings require urgent assessment for invasive ventilation rather than a prolonged HFNO trial. [13][14][15]",
+    "For COVID-19 acute hypoxemic respiratory failure managed with HFNO, awake prone positioning can reduce intubation risk but has not demonstrated a consistent mortality benefit and does not replace failure surveillance. [22][24]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First Decision",
+      "heading": "Identify patients who should not undergo a prolonged HFNO trial",
+      "intro": "Use HFNO only while the patient can be monitored for prompt recognition of noninvasive support failure.",
+      "paragraphs": [
+        "Before starting or continuing HFNO, determine whether the patient has a condition requiring immediate invasive-airway evaluation rather than an extended oxygen-device trial. Persistent hypoxemia despite high inspired oxygen, escalating work of breathing, recurrent apnea, respiratory acidosis, reduced consciousness, or hemodynamic instability are clinical failure features used to trigger invasive-ventilation escalation. [14][15]",
+        "Treat the underlying cause concurrently and assess whether the patient can protect the airway, cooperate with therapy, and sustain adequate ventilation. HFNO principally supports oxygenation and may improve comfort, secretion clearance, and work of breathing through high flow, humidification, dead-space washout, and low-level positive airway pressure; these physiologic effects do not correct progressive ventilatory failure or shock. [1][10]",
+        "Place patients with substantial oxygen requirement or evolving respiratory distress in a setting that permits frequent bedside reassessment and immediate intubation if deterioration occurs. HFNO comfort can permit longer tolerance of failing support, making trajectory more important than a single acceptable oxygen saturation measurement. [13]"
+      ],
+      "bullets": [
+        "Escalate urgently for persistent SpO2 below 90% despite FiO2 of at least 0.60 in the cited failure framework. [14]",
+        "Escalate for worsening work of breathing, including marked retractions, grunting, or nasal flaring; adult clinicians should apply the same principle to visible increasing respiratory effort. [14]",
+        "Escalate for recurrent apnea requiring stimulation or bag-mask ventilation, respiratory acidosis with pH below 7.20 and PaCO2 above 60 mm Hg, or hemodynamic instability. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immediate HFNO failure features that should trigger invasive-airway assessment rather than continued observation. [14][15]",
+        "columns": [
+          "Finding",
+          "Why it changes management",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "SpO2 remains <90% with FiO2 \u22650.60",
+            "Indicates refractory hypoxemia in a published HFNO failure framework. [14]",
+            "Urgently reassess for intubation and invasive ventilation. [14][15]"
+          ],
+          [
+            "Increasing work of breathing",
+            "Signals inadequate respiratory support and rising risk of fatigue. [13][14]",
+            "Call for airway-capable support; do not rely on comfort alone. [13]"
+          ],
+          [
+            "pH <7.20 with PaCO2 >60 mm Hg",
+            "Meets respiratory-acidosis failure criteria in the cited framework. [14]",
+            "Escalate to invasive ventilation evaluation. [14]"
+          ],
+          [
+            "Apnea, depressed consciousness, or hemodynamic instability",
+            "Suggests inability to safely sustain noninvasive support. [14][15]",
+            "Prepare for definitive airway management and stabilize circulation. [14][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "serial-response",
+      "eyebrow": "Monitoring",
+      "heading": "Use respiratory trajectory and the ROX index to detect early HFNO failure",
+      "intro": "A stable saturation is insufficient if respiratory rate, heart rate, or work of breathing are worsening.",
+      "paragraphs": [
+        "Calculate the ROX index as (SpO2/FiO2)/respiratory rate and trend it after HFNO initiation. In an observational cohort, ROX was lower at 1 hour and 12 hours among patients who failed HFNO, and the 12-hour ROX index was independently associated with failure (odds ratio 0.802). [13]",
+        "Interpret ROX as a trajectory tool, not an isolated authorization to continue HFNO. A low value or decline should lead to direct reassessment of respiratory effort, oxygen requirement, mental status, gas exchange, and readiness for intubation; escalation should also occur if the clinical condition deteriorates regardless of index value. [13]",
+        "Heart rate provides additional early information: patients who failed HFNO had higher heart rates before therapy and at 1 hour after initiation, while higher respiratory rates before HFNO were also associated with failure. Pair serial vital signs with ROX rather than using oxygenation alone. [13]"
+      ],
+      "bullets": [
+        "Document SpO2, FiO2, respiratory rate, heart rate, work of breathing, mental status, and hemodynamics at baseline and repeatedly after HFNO initiation. [13]",
+        "Calculate ROX at least at early reassessment and again by 12 hours; a lower 12-hour ROX should prompt escalation consideration. [13]",
+        "Obtain an arterial or venous blood gas when hypercapnia, acidemia, or ventilatory failure is suspected; pH and PaCO2 identify respiratory acidosis that changes the urgency of invasive support. [14][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Serial assessments that should determine whether HFNO continues or escalates. [13][14][15]",
+        "columns": [
+          "Assessment",
+          "Concerning trend",
+          "Action"
+        ],
+        "rows": [
+          [
+            "ROX index: (SpO2/FiO2)/respiratory rate",
+            "Lower value at 1 or 12 hours; low 12-hour ROX is associated with HFNO failure. [13]",
+            "Reassess bedside immediately and prepare to escalate if deterioration persists. [13]"
+          ],
+          [
+            "Respiratory rate and visible effort",
+            "Tachypnea or increasing work of breathing despite HFNO. [13][14]",
+            "Do not continue support solely because SpO2 is temporarily acceptable. [13]"
+          ],
+          [
+            "Heart rate",
+            "Persistent or rising tachycardia after initiation. [13]",
+            "Assess for ongoing respiratory distress, shock, fever, pain, or other drivers; integrate with ROX and examination. [13]"
+          ],
+          [
+            "Blood gas",
+            "Respiratory acidosis, particularly pH <7.20 with PaCO2 >60 mm Hg in the cited failure criteria. [14]",
+            "Proceed to invasive-ventilation assessment. [14][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "choose-escalation",
+      "eyebrow": "Respiratory Support",
+      "heading": "Choose NIV selectively and intubate when HFNO failure reflects airway, ventilation, or circulatory failure",
+      "intro": "The appropriate next device depends on whether the dominant problem is hypoxemia alone or evolving ventilatory and airway failure.",
+      "paragraphs": [
+        "For initial management of hospitalized adults with acute hypoxemic respiratory failure, ACP conditionally suggests HFNO rather than NIV. The associated evidence review found that, compared with NIV, HFNO may reduce intubation, all-cause mortality, hospital-acquired pneumonia, and discomfort in initial acute respiratory failure management, although certainty was low. [8][4]",
+        "NIV is not a rescue strategy for a patient with contraindicating clinical deterioration. If HFNO failure is accompanied by inability to protect the airway, apnea, severe respiratory acidosis, refractory hypoxemia, or hemodynamic instability, prioritize preparation for endotracheal intubation and invasive ventilation. [14][15]",
+        "For COVID-19 hypoxemic respiratory failure, comparative evidence remains mixed. A systematic review found uncertainty regarding mortality with HFNO versus NIV and suggested that HFNO may increase the composite of intubation or death compared with NIV; this uncertainty supports individualized device selection and especially close surveillance for failure rather than delayed escalation. [22]"
+      ],
+      "bullets": [
+        "Continue HFNO when oxygenation and respiratory effort improve or remain stable, the patient remains alert and hemodynamically stable, and serial ROX does not indicate deterioration. [13]",
+        "Consider NIV only when the patient remains an appropriate noninvasive-support candidate and can be monitored for rapid failure recognition; do not use it to defer needed intubation. [8][14][15]",
+        "Proceed toward invasive ventilation when failure criteria are present or the patient worsens clinically despite HFNO, independent of the duration of HFNO already delivered. [13][14][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Support-selection framework after HFNO reassessment. [4][8][13][14][15][22]",
+        "columns": [
+          "Clinical pattern",
+          "Preferred next step",
+          "Rationale"
+        ],
+        "rows": [
+          [
+            "Improving oxygenation, declining respiratory rate or effort, stable hemodynamics",
+            "Continue HFNO with serial reassessment. [13]",
+            "Clinical response and a nonworsening ROX trajectory support ongoing trial. [13]"
+          ],
+          [
+            "Persistent hypoxemia or worsening ROX/respiratory distress, but no immediate airway or ventilatory failure feature",
+            "Escalate monitoring and make an immediate plan for definitive support; consider NIV only in an appropriate, closely observed patient. [13][22]",
+            "Failure can evolve despite HFNO tolerance; comparative HFNO-versus-NIV evidence is condition-specific and uncertain in COVID-19. [4][22]"
+          ],
+          [
+            "Refractory hypoxemia, apnea, respiratory acidosis, reduced consciousness, or hemodynamic instability",
+            "Endotracheal intubation and invasive ventilation evaluation. [14][15]",
+            "These findings represent failure of noninvasive oxygen support and may compromise airway safety or ventilation. [14][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "covid-awake-proning",
+      "eyebrow": "COVID-19",
+      "heading": "Use awake prone positioning as an adjunct, not as a reason to defer escalation",
+      "intro": "Awake prone positioning can reduce intubation risk in selected nonintubated patients receiving HFNO or NIV.",
+      "paragraphs": [
+        "In COVID-19 acute hypoxemic respiratory failure, awake prone positioning compared with standard care probably reduces intubation (risk ratio 0.83, 95% CI 0.71 to 0.96) but may have little or no effect on mortality. [22] A separate meta-analysis found lower intubation odds, particularly when median daily prone duration exceeded 8 hours and among patients receiving HFNO or NIV; mortality benefit was not present in the randomized-trial subgroup. [23]",
+        "For patients already receiving HFNO, use prone sessions only if they can reposition safely and remain under active surveillance. A pooled randomized meta-trial reported reduced need for intubation with awake proning plus HFNO but no mortality difference; effects were heterogeneous across participating countries. [24]",
+        "Terminate the strategy and escalate when prone positioning does not reverse worsening oxygenation or respiratory effort, or when any HFNO failure feature emerges. Improvement while prone should be confirmed by sustained clinical stability after repositioning rather than treated as definitive reversal of respiratory failure. [13][14][24]"
+      ],
+      "bullets": [
+        "Consider awake prone positioning in monitored, nonintubated COVID-19 hypoxemic respiratory failure receiving HFNO or NIV. [22][23][24]",
+        "Do not interpret an improved saturation during prone positioning as protection against respiratory acidosis, altered mental status, shock, or progressive work of breathing. [13][14][15]",
+        "Use need for intubation, serial respiratory effort, ROX trajectory, gas exchange, and hemodynamics\u2014not prone tolerance alone\u2014to determine escalation. [13][14][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Role of awake prone positioning during HFNO for COVID-19 acute hypoxemic respiratory failure. [22][23][24]",
+        "columns": [
+          "Question",
+          "Evidence-informed answer",
+          "Operational implication"
+        ],
+        "rows": [
+          [
+            "Does awake proning reduce intubation?",
+            "It probably reduces intubation versus standard care; reported RR 0.83 (95% CI 0.71-0.96). [22]",
+            "Offer as an adjunct in appropriate monitored patients. [22][24]"
+          ],
+          [
+            "Does it reduce mortality?",
+            "Mortality benefit is uncertain; randomized evidence did not show a consistent mortality reduction. [22][23][24]",
+            "Do not use proning response to postpone escalation in a deteriorating patient. [22][24]"
+          ],
+          [
+            "Does duration matter?",
+            "A meta-analysis reported greater intubation benefit in the subgroup with median daily duration >8 hours. [23]",
+            "Encourage sustained sessions only when tolerated and clinically safe. [23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "handoff-and-documentation",
+      "eyebrow": "Operational Safety",
+      "heading": "Document an explicit failure plan when HFNO is initiated",
+      "intro": "A predefined escalation plan reduces reliance on delayed recognition of clinical deterioration.",
+      "paragraphs": [
+        "At HFNO initiation, document the presumed etiology of acute respiratory failure, current FiO2 and flow, oxygen saturation, respiratory rate, heart rate, work of breathing, mental status, hemodynamics, blood-gas findings when obtained, and baseline ROX index. Repeat the same measures at early reassessment and by 12 hours because ROX at both time points, particularly 12 hours, is associated with HFNO outcome. [13]",
+        "Specify the escalation destination before the patient worsens: continued HFNO with reassessment, an NIV trial when clinically appropriate, or invasive ventilation. Reassess immediately rather than waiting for a scheduled time point when oxygen requirement rises, respiratory effort increases, mental status declines, hemodynamics worsen, or gas exchange demonstrates respiratory acidosis. [13][14][15]",
+        "Communicate the failure plan during transfer and handoff. The key decision is not whether HFNO has been used for a particular duration, but whether the patient is demonstrating sustained physiologic response without features that make noninvasive support unsafe. [13][24]"
+      ],
+      "bullets": [
+        "Record the ROX formula and values: (SpO2/FiO2)/respiratory rate. [13]",
+        "Record whether the patient has any immediate escalation feature: refractory hypoxemia, escalating work of breathing, apnea, respiratory acidosis, altered consciousness, or hemodynamic instability. [14][15]",
+        "Ensure an airway-capable clinician and equipment are available when the patient has a worsening trajectory on HFNO. [13][14][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Minimum HFNO reassessment documentation for escalation decisions. [13][14][15]",
+        "columns": [
+          "Document",
+          "Timing",
+          "Decision use"
+        ],
+        "rows": [
+          [
+            "SpO2, FiO2, respiratory rate, and calculated ROX",
+            "Baseline, early after initiation, and by 12 hours; immediately with deterioration. [13]",
+            "Detect a low or worsening oxygenation-respiratory rate trajectory. [13]"
+          ],
+          [
+            "Heart rate and work of breathing",
+            "Baseline and serially, including approximately 1 hour after initiation. [13]",
+            "Persistent tachycardia or increased effort raises concern for failure. [13]"
+          ],
+          [
+            "Mental status, apnea, and hemodynamics",
+            "Continuously or with every bedside reassessment. [14][15]",
+            "Identifies patients unsuitable for ongoing noninvasive support. [14][15]"
+          ],
+          [
+            "Blood gas when ventilatory failure is suspected",
+            "At deterioration or concern for hypercapnia/acidemia. [14][15]",
+            "Respiratory acidosis accelerates invasive-ventilation assessment. [14][15]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/10/2/e034956",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol\n*   Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol. **Conclusion** This systematic review will provide a c",
+      "score": 0.7760977
+    },
+    {
+      "number": 2,
+      "title": "Machine Learning for Predicting Critical Events Among Hospitalized ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834654",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Spo2/Fio2 as a predictor of high flow nasal cannula outcomes in children with acute hypoxemic respiratory failure. Sci Rep. 2021;11(1):13439.",
+      "score": 0.31855983
+    },
+    {
+      "number": 3,
+      "title": "Poster sessions - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/79/Suppl_2/A176.2.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "HIGH FLOW NASAL OXYGEN (HFNO) USE IN A POST-. COVID PANDEMIC ERA: AN ACUTE RESPIRATORY CARE. UNIT (ARCU) EXPERIENCE. J Weatherley, M Dawson, S",
+      "score": 0.30523166
+    },
+    {
+      "number": 4,
+      "title": "Effectiveness and Harms of High-Flow Nasal Oxygen for Acute Respiratory Failure: An Evidence Report for a Clinical Guideline From the American College of Physicians | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M20-4675",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Compared with NIV, HFNO may reduce all-cause mortality, intubation, and hospital-acquired pneumonia and improve patient comfort in initial ARF management (low-certainty evidence) but not in postextubation management. In pooled results from 2 RCTs in medical patients (*n*\u00a0= 646), HFNO made little or ",
+      "score": 0.758958
+    },
+    {
+      "number": 5,
+      "title": "Surviving Pediatric Cardiogenic Shock: Clinical Approach ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001461",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "high-flow nasal cannula or continuous or bilevel positive ... Intubation and mechanical ventilation ... dynamics (heart rate, blood pressure, oxygen saturation,.",
+      "score": 0.418341
+    },
+    {
+      "number": 6,
+      "title": "In acute respiratory failure, HFNO was noninferior to NIV for ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-00593-JC",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "In adults with acute respiratory failure (ARF), is high-flow nasal oxygen (HFNO) noninferior to noninvasive ventilation (NIV) for a composite of endotracheal",
+      "score": 0.6255073
+    },
+    {
+      "number": 7,
+      "title": "ACP provided 2 conditional recommendations on use of high-flow ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ACPJ202109210-098",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Use of high-flow nasal oxygen (HFNO) for managing hospitalized patients with acute respiratory failure (ARF), initially or after extubation.",
+      "score": 0.56258565
+    },
+    {
+      "number": 8,
+      "title": "Appropriate Use of High-Flow Nasal Oxygen in Hospitalized ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M20-7533",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "ACP suggests that clinicians use high-flow nasal oxygen rather than noninvasive ventilation in hospitalized adults for the management of acute",
+      "score": 0.5513086
+    },
+    {
+      "number": 9,
+      "title": "Comparison of high-flow nasal oxygen therapy with conventional oxygen therapy and noninvasive ventilation in adult patients with acute hypoxemic respiratory failure: A meta-analysis and systematic review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0883944116300855",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Comparison of high-flow nasal oxygen therapy with conventional oxygen therapy and noninvasive ventilation in adult patients with acute hypoxemic respiratory failure: A meta-analysis and systematic review - ScienceDirect\n# Comparison of high-flow nasal oxygen therapy with conventional oxygen t",
+      "score": 0.8351749
+    },
+    {
+      "number": 10,
+      "title": "High-Flow Nasal Cannula Oxygen in Adult Patients: A Narrative Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002962915301269",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "high-flow oxygen via nasal cannula has been described as a useful alternative to conventional oxygen therapy in patients with acute respiratory failure. High-flow oxygen via nasal cannula rapidly alleviates symptoms of acute respiratory failure and improves oxygenation by several mechanisms, includi",
+      "score": 0.7608822
+    },
+    {
+      "number": 11,
+      "title": "Noninvasive Oxygenation Strategies in Adult Patients With Acute Hypoxemic Respiratory Failure: A Systematic Review and Network Meta-Analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369223005974",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Invasive and non-invasive ventilation in patients with COVID-19\n\n### Dtsch Arztebl Int\n\n### Association of noninvasive oxygenation strategies with all-cause mortality in adults with acute hypoxemic respiratory failure: a systematic review and meta-analysis\n\n### JAMA\n\n### Physiologic e",
+      "score": 0.7043437
+    },
+    {
+      "number": 12,
+      "title": "[PDF] High flow nasal cannula for adult acute hypoxemic respiratory failure ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/am/pii/S073567572100560X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "1873-1878 CrossrefView in ScopusGoogle Scholar%3A1873-8.) Granton, D.X. Wang, _et al._ High flow nasal cannula compared with conventional oxygen therapy for acute hypoxemic respiratory failure: a systematic review and meta-analysis Intensive Care Med, 45 (5) (2019 May), pp. 2238-2247 CrossrefView in",
+      "score": 0.67063034
+    },
+    {
+      "number": 13,
+      "title": "Predictive factors for high-flow nasal cannula... : Lung India",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-202201000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In our study, patients with higher APACHE IV scores, more deranged physical parameters including high heart rates and respiratory rates and blood parameters of low platelet counts, sodium levels, and higher pH were at higher risk of HFNC failure. Close monitoring of clinical response is deemed impor",
+      "score": 0.7491794
+    },
+    {
+      "number": 14,
+      "title": "Performance Evaluation of XBreathe Neo\u2122 High-flow... : Bali Journal of Anesthesiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/bjoa/_layouts/15/oaks.journals/downloadpdf.aspx?an=02007115-202507000-00007",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "For neonates allocated to the HFNC group, the initial airflow rate was set at 5\u2009L/min (LPM). The fraction of inspired oxygen (FiO2) was titrated to maintain peripheral SpO2 between 91% and 95%. If clinical indicators suggested deterioration, the airflow was increased incrementally by 1 LPM to a maxi",
+      "score": 0.5826579
+    },
+    {
+      "number": 15,
+      "title": "Arterial blood gas analysis or venous blood gas... : Internal Medicine ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00130554-202409000-00015",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Patients with type I respiratory failure can be treated with supplemental oxygen therapy, including high\u2010flow nasal cannula, with escalation to invasive",
+      "score": 0.4765072
+    },
+    {
+      "number": 16,
+      "title": "Dynamic ROX-based index incorporating heart rate... : Heart & Lung: Journal of Acute & Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00060606-202609001-00018",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Dynamic ROX-based index incorporating heart rate and flow for predicting high-flow nasal cannula outcomes in acute respiratory failure: A retrospective single-centre cohort study\n\norcid icon\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\n",
+      "score": 0.45595008
+    },
+    {
+      "number": 17,
+      "title": "High-flow oxygen via nasal cannulae in patients with acute hypoxemic respiratory failure: a systematic review and meta-analysis - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5644261",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "From 2023 screened citations, we identified seven trials (1771 patients) meeting inclusion criteria. All trials were at high risk of bias due to lack of blinding. There was no evidence for a mortality difference in patients receiving HFNC vs. NIV and/or standard oxygen (RR 1.01, 95% CI 0.69 to 1.48,",
+      "score": 0.8127637
+    },
+    {
+      "number": 18,
+      "title": "CAN THE ROX INDEX ACCURATELY PREDICT OUTCOMES OF HFNC THERAPY IN PATIENTS WITH ACUTE HYPOXEMIC RESPIRATORY FAILURE?: A SYSTEMATIC REVIEW WITH META-ANALYSIS - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(24)02488-7/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# CAN THE ROX INDEX ACCURATELY PREDICT OUTCOMES OF HFNC THERAPY IN PATIENTS WITH ACUTE HYPOXEMIC RESPIRATORY FAILURE?: A SYSTEMATIC REVIEW WITH META-ANALYSIS. This systematic review and meta-analysis assessed the ROX index's ability to predict HFNC outcomes in Acute Hypoxic Respiratory Failure (AHRF",
+      "score": 0.58777803
+    },
+    {
+      "number": 19,
+      "title": "[PDF] January 2026 - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/32/1/pdfs/v32-n1.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "4 5 6 Symptoms of onset Fever Fever Fever Fever Fever Fever + shock Pathogen Bacillus licheniformis Bacillis subtilis B. subtilis B. licheniformis B. subtilis Lacticaseibacillus rhamnosus Prior antibiotic exposure Yes Yes Yes Yes Yes Yes Concurrent infection No No Burkholderia cepacia (sputum) Acine",
+      "score": 0.31267473
+    },
+    {
+      "number": 20,
+      "title": "How I manage acute respiratory failure in patients with ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/143/11/971/506626/How-I-manage-acute-respiratory-failure-in-patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": ", et al. High-flow nasal oxygen alone or alternating with non-invasive ventilation in critically ill immunocompromised patients with acute",
+      "score": 0.564027
+    },
+    {
+      "number": 21,
+      "title": "Unpacking the Real Impact of High-Flow Nasal Cannula on ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/hospitalpediatrics/article-pdf/16/8/709/1945206/hosppeds.2025008983.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "PICU admission, even without escalation past HFNC, was associated with significantly longer hospital length of stay and duration of oxygen.",
+      "score": 0.35555163
+    },
+    {
+      "number": 22,
+      "title": "Awake Prone Positioning, High-Flow Nasal Oxygen and Non-Invasive Ventilation as Non-Invasive Respiratory Strategies in COVID-19 Acute Respiratory Failure: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8782004",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Background: Acute respiratory failure is the most important organ dysfunction of COVID-19 patients. While non-invasive ventilation (NIV) and high-flow nasal cannula (HFNC) oxygen are frequently used, efficacy and safety remain uncertain. Benefits and harms of awake prone positioning (APP) in COVID-1",
+      "score": 0.92684203
+    },
+    {
+      "number": 23,
+      "title": "Effect of Awake Prone Positioning in non-Intubated COVID-19 Patients with Acute Hypoxemic Respiratory Failure: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9412157",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Results\n\nOf 5746 identified publications, 22 were eligible for inclusion in the meta-analysis (N\u2009=\u20095146 patients). In comparison to the non-APP group, APP could decrease the intubation rates (OR 0.64; 95% CI 0.48-0.83; P\u2009=\u2009.001), particularly in the subgroup of the daily median duration of APP\u2009>",
+      "score": 0.9020676
+    },
+    {
+      "number": 24,
+      "title": "High-flow nasal cannula oxygen therapy in acute hypoxemic respiratory failure and COVID-19-related respiratory failure - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9534601",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A meta-trial pooling several trials from different countries aimed to evaluate whether HFNC optimized with sessions of awake prone positioning in patients with severe COVID-19-related respiratory failure could improve their prognosis. Among the 1121 patients included in the intention-to-treat analys",
+      "score": 0.89545894
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/10/2/e034956",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol\n*   Effectiveness and harms of high-flow nasal oxygen (HFNO) for acute respiratory failure: a systematic review protocol. **Conclusion** This systematic review will provide a c",
+      "score": 0.7760977
+    },
+    {
+      "number": 2,
+      "title": "Machine Learning for Predicting Critical Events Among Hospitalized ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2834654",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Spo2/Fio2 as a predictor of high flow nasal cannula outcomes in children with acute hypoxemic respiratory failure. Sci Rep. 2021;11(1):13439.",
+      "score": 0.31855983
+    },
+    {
+      "number": 3,
+      "title": "Poster sessions - Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/79/Suppl_2/A176.2.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "HIGH FLOW NASAL OXYGEN (HFNO) USE IN A POST-. COVID PANDEMIC ERA: AN ACUTE RESPIRATORY CARE. UNIT (ARCU) EXPERIENCE. J Weatherley, M Dawson, S",
+      "score": 0.30523166
+    },
+    {
+      "number": 4,
+      "title": "Effectiveness and Harms of High-Flow Nasal Oxygen for Acute Respiratory Failure: An Evidence Report for a Clinical Guideline From the American College of Physicians | Annals of Internal Medicine",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M20-4675",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Compared with NIV, HFNO may reduce all-cause mortality, intubation, and hospital-acquired pneumonia and improve patient comfort in initial ARF management (low-certainty evidence) but not in postextubation management. In pooled results from 2 RCTs in medical patients (*n*\u00a0= 646), HFNO made little or ",
+      "score": 0.758958
+    },
+    {
+      "number": 5,
+      "title": "Surviving Pediatric Cardiogenic Shock: Clinical Approach ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001461",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "high-flow nasal cannula or continuous or bilevel positive ... Intubation and mechanical ventilation ... dynamics (heart rate, blood pressure, oxygen saturation,.",
+      "score": 0.418341
+    },
+    {
+      "number": 6,
+      "title": "In acute respiratory failure, HFNO was noninferior to NIV for ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-00593-JC",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "In adults with acute respiratory failure (ARF), is high-flow nasal oxygen (HFNO) noninferior to noninvasive ventilation (NIV) for a composite of endotracheal",
+      "score": 0.6255073
+    },
+    {
+      "number": 7,
+      "title": "ACP provided 2 conditional recommendations on use of high-flow ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ACPJ202109210-098",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Use of high-flow nasal oxygen (HFNO) for managing hospitalized patients with acute respiratory failure (ARF), initially or after extubation.",
+      "score": 0.56258565
+    },
+    {
+      "number": 8,
+      "title": "Appropriate Use of High-Flow Nasal Oxygen in Hospitalized ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M20-7533",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "ACP suggests that clinicians use high-flow nasal oxygen rather than noninvasive ventilation in hospitalized adults for the management of acute",
+      "score": 0.5513086
+    },
+    {
+      "number": 9,
+      "title": "Comparison of high-flow nasal oxygen therapy with conventional oxygen therapy and noninvasive ventilation in adult patients with acute hypoxemic respiratory failure: A meta-analysis and systematic review - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0883944116300855",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Comparison of high-flow nasal oxygen therapy with conventional oxygen therapy and noninvasive ventilation in adult patients with acute hypoxemic respiratory failure: A meta-analysis and systematic review - ScienceDirect\n# Comparison of high-flow nasal oxygen therapy with conventional oxygen t",
+      "score": 0.8351749
+    },
+    {
+      "number": 10,
+      "title": "High-Flow Nasal Cannula Oxygen in Adult Patients: A Narrative Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002962915301269",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "high-flow oxygen via nasal cannula has been described as a useful alternative to conventional oxygen therapy in patients with acute respiratory failure. High-flow oxygen via nasal cannula rapidly alleviates symptoms of acute respiratory failure and improves oxygenation by several mechanisms, includi",
+      "score": 0.7608822
+    },
+    {
+      "number": 11,
+      "title": "Noninvasive Oxygenation Strategies in Adult Patients With Acute Hypoxemic Respiratory Failure: A Systematic Review and Network Meta-Analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369223005974",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Invasive and non-invasive ventilation in patients with COVID-19\n\n### Dtsch Arztebl Int\n\n### Association of noninvasive oxygenation strategies with all-cause mortality in adults with acute hypoxemic respiratory failure: a systematic review and meta-analysis\n\n### JAMA\n\n### Physiologic e",
+      "score": 0.7043437
+    },
+    {
+      "number": 12,
+      "title": "[PDF] High flow nasal cannula for adult acute hypoxemic respiratory failure ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/am/pii/S073567572100560X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "1873-1878 CrossrefView in ScopusGoogle Scholar%3A1873-8.) Granton, D.X. Wang, _et al._ High flow nasal cannula compared with conventional oxygen therapy for acute hypoxemic respiratory failure: a systematic review and meta-analysis Intensive Care Med, 45 (5) (2019 May), pp. 2238-2247 CrossrefView in",
+      "score": 0.67063034
+    },
+    {
+      "number": 13,
+      "title": "Predictive factors for high-flow nasal cannula... : Lung India",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/lungindia/_layouts/15/oaks.journals/downloadpdf.aspx?an=01408641-202201000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In our study, patients with higher APACHE IV scores, more deranged physical parameters including high heart rates and respiratory rates and blood parameters of low platelet counts, sodium levels, and higher pH were at higher risk of HFNC failure. Close monitoring of clinical response is deemed impor",
+      "score": 0.7491794
+    },
+    {
+      "number": 14,
+      "title": "Performance Evaluation of XBreathe Neo\u2122 High-flow... : Bali Journal of Anesthesiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/bjoa/_layouts/15/oaks.journals/downloadpdf.aspx?an=02007115-202507000-00007",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "For neonates allocated to the HFNC group, the initial airflow rate was set at 5\u2009L/min (LPM). The fraction of inspired oxygen (FiO2) was titrated to maintain peripheral SpO2 between 91% and 95%. If clinical indicators suggested deterioration, the airflow was increased incrementally by 1 LPM to a maxi",
+      "score": 0.5826579
+    },
+    {
+      "number": 15,
+      "title": "Arterial blood gas analysis or venous blood gas... : Internal Medicine ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00130554-202409000-00015",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Patients with type I respiratory failure can be treated with supplemental oxygen therapy, including high\u2010flow nasal cannula, with escalation to invasive",
+      "score": 0.4765072
+    },
+    {
+      "number": 16,
+      "title": "Dynamic ROX-based index incorporating heart rate... : Heart & Lung: Journal of Acute & Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00060606-202609001-00018",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossmark: Check for updates\n\n# Dynamic ROX-based index incorporating heart rate and flow for predicting high-flow nasal cannula outcomes in acute respiratory failure: A retrospective single-centre cohort study\n\norcid icon\n\n## Related Articles\n\n## Readers Of this Article Also Read\n\n## Most Popular\n\n",
+      "score": 0.45595008
+    },
+    {
+      "number": 17,
+      "title": "High-flow oxygen via nasal cannulae in patients with acute hypoxemic respiratory failure: a systematic review and meta-analysis - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5644261",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "From 2023 screened citations, we identified seven trials (1771 patients) meeting inclusion criteria. All trials were at high risk of bias due to lack of blinding. There was no evidence for a mortality difference in patients receiving HFNC vs. NIV and/or standard oxygen (RR 1.01, 95% CI 0.69 to 1.48,",
+      "score": 0.8127637
+    },
+    {
+      "number": 18,
+      "title": "CAN THE ROX INDEX ACCURATELY PREDICT OUTCOMES OF HFNC THERAPY IN PATIENTS WITH ACUTE HYPOXEMIC RESPIRATORY FAILURE?: A SYSTEMATIC REVIEW WITH META-ANALYSIS - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(24)02488-7/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# CAN THE ROX INDEX ACCURATELY PREDICT OUTCOMES OF HFNC THERAPY IN PATIENTS WITH ACUTE HYPOXEMIC RESPIRATORY FAILURE?: A SYSTEMATIC REVIEW WITH META-ANALYSIS. This systematic review and meta-analysis assessed the ROX index's ability to predict HFNC outcomes in Acute Hypoxic Respiratory Failure (AHRF",
+      "score": 0.58777803
+    },
+    {
+      "number": 19,
+      "title": "[PDF] January 2026 - CDC",
+      "detail": "wwwnc.cdc.gov",
+      "url": "https://wwwnc.cdc.gov/eid/content/32/1/pdfs/v32-n1.pdf",
+      "authors": "wwwnc.cdc.gov",
+      "host": "wwwnc.cdc.gov",
+      "snippet": "4 5 6 Symptoms of onset Fever Fever Fever Fever Fever Fever + shock Pathogen Bacillus licheniformis Bacillis subtilis B. subtilis B. licheniformis B. subtilis Lacticaseibacillus rhamnosus Prior antibiotic exposure Yes Yes Yes Yes Yes Yes Concurrent infection No No Burkholderia cepacia (sputum) Acine",
+      "score": 0.31267473
+    },
+    {
+      "number": 20,
+      "title": "How I manage acute respiratory failure in patients with ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/143/11/971/506626/How-I-manage-acute-respiratory-failure-in-patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": ", et al. High-flow nasal oxygen alone or alternating with non-invasive ventilation in critically ill immunocompromised patients with acute",
+      "score": 0.564027
+    },
+    {
+      "number": 21,
+      "title": "Unpacking the Real Impact of High-Flow Nasal Cannula on ...",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/hospitalpediatrics/article-pdf/16/8/709/1945206/hosppeds.2025008983.pdf",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "PICU admission, even without escalation past HFNC, was associated with significantly longer hospital length of stay and duration of oxygen.",
+      "score": 0.35555163
+    },
+    {
+      "number": 22,
+      "title": "Awake Prone Positioning, High-Flow Nasal Oxygen and Non-Invasive Ventilation as Non-Invasive Respiratory Strategies in COVID-19 Acute Respiratory Failure: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8782004",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Background: Acute respiratory failure is the most important organ dysfunction of COVID-19 patients. While non-invasive ventilation (NIV) and high-flow nasal cannula (HFNC) oxygen are frequently used, efficacy and safety remain uncertain. Benefits and harms of awake prone positioning (APP) in COVID-1",
+      "score": 0.92684203
+    },
+    {
+      "number": 23,
+      "title": "Effect of Awake Prone Positioning in non-Intubated COVID-19 Patients with Acute Hypoxemic Respiratory Failure: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9412157",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Results\n\nOf 5746 identified publications, 22 were eligible for inclusion in the meta-analysis (N\u2009=\u20095146 patients). In comparison to the non-APP group, APP could decrease the intubation rates (OR 0.64; 95% CI 0.48-0.83; P\u2009=\u2009.001), particularly in the subgroup of the daily median duration of APP\u2009>",
+      "score": 0.9020676
+    },
+    {
+      "number": 24,
+      "title": "High-flow nasal cannula oxygen therapy in acute hypoxemic respiratory failure and COVID-19-related respiratory failure - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9534601",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A meta-trial pooling several trials from different countries aimed to evaluate whether HFNC optimized with sessions of awake prone positioning in patients with severe COVID-19-related respiratory failure could improve their prognosis. Among the 1121 patients included in the intention-to-treat analys",
+      "score": 0.89545894
+    }
+  ],
+  "publishedAt": "2026-09-15T18:07:30.010746+00:00",
+  "updatedAt": "2026-09-15T18:07:30.010746+00:00",
+  "readingMinutes": 6,
+  "slug": "high-flow-nasal-oxygen-escalation"
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neurology emergency",
+  "title": "Status Epilepticus Treatment Sequence",
+  "summary": "Treat convulsive status epilepticus as a timed emergency: stabilize immediately, give benzodiazepine therapy promptly, load one second-line antiseizure medication if seizures persist, and escalate to ICU anesthetic management with EEG guidance for refractory or nonconvulsive status epilepticus.",
+  "seoDescription": "Timed treatment sequence for convulsive and nonconvulsive status epilepticus, including escalation after benzodiazepines and EEG-guided refractory care.",
+  "clinicalQuestion": "What is the practical treatment sequence for status epilepticus after seizure activity reaches the treatment threshold?",
+  "specialty": "Neurology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "status epilepticus treatment",
+    "benzodiazepine-refractory status epilepticus",
+    "ESETT",
+    "nonconvulsive status epilepticus",
+    "continuous EEG",
+    "refractory status epilepticus"
+  ],
+  "keyTakeaways": [
+    "For bilateral tonic-clonic status epilepticus, initiate emergency treatment once seizure activity exceeds 5 minutes; focal status with impaired consciousness and absence status have longer operational treatment thresholds. [9]",
+    "After benzodiazepine failure, choose levetiracetam, fosphenytoin, or valproate as a single second-line antiseizure medication; ESETT found no outcome difference among these agents across children, adults, and older adults. [3][4]",
+    "Persistent coma, confusion, or failure to return to baseline after apparent convulsive seizure cessation requires EEG assessment for nonconvulsive status epilepticus. [6][13]",
+    "Define refractory status epilepticus as persistence after one benzodiazepine plus at least one antiseizure medication; continued or recurrent seizures at least 24 hours after anesthetic therapy define super-refractory status epilepticus. [9]",
+    "Use protocolized rapid escalation: pediatric center pathways commonly initiate a non-benzodiazepine antiseizure medication within 5 to 15 minutes and third-line treatment within 15 to 30 minutes. [7]"
+  ],
+  "sections": [
+    {
+      "id": "activate-timed-treatment",
+      "eyebrow": "First decision",
+      "heading": "When to activate the status epilepticus pathway",
+      "intro": "Use seizure type and duration to determine whether immediate pharmacologic termination is required.",
+      "paragraphs": [
+        "Activate a time-stamped status epilepticus response for bilateral tonic-clonic seizure activity lasting more than 5 minutes or recurrent convulsions without recovery. The operational treatment threshold is 10 minutes for focal status epilepticus with or without impaired consciousness and 10 to 15 minutes for absence status epilepticus. [9]",
+        "During active convulsions, prioritize airway positioning, oxygenation and cardiorespiratory monitoring while preparing first-line medication. Seizure activity can produce systemic complications and permanent neuronal injury when treatment is delayed, so stabilization must not postpone antiseizure therapy. [18][19]",
+        "Document the observed or estimated seizure onset time, prior rescue medication, chronic antiseizure regimen, recent medication interruption, alcohol withdrawal risk, and possible cocaine, opioid, or other exposure. In ESETT adults, toxin-related seizures accounted for 11.6% of presentations; alcohol withdrawal and cocaine were each reported in 37% of toxin-related cases. [24]"
+      ],
+      "bullets": [
+        "Treat an ongoing bilateral tonic-clonic seizure at 5 minutes rather than waiting for a conventional 30-minute duration. [9]",
+        "If motor activity stops but consciousness does not recover as expected, move immediately to an EEG-directed nonconvulsive status epilepticus branch. [6][13]",
+        "Treat suspected toxin-related status epilepticus using the same benzodiazepine-to-second-line sequence while addressing the precipitant. [21][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational treatment and electrographic thresholds for major status epilepticus presentations. [9]",
+        "columns": [
+          "Presentation",
+          "Threshold",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "Bilateral tonic-clonic status epilepticus",
+            "More than 5 minutes [9]",
+            "Initiate emergency antiseizure treatment. [9]"
+          ],
+          [
+            "Focal status epilepticus with or without impaired consciousness",
+            "More than 10 minutes [9]",
+            "Treat as status epilepticus; assess for electroclinical evolution. [9]"
+          ],
+          [
+            "Absence status epilepticus",
+            "10 to 15 minutes [9]",
+            "Confirm electroclinical syndrome and initiate treatment. [9]"
+          ],
+          [
+            "Nonconvulsive status epilepticus in critically ill patients",
+            "At least 10 continuous minutes of electrographic or electroclinical seizure activity, or seizure burden at least 20% of an hour [9]",
+            "Use EEG to establish diagnosis and guide treatment response. [9][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "benzodiazepine-first-line",
+      "eyebrow": "Immediate termination",
+      "heading": "Give benzodiazepine therapy before loading a second-line agent",
+      "intro": "Do not delay first-line seizure termination while completing diagnostic studies.",
+      "paragraphs": [
+        "Administer a benzodiazepine as the first pharmacologic step for convulsive status epilepticus. U.S. pediatric center pathways uniformly used intravenous lorazepam as first-line therapy, with intramuscular midazolam or rectal diazepam listed as alternatives when intravenous access is unavailable or delayed. [7]",
+        "Move promptly from benzodiazepine treatment to a non-benzodiazepine antiseizure medication when seizures persist. The American Epilepsy Society timing framework places second-line therapy within 20 to 40 minutes, whereas nine of ten pediatric research-center pathways target earlier initiation, with a median of 10 minutes and a range of 5 to 15 minutes. [7]",
+        "Avoid repeated delays between treatment phases. Longer seizure duration is associated with benzodiazepine-resistant status epilepticus, supporting early transition rather than prolonged serial rescue treatment when convulsions continue. [12]"
+      ],
+      "bullets": [
+        "Use intravenous lorazepam when intravenous access is available. [7]",
+        "Use intramuscular midazolam or rectal diazepam as route alternatives when access delays first-line treatment. [7]",
+        "Start the second-line antiseizure medication immediately after persistent seizure activity establishes benzodiazepine-refractory status epilepticus. [3][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Time-based escalation used in guideline-informed pediatric status epilepticus pathways. [7]",
+        "columns": [
+          "Treatment phase",
+          "AES timing described in pathway comparison",
+          "Observed pediatric pathway practice"
+        ],
+        "rows": [
+          [
+            "Stabilization and first-line benzodiazepine",
+            "Stabilization-phase treatment [7]",
+            "All pathways used intravenous lorazepam; intramuscular midazolam and rectal diazepam were alternatives. [7]"
+          ],
+          [
+            "Second-line non-benzodiazepine antiseizure medication",
+            "Initiate within 20 to 40 minutes. [7]",
+            "Nine of ten pathways initiated earlier; median 10 minutes, range 5 to 15 minutes. [7]"
+          ],
+          [
+            "Third-line treatment",
+            "40 minutes. [7]",
+            "Eight of ten pathways recommended earlier escalation; median 20 minutes, range 15 to 30 minutes. [7]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "second-line-therapy",
+      "eyebrow": "Established status",
+      "heading": "Choose one second-line antiseizure medication after benzodiazepine failure",
+      "intro": "Selection among the three ESETT agents should be individualized because comparative efficacy was similar.",
+      "paragraphs": [
+        "For benzodiazepine-refractory convulsive status epilepticus, select one of levetiracetam, fosphenytoin, or valproate as the second-line intravenous antiseizure medication. ESETT was a double-blind, randomized trial in patients aged 2 years and older and found no difference in outcomes among the three agents overall or across pediatric, adult, and older-adult groups. [3][4]",
+        "Use patient-specific contraindications, existing antiseizure therapy, likely seizure etiology, and anticipated adverse-effect tradeoffs to select among the three agents; the trial result supports choosing promptly rather than delaying therapy to identify a universally preferred drug. [3][4]",
+        "In toxin-related benzodiazepine-refractory status epilepticus, a single second-line dose of levetiracetam, fosphenytoin, or valproate produced seizure cessation with improved consciousness at 1 hour in 42% of ESETT participants. [24]"
+      ],
+      "bullets": [
+        "Use one definitive second-line loading strategy rather than sequentially delaying escalation through multiple agents. [3][7]",
+        "If the first second-line agent fails, classify the episode as refractory status epilepticus and transfer management to an ICU-capable, EEG-guided pathway. [9]",
+        "Fosphenytoin has FDA-reviewed use in generalized convulsive status epilepticus and as short-term substitution for oral phenytoin. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Evidence-supported second-line choices for benzodiazepine-refractory convulsive status epilepticus. [3][4]",
+        "columns": [
+          "Agent",
+          "Role in ESETT",
+          "Decision point"
+        ],
+        "rows": [
+          [
+            "Levetiracetam",
+            "Randomized second-line therapy in patients aged 2 years and older with benzodiazepine-refractory convulsive status epilepticus. [3][4]",
+            "Reasonable immediate selection; ESETT did not show inferior efficacy by age group. [3][4]"
+          ],
+          [
+            "Fosphenytoin",
+            "Randomized second-line therapy in ESETT; FDA-reviewed for generalized convulsive status epilepticus. [1][3][4]",
+            "Reasonable immediate selection; ESETT did not show superior efficacy over levetiracetam or valproate. [3][4]"
+          ],
+          [
+            "Valproate",
+            "Randomized second-line therapy in ESETT. [3][4]",
+            "Reasonable immediate selection; ESETT did not show superior efficacy over levetiracetam or fosphenytoin. [3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "refractory-escalation",
+      "eyebrow": "ICU escalation",
+      "heading": "Escalate persistent seizures to anesthetic therapy and continuous EEG",
+      "intro": "Persistent clinical or electrographic seizure activity after first- and second-line therapy requires critical-care management.",
+      "paragraphs": [
+        "Classify status epilepticus as refractory when it persists despite one benzodiazepine and at least one antiseizure medication. This threshold should trigger ICU-level escalation, airway planning, continuous EEG access, and treatment capable of suppressing ongoing electrographic seizures. [9][13]",
+        "If anesthetic induction is needed to terminate ongoing convulsive activity or facilitate intubation, propofol, midazolam, or etomidate may terminate seizures at induction. [23] Continue EEG monitoring because motor cessation after intubation does not exclude persistent electrographic seizures. [6][13]",
+        "Classify status epilepticus as super-refractory when it continues or recurs 24 hours or more after anesthetic therapy begins, including recurrence during anesthetic reduction or withdrawal. This phenotype warrants continued EEG-directed management and renewed search for an underlying cause driving seizure persistence. [9]"
+      ],
+      "bullets": [
+        "Escalate to EEG-guided critical care after failure of a benzodiazepine plus one antiseizure medication. [9][13]",
+        "Do not use absence of convulsions as evidence of seizure control after sedation, neuromuscular paralysis, or intubation; verify with EEG. [6][13]",
+        "Recognize recurrence during anesthetic weaning as super-refractory status epilepticus when it occurs at least 24 hours after anesthetic initiation. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Treatment-response categories that determine escalation. [9]",
+        "columns": [
+          "Category",
+          "Definition",
+          "Next management setting"
+        ],
+        "rows": [
+          [
+            "Benzodiazepine-refractory convulsive status epilepticus",
+            "Persistent convulsive status epilepticus after benzodiazepine therapy, requiring second-line antiseizure medication. [3][4]",
+            "Administer levetiracetam, fosphenytoin, or valproate promptly. [3][4]"
+          ],
+          [
+            "Refractory status epilepticus",
+            "Persists after one benzodiazepine and at least one antiseizure medication. [9]",
+            "ICU escalation with EEG-guided management and anesthetic-capable care. [9][13]"
+          ],
+          [
+            "Super-refractory status epilepticus",
+            "Continues or recurs 24 hours or more after anesthetic therapy begins, including during anesthetic reduction or withdrawal. [9]",
+            "Continue critical-care seizure management and reassess causes of ongoing status. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nonconvulsive-status",
+      "eyebrow": "EEG branch",
+      "heading": "Detect and treat nonconvulsive status epilepticus after convulsions stop",
+      "intro": "Persistent encephalopathy after a seizure is an EEG indication, not a reason to wait for recurrent motor activity.",
+      "paragraphs": [
+        "Obtain EEG urgently in patients with persistent altered consciousness, unexplained coma, or subtle motor findings after an apparent convulsive seizure has ended. EEG is essential for detecting nonconvulsive status epilepticus, for which confusion or impaired consciousness may be the only clinical manifestation. [6][13]",
+        "In critically ill patients, diagnose nonconvulsive status epilepticus when electrographic or electroclinical seizures persist continuously for at least 10 minutes or occupy at least 20% of an hour of recording. [9] A monitoring duration of at least 15 minutes is recommended for diagnostic assessment. [10][15]",
+        "For ictal-interictal continuum patterns that do not independently fulfill nonconvulsive status epilepticus criteria, use an immediate diagnostic intravenous antiseizure medication trial. Concurrent EEG improvement and clinical improvement establish electroclinical nonconvulsive status epilepticus; EEG improvement alone does not establish that diagnosis. [9]"
+      ],
+      "bullets": [
+        "Use continuous or prolonged EEG rather than bedside observation to assess seizure control in sedated or persistently encephalopathic patients. [6][13][17]",
+        "Interpret an isolated electrographic response to an intravenous antiseizure medication cautiously unless clinical improvement accompanies it. [9]",
+        "Use the EEG result to distinguish ongoing nonconvulsive seizures from a postictal state or another cause of encephalopathy. [6][9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "EEG findings and actions for suspected nonconvulsive status epilepticus. [9][10]",
+        "columns": [
+          "EEG scenario",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Electrographic or electroclinical seizure activity for at least 10 continuous minutes",
+            "Meets critical-care nonconvulsive status epilepticus threshold. [9]",
+            "Treat and follow electrographic response with EEG. [9][13]"
+          ],
+          [
+            "Cumulative seizure burden at least 20% of one hour",
+            "Meets critical-care nonconvulsive status epilepticus threshold. [9]",
+            "Treat and follow electrographic response with EEG. [9][13]"
+          ],
+          [
+            "Ictal-interictal continuum pattern without definitive criteria",
+            "Possible electrographic status epilepticus. [9]",
+            "Perform an immediate diagnostic intravenous antiseizure medication trial and assess both EEG and clinical response. [9]"
+          ],
+          [
+            "EEG improvement without clinical improvement after diagnostic trial",
+            "Does not establish electroclinical nonconvulsive status epilepticus. [9]",
+            "Continue diagnostic assessment rather than assuming clinical seizure resolution. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiology-and-disposition",
+      "eyebrow": "Parallel workup",
+      "heading": "Identify the precipitant while treatment proceeds",
+      "intro": "Etiologic testing should run in parallel with seizure termination and must not delay timed escalation.",
+      "paragraphs": [
+        "Use history to direct immediate etiologic branches: missed antiseizure medications or known epilepsy suggests breakthrough status; alcohol withdrawal or cocaine/opioid co-use raises concern for toxin-related status; new persistent encephalopathy increases the priority for EEG-confirmed nonconvulsive status epilepticus. [6][24]",
+        "Toxin-related status epilepticus is not automatically refractory: in ESETT, 42% of toxin-related benzodiazepine-refractory cases met the outcome of seizure cessation and improved consciousness 1 hour after a single second-line antiseizure medication. [24] Continue precipitant-directed management while maintaining standard seizure escalation.",
+        "Disposition is determined by treatment response rather than apparent cessation of motor activity alone. Admit patients with refractory status, anesthetic exposure, or unresolved encephalopathy to an ICU environment with EEG capability; use EEG to verify seizure control when clinical examination is limited. [6][9][13]"
+      ],
+      "bullets": [
+        "Screen specifically for alcohol withdrawal and cocaine or opioid exposure when the presentation lacks an alternative explanation. [24]",
+        "Do not defer second-line antiseizure therapy while evaluating a possible toxin exposure. [21][24]",
+        "Use persistent altered consciousness after convulsion cessation as a disposition and monitoring trigger for EEG-capable care. [6][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic clues that alter the parallel evaluation during status epilepticus. [6][24]",
+        "columns": [
+          "Clinical pattern",
+          "Most actionable next step",
+          "What it changes"
+        ],
+        "rows": [
+          [
+            "Persistent encephalopathy after motor seizure cessation",
+            "Urgent prolonged or continuous EEG. [6][13][17]",
+            "Detects nonconvulsive status epilepticus requiring ongoing antiseizure management. [6][9]"
+          ],
+          [
+            "Alcohol withdrawal or suspected cocaine/opioid exposure",
+            "Treat seizures through the standard benzodiazepine-to-second-line sequence while managing the exposure. [21][24]",
+            "Identifies toxin-related status epilepticus without changing the need for rapid seizure termination. [24]"
+          ],
+          [
+            "Seizures persist after benzodiazepine plus one antiseizure medication",
+            "Escalate to ICU-level EEG-guided management. [9][13]",
+            "Establishes refractory status epilepticus. [9]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

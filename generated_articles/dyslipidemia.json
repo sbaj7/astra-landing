@@ -1,0 +1,650 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular Prevention",
+  "title": "Dyslipidemia",
+  "summary": "Manage dyslipidemia by separating LDL-C\u2013driven ASCVD risk from triglyceride-driven pancreatitis risk, excluding secondary causes, identifying familial disease, and escalating from maximally tolerated statins to evidence-based nonstatins according to residual risk and lipid response.",
+  "seoDescription": "A physician guide to dyslipidemia assessment, familial hypercholesterolemia, LDL-C intensification, triglyceride thresholds, and nonstatin selection.",
+  "clinicalQuestion": "How should clinicians evaluate dyslipidemia and select lipid-lowering therapy for ASCVD prevention and severe hypertriglyceridemia?",
+  "specialty": "Cardiology and Internal Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "dyslipidemia",
+    "LDL-C",
+    "hypertriglyceridemia",
+    "familial hypercholesterolemia",
+    "statin intolerance",
+    "PCSK9 inhibitors",
+    "lipoprotein(a)",
+    "apolipoprotein B"
+  ],
+  "keyTakeaways": [
+    "Use a maximally tolerated statin as the pharmacologic foundation for ASCVD secondary prevention; greater LDL-C lowering is associated with greater ASCVD risk reduction. [2]",
+    "Measure lipoprotein(a) at least once in adulthood; values at or above 125 nmol/L (50 mg/dL) are risk-enhancing and should prompt more intensive LDL-C lowering and control of other risk factors. [3][4]",
+    "When triglycerides are persistently 500 to 999 mg/dL, prioritize a low-fat diet and consider fenofibrate or prescription omega-3 fatty acids to reduce pancreatitis risk; add or intensify statin therapy in patients aged 40 to 75 years with ASCVD, diabetes, or at least 5% 10-year risk. [14]",
+    "In persistent LDL-C elevation despite maximally tolerated statin therapy, add ezetimibe first for most patients; use a PCSK9 monoclonal antibody earlier when a reduction greater than 25% is needed or risk is very high. [11][12]",
+    "Exclude secondary dyslipidemia before diagnosing familial hypercholesterolemia, then apply Dutch Lipid Clinic Network, Simon Broome, or ACC/AHA criteria when the phenotype suggests inherited LDL receptor disease. [11]"
+  ],
+  "sections": [
+    {
+      "id": "initial-risk-phenotyping",
+      "eyebrow": "Initial Assessment",
+      "heading": "Classify the lipid abnormality by the decision it changes",
+      "intro": "Separate ASCVD-risk management from urgent pancreatitis-risk reduction before choosing a drug.",
+      "paragraphs": [
+        "For LDL-C\u2013predominant dyslipidemia, establish whether the patient has clinical ASCVD, diabetes, severe primary hypercholesterolemia, or a primary-prevention risk decision. Statins remain the treatment foundation for secondary prevention because of established efficacy, safety, tolerability, and cost-effectiveness; ASCVD risk reduction rises in graded fashion with the magnitude of LDL-C lowering. [2]",
+        "Do not interpret an isolated LDL-C value as the complete atherogenic burden when triglycerides are elevated, diabetes is present, or achieved LDL-C is below 70 mg/dL. Order apolipoprotein B in these settings when residual particle-related risk could be underestimated by the standard lipid panel; non-HDL-C is also readily calculated without added cost and reflects all atherogenic cholesterol. [3][5][15]",
+        "Separate severe hypertriglyceridemia from LDL-C treatment escalation. Persistent fasting triglycerides of 500 to 999 mg/dL warrant a pancreatitis-prevention strategy centered on a low-fat diet and consideration of fenofibrate or prescription omega-3 fatty acids. In adults aged 40 to 75 years with ASCVD, diabetes, or 10-year ASCVD risk of at least 5%, simultaneously initiate or intensify statin therapy. [14]"
+      ],
+      "bullets": [
+        "Order ApoB when triglycerides are at least 150 mg/dL, diabetes is present, or achieved LDL-C is below 70 mg/dL and residual atherogenic particle burden may alter treatment intensity. [3]",
+        "Calculate non-HDL-C from the routine lipid panel when triglycerides are elevated or LDL-C may be less reliable in obesity, metabolic syndrome, or type 2 diabetes. [15]",
+        "Use fasting triglycerides to direct pancreatitis-risk management when values are 500 mg/dL or higher. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Lipid patterns that change the immediate management objective. [3][11][14][15]",
+        "columns": [
+          "Predominant finding",
+          "Interpretation",
+          "Immediate next action"
+        ],
+        "rows": [
+          [
+            "LDL-C remains elevated on statin therapy",
+            "Residual LDL-C\u2013mediated ASCVD risk; expected LDL-C reduction needed determines nonstatin choice. [11][12]",
+            "Confirm maximally tolerated statin use; add ezetimibe for most patients or consider earlier PCSK9 inhibition if more than 25% further LDL-C lowering is required. [11][12]"
+          ],
+          [
+            "Fasting TG 500-999 mg/dL",
+            "Pancreatitis-risk range requiring triglyceride-directed intervention. [14]",
+            "Institute a low-fat diet; consider fenofibrate or prescription omega-3 fatty acids, and intensify statin therapy when ASCVD risk indications are present. [14]"
+          ],
+          [
+            "Elevated TG, diabetes, or LDL-C <70 mg/dL",
+            "LDL-C can underestimate atherogenic particle burden. [3][15]",
+            "Measure ApoB and use non-HDL-C to refine residual risk assessment. [3][15]"
+          ],
+          [
+            "Very high untreated LDL-C phenotype after secondary causes excluded",
+            "Consider heterozygous or homozygous familial hypercholesterolemia. [11]",
+            "Apply formal familial hypercholesterolemia criteria and determine whether advanced therapy is needed. [11][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "secondary-and-familial-causes",
+      "eyebrow": "Etiology",
+      "heading": "Exclude secondary dyslipidemia before labeling familial hypercholesterolemia",
+      "intro": "Inherited disease should be pursued when the phenotype persists after reversible contributors are addressed.",
+      "paragraphs": [
+        "When LDL-C is markedly elevated or response to statin therapy is unexpectedly poor, first evaluate for secondary dyslipidemia before assigning familial hypercholesterolemia. If secondary causes are excluded, assess for LDL receptor pathway disease using Dutch Lipid Clinic Network criteria, Simon Broome criteria, or ACC/AHA diagnostic criteria. [11]",
+        "Heterozygous familial hypercholesterolemia typically reflects a mutation affecting one allele, whereas homozygous familial hypercholesterolemia produces substantially more severe disease; LDL-C in heterozygous disease may be two to three times above normal. The distinction changes escalation because lomitapide and evinacumab are specifically considered for homozygous familial hypercholesterolemia. [11][12]",
+        "Use treatment response as a diagnostic and management discriminator. If a patient requires more than 25% additional LDL-C lowering despite maximally tolerated statin therapy, or has very high risk such as LDL-C greater than 190 mg/dL, PCSK9 inhibition can be initiated before ezetimibe rather than relying on ezetimibe alone, which typically lowers LDL-C by about 25%. [11]"
+      ],
+      "bullets": [
+        "Apply formal familial hypercholesterolemia criteria after secondary dyslipidemia has been excluded. [11]",
+        "Consider PCSK9 inhibitor therapy in heterozygous familial hypercholesterolemia aged 30 to 75 years when LDL-C remains at least 100 mg/dL despite maximally tolerated statin plus ezetimibe therapy. [13]",
+        "Consider lomitapide or evinacumab for homozygous familial hypercholesterolemia. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation clues in suspected familial hypercholesterolemia. [11][12][13]",
+        "columns": [
+          "Clinical situation",
+          "What it suggests",
+          "Therapeutic implication"
+        ],
+        "rows": [
+          [
+            "Secondary causes excluded with marked persistent LDL-C elevation",
+            "Familial hypercholesterolemia phenotype requiring formal diagnostic assessment. [11]",
+            "Use Dutch Lipid Clinic Network, Simon Broome, or ACC/AHA criteria. [11]"
+          ],
+          [
+            "Need for >25% further LDL-C reduction on maximally tolerated statin",
+            "Ezetimibe alone may not provide adequate incremental lowering. [11]",
+            "Reasonably initiate a PCSK9 inhibitor before ezetimibe in very-high-risk patients. [11]"
+          ],
+          [
+            "HeFH, age 30-75 years, LDL-C \u2265100 mg/dL on statin plus ezetimibe",
+            "Persistent high LDL-C despite standard combination therapy. [13]",
+            "A PCSK9 inhibitor may be considered. [13]"
+          ],
+          [
+            "HoFH",
+            "Extreme inherited LDL receptor pathway dysfunction. [11][12]",
+            "Consider lomitapide or evinacumab. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ldl-c-lowering-escalation",
+      "eyebrow": "ASCVD Prevention",
+      "heading": "Escalate LDL-C lowering according to residual risk and required incremental reduction",
+      "intro": "Use statin intensity and on-treatment LDL-C or non-HDL-C to determine the next agent.",
+      "paragraphs": [
+        "For established ASCVD, maintain maximally tolerated statin therapy before adding nonstatins unless statin-attributed adverse effects preclude use. In very-high-risk ASCVD, add a PCSK9 monoclonal antibody when LDL-C remains at least 70 mg/dL or non-HDL-C remains at least 100 mg/dL despite ezetimibe and maximally tolerated statin therapy. [12]",
+        "For ASCVD not classified as very high risk in patients aged 75 years or younger, add ezetimibe when LDL-C remains at least 70 mg/dL on maximally tolerated statin therapy. If LDL-C remains at least 70 mg/dL despite the statin-ezetimibe combination, consider bempedoic acid; PCSK9 inhibition is appropriate when a larger additional LDL-C reduction is needed. [12]",
+        "In diabetes with statin-attributed adverse effects, ezetimibe, bempedoic acid, and/or a PCSK9 monoclonal antibody are recommended options to lower LDL-C and reduce ASCVD risk. Select among them based on needed LDL-C reduction, injection preference, cost, and ability to sustain adherence. [13]",
+        "Inclisiran is an option when less frequent injections are preferred, but cardiovascular outcome studies in ASCVD are ongoing. Do not equate LDL-C lowering with completed outcomes evidence when choosing between inclisiran and therapies with established cardiovascular benefit, including statins, ezetimibe, PCSK9 monoclonal antibodies, and icosapent ethyl. [12][13]"
+      ],
+      "bullets": [
+        "Use LDL-C at least 70 mg/dL or non-HDL-C at least 100 mg/dL after statin plus ezetimibe as a threshold to add a PCSK9 monoclonal antibody in very-high-risk ASCVD. [12]",
+        "Consider bempedoic acid when PCSK9 inhibitor cost is a major barrier. [12]",
+        "Choose inclisiran when infrequent injection scheduling is a priority, while recognizing that ASCVD outcomes trials remain ongoing. [12][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical nonstatin selection after maximally tolerated statin therapy. [11][12][13]",
+        "columns": [
+          "Clinical setting",
+          "Preferred next step",
+          "Escalation or tradeoff"
+        ],
+        "rows": [
+          [
+            "ASCVD, not very high risk, age \u226475 years, LDL-C \u226570 mg/dL",
+            "Add ezetimibe. [12]",
+            "Consider bempedoic acid if LDL-C remains \u226570 mg/dL after statin plus ezetimibe. [12]"
+          ],
+          [
+            "Very-high-risk ASCVD, LDL-C \u226570 mg/dL or non-HDL-C \u2265100 mg/dL despite statin plus ezetimibe",
+            "Add a PCSK9 monoclonal antibody. [12]",
+            "Consider bempedoic acid when PCSK9 inhibitor expense is prohibitive. [12]"
+          ],
+          [
+            "Need >25% further LDL-C reduction or very-high-risk phenotype",
+            "Consider PCSK9 inhibitor before ezetimibe. [11]",
+            "Ezetimibe typically lowers LDL-C by about 25%, which may be insufficient. [11]"
+          ],
+          [
+            "Diabetes with statin-attributed adverse effects",
+            "Use ezetimibe, bempedoic acid, and/or PCSK9 monoclonal antibody. [13]",
+            "Match therapy to required LDL-C lowering and feasibility of administration. [13]"
+          ],
+          [
+            "Preference for less frequent injections",
+            "Consider inclisiran. [12]",
+            "ASCVD outcome studies are ongoing. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "triglyceride-directed-management",
+      "eyebrow": "Hypertriglyceridemia",
+      "heading": "Treat triglycerides above 500 mg/dL to reduce pancreatitis risk",
+      "intro": "Triglyceride-directed drugs have a different immediate goal than LDL-C\u2013directed ASCVD prevention.",
+      "paragraphs": [
+        "For persistent fasting triglycerides of 500 to 999 mg/dL in adults aged 20 to 39 years, emphasize a low-fat diet and consider fenofibrate or prescription omega-3 fatty acids to reduce pancreatitis risk. For those aged 40 to 75 years with 10-year ASCVD risk of at least 5%, diabetes, or ASCVD, initiate or intensify statin therapy in addition to a low-fat or very-low-fat diet and consideration of fenofibrate or prescription omega-3 fatty acids. [14]",
+        "Prescription omega-3 fatty acid products include EPA/DHA mixtures and purified EPA as icosapent ethyl. At 2 g twice daily, prescription omega-3 fatty acids lower triglycerides by approximately 30%. Low-dose omega-3 formulations have not reduced ASCVD events in primary or secondary prevention trials; cardiovascular event reduction has been shown in trials of EPA alone. [14]",
+        "Do not use triglyceride lowering alone as a substitute for LDL-C\u2013directed prevention. In patients with ASCVD risk indications, statin therapy remains central, while fibrates and prescription omega-3 therapy are selected chiefly for severe triglyceride elevation and pancreatitis-risk reduction. [2][14]"
+      ],
+      "bullets": [
+        "For adults aged 20 to 39 years with fasting triglycerides 500 to 999 mg/dL, consider fenofibrate or prescription omega-3 fatty acids after instituting a low-fat diet. [14]",
+        "For adults aged 40 to 75 years with triglycerides 500 to 999 mg/dL plus ASCVD, diabetes, or 10-year ASCVD risk at least 5%, intensify statin therapy and consider fenofibrate or prescription omega-3 fatty acids. [14]",
+        "Use prescription rather than low-dose over-the-counter omega-3 products when treating severe hypertriglyceridemia; 2 g twice daily lowers triglycerides by about 30%. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Management of persistent fasting triglycerides 500 to 999 mg/dL. [14]",
+        "columns": [
+          "Patient group",
+          "Diet and lipid therapy",
+          "Primary near-term objective"
+        ],
+        "rows": [
+          [
+            "Age 20-39 years",
+            "Low-fat diet; consider fenofibrate or prescription omega-3 fatty acids. [14]",
+            "Reduce pancreatitis risk. [14]"
+          ],
+          [
+            "Age 40-75 years with ASCVD, diabetes, or 10-year ASCVD risk \u22655%",
+            "Initiate or intensify statin; use low-fat or very-low-fat diet; consider fenofibrate or prescription omega-3 fatty acids. [14]",
+            "Reduce pancreatitis risk while addressing ASCVD risk. [14]"
+          ],
+          [
+            "Candidate for omega-3 therapy",
+            "Prescription omega-3 fatty acids at 2 g twice daily lower triglycerides by about 30%. [14]",
+            "Use purified EPA when ASCVD outcome benefit is the intended evidence-based consideration. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-refinement-and-monitoring",
+      "eyebrow": "Risk Refinement",
+      "heading": "Use Lp(a), ApoB, and coronary calcium when conventional risk assessment leaves uncertainty",
+      "intro": "Risk-enhancing biomarkers should change LDL-C intensity, not replace treatment of established disease.",
+      "paragraphs": [
+        "Measure Lp(a) at least once in every adult to identify inherited elevation. Lp(a) at or above 125 nmol/L (50 mg/dL) is a risk-enhancing factor associated with about 1.4-fold higher ASCVD risk, and levels at or above 250 nmol/L (100 mg/dL) are associated with at least twofold higher estimated risk; these findings support intensified LDL-C lowering and more aggressive management of modifiable risk factors. [3]",
+        "An Lp(a) concentration above 180 mg/dL (430 nmol/L) identifies a very high inherited level with lifetime ASCVD risk comparable to heterozygous familial hypercholesterolemia. Because circulating Lp(a) is largely genetically determined and minimally modified by diet or environmental exposures, use the result for risk stratification and family-oriented clinical assessment rather than expecting lifestyle intervention to normalize it. [3][4]",
+        "Consider coronary artery calcium scoring to refine risk and guide LDL-C and non-HDL-C goals in men aged at least 40 years and women aged at least 45 years when primary-prevention treatment intensity remains uncertain. Interpret both absolute calcium burden and the age-, sex-, and race-standardized percentile because each adds prognostic information. [3]",
+        "Reassess the lipid panel after therapy changes to determine whether the patient has crossed the escalation threshold relevant to the treatment pathway, such as LDL-C 70 mg/dL or non-HDL-C 100 mg/dL in very-high-risk ASCVD. In patients with elevated triglycerides, diabetes, or low achieved LDL-C, repeat or obtain ApoB when discordance with LDL-C could change residual-risk assessment. [3][12]"
+      ],
+      "bullets": [
+        "Treat Lp(a) \u2265125 nmol/L (50 mg/dL) as a risk-enhancing factor that supports intensified LDL-C lowering. [3][4]",
+        "Recognize Lp(a) \u2265250 nmol/L (100 mg/dL) as associated with at least twofold higher estimated ASCVD risk. [3]",
+        "Use coronary artery calcium in men \u226540 years and women \u226545 years when primary-prevention risk classification would change treatment intensity. [3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Risk-refining tests and actions. [3][4][12]",
+        "columns": [
+          "Test",
+          "Actionable result",
+          "What it changes"
+        ],
+        "rows": [
+          [
+            "Lp(a), once in adulthood",
+            "\u2265125 nmol/L (50 mg/dL). [3]",
+            "Risk-enhancing finding supporting intensified LDL-C lowering and control of other risk factors. [3][4]"
+          ],
+          [
+            "Lp(a), once in adulthood",
+            "\u2265250 nmol/L (100 mg/dL). [3]",
+            "Associated with \u22652-fold higher estimated ASCVD risk. [3]"
+          ],
+          [
+            "Lp(a), once in adulthood",
+            ">180 mg/dL (>430 nmol/L). [3]",
+            "Identifies inherited risk comparable to heterozygous familial hypercholesterolemia. [3]"
+          ],
+          [
+            "ApoB",
+            "Elevated triglycerides, diabetes, or achieved LDL-C <70 mg/dL. [3]",
+            "Identifies residual particle-related risk that may be underestimated by standard LDL-C assessment. [3]"
+          ],
+          [
+            "Coronary artery calcium",
+            "Men \u226540 years; women \u226545 years when risk remains uncertain. [3]",
+            "Absolute score and standardized percentile can reclassify risk and guide LDL-C and non-HDL-C goals. [3]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should a PCSK9 inhibitor be used before ezetimibe?",
+      "answer": "Consider earlier PCSK9 inhibition when the patient needs more than 25% additional LDL-C lowering despite maximally tolerated statin therapy or has a very-high-risk phenotype such as LDL-C greater than 190 mg/dL; ezetimibe typically lowers LDL-C by about 25%. [11]"
+    },
+    {
+      "question": "Should low-dose omega-3 supplements be used for ASCVD prevention?",
+      "answer": "No. Low-dose omega-3 fatty acid trials have not shown primary or secondary ASCVD prevention benefit; cardiovascular outcome benefit has been demonstrated in trials of EPA alone. [14]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Screening for Lipid Disorders in Children and Adolescents",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/JOURNALS/JAMA/FULLARTICLE/2542642",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Interventions for dyslipidemia include lifestyle modification (eg, changes in diet and physical activity) and pharmacotherapy (eg, statins, bile",
+      "score": 0.21930444
+    },
+    {
+      "number": 2,
+      "title": "2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.11.016",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "that are relevant to the management of persons with dyslipidemia in both primary and secondary prevention settings. This guideline also includes new recommendations based on high-quality evidence from major large randomized, placebo-controlled cardiovascular outcomes trials published since the 2018 ",
+      "score": 0.6538572
+    },
+    {
+      "number": 3,
+      "title": "2026 Dyslipidemia Guideline-at-a-Glance - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.02.4872",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "6.\n\nLp(a) should be measured at least once to identify those individuals at higher risk of ASCVD. It is considered as a risk-enhancing factor at levels \u2265125 nmol/L (50 mg/dL), which is associated with about a 1.4-fold increased ASCVD risk, and values \u2265250 nmol/L (100 mg/dL) are associated with \u22652-fo",
+      "score": 0.7663815
+    },
+    {
+      "number": 4,
+      "title": "Lipoprotein(a) and Long-Term Cardiovascular Risk in a Multi-Ethnic ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.02.031",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Our findings confirming Lp(a)-associated ASCVD risks in a large primary prevention U.S. pooled cohort are particularly relevant given the latest recommendations for universal screening of Lp(a) from the focused update to the 2019 National Lipid Association scientific statement,31 noting that Lp(a) t",
+      "score": 0.740494
+    },
+    {
+      "number": 5,
+      "title": "Cholesterol Levels and Cardiovascular Outcomes Following Statin ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2025.101864",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Apolipoprotein B (ApoB) is increasingly being emphasized in estimating CV risk. The National Lipid Association and European Society of Cardiology10,27 include consideration of ApoB in their treatment algorithm while the importance of ApoB is discussed in the 2019 American College of Cardiology/ Amer",
+      "score": 0.66203266
+    },
+    {
+      "number": 6,
+      "title": "Executive summary of the Hellenic Atherosclerosis Society ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S266708952400004X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Keywords\n\nAtherosclerotic cardiovascular disease\n\n; \n\nStatins\n\n; \n\nEzetimibe\n\n; \n\nPCSK9 inhibitor\n\n; \n\nBempedoic acid\n\n; \n\nFamilial hypercholesterolemia\n\n; \n\nType 2 diabetes\n\n; \n\nHeart failure\n\n   Previous article in this issue\n   Next article in this issue\n\nSorry, something went wrong. Please tr",
+      "score": 0.4562407
+    },
+    {
+      "number": 7,
+      "title": "Lipid-lowering in diabetes: An update - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0021915023052346",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "supplemental therapy, such as the addition of ezetimibe, bempedoic acid or PCSK9 inhibitors, is often required to reach LDL goals. As a result, the upfront use of combination therapies, particularly a statin plus ezetimibe, is a rational initial approach. The addition to statins of drugs that specif",
+      "score": 0.40330887
+    },
+    {
+      "number": 8,
+      "title": "PCSK9 inhibitor, ezetimibe, and bempedoic acid: Evidence-based ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0033062023000130",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Am Coll Cardiol\n\n### Baseline and on-statin treatment lipoprotein(a) levels for prediction of cardiovascular events: individual patient-data meta-analysis of statin outcome trials\n\n### Lancet.\n\n### Apolipoprotein B and non-HDL cholesterol better reflect residual risk than LDL cholesterol in st",
+      "score": 0.73207545
+    },
+    {
+      "number": 9,
+      "title": "Combination of bempedoic acid, ezetimibe, and atorvastatin in patients with hypercholesterolemia: A randomized clinical trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021915020315975",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Nat. Commun.\n\n## Cited by (87)\n\n### Bempedoic acid in the management of lipid disorders and cardiovascular risk. 2023 position paper of the International Lipid Expert Panel (ILEP)\n\n### Personalized management of dyslipidemias in patients with diabetes\u2014it is time for a new approach (2022)\n\n### Me",
+      "score": 0.7011614
+    },
+    {
+      "number": 10,
+      "title": "[PDF] Advances in the treatment of dyslipidemia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/83/3/181.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "CLEVELAND CLINIC JOURNAL OF MEDICINE VOLUME 83 \u2022 NUMBER 3 MARCH 2016 181 T he 2013 joint guidelines of the Ameri-can College of Cardiology and Ameri-can Heart Association (ACC/AHA)1 on the treatment of blood cholesterol to reduce car-diovascular risk recommend high-intensity statin therapy for secon",
+      "score": 0.54666615
+    },
+    {
+      "number": 11,
+      "title": "My adult patient\u2019s hypercholesterolemia is not responding to statins\u2014what\u2019s next? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/6/347",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Google ScholarCrossRefPubMed\n3. 3\n\n   \u21b5\n\n   Wang EM, Asias-Dinh B, Rosario N. Review of recent literature and updates in nonstatin cholesterol management. Mayo Clin Proc 2024; 99(9):1449\u20131468. doi:10.1016/j.mayocp.2024.03.001\n\n   Google ScholarCrossRefPubMed\n4. 4\n\n   \u21b5\n\n   Virani SS, Smith SC Jr, St",
+      "score": 0.53881395
+    },
+    {
+      "number": 12,
+      "title": "Stepwise Approach to Novel Lipid-Lowering Medications - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/02/20/15/56/a-stepwise-approach",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "PCSK9 monoclonal antibody therapy should be added if LDL-C remains \u226570 mg/dL or non\u2013high-density lipoprotein cholesterol (non\u2013HDL-C) \u2265100 mg/dL despite ezetimibe and maximally tolerated statin.\n     + Bempedoic acid may be considered if concerned about the expense of PCSK9 inhibitor.\n     + Inclisir",
+      "score": 0.5917474
+    },
+    {
+      "number": 13,
+      "title": "Lipid Manager - Mobile and Web Apps",
+      "detail": "tools.acc.org",
+      "url": "https://tools.acc.org/ldl",
+      "authors": "tools.acc.org",
+      "host": "tools.acc.org",
+      "snippet": "\u2020In adults with diabetes who have statin-attributed side effects, initiation of ezetimibe and/or bempedoic acid and/or a PCSK9 mAb is recommended to lower LDL-C and reduce ASCVD risk.\n\nSource: 2026 ACC/AHA/Multisociety Guideline on the Management of Dyslipidemia, Figure 9\n\n  \n\ntop\n\nSecondary ASCVD P",
+      "score": 0.58919704
+    },
+    {
+      "number": 14,
+      "title": "ACC Consensus on ASCVD Risk Reduction in Hypertriglyceridemia",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/07/27/21/04/2021-acc-ecdp-hypertriglyceridemia",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "7. TG risk-based therapies including fibrates and prescription grade OM-3FA have been useful for severe hypertriglyceridemia, but until recently, were of little value for reducing risk and prevention of ASCVD. Prescription grade OM-3FA includes mixtures of EPA and DHA as ethyl esters and carboxylic ",
+      "score": 0.49362883
+    },
+    {
+      "number": 15,
+      "title": "Importance and Management of Non\u2013High-Density Lipoprotein ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacasi.2025.12.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "lipoprotein cholesterol (non-HDL-C) and apolipoprotein B (ApoB), as measures of all atherogenic particles, confer better estimation of ASCVD risk than does LDL-C.17-22 The cost and limited availability of ApoB testing, however, are factors in its use as a marker.15,23 In contrast, non-HDL-C is easil",
+      "score": 0.6141863
+    },
+    {
+      "number": 16,
+      "title": "Beyond statins: New pharmacological targets to decrease LDL-cholesterol and cardiovascular events",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0163725823001717",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The pharmacological treatment of dyslipidemia, a major modifiable risk factor for developing atherosclerotic cardiovascular disease (ASCVD), remains a debated and controversial issue, not only in terms of the most appropriate therapeutic range for lipid levels, but also with regard to the optimal st",
+      "score": 0.6747586
+    },
+    {
+      "number": 17,
+      "title": "Management of residual risk after statin therapy - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021915015302483",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Conventional randomised controlled trials, prospective epidemiological cohort studies, and more recently Mendelian randomisation studies have all shown a direct relationship between LDL-cholesterol and the incidence of coronary heart disease.4,18 Although lowering of LDL-cholesterol to a target of <",
+      "score": 0.6147415
+    },
+    {
+      "number": 18,
+      "title": "Target Populations and Treatment Cost for Bempedoic Acid and PCSK9 Inhibitors: A Simulation Study in a Contemporary CAD Cohort - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0149291821002630",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Atherosclerosis\n\n### Association of high-sensitivity troponin T and I with the severity of stable coronary artery disease in patients with chronic kidney disease\n\n### Atherosclerosis\n\n### Interpretation of the evidence for the efficacy and safety of statin therapy\n\n### Lancet\n\n### Bempedoic acid",
+      "score": 0.60049355
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Screening for Lipid Disorders in Children and Adolescents",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/JOURNALS/JAMA/FULLARTICLE/2542642",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Interventions for dyslipidemia include lifestyle modification (eg, changes in diet and physical activity) and pharmacotherapy (eg, statins, bile",
+      "score": 0.21930444
+    },
+    {
+      "number": 2,
+      "title": "2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2025.11.016",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "that are relevant to the management of persons with dyslipidemia in both primary and secondary prevention settings. This guideline also includes new recommendations based on high-quality evidence from major large randomized, placebo-controlled cardiovascular outcomes trials published since the 2018 ",
+      "score": 0.6538572
+    },
+    {
+      "number": 3,
+      "title": "2026 Dyslipidemia Guideline-at-a-Glance - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2026.02.4872",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "6.\n\nLp(a) should be measured at least once to identify those individuals at higher risk of ASCVD. It is considered as a risk-enhancing factor at levels \u2265125 nmol/L (50 mg/dL), which is associated with about a 1.4-fold increased ASCVD risk, and values \u2265250 nmol/L (100 mg/dL) are associated with \u22652-fo",
+      "score": 0.7663815
+    },
+    {
+      "number": 4,
+      "title": "Lipoprotein(a) and Long-Term Cardiovascular Risk in a Multi-Ethnic ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.02.031",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Our findings confirming Lp(a)-associated ASCVD risks in a large primary prevention U.S. pooled cohort are particularly relevant given the latest recommendations for universal screening of Lp(a) from the focused update to the 2019 National Lipid Association scientific statement,31 noting that Lp(a) t",
+      "score": 0.740494
+    },
+    {
+      "number": 5,
+      "title": "Cholesterol Levels and Cardiovascular Outcomes Following Statin ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2025.101864",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Apolipoprotein B (ApoB) is increasingly being emphasized in estimating CV risk. The National Lipid Association and European Society of Cardiology10,27 include consideration of ApoB in their treatment algorithm while the importance of ApoB is discussed in the 2019 American College of Cardiology/ Amer",
+      "score": 0.66203266
+    },
+    {
+      "number": 6,
+      "title": "Executive summary of the Hellenic Atherosclerosis Society ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S266708952400004X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Keywords\n\nAtherosclerotic cardiovascular disease\n\n; \n\nStatins\n\n; \n\nEzetimibe\n\n; \n\nPCSK9 inhibitor\n\n; \n\nBempedoic acid\n\n; \n\nFamilial hypercholesterolemia\n\n; \n\nType 2 diabetes\n\n; \n\nHeart failure\n\n   Previous article in this issue\n   Next article in this issue\n\nSorry, something went wrong. Please tr",
+      "score": 0.4562407
+    },
+    {
+      "number": 7,
+      "title": "Lipid-lowering in diabetes: An update - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0021915023052346",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "supplemental therapy, such as the addition of ezetimibe, bempedoic acid or PCSK9 inhibitors, is often required to reach LDL goals. As a result, the upfront use of combination therapies, particularly a statin plus ezetimibe, is a rational initial approach. The addition to statins of drugs that specif",
+      "score": 0.40330887
+    },
+    {
+      "number": 8,
+      "title": "PCSK9 inhibitor, ezetimibe, and bempedoic acid: Evidence-based ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0033062023000130",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Am Coll Cardiol\n\n### Baseline and on-statin treatment lipoprotein(a) levels for prediction of cardiovascular events: individual patient-data meta-analysis of statin outcome trials\n\n### Lancet.\n\n### Apolipoprotein B and non-HDL cholesterol better reflect residual risk than LDL cholesterol in st",
+      "score": 0.73207545
+    },
+    {
+      "number": 9,
+      "title": "Combination of bempedoic acid, ezetimibe, and atorvastatin in patients with hypercholesterolemia: A randomized clinical trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021915020315975",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Nat. Commun.\n\n## Cited by (87)\n\n### Bempedoic acid in the management of lipid disorders and cardiovascular risk. 2023 position paper of the International Lipid Expert Panel (ILEP)\n\n### Personalized management of dyslipidemias in patients with diabetes\u2014it is time for a new approach (2022)\n\n### Me",
+      "score": 0.7011614
+    },
+    {
+      "number": 10,
+      "title": "[PDF] Advances in the treatment of dyslipidemia",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/83/3/181.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "CLEVELAND CLINIC JOURNAL OF MEDICINE VOLUME 83 \u2022 NUMBER 3 MARCH 2016 181 T he 2013 joint guidelines of the Ameri-can College of Cardiology and Ameri-can Heart Association (ACC/AHA)1 on the treatment of blood cholesterol to reduce car-diovascular risk recommend high-intensity statin therapy for secon",
+      "score": 0.54666615
+    },
+    {
+      "number": 11,
+      "title": "My adult patient\u2019s hypercholesterolemia is not responding to statins\u2014what\u2019s next? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/92/6/347",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Google ScholarCrossRefPubMed\n3. 3\n\n   \u21b5\n\n   Wang EM, Asias-Dinh B, Rosario N. Review of recent literature and updates in nonstatin cholesterol management. Mayo Clin Proc 2024; 99(9):1449\u20131468. doi:10.1016/j.mayocp.2024.03.001\n\n   Google ScholarCrossRefPubMed\n4. 4\n\n   \u21b5\n\n   Virani SS, Smith SC Jr, St",
+      "score": 0.53881395
+    },
+    {
+      "number": 12,
+      "title": "Stepwise Approach to Novel Lipid-Lowering Medications - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/02/20/15/56/a-stepwise-approach",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "PCSK9 monoclonal antibody therapy should be added if LDL-C remains \u226570 mg/dL or non\u2013high-density lipoprotein cholesterol (non\u2013HDL-C) \u2265100 mg/dL despite ezetimibe and maximally tolerated statin.\n     + Bempedoic acid may be considered if concerned about the expense of PCSK9 inhibitor.\n     + Inclisir",
+      "score": 0.5917474
+    },
+    {
+      "number": 13,
+      "title": "Lipid Manager - Mobile and Web Apps",
+      "detail": "tools.acc.org",
+      "url": "https://tools.acc.org/ldl",
+      "authors": "tools.acc.org",
+      "host": "tools.acc.org",
+      "snippet": "\u2020In adults with diabetes who have statin-attributed side effects, initiation of ezetimibe and/or bempedoic acid and/or a PCSK9 mAb is recommended to lower LDL-C and reduce ASCVD risk.\n\nSource: 2026 ACC/AHA/Multisociety Guideline on the Management of Dyslipidemia, Figure 9\n\n  \n\ntop\n\nSecondary ASCVD P",
+      "score": 0.58919704
+    },
+    {
+      "number": 14,
+      "title": "ACC Consensus on ASCVD Risk Reduction in Hypertriglyceridemia",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/07/27/21/04/2021-acc-ecdp-hypertriglyceridemia",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "7. TG risk-based therapies including fibrates and prescription grade OM-3FA have been useful for severe hypertriglyceridemia, but until recently, were of little value for reducing risk and prevention of ASCVD. Prescription grade OM-3FA includes mixtures of EPA and DHA as ethyl esters and carboxylic ",
+      "score": 0.49362883
+    },
+    {
+      "number": 15,
+      "title": "Importance and Management of Non\u2013High-Density Lipoprotein ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacasi.2025.12.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "lipoprotein cholesterol (non-HDL-C) and apolipoprotein B (ApoB), as measures of all atherogenic particles, confer better estimation of ASCVD risk than does LDL-C.17-22 The cost and limited availability of ApoB testing, however, are factors in its use as a marker.15,23 In contrast, non-HDL-C is easil",
+      "score": 0.6141863
+    },
+    {
+      "number": 16,
+      "title": "Beyond statins: New pharmacological targets to decrease LDL-cholesterol and cardiovascular events",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0163725823001717",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The pharmacological treatment of dyslipidemia, a major modifiable risk factor for developing atherosclerotic cardiovascular disease (ASCVD), remains a debated and controversial issue, not only in terms of the most appropriate therapeutic range for lipid levels, but also with regard to the optimal st",
+      "score": 0.6747586
+    },
+    {
+      "number": 17,
+      "title": "Management of residual risk after statin therapy - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021915015302483",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Conventional randomised controlled trials, prospective epidemiological cohort studies, and more recently Mendelian randomisation studies have all shown a direct relationship between LDL-cholesterol and the incidence of coronary heart disease.4,18 Although lowering of LDL-cholesterol to a target of <",
+      "score": 0.6147415
+    },
+    {
+      "number": 18,
+      "title": "Target Populations and Treatment Cost for Bempedoic Acid and PCSK9 Inhibitors: A Simulation Study in a Contemporary CAD Cohort - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0149291821002630",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Atherosclerosis\n\n### Association of high-sensitivity troponin T and I with the severity of stable coronary artery disease in patients with chronic kidney disease\n\n### Atherosclerosis\n\n### Interpretation of the evidence for the efficacy and safety of statin therapy\n\n### Lancet\n\n### Bempedoic acid",
+      "score": 0.60049355
+    }
+  ],
+  "publishedAt": "2026-09-16T00:16:20.115770+00:00",
+  "updatedAt": "2026-09-16T00:16:20.115770+00:00",
+  "readingMinutes": 6,
+  "slug": "dyslipidemia"
+}

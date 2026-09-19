@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Acute Kidney Injury Medication Adjustment",
+  "summary": "In acute kidney injury, promptly reconcile medications, stop or reassess reversible nephrotoxins, adjust renally cleared drugs to changing kidney function, preserve essential therapy when benefits outweigh risk, and monitor creatinine, urine output, volume status, and drug concentrations when exposure is unpredictable.",
+  "seoDescription": "Point-of-care guidance for medication reconciliation, nephrotoxin cessation, renal dose adjustment, and monitoring during acute kidney injury.",
+  "clinicalQuestion": "How should clinicians modify, dose, and monitor medications when acute kidney injury is suspected or established?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute kidney injury",
+    "AKI medication adjustment",
+    "nephrotoxins",
+    "renal dosing",
+    "NSAIDs",
+    "ACE inhibitors",
+    "ARBs",
+    "diuretics",
+    "aminoglycosides",
+    "therapeutic drug monitoring"
+  ],
+  "keyTakeaways": [
+    "At AKI recognition, perform medication reconciliation and stop or avoid nephrotoxic drugs and other agents that can worsen kidney function; adjust remaining drug doses for renal function. [1][14][17]",
+    "NSAIDs increase AKI risk when combined with renin-angiotensin system inhibitors and/or diuretics; the adjusted AKI rate ratio was 1.64 with triple therapy in a community cohort. [12]",
+    "Do not use fractional excretion indices alone to classify AKI, particularly after diuretic exposure; integrate urine findings, hemodynamics, obstruction assessment, and the medication timeline. [18]",
+    "For severe infection in critically ill AKI, avoid reflexive dose reduction of initial antibiotic therapy: altered pharmacokinetics may require higher exposure despite reduced renal clearance, with individualized reassessment and therapeutic drug monitoring when available. [7][8][10]",
+    "After AKI, reassess kidney function and proteinuria at approximately 3 months, reconcile medications, and reinforce nephrotoxin avoidance to identify incomplete recovery or CKD progression. [17]"
+  ],
+  "sections": [
+    {
+      "id": "first-hours-medication-review",
+      "eyebrow": "Immediate action",
+      "heading": "Medication actions when AKI is detected",
+      "intro": "Treat medication review as an immediate AKI intervention, not a discharge task.",
+      "paragraphs": [
+        "At suspected or confirmed AKI, reconcile every prescribed, over-the-counter, inpatient, contrast-related, and recently discontinued medication against baseline creatinine, current creatinine trajectory, urine output, blood pressure, volume status, and the timing of acute illness. Stop or avoid nephrotoxic drugs and review drugs that alter renal hemodynamics or require renal dose adjustment. Nephrotoxins contribute to an estimated 20% to 30% of AKI cases. [1]",
+        "Do not equate all creatinine rises after medication exposure with intrinsic drug nephrotoxicity. A rise during vomiting, diarrhea, sepsis, perioperative hypotension, or heart failure may reflect reduced effective kidney perfusion compounded by NSAIDs, ACE inhibitors, ARBs, or diuretics. The immediate decision is to restore or support hemodynamics, identify the precipitating illness, and reassess whether each agent remains appropriate in the current physiologic state. [1][5][17]",
+        "Measure and trend serum creatinine in adults with acute illness who have CKD, oliguria below 0.5 mL/kg/hour, hypovolemia, sepsis, recent iodinated contrast exposure, obstructive symptoms, or recent exposure to NSAIDs, aminoglycosides, ACE inhibitors, ARBs, or diuretics. CKD with eGFR below 60 mL/min/1.73 m² confers particular AKI risk. [20][21]"
+      ],
+      "bullets": [
+        "Document baseline kidney function and the onset of creatinine rise before attributing AKI to a medication. [18][20]",
+        "Hold an antihypertensive or diuretic when it is contributing to hypotension, hypovolemia, or impaired renal perfusion; reassess after volume and blood-pressure optimization. [1]",
+        "Avoid iodinated contrast when it is not necessary during active AKI; if imaging is urgent, explicitly weigh diagnostic benefit against nephrotoxic risk. [14][17]",
+        "If sepsis is suspected or confirmed, implement the local sepsis bundle within 1 hour and pursue source control while reviewing antimicrobial nephrotoxicity and dose exposure. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial medication-focused actions in suspected or established AKI. [1][14][17][20][21]",
+        "columns": [
+          "Clinical finding",
+          "Medication decision",
+          "Next monitoring step"
+        ],
+        "rows": [
+          [
+            "Hypovolemia or hypotension with AKI",
+            "Reassess and commonly hold diuretics and antihypertensives that worsen perfusion; give IV fluid when clinically indicated and consider vasopressors if fluid-unresponsive. [1]",
+            "Trend blood pressure, fluid balance, urine output, and serum creatinine. [1][14]"
+          ],
+          [
+            "Current NSAID exposure",
+            "Stop NSAID during AKI and avoid re-exposure while kidney function and volume status are unstable. [1][17]",
+            "Review concurrent ACE inhibitor, ARB, and diuretic use and assess for reversible volume depletion. [5][12]"
+          ],
+          [
+            "Aminoglycoside or other renally cleared anti-infective required",
+            "Do not omit necessary antimicrobial treatment; individualize dosing for AKI severity, critical illness, and any renal replacement therapy. [7][8]",
+            "Use drug concentrations when available and reassess dose as renal and volume status change. [7][10]"
+          ],
+          [
+            "Recent iodinated contrast exposure or contemplated contrast study",
+            "Avoid nonessential contrast exposure and discontinue other nephrotoxins where possible. [14][17]",
+            "Follow creatinine and fluid balance; evaluate alternative imaging when it will answer the clinical question. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "drug-class-decisions",
+      "eyebrow": "Drug classes",
+      "heading": "Which medications to stop, hold, or intensively monitor",
+      "intro": "Separate direct nephrotoxins from drugs that become hazardous when renal perfusion falls.",
+      "paragraphs": [
+        "Stop NSAIDs in established AKI unless an exceptional competing indication outweighs renal risk. NSAIDs can exacerbate AKI during hypovolemia and are associated with interstitial nephritis, which can itself cause AKI or worsen preexisting injury. Their risk is amplified by concurrent renin-angiotensin system blockade and diuretics. [18][21]",
+        "ACE inhibitors and ARBs require a contextual decision rather than automatic permanent discontinuation. During AKI with hypotension, hypovolemia, or impaired renal autoregulation, temporarily withhold or reassess the agent while correcting the precipitating physiology. These drugs are specifically identified among medications that can cause or exacerbate AKI, especially in hypovolemic patients. [1][5][21]",
+        "Diuretics should be evaluated against the patient’s effective circulating volume and congestion rather than discontinued reflexively. In a patient with AKI plus hypovolemia or hypotension, holding the diuretic is appropriate while volume status and blood pressure are optimized; continued diuretic exposure can also compound NSAID and renin-angiotensin system inhibitor risk. [1][5][12]",
+        "Aminoglycosides are recognized nephrotoxic exposures in AKI risk assessment and should be avoided when a clinically effective non-nephrotoxic alternative is available. When an aminoglycoside is necessary, dose selection cannot rely on a static renal-function estimate during fluctuating AKI; incorporate severity of infection, changing renal clearance, and therapeutic drug monitoring where available. [1][7][10][21]",
+        "For patients with CKD stage G3 or higher, defined as eGFR below 60 mL/min/1.73 m², KDIGO guidance supports avoiding nephrotoxic medications or reducing their dose. In AKI superimposed on CKD, use the best current estimate of kidney function for dose adjustment, but recognize that rapidly changing creatinine makes any single estimate imprecise. [15][16][18]"
+      ],
+      "bullets": [
+        "Ask specifically about nonprescription NSAIDs; unrecorded community NSAID use may be the modifiable exposure in an otherwise unexplained hemodynamic AKI. [4][12]",
+        "Review medication combinations, not only individual agents: NSAID plus an ACE inhibitor or ARB plus a diuretic is the highest-yield preventable pattern. [5][12]",
+        "Avoid substituting one nephrotoxin for another without defining the treatment target, expected duration, and monitoring plan. [1][17]"
+      ],
+      "subsections": [
+        {
+          "heading": "The NSAID–renin-angiotensin system inhibitor–diuretic interaction",
+          "paragraphs": [
+            "In a community nested case-control study using a 50% or greater rise in creatinine to define AKI, NSAID exposure increased AKI risk with triple therapy comprising a renin-angiotensin system inhibitor plus diuretic (adjusted rate ratio 1.64; 95% CI, 1.25-2.14). Increased risk was also observed with NSAID plus a renin-angiotensin system inhibitor alone (adjusted rate ratio 1.60; 95% CI, 1.18-2.17) and NSAID plus a diuretic alone (adjusted rate ratio 1.64; 95% CI, 1.17-2.29). [12]",
+            "When a patient taking one or more of these agents develops intercurrent illness, assess hydration, blood pressure, creatinine, and urine output before adding an NSAID. During active AKI, remove the NSAID first and reassess the need for the hemodynamically active agents after volume and pressure are corrected; observational data support association, but do not establish that every combination mandates permanent cessation. [5][12]"
+          ],
+          "bullets": [
+            "Community AKI incidence in the cited cohort was 68 per 10,000 person-years, and the absolute risk increase was greater with triple than dual combinations. [12]",
+            "Recent medication exposure is particularly relevant when acute illness is accompanied by hypovolemia, sepsis, or oliguria. [20][21]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Medication-class framework for AKI review. [1][5][7][12][16][17][21]",
+        "columns": [
+          "Medication or combination",
+          "AKI-specific concern",
+          "Practical action"
+        ],
+        "rows": [
+          [
+            "NSAID",
+            "Can cause or exacerbate AKI, particularly with hypovolemia; may cause interstitial nephritis. [18][21]",
+            "Stop during active AKI; identify over-the-counter use and avoid concurrent nephrotoxic exposures. [1][17]"
+          ],
+          [
+            "ACE inhibitor or ARB",
+            "May impair compensatory renal autoregulation during reduced perfusion. [18]",
+            "Temporarily reassess or hold when AKI accompanies hypotension or hypovolemia; revisit indication after stabilization. [1][5][21]"
+          ],
+          [
+            "Diuretic",
+            "May worsen effective volume depletion; contributes to high-risk combinations with NSAIDs and renin-angiotensin system inhibitors. [1][12]",
+            "Hold when hypovolemic or hypotensive; reassess volume status and blood pressure rather than applying a fixed rule. [1]"
+          ],
+          [
+            "Aminoglycoside",
+            "Recognized nephrotoxic exposure; dosing is difficult in unstable AKI. [1][7][21]",
+            "Avoid when an effective alternative exists; if essential, individualize regimen and use concentration monitoring when available. [7][10]"
+          ],
+          [
+            "Renally cleared medication",
+            "Accumulation risk rises as filtration declines, but rapidly changing AKI limits precision of estimated renal function. [8][18]",
+            "Adjust dose to the best current kidney-function assessment and repeat review as creatinine, urine output, volume status, or RRT changes. [14][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "dose-adjustment-and-monitoring",
+      "eyebrow": "Dosing",
+      "heading": "Renal dose adjustment during changing kidney function",
+      "intro": "AKI dosing is a repeated assessment, not a one-time creatinine-based order change.",
+      "paragraphs": [
+        "Adjust medication doses for renal function in all patients at risk for or with established AKI, but reassess whenever the creatinine trajectory, urine output, fluid balance, hemodynamics, or renal replacement therapy changes. KDIGO therapeutic measures include medication-dose adjustment, hemodynamic monitoring, fluid balance control, discontinuation of nephrotoxins, and avoidance of iodinated contrast where possible. [14]",
+        "Creatinine-based renal estimates can lag behind abrupt changes in filtration. In critically ill AKI, expanded volume of distribution, altered clearance, and renal replacement therapy create substantial pharmacokinetic variability; dosing should therefore incorporate the clinical indication, severity of infection, renal and volume trajectory, modality of renal support, and drug-specific pharmacodynamics rather than a published renal-dose table alone. [7][8][24]",
+        "For life-threatening infection, avoid underexposure caused by automatic reduction of initial antimicrobial doses solely because creatinine is elevated. Critically ill patients with AKI may require increased antibiotic doses despite reduced renal clearance, particularly for serious infections. After initial therapy, use serial clinical assessment and therapeutic drug monitoring when available to individualize exposure. [7][10]"
+      ],
+      "bullets": [
+        "Recalculate the dosing plan after initiation, discontinuation, or modality change of renal replacement therapy. [7][24]",
+        "Use therapeutic drug monitoring for agents with narrow therapeutic ranges or marked pharmacokinetic variability when assays and interpretable targets are available. [10][11]",
+        "Do not base antibiotic adjustment solely on a single estimated GFR in unstable AKI or during continuous renal replacement therapy. [7][8][24]"
+      ],
+      "subsections": [
+        {
+          "heading": "Therapeutic drug monitoring",
+          "paragraphs": [
+            "Therapeutic drug monitoring measures drug concentrations in serum or plasma at defined times to guide dose selection, therapeutic response, and toxicity prevention. It is most useful when dose poorly predicts exposure because of high pharmacokinetic variability or a narrow therapeutic index. [10][11]",
+            "In ICU AKI, obtain and interpret concentrations in conjunction with dose timing, changing renal function, fluid status, and renal replacement modality. For beta-lactams in one ICU evaluation, 74% of patients required dose adjustment after the first measurement and half required a dose increase, illustrating the risk of empiric underdosing in critically ill patients. [10]"
+          ],
+          "bullets": [
+            "Document the exact sampling time relative to administration before acting on a drug concentration. [10][11]",
+            "Coordinate with pharmacy when AKI is evolving or continuous renal replacement therapy is used because standardized ICU dosing data remain limited. [7][24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Dosing reassessment triggers in AKI. [7][8][10][14][24]",
+        "columns": [
+          "Trigger",
+          "Why the current regimen may be wrong",
+          "Required action"
+        ],
+        "rows": [
+          [
+            "Rising or falling creatinine",
+            "Creatinine may not reflect real-time filtration during evolving AKI. [18]",
+            "Repeat medication review and revise renally cleared drug exposure using the current clinical trajectory. [14][18]"
+          ],
+          [
+            "Oliguria below 0.5 mL/kg/hour",
+            "Oliguria identifies increased AKI risk and may indicate declining clearance before creatinine fully changes. [20][21]",
+            "Review nephrotoxins, hemodynamics, fluid balance, and doses of renally eliminated medications. [1][14]"
+          ],
+          [
+            "Severe sepsis or critical illness",
+            "Volume distribution and clearance are altered; reduced doses can cause inadequate antimicrobial exposure. [7][8]",
+            "Individualize antimicrobial dosing and consider therapeutic drug monitoring. [7][10]"
+          ],
+          [
+            "Initiation or change of CRRT",
+            "Drug clearance depends on renal replacement modality and settings. [7][24]",
+            "Reassess every renally cleared medication with pharmacy and use concentration-based monitoring where possible. [7][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-pitfalls-and-escalation",
+      "eyebrow": "Reassessment",
+      "heading": "Do not misclassify AKI or delay escalation",
+      "intro": "Medication adjustment is safer when the AKI mechanism is actively re-evaluated.",
+      "paragraphs": [
+        "Use the medication timeline to prioritize mechanisms, but do not diagnose prerenal, intrinsic, or postrenal AKI from fractional excretion of sodium, fractional excretion of urea, or urine osmolality alone. These indices are altered by commonly used drugs, including diuretics, and no single marker reliably distinguishes AKI causes in isolation. Integrate volume examination, hemodynamics, urinalysis, obstruction history, creatinine trend, and response to targeted interventions. [18]",
+        "Evaluate for obstruction when symptoms or history suggest urologic obstruction or a condition predisposing to obstruction, because medication withholding will not correct a postrenal process. AKI risk assessment should also actively identify sepsis, hypovolemia, contrast exposure, and nephritic features such as edema or hematuria, each of which changes the next diagnostic and therapeutic action. [20][21]",
+        "Discuss AKI management with nephrology as soon as possible and within 24 hours when there is stage 3 AKI, inadequate response to initial treatment, AKI complications, renal transplantation, or another high-risk clinical context. This should occur alongside—not after—medication reconciliation and hemodynamic optimization. [21][22]"
+      ],
+      "bullets": [
+        "Escalate immediately for AKI complications rather than waiting for medication changes to reverse the course. [21][22]",
+        "If central venous access is needed in AKI, KDIGO-based measures favor subclavian access rather than other sites. [14]",
+        "Use fluid balance monitoring to distinguish ongoing hypovolemia from fluid accumulation before continuing, withholding, or reintroducing diuretics. [14][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Findings that change the medication plan or require escalation. [14][18][21][22]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Diuretic exposure with low fractional excretion indices",
+            "Urinary indices may be medication-affected and are not diagnostic alone. [18]",
+            "Do not anchor on a prerenal label; reassess hemodynamics, urinalysis, obstruction risk, and drug exposures. [18]"
+          ],
+          [
+            "Persistent AKI despite volume and medication correction",
+            "Initial hemodynamic or medication hypothesis may be incomplete. [21][22]",
+            "Evaluate for obstruction, intrinsic kidney disease, ongoing sepsis, or unrecognized nephrotoxin and involve nephrology within 24 hours when indicated. [21][22]"
+          ],
+          [
+            "Stage 3 AKI or AKI complication",
+            "High-risk AKI requiring prompt specialty discussion. [21][22]",
+            "Contact nephrology as soon as possible and within 24 hours of detection. [21][22]"
+          ],
+          [
+            "New edema or hematuria",
+            "Raises concern for nephritic pathology rather than isolated medication-related hemodynamic AKI. [21]",
+            "Expand kidney evaluation and avoid delaying cause-directed assessment by attributing AKI solely to medications. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "restarting-and-follow-up",
+      "eyebrow": "Recovery",
+      "heading": "Medication reintroduction and post-AKI surveillance",
+      "intro": "Reintroduce beneficial chronic therapy only after the acute physiology and kidney trajectory are reassessed.",
+      "paragraphs": [
+        "After AKI improves, perform a second medication reconciliation rather than automatically resuming the preadmission list. Reassess the original indication for ACE inhibitor, ARB, diuretic, and any nephrotoxic medication; confirm recovery of blood pressure, volume status, urine output, and kidney function before reintroducing an agent that was withheld for hemodynamic AKI. [1][17][18]",
+        "Arrange follow-up at approximately 3 months after AKI to assess kidney recovery and progression to CKD or progressive CKD. The follow-up evaluation should include kidney function, proteinuria, medication reconciliation, patient education on nephrotoxin avoidance, and CKD-progression prevention strategies when kidney disease persists. [17]",
+        "For patients with CKD or prior AKI, provide explicit anticipatory counseling about dehydration and nephrotoxin exposure, especially NSAID use. This is most consequential when patients also take ACE inhibitors, ARBs, or diuretics or have eGFR below 60 mL/min/1.73 m². [12][16][18]"
+      ],
+      "bullets": [
+        "At follow-up, compare creatinine with the documented pre-AKI baseline and assess proteinuria rather than assuming renal recovery from clinical improvement alone. [17]",
+        "Update renal dosing for chronic medications if residual CKD is present. [15][16]",
+        "Record an NSAID avoidance plan in the medication list when NSAIDs contributed to, or are likely to exacerbate, AKI. [1][18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-AKI medication follow-up at approximately 3 months. [17]",
+        "columns": [
+          "Assessment",
+          "Decision enabled"
+        ],
+        "rows": [
+          [
+            "Kidney function",
+            "Determine recovery versus persistent kidney dysfunction and revise renal drug dosing. [17]"
+          ],
+          [
+            "Proteinuria",
+            "Assess prognosis and identify persistent kidney disease requiring CKD-directed management. [17]"
+          ],
+          [
+            "Medication reconciliation",
+            "Avoid inadvertent re-exposure to nephrotoxins and reassess chronic therapy indications. [17]"
+          ],
+          [
+            "Nephrotoxin avoidance counseling",
+            "Reduce recurrent exposure to NSAIDs and other potentially nephrotoxic drugs during future illness. [17][18]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should ACE inhibitors or ARBs always be stopped in AKI?",
+      "answer": "No permanent rule applies. Reassess or temporarily withhold them when AKI occurs with hypotension, hypovolemia, or impaired renal autoregulation, then reconsider the indication after hemodynamics and kidney function stabilize. [1][5][18][21]"
+    },
+    {
+      "question": "Can a renally cleared antibiotic simply be dose-reduced at AKI recognition?",
+      "answer": "Not reliably in critical illness. AKI, fluid shifts, and renal replacement therapy cause variable pharmacokinetics, and severe infection may require higher exposure despite reduced renal clearance; use serial reassessment and therapeutic drug monitoring when available. [7][8][10][24]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

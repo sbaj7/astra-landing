@@ -1,0 +1,633 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hepatology",
+  "title": "Abnormal Liver Test Patterns",
+  "summary": "Interpret abnormal liver tests by separating hepatocellular, cholestatic, and mixed injury, assessing bilirubin and INR for urgency, then directing serology, imaging, medication review, and selective biopsy toward the most likely competing etiologies.",
+  "seoDescription": "Physician guide to interpreting hepatocellular, cholestatic, and mixed liver test patterns using R value, bilirubin, INR, targeted serology, and imaging.",
+  "clinicalQuestion": "How should clinicians classify abnormal liver tests and use the pattern to prioritize urgent evaluation and targeted diagnostic testing?",
+  "specialty": "Hepatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "abnormal liver tests",
+    "elevated transaminases",
+    "alkaline phosphatase elevation",
+    "R value",
+    "cholestatic liver injury",
+    "hepatocellular liver injury",
+    "drug-induced liver injury"
+  ],
+  "keyTakeaways": [
+    "Interpret ALT, AST, alkaline phosphatase, bilirubin, albumin, and INR as a pattern; aminotransferases indicate hepatocellular injury, whereas alkaline phosphatase elevation suggests cholestasis or impaired bile flow. [2]",
+    "Calculate the R value at presentation: R >5 indicates hepatocellular injury, R <2 cholestatic injury, and R 2-5 mixed injury. [3][10][13]",
+    "Elevated bilirubin with prolonged INR identifies higher-risk liver dysfunction and warrants urgent evaluation rather than routine outpatient trend testing. [2][13]",
+    "For suspected drug-induced liver injury, establish medication timing, classify the injury pattern, and systematically exclude competing causes before assigning causality. [3]",
+    "In hepatocellular injury, prioritize viral hepatitis and autoimmune testing; in jaundiced cholestatic or mixed injury, add cholangiography after ultrasound when obstruction or biliary disease remains possible. [13]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-confirmation",
+      "eyebrow": "First decision",
+      "heading": "Identify liver dysfunction requiring urgent escalation",
+      "intro": "The immediate priority is distinguishing biochemical injury from impaired hepatic function.",
+      "paragraphs": [
+        "Review total bilirubin, INR or prothrombin time, albumin, ALT, AST, and alkaline phosphatase together. ALT and AST elevations reflect hepatocellular injury; alkaline phosphatase elevation reflects cholestasis or impaired bile flow. Bilirubin may rise in either hepatocellular or cholestatic disease, while bilirubin, INR/prothrombin time, and albumin provide information about hepatic function. [2]",
+        "Expedite evaluation when aminotransferase elevation is accompanied by elevated bilirubin and prolonged INR, because this combination signals more urgent liver disease assessment. Acute liver failure is defined clinically by acute abnormal liver blood tests in a patient without known chronic liver disease plus liver-related coagulopathy and clinically apparent hepatic encephalopathy. [2][17]",
+        "Do not equate every enzyme abnormality with progressive chronic liver disease, but do not defer diagnosis when the pattern suggests a treatable cause. The decision to broaden testing should be driven by the clinical scenario, because indiscriminate testing increases false-positive results and can expose patients to unnecessary biopsy-related risk. [6]"
+      ],
+      "bullets": [
+        "Obtain a focused exposure history: metabolic risk factors, alcohol use, viral hepatitis risks, occupational or chemical exposures, and all current and recently stopped prescription drugs, over-the-counter products, herbals, and supplements. [2][3][10]",
+        "When DILI is possible, document each suspect agent's start date, stop date, dose changes, and the chronology relative to liver-test onset; timing is central to causality assessment. [1][3]",
+        "If baseline liver tests were abnormal before a suspected exposure, interpret ALT, alkaline phosphatase, and bilirubin changes against the pre-exposure mean baseline rather than the laboratory ULN alone. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Laboratory features that separate injury pattern from hepatic functional impairment. [2][3][10]",
+        "columns": [
+          "Test",
+          "Primary interpretation",
+          "Actionable implication"
+        ],
+        "rows": [
+          [
+            "ALT and AST",
+            "Predominant elevation indicates hepatocellular injury. [2]",
+            "Calculate R value and prioritize hepatocellular etiologies. [3][13]"
+          ],
+          [
+            "Alkaline phosphatase",
+            "Elevation indicates a cholestatic process and impaired bile flow. [2]",
+            "Confirm the cholestatic pattern and evaluate for biliary disease or cholestatic DILI. [2][13]"
+          ],
+          [
+            "Total bilirubin",
+            "Can be elevated in hepatocellular or cholestatic injury; also contributes to functional assessment. [2]",
+            "Elevated bilirubin with hepatocellular injury increases urgency, particularly when INR is prolonged. [2][13]"
+          ],
+          [
+            "INR/prothrombin time",
+            "Marker of hepatic function rather than injury alone. [2]",
+            "Prolongation with bilirubin elevation warrants urgent evaluation. [2]"
+          ],
+          [
+            "Albumin",
+            "Marker of hepatic function. [2]",
+            "Interpret with bilirubin and INR rather than as an isolated enzyme-pattern discriminator. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classify-with-r-value",
+      "eyebrow": "Pattern recognition",
+      "heading": "Calculate the R value before ordering pattern-specific tests",
+      "intro": "Use the first available laboratory set closest to the clinical event.",
+      "paragraphs": [
+        "Calculate R = (ALT/ULN) \u00f7 (alkaline phosphatase/ULN). By convention, R >5 is hepatocellular, R <2 is cholestatic, and R between 2 and 5 is mixed. Classification should use the first laboratory tests available in relation to the clinical event, particularly when DILI is considered. [3][10][13]",
+        "The R value directs the initial competing-etiology workup but does not establish a cause. Individual drugs can produce differing biochemical patterns among patients, and DILI remains a diagnosis of exclusion even when exposure timing is compelling. [3]",
+        "For clinically significant exposure-associated liver injury, commonly used biochemical thresholds are ALT at least 5 times ULN, alkaline phosphatase at least 2 times ULN, or ALT at least 3 times ULN with total bilirubin greater than 2 times ULN. If a bone source of alkaline phosphatase is plausible, concomitant GGT elevation supports a hepatobiliary source. [10]"
+      ],
+      "bullets": [],
+      "subsections": [
+        {
+          "heading": "Avoid common classification errors",
+          "paragraphs": [
+            "Use the laboratory-specific ULN for both ALT and alkaline phosphatase. An ALT or AST value alone does not distinguish hepatocellular from mixed injury when alkaline phosphatase is also elevated; calculate the R value rather than relying on visual comparison of absolute enzyme values. [3][10]",
+            "AST predominance is not itself a diagnosis. ALT is generally higher than AST in liver disease, whereas AST may predominate in alcohol-related injury, steatosis, or myopathy; use the clinical context and complete biochemical pattern before attributing an aminotransferase elevation to liver disease. [8]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "R-value classification and its immediate diagnostic consequence. [3][10][13]",
+        "columns": [
+          "Pattern",
+          "R value",
+          "Initial diagnostic direction"
+        ],
+        "rows": [
+          [
+            "Hepatocellular",
+            ">5. [3][10][13]",
+            "Evaluate hepatocellular competing etiologies, including viral hepatitis and autoimmune disease; review drug and supplement exposures. [3][13]"
+          ],
+          [
+            "Mixed",
+            "2-5. [3][10][13]",
+            "Evaluate both hepatocellular and cholestatic alternatives; if jaundiced, include biliary imaging beyond ultrasound when indicated. [13]"
+          ],
+          [
+            "Cholestatic",
+            "<2. [3][10][13]",
+            "Prioritize impaired bile flow, biliary disease, and cholestatic DILI; use imaging to assess the biliary tree. [2][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hepatocellular-pattern",
+      "eyebrow": "R value >5",
+      "heading": "Work up hepatocellular injury with viral, autoimmune, and exposure branches",
+      "intro": "The central task is to distinguish acute viral, autoimmune, metabolic, alcohol-associated, and medication-related injury.",
+      "paragraphs": [
+        "For hepatocellular or mixed DILI-pattern presentations, evaluate competing viral and autoimmune causes rather than assigning the abnormality to a medication by temporal association alone. Recommended hepatocellular-case testing includes hepatitis A and B evaluation, RNA-HCV, IgM anti-HEV, and autoimmune serology. [3][13]",
+        "Autoimmune hepatitis should remain in the differential even when symptoms are absent. Diagnostic criteria incorporate elevated AST and ALT, total immunoglobulin levels, autoantibodies, and characteristic histologic abnormalities; asymptomatic patients can have histologic inflammation comparable to symptomatic patients. [14]",
+        "A structured medication review is essential in every hepatocellular pattern with possible DILI. Establish chronology for prescription agents, nonprescription analgesics, herbals, dietary supplements, and recent discontinuations, then exclude competing etiologies systematically before concluding that a drug caused the injury. [1][3]"
+      ],
+      "bullets": [
+        "Order RNA-HCV rather than relying only on hepatitis C antibody when evaluating suspected hepatocellular DILI. [13]",
+        "Include IgM anti-HEV in the hepatocellular workup when DILI is being considered. [13]",
+        "Order autoimmune serology and total immunoglobulin assessment when the pattern and clinical context raise concern for autoimmune hepatitis. [13][14]",
+        "Consider liver biopsy when diagnosis remains uncertain, when severity assessment is needed, or when histology may exclude a competing cause; biopsy is not routinely required when a known hepatotoxic drug is suspected and the course is favorable. [3][13]"
+      ],
+      "subsections": [
+        {
+          "heading": "When autoimmune hepatitis becomes the leading branch",
+          "paragraphs": [
+            "Integrate autoantibodies, total immunoglobulin levels, aminotransferase elevation, and liver histology; no isolated component is sufficient to establish autoimmune hepatitis. [14]",
+            "When autoimmune hepatitis is treated with glucocorticoids, assess response with serial AST, ALT, and IgG. AASLD and EASL guidance cited by AASLD supports a 2-week glucocorticoid trial with close laboratory monitoring; approximately 70%-80% of patients demonstrate some clinical response. [14]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Hepatocellular-pattern branches that change the next diagnostic step. [3][13][14]",
+        "columns": [
+          "Finding",
+          "Leading branch",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "New drug, herbal, or supplement exposure with compatible timing",
+            "Possible DILI. [3]",
+            "Document exposure chronology and exclude viral, autoimmune, and other competing etiologies. [3][13]"
+          ],
+          [
+            "Hepatocellular injury without a convincing exposure",
+            "Viral or autoimmune hepatitis remains possible. [13][14]",
+            "Obtain hepatitis A/B testing, RNA-HCV, IgM anti-HEV, autoimmune serology, and total immunoglobulins. [13][14]"
+          ],
+          [
+            "Elevated AST/ALT, immunoglobulins, autoantibodies, and compatible histology",
+            "Autoimmune hepatitis. [14]",
+            "Use glucocorticoid treatment with close AST, ALT, and IgG monitoring after initiation. [14]"
+          ],
+          [
+            "Uncertain diagnosis or need to assess severity/exclude alternatives",
+            "Unresolved hepatocellular injury. [3][13]",
+            "Consider liver biopsy. [3][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cholestatic-and-mixed-patterns",
+      "eyebrow": "R value <5",
+      "heading": "Escalate biliary evaluation for cholestatic or jaundiced mixed injury",
+      "intro": "Cholestatic patterns require assessment for impaired bile flow and biliary pathology.",
+      "paragraphs": [
+        "An alkaline phosphatase-predominant profile indicates cholestasis or impaired bile flow. In a cholestatic or mixed pattern with jaundice, perform ultrasound and add cholangiography to evaluate the biliary tree. [2][13]",
+        "Cholestatic DILI remains an exclusion diagnosis. Drug-induced cholestasis is generally managed by withdrawal of the suspect drug; most cases improve after withdrawal, although prolonged cholestasis can occur and a minority have persistent laboratory or histologic injury. [12]",
+        "Do not assume a single medication has a fixed phenotype. The same drug can cause hepatocellular, cholestatic, or mixed biochemical injury in different patients; retain structural and inflammatory biliary causes in the differential even with a plausible drug exposure. [3]"
+      ],
+      "bullets": [
+        "For alkaline phosphatase at least 2 times ULN, use GGT to support hepatobiliary origin when bone disease could explain the alkaline phosphatase elevation. [10]",
+        "For jaundiced cholestatic or mixed injury, obtain cholangiography in addition to ultrasound rather than relying on ultrasound alone. [13]",
+        "Stop the suspected offending drug when drug-induced cholestasis is likely; no established effective therapy substitutes for drug withdrawal. [12]",
+        "Follow acute injury without evidence of fibrosis until liver parameters completely resolve. [10]"
+      ],
+      "subsections": [
+        {
+          "heading": "Drug-induced cholestasis and persistent abnormalities",
+          "paragraphs": [
+            "Chlorpromazine is a prototype cause of cholestasis lasting longer than 6 months and can produce vanishing bile duct syndrome with permanent liver damage. Persistent cholestasis after a culprit drug is stopped should therefore trigger continued biochemical follow-up and reassessment for persistent duct injury or alternative diagnoses. [12]",
+            "Ursodeoxycholic acid and corticosteroids have been reported as potentially beneficial in selected drug-induced cholestasis cases, particularly corticosteroids in hypersensitivity-associated cholestasis, but controlled-trial evidence is lacking; neither should replace prompt withdrawal of the suspected drug. [12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Practical next steps for cholestatic and mixed liver-test patterns. [2][3][10][12][13]",
+        "columns": [
+          "Scenario",
+          "Key discriminator",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Alkaline phosphatase-predominant elevation",
+            "Cholestatic process or impaired bile flow. [2]",
+            "Assess biliary disease with ultrasound; use GGT when a bone source is a competing explanation. [10][13]"
+          ],
+          [
+            "Cholestatic or mixed pattern with jaundice",
+            "Potential biliary obstruction or cholangiopathy. [13]",
+            "Perform cholangiography in addition to ultrasound. [13]"
+          ],
+          [
+            "Suspected cholestatic DILI",
+            "Compatible drug chronology after alternative causes are assessed. [3][12]",
+            "Withdraw the suspected drug and monitor for biochemical resolution. [10][12]"
+          ],
+          [
+            "Persistent cholestasis after drug withdrawal",
+            "Potential prolonged drug injury or alternate biliary disease. [12]",
+            "Continue follow-up and reconsider diagnosis; prolonged cholestasis may persist beyond 6 months in selected drug reactions. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-biopsy",
+      "eyebrow": "Follow-through",
+      "heading": "Use serial testing and selective biopsy to resolve unexplained abnormalities",
+      "intro": "Trend the biochemical pattern after exposure removal or directed treatment.",
+      "paragraphs": [
+        "Obtain sequential liver tests when the initial cause is uncertain, particularly after a possible medication exposure or a transient biliary event. Serial ALT, alkaline phosphatase, bilirubin, and INR establish whether injury is resolving, evolving toward cholestasis, or developing functional impairment. [1][2][10]",
+        "Liver biopsy can support suspected DILI, define severity, and exclude competing diagnoses. It is most useful when the diagnosis remains uncertain, liver tests persist, or management depends on distinguishing autoimmune, drug-related, infiltrative, or other pathologic processes; it is not obligatory for a known hepatotoxic exposure with favorable clinical evolution. [3][13]",
+        "For suspected steatotic liver disease in patients with metabolic risk factors, ultrasound or steatosis biomarkers plus liver enzymes can identify steatosis; serum fibrosis markers such as FIB-4, NAFLD Fibrosis Score, ELF, FibroTest, or FibroMeter separate lower-risk from medium/high-risk fibrosis groups. Medium/high-risk noninvasive results warrant specialist referral and in-depth severity assessment, including consideration of biopsy. [11]"
+      ],
+      "bullets": [
+        "Follow acute liver injury without evidence of fibrosis until all abnormal liver parameters resolve. [10]",
+        "Use biopsy selectively for persistent abnormal noninvasive liver tests according to clinical context and magnitude of abnormality. [10]",
+        "In metabolic-risk patients with suspected steatosis, use fibrosis risk stratification rather than aminotransferase values alone to determine need for specialty assessment. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring choices after initial pattern-directed evaluation. [3][10][11][13]",
+        "columns": [
+          "Clinical course",
+          "Monitoring or procedure",
+          "Decision changed"
+        ],
+        "rows": [
+          [
+            "Acute injury resolving after exposure withdrawal",
+            "Serial liver tests until complete parameter resolution. [10]",
+            "Confirms favorable evolution while detecting persistent injury. [10]"
+          ],
+          [
+            "Persistent unexplained abnormalities",
+            "Consider liver biopsy based on context and severity. [3][10][13]",
+            "Can support DILI, assess severity, and exclude competing diagnoses. [3]"
+          ],
+          [
+            "Metabolic risk factors with suspected steatosis",
+            "Ultrasound or steatosis biomarkers plus FIB-4, NAFLD Fibrosis Score, ELF, FibroTest, or FibroMeter. [11]",
+            "Medium/high fibrosis risk prompts specialist referral and in-depth severity assessment. [11]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] 202293Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2014/202293Orig1s000OtherR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "discontinued and what other drugs might have been given the patient. Therefore, a potential diagnosis has to be inferred on the background of extremely skimpy data. Comment: Based on data made available, I infer that the patient\u2019s abnormal liver chemistries were probably due to biliary tree disease,",
+      "score": 0.5585443
+    },
+    {
+      "number": 2,
+      "title": "Evaluation of Abnormal Liver Biochemical Test Results",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0016508526002398",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Liver biochemical and function tests\u2014alanine aminotransferase, aspartate aminotransferase, alkaline phosphatase, bilirubin, prothrombin time, and albumin\u2014are used to screen and identify people with acute and chronic liver disease. Elevations in alanine aminotransferase and aspartate aminotransferase",
+      "score": 0.6301622
+    },
+    {
+      "number": 3,
+      "title": "ACG Clinical Guideline: Diagnosis and Management... - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/10.14309/ajg.0000000000001259~acg-clinical-guideline-diagnosis-and-management-of",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### _Key concepts_\n\n   1. Accurate clinical history related to medication exposure and the onset of liver test abnormalities should be obtained when DILI is suspected.\n\n   2. DILI is a diagnosis of exclusion, and thus, appropriate competing etiologies should be excluded in a systematic fashion.\n\n   ",
+      "score": 0.6244086
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of abnormal liver... - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cld/fulltext/2023/06000/evaluation_and_management_of_abnormal_liver.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cholestatic and hepatocellular liver enzyme patterns can be suggestive of specific diagnoses, demonstrate a relatively nonspecific mixed liver enzyme pattern.",
+      "score": 0.6219319
+    },
+    {
+      "number": 5,
+      "title": "Liver Function Test - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/liver-function-test",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Pattern of liver test abnormalities in cholestasis\n\nLiver disease is often reflected by elevation in liver enzymes and/or liver function. The term liver function test is a misnomer, because these tests do not reflect liver function and may be abnormal in conditions unrelated to liver diseases. L",
+      "score": 0.53648347
+    },
+    {
+      "number": 6,
+      "title": "Clinical Approach to the Patient With Abnormal Liver Test Results - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025619611632825",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thus, the initial decision to evaluate an abnormal liver chemistry further and the choice of testing desired should be dictated by the clinical scenario. The physician must realize that all liver chemistry abnormalities are not indicative of progressive chronic liver disease, yet must also appreciat",
+      "score": 0.5253938
+    },
+    {
+      "number": 7,
+      "title": "Management of asymptomatic patients with abnormal liver function tests - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620525003085",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Hepatol\n\n### Autoimmune serology testing in clinical practice: an updated roadmap for the diagnosis of autoimmune hepatitis\n\n### Eur J Intern Med\n\n### Autoantibodies and defined target autoantigens in autoimmune hepatitis: an overview\n\n### Eur J Intern Med\n\n### Evaluation of abnormal liver-enz",
+      "score": 0.52378637
+    },
+    {
+      "number": 8,
+      "title": "s Guide to Abnormal Liver Tests - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119802181.ch1",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "In general, serum ALT levels are higher than serum AST in liver diseases, while AST is greater in some cases of alcohol- related injury, steatosis, myopathy,",
+      "score": 0.4558047
+    },
+    {
+      "number": 9,
+      "title": "[PDF] Interpretation of liver function tests",
+      "detail": "cdn.who.int",
+      "url": "https://cdn.who.int/media/docs/default-source/searo/hiv-hepatitis/training-modules/04-liver-function-tests-interpretation.pdf?sfvrsn=6fdf2ee9_2",
+      "authors": "cdn.who.int",
+      "host": "cdn.who.int",
+      "snippet": "25 Deranged LFT LFT derangement Alk phosphatase elevation Bilirubin elevation ALT/AST elevation 3 1 2 Enzyme elevation Approach depends on which test(s) result is/are abnormal Liver function tests have two components: bilirubin and various liver enzymes. For complete and accurate interpretation of L",
+      "score": 0.6755297
+    },
+    {
+      "number": 10,
+      "title": "[PDF] EASL Clinical Practice Guideline: Occupational liver diseases",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2019/09/EASL-CPG-occupational-liver-diseases.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "a. Any one of the following CRITERIA TO DEFINE LIVER INJURY: 1) Alanine aminotransferase (ALT) level \u22655x upper limit of normality (ULN) 2) Alkaline phosphatase (ALP) level \u22652\u0003 ULN (particularly if concomitantly elevated gamma-glutamyl transpeptidase (GGT) in the absence of bone disease) 3) ALT level",
+      "score": 0.5726516
+    },
+    {
+      "number": 11,
+      "title": "[PDF] NAFLD-English-report.pdf - EASL",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2018/10/NAFLD-English-report.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "context (B2) \u2022 In selected patients at high risk of liver disease progression, monitoring should include a repeat liver biopsy after at least 5-year follow-up (C2) Non-invasive testing in paediatric NAFLD The position paper by the European Society for Paediatric Gastroenterology Hepatology and Nutri",
+      "score": 0.23917201
+    },
+    {
+      "number": 12,
+      "title": "[PDF] EASL Clinical Practice Guidelines: Management of cholestatic liver ...",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2018/10/cholestatic-liver-English-report.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "expected in hyper-sensitivity-induced cholestasis, but no relevant con-trolled trials are available on this subject . The outcome of drug-induced cholestatic injury, after with-drawal of the drug, is generally good . Occasionally it is followed by prolonged cholestasis. The prototype drug causing ch",
+      "score": 0.6304352
+    },
+    {
+      "number": 13,
+      "title": "[PDF] EASL Clinical Practice Guidelines: Drug-induced liver injury",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2019/04/EASL-CPG-Drug-induced-liver-injury-2019-04.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Recommendation \u0002 DILI should be classi\ufb01ed as hepatocellular, cholestatic or mixed according to the pattern of elevation of liver enzymes based on the \ufb01rst set of laboratory tests avail-able in relation to the clinical event. Grade B.\nEvidence: Extrapolation from level 2 studies (prospective cohort s",
+      "score": 0.6155738
+    },
+    {
+      "number": 14,
+      "title": "Why do we treat autoimmune hepatitis with immunomodulators? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-do-we-treat-autoimmune-hepatitis-immunomodulators",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Patients with AIH range from being asymptomatic with abnormal liver tests (typically with hepatocellular injury evidenced by elevations in aspartate aminotransferase [AST] and alanine aminotransferase [ALT]) to having acute liver failure. Symptoms00458-4/fulltext \"Opens a page in a new window.\") do ",
+      "score": 0.42605945
+    },
+    {
+      "number": 15,
+      "title": "Causes | Background information | Jaundice in adults - CKS - NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/jaundice-in-adults/background-information/causes",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "12 to 39% of people with AIH are asymptomatic at diagnosis, which may occur following incidental findings of abnormal liver function tests. Bloods",
+      "score": 0.34946668
+    },
+    {
+      "number": 16,
+      "title": "[PDF] Neonatal jaundice - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/cg98/update/CG98/documents/neonatal-jaundice-prepublication-check-full-guideline2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "resulted in 9 (5.8%) babies being referred on for further 34 investigation. Clinical examination identified one case of hepatoblastoma, and ultimately led 35 to the detection of trisomy 9p. Abnormal results for liver function tests identified one baby 36 with giant cell hepatitis. Three cases of G-6",
+      "score": 0.21138462
+    },
+    {
+      "number": 17,
+      "title": "The clinical phenotypes of autoimmune hepatitis: A comprehensive review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0896841115300512",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Practice guidelines EASL Clinical Practical Guidelines on the management of acute (fulminant) liver failure Journal of Hepatology \u2022 Volume 66 \u2022 2017  Show abstract The term acute liver failure (ALF) is frequently applied as a generic expression to describe patients presenting with or developing an a",
+      "score": 0.3713423
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] 202293Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2014/202293Orig1s000OtherR.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "discontinued and what other drugs might have been given the patient. Therefore, a potential diagnosis has to be inferred on the background of extremely skimpy data. Comment: Based on data made available, I infer that the patient\u2019s abnormal liver chemistries were probably due to biliary tree disease,",
+      "score": 0.5585443
+    },
+    {
+      "number": 2,
+      "title": "Evaluation of Abnormal Liver Biochemical Test Results",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0016508526002398",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Liver biochemical and function tests\u2014alanine aminotransferase, aspartate aminotransferase, alkaline phosphatase, bilirubin, prothrombin time, and albumin\u2014are used to screen and identify people with acute and chronic liver disease. Elevations in alanine aminotransferase and aspartate aminotransferase",
+      "score": 0.6301622
+    },
+    {
+      "number": 3,
+      "title": "ACG Clinical Guideline: Diagnosis and Management... - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/10.14309/ajg.0000000000001259~acg-clinical-guideline-diagnosis-and-management-of",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### _Key concepts_\n\n   1. Accurate clinical history related to medication exposure and the onset of liver test abnormalities should be obtained when DILI is suspected.\n\n   2. DILI is a diagnosis of exclusion, and thus, appropriate competing etiologies should be excluded in a systematic fashion.\n\n   ",
+      "score": 0.6244086
+    },
+    {
+      "number": 4,
+      "title": "Evaluation and management of abnormal liver... - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cld/fulltext/2023/06000/evaluation_and_management_of_abnormal_liver.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Cholestatic and hepatocellular liver enzyme patterns can be suggestive of specific diagnoses, demonstrate a relatively nonspecific mixed liver enzyme pattern.",
+      "score": 0.6219319
+    },
+    {
+      "number": 5,
+      "title": "Liver Function Test - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/liver-function-test",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Pattern of liver test abnormalities in cholestasis\n\nLiver disease is often reflected by elevation in liver enzymes and/or liver function. The term liver function test is a misnomer, because these tests do not reflect liver function and may be abnormal in conditions unrelated to liver diseases. L",
+      "score": 0.53648347
+    },
+    {
+      "number": 6,
+      "title": "Clinical Approach to the Patient With Abnormal Liver Test Results - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025619611632825",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Thus, the initial decision to evaluate an abnormal liver chemistry further and the choice of testing desired should be dictated by the clinical scenario. The physician must realize that all liver chemistry abnormalities are not indicative of progressive chronic liver disease, yet must also appreciat",
+      "score": 0.5253938
+    },
+    {
+      "number": 7,
+      "title": "Management of asymptomatic patients with abnormal liver function tests - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620525003085",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Hepatol\n\n### Autoimmune serology testing in clinical practice: an updated roadmap for the diagnosis of autoimmune hepatitis\n\n### Eur J Intern Med\n\n### Autoantibodies and defined target autoantigens in autoimmune hepatitis: an overview\n\n### Eur J Intern Med\n\n### Evaluation of abnormal liver-enz",
+      "score": 0.52378637
+    },
+    {
+      "number": 8,
+      "title": "s Guide to Abnormal Liver Tests - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119802181.ch1",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "In general, serum ALT levels are higher than serum AST in liver diseases, while AST is greater in some cases of alcohol- related injury, steatosis, myopathy,",
+      "score": 0.4558047
+    },
+    {
+      "number": 9,
+      "title": "[PDF] Interpretation of liver function tests",
+      "detail": "cdn.who.int",
+      "url": "https://cdn.who.int/media/docs/default-source/searo/hiv-hepatitis/training-modules/04-liver-function-tests-interpretation.pdf?sfvrsn=6fdf2ee9_2",
+      "authors": "cdn.who.int",
+      "host": "cdn.who.int",
+      "snippet": "25 Deranged LFT LFT derangement Alk phosphatase elevation Bilirubin elevation ALT/AST elevation 3 1 2 Enzyme elevation Approach depends on which test(s) result is/are abnormal Liver function tests have two components: bilirubin and various liver enzymes. For complete and accurate interpretation of L",
+      "score": 0.6755297
+    },
+    {
+      "number": 10,
+      "title": "[PDF] EASL Clinical Practice Guideline: Occupational liver diseases",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2019/09/EASL-CPG-occupational-liver-diseases.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "a. Any one of the following CRITERIA TO DEFINE LIVER INJURY: 1) Alanine aminotransferase (ALT) level \u22655x upper limit of normality (ULN) 2) Alkaline phosphatase (ALP) level \u22652\u0003 ULN (particularly if concomitantly elevated gamma-glutamyl transpeptidase (GGT) in the absence of bone disease) 3) ALT level",
+      "score": 0.5726516
+    },
+    {
+      "number": 11,
+      "title": "[PDF] NAFLD-English-report.pdf - EASL",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2018/10/NAFLD-English-report.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "context (B2) \u2022 In selected patients at high risk of liver disease progression, monitoring should include a repeat liver biopsy after at least 5-year follow-up (C2) Non-invasive testing in paediatric NAFLD The position paper by the European Society for Paediatric Gastroenterology Hepatology and Nutri",
+      "score": 0.23917201
+    },
+    {
+      "number": 12,
+      "title": "[PDF] EASL Clinical Practice Guidelines: Management of cholestatic liver ...",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2018/10/cholestatic-liver-English-report.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "expected in hyper-sensitivity-induced cholestasis, but no relevant con-trolled trials are available on this subject . The outcome of drug-induced cholestatic injury, after with-drawal of the drug, is generally good . Occasionally it is followed by prolonged cholestasis. The prototype drug causing ch",
+      "score": 0.6304352
+    },
+    {
+      "number": 13,
+      "title": "[PDF] EASL Clinical Practice Guidelines: Drug-induced liver injury",
+      "detail": "easl.eu",
+      "url": "https://easl.eu/wp-content/uploads/2019/04/EASL-CPG-Drug-induced-liver-injury-2019-04.pdf",
+      "authors": "easl.eu",
+      "host": "easl.eu",
+      "snippet": "Recommendation \u0002 DILI should be classi\ufb01ed as hepatocellular, cholestatic or mixed according to the pattern of elevation of liver enzymes based on the \ufb01rst set of laboratory tests avail-able in relation to the clinical event. Grade B.\nEvidence: Extrapolation from level 2 studies (prospective cohort s",
+      "score": 0.6155738
+    },
+    {
+      "number": 14,
+      "title": "Why do we treat autoimmune hepatitis with immunomodulators? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-do-we-treat-autoimmune-hepatitis-immunomodulators",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Patients with AIH range from being asymptomatic with abnormal liver tests (typically with hepatocellular injury evidenced by elevations in aspartate aminotransferase [AST] and alanine aminotransferase [ALT]) to having acute liver failure. Symptoms00458-4/fulltext \"Opens a page in a new window.\") do ",
+      "score": 0.42605945
+    },
+    {
+      "number": 15,
+      "title": "Causes | Background information | Jaundice in adults - CKS - NICE",
+      "detail": "cks.nice.org.uk",
+      "url": "https://cks.nice.org.uk/topics/jaundice-in-adults/background-information/causes",
+      "authors": "cks.nice.org.uk",
+      "host": "cks.nice.org.uk",
+      "snippet": "12 to 39% of people with AIH are asymptomatic at diagnosis, which may occur following incidental findings of abnormal liver function tests. Bloods",
+      "score": 0.34946668
+    },
+    {
+      "number": 16,
+      "title": "[PDF] Neonatal jaundice - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/cg98/update/CG98/documents/neonatal-jaundice-prepublication-check-full-guideline2",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "resulted in 9 (5.8%) babies being referred on for further 34 investigation. Clinical examination identified one case of hepatoblastoma, and ultimately led 35 to the detection of trisomy 9p. Abnormal results for liver function tests identified one baby 36 with giant cell hepatitis. Three cases of G-6",
+      "score": 0.21138462
+    },
+    {
+      "number": 17,
+      "title": "The clinical phenotypes of autoimmune hepatitis: A comprehensive review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0896841115300512",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Practice guidelines EASL Clinical Practical Guidelines on the management of acute (fulminant) liver failure Journal of Hepatology \u2022 Volume 66 \u2022 2017  Show abstract The term acute liver failure (ALF) is frequently applied as a generic expression to describe patients presenting with or developing an a",
+      "score": 0.3713423
+    }
+  ],
+  "publishedAt": "2026-09-15T21:00:36.900074+00:00",
+  "updatedAt": "2026-09-15T21:00:36.900074+00:00",
+  "readingMinutes": 6,
+  "slug": "abnormal-liver-test-patterns"
+}

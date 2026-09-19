@@ -78,26 +78,9 @@ const ClinicalArticlesModal = ({ isPresented, onDismiss, onSelectArticle, theme 
     const loadArticles = async () => {
       try {
         setIsLoading(true);
-        const supabaseUrl = import.meta?.env?.VITE_SUPABASE_URL || 'https://shwitfgtpfszjjoczbxp.supabase.co';
-
-        // Try Supabase first
-        const supabaseIndexUrl = `${supabaseUrl}/storage/v1/object/public/articles/index.json`;
-        console.log('🔍 Fetching articles from Supabase:', supabaseIndexUrl);
-
-        let response = await fetch(supabaseIndexUrl);
-        console.log('📡 Supabase response status:', response.status, response.statusText);
-
-        // If Supabase fails, try local fallback
+        const response = await fetch('/generated_articles/index.json');
         if (!response.ok) {
-          console.log('⚠️ Supabase fetch failed, trying local fallback...');
-          const localIndexUrl = '/generated_articles/index.json';
-          console.log('🔍 Fetching articles from local:', localIndexUrl);
-          response = await fetch(localIndexUrl);
-          console.log('📡 Local response status:', response.status, response.statusText);
-
-          if (!response.ok) {
-            throw new Error(`Failed to load articles from both Supabase and local (HTTP ${response.status})`);
-          }
+          throw new Error(`Failed to load the clinical library (HTTP ${response.status})`);
         }
 
         const data = await response.json();

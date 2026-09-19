@@ -13,8 +13,337 @@
     }
   ],
   "rewrites": [
-    { "source": "/articles", "destination": "/articles/index.html" },
-    { "source": "/articles/:slug", "destination": "/articles/:slug/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/articles/abdominal-wall-hernias-repair-techniques-and-prevention-of-recurrence",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/acute-abdomen-diagnostic-approach-and-imaging-choices",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/acute-ischemic-stroke-triage-thrombolysis-and-thrombectomy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/acute-respiratory-failure-oxygenation-strategies-and-escalation-of-care",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/adolescent-depression-and-suicide-prevention-evidence-based-multi-tier-strategies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/adrenal-incidentalomas-biochemical-workup-and-surgical-indications",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/antimicrobial-prophylaxis-for-surgery-in-immunocompromised-patients",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/anxiety-disorders-integrating-pharmacologic-and-cognitive-behavioral-strategies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/approach-to-abnormal-liver-function-tests-lfts",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/approach-to-fever-without-an-identifiable-source-fws-in-children",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/approach-to-syncope-bedside-diagnosis-and-risk-stratification",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/approach-to-unintentional-weight-loss-in-adults",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/ards-management-prone-positioning-ecmo-and-adjunctive-therapies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/asthma-management-biologics-and-step-up-therapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/atrial-fibrillation-in-2025-rate-vs-rhythm-control",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/brain-death-determination-and-ethical-considerations",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/burnout-and-moral-injury-in-healthcare-professionals-epidemiology-drivers-and-interventions",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/cancer-pain-management-multimodal-multidisciplinary-strategies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/community-acquired-pneumonia-in-adults-empiric-therapy-and-optimal-duration",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/cost-conscious-care-and-value-based-medicine-clinically-focused-guide",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/delirium-in-hospitalized-adults-prevention-and-treatment",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/delirium-versus-dementia-rapid-bedside-differentiation",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/developmental-delay-evaluation-and-early-intervention",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/diagnosis-and-management-of-type-2-diabetes-mellitus",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/diagnosis-and-treatment-of-pulmonary-embolism-in-hemodynamically-stable-patients",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/diagnostic-reasoning-and-common-cognitive-biases-in-medicine",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/differentiating-migraine-tension-type-and-secondary-headaches",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/eating-disorders-medical-stabilization-and-multidisciplinary-care",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/endocarditis-diagnostic-criteria-and-surgical-indications",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/enhanced-recovery-after-surgery-eras-implementation-outcomes-and-practical-playbook",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/evaluation-and-management-of-chest-pain-in-the-emergency-department",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/evaluation-of-hemoptysis-in-the-inpatient-setting",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/evidence-based-management-of-chronic-pain",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/evidence-based-management-of-osteomyelitis-in-diabetic-foot-infections",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/fluid-and-electrolyte-management-in-surgical-patients",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/genetic-testing-and-targeted-therapy-in-solid-tumors",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/guillain-barr-syndrome-gbs-and-other-acute-demyelinating-neuropathies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/hepatitis-b-and-c-management-in-2025-guideline-driven-elimination-focused-care",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/hiv-infection-initial-evaluation-and-antiretroviral-therapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/hospital-acquired-infections-antimicrobial-stewardship-principles",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/hypertension-management-2024-2025-guideline-updates-and-therapeutic-sequencing",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/immunization-schedule-updates-and-contraindications-rapid-clinical-brief",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/lipid-management-in-secondary-prevention-beyond-statins",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/long-covid-and-post-infectious-pulmonary-syndromes-prevalence-phenotypes-and-management",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/major-depressive-disorder-diagnosis-and-first-line-pharmacotherapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/management-of-heart-failure-with-preserved-ejection-fraction-hfpef",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/management-of-postoperative-ileus-and-small-bowel-obstruction",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/mechanical-ventilation-lung-protective-settings-and-evidence-based-weaning",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/meningitis-and-encephalitis-empiric-coverage-and-adjunctive-therapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/mood-stabilization-and-maintenance-therapy-in-bipolar-disorder",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/myocarditis-and-pericarditis-following-viral-infection-or-vaccination-incidence-risk-modifiers-and-clinical-pearls",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/neonatal-jaundice-differential-diagnosis-and-management",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/neurologic-complications-of-systemic-illness-and-critical-care",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/nutritional-optimization-in-surgical-patients-practical-evidence-informed-guidance",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/obstructive-sleep-apnea-diagnosis-cardiovascular-risk-and-treatment-adherence",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/optimizing-anticoagulation-at-the-intersection-of-renal-impairment-and-obesity",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/parkinson-disease-pharmacologic-management-and-timing-of-deep-brain-stimulation",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/pediatric-asthma-management-and-adherence-evidence-based-strategies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/pediatric-diabetic-ketoacidosis-high-yield-management-pearls",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/pediatric-seizures-initial-management-and-prognosis",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/perioperative-management-of-antiplatelet-and-anticoagulant-therapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/perioperative-risk-assessment-and-optimization",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/pharmacologic-and-non-pharmacologic-management-of-copd-exacerbations",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/polycystic-ovary-syndrome-metabolic-burden-and-reproductive-consequences",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/polypharmacy-and-deprescribing-in-older-adults",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/post-traumatic-stress-disorder-recognition-and-treatment",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/preoperative-cardiac-evaluation-before-non-cardiac-surgery",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/preventive-care-and-cancer-screening-2024-2025-updates-and-practical-takeaways",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/secondary-stroke-prevention-antithrombotic-and-lipid-lowering-therapy",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/seizure-management-in-adults-initial-evaluation-and-long-term-treatment",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/sepsis-recognition-and-early-goal-directed-therapy-2025-update",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/sglt2-inhibitors-in-heart-failure-regardless-of-diabetes-status",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/sleep-disorders-insomnia-management-with-circadian-rhythm-focused-strategies",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/substance-use-disorders-medication-assisted-treatment-updates",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/suicide-risk-assessment-and-safety-planning-in-clinical-care",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/surgical-site-infections-prevention-and-management",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/thyroid-nodules-and-differentiated-thyroid-cancer-evaluation-and-follow-up",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/trauma-resuscitation-updates-in-damage-control-surgery-dcs-and-resuscitation-dcr",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles/venous-thromboembolism-diagnosis-and-anticoagulation-management",
+      "destination": "/api/retired-article"
+    },
+    {
+      "source": "/articles",
+      "destination": "/articles/index.html"
+    },
+    {
+      "source": "/articles/specialty/:specialty",
+      "destination": "/articles/specialty/:specialty/index.html"
+    },
+    {
+      "source": "/articles/:slug",
+      "destination": "/articles/:slug/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

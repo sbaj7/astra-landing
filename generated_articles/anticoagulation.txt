@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Thrombosis management",
+  "title": "Anticoagulation",
+  "summary": "Select anticoagulant therapy by indication and the clinical setting that changes net benefit: bleeding urgency, valve status, antiphospholipid syndrome, hepatic function, cancer, and treatment duration. Use drug-specific assays and antidotes only when results will change immediate management.",
+  "seoDescription": "A physician-focused approach to anticoagulant selection, monitoring, reversal, and high-risk exceptions in atrial fibrillation and venous thromboembolism.",
+  "clinicalQuestion": "How should clinicians select, monitor, interrupt, and reverse anticoagulation across common and high-risk clinical settings?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "direct oral anticoagulants",
+    "warfarin",
+    "venous thromboembolism",
+    "atrial fibrillation",
+    "anticoagulant reversal",
+    "antiphospholipid syndrome",
+    "cirrhosis"
+  ],
+  "keyTakeaways": [
+    "For atrial fibrillation, DOACs are preferred over warfarin except with moderate-to-severe mitral stenosis or a mechanical heart valve. [14]",
+    "Treat confirmed proximal DVT or pulmonary embolism with anticoagulation for at least 3 months; reassess extended therapy against recurrence and bleeding risk. [21][20]",
+    "Use idarucizumab for dabigatran reversal and andexanet alfa for apixaban- or rivaroxaban-associated urgent reversal; delayed dabigatran rebound can occur. [1][2]",
+    "Avoid DOACs for mechanical heart valves and favor vitamin K antagonists for thrombotic antiphospholipid syndrome, particularly after arterial events. [16][19][24]",
+    "In cirrhosis with acute DVT or PE, DOACs or LMWH/VKA are options in Child-Pugh A or B; use LMWH alone or bridge to VKA in Child-Pugh C. [9]"
+  ],
+  "sections": [
+    {
+      "id": "choose-the-anticoagulant",
+      "eyebrow": "Initial selection",
+      "heading": "Choose therapy by indication and exclusion phenotype",
+      "intro": "Start with the thrombotic indication, then identify conditions in which DOAC evidence or safety is limited.",
+      "paragraphs": [
+        "For stroke prevention in atrial fibrillation, use a DOAC rather than warfarin in most patients. Select warfarin instead when the patient has moderate-to-severe mitral stenosis or a mechanical heart valve. [14] Mechanical valves require lifelong anticoagulation, and DOACs have not been approved for this indication. [15][16]",
+        "For acute proximal DVT or PE, initiate therapeutic anticoagulation and treat for at least 3 months. Obtain baseline complete blood count, renal function, hepatic function, PT, and aPTT, but do not delay anticoagulation while awaiting these results; review abnormalities within 24 hours of starting interim therapeutic therapy. [21] At the 3-month decision point, weigh recurrence risk against bleeding risk and patient preference rather than treating anticoagulation as a cure for VTE. [20][21]",
+        "Choose warfarin rather than rivaroxaban for thrombotic antiphospholipid syndrome. In a randomized comparison, rivaroxaban 20 mg daily did not meet noninferiority versus vitamin K antagonist therapy, and recurrent arterial thrombosis and stroke were more frequent with rivaroxaban. [24] This concern is greatest after arterial thrombosis and supports avoiding DOAC substitution in this phenotype. [17][24]"
+      ],
+      "bullets": [
+        "Use DOACs as the default oral strategy for most atrial fibrillation and VTE indications, provided there is no mechanical valve, moderate-to-severe mitral stenosis, thrombotic antiphospholipid syndrome, or advanced hepatic disease requiring an alternate approach. [14][17]",
+        "Before committing to extended VTE therapy, reassess active cancer, prior gastrointestinal bleeding or stroke, comorbidity burden, age, and concurrent antithrombotic drugs. Major bleeding risk rises approximately 1.5-fold per 10 years of age and about twofold with active cancer. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Anticoagulant selection pivots by clinical setting. [9][14][16][17][24]",
+        "columns": [
+          "Clinical setting",
+          "Preferred direction",
+          "Decision-changing exception"
+        ],
+        "rows": [
+          [
+            "Atrial fibrillation without major valvular exclusion",
+            "DOAC favored over warfarin. [14]",
+            "Use warfarin with moderate-to-severe mitral stenosis or a mechanical heart valve. [14]"
+          ],
+          [
+            "Mechanical heart valve",
+            "Lifelong warfarin-based anticoagulation. [15][16]",
+            "Do not use DOACs; they are not approved and are discouraged because of inferior thromboembolic protection concerns. [16][19]"
+          ],
+          [
+            "Thrombotic antiphospholipid syndrome",
+            "Vitamin K antagonist favored. [17][24]",
+            "Avoid rivaroxaban after arterial thrombosis or stroke risk phenotypes. [24]"
+          ],
+          [
+            "Acute DVT or PE with Child-Pugh A or B cirrhosis",
+            "DOAC or LMWH/VKA is acceptable. [9]",
+            "Confirm hepatic severity before selecting a DOAC. [9]"
+          ],
+          [
+            "Acute DVT or PE with Child-Pugh C cirrhosis",
+            "LMWH alone, or bridge to VKA if baseline INR is normal. [9]",
+            "Evidence for DOAC use is inadequate in this setting. [9][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "special-populations",
+      "eyebrow": "High-risk phenotypes",
+      "heading": "Modify anticoagulation for cirrhosis and active cancer",
+      "intro": "Neither cirrhosis nor cancer should be treated as a simple binary contraindication to anticoagulation.",
+      "paragraphs": [
+        "Cirrhosis is associated with thrombotic as well as bleeding risk. In Child-Pugh A or B cirrhosis with atrial fibrillation, use standard-dose DOAC therapy according to cardiology guidance used in patients without liver disease. [9] In Child-Pugh C cirrhosis, evidence is insufficient to define the benefit-risk balance of anticoagulation for atrial fibrillation; avoid assuming that an elevated baseline INR provides protection from thrombosis. [9]",
+        "For cirrhosis-associated portal vein thrombosis, anticoagulate symptomatic PVT. Consider anticoagulation for asymptomatic PVT that is progressing, and continue extended therapy in liver-transplant candidates with PVT. [9] This separates incidental stable PVT from symptomatic or progressive disease in which preventing extension or preserving transplant options changes management. [9]",
+        "For cancer-associated thrombosis, LMWH and DOACs are preferred treatment strategies, but selection requires an active review of anticancer-drug interactions, platelet count, and bleeding vulnerability. [10] Active cancer increases major bleeding risk during anticoagulation by approximately twofold, so repeat the bleeding-risk assessment when chemotherapy, thrombocytopenia, renal impairment, invasive procedures, or antiplatelet therapy are introduced. [10][20]"
+      ],
+      "bullets": [
+        "Do not withhold anticoagulation for confirmed acute DVT or PE solely because cirrhosis is present; stratify by Child-Pugh class and indication. [9]",
+        "For cancer-associated thrombosis, explicitly check for DOAC drug-drug interactions and thrombocytopenia before choosing a DOAC over LMWH. [10]",
+        "For AF in Child-Pugh C cirrhosis, recognize that the anticoagulation decision remains uncertain and requires individualized thrombotic and bleeding assessment. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Cirrhosis-specific anticoagulation decisions. [9]",
+        "columns": [
+          "Scenario",
+          "Action",
+          "Rationale for escalation or alternate therapy"
+        ],
+        "rows": [
+          [
+            "AF with Child-Pugh A or B cirrhosis",
+            "Use standard-dose DOAC treatment consistent with usual cardiology recommendations. [9]",
+            "Available guidance supports this approach in compensated or moderately impaired liver disease. [9]"
+          ],
+          [
+            "AF with Child-Pugh C cirrhosis",
+            "Individualize; evidence is inadequate to establish benefit-risk balance. [9]",
+            "Do not extrapolate recommendations for Child-Pugh A or B to Child-Pugh C. [9]"
+          ],
+          [
+            "Symptomatic PVT",
+            "Anticoagulate. [9]",
+            "Symptoms identify a treatment indication. [9]"
+          ],
+          [
+            "Asymptomatic progressive PVT",
+            "Consider anticoagulation. [9]",
+            "Progression changes the balance toward preventing further thrombus extension. [9]"
+          ],
+          [
+            "PVT in liver-transplant candidate",
+            "Continue extended anticoagulation. [9]",
+            "PVT has direct transplant-planning implications. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "laboratory-assessment",
+      "eyebrow": "Testing",
+      "heading": "Order anticoagulant testing only when the result changes immediate care",
+      "intro": "Routine coagulation testing is not a substitute for drug-specific assessment of DOAC exposure.",
+      "paragraphs": [
+        "Do not use INR to quantify DOAC effect. If a clinically consequential question exists—serious bleeding, suspected overdose, thrombosis while treated, renal or hepatic insufficiency, or a potential drug interaction—order an assay matched to the agent. [3] For dabigatran, diluted thrombin time and ecarin clotting time are sensitive and respond linearly across therapeutic plasma concentrations. [3]",
+        "For unfractionated heparin, use the institutionally validated aPTT or anti-Xa monitoring protocol rather than interpreting a single result without clinical context. A therapeutic anti-Xa range of 0.5 to 1.2 IU/mL is cited, but major bleeding can occur despite a therapeutic aPTT; older age, female sex, lower weight, renal dysfunction, recent surgery or trauma, hepatic dysfunction, malignancy, low baseline hemoglobin, and concomitant antithrombotic therapy increase risk. [3]",
+        "When considering thrombophilia evaluation after VTE, do not test after a provoked DVT or PE. If an unprovoked DVT or PE is being considered for anticoagulation discontinuation, consider antiphospholipid antibody testing; anticoagulants can affect the assays, so obtain specialist input on timing and interpretation. [21]"
+      ],
+      "bullets": [
+        "Order baseline CBC, renal and hepatic function, PT, and aPTT when initiating interim therapeutic anticoagulation for suspected VTE; treatment should not wait for results. [21]",
+        "Use dabigatran-specific dTT or ECT when estimating dabigatran effect will alter reversal, urgent procedural, overdose, or treatment-failure decisions. [3]",
+        "Do not use routine INR testing to infer the intensity of apixaban, edoxaban, rivaroxaban, or dabigatran effect. [3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Testing decisions during anticoagulation. [3][21]",
+        "columns": [
+          "Clinical question",
+          "Test or action",
+          "Interpretation and next step"
+        ],
+        "rows": [
+          [
+            "Baseline assessment before interim therapeutic anticoagulation for suspected VTE",
+            "CBC, renal function, hepatic function, PT, and aPTT. [21]",
+            "Start anticoagulation without waiting; review abnormal results within 24 hours. [21]"
+          ],
+          [
+            "Need to estimate dabigatran effect",
+            "Diluted thrombin time or ecarin clotting time. [3]",
+            "Both are sensitive to dabigatran effect and have linear response across therapeutic concentrations. [3]"
+          ],
+          [
+            "Need to estimate DOAC effect",
+            "Use an agent-appropriate assay rather than INR. [3]",
+            "INR is unsuitable for routine DOAC effect assessment. [3]"
+          ],
+          [
+            "UFH treatment monitoring",
+            "Institution-validated aPTT or anti-Xa protocol. [3]",
+            "A therapeutic result does not exclude major bleeding risk; reassess clinical risk factors. [3]"
+          ],
+          [
+            "Thrombophilia testing after VTE",
+            "Avoid after provoked VTE; consider antiphospholipid antibody testing before stopping therapy after unprovoked VTE. [21]",
+            "Anticoagulants may affect antiphospholipid testing, requiring timing and interpretation support. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "major-bleeding-and-reversal",
+      "eyebrow": "Emergency management",
+      "heading": "Reverse DOACs for life-threatening bleeding or urgent procedures requiring immediate hemostasis",
+      "intro": "Identify the anticoagulant, last dose, renal function, and whether the bleeding or procedure requires urgent reversal.",
+      "paragraphs": [
+        "For dabigatran-associated bleeding requiring reversal, use idarucizumab, the specific reversal agent for dabigatran. [1][2] Continue observation after initial reversal when clinically indicated because delayed rebound of dabigatran anticoagulant effect can occur. [2] A drug-specific dabigatran assay, when rapidly available, can help characterize residual anticoagulant effect, but reversal decisions in severe bleeding should not depend on an assay result that delays hemostatic treatment. [3]",
+        "For apixaban- or rivaroxaban-associated major bleeding requiring urgent reversal, use andexanet alfa, which is approved for these direct factor Xa inhibitors. [1][2] Andexanet is an intravenous agent that binds direct factor Xa inhibitors with high affinity. [23] Do not substitute an agent-specific antidote across mechanism classes: idarucizumab targets dabigatran, whereas andexanet targets direct oral factor Xa inhibitors. [1][2]",
+        "After bleeding control, reassess the original thrombotic indication before deciding whether and when to resume anticoagulation. The early treatment period carries the greatest bleeding-related complication risk, particularly within the first 3 to 6 months, but interruption also restores the patient's underlying thrombotic risk. [14][20]"
+      ],
+      "bullets": [
+        "Dabigatran: idarucizumab for urgent reversal; monitor for delayed rebound effect. [1][2]",
+        "Apixaban or rivaroxaban: andexanet alfa for urgent reversal. [1][2]",
+        "For any severe anticoagulant-associated bleeding, use an agent-specific assay only if it is rapidly available and will change a real-time decision; do not use INR as a DOAC activity measure. [3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Urgent-reversal checklist",
+          "paragraphs": [
+            "Document the exact anticoagulant, time of last dose, renal and hepatic function, bleeding site, hemodynamic status, and need for emergency surgery or invasive hemostasis. Renal and hepatic insufficiency, suspected overdose, drug interactions, serious bleeding, and thrombosis on therapy are the principal settings in which DOAC exposure testing may change management. [3]"
+          ],
+          "bullets": [
+            "Match the antidote to the anticoagulant mechanism: idarucizumab for dabigatran; andexanet alfa for apixaban or rivaroxaban. [1][2]",
+            "If anticoagulation is interrupted, establish a reassessment plan once hemostasis is achieved because VTE recurrence begins when anticoagulation is stopped. [20]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Mechanism-specific DOAC reversal. [1][2][23]",
+        "columns": [
+          "Anticoagulant exposure",
+          "Reversal agent",
+          "Important operational point"
+        ],
+        "rows": [
+          [
+            "Dabigatran",
+            "Idarucizumab. [1][2]",
+            "Watch for delayed rebound anticoagulant effect; dTT or ECT can assess dabigatran effect when results will change care. [2][3]"
+          ],
+          [
+            "Apixaban",
+            "Andexanet alfa. [1][2]",
+            "Andexanet is administered intravenously and targets direct factor Xa inhibitors. [23]"
+          ],
+          [
+            "Rivaroxaban",
+            "Andexanet alfa. [1][2]",
+            "Do not use INR to determine DOAC anticoagulant intensity. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "duration-and-follow-up",
+      "eyebrow": "Longitudinal care",
+      "heading": "Reassess duration, bleeding risk, and treatment failure at every transition",
+      "intro": "Long-term safety depends on recurrent reassessment, not a one-time anticoagulant choice.",
+      "paragraphs": [
+        "At 3 months after proximal DVT or PE, determine whether treatment stops or continues by reassessing whether the event was provoked, whether recurrence risk remains high, and whether bleeding risk has changed. [21][20] Unprovoked proximal DVT, recurrent DVT, and PE historically favor treatment beyond 6 months when major bleeding risk is not prohibitive, but the duration decision should remain individualized. [15][20]",
+        "Assess for factors that alter anticoagulant exposure or safety at each new illness, medication change, hospital admission, and planned procedure: declining renal or hepatic function, potential drug-drug interactions, active cancer therapy, thrombocytopenia, and concurrent antiplatelet or thrombolytic treatment. [3][10] For VKA therapy, INR remains the pharmacodynamic monitoring tool; for DOACs, reserve drug-level or activity testing for clinically consequential scenarios. [3]",
+        "Do not stop oral anticoagulation solely because of repetitive falls when its thromboembolic indication remains strong. Instead, identify modifiable bleeding risks and reassess net clinical benefit, particularly as age, cancer status, renal function, and concomitant antithrombotics evolve. [17][20]"
+      ],
+      "bullets": [
+        "At every VTE duration review, document recurrence risk, major bleeding risk, and patient preference. [20][21]",
+        "Escalate evaluation for apparent treatment failure by confirming adherence, drug interactions, renal and hepatic status, and anticoagulant exposure when appropriate. [3]",
+        "Reassess cancer-associated thrombosis when platelet count, chemotherapy, drug interactions, or bleeding phenotype changes. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up triggers that should change anticoagulation management. [3][10][20][21]",
+        "columns": [
+          "Trigger",
+          "Immediate reassessment",
+          "Management consequence"
+        ],
+        "rows": [
+          [
+            "Three months after confirmed proximal DVT or PE",
+            "Recurrence risk, bleeding risk, and patient preference. [20][21]",
+            "Decide whether to stop or continue secondary prevention. [20][21]"
+          ],
+          [
+            "New renal or hepatic impairment",
+            "Potential DOAC accumulation or altered exposure. [3]",
+            "Use drug-specific assessment when it will change management; reconsider agent choice in severe liver disease. [3][9]"
+          ],
+          [
+            "Thrombosis or serious bleeding while receiving a DOAC",
+            "Adherence, interaction, organ function, and drug exposure. [3]",
+            "Obtain an appropriate drug-specific assay if actionable and revise therapy according to the identified cause. [3]"
+          ],
+          [
+            "New cancer therapy or thrombocytopenia",
+            "Drug interactions and bleeding vulnerability. [10]",
+            "Reevaluate LMWH versus DOAC strategy and overall intensity. [10]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

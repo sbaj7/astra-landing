@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hepatology",
+  "title": "Esophageal Varices",
+  "summary": "Use noninvasive portal-hypertension assessment to identify patients who need endoscopy or preventive therapy, recognize acute variceal hemorrhage early, and combine vasoactive treatment, antibiotics, endoscopic therapy, and timely TIPS referral to reduce failure and recurrent bleeding.",
+  "seoDescription": "Physician guide to esophageal varices: CSPH assessment, endoscopic screening, acute hemorrhage control, TIPS selection, and secondary prevention.",
+  "clinicalQuestion": "How should physicians diagnose, prevent, treat, and monitor esophageal varices in patients with portal hypertension?",
+  "specialty": "Gastroenterology and Hepatology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "esophageal varices",
+    "portal hypertension",
+    "clinically significant portal hypertension",
+    "variceal hemorrhage",
+    "endoscopic variceal ligation",
+    "TIPS",
+    "nonselective beta-blockers"
+  ],
+  "keyTakeaways": [
+    "Clinical decompensation, gastroesophageal varices, portosystemic collaterals, or hepatofugal portal flow establishes clinically significant portal hypertension (CSPH). [1]",
+    "In compensated advanced chronic liver disease, liver stiffness measurement (LSM) of 25 kPa or greater rules in CSPH; LSM of 15 kPa or less with platelets of at least 150 \u00d7 10^9/L rules it out with at least 90% sensitivity and negative predictive value. [1]",
+    "For suspected acute variceal hemorrhage, begin vasoactive therapy, antimicrobial prophylaxis, conservative transfusion, and arrange endoscopy within 12 hours. [13]",
+    "Recommend preemptive TIPS within 72 hours, ideally within 24 hours of index endoscopy, for Child-Turcotte-Pugh class B with score greater than 7 plus active bleeding or class C with score 10-13, absent absolute contraindications. [13]",
+    "After an acute esophageal variceal bleed without TIPS, use indefinite nonselective beta-blocker therapy plus repeated endoscopic variceal ligation every 2-6 weeks for secondary prevention. [13][24]"
+  ],
+  "sections": [
+    {
+      "id": "identify-csph-and-screen",
+      "eyebrow": "Risk Stratification",
+      "heading": "Identify CSPH before deciding on endoscopy or preventive therapy",
+      "intro": "Use objective portal-hypertension evidence rather than cirrhosis alone to direct screening and prophylaxis.",
+      "paragraphs": [
+        "Diagnose CSPH when any overt portal-hypertension manifestation is present: hepatic decompensation, gastroesophageal varices on endoscopy, portosystemic collaterals on imaging, or hepatofugal portal-vein flow. These findings move the patient directly to portal-hypertension management; an invasive pressure measurement is not required for that decision. [1]",
+        "For compensated advanced chronic liver disease without overt portal-hypertension manifestations, combine vibration-controlled transient elastography (VCTE) LSM with platelet count. CSPH is diagnosed by the rule-of-five thresholds: LSM at least 25 kPa regardless of platelets; LSM 20-24.9 kPa with platelets below 150 \u00d7 10^9/L; or LSM 15-19.9 kPa with platelets below 110 \u00d7 10^9/L. [1]",
+        "Rule out CSPH when LSM is 15 kPa or less and platelets are at least 150 \u00d7 10^9/L; this combination has sensitivity and negative predictive value of at least 90%. Do not use an isolated LSM as a variceal-screening substitute: published LSM thresholds for predicting varices have variable specificity, including 43% specificity at 17.6 kPa in hepatitis C-associated cirrhosis. [1][3]"
+      ],
+      "bullets": [
+        "If VCTE/platelet findings are indeterminate, perform upper endoscopy to determine whether varices are present and thereby confirm or exclude CSPH. [1]",
+        "If endoscopy is declined in an indeterminate patient without detected varices, repeat VCTE and platelet count in 1 year; this is particularly reasonable when underlying liver disease is inactive. [1]",
+        "HVPG of 10 mm Hg or greater is the threshold associated with variceal formation; values of 12 mm Hg or greater are associated with increased bleeding risk. [4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Noninvasive CSPH interpretation in compensated advanced chronic liver disease. [1]",
+        "columns": [
+          "VCTE LSM",
+          "Platelet count",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "\u226415 kPa",
+            "\u2265150 \u00d7 10^9/L",
+            "CSPH ruled out with \u226590% sensitivity and negative predictive value. [1]",
+            "Do not use this result alone to diagnose varices; continue liver-disease assessment and reassess if clinical status changes. [1]"
+          ],
+          [
+            "15-19.9 kPa",
+            "<110 \u00d7 10^9/L",
+            "CSPH diagnosed. [1]",
+            "Manage as CSPH; assess for varices and preventive strategy. [1]"
+          ],
+          [
+            "20-24.9 kPa",
+            "<150 \u00d7 10^9/L",
+            "CSPH diagnosed. [1]",
+            "Manage as CSPH; assess for varices and preventive strategy. [1]"
+          ],
+          [
+            "\u226525 kPa",
+            "Any count",
+            "CSPH diagnosed. [1]",
+            "Manage as CSPH; assess for varices and preventive strategy. [1]"
+          ],
+          [
+            "Other combinations",
+            "Other combinations",
+            "Indeterminate rule-of-five result. [1]",
+            "Perform endoscopy; if negative, repeat LSM and platelet count in 1 year. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "endoscopic-risk-and-primary-prevention",
+      "eyebrow": "Prevention",
+      "heading": "Use endoscopy to define bleeding risk and select primary prevention",
+      "intro": "Variceal size, red wale marks, and liver dysfunction determine hemorrhage risk.",
+      "paragraphs": [
+        "Endoscopy remains the definitive test for visualizing esophageal varices and identifying red wale marks. The highest-risk pattern combines larger varices, red wale marks, and advanced hepatic dysfunction; Child-Pugh B/C status and red wale marks independently predict first hemorrhage. [2][8]",
+        "If endoscopy in a patient with indeterminate noninvasive CSPH criteria identifies varices, initiate a nonselective beta-blocker (NSBB). This approach treats the presence of CSPH rather than waiting for a first hemorrhage. [1]",
+        "In compensated cirrhosis with gastric varices, NSBBs should be considered as primary prophylaxis because gastric varices indicate CSPH; the same portal-pressure strategy is relevant when gastroesophageal varices coexist. [16]"
+      ],
+      "bullets": [
+        "Avoid applying VCTE/platelet criteria designed for cirrhosis to suspected porto-sinusoidal vascular disorder (PSVD); patients with PSVD require EGD for variceal screening. [17]",
+        "For PSVD, manage detected esophageal varices with an NSBB or endoscopic variceal ligation (EVL), similarly to cirrhosis-associated varices. [17]",
+        "In PSVD with portal-hypertension features, obtain Doppler ultrasonography every 6 months to detect portal-vein thrombosis; the yearly probability of portal-vein thrombosis is approximately 9%. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Endoscopic and clinical features that increase first-bleed risk. [2][8]",
+        "columns": [
+          "Finding",
+          "Clinical interpretation",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Large varices",
+            "A major predictor of variceal hemorrhage. [8]",
+            "Use primary-prevention therapy rather than observation alone. [1][8]"
+          ],
+          [
+            "Red wale marks",
+            "Predict increased first-bleed risk. [2][8]",
+            "Treat as a high-risk endoscopic feature. [2][8]"
+          ],
+          [
+            "Child-Pugh B/C cirrhosis",
+            "Predicts hemorrhage risk, especially with high-risk endoscopic findings. [2]",
+            "Escalate preventive planning and reassess promptly with decompensation. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-variceal-hemorrhage",
+      "eyebrow": "Emergency Management",
+      "heading": "Treat suspected acute variceal hemorrhage before endoscopic confirmation",
+      "intro": "Control portal pressure and procedure-ready bleeding risk while arranging urgent endoscopy.",
+      "paragraphs": [
+        "For acute upper gastrointestinal bleeding in a patient with portal hypertension or known varices, manage as acute variceal hemorrhage while diagnostic endoscopy is arranged. Initial management includes conservative transfusion, antimicrobial prophylaxis, vasoactive therapy, and endoscopic evaluation within 12 hours. [13]",
+        "Start a vasoactive agent promptly and continue it for 2-5 days. Octreotide and terlipressin are established adjuncts to endoscopic therapy; in a randomized trial of 324 patients receiving endoscopic band ligation, control of bleeding was 92.6% with terlipressin and 95.6% with octreotide, with no significant difference in in-hospital mortality. [5][12]",
+        "Perform EVL as the preferred endoscopic method for esophageal variceal hemostasis. If band ligation is technically difficult, endoscopic injection sclerotherapy is an alternative. Combined endoscopic and pharmacologic treatment is superior to EVL alone for acute variceal bleeding. [5][18]"
+      ],
+      "bullets": [
+        "Do not defer vasoactive therapy until endoscopy when acute variceal bleeding is suspected. [5][13]",
+        "Apply the same initial bundle to bleeding gastric or ectopic varices: vasoactive therapy, antimicrobials, conservative transfusion, and endoscopy within 12 hours. [13]",
+        "If active bleeding cannot be controlled, use a covered expandable esophageal stent where available or balloon tamponade only as a bridge to TIPS. [13]"
+      ],
+      "subsections": [
+        {
+          "heading": "Escalate early to preemptive TIPS",
+          "paragraphs": [
+            "Recommend preemptive TIPS for Child-Turcotte-Pugh class B with score greater than 7 and active bleeding at endoscopy, or class C with score 10-13. Create TIPS within 72 hours and ideally within 24 hours of initial upper endoscopy; transfer to a TIPS-capable center when local access would delay intervention. [13]"
+          ],
+          "bullets": [
+            "Use bridge therapy rather than repeated temporizing endoscopy alone when hemorrhage remains uncontrolled and TIPS is planned. [13]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Acute variceal hemorrhage sequence and escalation thresholds. [5][13]",
+        "columns": [
+          "Clinical point",
+          "Action",
+          "Timing or threshold"
+        ],
+        "rows": [
+          [
+            "Suspected acute variceal hemorrhage",
+            "Begin conservative transfusion, antimicrobial prophylaxis, and vasoactive therapy; arrange upper endoscopy. [13]",
+            "Endoscopy within 12 hours. [13]"
+          ],
+          [
+            "Endoscopic hemostasis",
+            "Perform EVL; use injection sclerotherapy if ligation is technically difficult. [5]",
+            "At index endoscopy. [5]"
+          ],
+          [
+            "High risk of treatment failure",
+            "Recommend preemptive TIPS if CTP B >7 with active bleeding or CTP C 10-13. [13]",
+            "Within 72 hours, ideally within 24 hours of index endoscopy. [13]"
+          ],
+          [
+            "Uncontrolled bleeding",
+            "Use covered esophageal stent or balloon tamponade as bridge to TIPS. [13]",
+            "Immediate rescue bridge. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "secondary-prevention-and-surveillance",
+      "eyebrow": "After Hemostasis",
+      "heading": "Prevent recurrent hemorrhage with NSBB plus serial ligation",
+      "intro": "The default post-bleed strategy is combined portal-pressure reduction and variceal eradication.",
+      "paragraphs": [
+        "For patients who recover from acute variceal hemorrhage without TIPS, initiate an NSBB when vasoactive therapy is discontinued. Use the NSBB indefinitely and combine it with EVL every 2-6 weeks for prevention of recurrent hemorrhage. [13][24]",
+        "Do not substitute EVL alone for combined secondary prevention when an NSBB can be used: adding an NSBB to EVL reduces rebleeding after an acute esophageal variceal bleed. [18]",
+        "After variceal eradication, continue surveillance endoscopy. In patients without varices on an initial endoscopy, a follow-up examination at 2-3 years is described, with a 2-year interval when liver function deteriorates; a change in hepatic function should therefore shorten reassessment rather than waiting for a fixed long interval. [9]"
+      ],
+      "bullets": [
+        "If a patient with prior acute variceal hemorrhage receives TIPS, coordinate follow-up through the portal-hypertension/TIPS program rather than automatically applying the non-TIPS secondary-prevention sequence. [13]",
+        "For PSVD, do not give prophylactic anticoagulation solely to prevent portal-vein thrombosis; treat portal-vein thrombosis according to cirrhosis portal-vein thrombosis management principles if it develops. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-hemorrhage prevention by TIPS status. [13][24]",
+        "columns": [
+          "Patient group",
+          "Secondary-prevention strategy",
+          "Monitoring trigger"
+        ],
+        "rows": [
+          [
+            "Acute variceal hemorrhage without TIPS",
+            "Start NSBB at vasoactive-therapy discontinuation; continue indefinitely plus EVL every 2-6 weeks. [13][24]",
+            "Repeat EVL sessions until eradication and continue endoscopic surveillance. [24]"
+          ],
+          [
+            "Preemptive-TIPS eligible patient",
+            "TIPS within 72 hours, ideally within 24 hours, after initial endoscopy. [13]",
+            "Transfer promptly if TIPS is not locally available. [13]"
+          ],
+          [
+            "No varices on initial endoscopy",
+            "Continue surveillance rather than prophylactic eradication therapy. [9]",
+            "Repeat at 2-3 years; use 2 years if liver function deteriorates. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gastric-and-noncirrhotic-branches",
+      "eyebrow": "Important Exceptions",
+      "heading": "Recognize gastric-varix anatomy and noncirrhotic portal hypertension",
+      "intro": "Anatomic subtype and portal-hypertension cause alter procedural planning and surveillance.",
+      "paragraphs": [
+        "Do not assume all gastroesophageal varices have identical anatomy. GOV2 and isolated gastric varices type 1 (IGV1) involve the fundus and are considered cardiofundal varices; they are associated with portal hypertension from cirrhosis, hepatocellular carcinoma, or portal-vein thrombosis. IGV1 may also arise with splenic-vein thrombosis and splenomegaly. [16]",
+        "Cardiofundal varices account for about 20% of gastric varices and carry higher bleeding risk. Persistent gastric varices after endoscopic management should prompt repeat cross-sectional imaging to guide subsequent therapy; EUS-guided coil therapy is one advanced-endoscopic option used for secondary prophylaxis in multidisciplinary practice. [16]",
+        "When portal hypertension and varices occur without cirrhosis, evaluate for PSVD and associated immunologic disease, prothrombotic or genetic disorders, and drug or toxin exposures. Preserved liver function does not eliminate variceal or portal-vein thrombosis risk, so EGD screening and serial Doppler surveillance remain indicated. [17]"
+      ],
+      "bullets": [
+        "Manage bleeding gastric or ectopic varices initially with the same stabilization bundle as esophageal varices. [13]",
+        "For ectopic-varix rebleeding, endoscopic treatment and endovascular embolization of the feeding vessel with or without TIPS are reported options, but data are limited largely to small retrospective cohorts. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Branches that should change the usual esophageal-varix pathway. [13][16][17]",
+        "columns": [
+          "Branch",
+          "Discriminator",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Cardiofundal gastric varices",
+            "GOV2 or IGV1 in the gastric fundus. [16]",
+            "Consider NSBB primary prophylaxis in compensated cirrhosis; obtain repeat cross-sectional imaging for persistent varices to guide therapy. [16]"
+          ],
+          [
+            "Splenic-vein thrombosis pattern",
+            "IGV1 with splenomegaly can reflect splenic-vein thrombosis. [16]",
+            "Define vascular anatomy before choosing endoscopic or endovascular therapy. [16]"
+          ],
+          [
+            "PSVD/noncirrhotic portal hypertension",
+            "Portal hypertension with absence of cirrhosis. [17]",
+            "Perform EGD rather than applying Baveno noninvasive criteria; screen associated causes and obtain Doppler ultrasound every 6 months. [17]"
+          ],
+          [
+            "Ectopic variceal bleeding",
+            "Varices outside esophagus or proximal stomach. [13]",
+            "Use the acute bleeding bundle, then consider endoscopic therapy or feeding-vessel embolization with or without TIPS. [13]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Request Permissions - Frontline Gastroenterology",
+      "detail": "fg.bmj.com",
+      "url": "https://fg.bmj.com/content/early/2026/06/04/flgastro-2026-103698",
+      "authors": "fg.bmj.com",
+      "host": "fg.bmj.com",
+      "snippet": "\u2192 The presence of clinical decompensation, or gastro-oesophageal varices on endoscopy, or portosystemic collaterals or hepato-fugal/reverse flow in the portal vein on imaging, is sufficient to diagnose CSPH.\n\nBSG position = agree.\n\n\u2192 CSPH can be non-invasively identified by liver stiffness measureme",
+      "score": 0.6279746
+    },
+    {
+      "number": 2,
+      "title": "Esophageal varices - Symptoms, diagnosis and treatment | BMJ ...",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/815",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Diagnosis and surveillance are important aspects of management.\n\nDiagnosis and surveillance are important aspects of management.\n\n### Definition\n\nEsophageal varices are dilated collateral blood vessels that develop as a complication of portal hypertension, usually in the setting of cirrhosis. They c",
+      "score": 0.57064295
+    },
+    {
+      "number": 3,
+      "title": "UK guidelines on the management of variceal haemorrhage in ... - Gut",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/64/11/1680",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "### Diagnosis of gastro-oesophageal varices\n\nUntil recently, endoscopy has been used exclusively to diagnose varices. Non-invasive methods of screening for varices include capsule endoscopy, transient elastography and use of laboratory and radiological findings.\n\n#### Endoscopy [...] alcoholic cirrh",
+      "score": 0.568057
+    },
+    {
+      "number": 4,
+      "title": "Emerging non-invasive approaches for diagnosis and monitoring of ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(18)30232-2/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "An HVPG of 10 mm Hg or more is considered the threshold for the formation of varices, and a value of 12 mm Hg or more is associated with increased risk of",
+      "score": 0.4511578
+    },
+    {
+      "number": 5,
+      "title": "Real-world comparison of terlipressin vs. octreotide as an adjuvant treatment in the management of variceal bleeding | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-56873-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Medical therapy for esophageal variceal bleeding (EVB) is aimed at reducing the splanchnic blood flow and portal pressure. Endoscopic esophageal band ligation is the preferred procedure for achieving hemostasis, and if it proves to be technically difficult, endoscopic injection sclerotherapy (EIS) c",
+      "score": 0.71948266
+    },
+    {
+      "number": 6,
+      "title": "Non invasive evaluation of portal hypertension using ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168827811005538",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by L Castera \u00b7 2012 \u00b7 Cited by 433 \u2014 Esophageal capsule endoscopy for screening and surveillance of esophageal varices in patients with portal hypertension. Hepatology, 47 (2008), pp. 1595-1603.Read more",
+      "score": 0.56920683
+    },
+    {
+      "number": 7,
+      "title": "Non invasive screening and grading of esophageal varices ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378603X14000503",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by SG Moftah \u00b7 2014 \u00b7 Cited by 16 \u2014 ... red signs (i.e., red wale, hemocystic, or cherry red spots). Grade 3 was chosen as a cutoff point to define high-risk varices, based on the ...Read more",
+      "score": 0.5177909
+    },
+    {
+      "number": 8,
+      "title": "Endoscopic diagnosis, grading and predictors of bleeding ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1096288304001020",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JW Ferguson \u00b7 2005 \u00b7 Cited by 11 \u2014 The most important predictors of oesophageal variceal bleeding are variceal size, presence of red wale markings and severity of liver dysfunction as defined by ...Read more",
+      "score": 0.47621483
+    },
+    {
+      "number": 9,
+      "title": "Elastograph - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/elastograph",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "TE may be used to monitor disease progression or regression via serial measurements and to guide further management including treatment. Portal hypertension plays a crucial role in the pathophysiology of most complications of HCV-related cirrhosis. Accordingly, hepatic venous pressure gradient (HVPG",
+      "score": 0.46818325
+    },
+    {
+      "number": 10,
+      "title": "Variceal bleeding: Management options",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjga/fulltext/1995/01010/variceal_bleeding__management_options.6.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Various therapeutic options are available for the management of bleeding esophageal varices. [Table 1] Pharmacological agents, balloon tamponade, endoscopic",
+      "score": 0.769098
+    },
+    {
+      "number": 11,
+      "title": "Vasoactive drugs in the management of acute variceal... : Saudi Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjga/fulltext/1997/03010/vasoactive_drugs_in_the_management_of_acute.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "We conducted a prospective, double-blind, randomized trial, which compared sclerotherapy alone with a combination of sclerotherapy and octreotide for the control of acute variceal bleeding and the prevention of early rebleeding in patients with cirrhosis[38]. A prospective randomized trial comparing",
+      "score": 0.7067782
+    },
+    {
+      "number": 12,
+      "title": "Terlipressin vs. Octreotide in Bleeding... : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/abstract/00000434-200903000-00020~terlipressin-vs-octreotide-in-bleeding-esophageal-varices-as",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Journals\n\n# Terlipressin vs. Octreotide in Bleeding Esophageal Varices as an Adjuvant Therapy With Endoscopic Band Ligation\n\n## A Randomized Double-Blind Placebo-Controlled Trial\n\n### OBJECTIVES:\n\nData are scarce on the head-to-head efficacy of terlipressin and octreotide as an adjuvant therapy to e",
+      "score": 0.6829338
+    },
+    {
+      "number": 13,
+      "title": "AASLD Practice Guidance on risk stratification... : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/10.1097/hep.0000000000000647~aasld-practice-guidance-on-risk-stratification-and",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "8.   In patients with CTP class B score >7 and active bleeding on endoscopy or CTP class C score 10\u201313, preemptive TIPS creation (within 72 hours and ideally within 24 hours of initial upper endoscopy) should be recommended in absence of absolute contraindications to TIPS. If TIPS is not locally ava",
+      "score": 0.63804686
+    },
+    {
+      "number": 14,
+      "title": "Prevention and management of gastroesophageal varices and ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/hep.21907",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Nonselective \u00df-blockers (propranolol, nadolol) reduce portal pressure by ... Complications in the medical treatment of portal hypertension. Portal.",
+      "score": 0.95299
+    },
+    {
+      "number": 15,
+      "title": "Beta\u2010blockers in portal hypertension: new developments and controversies  - Tripathi - 2014 - Liver International - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/liv.12360",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The following terms were used for searching for articles in Pubmed, Web of Knowledge and Medline: propranolol, non-selective beta-blocker, nadolol, carvedilol, portal hypertension, variceal bleeding, randomized, meta-analysis. A meta-analysis of three trials 60, two of which included combination NSB",
+      "score": 0.8830406539130435
+    },
+    {
+      "number": 16,
+      "title": "Endoscopic Management of Gastric Varices | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/endoscopic-management-gastric-varices",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Prevention of Initial Gastric Variceal Bleeding\n\nSince gastric varices are characteristic of clinically significant portal hypertension (CSPH), non-selective beta-blockers should be considered as primary prophylaxis31875-0/abstract) in the setting of compensated cirrhosis to prevent decompensation b",
+      "score": 0.67063034
+    },
+    {
+      "number": 17,
+      "title": "Why is it important to think about non-cirrhotic portal hypertension? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-it-important-think-about-non-cirrhotic-portal",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "How is PSVD managed?\n\nOnce the diagnosis of PSVD is made, patients should be screened for associated immunological diseases, pro- thrombotic or genetic disorders and exposure to drugs/ toxins (Table 1). Patients need to undergo EGD for variceal screening, and the non-invasive criteria proposed by BA",
+      "score": 0.6522641
+    },
+    {
+      "number": 18,
+      "title": "Quick Tips: Esophageal Varices | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/tools-trade/quick-tips-esophageal-varices",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Villanueva C, et al. NEJM 2013 - study of transfusion thresholds in UGIB, showing that a restrictive strategy may be beneficial in patients with cirrhosis\n\nLondong W, et al. Gastroenterology 198980069-1/pdf) - pharmacokinetic study demonstrating the effects of octreotide on gastric acid\n\nGarcia-Tsao",
+      "score": 0.64880073
+    },
+    {
+      "number": 19,
+      "title": "Portal Hypertension Bleeding in Cirrhosis - AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/practice-guidelines/portal-hypertension-bleeding-cirrhosis",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Skip to content\n\n Home\n Practice Guidelines\n\n# Portal Hypertension Bleeding in Cirrhosis\n\nAASLD develops evidence-based practice guidelines and practice guidances which are updated regularly by a multi-disciplinary panel of experts, including hepatologists, and include recommendations of preferred a",
+      "score": 0.6260562
+    },
+    {
+      "number": 20,
+      "title": "Baveno VII - Renewing consensus in portal hypertension - PubMed",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=35120736&link_type=MED&atom=%2Fccjom%2F91%2F7%2F409.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "portal hypertension (CSPH) is associated with differing outcomes, on the course of cirrhosis, Esophageal and Gastric Varices* Liver Cirrhosis / complications",
+      "score": 0.528169
+    },
+    {
+      "number": 21,
+      "title": "Primary Prophylaxis of Variceal Bleeding in Cirrhosis: A Cost",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(97)00079-6/pdf",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Prophylactic endoscopic sclerosing treatment of the the prevention of the firs hemorrhage from esophageal varices: esophageal wall in varices: a propective",
+      "score": 0.42462727
+    },
+    {
+      "number": 22,
+      "title": "Primary prophylaxis for variceal bleeding: Are we there yet ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(05)00351-3/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Randomized study comparing banding and propranolol to prevent initial variceal hemorrhage in cirrhotics with high risk esophageal varices. Gastroenterology",
+      "score": 0.4179133
+    },
+    {
+      "number": 23,
+      "title": "Performance of Baveno VI and Expanded Baveno VI Criteria for ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S1542-3565(19)30494-X/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "We aimed to assess the accuracy of Baveno VI criteria for identification of high-risk varices (HRVs) and varices of any size in patients with",
+      "score": 0.2939975
+    },
+    {
+      "number": 24,
+      "title": "Screening and Surveillance of Varices in Patients With Cirrhosis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S1542-3565(18)30267-2/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "The recommended treatment to prevent recurrent hemorrhage consists of the combination of NSBB (used indefinitely) plus EVL every 2 to 6 weeks",
+      "score": 0.2932835
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Request Permissions - Frontline Gastroenterology",
+      "detail": "fg.bmj.com",
+      "url": "https://fg.bmj.com/content/early/2026/06/04/flgastro-2026-103698",
+      "authors": "fg.bmj.com",
+      "host": "fg.bmj.com",
+      "snippet": "\u2192 The presence of clinical decompensation, or gastro-oesophageal varices on endoscopy, or portosystemic collaterals or hepato-fugal/reverse flow in the portal vein on imaging, is sufficient to diagnose CSPH.\n\nBSG position = agree.\n\n\u2192 CSPH can be non-invasively identified by liver stiffness measureme",
+      "score": 0.6279746
+    },
+    {
+      "number": 2,
+      "title": "Esophageal varices - Symptoms, diagnosis and treatment | BMJ ...",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/815",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Diagnosis and surveillance are important aspects of management.\n\nDiagnosis and surveillance are important aspects of management.\n\n### Definition\n\nEsophageal varices are dilated collateral blood vessels that develop as a complication of portal hypertension, usually in the setting of cirrhosis. They c",
+      "score": 0.57064295
+    },
+    {
+      "number": 3,
+      "title": "UK guidelines on the management of variceal haemorrhage in ... - Gut",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/64/11/1680",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "### Diagnosis of gastro-oesophageal varices\n\nUntil recently, endoscopy has been used exclusively to diagnose varices. Non-invasive methods of screening for varices include capsule endoscopy, transient elastography and use of laboratory and radiological findings.\n\n#### Endoscopy [...] alcoholic cirrh",
+      "score": 0.568057
+    },
+    {
+      "number": 4,
+      "title": "Emerging non-invasive approaches for diagnosis and monitoring of ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(18)30232-2/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "An HVPG of 10 mm Hg or more is considered the threshold for the formation of varices, and a value of 12 mm Hg or more is associated with increased risk of",
+      "score": 0.4511578
+    },
+    {
+      "number": 5,
+      "title": "Real-world comparison of terlipressin vs. octreotide as an adjuvant treatment in the management of variceal bleeding | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-56873-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Medical therapy for esophageal variceal bleeding (EVB) is aimed at reducing the splanchnic blood flow and portal pressure. Endoscopic esophageal band ligation is the preferred procedure for achieving hemostasis, and if it proves to be technically difficult, endoscopic injection sclerotherapy (EIS) c",
+      "score": 0.71948266
+    },
+    {
+      "number": 6,
+      "title": "Non invasive evaluation of portal hypertension using ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0168827811005538",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by L Castera \u00b7 2012 \u00b7 Cited by 433 \u2014 Esophageal capsule endoscopy for screening and surveillance of esophageal varices in patients with portal hypertension. Hepatology, 47 (2008), pp. 1595-1603.Read more",
+      "score": 0.56920683
+    },
+    {
+      "number": 7,
+      "title": "Non invasive screening and grading of esophageal varices ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378603X14000503",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by SG Moftah \u00b7 2014 \u00b7 Cited by 16 \u2014 ... red signs (i.e., red wale, hemocystic, or cherry red spots). Grade 3 was chosen as a cutoff point to define high-risk varices, based on the ...Read more",
+      "score": 0.5177909
+    },
+    {
+      "number": 8,
+      "title": "Endoscopic diagnosis, grading and predictors of bleeding ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1096288304001020",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JW Ferguson \u00b7 2005 \u00b7 Cited by 11 \u2014 The most important predictors of oesophageal variceal bleeding are variceal size, presence of red wale markings and severity of liver dysfunction as defined by ...Read more",
+      "score": 0.47621483
+    },
+    {
+      "number": 9,
+      "title": "Elastograph - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/elastograph",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "TE may be used to monitor disease progression or regression via serial measurements and to guide further management including treatment. Portal hypertension plays a crucial role in the pathophysiology of most complications of HCV-related cirrhosis. Accordingly, hepatic venous pressure gradient (HVPG",
+      "score": 0.46818325
+    },
+    {
+      "number": 10,
+      "title": "Variceal bleeding: Management options",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjga/fulltext/1995/01010/variceal_bleeding__management_options.6.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Various therapeutic options are available for the management of bleeding esophageal varices. [Table 1] Pharmacological agents, balloon tamponade, endoscopic",
+      "score": 0.769098
+    },
+    {
+      "number": 11,
+      "title": "Vasoactive drugs in the management of acute variceal... : Saudi Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjga/fulltext/1997/03010/vasoactive_drugs_in_the_management_of_acute.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "We conducted a prospective, double-blind, randomized trial, which compared sclerotherapy alone with a combination of sclerotherapy and octreotide for the control of acute variceal bleeding and the prevention of early rebleeding in patients with cirrhosis[38]. A prospective randomized trial comparing",
+      "score": 0.7067782
+    },
+    {
+      "number": 12,
+      "title": "Terlipressin vs. Octreotide in Bleeding... : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/abstract/00000434-200903000-00020~terlipressin-vs-octreotide-in-bleeding-esophageal-varices-as",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Journals\n\n# Terlipressin vs. Octreotide in Bleeding Esophageal Varices as an Adjuvant Therapy With Endoscopic Band Ligation\n\n## A Randomized Double-Blind Placebo-Controlled Trial\n\n### OBJECTIVES:\n\nData are scarce on the head-to-head efficacy of terlipressin and octreotide as an adjuvant therapy to e",
+      "score": 0.6829338
+    },
+    {
+      "number": 13,
+      "title": "AASLD Practice Guidance on risk stratification... : Hepatology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/hep/fulltext/10.1097/hep.0000000000000647~aasld-practice-guidance-on-risk-stratification-and",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "8.   In patients with CTP class B score >7 and active bleeding on endoscopy or CTP class C score 10\u201313, preemptive TIPS creation (within 72 hours and ideally within 24 hours of initial upper endoscopy) should be recommended in absence of absolute contraindications to TIPS. If TIPS is not locally ava",
+      "score": 0.63804686
+    },
+    {
+      "number": 14,
+      "title": "Prevention and management of gastroesophageal varices and ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/hep.21907",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Nonselective \u00df-blockers (propranolol, nadolol) reduce portal pressure by ... Complications in the medical treatment of portal hypertension. Portal.",
+      "score": 0.95299
+    },
+    {
+      "number": 15,
+      "title": "Beta\u2010blockers in portal hypertension: new developments and controversies  - Tripathi - 2014 - Liver International - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/liv.12360",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The following terms were used for searching for articles in Pubmed, Web of Knowledge and Medline: propranolol, non-selective beta-blocker, nadolol, carvedilol, portal hypertension, variceal bleeding, randomized, meta-analysis. A meta-analysis of three trials 60, two of which included combination NSB",
+      "score": 0.8830406539130435
+    },
+    {
+      "number": 16,
+      "title": "Endoscopic Management of Gastric Varices | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/clinical-pearls/endoscopic-management-gastric-varices",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Prevention of Initial Gastric Variceal Bleeding\n\nSince gastric varices are characteristic of clinically significant portal hypertension (CSPH), non-selective beta-blockers should be considered as primary prophylaxis31875-0/abstract) in the setting of compensated cirrhosis to prevent decompensation b",
+      "score": 0.67063034
+    },
+    {
+      "number": 17,
+      "title": "Why is it important to think about non-cirrhotic portal hypertension? | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-it-important-think-about-non-cirrhotic-portal",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "How is PSVD managed?\n\nOnce the diagnosis of PSVD is made, patients should be screened for associated immunological diseases, pro- thrombotic or genetic disorders and exposure to drugs/ toxins (Table 1). Patients need to undergo EGD for variceal screening, and the non-invasive criteria proposed by BA",
+      "score": 0.6522641
+    },
+    {
+      "number": 18,
+      "title": "Quick Tips: Esophageal Varices | AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/liver-fellow-network/core-series/tools-trade/quick-tips-esophageal-varices",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Villanueva C, et al. NEJM 2013 - study of transfusion thresholds in UGIB, showing that a restrictive strategy may be beneficial in patients with cirrhosis\n\nLondong W, et al. Gastroenterology 198980069-1/pdf) - pharmacokinetic study demonstrating the effects of octreotide on gastric acid\n\nGarcia-Tsao",
+      "score": 0.64880073
+    },
+    {
+      "number": 19,
+      "title": "Portal Hypertension Bleeding in Cirrhosis - AASLD",
+      "detail": "www.aasld.org",
+      "url": "https://www.aasld.org/practice-guidelines/portal-hypertension-bleeding-cirrhosis",
+      "authors": "www.aasld.org",
+      "host": "www.aasld.org",
+      "snippet": "Skip to content\n\n Home\n Practice Guidelines\n\n# Portal Hypertension Bleeding in Cirrhosis\n\nAASLD develops evidence-based practice guidelines and practice guidances which are updated regularly by a multi-disciplinary panel of experts, including hepatologists, and include recommendations of preferred a",
+      "score": 0.6260562
+    },
+    {
+      "number": 20,
+      "title": "Baveno VII - Renewing consensus in portal hypertension - PubMed",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=35120736&link_type=MED&atom=%2Fccjom%2F91%2F7%2F409.atom",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "portal hypertension (CSPH) is associated with differing outcomes, on the course of cirrhosis, Esophageal and Gastric Varices* Liver Cirrhosis / complications",
+      "score": 0.528169
+    },
+    {
+      "number": 21,
+      "title": "Primary Prophylaxis of Variceal Bleeding in Cirrhosis: A Cost",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(97)00079-6/pdf",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Prophylactic endoscopic sclerosing treatment of the the prevention of the firs hemorrhage from esophageal varices: esophageal wall in varices: a propective",
+      "score": 0.42462727
+    },
+    {
+      "number": 22,
+      "title": "Primary prophylaxis for variceal bleeding: Are we there yet ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(05)00351-3/abstract",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Randomized study comparing banding and propranolol to prevent initial variceal hemorrhage in cirrhotics with high risk esophageal varices. Gastroenterology",
+      "score": 0.4179133
+    },
+    {
+      "number": 23,
+      "title": "Performance of Baveno VI and Expanded Baveno VI Criteria for ...",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S1542-3565(19)30494-X/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "We aimed to assess the accuracy of Baveno VI criteria for identification of high-risk varices (HRVs) and varices of any size in patients with",
+      "score": 0.2939975
+    },
+    {
+      "number": 24,
+      "title": "Screening and Surveillance of Varices in Patients With Cirrhosis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S1542-3565(18)30267-2/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "The recommended treatment to prevent recurrent hemorrhage consists of the combination of NSBB (used indefinitely) plus EVL every 2 to 6 weeks",
+      "score": 0.2932835
+    }
+  ],
+  "publishedAt": "2026-09-16T00:53:30.392447+00:00",
+  "updatedAt": "2026-09-16T00:53:30.392447+00:00",
+  "readingMinutes": 5,
+  "slug": "esophageal-varices"
+}

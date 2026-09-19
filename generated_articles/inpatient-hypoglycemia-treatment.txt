@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hospital Medicine",
+  "title": "Inpatient Hypoglycemia Treatment",
+  "summary": "Treat any inpatient glucose below 70 mg/dL immediately, then identify the medication, nutrition, organ-failure, or acute-illness trigger before recurrence occurs. Route dextrose or glucagon to mental status and enteral access, recheck promptly, revise the causative regimen, and intensify surveillance for prolonged drug-related events.",
+  "seoDescription": "Point-of-care inpatient hypoglycemia treatment: immediate glucose rescue, monitoring, recurrence prevention, and evaluation of medication and illness triggers.",
+  "clinicalQuestion": "How should clinicians rescue, monitor, and prevent recurrent hypoglycemia in hospitalized adults?",
+  "specialty": "Hospital Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "inpatient hypoglycemia",
+    "hospital hypoglycemia protocol",
+    "dextrose treatment",
+    "glucagon",
+    "sulfonylurea hypoglycemia",
+    "insulin-associated hypoglycemia"
+  ],
+  "keyTakeaways": [
+    "Activate a nurse-initiated hypoglycemia protocol at glucose below 70 mg/dL; document the event and review the treatment regimen after every occurrence. [12]",
+    "For an alert patient able to swallow or receiving gastric/NG access, administer 15 g carbohydrate and reassess glucose in 15 minutes. [3][5]",
+    "For impaired consciousness or inability to use the enteral route, use IV dextrose when access is available or 1 mg intramuscular glucagon when it is not. [8][18]",
+    "Persistent or recurrent hypoglycemia after sulfonylurea or long-acting insulin exposure warrants frequent glucose monitoring because hypoglycemia may persist for 24 hours or longer. [20]",
+    "Immediately reconcile insulin, sulfonylureas, nutritional delivery, renal/hepatic function, sepsis, and recent corticosteroid reduction; these findings determine the preventive intervention. [7][20][21][23]"
+  ],
+  "sections": [
+    {
+      "id": "immediate-rescue",
+      "eyebrow": "First Response",
+      "heading": "Treat glucose below 70 mg/dL without waiting for symptoms",
+      "intro": "Use a standardized bedside response and choose the glucose route by consciousness and enteral access.",
+      "paragraphs": [
+        "A bedside glucose value below 70 mg/dL requires immediate treatment under a hospital-wide, nurse-initiated hypoglycemia protocol. Document the episode, including the glucose value, symptoms, treatment, response, and likely precipitant. A value below 70 mg/dL should also trigger clinician review of the glucose-lowering regimen because it predicts subsequent severe hypoglycemia. [12]",
+        "If the patient is awake, can protect the airway, and can swallow, give 15 g rapidly absorbed carbohydrate orally. The same 15-g approach can be delivered through gastric or nasogastric access when available. Recheck point-of-care glucose in 15 minutes and repeat treatment if hypoglycemia persists. [3][5]",
+        "If altered mental status, seizure, unconsciousness, aspiration risk, or NPO status precludes enteral carbohydrate, give IV dextrose if intravenous access is available. If IV access is unavailable, administer glucagon 1 mg intramuscularly. Recommendations commonly cited for unconscious hypoglycemic adults include 25 g IV glucose, historically as 50 mL of D50, or 1 mg IM glucagon. [8][18]"
+      ],
+      "bullets": [
+        "Do not give oral carbohydrate to a patient who cannot safely swallow; use IV dextrose or IM glucagon instead. [8][18]",
+        "Use point-of-care glucose to confirm low CGM alarms before insulin-dose changes or treatment decisions when CGM is used in hospital. [12][18]",
+        "After initial correction, determine whether the patient has received a long-acting insulin or sulfonylurea; a single rescue dose may not prevent recurrence. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immediate route selection for inpatient hypoglycemia. [3][5][8][18]",
+        "columns": [
+          "Clinical state",
+          "Immediate treatment",
+          "Required reassessment"
+        ],
+        "rows": [
+          [
+            "Alert; safe swallow; oral, gastric, or NG access",
+            "15 g rapidly absorbed carbohydrate by oral or enteral route. [3][5]",
+            "Repeat point-of-care glucose in 15 minutes; retreat if still low. [3][5]"
+          ],
+          [
+            "Obtunded, unconscious, seizing, aspiration risk, or unable to swallow; IV access present",
+            "IV dextrose; a commonly recommended adult rescue dose is 25 g, historically 50 mL D50. [8][18]",
+            "Repeat point-of-care glucose within 15-30 minutes to verify correction. [18]"
+          ],
+          [
+            "Unable to swallow and no IV access",
+            "Glucagon 1 mg intramuscularly. [8]",
+            "Obtain IV access and continue point-of-care glucose monitoring; treat recurrent hypoglycemia promptly. [8][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "post-treatment-monitoring",
+      "eyebrow": "After Rescue",
+      "heading": "Monitor for recurrent and prolonged hypoglycemia",
+      "intro": "A corrected bedside value does not establish durable recovery.",
+      "paragraphs": [
+        "Continue frequent point-of-care glucose checks after rescue when the cause can continue lowering glucose, particularly long-acting insulin, sulfonylureas, renal dysfunction, interrupted nutrition, or acute systemic illness. Sulfonylurea- or long-acting insulin-associated hypoglycemia may persist for 24 hours or more and requires both recurrent monitoring and a plan for repeat carbohydrate or dextrose treatment. [20]",
+        "Escalate surveillance when hypoglycemia follows a change in nutrition delivery: new NPO status, reduced oral intake, delayed meals, interruption of enteral feeding or total parenteral nutrition, or discontinuation of IV dextrose. These triggers commonly cause a mismatch between active insulin effect and carbohydrate delivery. [7][23]",
+        "For insulin-treated, noncritically ill adults at high risk for hypoglycemia, real-time CGM with confirmatory bedside glucose for insulin adjustments is an option in hospitals with trained staff and appropriate resources. Treat or adjust insulin from the confirmatory point-of-care value rather than an unverified CGM low. [12]"
+      ],
+      "bullets": [
+        "Track every inpatient hypoglycemia episode at the institutional level and in the medical record. [12]",
+        "Treat the initial event as a safety signal, not an isolated laboratory abnormality; revise the active regimen before the next scheduled glucose-lowering dose. [12]",
+        "When nutritional support is interrupted, immediately reassess active prandial, basal, and correctional insulin exposure rather than waiting for the next routine glucose check. [7][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Features that warrant intensified post-rescue monitoring. [7][20][21][23]",
+        "columns": [
+          "Pattern",
+          "Why recurrence is likely",
+          "Immediate prevention step"
+        ],
+        "rows": [
+          [
+            "Sulfonylurea or long-acting insulin exposure",
+            "Drug-associated hypoglycemia can persist for 24 hours or longer. [20]",
+            "Use frequent point-of-care glucose monitoring and provide repeat carbohydrate or dextrose treatment as needed. [20]"
+          ],
+          [
+            "NPO status, poor intake, delayed meal, or interrupted enteral/parental nutrition",
+            "Active insulin effect may become unmatched to carbohydrate delivery. [7][23]",
+            "Reconcile insulin orders with actual nutrition delivery before further dosing. [7][23]"
+          ],
+          [
+            "Renal, hepatic, cardiac, or systemic critical illness",
+            "Renal failure, hepatic failure, heart failure, sepsis, malignancy, and malnutrition are associated with inpatient hypoglycemia. [20][21][23]",
+            "Increase glucose surveillance and address the precipitating illness while reducing avoidable hypoglycemic exposure. [20][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "identify-the-trigger",
+      "eyebrow": "Cause-Directed Prevention",
+      "heading": "Classify the precipitant before changing the diabetes regimen",
+      "intro": "Medication and nutrition mismatches are common, but spontaneous hypoglycemia requires illness-focused evaluation.",
+      "paragraphs": [
+        "Start with a time-linked medication and nutrition review: compare the glucose nadir with insulin administration, sulfonylurea exposure, correctional insulin, IV insulin used for hyperkalemia, meal intake, NPO orders, enteral feed interruptions, total parenteral nutrition interruption, and recent discontinuation of IV dextrose. Also identify recent corticosteroid dose reduction, which can lower insulin requirements and precipitate hypoglycemia if insulin is not reduced. [7][21][23]",
+        "In patients receiving sulfonylureas, age 65 years or older, estimated GFR at or below 30 mL/min/1.73 m², and concurrent intermediate- or long-acting insulin identify higher risk for sulfonylurea-associated hypoglycemia. In one hospitalized cohort, 19% of sulfonylurea recipients experienced hypoglycemia; rates were 22% with glyburide, 19% with glimepiride, and 16% with glipizide. Avoid or use sulfonylureas cautiously in these high-risk inpatients. [22]",
+        "If no glucose-lowering exposure or nutrition mismatch explains the event, evaluate acute illness and non-diabetic causes. Sepsis, renal impairment, liver failure, heart failure, malignancy, malnutrition, adrenal insufficiency, and alcohol exposure are recognized etiologic branches. The next action is directed testing and treatment for the suspected illness rather than empiric intensification of glucose surveillance alone. [20][21][24]"
+      ],
+      "bullets": [
+        "Hold or reduce the hypoglycemia-producing medication when clinically feasible; reassess every scheduled insulin dose after an event. [6][12]",
+        "Review non-diabetes medications that can contribute to hypoglycemia, including quinolones, clarithromycin, metronidazole, trimethoprim-sulfamethoxazole, quinine, pentamidine, beta-blockers, ACE inhibitors, ARBs, and tramadol. [21]",
+        "When sepsis, organ failure, or malnutrition is present, do not attribute a low glucose solely to diabetes treatment without reviewing the concurrent illness trajectory. [20][21][23]"
+      ],
+      "subsections": [
+        {
+          "heading": "Medication-associated hypoglycemia",
+          "paragraphs": [
+            "Insulin and sulfonylureas are the leading medication exposures to identify. Insulin-related events often follow decreased caloric intake, delayed or missed meals, or failure to reduce dosing after improved clinical status or corticosteroid taper. Sulfonylureas are particularly problematic in older adults, renal impairment, and poor nutritional intake because hypoglycemia can be prolonged. [7][21][22][23]"
+          ],
+          "bullets": [
+            "Check for duplicate insulin orders during transitions between teams or locations; fragmented care can lead to duplicated insulin therapy or failure to stop oral agents. [20]",
+            "If IV insulin was used to treat hyperkalemia, include it in the medication-causality review. [21]"
+          ]
+        },
+        {
+          "heading": "Illness-associated hypoglycemia",
+          "paragraphs": [
+            "Consider spontaneous hypoglycemia when no temporally plausible diabetes medication or nutrition interruption is present. In an emergency-department series, antidiabetes drugs accounted for 73.7% of identified causes, while alcohol, severe infection or sepsis, undernutrition or malabsorption, malignancy, liver dysfunction, heart failure, and adrenal insufficiency were additional etiologies. [24]"
+          ],
+          "bullets": [
+            "Assess for infection or sepsis, hepatic dysfunction, renal dysfunction, heart failure, malnutrition, alcohol exposure, malignancy, and adrenal insufficiency based on the clinical context. [20][21][24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Etiologic branching after an inpatient hypoglycemia event. [7][20][21][22][23][24]",
+        "columns": [
+          "Etiologic branch",
+          "Discriminator",
+          "Action that changes recurrence risk"
+        ],
+        "rows": [
+          [
+            "Insulin–nutrition mismatch",
+            "NPO order, poor intake, missed or delayed meal, or interrupted enteral/parental nutrition after insulin administration. [7][23]",
+            "Reconcile glucose-lowering orders with actual carbohydrate delivery before subsequent dosing. [7][23]"
+          ],
+          [
+            "Sulfonylurea-associated event",
+            "Sulfonylurea exposure, especially age 65 years or older, eGFR at or below 30 mL/min/1.73 m², or concurrent intermediate-/long-acting insulin. [22]",
+            "Avoid or use the sulfonylurea cautiously; continue frequent glucose monitoring for prolonged recurrence. [20][22]"
+          ],
+          [
+            "Changing insulin requirement",
+            "Improved illness, declining glucose levels, or corticosteroid dose reduction without insulin adjustment. [7][21]",
+            "Reduce insulin exposure based on the new clinical and nutritional state. [7][21]"
+          ],
+          [
+            "Spontaneous illness-associated event",
+            "No explanatory hypoglycemic therapy exposure; sepsis, organ failure, malnutrition, alcohol exposure, malignancy, or adrenal insufficiency present. [20][21][24]",
+            "Treat and evaluate the suspected underlying disorder while maintaining frequent glucose monitoring. [20][21][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "prevent-system-errors",
+      "eyebrow": "Inpatient Safety",
+      "heading": "Build prevention into orders, handoffs, and glucose monitoring",
+      "intro": "Hypoglycemia prevention depends on anticipating predictable changes in intake and insulin requirement.",
+      "paragraphs": [
+        "Use a standardized institutional protocol at glucose below 70 mg/dL, but pair it with an individualized prevention plan for each patient. Insulin is a high-alert medication, and breakdowns in communication between teams can produce duplicate insulin orders or continued oral hypoglycemic therapy despite changing clinical conditions. [12][20]",
+        "Avoid sliding-scale insulin alone in long-term care settings and simplify regimens for older adults with multiple comorbidities, cognitive impairment, or functional dependence when hypoglycemia avoidance is the priority. Conservative long-term care targets described in current reviews are fasting glucose 100-140 mg/dL and postprandial glucose 140-180 mg/dL; individualized HbA1c targets may range from less than 7.5% in healthy functional adults to 8.0%-8.5% in those with major comorbidity or functional dependence. [3]",
+        "At each transition of care—NPO status, procedure transport, feed interruption, steroid taper, renal deterioration, or discharge—reconcile the active insulin and noninsulin medication plan with current carbohydrate exposure and renal function. This is particularly important for patients with prior inpatient hypoglycemia, which is itself a risk marker for recurrent events. [7][20][21][23]"
+      ],
+      "bullets": [
+        "Use a documented handoff for insulin administration when patients leave the unit for testing or procedures that may delay meals. [7]",
+        "Avoid relying on sliding-scale insulin alone for long-term care residents; simplify treatment to reduce hypoglycemia risk. [3]",
+        "For a patient with recurrent lows, reassess whether CGM plus confirmatory point-of-care testing is feasible in the institutional setting. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "High-yield prevention checkpoints for hospitalized patients receiving glucose-lowering therapy. [7][12][20][21][23]",
+        "columns": [
+          "Checkpoint",
+          "What to verify",
+          "Reason for action"
+        ],
+        "rows": [
+          [
+            "Before the next dose after glucose below 70 mg/dL",
+            "Active insulin, sulfonylurea, noninsulin glucose-lowering medications, and nutrition orders. [6][12]",
+            "A low glucose should prompt regimen review to prevent progression to severe hypoglycemia. [12]"
+          ],
+          [
+            "At NPO order or feeding interruption",
+            "Whether prandial insulin, basal insulin, correctional insulin, IV dextrose, enteral feeding, or parenteral nutrition requires modification. [7][23]",
+            "Nutrition interruption and missed meals are common triggers for inpatient hypoglycemia. [7][23]"
+          ],
+          [
+            "With renal decline or severe acute illness",
+            "Glucose trend, prior lows, insulin exposure, and sulfonylurea use. [20][21][22]",
+            "Renal failure, sepsis, and multiorgan disease increase hypoglycemia risk. [20][21][22]"
+          ],
+          [
+            "During steroid reduction",
+            "Whether insulin dosing still matches the reduced glucocorticoid effect. [7][21]",
+            "Corticosteroid dose reduction can precipitate hypoglycemia without insulin adjustment. [7][21]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

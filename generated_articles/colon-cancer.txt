@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Gastrointestinal Oncology",
+  "title": "Colon Cancer",
+  "summary": "Colon cancer management hinges on complete colonoscopic and radiographic staging, high-quality surgical resection, pathology-directed adjuvant therapy, and molecular stratification when advanced disease is present. This guide prioritizes decisions that alter resectability, recurrence risk, systemic treatment, and surveillance.",
+  "seoDescription": "Point-of-care guide to colon cancer staging, surgery, adjuvant therapy, molecular testing, metastatic treatment selection, and survivorship surveillance.",
+  "clinicalQuestion": "How should physicians stage, treat, molecularly profile, and surveil patients with colon cancer across localized and metastatic disease?",
+  "specialty": "Medical Oncology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "colon cancer",
+    "adjuvant chemotherapy",
+    "FOLFOX",
+    "CAPOX",
+    "metastatic colorectal cancer",
+    "MSI-H",
+    "dMMR",
+    "RAS testing",
+    "BRAF V600E",
+    "ctDNA"
+  ],
+  "keyTakeaways": [
+    "Initial colon cancer evaluation should include colonoscopy with tissue diagnosis, baseline CEA, and chest-abdomen-pelvis CT to define local extent and distant metastatic disease. [14][5]",
+    "Resectable nonmetastatic colon cancer is generally managed with oncologic colectomy; adjuvant treatment is determined by pathologic stage and adverse prognostic features. [14][9]",
+    "Oxaliplatin-based adjuvant therapy with FOLFOX or CAPOX is the standard approach for stage III colon cancer, with treatment duration individualized by recurrence risk and cumulative neuropathy risk. [14][4]",
+    "For stage II disease, discuss fluoropyrimidine-based therapy or oxaliplatin-containing treatment only when poor prognostic features materially increase recurrence risk. [14]",
+    "In metastatic disease, establish MMR/MSI, RAS, BRAF, and other actionable biomarkers before selecting immunotherapy, anti-EGFR therapy, or biomarker-directed treatment. [2][3][17][21]",
+    "Do not use ctDNA as a replacement for standard staging or surveillance; its principal current role is risk stratification and minimal residual disease assessment while management integration continues to evolve. [6][17]"
+  ],
+  "sections": [
+    {
+      "id": "initial-staging-and-resectability",
+      "eyebrow": "Initial Evaluation",
+      "heading": "Complete staging before committing to surgery or systemic therapy",
+      "intro": "Separate localized, potentially curable disease from metastatic disease at presentation.",
+      "paragraphs": [
+        "After histologic confirmation on colonoscopy, obtain a baseline CEA and contrast-enhanced CT of the chest, abdomen, and pelvis. These studies establish a pre-treatment disease burden, identify liver, lung, peritoneal, or nodal metastases, and provide a reference for subsequent treatment response or recurrence assessment. [14][5]",
+        "Refer patients with obstruction, perforation, uncontrolled bleeding, or impending perforation for urgent surgical assessment rather than delaying management for a complete elective staging sequence. In clinically stable patients, use multidisciplinary review to determine whether imaging suggests resectable localized disease, potentially resectable metastatic disease, or unresectable metastatic disease requiring systemic therapy first. [9][21]",
+        "Document the preoperative CEA even when imaging suggests localized disease because postoperative interpretation depends on whether the marker was elevated at diagnosis. Colonoscopy also identifies synchronous lesions and permits biopsy, but a lesion that cannot be traversed should not prevent cross-sectional staging or surgical planning. [14][5]"
+      ],
+      "bullets": [
+        "Obtain chest-abdomen-pelvis CT and CEA after diagnosis. [14]",
+        "Use pathology from the diagnostic biopsy to confirm adenocarcinoma before definitive oncologic treatment. [5]",
+        "Escalate early to a colorectal surgeon and medical oncologist when CT shows T3-T4 or node-positive disease, suspected adjacent-organ involvement, or metastases. [16][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial findings that redirect colon cancer management. [14][16][21]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Localized primary tumor without distant metastasis",
+            "Potentially curable nonmetastatic colon cancer. [14]",
+            "Plan oncologic colectomy and determine adjuvant therapy from final pathology. [14]"
+          ],
+          [
+            "T3-T4 and/or N0-N2 disease on preoperative assessment",
+            "Locally advanced disease may warrant multidisciplinary discussion of perioperative strategy. [16]",
+            "Assess suitability for neoadjuvant FOLFOX or CAPOX in selected high-risk patients versus immediate surgery. [16]"
+          ],
+          [
+            "Distant metastatic disease",
+            "Requires assessment of metastatic burden, symptoms, resectability, and tumor biomarkers. [21]",
+            "Obtain molecular profiling and select systemic therapy; consider metastasis-directed surgery only in selected potentially curable cases. [9][21]"
+          ],
+          [
+            "Obstruction, perforation, or uncontrolled bleeding",
+            "Acute complication can supersede elective sequencing. [9]",
+            "Urgent colorectal surgical evaluation and stabilization; then complete staging and systemic-treatment planning. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surgery-and-pathologic-risk",
+      "eyebrow": "Localized Disease",
+      "heading": "Use surgical pathology to determine recurrence risk and adjuvant treatment",
+      "intro": "Final pathologic stage—not imaging alone—drives postoperative systemic-treatment decisions.",
+      "paragraphs": [
+        "For resectable nonmetastatic colon cancer, oncologic colectomy is the central curative intervention. The resection specimen establishes pT category, nodal status, margin status, grade, and other adverse pathologic features that distinguish stage I disease requiring observation from stage II disease requiring individualized risk discussion and stage III disease generally requiring adjuvant chemotherapy. [14][9]",
+        "Stage II is the principal adjuvant-treatment gray zone. In high-risk stage II disease, discuss adjuvant chemotherapy and offer fluoropyrimidine monotherapy or oxaliplatin-based treatment according to the number and type of poor prognostic features, expected absolute benefit, postoperative recovery, and the risk of oxaliplatin neurotoxicity. [14]",
+        "Stage III colon cancer should generally receive an oxaliplatin-containing adjuvant regimen, typically FOLFOX or CAPOX. Treatment duration should be individualized by recurrence risk and neurotoxicity tradeoff; the duration question is especially relevant because cumulative oxaliplatin exposure causes neuropathy. [14][4][8]",
+        "When adjuvant chemotherapy is selected, initiate it once the patient is medically able to receive treatment, ideally no later than 6 to 8 weeks after surgery. Use postoperative functional status, wound healing, renal function, residual neuropathy, and patient goals to decide whether a fluoropyrimidine-only approach is preferable to oxaliplatin exposure. [6][14]"
+      ],
+      "bullets": [
+        "Stage I after adequate resection: surveillance rather than routine adjuvant chemotherapy. [14]",
+        "High-risk stage II: explicitly discuss adjuvant fluoropyrimidine alone versus oxaliplatin-based therapy; avoid presenting treatment as mandatory for all stage II tumors. [14]",
+        "Stage III: offer FOLFOX or CAPOX unless postoperative condition, competing illness, or toxicity risk makes oxaliplatin inappropriate. [14][4]",
+        "Before oxaliplatin, record baseline sensory symptoms and reassess cumulative neuropathy during therapy. [8]"
+      ],
+      "subsections": [
+        {
+          "heading": "When to consider neoadjuvant chemotherapy",
+          "paragraphs": [
+            "For selected locally advanced T3-T4, N0-N2 colon cancers—particularly tumors with high-risk features on preoperative assessment—multidisciplinary teams may consider neoadjuvant FOLFOX or CAPOX. FOxTROT and OPTICAL reported increased complete resection rates and fewer high-stage tumors with preoperative chemotherapy; this approach should be reserved for patients in whom imaging and surgical review support a meaningful resectability or downstaging advantage. [16]"
+          ],
+          "bullets": [
+            "Do not apply rectal-cancer chemoradiation paradigms routinely to colon primaries. [9]",
+            "Use neoadjuvant systemic therapy only after confirming that the lesion is colon rather than rectal cancer and that surgery is not urgently required for a complication. [16][9]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Postoperative treatment branch points in nonmetastatic colon cancer. [14][4][6]",
+        "columns": [
+          "Pathologic setting",
+          "Default management",
+          "Decision modifier"
+        ],
+        "rows": [
+          [
+            "Stage I",
+            "Observation after curative resection. [14]",
+            "Confirm adequate surgical pathology and establish surveillance plan. [14]"
+          ],
+          [
+            "Average-risk stage II",
+            "Observation is generally appropriate; adjuvant therapy requires individualized benefit-risk discussion. [14]",
+            "Avoid automatic oxaliplatin exposure when adverse-risk features are absent. [14]"
+          ],
+          [
+            "High-risk stage II",
+            "Discuss fluoropyrimidine monotherapy or FOLFOX/CAPOX. [14]",
+            "Balance poor prognostic features against neuropathy risk and fitness for treatment. [14][8]"
+          ],
+          [
+            "Stage III",
+            "FOLFOX or CAPOX adjuvant chemotherapy. [14][4]",
+            "Individualize duration according to recurrence risk and cumulative oxaliplatin neurotoxicity. [4][8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "molecular-testing-and-metastatic-treatment",
+      "eyebrow": "Advanced Disease",
+      "heading": "Profile metastatic tumors before choosing first-line systemic therapy",
+      "intro": "Biomarker results can redirect therapy from cytotoxic chemotherapy to immunotherapy or targeted treatment.",
+      "paragraphs": [
+        "For metastatic colon cancer, obtain tumor testing for mismatch-repair deficiency or microsatellite instability, RAS alterations, and BRAF V600E before selecting biologic therapy. Additional actionable markers increasingly include HER2, KRAS G12C, POLE/POLD1, and other molecular alterations that can determine eligibility for biomarker-directed treatment or clinical trials. [17][3][21]",
+        "dMMR/MSI-H status is a treatment-defining result in metastatic colorectal cancer. It occurs in approximately 3% to 5% of metastatic cases and identifies a population for which immunotherapy is central to systemic-treatment selection; dMMR/MSI-H in an early-stage tumor also should prompt evaluation of whether the biology is sporadic MLH1 silencing or an inherited Lynch syndrome pathway. [19][17]",
+        "Do not use cetuximab or panitumumab in RAS-mutated metastatic disease. Among RAS-wild-type tumors, anti-EGFR outcomes are more favorable for left-sided than right-sided primaries, while BRAF mutation is associated with low anti-EGFR response; integrate primary sidedness and BRAF status rather than treating RAS wild type as a sufficient selection criterion. [2]",
+        "For unresectable metastatic disease, choose initial therapy according to tumor biology, disease tempo, symptom burden, organ function, prior oxaliplatin exposure, performance status, and whether tumor shrinkage could make metastases resectable. Subsequent-line planning should preserve options for anti-EGFR therapy, biomarker-directed drugs, immunotherapy for dMMR/MSI-H disease, and clinical trials. [21][3]"
+      ],
+      "bullets": [
+        "dMMR/MSI-H metastatic tumor: prioritize immunotherapy-based treatment selection. [17][19]",
+        "RAS-mutated tumor: exclude anti-EGFR antibodies. [2]",
+        "RAS-wild-type, left-sided primary: anti-EGFR therapy is more favorable than in right-sided disease. [2]",
+        "BRAF-mutated tumor: anticipate reduced anti-EGFR responsiveness and consider BRAF-directed strategies as disease sequencing evolves. [2][17]",
+        "HER2-positive or other molecularly selected solid tumors: evaluate eligibility for approved tumor-agnostic or colorectal-specific targeted therapy, including trastuzumab deruxtecan where applicable. [3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Metastatic disease with potential for curative local treatment",
+          "paragraphs": [
+            "Do not label all stage IV disease uniformly incurable before a multidisciplinary resectability review. Selected patients can achieve long-term survival or cure with chemotherapy plus surgery when metastatic disease is amenable to complete local treatment; systemic therapy may be used to test tumor biology, downstage disease, or control occult systemic disease before resection. [9][21]"
+          ],
+          "bullets": [
+            "Refer liver-limited, lung-limited, or otherwise potentially completely treatable metastatic disease to a multidisciplinary team before committing to indefinite palliative therapy. [9][21]",
+            "Reassess resectability after systemic treatment rather than assuming baseline unresectability is permanent. [9][21]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Molecular results that change systemic-treatment selection in metastatic colon cancer. [2][3][17][19][21]",
+        "columns": [
+          "Biomarker or clinical feature",
+          "Treatment implication",
+          "Practical caution"
+        ],
+        "rows": [
+          [
+            "dMMR/MSI-H",
+            "Select immunotherapy as a major treatment pathway. [17][19]",
+            "Assess for possible Lynch syndrome versus sporadic MLH1-related biology when clinically indicated. [19]"
+          ],
+          [
+            "RAS mutation",
+            "Do not use cetuximab or panitumumab. [2]",
+            "Use chemotherapy-based and other biomarker-directed options as appropriate. [2][21]"
+          ],
+          [
+            "RAS wild type, left-sided primary",
+            "Anti-EGFR therapy has more favorable outcomes than in right-sided tumors. [2]",
+            "Interpret alongside BRAF status, treatment line, and treatment objective. [2]"
+          ],
+          [
+            "BRAF mutation",
+            "Expect low anti-EGFR response and consider BRAF-directed sequencing. [2][17]",
+            "Do not infer treatment sensitivity from RAS status alone. [2]"
+          ],
+          [
+            "HER2-positive tumor",
+            "Evaluate HER2-directed treatment eligibility, including trastuzumab deruxtecan in applicable unresectable or metastatic solid tumors. [3]",
+            "Confirm assay-defined HER2 positivity and account for prior treatment exposure. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ctdna-and-posttreatment-surveillance",
+      "eyebrow": "Monitoring",
+      "heading": "Use surveillance to detect treatable recurrence and manage treatment sequelae",
+      "intro": "Pair standard surveillance with active assessment for neuropathy, fatigue, and psychosocial morbidity.",
+      "paragraphs": [
+        "After curative-intent therapy, surveillance should be structured around recurrence detection, colonoscopic identification of metachronous neoplasia, and monitoring of late surgical and treatment effects. Major U.S. and international organizations provide survivorship guidance, although specific schedules vary because high-quality trial evidence for individual follow-up components remains limited. [8][20]",
+        "Trend CEA only in the context of the baseline value, serial measurements, imaging, symptoms, and examination; an isolated abnormal CEA should prompt confirmation and directed evaluation rather than automatic attribution to recurrence. Use surveillance imaging and colonoscopy according to the treating oncology team's stage-specific protocol, particularly when detection of recurrence could lead to resection or other potentially curative local therapy. [8][20]",
+        "ctDNA can identify molecular residual disease, recurrence risk, treatment response, and clonal evolution, but it should not replace conventional pathologic staging, radiographic staging, or standard postoperative surveillance. A positive result indicates higher-risk biology, whereas a negative test does not exclude residual disease because low tumor burden and low input-molecule numbers can limit assay sensitivity. [6][17]",
+        "During and after oxaliplatin exposure, assess sensory neuropathy at each treatment review and document functional consequences such as impaired gait, dexterity, or cold-triggered symptoms. Survivorship assessments should also address fatigue, anxiety, depression, bowel dysfunction, sexual dysfunction, and treatment-related pain rather than limiting follow-up to recurrence testing. [8][20]"
+      ],
+      "bullets": [
+        "Use a survivorship care plan that identifies the treating team, recurrence-monitoring strategy, prior chemotherapy exposure, and persistent toxicities. [20]",
+        "Interpret ctDNA as a risk-stratification tool, not a stand-alone mandate to intensify or withhold treatment outside an evidence-based management pathway. [6][17]",
+        "Evaluate persistent neuropathy after oxaliplatin because it can remain a clinically meaningful survivorship problem. [8]",
+        "Review psychosocial symptoms and functional limitations during routine surveillance visits. [8][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-treatment monitoring tools and their decision roles. [6][8][17][20]",
+        "columns": [
+          "Tool",
+          "Primary use",
+          "Interpretive limitation"
+        ],
+        "rows": [
+          [
+            "CEA",
+            "Serial marker assessment when interpreted with imaging and clinical context. [8][20]",
+            "A single abnormal result is not diagnostic of recurrence. [8]"
+          ],
+          [
+            "Cross-sectional imaging",
+            "Evaluate suspected or asymptomatic recurrence when finding treatable disease would alter management. [8][20]",
+            "Use in a stage-specific surveillance strategy rather than as an isolated test. [8]"
+          ],
+          [
+            "Colonoscopy",
+            "Detect synchronous or metachronous neoplasia and evaluate the remaining colon. [5][20]",
+            "An incomplete diagnostic examination may require postoperative completion. [5]"
+          ],
+          [
+            "ctDNA",
+            "Minimal residual disease and recurrence-risk stratification. [6][17]",
+            "Low disease burden can reduce sensitivity; it does not replace standard surveillance. [6]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should ctDNA determine adjuvant chemotherapy after colon cancer resection?",
+      "answer": "ctDNA provides prognostic information about molecular residual disease and recurrence risk, but assay sensitivity is limited at low tumor burden and it should not replace standard pathologic risk assessment or conventional surveillance. [6][17]"
+    },
+    {
+      "question": "When should a dMMR colon cancer prompt hereditary cancer evaluation?",
+      "answer": "dMMR may result from germline mismatch-repair defects causing Lynch syndrome or from sporadic MLH1 hypermethylation. Distinguish these pathways when clinical and tumor findings raise concern for inherited predisposition, because the result affects counseling and tailored screening. [19][4][5]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

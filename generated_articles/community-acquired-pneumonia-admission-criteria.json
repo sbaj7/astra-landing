@@ -1,0 +1,760 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary and Critical Care",
+  "title": "Community-Acquired Pneumonia Admission Criteria",
+  "summary": "Determine CAP disposition by separating outpatient suitability from physiologic instability, then use PSI for mortality-oriented site-of-care assessment and ATS/IDSA severe-CAP criteria to identify patients needing ICU-level monitoring, ventilatory support, or vasopressors.",
+  "seoDescription": "Adult community-acquired pneumonia admission criteria: outpatient selection, PSI and CURB-65 use, severe CAP criteria, and ICU disposition triggers.",
+  "clinicalQuestion": "Which adults with community-acquired pneumonia require hospital admission or ICU-level care?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "community-acquired pneumonia",
+    "CAP admission criteria",
+    "pneumonia severity index",
+    "PSI",
+    "CURB-65",
+    "severe community-acquired pneumonia",
+    "ICU admission"
+  ],
+  "keyTakeaways": [
+    "Use a validated prognostic rule, preferably the Pneumonia Severity Index (PSI), together with clinical judgment to guide initial inpatient versus outpatient disposition for adults with CAP.[19]",
+    "Do not use PSI or CURB-65 alone to exclude impending respiratory or circulatory failure; both have limited discrimination for ICU admission, with estimated AUCs of 0.69.[23][24]",
+    "Admit directly to an ICU when CAP causes respiratory failure requiring mechanical ventilation or septic shock requiring vasopressors; each is an ATS/IDSA major severity criterion.[6][22]",
+    "In patients without a major criterion, three or more ATS/IDSA minor criteria should prompt ICU admission consideration or a monitored setting with immediate escalation capability.[20][22]",
+    "Reassess early deterioration after initial placement: transfer to ICU during the first 24 to 48 hours after hospitalization is associated with greater morbidity and mortality than direct ICU admission.[13]"
+  ],
+  "sections": [
+    {
+      "id": "initial-disposition-decision",
+      "eyebrow": "First decision",
+      "heading": "Choose outpatient, inpatient, or ICU care from physiologic risk",
+      "intro": "Disposition should precede regimen selection because site of care determines monitoring and rescue capacity.",
+      "paragraphs": [
+        "For adults with radiographically confirmed or strongly suspected CAP, make the first disposition decision from acute respiratory and circulatory support needs. Respiratory failure requiring mechanical ventilation and septic shock requiring vasopressors define severe CAP and warrant ICU-level care rather than routine ward admission.[6][22]",
+        "For patients without immediate ventilatory or vasopressor requirements, apply a validated prognostic rule plus bedside judgment to determine whether outpatient treatment is reasonable. The ATS/IDSA guideline recommends the PSI over CURB-65 to help determine need for hospitalization because PSI provides more comprehensive mortality risk stratification, although it requires more clinical variables.[8][19]",
+        "Do not let a low mortality score override a trajectory suggesting imminent decompensation. PSI and CURB-65 were designed primarily around short-term mortality and have limited ability to identify patients likely to deteriorate on a general ward; their estimated AUC for ICU-admission prediction is 0.69.[20][23][24]"
+      ],
+      "bullets": [
+        "Direct ICU admission: mechanical ventilation requirement or septic shock requiring vasopressors.[6][22]",
+        "Hospital admission: clinical judgment indicates outpatient care is unsafe after PSI-informed risk assessment.[19]",
+        "Outpatient pathway: only after PSI-informed assessment and clinical judgment support nonhospital management; reassess the plan if hypoxemia, respiratory distress, or hemodynamic instability develops.[19][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition framework for adults with CAP.[19][22]",
+        "columns": [
+          "Disposition",
+          "Decisive finding",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "ICU",
+            "Mechanical ventilation requirement or septic shock requiring vasopressors.[22]",
+            "Provide ICU-level respiratory and hemodynamic support.[6][22]"
+          ],
+          [
+            "ICU consideration or monitored higher-acuity care",
+            "At least 3 ATS/IDSA minor criteria without a major criterion.[20][22]",
+            "Escalate monitoring and reassess frequently for respiratory or circulatory failure.[20][22]"
+          ],
+          [
+            "Inpatient ward",
+            "No severe-CAP criteria but PSI-informed assessment or clinical judgment does not support outpatient management.[19]",
+            "Admit with a defined reassessment plan for early deterioration.[13][19]"
+          ],
+          [
+            "Outpatient management",
+            "PSI-informed assessment and clinical judgment support care outside the hospital.[19]",
+            "Ensure the patient does not have instability requiring hospital-level monitoring or support.[19][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-scores-for-hospital-admission",
+      "eyebrow": "Hospitalization risk",
+      "heading": "Use PSI for admission decisions; use CURB-65 as a rapid bedside screen",
+      "intro": "Mortality-risk tools and ICU-triage tools answer different questions.",
+      "paragraphs": [
+        "Use PSI as the preferred structured tool when deciding outpatient versus inpatient care. It incorporates multiple clinical parameters and provides comprehensive risk stratification, whereas CURB-65 is shorter and more feasible in emergency settings.[8][19] A score should support, not replace, judgment about oxygenation, respiratory work, shock, comorbidity, functional reserve, and the ability to execute outpatient treatment.",
+        "CURB-65 is a practical rapid assessment tool, but its low score does not reliably rule out need for higher-acuity care. In a meta-analysis, CURB-65 group 0 had the lowest risk of ICU admission, with a negative likelihood ratio of 0.14 (95% CI, 0.06-0.34); however, broader evidence shows PSI and CURB-65 have similar, limited discrimination for ICU admission across cutoffs.[18][23]",
+        "A CURB-65 score of 4 was presented as supporting inpatient therapy in an ACEP clinical review; that same vignette had four severe-CAP minor criteria, illustrating why a mortality score should be paired with ATS/IDSA severity assessment rather than used in isolation.[20]"
+      ],
+      "bullets": [
+        "Use PSI primarily for mortality-oriented site-of-care assessment and hospitalization decisions.[8][19]",
+        "Use CURB-65 when a rapid ED screen is needed, but add direct assessment for respiratory failure, shock, and ATS/IDSA minor criteria.[8][20][23]",
+        "Use ATS/IDSA severe-CAP criteria rather than PSI or CURB-65 alone when the question is ICU-level monitoring or organ-support risk.[20][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "What each CAP severity tool should change in disposition planning.[8][19][23]",
+        "columns": [
+          "Tool",
+          "Best use",
+          "Disposition limitation"
+        ],
+        "rows": [
+          [
+            "PSI",
+            "Comprehensive initial risk stratification for outpatient versus inpatient decision-making.[8][19]",
+            "Requires multiple variables and is not sufficient alone for identifying patients who may deteriorate on a ward.[8][20]"
+          ],
+          [
+            "CURB-65",
+            "Rapid emergency-setting mortality-risk assessment.[8]",
+            "Limited prediction of ICU admission; a low score does not exclude severe physiologic deterioration.[23][24]"
+          ],
+          [
+            "ATS/IDSA severe-CAP criteria",
+            "Identification of patients who need ICU-level support or consideration of ICU admission.[20][22]",
+            "Apply alongside clinical judgment because prediction rules are aids to, not substitutes for, clinical judgment.[23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ats-idsa-severe-cap-criteria",
+      "eyebrow": "Critical care triage",
+      "heading": "Apply ATS/IDSA severe-CAP criteria before assigning a general ward bed",
+      "intro": "One major criterion establishes severe CAP; otherwise count minor criteria.",
+      "paragraphs": [
+        "Severe CAP is present with either one major criterion or at least three minor criteria. The two major criteria are septic shock with need for vasopressors and respiratory failure requiring mechanical ventilation.[6][22] These findings should trigger direct ICU admission because they identify active organ-support needs, not merely increased mortality risk.",
+        "For patients not yet receiving invasive mechanical ventilation or vasopressors, count the nine ATS/IDSA minor criteria. Three or more should warrant consideration of ICU admission.[20][22] This threshold is particularly useful when respiratory or hemodynamic failure is evolving but has not yet met a major criterion.",
+        "Do not delay escalation while awaiting a score if the patient is worsening. Late ICU transfer, particularly within the first 24 to 48 hours after hospital admission, has been associated with greater morbidity and mortality than direct ICU admission.[13]"
+      ],
+      "bullets": [
+        "Major criterion: respiratory failure requiring mechanical ventilation.[22]",
+        "Major criterion: septic shock requiring vasopressors.[22]",
+        "Minor-criteria threshold: 3 or more criteria warrants ICU-admission consideration.[20][22]"
+      ],
+      "subsections": [
+        {
+          "heading": "ATS/IDSA minor criteria",
+          "paragraphs": [
+            "Count the following at presentation or during reassessment: respiratory rate of at least 30 breaths/min; PaO2/FiO2 ratio of 250 or less; multilobar infiltrates; confusion or disorientation; blood urea nitrogen of at least 20 mg/dL; leukopenia with white blood cell count below 4,000 cells/mm3; thrombocytopenia with platelet count below 100,000 cells/mm3; hypothermia with core temperature below 36 degrees C; and hypotension requiring aggressive fluid resuscitation.[22]"
+          ],
+          "bullets": [
+            "A respiratory rate of at least 30 breaths/min is both a minor severe-CAP criterion and a trigger to assess gas exchange and escalation needs.[20][22]",
+            "Multilobar infiltrates count as a minor criterion and should raise concern for progressive severe lung injury when paired with hypoxemia or organ dysfunction.[6][22]",
+            "BUN of at least 20 mg/dL, leukopenia below 4,000 cells/mm3, or platelets below 100,000 cells/mm3 each contributes one minor criterion.[22]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "ATS/IDSA criteria defining severe CAP.[6][22]",
+        "columns": [
+          "Criterion class",
+          "Finding",
+          "Disposition implication"
+        ],
+        "rows": [
+          [
+            "Major",
+            "Septic shock requiring vasopressors.[22]",
+            "Direct ICU-level care.[6][22]"
+          ],
+          [
+            "Major",
+            "Respiratory failure requiring mechanical ventilation.[22]",
+            "Direct ICU-level care.[6][22]"
+          ],
+          [
+            "Minor",
+            "Respiratory rate at least 30 breaths/min; PaO2/FiO2 ratio 250 or less; multilobar infiltrates; confusion/disorientation.[22]",
+            "Count toward the 3-minor-criterion threshold for ICU consideration.[20][22]"
+          ],
+          [
+            "Minor",
+            "BUN at least 20 mg/dL; WBC below 4,000 cells/mm3; platelets below 100,000 cells/mm3; core temperature below 36 degrees C; hypotension requiring aggressive fluid resuscitation.[22]",
+            "Count toward the 3-minor-criterion threshold for ICU consideration.[20][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-data-that-change-disposition",
+      "eyebrow": "Targeted workup",
+      "heading": "Obtain disposition-changing data early and repeat assessment when risk evolves",
+      "intro": "Testing should clarify hypoxemia, organ dysfunction, and radiographic extent before final bed assignment.",
+      "paragraphs": [
+        "Obtain chest radiography to document infiltrates and identify multilobar disease, which is an ATS/IDSA minor criterion.[22] If clinical suspicion remains high despite a negative chest radiograph, obtain chest CT rather than dismissing CAP solely on the initial radiograph.[22]",
+        "Measure oxygenation and obtain the data needed to calculate PaO2/FiO2 when severe disease is possible; a ratio of 250 or less is an ATS/IDSA minor criterion.[22] In a patient with high respiratory rate and low oxygen saturation, an ACEP review specifically recommends arterial blood gas and lactate measurement to define respiratory and circulatory risk.[20]",
+        "Obtain CBC, BUN, platelet count, temperature, mental-status assessment, and blood pressure during the initial evaluation because abnormal values directly populate the ATS/IDSA minor criteria.[22] Recalculate severity after fluid resuscitation or clinical change: persistent hypotension requiring aggressive fluid resuscitation remains a minor criterion, while progression to vasopressor-dependent shock is a major criterion requiring ICU care.[22]"
+      ],
+      "bullets": [
+        "Negative chest radiograph with persistent high clinical suspicion: obtain chest CT.[22]",
+        "Hypoxemia or tachypnea with concern for severe CAP: assess arterial oxygenation; PaO2/FiO2 of 250 or less is a minor criterion.[20][22]",
+        "Suspected shock: determine whether fluid-responsive hypotension has progressed to vasopressor requirement, which changes classification from a minor to a major criterion.[22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tests and observations that alter CAP disposition.[20][22]",
+        "columns": [
+          "Assessment",
+          "Actionable result",
+          "What changes"
+        ],
+        "rows": [
+          [
+            "Chest radiography or chest CT",
+            "Multilobar infiltrates; CT when high suspicion persists despite negative radiograph.[22]",
+            "Multilobar disease adds one ATS/IDSA minor criterion; CT can establish an alternative basis for CAP management when radiography is negative.[22]"
+          ],
+          [
+            "Arterial oxygenation",
+            "PaO2/FiO2 ratio 250 or less.[22]",
+            "Adds one minor severe-CAP criterion and supports higher-acuity evaluation.[22]"
+          ],
+          [
+            "Hemodynamic assessment",
+            "Hypotension requiring aggressive fluid resuscitation, or shock requiring vasopressors.[22]",
+            "The first is a minor criterion; vasopressor requirement is a major criterion requiring ICU-level care.[22]"
+          ],
+          [
+            "CBC, BUN, temperature, mentation",
+            "WBC below 4,000 cells/mm3, platelets below 100,000 cells/mm3, BUN at least 20 mg/dL, core temperature below 36 degrees C, or confusion/disorientation.[22]",
+            "Each finding adds one minor criterion toward ICU-admission consideration.[22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reassessment-and-escalation",
+      "eyebrow": "Avoid delayed ICU transfer",
+      "heading": "Set explicit escalation triggers after initial admission",
+      "intro": "A ward disposition is provisional when severe-CAP features are near threshold or worsening.",
+      "paragraphs": [
+        "Patients with one or two ATS/IDSA minor criteria require serial reassessment rather than reassurance from an initially non-ICU disposition. A third minor criterion should prompt ICU-admission consideration, while mechanical ventilation or vasopressor dependence mandates ICU-level care.[20][22]",
+        "Escalate immediately for increasing respiratory support needs, development of mechanical ventilation requirement, or shock progressing to vasopressor use.[6][22] Bilateral or multilobar radiographic opacities accompanying severe hypoxemia and multiorgan dysfunction are concerning markers of progressive severe lung injury and should lower the threshold for ICU-level surveillance.[6]",
+        "Keep the purpose of each score distinct: PSI and CURB-65 inform prognosis and initial site-of-care decisions, whereas ATS/IDSA criteria identify intensive monitoring and organ-support risk.[8][19][20][23] This combined approach is preferable to assigning a patient to a ward solely because a mortality score is low."
+      ],
+      "bullets": [
+        "Reclassify as severe CAP immediately if vasopressor-dependent shock or mechanical ventilation develops.[22]",
+        "Consider ICU transfer when a third ATS/IDSA minor criterion appears during observation or ward treatment.[20][22]",
+        "Use clinical judgment with prediction rules; systematic review data support these tools as aids, not replacements, for judgment in ICU triage.[23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation triggers after initial CAP disposition.[6][13][20][22]",
+        "columns": [
+          "Change during observation",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "New requirement for mechanical ventilation.[22]",
+            "Major severe-CAP criterion.[22]",
+            "Transfer or admit directly to ICU.[6][22]"
+          ],
+          [
+            "Shock now requiring vasopressors.[22]",
+            "Major severe-CAP criterion.[22]",
+            "Transfer or admit directly to ICU.[6][22]"
+          ],
+          [
+            "Total of 3 or more minor criteria.[20][22]",
+            "High risk requiring ICU-admission consideration.[20][22]",
+            "Obtain ICU evaluation or place in a setting capable of close monitoring and immediate escalation.[20][22]"
+          ],
+          [
+            "Clinical deterioration within 24 to 48 hours after hospital admission.[13]",
+            "Delayed ICU transfer has been associated with greater morbidity and mortality than direct ICU admission.[13]",
+            "Reassess respiratory and hemodynamic support needs promptly and escalate rather than await further decline.[13][22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Antibiotic Treatment Strategies for Community-Acquired Pneumonia ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1406330",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "For patients with clinically suspected CAP who are admitted to a non\u2013intensive-care-unit (ICU) ward, guidelines recommend either combination",
+      "score": 0.5809471
+    },
+    {
+      "number": 2,
+      "title": "Community-Acquired Pneumonia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra1312885",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "admission in community-acquired pneu- monia patients without major criteria or contraindications to intensive care unit care. Clin Infect",
+      "score": 0.47139415
+    },
+    {
+      "number": 3,
+      "title": "Community-acquired pneumonia - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140673603150210/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Until better rapid diagnostic methods are developed, most patients will be treated empirically. Antimicrobials continue to be the mainstay of treatment, and",
+      "score": 0.35528317
+    },
+    {
+      "number": 4,
+      "title": "Community-Acquired Pneumonia | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp1214869",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Duration of Antibiotic Treatment ... The currently recommended duration of antibiotic therapy for community-acquired pneumonia is 5 to 7 days.",
+      "score": 0.28530273
+    },
+    {
+      "number": 5,
+      "title": "Severity assessment scores to guide empirical use of antibiotics in ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(13)70084-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Severity assessment scores were first developed to predict the 30 day mortality in community acquired pneumonia; however, several guidelines have extended",
+      "score": 0.27277988
+    },
+    {
+      "number": 6,
+      "title": "Severe community-acquired pneumonia (sCAP): advances in management and future directions | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/80/8/565",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Severe community-acquired pneumonia (sCAP) is a global healthcare challenge, characterised by its high mortality risk and complex management. The American Thoracic Society and Infectious Diseases Society Association (ATS/IDSA) criteria for sCAP highlight key markers of disease severity, including th",
+      "score": 0.599087
+    },
+    {
+      "number": 7,
+      "title": "Assessment of T-cell subsets and procalcitonin for diagnosing and stratifying severity in community acquired pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-23926-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "This study demonstrates that monitoring T-cell subsets and serum procalcitonin levels provides valuable insight into the severity of community-acquired pneumonia (CAP), correlating well with established indices such as PSI and CURB-65. Both biomarkers offer rapid and accessible tools for early risk ",
+      "score": 0.6601948
+    },
+    {
+      "number": 8,
+      "title": "72-hour SOFA changes and risk stratification for invasive mechanical ventilation in patients with community-acquired Pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-44586-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The Pneumonia Severity Index (PSI) and CURB-65 score are currently the most widely used risk stratification tools for CAP. PSI enables comprehensive risk stratification but requires multiple clinical parameters, whereas CURB-65 is concise and efficient, making it more suitable for emergency settings",
+      "score": 0.6399392
+    },
+    {
+      "number": 9,
+      "title": "Identifying severe community-acquired pneumonia using radiomics and clinical data: a machine learning approach | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-72310-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "SCAP is the most life-threatening form of CAP, characterized by intensive care unit (ICU) admission and high morbidity and mortality rates1, 220123. \n                  \n                  \n                 (2022).\"). Pneumonia severity scales, such as the CURB-65 (CUR-65) scale and the Pneumonia Seve",
+      "score": 0.52144736
+    },
+    {
+      "number": 10,
+      "title": "Expanded CURB-65: a new score system predicts severity of community-acquired pneumonia with superior efficiency | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/srep22911",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "and length of stay were increased along with increased risk score. The AUCs in the prediction of 30-day mortality in the main cohort were 0.826 (95%\u2009CI, 0.807\u20130.844), 0.801 (95%\u2009CI, 0.781\u20130.820), 0.756 (95%\u2009CI, 0.735\u20130.777), 0.793 (95%\u2009CI, 0.773\u20130.813) and 0.759 (95%\u2009CI, 0.737\u20130.779) for the expande",
+      "score": 0.85538095
+    },
+    {
+      "number": 11,
+      "title": "Validation of IDSA/ATS Guidelines for ICU Admission in Adults Over 80 Years Old With Community-Acquired Pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300289622005300",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Med Sci.\n\n### Diagnosis and treatment of adults with community-acquired pneumonia an official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America\n\n### Am J Respir Crit Care Med.\n\n### Severe community-acquired pneumonia: validation of the Infect",
+      "score": 0.74318707
+    },
+    {
+      "number": 12,
+      "title": "Predicting the need for ICU admission in community-acquired pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611119302331",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Predicting the need for ICU admission in community-acquired pneumonia - ScienceDirect\n## Respiratory Medicine. Volume 155, August 2019, Pages 61-65. # Predicting the need for ICU admission in community-acquired pneumonia. Author links open overlay panel, , , ,. https://doi.org/10.1016/j.rmed.",
+      "score": 0.6426349
+    },
+    {
+      "number": 13,
+      "title": "Infectious Diseases Society of America/American ... - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/44/Supplement_2/S27/372079",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In some studies, a significant percentage of patients with CAP are transferred to the ICU in the first 24\u201348 h after hospitalization. Mortality and morbidity among these patients appears to be greater than those among patients admitted directly to the ICU. Conversely, ICU resources are often overstr",
+      "score": 0.6150191
+    },
+    {
+      "number": 14,
+      "title": "Validation of the Infectious Diseases Society of America/American Thoracic Society criteria to predict severe community-acquired pneumonia caused by Streptococcus pneumoniae - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675708005627",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Factors influencing in-hospital mortality in community-acquired pneumonia: a prospective study of patients not initially admitted to the ICU\n\n### Chest\n\n### Resource utilization of adults admitted to a large urban hospital with community-acquired pneumonia caused by Streptococcus pneu",
+      "score": 0.57723385
+    },
+    {
+      "number": 15,
+      "title": "Validation of the Pediatric Infectious Diseases Society\u2013Infectious Diseases Society of America Severity Criteria in Children With Community-Acquired Pneumonia | Clinical Infectious Diseases | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/67/1/112/4807155",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "# Validation of the Pediatric Infectious Diseases Society\u2013Infectious Diseases Society of America Severity Criteria in Children With Community-Acquired Pneumonia *Free*. Todd A Florin, Cole Brokamp, Rachel Mantyla, Bradley DePaoli, Richard Ruddy, Samir S Shah, Lilliam Ambroggio, Validation of the Ped",
+      "score": 0.5117904
+    },
+    {
+      "number": 16,
+      "title": "Prospective Comparison of Severity Scores for Predicting Clinically Relevant Outcomes for Patients Hospitalized With Community-Acquired Pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369209603639",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am J Med\n\n### Low-risk patients admitted with community- acquired pneumonia\n\n### Am J Med\n\n### Clinical opinion prevails over the pneumonia severity index\n\n### Am J Med\n\n### Treatment failure in community-acquired pneumonia\n\n### Chest\n\n### Severe sepsis in community-acquired pneumonia: when does",
+      "score": 0.43828082
+    },
+    {
+      "number": 17,
+      "title": "Utility of community\u2010acquired pneumonia severity scores in guiding disposition from the emergency department: Intensive care or short\u2010stay unit? - Williams - 2018 - Emergency Medicine Australasia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1742-6723.12947",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Utility of community-acquired pneumonia severity scores in guiding disposition from the emergency department: Intensive care or short-stay unit? To assess community-acquired pneumonia severity scores from two perspectives: (i) prediction of ICU admission or mortality; and (ii) utility of low score",
+      "score": 0.826278
+    },
+    {
+      "number": 18,
+      "title": "Severity assessment tools to guide ICU admission in community-acquired pneumonia: systematic review and meta-analysis - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK85636",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "RESULTS: Sufficient data were collected to perform a meta-analysis on five current scoring systems: the Pneumonia Severity Index (PSI), the CURB65 score, the CRB65 score, the American Thoracic Society (ATS) 2001 criteria and the Infectious Disease Society of America/ATS (IDSA/ATS) 2007 criteria. The",
+      "score": 0.74273956
+    },
+    {
+      "number": 19,
+      "title": "Diagnosis and Treatment of Adults with Community-acquired ... - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Skip to nav Skip to content\n\n\n\n\n\nView All Guidelines\n\nCURRENT\n\n# ATS/IDSA Guidelines for Diagnosis and Treatment of Adults with Community-Acquired Pneumonia\n\nDownload PDF\n\nPublishedOctober 01, 2019\n\nAmerican Journal of Respiratory and Critical Care Medicine, Volume 200, Issue 7, 1 October 2019, Page",
+      "score": 0.73868835
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Community-Acquired Pneumonia - ACEP",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/siteassets/sites/acep/media/moc/moc-documents/pneumonia-community-acquired-clinical-practice.pdf",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "The IDSA\u2013ATS guidelines for community-acquired pneumonia differ only slightly from non-U.S. guidelines. European guidelines keep the option of beta-lactam monotherapy and de-emphasize the use of fluoroquinolones in hospi-talized patients outside the ICU.48 CONCLUSIONS AND RECOMMENDATIONS The woman d",
+      "score": 0.734139
+    },
+    {
+      "number": 21,
+      "title": "Hospital-Acquired and Ventilator-Associated Pneumonia - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/hap_vap",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Skip to nav Skip to content\n\n\n\n\n\nView All Guidelines\n\n# ATS/IDSA 2016 Clinical Practice Guidelines for the Management of Adults With Hospital-Acquired and Ventilator-Associated Pneumonia\n\nDownload PDF\n\nPublishedJuly 14, 2016\n\nClinical Infectious Diseases, Volume 63, Issue 5, 1 September 2016, Pages ",
+      "score": 0.6854659
+    },
+    {
+      "number": 22,
+      "title": "[PDF] cap clinical pathway | idsa",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/community-acquired-pneumonia-in-adults/cap-clinical-pathway-final-online.pdf",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Clostridioides difficile infection \u2021 This is a clinical practice enhancement to the ATS/IDSA CAP clinical practice guideline Return to Figure 1 IDSA | CAP Clinical Pathway 7 References 1 Metlay JP, Waterer GW, Long AC, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Of",
+      "score": 0.6194488
+    },
+    {
+      "number": 23,
+      "title": "Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK117059",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "CONCLUSIONS: New severity scores for predicting the need for ICU or intensive treatment in patients with CAP, such as ATS/IDSA 2007 minor criteria, SCAP score, and SMART-COP, have better discriminative performances compared with PSI and CURB-65. High negative predictive value is the most consistent ",
+      "score": 0.50930125
+    },
+    {
+      "number": 24,
+      "title": "Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/22839689",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any information you provid",
+      "score": 0.4420348
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Antibiotic Treatment Strategies for Community-Acquired Pneumonia ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1406330",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "For patients with clinically suspected CAP who are admitted to a non\u2013intensive-care-unit (ICU) ward, guidelines recommend either combination",
+      "score": 0.5809471
+    },
+    {
+      "number": 2,
+      "title": "Community-Acquired Pneumonia",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra1312885",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "admission in community-acquired pneu- monia patients without major criteria or contraindications to intensive care unit care. Clin Infect",
+      "score": 0.47139415
+    },
+    {
+      "number": 3,
+      "title": "Community-acquired pneumonia - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140673603150210/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Until better rapid diagnostic methods are developed, most patients will be treated empirically. Antimicrobials continue to be the mainstay of treatment, and",
+      "score": 0.35528317
+    },
+    {
+      "number": 4,
+      "title": "Community-Acquired Pneumonia | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMcp1214869",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Duration of Antibiotic Treatment ... The currently recommended duration of antibiotic therapy for community-acquired pneumonia is 5 to 7 days.",
+      "score": 0.28530273
+    },
+    {
+      "number": 5,
+      "title": "Severity assessment scores to guide empirical use of antibiotics in ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(13)70084-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Severity assessment scores were first developed to predict the 30 day mortality in community acquired pneumonia; however, several guidelines have extended",
+      "score": 0.27277988
+    },
+    {
+      "number": 6,
+      "title": "Severe community-acquired pneumonia (sCAP): advances in management and future directions | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/80/8/565",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Severe community-acquired pneumonia (sCAP) is a global healthcare challenge, characterised by its high mortality risk and complex management. The American Thoracic Society and Infectious Diseases Society Association (ATS/IDSA) criteria for sCAP highlight key markers of disease severity, including th",
+      "score": 0.599087
+    },
+    {
+      "number": 7,
+      "title": "Assessment of T-cell subsets and procalcitonin for diagnosing and stratifying severity in community acquired pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-23926-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "This study demonstrates that monitoring T-cell subsets and serum procalcitonin levels provides valuable insight into the severity of community-acquired pneumonia (CAP), correlating well with established indices such as PSI and CURB-65. Both biomarkers offer rapid and accessible tools for early risk ",
+      "score": 0.6601948
+    },
+    {
+      "number": 8,
+      "title": "72-hour SOFA changes and risk stratification for invasive mechanical ventilation in patients with community-acquired Pneumonia | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-44586-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "The Pneumonia Severity Index (PSI) and CURB-65 score are currently the most widely used risk stratification tools for CAP. PSI enables comprehensive risk stratification but requires multiple clinical parameters, whereas CURB-65 is concise and efficient, making it more suitable for emergency settings",
+      "score": 0.6399392
+    },
+    {
+      "number": 9,
+      "title": "Identifying severe community-acquired pneumonia using radiomics and clinical data: a machine learning approach | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-72310-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "SCAP is the most life-threatening form of CAP, characterized by intensive care unit (ICU) admission and high morbidity and mortality rates1, 220123. \n                  \n                  \n                 (2022).\"). Pneumonia severity scales, such as the CURB-65 (CUR-65) scale and the Pneumonia Seve",
+      "score": 0.52144736
+    },
+    {
+      "number": 10,
+      "title": "Expanded CURB-65: a new score system predicts severity of community-acquired pneumonia with superior efficiency | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/srep22911",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "and length of stay were increased along with increased risk score. The AUCs in the prediction of 30-day mortality in the main cohort were 0.826 (95%\u2009CI, 0.807\u20130.844), 0.801 (95%\u2009CI, 0.781\u20130.820), 0.756 (95%\u2009CI, 0.735\u20130.777), 0.793 (95%\u2009CI, 0.773\u20130.813) and 0.759 (95%\u2009CI, 0.737\u20130.779) for the expande",
+      "score": 0.85538095
+    },
+    {
+      "number": 11,
+      "title": "Validation of IDSA/ATS Guidelines for ICU Admission in Adults Over 80 Years Old With Community-Acquired Pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0300289622005300",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Med Sci.\n\n### Diagnosis and treatment of adults with community-acquired pneumonia an official clinical practice guideline of the American Thoracic Society and Infectious Diseases Society of America\n\n### Am J Respir Crit Care Med.\n\n### Severe community-acquired pneumonia: validation of the Infect",
+      "score": 0.74318707
+    },
+    {
+      "number": 12,
+      "title": "Predicting the need for ICU admission in community-acquired pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611119302331",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Predicting the need for ICU admission in community-acquired pneumonia - ScienceDirect\n## Respiratory Medicine. Volume 155, August 2019, Pages 61-65. # Predicting the need for ICU admission in community-acquired pneumonia. Author links open overlay panel, , , ,. https://doi.org/10.1016/j.rmed.",
+      "score": 0.6426349
+    },
+    {
+      "number": 13,
+      "title": "Infectious Diseases Society of America/American ... - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/44/Supplement_2/S27/372079",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In some studies, a significant percentage of patients with CAP are transferred to the ICU in the first 24\u201348 h after hospitalization. Mortality and morbidity among these patients appears to be greater than those among patients admitted directly to the ICU. Conversely, ICU resources are often overstr",
+      "score": 0.6150191
+    },
+    {
+      "number": 14,
+      "title": "Validation of the Infectious Diseases Society of America/American Thoracic Society criteria to predict severe community-acquired pneumonia caused by Streptococcus pneumoniae - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675708005627",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Factors influencing in-hospital mortality in community-acquired pneumonia: a prospective study of patients not initially admitted to the ICU\n\n### Chest\n\n### Resource utilization of adults admitted to a large urban hospital with community-acquired pneumonia caused by Streptococcus pneu",
+      "score": 0.57723385
+    },
+    {
+      "number": 15,
+      "title": "Validation of the Pediatric Infectious Diseases Society\u2013Infectious Diseases Society of America Severity Criteria in Children With Community-Acquired Pneumonia | Clinical Infectious Diseases | Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cid/article/67/1/112/4807155",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "# Validation of the Pediatric Infectious Diseases Society\u2013Infectious Diseases Society of America Severity Criteria in Children With Community-Acquired Pneumonia *Free*. Todd A Florin, Cole Brokamp, Rachel Mantyla, Bradley DePaoli, Richard Ruddy, Samir S Shah, Lilliam Ambroggio, Validation of the Ped",
+      "score": 0.5117904
+    },
+    {
+      "number": 16,
+      "title": "Prospective Comparison of Severity Scores for Predicting Clinically Relevant Outcomes for Patients Hospitalized With Community-Acquired Pneumonia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369209603639",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am J Med\n\n### Low-risk patients admitted with community- acquired pneumonia\n\n### Am J Med\n\n### Clinical opinion prevails over the pneumonia severity index\n\n### Am J Med\n\n### Treatment failure in community-acquired pneumonia\n\n### Chest\n\n### Severe sepsis in community-acquired pneumonia: when does",
+      "score": 0.43828082
+    },
+    {
+      "number": 17,
+      "title": "Utility of community\u2010acquired pneumonia severity scores in guiding disposition from the emergency department: Intensive care or short\u2010stay unit? - Williams - 2018 - Emergency Medicine Australasia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1742-6723.12947",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Utility of community-acquired pneumonia severity scores in guiding disposition from the emergency department: Intensive care or short-stay unit? To assess community-acquired pneumonia severity scores from two perspectives: (i) prediction of ICU admission or mortality; and (ii) utility of low score",
+      "score": 0.826278
+    },
+    {
+      "number": 18,
+      "title": "Severity assessment tools to guide ICU admission in community-acquired pneumonia: systematic review and meta-analysis - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK85636",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "RESULTS: Sufficient data were collected to perform a meta-analysis on five current scoring systems: the Pneumonia Severity Index (PSI), the CURB65 score, the CRB65 score, the American Thoracic Society (ATS) 2001 criteria and the Infectious Disease Society of America/ATS (IDSA/ATS) 2007 criteria. The",
+      "score": 0.74273956
+    },
+    {
+      "number": 19,
+      "title": "Diagnosis and Treatment of Adults with Community-acquired ... - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/community-acquired-pneumonia-cap-in-adults",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Skip to nav Skip to content\n\n\n\n\n\nView All Guidelines\n\nCURRENT\n\n# ATS/IDSA Guidelines for Diagnosis and Treatment of Adults with Community-Acquired Pneumonia\n\nDownload PDF\n\nPublishedOctober 01, 2019\n\nAmerican Journal of Respiratory and Critical Care Medicine, Volume 200, Issue 7, 1 October 2019, Page",
+      "score": 0.73868835
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Community-Acquired Pneumonia - ACEP",
+      "detail": "www.acep.org",
+      "url": "https://www.acep.org/siteassets/sites/acep/media/moc/moc-documents/pneumonia-community-acquired-clinical-practice.pdf",
+      "authors": "www.acep.org",
+      "host": "www.acep.org",
+      "snippet": "The IDSA\u2013ATS guidelines for community-acquired pneumonia differ only slightly from non-U.S. guidelines. European guidelines keep the option of beta-lactam monotherapy and de-emphasize the use of fluoroquinolones in hospi-talized patients outside the ICU.48 CONCLUSIONS AND RECOMMENDATIONS The woman d",
+      "score": 0.734139
+    },
+    {
+      "number": 21,
+      "title": "Hospital-Acquired and Ventilator-Associated Pneumonia - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/hap_vap",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Skip to nav Skip to content\n\n\n\n\n\nView All Guidelines\n\n# ATS/IDSA 2016 Clinical Practice Guidelines for the Management of Adults With Hospital-Acquired and Ventilator-Associated Pneumonia\n\nDownload PDF\n\nPublishedJuly 14, 2016\n\nClinical Infectious Diseases, Volume 63, Issue 5, 1 September 2016, Pages ",
+      "score": 0.6854659
+    },
+    {
+      "number": 22,
+      "title": "[PDF] cap clinical pathway | idsa",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/community-acquired-pneumonia-in-adults/cap-clinical-pathway-final-online.pdf",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Clostridioides difficile infection \u2021 This is a clinical practice enhancement to the ATS/IDSA CAP clinical practice guideline Return to Figure 1 IDSA | CAP Clinical Pathway 7 References 1 Metlay JP, Waterer GW, Long AC, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia. An Of",
+      "score": 0.6194488
+    },
+    {
+      "number": 23,
+      "title": "Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK117059",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "CONCLUSIONS: New severity scores for predicting the need for ICU or intensive treatment in patients with CAP, such as ATS/IDSA 2007 minor criteria, SCAP score, and SMART-COP, have better discriminative performances compared with PSI and CURB-65. High negative predictive value is the most consistent ",
+      "score": 0.50930125
+    },
+    {
+      "number": 24,
+      "title": "Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/22839689",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Prediction of severe community-acquired pneumonia: a systematic review and meta-analysis - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that any information you provid",
+      "score": 0.4420348
+    }
+  ],
+  "publishedAt": "2026-09-15T21:03:43.456432+00:00",
+  "updatedAt": "2026-09-15T21:03:43.456432+00:00",
+  "readingMinutes": 6,
+  "slug": "community-acquired-pneumonia-admission-criteria"
+}

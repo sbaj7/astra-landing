@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import '@fontsource/newsreader/latin-400.css';
 import '@fontsource/newsreader/latin-600.css';
 import { normalizeClinicalArticle } from '../articles/articleSchema.js';
+import { hubsForArticle } from '../articles/articleDiscovery.js';
 import { useTheme } from './Themes+Styles.jsx';
 import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
 import './ClinicalArticleView.css';
@@ -469,6 +470,9 @@ const ClinicalArticleView = ({ article: sourceArticle, relatedArticles = [], the
               )}
 
               <aside className="article-editorial" aria-label="Editorial information"><strong>Editorial note.</strong> {article.editorialNote} <a href="/editorial-policy.html">Read our editorial standards.</a></aside>
+              <nav className="article-specialty-links" aria-label="Related specialties">
+                {hubsForArticle(sourceArticle).map((hub) => <a key={hub.slug} href={`/articles/specialty/${hub.slug}`}>{hub.title} guides</a>)}
+              </nav>
 
               {relatedArticles.length > 0 && (
                 <nav className="article-related" aria-labelledby="related-articles-title">

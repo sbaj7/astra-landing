@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Medical Toxicology",
+  "title": "Benzodiazepine Toxicity",
+  "summary": "Manage benzodiazepine toxicity by prioritizing airway and ventilation, actively identifying opioid, alcohol, and proconvulsant co-ingestion, and reserving flumazenil for exceptional pure exposures without seizure risk or benzodiazepine dependence.",
+  "seoDescription": "Point-of-care management of benzodiazepine toxicity: airway support, co-ingestion assessment, selective flumazenil use, dosing, contraindications, and monitoring.",
+  "clinicalQuestion": "How should clinicians stabilize benzodiazepine toxicity and determine whether flumazenil is appropriate?",
+  "specialty": "Emergency Medicine and Medical Toxicology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "benzodiazepine overdose",
+    "benzodiazepine toxicity",
+    "flumazenil",
+    "sedative-hypnotic poisoning",
+    "toxicology"
+  ],
+  "keyTakeaways": [
+    "Treat hypoventilation, airway obstruction, apnea, and circulatory instability before attempting pharmacologic reversal; flumazenil is an adjunct rather than a replacement for airway and ventilatory support. [1][2][3]",
+    "Respiratory depression and death are most concerning with mixed ingestion, particularly benzodiazepines combined with opioids or alcohol. [4][6]",
+    "Avoid routine flumazenil in undifferentiated coma or typical emergency department overdose presentations because seizures and withdrawal can follow reversal, particularly in benzodiazepine-dependent patients and cyclic antidepressant overdose. [3][4][5][11]",
+    "When flumazenil is selected for known or suspected benzodiazepine overdose, give 0.2 mg IV over 30 seconds, then 0.3 mg after 30 seconds if needed, followed by 0.5 mg IV at 1-minute intervals to a cumulative 3 mg. [1][2]",
+    "After flumazenil, monitor for resedation and respiratory depression; labeling describes observation for up to 120 minutes after reversal of benzodiazepine effects. [2][3]"
+  ],
+  "sections": [
+    {
+      "id": "initial-stabilization",
+      "eyebrow": "First priorities",
+      "heading": "Stabilize ventilation before diagnosing a pure benzodiazepine exposure",
+      "intro": "Treat physiologic failure, not the drug screen or presumed ingestion alone.",
+      "paragraphs": [
+        "Immediately assess airway patency, respiratory effort, oxygenation, ventilation, mental status, blood pressure, and cardiac rhythm. Establish intravenous access and provide airway management, assisted ventilation, and cardiovascular support when hypoventilation, airway obstruction, apnea, or hemodynamic compromise is present. Pulse oximetry and continuous vital-sign monitoring are specifically emphasized when sedative-related respiratory compromise is possible. [1][3]",
+        "Do not use flumazenil as a substitute for definitive airway and ventilatory management. The drug reverses benzodiazepine-mediated effects but does not reverse toxicity from other concomitant medications; an initially somnolent patient may also become agitated and attempt to remove an endotracheal tube or intravenous lines after awakening. [1][3]",
+        "A benzodiazepine-predominant presentation may produce marked central nervous system depression with relatively preserved resting heart rate, blood pressure, and respiratory rate. Bradycardia, hypotension, or respiratory depression should increase concern for ethanol, barbiturate, opioid, or other co-exposure rather than reassuring clinicians that the exposure is isolated. [5]"
+      ],
+      "bullets": [
+        "Secure airway, ventilation, and intravenous access before any flumazenil dose. [1][2]",
+        "Use ongoing monitoring for early hypoventilation, airway obstruction, or apnea; intervene immediately if these occur. [3]",
+        "Escalate resuscitation when cardiovascular instability persists despite initial supportive measures; intravenous fluid bolus is the usual initial measure for hypotension, with norepinephrine for fluid-resistant hypotension. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial management priorities in suspected benzodiazepine toxicity. [1][3][5]",
+        "columns": [
+          "Clinical finding",
+          "Interpretation",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Hypoventilation, airway obstruction, or apnea",
+            "Time-critical respiratory failure; may reflect benzodiazepines plus opioids or other sedatives. [3][4]",
+            "Secure airway and provide assisted ventilation; continue pulse oximetry and vital-sign monitoring. [1][3]"
+          ],
+          [
+            "Profound sedation with otherwise relatively normal vital signs",
+            "Compatible with a GABAergic sedative-hypnotic toxidrome, including benzodiazepines or Z-drugs. [5]",
+            "Continue observation and supportive management while assessing exposure history and competing causes of coma. [5]"
+          ],
+          [
+            "Hypotension despite initial assessment",
+            "May indicate severe poisoning or a non-benzodiazepine co-ingestant. [5]",
+            "Give intravenous fluid bolus; use norepinephrine if hypotension is fluid-resistant. [5]"
+          ],
+          [
+            "Abrupt awakening after antagonist",
+            "Agitation and attempts to remove lines or airway devices may occur. [1]",
+            "Maintain secure airway access and close bedside supervision during recovery. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "exposure-assessment",
+      "eyebrow": "Risk stratification",
+      "heading": "Identify the co-ingestion and seizure-risk branches before considering reversal",
+      "intro": "Flumazenil eligibility depends more on the exposure context than on sedation severity alone.",
+      "paragraphs": [
+        "Determine whether the presentation is plausibly a pure benzodiazepine exposure or a mixed overdose. Death from benzodiazepine overdose is uncommon in isolation; fatal respiratory depression more often involves another respiratory depressant, particularly alcohol or opioids. A history of intentional ingestion should be treated as a major reason to suspect unrecognized co-exposures and to avoid empiric flumazenil. [4][6]",
+        "Specifically identify chronic benzodiazepine use, a seizure disorder, and possible cyclic antidepressant overdose before reversal. Flumazenil can precipitate benzodiazepine withdrawal in tolerant patients and seizures in susceptible patients; FDA labeling highlights seizure risk in long-term benzodiazepine users and cyclic antidepressant overdose. [3][5]",
+        "Do not use a urine benzodiazepine screen to decide whether a sedated patient should receive flumazenil. Immunoassays are screening tests that yield presumptive positives, whereas confirmation is performed with gas chromatography-mass spectrometry or liquid chromatography-mass spectrometry. Testing can document exposure when clinically or forensically relevant, but airway and ventilation decisions remain clinical. [13][15][16]"
+      ],
+      "bullets": [
+        "Ask or obtain collateral history for prescribed benzodiazepines, long-term use, recent procedural sedation, alcohol, opioids, antidepressants, and seizure history before antagonist administration. [3][4][5]",
+        "Treat an intentional or uncertain ingestion as potentially mixed until the exposure history supports otherwise. [6]",
+        "If an overdose is intentional, arrange mental health assessment once the patient is medically stabilized and able to participate. [6]"
+      ],
+      "subsections": [
+        {
+          "heading": "When the presentation is not pure benzodiazepine toxicity",
+          "paragraphs": [
+            "With suspected opioid co-ingestion, benzodiazepine reversal will not address opioid-mediated respiratory depression. Continue respiratory support and direct management toward the co-ingestant syndrome rather than escalating flumazenil solely to normalize consciousness. [3][4]",
+            "With possible cyclic antidepressant co-ingestion, avoid flumazenil because antagonist-associated seizure may unmask or worsen a proconvulsant poisoning. In this setting, supportive critical care and toxicology consultation are safer than pharmacologic benzodiazepine reversal. [3][4][6]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Features that shift management away from flumazenil. [3][4][5][6]",
+        "columns": [
+          "Finding",
+          "Why it matters",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Known chronic benzodiazepine exposure",
+            "Antagonism can precipitate withdrawal and seizures. [3][5]",
+            "Avoid routine flumazenil; support airway and ventilation as needed. [4][5]"
+          ],
+          [
+            "Seizure disorder",
+            "Flumazenil may precipitate seizure. [5]",
+            "Generally avoid flumazenil and manage respiratory compromise supportively. [5]"
+          ],
+          [
+            "Possible cyclic antidepressant overdose",
+            "FDA labeling identifies a high-risk setting for seizure with flumazenil. [3]",
+            "Do not use flumazenil; manage as a mixed overdose. [3][4]"
+          ],
+          [
+            "Alcohol or opioid co-ingestion",
+            "Mixed respiratory depressants drive much of the severe morbidity and mortality. [4][6]",
+            "Provide airway and ventilatory support; do not expect flumazenil to reverse non-benzodiazepine effects. [3]"
+          ],
+          [
+            "Undifferentiated coma",
+            "Routine flumazenil in a coma cocktail is hazardous. [11][19]",
+            "Use targeted assessment and supportive resuscitation rather than empiric reversal. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "flumazenil-selection",
+      "eyebrow": "Antidote decision",
+      "heading": "Reserve flumazenil for carefully selected pure benzodiazepine toxicity",
+      "intro": "The principal tradeoff is transient arousal versus seizure, withdrawal, and resedation risk.",
+      "paragraphs": [
+        "Flumazenil competitively antagonizes benzodiazepine binding and can reverse benzodiazepine-induced sedation. In acute poisoning, it should be considered only when the exposure is believed to be pure benzodiazepine toxicity, the patient has no contraindications, and the expected benefit outweighs the risks of induced seizures or withdrawal. Expert guidance characterizes this as an uncommon emergency department scenario and recommends specialist input from a clinician trained in acute benzodiazepine overdose management. [4][5][6]",
+        "The most defensible use case is clinically significant respiratory depression or respiratory arrest from a pure benzodiazepine poisoning in a patient without benzodiazepine tolerance, seizure disorder, suspected proconvulsant co-ingestion, or other contraindication. Even in that circumstance, ensure that the airway is secured as appropriate and that ventilatory support is immediately available before dosing. [1][4][5]",
+        "Do not use flumazenil simply to improve a neurologic examination, accelerate discharge, or empirically reverse unexplained altered mental status. Historic resuscitation guidance specifically advises against routine inclusion in a coma cocktail because reversal of benzodiazepine intoxication can be hazardous. [11][19]"
+      ],
+      "bullets": [
+        "Favorable conditions: credible isolated benzodiazepine exposure, no tolerance or seizure history, no evidence of proconvulsant co-ingestion, and a clinically meaningful need for reversal. [4][5][6]",
+        "High-risk conditions: long-term benzodiazepine use, cyclic antidepressant overdose, seizure disorder, intentional or uncertain mixed ingestion, or undifferentiated coma. [3][4][5][6][11]",
+        "Consult a poison center or medical toxicologist before flumazenil when the exposure history is incomplete or seizure risk cannot be confidently excluded. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Flumazenil selection framework for suspected benzodiazepine poisoning. [3][4][5][6]",
+        "columns": [
+          "Decision branch",
+          "Features",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Supportive management preferred",
+            "Typical emergency department overdose, uncertain history, intentional ingestion, or co-ingestion with alcohol, opioids, or proconvulsant drugs. [4][6]",
+            "Manage airway, breathing, circulation, and observation; do not use routine flumazenil. [4][6]"
+          ],
+          [
+            "Flumazenil may be considered",
+            "Pure benzodiazepine poisoning with clinically important respiratory depression or arrest and no contraindications. [4]",
+            "Use only after airway and intravenous access are established and with close monitoring. [1][2][4]"
+          ],
+          [
+            "Flumazenil avoided",
+            "Benzodiazepine tolerance, seizure disorder, or cyclic antidepressant overdose. [3][5]",
+            "Provide supportive care and seek toxicology guidance; anticipate seizure-management complexity if inadvertent reversal occurs. [1][3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "flumazenil-dosing-monitoring",
+      "eyebrow": "When reversal is selected",
+      "heading": "Administer flumazenil slowly and monitor for resedation and seizures",
+      "intro": "Titrate to a clinically adequate response rather than abrupt full awakening.",
+      "paragraphs": [
+        "For known or suspected benzodiazepine overdose in adults, administer flumazenil 0.2 mg intravenously over 30 seconds. If the desired level of consciousness is not achieved after waiting 30 seconds, give 0.3 mg IV over 30 seconds. Further 0.5 mg IV doses may be given over 30 seconds at 1-minute intervals, to a cumulative maximum of 3 mg. Do not rush administration; labeling directs gradual awakening after securing airway and intravenous access. [1][2]",
+        "Monitor continuously for resedation, respiratory depression, and residual benzodiazepine effects after reversal. Because the antagonist may wear off before the sedative effect resolves, monitoring after flumazenil is required; product labeling describes an appropriate observation period of up to 120 minutes after reversal in sedation settings. [2][3]",
+        "Be prepared for seizures after flumazenil. Labeling reports that seizures associated with flumazenil have been managed with benzodiazepines, phenytoin, or barbiturates, but higher-than-usual benzodiazepine doses may be required because receptor antagonism is present. This is a reason to administer flumazenil only where seizure treatment and airway support can be delivered immediately. [1][2]"
+      ],
+      "bullets": [
+        "Initial dose: 0.2 mg IV over 30 seconds. [1][2]",
+        "If needed after 30 seconds: 0.3 mg IV over 30 seconds. [1][2]",
+        "Subsequent titration: 0.5 mg IV over 30 seconds every 1 minute as needed; maximum cumulative dose 3 mg. [1][2]",
+        "After any response, continue observation for resedation, respiratory depression, and agitation; retain airway and vascular access until clinically stable. [1][2][3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Failure to respond or recurrent sedation",
+          "paragraphs": [
+            "Lack of meaningful response should prompt reassessment for an incorrect diagnosis, mixed ingestion, structural or metabolic causes of depressed consciousness, or respiratory failure that requires ongoing ventilatory support. Do not interpret nonresponse as justification for exceeding the labeled cumulative 3 mg overdose regimen. [1][2][3]",
+            "Resedation after initial reversal requires renewed airway and respiratory assessment rather than automatic repeated antidote treatment. Continuous-infusion flumazenil has been reported for prolonged toxicity, but the cited evidence includes case-level experience rather than a routine emergency department regimen; use requires toxicology or critical care oversight. [2][20][23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Adult flumazenil dosing and post-dose actions for benzodiazepine overdose. [1][2][3]",
+        "columns": [
+          "Step",
+          "Dose and timing",
+          "Required action"
+        ],
+        "rows": [
+          [
+            "Before dosing",
+            "No dose until airway and intravenous access are established. [1][2]",
+            "Ensure capability for assisted ventilation, seizure management, and continuous monitoring. [1][3]"
+          ],
+          [
+            "Initial dose",
+            "0.2 mg IV over 30 seconds. [1][2]",
+            "Assess level of consciousness after 30 seconds. [1][2]"
+          ],
+          [
+            "Second dose",
+            "0.3 mg IV over 30 seconds if needed after the initial 30-second wait. [1][2]",
+            "Avoid rapid administration and target gradual awakening. [1]"
+          ],
+          [
+            "Further titration",
+            "0.5 mg IV over 30 seconds at 1-minute intervals; maximum cumulative dose 3 mg. [1][2]",
+            "Stop at adequate clinical response or maximum cumulative dose. [1][2]"
+          ],
+          [
+            "Post-reversal observation",
+            "Monitor for an appropriate period; up to 120 minutes is described after reversal of sedation. [2]",
+            "Watch for resedation, respiratory depression, residual sedation, agitation, and seizures. [1][2][3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "disposition-follow-up",
+      "eyebrow": "Disposition",
+      "heading": "Observe until respiratory risk and recurrent sedation have resolved",
+      "intro": "Disposition follows clinical stability and exposure risk, not transient improvement in alertness.",
+      "paragraphs": [
+        "Continue monitored care after significant benzodiazepine toxicity until the patient no longer has respiratory depression, airway vulnerability, or recurrent sedation. Patients treated with flumazenil require observation for resedation and residual benzodiazepine effects because reversal may be shorter-lived than the sedative exposure. [2][3]",
+        "Patients with mixed overdose, persistent cardiorespiratory compromise, seizures, recurrent sedation after reversal, or an uncertain exposure history require escalation to monitored acute care and poison-center or toxicology guidance. In intentional overdose, complete mental health assessment after medical stabilization rather than treating transient arousal as medical clearance. [6]",
+        "For patients with uncomplicated sedative effects managed without flumazenil, the endpoint remains sustained clinical recovery with stable ventilation and vital signs under observation. Do not discharge based solely on a presumptive urine immunoassay result; confirmatory GC-MS or LC-MS testing may establish analyte identity when needed but does not replace clinical assessment. [13][15][16]"
+      ],
+      "bullets": [
+        "Continue monitoring after flumazenil for resedation and respiratory depression. [2][3]",
+        "Escalate care for seizure, persistent hypoventilation, airway obstruction, apnea, hemodynamic instability, or suspected mixed poisoning. [3][5][6]",
+        "Arrange mental health evaluation after stabilization for intentional overdose. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition triggers after benzodiazepine toxicity. [2][3][6]",
+        "columns": [
+          "Clinical course",
+          "Disposition implication"
+        ],
+        "rows": [
+          [
+            "Persistent or recurrent respiratory depression, airway obstruction, or apnea",
+            "Continue monitored care with ventilatory support capability. [3]"
+          ],
+          [
+            "Resedation after flumazenil",
+            "Extend monitoring and reassess airway, ventilation, and mixed exposure risk. [2][3]"
+          ],
+          [
+            "Seizure after flumazenil or suspected proconvulsant co-ingestion",
+            "Escalate to acute care with seizure-treatment capability and toxicology input. [1][3][6]"
+          ],
+          [
+            "Intentional overdose after medical stabilization",
+            "Obtain a full mental health assessment. [6]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should flumazenil be used for benzodiazepine-associated coma?",
+      "answer": "No. Routine use in undifferentiated coma is discouraged because flumazenil can precipitate seizures or withdrawal and does not reverse non-benzodiazepine co-ingestants. Use targeted resuscitation and reserve reversal for carefully selected pure exposures. [3][4][5][11][19]"
+    },
+    {
+      "question": "What is the maximum adult flumazenil dose for suspected benzodiazepine overdose?",
+      "answer": "The labeled cumulative maximum is 3 mg IV: 0.2 mg over 30 seconds, then 0.3 mg after 30 seconds if needed, followed by 0.5 mg doses at 1-minute intervals. [1][2]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "FLUMAZENIL INJECTION, USP",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1855bb03-392f-4a0d-8361-24fc2a0e635e&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Management of Suspected Benzodiazepine Overdose in Adult Patients\n  \nFor initial management of a known or suspected benzodiazepine overdose, the recommended initial dose of flumazenil injection is 0.2 mg (2 mL) administered intravenously over 30 seconds. If the desired level of consciousness is not ",
+      "score": 0.5192538
+    },
+    {
+      "number": 2,
+      "title": "DailyMed - FLUMAZENIL injection, solution",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=442ed32b-b508-40cc-9915-ff05674566da",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "For initial management of a known or suspected benzodiazepine overdose, the recommended initial dose of flumazenil injection is 0.2 mg (2 mL) administered intravenously over 30 seconds. If the desired level of consciousness is not obtained after waiting 30 seconds, a further dose of 0.3 mg (3 mL) ca",
+      "score": 0.47533798
+    },
+    {
+      "number": 3,
+      "title": "[PDF] center for drug evaluation and research - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/215868Orig1s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "intended as an adjunct to, not as a substitute for, proper management of benzodiazepine overdose. Monitor patients treated with flumazenil for resedation, respiratory depression, and other residual benzodiazepine effects for an appropriate period after treatment. Flumazenil will only reverse benzodi",
+      "score": 0.47504577
+    },
+    {
+      "number": 4,
+      "title": "Benzodiazepine overdose - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/343",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Death is uncommon. Most deaths from BZD overdose are from respiratory depression as a result of mixed overdoses with BZD and other respiratory depressants, particularly alcohol and opioids.\n\nThe BZD antagonist flumazenil can be effective in select patients with respiratory depression or respiratory ",
+      "score": 0.5232017
+    },
+    {
+      "number": 5,
+      "title": "Toxidromes and a general approach to poisoning",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/110/9/681",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "antagonises benzodiazepine binding at the benzodiazepine receptor and may be judiciously used to reverse benzodiazepine-induced sedation.11 Flumazenil does not always reverse benzodiazepine-induced respiratory depression, and it may precipitate benzodiazepine withdrawal in tolerant patients, or seiz",
+      "score": 0.4186262
+    },
+    {
+      "number": 6,
+      "title": "Benzodiazepine overdose - Management recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/3000222/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Benzodiazepine overdose - Management recommendations | BMJ Best Practice\n# Benzodiazepine overdose. It can occur in the case of a large overdose or when there is co-ingestion of other respiratory depressants (e.g., opioid, alcohol). Resuscitation and supportive treatment will be needed. For m",
+      "score": 0.6793707
+    },
+    {
+      "number": 7,
+      "title": "Part 10.2: Toxicology in ECC | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.105.166564?doi=10.1161%2FCIRCULATIONAHA.105.166564",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Reversal of benzodiazepine intoxication with flumazenil is associated with significant toxicity in patients with benzodiazepine dependence or",
+      "score": 0.5968332
+    },
+    {
+      "number": 8,
+      "title": "2023 American Heart Association Focused Update on the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000001161",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Based on structured evidence reviews, guidelines are provided for the treatment of critical poisoning from benzodiazepines, These guidelines discuss the role",
+      "score": 0.5608546
+    },
+    {
+      "number": 9,
+      "title": "An Update to the American Heart Association Guidelines for ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001161?doi=10.1161%2FCIR.0000000000001161",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Benzodiazepines are implicated in a large number of poisoning-related deaths, odiazepine overdose causes CNS depression",
+      "score": 0.52290934
+    },
+    {
+      "number": 10,
+      "title": "Toxidromes | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-026-00736-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nAmerican Academy of Clinical Toxicology & European Association of Poisons Centres and Clinical Toxicologists. Position statement and practice guidelines on the use of multi-dose activated charcoal in the treatment of acute poisoning. J. Toxicol. Clin. Toxicol. 37, 731\u2013751 (1",
+      "score": 0.45377067
+    },
+    {
+      "number": 11,
+      "title": "Part 8: Advanced Challenges in Resuscitation | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circ.102.suppl_1.I-223?doi=10.1161%2Fcirc.102.suppl_1.I-223",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Because reversal of benzodiazepine intoxication with flumazenil is hazardous, we do not recommend routine inclusion of this practice in \u201ccoma cocktail\u201d",
+      "score": 0.25574586
+    },
+    {
+      "number": 12,
+      "title": "Trends in antidote use in France from 2015 to 2021: a nationwide poison centers study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-15475-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "of poisoning involving acetaminophen, benzodiazepines, and opioids. The observed use of methylthioninium chloride, hydroxocobalamin, cyanocobalamin and DOAC reversal agents increased, both in terms of absolute numbers and proportions, revealing new behaviors leading to poisoning, such as nitrous oxi",
+      "score": 0.19250934
+    },
+    {
+      "number": 13,
+      "title": "Clorazepate - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/neuroscience/clorazepate",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "As given above, the usual strategy for analyzing benzodiazepines in urine first includes a prescreening using immunoassays and second a confirmatory test.",
+      "score": 0.55796635
+    },
+    {
+      "number": 14,
+      "title": "Loprazolam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/loprazolam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "As given above, the usual strategy for analyzing benzodiazepines in urine first includes a prescreening using immunoassays and second a confirmatory test.",
+      "score": 0.5489884
+    },
+    {
+      "number": 15,
+      "title": "Bromazepam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/veterinary-science-and-veterinary-medicine/bromazepam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "###### 6.3.4.1.1 Screening and confirmation of benzodiazepines\n\nDifferent immunoassays for indication of benzodiazepines are commercially available and can be used for screening in urine in order to differentiate between negative and presumptively positive samples. Positive results can be confirmed ",
+      "score": 0.4526091
+    },
+    {
+      "number": 16,
+      "title": "7 Aminoflunitrazepam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/7-aminoflunitrazepam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Methods for confirmation testing of benzodiazepines include GC and LC with MS detection. Confirmation methods using GC-MS generally report cutoff",
+      "score": 0.35588735
+    },
+    {
+      "number": 17,
+      "title": "A strategy for the detection of benzodiazepine drugs using low ...",
+      "detail": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.3630",
+      "authors": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "host": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "snippet": "flumazenil has been demonstrated to reverse benzodiazepine overdoses, its widespread use is not recommended due to the associated high risk of ...Missing: guidelines | Show results with:guidelines",
+      "score": 0.3397405
+    },
+    {
+      "number": 18,
+      "title": "Development and Validation of an HPLC\u2013MS/MS Method for the ...",
+      "detail": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.70142",
+      "authors": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "host": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "snippet": "A highly sensitive and selective LC\u2013MS/MS method was developed and validated for the simultaneous detection of 38 benzodiazepines and their ...Missing: thresholds overdose",
+      "score": 0.29700124
+    },
+    {
+      "number": 19,
+      "title": "Flumazenil, naloxone and the \u2018coma cocktail\u2019 : British Journal of Clinical Pharmacology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00002256-201603000-00006",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Flumazenil and naloxone are considered to be pharmacologically ideal antidotes. By competitive binding at the molecular target receptors, they are highly specific antagonists of two important drug classes, the benzodiazepines and opioids, respectively. Both antidotes enjoy rapid onset and short dura",
+      "score": 0.3963491
+    },
+    {
+      "number": 20,
+      "title": "Continuous\u2010Infusion Flumazenil in the Management of ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1592/phco.23.14.1513.31941",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "A 67-year-old man with chlordiazepoxide toxicity required a 9-day infusion of flumazenil to prevent resedation and respiratory insufficiency; he",
+      "score": 0.35561875
+    },
+    {
+      "number": 21,
+      "title": "Adverse Events Associated with Flumazenil Treatment for the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/bcpt.12434",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Flumazenil is used for the reversal of benzodiazepine overdose. Serious adverse events (SAEs) including seizures and cardiac arrhythmias",
+      "score": 0.27868158
+    },
+    {
+      "number": 22,
+      "title": "Schizophrenia and Related Psychoses - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119870203.mpg001.pub2?paRef=Latest+Article+Version",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Many other drugs have been used (naloxone, Concomitant benzodiazepine use should be avoided, where possible. Monitor all patients for signs of",
+      "score": 0.24064115
+    },
+    {
+      "number": 23,
+      "title": "1258 : Critical Care Medicine - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/abstract/2013/12001/1258__continuous_infusion_flumazenil_for_prolonged.1208.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Nine days after the last dose of benzodiazepine was administered a flumazenil continuous infusion was initiated at 0.5 mg per hour. The patient's mental status",
+      "score": 0.22563875
+    },
+    {
+      "number": 24,
+      "title": "Prehospital midazolam use and outcomes among patients with out ...",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000010913",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "Although high benzodiazepine doses carry a theoretical risk of respiratory depression, trial data using small sample sizes suggest that the risk",
+      "score": 0.11501327
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "FLUMAZENIL INJECTION, USP",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=1855bb03-392f-4a0d-8361-24fc2a0e635e&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Management of Suspected Benzodiazepine Overdose in Adult Patients\n  \nFor initial management of a known or suspected benzodiazepine overdose, the recommended initial dose of flumazenil injection is 0.2 mg (2 mL) administered intravenously over 30 seconds. If the desired level of consciousness is not ",
+      "score": 0.5192538
+    },
+    {
+      "number": 2,
+      "title": "DailyMed - FLUMAZENIL injection, solution",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=442ed32b-b508-40cc-9915-ff05674566da",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "For initial management of a known or suspected benzodiazepine overdose, the recommended initial dose of flumazenil injection is 0.2 mg (2 mL) administered intravenously over 30 seconds. If the desired level of consciousness is not obtained after waiting 30 seconds, a further dose of 0.3 mg (3 mL) ca",
+      "score": 0.47533798
+    },
+    {
+      "number": 3,
+      "title": "[PDF] center for drug evaluation and research - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/215868Orig1s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "intended as an adjunct to, not as a substitute for, proper management of benzodiazepine overdose. Monitor patients treated with flumazenil for resedation, respiratory depression, and other residual benzodiazepine effects for an appropriate period after treatment. Flumazenil will only reverse benzodi",
+      "score": 0.47504577
+    },
+    {
+      "number": 4,
+      "title": "Benzodiazepine overdose - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/343",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Death is uncommon. Most deaths from BZD overdose are from respiratory depression as a result of mixed overdoses with BZD and other respiratory depressants, particularly alcohol and opioids.\n\nThe BZD antagonist flumazenil can be effective in select patients with respiratory depression or respiratory ",
+      "score": 0.5232017
+    },
+    {
+      "number": 5,
+      "title": "Toxidromes and a general approach to poisoning",
+      "detail": "adc.bmj.com",
+      "url": "https://adc.bmj.com/content/110/9/681",
+      "authors": "adc.bmj.com",
+      "host": "adc.bmj.com",
+      "snippet": "antagonises benzodiazepine binding at the benzodiazepine receptor and may be judiciously used to reverse benzodiazepine-induced sedation.11 Flumazenil does not always reverse benzodiazepine-induced respiratory depression, and it may precipitate benzodiazepine withdrawal in tolerant patients, or seiz",
+      "score": 0.4186262
+    },
+    {
+      "number": 6,
+      "title": "Benzodiazepine overdose - Management recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/3000222/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Benzodiazepine overdose - Management recommendations | BMJ Best Practice\n# Benzodiazepine overdose. It can occur in the case of a large overdose or when there is co-ingestion of other respiratory depressants (e.g., opioid, alcohol). Resuscitation and supportive treatment will be needed. For m",
+      "score": 0.6793707
+    },
+    {
+      "number": 7,
+      "title": "Part 10.2: Toxicology in ECC | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.105.166564?doi=10.1161%2FCIRCULATIONAHA.105.166564",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Reversal of benzodiazepine intoxication with flumazenil is associated with significant toxicity in patients with benzodiazepine dependence or",
+      "score": 0.5968332
+    },
+    {
+      "number": 8,
+      "title": "2023 American Heart Association Focused Update on the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000001161",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Based on structured evidence reviews, guidelines are provided for the treatment of critical poisoning from benzodiazepines, These guidelines discuss the role",
+      "score": 0.5608546
+    },
+    {
+      "number": 9,
+      "title": "An Update to the American Heart Association Guidelines for ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001161?doi=10.1161%2FCIR.0000000000001161",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Benzodiazepines are implicated in a large number of poisoning-related deaths, odiazepine overdose causes CNS depression",
+      "score": 0.52290934
+    },
+    {
+      "number": 10,
+      "title": "Toxidromes | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-026-00736-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nAmerican Academy of Clinical Toxicology & European Association of Poisons Centres and Clinical Toxicologists. Position statement and practice guidelines on the use of multi-dose activated charcoal in the treatment of acute poisoning. J. Toxicol. Clin. Toxicol. 37, 731\u2013751 (1",
+      "score": 0.45377067
+    },
+    {
+      "number": 11,
+      "title": "Part 8: Advanced Challenges in Resuscitation | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circ.102.suppl_1.I-223?doi=10.1161%2Fcirc.102.suppl_1.I-223",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Because reversal of benzodiazepine intoxication with flumazenil is hazardous, we do not recommend routine inclusion of this practice in \u201ccoma cocktail\u201d",
+      "score": 0.25574586
+    },
+    {
+      "number": 12,
+      "title": "Trends in antidote use in France from 2015 to 2021: a nationwide poison centers study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-15475-x",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "of poisoning involving acetaminophen, benzodiazepines, and opioids. The observed use of methylthioninium chloride, hydroxocobalamin, cyanocobalamin and DOAC reversal agents increased, both in terms of absolute numbers and proportions, revealing new behaviors leading to poisoning, such as nitrous oxi",
+      "score": 0.19250934
+    },
+    {
+      "number": 13,
+      "title": "Clorazepate - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/neuroscience/clorazepate",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "As given above, the usual strategy for analyzing benzodiazepines in urine first includes a prescreening using immunoassays and second a confirmatory test.",
+      "score": 0.55796635
+    },
+    {
+      "number": 14,
+      "title": "Loprazolam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/loprazolam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "As given above, the usual strategy for analyzing benzodiazepines in urine first includes a prescreening using immunoassays and second a confirmatory test.",
+      "score": 0.5489884
+    },
+    {
+      "number": 15,
+      "title": "Bromazepam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/veterinary-science-and-veterinary-medicine/bromazepam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "###### 6.3.4.1.1 Screening and confirmation of benzodiazepines\n\nDifferent immunoassays for indication of benzodiazepines are commercially available and can be used for screening in urine in order to differentiate between negative and presumptively positive samples. Positive results can be confirmed ",
+      "score": 0.4526091
+    },
+    {
+      "number": 16,
+      "title": "7 Aminoflunitrazepam - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/7-aminoflunitrazepam",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Methods for confirmation testing of benzodiazepines include GC and LC with MS detection. Confirmation methods using GC-MS generally report cutoff",
+      "score": 0.35588735
+    },
+    {
+      "number": 17,
+      "title": "A strategy for the detection of benzodiazepine drugs using low ...",
+      "detail": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.3630",
+      "authors": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "host": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "snippet": "flumazenil has been demonstrated to reverse benzodiazepine overdoses, its widespread use is not recommended due to the associated high risk of ...Missing: guidelines | Show results with:guidelines",
+      "score": 0.3397405
+    },
+    {
+      "number": 18,
+      "title": "Development and Validation of an HPLC\u2013MS/MS Method for the ...",
+      "detail": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "url": "https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/dta.70142",
+      "authors": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "host": "analyticalsciencejournals.onlinelibrary.wiley.com",
+      "snippet": "A highly sensitive and selective LC\u2013MS/MS method was developed and validated for the simultaneous detection of 38 benzodiazepines and their ...Missing: thresholds overdose",
+      "score": 0.29700124
+    },
+    {
+      "number": 19,
+      "title": "Flumazenil, naloxone and the \u2018coma cocktail\u2019 : British Journal of Clinical Pharmacology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00002256-201603000-00006",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Flumazenil and naloxone are considered to be pharmacologically ideal antidotes. By competitive binding at the molecular target receptors, they are highly specific antagonists of two important drug classes, the benzodiazepines and opioids, respectively. Both antidotes enjoy rapid onset and short dura",
+      "score": 0.3963491
+    },
+    {
+      "number": 20,
+      "title": "Continuous\u2010Infusion Flumazenil in the Management of ...",
+      "detail": "accpjournals.onlinelibrary.wiley.com",
+      "url": "https://accpjournals.onlinelibrary.wiley.com/doi/10.1592/phco.23.14.1513.31941",
+      "authors": "accpjournals.onlinelibrary.wiley.com",
+      "host": "accpjournals.onlinelibrary.wiley.com",
+      "snippet": "A 67-year-old man with chlordiazepoxide toxicity required a 9-day infusion of flumazenil to prevent resedation and respiratory insufficiency; he",
+      "score": 0.35561875
+    },
+    {
+      "number": 21,
+      "title": "Adverse Events Associated with Flumazenil Treatment for the ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/bcpt.12434",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Flumazenil is used for the reversal of benzodiazepine overdose. Serious adverse events (SAEs) including seizures and cardiac arrhythmias",
+      "score": 0.27868158
+    },
+    {
+      "number": 22,
+      "title": "Schizophrenia and Related Psychoses - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119870203.mpg001.pub2?paRef=Latest+Article+Version",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Many other drugs have been used (naloxone, Concomitant benzodiazepine use should be avoided, where possible. Monitor all patients for signs of",
+      "score": 0.24064115
+    },
+    {
+      "number": 23,
+      "title": "1258 : Critical Care Medicine - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ccmjournal/abstract/2013/12001/1258__continuous_infusion_flumazenil_for_prolonged.1208.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Nine days after the last dose of benzodiazepine was administered a flumazenil continuous infusion was initiated at 0.5 mg per hour. The patient's mental status",
+      "score": 0.22563875
+    },
+    {
+      "number": 24,
+      "title": "Prehospital midazolam use and outcomes among patients with out ...",
+      "detail": "www.neurology.org",
+      "url": "https://www.neurology.org/doi/10.1212/WNL.0000000000010913",
+      "authors": "www.neurology.org",
+      "host": "www.neurology.org",
+      "snippet": "Although high benzodiazepine doses carry a theoretical risk of respiratory depression, trial data using small sample sizes suggest that the risk",
+      "score": 0.11501327
+    }
+  ],
+  "publishedAt": "2026-09-15T23:58:09.931023+00:00",
+  "updatedAt": "2026-09-15T23:58:09.931023+00:00",
+  "readingMinutes": 6,
+  "slug": "benzodiazepine-toxicity"
+}

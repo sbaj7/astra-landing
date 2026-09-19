@@ -1,0 +1,770 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Endocrinology",
+  "title": "Pituitary Adenoma",
+  "summary": "Pituitary adenoma management begins by identifying visual or adrenal emergencies, defining hormone secretion and hypopituitarism, and obtaining dedicated sellar imaging. Treatment diverges sharply: dopamine agonist therapy for prolactinoma, transsphenoidal surgery for most other clinically significant tumors, and selective radiation or medical therapy for persistent disease.",
+  "seoDescription": "Physician guide to pituitary adenoma evaluation, endocrine testing, imaging, subtype-directed treatment, surgery, radiation, surveillance, and special situations.",
+  "clinicalQuestion": "How should physicians classify, evaluate, and select initial treatment for a suspected or incidentally detected pituitary adenoma?",
+  "specialty": "Endocrinology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "pituitary adenoma",
+    "PitNET",
+    "pituitary incidentaloma",
+    "prolactinoma",
+    "acromegaly",
+    "Cushing disease",
+    "transsphenoidal surgery",
+    "hypopituitarism"
+  ],
+  "keyTakeaways": [
+    "Urgent visual deterioration, ophthalmoplegia, or suspected pituitary apoplexy requires expedited multidisciplinary pituitary assessment rather than routine outpatient surveillance.[3][14][17]",
+    "Classify a sellar lesion by mass effect, hormone excess, and hormone deficiency; dedicated pituitary imaging, pituitary hormone testing, and visual assessment are individualized by lesion and clinical context.[3]",
+    "Prolactinoma is the major exception to surgery-first management: dopamine agonist therapy is a central treatment modality, with surgery, radiation, and special-situation management selected for resistant, invasive, or complicated disease.[1][2]",
+    "For GH-, ACTH-, TSH-secreting and clinically nonfunctioning adenomas with clinically significant tumor burden, transsphenoidal surgery is generally the primary definitive local treatment; persistent or recurrent tumor may require medical therapy and/or radiation.[1][8][11][13][24]",
+    "Persistent biochemical or structural disease should trigger subtype-specific reassessment and coordinated endocrinology, neurosurgery, neuroradiology, and ophthalmology care; referral to a pituitary tumor center of excellence is particularly appropriate when intervention is being considered or uncertainty remains.[3]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-first-assessment",
+      "eyebrow": "Initial decision",
+      "heading": "Which pituitary adenomas require urgent action?",
+      "intro": "Separate acute compressive or hemorrhagic presentations from stable endocrine or incidental lesions.",
+      "paragraphs": [
+        "Treat new or worsening lesion-specific symptoms as an escalation trigger. Visual symptoms, ocular motor deficits, severe acute headache with concern for hemorrhage, or other evidence of expanding sellar disease warrant urgent assessment by endocrinology, neurosurgery, and ophthalmology rather than interval imaging alone.[3][14][17]",
+        "Pregnancy does not eliminate compressive risk. In one series, symptomatic expansion occurred in 6 of 40 women with macroprolactinomas diagnosed before conception and in 1 of 7 women with nonfunctioning adenomas diagnosed before conception; two women had pituitary apoplexy. New headache or visual symptoms during pregnancy should therefore prompt assessment for expansion or apoplexy.[14]",
+        "For a stable incidentally discovered sellar or parasellar lesion, individualize the urgency of endocrinology, neurosurgery, ophthalmology, dedicated pituitary imaging, pituitary hormone testing, and visual assessment according to lesion type, size, symptoms, and proximity to relevant structures.[3]"
+      ],
+      "bullets": [
+        "Escalate promptly for new or deteriorating lesion-specific symptoms, especially when surgery or adjuvant treatment may be required.[3]",
+        "Use a multidisciplinary pituitary tumor center of excellence when operative or adjuvant decisions are under consideration or the next step is uncertain.[3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Urgency is driven by lesion-specific deterioration and pregnancy-associated expansion risk.[3][14]",
+        "columns": [
+          "Presentation",
+          "Immediate next action",
+          "Why it changes management"
+        ],
+        "rows": [
+          [
+            "New visual or ocular motor symptoms; severe acute headache concerning for apoplexy",
+            "Urgent multidisciplinary pituitary assessment, including ophthalmology and neurosurgical input.[3][17]",
+            "May represent expanding or hemorrhagic sellar disease requiring expedited intervention.[3][17]"
+          ],
+          [
+            "Stable incidental sellar lesion",
+            "Arrange context-specific dedicated imaging, pituitary hormone evaluation, and visual assessment.[3]",
+            "Macroadenomas, microadenomas, cystic lesions, and empty sella do not follow a single surveillance pathway.[3]"
+          ],
+          [
+            "Pregnancy with new headache or visual symptoms",
+            "Evaluate promptly for tumor expansion or apoplexy.[14]",
+            "Symptomatic expansion and apoplexy have been reported with macroprolactinomas and nonfunctioning adenomas during pregnancy.[14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classify-hormonal-phenotype",
+      "eyebrow": "Diagnostic branch point",
+      "heading": "How should endocrine testing direct the differential?",
+      "intro": "Interpret the lesion through secretion, pituitary reserve, and mass effect rather than MRI appearance alone.",
+      "paragraphs": [
+        "Obtain a focused baseline pituitary evaluation that can identify prolactin excess, GH excess, ACTH-dependent hypercortisolism, central thyroid dysfunction, gonadal-axis dysfunction, and impaired adrenal reserve. In patients with known pituitary tumor predisposition or symptomatic disease, surveillance panels include IGF-1, spot GH, prolactin, estradiol or testosterone, LH, FSH, TSH, free thyroxine, and morning cortisol; dynamic testing is used when needed to establish hormone excess or deficiency.[21][22]",
+        "An ACTH-driven hypercortisolism pathway requires biochemical confirmation of Cushing syndrome before localizing a pituitary source. Failure to suppress cortisol with physiologic dexamethasone testing supports Cushing syndrome; plasma ACTH then distinguishes ACTH-dependent disease from autonomous adrenal cortisol production, in which ACTH should be suppressed to less than 20 pg/mL.[20] Current Cushing disease consensus guidance addresses diagnostic laboratory testing, imaging, treatment selection, complication management, and disease monitoring.[8]",
+        "Interpret a prolactin result with attention to competing causes of hyperprolactinemia and MRI correlation. A prolactin concentration of 30-200 ng/mL can reflect functional causes or microadenoma, and no provocative or suppressive biochemical test consistently distinguishes these possibilities; pituitary MRI is superior to CT for microadenoma detection, while CT has a high false-positive rate for lesions smaller than 6 mm.[20] The prolactinoma consensus addresses biochemical assessment, imaging, disease-related complications, dopamine agonist withdrawal, surgery, radiation, pregnancy, chronic kidney disease, psychiatric disease, and other special situations.[2]",
+        "Discordant thyroid studies require biochemical interpretation before attributing an elevated TSH to primary hypothyroidism. Inappropriately elevated TSH with elevated free T4 and free T3 should prompt evaluation for central hyperthyroidism, including consideration of a TSH-secreting adenoma; one reported case incorporated alpha-subunit testing, alpha-subunit/TSH molar ratio, THRB testing, and pituitary assessment.[23]"
+      ],
+      "bullets": [
+        "Use serum IGF-1 as the initial biochemical screen when GH excess is suspected; further dynamic testing may be required to establish hormone excess.[21][22]",
+        "For suspected Cushing disease, establish endogenous hypercortisolism and ACTH dependence before treating a sellar lesion as causative.[8][20]",
+        "Do not use CT alone to adjudicate a possible microadenoma when MRI is available; lesions under 6 mm are particularly vulnerable to CT false-positive interpretation.[20]"
+      ],
+      "subsections": [
+        {
+          "heading": "Match phenotype to the next treatment pathway",
+          "paragraphs": [
+            "A confirmed prolactinoma usually enters a dopamine agonist-centered pathway, whereas a clinically nonfunctioning lesion is managed according to compressive effects and residual pituitary function. GH- and ACTH-secreting tumors require biochemical disease control in addition to local tumor control, because persistent hormone excess drives disease-specific morbidity.[1][2][8][11]"
+          ],
+          "bullets": [
+            "Consider genetic disease more strongly in childhood and adolescence, where functioning tumors, macroprolactinomas, aggressive behavior, treatment resistance, and genetic etiologies are relatively more prominent than in adults.[4]",
+            "For AIP familial isolated pituitary adenoma, clinical and biochemical surveillance includes annual IGF-1, GH, prolactin, gonadal hormones, TSH, free thyroxine, and morning cortisol, with MRI frequency tailored to clinical status, prior tumor extent, and treatment modality.[21][22]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Hormonal patterns determine whether the immediate pathway is prolactinoma-directed medical therapy, Cushing disease confirmation, or evaluation for other functioning and nonfunctioning tumors.[1][2][8][20][23]",
+        "columns": [
+          "Biochemical pattern",
+          "Interpretive issue",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "Prolactin 30-200 ng/mL",
+            "May represent functional hyperprolactinemia or microadenoma; provocative testing does not reliably distinguish them.[20]",
+            "Correlate with pituitary MRI and clinical context before assigning a tumor-directed pathway.[20]"
+          ],
+          [
+            "Nonsuppressible cortisol after physiologic dexamethasone testing with ACTH \u226520 pg/mL",
+            "Supports ACTH-dependent Cushing syndrome rather than autonomous adrenal cortisol production.[20]",
+            "Proceed through a Cushing disease diagnostic and localization pathway.[8][20]"
+          ],
+          [
+            "Elevated free T4/free T3 with inappropriately elevated TSH",
+            "Central hyperthyroidism is possible; elevated TSH should not be interpreted in isolation.[23]",
+            "Evaluate for TSHoma and competing etiologies of thyroid hormone resistance.[23]"
+          ],
+          [
+            "Elevated IGF-1 or symptoms suggesting GH excess",
+            "Requires evaluation for acromegaly or gigantism, with dynamic testing when indicated.[21][22]",
+            "Refer for subtype-directed pituitary management; transsphenoidal resection is considered first-line local treatment.[24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "imaging-visual-and-pathology",
+      "eyebrow": "Anatomic staging",
+      "heading": "When do MRI, visual assessment, and pathology alter management?",
+      "intro": "Use anatomy to determine compression risk and feasibility of definitive local treatment.",
+      "paragraphs": [
+        "Obtain dedicated pituitary MRI to define a suspected adenoma and to distinguish a pituitary lesion from alternative sellar pathology. MRI is superior to CT for diagnosis of pituitary microadenoma; the benefit is greatest when a lesion is small or biochemical findings are equivocal.[20] For incidentalomas, the need for dedicated imaging and visual assessment depends on whether the lesion is a macroadenoma, microadenoma, cystic lesion, or empty sella and on patient-specific clinical context.[3]",
+        "Visual assessment is not a formality in lesions with possible lesion-specific symptoms or anatomy threatening the visual apparatus. The incidentaloma consensus specifically identifies circumstances in which ophthalmology consultation and visual assessment are warranted, and recommends multidisciplinary review for new or deteriorating symptoms.[3]",
+        "Use pathology after resection to establish tumor lineage and guide the assessment of persistent, recurrent, or clinically aggressive disease. Aggressive pituitary adenomas are defined clinically by high recurrence and/or resistance to conventional therapies, rather than by a single histopathologic category; no biomarker is established as a complete early predictor of aggressive behavior.[5]"
+      ],
+      "bullets": [
+        "Do not equate radiographic discovery with a single diagnosis or treatment plan; cystic lesions and empty sella require separate contextual assessment from adenomas.[3]",
+        "Reassess pathology, imaging behavior, endocrine activity, and treatment response together when recurrence is rapid or conventional therapy fails.[5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Imaging and multidisciplinary assessment are selected by lesion context and clinical deterioration rather than by incidental discovery alone.[3][5][20]",
+        "columns": [
+          "Finding or scenario",
+          "Test or consultation",
+          "Management consequence"
+        ],
+        "rows": [
+          [
+            "Possible microadenoma with biochemical concern",
+            "Dedicated pituitary MRI.[20]",
+            "MRI is preferred over CT because CT may falsely identify lesions smaller than 6 mm.[20]"
+          ],
+          [
+            "Incidental macroadenoma, microadenoma, cystic lesion, or empty sella",
+            "Individualize endocrinology, neurosurgery, ophthalmology, imaging, and hormone testing.[3]",
+            "Avoid applying a uniform incidentaloma pathway across distinct lesion categories.[3]"
+          ],
+          [
+            "Recurrent or treatment-resistant adenoma",
+            "Multidisciplinary review with pathology and longitudinal imaging/endocrine data.[3][5]",
+            "Clinical aggressiveness is defined by recurrence and/or treatment resistance and may require nonstandard escalation.[5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "subtype-directed-treatment",
+      "eyebrow": "Definitive management",
+      "heading": "Which patients need medical therapy, transsphenoidal surgery, or radiation?",
+      "intro": "Select treatment by secretory subtype, mass effect, resectability, and biochemical response.",
+      "paragraphs": [
+        "Transsphenoidal surgery is the principal local treatment for most clinically significant nonprolactin pituitary adenomas. Across functioning adenomas, treatment strategies are tailored by subtype and can include surgical resection, medical therapy, and/or radiation; transsphenoidal tumor resection is considered first-line treatment for acromegaly.[11][24] Cushing disease consensus guidance likewise places treatment selection within a diagnostic, complication-management, and longitudinal-monitoring framework.[8]",
+        "Prolactinoma is managed differently. Dopamine agonist therapy is a core medical treatment, and the contemporary consensus addresses efficacy, adverse effects, withdrawal, surgery, preoperative therapy, radiation, and special settings such as cystic, giant, aggressive, mixed GH/prolactin-secreting tumors and pregnancy.[1][2] Choose surgery or radiation through a multidisciplinary pathway when medical treatment is ineffective, not tolerated, or when local disease behavior requires additional control.[2]",
+        "For acromegaly with persistent disease after surgery or when surgery is not sufficient, medical options include somatostatin analogues, cabergoline, and pegvisomant.[1] Preoperative somatostatin analogue therapy has been evaluated specifically before transsphenoidal resection of GH-secreting adenomas, so its use should be individualized to operative and biochemical goals rather than presumed routine.[12]",
+        "Reserve radiation as an adjunct for persistent or recurrent adenoma when durable local control is not achieved with surgery and subtype-appropriate medical therapy. Pituitary adenoma management requires balancing surgery, medical therapy, and radiation; radiation therapy sources describe doses of 20 Gy, but modality and dose selection require specialist planning.[10][13]"
+      ],
+      "bullets": [
+        "Use dopamine agonist-centered management for prolactinoma rather than automatically proceeding to surgery.[1][2]",
+        "Use transsphenoidal surgery as the first-line local treatment for acromegaly and as the usual local strategy for clinically significant nonprolactin adenomas.[11][24]",
+        "Escalate persistent or recurrent disease to coordinated consideration of repeat surgery, pharmacotherapy, and radiation rather than treating MRI persistence alone.[1][10][11][13]"
+      ],
+      "subsections": [
+        {
+          "heading": "Pregnancy and reproductive planning",
+          "paragraphs": [
+            "Before conception, characterize tumor size, prior surgery or radiation, and compressive risk. In the reported pregnancy cohort, none of nine women treated with surgery or radiotherapy before pregnancy had symptomatic tumor expansion, whereas expansion occurred among women with macroprolactinomas and nonfunctioning adenomas diagnosed before conception or during pregnancy.[14] Coordinate pregnancy planning and surveillance through endocrinology and obstetrics, with urgent reassessment for symptoms of expansion or apoplexy.[2][14]"
+          ],
+          "bullets": [
+            "Do not infer adverse pregnancy outcome solely from a pituitary tumor diagnosis; the cohort found no clear evidence of association with pregnancy-induced hypertension, preeclampsia, preterm labor, or stillbirth, although women with nonfunctioning adenomas had higher cesarean delivery risk than controls (relative risk 2.06; 95% CI, 1.26-3.36).[14]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Initial treatment selection is subtype-specific and frequently combines local and endocrine-directed therapies over time.[1][2][8][10][11][13][24]",
+        "columns": [
+          "Clinical subtype or state",
+          "Usual initial strategy",
+          "Escalation pathway"
+        ],
+        "rows": [
+          [
+            "Prolactinoma",
+            "Dopamine agonist-centered medical management.[1][2]",
+            "Consider surgery, preoperative medical therapy, or radiation for selected resistant, complicated, invasive, or aggressive disease.[2]"
+          ],
+          [
+            "Acromegaly from GH-secreting adenoma",
+            "Transsphenoidal resection is considered first-line local treatment.[24]",
+            "Persistent disease may require somatostatin analogues, cabergoline, pegvisomant, and/or radiation.[1][10]"
+          ],
+          [
+            "Cushing disease",
+            "Use the consensus diagnostic and treatment-selection pathway after biochemical confirmation and localization.[8]",
+            "Manage persistent disease with subtype-directed medical and local treatment strategies plus comorbidity monitoring.[8]"
+          ],
+          [
+            "Clinically nonfunctioning adenoma with significant tumor burden",
+            "Transsphenoidal surgery is generally the principal local treatment.[11][13]",
+            "Persistent or recurrent tumor is commonly managed with radiation therapy after reassessment of surgical and endocrine options.[13]"
+          ],
+          [
+            "Aggressive or treatment-resistant adenoma",
+            "Multidisciplinary reassessment of clinical behavior, pathology, endocrine control, and anatomy.[3][5]",
+            "Use individualized combinations of surgery, pharmacotherapy, and radiation; treatment resistance and recurrence define the aggressive phenotype.[5][11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surveillance-and-escalation",
+      "eyebrow": "Longitudinal care",
+      "heading": "How should follow-up detect residual disease, recurrence, and treatment complications?",
+      "intro": "Follow biochemical activity, residual mass, pituitary deficits, and disease-specific comorbidity in parallel.",
+      "paragraphs": [
+        "After treatment, surveillance must be aligned with the tumor\u2019s original hormonal phenotype and treatment modality. In symptomatic patients with AIP-associated familial isolated pituitary adenoma, annual clinical assessment and testing with IGF-1, spot GH, prolactin, estradiol or testosterone, LH, FSH, TSH, free thyroxine, and morning cortisol are recommended; MRI interval depends on clinical status, prior tumor extent, and treatment modality.[21][22]",
+        "Monitor complications caused by hormone excess, pituitary deficits, or treatment. In acromegaly, surveillance includes diabetes mellitus, hypertension, hypogonadism, osteoarthritis, and osteoporosis assessment; GeneReviews recommends colonoscopy beginning at age 40 years and repeating every 3-10 years according to colorectal lesions and IGF-1 levels in AIP-FIPA.[21][22]",
+        "Use new biochemical activity, new visual symptoms, enlarging residual disease, recurrence after prior therapy, or intolerance/resistance to medical therapy as triggers for repeat multidisciplinary treatment planning. This is particularly important for tumors behaving aggressively, defined clinically by recurrence and/or resistance to conventional therapies.[3][5]"
+      ],
+      "bullets": [
+        "Track free thyroxine rather than relying on TSH alone when central thyroid dysfunction is possible.[22][23]",
+        "Include morning cortisol and gonadal-axis testing in follow-up when pituitary reserve may be impaired by tumor or treatment.[21][22]",
+        "Increase surveillance intensity when clinical status changes; MRI frequency should reflect prior tumor extent and treatment modality rather than a fixed universal interval.[21][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Longitudinal surveillance should capture both endocrine recurrence and new pituitary dysfunction.[21][22]",
+        "columns": [
+          "Follow-up domain",
+          "Assessments",
+          "Actionable use"
+        ],
+        "rows": [
+          [
+            "Hormone excess or deficiency",
+            "IGF-1, spot GH, prolactin, estradiol/testosterone, LH, FSH, TSH, free thyroxine, and morning cortisol; dynamic testing when indicated.[21][22]",
+            "Detect persistent or recurrent secretion and evolving pituitary-axis deficits.[21][22]"
+          ],
+          [
+            "Residual or recurrent tumor",
+            "Pituitary MRI with frequency based on clinical status, prior tumor extent, and treatment modality.[21][22]",
+            "Identify structural progression requiring renewed surgical, medical, or radiation consideration.[3][13]"
+          ],
+          [
+            "Acromegaly complications",
+            "Assess diabetes, hypertension, hypogonadism, osteoarthritis, and osteoporosis; use colonoscopy from age 40 years with 3-10-year repeat interval in AIP-FIPA according to lesions and IGF-1.[21][22]",
+            "Treat systemic morbidity alongside biochemical and structural tumor control.[21][22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should an incidental pituitary lesion be referred to a pituitary center?",
+      "answer": "Refer when lesion-specific symptoms are new or worsening, when surgery or adjuvant therapy is being considered, or when the appropriate next step is uncertain. The incidentaloma consensus specifically supports multidisciplinary pituitary tumor center input in these settings.[3]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Diagnosis and Treatment of Pituitary Adenomas: A Review",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2600472",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by ME Molitch \u00b7 2017 \u00b7 Cited by 1324 \u2014 Medical therapy with somatostatin analogues, cabergoline, and pegvisomant is often also needed. ... transsphenoidal surgery with medical therapy ...Read more",
+      "score": 0.7950386
+    },
+    {
+      "number": 2,
+      "title": "Diagnosis and management of prolactin-secreting pituitary adenomas",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-023-00886-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Diagnosis and management of prolactin-secreting pituitary adenomas: a Pituitary Society international Consensus Statement. This Consensus Statement from an international, multidisciplinary workshop sponsored by the Pituitary Society offers evidence-based graded consensus recommendations and key su",
+      "score": 0.9859
+    },
+    {
+      "number": 3,
+      "title": "Pituitary incidentaloma: a Pituitary Society international consensus ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-025-01134-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "This Pituitary Society Consensus article presents an evidence-based consensus on the management of pituitary incidentaloma, defined as an\u00a0unexpected sellar or parasellar finding incidentally discovered on an imaging study that was not performed for a clinically suspected pituitary lesion. Recommenda",
+      "score": 0.98507
+    },
+    {
+      "number": 4,
+      "title": "Consensus guideline for the diagnosis and management of pituitary ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-023-00949-7",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Consensus guideline for the diagnosis and management of pituitary adenomas in childhood and adolescence: Part 2, specific diseases. Pituitary adenomas are rare in children and young people under the age of 19 (hereafter referred to as CYP) but they pose some different diagnostic and management cha",
+      "score": 0.97884
+    },
+    {
+      "number": 5,
+      "title": "Aggressive pituitary adenomas\u2014diagnosis and emerging treatments | Nature Reviews Endocrinology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrendo.2014.64",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Aggressive pituitary adenomas\u2014diagnosis and emerging treatments. **volume\u00a010**,\u00a0pages 423\u2013435 (2014) Cite this article. The WHO categorizes pituitary tumours as typical adenomas, atypical adenomas and pituitary carcinomas, although this classification does not cover the entire spectrum of histopat",
+      "score": 0.97529
+    },
+    {
+      "number": 6,
+      "title": "The burden of disease for pituitary patients - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1521690X19300600",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Non-functioning adenoma is the most prevalent pituitary adenoma. Visual ... Patient burden at diagnosis: treatment goals. Patients may have small or",
+      "score": 0.98439
+    },
+    {
+      "number": 7,
+      "title": "Long-term Remission in Functioning Pituitary Adenomas after ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/org/science/article/pii/S1871530325000770",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Diagnosis and treatment of hyperprolactinemia: An Endocrine Society clinical practice guideline. ... pituitary adenoma. Horm. Metab. Res., 46 (13) (2014)",
+      "score": 0.97967
+    },
+    {
+      "number": 8,
+      "title": "Consensus on diagnosis and management of Cushing's disease",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213858721002357",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Consensus on diagnosis and management of Cushing's disease: a guideline update. Recommendations regarding use of laboratory tests, imaging, and treatment options are presented, along with algorithms for diagnosis of Cushing's syndrome and management of Cushing's disease. Cushing's disease, the most ",
+      "score": 0.97383
+    },
+    {
+      "number": 9,
+      "title": "Pituitary Cancer - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/pituitary-cancer",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Typically, the clinical diagnosis of a gonadotroph adenoma is made by an absence of symptoms that would suggest a different type of pituitary adenoma (e.g., of",
+      "score": 0.96459
+    },
+    {
+      "number": 10,
+      "title": "Radiation Therapy in the Management of Pituitary Adenomas",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/96/7/1992/2833948",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Optimal management of pituitary adenomas involves consideration of the roles of medical therapy, surgery, and radiation ... doses of 20 Gy",
+      "score": 0.5889134
+    },
+    {
+      "number": 11,
+      "title": "Management of hormone-secreting pituitary adenomas",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/neuro-oncology/article/19/6/762/2631675",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by GU Mehta \u00b7 2017 \u00b7 Cited by 240 \u2014 Treatment strategies are tailored to the specific adenoma subtype and can include surgical resection, medical therapy, and/or radiation therapy.Read more",
+      "score": 0.56575525
+    },
+    {
+      "number": 12,
+      "title": "Role of Pharmacotherapy in Perioperative Management of ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/88/3/963/2845084",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Ben-Shlomo \u00b7 2003 \u00b7 Cited by 106 \u2014 This review evaluates the rationale for administering somatostatin analog treatment before either transsphenoidal resection of a GH-secreting pituitary adenoma",
+      "score": 0.53925073
+    },
+    {
+      "number": 13,
+      "title": "Successful Volume Control of Invasive Pituitary Adenoma ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcemcr/article/3/6/luaf075/8116176",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Elhadd \u00b7 2025 \u00b7 Cited by 1 \u2014 First-line treatment is transsphenoidal surgery (TSS); Persistent or recurrent adenomas are usually treated with radiation therapy.",
+      "score": 0.4784076
+    },
+    {
+      "number": 14,
+      "title": "Macroprolactinomas and Nonfunctioning Pituitary... : Obstetrics & Gynecology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/_layouts/15/oaks.journals/downloadpdf.aspx?an=00006250-201701000-00024",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "There were 71 confirmed cases of pituitary tumors in pregnancy (49 macrolactinoma, 16 nonfunctioning adenomas, three acromegaly, three Cushing's disease). The women with pituitary tumors were 4 years older than comparison women (P<.001). None of the nine women treated with surgery or radiotherapy be",
+      "score": 0.75421005
+    },
+    {
+      "number": 15,
+      "title": "Poster Presentation : Indian Journal of Endocrinology and Metabolism",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/indjem/fulltext/2025/09001/poster_presentation.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "visual disturbances (35%). Prolactinoma and acromegaly were predominant in 20 to 59-year-olds. Among Prolactinoma, infertility (21%), and galactorrhoea (19.4%) were common. Males reported with erectile dysfunction. In acromegaly, Headache, enlarged nose, and acral enlargement of the hands and feet w",
+      "score": 0.59796065
+    },
+    {
+      "number": 16,
+      "title": "Long-Term Outcomes After CyberKnife Radiosurgery for ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/neurosurgery/_layouts/15/oaks.journals/downloadpdf.aspx?an=00006123-202504000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Pituitary adenomas account for 10% to 20% of all tumors of the central nervous system, of which approximately one third are nonfunctioning.1",
+      "score": 0.34959987
+    },
+    {
+      "number": 17,
+      "title": "PITUITARY DISORDERS",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2009/04000/pituitary_disorders.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Google Scholar\n\nSchlechte JA. Clinical practice. Prolactinoma. N Engl J Med 2003;349(21):2035-2041.\n\nGoogle Scholar\n\nSchneider HJ, Kreitschmann-Andermahr I, Ghigo E, et al. Hypothalamopituitary dysfunction following traumatic brain injury and aneurysmal subarachnoid hemorrhage: a systematic review. ",
+      "score": 0.3396091
+    },
+    {
+      "number": 18,
+      "title": "Guidance: Collaboration or Endorsement | Endocrine Society",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/collaborated-and-endorsed-guidelines",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "###### CLINICAL PRACTICE GUIDELINES. The Endocrine Society supports the dissemination of up-to-date, high quality clinical guidance to improve clinical care. To that end, the Society considers the endorsement of externally developed clinical practice guidelines and consensus documents that meet expl",
+      "score": 0.96439
+    },
+    {
+      "number": 19,
+      "title": "[PDF] BASIC - Gonadotroph Biology (1:30 PM-3:30 PM) Title GNRH ...",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/-/media/endocrine/files/endo-annual-meetings/endo_abstracts_2011_02.pdf",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "Pub # P1-382 Session Information POSTER SESSION: BASIC - Gonadotroph Biology (1:30 PM-3:30 PM) Title GNRH-Induced PACAP and PAC1 Receptor Expression in Pituitary Gonadotrophs: A Possible Role in the Regulation of Gonadotropin Subunit Gene Expression Author String H Kanasaki, IN Purwana, A Oride, T M",
+      "score": 0.95636
+    },
+    {
+      "number": 20,
+      "title": "Abbreviated Tests of Endocrine Function - Clinical Methods - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK704",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "diagnostic problem is the patient with a serum prolactin between 30 and 200 ng/ml. This may be caused by functional factors or a microadenoma. At present there are no biochemical provocative or suppressive tests that will consistently differentiate functional from tumorous hyperprolactinemia. Imagin",
+      "score": 0.46395484
+    },
+    {
+      "number": 21,
+      "title": "AIP Familial Isolated Pituitary Adenomas - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/22720333",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In symptomatic individuals: annual clinical assessment and pituitary function tests (serum IGF-1, spot GH, prolactin, estradiol/testosterone, LH, FSH, TSH, thyroxine, and morning cortisol); if indicated, annual dynamic testing to evaluate for hormone excess or deficiency (e.g., glucose tolerance tes",
+      "score": 0.46147847
+    },
+    {
+      "number": 22,
+      "title": "AIP Familial Isolated Pituitary Adenomas - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK97965",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In symptomatic individuals: annual clinical assessment and pituitary function tests (serum IGF-1, spot GH, prolactin, estradiol/testosterone, LH, FSH, TSH, thyroxine, and morning cortisol); if indicated, annual dynamic testing to evaluate for hormone excess or deficiency (e.g., glucose tolerance tes",
+      "score": 0.43165663
+    },
+    {
+      "number": 23,
+      "title": "ENDO 2026",
+      "detail": "endo2026.endocrine.org",
+      "url": "https://endo2026.endocrine.org/ajaxcalls/PresentationInfo.asp?PresentationID=1843600",
+      "authors": "endo2026.endocrine.org",
+      "host": "endo2026.endocrine.org",
+      "snippet": "Title: ENDO 2026\n# MON-105 - When Refractory Hypothyroidism Is Central Hyperthyroidism: TSH-Secreting Pituitary Adenoma Unmasked by Levothyroxine Withdrawal. ## Submitting author(s). ## Co-Author(s). ## Senior Author/Primary Investigator(s). TSH\u2011secreting pituitary adenomas (TSHomas) are rare causes",
+      "score": 0.40500212
+    },
+    {
+      "number": 24,
+      "title": "Pharmacological management of acromegaly: a current ...",
+      "detail": "uat.ajnr.org",
+      "url": "https://uat.ajnr.org/lookup/external-ref?access_num=20887124&link_type=MED&atom=%2Fajnr%2Fearly%2F2020%2F05%2F28%2Fajnr.A6584.atom",
+      "authors": "uat.ajnr.org",
+      "host": "uat.ajnr.org",
+      "snippet": "by S Manjila \u00b7 2010 \u00b7 Cited by 50 \u2014 a pituitary adenoma. Treatment goals include complete removal of the tumor \u30fb transsphenoidal tumor resection is considered first-line treatment \u30fb cabergoline",
+      "score": 0.5775198
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Diagnosis and Treatment of Pituitary Adenomas: A Review",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/article-abstract/2600472",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "by ME Molitch \u00b7 2017 \u00b7 Cited by 1324 \u2014 Medical therapy with somatostatin analogues, cabergoline, and pegvisomant is often also needed. ... transsphenoidal surgery with medical therapy ...Read more",
+      "score": 0.7950386
+    },
+    {
+      "number": 2,
+      "title": "Diagnosis and management of prolactin-secreting pituitary adenomas",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-023-00886-5",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Diagnosis and management of prolactin-secreting pituitary adenomas: a Pituitary Society international Consensus Statement. This Consensus Statement from an international, multidisciplinary workshop sponsored by the Pituitary Society offers evidence-based graded consensus recommendations and key su",
+      "score": 0.9859
+    },
+    {
+      "number": 3,
+      "title": "Pituitary incidentaloma: a Pituitary Society international consensus ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-025-01134-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "This Pituitary Society Consensus article presents an evidence-based consensus on the management of pituitary incidentaloma, defined as an\u00a0unexpected sellar or parasellar finding incidentally discovered on an imaging study that was not performed for a clinically suspected pituitary lesion. Recommenda",
+      "score": 0.98507
+    },
+    {
+      "number": 4,
+      "title": "Consensus guideline for the diagnosis and management of pituitary ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41574-023-00949-7",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Consensus guideline for the diagnosis and management of pituitary adenomas in childhood and adolescence: Part 2, specific diseases. Pituitary adenomas are rare in children and young people under the age of 19 (hereafter referred to as CYP) but they pose some different diagnostic and management cha",
+      "score": 0.97884
+    },
+    {
+      "number": 5,
+      "title": "Aggressive pituitary adenomas\u2014diagnosis and emerging treatments | Nature Reviews Endocrinology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/nrendo.2014.64",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "# Aggressive pituitary adenomas\u2014diagnosis and emerging treatments. **volume\u00a010**,\u00a0pages 423\u2013435 (2014) Cite this article. The WHO categorizes pituitary tumours as typical adenomas, atypical adenomas and pituitary carcinomas, although this classification does not cover the entire spectrum of histopat",
+      "score": 0.97529
+    },
+    {
+      "number": 6,
+      "title": "The burden of disease for pituitary patients - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1521690X19300600",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Non-functioning adenoma is the most prevalent pituitary adenoma. Visual ... Patient burden at diagnosis: treatment goals. Patients may have small or",
+      "score": 0.98439
+    },
+    {
+      "number": 7,
+      "title": "Long-term Remission in Functioning Pituitary Adenomas after ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/org/science/article/pii/S1871530325000770",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Diagnosis and treatment of hyperprolactinemia: An Endocrine Society clinical practice guideline. ... pituitary adenoma. Horm. Metab. Res., 46 (13) (2014)",
+      "score": 0.97967
+    },
+    {
+      "number": 8,
+      "title": "Consensus on diagnosis and management of Cushing's disease",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213858721002357",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Consensus on diagnosis and management of Cushing's disease: a guideline update. Recommendations regarding use of laboratory tests, imaging, and treatment options are presented, along with algorithms for diagnosis of Cushing's syndrome and management of Cushing's disease. Cushing's disease, the most ",
+      "score": 0.97383
+    },
+    {
+      "number": 9,
+      "title": "Pituitary Cancer - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/pituitary-cancer",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Typically, the clinical diagnosis of a gonadotroph adenoma is made by an absence of symptoms that would suggest a different type of pituitary adenoma (e.g., of",
+      "score": 0.96459
+    },
+    {
+      "number": 10,
+      "title": "Radiation Therapy in the Management of Pituitary Adenomas",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/96/7/1992/2833948",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Optimal management of pituitary adenomas involves consideration of the roles of medical therapy, surgery, and radiation ... doses of 20 Gy",
+      "score": 0.5889134
+    },
+    {
+      "number": 11,
+      "title": "Management of hormone-secreting pituitary adenomas",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/neuro-oncology/article/19/6/762/2631675",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by GU Mehta \u00b7 2017 \u00b7 Cited by 240 \u2014 Treatment strategies are tailored to the specific adenoma subtype and can include surgical resection, medical therapy, and/or radiation therapy.Read more",
+      "score": 0.56575525
+    },
+    {
+      "number": 12,
+      "title": "Role of Pharmacotherapy in Perioperative Management of ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/88/3/963/2845084",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by A Ben-Shlomo \u00b7 2003 \u00b7 Cited by 106 \u2014 This review evaluates the rationale for administering somatostatin analog treatment before either transsphenoidal resection of a GH-secreting pituitary adenoma",
+      "score": 0.53925073
+    },
+    {
+      "number": 13,
+      "title": "Successful Volume Control of Invasive Pituitary Adenoma ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcemcr/article/3/6/luaf075/8116176",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by T Elhadd \u00b7 2025 \u00b7 Cited by 1 \u2014 First-line treatment is transsphenoidal surgery (TSS); Persistent or recurrent adenomas are usually treated with radiation therapy.",
+      "score": 0.4784076
+    },
+    {
+      "number": 14,
+      "title": "Macroprolactinomas and Nonfunctioning Pituitary... : Obstetrics & Gynecology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/_layouts/15/oaks.journals/downloadpdf.aspx?an=00006250-201701000-00024",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "There were 71 confirmed cases of pituitary tumors in pregnancy (49 macrolactinoma, 16 nonfunctioning adenomas, three acromegaly, three Cushing's disease). The women with pituitary tumors were 4 years older than comparison women (P<.001). None of the nine women treated with surgery or radiotherapy be",
+      "score": 0.75421005
+    },
+    {
+      "number": 15,
+      "title": "Poster Presentation : Indian Journal of Endocrinology and Metabolism",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/indjem/fulltext/2025/09001/poster_presentation.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "visual disturbances (35%). Prolactinoma and acromegaly were predominant in 20 to 59-year-olds. Among Prolactinoma, infertility (21%), and galactorrhoea (19.4%) were common. Males reported with erectile dysfunction. In acromegaly, Headache, enlarged nose, and acral enlargement of the hands and feet w",
+      "score": 0.59796065
+    },
+    {
+      "number": 16,
+      "title": "Long-Term Outcomes After CyberKnife Radiosurgery for ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/neurosurgery/_layouts/15/oaks.journals/downloadpdf.aspx?an=00006123-202504000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Pituitary adenomas account for 10% to 20% of all tumors of the central nervous system, of which approximately one third are nonfunctioning.1",
+      "score": 0.34959987
+    },
+    {
+      "number": 17,
+      "title": "PITUITARY DISORDERS",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2009/04000/pituitary_disorders.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Google Scholar\n\nSchlechte JA. Clinical practice. Prolactinoma. N Engl J Med 2003;349(21):2035-2041.\n\nGoogle Scholar\n\nSchneider HJ, Kreitschmann-Andermahr I, Ghigo E, et al. Hypothalamopituitary dysfunction following traumatic brain injury and aneurysmal subarachnoid hemorrhage: a systematic review. ",
+      "score": 0.3396091
+    },
+    {
+      "number": 18,
+      "title": "Guidance: Collaboration or Endorsement | Endocrine Society",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/collaborated-and-endorsed-guidelines",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "###### CLINICAL PRACTICE GUIDELINES. The Endocrine Society supports the dissemination of up-to-date, high quality clinical guidance to improve clinical care. To that end, the Society considers the endorsement of externally developed clinical practice guidelines and consensus documents that meet expl",
+      "score": 0.96439
+    },
+    {
+      "number": 19,
+      "title": "[PDF] BASIC - Gonadotroph Biology (1:30 PM-3:30 PM) Title GNRH ...",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/-/media/endocrine/files/endo-annual-meetings/endo_abstracts_2011_02.pdf",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "Pub # P1-382 Session Information POSTER SESSION: BASIC - Gonadotroph Biology (1:30 PM-3:30 PM) Title GNRH-Induced PACAP and PAC1 Receptor Expression in Pituitary Gonadotrophs: A Possible Role in the Regulation of Gonadotropin Subunit Gene Expression Author String H Kanasaki, IN Purwana, A Oride, T M",
+      "score": 0.95636
+    },
+    {
+      "number": 20,
+      "title": "Abbreviated Tests of Endocrine Function - Clinical Methods - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK704",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "diagnostic problem is the patient with a serum prolactin between 30 and 200 ng/ml. This may be caused by functional factors or a microadenoma. At present there are no biochemical provocative or suppressive tests that will consistently differentiate functional from tumorous hyperprolactinemia. Imagin",
+      "score": 0.46395484
+    },
+    {
+      "number": 21,
+      "title": "AIP Familial Isolated Pituitary Adenomas - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/22720333",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In symptomatic individuals: annual clinical assessment and pituitary function tests (serum IGF-1, spot GH, prolactin, estradiol/testosterone, LH, FSH, TSH, thyroxine, and morning cortisol); if indicated, annual dynamic testing to evaluate for hormone excess or deficiency (e.g., glucose tolerance tes",
+      "score": 0.46147847
+    },
+    {
+      "number": 22,
+      "title": "AIP Familial Isolated Pituitary Adenomas - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK97965",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In symptomatic individuals: annual clinical assessment and pituitary function tests (serum IGF-1, spot GH, prolactin, estradiol/testosterone, LH, FSH, TSH, thyroxine, and morning cortisol); if indicated, annual dynamic testing to evaluate for hormone excess or deficiency (e.g., glucose tolerance tes",
+      "score": 0.43165663
+    },
+    {
+      "number": 23,
+      "title": "ENDO 2026",
+      "detail": "endo2026.endocrine.org",
+      "url": "https://endo2026.endocrine.org/ajaxcalls/PresentationInfo.asp?PresentationID=1843600",
+      "authors": "endo2026.endocrine.org",
+      "host": "endo2026.endocrine.org",
+      "snippet": "Title: ENDO 2026\n# MON-105 - When Refractory Hypothyroidism Is Central Hyperthyroidism: TSH-Secreting Pituitary Adenoma Unmasked by Levothyroxine Withdrawal. ## Submitting author(s). ## Co-Author(s). ## Senior Author/Primary Investigator(s). TSH\u2011secreting pituitary adenomas (TSHomas) are rare causes",
+      "score": 0.40500212
+    },
+    {
+      "number": 24,
+      "title": "Pharmacological management of acromegaly: a current ...",
+      "detail": "uat.ajnr.org",
+      "url": "https://uat.ajnr.org/lookup/external-ref?access_num=20887124&link_type=MED&atom=%2Fajnr%2Fearly%2F2020%2F05%2F28%2Fajnr.A6584.atom",
+      "authors": "uat.ajnr.org",
+      "host": "uat.ajnr.org",
+      "snippet": "by S Manjila \u00b7 2010 \u00b7 Cited by 50 \u2014 a pituitary adenoma. Treatment goals include complete removal of the tumor \u30fb transsphenoidal tumor resection is considered first-line treatment \u30fb cabergoline",
+      "score": 0.5775198
+    }
+  ],
+  "publishedAt": "2026-09-16T00:31:40.539186+00:00",
+  "updatedAt": "2026-09-16T00:31:40.539186+00:00",
+  "readingMinutes": 7,
+  "slug": "pituitary-adenoma"
+}

@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Perioperative medicine",
+  "title": "Perioperative DOAC Interruption",
+  "summary": "Plan direct oral anticoagulant interruption by procedural bleeding consequence, agent, renal function, and whether neuraxial access is planned; avoid heparin bridging, confirm procedural hemostasis before restarting, and shorten time off anticoagulation whenever safely possible.",
+  "seoDescription": "Practical perioperative DOAC interruption timing by bleeding risk, renal function, agent, neuraxial anesthesia, testing, and postoperative resumption.",
+  "clinicalQuestion": "How should apixaban, rivaroxaban, edoxaban, and dabigatran be interrupted and resumed around elective procedures?",
+  "specialty": "Perioperative medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "DOAC interruption",
+    "perioperative anticoagulation",
+    "apixaban perioperative management",
+    "dabigatran renal function",
+    "neuraxial anesthesia anticoagulation",
+    "DOAC resumption",
+    "heparin bridging"
+  ],
+  "keyTakeaways": [
+    "Classify the procedure as minimal, low/moderate, or high bleeding risk before selecting a DOAC schedule; neuraxial anesthesia requires complete interruption. [8]",
+    "For procedures that cannot be done safely on uninterrupted therapy, DOAC hold duration depends on the specific agent, renal function, and procedural bleeding risk. [9]",
+    "Do not use perioperative heparin or LMWH bridging solely because a DOAC is interrupted; DOACs achieve therapeutic anticoagulation within hours of resumption. [7][24]",
+    "Restart a DOAC only after procedural hemostasis is secure: generally the next day after low-risk procedures and at least 48-72 hours after high-risk procedures. [7]",
+    "For dabigatran, impaired renal function materially extends interruption: CrCl 30-50 mL/min requires 4-5 days before high-bleeding-risk procedures or neuraxial intervention. [1][5][8]"
+  ],
+  "sections": [
+    {
+      "id": "make-the-preoperative-plan",
+      "eyebrow": "Initial decision",
+      "heading": "Build the interruption plan from procedure, drug, and renal function",
+      "intro": "Document the procedure category, last dose, renal function, and planned anesthetic technique before issuing hold instructions.",
+      "paragraphs": [
+        "First determine whether anticoagulation can remain uninterrupted. Minimal-risk procedures include cataract surgery and minor dental or dermatologic procedures; the 2024 perioperative guideline defines this category by a 30-day major-bleeding risk of 0%. Low/moderate-risk procedures have an estimated 30-day major-bleeding risk below 2%. Procedures with major bleeding consequences, particularly neuraxial anesthesia, require complete interruption. [8]",
+        "If interruption is required, use the DOAC, current creatinine clearance (CrCl), and procedural bleeding risk\u2014not a fixed number of calendar days. ACC guidance specifically directs that interruption timing be individualized by agent, renal function, and procedure bleeding risk. Renal function is especially consequential for dabigatran; obtain a current creatinine measurement when kidney function may have changed, including clinical deterioration before an endoscopic procedure. [5][9]",
+        "Avoid routine drug-level testing for standard elective cases with an adequate pharmacokinetic hold. Consider a calibrated agent-specific anti-Xa level for factor Xa inhibitors or dilute thrombin time (dTT) for dabigatran when severe renal impairment, uncertain last ingestion, or an abbreviated interruption leaves clinically important uncertainty. A residual DOAC concentration below 30 ng/mL is commonly treated by anesthesiology societies as a hemostatic threshold, although this cutoff has not been clinically validated. [4][10][16]"
+      ],
+      "bullets": [
+        "Record the indication for anticoagulation and assess whether an unusually high thrombotic-risk circumstance warrants joint planning among the proceduralist, anticoagulation prescriber, and anesthesia team. [8]",
+        "Confirm the planned intervention rather than relying on a generic label; a diagnostic procedure and therapeutic intervention may have different bleeding consequences. [8][19]",
+        "Recalculate CrCl near the procedure when acute illness, dehydration, or renal decline could increase DOAC exposure. [5][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Procedure-risk classification directs whether interruption is necessary and how conservatively to manage the perioperative interval. [8]",
+        "columns": [
+          "Procedure category",
+          "Examples or defining feature",
+          "DOAC planning implication"
+        ],
+        "rows": [
+          [
+            "Minimal bleeding risk",
+            "30-day major-bleeding risk 0%; cataract surgery; minor dental or dermatologic procedures. [8]",
+            "Determine whether uninterrupted therapy is feasible; avoid unnecessarily prolonged interruption. [8]"
+          ],
+          [
+            "Low/moderate bleeding risk",
+            "30-day major-bleeding risk <2%. [8]",
+            "Use an agent- and renal function-specific short interruption if uninterrupted therapy is not safe. [8][9]"
+          ],
+          [
+            "High bleeding risk or high consequence of bleeding",
+            "Includes neuraxial anesthesia. [8]",
+            "Use complete interruption; use the longer schedule required for the agent and renal function. [8][10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "elective-interruption-timing",
+      "eyebrow": "Preprocedure timing",
+      "heading": "How long to hold each DOAC before elective surgery",
+      "intro": "Count the hold interval from the last administered dose and use CrCl rather than eGFR when applying the ACC timing table.",
+      "paragraphs": [
+        "For standard procedures, a pharmacokinetic approach targets approximately 2-3 half-lives off drug for low bleeding risk and 4-5 half-lives for uncertain, intermediate, or high bleeding risk. In the ACC 2020 pathway, apixaban, edoxaban, or rivaroxaban with CrCl at least 30 mL/min are held at least 24 hours for low-risk procedures and 48 hours for uncertain, intermediate, or high-risk procedures. [10]",
+        "Dabigatran interruption must be extended as renal clearance falls. With CrCl at least 80 mL/min, hold at least 24 hours for low-risk and 48 hours for higher-risk procedures; with CrCl 50-79 mL/min, hold at least 36 and 72 hours, respectively; and with CrCl 30-49 mL/min, hold at least 48 and 96 hours, respectively. For CrCl 15-29 mL/min, the ACC table advises at least 72 hours for low-risk procedures and dTT testing or prolonged withholding for higher-risk procedures. [10]",
+        "A standardized PAUSE-based strategy used 1 day of interruption before low-bleeding-risk surgery and 2 days before high-bleeding-risk surgery, with longer interruption for dabigatran in renal impairment. Across perioperative DOAC interruption studies in atrial fibrillation, pooled 30-day thromboembolism and major-bleeding rates were 0.4% and 1.8%, respectively. [12][21]"
+      ],
+      "bullets": [
+        "For factor Xa inhibitors with CrCl 15-29 mL/min, the ACC pathway advises at least 36 hours for low-risk procedures; for higher-risk procedures, obtain an agent-specific anti-Xa level or withhold at least 72 hours. [10]",
+        "For dabigatran with CrCl below 15 mL/min, and for factor Xa inhibitors with CrCl below 15 mL/min, the cited ACC table provides no fixed interval; obtain drug-specific testing or individualize the plan. [10]",
+        "Do not shorten the hold because a patient has a high CHA2DS2-VASc score without first considering whether the procedure can proceed uninterrupted or be deferred; the hold is designed to minimize both residual drug and time without anticoagulation. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ACC 2020 minimum preprocedure withholding intervals for elective procedures. Higher-risk refers to uncertain, intermediate, or high procedural bleeding risk. [10]",
+        "columns": [
+          "Agent and CrCl",
+          "Low bleeding risk",
+          "Uncertain, intermediate, or high bleeding risk"
+        ],
+        "rows": [
+          [
+            "Dabigatran, CrCl \u226580 mL/min",
+            "\u226524 hours. [10]",
+            "\u226548 hours. [10]"
+          ],
+          [
+            "Dabigatran, CrCl 50-79 mL/min",
+            "\u226536 hours. [10]",
+            "\u226572 hours. [10]"
+          ],
+          [
+            "Dabigatran, CrCl 30-49 mL/min",
+            "\u226548 hours. [10]",
+            "\u226596 hours. [10]"
+          ],
+          [
+            "Dabigatran, CrCl 15-29 mL/min",
+            "\u226572 hours. [10]",
+            "No fixed interval; consider dTT and/or prolonged withholding. [10]"
+          ],
+          [
+            "Apixaban, edoxaban, or rivaroxaban, CrCl \u226530 mL/min",
+            "\u226524 hours. [10]",
+            "\u226548 hours. [10]"
+          ],
+          [
+            "Apixaban, edoxaban, or rivaroxaban, CrCl 15-29 mL/min",
+            "\u226536 hours. [10]",
+            "No fixed interval; consider agent-specific anti-Xa level and/or withhold \u226572 hours. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "neuraxial-and-deep-blocks",
+      "eyebrow": "High-consequence bleeding",
+      "heading": "Use a more conservative plan for neuraxial anesthesia and deep blocks",
+      "intro": "Coordinate anticoagulant timing with the anesthesiologist before scheduling a neuraxial technique.",
+      "paragraphs": [
+        "Neuraxial anesthesia should not be managed as an ordinary high-bleeding-risk surgery because spinal or epidural hematoma carries disproportionate neurologic consequence. The 2024 perioperative guideline calls for complete interruption and specifies at least 3 days for factor Xa inhibitors and at least 4 days for dabigatran when minimal drug effect is desired; extend dabigatran to 5-6 days when CrCl is below 50 mL/min. [8]",
+        "ASRA-oriented guidance uses a conservative residual anticoagulant target of less than 30 ng/mL when level testing is used. In patients with CrCl above 50 mL/min taking high-dose dabigatran, a 60-72-hour interruption yielded dTT evidence of no detectable anticoagulant effect, defined as a plasma concentration below 20 ng/mL, in 95.5% at procedure time. [1][4][16]",
+        "For elective neuraxial procedures with uncertain adherence, delayed elimination, or a shorter-than-recommended interval, choose an alternate anesthetic technique, delay the intervention, or obtain a drug-specific level rather than inferring safety from PT, INR, or aPTT. Practice remains variable: anesthesiologists surveyed for high-bleeding-risk surgery with neuraxial anesthesia generally favored 3-5 days of interruption, whereas medical specialists more often favored 2 days. [10][17]"
+      ],
+      "bullets": [
+        "Use at least a 3-day interruption for apixaban, rivaroxaban, or edoxaban before neuraxial anesthesia. [8]",
+        "Use at least a 4-day interruption for dabigatran before neuraxial anesthesia; use 5-6 days when CrCl is below 50 mL/min. [8]",
+        "If a calibrated assay is used to adjudicate residual activity, interpret a level below 30 ng/mL as a commonly used expert threshold rather than a prospectively validated guarantee of safety. [4][16]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "procedure-specific-exceptions",
+      "eyebrow": "Procedural branches",
+      "heading": "Handle endoscopy and cardiac implantable devices as procedure-specific decisions",
+      "intro": "Procedural details can justify a shorter or different interruption strategy than a generic surgery schedule.",
+      "paragraphs": [
+        "For elective endoscopy, distinguish low-risk diagnostic procedures from interventions with a substantial postprocedural bleeding risk. Endoscopy guidance supports a favorable temporary DOAC interruption interval of 1-2 days before elective endoscopic procedures, excluding the day of the procedure; for dabigatran with CrCl 30-50 mL/min, the last dose should be 5 days before a high-risk procedure. [5][19]",
+        "Avoid LMWH bridging around endoscopic procedures solely because the DOAC is held. In cited endoscopy data, bridging increased postpolypectomy hemorrhage without reducing thromboembolic events. [5]",
+        "For atrial fibrillation patients undergoing pacemaker, defibrillator, or generator procedures, either uninterrupted or interrupted DOAC therapy is reasonable. Choose with the implanting operator based on anticipated pocket bleeding, procedural complexity, and local protocol rather than applying an automatic multi-day interruption. [9]"
+      ],
+      "bullets": [
+        "If a patient taking dabigatran is clinically deteriorating before endoscopy, reassess renal function before confirming the date of the last dose. [5]",
+        "For high-risk endoscopic intervention, weigh delayed postprocedural bleeding against the rapid onset of DOAC effect after resumption. [5][7]",
+        "For device implantation, an uninterrupted strategy is a reasonable option only in the specific pacemaker, defibrillator, or generator-change setting addressed by AF guidance. [9]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "postprocedure-resumption",
+      "eyebrow": "Restart strategy",
+      "heading": "Restart at full dose only after hemostasis is established",
+      "intro": "The postoperative decision is driven by observed hemostasis and the consequence of site bleeding, not by the preoperative hold duration.",
+      "paragraphs": [
+        "Before restarting, confirm procedural-site hemostasis, consider procedure-specific bleeding complications, reassess patient-specific bleeding factors, and involve the proceduralist and managing service in the decision. This is essential because a full DOAC dose restores therapeutic anticoagulation within hours; peak levels and therapeutic effect generally occur about 2-3 hours after DOAC initiation. [7][8]",
+        "After a low postprocedural bleeding-risk procedure, resume the full DOAC dose on the day after the procedure if hemostasis is complete. After a high postprocedural bleeding-risk procedure, wait at least 48-72 hours before full-dose resumption when complete hemostasis has been achieved. PAUSE-based endoscopy guidance similarly reports low thromboembolic risk when DOAC therapy is restarted 2-3 days after high-risk procedures. [5][7]",
+        "Do not bridge after DOAC interruption when full-dose resumption is planned. Unlike warfarin, DOAC therapy becomes therapeutic rapidly, and ACC guidance states that postinterruption bridging is unnecessary and may be hazardous. If postoperative bleeding occurs, defer resumption until adequate hemostasis is achieved rather than restarting according to a preset clock. [7][24]"
+      ],
+      "bullets": [
+        "Use postoperative renal function to select the resumed DOAC dose. [7]",
+        "After significant postoperative bleeding, delay DOAC resumption until adequate hemostasis rather than treating the original restart target as mandatory. [7]",
+        "For warfarin\u2014not DOACs\u2014restarting at the prior therapeutic dose 12-24 hours after a low/moderate-risk procedure may be reasonable once hemostasis is achieved; do not extrapolate this delayed-onset strategy to DOACs. [8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Postprocedure DOAC restart is contingent on adequate hemostasis. [7]",
+        "columns": [
+          "Postprocedural setting",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Low postprocedural bleeding risk with complete hemostasis",
+            "Resume the full DOAC dose on the day after the procedure. [7]"
+          ],
+          [
+            "High postprocedural bleeding risk with complete hemostasis",
+            "Wait at least 48-72 hours before full-dose DOAC resumption. [7]"
+          ],
+          [
+            "Ongoing bleeding or procedure-related bleeding complication",
+            "Delay resumption until adequate hemostasis is achieved. [7]"
+          ],
+          [
+            "Planned DOAC resumption",
+            "Do not add routine parenteral bridging. [7][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "when-the-plan-cannot-be-standardized",
+      "eyebrow": "Escalation",
+      "heading": "Escalate when clearance, timing, or bleeding consequences are uncertain",
+      "intro": "A standard schedule is least reliable when the last dose or effective drug clearance is uncertain.",
+      "paragraphs": [
+        "Escalate preprocedural planning when CrCl is severely reduced, the last dose is uncertain, an urgent procedure cannot wait for the recommended hold, or neuraxial bleeding consequences are unacceptable. For factor Xa inhibitors, use a calibrated agent-specific anti-Xa level when testing is needed; for dabigatran, use dTT. The ACC pathway explicitly recommends considering these tests in advanced renal impairment when a fixed interruption interval is inadequate or unsupported. [10]",
+        "Do not use an isolated time-since-last-dose estimate as a substitute for reassessing renal function in a patient whose clinical status has changed. Dabigatran is the clearest example: CrCl 30-50 mL/min requires 4-5 days to reach minimal anticoagulant effect before high-bleeding-risk procedures, compared with shorter interruptions in preserved renal function. [1][5]",
+        "For high-thrombotic-risk patients or procedures in which bleeding would have severe consequences, use team-based planning among the anticoagulation prescriber, proceduralist, anesthesiologist, and surgical team. The goal is not zero time off anticoagulation; it is the shortest interruption that achieves an acceptable residual drug effect for that procedure. [8][9]"
+      ],
+      "bullets": [
+        "Order dTT when dabigatran exposure must be assessed and a recommended hold cannot be verified or completed. [10]",
+        "Order a calibrated agent-specific anti-Xa level when factor Xa inhibitor activity must be assessed in advanced renal impairment or after an abbreviated hold. [10]",
+        "For neuraxial procedures with unresolved uncertainty, delay or change anesthetic technique rather than relying on routine coagulation assays. [10][16]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should DOAC interruption be bridged with LMWH or unfractionated heparin?",
+      "answer": "No. Routine bridging is not indicated after DOAC interruption because DOACs have predictable offset and rapidly restore therapeutic anticoagulation after full-dose resumption; bridging may be hazardous and has increased postpolypectomy bleeding without demonstrated thromboembolic benefit. [5][7][24]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Regional anesthesia in the patient receiving antithrombotic or ...",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/early/2025/01/21/rapm-2024-105766",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "rivaroxaban, or dabigatran, and found that a 49\u201372\u2009hours preprocedural discontinuation of these DOACs resulted in apixaban, rivaroxaban, and dabigatran plasma levels >30\u2009ng/mL in only 5% of the patients.59 These results supported guidelines that the dabigatran-free time interval before a procedure s",
+      "score": 0.6952351
+    },
+    {
+      "number": 2,
+      "title": "Perioperative Management of Anticoagulant and Antiplatelet Therapy",
+      "detail": "evidence.nejm.org",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDra2200322",
+      "authors": "evidence.nejm.org",
+      "host": "evidence.nejm.org",
+      "snippet": "If DOAC reversal agents are not available, PCCs can be administered as agents to overwhelm the anticoagulant effect of circulating DOACs, but",
+      "score": 0.5192538
+    },
+    {
+      "number": 3,
+      "title": "lee_2025_oi_241641_1738258962.61605.pdf",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2830026/lee_2025_oi_241641_1738258962.61605.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "in the modified intention-to-treat analysis represent the largest enrollment in any published prospective multicenter study examining the safety of DOAC interruption for procedures with minimal to low bleeding risk. Second, our study observed relatively low event rates compared with prior research. ",
+      "score": 0.7625837
+    },
+    {
+      "number": 4,
+      "title": "rapm-2024-105766.full.pdf - Regional Anesthesia & Pain Medicine",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/rapm/early/2025/10/16/rapm-2024-105766.full.pdf",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "rivar-oxaban, or dabigatran, and found that a 49\u201372 hours prepro-cedural discontinuation of these DOACs resulted in apixaban, rivaroxaban, and dabigatran plasma levels >30 ng/mL in only 5% of the patients.59 These results supported guidelines that the dabigatran-\u00ad free time interval before a procedu",
+      "score": 0.5849357
+    },
+    {
+      "number": 5,
+      "title": "Endoscopy in patients on antiplatelet or anticoagulant ...",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/gutjnl/70/9/1611.full.pdf",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "may have to be stopped for longer than this, however, when renal function is signifi-cantly reduced.27 For patients on dabigatran with CrCl of 30\u201350 mL/min we recommend that the last dose of the drug is 5 days before the procedure. Dabigatran therapy is contraindicated in patients with CrCl<30 mL/mi",
+      "score": 0.56920683
+    },
+    {
+      "number": 6,
+      "title": "Factor Xa Inhibitor Discontinuation for Minimal\u2013 or Low\u2013Bleeding ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2830026",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "This analysis demonstrated a 38% lower risk of major bleeding with DOAC treatment under a noninterruption strategy, with no differences observed",
+      "score": 0.3042075
+    },
+    {
+      "number": 7,
+      "title": "2017 ACC Expert Consensus Decision\u00a0Pathway for Periprocedural Management of Anticoagulation in Patients With Nonvalvular Atrial\u00a0Fibrillation: A Report of the American College of Cardiology Clinical Expert Consensus Document Task Force",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.11.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Similar to a VKA, reinitiation of a DOAC first requires hemostasis at the procedural site. Thereafter, it is important to consider the consequences of procedural site bleeding and patient-related factors that increase the likelihood of bleeding complications. Unlike therapy with a VKA, use of a DOAC",
+      "score": 0.7123327
+    },
+    {
+      "number": 8,
+      "title": "2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.06.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Procedures with higher bleeding risks (eg, neuraxial anesthesia) should be performed with complete interruption of OAC.29 When minimal drug effect is desired, anticoagulants should be held for \u22655 half-lives (Table 13), \u22653 days for factor Xa inhibitors (rivaroxaban, apixaban, edoxaban), and \u22654 days f",
+      "score": 0.694241
+    },
+    {
+      "number": 9,
+      "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| 2a | A | 3. In patients with AF with CHA2DS2-VASc score \u22652 or equivalent risk of stroke, on DOAC anticoagulation and undergoing pacemaker or defibrillator implantation or generator change, either uninterrupted or interrupted DOAC is reasonable.8-10 |\n| 1 | B-NR | 4. In patients with AF on DOAC and",
+      "score": 0.6654328
+    },
+    {
+      "number": 10,
+      "title": "2020 ACC Expert Consensus Decision Pathway on Management of ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.04.053",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| CrCl, mL/min | Dabigatran | Apixaban, Betrixaban, Edoxaban, or Rivaroxaban |\n --- \n| \u226580 | 50\u201379 | 30\u201349 | 15\u201329 | <15 | \u226530 | 15\u201329 | <15 |\n| Low | \u226524 h | \u226536 h | \u226548 h | \u226572 h | No data. Consider measuring dTT and/or withholding \u226596 h. | \u226524 h | \u226536 h | No data. Consider measuring agent-specifi",
+      "score": 0.6369636
+    },
+    {
+      "number": 11,
+      "title": "Outcomes in patients undergoing periprocedural interruption of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jth.15850",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The direct oral anticoagulants (DOACs), which include apixaban, dabigatran, rivaroxaban, and edoxaban, are now first-line therapy for",
+      "score": 0.6803909
+    },
+    {
+      "number": 12,
+      "title": "Perioperative interruption of direct oral anticoagulants in patients ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/rth2.12076",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The perioperative interruption of DOACs in patients with AF was associated with 0.4% thromboembolic and 1.8% major bleeding events at 30 days",
+      "score": 0.5749443
+    },
+    {
+      "number": 13,
+      "title": "Measuring Direct Oral Anticoagulant (DOAC) Levels: Applications ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/ijlh.14483",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Guide decisions regarding alternatives including switching to a VKA; Plan duration of DOAC interruption for elective surgery/procedure.",
+      "score": 0.5457947
+    },
+    {
+      "number": 14,
+      "title": "Coagulation assays and direct oral anticoagulant levels among ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jth.15901?msockid=3ce35375178d68e11c45453b16bf69d3",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The Perioperative Anticoagulation Use for Surgery Evaluation study prospectively evaluated a prespecified periprocedural interruption strategy",
+      "score": 0.5027105
+    },
+    {
+      "number": 15,
+      "title": "Optimizing anticoagulation therapy for in\u2010hospital patients on ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bcp.16159",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "Jul 3, 2024 \u2014 Our objectives were to update a local guideline for perioperative DOAC management and to develop a guideline for the anticoagulation management",
+      "score": 0.4854295
+    },
+    {
+      "number": 16,
+      "title": "Direct oral anticoagulant management for neuraxial anaesthesia and deep peripheral nerve blocks",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0007091225006312",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The ASRA guidelines advocate for longer interruptions and optional DOAC level testing in a narrow range of circumstances to ensure an undetectable anticoagulant effect, defined as a residual anticoagulant level of <30 ng ml\u22121 before invasive procedures.4 Uncertainty remains regarding the safety thre",
+      "score": 0.6959795
+    },
+    {
+      "number": 17,
+      "title": "A physician survey of perioperative neuraxial anesthesia management in patients on a direct oral anticoagulant",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S247503792201295X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Author links open overlay panel James D.Douketis MD 1, Summer Syed MD 2, Na Li PhD 1, Samer Narouze MD, PhD 3, Mansoor Radwi MD 4, Joanne Duncan BSc 1, Sam Schulman MD, PhD 1 5, Alex C.Spyropoulos MD 6\n\nShow more\n\nViewPDFDownload full issue\n\nCite\n\nAdd to Mendeley\n\nShare\n\n10.1002/rth2.12430\n\nMore act",
+      "score": 0.67192334
+    },
+    {
+      "number": 18,
+      "title": "2024 European Heart Rhythm Association/Heart Rhythm Society ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/26/4/euae043/7639428",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "there was no sign of lower bleeding rates with preprocedural DOAC interruption.523 The randomized trials supporting the minimally (single dose)",
+      "score": 0.397822
+    },
+    {
+      "number": 19,
+      "title": "Management of Anticoagulants and Antiplatelets During Acute ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcag/article/5/2/100/6549718",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The duration of temporary DOAC interruption before endoscopic procedures associated with favorable outcomes is between 1 and 2 days, excluding",
+      "score": 0.29335943
+    },
+    {
+      "number": 20,
+      "title": "Perioperative management of apixaban in patients with ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article/8/3/732/506971/Perioperative-management-of-apixaban-in-patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Jan 31, 2024 \u2014 Perioperative consultants often recommended apixaban dose reduction or rotation to a different anticoagulant. Preoperative interruption",
+      "score": 0.61695945
+    },
+    {
+      "number": 21,
+      "title": "Perioperative Anticoagulant Use for Surgery Evaluation (PAUSE ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/132/Supplement%201/LBA-5/375113/Perioperative-Anticoagulant-Use-for-Surgery",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "DOACs were interrupted for 1 day before and after surgery for a low bleed risk surgery and 2 days before and after a high bleed surgery; longer",
+      "score": 0.5617203
+    },
+    {
+      "number": 22,
+      "title": "Consultative hematology 1: perioperative management concepts",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/books/book/10/chapter/12743284/Consultative-hematology-1-perioperative-management",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Direct oral anticoagulants (DOACs) are typically held for 24-72 hours while vitamin K antagonists (VKAs) are held for 5 days before a surgical procedure.",
+      "score": 0.5533369
+    },
+    {
+      "number": 23,
+      "title": "Predictors of preprocedural direct oral anticoagulant levels in ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article/4/15/3520/461694/Predictors-of-preprocedural-direct-oral",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "The Perioperative Anticoagulation Use for Surgery Evaluation (PAUSE) study prospectively evaluated a prespecified periprocedural-interruption",
+      "score": 0.39606872
+    },
+    {
+      "number": 24,
+      "title": "Perioperative Anticoagulation Management - StatPearls - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557590",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "It is important to note that bridging therapy is not indicated in patients on DOACs. The predictable pharmacological effect of DOACs allows a properly timed interruption of anticoagulation therapy before surgery. Various societies have issued recommendations about the timing of DOAC interruption. Ou",
+      "score": 0.7418428
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Regional anesthesia in the patient receiving antithrombotic or ...",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/early/2025/01/21/rapm-2024-105766",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "rivaroxaban, or dabigatran, and found that a 49\u201372\u2009hours preprocedural discontinuation of these DOACs resulted in apixaban, rivaroxaban, and dabigatran plasma levels >30\u2009ng/mL in only 5% of the patients.59 These results supported guidelines that the dabigatran-free time interval before a procedure s",
+      "score": 0.6952351
+    },
+    {
+      "number": 2,
+      "title": "Perioperative Management of Anticoagulant and Antiplatelet Therapy",
+      "detail": "evidence.nejm.org",
+      "url": "https://evidence.nejm.org/doi/full/10.1056/EVIDra2200322",
+      "authors": "evidence.nejm.org",
+      "host": "evidence.nejm.org",
+      "snippet": "If DOAC reversal agents are not available, PCCs can be administered as agents to overwhelm the anticoagulant effect of circulating DOACs, but",
+      "score": 0.5192538
+    },
+    {
+      "number": 3,
+      "title": "lee_2025_oi_241641_1738258962.61605.pdf",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2830026/lee_2025_oi_241641_1738258962.61605.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "in the modified intention-to-treat analysis represent the largest enrollment in any published prospective multicenter study examining the safety of DOAC interruption for procedures with minimal to low bleeding risk. Second, our study observed relatively low event rates compared with prior research. ",
+      "score": 0.7625837
+    },
+    {
+      "number": 4,
+      "title": "rapm-2024-105766.full.pdf - Regional Anesthesia & Pain Medicine",
+      "detail": "rapm.bmj.com",
+      "url": "https://rapm.bmj.com/content/rapm/early/2025/10/16/rapm-2024-105766.full.pdf",
+      "authors": "rapm.bmj.com",
+      "host": "rapm.bmj.com",
+      "snippet": "rivar-oxaban, or dabigatran, and found that a 49\u201372 hours prepro-cedural discontinuation of these DOACs resulted in apixaban, rivaroxaban, and dabigatran plasma levels >30 ng/mL in only 5% of the patients.59 These results supported guidelines that the dabigatran-\u00ad free time interval before a procedu",
+      "score": 0.5849357
+    },
+    {
+      "number": 5,
+      "title": "Endoscopy in patients on antiplatelet or anticoagulant ...",
+      "detail": "gut.bmj.com",
+      "url": "https://gut.bmj.com/content/gutjnl/70/9/1611.full.pdf",
+      "authors": "gut.bmj.com",
+      "host": "gut.bmj.com",
+      "snippet": "may have to be stopped for longer than this, however, when renal function is signifi-cantly reduced.27 For patients on dabigatran with CrCl of 30\u201350 mL/min we recommend that the last dose of the drug is 5 days before the procedure. Dabigatran therapy is contraindicated in patients with CrCl<30 mL/mi",
+      "score": 0.56920683
+    },
+    {
+      "number": 6,
+      "title": "Factor Xa Inhibitor Discontinuation for Minimal\u2013 or Low\u2013Bleeding ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2830026",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "This analysis demonstrated a 38% lower risk of major bleeding with DOAC treatment under a noninterruption strategy, with no differences observed",
+      "score": 0.3042075
+    },
+    {
+      "number": 7,
+      "title": "2017 ACC Expert Consensus Decision\u00a0Pathway for Periprocedural Management of Anticoagulation in Patients With Nonvalvular Atrial\u00a0Fibrillation: A Report of the American College of Cardiology Clinical Expert Consensus Document Task Force",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.11.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Similar to a VKA, reinitiation of a DOAC first requires hemostasis at the procedural site. Thereafter, it is important to consider the consequences of procedural site bleeding and patient-related factors that increase the likelihood of bleeding complications. Unlike therapy with a VKA, use of a DOAC",
+      "score": 0.7123327
+    },
+    {
+      "number": 8,
+      "title": "2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.06.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Procedures with higher bleeding risks (eg, neuraxial anesthesia) should be performed with complete interruption of OAC.29 When minimal drug effect is desired, anticoagulants should be held for \u22655 half-lives (Table 13), \u22653 days for factor Xa inhibitors (rivaroxaban, apixaban, edoxaban), and \u22654 days f",
+      "score": 0.694241
+    },
+    {
+      "number": 9,
+      "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.08.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| 2a | A | 3. In patients with AF with CHA2DS2-VASc score \u22652 or equivalent risk of stroke, on DOAC anticoagulation and undergoing pacemaker or defibrillator implantation or generator change, either uninterrupted or interrupted DOAC is reasonable.8-10 |\n| 1 | B-NR | 4. In patients with AF on DOAC and",
+      "score": 0.6654328
+    },
+    {
+      "number": 10,
+      "title": "2020 ACC Expert Consensus Decision Pathway on Management of ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.04.053",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "| CrCl, mL/min | Dabigatran | Apixaban, Betrixaban, Edoxaban, or Rivaroxaban |\n --- \n| \u226580 | 50\u201379 | 30\u201349 | 15\u201329 | <15 | \u226530 | 15\u201329 | <15 |\n| Low | \u226524 h | \u226536 h | \u226548 h | \u226572 h | No data. Consider measuring dTT and/or withholding \u226596 h. | \u226524 h | \u226536 h | No data. Consider measuring agent-specifi",
+      "score": 0.6369636
+    },
+    {
+      "number": 11,
+      "title": "Outcomes in patients undergoing periprocedural interruption of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jth.15850",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The direct oral anticoagulants (DOACs), which include apixaban, dabigatran, rivaroxaban, and edoxaban, are now first-line therapy for",
+      "score": 0.6803909
+    },
+    {
+      "number": 12,
+      "title": "Perioperative interruption of direct oral anticoagulants in patients ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/rth2.12076",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The perioperative interruption of DOACs in patients with AF was associated with 0.4% thromboembolic and 1.8% major bleeding events at 30 days",
+      "score": 0.5749443
+    },
+    {
+      "number": 13,
+      "title": "Measuring Direct Oral Anticoagulant (DOAC) Levels: Applications ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/ijlh.14483",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Guide decisions regarding alternatives including switching to a VKA; Plan duration of DOAC interruption for elective surgery/procedure.",
+      "score": 0.5457947
+    },
+    {
+      "number": 14,
+      "title": "Coagulation assays and direct oral anticoagulant levels among ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jth.15901?msockid=3ce35375178d68e11c45453b16bf69d3",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The Perioperative Anticoagulation Use for Surgery Evaluation study prospectively evaluated a prespecified periprocedural interruption strategy",
+      "score": 0.5027105
+    },
+    {
+      "number": 15,
+      "title": "Optimizing anticoagulation therapy for in\u2010hospital patients on ...",
+      "detail": "bpspubs.onlinelibrary.wiley.com",
+      "url": "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bcp.16159",
+      "authors": "bpspubs.onlinelibrary.wiley.com",
+      "host": "bpspubs.onlinelibrary.wiley.com",
+      "snippet": "Jul 3, 2024 \u2014 Our objectives were to update a local guideline for perioperative DOAC management and to develop a guideline for the anticoagulation management",
+      "score": 0.4854295
+    },
+    {
+      "number": 16,
+      "title": "Direct oral anticoagulant management for neuraxial anaesthesia and deep peripheral nerve blocks",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0007091225006312",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The ASRA guidelines advocate for longer interruptions and optional DOAC level testing in a narrow range of circumstances to ensure an undetectable anticoagulant effect, defined as a residual anticoagulant level of <30 ng ml\u22121 before invasive procedures.4 Uncertainty remains regarding the safety thre",
+      "score": 0.6959795
+    },
+    {
+      "number": 17,
+      "title": "A physician survey of perioperative neuraxial anesthesia management in patients on a direct oral anticoagulant",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S247503792201295X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Author links open overlay panel James D.Douketis MD 1, Summer Syed MD 2, Na Li PhD 1, Samer Narouze MD, PhD 3, Mansoor Radwi MD 4, Joanne Duncan BSc 1, Sam Schulman MD, PhD 1 5, Alex C.Spyropoulos MD 6\n\nShow more\n\nViewPDFDownload full issue\n\nCite\n\nAdd to Mendeley\n\nShare\n\n10.1002/rth2.12430\n\nMore act",
+      "score": 0.67192334
+    },
+    {
+      "number": 18,
+      "title": "2024 European Heart Rhythm Association/Heart Rhythm Society ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/26/4/euae043/7639428",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "there was no sign of lower bleeding rates with preprocedural DOAC interruption.523 The randomized trials supporting the minimally (single dose)",
+      "score": 0.397822
+    },
+    {
+      "number": 19,
+      "title": "Management of Anticoagulants and Antiplatelets During Acute ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcag/article/5/2/100/6549718",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The duration of temporary DOAC interruption before endoscopic procedures associated with favorable outcomes is between 1 and 2 days, excluding",
+      "score": 0.29335943
+    },
+    {
+      "number": 20,
+      "title": "Perioperative management of apixaban in patients with ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article/8/3/732/506971/Perioperative-management-of-apixaban-in-patients",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Jan 31, 2024 \u2014 Perioperative consultants often recommended apixaban dose reduction or rotation to a different anticoagulant. Preoperative interruption",
+      "score": 0.61695945
+    },
+    {
+      "number": 21,
+      "title": "Perioperative Anticoagulant Use for Surgery Evaluation (PAUSE ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/132/Supplement%201/LBA-5/375113/Perioperative-Anticoagulant-Use-for-Surgery",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "DOACs were interrupted for 1 day before and after surgery for a low bleed risk surgery and 2 days before and after a high bleed surgery; longer",
+      "score": 0.5617203
+    },
+    {
+      "number": 22,
+      "title": "Consultative hematology 1: perioperative management concepts",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/books/book/10/chapter/12743284/Consultative-hematology-1-perioperative-management",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Direct oral anticoagulants (DOACs) are typically held for 24-72 hours while vitamin K antagonists (VKAs) are held for 5 days before a surgical procedure.",
+      "score": 0.5533369
+    },
+    {
+      "number": 23,
+      "title": "Predictors of preprocedural direct oral anticoagulant levels in ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/bloodadvances/article/4/15/3520/461694/Predictors-of-preprocedural-direct-oral",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "The Perioperative Anticoagulation Use for Surgery Evaluation (PAUSE) study prospectively evaluated a prespecified periprocedural-interruption",
+      "score": 0.39606872
+    },
+    {
+      "number": 24,
+      "title": "Perioperative Anticoagulation Management - StatPearls - NCBI - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557590",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "It is important to note that bridging therapy is not indicated in patients on DOACs. The predictable pharmacological effect of DOACs allows a properly timed interruption of anticoagulation therapy before surgery. Various societies have issued recommendations about the timing of DOAC interruption. Ou",
+      "score": 0.7418428
+    }
+  ],
+  "publishedAt": "2026-09-15T17:49:07.422796+00:00",
+  "updatedAt": "2026-09-15T17:49:07.422796+00:00",
+  "readingMinutes": 7,
+  "slug": "perioperative-doac-interruption"
+}

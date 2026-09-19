@@ -1,0 +1,735 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonology and Allergy",
+  "title": "Severe Asthma Biologic Selection",
+  "summary": "Select an asthma biologic only after confirming severe asthma, correcting modifiable drivers, documenting exacerbation burden, and matching allergic or type 2 biomarkers, oral corticosteroid dependence, and relevant comorbidities to a single targeted agent.",
+  "seoDescription": "Clinical framework for selecting biologics in severe asthma using exacerbations, adherence, IgE sensitization, eosinophils, FeNO, oral steroid use, and comorbidities.",
+  "clinicalQuestion": "How should clinicians select a biologic for adults with severe asthma after optimized inhaled therapy?",
+  "specialty": "Pulmonology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "severe asthma",
+    "asthma biologics",
+    "eosinophilic asthma",
+    "allergic asthma",
+    "FeNO",
+    "blood eosinophils",
+    "oral corticosteroid-dependent asthma",
+    "omalizumab",
+    "mepolizumab",
+    "benralizumab",
+    "dupilumab",
+    "tezepelumab"
+  ],
+  "keyTakeaways": [
+    "Do not label asthma as severe or initiate a biologic until the diagnosis is confirmed and adherence, inhaler technique, and comorbid contributors have been addressed. [6][9][16]",
+    "For persistent exacerbations despite optimized high-dose inhaled corticosteroid plus controller therapy, blood eosinophils, FeNO, allergen sensitization, total IgE, body weight, and maintenance oral corticosteroid exposure guide biologic eligibility. [5][8][10][11]",
+    "Use anti-IgE treatment for allergic asthma with demonstrated aeroallergen sensitization and total IgE plus body weight within the dosing range; use anti-IL-5/IL-5R therapy principally for eosinophilic disease. [8][21]",
+    "Eosinophils of at least 300 cells/\u03bcL support anti-IL-5/IL-5R eligibility in GINA-based criteria, whereas ERS/ATS uses at least 150 cells/\u03bcL; select the threshold required by the applicable product, payer, and local pathway. [5][8]",
+    "Dupilumab is an option for severe eosinophilic/type 2 asthma when eosinophils are at least 150 cells/\u03bcL or FeNO is at least 25 ppb, and for oral corticosteroid-dependent asthma regardless of eosinophil count in ERS/ATS guidance. [5][8]",
+    "When more than one biologic is plausible, prioritize the dominant treatable trait and comorbid type 2 disease; comparative head-to-head efficacy evidence remains limited. [7][14]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-biologic-candidacy",
+      "eyebrow": "Before escalation",
+      "heading": "Confirm that uncontrolled disease is truly severe asthma",
+      "intro": "Biologic selection begins after excluding remediable causes of apparent treatment failure.",
+      "paragraphs": [
+        "Use the ERS/ATS severe-asthma construct: asthma requiring high-dose inhaled corticosteroid (ICS) plus a second controller and/or systemic corticosteroids to prevent loss of control, or asthma remaining uncontrolled despite that treatment. Confirm the asthma diagnosis before applying this label, and reassess relevant comorbidities before escalating to a biologic. [1][16]",
+        "Document current controller dispensing and observed inhaler technique before referral or authorization. In a U.S. claims analysis of patients escalated to biologics, 63% had suboptimal maintenance-medication adherence, defined as proportion of days covered below 80%; a biologic should not substitute for correcting avoidable underexposure to ICS-based therapy. [6]",
+        "Use a structured difficult-asthma assessment when control remains poor. Specialist review that includes diagnostic reassessment, treatment optimization, adherence and inhaler-technique intervention, and self-management education has been associated with improved control, lung function, exacerbation outcomes, and reduced oral corticosteroid burden. [9]"
+      ],
+      "bullets": [
+        "Record exacerbations during the preceding 12 months, including systemic corticosteroid bursts, emergency care, hospitalization, ICU admission, and mechanical ventilation; two or more systemic corticosteroid courses in the prior year is a frequent-exacerbation criterion used in severe-asthma definitions. [18]",
+        "Document baseline symptom burden with a validated instrument when available: ACT below 20 or ACQ above 1.5 identifies uncontrolled symptoms in a severe-asthma registry protocol. [18]",
+        "Obtain spirometry with bronchodilator testing when feasible. A negative bronchodilator response does not exclude asthma in a patient already receiving inhaled therapy; visit-to-visit FEV1 variability, home peak-flow variability greater than 10%, or bronchial challenge testing may provide objective support. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pre-biologic confirmation steps that change whether escalation is appropriate. [6][9][16][18]",
+        "columns": [
+          "Clinical question",
+          "Actionable assessment",
+          "What the result changes"
+        ],
+        "rows": [
+          [
+            "Is asthma objectively supported?",
+            "Perform spirometry with bronchodilator testing when feasible; if nondiagnostic, assess serial FEV1 or home peak expiratory flow variability and consider bronchial challenge testing. [15]",
+            "Avoid assigning refractory disease without objective diagnostic review; pursue alternative or coexisting explanations for airflow symptoms when objective evidence is absent. [15][16]"
+          ],
+          [
+            "Is disease uncontrolled at high treatment intensity?",
+            "Verify high-dose ICS plus a second controller and document exacerbations, ACT, ACQ, lung function, and systemic corticosteroid exposure. [1][16][18]",
+            "Establishes whether the patient meets a severe-asthma phenotype rather than undertreated asthma. [1][16]"
+          ],
+          [
+            "Is poor control modifiable?",
+            "Review dispensing history, adherence, inhaler technique, and comorbid contributors. Proportion of days covered below 80% indicates suboptimal maintenance adherence. [6][9]",
+            "Correct modifiable drivers before attributing persistent symptoms or exacerbations to biologic-refractory inflammation. [6][9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "phenotype-before-selection",
+      "eyebrow": "Phenotype testing",
+      "heading": "Obtain biomarkers during stable disease and interpret them as treatment-selection signals",
+      "intro": "Use several biomarkers rather than a single laboratory value when phenotypes overlap.",
+      "paragraphs": [
+        "For a patient with confirmed severe asthma and persistent exacerbations despite optimized inhaled therapy, obtain blood eosinophils, FeNO, total serum IgE, and aeroallergen sensitization by skin-prick testing or allergen-specific IgE. Blood eosinophils, FeNO, and total IgE are the principal biomarkers used in clinical phenotyping for type 2-high and type 2-low asthma. [8][11]",
+        "Interpret blood eosinophils and FeNO in the context of ongoing corticosteroid treatment. Blood eosinophils of at least 150 cells/\u03bcL and FeNO of at least 20 ppb despite treatment indicate residual type 2 inflammation; higher eosinophils and FeNO predict greater expected response to dupilumab. [5][10]",
+        "If eosinophilic and allergic signals coexist, do not infer that one class is universally superior. Patients may meet eligibility criteria for both anti-IgE and anti-IL-5/IL-5R treatment, while direct comparative evidence is limited and an indirect comparison found no difference in comparative effectiveness or tolerability between anti-IL-5 and anti-IgE therapy in overlapping eligible populations. [14]"
+      ],
+      "bullets": [
+        "Anti-IgE eligibility requires sensitization to common aeroallergens plus total serum IgE and body weight within the agent's dosing range. [8]",
+        "GINA-based anti-IL-5/IL-5R eligibility commonly uses blood eosinophils of at least 300 cells/\u03bcL; ERS/ATS guidance uses at least 150 cells/\u03bcL. [5][8]",
+        "GINA-based dupilumab eligibility for severe eosinophilic asthma includes blood eosinophils of at least 150 cells/\u03bcL or FeNO of at least 25 ppb with prior-year exacerbations. [5][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Biomarker patterns used to direct initial biologic class selection in severe asthma. [5][8][10][21]",
+        "columns": [
+          "Treatable pattern",
+          "Required or supportive findings",
+          "Initial biologic-class direction"
+        ],
+        "rows": [
+          [
+            "Allergic asthma",
+            "Aeroallergen sensitization by skin testing or specific IgE; total IgE and body weight within dosing range. [8]",
+            "Anti-IgE therapy, represented by omalizumab. [8][21]"
+          ],
+          [
+            "Eosinophilic asthma",
+            "Blood eosinophils at least 300 cells/\u03bcL in GINA-based criteria or at least 150 cells/\u03bcL in ERS/ATS guidance. [5][8]",
+            "Anti-IL-5 or anti-IL-5R therapy, represented by mepolizumab, reslizumab, or benralizumab. [5][21]"
+          ],
+          [
+            "Type 2 asthma with elevated FeNO",
+            "FeNO at least 25 ppb in GINA-based dupilumab criteria; FeNO at least 20 ppb despite treatment signals residual type 2 inflammation. [5][10]",
+            "Consider anti-IL-4R\u03b1 therapy with dupilumab, particularly when eosinophils and FeNO are both elevated. [5]"
+          ],
+          [
+            "Oral corticosteroid-dependent asthma",
+            "Maintenance oral corticosteroid requirement after optimized inhaled treatment and severe-asthma assessment. [5][6]",
+            "Dupilumab is supported in ERS/ATS guidance regardless of eosinophil count; anti-IL-5/IL-5R therapy is also used for eosinophilic disease. [5][21]"
+          ],
+          [
+            "No clear allergic or eosinophilic eligibility pattern",
+            "Low or nonqualifying biomarkers after confirming adherence, diagnosis, and comorbidity management. [6][11]",
+            "Do not force a phenotype-specific biologic choice; reassess the difficult-asthma evaluation and consider an agent with broader severe-asthma positioning within specialist care. [7][13][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "choose-a-single-biologic",
+      "eyebrow": "Treatment selection",
+      "heading": "Match one biologic to the dominant clinical trait",
+      "intro": "Use eligibility markers to narrow choices, then use corticosteroid exposure and comorbid disease to select among overlapping options.",
+      "paragraphs": [
+        "Choose anti-IgE therapy when allergic sensitization is unequivocal and the patient's total IgE and body weight fit the dosing framework. Omalizumab is the established anti-IgE option; its selection depends on allergic phenotype rather than blood eosinophil count alone. [8][21]",
+        "Choose an IL-5-pathway strategy when recurrent exacerbations occur in eosinophilic asthma. Mepolizumab and benralizumab are identified for severe eosinophilic asthma, and reslizumab is another anti-IL-5 option. A blood eosinophil count meeting the applicable threshold supports this branch, but the decision should remain anchored to prior exacerbations despite optimized standard therapy. [5][8][21]",
+        "Choose dupilumab when type 2 biology is signaled by eosinophils of at least 150 cells/\u03bcL or FeNO of at least 25 ppb in a patient with prior-year exacerbations, or when maintenance oral corticosteroid dependence is the dominant problem. Elevated eosinophils and FeNO are associated with greater expected response, whereas ERS/ATS guidance permits use in corticosteroid-dependent severe asthma regardless of eosinophil count. [5][8]",
+        "For patients eligible for several agents, select the therapy most likely to address the dominant asthma trait and relevant type 2 comorbidities, while incorporating dosing burden, prior response, and patient preference. There are no robust head-to-head comparative trials sufficient to establish a universal rank order among biologics. [7][14]"
+      ],
+      "bullets": [
+        "Do not combine two asthma biologics routinely. Expert drug-plan guidance states that tezepelumab should not be used in combination with another asthma biologic, and published combination experience is limited to case series and reports. [21][24]",
+        "A switch to another biologic monotherapy is the preferred strategy when the initial biologic fails to achieve adequate control; case-series experience with combination treatment generally followed an unsuccessful monotherapy switch attempt. [24]",
+        "Avoid concurrent live vaccines with dupilumab or tezepelumab based on reported interaction guidance. [20]"
+      ],
+      "subsections": [
+        {
+          "heading": "When a broader mechanism is considered",
+          "paragraphs": [
+            "Tezepelumab has a broader severe-asthma indication profile than phenotype-restricted anti-IgE and anti-IL-5/IL-5R therapies in expert summaries, but selection should still follow confirmation of severe asthma, optimization of standard therapy, and assessment by a clinician experienced in asthma biologics. [13][21]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Practical class selection when severe asthma remains uncontrolled after optimization. [5][8][21]",
+        "columns": [
+          "Dominant decision driver",
+          "Preferred class or agent direction",
+          "Selection caveat"
+        ],
+        "rows": [
+          [
+            "Sensitized allergic asthma with IgE and weight in range",
+            "Anti-IgE: omalizumab. [8][21]",
+            "Confirm sensitization and dosing-range eligibility; eosinophilia alone does not establish anti-IgE eligibility. [8]"
+          ],
+          [
+            "Eosinophilic exacerbation-prone asthma",
+            "Anti-IL-5/IL-5R: mepolizumab, benralizumab, or reslizumab. [5][21]",
+            "Use the biomarker cutoff specified by the governing pathway: at least 300 cells/\u03bcL in GINA-based criteria versus at least 150 cells/\u03bcL in ERS/ATS guidance. [5][8]"
+          ],
+          [
+            "Elevated FeNO and/or eosinophilic type 2 asthma",
+            "Anti-IL-4R\u03b1: dupilumab. [5][8][21]",
+            "GINA-based eligibility uses eosinophils at least 150 cells/\u03bcL or FeNO at least 25 ppb; higher values predict better response. [5][8]"
+          ],
+          [
+            "Maintenance oral corticosteroid dependence",
+            "Dupilumab is an ERS/ATS-supported option regardless of eosinophil count; assess eosinophilic eligibility for IL-5-pathway therapy concurrently. [5][21]",
+            "Plan steroid reduction only after clinical response is established and continue to monitor for loss of control. [22]"
+          ],
+          [
+            "Overlapping allergic and eosinophilic eligibility",
+            "Choose one agent based on dominant trait and comorbid disease burden. [7][14]",
+            "No definitive comparative trial evidence establishes a universally preferred first agent. [7][14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-response-and-switch",
+      "eyebrow": "Follow-up",
+      "heading": "Measure clinical response, reduce corticosteroid exposure, and switch rather than combine",
+      "intro": "Continue high-value asthma assessments after biologic initiation; biomarker eligibility is not itself a response endpoint.",
+      "paragraphs": [
+        "At each follow-up, quantify exacerbations requiring systemic corticosteroids, emergency or hospital care, maintenance oral corticosteroid exposure, symptom control using ACT or ACQ, lung function, and treatment adherence. These outcomes align with the goals of biologic treatment: fewer exacerbations and hospitalizations, improved disease control, and lower corticosteroid burden. [12][17][23]",
+        "If maintenance oral corticosteroids are being used, make reduction of systemic corticosteroid burden an explicit outcome. Biologics are commonly initiated in severe uncontrolled asthma to replace or reduce oral corticosteroids, but withdrawal should be guided by sustained asthma control and monitored for deterioration. [22]",
+        "If the selected biologic does not produce meaningful improvement in the patient's dominant baseline problem, repeat the systematic assessment before changing class: verify asthma diagnosis, adherence, inhaler technique, exacerbation attribution, and current biomarker pattern. If persistent severe asthma is confirmed, switch to a different biologic monotherapy rather than empirically adding a second asthma biologic. [9][21][24]"
+      ],
+      "bullets": [
+        "Record injection-site reactions, nasopharyngitis, headache, and hypersensitivity events, which are among commonly reported adverse reactions across asthma biologics. [22]",
+        "Review planned immunizations before starting dupilumab or tezepelumab because concurrent live vaccines should be avoided. [20]",
+        "Do not use response to a biologic as the sole confirmation of an asthma diagnosis; retain objective assessment and reassess alternative causes when control remains poor. [9][15][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-initiation assessment separates treatment response from persistent difficult asthma. [9][17][22][24]",
+        "columns": [
+          "Finding at follow-up",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Fewer exacerbations and lower systemic corticosteroid exposure",
+            "Clinical response consistent with the intended risk-reduction goal of biologic treatment. [17][22][23]",
+            "Continue the biologic and maintain reassessment of control, lung function, adverse effects, adherence, and corticosteroid burden. [22][23]"
+          ],
+          [
+            "Persistent exacerbations despite biologic treatment",
+            "May represent inadequate biologic response, persistent exposure or adherence problems, diagnostic error, or unaddressed comorbidity. [9][24]",
+            "Repeat systematic difficult-asthma assessment and reconsider phenotype-directed monotherapy. [9][24]"
+          ],
+          [
+            "Inadequate control after confirmed appropriate monotherapy",
+            "A biologic switch may be appropriate after reassessing the dominant asthma and comorbidity traits. [24]",
+            "Switch to an alternative biologic monotherapy; do not routinely combine asthma biologics. [21][24]"
+          ],
+          [
+            "New systemic symptoms or suspected hypersensitivity",
+            "Potential biologic adverse reaction requires clinical attribution and severity assessment. [22]",
+            "Assess promptly and determine whether treatment interruption or discontinuation is necessary based on clinical severity. [22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should an elevated FeNO alone direct biologic selection?",
+      "answer": "FeNO of at least 25 ppb meets a GINA-based dupilumab eligibility pathway when prior-year exacerbations persist despite severe-asthma therapy; FeNO of at least 20 ppb despite treatment supports residual type 2 inflammation. Interpret it with blood eosinophils, exacerbation history, adherence, and allergic testing rather than as a standalone diagnosis. [5][8][10][11]"
+    },
+    {
+      "question": "Can two asthma biologics be prescribed together for persistent severe asthma?",
+      "answer": "Routine dual-biologic treatment should be avoided. Guidance for tezepelumab advises against combining it with another asthma biologic, and the published experience with combinations is limited largely to case series. Reassess phenotype and switch monotherapy when response is inadequate. [21][24]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Characterisation of patients with severe asthma in the UK Severe Asthma Registry in the biologic era",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/76/3/220",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Title: Characterisation of patients with severe asthma in the UK Severe Asthma Registry in the biologic era\nSevere asthma has been defined by the European Respiratory Society / American Thoracic Society (ERS/ATS) as asthma which requires treatment with high-dose inhaled corticosteroids (ICS) plus a ",
+      "score": 0.5942929
+    },
+    {
+      "number": 2,
+      "title": "2020 Asthma Guideline Update From the National ... - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2773482",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Evidence ReviewThe National Heart, Lung, and Blood Advisory Council chose 6 topics to update the 2007 asthma guidelines based on results from a 2014 needs assessment. The Agency for Healthcare Research and Quality conducted systematic reviews of these 6 topics based on literature searches up to Marc",
+      "score": 0.29443854
+    },
+    {
+      "number": 3,
+      "title": "Biologic Therapies for Severe Asthma",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra2032506",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Interleukin-5 promotes the proliferation and differentiation of eosinophils from bone marrow eosinophil progenitors, prolongs eosinophil",
+      "score": 0.39312926
+    },
+    {
+      "number": 4,
+      "title": "Guideline-driven and dependable management of... : Annals of Medicine & Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annals-of-medicine-and-surgery/_layouts/15/oaks.journals/downloadpdf.aspx?an=01845215-202508000-00061",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Discussion\n\nOur systematic review thoroughly synthesizes recent evidence on asthma management, drawing from clinical guidelines, randomized controlled trials, cohort studies, and systematic reviews published between 2018 and 2024. The findings reaffirm the central role of ICS as first-line therap",
+      "score": 0.7152057
+    },
+    {
+      "number": 5,
+      "title": "Characteristics, phenotypes, mechanisms and... : Chinese Medical Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmj/_layouts/15/oaks.journals/downloadpdf.aspx?an=00029330-202205200-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The 2019 GINA guidelines for severe asthma recommend the use of an anti-IL-5 and anti-IL-5R\u03b1 antibody for patients who remain uncontrolled with exacerbations in the past year despite step 4 or 5 therapy and who have a blood eosinophil count >\u200a300 cells/\u03bcL (). The ERS-ATS recommendation on the other ",
+      "score": 0.7065353
+    },
+    {
+      "number": 6,
+      "title": "Assessment of Real-World Escalation to Biologics in US Patients With Asthma - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213219822007164",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Assessment of Real-World Escalation to Biologics in US Patients With Asthma - ScienceDirect\n# Original Article Asthma Assessment of Real-World Escalation to Biologics in US Patients With Asthma. Previous studies indicate that suboptimal medication adherence may contribute to uncontrolled asth",
+      "score": 0.64986813
+    },
+    {
+      "number": 7,
+      "title": "Biologic Management in Severe Asthma for Adults : Chest",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00002953-202602000-00010",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Results\n\nOur systematic review and critical analysis of the literature on the 7 PICO questions related to choice of biologic agent in severe asthma patients resulted in 7 evidence-based recommendations.\n\n### Interpretation\n\nCharacteristics such as quality of life impairment, baseline lung functi",
+      "score": 0.64478505
+    },
+    {
+      "number": 8,
+      "title": "Eligibility of C-BIOPRED severe asthma cohort for... : Chinese Medical Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmj/fulltext/2023/01200/eligibility_of_c_biopred_severe_asthma_cohort_for.15.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "To determine the eligibility for T2 biologic therapies, we used the guidelines of the Global Initiative for Asthma (GINA) (), whereby patients diagnosed with severe asthma have had at least two exacerbations in the past year with biomarker cut-offs for different classes of biologic therapies. For an",
+      "score": 0.54956865
+    },
+    {
+      "number": 9,
+      "title": "Systematic Assessment for Difficult and Severe Asthma Improves Outcomes and Halves Oral Corticosteroid Burden Independent of Monoclonal Biologic Use - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2213219820300374",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\n\n## Article preview\n\nElsevier\n\n## The Journal of Allergy and Clinical Immunology: In Practice\n\nThe Journal of Allergy and Clinical Immunology: In Practice\n\n# Original Article Systematic Assessment for Difficult and Severe Asthma Improves Outcomes and Halves Oral Corticosteroid Burden I",
+      "score": 0.434102
+    },
+    {
+      "number": 10,
+      "title": "Guidance for type 2 inflammatory biomarkers - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2212534525000048",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In patients with severe asthma, blood eosinophils \u2265150/\u03bcL and FeNO \u226520 ppb despite treatment are considered indicators of residual type 2 inflammation [8]).",
+      "score": 0.7318455
+    },
+    {
+      "number": 11,
+      "title": "Phenotyping of Severe Asthma in the Era of Broad-Acting Anti ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213219824000758",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Blood eosinophils, FeNO, and serum total IgE are the most widely used biomarkers for the diagnosis of both T2-high and T2-low asthma in clinical practice.",
+      "score": 0.72207695
+    },
+    {
+      "number": 12,
+      "title": "[PDF] PROTOCOL CHECKLIST - HMA-EMA Catalogues",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/system/files/2024-10/REG_Time%20to%20Biologics%20Protocol.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "to tailored effective treatment provided by evidence-based guidelines, requiring further treatment to increase disease control4. The Global Initiative for Asthma (GINA) recommends the consideration, on a case-by-case basis, of biological treatment for severe asthma patients on GINA step 55. Patients",
+      "score": 0.65940565
+    },
+    {
+      "number": 13,
+      "title": "New guidelines to treat severe asthma recommend \u2018evaluating first, treating second\u2019 - CHEST Physician",
+      "detail": "chestdailynews.chestnet.org",
+      "url": "https://chestdailynews.chestnet.org/new-guidelines-to-treat-severe-asthma-recommend-evaluating-first-treating-second",
+      "authors": "chestdailynews.chestnet.org",
+      "host": "chestdailynews.chestnet.org",
+      "snippet": "CHEST Physician\u00ae Home\n\nCHEST Physician\u00ae Home\n\n# New guidelines to treat severe asthma recommend \u2018evaluating first, treating second\u2019\n\n| Estimated time to read:\n\nRecent guidelines for severe asthma expand treatment options, but there remains a subset of patients that don\u2019t fit the latest treatment par",
+      "score": 0.6551821
+    },
+    {
+      "number": 14,
+      "title": "[PDF] The comparative effectiveness across severe asthma biologic ...",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/ISAR_OPCG1903_Effectiveness%20across%20Bx%20classes_Protocol%2013%20Aug%202020.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "efficacious response to anti-IgE and anti-IL-5/5R, it has 8 become increasingly important to understand and assess the clinical effectiveness of these two 9 classes among those that are eligible for both. The GINA 2019 guidelines have called for head 10 on comparisons of different biologics in patie",
+      "score": 0.6466616
+    },
+    {
+      "number": 15,
+      "title": "GINA vs ATS/ERS Bronchodilator Responsiveness Thresholds vs Alternative Routes of Diagnosis in Severe or Difficult to Control Asthma | American Journal of Respiratory and Critical Care Medicine",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/ajrccm.2025.211.Abstracts.A3072",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "# American Journal of Respiratory and Critical Care Medicine. # GINA vs ATS/ERS Bronchodilator Responsiveness Thresholds vs Alternative Routes of Diagnosis in Severe or Difficult to Control Asthma. The presence of a positive bronchodilator response (BDR), or improvement in airflow on spirometry afte",
+      "score": 0.6337056
+    },
+    {
+      "number": 16,
+      "title": "International ERS/ATS guidelines on definition, evaluation and treatment of severe asthma - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=24337046",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: International ERS/ATS guidelines on definition, evaluation and treatment of severe asthma - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on ",
+      "score": 0.55275756
+    },
+    {
+      "number": 17,
+      "title": "Efficacy of azithromycin in severe asthma from the AMAZES randomised trial - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6926362",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Severe asthma is defined in several ways. The key elements in each of the definitions are evidence of poor control despite use of high intensity asthma therapy, which recognises the disease as being relatively refractory to conventional asthma therapy. The main differences between the definitions re",
+      "score": 0.51822984
+    },
+    {
+      "number": 18,
+      "title": "[PDF] 1 | Page RSAR Registry Protocol D-code: D3250R00040 Tracking ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/66/NCT03608566/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "exacerbations. The data including these estimates will be entered into the electronic database of RSAR for storage and subsequent impersonal analytics. Data from any existing registries of patients with severe asthma may also be entered. For compatibility, the existing data will be sorted in accorda",
+      "score": 0.32034323
+    },
+    {
+      "number": 19,
+      "title": "[PDF] Utilizing CT Based Imaging Parameters of Body Composition to ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/60/NCT06922760/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "levels of type II cytokines including IL4, IL5 and IL13, which induce pathologic downstream production of IgE and eosinophils. Current clinical practice utilizes surrogate biomarkers, including peripheral and sputum eosinophils, FeNO and total IgE levels, to phenotype patients with severe asthma and",
+      "score": 0.75290436
+    },
+    {
+      "number": 20,
+      "title": "A retrospective study on potential drug\u2012drug interactions in patients with severe asthma receiving biological therapy: a single-center experience",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11737206",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "No interactions involving biologicals were recorded, which is consistent with current knowledge. According to the literature, benralizumab, reslizumab, mepolizumab, omalizumab, dupilumab and tezepelumab all interact with efgartigimod-alpha and rozanolixizumab (significance level C), which may dimini",
+      "score": 0.86713725
+    },
+    {
+      "number": 21,
+      "title": "Table 4, Summary of Drug Plan Input and Clinical Expert Response - Tezepelumab (Tezspire) - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK601779/table/tr8269861151140731_ch01_t04?report=objectonly",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Other biologics indicated for severe asthma include omalizumab, mepolizumab, reslizumab, benralizumab, and dupilumab. Health Canada indications for these agents generally relate to specific phenotypes \u2014 allergic (omalizumab) and eosinophilic (mepolizumab, reslizumab, benralizumab). The indication ",
+      "score": 0.8319231
+    },
+    {
+      "number": 22,
+      "title": "Safety of Biological Therapies for Severe Asthma: An Analysis of Suspected Adverse Reactions Reported in the WHO Pharmacovigilance Database",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11055782",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Stratifying all biologic-related ICSRs by therapeutic indication, around 29.4% (_n_ = 48,440) concerned asthma use; omalizumab was mainly indicated as the suspected drug (_n_ = 20,501), followed by dupilumab, mepolizumab, benralizumab and reslizumab. The most frequently reported suspected ADRs of as",
+      "score": 0.8286204
+    },
+    {
+      "number": 23,
+      "title": "Switching to twice-yearly depemokimab from mepolizumab/benralizumab in severe asthma: a multicenter, randomized, double-blind, phase 3A clinical trial (NIMBLE)",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13160935",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In conclusion, the results suggest that people with severe asthma and documented benefit from IL-5\u2013directed biologic treatment can safely and effectively switch from a short-acting biologic such as mepolizumab or benralizumab to an ultra-long-acting biologic such as depemokimab. NIMBLE shows that th",
+      "score": 0.8051581
+    },
+    {
+      "number": 24,
+      "title": "Combination of Biological Therapy in Severe Asthma: Where We Are?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10672189",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A case series by Lommatzsch et al.  described 25 patients treated with several biologic combinations. 15 patients concomitantly received 2 biologics approved for severe asthma: 7 received a dual treatment to obtain asthma control, and 8 were treated with another asthma biologic for the management of",
+      "score": 0.8025714
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Characterisation of patients with severe asthma in the UK Severe Asthma Registry in the biologic era",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/76/3/220",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Title: Characterisation of patients with severe asthma in the UK Severe Asthma Registry in the biologic era\nSevere asthma has been defined by the European Respiratory Society / American Thoracic Society (ERS/ATS) as asthma which requires treatment with high-dose inhaled corticosteroids (ICS) plus a ",
+      "score": 0.5942929
+    },
+    {
+      "number": 2,
+      "title": "2020 Asthma Guideline Update From the National ... - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2773482",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Evidence ReviewThe National Heart, Lung, and Blood Advisory Council chose 6 topics to update the 2007 asthma guidelines based on results from a 2014 needs assessment. The Agency for Healthcare Research and Quality conducted systematic reviews of these 6 topics based on literature searches up to Marc",
+      "score": 0.29443854
+    },
+    {
+      "number": 3,
+      "title": "Biologic Therapies for Severe Asthma",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/pdf/10.1056/NEJMra2032506",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Interleukin-5 promotes the proliferation and differentiation of eosinophils from bone marrow eosinophil progenitors, prolongs eosinophil",
+      "score": 0.39312926
+    },
+    {
+      "number": 4,
+      "title": "Guideline-driven and dependable management of... : Annals of Medicine & Surgery",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/annals-of-medicine-and-surgery/_layouts/15/oaks.journals/downloadpdf.aspx?an=01845215-202508000-00061",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Discussion\n\nOur systematic review thoroughly synthesizes recent evidence on asthma management, drawing from clinical guidelines, randomized controlled trials, cohort studies, and systematic reviews published between 2018 and 2024. The findings reaffirm the central role of ICS as first-line therap",
+      "score": 0.7152057
+    },
+    {
+      "number": 5,
+      "title": "Characteristics, phenotypes, mechanisms and... : Chinese Medical Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmj/_layouts/15/oaks.journals/downloadpdf.aspx?an=00029330-202205200-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The 2019 GINA guidelines for severe asthma recommend the use of an anti-IL-5 and anti-IL-5R\u03b1 antibody for patients who remain uncontrolled with exacerbations in the past year despite step 4 or 5 therapy and who have a blood eosinophil count >\u200a300 cells/\u03bcL (). The ERS-ATS recommendation on the other ",
+      "score": 0.7065353
+    },
+    {
+      "number": 6,
+      "title": "Assessment of Real-World Escalation to Biologics in US Patients With Asthma - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213219822007164",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Assessment of Real-World Escalation to Biologics in US Patients With Asthma - ScienceDirect\n# Original Article Asthma Assessment of Real-World Escalation to Biologics in US Patients With Asthma. Previous studies indicate that suboptimal medication adherence may contribute to uncontrolled asth",
+      "score": 0.64986813
+    },
+    {
+      "number": 7,
+      "title": "Biologic Management in Severe Asthma for Adults : Chest",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00002953-202602000-00010",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Results\n\nOur systematic review and critical analysis of the literature on the 7 PICO questions related to choice of biologic agent in severe asthma patients resulted in 7 evidence-based recommendations.\n\n### Interpretation\n\nCharacteristics such as quality of life impairment, baseline lung functi",
+      "score": 0.64478505
+    },
+    {
+      "number": 8,
+      "title": "Eligibility of C-BIOPRED severe asthma cohort for... : Chinese Medical Journal",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cmj/fulltext/2023/01200/eligibility_of_c_biopred_severe_asthma_cohort_for.15.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "To determine the eligibility for T2 biologic therapies, we used the guidelines of the Global Initiative for Asthma (GINA) (), whereby patients diagnosed with severe asthma have had at least two exacerbations in the past year with biomarker cut-offs for different classes of biologic therapies. For an",
+      "score": 0.54956865
+    },
+    {
+      "number": 9,
+      "title": "Systematic Assessment for Difficult and Severe Asthma Improves Outcomes and Halves Oral Corticosteroid Burden Independent of Monoclonal Biologic Use - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2213219820300374",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\n\n## Article preview\n\nElsevier\n\n## The Journal of Allergy and Clinical Immunology: In Practice\n\nThe Journal of Allergy and Clinical Immunology: In Practice\n\n# Original Article Systematic Assessment for Difficult and Severe Asthma Improves Outcomes and Halves Oral Corticosteroid Burden I",
+      "score": 0.434102
+    },
+    {
+      "number": 10,
+      "title": "Guidance for type 2 inflammatory biomarkers - ScienceDirect.com",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2212534525000048",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In patients with severe asthma, blood eosinophils \u2265150/\u03bcL and FeNO \u226520 ppb despite treatment are considered indicators of residual type 2 inflammation [8]).",
+      "score": 0.7318455
+    },
+    {
+      "number": 11,
+      "title": "Phenotyping of Severe Asthma in the Era of Broad-Acting Anti ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213219824000758",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Blood eosinophils, FeNO, and serum total IgE are the most widely used biomarkers for the diagnosis of both T2-high and T2-low asthma in clinical practice.",
+      "score": 0.72207695
+    },
+    {
+      "number": 12,
+      "title": "[PDF] PROTOCOL CHECKLIST - HMA-EMA Catalogues",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/system/files/2024-10/REG_Time%20to%20Biologics%20Protocol.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "to tailored effective treatment provided by evidence-based guidelines, requiring further treatment to increase disease control4. The Global Initiative for Asthma (GINA) recommends the consideration, on a case-by-case basis, of biological treatment for severe asthma patients on GINA step 55. Patients",
+      "score": 0.65940565
+    },
+    {
+      "number": 13,
+      "title": "New guidelines to treat severe asthma recommend \u2018evaluating first, treating second\u2019 - CHEST Physician",
+      "detail": "chestdailynews.chestnet.org",
+      "url": "https://chestdailynews.chestnet.org/new-guidelines-to-treat-severe-asthma-recommend-evaluating-first-treating-second",
+      "authors": "chestdailynews.chestnet.org",
+      "host": "chestdailynews.chestnet.org",
+      "snippet": "CHEST Physician\u00ae Home\n\nCHEST Physician\u00ae Home\n\n# New guidelines to treat severe asthma recommend \u2018evaluating first, treating second\u2019\n\n| Estimated time to read:\n\nRecent guidelines for severe asthma expand treatment options, but there remains a subset of patients that don\u2019t fit the latest treatment par",
+      "score": 0.6551821
+    },
+    {
+      "number": 14,
+      "title": "[PDF] The comparative effectiveness across severe asthma biologic ...",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/ISAR_OPCG1903_Effectiveness%20across%20Bx%20classes_Protocol%2013%20Aug%202020.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "efficacious response to anti-IgE and anti-IL-5/5R, it has 8 become increasingly important to understand and assess the clinical effectiveness of these two 9 classes among those that are eligible for both. The GINA 2019 guidelines have called for head 10 on comparisons of different biologics in patie",
+      "score": 0.6466616
+    },
+    {
+      "number": 15,
+      "title": "GINA vs ATS/ERS Bronchodilator Responsiveness Thresholds vs Alternative Routes of Diagnosis in Severe or Difficult to Control Asthma | American Journal of Respiratory and Critical Care Medicine",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/ajrccm.2025.211.Abstracts.A3072",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "# American Journal of Respiratory and Critical Care Medicine. # GINA vs ATS/ERS Bronchodilator Responsiveness Thresholds vs Alternative Routes of Diagnosis in Severe or Difficult to Control Asthma. The presence of a positive bronchodilator response (BDR), or improvement in airflow on spirometry afte",
+      "score": 0.6337056
+    },
+    {
+      "number": 16,
+      "title": "International ERS/ATS guidelines on definition, evaluation and treatment of severe asthma - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Abstract&list_uids=24337046",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: International ERS/ATS guidelines on definition, evaluation and treatment of severe asthma - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on ",
+      "score": 0.55275756
+    },
+    {
+      "number": 17,
+      "title": "Efficacy of azithromycin in severe asthma from the AMAZES randomised trial - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6926362",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Severe asthma is defined in several ways. The key elements in each of the definitions are evidence of poor control despite use of high intensity asthma therapy, which recognises the disease as being relatively refractory to conventional asthma therapy. The main differences between the definitions re",
+      "score": 0.51822984
+    },
+    {
+      "number": 18,
+      "title": "[PDF] 1 | Page RSAR Registry Protocol D-code: D3250R00040 Tracking ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/66/NCT03608566/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "exacerbations. The data including these estimates will be entered into the electronic database of RSAR for storage and subsequent impersonal analytics. Data from any existing registries of patients with severe asthma may also be entered. For compatibility, the existing data will be sorted in accorda",
+      "score": 0.32034323
+    },
+    {
+      "number": 19,
+      "title": "[PDF] Utilizing CT Based Imaging Parameters of Body Composition to ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/60/NCT06922760/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "levels of type II cytokines including IL4, IL5 and IL13, which induce pathologic downstream production of IgE and eosinophils. Current clinical practice utilizes surrogate biomarkers, including peripheral and sputum eosinophils, FeNO and total IgE levels, to phenotype patients with severe asthma and",
+      "score": 0.75290436
+    },
+    {
+      "number": 20,
+      "title": "A retrospective study on potential drug\u2012drug interactions in patients with severe asthma receiving biological therapy: a single-center experience",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11737206",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "No interactions involving biologicals were recorded, which is consistent with current knowledge. According to the literature, benralizumab, reslizumab, mepolizumab, omalizumab, dupilumab and tezepelumab all interact with efgartigimod-alpha and rozanolixizumab (significance level C), which may dimini",
+      "score": 0.86713725
+    },
+    {
+      "number": 21,
+      "title": "Table 4, Summary of Drug Plan Input and Clinical Expert Response - Tezepelumab (Tezspire) - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK601779/table/tr8269861151140731_ch01_t04?report=objectonly",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Other biologics indicated for severe asthma include omalizumab, mepolizumab, reslizumab, benralizumab, and dupilumab. Health Canada indications for these agents generally relate to specific phenotypes \u2014 allergic (omalizumab) and eosinophilic (mepolizumab, reslizumab, benralizumab). The indication ",
+      "score": 0.8319231
+    },
+    {
+      "number": 22,
+      "title": "Safety of Biological Therapies for Severe Asthma: An Analysis of Suspected Adverse Reactions Reported in the WHO Pharmacovigilance Database",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11055782",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Stratifying all biologic-related ICSRs by therapeutic indication, around 29.4% (_n_ = 48,440) concerned asthma use; omalizumab was mainly indicated as the suspected drug (_n_ = 20,501), followed by dupilumab, mepolizumab, benralizumab and reslizumab. The most frequently reported suspected ADRs of as",
+      "score": 0.8286204
+    },
+    {
+      "number": 23,
+      "title": "Switching to twice-yearly depemokimab from mepolizumab/benralizumab in severe asthma: a multicenter, randomized, double-blind, phase 3A clinical trial (NIMBLE)",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13160935",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In conclusion, the results suggest that people with severe asthma and documented benefit from IL-5\u2013directed biologic treatment can safely and effectively switch from a short-acting biologic such as mepolizumab or benralizumab to an ultra-long-acting biologic such as depemokimab. NIMBLE shows that th",
+      "score": 0.8051581
+    },
+    {
+      "number": 24,
+      "title": "Combination of Biological Therapy in Severe Asthma: Where We Are?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10672189",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A case series by Lommatzsch et al.  described 25 patients treated with several biologic combinations. 15 patients concomitantly received 2 biologics approved for severe asthma: 7 received a dual treatment to obtain asthma control, and 8 were treated with another asthma biologic for the management of",
+      "score": 0.8025714
+    }
+  ],
+  "publishedAt": "2026-09-15T18:09:37.792538+00:00",
+  "updatedAt": "2026-09-15T18:09:37.792538+00:00",
+  "readingMinutes": 5,
+  "slug": "severe-asthma-biologic-selection"
+}

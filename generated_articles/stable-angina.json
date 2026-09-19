@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiology",
+  "title": "Stable Angina",
+  "summary": "Evaluate persistent exertional chest symptoms with risk-directed anatomic or functional testing, distinguish flow-limiting obstructive disease from nonobstructive mechanisms, initiate chronic coronary disease risk reduction and antianginal therapy, and reserve invasive angiography with physiologic assessment for actionable anatomy or refractory symptoms.",
+  "seoDescription": "Physician guide to stable angina testing, coronary CT and stress imaging selection, physiologic lesion assessment, medical therapy, and revascularization.",
+  "clinicalQuestion": "How should clinicians test, risk-stratify, and manage patients with suspected or established stable angina?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "stable angina",
+    "chronic coronary disease",
+    "coronary CT angiography",
+    "stress testing",
+    "fractional flow reserve",
+    "revascularization"
+  ],
+  "keyTakeaways": [
+    "Treat a change in symptom frequency, severity, duration, or resting occurrence as a potential acute coronary syndrome rather than stable angina; acute coronary syndrome guidelines address unstable angina, NSTEMI, and STEMI. [9]",
+    "For stable suspected coronary disease, choose coronary CT angiography when defining coronary anatomy is the main question and stress imaging when demonstrating inducible ischemia will determine management; direct invasive angiography is generally not a cost-effective initial diagnostic strategy. [1][14][16]",
+    "Do not equate an anatomic stenosis with a revascularization target: invasive FFR is the reference standard for functional lesion assessment, and CT-derived FFR can provide noninvasive physiologic information from coronary CTA. [1][17][22]",
+    "Select PCI versus CABG from disease extent and complexity, ventricular function, comorbidity, bleeding risk, and patient preference rather than angina alone. [14]",
+    "Use longitudinal chronic coronary disease care rather than a one-time diagnostic approach; chronic coronary disease includes obstructive and nonobstructive CAD, prior MI or revascularization, ischemia diagnosed noninvasively, and chronic angina syndromes with differing causes. [4]"
+  ],
+  "sections": [
+    {
+      "id": "first-decision",
+      "eyebrow": "Triage",
+      "heading": "Separate stable symptoms from acute coronary syndrome before outpatient testing",
+      "intro": "The stability of the symptom pattern determines the initial pathway.",
+      "paragraphs": [
+        "Use the stable-angina pathway only when symptoms are predictably provoked and unchanged in frequency and severity over time; one review defines chronic stable angina as symptoms unchanged for at least 2 months. Escalating exertional threshold, new rest symptoms, prolonged episodes, or a clinically unstable presentation should instead trigger an acute coronary syndrome evaluation pathway. [9][14]",
+        "Do not assume exertional chest discomfort is obstructive epicardial CAD. Stable angina reflects inadequate myocardial perfusion, most commonly from atherosclerotic CAD but not invariably so; chronic coronary disease also encompasses nonobstructive CAD and chronic angina syndromes with variable causes. A normal or nonobstructive anatomic study therefore changes the diagnostic question from obstructive lesion localization to alternative ischemic mechanisms or noncoronary causes. [4][14]"
+      ],
+      "bullets": [
+        "Obtain a resting ECG before exercise ECG testing; left bundle branch morphology, ventricular pacing, delta waves, or significant baseline ST depression limit exercise ECG interpretation. [24]",
+        "Use exercise data when it can reproduce symptoms and identify exercise capacity, chronotropic incompetence, or a hypertensive response; choose imaging-based testing if the patient cannot achieve diagnostic exercise levels or has an uninterpretable resting ECG. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial pathway is determined by symptom stability and whether the clinical question is anatomy, ischemia, or lesion physiology. [9][14][17]",
+        "columns": [
+          "Clinical situation",
+          "Next test or pathway",
+          "What changes management"
+        ],
+        "rows": [
+          [
+            "New, worsening, prolonged, or rest symptoms",
+            "Evaluate as possible acute coronary syndrome rather than outpatient stable-angina testing. [9]",
+            "Acute coronary syndrome includes unstable angina, NSTEMI, and STEMI. [9]"
+          ],
+          [
+            "Stable symptoms; anatomy is needed",
+            "Coronary CT angiography to define coronary atheroma, stenosis, and structural coronary abnormalities. [14][16]",
+            "A negative coronary CTA is highly sensitive for excluding functionally significant CAD in meta-analysis; obstructive or indeterminate disease may require physiologic assessment or invasive evaluation. [16][17]"
+          ],
+          [
+            "Stable symptoms; inducible ischemia is needed",
+            "Stress echocardiography, SPECT myocardial perfusion imaging, stress CMR, PET, or exercise ECG when appropriate. [16][24]",
+            "Ischemia testing can guide invasive coronary angiography and characterize exercise-related symptoms. [16][24]"
+          ],
+          [
+            "Anatomic lesion of uncertain functional significance",
+            "Use CT-derived FFR after CTA when suitable, or invasive angiography with FFR when catheterization is undertaken. [1][17][22]",
+            "Revascularization decisions should be tied to physiologic lesion significance rather than angiographic appearance alone. [1][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "noninvasive-testing",
+      "eyebrow": "Diagnosis",
+      "heading": "Choose coronary CTA or stress imaging according to the decision needed",
+      "intro": "No single noninvasive test answers anatomy, ischemia, exercise tolerance, and lesion-level physiology equally well.",
+      "paragraphs": [
+        "Coronary CTA is an anatomic test: it assesses coronary atheroma, stenosis, and structural coronary abnormalities. In a meta-analysis using invasive FFR as reference, coronary CTA had the highest sensitivity for functionally significant lesions at 88% (95% CI, 85%\u201390%). This makes it useful when excluding significant coronary disease is the near-term decision; a positive CTA does not by itself establish that a stenosis causes ischemia. [14][16]",
+        "Use stress imaging when the management question is inducible ischemia rather than coronary anatomy alone. In the same meta-analysis, stress CMR and combined coronary CTA plus stress myocardial CT perfusion had the highest vessel-based specificity, while PET, stress CMR, stress echocardiography, and SPECT each provide functional evidence of ischemia. Test selection should also reflect exercise ability, ECG interpretability, local availability, and expertise. [16][24]",
+        "Exercise ECG remains a practical option when the resting ECG is interpretable and the patient can exercise adequately, but contemporary national and international guidance has downgraded it to a Class II indication. Its residual value is direct symptom correlation and assessment of exercise capacity, chronotropic response, and exercise blood-pressure response. [24]"
+      ],
+      "bullets": [
+        "Prefer exercise stress, when feasible, for stress echocardiography and SPECT myocardial perfusion imaging. [24]",
+        "Avoid relying on exercise ECG alone when baseline LBBB morphology, ventricular pacing, delta waves, or substantial ST-segment depression prevents interpretable ischemic ST changes. [24]",
+        "If a prior CTA shows moderate coronary disease, CT-derived FFR can serve as a gatekeeper to catheterization, provided CTA image quality and anatomic data are adequate. [17][22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Interpret CT-derived FFR at the lesion, not as a generic vessel label",
+          "paragraphs": [
+            "CT-derived FFR combines CTA anatomy with computational physiologic assessment without additional radiation, contrast administration, or pharmacologic hyperemia beyond the CTA acquisition. Its interpretation is affected by stenosis severity, coronary calcium, atherosclerosis, luminal volume, and left-ventricular myocardial mass; these limitations matter most when the result will determine referral to invasive angiography. [17]",
+            "For a focal stenosis, use the CT-derived FFR value measured 10\u201320 mm distal to the lower border of the lesion for clinical decision-making rather than an arbitrary distal vessel value. Standardized reporting is particularly important because the analysis reports pressure and flow information across the coronary tree. [22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Noninvasive test characteristics and practical selection points. [16][24]",
+        "columns": [
+          "Modality",
+          "Primary actionable output",
+          "Key selection point"
+        ],
+        "rows": [
+          [
+            "Coronary CTA",
+            "Coronary plaque and stenosis anatomy; sensitivity 88% (95% CI, 85%\u201390%) for functionally significant lesions in a meta-analysis. [16]",
+            "Use when exclusion or definition of CAD anatomy will direct care; add physiologic assessment when lesion significance remains uncertain. [14][16][17]"
+          ],
+          [
+            "PET",
+            "Functional ischemia assessment; sensitivity 85% (95% CI, 82%\u201388%) in a meta-analysis. [16]",
+            "Use according to availability and local expertise. [24]"
+          ],
+          [
+            "Stress CMR",
+            "Functional ischemia assessment; sensitivity 81% (95% CI, 79%\u201384%) and high vessel-based specificity in a meta-analysis. [16]",
+            "Useful when functional assessment is required and the center has timely expertise. [16][24]"
+          ],
+          [
+            "Stress echocardiography",
+            "Inducible regional wall-motion abnormality; sensitivity 72% (95% CI, 64%\u201378%) in a meta-analysis. [16]",
+            "Exercise stress is preferred when adequate exercise can be achieved. [24]"
+          ],
+          [
+            "SPECT myocardial perfusion imaging",
+            "Perfusion mismatch; sensitivity 64% (95% CI, 60%\u201368%) in a meta-analysis. [16]",
+            "Exercise stress is preferred when adequate exercise can be achieved. [24]"
+          ],
+          [
+            "Exercise ECG",
+            "Symptoms, exercise capacity, heart-rate response, blood-pressure response, and ischemic ST changes when interpretable. [24]",
+            "Do not use as the sole ischemia test with limiting baseline ECG abnormalities or inability to exercise adequately. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "invasive-evaluation",
+      "eyebrow": "Physiology",
+      "heading": "Use invasive angiography when anatomy or symptoms justify a revascularization decision",
+      "intro": "Angiography should answer a treatment question, not substitute for initial risk assessment.",
+      "paragraphs": [
+        "Reserve invasive coronary angiography for patients in whom noninvasive findings, symptom burden, or clinical risk make coronary anatomy actionable. Direct invasive testing is generally less cost-effective than noninvasive functional testing for new stable angina, although a decision model found direct angiography with FFR became cost-effective when the value assigned to a correct diagnosis exceeded \u00a324,000. [1]",
+        "When invasive angiography identifies an intermediate or otherwise uncertain lesion, add FFR to determine functional significance before revascularization. FFR-guided care has been associated with better outcomes than management based on angiography alone, and invasive FFR is described as the reference standard for revascularization decision-making in stable CAD. [1][17]",
+        "Integrate coronary distribution and disease complexity with ventricular function, comorbidity, bleeding risk, and patient preference when selecting PCI versus CABG. Neither procedure should be framed as a default response to an angiographic stenosis; both are revascularization approaches with different procedural strategies and limitations. [6][14]"
+      ],
+      "bullets": [
+        "A lesion seen on CTA should generally be treated as an anatomic finding until ischemia or physiologic significance is established. [14][17]",
+        "Discuss revascularization through shared decision-making when a patient has anatomically and physiologically actionable disease; chronic coronary disease guidelines explicitly center longitudinal, patient-centered care. [4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "What invasive assessment adds after noninvasive evaluation. [1][14][17]",
+        "columns": [
+          "Finding before catheterization",
+          "Invasive objective",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "High-risk or actionable coronary anatomy on CTA",
+            "Define coronary distribution and feasibility of revascularization. [14]",
+            "Compare PCI and CABG using disease complexity, ventricular function, comorbidity, bleeding risk, and patient preference. [14]"
+          ],
+          [
+            "Stenosis with uncertain ischemic significance",
+            "Measure invasive FFR. [1][17]",
+            "Use physiologic significance to guide whether revascularization is warranted. [1][17]"
+          ],
+          [
+            "Persistent angina despite medical treatment with a plausible coronary target",
+            "Establish anatomy and lesion physiology before a revascularization decision. [1][17]",
+            "Proceed with a patient-specific PCI versus CABG discussion if anatomy and physiology support intervention. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "chronic-management",
+      "eyebrow": "Management",
+      "heading": "Manage stable angina as chronic coronary disease between diagnostic milestones",
+      "intro": "Symptom control and cardiovascular risk management proceed while testing and revascularization decisions are being made.",
+      "paragraphs": [
+        "Use the chronic coronary disease framework rather than the older isolated label of stable ischemic heart disease. The 2023 multisociety guideline defines chronic coronary disease broadly to include obstructive and nonobstructive CAD, prior MI or revascularization, ischemic heart disease diagnosed only by noninvasive testing, and chronic angina syndromes with varying causes. This classification should prompt longitudinal reassessment of symptoms, testing results, and treatment goals rather than discharge after a single negative or positive study. [3][4]",
+        "For antianginal symptom treatment, beta-blockers and calcium-channel blockers are established initial classes; if both are contraindicated or not tolerated, NICE guidance advises considering monotherapy with another antianginal option. Ranolazine has trial evidence for prolonging exercise duration and time to angina as monotherapy or in combination therapy, but the available evidence excerpt does not provide a dose or a specific sequencing rule. [2][18][19]",
+        "Treat hypertension and modifiable cardiovascular risk factors as part of coronary disease management. Older ACC/AHA guidance notes that hypertension in chronic stable angina confers high cardiovascular morbidity and mortality risk and supports beginning with nonpharmacologic measures, adding antihypertensive therapy when lifestyle and dietary measures do not adequately lower blood pressure. [6]",
+        "For patients with type 2 diabetes and chronic coronary disease, the 2023 AHA/ACC multisociety guideline recommends an SGLT2 inhibitor or GLP-1 receptor agonist with proven cardiovascular benefit. Select the individual agent, dose, renal constraints, and monitoring plan from current product labeling and diabetes-specific guidance. [3]"
+      ],
+      "bullets": [
+        "Reassess after therapy changes with symptom frequency, exertional threshold, medication tolerance, and whether symptoms now warrant anatomic or physiologic reassessment. [4][14]",
+        "Do not use response to an antianginal drug as proof that obstructive CAD is present; stable angina can arise in chronic angina syndromes with differing causes. [4][14]",
+        "Consider the antianginal goal separately from the revascularization goal: revascularization selection depends on coronary anatomy, functional significance, and patient-level tradeoffs. [14][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Chronic management decisions supported by the cited literature. [2][3][6][18][19]",
+        "columns": [
+          "Clinical objective",
+          "Action",
+          "Important qualifier"
+        ],
+        "rows": [
+          [
+            "Reduce angina burden",
+            "Use a beta-blocker or calcium-channel blocker when tolerated. [2]",
+            "If both are contraindicated or not tolerated, consider alternative antianginal monotherapy. [2]"
+          ],
+          [
+            "Persisting angina despite or limiting use of first-line classes",
+            "Consider ranolazine for symptom improvement. [18][19]",
+            "Evidence supports improved exercise duration and time to angina; dosing details are not specified in the cited excerpt. [18]"
+          ],
+          [
+            "Treat hypertension",
+            "Begin with nonpharmacologic measures and add antihypertensive medication if lifestyle and dietary measures do not adequately reduce blood pressure. [6]",
+            "Hypertensive patients with chronic stable angina have high cardiovascular morbidity and mortality risk. [6]"
+          ],
+          [
+            "Type 2 diabetes with chronic coronary disease",
+            "Use an SGLT2 inhibitor or GLP-1 receptor agonist with proven cardiovascular benefit. [3]",
+            "Agent selection requires product-specific contraindication, renal, and monitoring review. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "follow-up-escalation",
+      "eyebrow": "Follow-up",
+      "heading": "Escalate when symptoms and objective findings no longer align",
+      "intro": "Discordance between symptoms, anatomy, and ischemia should trigger a targeted reassessment rather than automatic PCI.",
+      "paragraphs": [
+        "If coronary CTA is negative for obstructive disease but exertional symptoms persist, reconsider whether the syndrome is nonobstructive chronic coronary disease, another ischemic mechanism, or a noncoronary exercise-limiting disorder. Functional testing can clarify whether inducible ischemia is present, while exercise testing may reveal chronotropic incompetence, hypertensive response, or poor exercise capacity that changes the competing diagnosis. [4][16][24]",
+        "If CTA shows stenosis but stress imaging is negative or symptoms are atypical, avoid treating anatomy alone as a mandate for intervention. CT-derived FFR or invasive FFR is the next discriminator when defining lesion-level flow limitation would determine whether catheterization or revascularization is appropriate. [17][22]",
+        "Repeat noninvasive risk stratification in patients with known stable angina who become asymptomatic on therapy according to older ACC/AHA coronary angiography guidance, while using the current chronic coronary disease framework for longitudinal follow-up. A recurrence, reduced exertional threshold, or change in symptom quality should restart the assessment at the stability-versus-acute-coronary-syndrome decision point. [4][8][9]"
+      ],
+      "bullets": [
+        "Escalate from CTA to CT-derived FFR when moderate disease creates uncertainty about physiologic significance. [17][22]",
+        "Escalate to invasive angiography with FFR when symptoms or noninvasive findings make a revascularization decision likely. [1][17]",
+        "Reevaluate for acute coronary syndrome rather than repeating routine outpatient testing when the symptom pattern becomes unstable. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common discordant-result pathways. [4][16][17][22][24]",
+        "columns": [
+          "Discordance",
+          "Next discriminator",
+          "Avoid"
+        ],
+        "rows": [
+          [
+            "Persistent exertional symptoms with nonobstructive CTA",
+            "Functional ischemia testing and exercise-physiology assessment when feasible. [16][24]",
+            "Assuming that symptoms establish obstructive epicardial CAD. [4][14]"
+          ],
+          [
+            "CTA stenosis with uncertain clinical significance",
+            "CT-derived FFR or invasive FFR. [17][22]",
+            "Selecting revascularization solely from stenosis appearance. [1][17]"
+          ],
+          [
+            "Previously stable symptoms become rest, prolonged, or worsening symptoms",
+            "Acute coronary syndrome evaluation. [9]",
+            "Continuing a routine chronic-angina diagnostic pathway. [9]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "When should CT-derived FFR be added to coronary CTA?",
+      "answer": "Use CT-derived FFR when CTA identifies moderate or otherwise uncertain coronary disease and lesion-level physiologic significance will determine whether to refer for invasive angiography or revascularization. Interpret the value 10\u201320 mm distal to the lower lesion border, recognizing that calcium, plaque burden, luminal volume, and LV mass can affect results. [17][22]"
+    },
+    {
+      "question": "Is a normal stress study sufficient to dismiss persistent exertional symptoms?",
+      "answer": "No. A normal functional study reduces evidence for inducible ischemia but does not eliminate nonobstructive chronic coronary disease or noncoronary exercise limitations. Reassess the symptom phenotype, coronary anatomy when indicated, and exercise data for chronotropic incompetence, hypertensive response, or limited exercise capacity. [4][24]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cost-effectiveness in diagnosis of stable angina patients: a decision-analytical modelling approach | Open Heart",
+      "detail": "openheart.bmj.com",
+      "url": "https://openheart.bmj.com/content/9/1/e001700",
+      "authors": "openheart.bmj.com",
+      "host": "openheart.bmj.com",
+      "snippet": "Title: Cost-effectiveness in diagnosis of stable angina patients: a decision-analytical modelling approach | Open Heart\n**Objective** Given recent data on published diagnostic accuracies, this study sought to determine the most cost-effective diagnostic strategy for detection of significant coronary",
+      "score": 0.5568099
+    },
+    {
+      "number": 2,
+      "title": "Management of stable angina: summary of NICE guidance - The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/343/bmj.d4147",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "If the person cannot tolerate \u03b2 blockers or calcium channel blockers or if both are contraindicated, consider monotherapy with one of the",
+      "score": 0.6391287
+    },
+    {
+      "number": 3,
+      "title": "2023 Chronic Coronary Disease Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.06.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The 2023 American Heart Association (AHA)/American College of Cardiology (ACC) Multisociety Guideline for the Management of Patients with Chronic Coronary Disease (AHA/ACC Multisociety Chronic Coronary Disease Guideline) provides guidance for clinicians on the management of patients with chronic cor",
+      "score": 0.7445268
+    },
+    {
+      "number": 4,
+      "title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.04.003",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The scope of the \u201c2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease\u201d (referred to hereafter as the \u201c2023 CCD guideline\u201d) is to provide an update to and consolidate new evidence since the publication of the \u201c2012 ACCF/AHA/ACP/AATS/PCNA/SCAI/STS Gui",
+      "score": 0.72418857
+    },
+    {
+      "number": 5,
+      "title": "Optimizing Management of Stable Angina: A Patient-Centered Approach Integrating Revascularization, Medical Therapy, and Lifestyle Interventions",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.06.015",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "13.\n\nWriting Committee Members. Virani S.S., Newby L.K., et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA guideline for the management of patients with chronic coronary disease: a report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. _J Am Col",
+      "score": 0.6912478
+    },
+    {
+      "number": 6,
+      "title": "ACC/AHA/ACP-ASIM guidelines for the management of patients with ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/S0735-1097%2899%2900150-3",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "There are currently two well-established revascularization approaches to treatment of chronic stable angina caused by coronary atherosclerosis. One is coronary artery bypass grafting (CABG), in which segments of autologous arteries or veins are used to reroute blood around relatively long segments o",
+      "score": 0.6617704
+    },
+    {
+      "number": 7,
+      "title": "ACC/AHA/ACP\u2013ASIM Guidelines for the Management of Patients ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.99.21.2829",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Chronic stable angina is the initial manifestation of ischemic heart disease in approximately one half of patients. The magnitude of the problem can be easily",
+      "score": 0.63397753
+    },
+    {
+      "number": 8,
+      "title": "ACC/AHA Guidelines for Coronary Angiography: Executive ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.99.17.2345",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Those patients with stable angina who respond to therapy and are currently asymptomatic should undergo noninvasive testing for risk stratification.",
+      "score": 0.5737984
+    },
+    {
+      "number": 9,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This guideline will focus on the acute management of ACS, including unstable angina, NSTEMI, and STEMI, which are presumed of a patient with CCD",
+      "score": 0.4905535
+    },
+    {
+      "number": 10,
+      "title": "Coronary artery disease and stable angina | Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/coronary-artery-disease-and-stable-angina/nrcardio",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Anti-inflammatory therapy with low-dose colchicine reduces the risk of cardiovascular events by 31% compared with placebo in patients with chronic coronary artery disease, according to findings from the LoDoCo2 trial presented at the ESC Congress 2020.\n\nResearch Highlight\n | \n11 September 2020\n\n### ",
+      "score": 0.48630774
+    },
+    {
+      "number": 11,
+      "title": "2014 ACC/AHA/AATS/PCNA/SCAI/STS Focused Update of the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000095",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "These guidelines are intended to apply to adult patients with stable known or suspected ischemic heart disease (IHD), including those with new-",
+      "score": 0.42849702
+    },
+    {
+      "number": 12,
+      "title": "Cytotoxic CD4+ T cells: origin, biological functions, diseases and therapeutic targets | Signal Transduction and Targeted Therapy",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41392-025-02533-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Coronary artery disease (CAD) is a chronic atherosclerotic condition that is inherently inflammatory and presents in various forms, including stable angina, unstable angina, myocardial infarction, and sudden cardiac death. CAD has been established as the leading cause of death worldwide, both in dev",
+      "score": 0.19673395
+    },
+    {
+      "number": 13,
+      "title": "Chronic Coronary Syndrome: A Review of the Literature - Ovid",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/accd/fulltext/2021/03010/chronic_coronary_syndrome__a_review_of_the.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "According to the 2019 ESC guidelines, Patient with CAD suspicion and stable angina symptoms with/without dyspnea",
+      "score": 0.6437107
+    },
+    {
+      "number": 14,
+      "title": "Ischaemic heart disease: stable angina - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1357303922000986",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Ischaemic heart disease: stable angina - ScienceDirect\n# Ischaemic heart disease Ischaemic heart disease: stable angina. Stable angina is a clinical syndrome reflecting inadequate myocardial perfusion. This is typically, but not always, caused by atherosclerotic coronary artery disease. A ran",
+      "score": 0.7750779
+    },
+    {
+      "number": 15,
+      "title": "Comparison of Diagnostic Accuracy of CT Derived Fractional Flow Reserve for Predicting Revascularization - Tsugu - 2025 - Echocardiography - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/echo.70137",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "D. Safian, et\u00a0al., \u201cCoronary CT Angiography-Derived Fractional Flow Reserve Testing in Patients With Stable Coronary Artery Disease: Recommendations on Interpretation and Reporting,\u201d *Radiology: Cardiothoracic Imaging* 1, no. Ohana, et\u00a0al., \u201cFractional Flow Reserve Derived From Coronary Computed Tom",
+      "score": 0.58777803
+    },
+    {
+      "number": 16,
+      "title": "Diagnostic performance of non-invasive imaging for stable coronary artery disease: A meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167527319332772",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Diagnostic performance of non-invasive imaging for stable coronary artery disease: A meta-analysis - ScienceDirect\nThe diagnostic test with the highest sensitivity to detect a functionally significant coronary lesion was coronary computed tomography (CT) angiography [88%(85%\u201390%)], followed b",
+      "score": 0.57637566
+    },
+    {
+      "number": 17,
+      "title": "Integration of fractional flow reserve derived from CT into clinical practice - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0914508723000333",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Integration of fractional flow reserve derived from CT into clinical practice - ScienceDirect\n## Journal of Cardiology. Volume 81, Issue 6, June 2023, Pages 577-585. # Review Integration of fractional flow reserve derived from CT into clinical practice. Author links open overlay panel, ,. htt",
+      "score": 0.48630774
+    },
+    {
+      "number": 18,
+      "title": "Clinical implications of inhibition of the late sodium current: ranolazine",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartjsupp/article-pdf/8/suppl_A/A14/1184522/sui092.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Ranolazine has been shown in clinical trials to significantly prolong exercise duration and time to angina, as monotherapy or when administered with",
+      "score": 0.34953326
+    },
+    {
+      "number": 19,
+      "title": "Treatment of stable ischaemic heart disease: the old and the new",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartjsupp/article/22/Supplement_E/E54/5851034",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "More recently, ranolazine and ivabradine have been introduced. All these drugs have been proven to reduce significantly angina. On the other",
+      "score": 0.317956
+    },
+    {
+      "number": 20,
+      "title": "Percutaneous coronary intervention from COURAGE to ISCHEMIA and beyond - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167527322017211",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J. Am. Coll. Cardiol.\n\n### 2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: executive summary: a report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines\n\n### J. Am. Coll. Cardiol.\n\n### Percutaneous coronary int",
+      "score": 0.63804686
+    },
+    {
+      "number": 21,
+      "title": "10. Cardiovascular Disease and Risk Management: Standards of ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.2337%2Fdc26-S010&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Clinical management of stable coronary artery disease in patients with type 2 diabetes mellitus: a scientific statement from the American",
+      "score": 0.25904277
+    },
+    {
+      "number": 22,
+      "title": "Coronary CT Angiography-derived Fractional Flow Reserve Testing in                     Patients with Stable Coronary Artery Disease: Recommendations on Interpretation                     and Reporting",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/ryct.2019190050",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Title: Coronary CT Angiography-derived Fractional Flow Reserve Testing in                     Patients with Stable Coronary Artery Disease: Recommendations on Interpretation                     and Reporting\n# Coronary CT Angiography-derived Fractional Flow Reserve Testing in Patients with Stable Co",
+      "score": 0.7135319
+    },
+    {
+      "number": 23,
+      "title": "Coronary computed tomography angiography vs stress testing for stable angina evaluation: Diagnostic and prognostic superiority",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12476583",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , characterized by predictable chest pain resulting from myocardial ischemia during exertion or stress. Accurate and timely diagnosis is essential to guide risk stratification, therapeutic decision-making, and to prevent adverse cardiovascular events. Currently, first-line evaluation strategies f",
+      "score": 0.7038554
+    },
+    {
+      "number": 24,
+      "title": "Chest Pain Evaluation: Diagnostic Testing - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10774086",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "however, phase 3 trials have been completed of a new PET tracer that could be used with exercise in the future. In contrast, exercise stress is preferred for stress echocardiography and SPECT myocardial perfusion imaging when adequate levels of exercise can be attained. Finally, an important determi",
+      "score": 0.53502613
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Cost-effectiveness in diagnosis of stable angina patients: a decision-analytical modelling approach | Open Heart",
+      "detail": "openheart.bmj.com",
+      "url": "https://openheart.bmj.com/content/9/1/e001700",
+      "authors": "openheart.bmj.com",
+      "host": "openheart.bmj.com",
+      "snippet": "Title: Cost-effectiveness in diagnosis of stable angina patients: a decision-analytical modelling approach | Open Heart\n**Objective** Given recent data on published diagnostic accuracies, this study sought to determine the most cost-effective diagnostic strategy for detection of significant coronary",
+      "score": 0.5568099
+    },
+    {
+      "number": 2,
+      "title": "Management of stable angina: summary of NICE guidance - The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/343/bmj.d4147",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "If the person cannot tolerate \u03b2 blockers or calcium channel blockers or if both are contraindicated, consider monotherapy with one of the",
+      "score": 0.6391287
+    },
+    {
+      "number": 3,
+      "title": "2023 Chronic Coronary Disease Guideline-at-a-Glance",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.06.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The 2023 American Heart Association (AHA)/American College of Cardiology (ACC) Multisociety Guideline for the Management of Patients with Chronic Coronary Disease (AHA/ACC Multisociety Chronic Coronary Disease Guideline) provides guidance for clinicians on the management of patients with chronic cor",
+      "score": 0.7445268
+    },
+    {
+      "number": 4,
+      "title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2023.04.003",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The scope of the \u201c2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease\u201d (referred to hereafter as the \u201c2023 CCD guideline\u201d) is to provide an update to and consolidate new evidence since the publication of the \u201c2012 ACCF/AHA/ACP/AATS/PCNA/SCAI/STS Gui",
+      "score": 0.72418857
+    },
+    {
+      "number": 5,
+      "title": "Optimizing Management of Stable Angina: A Patient-Centered Approach Integrating Revascularization, Medical Therapy, and Lifestyle Interventions",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2024.06.015",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "13.\n\nWriting Committee Members. Virani S.S., Newby L.K., et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA guideline for the management of patients with chronic coronary disease: a report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. _J Am Col",
+      "score": 0.6912478
+    },
+    {
+      "number": 6,
+      "title": "ACC/AHA/ACP-ASIM guidelines for the management of patients with ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/S0735-1097%2899%2900150-3",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "There are currently two well-established revascularization approaches to treatment of chronic stable angina caused by coronary atherosclerosis. One is coronary artery bypass grafting (CABG), in which segments of autologous arteries or veins are used to reroute blood around relatively long segments o",
+      "score": 0.6617704
+    },
+    {
+      "number": 7,
+      "title": "ACC/AHA/ACP\u2013ASIM Guidelines for the Management of Patients ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.99.21.2829",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Chronic stable angina is the initial manifestation of ischemic heart disease in approximately one half of patients. The magnitude of the problem can be easily",
+      "score": 0.63397753
+    },
+    {
+      "number": 8,
+      "title": "ACC/AHA Guidelines for Coronary Angiography: Executive ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.99.17.2345",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Those patients with stable angina who respond to therapy and are currently asymptomatic should undergo noninvasive testing for risk stratification.",
+      "score": 0.5737984
+    },
+    {
+      "number": 9,
+      "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This guideline will focus on the acute management of ACS, including unstable angina, NSTEMI, and STEMI, which are presumed of a patient with CCD",
+      "score": 0.4905535
+    },
+    {
+      "number": 10,
+      "title": "Coronary artery disease and stable angina | Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/subjects/coronary-artery-disease-and-stable-angina/nrcardio",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Anti-inflammatory therapy with low-dose colchicine reduces the risk of cardiovascular events by 31% compared with placebo in patients with chronic coronary artery disease, according to findings from the LoDoCo2 trial presented at the ESC Congress 2020.\n\nResearch Highlight\n | \n11 September 2020\n\n### ",
+      "score": 0.48630774
+    },
+    {
+      "number": 11,
+      "title": "2014 ACC/AHA/AATS/PCNA/SCAI/STS Focused Update of the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000095",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "These guidelines are intended to apply to adult patients with stable known or suspected ischemic heart disease (IHD), including those with new-",
+      "score": 0.42849702
+    },
+    {
+      "number": 12,
+      "title": "Cytotoxic CD4+ T cells: origin, biological functions, diseases and therapeutic targets | Signal Transduction and Targeted Therapy",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41392-025-02533-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Coronary artery disease (CAD) is a chronic atherosclerotic condition that is inherently inflammatory and presents in various forms, including stable angina, unstable angina, myocardial infarction, and sudden cardiac death. CAD has been established as the leading cause of death worldwide, both in dev",
+      "score": 0.19673395
+    },
+    {
+      "number": 13,
+      "title": "Chronic Coronary Syndrome: A Review of the Literature - Ovid",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/accd/fulltext/2021/03010/chronic_coronary_syndrome__a_review_of_the.2.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "According to the 2019 ESC guidelines, Patient with CAD suspicion and stable angina symptoms with/without dyspnea",
+      "score": 0.6437107
+    },
+    {
+      "number": 14,
+      "title": "Ischaemic heart disease: stable angina - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1357303922000986",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Ischaemic heart disease: stable angina - ScienceDirect\n# Ischaemic heart disease Ischaemic heart disease: stable angina. Stable angina is a clinical syndrome reflecting inadequate myocardial perfusion. This is typically, but not always, caused by atherosclerotic coronary artery disease. A ran",
+      "score": 0.7750779
+    },
+    {
+      "number": 15,
+      "title": "Comparison of Diagnostic Accuracy of CT Derived Fractional Flow Reserve for Predicting Revascularization - Tsugu - 2025 - Echocardiography - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/echo.70137",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "D. Safian, et\u00a0al., \u201cCoronary CT Angiography-Derived Fractional Flow Reserve Testing in Patients With Stable Coronary Artery Disease: Recommendations on Interpretation and Reporting,\u201d *Radiology: Cardiothoracic Imaging* 1, no. Ohana, et\u00a0al., \u201cFractional Flow Reserve Derived From Coronary Computed Tom",
+      "score": 0.58777803
+    },
+    {
+      "number": 16,
+      "title": "Diagnostic performance of non-invasive imaging for stable coronary artery disease: A meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167527319332772",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Diagnostic performance of non-invasive imaging for stable coronary artery disease: A meta-analysis - ScienceDirect\nThe diagnostic test with the highest sensitivity to detect a functionally significant coronary lesion was coronary computed tomography (CT) angiography [88%(85%\u201390%)], followed b",
+      "score": 0.57637566
+    },
+    {
+      "number": 17,
+      "title": "Integration of fractional flow reserve derived from CT into clinical practice - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0914508723000333",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Integration of fractional flow reserve derived from CT into clinical practice - ScienceDirect\n## Journal of Cardiology. Volume 81, Issue 6, June 2023, Pages 577-585. # Review Integration of fractional flow reserve derived from CT into clinical practice. Author links open overlay panel, ,. htt",
+      "score": 0.48630774
+    },
+    {
+      "number": 18,
+      "title": "Clinical implications of inhibition of the late sodium current: ranolazine",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartjsupp/article-pdf/8/suppl_A/A14/1184522/sui092.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Ranolazine has been shown in clinical trials to significantly prolong exercise duration and time to angina, as monotherapy or when administered with",
+      "score": 0.34953326
+    },
+    {
+      "number": 19,
+      "title": "Treatment of stable ischaemic heart disease: the old and the new",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartjsupp/article/22/Supplement_E/E54/5851034",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "More recently, ranolazine and ivabradine have been introduced. All these drugs have been proven to reduce significantly angina. On the other",
+      "score": 0.317956
+    },
+    {
+      "number": 20,
+      "title": "Percutaneous coronary intervention from COURAGE to ISCHEMIA and beyond - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167527322017211",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J. Am. Coll. Cardiol.\n\n### 2019 ACC/AHA guideline on the primary prevention of cardiovascular disease: executive summary: a report of the American College of Cardiology/American Heart Association task force on clinical practice guidelines\n\n### J. Am. Coll. Cardiol.\n\n### Percutaneous coronary int",
+      "score": 0.63804686
+    },
+    {
+      "number": 21,
+      "title": "10. Cardiovascular Disease and Risk Management: Standards of ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.2337%2Fdc26-S010&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Clinical management of stable coronary artery disease in patients with type 2 diabetes mellitus: a scientific statement from the American",
+      "score": 0.25904277
+    },
+    {
+      "number": 22,
+      "title": "Coronary CT Angiography-derived Fractional Flow Reserve Testing in                     Patients with Stable Coronary Artery Disease: Recommendations on Interpretation                     and Reporting",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/ryct.2019190050",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "Title: Coronary CT Angiography-derived Fractional Flow Reserve Testing in                     Patients with Stable Coronary Artery Disease: Recommendations on Interpretation                     and Reporting\n# Coronary CT Angiography-derived Fractional Flow Reserve Testing in Patients with Stable Co",
+      "score": 0.7135319
+    },
+    {
+      "number": 23,
+      "title": "Coronary computed tomography angiography vs stress testing for stable angina evaluation: Diagnostic and prognostic superiority",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12476583",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , characterized by predictable chest pain resulting from myocardial ischemia during exertion or stress. Accurate and timely diagnosis is essential to guide risk stratification, therapeutic decision-making, and to prevent adverse cardiovascular events. Currently, first-line evaluation strategies f",
+      "score": 0.7038554
+    },
+    {
+      "number": 24,
+      "title": "Chest Pain Evaluation: Diagnostic Testing - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10774086",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "however, phase 3 trials have been completed of a new PET tracer that could be used with exercise in the future. In contrast, exercise stress is preferred for stress echocardiography and SPECT myocardial perfusion imaging when adequate levels of exercise can be attained. Finally, an important determi",
+      "score": 0.53502613
+    }
+  ],
+  "publishedAt": "2026-09-15T22:58:27.477867+00:00",
+  "updatedAt": "2026-09-15T22:58:27.477867+00:00",
+  "readingMinutes": 6,
+  "slug": "stable-angina"
+}

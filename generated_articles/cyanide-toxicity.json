@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Medical Toxicology",
+  "title": "Cyanide Toxicity",
+  "summary": "Treat suspected severe cyanide toxicity immediately when a compatible exposure accompanies rapid neurologic or cardiovascular collapse and metabolic acidosis. Secure oxygenation and circulation, obtain targeted co-exposure testing, and give IV hydroxocobalamin without awaiting cyanide confirmation when clinical suspicion is high.",
+  "seoDescription": "Point-of-care diagnosis and emergency treatment of cyanide toxicity, including smoke inhalation, antidote selection, dosing, and co-exposure assessment.",
+  "clinicalQuestion": "How should physicians recognize and immediately treat suspected severe cyanide toxicity before confirmatory testing returns?",
+  "specialty": "Emergency Medicine and Medical Toxicology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "cyanide poisoning",
+    "hydroxocobalamin",
+    "smoke inhalation",
+    "cyanide antidote",
+    "sodium nitrite",
+    "sodium thiosulfate",
+    "nitroprusside toxicity"
+  ],
+  "keyTakeaways": [
+    "Do not delay antidotal treatment for a cyanide concentration: clinical confirmation may take hours or days, and cyanide levels are technically difficult to obtain and interpret. [2][14][21]",
+    "For suspected severe cyanide toxicity, use IV hydroxocobalamin as the empiric first-line antidote; give 5 g over 15 minutes in adults and consider one additional 5 g dose if needed. [10][17][18][22]",
+    "In smoke inhalation, actively assess carbon monoxide co-poisoning with co-oximetry; carboxyhemoglobin above 5% in nonsmokers or above 10% in smokers supports carbon monoxide exposure. [12]",
+    "Avoid reflexive nitrite use in smoke inhalation because induced methemoglobinemia can compound impaired oxygen delivery from concurrent carboxyhemoglobinemia. [11]",
+    "Stop sodium nitroprusside immediately when cyanide toxicity is suspected; lactic acidosis and venous hyperoxemia are concerning but may be delayed beyond dangerous cyanide accumulation. [2]"
+  ],
+  "sections": [
+    {
+      "id": "treat-before-confirmation",
+      "eyebrow": "Immediate action",
+      "heading": "When to give empiric cyanide antidote",
+      "intro": "Use exposure pattern and severity, not delayed cyanide assays, to make the initial antidote decision.",
+      "paragraphs": [
+        "Treat empirically when a credible acute exposure is followed by severe neurologic dysfunction, respiratory failure, shock, cardiac arrest, or rapidly progressive metabolic acidosis. High-risk settings include enclosed-space fire smoke, known industrial or intentional cyanide exposure, and excessive or prolonged sodium nitroprusside infusion. Cyanide inhibits cytochrome oxidase, producing cellular oxygen-utilization failure despite oxygen delivery. [7][13][21]",
+        "Send blood cyanide testing if it can be obtained without interrupting resuscitation, but do not await the result. Cyanide assays are technically difficult; results from body fluids other than packed red blood cells are difficult to interpret. Acute clinical management should therefore be driven by exposure history and physiologic deterioration. [2][14]",
+        "Begin concurrent airway, ventilatory, circulatory, and high-concentration oxygen support while the antidote is prepared. In a patient with strongly suspected cyanide toxicity, toxicology or poison-center consultation should guide subsequent dosing and monitoring but must not delay hydroxocobalamin administration. [3][17]"
+      ],
+      "bullets": [
+        "Enclosed-space fire with collapse, coma, shock, or severe acidemia: presume possible combined cyanide and carbon monoxide toxicity; obtain co-oximetry while treating the life-threatening syndrome. [12][21]",
+        "Known cyanide salt or gas exposure with abrupt cardiopulmonary compromise: administer antidote immediately after or during initial ABC resuscitation. [3][22]",
+        "Sodium nitroprusside recipient with unexplained worsening acidosis or venous hyperoxemia: stop the infusion immediately and treat on clinical suspicion. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical patterns that should change the urgency of empiric antidotal treatment. [2][12][13][21]",
+        "columns": [
+          "Exposure pattern",
+          "Immediate discriminator",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Enclosed-space fire smoke",
+            "Neurologic or cardiovascular dysfunction with metabolic acidosis; evaluate for concurrent carbon monoxide exposure by co-oximetry. [12][21]",
+            "Provide oxygen and resuscitation; give empiric hydroxocobalamin when severe cyanide toxicity is suspected. [17][21]"
+          ],
+          [
+            "Known industrial, intentional, or ingestion exposure",
+            "Rapid respiratory, neurologic, or hemodynamic deterioration after a credible exposure. [14][21]",
+            "Draw confirmatory specimens only if this does not delay antidote and stabilization. [14][22]"
+          ],
+          [
+            "Sodium nitroprusside infusion",
+            "Lactic acidosis or venous hyperoxemia may indicate cyanide toxicity, although these can be delayed. [2]",
+            "Discontinue nitroprusside and initiate cyanide-toxicity treatment when suspicion is reasonable. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-resuscitation-and-testing",
+      "eyebrow": "Resuscitation",
+      "heading": "Initial workup in suspected cyanide toxicity",
+      "intro": "Obtain tests that identify physiologic severity and competing toxic exposures, but keep treatment moving.",
+      "paragraphs": [
+        "Obtain arterial or venous blood gas analysis with lactate early to document acid-base severity and trend response. In sodium nitroprusside-associated toxicity, lactic acidosis and venous hyperoxemia are supportive findings, but neither reliably excludes dangerous cyanide burden early because acidosis may appear more than an hour after red-cell cyanide buffering capacity is exhausted. [2]",
+        "In smoke exposure, order co-oximetry rather than relying on conventional pulse oximetry to assess carbon monoxide exposure. A carboxyhemoglobin concentration above 5% in nonsmokers or above 10% in smokers meets CDC laboratory criteria for carbon monoxide exposure; smokers may have baseline values of 6% to 10%. [12]",
+        "Interpret cyanide-related findings in context. An almond-like breath odor and cherry-red appearance are classically described but are not sufficient to rule cyanide toxicity in or out. The practical discriminator remains a compatible exposure plus otherwise unexplained CNS or cardiovascular failure and severe metabolic derangement. [14]"
+      ],
+      "bullets": [
+        "Obtain blood gas and lactate at presentation; repeat after stabilization and antidote administration to assess trajectory. [2]",
+        "Obtain co-oximetry in all clinically significant fire-smoke exposures to identify carbon monoxide co-poisoning. [12]",
+        "Collect a cyanide level when operationally feasible, but never defer antidote administration for the result. [2][14][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tests that alter immediate management in suspected cyanide toxicity. [2][12][14]",
+        "columns": [
+          "Test",
+          "Actionable interpretation",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Blood gas with lactate",
+            "Acidosis and elevated lactate support severe cellular hypoxia; absence early does not exclude cyanide toxicity. [2]",
+            "Escalate resuscitation and maintain empiric antidotal therapy when the exposure and clinical syndrome are compatible. [2]"
+          ],
+          [
+            "Venous oxygen assessment",
+            "Venous hyperoxemia can occur with cyanide-mediated failure of oxygen utilization. [2]",
+            "Supports cyanide toxicity in the appropriate exposure setting; do not use as a required criterion. [2]"
+          ],
+          [
+            "Co-oximetry",
+            "Carboxyhemoglobin >5% in nonsmokers or >10% in smokers supports carbon monoxide exposure. [12]",
+            "Treat smoke-inhalation victims as potential mixed toxic exposure; avoid therapies that unnecessarily reduce oxygen-carrying capacity. [11][12]"
+          ],
+          [
+            "Blood cyanide concentration",
+            "May confirm exposure but is difficult to obtain and interpret rapidly. [2]",
+            "Use for later confirmation when available; do not delay emergency treatment. [2][14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "antidote-selection-and-dosing",
+      "eyebrow": "Antidotal therapy",
+      "heading": "Choose hydroxocobalamin first for severe suspected toxicity",
+      "intro": "Hydroxocobalamin is the preferred empiric antidote when cyanide exposure is severe or cannot be immediately confirmed.",
+      "paragraphs": [
+        "Administer hydroxocobalamin 5 g IV over 15 minutes to adults with suspected severe cyanide toxicity. If clinical signs persist or recur, a second 5 g IV dose may be given; published recommendations describe repeat dosing up to a total of 15 g, while other regulatory materials describe repeating the initial 5 g dose once. [10][17][18][22]",
+        "For children, use hydroxocobalamin 70 mg/kg IV, not exceeding 5 g per dose. Use the same clinical trigger as in adults: a compelling exposure with severe or evolving cardiopulmonary, neurologic, or metabolic toxicity warrants treatment before laboratory confirmation. [18][22]",
+        "Hydroxocobalamin binds cyanide to form nontoxic cyanocobalamin and is favored for empiric smoke-inhalation treatment because it avoids deliberate methemoglobin formation. Reported adverse effects include hypertension, hypersensitivity manifestations, nausea, dizziness, rigors, and hot flushes; rare anaphylaxis has been described. There are no absolute contraindications when life-threatening cyanide poisoning is suspected. [7][16][18]"
+      ],
+      "bullets": [
+        "Adult hydroxocobalamin: 5 g IV over 15 minutes; reassess hemodynamics, neurologic status, ventilation, and acid-base trajectory for need for repeat treatment. [10][17][18]",
+        "Pediatric hydroxocobalamin: 70 mg/kg IV, maximum 5 g per dose. [18]",
+        "Do not use nitrites reflexively in smoke inhalation, where methemoglobinemia may worsen oxygen transport in the setting of carboxyhemoglobinemia. [11]",
+        "Use sodium thiosulfate only with attention to product-specific sequencing and compatibility: it is labeled for sequential use with sodium nitrite in serious acute cyanide poisoning and is chemically incompatible with hydroxocobalamin in the same IV line. [3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Sodium nitrite plus sodium thiosulfate",
+          "paragraphs": [
+            "When the sodium nitrite/sodium thiosulfate antidote regimen is selected for serious or life-threatening acute cyanide poisoning, the labeled adult regimen is sodium nitrite 10 mL IV at 2.5 to 5 mL/minute, immediately followed by sodium thiosulfate 50 mL IV (12.5 g). If signs recur, repeat one-half of the original dose of both agents. [3]",
+            "The nitrite component intentionally forms methemoglobin, which creates a specific hazard in smoke-inhalation victims with concomitant carboxyhemoglobinemia. Use nitrites cautiously in this setting rather than treating them as interchangeable with hydroxocobalamin. [11]"
+          ],
+          "bullets": [
+            "Administer sodium thiosulfate after sodium nitrite when using the labeled combined antidote regimen. [3]",
+            "Do not run sodium thiosulfate and hydroxocobalamin through the same IV line because of chemical incompatibility. [3]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Antidote selection and source-supported dosing for acute cyanide toxicity. [3][10][11][17][18][22]",
+        "columns": [
+          "Regimen",
+          "Dose",
+          "Selection and limitation"
+        ],
+        "rows": [
+          [
+            "Hydroxocobalamin, adult",
+            "5 g IV over 15 minutes; a further 5 g may be given if needed. [17][18][22]",
+            "Preferred empiric option for suspected severe toxicity, particularly smoke inhalation, because it does not induce methemoglobinemia. [11][21]"
+          ],
+          [
+            "Hydroxocobalamin, pediatric",
+            "70 mg/kg IV; maximum 5 g per dose. [18]",
+            "Use for severe suspected toxicity; do not delay for cyanide assay results. [14][18]"
+          ],
+          [
+            "Sodium nitrite plus sodium thiosulfate, adult",
+            "Sodium nitrite 10 mL IV at 2.5-5 mL/min, then sodium thiosulfate 50 mL IV. [3]",
+            "Labeled regimen for serious or life-threatening acute cyanide poisoning; use nitrites cautiously with smoke-related carboxyhemoglobinemia. [3][11]"
+          ],
+          [
+            "Repeat nitrite/thiosulfate regimen",
+            "If poisoning signs recur, give one-half the original dose of each agent. [3]",
+            "Avoid administering sodium thiosulfate in the same IV line as hydroxocobalamin. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "smoke-inhalation-and-mixed-exposure",
+      "eyebrow": "Special scenario",
+      "heading": "Manage fire-smoke exposure as potential mixed poisoning",
+      "intro": "Fire victims may have simultaneous cyanide and carbon monoxide toxicity, changing antidote risk-benefit decisions.",
+      "paragraphs": [
+        "In enclosed-space fires, cyanide poisoning must be considered because combustion smoke can contain hydrogen cyanide, while carbon monoxide frequently produces overlapping neurologic and cardiovascular manifestations. Obtain co-oximetry promptly, but do not require a carboxyhemoglobin threshold to treat a patient with a compelling cyanide syndrome. [7][12][21]",
+        "A carboxyhemoglobin concentration above 5% in nonsmokers or above 10% in smokers supports carbon monoxide exposure, but the value does not exclude concurrent cyanide poisoning. Give oxygen and prioritize hydroxocobalamin when cyanide toxicity is clinically severe; this avoids the oxygen-delivery penalty of nitrite-induced methemoglobinemia. [11][12][21]",
+        "Do not use apparent oxygenation alone to reassure yourself. Cyanide toxicity impairs cellular oxygen utilization, and conventional oxygen-saturation measures do not establish adequate tissue oxygen use. Follow clinical perfusion, hemodynamics, ventilation, neurologic status, and serial acid-base data after resuscitation and antidote administration. [2][7]"
+      ],
+      "bullets": [
+        "Send co-oximetry early in clinically significant smoke inhalation. [12]",
+        "Use hydroxocobalamin rather than a nitrite-containing regimen when severe cyanide poisoning is suspected in smoke inhalation and oxygen-carrying capacity is already compromised by carbon monoxide. [11][21]",
+        "Continue reassessment after antidote because persistent shock, respiratory failure, or acidosis requires ongoing critical-care resuscitation even if cyanide treatment has been given. [3][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Smoke-inhalation decisions that prevent avoidable antidote-related harm. [11][12][21]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Decision"
+        ],
+        "rows": [
+          [
+            "Enclosed-space fire plus altered mental status, shock, or acidosis",
+            "Potential cyanide toxicity, often with carbon monoxide co-exposure. [21]",
+            "Give oxygen, obtain co-oximetry, and administer empiric hydroxocobalamin for severe suspected cyanide toxicity. [12][17]"
+          ],
+          [
+            "Carboxyhemoglobin >5% in nonsmoker or >10% in smoker",
+            "Supports carbon monoxide exposure. [12]",
+            "Recognize co-poisoning; avoid empiric nitrites unless the specific benefit outweighs methemoglobin-related oxygen-delivery risk. [11]"
+          ],
+          [
+            "Persistent physiologic instability after antidote",
+            "May reflect ongoing respiratory, circulatory, or mixed toxic injury. [3][17]",
+            "Continue ventilatory and circulatory support and obtain toxicology guidance; do not assume antidote administration completes management. [3][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nitroprusside-associated-toxicity",
+      "eyebrow": "Iatrogenic exposure",
+      "heading": "Recognize cyanide toxicity during sodium nitroprusside infusion",
+      "intro": "Unexplained metabolic deterioration during nitroprusside therapy requires immediate drug cessation and clinical treatment.",
+      "paragraphs": [
+        "Suspect cyanide toxicity in a patient receiving sodium nitroprusside who develops unexplained metabolic acidosis, venous hyperoxemia, or clinical deterioration. Cyanide measurement should not be awaited: dangerous cyanide levels can precede acidosis by more than an hour, and a reasonable clinical suspicion is sufficient to start treatment. [2]",
+        "Immediately discontinue sodium nitroprusside and provide ventilatory and circulatory support. The nitroprusside label describes treatment with sodium nitrite to create methemoglobin followed by sodium thiosulfate, but this approach must be individualized when concomitant hypoxemia, anemia, or carbon monoxide exposure makes induced methemoglobinemia hazardous. [2][3][11]",
+        "Trend blood gas parameters and lactate after stopping the infusion and administering antidotal therapy, but do not use a transiently nonacidotic blood gas to exclude toxicity. Obtain toxicology support for antidote choice and for interpretation of cyanide and thiocyanate testing, which may not be rapidly actionable. [2][17]"
+      ],
+      "bullets": [
+        "Stop nitroprusside at the first reasonable suspicion of cyanide toxicity. [2]",
+        "Do not wait for cyanide concentration, lactate elevation, or acidosis to become definitive before treating a deteriorating patient. [2]",
+        "Use serial clinical and acid-base reassessment to guide escalation after the infusion is stopped. [2]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Nitroprusside-associated cyanide toxicity: immediate response. [2][3]",
+        "columns": [
+          "Problem",
+          "Why it matters",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Unexplained acidosis or venous hyperoxemia during sodium nitroprusside",
+            "Both can indicate cyanide toxicity, but may be delayed after dangerous cyanide accumulation. [2]",
+            "Stop sodium nitroprusside and initiate cyanide-toxicity treatment on clinical suspicion. [2]"
+          ],
+          [
+            "Cyanide assay pending",
+            "Assays are technically difficult and may not return in time to direct initial resuscitation. [2]",
+            "Do not delay antidote or supportive care. [2]"
+          ],
+          [
+            "Need for thiosulfate with hydroxocobalamin",
+            "Sodium thiosulfate is chemically incompatible with hydroxocobalamin in the same IV line. [3]",
+            "Use separate IV access or avoid co-infusion through the same line. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-disposition",
+      "eyebrow": "After antidote",
+      "heading": "Monitor response and escalate ongoing critical care",
+      "intro": "Clinical recovery and correction of physiologic derangement\u2014not cyanide assay turnaround\u2014determine immediate post-antidote management.",
+      "paragraphs": [
+        "Following antidote administration, reassess airway protection, ventilatory requirements, blood pressure, perfusion, mental status, and serial blood gas and lactate measurements. Persistent or recurrent signs of poisoning after the sodium nitrite/sodium thiosulfate regimen are an indication for repeat treatment at one-half of the original dose; hydroxocobalamin guidance permits an additional 5 g dose when needed. [3][17][18]",
+        "Admit patients with severe presentations, ongoing respiratory failure, shock, cardiac arrest, or persistent metabolic derangement to an intensive-care setting for continued organ support and serial reassessment. For intentional ingestion, obtain psychiatric evaluation after physiologic stabilization. [17]",
+        "Document the exposure setting, timing, antidote dose and infusion time, initial and serial blood gas results, lactate, and co-oximetry results in smoke exposures. This record supports toxicology consultation, identifies mixed poisoning, and permits later interpretation of confirmatory cyanide testing. [2][12][17]"
+      ],
+      "bullets": [
+        "Repeat focused clinical examination and blood gas/lactate testing after resuscitation and antidote administration. [2]",
+        "Escalate to ICU-level care for persistent respiratory, neurologic, circulatory, or metabolic instability. [17]",
+        "Arrange toxicology or poison-center input for ongoing antidote decisions and diagnostic interpretation. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-antidote reassessment priorities. [2][3][17][18]",
+        "columns": [
+          "Monitor",
+          "Escalation trigger",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Hemodynamics and perfusion",
+            "Persistent or recurrent shock after initial therapy. [17]",
+            "Continue circulatory support and reassess need for additional antidotal therapy. [17][18]"
+          ],
+          [
+            "Ventilation and mental status",
+            "Respiratory failure, inability to protect airway, or persistent coma. [17]",
+            "Continue critical-care airway and ventilatory support. [17]"
+          ],
+          [
+            "Blood gas and lactate",
+            "Persistent or worsening acidosis despite initial management. [2]",
+            "Reassess ongoing cyanide effect, alternative causes, and adequacy of resuscitation; obtain toxicology guidance. [2][17]"
+          ],
+          [
+            "Recurrent cyanide signs after nitrite/thiosulfate",
+            "Return of clinical poisoning manifestations. [3]",
+            "Repeat both agents at one-half the original dose. [3]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] Nitropress\u00ae (sodium nitroprusside) injection - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/103250/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "and diltiazem which led to a drop in carboxyhemoglobin level. Treatment with NO was maintained at the same dose (6 ppm). When SNP was withdrawn cyanide levels were 0.5 \u00b5g/ml, thiocyanate 6.8 \u00b5g/ml, pH 7.44, PaO2 97, PaCO2 41.5, hemoglobin saturation 98%, oxyhemoglobin 97%, carboxyhemoglobin 2.4% and",
+      "score": 0.962018767783289
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Sodium Nitroprusside Injection - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/207426Orig1s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "rats are 2.8, 5.0, 8.4, and 11.2 mg/kg, respectively. This label may not be the latest approved by FDA. For current labeling information, please visit  Treatment of cyanide toxicity: Cyanide levels can be measured by many laboratories, and blood-gas studies that can detect venous hyperoxemia or acid",
+      "score": 0.9586820705218729
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use the SODIUM THIOSULFATE INJECTION safely and effectively. See full prescribing information for SODIUM THIOSULFATE INJECTION. Sodium Thiosulfate Injection, USP Initial U.S. Approval: 1992",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=82f55408-2de9-463d-85e8-b39c3b259f0b&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Title: These highlights do not include all the information needed to use the SODIUM THIOSULFATE INJECTION safely and effectively. See full prescribing information for SODIUM THIOSULFATE INJECTION. Sodium Thiosulfate Injection, USP Initial U.S. Approval: 1992\n|  | HIGHLIGHTS OF PRESCRIBING INFORMATIO",
+      "score": 0.9482281538199664
+    },
+    {
+      "number": 4,
+      "title": "A pilot study in the swine model of lethal cyanide intoxication ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-55739-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "IV Met2Pt demonstrates the best recoveries after cyanide poisoning by reducing lactate levels (W = 9.04, p < 10\u2212 4), maintaining blood pH (W =",
+      "score": 0.9580680187558872
+    },
+    {
+      "number": 5,
+      "title": "Regulation of mammalian cellular metabolism by endogenous cyanide production | Nature Metabolism",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s42255-025-01225-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nPubMed \nGoogle Scholar\n\nEiserich, J. P. et al. Quantitative assessment of cyanide in cystic fibrosis sputum and its oxidative catabolism by hypochlorous acid. Free Radic. Biol. Med. 129, 146\u2013154 (2018).\n\nArticle \nCAS \nPubMed \nGoogle Scholar\n\nBortey-Sam, N. et al. Diagnosis of cyanide p",
+      "score": 0.9423459301550808
+    },
+    {
+      "number": 6,
+      "title": "Hydroxocobalamin and Sodium Thiosulfate Versus Sodium Nitrite and Sodium Thiosulfate in the Treatment of Acute Cyanide Toxicity in a Swine (Sus scrofa) Model - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064409015583",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Management of cyanide toxicity in patients with burns\n\n### Cyanide poisoning by fire smoke inhalation: A European expert consensus\n\n### Hydroxocobalamin in cyanide poisoning\n\n### Review article: Management of cyanide poisoning\n\n## Recommended articles\n\n### Mushroom polysaccharide lentinan for tr",
+      "score": 0.9605731277984444
+    },
+    {
+      "number": 7,
+      "title": "Cyanide Poisoning - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/cyanide-poisoning",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "There are several antidotes for cyanide poisoning, including inhalation of amyl nitrate and administration of sodium thiosulfate, sodium nitrate, ferrous sulfate, dicobalt edentate, or hydroxocobalamin. Oxygen therapy is also useful. If a cyanide-poisoning victim receives prompt medical care, a life",
+      "score": 0.9555089116345163
+    },
+    {
+      "number": 8,
+      "title": "Evaluation of hydroxocobalamin use for the treatment of suspected ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305417923001742",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "O'Brien et al. Empiric management of cyanide toxicity ... Intravenous Hydroxocobalamin for Cyanide Poisoning From Smoke Inhalation: A Comprehensive Scoping Review.",
+      "score": 0.9530934054904573
+    },
+    {
+      "number": 9,
+      "title": "Sodium Thiosulfate or Hydroxocobalamin for the Empiric Treatment of Cyanide Poisoning? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064406022761",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Drug Saf\n\n### Suspected cyanide poisoning in smoke inhalation: complications of sodium nitrite therapy\n\n### J Toxicol Clin Toxicol\n\n### Antidotal treatment of cyanide poisoning\n\n### J Chin Med Assoc\n\n### Hydroxocobalamine in cyanide poisoning\n\n### J Toxicol Clin Exp\n\n### Gas poisoning\n\n### An Si",
+      "score": 0.9524496428545165
+    },
+    {
+      "number": 10,
+      "title": "Review article: Management of cyanide poisoning - Ovid",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1742-6723.2012.01538.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "adult patients with suspected severe cyanide poisoning \u2026 receive immediate parenteral hydroxocobalamin, 5 g over 15 min with repeat dosing up to 15 g.",
+      "score": 0.9583421965657307
+    },
+    {
+      "number": 11,
+      "title": "Sodium Nitrite and Sodium Thiosulfate | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/6034/Sodium-Nitrite-and-Sodium-Thiosulfate",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Smoke inhalation: Use nitrites cautiously in patients with cyanide poisoning related to smoke inhalation because methemoglobinemia and carboxyhemoglobinemia (",
+      "score": 0.9376238361030668
+    },
+    {
+      "number": 12,
+      "title": "Case Definitions for Chemical Poisoning",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5401a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "or a 100% certainty of the etiology of the agent is known. Carbon Monoxide Clinical Description  The predominant manifestations of carbon monoxide poisoning are cardiovascular and neurologic effects. Inhalation of carbon monoxide gas typically leads to headache, dizziness, and confusion, which might",
+      "score": 0.9737168088472439
+    },
+    {
+      "number": 13,
+      "title": "Adult Toxicology in Critical Carea - CHEST Journal",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)34761-4/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "The diagnosis of cyanide poisoning is usually , and cardiopulmonary dysfunction in the presence of severe lactic acidosis or an elevated mixed venous",
+      "score": 0.9623745716044748
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Toxicological Profile for Cyanide, Draft for Public Comment",
+      "detail": "www.atsdr.cdc.gov",
+      "url": "https://www.atsdr.cdc.gov/toxprofiles/tp8-c6.pdf",
+      "authors": "www.atsdr.cdc.gov",
+      "host": "www.atsdr.cdc.gov",
+      "snippet": "cyanide is eliminated from the body relatively rapidly and thiocyanate levels are only sustained for somewhat longer periods, other biomarkers of low-level exposure would be useful. In acute poisoning scenarios, clinicians may not have time to wait for results of laboratory tests for cyanide or meta",
+      "score": 0.9614288440506107
+    },
+    {
+      "number": 15,
+      "title": "Adverse Respiratory Effects Following Overhaul in ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/196229/cdc_196229_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "The assay has been validated by com-parison with a monoclonal antibodies\u2013 based sandwich type enzyme-linked immunosorbent assay (ELISA).25 SP-A was measured by an ELISA inhibition assay similar to that de-scribed by Doyle et al,26 using a poly-clonal antibody raised against alveolar proteinosis\u2013deri",
+      "score": 0.9535353241470739
+    },
+    {
+      "number": 16,
+      "title": "Hydroxocobalamin - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557632",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nHydroxocobalamin is a medication used in the management and treatment of vitamin B12 deficiency and acute cyanide toxicity. It is in the anti-anemic class of drugs. This activity outlines the indications, action, and contraindications for hydroxocobalamin as a valua",
+      "score": 0.9613584036772337
+    },
+    {
+      "number": 17,
+      "title": "Cyanide Toxicity - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK507796",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Care coordination among emergency clinicians, critical care teams, and support staff is essential for the effective management of severe cyanide toxicity cases. Nurses are responsible for continuous monitoring, ensuring the prompt administration of antidotes, and communicating any changes in patient",
+      "score": 0.9498112485579551
+    },
+    {
+      "number": 18,
+      "title": "Resuscitating Through the Smoke: Novel Use of Cyanocobalamin in a Pediatric House Fire Victim - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12135720",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "During transport, the patient received six doses of 0.35 mg epinephrine (1:10,000) and a cumulative 35 mEq of 8.4% sodium bicarbonate via intraosseous (IO) access. While this dosing may appear high, it reflects prolonged cardiopulmonary resuscitation in the field for a presumed toxic-metabolic arres",
+      "score": 0.9383999994443718
+    },
+    {
+      "number": 19,
+      "title": "Oral Glycine and Sodium Thiosulfate for Lethal Cyanide Ingestion - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5578424",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Group 3 animals that received sodium thiosulfate alone showed more signs of cyanide poisoning than Group 4 animals treated with sodium thiosulfate plus glycine, and although Group 3 animals slowly recovered, their base excess (reflecting lactate concentrations), and CWNIRS tissue hemoglobin oxygenat",
+      "score": 0.9232294657647031
+    },
+    {
+      "number": 20,
+      "title": "Modest and variable efficacy of pre-exposure hydroxocobalamin and dicobalt edetate in a porcine model of acute cyanide salt poisoning",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7034532",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Dicobalt edetate is associated with hypertension, tachycardia, and retrosternal pain , while hydroxocobalamin is associated with few adverse effects . It may, therefore, be possible to rapidly administer hydroxocobalamin to hazardous area response teams (HART) first attenders before they enter a sit",
+      "score": 0.9211097787789888
+    },
+    {
+      "number": 21,
+      "title": "Sodium thiosulfate or hydroxocobalamin for the empiric treatment of cyanide poisoning? - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/17098327",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Sodium thiosulfate or hydroxocobalamin for the empiric treatment of cyanide poisoning? - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a f",
+      "score": 0.9029219926319801
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Cyanokit, INN-hydroxocobalamin - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-discussion/cyanokit-epar-scientific-discussion_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "non-controlled, non comparative clinical studies either in suspected cyanide-poisoning due to fire smoke inhalation or in known cyanide exposure from sources other than fire smoke, provided evidence of hydroxocobalamin efficacy despite the lack of controlled data. Based on provided data, hydroxocoba",
+      "score": 0.9533562565248032
+    },
+    {
+      "number": 23,
+      "title": "SODIUM NITRITE AND SODIUM THIOSULFATE ARE EFFECTIVE AGAINST ACUTE CYANIDE POISONING WHEN ADMINISTERED BY INTRAMUSCULAR INJECTION - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5446299",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We have developed lethal models of cyanide poisoning in three mammalian species. In all three models, animals are exposed to cyanide, injected intramuscularly with antidote, and then re-exposed to cyanide. For the following four reasons, we feel our models more accurately reflect real-life scenarios",
+      "score": 0.9511025058191563
+    },
+    {
+      "number": 24,
+      "title": "Hydroxocobalamin and sodium thiosulfate versus sodium nitrite and sodium thiosulfate in the treatment of acute cyanide toxicity in a swine (Sus scrofa) model - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/19944487",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Hydroxocobalamin and sodium thiosulfate versus sodium nitrite and sodium thiosulfate in the treatment of acute cyanide toxicity in a swine (Sus scrofa) model - PubMed\nSkip to main page content. An official website of the United States government. **The .gov means it\u2019s official.**. Federal gov",
+      "score": 0.9488843487477645
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] Nitropress\u00ae (sodium nitroprusside) injection - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/103250/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "and diltiazem which led to a drop in carboxyhemoglobin level. Treatment with NO was maintained at the same dose (6 ppm). When SNP was withdrawn cyanide levels were 0.5 \u00b5g/ml, thiocyanate 6.8 \u00b5g/ml, pH 7.44, PaO2 97, PaCO2 41.5, hemoglobin saturation 98%, oxyhemoglobin 97%, carboxyhemoglobin 2.4% and",
+      "score": 0.962018767783289
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Sodium Nitroprusside Injection - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/207426Orig1s000lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "rats are 2.8, 5.0, 8.4, and 11.2 mg/kg, respectively. This label may not be the latest approved by FDA. For current labeling information, please visit  Treatment of cyanide toxicity: Cyanide levels can be measured by many laboratories, and blood-gas studies that can detect venous hyperoxemia or acid",
+      "score": 0.9586820705218729
+    },
+    {
+      "number": 3,
+      "title": "These highlights do not include all the information needed to use the SODIUM THIOSULFATE INJECTION safely and effectively. See full prescribing information for SODIUM THIOSULFATE INJECTION. Sodium Thiosulfate Injection, USP Initial U.S. Approval: 1992",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=82f55408-2de9-463d-85e8-b39c3b259f0b&type=display",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Title: These highlights do not include all the information needed to use the SODIUM THIOSULFATE INJECTION safely and effectively. See full prescribing information for SODIUM THIOSULFATE INJECTION. Sodium Thiosulfate Injection, USP Initial U.S. Approval: 1992\n|  | HIGHLIGHTS OF PRESCRIBING INFORMATIO",
+      "score": 0.9482281538199664
+    },
+    {
+      "number": 4,
+      "title": "A pilot study in the swine model of lethal cyanide intoxication ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-55739-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "IV Met2Pt demonstrates the best recoveries after cyanide poisoning by reducing lactate levels (W = 9.04, p < 10\u2212 4), maintaining blood pH (W =",
+      "score": 0.9580680187558872
+    },
+    {
+      "number": 5,
+      "title": "Regulation of mammalian cellular metabolism by endogenous cyanide production | Nature Metabolism",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s42255-025-01225-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nPubMed \nGoogle Scholar\n\nEiserich, J. P. et al. Quantitative assessment of cyanide in cystic fibrosis sputum and its oxidative catabolism by hypochlorous acid. Free Radic. Biol. Med. 129, 146\u2013154 (2018).\n\nArticle \nCAS \nPubMed \nGoogle Scholar\n\nBortey-Sam, N. et al. Diagnosis of cyanide p",
+      "score": 0.9423459301550808
+    },
+    {
+      "number": 6,
+      "title": "Hydroxocobalamin and Sodium Thiosulfate Versus Sodium Nitrite and Sodium Thiosulfate in the Treatment of Acute Cyanide Toxicity in a Swine (Sus scrofa) Model - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064409015583",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Management of cyanide toxicity in patients with burns\n\n### Cyanide poisoning by fire smoke inhalation: A European expert consensus\n\n### Hydroxocobalamin in cyanide poisoning\n\n### Review article: Management of cyanide poisoning\n\n## Recommended articles\n\n### Mushroom polysaccharide lentinan for tr",
+      "score": 0.9605731277984444
+    },
+    {
+      "number": 7,
+      "title": "Cyanide Poisoning - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/cyanide-poisoning",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "There are several antidotes for cyanide poisoning, including inhalation of amyl nitrate and administration of sodium thiosulfate, sodium nitrate, ferrous sulfate, dicobalt edentate, or hydroxocobalamin. Oxygen therapy is also useful. If a cyanide-poisoning victim receives prompt medical care, a life",
+      "score": 0.9555089116345163
+    },
+    {
+      "number": 8,
+      "title": "Evaluation of hydroxocobalamin use for the treatment of suspected ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305417923001742",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "O'Brien et al. Empiric management of cyanide toxicity ... Intravenous Hydroxocobalamin for Cyanide Poisoning From Smoke Inhalation: A Comprehensive Scoping Review.",
+      "score": 0.9530934054904573
+    },
+    {
+      "number": 9,
+      "title": "Sodium Thiosulfate or Hydroxocobalamin for the Empiric Treatment of Cyanide Poisoning? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064406022761",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Drug Saf\n\n### Suspected cyanide poisoning in smoke inhalation: complications of sodium nitrite therapy\n\n### J Toxicol Clin Toxicol\n\n### Antidotal treatment of cyanide poisoning\n\n### J Chin Med Assoc\n\n### Hydroxocobalamine in cyanide poisoning\n\n### J Toxicol Clin Exp\n\n### Gas poisoning\n\n### An Si",
+      "score": 0.9524496428545165
+    },
+    {
+      "number": 10,
+      "title": "Review article: Management of cyanide poisoning - Ovid",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1742-6723.2012.01538.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "adult patients with suspected severe cyanide poisoning \u2026 receive immediate parenteral hydroxocobalamin, 5 g over 15 min with repeat dosing up to 15 g.",
+      "score": 0.9583421965657307
+    },
+    {
+      "number": 11,
+      "title": "Sodium Nitrite and Sodium Thiosulfate | Pediatric Care Online",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/drug-monograph/18/6034/Sodium-Nitrite-and-Sodium-Thiosulfate",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Smoke inhalation: Use nitrites cautiously in patients with cyanide poisoning related to smoke inhalation because methemoglobinemia and carboxyhemoglobinemia (",
+      "score": 0.9376238361030668
+    },
+    {
+      "number": 12,
+      "title": "Case Definitions for Chemical Poisoning",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5401a1.htm",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "or a 100% certainty of the etiology of the agent is known. Carbon Monoxide Clinical Description  The predominant manifestations of carbon monoxide poisoning are cardiovascular and neurologic effects. Inhalation of carbon monoxide gas typically leads to headache, dizziness, and confusion, which might",
+      "score": 0.9737168088472439
+    },
+    {
+      "number": 13,
+      "title": "Adult Toxicology in Critical Carea - CHEST Journal",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)34761-4/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "The diagnosis of cyanide poisoning is usually , and cardiopulmonary dysfunction in the presence of severe lactic acidosis or an elevated mixed venous",
+      "score": 0.9623745716044748
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Toxicological Profile for Cyanide, Draft for Public Comment",
+      "detail": "www.atsdr.cdc.gov",
+      "url": "https://www.atsdr.cdc.gov/toxprofiles/tp8-c6.pdf",
+      "authors": "www.atsdr.cdc.gov",
+      "host": "www.atsdr.cdc.gov",
+      "snippet": "cyanide is eliminated from the body relatively rapidly and thiocyanate levels are only sustained for somewhat longer periods, other biomarkers of low-level exposure would be useful. In acute poisoning scenarios, clinicians may not have time to wait for results of laboratory tests for cyanide or meta",
+      "score": 0.9614288440506107
+    },
+    {
+      "number": 15,
+      "title": "Adverse Respiratory Effects Following Overhaul in ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/196229/cdc_196229_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "The assay has been validated by com-parison with a monoclonal antibodies\u2013 based sandwich type enzyme-linked immunosorbent assay (ELISA).25 SP-A was measured by an ELISA inhibition assay similar to that de-scribed by Doyle et al,26 using a poly-clonal antibody raised against alveolar proteinosis\u2013deri",
+      "score": 0.9535353241470739
+    },
+    {
+      "number": 16,
+      "title": "Hydroxocobalamin - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557632",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Continuing Education Activity\n\nHydroxocobalamin is a medication used in the management and treatment of vitamin B12 deficiency and acute cyanide toxicity. It is in the anti-anemic class of drugs. This activity outlines the indications, action, and contraindications for hydroxocobalamin as a valua",
+      "score": 0.9613584036772337
+    },
+    {
+      "number": 17,
+      "title": "Cyanide Toxicity - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK507796",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Care coordination among emergency clinicians, critical care teams, and support staff is essential for the effective management of severe cyanide toxicity cases. Nurses are responsible for continuous monitoring, ensuring the prompt administration of antidotes, and communicating any changes in patient",
+      "score": 0.9498112485579551
+    },
+    {
+      "number": 18,
+      "title": "Resuscitating Through the Smoke: Novel Use of Cyanocobalamin in a Pediatric House Fire Victim - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12135720",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "During transport, the patient received six doses of 0.35 mg epinephrine (1:10,000) and a cumulative 35 mEq of 8.4% sodium bicarbonate via intraosseous (IO) access. While this dosing may appear high, it reflects prolonged cardiopulmonary resuscitation in the field for a presumed toxic-metabolic arres",
+      "score": 0.9383999994443718
+    },
+    {
+      "number": 19,
+      "title": "Oral Glycine and Sodium Thiosulfate for Lethal Cyanide Ingestion - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5578424",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Group 3 animals that received sodium thiosulfate alone showed more signs of cyanide poisoning than Group 4 animals treated with sodium thiosulfate plus glycine, and although Group 3 animals slowly recovered, their base excess (reflecting lactate concentrations), and CWNIRS tissue hemoglobin oxygenat",
+      "score": 0.9232294657647031
+    },
+    {
+      "number": 20,
+      "title": "Modest and variable efficacy of pre-exposure hydroxocobalamin and dicobalt edetate in a porcine model of acute cyanide salt poisoning",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7034532",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Dicobalt edetate is associated with hypertension, tachycardia, and retrosternal pain , while hydroxocobalamin is associated with few adverse effects . It may, therefore, be possible to rapidly administer hydroxocobalamin to hazardous area response teams (HART) first attenders before they enter a sit",
+      "score": 0.9211097787789888
+    },
+    {
+      "number": 21,
+      "title": "Sodium thiosulfate or hydroxocobalamin for the empiric treatment of cyanide poisoning? - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/17098327",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Sodium thiosulfate or hydroxocobalamin for the empiric treatment of cyanide poisoning? - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a f",
+      "score": 0.9029219926319801
+    },
+    {
+      "number": 22,
+      "title": "[PDF] Cyanokit, INN-hydroxocobalamin - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/scientific-discussion/cyanokit-epar-scientific-discussion_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "non-controlled, non comparative clinical studies either in suspected cyanide-poisoning due to fire smoke inhalation or in known cyanide exposure from sources other than fire smoke, provided evidence of hydroxocobalamin efficacy despite the lack of controlled data. Based on provided data, hydroxocoba",
+      "score": 0.9533562565248032
+    },
+    {
+      "number": 23,
+      "title": "SODIUM NITRITE AND SODIUM THIOSULFATE ARE EFFECTIVE AGAINST ACUTE CYANIDE POISONING WHEN ADMINISTERED BY INTRAMUSCULAR INJECTION - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5446299",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We have developed lethal models of cyanide poisoning in three mammalian species. In all three models, animals are exposed to cyanide, injected intramuscularly with antidote, and then re-exposed to cyanide. For the following four reasons, we feel our models more accurately reflect real-life scenarios",
+      "score": 0.9511025058191563
+    },
+    {
+      "number": 24,
+      "title": "Hydroxocobalamin and sodium thiosulfate versus sodium nitrite and sodium thiosulfate in the treatment of acute cyanide toxicity in a swine (Sus scrofa) model - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/19944487",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Hydroxocobalamin and sodium thiosulfate versus sodium nitrite and sodium thiosulfate in the treatment of acute cyanide toxicity in a swine (Sus scrofa) model - PubMed\nSkip to main page content. An official website of the United States government. **The .gov means it\u2019s official.**. Federal gov",
+      "score": 0.9488843487477645
+    }
+  ],
+  "publishedAt": "2026-09-16T00:02:02.744866+00:00",
+  "updatedAt": "2026-09-16T00:02:02.744866+00:00",
+  "readingMinutes": 7,
+  "slug": "cyanide-toxicity"
+}

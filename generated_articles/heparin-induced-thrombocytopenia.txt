@@ -2,223 +2,268 @@
   "schemaVersion": 2,
   "eyebrow": "Hematology",
   "title": "Heparin-Induced Thrombocytopenia",
-  "summary": "Use the 4Ts score to identify clinically meaningful HIT, stop every heparin exposure immediately when probability is intermediate or high, begin therapeutic non-heparin anticoagulation, and confirm with PF4 antibody testing plus a functional assay when indicated.",
-  "seoDescription": "Point-of-care approach to suspected heparin-induced thrombocytopenia: 4Ts assessment, laboratory confirmation, anticoagulant selection, and special situations.",
-  "clinicalQuestion": "How should clinicians diagnose, anticoagulate, and transition patients with suspected or confirmed heparin-induced thrombocytopenia?",
+  "summary": "Use the 4Ts score before ordering HIT tests. For intermediate or high probability, stop all heparin, begin nonheparin anticoagulation, obtain an IgG-specific PF4/heparin immunoassay, and use a functional platelet-activation assay to resolve positive or discordant results.",
+  "seoDescription": "Clinical approach to HIT testing and anticoagulation: 4Ts-guided testing, PF4/heparin assay interpretation, functional confirmation, and nonheparin therapy.",
+  "clinicalQuestion": "How should clinicians use 4Ts scoring, PF4/heparin testing, functional assays, and nonheparin anticoagulation in suspected HIT?",
   "specialty": "Hematology",
   "audience": "U.S. physicians and medical trainees",
   "tags": [
     "heparin-induced thrombocytopenia",
-    "HIT",
+    "HIT testing",
     "4Ts score",
-    "PF4 antibody",
-    "serotonin-release assay",
+    "PF4 ELISA",
+    "serotonin release assay",
     "argatroban",
-    "bivalirudin",
     "fondaparinux"
   ],
   "keyTakeaways": [
-    "Investigate HIT when platelet count falls by at least 50% and/or new thrombosis occurs on days 5-14 after heparin initiation, including after heparin has been stopped. [7]",
-    "A low-probability 4Ts score can exclude HIT without laboratory testing; intermediate- or high-probability presentations require immediate withdrawal of all heparin and non-heparin anticoagulation while testing proceeds. [16][2]",
-    "Do not manage acute HIT by stopping heparin alone or by initiating warfarin alone; both thrombosis prevention and interruption of heparin-dependent platelet activation are required. [2][7]",
-    "For acute HIT requiring PCI, bivalirudin is the preferred non-heparin anticoagulant option in ASH guidance; for dialysis-circuit anticoagulation in acute HIT, use argatroban, danaparoid, or bivalirudin. [24]"
+    "Do not send HIT antibody testing solely for thrombocytopenia during heparin exposure; first estimate pretest probability with the 4Ts score. A low score can exclude HIT in many patients, whereas intermediate or high probability warrants immunoassay testing. [11][19][23]",
+    "In suspected acute HIT with a 4Ts score of at least 4, stop heparin and initiate a nonheparin anticoagulant while diagnostic testing proceeds. [11][12]",
+    "A positive PF4/heparin immunoassay does not establish HIT because many detected antibodies do not activate platelets; confirm clinically consequential antibodies with a functional assay when available. [13][19][24]",
+    "Interpret PF4/heparin ELISA optical density with the clinical probability: higher optical density is associated with serotonin-release assay positivity and thrombosis risk, while weak-positive results generate substantial overtreatment. [7][21]",
+    "Fondaparinux is used off label for suspected acute HIT; argatroban is problematic in impaired hepatic function and aPTT confounding can complicate monitoring in consumptive coagulopathy. [9]"
   ],
   "sections": [
     {
-      "id": "recognize-and-triage",
-      "eyebrow": "Immediate decision",
-      "heading": "Recognize the platelet pattern that warrants HIT action",
-      "intro": "Treat suspected HIT as a thrombotic emergency rather than an isolated platelet-count abnormality.",
+      "id": "when-to-suspect-hit",
+      "eyebrow": "Initial decision",
+      "heading": "Identify the platelet pattern that warrants a HIT workup",
+      "intro": "Anchor testing to timing, platelet trajectory, thrombosis, and competing explanations.",
       "paragraphs": [
-        "Suspect HIT when a patient exposed to unfractionated heparin or low-molecular-weight heparin develops a platelet fall of at least 50% from baseline, particularly with new arterial or venous thrombosis between days 5 and 14 after starting heparin. This timing rule applies even when thrombocytopenia or thrombosis develops after heparin has already been discontinued. [7][12]",
-        "Typical immune HIT begins 5-10 days after exposure, with a reported range of 4-15 days; delayed-onset presentations may occur after exposure has ended. A new thrombosis during this interval increases pretest probability and should prompt both diagnostic testing and immediate anticoagulant substitution rather than observation for platelet recovery. [2][5][7]",
-        "Obtain a current platelet count, review the pre-heparin baseline and daily trajectory, identify every heparin source, and assess for new thrombosis. The immediate clinical decision is driven by the 4Ts domains: magnitude of thrombocytopenia, timing, thrombosis or other sequelae, and competing causes of thrombocytopenia. [16]"
+        "Suspect immune HIT when thrombocytopenia develops after unfractionated or low-molecular-weight heparin exposure, particularly with a platelet fall beginning around day 4 or 5 of exposure, new thrombosis, or both. HIT is driven by platelet-activating antibodies to PF4-heparin complexes and is a prothrombotic—not bleeding-predominant—drug reaction. [11][14]",
+        "Calculate the 4Ts score before ordering laboratory testing. Its four elements are the relative platelet-count fall, timing of decline, thrombosis or other sequelae, and the presence of alternative causes of thrombocytopenia. A score below 4 should generally redirect evaluation toward non-HIT causes rather than trigger routine HIT immunoassay testing; a score of 4 or greater should trigger prompt HIT-directed testing and management. [12][19][20][23]",
+        "Reassess alternative explanations explicitly before labeling HIT: in dialysis-associated thrombocytopenia, the differential includes infection, pseudothrombocytopenia, antiphospholipid syndrome, implicated drugs, and dialyzer membrane or sterilization effects. In cardiac surgery, PF4-heparin antibodies are frequent: approximately 50% of about 950 patients developed antibodies within 30 days by polyspecific ELISA, without an associated increase in death or thromboembolism. Testing in that setting should therefore be limited to patients with an appropriately high clinical probability. [12][22]"
       ],
       "bullets": [
-        "Count all exposures: therapeutic UFH, prophylactic UFH, LMWH, procedural heparin, heparinized flushes, and dialysis-circuit heparin. In suspected HIT, discontinue all heparin products, including LMWH. [2]",
-        "Act urgently for limb ischemia, acute arterial occlusion, pulmonary embolism, or progressive venous thrombosis; HIT can produce life- and limb-threatening arterial or venous thromboembolism. [2]",
-        "If the patient is receiving heparin and estimated HIT risk exceeds 1%, monitor platelet counts every 2-3 days from day 4 through day 14, or until heparin is stopped. [10]"
+        "Document the baseline platelet count and calculate the percentage fall; the dialysis-focused algorithm flags a fall greater than 50% or a platelet count below 100 × 10^9/L as a thrombocytopenic pattern requiring assessment in the right clinical context. [12]",
+        "Ask specifically about new venous or arterial thrombosis, including dialysis-access thrombosis; HIT-associated thrombosis can be extensive and may lead to limb loss or death. [23]",
+        "Do not use a positive antibody result to override a low-probability clinical presentation without resolving discordance. [13][19][22]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Clinical triggers for HIT evaluation and immediate action. [2][7][16]",
+        "caption": "4Ts-directed first actions in suspected HIT. [11][12][19][23]",
         "columns": [
-          "Finding",
+          "Clinical probability",
+          "Testing action",
+          "Immediate anticoagulation action"
+        ],
+        "rows": [
+          [
+            "Low 4Ts score (<4)",
+            "Do not routinely order HIT immunoassay; investigate alternative causes of thrombocytopenia. [12]",
+            "Do not institute HIT-directed nonheparin anticoagulation solely for HIT suspicion. [12]"
+          ],
+          [
+            "Intermediate or high 4Ts score (≥4)",
+            "Order a PF4/heparin immunoassay; if positive, obtain a functional platelet-activation assay to confirm clinically significant antibodies. [11][19][23]",
+            "Stop heparin and begin a nonheparin anticoagulant while results are pending. [11][12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pf4-immunoassay-interpretation",
+      "eyebrow": "Laboratory testing",
+      "heading": "Order and interpret PF4/heparin immunoassays in clinical context",
+      "intro": "Immunoassays are screening tests; they are sensitive but not intrinsically diagnostic.",
+      "paragraphs": [
+        "For intermediate- or high-probability HIT, obtain a validated PF4/heparin antibody immunoassay, preferably an assay restricted to IgG antibodies. British guidance recommends that initial ELISAs have sensitivity greater than 95% and detect IgG only; a negative high-sensitivity ELISA can exclude HIT. [22]",
+        "A positive PF4/heparin assay identifies antibodies but not necessarily pathogenic platelet activation. Many immunoassays detect non-platelet-activating IgG as well as IgM and IgA antibodies, which limits their clinical specificity and positive predictive value. Interpret a positive result jointly with the 4Ts score, platelet course, thrombotic phenotype, and—when available—a functional assay. [13][19][22][24]",
+        "Use ELISA optical density as a probability modifier rather than a stand-alone treatment threshold. Higher optical density values correlate with serotonin-release assay positivity and thrombosis risk. In one surgical and cardiac ICU cohort, serotonin-release assay positivity occurred in 81.8% of patients with ELISA optical density at least 2.0, compared with 4.5% at 0.85 to 1.99 and 1.0% at 0 to 0.84. [7][21]",
+        "Avoid overinterpreting antibody positivity after cardiac surgery or other high-seropositivity settings. A polyspecific ELISA cutoff of optical density 0.4 identified frequent postoperative antibodies without increased thromboembolism or death, illustrating why indiscriminate testing creates false diagnostic signals. [22]"
+      ],
+      "bullets": [
+        "Negative high-sensitivity IgG PF4/heparin ELISA: exclude HIT and discontinue HIT-directed alternative anticoagulation when the clinical course is concordant. [12][22]",
+        "Positive immunoassay plus intermediate/high 4Ts score: continue heparin avoidance and send functional testing to establish whether antibodies activate platelets. [11][19][23]",
+        "Positive immunoassay with low 4Ts score or a convincing competing cause: treat as discordant testing, not confirmed HIT; reassess assay type, optical density, and alternative diagnoses. [19][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How laboratory results change the next step in suspected HIT. [12][13][19][21][22]",
+        "columns": [
+          "Result pattern",
           "Interpretation",
           "Next action"
         ],
         "rows": [
           [
-            "Platelet fall ≥50% and/or thrombosis on days 5-14 after heparin initiation",
-            "Compatible with HIT, including when heparin has already been stopped. [7]",
-            "Calculate 4Ts score; if intermediate or high probability, stop all heparin and begin a non-heparin anticoagulant. [2][16]"
+            "4Ts <4",
+            "Clinical probability is low; the 4Ts score can exclude HIT in many patients when applied by experienced observers. [19][23]",
+            "Evaluate other causes; avoid routine HIT testing and unnecessary alternative anticoagulation. [12]"
           ],
           [
-            "Platelet fall 5-10 days after UFH or LMWH exposure",
-            "Typical immune HIT timing. [2]",
-            "Send HIT laboratory testing if 4Ts probability is not low; do not wait for results before changing anticoagulation. [2][16]"
+            "4Ts ≥4; high-sensitivity IgG ELISA negative",
+            "HIT can be excluded by a negative high-sensitivity ELISA. [22]",
+            "Stop HIT-directed nonheparin anticoagulation and resume heparin only if otherwise indicated. [12]"
           ],
           [
-            "Low-probability 4Ts score",
-            "HIT can be excluded without laboratory investigation. [16]",
-            "Pursue alternative causes of thrombocytopenia rather than empiric HIT treatment. [16]"
+            "4Ts ≥4; immunoassay positive",
+            "Antibodies are present, but pathogenic platelet activation remains unproven. [13][19]",
+            "Continue heparin avoidance; obtain SRA, HIPA, or another validated functional assay. [11][23][24]"
+          ],
+          [
+            "Positive ELISA with OD ≥2.0",
+            "Strong ELISA reactivity substantially increases likelihood of SRA positivity in one ICU cohort. [21]",
+            "Treat the result as higher-probability HIT while functional confirmation is pursued; integrate with 4Ts and thrombosis status. [7][21]"
+          ],
+          [
+            "Positive ELISA with low or intermediate OD",
+            "Weak-positive results have lower functional-assay positivity and require careful clinical correlation. [21]",
+            "Do not confirm HIT from ELISA alone; prioritize functional testing and competing diagnoses. [13][19][21]"
           ]
         ]
       }
     },
     {
-      "id": "diagnostic-testing",
-      "eyebrow": "Diagnostic pathway",
-      "heading": "Use clinical probability before PF4 testing",
-      "intro": "PF4 antibodies establish laboratory support only in the correct clinical context.",
+      "id": "functional-assay-confirmation",
+      "eyebrow": "Confirmation",
+      "heading": "Use functional assays to distinguish pathogenic HIT antibodies",
+      "intro": "Functional testing is decisive when the clinical and immunoassay data support HIT.",
       "paragraphs": [
-        "Apply the 4Ts score before ordering or interpreting HIT assays. Its four components are thrombocytopenia severity, timing relative to heparin, thrombosis or other HIT sequelae, and the likelihood of another explanation. A low score supports excluding HIT without laboratory testing; a non-low score requires laboratory evaluation alongside therapeutic action. [16]",
-        "Order a PF4/heparin antibody immunoassay for intermediate- or high-probability HIT. A positive immunoassay does not independently establish HIT because the diagnosis requires a compatible clinical syndrome plus heparin-dependent platelet-activating antibodies; antibody positivity without clinical manifestations is insufficient. [2]",
-        "Use a functional platelet-activation assay, such as the serotonin-release assay (SRA), to establish whether detected antibodies are pathogenic when immunoassay findings and clinical probability require confirmation. The SRA detects pathogenic HIT antibodies, and quantitative PF4 enzyme-immunoassay optical-density interpretation may help contextualize results, but neither should override the clinical picture. [17][14]"
+        "Order a platelet-activation assay after a positive immunoassay in a patient with intermediate or high 4Ts probability. The serotonin-release assay (SRA) and heparin-induced platelet activation assay (HIPA) are established functional approaches; both test whether patient antibody-heparin-PF4 complexes activate donor platelets. [7][11][19][23][24]",
+        "Functional assays improve specificity because they identify platelet-activating antibodies rather than antibody binding alone. In SRA, serotonin release from platelet dense granules is measured; in HIPA, washed donor platelets are combined with patient serum and heparin and platelet aggregation is assessed. [7][20][24]",
+        "Do not delay acute management in a patient with intermediate or high clinical probability solely because functional testing is available only through specialized laboratories. Functional assays are technically challenging, differ by platelet donor selection, sample preparation, heparin concentration, endpoint, and control interpretation, and are often not rapidly available. [19][23][24]",
+        "Treat discordant results as a diagnostic problem rather than a reflex mandate for indefinite HIT labeling. Immunoassay-positive but functional-assay-negative results can occur because detected antibodies are nonactivating; interpretation should return to the 4Ts score, optical density, thrombosis, assay characteristics, and medication effects. Potent P2Y12 inhibition has been reported to yield false-negative SRA results. [8][13][19][20]"
       ],
       "bullets": [
-        "Document the platelet nadir and percentage fall rather than relying on whether the absolute platelet count crosses a laboratory lower limit; HIT is typically associated with a substantial platelet decline. [15][12]",
-        "Reassess competing explanations at the bedside, including the temporal relationship of surgery, infection, medications, and thrombosis, because the alternative-cause domain materially changes the 4Ts estimate. [16]",
-        "Do not diagnose HIT from a PF4 immunoassay alone; require clinical compatibility and evidence of platelet-activating antibodies. [2]"
-      ],
-      "subsections": [
-        {
-          "heading": "Distinguish HIT from vaccine-induced immune thrombotic thrombocytopenia",
-          "paragraphs": [
-            "In a patient with thrombocytopenia and thrombosis but no heparin exposure, a positive PF4 antibody immunoassay should raise concern for vaccine-induced immune thrombotic thrombocytopenia (VITT) rather than HIT. In suspected VITT, obtain urgent complete blood count and symptom-directed imaging to identify thrombosis; markedly elevated D-dimer supports the diagnosis in societal guidance. [11]"
-          ],
-          "bullets": [
-            "After adenoviral-vector COVID-19 vaccination, VITT presentations have been reported 5-28 days after vaccination; do not attribute this pattern to HIT without a compatible heparin exposure. [18]"
-          ]
-        }
-      ],
-      "table": {
-        "caption": "Laboratory interpretation in suspected HIT. [2][14][16][17]",
-        "columns": [
-          "Test or assessment",
-          "What it answers",
-          "Decision consequence"
-        ],
-        "rows": [
-          [
-            "4Ts score",
-            "Pretest probability based on platelet fall, timing, thrombosis, and alternative causes. [16]",
-            "Low probability can exclude HIT without laboratory testing; non-low probability prompts laboratory evaluation and immediate management. [16][2]"
-          ],
-          [
-            "PF4/heparin antibody immunoassay",
-            "Detects heparin-dependent antibodies. [2]",
-            "Interpret only with clinical probability; positivity alone is insufficient for diagnosis. [2]"
-          ],
-          [
-            "Serotonin-release assay",
-            "Detects pathogenic platelet-activating HIT antibodies. [17]",
-            "Use to clarify or confirm clinically suspected, immunoassay-supported HIT. [14][17]"
-          ]
-        ]
-      }
-    },
-    {
-      "id": "acute-management",
-      "eyebrow": "Treatment",
-      "heading": "Stop heparin and provide therapeutic non-heparin anticoagulation",
-      "intro": "The treatment threshold is clinical suspicion at intermediate or high 4Ts probability.",
-      "paragraphs": [
-        "For suspected HIT with at least intermediate 4Ts probability, immediately stop all heparin exposures and start a non-heparin anticoagulant. Do not await confirmatory testing, because stopping heparin alone is inadequate to prevent ongoing thrombotic risk. [2]",
-        "Do not initiate or continue a vitamin K antagonist as sole therapy in acute HIT. ACCP guidance recommends an alternative non-heparin anticoagulant over continued UFH or LMWH and over initiation or continuation of vitamin K antagonist therapy in strongly suspected or confirmed HIT, whether or not thrombosis is present. [7]",
-        "Choose the non-heparin anticoagulant according to acuity, procedure needs, renal replacement therapy, organ function, monitoring capability, and formulary availability. U.S.-available agents described for HIT include intravenous argatroban and bivalirudin, which require laboratory-based dose adjustment, and subcutaneous fondaparinux, which does not require routine monitoring. [3]"
-      ],
-      "bullets": [
-        "Use a parenteral non-heparin anticoagulant when urgent titration, procedures, critical illness, or dialysis-circuit anticoagulation requires a rapidly adjustable agent. [3][24]",
-        "Fondaparinux is considered a non-heparin anticoagulant despite rare reports of fondaparinux-induced HIT; observational data describe successful treatment use. [2]",
-        "Direct oral anticoagulants are increasingly used in HIT, but optimal dosing and safety in severe renal impairment remain poorly defined. [22]"
-      ],
-      "subsections": [
-        {
-          "heading": "Avoid incomplete treatment",
-          "paragraphs": [
-            "Heparin cessation removes the antigenic driver but does not by itself prevent thrombosis from established platelet activation. Likewise, warfarin alone is not sufficient in acute HIT. Maintain therapeutic anticoagulation with a non-heparin agent while diagnostic status and the appropriate transition strategy are determined. [2][7]"
-          ],
-          "bullets": [
-            "For prophylaxis in a patient with HIT when fondaparinux is selected, a cited prophylactic regimen is fondaparinux 2.5 mg subcutaneously once daily. [18]",
-            "For treatment-intensity anticoagulation, use agent-specific institutional protocols and laboratory adjustment for intravenous argatroban or bivalirudin; the cited evidence identifies monitoring-based dose adjustment but does not provide a universal regimen. [3]"
-          ]
-        }
-      ],
-      "table": {
-        "caption": "Non-heparin anticoagulant selection in special HIT settings. [3][22][24]",
-        "columns": [
-          "Clinical setting",
-          "Preferred or supported approach",
-          "Important limitation"
-        ],
-        "rows": [
-          [
-            "Acute HIT requiring PCI",
-            "Use bivalirudin rather than another non-heparin anticoagulant. [24]",
-            "ASH recommendation is conditional with low-certainty evidence. [24]"
-          ],
-          [
-            "Acute HIT requiring dialysis-circuit anticoagulation",
-            "Use argatroban, danaparoid, or bivalirudin rather than other non-heparin anticoagulants. [24]",
-            "Recommendation is conditional with very low-certainty evidence. [24]"
-          ],
-          [
-            "Subacute or remote HIT requiring dialysis-circuit anticoagulation without another anticoagulation indication",
-            "Use regional citrate rather than heparin or another non-heparin anticoagulant. [24]",
-            "Applies after acute HIT rather than to active acute HIT. [24]"
-          ],
-          [
-            "Clinically stable patient in whom subcutaneous therapy is suitable",
-            "Fondaparinux is an observed treatment option and does not require routine laboratory monitoring. [2][3][23]",
-            "Rare fondaparinux-associated HIT has been reported. [2]"
-          ]
-        ]
-      }
-    },
-    {
-      "id": "transition-and-special-situations",
-      "eyebrow": "Ongoing management",
-      "heading": "Plan transition and future anticoagulation by HIT phase and procedural need",
-      "intro": "The acute treatment decision differs from anticoagulation choices after platelet recovery or remote HIT.",
-      "paragraphs": [
-        "When transitioning from parenteral therapy to a direct oral anticoagulant, reported timing is within 2 hours after stopping argatroban or bivalirudin, 8-12 hours after stopping danaparoid, and 24 hours after the last fondaparinux dose. In severe renal impairment, DOAC dose selection and safety remain uncertain, favoring individualized selection of an alternative regimen when necessary. [22]",
-        "If warfarin is selected after acute HIT, overlap with parenteral non-heparin anticoagulation for at least 5 days and until the target INR is reached. Argatroban and bivalirudin can prolong the INR, so interpret INR during transition with this pharmacologic effect in mind. [22]",
-        "For remote HIT requiring VTE treatment or prophylaxis, ASH recommends a non-heparin anticoagulant rather than UFH or LMWH; listed options include apixaban, dabigatran, edoxaban, rivaroxaban, fondaparinux, danaparoid, and a vitamin K antagonist. [24]"
-      ],
-      "bullets": [
-        "For subacute HIT A, subacute HIT B, or remote HIT requiring cardiac surgery, intraoperative heparin is recommended over a non-heparin anticoagulant, plasma exchange plus heparin, or heparin combined with an antiplatelet agent; monitor platelets afterward for delayed-onset HIT. [22]",
-        "For patients with a history of HIT who need ongoing renal replacement therapy after the acute phase and have no other anticoagulation indication, use citrate or another non-heparin method for circuit thrombosis prevention rather than heparin. [22][24]",
-        "Record HIT prominently in the medication allergy/adverse-reaction history and differentiate acute, subacute, and remote phase when planning future procedures because heparin acceptability changes by phase. [22][24]"
+        "SRA or HIPA positive with compatible clinical presentation: confirm HIT and continue nonheparin anticoagulation. [11][19][20]",
+        "Functional assay negative after a positive immunoassay: reconsider HIT, particularly with low clinical probability or weak immunoassay reactivity. [13][19][21]",
+        "If P2Y12 receptor inhibition is present, recognize potential false-negative functional testing and integrate strong clinical and immunoassay evidence rather than relying on one assay result in isolation. [6][8]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Transition and re-exposure decisions by clinical phase. [22][24]",
+        "caption": "Functional assays used to confirm platelet-activating HIT antibodies. [7][19][20][23][24]",
         "columns": [
-          "Situation",
-          "Action",
-          "Timing or constraint"
+          "Assay",
+          "What it measures",
+          "Operational implication"
         ],
         "rows": [
           [
-            "Transition from argatroban or bivalirudin to a DOAC",
-            "Start the DOAC after stopping the parenteral agent. [22]",
-            "Within 2 hours. [22]"
+            "Serotonin-release assay",
+            "Heparin-dependent serotonin release from donor platelet dense granules, reflecting platelet activation. [20][24]",
+            "Accepted functional reference assay but technically demanding and often unavailable in real time. [19][23][24]"
           ],
           [
-            "Transition from fondaparinux to a DOAC",
-            "Start the DOAC after the final fondaparinux dose. [22]",
-            "Wait 24 hours. [22]"
+            "Heparin-induced platelet activation assay",
+            "Platelet aggregation after donor washed platelets are exposed to patient serum and heparin. [7][20]",
+            "Can provide functional confirmation; assay performance and interpretation depend on laboratory methodology. [20][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-anticoagulation",
+      "eyebrow": "Immediate management",
+      "heading": "Stop heparin and anticoagulate suspected acute HIT before confirmation",
+      "intro": "The treatment decision follows clinical probability because thrombotic risk can be catastrophic.",
+      "paragraphs": [
+        "For a 4Ts score of at least 4, immediately stop unfractionated heparin and low-molecular-weight heparin, send the immunoassay, and start nonheparin anticoagulation while testing proceeds. This approach addresses the prothrombotic interval before laboratory confirmation; heparin avoidance plus nonheparin anticoagulation are the core acute management measures. [11][12]",
+        "Argatroban is a direct thrombin inhibitor used for acute HIT, but impaired hepatic function is a major selection constraint. Its monitoring can also be difficult when aPTT is confounded by HIT-associated consumptive coagulopathy. Do not select argatroban without accounting for these limitations. [9]",
+        "Fondaparinux has been used off label in suspected acute HIT, including patients with intermediate or high clinical probability. Registry data described it as effective and safe without HIT-specific complications, but randomized trial data were identified as needed and fondaparinux does not carry an acute-HIT indication. Document its off-label status when it is selected. [9]",
+        "For hemodialysis-associated suspected HIT, stop heparin and use nonheparin anticoagulation when 4Ts is at least 4. In patients with a history of HIT, danaparoid or citrate are described options for dialysis anticoagulation, although danaparoid has limited access and is not approved in the United States. [9][12]"
+      ],
+      "bullets": [
+        "Suspected HIT, 4Ts ≥4: discontinue all heparin exposure and begin a nonheparin anticoagulant pending testing. [11][12]",
+        "High-sensitivity immunoassay negative: stop the nonheparin anticoagulant and resume heparin if clinically required. [12][22]",
+        "Confirmed HIT: maintain heparin avoidance and continue nonheparin anticoagulation; reassess thrombosis status and bleeding risk as treatment is continued. [11][23]",
+        "Avoid treating every positive PF4/heparin ELISA as confirmed HIT; unnecessary direct-thrombin-inhibitor exposure carries bleeding risk and has contributed to overtreatment. [13][21]"
+      ],
+      "subsections": [
+        {
+          "heading": "Treatment selection limits supported by available data",
+          "paragraphs": [
+            "The available comparative evidence supports a practical selection distinction rather than a universal drug hierarchy: fondaparinux is an off-label option with supportive registry experience, whereas argatroban has a specific hepatic-function limitation and potential aPTT-monitoring interference in consumptive coagulopathy. No dose, renal adjustment, or duration regimen is specified here because those parameters are not established in the cited material. [9]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Anticoagulation decisions for suspected or confirmed HIT. [9][11][12][22][23]",
+        "columns": [
+          "Clinical state",
+          "Heparin action",
+          "Anticoagulation action",
+          "Key limitation"
+        ],
+        "rows": [
+          [
+            "Low-probability HIT",
+            "Do not discontinue heparin solely for HIT when 4Ts is below 4. [12]",
+            "Avoid empiric HIT-specific nonheparin anticoagulation. [12]",
+            "Continue evaluating alternate causes of thrombocytopenia. [12][19]"
           ],
           [
-            "Warfarin transition after acute HIT",
-            "Continue parenteral non-heparin anticoagulation during warfarin initiation. [22]",
-            "Overlap at least 5 days and until target INR; account for argatroban or bivalirudin INR elevation. [22]"
+            "Intermediate/high probability while tests pending",
+            "Stop heparin. [11][12]",
+            "Initiate nonheparin anticoagulation. [11][12]",
+            "Do not wait for delayed functional testing if clinical probability is substantial. [19][23]"
           ],
           [
-            "Remote HIT requiring VTE prophylaxis or treatment",
-            "Select a non-heparin anticoagulant rather than UFH or LMWH. [24]",
-            "Options include DOACs, fondaparinux, danaparoid, or VKA. [24]"
+            "Argatroban considered",
+            "Avoid heparin. [11]",
+            "Use a nonheparin direct thrombin inhibitor when clinically appropriate. [9]",
+            "Contraindicated in impaired liver function; aPTT may be confounded by consumptive coagulopathy. [9]"
+          ],
+          [
+            "Fondaparinux considered",
+            "Avoid heparin. [11]",
+            "May be used off label in suspected acute HIT. [9]",
+            "Not indicated specifically for acute HIT; randomized trial evidence remains limited. [9]"
+          ],
+          [
+            "High-sensitivity ELISA negative",
+            "Resume heparin if otherwise indicated. [12]",
+            "Stop empiric nonheparin anticoagulation. [12]",
+            "Confirm that the clinical presentation is concordant with exclusion of HIT. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "avoid-misdiagnosis",
+      "eyebrow": "Safety",
+      "heading": "Prevent overdiagnosis and treatment-related harm",
+      "intro": "The main preventable error is treating an antibody result rather than a clinicopathologic syndrome.",
+      "paragraphs": [
+        "HIT overdiagnosis is common when clinicians bypass pretest probability assessment. In an ICU study of 135 tested patients, 80 had positive PF4/heparin ELISAs, but only 11 had positive SRA results; 21.5% received argatroban or lepirudin. The discrepancy illustrates the clinical cost of treating ELISA positivity without adequate 4Ts and functional-assay integration. [21]",
+        "Use an IgG-specific, high-sensitivity initial ELISA and retain the quantitative optical density in the chart and handoff. A positive result should be interpreted with the clinical estimate of pretest probability; a negative high-sensitivity assay excludes HIT, while a positive assay requires assessment for platelet activation. [7][19][22]",
+        "When HIT remains plausible, actively assess for thrombosis rather than relying on the platelet count alone. HIT is associated with extensive venous and arterial thrombosis, limb loss, and death; mortality was 22% in a VITT cohort, but that outcome estimate applies to VITT rather than heparin-induced thrombocytopenia and should not be transferred to HIT. [3][23]",
+        "Record the ultimate diagnostic status precisely: suspected HIT, immunoassay-positive/functional assay pending, functional-confirmed HIT, or HIT excluded. This prevents inappropriate long-term heparin avoidance after a low-probability or functionally unconfirmed antibody result. [13][19][22]"
+      ],
+      "bullets": [
+        "Do not extrapolate VITT testing or risk estimates to HIT: VITT antibodies directly target PF4 and are associated with adenoviral-based vaccines, but this is a distinct anti-PF4 disorder. [1][4]",
+        "When thrombocytopenia occurs during dialysis, investigate circuit-, drug-, infection-, and laboratory-related alternatives alongside HIT rather than reflexively assigning heparin causality. [12]",
+        "For a positive PF4/heparin test with a negative functional assay, review exposure timing, 4Ts scoring, optical density, thrombosis, and potential P2Y12 inhibitor interference before retaining a HIT diagnosis. [6][8][19][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common HIT-testing errors and corrective actions. [12][13][19][21][22]",
+        "columns": [
+          "Error",
+          "Why it misleads",
+          "Corrective action"
+        ],
+        "rows": [
+          [
+            "Ordering ELISA without 4Ts assessment",
+            "Antibody detection has limited positive predictive value when pretest probability is low. [19][23]",
+            "Calculate 4Ts first; generally avoid testing when score is below 4. [12]"
+          ],
+          [
+            "Calling any positive ELISA HIT",
+            "Not all anti-PF4/heparin antibodies activate platelets. [13][19]",
+            "Use IgG assay characteristics, optical density, clinical probability, and functional testing. [7][21][22]"
+          ],
+          [
+            "Continuing empiric alternative anticoagulation after negative high-sensitivity ELISA",
+            "A negative high-sensitivity ELISA excludes HIT. [22]",
+            "Stop nonheparin anticoagulation and resume heparin if indicated. [12]"
+          ],
+          [
+            "Ignoring alternative causes after cardiac surgery or during dialysis",
+            "Antibody positivity and thrombocytopenia have multiple non-HIT explanations in these settings. [12][22]",
+            "Restrict testing to compatible platelet and thrombosis patterns; investigate competing causes concurrently. [12][22]"
           ]
         ]
       }

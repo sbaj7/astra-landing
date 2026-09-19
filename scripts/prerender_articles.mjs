@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createServer } from 'vite';
 import { getBaseUrl } from './siteConfig.mjs';
 import { articleToMarkdown, toPublicArticle } from './articleContent.mjs';
+import { specialtyHubs, hubsForArticle, relatedArticleLinks } from '../src/articles/articleDiscovery.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.join(__dirname, '..');
@@ -42,19 +43,7 @@ const loadArticles = async () => {
   return loaded;
 };
 
-const relatedFor = (current, all) => {
-  const tags = new Set((current.article.tags || []).map((tag) => String(tag).toLowerCase()));
-  return all
-    .filter((candidate) => candidate.metadata.slug !== current.metadata.slug)
-    .map((candidate) => ({
-      ...candidate.metadata,
-      score: (candidate.article.tags || []).filter((tag) => tags.has(String(tag).toLowerCase())).length
-    }))
-    .filter((candidate) => candidate.score > 0)
-    .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
-    .slice(0, 3)
-    .map(({ score: _score, ...candidate }) => candidate);
-};
+const relatedFor = (current, all) => relatedArticleLinks(current.article, all.map((candidate) => candidate.metadata));
 
 const renderArticles = async () => {
   const vite = await createServer({ root: projectRoot, server: { middlewareMode: true }, logLevel: 'error', appType: 'custom' });
@@ -67,6 +56,11 @@ const renderArticles = async () => {
     const libraryDir = path.join(distDir, 'articles');
     await fs.mkdir(libraryDir, { recursive: true });
     await fs.writeFile(path.join(libraryDir, 'index.html'), renderArticleIndexDocument({ articles: articleMetadata, baseUrl, assets }), 'utf8');
+    for (const hub of specialtyHubs.filter((item) => articleMetadata.some((article) => hubsForArticle(article).some((match) => match.slug === item.slug)))) {
+      const hubDir = path.join(libraryDir, 'specialty', hub.slug);
+      await fs.mkdir(hubDir, { recursive: true });
+      await fs.writeFile(path.join(hubDir, 'index.html'), renderArticleIndexDocument({ articles: articleMetadata, baseUrl, assets, hub }), 'utf8');
+    }
 
     for (const entry of loadedArticles) {
       const outputDir = path.join(libraryDir, entry.metadata.slug);

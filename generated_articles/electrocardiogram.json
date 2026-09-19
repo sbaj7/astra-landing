@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiovascular diagnosis",
+  "title": "Electrocardiogram",
+  "summary": "Use the 12-lead electrocardiogram as a time-sensitive diagnostic test for ischemia, rhythm and conduction disorders, then escalate discordant or high-risk findings with targeted monitoring, imaging, electrophysiology, or repeat acquisition.",
+  "seoDescription": "A physician-focused approach to 12-lead ECG acquisition, interpretation, high-risk patterns, ambulatory monitoring, screening limits, and escalation.",
+  "clinicalQuestion": "How should physicians acquire, interpret, and act on a 12-lead electrocardiogram in diagnostic and screening practice?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "12-lead ECG",
+    "electrocardiography",
+    "ECG interpretation",
+    "ambulatory ECG",
+    "Brugada syndrome",
+    "pre-excitation",
+    "ECG screening"
+  ],
+  "keyTakeaways": [
+    "Use a standard 12-lead ECG early when myocardial ischemia or infarction is suspected; it is the key initial clinical test for these diagnoses. [10]",
+    "Interpret computer-generated ECG statements as decision support, not a final diagnosis; physician ECG interpretation has measurable accuracy limitations, and clinical context improves interpretation. [1][7]",
+    "A short PR interval below 120 ms with a delta wave indicates ventricular pre-excitation; label Wolff-Parkinson-White syndrome only when tachyarrhythmia or compatible palpitations are present. [4]",
+    "Type 1 Brugada morphology is coved ST-segment elevation of at least 2 mm in at least one right precordial lead, including V1-V2 positioned in the second through fourth intercostal spaces. [4][17]",
+    "Do not treat a normal resting ECG as exclusion of intermittent arrhythmia; select ambulatory ECG monitoring when the diagnostic question is rhythm capture over time. [7][8]"
+  ],
+  "sections": [
+    {
+      "id": "acquire-and-triage",
+      "eyebrow": "Initial test",
+      "heading": "When a 12-lead ECG changes immediate management",
+      "intro": "Obtain the tracing for a specific diagnostic question and interpret it in clinical context.",
+      "paragraphs": [
+        "Obtain a standard 12-lead ECG promptly when acute myocardial ischemia or infarction is in the differential; the ECG is considered the single most important initial clinical test for diagnosing myocardial ischemia and infarction. A nondiagnostic tracing does not resolve persistent clinical concern, because the 12-lead recording is a brief sample of electrical activity and must be integrated with symptoms, examination, and other testing. [10][8]",
+        "Use the 12-lead ECG to identify arrhythmias, conduction disturbance, acute coronary syndromes, chamber hypertrophy or enlargement patterns, and electrical effects of drugs or electrolyte disturbances. Each abnormality should trigger a targeted next test rather than a nonspecific cardiac workup: rhythm concern favors ambulatory ECG; suspected structural disease favors echocardiography or cardiac magnetic resonance imaging; and suspected coronary disease may require anatomic or functional coronary evaluation. [8][6]",
+        "Review the actual waveforms and lead placement before acting on an automated interpretation. Clinical information improves the usefulness of ECG interpretation, while occasional interpretation practice can lead to missed or incorrectly diagnosed arrhythmia; the ACC/AHA competence statement recommends at least 100 ECG interpretations annually to maintain competence. [7]"
+      ],
+      "bullets": [
+        "For suspected ischemia or infarction: obtain and interpret a 12-lead ECG as the initial clinical test. [10]",
+        "For transient palpitations, episodic presyncope, or suspected intermittent arrhythmia with no diagnostic resting tracing: use ambulatory ECG monitoring designed to capture the event. [7][8]",
+        "For an ECG pattern suggesting structural, inflammatory, or infiltrative disease: direct the next study toward echocardiography, coronary imaging, cardiac magnetic resonance imaging, endomyocardial biopsy, or electrophysiology study according to the working diagnosis. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ECG finding-to-next-step framework. [4][6][7][8][10][17]",
+        "columns": [
+          "ECG or clinical scenario",
+          "Interpretation",
+          "Actionable next step"
+        ],
+        "rows": [
+          [
+            "Suspected acute myocardial ischemia or infarction",
+            "The 12-lead ECG is the principal initial clinical test. [10]",
+            "Interpret immediately in the clinical presentation and pursue the acute coronary syndrome pathway when findings and presentation support it. [10]"
+          ],
+          [
+            "Symptoms suggesting intermittent arrhythmia; resting ECG nondiagnostic",
+            "A short resting tracing may not capture episodic rhythm disturbance. [7][8]",
+            "Order ambulatory ECG monitoring and review the full-disclosure tracing when available. [7]"
+          ],
+          [
+            "PR interval <120 ms plus delta wave",
+            "Manifest ventricular pre-excitation from antegrade accessory-pathway conduction. [4]",
+            "Determine whether tachyarrhythmia or palpitations are present; those features establish WPW syndrome rather than isolated pre-excitation. [4]"
+          ],
+          [
+            "Coved right-precordial ST elevation \u22652 mm with inverted T wave",
+            "Type 1 Brugada ECG pattern. [4][17]",
+            "Confirm appropriate V1-V2 positioning, assess symptoms and family history of sudden cardiac death, and consider specialist risk assessment. [4]"
+          ],
+          [
+            "ECG raises concern for structural or arrhythmogenic substrate",
+            "Electrical abnormality may require multimodality evaluation. [6][8]",
+            "Select echocardiography, cardiac magnetic resonance imaging, coronary angiography or CT, endomyocardial biopsy, or electrophysiology study based on the suspected disease. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpretation-workflow",
+      "eyebrow": "Interpretation",
+      "heading": "A reproducible reading workflow that avoids consequential errors",
+      "intro": "Use a fixed sequence before assigning a rhythm or disease label.",
+      "paragraphs": [
+        "First verify technical adequacy and reconcile the tracing with the patient\u2019s age, symptoms, medications, electrolyte status, prior ECGs, and recording conditions. The ECG records body-surface potential differences from prescribed electrode sites, so acquisition and lead placement are integral to interpretation rather than clerical details. [11][15]",
+        "Then read rate and rhythm, PR interval, QRS duration and axis, ST-T-U morphology, and QT interval in a consistent order. This structure separates primary rhythm and conduction diagnoses from repolarization abnormalities that may reflect ischemia, drugs, electrolyte disturbance, or congenital channelopathy. Standardized interpretation statements specifically address ST segment, T wave, U wave, and QT interval assessment. [8][14][15]",
+        "When the tracing conflicts with the clinical syndrome, repeat the 12-lead ECG with attention to lead positioning and obtain serial or ambulatory recordings when the suspected process is dynamic. Full-disclosure ambulatory systems are preferred by many clinicians because the tracing can be read similarly to a 12-lead ECG and technical failures can be assessed. [7]"
+      ],
+      "bullets": [
+        "Compare with prior ECGs before calling a pattern new when prior tracings are available. [7]",
+        "Document whether interpretation is based on the waveform review, automated statement, or both; machine output should not replace physician adjudication. [1][7][8]",
+        "Escalate uncertain high-risk patterns for expert over-read rather than relying on limited-frequency interpretation experience. [1][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Structured ECG interpretation targets and common decision consequences. [7][8][14][15]",
+        "columns": [
+          "Reading domain",
+          "Question to answer",
+          "Decision consequence"
+        ],
+        "rows": [
+          [
+            "Acquisition",
+            "Are the leads and recording technically credible? [11][15]",
+            "Repeat an inadequate or clinically discordant tracing before assigning a durable diagnosis. [7][11]"
+          ],
+          [
+            "Rhythm",
+            "Is the rhythm diagnostic on this brief recording? [8]",
+            "If symptoms are episodic and the ECG is unrevealing, use ambulatory monitoring. [7][8]"
+          ],
+          [
+            "Conduction",
+            "Is there pre-excitation or intraventricular conduction disturbance? [4][14]",
+            "Use the morphology to direct arrhythmia risk assessment or structural evaluation. [4][6][14]"
+          ],
+          [
+            "ST-T-U and QT",
+            "Is repolarization abnormality present and clinically concordant? [15]",
+            "Evaluate ischemic, drug-related, electrolyte-related, and inherited-channelopathy possibilities according to the pattern. [8][15][17]"
+          ],
+          [
+            "Clinical integration",
+            "Does the ECG fit symptoms, family history, and examination? [7]",
+            "Discordance requires repeat acquisition, serial testing, ambulatory recording, or targeted imaging rather than reassurance from a single tracing. [6][7][8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "preexcitation-and-brugada",
+      "eyebrow": "High-risk patterns",
+      "heading": "Act on pre-excitation and Brugada patterns without overdiagnosing syndromes",
+      "intro": "Separate an ECG pattern from a syndrome defined by symptoms or arrhythmic events.",
+      "paragraphs": [
+        "Diagnose ventricular pre-excitation on the resting ECG when there is a PR interval below 120 ms and a delta wave, reflecting antegrade accessory-pathway conduction that bypasses the AV node partly or completely. Do not equate that isolated ECG finding with Wolff-Parkinson-White syndrome: the syndrome requires tachyarrhythmia or palpitations. This distinction changes counseling, diagnostic framing, and the urgency of rhythm-focused evaluation. [4]",
+        "Identify a type 1 Brugada pattern by coved ST-segment elevation of at least 2 mm in at least one right precordial lead, followed by T-wave inversion; assess V1-V2 in the second, third, or fourth intercostal space. A type 1 pattern may be spontaneous or induced by a class I antiarrhythmic provocative test such as ajmaline or flecainide. [4][17]",
+        "For Brugada-pattern ECGs, prioritize history of syncope or arrhythmic events, spontaneous versus provoked type 1 morphology, sex, family history of sudden cardiac death, and spontaneous atrial fibrillation in risk assessment. Spontaneous type 1 morphology is associated with the greatest likelihood of clinical sequelae among asymptomatic individuals. The value of electrophysiology study inducibility for ventricular arrhythmia risk remains controversial. [4]"
+      ],
+      "bullets": [
+        "In Brugada syndrome, advise avoidance of potentially proarrhythmic drugs, avoidance of excessive alcohol consumption, and prompt fever reduction; the cited aircrew guidance gives paracetamol as an example. [4]",
+        "Do not use fragmented QRS or ventricular effective refractory period below 200 ms as established stand-alone Brugada risk markers; both remain under investigation. [4]",
+        "For a suspected concealed inherited repolarization disorder, exercise recovery measurements may add diagnostic discrimination: in one study, a delta RT greater than 25 ms at 1 minute of recovery had sensitivity of 73% and specificity of 92% for congenital long-QT syndrome. [17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Long-QT evaluation when the baseline ECG is equivocal",
+          "paragraphs": [
+            "In relatives of patients with congenital long-QT syndrome, combine resting QTc with QTc measured 4 minutes after exercise recovery when evaluating for carrier status. One cited family study reported 94% sensitivity and 90% specificity for the combined approach; this is a diagnostic adjunct, not a substitute for phenotype, family assessment, and genotype-informed interpretation. [17]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Selected inherited-arrhythmia and pre-excitation ECG thresholds. [4][17]",
+        "columns": [
+          "Pattern",
+          "Threshold or defining feature",
+          "Interpretation and action"
+        ],
+        "rows": [
+          [
+            "Manifest pre-excitation",
+            "PR interval <120 ms plus delta wave. [4]",
+            "Accessory-pathway antegrade conduction; determine whether palpitations or tachyarrhythmia establish WPW syndrome. [4]"
+          ],
+          [
+            "Brugada type 1",
+            "Coved ST elevation \u22652 mm in \u22651 right precordial lead with inverted T wave; evaluate V1-V2 in the second through fourth intercostal spaces. [4][17]",
+            "Assess for spontaneous pattern, symptoms, family history of sudden cardiac death, and atrial fibrillation; consider specialist evaluation. [4]"
+          ],
+          [
+            "Brugada type 2",
+            "Saddleback ST elevation with ST-end trough \u22651 mm. [17]",
+            "Not type 1 morphology; interpret with the full clinical and ECG context. [17]"
+          ],
+          [
+            "Brugada type 3",
+            "Saddleback ST elevation with ST-end trough <1 mm. [17]",
+            "Not type 1 morphology; do not assign type 1 risk implications from this pattern alone. [17]"
+          ],
+          [
+            "Exercise recovery adjunct for congenital long-QT syndrome",
+            "Delta RT >25 ms at 1 minute after recovery. [17]",
+            "Reported sensitivity 73% and specificity 92% in the cited study; use as part of an inherited-arrhythmia assessment. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ambulatory-ecg",
+      "eyebrow": "Intermittent symptoms",
+      "heading": "When ambulatory ECG adds more than a resting tracing",
+      "intro": "Use ambulatory monitoring when the diagnosis depends on rhythm behavior over time.",
+      "paragraphs": [
+        "Order ambulatory ECG when the presenting complaint is episodic and a standard ECG does not establish the rhythm diagnosis. Long-term monitoring primarily provides rhythm and repolarization information, whereas the standard 12-lead ECG provides broader assessment of electrical activity, including conduction and ischemic patterns. [8]",
+        "Choose an ambulatory system that permits assessment of technical failures and, when feasible, full-disclosure waveform review. Full-disclosure capability allows clinicians to read the ambulatory tracing similarly to a 12-lead ECG and is preferred by many interpreters for this reason. [7]",
+        "Use the baseline 12-lead ECG as an adjunct to ambulatory interpretation rather than treating the two tests as interchangeable. The standard tracing may identify conduction or repolarization features that change interpretation of ambulatory rhythm events. [7][8]"
+      ],
+      "bullets": [
+        "A nondiagnostic resting ECG in a patient with intermittent palpitations or suspected paroxysmal arrhythmia is an indication to pursue longer-duration rhythm capture rather than conclude that no arrhythmia exists. [7][8]",
+        "Review raw or full-disclosure data when an automated ambulatory classification is discordant with symptoms or the baseline ECG. [7]",
+        "Use the 12-lead ECG to define broader electrical phenotype and ambulatory monitoring to establish temporal rhythm correlation. [7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Resting versus ambulatory ECG: complementary diagnostic roles. [7][8]",
+        "columns": [
+          "Modality",
+          "Best-supported role",
+          "Interpretive limitation"
+        ],
+        "rows": [
+          [
+            "Standard 12-lead ECG",
+            "Broad snapshot of arrhythmias, conduction disturbance, acute coronary syndromes, chamber abnormality patterns, and drug or electrolyte effects. [8]",
+            "Brief recording may miss episodic rhythm disorders. [7][8]"
+          ],
+          [
+            "Ambulatory ECG",
+            "Longitudinal rhythm and repolarization assessment, particularly when symptoms are intermittent. [7][8]",
+            "Technical failure and algorithmic interpretation require waveform review; full-disclosure capability facilitates this. [7]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "screening-and-quality",
+      "eyebrow": "Appropriate use",
+      "heading": "Use ECG screening selectively and protect against interpretation error",
+      "intro": "Screening value depends on the population, downstream testing burden, and interpreter expertise.",
+      "paragraphs": [
+        "Do not assume that a 12-lead ECG is a universal screening test simply because it is low cost and widely available. The AHA has issued a detailed evidence critique of ECG screening in healthy populations aged 12 to 25 years, and athlete pre-participation ECG implementation remains controversial. Apply screening decisions to the specific population and program rather than extrapolating diagnostic-test use in symptomatic patients. [12][22][23]",
+        "In athletes with ventricular extrasystoles, begin with targeted history rather than ECG morphology alone: exertional symptoms, family history, race and ethnicity, geographic exposure relevant to endemic disease, performance-enhancing or recreational drug use, and comorbidities all alter the probability of an arrhythmogenic substrate and the next diagnostic test. [22]",
+        "Formal quality processes should include ongoing case volume, access to expert over-read for difficult tracings, and clinical correlation. The ACC/AHA competence statement recommends 100 annual 12-lead ECG interpretations to maintain competence, while a systematic review documents variability in physician interpretation accuracy. [1][7]"
+      ],
+      "bullets": [
+        "For athlete ECG screening, use established athlete-specific interpretation criteria and recognize that program-level implementation remains debated. [22][23]",
+        "For ventricular extrasystoles in athletes, integrate exercise symptoms, family history, substances, comorbidities, and ECG findings before determining the extent of evaluation. [22]",
+        "Use automated ECG interpretation to support triage and workflow, but retain clinician waveform review and contextual adjudication. [1][7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Screening and quality-control decisions for ECG programs. [1][7][12][22][23]",
+        "columns": [
+          "Setting",
+          "Decision point",
+          "Practical response"
+        ],
+        "rows": [
+          [
+            "Healthy young people",
+            "Population ECG screening has both potential benefits and harms requiring evidence-based program design. [12]",
+            "Do not generalize diagnostic ECG indications to mass screening without considering the screening-specific evidence. [12]"
+          ],
+          [
+            "Competitive athletes",
+            "Pre-participation ECG implementation remains controversial. [22][23]",
+            "Use standardized athlete interpretation approaches when an ECG is included in a screening program. [23]"
+          ],
+          [
+            "Athlete with ventricular extrasystoles",
+            "Clinical risk depends on exercise symptoms, family history, substances, comorbidity, and ECG context. [22]",
+            "Use an algorithmic risk assessment rather than ECG morphology in isolation. [22]"
+          ],
+          [
+            "Low-volume ECG interpreter",
+            "Infrequent interpretation increases risk of missed or inappropriate arrhythmia diagnosis. [7]",
+            "Arrange expert over-read or structured quality review; maintain at least 100 annual interpretations when serving as an ECG interpreter. [7]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should a computerized ECG interpretation be accepted without physician review?",
+      "answer": "No. Physician interpretation has documented accuracy limitations, and interpretation is more clinically useful when integrated with patient data. Review the waveform, acquisition quality, symptoms, medications, and prior ECGs before acting on an automated statement. [1][7][8]"
+    },
+    {
+      "question": "Does pre-excitation on ECG establish Wolff-Parkinson-White syndrome?",
+      "answer": "No. A PR interval below 120 ms with a delta wave indicates pre-excitation, but WPW syndrome requires tachyarrhythmia or symptoms of palpitations. [4]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Accuracy of Physicians' Electrocardiogram Interpretations",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771093",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "This systematic review and meta-analysis identifies and summarizes published research on the accuracy of physicians' interpretations of",
+      "score": 0.5113512
+    },
+    {
+      "number": 2,
+      "title": "Electrocardiogram-based diagnosis of liver diseases: an externally ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(25)00174-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "For the RR interval, low values contribute positively, while high values have a negative impact across all conditions. The QRS axis primarily",
+      "score": 0.33672404
+    },
+    {
+      "number": 3,
+      "title": "PartIII 197..198 - Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/99/Suppl_3/A197.4.full.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "In our study, we found a higher diagnostic value of ambulatory ECG, maybe because several parameters derived from ambulatory ECG were combined",
+      "score": 0.43929082
+    },
+    {
+      "number": 4,
+      "title": "Management of cardiac conduction abnormalities and arrhythmia in aircrew | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/Suppl_1/s38",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "In asymptomatic individuals spontaneous type 1 BrS ECG is associated with the highest likelihood of clinical sequelae. Other predictors for an increased risk are male gender, family history of SCD, and spontaneous AF. There is controversy about the value of an EP study for inducibility of ventricula",
+      "score": 0.42477044
+    },
+    {
+      "number": 5,
+      "title": "Notices",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/42/6/local/admin.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "YDSE, B., see Kruse, I. et al.\nYusuF, S. (& Lopez, R., Maddison, A., Maw, P., Ray, N., McMillan, S., Sleight, P.). Value of electrocardiogram in predicting and estimating infarct size in man. 286 754 SUBJECT INDEX 1979, Volume 42 Adrenaline and noradrenaline, excretion related to occupational stress",
+      "score": 0.35756806
+    },
+    {
+      "number": 6,
+      "title": "Diagnostic value and clinical impact of cardiac magnetic ...",
+      "detail": "openheart.bmj.com",
+      "url": "https://openheart.bmj.com/content/12/1/e003090",
+      "authors": "openheart.bmj.com",
+      "host": "openheart.bmj.com",
+      "snippet": "by E Boxhammer \u00b7 2025 \u00b7 Cited by 4 \u2014 The comprehensive diagnostic work-up involving ECG, echocardiography, laboratory tests, CAG, CT, CMRI, EMB and EPS enables a thorough evaluation ...Read more",
+      "score": 0.26752612
+    },
+    {
+      "number": 7,
+      "title": "ACC/AHA clinical competence statement on electrocardiography and ambulatory electrocardiography4444: A report of the ACC/AHA/ACP\u2013ASIM Task Force on Clinical Competence (ACC/AHA Committee to Develop a Clinical Competence Statement on Electrocardiography and Ambulatory Electrocardiography) Endorsed by the International Society for Holter and Noninvasive Electrocardiology",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/S0735-1097%2801%2901680-1",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### G. Maintaining competence in the interpretation of 12-lead ECGs\n\nMaintaining competence in the interpretation of 12-lead ECGs also requires ongoing practice. If interpretations are made only occasionally, arrhythmia may be missed or inappropriately diagnosed, particularly when there is a change ",
+      "score": 0.61279696
+    },
+    {
+      "number": 8,
+      "title": "Automatic diagnosis of the 12-lead ECG using a deep neural network | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-020-15432-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nRautaharju, P. M., Surawicz, B. & Gettes, L. S. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram: Part IV: The ST Segment, T and U Waves, and the QT Interval A Scientific Statement From the American Heart Association Elect",
+      "score": 0.5803764
+    },
+    {
+      "number": 9,
+      "title": "Assessment of the 12-Lead Electrocardiogram as a Screening Test ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.05.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n192.\n\nKligfield P., Gettes L.S., Bailey J.J. et al: Recommendations for the standardization and interpretation of the electrocardiogram: part I: the electrocardiogram and its technology: a scientific statement from the American Heart Association Electrocardiography ",
+      "score": 0.55565286
+    },
+    {
+      "number": 10,
+      "title": "AHA/ACCF/HRS recommendations for the standardization ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.108.191098",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Feb 19, 2009 \u2014 The ECG is considered the single most important initial clinical test for diagnosing myocardial ischemia and infarction. standard 12-lead body-",
+      "score": 0.5553635
+    },
+    {
+      "number": 11,
+      "title": "Recommendations for the Standardization and Interpretation of the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.106.180200",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The standard 12-lead ECG records potential differences between prescribed sites on the body surface that vary during the cardiac cycle; it",
+      "score": 0.534443
+    },
+    {
+      "number": 12,
+      "title": "Assessment of the 12-Lead ECG as a Screening Test for Detection ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000025",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The present AHA statement represents a detailed critique of the available evidence both for and against the ECG as a screening test to",
+      "score": 0.49582586
+    },
+    {
+      "number": 13,
+      "title": "ACC/AHA Clinical Competence Statement on Electrocardiography ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circ.104.25.3169",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This document applies to specialists trained in internal medicine and/or adult cardiology who are interpreting ECGs of adults. The interpretation of pediatric",
+      "score": 0.4892356
+    },
+    {
+      "number": 14,
+      "title": "Part III: Intraventricular Conduction Disturbances A Scientific ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.12.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The present article introduces the second part of \u201cRecommendations for Standardization and Interpretation of the Electrocardiogram.",
+      "score": 0.34409124
+    },
+    {
+      "number": 15,
+      "title": "Part I: The Electrocardiogram and Its Technology A Scientific ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2007.01.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "ECG is routinely used to monitor patients treated with antiarrhythmic and other drugs, in the preoperative assessment of patients undergoing",
+      "score": 0.27419147
+    },
+    {
+      "number": 16,
+      "title": "Diagnostic accuracy of computer aided electrocardiogram analysis ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jsap.13267",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The sensitivity of the ECG algorithm for detecting arrhythmias was 99.7% (95% confidence intervals, CI: 98.5 to 99.9) and the specificity was",
+      "score": 0.60077465
+    },
+    {
+      "number": 17,
+      "title": "JCS/JHRS 2022 Guideline on Diagnosis and Risk Assessment of Arrhythmia - Takase - 2024 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.13052",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "When exercise stress tests were conducted in 14 patients with congenital LQTS, 9 family members, and 40 control subjects, the criteria using the interval from the R-wave to the T-wave peak at 1 min after the recovery period (delta RT >25 ms) had a diagnostic sensitivity of 73% and specificity of 92%",
+      "score": 0.5920305
+    },
+    {
+      "number": 18,
+      "title": "Utility of a Novel 12\u2010Lead ECG Criterion for Localizing Manifest ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/joa3.70315",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "PR interval \u2265 91 msec was the cut off value to predict septal locations with sensitivity 72.3%, specificity of 62.5% and area under the curve (",
+      "score": 0.54594
+    },
+    {
+      "number": 19,
+      "title": "The diagnostic role of T wave morphology biomarkers in congenital ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/anec.13015",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Specific ECG changes forming part of the diagnostic criteria include QTc (corrected QT interval) prolongation (categorized by \u2265480",
+      "score": 0.5174983
+    },
+    {
+      "number": 20,
+      "title": "Advances in Electrocardiogram\u2010Based Non\u2010Invasive Blood Glucose ...",
+      "detail": "dom-pubs.onlinelibrary.wiley.com",
+      "url": "https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.70638?af=R",
+      "authors": "dom-pubs.onlinelibrary.wiley.com",
+      "host": "dom-pubs.onlinelibrary.wiley.com",
+      "snippet": "... thresholds for glucose sensitivity ... Regression: hypoglycemia sensitivity = 76%, specificity = 76%; hyperglycemia sensitivity = 79%, specificity",
+      "score": 0.32849765
+    },
+    {
+      "number": 21,
+      "title": "A Primer on ECG T Wave Morphologies Encountered in Clinical ...",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.70145",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "Changes in the T wave segment of an ECG can provide both diagnostic and prognostic information and may be affected by a variety of intrinsic",
+      "score": 0.3788962
+    },
+    {
+      "number": 22,
+      "title": "Ventricular extrasystoles in athletes: what can be learned from the clinical history, clinical examination, the electrocardiogram and the initial approach?",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-17/ventricular-extrasystoles-in-athletes-what-can-be-learned-from-the-clinical-his",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "The implementation of a 12-lead electrocardiogram (ECG) in the pre-participation screening of athletes is still controversial and a number of issues concerning this are largely debated. The interpretation of premature ventricular beats could represent a clinical dilemma. The initial evaluation shoul",
+      "score": 0.44492707
+    },
+    {
+      "number": 23,
+      "title": "How do you answer a 20-year-old when they ask: can I participate in competitive sports? Short questionnaire",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-19/how-do-you-answer-a-20-year-old-when-they-ask-can-i-participate-in-competitive",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "17. Drezner JA, Asif IM, Owens DS, Prutkin JM, Salerno JC, Fean R, Rao AL, Stout K, Harmon KG. Accuracy of ECG interpretation in competitive athletes: the impact of using standised ECG criteria.Br J Sports Med. 2012;46:335-40.\n18. Corrado D, Pelliccia A, Heidbuchel H, Sharma S, Link M, Basso C, Biff",
+      "score": 0.4169159
+    },
+    {
+      "number": 24,
+      "title": "Artificial intelligence in ECG diagnostics - where are we now?",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Guidelines\n\n Clinical practice guidelines)\n Scientific documents)\n Clinical practice tools)\n\nClinical practice guidelines\n\n All ESC Clinical Practice Guidelines\n Guidelines development\n Resources\n\n  + Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ES",
+      "score": 0.4040141
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Accuracy of Physicians' Electrocardiogram Interpretations",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771093",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "This systematic review and meta-analysis identifies and summarizes published research on the accuracy of physicians' interpretations of",
+      "score": 0.5113512
+    },
+    {
+      "number": 2,
+      "title": "Electrocardiogram-based diagnosis of liver diseases: an externally ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(25)00174-9/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "For the RR interval, low values contribute positively, while high values have a negative impact across all conditions. The QRS axis primarily",
+      "score": 0.33672404
+    },
+    {
+      "number": 3,
+      "title": "PartIII 197..198 - Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/99/Suppl_3/A197.4.full.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "In our study, we found a higher diagnostic value of ambulatory ECG, maybe because several parameters derived from ambulatory ECG were combined",
+      "score": 0.43929082
+    },
+    {
+      "number": 4,
+      "title": "Management of cardiac conduction abnormalities and arrhythmia in aircrew | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/Suppl_1/s38",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "In asymptomatic individuals spontaneous type 1 BrS ECG is associated with the highest likelihood of clinical sequelae. Other predictors for an increased risk are male gender, family history of SCD, and spontaneous AF. There is controversy about the value of an EP study for inducibility of ventricula",
+      "score": 0.42477044
+    },
+    {
+      "number": 5,
+      "title": "Notices",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/42/6/local/admin.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "YDSE, B., see Kruse, I. et al.\nYusuF, S. (& Lopez, R., Maddison, A., Maw, P., Ray, N., McMillan, S., Sleight, P.). Value of electrocardiogram in predicting and estimating infarct size in man. 286 754 SUBJECT INDEX 1979, Volume 42 Adrenaline and noradrenaline, excretion related to occupational stress",
+      "score": 0.35756806
+    },
+    {
+      "number": 6,
+      "title": "Diagnostic value and clinical impact of cardiac magnetic ...",
+      "detail": "openheart.bmj.com",
+      "url": "https://openheart.bmj.com/content/12/1/e003090",
+      "authors": "openheart.bmj.com",
+      "host": "openheart.bmj.com",
+      "snippet": "by E Boxhammer \u00b7 2025 \u00b7 Cited by 4 \u2014 The comprehensive diagnostic work-up involving ECG, echocardiography, laboratory tests, CAG, CT, CMRI, EMB and EPS enables a thorough evaluation ...Read more",
+      "score": 0.26752612
+    },
+    {
+      "number": 7,
+      "title": "ACC/AHA clinical competence statement on electrocardiography and ambulatory electrocardiography4444: A report of the ACC/AHA/ACP\u2013ASIM Task Force on Clinical Competence (ACC/AHA Committee to Develop a Clinical Competence Statement on Electrocardiography and Ambulatory Electrocardiography) Endorsed by the International Society for Holter and Noninvasive Electrocardiology",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/S0735-1097%2801%2901680-1",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### G. Maintaining competence in the interpretation of 12-lead ECGs\n\nMaintaining competence in the interpretation of 12-lead ECGs also requires ongoing practice. If interpretations are made only occasionally, arrhythmia may be missed or inappropriately diagnosed, particularly when there is a change ",
+      "score": 0.61279696
+    },
+    {
+      "number": 8,
+      "title": "Automatic diagnosis of the 12-lead ECG using a deep neural network | Nature Communications",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41467-020-15432-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nRautaharju, P. M., Surawicz, B. & Gettes, L. S. AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the Electrocardiogram: Part IV: The ST Segment, T and U Waves, and the QT Interval A Scientific Statement From the American Heart Association Elect",
+      "score": 0.5803764
+    },
+    {
+      "number": 9,
+      "title": "Assessment of the 12-Lead Electrocardiogram as a Screening Test ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2014.05.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Crossref\n\nPubMed\n\nGoogle Scholar\n\n192.\n\nKligfield P., Gettes L.S., Bailey J.J. et al: Recommendations for the standardization and interpretation of the electrocardiogram: part I: the electrocardiogram and its technology: a scientific statement from the American Heart Association Electrocardiography ",
+      "score": 0.55565286
+    },
+    {
+      "number": 10,
+      "title": "AHA/ACCF/HRS recommendations for the standardization ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.108.191098",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Feb 19, 2009 \u2014 The ECG is considered the single most important initial clinical test for diagnosing myocardial ischemia and infarction. standard 12-lead body-",
+      "score": 0.5553635
+    },
+    {
+      "number": 11,
+      "title": "Recommendations for the Standardization and Interpretation of the ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.106.180200",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The standard 12-lead ECG records potential differences between prescribed sites on the body surface that vary during the cardiac cycle; it",
+      "score": 0.534443
+    },
+    {
+      "number": 12,
+      "title": "Assessment of the 12-Lead ECG as a Screening Test for Detection ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000025",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The present AHA statement represents a detailed critique of the available evidence both for and against the ECG as a screening test to",
+      "score": 0.49582586
+    },
+    {
+      "number": 13,
+      "title": "ACC/AHA Clinical Competence Statement on Electrocardiography ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circ.104.25.3169",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This document applies to specialists trained in internal medicine and/or adult cardiology who are interpreting ECGs of adults. The interpretation of pediatric",
+      "score": 0.4892356
+    },
+    {
+      "number": 14,
+      "title": "Part III: Intraventricular Conduction Disturbances A Scientific ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2008.12.013",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "The present article introduces the second part of \u201cRecommendations for Standardization and Interpretation of the Electrocardiogram.",
+      "score": 0.34409124
+    },
+    {
+      "number": 15,
+      "title": "Part I: The Electrocardiogram and Its Technology A Scientific ... - JACC",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2007.01.024",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "ECG is routinely used to monitor patients treated with antiarrhythmic and other drugs, in the preoperative assessment of patients undergoing",
+      "score": 0.27419147
+    },
+    {
+      "number": 16,
+      "title": "Diagnostic accuracy of computer aided electrocardiogram analysis ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jsap.13267",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The sensitivity of the ECG algorithm for detecting arrhythmias was 99.7% (95% confidence intervals, CI: 98.5 to 99.9) and the specificity was",
+      "score": 0.60077465
+    },
+    {
+      "number": 17,
+      "title": "JCS/JHRS 2022 Guideline on Diagnosis and Risk Assessment of Arrhythmia - Takase - 2024 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.13052",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "When exercise stress tests were conducted in 14 patients with congenital LQTS, 9 family members, and 40 control subjects, the criteria using the interval from the R-wave to the T-wave peak at 1 min after the recovery period (delta RT >25 ms) had a diagnostic sensitivity of 73% and specificity of 92%",
+      "score": 0.5920305
+    },
+    {
+      "number": 18,
+      "title": "Utility of a Novel 12\u2010Lead ECG Criterion for Localizing Manifest ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/joa3.70315",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "PR interval \u2265 91 msec was the cut off value to predict septal locations with sensitivity 72.3%, specificity of 62.5% and area under the curve (",
+      "score": 0.54594
+    },
+    {
+      "number": 19,
+      "title": "The diagnostic role of T wave morphology biomarkers in congenital ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/anec.13015",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Specific ECG changes forming part of the diagnostic criteria include QTc (corrected QT interval) prolongation (categorized by \u2265480",
+      "score": 0.5174983
+    },
+    {
+      "number": 20,
+      "title": "Advances in Electrocardiogram\u2010Based Non\u2010Invasive Blood Glucose ...",
+      "detail": "dom-pubs.onlinelibrary.wiley.com",
+      "url": "https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.70638?af=R",
+      "authors": "dom-pubs.onlinelibrary.wiley.com",
+      "host": "dom-pubs.onlinelibrary.wiley.com",
+      "snippet": "... thresholds for glucose sensitivity ... Regression: hypoglycemia sensitivity = 76%, specificity = 76%; hyperglycemia sensitivity = 79%, specificity",
+      "score": 0.32849765
+    },
+    {
+      "number": 21,
+      "title": "A Primer on ECG T Wave Morphologies Encountered in Clinical ...",
+      "detail": "ascpt.onlinelibrary.wiley.com",
+      "url": "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.70145",
+      "authors": "ascpt.onlinelibrary.wiley.com",
+      "host": "ascpt.onlinelibrary.wiley.com",
+      "snippet": "Changes in the T wave segment of an ECG can provide both diagnostic and prognostic information and may be affected by a variety of intrinsic",
+      "score": 0.3788962
+    },
+    {
+      "number": 22,
+      "title": "Ventricular extrasystoles in athletes: what can be learned from the clinical history, clinical examination, the electrocardiogram and the initial approach?",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-17/ventricular-extrasystoles-in-athletes-what-can-be-learned-from-the-clinical-his",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "The implementation of a 12-lead electrocardiogram (ECG) in the pre-participation screening of athletes is still controversial and a number of issues concerning this are largely debated. The interpretation of premature ventricular beats could represent a clinical dilemma. The initial evaluation shoul",
+      "score": 0.44492707
+    },
+    {
+      "number": 23,
+      "title": "How do you answer a 20-year-old when they ask: can I participate in competitive sports? Short questionnaire",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-19/how-do-you-answer-a-20-year-old-when-they-ask-can-i-participate-in-competitive",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "17. Drezner JA, Asif IM, Owens DS, Prutkin JM, Salerno JC, Fean R, Rao AL, Stout K, Harmon KG. Accuracy of ECG interpretation in competitive athletes: the impact of using standised ECG criteria.Br J Sports Med. 2012;46:335-40.\n18. Corrado D, Pelliccia A, Heidbuchel H, Sharma S, Link M, Basso C, Biff",
+      "score": 0.4169159
+    },
+    {
+      "number": 24,
+      "title": "Artificial intelligence in ECG diagnostics - where are we now?",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/education/cardiopractice/artificial-intelligence-in-ecg-diagnostics-where-are-we-now",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "Guidelines\n\n Clinical practice guidelines)\n Scientific documents)\n Clinical practice tools)\n\nClinical practice guidelines\n\n All ESC Clinical Practice Guidelines\n Guidelines development\n Resources\n\n  + Patient versions of ESC Guidelines\n  + Essential messages and educational slide sets\n Tools\n\n  + ES",
+      "score": 0.4040141
+    }
+  ],
+  "publishedAt": "2026-09-15T22:47:06.631967+00:00",
+  "updatedAt": "2026-09-15T22:47:06.631967+00:00",
+  "readingMinutes": 6,
+  "slug": "electrocardiogram"
+}

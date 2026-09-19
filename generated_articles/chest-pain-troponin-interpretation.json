@@ -1,0 +1,761 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Emergency Cardiology",
+  "title": "Chest Pain Troponin Interpretation",
+  "summary": "Interpret high-sensitivity troponin with the ECG, symptom timing, serial change, and assay-specific thresholds\u2014not as an isolated binary test\u2014to distinguish acute myocardial infarction, acute nonischemic injury, chronic myocardial injury, and patients eligible for safe ED discharge.",
+  "seoDescription": "Practical interpretation of high-sensitivity troponin in acute chest pain: serial testing, assay-specific thresholds, myocardial injury, MI, and ED disposition.",
+  "clinicalQuestion": "How should clinicians interpret high-sensitivity troponin results in adults presenting with acute chest pain?",
+  "specialty": "Emergency Medicine and Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "high-sensitivity troponin",
+    "acute chest pain",
+    "myocardial injury",
+    "myocardial infarction",
+    "0/1-hour algorithm",
+    "ED disposition",
+    "acute coronary syndrome"
+  ],
+  "keyTakeaways": [
+    "Obtain a 12-lead ECG within 10 minutes and measure hs-cTn without delay in suspected ACS; troponin does not replace immediate ECG-based STEMI recognition.[8][10]",
+    "Myocardial injury is hs-cTn above the assay-specific 99th-percentile upper reference limit; myocardial infarction additionally requires a rise and/or fall plus clinical evidence of ischemia.[6][14]",
+    "Use an assay-specific validated hs-cTn clinical decision pathway rather than a universal numeric cutoff, a single value above the 99th percentile, or a delta borrowed from another assay.[16][23][24]",
+    "Patients ruled out by an hs-cTn pathway with a nonischemic ECG may be discharged without routine additional cardiac testing or obligatory risk-score application.[16]",
+    "A fall in pain after nitroglycerin neither establishes nor excludes ACS and should not alter interpretation of the ECG or serial hs-cTn pattern.[1]"
+  ],
+  "sections": [
+    {
+      "id": "initial-ecg-and-troponin",
+      "eyebrow": "First Decisions",
+      "heading": "Obtain ECG and hs-cTn in parallel",
+      "intro": "Do not wait for biomarker results before identifying an occlusive coronary syndrome.",
+      "paragraphs": [
+        "For acute chest pain or an anginal equivalent concerning for ACS, obtain a 12-lead ECG within 10 minutes of ED arrival and draw troponin without delay.[8][10] STEMI and very-high-risk NSTE-ACS are ECG- and clinical-emergency diagnoses; serial hs-cTn testing is important for confirmation and risk assessment but must not delay reperfusion-oriented evaluation when the ECG is diagnostic.[14]",
+        "Use hs-cTnI or hs-cTnT when available. The 2021 multisociety chest pain guideline identifies hs-cTn as the preferred biomarker, and the 2022 ACC pathway recommends U.S. centers transition to hs-cTn assays for acute chest-pain evaluation.[3][16] Do not apply hs-cTn accelerated pathways to older-generation, less-sensitive troponin assays.[16]",
+        "Repeat the ECG when symptoms recur, evolve, or remain concerning despite an initially nondiagnostic tracing; interpretation of ischemia requires integration of symptom timing, ECG findings, and serial hs-cTn concentrations.[13] A normal ECG lowers but does not independently eliminate the possibility of ACS, particularly early after symptom onset or in patients with ongoing high-risk clinical features.[8][16]"
+      ],
+      "bullets": [
+        "Record the exact local assay\u2014hs-cTnI versus hs-cTnT\u2014and its reporting units before interpreting a cutoff or delta.[23][24]",
+        "Use the laboratory-reported 99th-percentile upper reference limit (URL), ideally sex-specific when implemented locally; URLs and numeric values are not interchangeable across assays.[6][20][23]",
+        "Do not use response to nitroglycerin as a diagnostic maneuver for ACS.[1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial tests determine whether the patient enters an immediate reperfusion pathway or an hs-cTn clinical decision pathway.[8][14][16]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Immediate next step"
+        ],
+        "rows": [
+          [
+            "Diagnostic ischemic ECG in compatible acute presentation",
+            "Treat as an acute coronary occlusion syndrome; do not await serial biomarker confirmation.[8][14]",
+            "Activate the institution's emergent reperfusion pathway while obtaining hs-cTn.[14]"
+          ],
+          [
+            "Nonischemic or nondiagnostic ECG",
+            "Does not establish or exclude MI; interpretation depends on serial hs-cTn and clinical assessment.[13][16]",
+            "Apply a validated assay-specific hs-cTn clinical decision pathway.[16]"
+          ],
+          [
+            "hs-cTn unavailable or conventional assay in use",
+            "Accelerated hs-cTn pathways are not validated for less-sensitive assays.[16]",
+            "Use the institution's conventional-troponin serial protocol rather than an hs-cTn algorithm.[16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpret-injury-versus-infarction",
+      "eyebrow": "Core Interpretation",
+      "heading": "Separate myocardial injury from myocardial infarction",
+      "intro": "An elevated hs-cTn is a finding of myocardial injury, not a standalone ACS diagnosis.",
+      "paragraphs": [
+        "Classify any hs-cTn concentration above the assay-specific 99th-percentile URL as myocardial injury.[6][14] Diagnose acute MI only when abnormal hs-cTn shows a rise and/or fall and the patient has evidence of acute myocardial ischemia from the clinical presentation, ECG, imaging, or other ischemic evidence.[14] Thus, a single value above the URL establishes injury but cannot by itself distinguish type 1 MI from nonischemic injury or chronic elevation.[24]",
+        "A dynamic concentration pattern supports acute injury. Interpret the delta using the locally validated assay-specific pathway, including its designated sampling interval and absolute or relative change criteria; hs-cTn assays differ in analytical characteristics, limits of detection, and 99th-percentile URLs, so values and deltas cannot be transferred between assays.[6][23][24]",
+        "A persistently elevated value with little serial change should prompt assessment for chronic myocardial injury or an alternate acute cause rather than automatic labeling as NSTEMI. In contrast, a rise or fall establishes acute injury, after which ischemic symptoms, ECG changes, or imaging determine whether the syndrome is MI or acute nonischemic myocardial injury.[6][14][23]"
+      ],
+      "bullets": [
+        "Use serial results from the same assay and laboratory method whenever possible; do not trend cTnI against cTnT or assume numerical equivalence after an assay transition.[23]",
+        "Document both the measured concentration and the applicable assay URL in the assessment, rather than calling a result simply \u201cpositive.\u201d[6][23]",
+        "Consider sex-specific 99th-percentile URLs where the laboratory reports them; they may improve sensitivity in women and specificity in men, although their incremental clinical impact with serial testing remains debated.[6][20][23]"
+      ],
+      "subsections": [
+        {
+          "heading": "Troponin pattern and diagnostic consequence",
+          "paragraphs": [
+            "Acute MI requires acute myocardial injury plus ischemia; NSTEMI is distinguished from unstable angina by troponin elevation above the 99th percentile with a rise and/or-fall pattern in an ischemic presentation.[12][14] When serial hs-cTn is elevated but the ischemic evidence is absent, retain myocardial injury as the working diagnosis and investigate the clinical driver rather than treating the biomarker value alone as proof of plaque rupture.[14][23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Troponin interpretation depends on concentration, serial change, and evidence of ischemia\u2014not concentration alone.[6][14][23][24]",
+        "columns": [
+          "Serial hs-cTn pattern",
+          "Ischemic evidence",
+          "Working interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "At or below the validated rule-out threshold with required timing criteria met",
+            "Nonischemic ECG",
+            "MI ruled out by the applicable clinical decision pathway.[16][24]",
+            "Discharge may be appropriate without routine further cardiac testing.[16]"
+          ],
+          [
+            "Above 99th-percentile URL",
+            "No demonstrated rise or fall",
+            "Myocardial injury; assess for chronic injury and clinical context.[6][14]",
+            "Do not diagnose MI from the isolated elevation.[14][24]"
+          ],
+          [
+            "Rise and/or fall with at least one value above the 99th-percentile URL",
+            "Ischemic symptoms, ECG, imaging, or other ischemic evidence",
+            "Acute MI.[14]",
+            "Manage as ACS according to the clinical syndrome and institutional pathway.[14]"
+          ],
+          [
+            "Rise and/or fall with at least one value above the 99th-percentile URL",
+            "No ischemic evidence",
+            "Acute myocardial injury, not automatically MI.[14][23]",
+            "Identify and treat the nonischemic driver; reassess if ischemic evidence emerges.[14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "apply-serial-hsctn-pathways",
+      "eyebrow": "ED Disposition",
+      "heading": "Use assay-specific 0/1-hour, 0/2-hour, or single-draw rule-out pathways",
+      "intro": "The correct pathway is the one validated for the assay and feasible local turnaround time.",
+      "paragraphs": [
+        "Use a validated hs-cTn clinical decision pathway to assign patients to rule-out, observation, or rule-in categories.[16][17] Common accelerated approaches include 0/1-hour and 0/2-hour serial testing; their cutoffs and deltas are assay-specific and must be taken from the institution's validated protocol.[17][20][24] A 0/2-hour strategy may be more operationally achievable when laboratories cannot reliably return a 1-hour specimen within the required timeframe.[24]",
+        "A single-draw rule-out strategy is restricted to patients meeting the pathway's conditions: a very low hs-cTn value at or near the assay limit of detection, a nonischemic ECG, and symptoms beginning more than 2 hours before blood collection.[21][24] Do not use a lone value below the 99th-percentile URL to rule out MI in early presenters; a single measurement at that threshold lacks the sensitivity required for safe exclusion.[22][24]",
+        "Patients meeting rule-out criteria through an hs-cTn pathway and having a nonischemic initial ECG may be discharged without further testing and without mandatory application of a risk score.[16] This recommendation applies to patients appropriately evaluated by the pathway; persistent or recurrent concerning symptoms, ischemic ECG evolution, or failure to meet pathway timing criteria warrants continued observation and serial assessment.[16][24]"
+      ],
+      "bullets": [
+        "Draw the second sample at the protocol-defined interval from the initial blood draw, not whenever it is operationally convenient.[17][24]",
+        "Place patients who are neither ruled out nor ruled in into an observation pathway for additional serial hs-cTn testing and reassessment rather than forcing binary interpretation of an indeterminate result.[17][24]",
+        "Do not add a risk score reflexively after a completed hs-cTn rule-out pathway; clinical decision pathways themselves are recommended for disposition, and risk scores are not required in this rule-out group.[7][16]"
+      ],
+      "subsections": [
+        {
+          "heading": "Why the 99th percentile is not a rule-out cutoff",
+          "paragraphs": [
+            "The 99th-percentile URL defines myocardial injury, not a stand-alone early rule-out threshold.[6][14] In one report of primary-care hs-cTn use, a single-sample strategy using the 99th percentile had sensitivity of 78%; by contrast, a serial 0/1-hour protocol was reported with pooled sensitivity of 99.1%.[22] Use the local assay-specific low-concentration threshold and timing requirements for rule-out rather than equating \u201cbelow URL\u201d with \u201cno acute MI.\u201d[21][22][24]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Operational rules for hs-cTn pathways are defined by assay, specimen timing, low-value threshold, and delta criteria.[16][21][24]",
+        "columns": [
+          "Pathway state",
+          "Required interpretation",
+          "Disposition implication"
+        ],
+        "rows": [
+          [
+            "Rule out",
+            "Meets the local assay-specific low-value and/or serial-change criteria, with nonischemic ECG.[16][24]",
+            "ED discharge without routine additional cardiac testing is appropriate when clinical assessment is concordant.[16]"
+          ],
+          [
+            "Observe",
+            "Does not meet validated rule-out or rule-in criteria.[17][24]",
+            "Continue serial hs-cTn testing and reassess symptoms and ECG rather than assigning a final diagnosis from an equivocal early result.[17][24]"
+          ],
+          [
+            "Rule in / acute injury",
+            "Meets protocol-defined high concentration or dynamic-change criteria; MI still requires ischemic evidence.[14][24]",
+            "Evaluate urgently for ACS while distinguishing MI from nonischemic acute injury.[14][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "avoid-common-interpretation-errors",
+      "eyebrow": "Pitfalls",
+      "heading": "Avoid false reassurance and false-positive MI labeling",
+      "intro": "The main errors are using an isolated cutoff, ignoring symptom timing, and treating injury as infarction.",
+      "paragraphs": [
+        "Do not use the magnitude of a single hs-cTn elevation alone to identify MI. A value above the 99th-percentile URL indicates injury, while acute MI requires a dynamic pattern and evidence of ischemia.[6][14][24] Conversely, a detectable hs-cTn below the URL should not be called abnormal unless it exceeds the pathway's specific threshold or demonstrates a clinically significant delta under that assay's protocol.[23][24]",
+        "Do not compare absolute concentrations across assays. hs-cTnI and hs-cTnT assays use different calibrations, analytic limits, and 99th-percentile URLs; even two assays measuring the same troponin subtype may have noninterchangeable values.[23] If an institution changes assays, establish a new protocol-specific baseline and avoid interpreting apparent numerical changes as biologic deltas without assay continuity.[23]",
+        "Do not prematurely dismiss ACS because the presentation is not described as classic chest pain. In adults older than 75 years, a fall, syncope, or acute delirium may represent ACS and should prompt the same ECG-plus-hs-cTn evaluation when the clinical context is concerning.[18] Women have a higher prevalence of nonobstructive CAD and may have ischemic syndromes not captured by an obstructive-CAD framework alone.[4][18]"
+      ],
+      "bullets": [
+        "A negative conventional stress test does not preclude further evaluation for an occult coronary cause in patients with persistent symptoms and suspected ischemia with no obstructive coronary arteries.[18]",
+        "When hs-cTn is elevated without a convincing ischemic syndrome, maintain diagnostic separation between myocardial injury and MI; this prevents unnecessary ACS labeling while preserving vigilance for evolving ischemia.[14][23]",
+        "Use institutional laboratory reporting conventions for units, URLs, and sex-specific thresholds; report hs-cTn values as ng/L when used by the laboratory protocol.[20][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common hs-cTn errors and corrective actions.[1][14][16][23][24]",
+        "columns": [
+          "Error",
+          "Why it fails",
+          "Correct action"
+        ],
+        "rows": [
+          [
+            "\u201cTroponin positive equals NSTEMI\u201d",
+            "Elevation above the URL identifies injury, not necessarily ischemic infarction.[14][24]",
+            "Require serial change and clinical ischemic evidence before diagnosing MI.[14]"
+          ],
+          [
+            "\u201cBelow the 99th percentile rules out MI\u201d",
+            "The URL is an injury threshold; early presenters may require serial testing.[22][24]",
+            "Use a validated assay-specific rule-out pathway with required timing.[16][24]"
+          ],
+          [
+            "\u201cA fixed delta works for all assays\u201d",
+            "Assays differ in calibration, analytical performance, and URLs.[23][24]",
+            "Use only the local assay-specific delta and interval.[24]"
+          ],
+          [
+            "\u201cNitroglycerin response confirms cardiac pain\u201d",
+            "Pain relief is unrelated to the presence or absence of ACS.[1]",
+            "Base decisions on ECG, hs-cTn pathway, and clinical findings.[1][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "document-and-communicate",
+      "eyebrow": "Implementation",
+      "heading": "Document the interpretation that determines disposition",
+      "intro": "A defensible assessment records the pathway, not merely the highest troponin value.",
+      "paragraphs": [
+        "For every serial hs-cTn evaluation, document the assay name, collection times, numeric values with units, assay-specific 99th-percentile URL, applicable delta criterion, ECG interpretation, symptom-onset timing, and resulting pathway category. This makes explicit whether the conclusion is rule-out, observation, acute myocardial injury, or acute MI and prevents later reinterpretation of an isolated value outside its protocol context.[6][16][23][24]",
+        "At discharge after a completed rule-out pathway, state that MI was ruled out by the local hs-cTn clinical decision pathway in the setting of a nonischemic ECG, rather than stating that all cardiac causes were excluded.[16] Persistent, recurrent, or chronic symptoms may require outpatient evaluation for stable ischemic heart disease or ischemia with no obstructive coronary arteries; a negative conventional stress test does not necessarily exclude an occult coronary cause in the latter syndrome.[18]"
+      ],
+      "bullets": [
+        "Example assessment: \u201cNonischemic ECG; serial hs-cTn values meet local assay-specific rule-out criteria; acute MI ruled out by pathway.\u201d[16][24]",
+        "Example injury assessment: \u201chs-cTn above the 99th-percentile URL with serial change; acute myocardial injury present. Evaluate ischemic evidence before assigning MI.\u201d[14][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Documentation elements that preserve the clinical meaning of hs-cTn results.[6][16][23][24]",
+        "columns": [
+          "Record",
+          "Why it changes interpretation"
+        ],
+        "rows": [
+          [
+            "Assay and units",
+            "Numeric hs-cTn values are not interchangeable across assays.[23]"
+          ],
+          [
+            "Symptom onset and draw times",
+            "Determines eligibility for single-draw or accelerated serial pathways.[21][24]"
+          ],
+          [
+            "99th-percentile URL and serial delta",
+            "Separates injury threshold from assay-specific dynamic-change interpretation.[6][24]"
+          ],
+          [
+            "ECG and ischemic evidence",
+            "Required to distinguish acute MI from myocardial injury.[14]"
+          ],
+          [
+            "Final pathway category",
+            "Determines whether discharge, observation, or ACS evaluation is appropriate.[16][17]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Part 9: Acute Coronary Syndromes | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.110.985549",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A reduction in chest pain following nitroglycerin administration may be unrelated to the presence or absence of ACS, and should not be used as a diagnostic test",
+      "score": 0.25101417
+    },
+    {
+      "number": 2,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: Executive Summary: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109721057946",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Structure\n\nChest pain is a frequent cause for emergency department visits in the United States. The \u201c2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain\u201d provides recommendations based on contemporary evidence on the assessment and evaluation of chest p",
+      "score": 0.81770587
+    },
+    {
+      "number": 3,
+      "title": "Implementation of High-Sensitivity Cardiac Troponin Assays in the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S073510972207173X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2021 American Heart Association (AHA) and ACC chest pain guideline, which provided a Class I recommendation for hs-cTn as the preferred biomarker for",
+      "score": 0.7306941
+    },
+    {
+      "number": 4,
+      "title": "Chest Pain in Women: Considerations From the 2021 AHA/ACC Chest Pain Guideline",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0146280623001147",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Chest pain is a common concern of women evaluated in both the inpatient and outpatient setting. There are significant differences in pathophysiology when comparing coronary artery disease (CAD) in women and men, including a higher prevalence of nonobstructive CAD. Furthermore, significant sex dispar",
+      "score": 0.6864757
+    },
+    {
+      "number": 5,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S193459252100469X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\nJournal of Cardiovascular Computed Tomography\n\n## Journal of Cardiovascular Computed Tomography\n\n## Published by: Elsevier\n\n### Published by\n\nElsevier\n\n# Practice guidelines 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: A Report of the ",
+      "score": 0.6016175
+    },
+    {
+      "number": 6,
+      "title": "High-Sensitivity Cardiac Troponin and the 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guidelines for the Evaluation and Diagnosis of Acute Chest Pain. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35775423",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "The 2021 American Heart Association/American College of Cardiology/American Society of Echocardiography/American College of Chest Physicians/Society for Academic Emergency Medicine/Society of Cardiovascular Computed Tomography/Society for Cardiovascular Magnetic Resonance guidelines for the evaluati",
+      "score": 0.8861155
+    },
+    {
+      "number": 7,
+      "title": "The HEART score has less utility with high sensitivity troponin",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13422415",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  presenting complaint in the United States, accounting for 5.5% of all ED visits or over 7 million visits annually (1). Chest pain accounts for a large expenditure of healthcare resources and significant cost, estimated in 2016 at around $1.5 billion dollars annually (2). However, a low percentag",
+      "score": 0.87218446
+    },
+    {
+      "number": 8,
+      "title": "Triaging Down the 2021 Chest Pain\u00a0Guidelines",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8743870",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As the new 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR chest pain guidelines1 recommend, a 12-lead electrocardiogram (ECG) should be performed for ST-segment elevation myocardial infarction within 10 minutes of arrival to the emergency department (Class 1, Level of Evidence [LOE]: C-LD) and troponins with",
+      "score": 0.8652358
+    },
+    {
+      "number": 9,
+      "title": "Cardiac troponin at the point of care in acute and chronic coronary syndromes",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12400525",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "68. Sandoval Y ,  Apple FS ,  Mahler SA , et al. High\u2010sensitivity cardiac troponin and the 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guidelines for the evaluation and diagnosis of acute CHEST pain. _Circulation_. 2022;146(7):569\u2010581. doi: 10.1161/CIRCULATIONAHA.122.059678  [DOI] [PubMed] [Google Scholar",
+      "score": 0.8315952
+    },
+    {
+      "number": 10,
+      "title": "Implementation of High-Sensitivity Troponin for Early Rule-Out of Acute Myocardial Infarction in Emergency Department - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12214248",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "On November 10, 2021, high-sensitivity troponin (hs-cTnT) assays were incorporated into the chest pain clinical pathway in place of cTnT assays at our health system. Fifth generation hs-cTnT assays can detect troponin at concentrations 10- to 100-times lower than conventional assays.9,10 For this re",
+      "score": 0.82761955
+    },
+    {
+      "number": 11,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34955448",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Chest pain is a frequent cause for emergency department visits in the United States. The \"2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain\" provides recommendations based on contemporary evidence on the assessment and evaluation of chest pain. This guide",
+      "score": 0.7458619
+    },
+    {
+      "number": 12,
+      "title": "Acute Coronary Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459157",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "11.\n:   Writing Committee Members. Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, Blankstein R, Boyd J, Bullock-Palmer RP, Conejo T, Diercks DB, Gentile F, Greenwood JP, Hess EP, Hollenberg SM, Jaber WA, Jneid H, Joglar JA, Morrow DA, O'Connor RE, Ross MA, Shaw LJ. 2021 AHA/ACC/",
+      "score": 0.67347145
+    },
+    {
+      "number": 13,
+      "title": "Chest Pain: Evaluation and Exclusion of Myocardial Infarction and ...",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557672",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "7.\n:   Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, Blankstein R, Boyd J, Bullock-Palmer RP, Conejo T, Diercks DB, Gentile F, Greenwood JP, Hess EP, Hollenberg SM, Jaber WA, Jneid H, Joglar JA, Morrow DA, O'Connor RE, Ross MA, Shaw LJ. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Gui",
+      "score": 0.59655124
+    },
+    {
+      "number": 14,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI) - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK532281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Evaluating patients with acute onset of chest pain should begin with an ECG and troponin levels. The American College of Cardiology (ACC), American Heart Association (AHA), ESC, and the World Heart Federation (WHF) committee established the following ECG criteria for STEMI: [...] Cardiac Biomarkers\n",
+      "score": 0.42190963
+    },
+    {
+      "number": 15,
+      "title": "Background and definition of the decision problem(s) - High-sensitivity troponin assays for early rule-out of acute myocardial infarction in people with acute chest pain: a systematic review and economic evaluation - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK570808",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The ADVIA Centaur\u00ae High-Sensitivity Troponin I assay (Siemens Healthcare, Erlangen, Germany) can be used with the ADVIA Centaur XP and ADVIA Centaur XPT analysers (Siemens Healthcare, Erlangen, Germany). It is a magnetic latex particle chemiluminescent immunoassay and is intended for the in vitro qu",
+      "score": 0.7608822
+    },
+    {
+      "number": 16,
+      "title": "2022 ACC Expert Consensus Decision Pathway on the Evaluation and Disposition of Acute Chest Pain in the Emergency Department",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10691881",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "3.   This Expert Consensus Decision Pathway is focused on CDPs using high-sensitivity cardiac troponin I (hs-cTnI) assays. The pathways are not appropriate for use with older-generation, less-sensitive assays. An important secondary objective of this document is to support the transition to hs-cTn a",
+      "score": 0.81025416
+    },
+    {
+      "number": 17,
+      "title": "Effectiveness of rapid rule-out strategy for acute coronary syndrome in the emergency department: a real-world retrospective study in Asia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12722822",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "5.. Gulati, Levy, Mukherjee, Amsterdam, Bhatt, Birtcher, _et al._ 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain: executive summary: a report of the American College of Cardiology/American Heart Association joint committee on clinical practice guidelin",
+      "score": 0.72254705
+    },
+    {
+      "number": 18,
+      "title": "The 2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain: An Interventionalist\u2019s Viewpoint",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11308083",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## .\n\nThe management of elderly patients with chest pain can also be complex because while they have greater risk factors for cardiovascular disease, they also have comorbidities that may lead to misdiagnosis of chest pain as noncardiac.4 The guideline recommends that for patients over the age of 75",
+      "score": 0.68318754
+    },
+    {
+      "number": 19,
+      "title": "Chest Pain Risk Stratification in the Emergency Department: Current Perspectives",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853047",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## :2456\u20132468. doi: doi: 10.1161/CIRCULATIONAHA.118.036528  [DOI] [PMC free article] [PubMed] [Google Scholar]\n   3..Gulati M, Levy PD, Mukherjee D, et al.; for Writing Committee Members. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain: a report of the ",
+      "score": 0.638588
+    },
+    {
+      "number": 20,
+      "title": "SIRM/SIC consensus document on the management of patients with acute chest pain",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12669346",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Troponins\n\nHigh-sensitivity cardiac troponin T (hs-cTnT) and high-sensitivity cardiac troponin I (hs-cTnI) are the preferred serum biomarkers for evaluating patients with suspected ACS. Troponin concentrations should be reported as whole numbers in nanograms per liter (ng/L). Sex-specific 99th p",
+      "score": 0.57408494
+    },
+    {
+      "number": 21,
+      "title": "High-sensitivity troponin assays for early rule-out of acute myocardial infarction in people with acute chest pain: a systematic review and economic evaluation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8200931",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Thirty-seven studies (123 publications) were included in the review. The high-sensitivity cardiac troponin test strategies evaluated are defined by the combination of four factors (i.e. assay, number and timing of tests, and threshold concentration), resulting in a large number of possible combinati",
+      "score": 0.5407062
+    },
+    {
+      "number": 22,
+      "title": "Rapid rule-out of acute myocardial infarction using the 0/1-hour algorithm for cardiac troponins in emergency primary care: the OUT-ACS implementation study",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11809029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "By implementing an algorithm designed to meet high safety requirements , the new 0/1-hour protocol is now safer than the previous one, which relied on the 99th percentile and relative changes in hs-cTn concentrations (pooled sensitivity 99.1% vs. 93.7%, respectively) . Also, a recent publication inv",
+      "score": 0.75616
+    },
+    {
+      "number": 23,
+      "title": "Use of high\u2010sensitivity cardiac troponin in the emergency department: A policy resource and education paper (PREP) from the American College of Emergency Physicians",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10324464",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Open in a new tab\n\n##  and 99th percentile cutoffs) and, as a result, their values cannot be compared interchangeably.4, 5 Although few studies directly compare these assays, most evidence evaluating hs\u2010cTn assays show similar clinical performance.6 One meta\u2010analysis evaluating the performance of a ",
+      "score": 0.7393665
+    },
+    {
+      "number": 24,
+      "title": "Optimizing the Clinical Use of High-Sensitivity Troponin Assays: A Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10795745",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In the real world of busy emergency departments, a 0/1 h protocol would be hard to achieve. In addition, very many laboratories are unable to even meet the 60 min turn-around time from sample receipt in the laboratory to results reporting. Thus a 0/2 h strategy would be more achievable. In fact, the",
+      "score": 0.73891455
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Part 9: Acute Coronary Syndromes | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.110.985549",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A reduction in chest pain following nitroglycerin administration may be unrelated to the presence or absence of ACS, and should not be used as a diagnostic test",
+      "score": 0.25101417
+    },
+    {
+      "number": 2,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: Executive Summary: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109721057946",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Structure\n\nChest pain is a frequent cause for emergency department visits in the United States. The \u201c2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain\u201d provides recommendations based on contemporary evidence on the assessment and evaluation of chest p",
+      "score": 0.81770587
+    },
+    {
+      "number": 3,
+      "title": "Implementation of High-Sensitivity Cardiac Troponin Assays in the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S073510972207173X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2021 American Heart Association (AHA) and ACC chest pain guideline, which provided a Class I recommendation for hs-cTn as the preferred biomarker for",
+      "score": 0.7306941
+    },
+    {
+      "number": 4,
+      "title": "Chest Pain in Women: Considerations From the 2021 AHA/ACC Chest Pain Guideline",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0146280623001147",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Chest pain is a common concern of women evaluated in both the inpatient and outpatient setting. There are significant differences in pathophysiology when comparing coronary artery disease (CAD) in women and men, including a higher prevalence of nonobstructive CAD. Furthermore, significant sex dispar",
+      "score": 0.6864757
+    },
+    {
+      "number": 5,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: A Report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S193459252100469X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\nJournal of Cardiovascular Computed Tomography\n\n## Journal of Cardiovascular Computed Tomography\n\n## Published by: Elsevier\n\n### Published by\n\nElsevier\n\n# Practice guidelines 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain: A Report of the ",
+      "score": 0.6016175
+    },
+    {
+      "number": 6,
+      "title": "High-Sensitivity Cardiac Troponin and the 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guidelines for the Evaluation and Diagnosis of Acute Chest Pain. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35775423",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "The 2021 American Heart Association/American College of Cardiology/American Society of Echocardiography/American College of Chest Physicians/Society for Academic Emergency Medicine/Society of Cardiovascular Computed Tomography/Society for Cardiovascular Magnetic Resonance guidelines for the evaluati",
+      "score": 0.8861155
+    },
+    {
+      "number": 7,
+      "title": "The HEART score has less utility with high sensitivity troponin",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13422415",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  presenting complaint in the United States, accounting for 5.5% of all ED visits or over 7 million visits annually (1). Chest pain accounts for a large expenditure of healthcare resources and significant cost, estimated in 2016 at around $1.5 billion dollars annually (2). However, a low percentag",
+      "score": 0.87218446
+    },
+    {
+      "number": 8,
+      "title": "Triaging Down the 2021 Chest Pain\u00a0Guidelines",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8743870",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As the new 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR chest pain guidelines1 recommend, a 12-lead electrocardiogram (ECG) should be performed for ST-segment elevation myocardial infarction within 10 minutes of arrival to the emergency department (Class 1, Level of Evidence [LOE]: C-LD) and troponins with",
+      "score": 0.8652358
+    },
+    {
+      "number": 9,
+      "title": "Cardiac troponin at the point of care in acute and chronic coronary syndromes",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12400525",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "68. Sandoval Y ,  Apple FS ,  Mahler SA , et al. High\u2010sensitivity cardiac troponin and the 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guidelines for the evaluation and diagnosis of acute CHEST pain. _Circulation_. 2022;146(7):569\u2010581. doi: 10.1161/CIRCULATIONAHA.122.059678  [DOI] [PubMed] [Google Scholar",
+      "score": 0.8315952
+    },
+    {
+      "number": 10,
+      "title": "Implementation of High-Sensitivity Troponin for Early Rule-Out of Acute Myocardial Infarction in Emergency Department - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12214248",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "On November 10, 2021, high-sensitivity troponin (hs-cTnT) assays were incorporated into the chest pain clinical pathway in place of cTnT assays at our health system. Fifth generation hs-cTnT assays can detect troponin at concentrations 10- to 100-times lower than conventional assays.9,10 For this re",
+      "score": 0.82761955
+    },
+    {
+      "number": 11,
+      "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR ...",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34955448",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Chest pain is a frequent cause for emergency department visits in the United States. The \"2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain\" provides recommendations based on contemporary evidence on the assessment and evaluation of chest pain. This guide",
+      "score": 0.7458619
+    },
+    {
+      "number": 12,
+      "title": "Acute Coronary Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK459157",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "11.\n:   Writing Committee Members. Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, Blankstein R, Boyd J, Bullock-Palmer RP, Conejo T, Diercks DB, Gentile F, Greenwood JP, Hess EP, Hollenberg SM, Jaber WA, Jneid H, Joglar JA, Morrow DA, O'Connor RE, Ross MA, Shaw LJ. 2021 AHA/ACC/",
+      "score": 0.67347145
+    },
+    {
+      "number": 13,
+      "title": "Chest Pain: Evaluation and Exclusion of Myocardial Infarction and ...",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557672",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "7.\n:   Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, Blankstein R, Boyd J, Bullock-Palmer RP, Conejo T, Diercks DB, Gentile F, Greenwood JP, Hess EP, Hollenberg SM, Jaber WA, Jneid H, Joglar JA, Morrow DA, O'Connor RE, Ross MA, Shaw LJ. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Gui",
+      "score": 0.59655124
+    },
+    {
+      "number": 14,
+      "title": "Acute ST-Segment Elevation Myocardial Infarction (STEMI) - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK532281",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Evaluating patients with acute onset of chest pain should begin with an ECG and troponin levels. The American College of Cardiology (ACC), American Heart Association (AHA), ESC, and the World Heart Federation (WHF) committee established the following ECG criteria for STEMI: [...] Cardiac Biomarkers\n",
+      "score": 0.42190963
+    },
+    {
+      "number": 15,
+      "title": "Background and definition of the decision problem(s) - High-sensitivity troponin assays for early rule-out of acute myocardial infarction in people with acute chest pain: a systematic review and economic evaluation - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK570808",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The ADVIA Centaur\u00ae High-Sensitivity Troponin I assay (Siemens Healthcare, Erlangen, Germany) can be used with the ADVIA Centaur XP and ADVIA Centaur XPT analysers (Siemens Healthcare, Erlangen, Germany). It is a magnetic latex particle chemiluminescent immunoassay and is intended for the in vitro qu",
+      "score": 0.7608822
+    },
+    {
+      "number": 16,
+      "title": "2022 ACC Expert Consensus Decision Pathway on the Evaluation and Disposition of Acute Chest Pain in the Emergency Department",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10691881",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "3.   This Expert Consensus Decision Pathway is focused on CDPs using high-sensitivity cardiac troponin I (hs-cTnI) assays. The pathways are not appropriate for use with older-generation, less-sensitive assays. An important secondary objective of this document is to support the transition to hs-cTn a",
+      "score": 0.81025416
+    },
+    {
+      "number": 17,
+      "title": "Effectiveness of rapid rule-out strategy for acute coronary syndrome in the emergency department: a real-world retrospective study in Asia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12722822",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "5.. Gulati, Levy, Mukherjee, Amsterdam, Bhatt, Birtcher, _et al._ 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain: executive summary: a report of the American College of Cardiology/American Heart Association joint committee on clinical practice guidelin",
+      "score": 0.72254705
+    },
+    {
+      "number": 18,
+      "title": "The 2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain: An Interventionalist\u2019s Viewpoint",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11308083",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## .\n\nThe management of elderly patients with chest pain can also be complex because while they have greater risk factors for cardiovascular disease, they also have comorbidities that may lead to misdiagnosis of chest pain as noncardiac.4 The guideline recommends that for patients over the age of 75",
+      "score": 0.68318754
+    },
+    {
+      "number": 19,
+      "title": "Chest Pain Risk Stratification in the Emergency Department: Current Perspectives",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853047",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## :2456\u20132468. doi: doi: 10.1161/CIRCULATIONAHA.118.036528  [DOI] [PMC free article] [PubMed] [Google Scholar]\n   3..Gulati M, Levy PD, Mukherjee D, et al.; for Writing Committee Members. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain: a report of the ",
+      "score": 0.638588
+    },
+    {
+      "number": 20,
+      "title": "SIRM/SIC consensus document on the management of patients with acute chest pain",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12669346",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Troponins\n\nHigh-sensitivity cardiac troponin T (hs-cTnT) and high-sensitivity cardiac troponin I (hs-cTnI) are the preferred serum biomarkers for evaluating patients with suspected ACS. Troponin concentrations should be reported as whole numbers in nanograms per liter (ng/L). Sex-specific 99th p",
+      "score": 0.57408494
+    },
+    {
+      "number": 21,
+      "title": "High-sensitivity troponin assays for early rule-out of acute myocardial infarction in people with acute chest pain: a systematic review and economic evaluation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8200931",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Thirty-seven studies (123 publications) were included in the review. The high-sensitivity cardiac troponin test strategies evaluated are defined by the combination of four factors (i.e. assay, number and timing of tests, and threshold concentration), resulting in a large number of possible combinati",
+      "score": 0.5407062
+    },
+    {
+      "number": 22,
+      "title": "Rapid rule-out of acute myocardial infarction using the 0/1-hour algorithm for cardiac troponins in emergency primary care: the OUT-ACS implementation study",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11809029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "By implementing an algorithm designed to meet high safety requirements , the new 0/1-hour protocol is now safer than the previous one, which relied on the 99th percentile and relative changes in hs-cTn concentrations (pooled sensitivity 99.1% vs. 93.7%, respectively) . Also, a recent publication inv",
+      "score": 0.75616
+    },
+    {
+      "number": 23,
+      "title": "Use of high\u2010sensitivity cardiac troponin in the emergency department: A policy resource and education paper (PREP) from the American College of Emergency Physicians",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10324464",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Open in a new tab\n\n##  and 99th percentile cutoffs) and, as a result, their values cannot be compared interchangeably.4, 5 Although few studies directly compare these assays, most evidence evaluating hs\u2010cTn assays show similar clinical performance.6 One meta\u2010analysis evaluating the performance of a ",
+      "score": 0.7393665
+    },
+    {
+      "number": 24,
+      "title": "Optimizing the Clinical Use of High-Sensitivity Troponin Assays: A Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10795745",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In the real world of busy emergency departments, a 0/1 h protocol would be hard to achieve. In addition, very many laboratories are unable to even meet the 60 min turn-around time from sample receipt in the laboratory to results reporting. Thus a 0/2 h strategy would be more achievable. In fact, the",
+      "score": 0.73891455
+    }
+  ],
+  "publishedAt": "2026-09-15T21:55:10.976021+00:00",
+  "updatedAt": "2026-09-15T21:55:10.976021+00:00",
+  "readingMinutes": 6,
+  "slug": "chest-pain-troponin-interpretation"
+}

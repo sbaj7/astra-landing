@@ -1,0 +1,723 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiac Electrophysiology",
+  "title": "Sudden Cardiac Death",
+  "summary": "Sudden cardiac death prevention requires rapid identification of arrhythmic substrate, structural heart disease, inherited syndromes, and reversible ischemic triggers, followed by individualized device, disease-directed, and post-shock management rather than reliance on isolated electrocardiographic risk markers.",
+  "seoDescription": "Clinical approach to sudden cardiac death risk assessment, cardiac imaging, ECG testing, ICD selection, and post-shock management for physicians.",
+  "clinicalQuestion": "How should clinicians identify patients at risk for sudden cardiac death and direct testing, device therapy, and follow-up?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "sudden cardiac death",
+    "sudden cardiac arrest",
+    "ventricular arrhythmia",
+    "ICD",
+    "cardiac MRI",
+    "risk stratification"
+  ],
+  "keyTakeaways": [
+    "Use transthoracic echocardiography to define ventricular function and structural disease in patients undergoing sudden cardiac death risk assessment; LVEF remains more clinically effective than several noninvasive electrophysiologic indices. [14]",
+    "Add 12-lead ECG, ambulatory ECG monitoring, exercise ECG, cardiac MRI, and electrophysiology study selectively when the phenotype or suspected ventricular arrhythmia requires clarification. [14][23]",
+    "Cardiac MRI can identify arrhythmic substrate and help refine risk beyond ejection fraction, particularly when myocardial scar or structural disease is suspected. [8][22]",
+    "An ICD shock should trigger evaluation for the precipitating arrhythmia, device programming issues, and worsening heart failure; recurrent shocks may be reduced with beta-blocker-based therapy, amiodarone, antitachycardia pacing, and programming changes. [18]",
+    "Avoid or carefully weigh lamotrigine in clinically important structural or functional heart disease because class IB activity may widen QRS and promote ventricular proarrhythmia, especially at elevated heart rates. [1][2][3][4]"
+  ],
+  "sections": [
+    {
+      "id": "initial-risk-assessment",
+      "eyebrow": "Risk Stratification",
+      "heading": "Build risk assessment around substrate, ventricular function, and documented rhythm",
+      "intro": "Do not use an isolated screening marker as the endpoint of sudden death risk assessment.",
+      "paragraphs": [
+        "Begin with a 12-lead ECG and transthoracic echocardiogram (TTE) when evaluating a patient with suspected ventricular arrhythmia, syncope concerning for arrhythmia, a family history suggestive of inherited sudden death risk, or known structural heart disease. TTE is a Class I investigation to assess cardiac structure and function in sudden cardiac death risk assessment, and LVEF has greater established clinical utility than many noninvasive electrophysiologic indices. [14]",
+        "Use phenotype-directed testing after the initial ECG and TTE. Holter monitoring, exercise ECG, signal-averaged ECG, T-wave alternans, cardiac MRI, and invasive electrophysiology study are among the tests used for sudden cardiac death risk assessment; the choice should be driven by the suspected substrate, frequency of symptoms, and need to document ventricular arrhythmia or inducibility. [14][23]",
+        "Interpret a prolonged QTc on a standard 12-lead ECG as a clinically meaningful risk signal rather than a nonspecific incidental finding: QTc prolongation is an independent risk factor for sudden death from cardiac arrest. Review medications and acquired contributors while determining whether the ECG and clinical context suggest an inherited arrhythmia syndrome. [17]"
+      ],
+      "bullets": [
+        "Use TTE first to establish LVEF and identify structural disease; escalate imaging when anatomy, scar, or inflammatory/infiltrative substrate remains uncertain. [14][8]",
+        "Use ambulatory ECG when symptom-rhythm correlation or ventricular ectopy/ventricular tachycardia burden will alter management. [14][23]",
+        "Use exercise ECG when exertion may provoke arrhythmia or when exercise-related ECG behavior informs the suspected inherited or structural phenotype. [14][23]",
+        "Reserve electrophysiology study for a defined diagnostic or risk-stratification question, including assessment of ventricular arrhythmia inducibility. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tests used in sudden cardiac death risk assessment and the decision each test is intended to inform. [14][23]",
+        "columns": [
+          "Test",
+          "Primary decision use",
+          "Result that changes the next step"
+        ],
+        "rows": [
+          [
+            "12-lead ECG",
+            "Identify conduction abnormalities, repolarization abnormalities, and inherited arrhythmic phenotype clues. [17][23]",
+            "QTc prolongation increases concern for cardiac-arrest risk and prompts review for acquired and inherited causes. [17]"
+          ],
+          [
+            "TTE",
+            "Assess LVEF, cardiac structure, and functional substrate. [14]",
+            "Abnormal ventricular function or structural disease shifts assessment toward cardiomyopathy- or ischemic-substrate evaluation. [14]"
+          ],
+          [
+            "Holter ECG",
+            "Document ventricular arrhythmia and characterize intermittent rhythm abnormalities. [14][23]",
+            "Documented ventricular arrhythmia supports phenotype-specific escalation and treatment planning. [14]"
+          ],
+          [
+            "Exercise ECG",
+            "Assess exertion-associated rhythm abnormalities and risk phenotype. [14][23]",
+            "Exercise-provoked abnormalities direct further inherited-arrhythmia or structural evaluation. [14][23]"
+          ],
+          [
+            "Cardiac MRI",
+            "Define myocardial structure and potential arrhythmic substrate beyond routine imaging. [8][22]",
+            "Scar or other substrate can refine risk assessment and inform ICD discussions in selected patients. [8][22]"
+          ],
+          [
+            "Electrophysiology study",
+            "Assess inducibility of ventricular arrhythmia when an invasive result will alter management. [14]",
+            "Inducible ventricular arrhythmia provides a risk-stratification result in an appropriate clinical phenotype. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiologic-branches",
+      "eyebrow": "Etiologic Branching",
+      "heading": "Separate ischemic, structural, inherited, and medication-related arrhythmic risk",
+      "intro": "Testing should identify the substrate that determines reversible treatment and device strategy.",
+      "paragraphs": [
+        "In patients with known or suspected structural heart disease, use TTE to characterize ventricular function and anatomy, then use cardiac MRI when additional definition of myocardial substrate is needed. Cardiac MRI is used for sudden cardiac arrest prediction and risk stratification, while imaging-based identification of arrhythmic substrate is particularly relevant when LVEF alone does not capture risk. [8][22]",
+        "For suspected congenital or hereditary causes of sudden cardiac death, integrate history with 12-lead ECG, exercise ECG, and Holter monitoring before deciding whether advanced imaging or electrophysiologic evaluation is needed. Noninvasive evaluation of individuals at risk commonly includes resting, exercise, and ambulatory electrocardiography. [23]",
+        "Treat medication review as a diagnostic intervention when QRS widening, ventricular arrhythmia, or unexplained syncope occurs in a patient receiving sodium-channel-active drugs. Lamotrigine has class IB antiarrhythmic activity at therapeutic concentrations and may slow ventricular conduction, widen QRS, and induce proarrhythmia in patients with heart failure, valvular disease, congenital heart disease, conduction-system disease, ventricular arrhythmias, channelopathies including Brugada syndrome, clinically important ischemic disease, or multiple coronary disease risk factors. [1][2][3][4]"
+      ],
+      "bullets": [
+        "Obtain a medication list and ECG before initiating or continuing lamotrigine in patients with clinically important structural or functional heart disease when the anticipated benefit may not outweigh arrhythmic risk. [1][2][3][4]",
+        "Escalate concern for lamotrigine-related conduction slowing when tachycardia coexists, because elevated heart rates may increase the risk of ventricular conduction slowing. [1][2][3][4]",
+        "If a serious multiorgan hypersensitivity reaction is suspected during lamotrigine treatment and no alternative cause is found, discontinue lamotrigine. [1][2][3][4]"
+      ],
+      "subsections": [
+        {
+          "heading": "When LVEF does not fully characterize risk",
+          "paragraphs": [
+            "Do not equate an LVEF above the conventional severe-reduction range with absence of arrhythmic risk. Sudden cardiac deaths occur in patients with somewhat reduced LVEF of 36% to 50%, and myocardial scar is an important arrhythmic substrate; use clinical phenotype and imaging findings to decide whether further risk assessment is warranted. [7][8][22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Actionable etiologic patterns in sudden cardiac death assessment. [1][2][3][4][8][14][17][22][23]",
+        "columns": [
+          "Pattern",
+          "Key tests",
+          "Next clinical action"
+        ],
+        "rows": [
+          [
+            "Structural heart disease or reduced ventricular function",
+            "TTE; cardiac MRI when further substrate definition is needed. [14][8][22]",
+            "Use ventricular function and structural findings to guide arrhythmic risk assessment and consideration of prophylactic device therapy. [18][22]"
+          ],
+          [
+            "Suspected inherited arrhythmia syndrome",
+            "12-lead ECG, exercise ECG, Holter ECG; targeted advanced testing as indicated. [17][23]",
+            "Interpret QTc prolongation as an independent cardiac-arrest risk marker and pursue phenotype-specific assessment. [17]"
+          ],
+          [
+            "Ventricular arrhythmia requiring inducibility assessment",
+            "Electrophysiology study. [14]",
+            "Use inducibility only when the result will change risk classification or management. [14]"
+          ],
+          [
+            "Possible drug-related ventricular conduction slowing",
+            "Medication reconciliation and 12-lead ECG, with attention to QRS widening. [1][2][3][4]",
+            "Reassess lamotrigine risk-benefit in structural/functional cardiac disease and consider discontinuation when clinically indicated. [1][2][3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "device-therapy-and-follow-up",
+      "eyebrow": "Device Management",
+      "heading": "Use ICD therapy for prevention, then treat every shock as a high-risk clinical event",
+      "intro": "Defibrillator therapy prevents arrhythmic death but does not correct the underlying substrate or heart failure trajectory.",
+      "paragraphs": [
+        "ICDs are supported by multiple clinical trials for prevention of sudden cardiac death in patients with heart failure, but implantation requires attention to competing risk, device complications, and the need for longitudinal heart failure care. Most ICDs are implanted in patients with heart failure with reduced LVEF, so ICD follow-up should be integrated with routine heart failure surveillance rather than managed as a device-only problem. [18][24]",
+        "After an ICD discharge, determine whether therapy was appropriate, assess for recurrent ventricular arrhythmia and device-related contributors, and evaluate for worsening heart failure. Approximately 20% to 35% of heart failure patients receiving a primary-prevention ICD experience an appropriate shock within 1 to 3 years, while about one-third experience an inappropriate shock. [18]",
+        "An ICD shock carries prognostic significance: it is associated with a two- to fivefold increase in mortality, most commonly from progressive heart failure, and reported median time from first shock to death is 168 to 294 days depending on heart failure etiology and appropriateness of ICD therapy. Intensify heart failure surveillance and identify reversible triggers rather than treating the shock as an isolated electrical event. [18]"
+      ],
+      "bullets": [
+        "For recurrent appropriate or inappropriate ICD therapies, consider a strategy that includes optimization of baseline beta-blocker therapy, addition of amiodarone where appropriate, ICD sensitivity/programming adjustment, and antitachycardia pacing. [18]",
+        "After any shock, reassess heart failure status because subsequent risk shifts toward heart failure events even when sudden death prevention remains the device's primary function. [18]",
+        "Coordinate early device-specialist review for pocket, lead, generator, programming, or other device-management concerns during ICD follow-up. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-ICD shock actions based on the clinically relevant problem. [18][24]",
+        "columns": [
+          "Finding after device discharge",
+          "Immediate evaluation",
+          "Management focus"
+        ],
+        "rows": [
+          [
+            "Appropriate ICD therapy",
+            "Assess recurrent ventricular arrhythmia, precipitating cause, and heart failure status. [18]",
+            "Treat substrate and heart failure; consider beta-blocker optimization, amiodarone, antitachycardia pacing, and programming changes to reduce recurrence. [18]"
+          ],
+          [
+            "Inappropriate ICD therapy",
+            "Review device sensitivity and programming and evaluate for the rhythm or sensing mechanism responsible. [18]",
+            "Adjust device programming and address the identified trigger to reduce future inappropriate shocks. [18]"
+          ],
+          [
+            "Any first ICD shock",
+            "Assess for progressive heart failure and perform a broad etiologic evaluation. [18]",
+            "Increase heart failure surveillance because mortality risk and heart failure event risk rise after a shock. [18]"
+          ],
+          [
+            "Routine ICD follow-up",
+            "Review device function and screen for pocket, lead, generator, and clinical complications. [24]",
+            "Integrate device care with ongoing heart failure management and device-specialist collaboration when needed. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "limits-of-risk-markers",
+      "eyebrow": "Testing Pitfalls",
+      "heading": "Avoid overinterpreting noninvasive electrical risk markers",
+      "intro": "Use risk tests to answer a defined question, not to substitute for substrate assessment.",
+      "paragraphs": [
+        "Several noninvasive electrophysiologic measures\u2014including ventricular late potentials, T-wave alternans, T-wave variability, QT/RR slope, heart-rate variability, heart-rate turbulence, and deceleration capacity\u2014have been studied for sudden cardiac death risk assessment. Their availability does not make them equivalent to LVEF for clinical risk prediction; use them, if at all, as adjuncts within a phenotype-driven evaluation. [14]",
+        "Cardiac imaging offers a complementary pathway when electrical testing is insufficient because structural abnormalities and myocardial scar may define the arrhythmic substrate. The practical question is not whether an additional marker is abnormal, but whether the finding changes the indication for disease-directed therapy, intensified surveillance, electrophysiologic evaluation, or ICD consideration. [8][22]"
+      ],
+      "bullets": [
+        "Do not use a normal single test to exclude arrhythmic risk when history, ECG, or imaging suggests an inherited or structural substrate. [14][23]",
+        "Use cardiac MRI selectively when the incremental structural or scar information will change risk classification or device discussions. [8][22]",
+        "Document the clinical question before ordering electrophysiology study, ambulatory ECG, or advanced electrical indices. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Relative role of selected sudden cardiac death risk markers. [14][8][22]",
+        "columns": [
+          "Risk measure",
+          "Clinical role",
+          "Interpretive limitation"
+        ],
+        "rows": [
+          [
+            "LVEF by diagnostic imaging",
+            "Core assessment of cardiac function and a more effective clinically used predictor than several electrical indices. [14]",
+            "Does not capture all risk, including risk associated with myocardial scar or moderately reduced LVEF. [7][8][22]"
+          ],
+          [
+            "Electrical indices such as T-wave alternans or heart-rate variability",
+            "Adjunctive measures reported for risk assessment. [14]",
+            "Less clinically effective than LVEF for risk prediction. [14]"
+          ],
+          [
+            "Cardiac MRI",
+            "Characterizes structural and scar-related arrhythmic substrate. [8][22]",
+            "Should be used when substrate definition will change management rather than as indiscriminate screening. [8][22]"
+          ],
+          [
+            "Electrophysiology study",
+            "Assesses ventricular arrhythmia inducibility in selected patients. [14]",
+            "Requires a pre-specified management consequence for a positive or negative result. [14]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] lamotrigine tablet, film coated, extended release LAMICTAL XR",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=3e2c9a35-6a39-41d7-ad84-3c0bb8894b09&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that LAMICTAL XR exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, LAMICTAL XR could slow ventricular conduction (widen QRS",
+      "score": 0.33672404
+    },
+    {
+      "number": 2,
+      "title": "[PDF] LAMICTAL- lamotrigine tablet - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=d7e3572d-56fe-4727-2bb4-013ccca22678&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that LAMICTAL exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, LAMICTAL could slow ventricular conduction (widen QRS) and ",
+      "score": 0.32456765
+    },
+    {
+      "number": 3,
+      "title": "[PDF] LAMOTRIGINE - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=50fcf452-2d21-493e-a1dd-0c6ea9ac6184&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that lamotrigine exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, lamotrigine could slow ventricular conduction (widen QRS",
+      "score": 0.31744793
+    },
+    {
+      "number": 4,
+      "title": "[PDF] lamotrigine tablet, orally disintegrating - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=54ea1ec3-876b-4d3a-a92b-1a6d70951de0&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that Lamotrigine exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)] . Based on these in vitro findings, Lamotrigine could slow ventricular conduction (widen QR",
+      "score": 0.31019315
+    },
+    {
+      "number": 5,
+      "title": "Sudden cardiac death risk after myocardial infarction across the ...",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/early/2026/08/02/heartjnl-2026-327792.full.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "These findings highlight a clinically relevant unmet need for patients who carry a substantial burden of SCD despite being outside current ICD",
+      "score": 0.37408215
+    },
+    {
+      "number": 6,
+      "title": "Incidence of sudden cardiac death in the young: a systematic review",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/10/10/e040815",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "In our main analysis, most studies reported an incidence of between one and two sudden cardiac deaths per 100 000 person-years, although reported incidence",
+      "score": 0.28345448
+    },
+    {
+      "number": 7,
+      "title": "From ESC: Statin Nonadherence, LDL Cholesterol Lowering After ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/learning/audio-player/19089803",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "many sudden cardiac deaths occur in patients with somewhat reduced ejection fraction of 36 to 50%. Myocardial scar, a key arrhythmic substrate,",
+      "score": 0.2046759
+    },
+    {
+      "number": 8,
+      "title": "Cardiac imaging for the prediction of sudden cardiac arrest in ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)04918-6",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "This review will focus on the most modern advances in the field of cardiovascular imaging along with its applications for the prediction of SCA in patients with",
+      "score": 0.35595453
+    },
+    {
+      "number": 9,
+      "title": "Predicting risk of sudden cardiac death in patients with ... - Science",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abi8020",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "Patients with CS are at high risk of sudden cardiac death (SCD) due to abnormal uncoordinated heart rhythms or ventricular arrhythmias. In CS,",
+      "score": 0.49406826
+    },
+    {
+      "number": 10,
+      "title": "ACC/AHA/ESC 2006 guidelines for management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/27/17/2099/2887329",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "prevention of sudden cardiac death summarize both clinical evidence and expert opinion. ACC/AHA/ESC format",
+      "score": 0.7742597
+    },
+    {
+      "number": 11,
+      "title": "Reducing mortality from sudden cardiac death in the community",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cardiovascres/article/50/2/197/272867",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The revised AHA/ACC guidelines for ACLS acknowledge the paucity of compelling data for the efficacy of pharmacologic agents such as epinephrine, atropine, or",
+      "score": 0.7272211
+    },
+    {
+      "number": 12,
+      "title": "European Society of Cardiology quality indicators for the ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/25/1/199/6655831",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "AHA/ACC clinical performance and quality measures for prevention of sudden cardiac death. A report",
+      "score": 0.657297
+    },
+    {
+      "number": 13,
+      "title": "2015 ESC Guidelines for the management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/36/41/2793/2293363",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death:",
+      "score": 0.6052631
+    },
+    {
+      "number": 14,
+      "title": "JCS/JHRS 2022 Guideline on Diagnosis and Risk Assessment of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.13052",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Onset mechanism of sudden cardiac death.\n\nTypical tests to detect abnormal factors include LVEF measured by diagnostic imaging such as echocardiography, and inducibility of ventricular arrhythmia by cardiac EPS. However, although the indices of cardiac electrophysiology tests are measured non-invasi",
+      "score": 0.56431514
+    },
+    {
+      "number": 15,
+      "title": "Abstract - 2025 - Annals of Noninvasive Electrocardiology",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/anec.70099",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This study introduces an image-based AI-ECG platform for cardiac screening and risk prediction. Electrocardiographic Risk Factors for Sudden",
+      "score": 0.35655922
+    },
+    {
+      "number": 16,
+      "title": "Cases - 2023 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12903",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Another diagnostic modalities, like cardiac MRI and MSCT may be needed for further detailed evaluation of CS anatomy. prevent sudden cardiac",
+      "score": 0.3431661
+    },
+    {
+      "number": 17,
+      "title": "2020 APHRS/HRS expert consensus statement on the investigation ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/joa3.12449",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "QTc prolongation measured by standard 12-lead electrocardiography is an independent risk factor for sudden death due to cardiac arrest.",
+      "score": 0.33112025
+    },
+    {
+      "number": 18,
+      "title": "Appropriate Evaluation and Treatment of Heart Failure Patients After Implantable Cardioverter-Defibrillator Discharge: Time to Go Beyond the Initial Shock",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109709029283",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Multiple clinical trials support the use of implantable cardioverter-defibrillators (ICDs) for prevention of sudden cardiac death in patients with heart failure (HF). Unfortunately, several complicating issues have arisen from the universal use of ICDs in HF patients. An estimated 20% to 35% of HF p",
+      "score": 0.43237552
+    },
+    {
+      "number": 19,
+      "title": "Antiarrhythmic Agent - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/antiarrhythmic-agent",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Review article\n\n## Peripartum Cardiomyopathy: Current Understanding of Pathophysiology, Diagnostic Workup, Management, and Outcomes\n\n2023, Current Problems in CardiologyKlaudia J. Koziol BA, Wilbert S. Aronow MD, FACC/FAHA\n\n### Antiarrhythmics\n\nAntiarrhythmic agents may be required to treat symptoma",
+      "score": 0.3955783
+    },
+    {
+      "number": 20,
+      "title": "Heart Arrest - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/heart-arrest",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Cardiac arrest is defined as the termination of cardiac activity associated with loss of consciousness, of spontaneous breathing, and of circulation. Sudden cardiac arrest and sudden cardiac death (SCD) are terms often used interchangeably. Most patients with out-of-hospital cardiac arrest have show",
+      "score": 0.3608724
+    },
+    {
+      "number": 21,
+      "title": "2017 AHA/ACC/HRS Guideline for Management of Patients With ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109717413052",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Wearable cardioverter-defibrillator therapy for the prevention of sudden cardiac death, AHA, 2016 (S1.4-9). Optimal implantable cardioverter defibrillator",
+      "score": 0.34455422
+    },
+    {
+      "number": 22,
+      "title": "[PDF] NIH Public Access - CDC Stacks",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/30128/cdc_30128_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "NIH-PA Author Manuscript NIH-PA Author Manuscript NIH-PA Author Manuscript Keywords Sudden cardiac death; Cardiac magnetic resonance imaging; Computational anatomy; Shape analysis; Risk stratification; Implantable cardioverter defibrillator INTRODUCTION Sudden cardiac death (SCD) is a major health p",
+      "score": 0.3935487
+    },
+    {
+      "number": 23,
+      "title": "Congenital and Hereditary Causes of Sudden Cardiac Death in ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/rg.337125073",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "The workup of a patient at risk for sudden cardiac death often includes noninvasive testing, such as 12-lead, exercise, and Holter electrocardiography (ECG);",
+      "score": 0.32998574
+    },
+    {
+      "number": 24,
+      "title": "The dos and don\u2019ts of the follow-up of patients with ICD in private cardiology practice and the impact of remote monitoring",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-17/the-dos-and-don-ts-of-the-follow-up-of-patients-with-icd-in-private-cardiology-practice-and-the-impact-of-remote-monitoring",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "3. Priori SG, Blomstro\u0308m-Lundqvist C, Mazzanti A, Blom N, Borggrefe M, Camm J, Elliott PM, Fitzsimons D, Hatala R, Hindricks G, Kirchhof P, Kjeldsen K, Kuck KH, Hernandez-Madrid A, Nikolaou N, Norekval TM, Spaulding C, Van Veldhuisen DJ; ESC Scientific Document Group. 2015 ESC Guidelines for the man",
+      "score": 0.4877716
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] lamotrigine tablet, film coated, extended release LAMICTAL XR",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=3e2c9a35-6a39-41d7-ad84-3c0bb8894b09&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that LAMICTAL XR exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, LAMICTAL XR could slow ventricular conduction (widen QRS",
+      "score": 0.33672404
+    },
+    {
+      "number": 2,
+      "title": "[PDF] LAMICTAL- lamotrigine tablet - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=d7e3572d-56fe-4727-2bb4-013ccca22678&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that LAMICTAL exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, LAMICTAL could slow ventricular conduction (widen QRS) and ",
+      "score": 0.32456765
+    },
+    {
+      "number": 3,
+      "title": "[PDF] LAMOTRIGINE - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=50fcf452-2d21-493e-a1dd-0c6ea9ac6184&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that lamotrigine exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)]. Based on these in vitro findings, lamotrigine could slow ventricular conduction (widen QRS",
+      "score": 0.31744793
+    },
+    {
+      "number": 4,
+      "title": "[PDF] lamotrigine tablet, orally disintegrating - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=54ea1ec3-876b-4d3a-a92b-1a6d70951de0&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "5.4 Cardiac Rhythm and Conduction Abnormalities In vitro testing showed that Lamotrigine exhibits Class IB antiarrhythmic activity at therapeutically relevant concentrations [see Clinical Pharmacology (12.2)] . Based on these in vitro findings, Lamotrigine could slow ventricular conduction (widen QR",
+      "score": 0.31019315
+    },
+    {
+      "number": 5,
+      "title": "Sudden cardiac death risk after myocardial infarction across the ...",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/heartjnl/early/2026/08/02/heartjnl-2026-327792.full.pdf",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "These findings highlight a clinically relevant unmet need for patients who carry a substantial burden of SCD despite being outside current ICD",
+      "score": 0.37408215
+    },
+    {
+      "number": 6,
+      "title": "Incidence of sudden cardiac death in the young: a systematic review",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/10/10/e040815",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "In our main analysis, most studies reported an incidence of between one and two sudden cardiac deaths per 100 000 person-years, although reported incidence",
+      "score": 0.28345448
+    },
+    {
+      "number": 7,
+      "title": "From ESC: Statin Nonadherence, LDL Cholesterol Lowering After ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/learning/audio-player/19089803",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "many sudden cardiac deaths occur in patients with somewhat reduced ejection fraction of 36 to 50%. Myocardial scar, a key arrhythmic substrate,",
+      "score": 0.2046759
+    },
+    {
+      "number": 8,
+      "title": "Cardiac imaging for the prediction of sudden cardiac arrest in ...",
+      "detail": "www.cell.com",
+      "url": "https://www.cell.com/heliyon/fulltext/S2405-8440(23)04918-6",
+      "authors": "www.cell.com",
+      "host": "www.cell.com",
+      "snippet": "This review will focus on the most modern advances in the field of cardiovascular imaging along with its applications for the prediction of SCA in patients with",
+      "score": 0.35595453
+    },
+    {
+      "number": 9,
+      "title": "Predicting risk of sudden cardiac death in patients with ... - Science",
+      "detail": "www.science.org",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abi8020",
+      "authors": "www.science.org",
+      "host": "www.science.org",
+      "snippet": "Patients with CS are at high risk of sudden cardiac death (SCD) due to abnormal uncoordinated heart rhythms or ventricular arrhythmias. In CS,",
+      "score": 0.49406826
+    },
+    {
+      "number": 10,
+      "title": "ACC/AHA/ESC 2006 guidelines for management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/27/17/2099/2887329",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "prevention of sudden cardiac death summarize both clinical evidence and expert opinion. ACC/AHA/ESC format",
+      "score": 0.7742597
+    },
+    {
+      "number": 11,
+      "title": "Reducing mortality from sudden cardiac death in the community",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/cardiovascres/article/50/2/197/272867",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "The revised AHA/ACC guidelines for ACLS acknowledge the paucity of compelling data for the efficacy of pharmacologic agents such as epinephrine, atropine, or",
+      "score": 0.7272211
+    },
+    {
+      "number": 12,
+      "title": "European Society of Cardiology quality indicators for the ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article/25/1/199/6655831",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "AHA/ACC clinical performance and quality measures for prevention of sudden cardiac death. A report",
+      "score": 0.657297
+    },
+    {
+      "number": 13,
+      "title": "2015 ESC Guidelines for the management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/36/41/2793/2293363",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death:",
+      "score": 0.6052631
+    },
+    {
+      "number": 14,
+      "title": "JCS/JHRS 2022 Guideline on Diagnosis and Risk Assessment of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.13052",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Onset mechanism of sudden cardiac death.\n\nTypical tests to detect abnormal factors include LVEF measured by diagnostic imaging such as echocardiography, and inducibility of ventricular arrhythmia by cardiac EPS. However, although the indices of cardiac electrophysiology tests are measured non-invasi",
+      "score": 0.56431514
+    },
+    {
+      "number": 15,
+      "title": "Abstract - 2025 - Annals of Noninvasive Electrocardiology",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/anec.70099",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This study introduces an image-based AI-ECG platform for cardiac screening and risk prediction. Electrocardiographic Risk Factors for Sudden",
+      "score": 0.35655922
+    },
+    {
+      "number": 16,
+      "title": "Cases - 2023 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12903",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Another diagnostic modalities, like cardiac MRI and MSCT may be needed for further detailed evaluation of CS anatomy. prevent sudden cardiac",
+      "score": 0.3431661
+    },
+    {
+      "number": 17,
+      "title": "2020 APHRS/HRS expert consensus statement on the investigation ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/joa3.12449",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "QTc prolongation measured by standard 12-lead electrocardiography is an independent risk factor for sudden death due to cardiac arrest.",
+      "score": 0.33112025
+    },
+    {
+      "number": 18,
+      "title": "Appropriate Evaluation and Treatment of Heart Failure Patients After Implantable Cardioverter-Defibrillator Discharge: Time to Go Beyond the Initial Shock",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109709029283",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Multiple clinical trials support the use of implantable cardioverter-defibrillators (ICDs) for prevention of sudden cardiac death in patients with heart failure (HF). Unfortunately, several complicating issues have arisen from the universal use of ICDs in HF patients. An estimated 20% to 35% of HF p",
+      "score": 0.43237552
+    },
+    {
+      "number": 19,
+      "title": "Antiarrhythmic Agent - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/antiarrhythmic-agent",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Review article\n\n## Peripartum Cardiomyopathy: Current Understanding of Pathophysiology, Diagnostic Workup, Management, and Outcomes\n\n2023, Current Problems in CardiologyKlaudia J. Koziol BA, Wilbert S. Aronow MD, FACC/FAHA\n\n### Antiarrhythmics\n\nAntiarrhythmic agents may be required to treat symptoma",
+      "score": 0.3955783
+    },
+    {
+      "number": 20,
+      "title": "Heart Arrest - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/heart-arrest",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Cardiac arrest is defined as the termination of cardiac activity associated with loss of consciousness, of spontaneous breathing, and of circulation. Sudden cardiac arrest and sudden cardiac death (SCD) are terms often used interchangeably. Most patients with out-of-hospital cardiac arrest have show",
+      "score": 0.3608724
+    },
+    {
+      "number": 21,
+      "title": "2017 AHA/ACC/HRS Guideline for Management of Patients With ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109717413052",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Wearable cardioverter-defibrillator therapy for the prevention of sudden cardiac death, AHA, 2016 (S1.4-9). Optimal implantable cardioverter defibrillator",
+      "score": 0.34455422
+    },
+    {
+      "number": 22,
+      "title": "[PDF] NIH Public Access - CDC Stacks",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/30128/cdc_30128_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "NIH-PA Author Manuscript NIH-PA Author Manuscript NIH-PA Author Manuscript Keywords Sudden cardiac death; Cardiac magnetic resonance imaging; Computational anatomy; Shape analysis; Risk stratification; Implantable cardioverter defibrillator INTRODUCTION Sudden cardiac death (SCD) is a major health p",
+      "score": 0.3935487
+    },
+    {
+      "number": 23,
+      "title": "Congenital and Hereditary Causes of Sudden Cardiac Death in ...",
+      "detail": "pubs.rsna.org",
+      "url": "https://pubs.rsna.org/doi/10.1148/rg.337125073",
+      "authors": "pubs.rsna.org",
+      "host": "pubs.rsna.org",
+      "snippet": "The workup of a patient at risk for sudden cardiac death often includes noninvasive testing, such as 12-lead, exercise, and Holter electrocardiography (ECG);",
+      "score": 0.32998574
+    },
+    {
+      "number": 24,
+      "title": "The dos and don\u2019ts of the follow-up of patients with ICD in private cardiology practice and the impact of remote monitoring",
+      "detail": "www.escardio.org",
+      "url": "https://www.escardio.org/communities/councils/cardiology-practice/scientific-documents-and-publications/ejournal/volume-17/the-dos-and-don-ts-of-the-follow-up-of-patients-with-icd-in-private-cardiology-practice-and-the-impact-of-remote-monitoring",
+      "authors": "www.escardio.org",
+      "host": "www.escardio.org",
+      "snippet": "3. Priori SG, Blomstro\u0308m-Lundqvist C, Mazzanti A, Blom N, Borggrefe M, Camm J, Elliott PM, Fitzsimons D, Hatala R, Hindricks G, Kirchhof P, Kjeldsen K, Kuck KH, Hernandez-Madrid A, Nikolaou N, Norekval TM, Spaulding C, Van Veldhuisen DJ; ESC Scientific Document Group. 2015 ESC Guidelines for the man",
+      "score": 0.4877716
+    }
+  ],
+  "publishedAt": "2026-09-15T22:59:17.704060+00:00",
+  "updatedAt": "2026-09-15T22:59:17.704060+00:00",
+  "readingMinutes": 5,
+  "slug": "sudden-cardiac-death"
+}

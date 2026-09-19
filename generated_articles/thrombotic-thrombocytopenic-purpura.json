@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology emergency",
+  "title": "Thrombotic Thrombocytopenic Purpura",
+  "summary": "Suspected immune thrombotic thrombocytopenic purpura requires immediate recognition of thrombotic microangiopathy, pre-treatment ADAMTS13 sampling, empiric plasma exchange when pretest probability is high, and rapid distinction from complement-mediated HUS and secondary thrombotic microangiopathies.",
+  "seoDescription": "Point-of-care diagnosis and initial management of thrombotic thrombocytopenic purpura, including ADAMTS13 testing, PLASMIC scoring, plasma exchange, and caplacizumab.",
+  "clinicalQuestion": "How should physicians rapidly diagnose and initiate treatment for suspected immune thrombotic thrombocytopenic purpura?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "TTP",
+    "immune TTP",
+    "iTTP",
+    "ADAMTS13",
+    "PLASMIC score",
+    "thrombotic microangiopathy",
+    "caplacizumab",
+    "therapeutic plasma exchange"
+  ],
+  "keyTakeaways": [
+    "Treat thrombocytopenia plus microangiopathic hemolytic anemia as a thrombotic microangiopathy until an etiologic branch is established; obtain ADAMTS13 activity and inhibitor or anti-ADAMTS13 IgG testing before plasma therapy when feasible. [7][10]",
+    "ADAMTS13 activity below 10% in the appropriate thrombotic microangiopathy phenotype confirms TTP; inhibitor or anti-ADAMTS13 testing helps identify the immune-mediated form. [4][7][10]",
+    "A PLASMIC score of 6-7 identifies high likelihood of severe ADAMTS13 deficiency and supports empiric therapeutic plasma exchange while definitive testing is pending. [5][8][23]",
+    "Caplacizumab is given as a 10-mg intravenous loading bolus followed by 10 mg subcutaneously daily during plasma exchange and for 30 days afterward; diagnostic certainty and ADAMTS13 turnaround time should guide early use. [2][7]",
+    "Persistent severe ADAMTS13 deficiency during remission predicts relapse risk; serial ADAMTS13 activity monitoring is used to identify patients needing preemptive management. [8]"
+  ],
+  "sections": [
+    {
+      "id": "first-hours",
+      "eyebrow": "Emergency pathway",
+      "heading": "What to do when TTP is suspected",
+      "intro": "Do not await the historic pentad or a send-out assay before acting in a high-probability thrombotic microangiopathy.",
+      "paragraphs": [
+        "Identify thrombotic microangiopathy from thrombocytopenia plus nonimmune microangiopathic hemolytic anemia: review the smear for schistocytes, and obtain LDH, indirect bilirubin, reticulocyte count, haptoglobin, creatinine, and coagulation studies. Typical TTP-associated findings include profound thrombocytopenia, schistocytes greater than 1%, elevated LDH and indirect bilirubin, low haptoglobin, reticulocytosis, a negative direct Coombs test except in some SLE-associated presentations, and coagulation tests that are not prolonged. [10]",
+        "Before therapeutic plasma exchange or plasma infusion, draw plasma for ADAMTS13 activity and for an inhibitor or anti-ADAMTS13 IgG assay whenever this does not delay treatment. ADAMTS13 activity below 10% in a patient with thrombocytopenia and hemolysis confirms TTP; severe sepsis can also be associated with activity below 10%, so interpret the result in the full clinical context. [4][7][10]",
+        "If clinical probability is high, initiate empiric therapeutic plasma exchange while ADAMTS13 results are pending. This is a hematologic emergency: mortality remains approximately 10%-20% even with treatment, and ADAMTS13 results may not be available for several days at centers using referral laboratories. [5][10][23]"
+      ],
+      "bullets": [
+        "Send before plasma exposure when feasible: ADAMTS13 activity, inhibitor, and/or anti-ADAMTS13 IgG. [7]",
+        "Document platelet count, LDH, creatinine, neurologic findings, and cardiac symptoms at presentation to establish end-organ involvement and response trajectory. [10][15]",
+        "Use a rapid ADAMTS13 assay when available; turnaround times under 1 hour may avert unnecessary plasma exchange and caplacizumab in patients without TTP. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial thrombotic microangiopathy pathway and what each result changes. [4][5][7][8][10][23]",
+        "columns": [
+          "Finding or test",
+          "Interpretation",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Thrombocytopenia with hemolysis and schistocytes",
+            "Establishes thrombotic microangiopathy phenotype; obtain ADAMTS13 testing before plasma therapy when feasible. [4][7][10]",
+            "Calculate PLASMIC score and evaluate competing causes of thrombotic microangiopathy. [5][8][23]"
+          ],
+          [
+            "ADAMTS13 activity <10%",
+            "Confirms TTP in the appropriate hemolysis-thrombocytopenia setting. [4][10]",
+            "Classify with inhibitor or anti-ADAMTS13 testing; immune-mediated disease requires TTP-directed acute management. [7]"
+          ],
+          [
+            "PLASMIC score 6-7",
+            "High-risk category; estimated likelihood of severe ADAMTS13 deficiency is 62%-82% in one summary and greater than 90% in another expert consensus. [5][8]",
+            "Proceed with empiric therapeutic plasma exchange while awaiting ADAMTS13 testing. [23]"
+          ],
+          [
+            "PLASMIC score 0-4",
+            "Low probability of severe ADAMTS13 deficiency. [5][23]",
+            "Prioritize alternative causes of thrombotic microangiopathy rather than routine empiric plasma exchange. [23]"
+          ],
+          [
+            "ADAMTS13 activity not severely deficient",
+            "TTP becomes less likely; reassess for complement-mediated HUS and secondary thrombotic microangiopathies. [17][21]",
+            "Direct further testing and cause-directed treatment to the alternative branch. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-stratification",
+      "eyebrow": "Pretest probability",
+      "heading": "How to use the PLASMIC score before ADAMTS13 returns",
+      "intro": "Apply PLASMIC only in suspected thrombotic microangiopathy, not as a screening test in asymptomatic thrombocytopenia.",
+      "paragraphs": [
+        "The PLASMIC score estimates the likelihood of severe ADAMTS13 deficiency in a patient with suspected thrombotic microangiopathy. Assign 1 point each for platelet count below 30 \u00d7 10^9/L, hemolysis, no active cancer, no solid-organ or stem-cell transplant history, MCV below 90 fL, INR below 1.5, and creatinine below 2.0 mg/dL. Peripheral schistocytes are required to apply the score. [4][5][8]",
+        "A score of 6-7 is high risk and supports empiric plasma exchange pending ADAMTS13 testing. A score of 5 is intermediate risk; one proposed approach considers plasma infusion at 30 mL/kg on day 1 then 15 mL/kg on days 2-4 while results are pending, at clinician discretion. A score of 0-4 should redirect the workup toward non-TTP causes of thrombotic microangiopathy. [5][23]",
+        "Use the score as a probability tool, not as a substitute for ADAMTS13 testing. The ISTH diagnostic guideline supports assessment of pretest probability by clinical judgment and/or PLASMIC or French scoring, with ADAMTS13 activity plus inhibitor or anti-ADAMTS13 testing central to the diagnostic pathway. [7]"
+      ],
+      "bullets": [
+        "PLASMIC high-risk features favor TTP over many competing thrombotic microangiopathies: severe thrombocytopenia, relatively preserved renal function, normal coagulation testing, and absence of cancer or transplantation. [5][8]",
+        "Severe renal dysfunction should lower confidence in TTP but does not independently establish an alternative diagnosis; use ADAMTS13 results and the broader etiologic evaluation. [5][8][21]",
+        "A high score should accelerate TTP therapy rather than delay it for confirmatory assay turnaround. [5][23]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "etiologic-branches",
+      "eyebrow": "Differential diagnosis",
+      "heading": "When the thrombotic microangiopathy is not TTP",
+      "intro": "Low or nonconfirmatory ADAMTS13 activity requires an etiologic pivot because phenotypically similar thrombotic microangiopathies require different treatment.",
+      "paragraphs": [
+        "Differentiate immune TTP from complement-mediated HUS and secondary thrombotic microangiopathies by integrating ADAMTS13 activity with context. Complement-mediated HUS, pregnancy, infection, malignancy, transplantation, endothelial-toxic drugs, and autoimmune disease can produce thrombocytopenia, hemolysis, and organ injury without immune TTP. A protocol describing complement-mediated HUS lists plasma therapy or eculizumab as treatment options, illustrating why confirmation of TTP materially changes therapy. [16][17]",
+        "In SLE with thrombotic microangiopathy, do not attribute the syndrome automatically to lupus nephritis. Histologic thrombotic microangiopathy, microangiopathic hemolytic anemia, thrombocytopenia, or central nervous system involvement should trigger workup for TTP, complement-mediated HUS, and antiphospholipid syndrome nephropathy; low ADAMTS13 activity confirms TTP in this setting. [21]",
+        "If ADAMTS13 activity is below 10%, distinguish immune-mediated from congenital TTP through inhibitor or anti-ADAMTS13 IgG testing and clinical context. Acquired TTP results from autoantibodies that inhibit ADAMTS13 and/or accelerate its clearance, whereas congenital TTP is an inherited severe ADAMTS13-deficiency state. [7][15]"
+      ],
+      "bullets": [
+        "Suspected complement-mediated HUS: obtain ADAMTS13 before committing to a TTP-only treatment pathway; a result confirming TTP should halt a complement-mediated HUS trial pathway. [17]",
+        "SLE-associated thrombotic microangiopathy: pursue the underlying pathophysiology because TTP, complement-mediated HUS, and antiphospholipid syndrome nephropathy may require different targeted treatment. [21]",
+        "Active cancer or prior solid-organ/stem-cell transplant lowers PLASMIC score and should heighten evaluation for secondary thrombotic microangiopathy. [5][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic branches in a patient with thrombotic microangiopathy. [7][15][16][17][21]",
+        "columns": [
+          "Branch",
+          "Discriminator",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Immune-mediated TTP",
+            "ADAMTS13 activity <10% with inhibitor or anti-ADAMTS13 IgG testing supporting autoantibody-mediated deficiency. [7][15]",
+            "Use plasma exchange-based acute TTP treatment; consider caplacizumab according to pretest probability and ADAMTS13 confirmation strategy. [7]"
+          ],
+          [
+            "Congenital TTP",
+            "Severe ADAMTS13 deficiency without the acquired autoantibody mechanism. [15]",
+            "Evaluate for congenital disease and ADAMTS13 replacement strategy; recombinant ADAMTS13 has been studied in congenital TTP. [19]"
+          ],
+          [
+            "Complement-mediated HUS",
+            "Thrombotic microangiopathy without TTP-confirming ADAMTS13 result. [17]",
+            "Pursue complement-mediated HUS evaluation; plasma therapy or eculizumab has been used for atypical HUS. [16]"
+          ],
+          [
+            "SLE-associated thrombotic microangiopathy",
+            "May represent TTP, complement-mediated HUS, or antiphospholipid syndrome nephropathy. [21]",
+            "Determine the mechanism rather than treating the thrombotic microangiopathy as a single lupus manifestation. [21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-treatment",
+      "eyebrow": "Confirmed or high-probability immune TTP",
+      "heading": "Therapeutic plasma exchange and caplacizumab",
+      "intro": "Acute treatment must suppress ongoing microvascular thrombosis while diagnostic classification and immune-directed management proceed.",
+      "paragraphs": [
+        "For high-probability immune TTP, start therapeutic plasma exchange empirically while ADAMTS13 activity is pending; a PLASMIC score of 6-7 is a practical trigger for this approach. In published management algorithms, high-risk patients are considered for empiric therapeutic plasma exchange, whereas low-risk patients are directed toward alternative thrombotic microangiopathy causes. [5][8][23]",
+        "Caplacizumab dosing in the pivotal trial and U.S. label is a 10-mg intravenous loading bolus followed by 10 mg subcutaneously once daily during plasma exchange and for 30 days after plasma exchange. In the randomized trial, caplacizumab reduced recurrence during the overall treatment plus 28-day follow-up period from 38% with placebo to 13%; the DailyMed labeling reports major thromboembolic events in 8.5% and 8.2% of caplacizumab- and placebo-treated patients, respectively. [1][2]",
+        "Caplacizumab selection depends on pretest probability and availability of timely ADAMTS13 testing. ISTH judges that the benefit-risk-cost balance does not support caplacizumab for intermediate- or low-suspicion TTP and recommends a positive ADAMTS13 activity result below 10 IU/dL or 10% before initiation in those settings. The guideline notes that ADAMTS13 testing was not required for enrollment in caplacizumab trials, creating a real-world tradeoff when assay turnaround is delayed and clinical suspicion is high. [7]",
+        "Escalate treatment intensity in refractory disease in conjunction with hematology. An ASH review describes twice-daily plasma exchange together with rituximab as a second-line strategy that usually leads to complete remission; the specific clinical threshold for refractory disease and agent sequencing should follow specialist-directed protocols. [13]"
+      ],
+      "bullets": [
+        "Caplacizumab regimen: 10 mg IV loading bolus, then 10 mg SC daily during plasma exchange and for 30 days afterward. [2]",
+        "Interpret recurrent thrombocytopenia by timing: in labeling, relapse is recurrent thrombocytopenia after platelet recovery to at least 150,000/\u00b5L requiring reinitiation of daily plasma exchange more than 30 days after plasma exchange; low ADAMTS13 activity below 10% was present in caplacizumab-treated patients who relapsed during follow-up. [1]",
+        "For inadequate response or refractory disease, reassess the diagnosis, verify ADAMTS13 results, and involve a TTP-experienced hematologist before escalating plasma exchange frequency and immunomodulatory therapy. [7][13]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "remission-monitoring",
+      "eyebrow": "Relapse prevention",
+      "heading": "How to monitor after clinical recovery",
+      "intro": "Platelet recovery alone does not eliminate relapse risk when severe ADAMTS13 deficiency persists.",
+      "paragraphs": [
+        "Monitor ADAMTS13 activity during clinical remission because it is the most reliable biomarker cited for relapse prediction. One expert consensus summarizes ISTH-advised surveillance as monthly testing for the first 3 months, every 3 months during the first year, and then every 6-12 months. [8]",
+        "Interpret late recurrent thrombocytopenia with repeat hemolysis testing and ADAMTS13 activity rather than assuming isolated thrombocytopenia is TTP relapse. In caplacizumab-treated patients who relapsed during post-treatment follow-up, ADAMTS13 activity was below 10% at the end of study treatment, linking unresolved severe deficiency to recurrence risk. [1]",
+        "During follow-up, assess for neurologic, renal, and cardiac sequelae and for associated autoimmune disease. Long-term follow-up is necessary both to identify recurrence and to evaluate sequelae or additional autoimmune disorders. [10]"
+      ],
+      "bullets": [
+        "First 3 months of remission: ADAMTS13 activity monthly. [8]",
+        "Remainder of year 1: ADAMTS13 activity every 3 months. [8]",
+        "Thereafter: ADAMTS13 activity every 6-12 months. [8]",
+        "Recurrent thrombocytopenia plus recurrent hemolysis should prompt urgent reassessment for acute TTP and alternate thrombotic microangiopathy causes. [1][10]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should plasma exchange wait for the ADAMTS13 result?",
+      "answer": "No in a high-probability thrombotic microangiopathy. Draw ADAMTS13 activity and inhibitor or anti-ADAMTS13 testing before plasma therapy when feasible, then use empiric therapeutic plasma exchange for high-risk patients while results are pending. [7][23]"
+    },
+    {
+      "question": "When does ADAMTS13 activity establish TTP?",
+      "answer": "ADAMTS13 activity below 10% establishes TTP in the appropriate setting of thrombocytopenia and microangiopathic hemolysis. Obtain inhibitor or anti-ADAMTS13 IgG testing to support immune-mediated disease classification. [4][7][10]"
+    },
+    {
+      "question": "Can caplacizumab be started solely from a PLASMIC score?",
+      "answer": "A high PLASMIC score supports high pretest probability and empiric plasma exchange, but ISTH advises that intermediate- or low-suspicion cases require a positive ADAMTS13 activity result below 10% before caplacizumab because benefit, risk, cost, and resource use do not justify routine use in those groups. [7][23]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] CABLIVI- caplacizumab - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=2348f06e-8004-4040-832e-e9e86a39f905&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Exacerbation defined as thrombocytopenia after initial recovery of \u2020 \u2021  \u2020 \u2021 The proportion of patients with a recurrence of TTP in the overall study period (the drug treatment period plus the 28-day follow-up period after discontinuation of drug treatment) was lower in the CABLIVI group (9/72 patien",
+      "score": 0.52758485
+    },
+    {
+      "number": 2,
+      "title": "Caplacizumab Treatment for Acquired Thrombotic ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1806311",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "TTP to receive caplacizumab (10-mg intravenous loading bolus, followed by 10 mg daily subcutaneously) or placebo during plasma exchange and for 30 days",
+      "score": 0.5968332
+    },
+    {
+      "number": 3,
+      "title": "Multimer Analysis of Von Willebrand Factor in Von ... - MDPI",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.3390%2Fdiagnostics11112153&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "thrombotic thrombocytopenic purpura (TTP). The analysis of VWF multimers is important. ISTH NHF WFH 2021 guidelines on the diagnosis of von Willebrand disease.",
+      "score": 0.40302688
+    },
+    {
+      "number": 4,
+      "title": "Thrombotic Thrombocytopenic Purpura - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430721",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "PLASMIC Score\n\nThe PLASMIC score is calculated from presentation findings and predicts the likelihood that ADAMTS13 activity be less than or equal to 10%, helping to make a presumptive diagnosis of TTP in the appropriate clinical setting.(#article-30097.r26) The presence of peripheral schistocytes i",
+      "score": 0.81595254
+    },
+    {
+      "number": 5,
+      "title": "Diagnostic and treatment guidelines for thrombotic thrombocytopenic purpura (TTP) in Japan 2023",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10615956",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In Japan, ADAMTS13 activity and inhibitor tests have been covered by the national health insurance since 2018. At many hospitals that outsource these tests to contract laboratories, it often takes 3 to 5 days before the results become available. As a tool to quickly predict acquired ADAMTS13 deficie",
+      "score": 0.75355774
+    },
+    {
+      "number": 6,
+      "title": "Severe Immune-Mediated Thrombotic Thrombocytopenic Purpura ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13361029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A PLASMIC score of 7 indicated a high probability of severe ADAMTS13 deficiency, which was confirmed by undetectable ADAMTS13 activity and high-titer inhibitory",
+      "score": 0.7507177
+    },
+    {
+      "number": 7,
+      "title": "ISTH guidelines for the diagnosis of thrombotic thrombocytopenic purpura",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8146131",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The panel judges that for patients with an intermediate or low clinical suspicion of TTP, the balance of benefit, risk, cost, and resource use does not justify the use of caplacizumab. Therefore, a positive ADAMTS13 activity test result (<10 IU/dL or <10% of normal) is required before the initiation",
+      "score": 0.6685563
+    },
+    {
+      "number": 8,
+      "title": "Korean expert consensus on the management of thrombotic thrombocytopenic purpura",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13358782",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Because ADAMTS13 activity testing is not widely available in most centers and results may take several days, clinical prediction tools have been developed to support initial management decisions [2][8]. Both the French score  and the PLASMIC score  are highly predictive of severe ADAMTS13 deficiency ",
+      "score": 0.65146625
+    },
+    {
+      "number": 9,
+      "title": "Platelet disorders 3: thrombotic thrombocytopenic purpura (immune ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/books/book/10/chapter/12745316/Platelet-disorders-3-thrombotic-thrombocytopenic",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "PLASMIC score can aid in rapidly identifying which patients presenting with a TMA have a high likelihood of ADAMTS13 deficiency.",
+      "score": 0.6353361
+    },
+    {
+      "number": 10,
+      "title": "Thrombotic Thrombocytopenic Purpura Evaluation and Management - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470585",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In a patient presenting with both thrombocytopenia and hemolytic anemia, the critical diagnostic indicator for acquired thrombotic TTP is an ADAMTS-13 (a disintegrin and metalloproteinase with a thrombospondin type 1 motif, member 13) activity level below 10%, whether or not inhibitory autoantibodie",
+      "score": 0.5423064
+    },
+    {
+      "number": 11,
+      "title": "Rapid ADAMTS13 activity assays for thrombotic thrombocytopenic ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/146/2/233/536852/Rapid-ADAMTS13-activity-assays-for-thrombotic",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Rapid ADAMTS13 assays have TATs <1 hour and the potential to avert therapeutic plasma exchange and caplacizumab in patients without TTP.",
+      "score": 0.3899187
+    },
+    {
+      "number": 12,
+      "title": "protocol: shp655-201",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03922308/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "For non-commercial use only Shire CONFIDENTIAL Page 49 SHP655-201 Protocol rADAMTS-13 03 OCT 2018 Any treatment for comorbid conditions is permitted. Red blood cell transfusion is permitted at the investigator discretion. Medical treatments not otherwise specified in the protocol are permitted. Cons",
+      "score": 0.604703
+    },
+    {
+      "number": 13,
+      "title": "Thrombotic thrombocytopenic purpura | Blood - ASH Publications",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/129/21/2836/36273/Thrombotic-thrombocytopenic-purpura",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "twice-daily plasma exchange may be prescribed together with rituximab, with this second-line treatment usually leading to complete remission.",
+      "score": 0.51662046
+    },
+    {
+      "number": 14,
+      "title": "Thrombotic thrombocytopenic purpura: celebrating 25 years of ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article-pdf/doi/10.1182/blood.2025030791/2506680/blood.2025030791.pdf",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "A phase 2 study of the safety and efficacy of rituximab with plasma exchange in acute acquired thrombotic thrombocytopenic purpura.",
+      "score": 0.48425868
+    },
+    {
+      "number": 15,
+      "title": "[PDF] For non-commercial use only - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03922308/Prot_004.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "2. INTRODUCTION Baxalta US Inc. (Baxalta), now part of Shire, has developed a recombinant A Disintegrin and Metalloproteinase with Thrombospondin Type-1 Motifs 13 candidate (rADAMTS-13, now designated as SHP655; formerly designated as BAX 930) for treating subjects with thrombotic thrombocytopenic p",
+      "score": 0.5174983
+    },
+    {
+      "number": 16,
+      "title": "[PDF] omeros - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/45/NCT02222545/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "infection, malignancies, use of endothelium-damaging drugs, transplantation, and pregnancy. Many of these precipitating factors are linked to endothelial cell activation, stress, or injury. Atypical HUS is treated with plasma therapy (plasma exchange or plasma infusion) or eculizumab, an anti-C5 mAb",
+      "score": 0.51105833
+    },
+    {
+      "number": 17,
+      "title": "Early Intervention with Eculizumab to Treat Thrombotic ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/03/NCT03518203/Prot_SAP_001.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "transplant alloHCT Allogeneic hematopoietic cell transplant sC5b-9 Soluble membrane attack complex TTP Thrombotic thrombocytopenic purpura ADAMTS13 a disintegrin and metalloproteinase with a thrombospondin type 1 motif, member 13 CH50 Total hemolytic complement activity DSMB data and safety monitori",
+      "score": 0.43036336
+    },
+    {
+      "number": 18,
+      "title": "mdma-induced thrombotic thrombocytopenic purpura in ... - Ovid",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(25)02311-6/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Deficiency of ADAMTS13 results in disseminated thrombus formation, leading to thrombocytopenia, hemolytic anemia, fever, neurologic changes, and renal failure.",
+      "score": 0.42634606
+    },
+    {
+      "number": 19,
+      "title": "Study Details | NCT04683003 | A Study of TAK-755 in Participants With Congenital Thrombotic Thrombocytopenic Purpura | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT04683003",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "| Proportion of Acute TTP Events Resolved After Treatment with TAK-755 while Enrolled in the Study | Proportion of acute TTP events that have resolved after treatment with TAK-755 (rADAMTS13) while enrolled in the study will be assessed. Acute TTP events are considered resolved when: Platelet count ",
+      "score": 0.402745
+    },
+    {
+      "number": 20,
+      "title": "Expert Statements on the Standard of Care in... : Chest - Ovid",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30735-3/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Acute renal failure is prevalent in patients with thrombotic thrombocytopenic purpura associated with low plasma ADAMTS13 activity.",
+      "score": 0.3797929
+    },
+    {
+      "number": 21,
+      "title": "EULAR recommendations for the management of systemic lupus erythematosus with kidney involvement: 2025 update",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(25)04412-7/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "In recent years, the concept of TMA in SLE has evolved to encompass syndromes of various underlying aetiologies, ranging from classic thrombotic thrombocytopenic purpura (TTP), via complement-mediated hemolytic uremic syndrome (CM-HUS), to antiphospholipid syndrome (APS) nephropathy. These syndromes",
+      "score": 0.3420444
+    },
+    {
+      "number": 22,
+      "title": "Expert Statements on the Standard of Care in Critically Ill Adult ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30735-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Acute renal failure is prevalent in patients with thrombotic thrombocytopenic purpura associated with low plasma ADAMTS13 activity. J Thromb",
+      "score": 0.33921495
+    },
+    {
+      "number": 23,
+      "title": "Utilizing a PLASMIC score-based approach in the management of suspected immune thrombotic thrombocytopenic purpura: a cost minimization analysis within the Harvard TMA Research Collaborative",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6642029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We sought to explore the potential cost savings associated with the use of a diagnostic and treatment algorithm that incorporates the PLASMIC score into the management of patients with suspected iTTP (Figure 3). Under a PLASMIC-score driven approach, ADAMTS13 activity testing and downstream iTTP-rel",
+      "score": 0.6437107
+    },
+    {
+      "number": 24,
+      "title": "Thrombocytopenia in hospitalized patients - ASH Publications",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2017/1/651/21144/Thrombocytopenia-in-hospitalized-patients-approach",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "A phase 2 study of the safety and efficacy of rituximab with plasma exchange in acute acquired thrombotic thrombocytopenic purpura .",
+      "score": 0.42005292
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] CABLIVI- caplacizumab - DailyMed",
+      "detail": "dailymed.nlm.nih.gov",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=2348f06e-8004-4040-832e-e9e86a39f905&type=pdf",
+      "authors": "dailymed.nlm.nih.gov",
+      "host": "dailymed.nlm.nih.gov",
+      "snippet": "Exacerbation defined as thrombocytopenia after initial recovery of \u2020 \u2021  \u2020 \u2021 The proportion of patients with a recurrence of TTP in the overall study period (the drug treatment period plus the 28-day follow-up period after discontinuation of drug treatment) was lower in the CABLIVI group (9/72 patien",
+      "score": 0.52758485
+    },
+    {
+      "number": 2,
+      "title": "Caplacizumab Treatment for Acquired Thrombotic ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1806311",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "TTP to receive caplacizumab (10-mg intravenous loading bolus, followed by 10 mg daily subcutaneously) or placebo during plasma exchange and for 30 days",
+      "score": 0.5968332
+    },
+    {
+      "number": 3,
+      "title": "Multimer Analysis of Von Willebrand Factor in Von ... - MDPI",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.3390%2Fdiagnostics11112153&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "thrombotic thrombocytopenic purpura (TTP). The analysis of VWF multimers is important. ISTH NHF WFH 2021 guidelines on the diagnosis of von Willebrand disease.",
+      "score": 0.40302688
+    },
+    {
+      "number": 4,
+      "title": "Thrombotic Thrombocytopenic Purpura - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK430721",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "PLASMIC Score\n\nThe PLASMIC score is calculated from presentation findings and predicts the likelihood that ADAMTS13 activity be less than or equal to 10%, helping to make a presumptive diagnosis of TTP in the appropriate clinical setting.(#article-30097.r26) The presence of peripheral schistocytes i",
+      "score": 0.81595254
+    },
+    {
+      "number": 5,
+      "title": "Diagnostic and treatment guidelines for thrombotic thrombocytopenic purpura (TTP) in Japan 2023",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10615956",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In Japan, ADAMTS13 activity and inhibitor tests have been covered by the national health insurance since 2018. At many hospitals that outsource these tests to contract laboratories, it often takes 3 to 5 days before the results become available. As a tool to quickly predict acquired ADAMTS13 deficie",
+      "score": 0.75355774
+    },
+    {
+      "number": 6,
+      "title": "Severe Immune-Mediated Thrombotic Thrombocytopenic Purpura ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13361029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A PLASMIC score of 7 indicated a high probability of severe ADAMTS13 deficiency, which was confirmed by undetectable ADAMTS13 activity and high-titer inhibitory",
+      "score": 0.7507177
+    },
+    {
+      "number": 7,
+      "title": "ISTH guidelines for the diagnosis of thrombotic thrombocytopenic purpura",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8146131",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The panel judges that for patients with an intermediate or low clinical suspicion of TTP, the balance of benefit, risk, cost, and resource use does not justify the use of caplacizumab. Therefore, a positive ADAMTS13 activity test result (<10 IU/dL or <10% of normal) is required before the initiation",
+      "score": 0.6685563
+    },
+    {
+      "number": 8,
+      "title": "Korean expert consensus on the management of thrombotic thrombocytopenic purpura",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13358782",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Because ADAMTS13 activity testing is not widely available in most centers and results may take several days, clinical prediction tools have been developed to support initial management decisions [2][8]. Both the French score  and the PLASMIC score  are highly predictive of severe ADAMTS13 deficiency ",
+      "score": 0.65146625
+    },
+    {
+      "number": 9,
+      "title": "Platelet disorders 3: thrombotic thrombocytopenic purpura (immune ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/books/book/10/chapter/12745316/Platelet-disorders-3-thrombotic-thrombocytopenic",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "PLASMIC score can aid in rapidly identifying which patients presenting with a TMA have a high likelihood of ADAMTS13 deficiency.",
+      "score": 0.6353361
+    },
+    {
+      "number": 10,
+      "title": "Thrombotic Thrombocytopenic Purpura Evaluation and Management - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470585",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In a patient presenting with both thrombocytopenia and hemolytic anemia, the critical diagnostic indicator for acquired thrombotic TTP is an ADAMTS-13 (a disintegrin and metalloproteinase with a thrombospondin type 1 motif, member 13) activity level below 10%, whether or not inhibitory autoantibodie",
+      "score": 0.5423064
+    },
+    {
+      "number": 11,
+      "title": "Rapid ADAMTS13 activity assays for thrombotic thrombocytopenic ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/146/2/233/536852/Rapid-ADAMTS13-activity-assays-for-thrombotic",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "Rapid ADAMTS13 assays have TATs <1 hour and the potential to avert therapeutic plasma exchange and caplacizumab in patients without TTP.",
+      "score": 0.3899187
+    },
+    {
+      "number": 12,
+      "title": "protocol: shp655-201",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03922308/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "For non-commercial use only Shire CONFIDENTIAL Page 49 SHP655-201 Protocol rADAMTS-13 03 OCT 2018 Any treatment for comorbid conditions is permitted. Red blood cell transfusion is permitted at the investigator discretion. Medical treatments not otherwise specified in the protocol are permitted. Cons",
+      "score": 0.604703
+    },
+    {
+      "number": 13,
+      "title": "Thrombotic thrombocytopenic purpura | Blood - ASH Publications",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article/129/21/2836/36273/Thrombotic-thrombocytopenic-purpura",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "twice-daily plasma exchange may be prescribed together with rituximab, with this second-line treatment usually leading to complete remission.",
+      "score": 0.51662046
+    },
+    {
+      "number": 14,
+      "title": "Thrombotic thrombocytopenic purpura: celebrating 25 years of ...",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/blood/article-pdf/doi/10.1182/blood.2025030791/2506680/blood.2025030791.pdf",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "A phase 2 study of the safety and efficacy of rituximab with plasma exchange in acute acquired thrombotic thrombocytopenic purpura.",
+      "score": 0.48425868
+    },
+    {
+      "number": 15,
+      "title": "[PDF] For non-commercial use only - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03922308/Prot_004.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "2. INTRODUCTION Baxalta US Inc. (Baxalta), now part of Shire, has developed a recombinant A Disintegrin and Metalloproteinase with Thrombospondin Type-1 Motifs 13 candidate (rADAMTS-13, now designated as SHP655; formerly designated as BAX 930) for treating subjects with thrombotic thrombocytopenic p",
+      "score": 0.5174983
+    },
+    {
+      "number": 16,
+      "title": "[PDF] omeros - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/45/NCT02222545/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "infection, malignancies, use of endothelium-damaging drugs, transplantation, and pregnancy. Many of these precipitating factors are linked to endothelial cell activation, stress, or injury. Atypical HUS is treated with plasma therapy (plasma exchange or plasma infusion) or eculizumab, an anti-C5 mAb",
+      "score": 0.51105833
+    },
+    {
+      "number": 17,
+      "title": "Early Intervention with Eculizumab to Treat Thrombotic ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/03/NCT03518203/Prot_SAP_001.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "transplant alloHCT Allogeneic hematopoietic cell transplant sC5b-9 Soluble membrane attack complex TTP Thrombotic thrombocytopenic purpura ADAMTS13 a disintegrin and metalloproteinase with a thrombospondin type 1 motif, member 13 CH50 Total hemolytic complement activity DSMB data and safety monitori",
+      "score": 0.43036336
+    },
+    {
+      "number": 18,
+      "title": "mdma-induced thrombotic thrombocytopenic purpura in ... - Ovid",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(25)02311-6/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Deficiency of ADAMTS13 results in disseminated thrombus formation, leading to thrombocytopenia, hemolytic anemia, fever, neurologic changes, and renal failure.",
+      "score": 0.42634606
+    },
+    {
+      "number": 19,
+      "title": "Study Details | NCT04683003 | A Study of TAK-755 in Participants With Congenital Thrombotic Thrombocytopenic Purpura | ClinicalTrials.gov",
+      "detail": "clinicaltrials.gov",
+      "url": "https://clinicaltrials.gov/study/NCT04683003",
+      "authors": "clinicaltrials.gov",
+      "host": "clinicaltrials.gov",
+      "snippet": "| Proportion of Acute TTP Events Resolved After Treatment with TAK-755 while Enrolled in the Study | Proportion of acute TTP events that have resolved after treatment with TAK-755 (rADAMTS13) while enrolled in the study will be assessed. Acute TTP events are considered resolved when: Platelet count ",
+      "score": 0.402745
+    },
+    {
+      "number": 20,
+      "title": "Expert Statements on the Standard of Care in... : Chest - Ovid",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30735-3/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Acute renal failure is prevalent in patients with thrombotic thrombocytopenic purpura associated with low plasma ADAMTS13 activity.",
+      "score": 0.3797929
+    },
+    {
+      "number": 21,
+      "title": "EULAR recommendations for the management of systemic lupus erythematosus with kidney involvement: 2025 update",
+      "detail": "ard.eular.org",
+      "url": "https://ard.eular.org/article/S0003-4967(25)04412-7/fulltext",
+      "authors": "ard.eular.org",
+      "host": "ard.eular.org",
+      "snippet": "In recent years, the concept of TMA in SLE has evolved to encompass syndromes of various underlying aetiologies, ranging from classic thrombotic thrombocytopenic purpura (TTP), via complement-mediated hemolytic uremic syndrome (CM-HUS), to antiphospholipid syndrome (APS) nephropathy. These syndromes",
+      "score": 0.3420444
+    },
+    {
+      "number": 22,
+      "title": "Expert Statements on the Standard of Care in Critically Ill Adult ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30735-3/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Acute renal failure is prevalent in patients with thrombotic thrombocytopenic purpura associated with low plasma ADAMTS13 activity. J Thromb",
+      "score": 0.33921495
+    },
+    {
+      "number": 23,
+      "title": "Utilizing a PLASMIC score-based approach in the management of suspected immune thrombotic thrombocytopenic purpura: a cost minimization analysis within the Harvard TMA Research Collaborative",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6642029",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We sought to explore the potential cost savings associated with the use of a diagnostic and treatment algorithm that incorporates the PLASMIC score into the management of patients with suspected iTTP (Figure 3). Under a PLASMIC-score driven approach, ADAMTS13 activity testing and downstream iTTP-rel",
+      "score": 0.6437107
+    },
+    {
+      "number": 24,
+      "title": "Thrombocytopenia in hospitalized patients - ASH Publications",
+      "detail": "ashpublications.org",
+      "url": "https://ashpublications.org/hematology/article/2017/1/651/21144/Thrombocytopenia-in-hospitalized-patients-approach",
+      "authors": "ashpublications.org",
+      "host": "ashpublications.org",
+      "snippet": "A phase 2 study of the safety and efficacy of rituximab with plasma exchange in acute acquired thrombotic thrombocytopenic purpura .",
+      "score": 0.42005292
+    }
+  ],
+  "publishedAt": "2026-09-15T22:26:46.283910+00:00",
+  "updatedAt": "2026-09-15T22:26:46.283910+00:00",
+  "readingMinutes": 6,
+  "slug": "thrombotic-thrombocytopenic-purpura"
+}

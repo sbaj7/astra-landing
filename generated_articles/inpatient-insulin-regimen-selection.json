@@ -1,0 +1,718 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hospital Medicine",
+  "title": "Inpatient Insulin Regimen Selection",
+  "summary": "Select insulin by acuity, nutritional reliability, prior diabetes treatment, and glucose trajectory. Use IV insulin for critical illness, scheduled subcutaneous insulin for sustained ward hyperglycemia, and correction-only therapy selectively for new, mild stress hyperglycemia while preventing hypoglycemia during changing intake.",
+  "seoDescription": "Practical inpatient insulin regimen selection by care setting, oral intake, hyperglycemia persistence, glucose targets, monitoring, pumps, and nutrition.",
+  "clinicalQuestion": "How should physicians choose IV, basal-bolus, basal-plus-correction, or correction-only insulin for hospitalized adults?",
+  "specialty": "Hospital Medicine and Endocrinology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "inpatient hyperglycemia",
+    "basal-bolus insulin",
+    "correctional insulin",
+    "sliding scale insulin",
+    "intravenous insulin",
+    "hospital glucose targets",
+    "insulin pump hospitalization"
+  ],
+  "keyTakeaways": [
+    "For most critically ill adults, use continuous IV insulin with a usual glucose target of 140-180 mg/dL; 110-140 mg/dL is reserved for selected patients in experienced settings without hypoglycemia. [15][23]",
+    "For noncritically ill adults with reliable nutrition, basal-prandial-correction insulin is preferred; correction-only insulin should not be the default for sustained hyperglycemia. [12][13][22]",
+    "In adults without known diabetes and glucose >140 mg/dL, initial correctional insulin is reasonable; add scheduled insulin when hyperglycemia persists as at least two point-of-care readings \u2265180 mg/dL in 24 hours. [14][16]",
+    "Match the regimen to intake: use basal-plus-correction when intake is absent or uncertain, and add prandial insulin only when meals are consistently consumed. [12]",
+    "Check point-of-care glucose before meals and at bedtime when eating, every 4-6 hours when NPO or receiving continuous enteral nutrition, and more often with IV insulin or abrupt changes in corticosteroids or nutrition. [23]"
+  ],
+  "sections": [
+    {
+      "id": "choose-by-acuity-and-persistence",
+      "eyebrow": "Initial Selection",
+      "heading": "Choose the regimen from acuity, prior diabetes status, and persistent hyperglycemia",
+      "intro": "Decide first whether the patient needs IV insulin or a subcutaneous physiologic regimen.",
+      "paragraphs": [
+        "Use continuous IV insulin in critical care, where rapid titration is needed as vasopressor requirements, organ perfusion, nutrition, and corticosteroid exposure change. For most ICU patients, target glucose 140-180 mg/dL. A 110-140 mg/dL target is an option only in selected patients\u2014such as cardiac surgical patients or patients with stable control\u2014when the unit has experienced protocols and nursing support and hypoglycemia can be avoided; targets <110 mg/dL are not recommended. [15][23]",
+        "Outside critical care, choose subcutaneous insulin according to whether hyperglycemia is transient or sustained and whether the patient has established diabetes. In adults without prior diabetes and hospital glucose >140 mg/dL, begin correctional insulin and target 100-180 mg/dL. Escalate to scheduled basal or basal-bolus insulin when at least two point-of-care glucose values are \u2265180 mg/dL within 24 hours despite correctional insulin. [14][16]",
+        "For adults with diabetes previously managed with diet or noninsulin agents, either correctional insulin or scheduled insulin may be used initially, with a 100-180 mg/dL target. The practical discriminator is recurrence: repeated values above target, consistent carbohydrate exposure, enteral nutrition, or corticosteroid-related hyperglycemia favor scheduled insulin rather than repeated reactive doses. [16][24]"
+      ],
+      "bullets": [
+        "Critical illness: continuous IV insulin; use protocol-driven frequent glucose measurement. [15][23]",
+        "New hospital hyperglycemia without known diabetes: correctional insulin initially if glucose is >140 mg/dL; convert to scheduled insulin for persistent \u2265180 mg/dL readings. [14][16]",
+        "Known diabetes with ongoing nutritional intake or repeated hyperglycemia: scheduled subcutaneous insulin rather than correction-only therapy. [12][13][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Regimen selection by hospital setting and glycemic pattern. [14][15][16][22][23]",
+        "columns": [
+          "Clinical branch",
+          "Initial insulin strategy",
+          "Glucose target and escalation"
+        ],
+        "rows": [
+          [
+            "Critical illness",
+            "Continuous IV insulin. [15][22]",
+            "Usually 140-180 mg/dL; consider 110-140 mg/dL only in selected patients with experienced staffing and no hypoglycemia. [15][23]"
+          ],
+          [
+            "Noncritical illness, no prior diabetes, glucose >140 mg/dL",
+            "Correctional insulin initially. [14][16]",
+            "Target 100-180 mg/dL; add scheduled insulin after \u22652 point-of-care values \u2265180 mg/dL in 24 hours. [14][16]"
+          ],
+          [
+            "Noncritical illness, diabetes treated without insulin before admission",
+            "Correctional or scheduled insulin, selected by glucose persistence and nutritional exposure. [16]",
+            "Target 100-180 mg/dL; repeated above-target values favor scheduled therapy. [16]"
+          ],
+          [
+            "Noncritical illness with consistent oral intake",
+            "Basal, prandial, and correction insulin. [12][13][22]",
+            "Avoid correction-only insulin as the primary regimen for sustained hyperglycemia. [12][13][22]"
+          ],
+          [
+            "NPO, inconsistent intake, or uncertain meal completion",
+            "Basal-plus-correction insulin; withhold prandial insulin until intake is reliable. [12]",
+            "Monitor every 4-6 hours when NPO; reassess after nutrition changes. [23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "select-subcutaneous-components",
+      "eyebrow": "Ward Regimens",
+      "heading": "Select basal-bolus versus basal-plus-correction from nutritional reliability",
+      "intro": "Do not use a meal-dependent regimen when intake is unpredictable.",
+      "paragraphs": [
+        "Use basal-prandial-correction insulin for noncritically ill patients with good, consistent oral intake. Basal insulin addresses fasting and between-meal hyperglycemia, prandial insulin covers nutritional carbohydrate exposure, and correction insulin addresses residual excursions. This approach is preferred by inpatient guidance over correction-only insulin in patients eating reliably. [12][13][22]",
+        "Use basal-plus-correction insulin when the patient is NPO, eating inconsistently, or has uncertain meal timing. Add prandial insulin only after intake becomes consistent. This avoids administering nutritional insulin for meals that are delayed, refused, interrupted for procedures, or incompletely consumed. [12][13]",
+        "Avoid exclusive sliding-scale or correction-only insulin for established, sustained inpatient hyperglycemia. In a randomized general-medicine comparison, basal-bolus therapy achieved glucose <140 mg/dL in 66% of patients versus 38% with sliding-scale insulin alone; hypoglycemia <60 mg/dL was uncommon in both groups. [15][17][23]"
+      ],
+      "bullets": [
+        "Reliable meals: prescribe basal insulin, prandial insulin, and correction insulin. [12][13][22]",
+        "NPO or variable intake: prescribe basal insulin plus correction insulin; reassess daily for addition of prandial insulin. [12]",
+        "Repeated correction doses without sustained control indicate the regimen lacks scheduled coverage rather than a need for indefinite sliding-scale escalation. [12][17][22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Prevent overbasalization",
+          "paragraphs": [
+            "Interpret fasting glucose separately from daytime and postprandial values. Low fasting values with persistent daytime hyperglycemia suggest excessive basal insulin with inadequate nutritional coverage; increasing basal insulin in that pattern increases hypoglycemia risk, especially when patients are unexpectedly made NPO. [13]"
+          ],
+          "bullets": [
+            "If fasting glucose is low, reduce basal exposure rather than treating daytime hyperglycemia solely by increasing basal insulin. [13]",
+            "If the patient is eating and daytime values remain high despite acceptable fasting values, evaluate the need for prandial coverage. [12][13]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Subcutaneous regimen components should track carbohydrate exposure and fasting glucose patterns. [12][13][22]",
+        "columns": [
+          "Pattern",
+          "Regimen implication",
+          "Safety action"
+        ],
+        "rows": [
+          [
+            "Consistent meals",
+            "Use basal-prandial-correction insulin. [12][13][22]",
+            "Obtain point-of-care values before meals and at bedtime. [23]"
+          ],
+          [
+            "NPO or unreliable meal intake",
+            "Use basal-plus-correction insulin; defer prandial insulin. [12]",
+            "Check glucose every 4-6 hours. [23]"
+          ],
+          [
+            "Low fasting glucose with daytime hyperglycemia",
+            "Avoid further basal escalation; assess prandial coverage. [13]",
+            "Anticipate hypoglycemia if nutrition is interrupted. [13]"
+          ],
+          [
+            "Persistent hyperglycemia on correction-only insulin",
+            "Convert to scheduled basal or basal-bolus treatment according to intake. [14][16][22]",
+            "Use repeated point-of-care trends, not an isolated value, to judge persistence. [14][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-titrate-safely",
+      "eyebrow": "Monitoring",
+      "heading": "Set glucose monitoring frequency to insulin route and nutrition delivery",
+      "intro": "Monitoring must tighten when insulin action or carbohydrate delivery can change quickly.",
+      "paragraphs": [
+        "Use point-of-care capillary glucose testing before meals and at bedtime for patients who are eating. For patients who are NPO or receiving continuous enteral nutrition, measure glucose every 4-6 hours. These schedules provide the data needed to distinguish fasting, nutritional, and persistent hyperglycemia before changing a regimen. [23]",
+        "Increase measurement frequency for continuous IV insulin, after corticosteroid initiation or dose change, after abrupt discontinuation of enteral or parenteral nutrition, and after recurrent hypoglycemia. Each of these situations can rapidly uncouple a previously appropriate insulin dose from current carbohydrate exposure or insulin requirement. [23]",
+        "Treat glucose <70 mg/dL as hypoglycemia and glucose <40 mg/dL as severe hypoglycemia. After either event, activate the institutional hypoglycemia protocol, obtain more frequent point-of-care glucose measurements, and reassess the basal, prandial, correction, nutrition, and corticosteroid components before resuming the prior regimen unchanged. [12]"
+      ],
+      "bullets": [
+        "Eating: point-of-care glucose before meals and at bedtime. [23]",
+        "NPO or continuous enteral nutrition: point-of-care glucose every 4-6 hours. [23]",
+        "IV insulin, nutrition interruption, corticosteroid change, or recurrent hypoglycemia: increase monitoring frequency beyond routine ward schedules. [23]",
+        "Glucose <70 mg/dL requires immediate protocolized response and regimen reassessment; <40 mg/dL is severe hypoglycemia. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Glucose-monitoring schedule by nutritional state and treatment instability. [12][23]",
+        "columns": [
+          "Situation",
+          "Point-of-care monitoring",
+          "What the result changes"
+        ],
+        "rows": [
+          [
+            "Eating meals",
+            "Before meals and at bedtime. [23]",
+            "Separate fasting from meal-associated hyperglycemia when adjusting basal versus prandial coverage. [13][23]"
+          ],
+          [
+            "NPO or continuous enteral nutrition",
+            "Every 4-6 hours. [23]",
+            "Use trends to determine correction need and identify hypoglycemia after nutrition interruption. [23]"
+          ],
+          [
+            "Continuous IV insulin",
+            "More frequent than routine ward testing. [23]",
+            "Titrate the infusion protocol and avoid hypoglycemia. [15][23]"
+          ],
+          [
+            "Glucose <70 mg/dL",
+            "More frequent testing under the hypoglycemia protocol. [12]",
+            "Reassess insulin components and carbohydrate delivery before continuing the prior plan. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "special-circumstances",
+      "eyebrow": "Exceptions",
+      "heading": "Modify the default regimen for steroids, enteral nutrition, and personal insulin pumps",
+      "intro": "These settings require explicit ownership of insulin delivery and nutrition changes.",
+      "paragraphs": [
+        "For glucocorticoid-associated hyperglycemia in the ward, use basal-bolus insulin with correction doses when feasible; correction-only insulin is retroactive and performs less well than scheduled approaches. Persistent hyperglycemia during enteral nutrition also requires scheduled insulin rather than correction doses alone. [17][24]",
+        "A patient using a personal insulin pump may continue self-management only when physically and mentally competent and when institutional processes support safe use. Nursing documentation should include basal rates and bolus doses at least daily. Discontinue the pump and transition to subcutaneous insulin or IV insulin if the patient is not competent or lacks necessary supplies. [5][17]",
+        "Do not assume inpatient nutrition will remain stable. A steroid dose reduction, an interrupted tube feeding, or a new NPO order changes insulin exposure immediately; increase glucose surveillance and reassess scheduled insulin when any of these transitions occurs. [23]"
+      ],
+      "bullets": [
+        "Glucocorticoid-related hyperglycemia: favor basal-bolus plus correction insulin when feasible. [24]",
+        "Enteral nutrition with persistent hyperglycemia: provide scheduled insulin. [17]",
+        "Personal pump continuation requires competence, adequate supplies, and hospital policy; otherwise transition to hospital-managed subcutaneous or IV insulin. [5][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Special inpatient circumstances that change insulin regimen selection. [5][17][23][24]",
+        "columns": [
+          "Circumstance",
+          "Preferred approach",
+          "Escalation or safety trigger"
+        ],
+        "rows": [
+          [
+            "Glucocorticoid exposure",
+            "Basal-bolus insulin with correction doses when feasible. [24]",
+            "Increase monitoring after steroid changes because insulin requirement may shift. [23]"
+          ],
+          [
+            "Continuous enteral nutrition",
+            "Scheduled insulin for persistent hyperglycemia. [17]",
+            "If feeding stops abruptly, increase glucose surveillance and reassess insulin exposure. [23]"
+          ],
+          [
+            "Personal insulin pump",
+            "Allow continuation only with patient competence, adequate supplies, and institutional safeguards. [5][17]",
+            "Discontinue for impaired competence or inadequate supplies; use subcutaneous or IV insulin. [5]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] Curriculum Vitae | Cecilia C. LOW WANG, MD, FACP - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/152448/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "ENDO 2012, Houston, TX. Endocrine Society. 2012 Session Chair, Clinical Research Fellowship and Mentor Oral Presentation session, ENDO 2012, Houston, TX. Endocrine Society. 2014 Inpatient Hyperglycemia in Select Populations. Clinical Diabetes and Endocrinology in 2014 Conference, Snowmass, CO 2014 S",
+      "score": 0.49802306
+    },
+    {
+      "number": 2,
+      "title": "Outcomes of \u201cReal-World\u201d Insulin Strategies in the Management of ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jes/article/5/8/bvab101/6300202",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Guidelines recommend scheduled long-acting basal and short-acting bolus insulin several times daily to manage inpatient hyperglycemia.",
+      "score": 0.6899958
+    },
+    {
+      "number": 3,
+      "title": "Management of Inpatient Hyperglycemia - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/labmed/article/42/7/427/2657710",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Insulin is first-line therapy for hyperglycemia as it is adaptable to the changing patient physiology over the course of hospitalization.",
+      "score": 0.5104727
+    },
+    {
+      "number": 4,
+      "title": "The Transition from Insulin Infusions to Long-Term Diabetes Therapy: The Argument for Insulin Analogs - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S104306790700010X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Insulin is the most effective and flexible regimen to achieve inpatient glycemic control, whether by infusion or by subcutaneous basal bolus regimens.",
+      "score": 0.98573
+    },
+    {
+      "number": 5,
+      "title": "In-Hospital Management of Adults Using Insulin Pump Therapy",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1499267114000525",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Image 3: Canadian Journal of Diabetes. ## Canadian Journal of Diabetes. In-Hospital Management of Adults Using Insulin Pump Therapy. In a retrospective analysis, Nasser et al found high patient satisfaction and no difference in glycemic control in patients allowed to remain on insulin pump therapy c",
+      "score": 0.98278
+    },
+    {
+      "number": 6,
+      "title": "Pathophysiology and management strategies for hyperglycemia for ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0026049512002831",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Review Pathophysiology and management strategies for hyperglycemia for patients with acute illness during and following a hospital stay. Check access to the full text by signing in through your organization. ## Pathophysiology of hyperglycemia in hospitalized patients. ## Insulin treatment in the ",
+      "score": 0.97937
+    },
+    {
+      "number": 7,
+      "title": "Changing to Basal-Bolus Insulin Therapy for the Inpatient ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X20353003",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Most acute-care hospitals have transitioned from sliding-scale to basal-bolus insulin therapy to manage hyperglycemia during hospitalization, changing to basal",
+      "score": 0.96893
+    },
+    {
+      "number": 8,
+      "title": "Effects of a subcutaneous insulin protocol, clinical education ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.385",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by JL Schnipper \u00b7 2009 \u00b7 Cited by 115 \u2014 basal-bolus insulin regimen results in improved glucose control compared with a sliding scale only regimen.12",
+      "score": 0.60750073
+    },
+    {
+      "number": 9,
+      "title": "Inpatient diabetes management - Demidowich - 2024",
+      "detail": "nyaspubs.onlinelibrary.wiley.com",
+      "url": "https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.15190",
+      "authors": "nyaspubs.onlinelibrary.wiley.com",
+      "host": "nyaspubs.onlinelibrary.wiley.com",
+      "snippet": "Jul 25, 2024 \u2014 Randomized study of basal-bolus insulin therapy in the inpatient management of patients with type 2 diabetes (RABBIT 2 trial). Diabetes Care ...Read more",
+      "score": 0.5271467
+    },
+    {
+      "number": 10,
+      "title": "Practical approach to clinical controversies in glycemic control ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1002/ncp.10858",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Apr 30, 2022 \u2014 Randomized study of basal-bolus insulin therapy in the inpatient management of patients with type 2 diabetes undergoing general surgery ...Read more",
+      "score": 0.48103997
+    },
+    {
+      "number": 11,
+      "title": "Continuous glucose monitoring for inpatient diabetes management: an update on current evidence and practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563639",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As new studies provided efficacy and safety evidence, basal-bolus insulin regimen became the standard of care for glycemic control for non-critically ill and continuous insulin infusion became the standard of care for the critically ill population, as recommended by several clinical practice guideli",
+      "score": 0.73868835
+    },
+    {
+      "number": 12,
+      "title": "Glycemic Management in Insulin-Naive Patients in the Inpatient Setting - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11093763",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Several studies have demonstrated that sliding-scale insulin (SSI) is not acceptable as the sole regimen in patients with diabetes, yet it remains the most common default regimen in most institutions (15\u201318). Guidelines from the ADA for hospitalized patients with hyperglycemia requiring insulin disc",
+      "score": 0.69399214
+    },
+    {
+      "number": 13,
+      "title": "Comparison of an Electronic Glycemic Management System Versus Provider-Managed Subcutaneous Basal Bolus Insulin Therapy in the Hospital Setting - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5375075",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "According to the American Diabetes Association (ADA), a basal bolus plus correction insulin regimen is the preferred treatment for non\u2013critically ill patients with good nutritional intake, and use of sliding scale insulin alone is strongly discouraged.1 Current guidelines for inpatient glycemic cont",
+      "score": 0.68318754
+    },
+    {
+      "number": 14,
+      "title": "Management of Hyperglycemia in Hospitalized Adult Patients in Non-Critical Care Settings: An Endocrine Society Clinical Practice Guideline - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9653018",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11. Seisa MO, Saadi S, Nayfeh T, et al. A systematic review supporting the endocrine society clinical practice guideline for the management of hyperglycemia in adults hospitalized for non-critical illness or undergoing elective surgical procedures. J Clin Endocrinol Metab. 10.1210/clinem/dgac277 [DO",
+      "score": 0.6811549
+    },
+    {
+      "number": 15,
+      "title": "Management of Diabetes and Hyperglycemia in Hospitalized Patients",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK279093",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The American Diabetes Association (ADA) and American Association of Clinical Endocrinology (AACE) task force on inpatient glycemic control and other groups recommended differing glycemic targets in the ICU setting (20) (Table 1). These guidelines suggest targeting a BG level between 140 and 180 mg/d",
+      "score": 0.63804686
+    },
+    {
+      "number": 16,
+      "title": "Inpatient Hyperglycemia Guideline Resources - Endocrine Society",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/inpatient-hyperglycemia-guideline-resources",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "**Full Guideline: Management of Hyperglycemia in Hospitalized Adult Patients in Non-Critical Care Settings: An Endocrine Society Clinical Practice Guideline***JCEM* | August 2022 (online June 2022). The 2022 guideline on management of hyperglycemia in hospitalized adult patients in non-critical care",
+      "score": 0.97295
+    },
+    {
+      "number": 17,
+      "title": "Top 10 Facts to Know About Inpatient Glycemic Control",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002934315010074",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Scheduled basal/bolus insulin regimens mimic normal pancreas hormonal physiology and are designed to prevent hyperglycemia, whereas sliding scale insulin (SSI) alone attempts to lower hyperglycemia only after it has occurred.1 A study comparing scheduled basal/bolus insulin to SSI alone showed a sig",
+      "score": 0.6768127
+    },
+    {
+      "number": 18,
+      "title": "Effectiveness of Inpatient Insulin Order Sets Using Human ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1530891X20356810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JD Valgardson \u00b7 2015 \u00b7 Cited by 16 \u2014 In conclusion, our results suggest that hospital insulin order sets among non-ICU patients with diabetes may increase the recommended use of BBC insulin, ...Read more",
+      "score": 0.37209493
+    },
+    {
+      "number": 19,
+      "title": "Differences in inpatient glycemic control and response to subcutaneous insulin therapy between medicine and surgery patients with type 2 diabetes - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1056872713001153",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Nature Clinical Practice. Endocrinology & Metabolism\n\n### Insulin therapy and glycemic control in hospitalized patients with diabetes during enteral nutrition therapy: A randomized controlled clinical trial\n\n### Diabetes Care\n\n### Elevated admission glucose and mortality in elderly patients hosp",
+      "score": 0.2763137
+    },
+    {
+      "number": 20,
+      "title": "A practical and evidence-based approach to management of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2214623716300096",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Open access\n\n## Highlights\n\n   \u2022Inpatient diabetes control in non-ICU patients can improve clinical outcomes. \n   \u2022Insulin administration is a mainstay of hyperglycemia management in the wards. \n   \u2022Avoidance of hypoglycemia is important during glycemia management. \n   \u2022Several diabetes patient grou",
+      "score": 0.27407125
+    },
+    {
+      "number": 21,
+      "title": "Advanced automated insulin delivery in inpatients ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1262363626000376",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by Y Cai \u00b7 2026 \u00b7 Cited by 2 \u2014 This study addressed the challenge of glucose management in inpatients receiving nutritional support, even with automated insulin delivery (AID).Read more",
+      "score": 0.25475034
+    },
+    {
+      "number": 22,
+      "title": "Inpatient and Outpatient Technologies to Assist in the Management of Insulin Dosing",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7755045",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In most instances, insulin is the preferred treatment for hyperglycemia in hospitalized patients. In the critical care setting, continuous intravenous (IV) insulin is the most effective method for achieving glycemic targets. Outside of critical care units, a regimen of basal, prandial, and correctio",
+      "score": 0.6546525
+    },
+    {
+      "number": 23,
+      "title": "Insulin Therapy for the Management of Hyperglycemia in Hospitalized Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3738170",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and 400 mg/dL, the use of basal-bolus insulin had greater improvement in BG control than sliding scale alone. A BG target of less than 140 mg/dL was achieved in 66% of patients in the glargine plus glulisine group and 38% in the sliding scale group. One-fifth of patients treated with an SSI without ",
+      "score": 0.6512002
+    },
+    {
+      "number": 24,
+      "title": "Management of Glucocorticoid-Induced Hyperglycemia - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9142341",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  could be temporarily used but under the supervision of diabetes inpatient team.18 Patients on insulin infusion can be transitioned to subcutaneous insulin once stable. The approach should be to use a basal-bolus regimen with additional correction doses of insulin to be added to correct residual ",
+      "score": 0.6450534
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] Curriculum Vitae | Cecilia C. LOW WANG, MD, FACP - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/152448/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "ENDO 2012, Houston, TX. Endocrine Society. 2012 Session Chair, Clinical Research Fellowship and Mentor Oral Presentation session, ENDO 2012, Houston, TX. Endocrine Society. 2014 Inpatient Hyperglycemia in Select Populations. Clinical Diabetes and Endocrinology in 2014 Conference, Snowmass, CO 2014 S",
+      "score": 0.49802306
+    },
+    {
+      "number": 2,
+      "title": "Outcomes of \u201cReal-World\u201d Insulin Strategies in the Management of ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jes/article/5/8/bvab101/6300202",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Guidelines recommend scheduled long-acting basal and short-acting bolus insulin several times daily to manage inpatient hyperglycemia.",
+      "score": 0.6899958
+    },
+    {
+      "number": 3,
+      "title": "Management of Inpatient Hyperglycemia - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/labmed/article/42/7/427/2657710",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Insulin is first-line therapy for hyperglycemia as it is adaptable to the changing patient physiology over the course of hospitalization.",
+      "score": 0.5104727
+    },
+    {
+      "number": 4,
+      "title": "The Transition from Insulin Infusions to Long-Term Diabetes Therapy: The Argument for Insulin Analogs - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S104306790700010X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Insulin is the most effective and flexible regimen to achieve inpatient glycemic control, whether by infusion or by subcutaneous basal bolus regimens.",
+      "score": 0.98573
+    },
+    {
+      "number": 5,
+      "title": "In-Hospital Management of Adults Using Insulin Pump Therapy",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1499267114000525",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Image 3: Canadian Journal of Diabetes. ## Canadian Journal of Diabetes. In-Hospital Management of Adults Using Insulin Pump Therapy. In a retrospective analysis, Nasser et al found high patient satisfaction and no difference in glycemic control in patients allowed to remain on insulin pump therapy c",
+      "score": 0.98278
+    },
+    {
+      "number": 6,
+      "title": "Pathophysiology and management strategies for hyperglycemia for ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0026049512002831",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Review Pathophysiology and management strategies for hyperglycemia for patients with acute illness during and following a hospital stay. Check access to the full text by signing in through your organization. ## Pathophysiology of hyperglycemia in hospitalized patients. ## Insulin treatment in the ",
+      "score": 0.97937
+    },
+    {
+      "number": 7,
+      "title": "Changing to Basal-Bolus Insulin Therapy for the Inpatient ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X20353003",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Most acute-care hospitals have transitioned from sliding-scale to basal-bolus insulin therapy to manage hyperglycemia during hospitalization, changing to basal",
+      "score": 0.96893
+    },
+    {
+      "number": 8,
+      "title": "Effects of a subcutaneous insulin protocol, clinical education ...",
+      "detail": "shmpublications.onlinelibrary.wiley.com",
+      "url": "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.385",
+      "authors": "shmpublications.onlinelibrary.wiley.com",
+      "host": "shmpublications.onlinelibrary.wiley.com",
+      "snippet": "by JL Schnipper \u00b7 2009 \u00b7 Cited by 115 \u2014 basal-bolus insulin regimen results in improved glucose control compared with a sliding scale only regimen.12",
+      "score": 0.60750073
+    },
+    {
+      "number": 9,
+      "title": "Inpatient diabetes management - Demidowich - 2024",
+      "detail": "nyaspubs.onlinelibrary.wiley.com",
+      "url": "https://nyaspubs.onlinelibrary.wiley.com/doi/10.1111/nyas.15190",
+      "authors": "nyaspubs.onlinelibrary.wiley.com",
+      "host": "nyaspubs.onlinelibrary.wiley.com",
+      "snippet": "Jul 25, 2024 \u2014 Randomized study of basal-bolus insulin therapy in the inpatient management of patients with type 2 diabetes (RABBIT 2 trial). Diabetes Care ...Read more",
+      "score": 0.5271467
+    },
+    {
+      "number": 10,
+      "title": "Practical approach to clinical controversies in glycemic control ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1002/ncp.10858",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Apr 30, 2022 \u2014 Randomized study of basal-bolus insulin therapy in the inpatient management of patients with type 2 diabetes undergoing general surgery ...Read more",
+      "score": 0.48103997
+    },
+    {
+      "number": 11,
+      "title": "Continuous glucose monitoring for inpatient diabetes management: an update on current evidence and practice",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10563639",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "As new studies provided efficacy and safety evidence, basal-bolus insulin regimen became the standard of care for glycemic control for non-critically ill and continuous insulin infusion became the standard of care for the critically ill population, as recommended by several clinical practice guideli",
+      "score": 0.73868835
+    },
+    {
+      "number": 12,
+      "title": "Glycemic Management in Insulin-Naive Patients in the Inpatient Setting - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11093763",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Several studies have demonstrated that sliding-scale insulin (SSI) is not acceptable as the sole regimen in patients with diabetes, yet it remains the most common default regimen in most institutions (15\u201318). Guidelines from the ADA for hospitalized patients with hyperglycemia requiring insulin disc",
+      "score": 0.69399214
+    },
+    {
+      "number": 13,
+      "title": "Comparison of an Electronic Glycemic Management System Versus Provider-Managed Subcutaneous Basal Bolus Insulin Therapy in the Hospital Setting - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5375075",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "According to the American Diabetes Association (ADA), a basal bolus plus correction insulin regimen is the preferred treatment for non\u2013critically ill patients with good nutritional intake, and use of sliding scale insulin alone is strongly discouraged.1 Current guidelines for inpatient glycemic cont",
+      "score": 0.68318754
+    },
+    {
+      "number": 14,
+      "title": "Management of Hyperglycemia in Hospitalized Adult Patients in Non-Critical Care Settings: An Endocrine Society Clinical Practice Guideline - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9653018",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11. Seisa MO, Saadi S, Nayfeh T, et al. A systematic review supporting the endocrine society clinical practice guideline for the management of hyperglycemia in adults hospitalized for non-critical illness or undergoing elective surgical procedures. J Clin Endocrinol Metab. 10.1210/clinem/dgac277 [DO",
+      "score": 0.6811549
+    },
+    {
+      "number": 15,
+      "title": "Management of Diabetes and Hyperglycemia in Hospitalized Patients",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK279093",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The American Diabetes Association (ADA) and American Association of Clinical Endocrinology (AACE) task force on inpatient glycemic control and other groups recommended differing glycemic targets in the ICU setting (20) (Table 1). These guidelines suggest targeting a BG level between 140 and 180 mg/d",
+      "score": 0.63804686
+    },
+    {
+      "number": 16,
+      "title": "Inpatient Hyperglycemia Guideline Resources - Endocrine Society",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/clinical-practice-guidelines/inpatient-hyperglycemia-guideline-resources",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "**Full Guideline: Management of Hyperglycemia in Hospitalized Adult Patients in Non-Critical Care Settings: An Endocrine Society Clinical Practice Guideline***JCEM* | August 2022 (online June 2022). The 2022 guideline on management of hyperglycemia in hospitalized adult patients in non-critical care",
+      "score": 0.97295
+    },
+    {
+      "number": 17,
+      "title": "Top 10 Facts to Know About Inpatient Glycemic Control",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0002934315010074",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Scheduled basal/bolus insulin regimens mimic normal pancreas hormonal physiology and are designed to prevent hyperglycemia, whereas sliding scale insulin (SSI) alone attempts to lower hyperglycemia only after it has occurred.1 A study comparing scheduled basal/bolus insulin to SSI alone showed a sig",
+      "score": 0.6768127
+    },
+    {
+      "number": 18,
+      "title": "Effectiveness of Inpatient Insulin Order Sets Using Human ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1530891X20356810",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by JD Valgardson \u00b7 2015 \u00b7 Cited by 16 \u2014 In conclusion, our results suggest that hospital insulin order sets among non-ICU patients with diabetes may increase the recommended use of BBC insulin, ...Read more",
+      "score": 0.37209493
+    },
+    {
+      "number": 19,
+      "title": "Differences in inpatient glycemic control and response to subcutaneous insulin therapy between medicine and surgery patients with type 2 diabetes - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1056872713001153",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Nature Clinical Practice. Endocrinology & Metabolism\n\n### Insulin therapy and glycemic control in hospitalized patients with diabetes during enteral nutrition therapy: A randomized controlled clinical trial\n\n### Diabetes Care\n\n### Elevated admission glucose and mortality in elderly patients hosp",
+      "score": 0.2763137
+    },
+    {
+      "number": 20,
+      "title": "A practical and evidence-based approach to management of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2214623716300096",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Open access\n\n## Highlights\n\n   \u2022Inpatient diabetes control in non-ICU patients can improve clinical outcomes. \n   \u2022Insulin administration is a mainstay of hyperglycemia management in the wards. \n   \u2022Avoidance of hypoglycemia is important during glycemia management. \n   \u2022Several diabetes patient grou",
+      "score": 0.27407125
+    },
+    {
+      "number": 21,
+      "title": "Advanced automated insulin delivery in inpatients ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1262363626000376",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "by Y Cai \u00b7 2026 \u00b7 Cited by 2 \u2014 This study addressed the challenge of glucose management in inpatients receiving nutritional support, even with automated insulin delivery (AID).Read more",
+      "score": 0.25475034
+    },
+    {
+      "number": 22,
+      "title": "Inpatient and Outpatient Technologies to Assist in the Management of Insulin Dosing",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7755045",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In most instances, insulin is the preferred treatment for hyperglycemia in hospitalized patients. In the critical care setting, continuous intravenous (IV) insulin is the most effective method for achieving glycemic targets. Outside of critical care units, a regimen of basal, prandial, and correctio",
+      "score": 0.6546525
+    },
+    {
+      "number": 23,
+      "title": "Insulin Therapy for the Management of Hyperglycemia in Hospitalized Patients",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3738170",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and 400 mg/dL, the use of basal-bolus insulin had greater improvement in BG control than sliding scale alone. A BG target of less than 140 mg/dL was achieved in 66% of patients in the glargine plus glulisine group and 38% in the sliding scale group. One-fifth of patients treated with an SSI without ",
+      "score": 0.6512002
+    },
+    {
+      "number": 24,
+      "title": "Management of Glucocorticoid-Induced Hyperglycemia - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9142341",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  could be temporarily used but under the supervision of diabetes inpatient team.18 Patients on insulin infusion can be transitioned to subcutaneous insulin once stable. The approach should be to use a basal-bolus regimen with additional correction doses of insulin to be added to correct residual ",
+      "score": 0.6450534
+    }
+  ],
+  "publishedAt": "2026-09-15T18:27:27.301904+00:00",
+  "updatedAt": "2026-09-15T18:27:27.301904+00:00",
+  "readingMinutes": 5,
+  "slug": "inpatient-insulin-regimen-selection"
+}

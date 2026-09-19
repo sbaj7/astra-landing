@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cardiac Electrophysiology",
+  "title": "Ventricular Tachycardia",
+  "summary": "Treat sustained wide-complex tachycardia as ventricular tachycardia until a safer alternative is established. Immediate cardioversion is required for instability; stable cases require 12-lead ECG discrimination, antiarrhythmic selection based on ventricular function and substrate, and definitive sudden-death prevention planning.",
+  "seoDescription": "Point-of-care guidance for ventricular tachycardia: stabilization, wide-complex ECG diagnosis, antiarrhythmic selection, ablation, and ICD decisions.",
+  "clinicalQuestion": "How should physicians stabilize, diagnose, and prevent recurrence of ventricular tachycardia?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "ventricular tachycardia",
+    "wide-complex tachycardia",
+    "monomorphic VT",
+    "electrical storm",
+    "procainamide",
+    "catheter ablation",
+    "ICD"
+  ],
+  "keyTakeaways": [
+    "In hemodynamically unstable sustained VT, prioritize immediate synchronized electrical cardioversion rather than extended ECG analysis or drug trials. [22]",
+    "For regular wide-complex tachycardia, AV dissociation or fusion complexes establish VT; most isolated morphology criteria are supportive rather than diagnostic. [6][2]",
+    "For tolerated monomorphic VT of uncertain cause, IV procainamide is generally preferred over amiodarone, but avoid procainamide in severe structural heart disease, decompensated heart failure, acute MI, or advanced kidney disease. [23][20]",
+    "Sustained VT without a reversible cause in nonischemic cardiomyopathy is a secondary-prevention ICD indication when meaningful survival greater than 1 year is expected. [19]",
+    "In coronary artery disease with recurrent symptomatic sustained monomorphic VT or ICD shocks despite chronic amiodarone, favor catheter ablation over further antiarrhythmic escalation. [18]"
+  ],
+  "sections": [
+    {
+      "id": "acute-triage",
+      "eyebrow": "Immediate management",
+      "heading": "Stabilize sustained ventricular tachycardia before refining mechanism",
+      "intro": "Hemodynamic status, not QRS morphology alone, determines the first intervention.",
+      "paragraphs": [
+        "For sustained VT with hypotension, ischemic chest discomfort, acute heart failure, altered mental status, or other hemodynamic instability, perform synchronized electrical cardioversion promptly. If antiarrhythmic treatment precipitates hypotension or clinical deterioration during initially tolerated VT, sedate when feasible and proceed to cardioversion rather than administering sequential drugs. [22]",
+        "In a stable patient, obtain a 12-lead ECG during tachycardia and compare it with a baseline sinus-rhythm ECG before pharmacologic conversion. A wide-complex tachycardia is defined by QRS duration greater than 120 ms and may reflect VT, supraventricular tachycardia (SVT) with bundle-branch block or rate-related aberrancy, or pre-excitation. [6]",
+        "Treat a regular monomorphic wide-complex tachycardia as VT when its mechanism remains uncertain. Misclassifying VT as SVT and administering verapamil or diltiazem can be life-threatening. [6]"
+      ],
+      "bullets": [
+        "If an ICD is present, interrogate it to define the treated rhythm and reprogram detection, antitachycardia pacing, or rate thresholds when appropriate to reduce recurrent shocks. [22]",
+        "Escalate recurrent sustained VT or repeated ICD therapies as electrical storm management; maximize beta-blockade and assess promptly for catheter ablation when arrhythmia remains refractory to medical treatment. [22][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial management branch for sustained wide-complex tachycardia. [6][22][23]",
+        "columns": [
+          "Clinical branch",
+          "Immediate action",
+          "Critical limitation"
+        ],
+        "rows": [
+          [
+            "Hemodynamically unstable sustained VT",
+            "Immediate synchronized cardioversion. [22]",
+            "Do not delay cardioversion for detailed algorithmic ECG interpretation. [22]"
+          ],
+          [
+            "Stable regular monomorphic wide-complex tachycardia, diagnosis uncertain",
+            "Obtain 12-lead ECG; manage as VT while evaluating ECG and clinical features. [6]",
+            "Avoid verapamil or diltiazem when VT has not been excluded. [6]"
+          ],
+          [
+            "Stable monomorphic VT, severe HF, acute MI, or advanced kidney disease",
+            "Use IV amiodarone as the acute pharmacologic choice. [23]",
+            "Procainamide is contraindicated in these settings. [20][23]"
+          ],
+          [
+            "Stable monomorphic VT without those exclusions",
+            "Consider IV procainamide; it is preferred over amiodarone for faster conversion and fewer major cardiac adverse events in tolerated wide-QRS tachycardia. [23]",
+            "Monitor for hypotension and terminate drug infusion if instability develops. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ecg-diagnosis",
+      "eyebrow": "ECG discrimination",
+      "heading": "Identify findings that establish VT and recognize diagnostic limits",
+      "intro": "Use high-specificity findings first; use formal algorithms as corroboration rather than proof.",
+      "paragraphs": [
+        "AV dissociation with ventricular rate faster than atrial rate establishes VT. Fusion complexes likewise establish VT because they represent simultaneous supraventricular and ventricular activation. These findings are specific but may not be visible on every tracing; actively inspect a long rhythm strip and all 12 leads. [6][9]",
+        "Precordial concordance, with all QRS complexes in V1 through V6 either positive or negative, supports VT or pre-excitation. A QRS complex during tachycardia that is identical to baseline sinus-rhythm bundle-branch block morphology instead supports SVT with aberrant conduction. Neither comparison excludes VT in every patient. [6]",
+        "Use Brugada or Vereckei-aVR algorithms to support a bedside decision, particularly when AV dissociation and fusion are absent. The Brugada approach evaluates precordial morphology, including absence of any RS complex and prolonged RS interval; the Vereckei approach emphasizes lead aVR. Meta-analysis finds high sensitivity but only moderate specificity for ECG-based wide-complex tachycardia algorithms, and many individual criteria are not diagnostic in isolation. [6][1][2]",
+        "The Basel algorithm identifies VT when at least two of three findings are present: clinical high-risk features, time to first peak greater than 40 ms in lead II, and time to first peak greater than 40 ms in aVR. It was derived in electrophysiology-confirmed monomorphic wide-complex tachycardias, but algorithm reproducibility and emergency use remain limitations. [5]"
+      ],
+      "bullets": [
+        "A regular wide-complex tachycardia can be VT, SVT with aberrancy, or antidromic atrioventricular reentrant tachycardia; antidromic AV reentry may be indistinguishable from monomorphic VT by morphology algorithms. [7]",
+        "For irregular wide-complex tachycardia, include VT, atrial fibrillation with bundle-branch block, and pre-excited atrial fibrillation. Serial ECGs after conversion may reveal intermittent pre-excitation. [7]",
+        "If the diagnosis remains consequentially uncertain after noninvasive assessment, consider invasive electrophysiology study to define the mechanism. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ECG findings that change the probability and management of a wide-complex tachycardia. [5][6][7][9]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "AV dissociation or fusion complex",
+            "Diagnostic of VT. [6][9]",
+            "Treat as VT and evaluate substrate after termination. [6]"
+          ],
+          [
+            "No RS complex in precordial leads",
+            "Brugada criterion supporting VT. [6]",
+            "Use with clinical context and other criteria; do not rely on a single morphology sign alone. [2]"
+          ],
+          [
+            "All-positive or all-negative precordial concordance",
+            "Suggests VT or pre-excitation. [6]",
+            "Assess for baseline pre-excitation and avoid AV-nodal blockade if pre-excited AF is possible. [7]"
+          ],
+          [
+            "Tachycardia QRS identical to baseline bundle-branch block",
+            "Consistent with SVT with abnormal intraventricular conduction. [6]",
+            "Manage as SVT only when the full clinical and ECG assessment supports that diagnosis. [6]"
+          ],
+          [
+            "Lead II and aVR time to first peak each greater than 40 ms plus one additional Basel criterion",
+            "At least two Basel criteria diagnose VT in the proposed algorithm. [5]",
+            "Use as supportive bedside classification, recognizing imperfect reproducibility of WCT algorithms. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "acute-drug-selection",
+      "eyebrow": "Stable monomorphic VT",
+      "heading": "Select acute antiarrhythmic therapy by substrate and contraindication",
+      "intro": "Drug therapy is for tolerated VT while continuous monitoring and cardioversion capability are maintained.",
+      "paragraphs": [
+        "For hemodynamically stable monomorphic VT of unknown etiology, IV procainamide or IV amiodarone may be used, with preference for procainamide because randomized data showed a higher proportion of termination within 40 minutes and fewer major cardiac adverse events than amiodarone in tolerated wide-QRS tachycardia. [23]",
+        "Do not use procainamide in severe structural heart disease, decompensated heart failure, acute MI, or advanced kidney disease. In those settings, choose IV amiodarone. During either infusion, monitor blood pressure continuously because hypotension can convert tolerated VT to instability requiring synchronized cardioversion. [20][22][23]",
+        "IV sotalol is another acute option for stable VT, and IV lidocaine is an alternative when preferred agents are unavailable. Lidocaine has lower observed termination efficacy than procainamide, amiodarone, or sotalol in comparative acute-treatment evidence. [19][20]",
+        "When the ECG strongly suggests idiopathic outflow-tract VT, specifically left bundle-branch block morphology with an inferior axis, IV beta-blockade may terminate the arrhythmia. Ventricular arrhythmias without structural heart disease are often beta-blocker responsive; failure of drug therapy is a reason to consider catheter ablation. [22][23]"
+      ],
+      "bullets": [
+        "Do not extrapolate a stable-VT drug pathway to polymorphic VT, recurrent VF, or unstable VT; these patterns require immediate rhythm-specific resuscitation and evaluation of the underlying substrate. [22][18]",
+        "After termination, obtain a resting 12-lead ECG to identify pre-excitation, ischemic changes, QT abnormalities, or a Brugada-pattern ECG that changes subsequent risk assessment. [7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Acute pharmacologic selection for tolerated monomorphic VT; doses are not specified in the cited excerpts. [19][20][22][23]",
+        "columns": [
+          "Agent or strategy",
+          "Best-supported use",
+          "Avoid or limitation"
+        ],
+        "rows": [
+          [
+            "IV procainamide",
+            "Preferred option for stable monomorphic VT of uncertain etiology when major exclusions are absent. [23]",
+            "Contraindicated in severe structural heart disease, decompensated HF, acute MI, and advanced kidney disease. [20][23]"
+          ],
+          [
+            "IV amiodarone",
+            "Option for stable VT; preferred when severe HF, acute MI, or end-stage kidney disease precludes procainamide. [23]",
+            "Can cause hypotension; cardioversion is required if deterioration occurs. [22]"
+          ],
+          [
+            "IV sotalol",
+            "Alternative for acute treatment of hemodynamically stable VT. [19][20]",
+            "Less favored than procainamide in comparative acute-efficacy summaries. [20]"
+          ],
+          [
+            "IV lidocaine",
+            "Alternative when preferred acute agents are unavailable. [19]",
+            "Observed termination efficacy is lower than procainamide, amiodarone, and sotalol. [20]"
+          ],
+          [
+            "IV beta-blocker",
+            "Consider when morphology suggests idiopathic outflow-tract VT. [22]",
+            "Do not substitute for cardioversion in unstable VT. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiology-and-risk",
+      "eyebrow": "Post-termination evaluation",
+      "heading": "Define structural substrate and sudden-death risk after VT termination",
+      "intro": "The durable plan depends on whether VT occurs with ischemic scar, cardiomyopathy, inherited disease, or no apparent structural disease.",
+      "paragraphs": [
+        "After a sustained VT episode, determine whether structural heart disease is present and assess left ventricular function. Reduced LVEF is a major risk discriminator; persistently reduced LVEF of 35% or less identifies patients with ischemic cardiomyopathy for whom primary-prevention ICD therapy is a class I guideline indication despite optimal medical therapy. [11]",
+        "In patients with nonischemic cardiomyopathy who survive sudden cardiac death due to VT or develop sustained VT without a reversible cause, implant an ICD for secondary prevention when expected survival exceeds 1 year with good functional quality of life. This decision prevents arrhythmic death but does not eliminate VT recurrence or treat the arrhythmogenic substrate. [19][11]",
+        "Use echocardiography as the foundation for structural assessment and obtain cardiac magnetic resonance imaging when cardiomyopathy phenotype, myocardial fibrosis, or arrhythmogenic substrate requires clarification. In hypertrophic cardiomyopathy, current guidance emphasizes CMR integration because late gadolinium enhancement identifies myocardial fibrosis and improves high-risk morphologic characterization. [17]",
+        "In a younger patient with VT and right ventricular abnormalities, consider arrhythmogenic right ventricular cardiomyopathy: supportive findings include VT with left bundle-branch block/inferior-axis morphology, T-wave inversion in V1 through V4, epsilon waves, right ventricular dilation or reduced systolic function, dyskinetic aneurysms, and delayed enhancement on CMR. [9]"
+      ],
+      "bullets": [
+        "Evaluate a patient with clinically diagnosed long-QT syndrome using genetic testing and counseling; nonselective beta-blockade with nadolol or propranolol is recommended when QT prolongation is documented. [18]",
+        "In suspected or established Brugada syndrome, genetic counseling and testing may facilitate cascade screening of relatives; programmed stimulation with single and double extrastimuli may be considered for further risk stratification in asymptomatic patients with spontaneous type 1 pattern. [8]",
+        "For a previously unrecognized ventricular arrhythmia presentation without known cardiac disease, use diagnostic evaluation, provocative testing, and genetic testing selectively according to the suspected inherited or electrical syndrome. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Substrate-directed implications after VT. [8][9][11][17][18][19]",
+        "columns": [
+          "Pattern after VT",
+          "Discriminating evaluation",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Ischemic cardiomyopathy with persistently reduced LVEF at or below 35%",
+            "Assess LVEF after optimal medical therapy. [11]",
+            "Primary-prevention ICD therapy is a class I guideline indication. [11]"
+          ],
+          [
+            "Nonischemic cardiomyopathy with sustained VT and no reversible cause",
+            "Confirm cardiomyopathy and exclude a reversible cause. [19]",
+            "Secondary-prevention ICD if expected survival exceeds 1 year with good quality of life. [19]"
+          ],
+          [
+            "Hypertrophic cardiomyopathy phenotype",
+            "Echocardiography plus CMR for phenotyping and fibrosis assessment. [17]",
+            "Use imaging-based high-risk characterization in ICD decision-making. [17]"
+          ],
+          [
+            "Possible arrhythmogenic right ventricular cardiomyopathy",
+            "ECG plus CMR for right ventricular dilation, dysfunction, aneurysms, and delayed enhancement. [9]",
+            "Refer for inherited cardiomyopathy and ventricular-arrhythmia risk assessment. [9]"
+          ],
+          [
+            "Documented long-QT syndrome",
+            "Genetic testing and counseling. [18]",
+            "Use nadolol or propranolol for documented QT prolongation. [18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "recurrence-prevention",
+      "eyebrow": "Long-term management",
+      "heading": "Prevent recurrent VT, ICD therapies, and electrical storm",
+      "intro": "ICD therapy protects against fatal arrhythmia but often requires adjunctive rhythm suppression or ablation.",
+      "paragraphs": [
+        "For recurrent VT despite optimal heart-failure treatment and beta-blockade, amiodarone or sotalol may be used to reduce recurrent VT episodes. Antiarrhythmic selection should be integrated with ICD planning, because drug therapy does not replace secondary-prevention ICD therapy when sustained VT occurs without a reversible cause in eligible patients. [19]",
+        "Refer for catheter ablation when sustained ventricular arrhythmia remains refractory to medical therapy or when recurrent VT produces ICD shocks. In randomized evidence dominated by ischemic cardiomyopathy with monomorphic VT, ablation reduces VT recurrence and ICD shocks compared with medical therapy, without a clear survival benefit. [20]",
+        "For coronary artery disease with recurrent symptomatic sustained monomorphic VT or recurrent ICD shocks despite chronic amiodarone, catheter ablation is recommended in preference to escalating antiarrhythmic therapy. In the VANISH trial context, ablation was superior to amiodarone dose escalation with or without mexiletine, although death, electrical storm, and appropriate ICD shock remained frequent in both groups. [18][20]",
+        "Counsel patients that VT ablation is not risk-free. Reported procedure-related mortality in experienced centers is below 1%; recognized complications include vascular injury, stroke, tamponade, and AV block. Earlier secondary-prevention trials reported substantial ablation-related complications in approximately 3.8% to 5% of participants, while reducing ICD shocks and VT recurrence. [19][21]"
+      ],
+      "bullets": [
+        "In an ICD recipient with recurrent shocks, obtain device interrogation promptly and optimize antitachycardia pacing and detection programming alongside antiarrhythmic and ablation decisions. [22]",
+        "In idiopathic VT without structural heart disease, use beta-blockers first; sotalol or class Ic agents may be considered if beta-blockade fails, and ablation is an option when drug treatment fails. [23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation choices for recurrent VT. [18][19][20][22][23]",
+        "columns": [
+          "Clinical problem",
+          "Next treatment step",
+          "Expected tradeoff"
+        ],
+        "rows": [
+          [
+            "Recurrent VT despite optimal HF therapy and beta-blocker",
+            "Consider amiodarone or sotalol. [19]",
+            "Drug suppression may reduce episodes but does not remove substrate or replace indicated ICD therapy. [11][19]"
+          ],
+          [
+            "Recurrent VT or ICD shocks despite antiarrhythmic therapy",
+            "Refer for VT catheter ablation. [20]",
+            "Reduces recurrent VT and ICD shocks; survival benefit is not clearly demonstrated. [20]"
+          ],
+          [
+            "CAD with recurrent symptomatic SMVT or ICD shocks despite chronic amiodarone",
+            "Choose catheter ablation rather than further antiarrhythmic escalation. [18]",
+            "Ablation has procedural risks and does not guarantee freedom from death, storm, or ICD therapies. [19][20]"
+          ],
+          [
+            "Recurrent ICD shocks",
+            "Interrogate and reprogram ICD, including antitachycardia pacing and detection settings where appropriate. [22]",
+            "Programming reduces avoidable shocks but must preserve reliable treatment of clinically important VT. [22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

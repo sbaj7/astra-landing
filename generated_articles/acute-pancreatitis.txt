@@ -2,166 +2,181 @@
   "schemaVersion": 2,
   "eyebrow": "Gastroenterology",
   "title": "Acute Pancreatitis",
-  "summary": "Acute pancreatitis requires rapid confirmation, severity assessment, etiologic evaluation, and targeted supportive care. The supplied search results do not include pancreatitis-specific diagnostic criteria, fluid protocols, nutrition guidance, biliary intervention recommendations, or antimicrobial indications; management details therefore require verification against current specialty guidance.",
-  "seoDescription": "Point-of-care overview of acute pancreatitis emphasizing diagnostic confirmation, severity assessment, etiologic evaluation, and evidence gaps requiring current guideline review.",
-  "clinicalQuestion": "How should physicians confirm acute pancreatitis, stratify severity, identify cause, and prioritize early management?",
+  "summary": "Use lactated Ringer’s–based, goal-directed rather than aggressive early resuscitation, reassess severity and volume status frequently, and restore oral or enteral nutrition early to avoid unnecessary fasting and parenteral nutrition.",
+  "seoDescription": "Point-of-care fluid resuscitation and nutrition strategy for acute pancreatitis, including severity triage, lactated Ringer’s, feeding route, and escalation.",
+  "clinicalQuestion": "How should clinicians select, monitor, and escalate fluid resuscitation and nutritional support in acute pancreatitis?",
   "specialty": "Gastroenterology",
   "audience": "U.S. physicians and medical trainees",
   "tags": [
     "acute pancreatitis",
-    "pancreatitis diagnosis",
-    "pancreatitis severity",
-    "etiologic evaluation",
-    "supportive care"
+    "lactated Ringer's",
+    "fluid resuscitation",
+    "enteral nutrition",
+    "oral refeeding",
+    "severe acute pancreatitis",
+    "BISAP"
   ],
   "keyTakeaways": [
-    "The supplied evidence does not provide pancreatitis-specific criteria or treatment recommendations; avoid substituting evidence from unrelated diagnostic, cardiovascular, or pharmacologic sources.",
-    "If acute pancreatitis occurs during sitagliptin therapy, the FDA label advises prompt discontinuation when pancreatitis is suspected and initiation of appropriate management. [3]",
-    "TriVerity is a host-response assay studied in emergency patients with suspected infection or sepsis; it does not establish or exclude acute pancreatitis. [8]"
+    "Avoid early aggressive fluid resuscitation: it increases fluid overload without improving clinical outcomes; use reassessed, goal-directed replacement instead. [5][6][8]",
+    "Prefer lactated Ringer’s over normal saline when crystalloid is required; saline has been associated with hyperchloremic acidosis and a proinflammatory effect. [3][5][6][22][23]",
+    "Do not maintain routine bowel rest. Mild and moderate acute pancreatitis can generally advance to oral low-fat solid food after a short fast, and immediate low-fat oral feeding has been studied against conventional refeeding. [5][6]",
+    "For moderately severe or severe disease when oral intake is not feasible, use early enteral nutrition; enteral feeding is favored over parenteral nutrition and nasogastric feeding is an acceptable route. [4][5][6][14][15][24]",
+    "Use early severity assessment to determine monitoring intensity: BISAP includes BUN greater than 25 mg/dL, altered mental status, SIRS, age greater than 60 years, and pleural effusion. [12]"
   ],
   "sections": [
     {
-      "id": "scope-and-evidence",
-      "eyebrow": "Evidence boundary",
-      "heading": "What the supplied evidence supports",
-      "intro": "The search set is not a pancreatitis management evidence base.",
+      "id": "first-hours-triage",
+      "eyebrow": "Initial management",
+      "heading": "Set monitoring intensity before choosing fluid volume",
+      "intro": "Treat hypovolemia while identifying patients likely to develop persistent organ failure.",
       "paragraphs": [
-        "No supplied result provides acute-pancreatitis-specific diagnostic thresholds, severity classification, recommended initial fluid strategy, analgesic regimen, enteral feeding timing, imaging sequence, indications for ERCP, antibiotic criteria, or criteria for drainage or necrosectomy. Accordingly, these decisions should be verified in current pancreatitis-focused U.S. professional guidance and local pathways before use at the bedside.",
-        "The only directly relevant supplied source is the sitagliptin prescribing information, which reports postmarketing acute pancreatitis, including fatal and nonfatal hemorrhagic or necrotizing cases. It instructs clinicians to discontinue sitagliptin promptly if pancreatitis is suspected and initiate appropriate management. Whether a history of pancreatitis increases risk during sitagliptin therapy is unknown. [3]"
+        "Confirm acute pancreatitis when at least two of three Revised Atlanta features are present: characteristic pancreatic-type pain, serum lipase or amylase at least three times the upper limit of normal, or characteristic pancreatic imaging. Do not obtain pancreatic CT solely to confirm an otherwise clear diagnosis; reserve CT, MRI, or ultrasound-directed pancreatic imaging for diagnostic uncertainty, failure to improve after 48–72 hours, or suspected complications. [12]",
+        "At presentation, calculate BISAP and document SIRS. BISAP assigns one point each for BUN greater than 25 mg/dL, altered mental status, SIRS, age greater than 60 years, and pleural effusion; reported mortality ranges from less than 1% with BISAP 0 to 22% with BISAP 5. SIRS on admission identifies increased risk for severe disease and should trigger closer reassessment during early resuscitation. [12]",
+        "Assess cardiovascular, renal, and pulmonary dysfunction with the modified Marshall score when severity is uncertain or deterioration occurs. A score of 2 or greater in cardiovascular, renal, or respiratory domains meets the definition of organ failure. Persistent organ dysfunction, escalating oxygen requirement, hypotension, or inability to safely administer replacement fluid should prompt monitored or critical-care level management rather than protocolized volume loading. [12]"
       ],
       "bullets": [
-        "Do not infer acute pancreatitis diagnosis from host-response molecular testing designed for suspected infection or sepsis. [8]",
-        "Do not use this source set to select intravenous fluid type, volume, rate, antibiotic therapy, nutritional route, ERCP timing, or procedural intervention.",
-        "Medication reconciliation is clinically relevant when pancreatitis is suspected, particularly for sitagliptin exposure. [3]"
+        "Use symptom onset—not hospital arrival—as time zero when interpreting disease evolution and timing reassessment. [12]",
+        "Obtain contrast-enhanced CT when a patient has no clinical improvement after 48 hours and infected necrosis or another complication is suspected; one severe-pancreatitis series used this trigger for CT evaluation. [10]",
+        "In patients with known heart failure or renal insufficiency, lower the threshold to limit or slow fluid administration because aggressive resuscitation can increase volume-overload risk. [8]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Supplied-source applicability to acute pancreatitis decisions",
+        "caption": "Early severity findings that change fluid-monitoring intensity. [12]",
         "columns": [
-          "Clinical decision",
-          "Evidence available in supplied results",
-          "Point-of-care implication"
+          "Finding",
+          "Actionable interpretation",
+          "Next step"
         ],
         "rows": [
           [
-            "Confirm acute pancreatitis",
-            "No pancreatitis-specific diagnostic criteria or laboratory thresholds supplied.",
-            "Use current specialty guidance; do not derive criteria from these results."
+            "BISAP component present: BUN >25 mg/dL, altered mental status, SIRS, age >60 years, or pleural effusion",
+            "Each adds one BISAP point; higher score correlates with increasing reported mortality. [12]",
+            "Increase reassessment frequency and evaluate for evolving organ dysfunction. [12]"
           ],
           [
-            "Assess severity or predict complications",
-            "TriVerity predicted need for mechanical ventilation, vasopressors, and/or new renal replacement therapy within 7 days among ED patients with suspected infection or sepsis; it was not validated for pancreatitis-specific severity assessment. [8]",
-            "Do not substitute this assay for pancreatitis-specific risk stratification."
+            "Modified Marshall score ≥2 in cardiovascular, renal, or respiratory system",
+            "Meets organ-failure definition. [12]",
+            "Escalate monitoring and individualize resuscitation to perfusion and pulmonary tolerance. [12]"
           ],
           [
-            "Review possible medication contribution",
-            "Sitagliptin labeling includes postmarketing reports of acute pancreatitis and directs prompt discontinuation if suspected. [3]",
-            "Hold sitagliptin when pancreatitis is suspected; evaluate alternative causes concurrently."
-          ],
-          [
-            "Initial treatment and interventions",
-            "No directly applicable pancreatitis treatment evidence supplied.",
-            "Verify current gastroenterology, surgery, and critical care recommendations."
+            "No improvement after 48–72 hours",
+            "Raises concern for a complication or an alternative diagnosis. [12]",
+            "Obtain pancreatic imaging; use contrast-enhanced CT when infected necrosis is suspected. [10][12]"
           ]
         ]
       }
     },
     {
-      "id": "medication-safety",
-      "eyebrow": "Medication review",
-      "heading": "Sitagliptin when pancreatitis is suspected",
-      "intro": "This is the only pancreatitis-specific action supported by the supplied literature.",
+      "id": "fluid-strategy",
+      "eyebrow": "Resuscitation",
+      "heading": "Use lactated Ringer’s with frequent reassessment, not aggressive fixed-volume resuscitation",
+      "intro": "The critical decision is balancing early perfusion support against iatrogenic fluid overload.",
       "paragraphs": [
-        "Sitagliptin is a dipeptidyl peptidase-4 inhibitor indicated to improve glycemic control in adults with type 2 diabetes. Its FDA labeling describes postmarketing reports of acute pancreatitis, including hemorrhagic and necrotizing pancreatitis. If pancreatitis is suspected after initiation or during treatment, stop sitagliptin promptly and manage the patient appropriately. [3]",
-        "The label states that sitagliptin has not been studied in patients with a history of pancreatitis and that it is unknown whether such patients have increased risk while receiving the drug. This is a knowledge gap rather than a quantified contraindication. [3]"
+        "Choose lactated Ringer’s as the preferred crystalloid when intravenous resuscitation is indicated. Lactated Ringer’s has reduced systemic inflammation compared with normal saline in acute pancreatitis, whereas normal saline has been associated with hyperchloremic acidosis and a proinflammatory effect. [3][5][6][22][23]",
+        "Avoid an early aggressive resuscitation strategy. In the WATERFALL randomized trial, the aggressive-fluid group had more fluid overload without clinical-outcome improvement, leading to early trial termination. A meta-analysis of 11 studies likewise found no mortality difference between aggressive and nonaggressive intravenous fluid strategies but found greater fluid-overload risk with aggressive treatment. [5][6]",
+        "Reassess fluid need serially rather than treating a prescribed volume as an endpoint. The initial clinical objective is correction of hypoperfusion while avoiding pulmonary and systemic congestion; this tradeoff is especially narrow with preexisting renal insufficiency or heart failure. Escalating BUN-based severity risk, SIRS, pleural effusion, or organ dysfunction warrants more intensive observation, but none justifies unmonitored fluid accumulation. [8][12]"
       ],
       "bullets": [
-        "Document exposure timing, dose, renal function, concomitant glucose-lowering drugs, alcohol exposure, biliary history, triglyceride status, and other plausible etiologies; the supplied evidence does not permit attribution of causality to sitagliptin alone.",
-        "Reassess the antihyperglycemic regimen after sitagliptin discontinuation. The supplied label supports renal-function-based sitagliptin dose adjustment but does not provide an acute-pancreatitis-specific replacement strategy. [3]",
-        "Sitagliptin monotherapy has low observed hypoglycemia incidence in pooled trials, but hypoglycemia increases when used with insulin or a sulfonylurea; if those agents are continued during acute illness, reassess dosing and glycemic monitoring. [3]"
+        "Use lactated Ringer’s rather than normal saline when there is no patient-specific contraindication to the balanced crystalloid. [3][5][6][22][23]",
+        "Reevaluate for fluid overload during the first treatment interval and reduce or stop further replacement when congestion develops; aggressive resuscitation did not improve outcomes in WATERFALL. [5][6]",
+        "Do not extrapolate older recommendations for aggressive early fluid therapy to patients with cardiac or renal reserve limitations. [8][11]"
+      ],
+      "subsections": [
+        {
+          "heading": "When deterioration should change the plan",
+          "paragraphs": [
+            "Persistent or new respiratory, renal, or cardiovascular dysfunction should shift management from routine floor-based fluid replacement to organ-supportive care guided by modified Marshall assessment. In this setting, repeated fluid escalation can worsen capillary leak, pulmonary complications, and abdominal pressure rather than reverse established severe disease. [8][12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": null
+    },
+    {
+      "id": "oral-feeding",
+      "eyebrow": "Mild and moderate disease",
+      "heading": "Resume oral nutrition early rather than waiting for complete symptom resolution",
+      "intro": "Routine prolonged nothing-by-mouth orders are not supported for uncomplicated disease.",
+      "paragraphs": [
+        "For mild or moderate acute pancreatitis, use only a short period of fasting, then restart oral intake as tolerated. Patients can generally progress from clear liquids to a low-fat solid diet and usually do not require formal nutritional-support interventions. [5][6]",
+        "A low-fat solid diet can be considered at admission in selected mild or moderate cases rather than waiting for conventional refeeding milestones. The multicenter PADI trial compared immediate low-fat solid feeding after admission with a conventional oral-refeeding approach, supporting a move away from prolonged pancreatic “rest.” [5][6]",
+        "If oral feeding cannot be established or is repeatedly interrupted in moderately severe or severe disease, do not continue fasting by default. Transition to enteral feeding rather than parenteral nutrition unless enteral delivery is not feasible. [5][6][14][15]"
+      ],
+      "bullets": [
+        "Mild or moderate disease with tolerable intake: begin oral low-fat food after a short fast rather than maintain bowel rest. [5][6]",
+        "Persistent inability to take oral nutrition in moderately severe or severe disease: initiate enteral nutrition. [5][6]",
+        "Do not choose parenteral nutrition simply because pancreatitis is severe; enteral nutrition attenuates the acute-phase response compared with parenteral nutrition. [14][15]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "enteral-nutrition",
+      "eyebrow": "Moderately severe and severe disease",
+      "heading": "Use early enteral nutrition when oral intake is inadequate",
+      "intro": "Enteral feeding supports gut integrity and is the preferred artificial nutrition pathway.",
+      "paragraphs": [
+        "Provide early enteral nutrition for moderately severe or severe acute pancreatitis when adequate oral feeding is not possible. Clinical benefit from early enteral feeding in these groups is considered established, and early enteral nutrition reduces bacterial-translocation risk by preserving gut integrity. [5][6][20]",
+        "Nasogastric feeding is an acceptable route; randomized evidence in severe acute pancreatitis found similar results for nasogastric versus nasojejunal feeding. Select the route that can be placed and delivered reliably, while reassessing intolerance or aspiration risk clinically. [4][24]",
+        "Reserve parenteral nutrition for circumstances in which enteral feeding cannot be used or cannot meet nutritional needs. Compared with parenteral nutrition, enteral feeding attenuates the acute-phase response and improves disease severity in acute pancreatitis. [14][15]"
+      ],
+      "bullets": [
+        "Oral intake inadequate plus moderately severe or severe disease: initiate enteral rather than parenteral nutrition early. [5][6][14][15]",
+        "Choose nasogastric access as an acceptable initial enteral route; nasojejunal placement is not routinely required solely because disease is severe. [4][24]",
+        "Continue to reassess for complications when clinical status fails to improve; imaging after 48–72 hours can identify necrosis or other complications that alter nutritional and procedural planning. [10][12]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Sitagliptin label information relevant to suspected acute pancreatitis [3]",
+        "caption": "Nutrition pathway by clinical course. [5][6][14][15]",
         "columns": [
-          "Issue",
-          "Label-supported information",
-          "Action"
+          "Clinical situation",
+          "Preferred nutrition strategy",
+          "Avoid or reserve"
         ],
         "rows": [
           [
-            "Suspected pancreatitis",
-            "Postmarketing acute pancreatitis, including fatal and nonfatal hemorrhagic or necrotizing pancreatitis, has been reported. [3]",
-            "Promptly discontinue sitagliptin and initiate appropriate management. [3]"
+            "Mild or moderate acute pancreatitis with returning oral tolerance",
+            "Short fast followed by oral intake, advancing to a low-fat solid diet. [5][6]",
+            "Routine nutritional-support intervention. [5][6]"
           ],
           [
-            "Prior pancreatitis",
-            "Not studied; whether prior pancreatitis increases risk is unknown. [3]",
-            "Use individualized risk-benefit assessment; seek current diabetes and pancreatitis guidance."
+            "Mild or moderate acute pancreatitis suitable for immediate refeeding",
+            "Consider immediate low-fat solid diet after admission. [5][6]",
+            "Conventional prolonged fasting solely to rest the pancreas. [5][6]"
           ],
           [
-            "Renal function",
-            "The label recommends assessment before starting and periodically thereafter; dose reduction is specified for moderate or severe renal impairment and ESRD. [3]",
-            "Review renal function during acute illness, but do not infer pancreatitis treatment from renal dose tables."
+            "Moderately severe or severe acute pancreatitis with inadequate oral intake",
+            "Early enteral nutrition; nasogastric feeding is an acceptable route. [4][5][6][24]",
+            "Parenteral nutrition when enteral delivery is feasible. [14][15]"
+          ],
+          [
+            "Enteral nutrition not feasible or insufficient",
+            "Consider parenteral nutrition only as an alternative pathway. [14][15]",
+            "Assuming severity alone mandates parenteral nutrition. [14][15]"
           ]
         ]
       }
     },
     {
-      "id": "avoid-misapplication",
-      "eyebrow": "Diagnostic stewardship",
-      "heading": "Avoid misapplying sepsis biomarkers to pancreatitis",
-      "intro": "Inflammatory presentations overlap clinically but not diagnostically.",
+      "id": "complication-reassessment",
+      "eyebrow": "Escalation",
+      "heading": "Reassess nonresponse at 48–72 hours for complications rather than adding fluid indiscriminately",
+      "intro": "Failure to improve requires diagnostic reassessment and often a change from supportive to complication-directed management.",
       "paragraphs": [
-        "A prospective validation study evaluated the FDA-cleared TriVerity host-response assay in adults presenting to emergency departments with suspected acute infection or sepsis. The assay generates bacterial, viral, and severity scores from expression of 29 host-response mRNAs and was evaluated against adjudicated infection status and a composite of mechanical ventilation, vasopressor use, or new renal replacement therapy within 7 days. [8]",
-        "Acute pancreatitis may produce systemic inflammation and organ dysfunction, but the supplied study did not validate TriVerity for diagnosing pancreatitis, distinguishing sterile pancreatic inflammation from pancreatitis-related infection, or guiding pancreatitis-specific treatment. A high severity score should not be interpreted as proof of pancreatitis severity, and a low bacterial score should not be used to decide against evaluation for infected pancreatic necrosis or another source of infection. [8]"
+        "When pain, systemic inflammation, organ dysfunction, or feeding failure does not improve after 48–72 hours, obtain pancreatic imaging to assess complications. Contrast-enhanced CT is particularly useful when infected necrosis is suspected after lack of improvement despite treatment. [10][12]",
+        "Do not treat suspected infected necrosis with fluids or nutrition changes alone. Imaging-defined necrotic collections and persistent clinical deterioration require management planning around organ dysfunction, infection assessment, nutritional support, and referral-capable endoscopic, radiologic, or surgical expertise when intervention is needed. Early endoscopic treatment studies continue to describe intensive fluid replacement, analgesia, and nutrition as baseline management while evaluating necrotic collections. [10]",
+        "If biliary pancreatitis is accompanied by cholangitis, evaluate for biliary obstruction and ERCP-directed therapy rather than relying on medical resuscitation alone. ERCP timing carries procedure-related risk, and urgent intervention should be reserved for an obstruction-driven indication such as cholangitis rather than pancreatitis severity alone. [9]"
       ],
       "bullets": [
-        "Use host-response test results, if obtained for an independent sepsis evaluation, only within the population and intended clinical context studied. [8]",
-        "A diagnostic test's accuracy depends on its intended use, target population, reference standard, and disease prevalence; extrapolation beyond the validation setting can introduce clinically important error. [10]",
-        "When systemic inflammation accompanies abdominal pain, preserve parallel evaluation for pancreatitis, biliary disease, ischemia, perforation, cholangitis, and infection rather than allowing a single biomarker to collapse the differential diagnosis. The supplied evidence does not provide a validated pathway for this distinction."
+        "No improvement after 48–72 hours: obtain CT or MRI-based pancreatic assessment rather than continue empiric escalation of intravenous fluid. [10][12]",
+        "Suspected cholangitis with acute biliary pancreatitis: evaluate ductal obstruction and pursue ERCP-directed management. [9]",
+        "Persistent organ failure: use modified Marshall scoring to define and monitor cardiovascular, renal, and respiratory dysfunction. [12]"
       ],
       "subsections": [],
-      "table": {
-        "caption": "Limits of applying supplied diagnostic evidence to acute pancreatitis",
-        "columns": [
-          "Test or framework",
-          "Studied purpose",
-          "Not established for acute pancreatitis"
-        ],
-        "rows": [
-          [
-            "TriVerity [8]",
-            "Likelihood of bacterial infection, viral infection, and need for specified critical-care interventions within 7 days in adults with suspected infection or sepsis. [8]",
-            "Diagnosis of pancreatitis; pancreatitis etiology; pancreatic necrosis; infected necrosis; need for ERCP, drainage, or surgery."
-          ],
-          [
-            "Diagnostic-test evaluation framework [10]",
-            "Methodologic principles for test development and evaluation during emerging infectious disease outbreaks. [10]",
-            "A pancreatitis diagnostic or management algorithm."
-          ]
-        ]
-      }
+      "table": null
     }
   ],
-  "faq": [
-    {
-      "question": "Should sitagliptin be continued when acute pancreatitis is suspected?",
-      "answer": "No. The sitagliptin label directs prompt discontinuation if pancreatitis is suspected and initiation of appropriate management. [3]"
-    },
-    {
-      "question": "Does a history of pancreatitis contraindicate sitagliptin?",
-      "answer": "The supplied FDA labeling states that sitagliptin has not been studied in patients with prior pancreatitis and that any increased risk in this group is unknown. [3]"
-    },
-    {
-      "question": "Can TriVerity confirm or exclude acute pancreatitis?",
-      "answer": "No. The supplied validation study concerns bacterial and viral infection likelihood and short-term critical-care needs in suspected infection or sepsis, not pancreatitis diagnosis or severity. [8]"
-    },
-    {
-      "question": "What pancreatitis-specific treatment protocol can be derived from these sources?",
-      "answer": "None. The supplied results lack direct evidence for diagnostic criteria, fluid resuscitation, analgesia, nutrition, antibiotics, ERCP, drainage, or necrosectomy in acute pancreatitis."
-    }
-  ],
+  "faq": [],
   "references": [],
   "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
 }

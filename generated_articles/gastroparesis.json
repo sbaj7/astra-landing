@@ -1,0 +1,754 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Gastroenterology",
+  "title": "Gastroparesis",
+  "summary": "Confirm delayed solid gastric emptying only after excluding obstruction, then reverse medication and glycemic contributors, protect hydration and nutrition, and escalate from diet and prokinetics to selected pyloric or device therapies for medically refractory nausea and vomiting.",
+  "seoDescription": "Physician guide to diagnosing and managing gastroparesis with 4-hour gastric emptying testing, medication review, nutrition, prokinetics, and escalation.",
+  "clinicalQuestion": "How should clinicians confirm gastroparesis and select medical, nutritional, and procedural treatment?",
+  "specialty": "Gastroenterology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "gastroparesis",
+    "gastric emptying scintigraphy",
+    "metoclopramide",
+    "erythromycin",
+    "G-POEM",
+    "gastric electrical stimulation",
+    "diabetic gastroparesis"
+  ],
+  "keyTakeaways": [
+    "Diagnose gastroparesis only when symptoms coexist with objectively delayed gastric emptying and mechanical obstruction has been excluded. [1][11]",
+    "Use a standardized 4-hour solid-meal gastric emptying study; greater than 10% retention at 4 hours supports the diagnosis, whereas a 2-hour-only study is not recommended. [9][13][14]",
+    "Before testing or treating, stop reversible causes of delayed emptying when feasible, particularly opioids, cannabis, anticholinergics, and GLP-1 receptor agonists; avoid opioids for gastroparesis-associated pain. [9][12]",
+    "Initial management combines nutrition-risk assessment, small-particle low-fat/low-fiber intake, diabetes optimization, antiemetics for nausea/vomiting, and metoclopramide or short-term erythromycin when prokinetic therapy is needed. [7][9][13]",
+    "Reserve G-POEM and gastric electrical stimulation for carefully selected medically refractory disease rather than routine initial therapy. [13]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-the-diagnosis",
+      "eyebrow": "Diagnosis",
+      "heading": "Confirm delayed emptying before labeling symptoms as gastroparesis",
+      "intro": "Symptoms alone do not distinguish gastroparesis from obstruction or other gastric neuromuscular disorders.",
+      "paragraphs": [
+        "Establish gastroparesis only when upper gastrointestinal symptoms coexist with objective delayed gastric emptying and there is no mechanical obstruction at the gastric outlet. Exclude obstruction with upper endoscopy, abdominal imaging, or both before attributing nausea, vomiting, early satiety, or postprandial fullness to a motility disorder. [1][9][11][18]",
+        "Order standardized solid-meal gastric emptying scintigraphy for suspected gastroparesis. Retention greater than 10% at 4 hours is diagnostic in the appropriate clinical setting; classify 4-hour retention of 10% to 15% as mild, 16% to 35% as moderate, and greater than 35% as severe. Do not rely on a 2-hour-only test, because current AGA guidance favors 4-hour testing. [9][13][14]",
+        "Use the FDA-approved carbon-13 spirulina stable-isotope breath test when scintigraphy is unavailable or impractical. Interpret it as an indirect test of gastric emptying because its validity depends on normal downstream intestinal, hepatic, and pulmonary handling of the labeled substrate. [9][19]"
+      ],
+      "bullets": [
+        "Hold drugs that affect gastric emptying for 48 to 72 hours before testing when clinically safe: opioids and anticholinergics can create false delay, whereas metoclopramide, domperidone, and erythromycin can create a falsely normal study. [3]",
+        "In diabetes, defer emptying assessment during acute metabolic derangement; hyperglycemia above 200 mg/dL delays emptying, and the cited guideline recommends testing after glucose is below 275 mg/dL. [3]",
+        "If the standardized study is normal, reconsider functional dyspepsia and other gastric neuromuscular disorders rather than escalating gastroparesis-directed interventions. Early satiety, postprandial fullness, and epigastric pain predominate more often in functional dyspepsia, whereas nausea and vomiting are more characteristic of gastroparesis. [16][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tests and findings that establish or redirect a suspected gastroparesis diagnosis. [9][13][18][19]",
+        "columns": [
+          "Clinical question",
+          "Test or condition",
+          "Actionable interpretation"
+        ],
+        "rows": [
+          [
+            "Is there structural gastric outflow disease?",
+            "Upper endoscopy and/or abdominal imaging [9][18]",
+            "Mechanical obstruction excludes gastroparesis as the explanation for delayed emptying; pursue the structural cause. [9][18]"
+          ],
+          [
+            "Is emptying objectively delayed?",
+            "Standardized 4-hour solid-meal gastric emptying scintigraphy [13][14]",
+            "More than 10% retention at 4 hours supports gastroparesis after obstruction is excluded. [9]"
+          ],
+          [
+            "How severe is the emptying delay?",
+            "Four-hour retention [9]",
+            "Mild: 10% to 15%; moderate: 16% to 35%; severe: greater than 35%. Use severity with oral-intake tolerance and nutritional status to determine escalation. [9]"
+          ],
+          [
+            "Can scintigraphy not be performed?",
+            "Carbon-13 spirulina breath test [9][19]",
+            "FDA-approved diagnostic alternative; interpret cautiously if bowel, liver, or pulmonary function could alter labeled-substrate handling. [9][19]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "identify-reversible-drivers",
+      "eyebrow": "Etiology and modifiers",
+      "heading": "Address contributors that change management before adding chronic therapy",
+      "intro": "Medication exposure, diabetes, prior surgery, and nutritional compromise determine the first intervention.",
+      "paragraphs": [
+        "Review the medication list before assigning idiopathic disease. Discontinue or replace, when feasible, agents that delay gastric emptying, including opioids, cannabis, anticholinergics, and GLP-1 receptor agonists. Medication-induced gastroparesis is best managed by withdrawing the causative agent rather than by simply adding prokinetics. [9][18]",
+        "For diabetic gastroparesis, optimize glycemic control as part of treatment and avoid interpreting gastric emptying during marked hyperglycemia. HbA1c has been associated with 4-hour retention, although improved HbA1c over 6 months did not necessarily normalize gastric emptying in one cited study; use glucose optimization to reduce a modifiable contributor rather than as a substitute for symptom- and nutrition-directed treatment. [3][12]",
+        "Document major etiologic context because diabetes, prior gastric surgery or vagal injury, medication exposure, neurologic disease, viral illness, autoimmune mechanisms, and idiopathic disease have different reversibility and escalation pathways. Idiopathic and diabetic disease are the populations specifically addressed by current AGA management guidance. [7][13]"
+      ],
+      "bullets": [
+        "Do not treat gastroparesis-associated pain with opioids, including tramadol or tapentadol, because these agents retard gastrointestinal transit and are associated with worse gastroparesis. [12]",
+        "Treat persistent vomiting as a nutrition and volume problem: assess oral intake, weight trajectory, hydration, electrolytes, and malnutrition risk early; refer patients at nutritional risk for formal dietitian assessment. [7][15]",
+        "If oral intake cannot maintain hydration or nutrition, move to jejunal enteral feeding rather than prolonged ineffective oral intake; parenteral nutrition is rarely required. [3][7][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Reversible contributors and immediate management changes in gastroparesis. [3][7][9][12][18]",
+        "columns": [
+          "Pattern",
+          "Discriminator",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Medication-related delay",
+            "Opioid, cannabis, anticholinergic, or GLP-1 receptor agonist exposure [9]",
+            "Stop, substitute, or reduce the offending agent when clinically feasible; reassess symptoms and test validity after washout. [3][9][18]"
+          ],
+          [
+            "Diabetes with hyperglycemia",
+            "Glucose above 200 mg/dL may delay emptying; testing should wait until glucose is below 275 mg/dL. [3]",
+            "Optimize glycemia and repeat or defer diagnostic testing if acute hyperglycemia could confound the result. [3][12]"
+          ],
+          [
+            "Inadequate oral intake",
+            "Dehydration, electrolyte deficit, weight loss, or malnutrition risk [7][15]",
+            "Correct fluid and electrolyte deficits; obtain dietitian assessment and consider jejunal feeding when oral intake remains inadequate. [7][15]"
+          ],
+          [
+            "Postsurgical disease",
+            "Prior partial gastric resection, vagotomy, or vagal nerve injury [6]",
+            "Confirm delayed emptying and exclude structural complications before considering refractory-disease pathways. [6][18]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "initial-medical-management",
+      "eyebrow": "First-line treatment",
+      "heading": "Match nutrition and medication intensity to emptying severity and intake failure",
+      "intro": "Treat nausea, vomiting, intake intolerance, and delayed emptying in parallel.",
+      "paragraphs": [
+        "Start with a small-particle diet\u2014foods blended or chopped into small pieces\u2014low in fat and nondigestible fiber. For mild disease, this dietary strategy plus antiemetics is a first-line approach; for severe disease, use a liquid diet or jejunal enteral feeding when oral solids cannot sustain nutrition. [9]",
+        "Use antiemetics to control nausea and vomiting, recognizing that they relieve symptoms but do not correct gastric emptying. Serotonin 5-hydroxytryptamine-3 receptor antagonists and histamine H1 receptor antagonists are cited first-line antiemetic options for mild gastroparesis. [9]",
+        "For moderate symptoms or persistent vomiting despite dietary modification and antiemetics, use a prokinetic. Current AGA guidance conditionally supports metoclopramide or erythromycin; metoclopramide remains the only medication approved in the United States for gastroparesis and is generally limited to less than 12 weeks. [8][13]"
+      ],
+      "bullets": [
+        "Use erythromycin primarily as short-term therapy because its role is limited by loss of sustained effect; it is conditionally recommended as an initial pharmacologic option. [3][13]",
+        "Do not use domperidone, prucalopride, aprepitant, nortriptyline, buspirone, or cannabidiol as routine first-line therapy under current AGA guidance. [13]",
+        "Domperidone is not FDA-approved in the United States and is available only through investigational protocols for patients unable to tolerate metoclopramide; if used, obtain baseline and follow-up ECG monitoring, and withhold therapy for QTc greater than 470 ms in men or greater than 450 ms in women. [3][4]",
+        "Consider a 5-HT4 agonist only after individualized discussion of limited-quality evidence; ACG conditionally suggests this class to improve gastric emptying. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial management by clinical severity and treatment purpose. [8][9][12][13]",
+        "columns": [
+          "Clinical situation",
+          "Primary intervention",
+          "Treatment goal and limitation"
+        ],
+        "rows": [
+          [
+            "Mild delayed emptying with preserved intake",
+            "Small-particle, low-fat, low-nondigestible-fiber diet plus antiemetic therapy [9]",
+            "Reduce nausea and improve tolerance; monitor weight and hydration rather than treating the scan result alone. [7][9]"
+          ],
+          [
+            "Moderate symptoms or persistent vomiting",
+            "Add metoclopramide or short-term erythromycin [8][13]",
+            "Improve symptoms and gastric emptying; metoclopramide is U.S. approved but recommended use is less than 12 weeks. [8]"
+          ],
+          [
+            "Severe delay or failure of oral nutrition",
+            "Liquid diet; jejunal enteral feeding if oral intake is inadequate [9][15]",
+            "Maintain hydration and nutrition; parenteral nutrition is rarely needed. [3][7][15]"
+          ],
+          [
+            "Intolerance or failure of metoclopramide",
+            "Consider domperidone only through an investigational pathway, with ECG surveillance [3][4]",
+            "Potential prokinetic alternative, but U.S. access and QTc risk constrain use. [3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "refractory-disease",
+      "eyebrow": "Escalation",
+      "heading": "Select pyloric interventions or gastric electrical stimulation only after medical failure",
+      "intro": "Refractory treatment should target dominant symptoms, documented delay, and nutritional consequences.",
+      "paragraphs": [
+        "Refer patients with persistent moderate-to-severe symptoms, recurrent vomiting, or nutrition failure despite medication withdrawal, dietary optimization, antiemetics, and a prokinetic trial to a motility-focused multidisciplinary center. Current AGA guidance recommends against routine initial G-POEM or gastric electrical stimulation, reserving them for selected medically refractory patients. [13]",
+        "Consider G-POEM after confirming absence of obstruction and delayed emptying on 4-hour scintigraphy. A 4-hour retention greater than 20% has been associated with a higher likelihood of response; nausea- and vomiting-predominant symptoms favor response, whereas pain-predominant symptoms are less likely to improve. Reported technical success exceeds 95%, with durable symptom relief in 50% to 77.5% at 2 to 4 years. [10]",
+        "Consider gastric electrical stimulation for chronic intractable nausea and vomiting due to diabetic or idiopathic gastroparesis after medical therapy fails. Enterra received FDA humanitarian device exemption approval for this indication; evidence includes randomized data showing reduced refractory vomiting, but guideline recommendations reserve its use for selected refractory disease rather than routine early treatment. [3][13][21]"
+      ],
+      "bullets": [
+        "Do not select a pylorus-directed procedure based on pain alone; prioritize patients with documented delay and nausea/vomiting predominance. [10]",
+        "Discuss G-POEM benefit as symptom-focused rather than a guaranteed correction of gastric emptying; symptom severity and gastric emptying do not consistently move together. [1][23]",
+        "Surgical pyloromyotomy and pyloroplasty remain areas of knowledge gaps in current AGA guidance; use individualized multidisciplinary decision-making rather than a routine algorithmic choice. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Selection framework for invasive therapy in medically refractory gastroparesis. [10][13][21]",
+        "columns": [
+          "Option",
+          "Best-supported selection features",
+          "Key counseling point"
+        ],
+        "rows": [
+          [
+            "G-POEM",
+            "Documented delayed 4-hour emptying, particularly retention greater than 20%; moderate-to-severe nausea/vomiting after medical therapy failure [10]",
+            "Technical success exceeds 95%; reported durable symptom relief is 50% to 77.5% at 2 to 4 years, while pain-predominant disease responds less reliably. [10]"
+          ],
+          [
+            "Gastric electrical stimulation",
+            "Chronic intractable nausea/vomiting from diabetic or idiopathic gastroparesis refractory to medical therapy [21]",
+            "FDA humanitarian device exemption pathway; do not use routinely as initial management. [13][21]"
+          ],
+          [
+            "Surgical pyloroplasty or pyloromyotomy",
+            "Individualized refractory-case consideration [13]",
+            "Current AGA guideline gives no recommendation because of knowledge gaps. [13]"
+          ],
+          [
+            "Jejunal feeding access",
+            "Inadequate oral hydration or nutritional maintenance despite dietary and medical treatment [7][15]",
+            "Nutritional rescue strategy, not proof that a pyloric intervention will relieve symptoms. [7][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-reassessment",
+      "eyebrow": "Follow-up",
+      "heading": "Monitor oral intake and vomiting burden, not gastric emptying alone",
+      "intro": "Reassess treatment response by clinical function and nutrition after each management change.",
+      "paragraphs": [
+        "At follow-up, document vomiting frequency, ability to maintain oral fluids and calories, weight trajectory, hydration, electrolyte abnormalities, diabetes control when applicable, and use of drugs that slow emptying. Escalate nutrition support when oral intake fails rather than waiting for profound malnutrition. [7][15][17]",
+        "Recheck the diagnosis when symptoms are refractory but the initial study was confounded by hyperglycemia or motility-altering medications, or when the symptom phenotype is pain-, fullness-, or early-satiety predominant with normal emptying. The severity of delayed emptying does not uniformly predict symptom burden or response to therapy. [3][16][23]",
+        "For domperidone use under an investigational protocol, obtain baseline and follow-up ECGs and stop or avoid treatment when QTc exceeds the cited sex-specific thresholds. For metoclopramide, adhere to the recommended treatment duration of less than 12 weeks unless a carefully individualized risk-benefit decision supports otherwise. [3][8]"
+      ],
+      "bullets": [
+        "Repeat gastric emptying testing when a result will change a major decision, such as confirming persistent objective delay before an invasive refractory-disease intervention. [10][13]",
+        "Reassess all antiemetic and prokinetic regimens for ongoing benefit; if symptoms remain dominated by vomiting despite optimized medical therapy, transition from serial medication changes to refractory-disease evaluation. [13][21]",
+        "Continue dietary and nutrition management even when a prokinetic or procedure is used, because oral tolerance and malnutrition risk remain central treatment targets. [7][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Follow-up triggers that should change management. [3][7][8][10][13][15]",
+        "columns": [
+          "Follow-up finding",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Persistent vomiting despite diet, antiemetic, and prokinetic therapy",
+            "Medically refractory symptom burden [13]",
+            "Confirm objective delay and refer for selected G-POEM or gastric electrical stimulation evaluation. [10][13][21]"
+          ],
+          [
+            "Unable to sustain oral hydration or nutrition",
+            "Nutritional treatment failure [7][15]",
+            "Correct deficits and consider jejunal enteral nutrition; reserve parenteral nutrition for uncommon circumstances. [3][7][15]"
+          ],
+          [
+            "QTc exceeds 470 ms in a man or 450 ms in a woman taking domperidone",
+            "Excess cardiac repolarization risk under cited guidance [3]",
+            "Withhold domperidone and reassess the antiemetic/prokinetic plan. [3]"
+          ],
+          [
+            "Initial test performed with glucose above target or ongoing motility-altering drugs",
+            "Potential false delayed or false normal result [3]",
+            "Correct the confounder and repeat standardized testing if the result determines treatment escalation. [3][13]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Rome Foundation and international neurogastroenterology and motility societies\u2019 consensus on idiopathic gastroparesis",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(24)00284-X/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Rome Foundation and international neurogastroenterology and motility societies\u2019 consensus on idiopathic gastroparesis - The Lancet Gastroenterology & Hepatology. a00284-X/abstract),b00284-X/abstract),q00284-X/abstract)jan.tack@kuleuven.be \u2219 et al. This consensus defined idiopathic gastroparesis as t",
+      "score": 0.6479992
+    },
+    {
+      "number": 2,
+      "title": "Exploring Clinical Similarities and Distinctions Between ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/nmo.70251",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Gastroparesis is characterized by delayed gastric emptying in the absence of mechanical obstruction, with symptoms including nausea, vomiting,",
+      "score": 0.3681336
+    },
+    {
+      "number": 3,
+      "title": "Clinical Guideline: Management of Gastroparesis : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/2013/01000/clinical_guideline__management_of_gastroparesis.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Parenteral nutrition is rarely required when hydration and nutritional state cannot be maintained. Medical treatment entails use of prokinetic and antiemetic therapies. Current approved treatment options, including metoclopramide and gastric electrical stimulation (GES, approved on a humanitarian de",
+      "score": 0.75312227
+    },
+    {
+      "number": 4,
+      "title": "Progress in Gastroparesis Management : JGH Open",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02045866-202603000-00016",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "metoclopramide, domperidone, and macrolides, while antiemetics alleviate symptoms when initial treatments don't lead to improvement. For refractory symptoms, invasive interventions may be necessary, including decompression and feeding tubes, such as gastrostomy tubes and jejunal feeding tubes, and m",
+      "score": 0.6922474
+    },
+    {
+      "number": 5,
+      "title": "Efficacy of gastric stimulator as an adjunct to pyloroplasty for gastroparesis: characterizing patients suitable for single procedure vs dual procedure approach",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1091255X24005766",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "framework was used to assess evidence and develop this guideline. The Guideline Panel prioritized clinical questions and outcomes, conducted an evidence review, and used the Evidence to Decision Framework to develop recommendations. The Guideline Panel agreed on 12 recommendations. A conditional rec",
+      "score": 0.62852204
+    },
+    {
+      "number": 6,
+      "title": "Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1542356510012772",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years - ScienceDirect\n# Original article\u2014alimentary tract Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years. We assessed the long-term clinical outcome",
+      "score": 0.71377134
+    },
+    {
+      "number": 7,
+      "title": "Nutritional approaches for gastroparesis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468125320300789",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Nutritional approaches for gastroparesis - ScienceDirect\nCommon signs and symptoms include nausea, vomiting, early satiety, postprandial fullness, bloating, and abdominal discomfort, which can markedly affect quality of life and can lead to increased use of health care.1, 2, 3, 4 Patients wit",
+      "score": 0.6453216
+    },
+    {
+      "number": 8,
+      "title": "Prokinetics in Gastroparesis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0889855314001393",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Prokinetic therapy should be considered as a means to improve gastric emptying and symptoms of gastroparesis. Metoclopramide remains the first-line prokinetic therapy, because it is the only approved medication for gastroparesis in the United States. There are 2 dopamine receptor antagonists availab",
+      "score": 0.5530473
+    },
+    {
+      "number": 9,
+      "title": "Gastroparesis: A Review. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42485161?fc=None&ff=20260725052832&v=2.20.0",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "virus, SARS-CoV-2). The 2022 American College of Gastroenterology and the 2025 American Gastroenterological Association (AGA) guidelines define the criterion standard diagnostic test for gastroparesis as gastric emptying scintigraphy with more than 10% gastric retention at 4 hours in patients with s",
+      "score": 0.8286204
+    },
+    {
+      "number": 10,
+      "title": "Redefining the Treatment Landscape in Gastroparesis: A Clinical Review of Gastric Peroral Endoscopic Myotomy Outcomes and Therapeutic Integration",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12687299",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "2.3\nAccording to guidelines from the American College of Gastroenterology (ACG), adult patients may be considered for G\u2010POEM if the following diagnostic criteria are met . Mechanical obstruction is excluded, typically via upper endoscopy or contrast imaging.Delayed gastric emptying is documented by ",
+      "score": 0.76002824
+    },
+    {
+      "number": 11,
+      "title": "ACG Clinical Guideline: Gastroparesis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35926490",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Gastroparesis is characterized by symptoms suggesting retention of food in the stomach with objective evidence of delayed gastric emptying in the absence of mechanical obstruction in the gastric outflow. This condition is increasingly encountered in clinical practice. These guidelines summarize pers",
+      "score": 0.7407191
+    },
+    {
+      "number": 12,
+      "title": "ACG Clinical Guideline: Gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9373497",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "glycemic control in diabetic gastroparesis (23). On the other hand, after 6 months of intensive therapy which led to decreased levels of glycosylated hemoglobin (from mean 10.6\u00b10.3% to 9\u00b10.4%), gastric emptying (GE) T 1/2 did not change (24). Nevertheless, Izzy et al. (25) documented that HbA1C leve",
+      "score": 0.72907686
+    },
+    {
+      "number": 13,
+      "title": "AGA Clinical Practice Guideline on Management of Gastroparesis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40976635",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "The Guideline Panel agreed on 12 recommendations. A conditional recommendation was issued against using 2-hour gastric emptying testing and in favor of 4-hour testing in patients with suspected gastroparesis. There are conditional recommendations for the use of metoclopramide and erythromycin in pat",
+      "score": 0.7265231
+    },
+    {
+      "number": 14,
+      "title": "Highlights From the New ACG Clinical Guideline for Gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9666798",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The gold standard for the diagnosis of gastroparesis is a scintigraphic study of gastric emptying of a solid meal, typically an egg or egg/protein-based meal.",
+      "score": 0.72465646
+    },
+    {
+      "number": 15,
+      "title": "Clinical guideline: management of gastroparesis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23147521",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "This guideline presents recommendations for the evaluation and management of patients with gastroparesis. Gastroparesis is identified in clinical practice through the recognition of the clinical symptoms and documentation of delayed gastric emptying. Symptoms from gastroparesis include nausea, vomit",
+      "score": 0.644248
+    },
+    {
+      "number": 16,
+      "title": "TEN CONTROVERSIES IN GASTROPARESIS AND A LOOK TO THE FUTURE",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10133001",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "23.. Shin, Camilleri, Busciglio, _et al._ Randomized controlled phase Ib study of ghrelin agonist, RM-131, in type 2 diabetic women with delayed gastric emptying: pharmacokinetics and pharmacodynamics. _Diabetes Care_. 2013;36(1):41\u201348. doi: 10.2337/dc12-1128  [DOI] [PMC free article] [PubMed] [Goog",
+      "score": 0.62934244
+    },
+    {
+      "number": 17,
+      "title": "Gastroparesis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK551528",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nA holistic approach is recommended when treating patients with gastroparesis. Treatment should comprise assessment of nutritional status, measures to correct fluid, electrolyte, and nutritional deficiencies, relief of symptoms of gastroparesis, improvement of gastric empty",
+      "score": 0.44883752
+    },
+    {
+      "number": 18,
+      "title": "Gastric Outlet Obstruction - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557826",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Endoscopic ultrasound (EUS) is performed if a malignant cause of GOO is suspected, allowing for fine-needle aspiration of tumors that are difficult to access and providing locoregional staging.(#article-22074.r10) Gastroparesis is diagnosed when a nuclear gastric emptying scan shows delayed gastric ",
+      "score": 0.4315129
+    },
+    {
+      "number": 19,
+      "title": "Gastric Emptying Scan - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531503",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Other tests used to measure GE include breath testing and wireless pH capsules. Breath testing is performed using a standardized meal including Spirulina labeled with Carbon-13. The meal passes through the stomach, into the duodenum where it is absorbed, metabolized in the liver and exhaled by the l",
+      "score": 0.5194
+    },
+    {
+      "number": 20,
+      "title": "Intervention and alternatives | Gastroparesis in adults: oral erythromycin | Advice | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/advice/esuom13/chapter/Intervention-and-alternatives",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "### Alternative treatment options\n\nThe management of gastroparesis centres on nutrition and fluid balance. For pharmacological management, the Clinical guideline: management of gastroparesis and the NICE clinical guideline on type 2 diabetes \u2013 newer agents recommend that metoclopramide, domperidone ",
+      "score": 0.74563974
+    },
+    {
+      "number": 21,
+      "title": "On and Off of Gastric Electrical Stimulation for Refractory\u00a0Vomiting - Gastroenterology",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(19)41949-5/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Gastric Electrical Stimulation Reduces Refractory Vomiting in a Randomized Crossover Trial41463-7/fulltext \"Gastric Electrical Stimulation Reduces Refractory Vomiting in a Randomized Crossover Trial\"). In March 2000, the US Food and Drug Administration approved the humanitarian device exemption appl",
+      "score": 0.6396691
+    },
+    {
+      "number": 22,
+      "title": "Gastric Electrical Stimulation for the Treatment of Gastroparesis or Gastroparesis-Like Symptoms: A Systemic Review and Meta-Analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1094715922013381",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Gastroenterology\n\n### Gastric electrical stimulation for medically refractory gastroparesis\n\n### Gastroenterology\n\n### A double-masked, randomized, placebo-controlled trial of temporary endoscopic mucosal gastric electrical stimulation for gastroparesis\n\n### Gastrointest Endosc\n\n### Gastric elec",
+      "score": 0.5367749
+    },
+    {
+      "number": 23,
+      "title": "Pharmacologic treatments for gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12599987",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Despite optimal supportive care with dietary strategies, most patients with gastroparesis continue to experience symptoms. The 2013 guideline from the American College of Gastroenterology recommended prokinetic agents as the first-line therapy for gastroparesis (Camilleri et al, 2013). The 2022 guid",
+      "score": 0.6010557
+    },
+    {
+      "number": 24,
+      "title": "Diagnostic Methods for Evaluation of Gastric Motility\u2014A Mini Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9955554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Delayed gastric emptying is the hallmark finding required to diagnose gastroparesis. Approximately 35% of unselected patients with FD will also",
+      "score": 0.49831602
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Rome Foundation and international neurogastroenterology and motility societies\u2019 consensus on idiopathic gastroparesis",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(24)00284-X/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Rome Foundation and international neurogastroenterology and motility societies\u2019 consensus on idiopathic gastroparesis - The Lancet Gastroenterology & Hepatology. a00284-X/abstract),b00284-X/abstract),q00284-X/abstract)jan.tack@kuleuven.be \u2219 et al. This consensus defined idiopathic gastroparesis as t",
+      "score": 0.6479992
+    },
+    {
+      "number": 2,
+      "title": "Exploring Clinical Similarities and Distinctions Between ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/nmo.70251",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Gastroparesis is characterized by delayed gastric emptying in the absence of mechanical obstruction, with symptoms including nausea, vomiting,",
+      "score": 0.3681336
+    },
+    {
+      "number": 3,
+      "title": "Clinical Guideline: Management of Gastroparesis : American Journal of Gastroenterology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ajg/fulltext/2013/01000/clinical_guideline__management_of_gastroparesis.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Parenteral nutrition is rarely required when hydration and nutritional state cannot be maintained. Medical treatment entails use of prokinetic and antiemetic therapies. Current approved treatment options, including metoclopramide and gastric electrical stimulation (GES, approved on a humanitarian de",
+      "score": 0.75312227
+    },
+    {
+      "number": 4,
+      "title": "Progress in Gastroparesis Management : JGH Open",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02045866-202603000-00016",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "metoclopramide, domperidone, and macrolides, while antiemetics alleviate symptoms when initial treatments don't lead to improvement. For refractory symptoms, invasive interventions may be necessary, including decompression and feeding tubes, such as gastrostomy tubes and jejunal feeding tubes, and m",
+      "score": 0.6922474
+    },
+    {
+      "number": 5,
+      "title": "Efficacy of gastric stimulator as an adjunct to pyloroplasty for gastroparesis: characterizing patients suitable for single procedure vs dual procedure approach",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1091255X24005766",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "framework was used to assess evidence and develop this guideline. The Guideline Panel prioritized clinical questions and outcomes, conducted an evidence review, and used the Evidence to Decision Framework to develop recommendations. The Guideline Panel agreed on 12 recommendations. A conditional rec",
+      "score": 0.62852204
+    },
+    {
+      "number": 6,
+      "title": "Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1542356510012772",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years - ScienceDirect\n# Original article\u2014alimentary tract Gastric Electrical Stimulation Improves Outcomes of Patients With Gastroparesis for up to 10 Years. We assessed the long-term clinical outcome",
+      "score": 0.71377134
+    },
+    {
+      "number": 7,
+      "title": "Nutritional approaches for gastroparesis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2468125320300789",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Nutritional approaches for gastroparesis - ScienceDirect\nCommon signs and symptoms include nausea, vomiting, early satiety, postprandial fullness, bloating, and abdominal discomfort, which can markedly affect quality of life and can lead to increased use of health care.1, 2, 3, 4 Patients wit",
+      "score": 0.6453216
+    },
+    {
+      "number": 8,
+      "title": "Prokinetics in Gastroparesis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0889855314001393",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Prokinetic therapy should be considered as a means to improve gastric emptying and symptoms of gastroparesis. Metoclopramide remains the first-line prokinetic therapy, because it is the only approved medication for gastroparesis in the United States. There are 2 dopamine receptor antagonists availab",
+      "score": 0.5530473
+    },
+    {
+      "number": 9,
+      "title": "Gastroparesis: A Review. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42485161?fc=None&ff=20260725052832&v=2.20.0",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "virus, SARS-CoV-2). The 2022 American College of Gastroenterology and the 2025 American Gastroenterological Association (AGA) guidelines define the criterion standard diagnostic test for gastroparesis as gastric emptying scintigraphy with more than 10% gastric retention at 4 hours in patients with s",
+      "score": 0.8286204
+    },
+    {
+      "number": 10,
+      "title": "Redefining the Treatment Landscape in Gastroparesis: A Clinical Review of Gastric Peroral Endoscopic Myotomy Outcomes and Therapeutic Integration",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12687299",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "2.3\nAccording to guidelines from the American College of Gastroenterology (ACG), adult patients may be considered for G\u2010POEM if the following diagnostic criteria are met . Mechanical obstruction is excluded, typically via upper endoscopy or contrast imaging.Delayed gastric emptying is documented by ",
+      "score": 0.76002824
+    },
+    {
+      "number": 11,
+      "title": "ACG Clinical Guideline: Gastroparesis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35926490",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Gastroparesis is characterized by symptoms suggesting retention of food in the stomach with objective evidence of delayed gastric emptying in the absence of mechanical obstruction in the gastric outflow. This condition is increasingly encountered in clinical practice. These guidelines summarize pers",
+      "score": 0.7407191
+    },
+    {
+      "number": 12,
+      "title": "ACG Clinical Guideline: Gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9373497",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "glycemic control in diabetic gastroparesis (23). On the other hand, after 6 months of intensive therapy which led to decreased levels of glycosylated hemoglobin (from mean 10.6\u00b10.3% to 9\u00b10.4%), gastric emptying (GE) T 1/2 did not change (24). Nevertheless, Izzy et al. (25) documented that HbA1C leve",
+      "score": 0.72907686
+    },
+    {
+      "number": 13,
+      "title": "AGA Clinical Practice Guideline on Management of Gastroparesis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40976635",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "The Guideline Panel agreed on 12 recommendations. A conditional recommendation was issued against using 2-hour gastric emptying testing and in favor of 4-hour testing in patients with suspected gastroparesis. There are conditional recommendations for the use of metoclopramide and erythromycin in pat",
+      "score": 0.7265231
+    },
+    {
+      "number": 14,
+      "title": "Highlights From the New ACG Clinical Guideline for Gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9666798",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The gold standard for the diagnosis of gastroparesis is a scintigraphic study of gastric emptying of a solid meal, typically an egg or egg/protein-based meal.",
+      "score": 0.72465646
+    },
+    {
+      "number": 15,
+      "title": "Clinical guideline: management of gastroparesis - PubMed",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23147521",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "This guideline presents recommendations for the evaluation and management of patients with gastroparesis. Gastroparesis is identified in clinical practice through the recognition of the clinical symptoms and documentation of delayed gastric emptying. Symptoms from gastroparesis include nausea, vomit",
+      "score": 0.644248
+    },
+    {
+      "number": 16,
+      "title": "TEN CONTROVERSIES IN GASTROPARESIS AND A LOOK TO THE FUTURE",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10133001",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "23.. Shin, Camilleri, Busciglio, _et al._ Randomized controlled phase Ib study of ghrelin agonist, RM-131, in type 2 diabetic women with delayed gastric emptying: pharmacokinetics and pharmacodynamics. _Diabetes Care_. 2013;36(1):41\u201348. doi: 10.2337/dc12-1128  [DOI] [PMC free article] [PubMed] [Goog",
+      "score": 0.62934244
+    },
+    {
+      "number": 17,
+      "title": "Gastroparesis - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK551528",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nA holistic approach is recommended when treating patients with gastroparesis. Treatment should comprise assessment of nutritional status, measures to correct fluid, electrolyte, and nutritional deficiencies, relief of symptoms of gastroparesis, improvement of gastric empty",
+      "score": 0.44883752
+    },
+    {
+      "number": 18,
+      "title": "Gastric Outlet Obstruction - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557826",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Endoscopic ultrasound (EUS) is performed if a malignant cause of GOO is suspected, allowing for fine-needle aspiration of tumors that are difficult to access and providing locoregional staging.(#article-22074.r10) Gastroparesis is diagnosed when a nuclear gastric emptying scan shows delayed gastric ",
+      "score": 0.4315129
+    },
+    {
+      "number": 19,
+      "title": "Gastric Emptying Scan - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531503",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Other tests used to measure GE include breath testing and wireless pH capsules. Breath testing is performed using a standardized meal including Spirulina labeled with Carbon-13. The meal passes through the stomach, into the duodenum where it is absorbed, metabolized in the liver and exhaled by the l",
+      "score": 0.5194
+    },
+    {
+      "number": 20,
+      "title": "Intervention and alternatives | Gastroparesis in adults: oral erythromycin | Advice | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/advice/esuom13/chapter/Intervention-and-alternatives",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "### Alternative treatment options\n\nThe management of gastroparesis centres on nutrition and fluid balance. For pharmacological management, the Clinical guideline: management of gastroparesis and the NICE clinical guideline on type 2 diabetes \u2013 newer agents recommend that metoclopramide, domperidone ",
+      "score": 0.74563974
+    },
+    {
+      "number": 21,
+      "title": "On and Off of Gastric Electrical Stimulation for Refractory\u00a0Vomiting - Gastroenterology",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(19)41949-5/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Gastric Electrical Stimulation Reduces Refractory Vomiting in a Randomized Crossover Trial41463-7/fulltext \"Gastric Electrical Stimulation Reduces Refractory Vomiting in a Randomized Crossover Trial\"). In March 2000, the US Food and Drug Administration approved the humanitarian device exemption appl",
+      "score": 0.6396691
+    },
+    {
+      "number": 22,
+      "title": "Gastric Electrical Stimulation for the Treatment of Gastroparesis or Gastroparesis-Like Symptoms: A Systemic Review and Meta-Analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1094715922013381",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Gastroenterology\n\n### Gastric electrical stimulation for medically refractory gastroparesis\n\n### Gastroenterology\n\n### A double-masked, randomized, placebo-controlled trial of temporary endoscopic mucosal gastric electrical stimulation for gastroparesis\n\n### Gastrointest Endosc\n\n### Gastric elec",
+      "score": 0.5367749
+    },
+    {
+      "number": 23,
+      "title": "Pharmacologic treatments for gastroparesis",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12599987",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Despite optimal supportive care with dietary strategies, most patients with gastroparesis continue to experience symptoms. The 2013 guideline from the American College of Gastroenterology recommended prokinetic agents as the first-line therapy for gastroparesis (Camilleri et al, 2013). The 2022 guid",
+      "score": 0.6010557
+    },
+    {
+      "number": 24,
+      "title": "Diagnostic Methods for Evaluation of Gastric Motility\u2014A Mini Review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9955554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Delayed gastric emptying is the hallmark finding required to diagnose gastroparesis. Approximately 35% of unselected patients with FD will also",
+      "score": 0.49831602
+    }
+  ],
+  "publishedAt": "2026-09-16T01:00:45.473620+00:00",
+  "updatedAt": "2026-09-16T01:00:45.473620+00:00",
+  "readingMinutes": 6,
+  "slug": "gastroparesis"
+}

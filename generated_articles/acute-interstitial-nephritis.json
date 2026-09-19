@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Acute Interstitial Nephritis",
+  "summary": "Approach suspected acute interstitial nephritis as unexplained acute kidney injury: stop plausible culprit drugs, exclude obstructive, ischemic, infectious, and glomerular processes, and use kidney biopsy when the diagnosis or immunosuppression decision remains consequential.",
+  "seoDescription": "Physician-focused diagnostic workup for acute interstitial nephritis, including medication review, competing AKI diagnoses, biopsy indications, and etiologic evaluation.",
+  "clinicalQuestion": "How should clinicians evaluate suspected acute interstitial nephritis in a patient with unexplained acute kidney injury?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "acute interstitial nephritis",
+    "drug-induced AIN",
+    "acute kidney injury",
+    "kidney biopsy",
+    "tubulointerstitial nephritis",
+    "immune checkpoint inhibitor AKI"
+  ],
+  "keyTakeaways": [
+    "Treat suspected AIN as a competing-cause AKI problem: promptly withdraw nonessential potential culprit medications while evaluating prerenal, obstructive, tubular, vascular, infectious, and glomerular causes. [14][21][23]",
+    "The classic fever-rash-eosinophilia syndrome is absent in most cases; do not use its absence to exclude AIN. [10]",
+    "Urine eosinophil testing has limited diagnostic utility and should not determine whether to pursue biopsy or change management. [14]",
+    "Kidney biopsy is the definitive diagnostic test and provides prognostic chronicity information that materially affects corticosteroid decisions. [17][21]",
+    "In immune checkpoint inhibitor-associated AKI, clinical features do not reliably distinguish ICI-AKI from other AKI causes; biopsy remains the diagnostic gold standard. [12]"
+  ],
+  "sections": [
+    {
+      "id": "triage-and-immediate-actions",
+      "eyebrow": "First encounter",
+      "heading": "Stabilize AKI and remove reversible exposures before labeling AIN",
+      "intro": "AIN is a diagnosis within an AKI differential, not a urine-sediment diagnosis.",
+      "paragraphs": [
+        "For any patient with rising creatinine and suspected AIN, first identify immediately reversible AKI contributors: hypovolemia, reduced renal perfusion from heart failure or vascular disease, urinary obstruction, sepsis, nephrotoxin exposure, and intrinsic glomerular or tubular injury. NSAID-mediated afferent arteriolar constriction and ACE inhibitor-mediated loss of efferent arteriolar tone can clinically simulate tubulointerstitial nephritis, particularly in patients with impaired renal perfusion. [23]",
+        "On the initial medication reconciliation, stop nonessential candidate agents rather than waiting for confirmatory testing. Drugs account for approximately 60% to 70% of AIN overall and 70% to 90% of biopsy-proven interstitial nephritis in reported series; commonly implicated classes include antimicrobials, NSAIDs, and proton-pump inhibitors. [14][22][24] Discontinue the suspected drug even when biopsy is planned, because prompt minimization of exposure is central to reversibility. [1][14][21]",
+        "Document all prescription, over-the-counter, intermittent, and recently discontinued exposures, including PPIs, antibiotics, NSAIDs, diuretics, anticonvulsants, RAAS inhibitors, and cancer immunotherapy. PPI-associated AIN can be missed clinically: in one study, only one-quarter of PPI-mediated cases were suspected before biopsy. [17] Do not rechallenge a patient with a drug strongly suspected to have caused AIN; recurrent AIN after omeprazole rechallenge has been reported. [5]"
+      ],
+      "bullets": [
+        "Obtain and trend serum creatinine, electrolytes, bicarbonate, and urine output to define AKI severity and identify complications requiring kidney replacement therapy. [21]",
+        "Review timing of medication starts, dose changes, intermittent use, and concurrent nephrotoxins; delayed hypersensitivity reactions make a simple dose-response inference unreliable for most drug-induced AIN. [24]",
+        "If infection is present during antibiotic exposure, keep infection-associated AIN and antibiotic-induced AIN in parallel until microbiologic, clinical, and biopsy data clarify the driver; the distinction can require opposite treatment priorities. [19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Immediate diagnostic actions for suspected AIN within the broader AKI differential. [14][21][23]",
+        "columns": [
+          "Clinical problem",
+          "Immediate assessment",
+          "Result that changes next step"
+        ],
+        "rows": [
+          [
+            "Potential drug-induced AIN",
+            "Complete medication and over-the-counter exposure review; stop nonessential candidate drugs. [14][21][24]",
+            "A plausible exposure supports withdrawal but does not establish causality; continue evaluation for competing AKI causes and consider biopsy when treatment decisions are consequential. [17][21]"
+          ],
+          [
+            "Hemodynamic or vascular AKI mimic",
+            "Assess volume status, heart failure, vascular risk, and exposure to NSAIDs or ACE inhibitors. [23]",
+            "A perfusion-related explanation should be corrected before attributing persistent AKI to AIN. [23]"
+          ],
+          [
+            "Obstructive AKI",
+            "Evaluate for urinary tract obstruction as part of the AKI workup. [21]",
+            "Obstruction redirects management to decompression rather than immunosuppression. [21]"
+          ],
+          [
+            "Possible glomerular or vasculitic disease",
+            "Assess urine sediment and systemic findings, including rash morphology. [21][23]",
+            "Purpura favors vasculitis over the allergic-type maculopapular rash described with drug-induced tubulointerstitial nephritis. [23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "clinical-pattern-and-urine-testing",
+      "eyebrow": "Bedside discrimination",
+      "heading": "Use clinical pattern recognition to raise suspicion, not to confirm AIN",
+      "intro": "No single symptom, urine finding, or blood test rules AIN in or out.",
+      "paragraphs": [
+        "Fever, rash, peripheral eosinophilia, eosinophiluria, and AKI may support a hypersensitivity phenotype, but the classic fever-eosinophilia-rash triad occurs in fewer than 10% of cases. [10] NSAID-associated AIN may instead present with substantial renal dysfunction and proteinuria without rash or other systemic manifestations; arthralgia and microscopic hematuria may occur. [10]",
+        "Obtain urinalysis with microscopy early, but interpret it as a screen for competing pathology rather than proof of AIN. Urine sediment and serum markers can help distinguish drug-induced AIN from acute tubular necrosis, glomerulonephritis, vasculitis, pyelonephritis, autoimmune AIN, and toxic exposure, but the diagnostic overlap is substantial. [21] In particular, eosinophiluria has limited diagnostic utility and should not be used to exclude AIN or justify corticosteroid treatment without a coherent clinicopathologic assessment. [14]",
+        "Use rash morphology as an actionable discriminator. An allergic-type maculopapular eruption supports drug-associated tubulointerstitial nephritis, whereas palpable purpura should redirect the evaluation toward vasculitis. [23] When the urinalysis suggests a glomerular process or the patient has systemic vasculitic features, prioritize evaluation for glomerulonephritis or vasculitis rather than empirically treating presumed AIN. [21][23]",
+        "Investigational tubular and inflammatory biomarkers, including urinary NGAL, KIM-1, MCP-1, alpha-1-microglobulin, and beta-2-microglobulin, remain insufficiently established for routine diagnostic or treatment selection. [20] Do not delay biopsy in a patient with persistent, unexplained AKI because a biomarker result is pending."
+      ],
+      "bullets": [
+        "AIN-compatible findings: AKI with a recent plausible exposure, maculopapular rash, fever, eosinophilia, or tubular injury findings; none is individually diagnostic. [10][14][21]",
+        "AIN mimics requiring active exclusion: acute tubular necrosis, prerenal or vascular AKI, obstruction, pyelonephritis, glomerulonephritis, vasculitis, systemic autoimmune disease, toxic-metal exposure, and sarcoidosis. [21][23]",
+        "Do not treat a negative eosinophiluria test as reassurance when creatinine continues to rise after removal of possible nephrotoxins. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Clinical findings that redirect the diagnostic branch in suspected AIN. [10][14][21][23]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next diagnostic action"
+        ],
+        "rows": [
+          [
+            "Fever, eosinophilia, maculopapular rash, or eosinophiluria",
+            "Supports an AIN phenotype but the full triad is present in fewer than 10% of cases. [10]",
+            "Review medications and systemic exposures; do not rely on this pattern instead of evaluating other AKI causes. [14][21]"
+          ],
+          [
+            "No rash or systemic symptoms with marked AKI and proteinuria during NSAID exposure",
+            "Compatible with NSAID-associated AIN. [10]",
+            "Stop the NSAID and assess for alternate intrinsic renal pathology; biopsy if diagnosis will change treatment. [17][21]"
+          ],
+          [
+            "Purpuric rash",
+            "More consistent with vasculitis than an allergic-type drug rash. [23]",
+            "Redirect evaluation toward vasculitis or glomerular disease and obtain kidney biopsy when clinically appropriate. [21][23]"
+          ],
+          [
+            "Eosinophiluria absent or present",
+            "Limited diagnostic utility. [14]",
+            "Do not use the result to rule out AIN, select corticosteroids, or defer biopsy. [14][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiologic-branching",
+      "eyebrow": "Cause-directed evaluation",
+      "heading": "Separate drug-associated AIN from infection, systemic disease, and immune therapy toxicity",
+      "intro": "Etiology changes whether withdrawal, antimicrobial treatment, immunosuppression, or systemic-disease evaluation comes first.",
+      "paragraphs": [
+        "Drug-associated AIN is the leading diagnostic branch in developed settings, but do not stop after identifying a candidate medication. AIN can be allergic or drug-induced, infectious, autoimmune or systemic, idiopathic, or associated with hematologic disease. [14][19][24] When multiple plausible triggers coexist, kidney biopsy can confirm interstitial nephritis but may not independently identify the exact cause; causality must integrate exposure chronology, microbiology, systemic findings, and treatment response. [19]",
+        "In a patient with active infection who develops AKI during antibiotic treatment, determine whether infection control requires continuing or intensifying antimicrobial therapy before presuming antibiotic-induced AIN. Infection-associated AIN and antibiotic-induced AIN may demand divergent management, making premature glucocorticoid treatment hazardous when uncontrolled infection remains plausible. [19]",
+        "Consider systemic inflammatory disease when medication causality is weak or biopsy demonstrates granulomatous interstitial nephritis. Granulomatous interstitial nephritis has been associated with infections including tuberculosis, leprosy, histoplasmosis, and brucellosis; drug reactions; granulomatosis with polyangiitis; Crohn disease; and sarcoidosis. [9] Exclude infectious causes before treating presumed drug-induced granulomatous AIN with corticosteroids. [17]",
+        "Do not require hypercalcemia, elevated ACE concentration, or thoracic imaging abnormalities to consider renal sarcoidosis. Isolated granulomatous sarcoid interstitial nephritis may present with severe renal failure despite normal serum calcium, urinary calcium excretion, ACE concentration, and no radiographic systemic sarcoidosis; biopsy may establish the diagnosis. [9]"
+      ],
+      "bullets": [
+        "Drug branch: withdraw the most plausible culprit immediately; antibiotics, NSAIDs, and PPIs deserve specific scrutiny. [14][22][24]",
+        "Infection branch: establish whether infection itself is causing interstitial nephritis before stopping necessary antimicrobial therapy or adding immunosuppression. [19]",
+        "Granulomatous branch: investigate infectious, drug-related, autoimmune, inflammatory bowel disease, and sarcoid causes before assigning idiopathic disease. [9][17]",
+        "Systemic branch: use extrarenal manifestations and urine findings to evaluate for vasculitis, lupus, Sj\u00f6gren syndrome, TINU, sarcoidosis, and glomerular disease. [21]"
+      ],
+      "subsections": [
+        {
+          "heading": "Immune checkpoint inhibitor-associated AKI",
+          "paragraphs": [
+            "In a patient receiving an immune checkpoint inhibitor, do not assume the ICI is the cause of AKI solely because of temporal association. AKI occurs in up to 20% of ICI-treated patients, but ICI-AKI accounts for approximately 2% to 5% of cases; acute tubulointerstitial nephritis is found in 80% to 90% of biopsies, while glomerular lesions are increasingly recognized. [12]",
+            "No clinical features reliably distinguish ICI-AKI from other AKI causes. Review concomitant AIN-associated drugs, volume status, obstruction, infection, and cancer-related kidney injury, and pursue kidney biopsy when the diagnosis will determine glucocorticoid exposure, continuation of cancer therapy, or future ICI rechallenge. [12]"
+          ],
+          "bullets": [
+            "A biopsy-proven non-AIN lesion can change both immunosuppression and oncology treatment decisions. [12]",
+            "Routine urinary, circulating, and imaging biomarkers are not ready to replace biopsy for ICI-AKI diagnosis. [12]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Etiologic branches that alter the diagnostic priority and immediate management of AIN. [9][12][14][17][19][24]",
+        "columns": [
+          "Etiologic branch",
+          "Clues requiring attention",
+          "Action before considering corticosteroids"
+        ],
+        "rows": [
+          [
+            "Drug-induced AIN",
+            "Recent or ongoing exposure to antibiotics, NSAIDs, PPIs, or another plausible medication. [14][22][24]",
+            "Withdraw the suspected agent promptly and assess for competing AKI causes; obtain biopsy if confirmation will affect immunosuppression. [14][17]"
+          ],
+          [
+            "Infection-associated AIN",
+            "Active infection with AKI developing before or during antimicrobial treatment. [19]",
+            "Define microbiology and infection severity; do not assume the antibiotic is the cause when continued antimicrobial treatment may be essential. [19]"
+          ],
+          [
+            "Granulomatous interstitial nephritis",
+            "Granulomas on biopsy or clinical concern for infection, drugs, sarcoidosis, Crohn disease, or vasculitis. [9]",
+            "Exclude infectious causes before corticosteroids for presumed drug-induced granulomatous AIN. [17]"
+          ],
+          [
+            "ICI-associated AKI",
+            "AKI during ICI therapy, with potential concomitant AIN-inducing medications or alternative AKI causes. [12]",
+            "Use biopsy when diagnosis affects immunosuppression, ICI interruption, or rechallenge; clinical features alone are unreliable. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "kidney-biopsy",
+      "eyebrow": "Definitive diagnosis",
+      "heading": "Use kidney biopsy when diagnostic certainty will alter treatment or prognosis",
+      "intro": "Biopsy is most valuable before exposing an uncertain diagnosis to corticosteroids.",
+      "paragraphs": [
+        "Kidney biopsy is the definitive diagnostic test for AIN. [21] Pursue biopsy promptly in persistent or progressive unexplained AKI when the differential includes AIN versus acute tubular necrosis, glomerulonephritis, vasculitis, infection-related kidney disease, or ICI-associated injury, particularly if corticosteroids are being considered. Clinical diagnosis of drug-induced AIN is difficult without biopsy, and empiric corticosteroids carry risks even with short-term use. [17]",
+        "Request assessment of interstitial inflammation, tubulitis, granulomas, interstitial fibrosis, tubular atrophy, and glomerular sclerosis. Tubulitis is associated with tubular injury, while the degree of interstitial fibrosis, tubular atrophy, and glomerular sclerosis provides prognostic information and can guide treatment intensity. [13][17] Severe fibrosis and tubular atrophy, along with dialysis dependence, predict poorer renal recovery. [15]",
+        "Biopsy findings can identify patients less likely to benefit from glucocorticoids. Avoiding corticosteroids is reasonable when biopsy demonstrates more than 75% interstitial fibrosis/tubular atrophy with significant glomerulosclerosis, because advanced chronic damage limits reversibility and shifts management toward renal support and prevention of further injury. [17]",
+        "If biopsy cannot be safely performed, make the working diagnosis only after documented exclusion of competing causes and after stopping plausible offending drugs. Reassess serial kidney function rather than treating nonspecific urinary findings as confirmation. The uncertainty is clinically important because observational studies of corticosteroids have yielded conflicting results and no randomized trial has established their benefit in drug-induced AIN. [17][18][20]"
+      ],
+      "bullets": [
+        "Biopsy is especially high value when: creatinine continues to worsen after drug withdrawal; urine or systemic findings suggest glomerular disease or vasculitis; active infection competes with drug causality; or ICI-AKI is suspected. [12][17][19][21]",
+        "Do not defer biopsy because eosinophiluria is absent, because it has limited diagnostic utility. [14]",
+        "Use chronicity on biopsy to counsel about recovery: extensive fibrosis and tubular atrophy predict worse outcomes. [15][17][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Kidney-biopsy findings that change the AIN management discussion. [13][15][17]",
+        "columns": [
+          "Pathology feature",
+          "Clinical implication",
+          "Management consequence"
+        ],
+        "rows": [
+          [
+            "Interstitial inflammation with tubulitis",
+            "Supports active tubulointerstitial injury; tubulitis is associated with tubular injury. [13]",
+            "Integrate with exposure and systemic evaluation to assign cause and determine whether immunosuppression is appropriate. [17][19]"
+          ],
+          [
+            "Granulomatous interstitial nephritis",
+            "Broadens etiology to infection, drugs, sarcoidosis, Crohn disease, and vasculitis. [9]",
+            "Exclude infection before corticosteroids for presumed drug-induced granulomatous AIN. [17]"
+          ],
+          [
+            "Severe interstitial fibrosis and tubular atrophy",
+            "Predicts reduced kidney recovery. [15][17]",
+            "Avoid reflexive corticosteroids when fibrosis/tubular atrophy exceeds 75% with significant glomerulosclerosis. [17]"
+          ],
+          [
+            "Alternative lesion, including glomerular disease",
+            "Explains why clinical AIN features are insufficiently specific. [12][21]",
+            "Redirect evaluation and treatment to the biopsy-defined disease. [12][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-diagnostic-reassessment",
+      "eyebrow": "After initial actions",
+      "heading": "Trend kidney recovery and escalate when the working diagnosis fails",
+      "intro": "Response to withdrawal is informative but does not establish etiology.",
+      "paragraphs": [
+        "After stopping a potential culprit and correcting reversible AKI factors, serially trend serum creatinine, electrolytes, bicarbonate, urine output, and dialysis requirement. Persistent kidney dysfunction beyond 3 weeks is associated with worse prognosis, likely reflecting increasing interstitial fibrosis and tubular injury. [21] Continued deterioration should trigger nephrology involvement and reconsideration of biopsy rather than prolonged observation.",
+        "Use cause and chronicity to frame prognosis. In a recent biopsy-confirmed ATIN cohort, 76% recovered kidney function by 6 months; recovery was more frequent in drug-related ATIN than other causes (81% versus 66%). Severe interstitial fibrosis/tubular atrophy and dialysis dependence were associated with poorer outcomes. [15] PPI-associated AIN has been linked with a lower likelihood of recovery at 6 months, potentially because exposure may be prolonged before recognition. [21]",
+        "If corticosteroids are being considered after diagnostic evaluation, distinguish evidence-supported timing signals from certainty of benefit. Retrospective studies associate earlier treatment with better renal recovery, but systematic review and expert debate identify substantial heterogeneity and no randomized evidence defining the magnitude of benefit or harms in drug-induced AIN. [8][14][18][20] Obtain biopsy when feasible before treatment, especially if the clinical diagnosis is uncertain or pathology may show advanced irreversible disease. [17]"
+      ],
+      "bullets": [
+        "Escalate the diagnostic workup when creatinine rises despite drug withdrawal and correction of perfusion or obstruction. [17][21]",
+        "Reopen the differential when fever, persistent infection, purpura, active urinary findings, or systemic inflammatory features emerge. [19][21][23]",
+        "For ICI-AKI, early glucocorticoid initiation within 3 days of diagnosis has been associated with higher kidney-recovery rates, but diagnosis should not rest on clinical features alone when biopsy is feasible and management consequences are substantial. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Reassessment triggers after an initial suspected-AIN evaluation. [12][15][17][19][21]",
+        "columns": [
+          "Follow-up finding",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Creatinine continues to rise after suspected-drug withdrawal",
+            "AIN remains possible, but unresolved hemodynamic, obstructive, tubular, glomerular, infectious, or vascular AKI must be reconsidered. [17][21][23]",
+            "Reassess competing causes and pursue kidney biopsy when results will alter therapy. [17][21]"
+          ],
+          [
+            "AKI persists beyond 3 weeks",
+            "Associated with worse prognosis, likely from progressive fibrosis and tubular damage. [21]",
+            "Expedite nephrology assessment and establish histology if uncertainty persists. [17][21]"
+          ],
+          [
+            "Biopsy shows severe fibrosis/tubular atrophy or dialysis dependence develops",
+            "Both predict poorer renal recovery. [15][17]",
+            "Focus decision-making on chronicity, renal support, and realistic expected reversibility before immunosuppression. [15][17]"
+          ],
+          [
+            "ICI-treated patient with unexplained AKI",
+            "ICI-AKI cannot be reliably separated clinically from other AKI etiologies. [12]",
+            "Use biopsy to define lesion and guide immunosuppression and oncology decisions when feasible. [12]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Acute Renal Failure - The New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199605303342207",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Renal failure due to acute interstitial nephritis is often reversible after the withdrawal of the offending medication or treatment of the",
+      "score": 0.53997856
+    },
+    {
+      "number": 2,
+      "title": "Acute tubulointerstitial nephritis induced by checkpoint inhibitors ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/14/3/884/5829682",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Early withdrawal of the offending drug and early treatment with corticosteroids constitute the basis of treatment of the disease [4]. Over",
+      "score": 0.58123237
+    },
+    {
+      "number": 3,
+      "title": "Granulomatous interstitial nephritis | Clinical Kidney Journal",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/8/5/516/471049",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In drug-induced GIN, treatment involves withdrawal of the offending agent and usually a course of corticosteroids. The use of corticosteroids",
+      "score": 0.5752307
+    },
+    {
+      "number": 4,
+      "title": "Omeprazole-induced acute interstitial nephritis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/000293439390273R",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## The American Journal of Medicine. # Correspondence Omeprazole-induced acute interstitial nephritis. ### Acute interstitial nephritis due to omeprazole. ### Acute interstitial nephritis associated with thiazide diuretics. ### Am J Med. There are more references available in the full text version o",
+      "score": 0.54681134
+    },
+    {
+      "number": 5,
+      "title": "Recurrent acute interstitial nephritis on rechallenge with omeprazole - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0140673694919453",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Letters to the Editor Recurrent acute interstitial nephritis on rechallenge with omeprazole. ### Acute interstitial nephritis due to omeprazole. ### Renal failure after omeprazole. There are more references available in the full text version of this article. * ### Proton Pump Inhibitors and Acute ",
+      "score": 0.5300668
+    },
+    {
+      "number": 6,
+      "title": "Vedolizumab induced acute interstitial nephritis - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/omcr/article/2026/1/omaf148/8443410",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Studies have shown that patients who receive steroid therapy within two weeks of stopping the offending medication are more likely to recover",
+      "score": 0.5230555
+    },
+    {
+      "number": 7,
+      "title": "Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2949918625000853",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis - ScienceDirect\n## Medical Reports. Volume 13, October 2025, 100240. # Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis. Author links op",
+      "score": 0.4813325
+    },
+    {
+      "number": 8,
+      "title": "gfu326.pdf - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ndt/article-pdf/30/9/1472/7638058/gfu326.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Early steroid treatment improves renal function recovery in patients with drug-induced acute interstitial nephritis.",
+      "score": 0.41577685
+    },
+    {
+      "number": 9,
+      "title": "Granulomatous Interstitial Nephritis and Acute... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjkd/fulltext/2000/11010/granulomatous_interstitial_nephritis_and_acute.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "This reported case displays an uncommon cause of acute renal failure and unusual form of interstitial nephritis. Granulomatous interstitial nephritis occurs in many conditions. These include infections, such as tuberculosis, leprosy, histoplasmosis, Brucellosis; adverse reactions to therapeutic agen",
+      "score": 0.35447827
+    },
+    {
+      "number": 10,
+      "title": "Naproxen Induced Acute Interstitial Nephritis... : Indian Journal of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijon/fulltext/2020/30050/naproxen_induced_acute_interstitial_nephritis_with.9.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The presence of concomitant patchy renal cortical necrosis in a case of acute interstitial nephritis due to NSAIDs is an unusual and unexpected finding. Renal cortical necrosis is caused by intense, severe and sustained vasoconstriction of small renal vessels like afferent arteriole, renal artery th",
+      "score": 0.35374123
+    },
+    {
+      "number": 11,
+      "title": "Severe acute interstitial nephritis induced by... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2019/02080/severe_acute_interstitial_nephritis_induced_by.82.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Controversy exists about whether corticosteroid therapy is necessary in the treatment of drug-induced AIN. Some studies have reported corticosteroid induced a more rapid and complete recovery of kidney function, while the others have failed to confirm the results.[24\u201327] In a recent research, Quinto",
+      "score": 0.34973314
+    },
+    {
+      "number": 12,
+      "title": "Immune Checkpoint Inhibitor\u2013Associated Acute... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/10.1681/asn.0000001232~immune-checkpoint-inhibitorassociated-acute-kidney-injury-a",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Delphi method to achieve consensus. Evidence was reviewed and appraised by workgroups, and consensus statements were developed through structured discussion and voting. Observational data suggest that AKI occurs in up to 20% of patients receiving ICIs, with ICI-AKI accounting for approximately 2%\u20135%",
+      "score": 0.57723385
+    },
+    {
+      "number": 13,
+      "title": "Urinary \u03b22\u2010Microglobulin Is a Good Indicator of Proximal Tubule ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2014/492838",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Moreover, 2 of 4 patients with secondary diagnosis of acute interstitial nephritis showed tubulitis, a feature associated with tubular injury.",
+      "score": 0.24966714
+    },
+    {
+      "number": 14,
+      "title": "Drug-induced acute interstitial nephritis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20517290",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "testing for eosinophiluria have limited diagnostic utility. The mainstay of therapy for drug-induced AIN is timely discontinuation of the causative agent. Although the benefits of corticosteroid therapy remain unproven, they do appear to have a positive effect in some patients with drug-induced AIN,",
+      "score": 0.7999589
+    },
+    {
+      "number": 15,
+      "title": "Update on Acute Tubulointerstitial Nephritis: Clinical Features, Immunologic Insights, and Diagnostic and Treatment Approaches",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12231035",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A recent study of 166 biopsy-confirmed ATIN cases found that medications were the primary cause (67%), with corticosteroids used in 81% of patients but showing no significant impact on kidney recovery.79 Overall, 76% achieved recovery within 6 months, with better outcomes in drug-related ATIN (81%) ",
+      "score": 0.77364457
+    },
+    {
+      "number": 16,
+      "title": "Duration of Treatment with Corticosteroids and Recovery of Kidney Function in Acute Interstitial Nephritis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30397027",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Cited by: 220 articles | PMID: 24927897    \n\n  \n\n   ### Prognosis of severe drug-induced acute interstitial nephritis requiring renal replacement therapy.\n\nHuang L, Liang S, Dong J, Fan W, Zeng C, Zhang T, Cheng S, Ge Y\n\nRen Fail, 43(1):1020-1027,  01 Dec 2021\n\nCited by: 4 articles | PMID: 34187299 ",
+      "score": 0.7327644
+    },
+    {
+      "number": 17,
+      "title": "Drug-Induced Acute Interstitial Nephritis - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5718279",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Clinical diagnosis of DI-AIN is challenging without a kidney biopsy. In fact, one study found that only a quarter of PPI-mediated DI-AIN cases were suspected before biopsy (10). Thus, it is desirable to document the presence of DI-AIN with a biopsy before exposing patients to corticosteroids, which ",
+      "score": 0.72019166
+    },
+    {
+      "number": 18,
+      "title": "Should Corticosteroids Be Used to Treat Biopsy-Proven Drug-Induced Acute Interstitial Nephritis?: CON",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9416818",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Drug-induced acute interstitial nephritis (DI-AIN) has been a neglected area in kidney disease, neither frequent nor (usually) severe enough to drive the research that would take the field forward yet common enough to be part of many differential diagnoses in AKI. In addition, the inclusion of a num",
+      "score": 0.71088976
+    },
+    {
+      "number": 19,
+      "title": "The diagnosis of acute interstitial nephritis caused by infection versus antibiotic-induced interstitial nephritis: a narrative review. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38572500",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Acute interstitial nephritis (AIN) is a significant contributor to acute kidney injury and can be attributed to a variety of factors, including but not limited to allergens or drugs, infections, autoimmune or systemic diseases, and idiopathic forms of the disease. In some cases, AIN requires a thera",
+      "score": 0.6944897
+    },
+    {
+      "number": 20,
+      "title": "Prednisolone treatment in acute interstitial nephritis (PRAISE) \u2013 protocol for the randomized controlled trial",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8088674",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "There are no generally accepted guidelines for the treatment of AIN , but normally this would include elimination of the precipitating cause and stimulus leading to renal inflammation. Since AIN is characterized by an enhanced immune response, immunosuppressive treatment could potentially improve pr",
+      "score": 0.6864757
+    },
+    {
+      "number": 21,
+      "title": "Allergic and Drug-Induced Interstitial Nephritis - StatPearls - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482323",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Prognosis\n\nThe prognosis of AIN is favorable in cases where a diagnosis has been made promptly, and exposure to the offending medication is minimized. AIN with renal failure for greater than 3 weeks portends a worse prognosis, likely due to the development of interstitial fibrosis and tubular dam",
+      "score": 0.68140936
+    },
+    {
+      "number": 22,
+      "title": "Acute interstitial nephritis - Kidney International",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%2815%2954176-8/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "By and large, drug-induced AIN is currently the commonest etiology of AIN, with antimicrobials and nonsteroidal anti-inflammatory drugs being",
+      "score": 0.6469293
+    },
+    {
+      "number": 23,
+      "title": "Tubulointerstitial Nephritis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557537",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "57.\n:   Gonz\u00e1lez E, Guti\u00e9rrez E, Galeano C, Chevia C, de Sequera P, Bernis C, Parra EG, Delgado R, Sanz M, Ortiz M, Goicoechea M, Quereda C, Olea T, Bouarich H, Hern\u00e1ndez Y, Segovia B, Praga M., Grupo Madrile\u00f1o De Nefritis Intersticiales. Early steroid treatment improves the recovery of renal functi",
+      "score": 0.6244086
+    },
+    {
+      "number": 24,
+      "title": "Medication-Induced Interstitial Nephritis in the 21st Century. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28284382",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Interstitial nephritis is an immune mediated form of tubulointerstitial kidney injury that may occur secondary to drugs, autoimmune disease, infections, and hematologic disorders or as a reactive process. Drug-induced acute interstitial nephritis (DI-AIN) occurs in 0.5%-3% of all kidney biopsies and",
+      "score": 0.5889134
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Acute Renal Failure - The New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199605303342207",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Renal failure due to acute interstitial nephritis is often reversible after the withdrawal of the offending medication or treatment of the",
+      "score": 0.53997856
+    },
+    {
+      "number": 2,
+      "title": "Acute tubulointerstitial nephritis induced by checkpoint inhibitors ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/14/3/884/5829682",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Early withdrawal of the offending drug and early treatment with corticosteroids constitute the basis of treatment of the disease [4]. Over",
+      "score": 0.58123237
+    },
+    {
+      "number": 3,
+      "title": "Granulomatous interstitial nephritis | Clinical Kidney Journal",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ckj/article/8/5/516/471049",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "In drug-induced GIN, treatment involves withdrawal of the offending agent and usually a course of corticosteroids. The use of corticosteroids",
+      "score": 0.5752307
+    },
+    {
+      "number": 4,
+      "title": "Omeprazole-induced acute interstitial nephritis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/000293439390273R",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## The American Journal of Medicine. # Correspondence Omeprazole-induced acute interstitial nephritis. ### Acute interstitial nephritis due to omeprazole. ### Acute interstitial nephritis associated with thiazide diuretics. ### Am J Med. There are more references available in the full text version o",
+      "score": 0.54681134
+    },
+    {
+      "number": 5,
+      "title": "Recurrent acute interstitial nephritis on rechallenge with omeprazole - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0140673694919453",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Letters to the Editor Recurrent acute interstitial nephritis on rechallenge with omeprazole. ### Acute interstitial nephritis due to omeprazole. ### Renal failure after omeprazole. There are more references available in the full text version of this article. * ### Proton Pump Inhibitors and Acute ",
+      "score": 0.5300668
+    },
+    {
+      "number": 6,
+      "title": "Vedolizumab induced acute interstitial nephritis - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/omcr/article/2026/1/omaf148/8443410",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Studies have shown that patients who receive steroid therapy within two weeks of stopping the offending medication are more likely to recover",
+      "score": 0.5230555
+    },
+    {
+      "number": 7,
+      "title": "Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2949918625000853",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis - ScienceDirect\n## Medical Reports. Volume 13, October 2025, 100240. # Immune checkpoint inhibitor-related nephrotoxicity: Pembrolizumab-induced acute interstitial nephritis. Author links op",
+      "score": 0.4813325
+    },
+    {
+      "number": 8,
+      "title": "gfu326.pdf - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ndt/article-pdf/30/9/1472/7638058/gfu326.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Early steroid treatment improves renal function recovery in patients with drug-induced acute interstitial nephritis.",
+      "score": 0.41577685
+    },
+    {
+      "number": 9,
+      "title": "Granulomatous Interstitial Nephritis and Acute... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjkd/fulltext/2000/11010/granulomatous_interstitial_nephritis_and_acute.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "This reported case displays an uncommon cause of acute renal failure and unusual form of interstitial nephritis. Granulomatous interstitial nephritis occurs in many conditions. These include infections, such as tuberculosis, leprosy, histoplasmosis, Brucellosis; adverse reactions to therapeutic agen",
+      "score": 0.35447827
+    },
+    {
+      "number": 10,
+      "title": "Naproxen Induced Acute Interstitial Nephritis... : Indian Journal of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/ijon/fulltext/2020/30050/naproxen_induced_acute_interstitial_nephritis_with.9.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The presence of concomitant patchy renal cortical necrosis in a case of acute interstitial nephritis due to NSAIDs is an unusual and unexpected finding. Renal cortical necrosis is caused by intense, severe and sustained vasoconstriction of small renal vessels like afferent arteriole, renal artery th",
+      "score": 0.35374123
+    },
+    {
+      "number": 11,
+      "title": "Severe acute interstitial nephritis induced by... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2019/02080/severe_acute_interstitial_nephritis_induced_by.82.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Controversy exists about whether corticosteroid therapy is necessary in the treatment of drug-induced AIN. Some studies have reported corticosteroid induced a more rapid and complete recovery of kidney function, while the others have failed to confirm the results.[24\u201327] In a recent research, Quinto",
+      "score": 0.34973314
+    },
+    {
+      "number": 12,
+      "title": "Immune Checkpoint Inhibitor\u2013Associated Acute... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/10.1681/asn.0000001232~immune-checkpoint-inhibitorassociated-acute-kidney-injury-a",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Delphi method to achieve consensus. Evidence was reviewed and appraised by workgroups, and consensus statements were developed through structured discussion and voting. Observational data suggest that AKI occurs in up to 20% of patients receiving ICIs, with ICI-AKI accounting for approximately 2%\u20135%",
+      "score": 0.57723385
+    },
+    {
+      "number": 13,
+      "title": "Urinary \u03b22\u2010Microglobulin Is a Good Indicator of Proximal Tubule ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2014/492838",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Moreover, 2 of 4 patients with secondary diagnosis of acute interstitial nephritis showed tubulitis, a feature associated with tubular injury.",
+      "score": 0.24966714
+    },
+    {
+      "number": 14,
+      "title": "Drug-induced acute interstitial nephritis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20517290",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "testing for eosinophiluria have limited diagnostic utility. The mainstay of therapy for drug-induced AIN is timely discontinuation of the causative agent. Although the benefits of corticosteroid therapy remain unproven, they do appear to have a positive effect in some patients with drug-induced AIN,",
+      "score": 0.7999589
+    },
+    {
+      "number": 15,
+      "title": "Update on Acute Tubulointerstitial Nephritis: Clinical Features, Immunologic Insights, and Diagnostic and Treatment Approaches",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12231035",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A recent study of 166 biopsy-confirmed ATIN cases found that medications were the primary cause (67%), with corticosteroids used in 81% of patients but showing no significant impact on kidney recovery.79 Overall, 76% achieved recovery within 6 months, with better outcomes in drug-related ATIN (81%) ",
+      "score": 0.77364457
+    },
+    {
+      "number": 16,
+      "title": "Duration of Treatment with Corticosteroids and Recovery of Kidney Function in Acute Interstitial Nephritis. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30397027",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Cited by: 220 articles | PMID: 24927897    \n\n  \n\n   ### Prognosis of severe drug-induced acute interstitial nephritis requiring renal replacement therapy.\n\nHuang L, Liang S, Dong J, Fan W, Zeng C, Zhang T, Cheng S, Ge Y\n\nRen Fail, 43(1):1020-1027,  01 Dec 2021\n\nCited by: 4 articles | PMID: 34187299 ",
+      "score": 0.7327644
+    },
+    {
+      "number": 17,
+      "title": "Drug-Induced Acute Interstitial Nephritis - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5718279",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Clinical diagnosis of DI-AIN is challenging without a kidney biopsy. In fact, one study found that only a quarter of PPI-mediated DI-AIN cases were suspected before biopsy (10). Thus, it is desirable to document the presence of DI-AIN with a biopsy before exposing patients to corticosteroids, which ",
+      "score": 0.72019166
+    },
+    {
+      "number": 18,
+      "title": "Should Corticosteroids Be Used to Treat Biopsy-Proven Drug-Induced Acute Interstitial Nephritis?: CON",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9416818",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Drug-induced acute interstitial nephritis (DI-AIN) has been a neglected area in kidney disease, neither frequent nor (usually) severe enough to drive the research that would take the field forward yet common enough to be part of many differential diagnoses in AKI. In addition, the inclusion of a num",
+      "score": 0.71088976
+    },
+    {
+      "number": 19,
+      "title": "The diagnosis of acute interstitial nephritis caused by infection versus antibiotic-induced interstitial nephritis: a narrative review. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38572500",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Acute interstitial nephritis (AIN) is a significant contributor to acute kidney injury and can be attributed to a variety of factors, including but not limited to allergens or drugs, infections, autoimmune or systemic diseases, and idiopathic forms of the disease. In some cases, AIN requires a thera",
+      "score": 0.6944897
+    },
+    {
+      "number": 20,
+      "title": "Prednisolone treatment in acute interstitial nephritis (PRAISE) \u2013 protocol for the randomized controlled trial",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8088674",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "There are no generally accepted guidelines for the treatment of AIN , but normally this would include elimination of the precipitating cause and stimulus leading to renal inflammation. Since AIN is characterized by an enhanced immune response, immunosuppressive treatment could potentially improve pr",
+      "score": 0.6864757
+    },
+    {
+      "number": 21,
+      "title": "Allergic and Drug-Induced Interstitial Nephritis - StatPearls - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK482323",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Prognosis\n\nThe prognosis of AIN is favorable in cases where a diagnosis has been made promptly, and exposure to the offending medication is minimized. AIN with renal failure for greater than 3 weeks portends a worse prognosis, likely due to the development of interstitial fibrosis and tubular dam",
+      "score": 0.68140936
+    },
+    {
+      "number": 22,
+      "title": "Acute interstitial nephritis - Kidney International",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%2815%2954176-8/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "By and large, drug-induced AIN is currently the commonest etiology of AIN, with antimicrobials and nonsteroidal anti-inflammatory drugs being",
+      "score": 0.6469293
+    },
+    {
+      "number": 23,
+      "title": "Tubulointerstitial Nephritis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557537",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "57.\n:   Gonz\u00e1lez E, Guti\u00e9rrez E, Galeano C, Chevia C, de Sequera P, Bernis C, Parra EG, Delgado R, Sanz M, Ortiz M, Goicoechea M, Quereda C, Olea T, Bouarich H, Hern\u00e1ndez Y, Segovia B, Praga M., Grupo Madrile\u00f1o De Nefritis Intersticiales. Early steroid treatment improves the recovery of renal functi",
+      "score": 0.6244086
+    },
+    {
+      "number": 24,
+      "title": "Medication-Induced Interstitial Nephritis in the 21st Century. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28284382",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Interstitial nephritis is an immune mediated form of tubulointerstitial kidney injury that may occur secondary to drugs, autoimmune disease, infections, and hematologic disorders or as a reactive process. Drug-induced acute interstitial nephritis (DI-AIN) occurs in 0.5%-3% of all kidney biopsies and",
+      "score": 0.5889134
+    }
+  ],
+  "publishedAt": "2026-09-15T17:57:35.765085+00:00",
+  "updatedAt": "2026-09-15T17:57:35.765085+00:00",
+  "readingMinutes": 7,
+  "slug": "acute-interstitial-nephritis"
+}

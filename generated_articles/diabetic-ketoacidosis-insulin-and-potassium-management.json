@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Endocrinology emergency",
+  "title": "Diabetic Ketoacidosis Insulin and Potassium Management",
+  "summary": "In DKA, insulin reverses ketogenesis but can precipitate fatal hypokalemia. Use beta-hydroxybutyrate and acid-base criteria to guide therapy, withhold insulin when potassium is below 3.5 mEq/L, continue treatment through ketoacidotic resolution, and overlap intravenous with subcutaneous insulin.",
+  "seoDescription": "Physician guide to insulin initiation, potassium replacement thresholds, monitoring, DKA resolution criteria, and safe transition to subcutaneous insulin.",
+  "clinicalQuestion": "How should insulin and potassium be sequenced, monitored, and transitioned during adult diabetic ketoacidosis treatment?",
+  "specialty": "Endocrinology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "diabetic ketoacidosis",
+    "DKA insulin infusion",
+    "DKA potassium replacement",
+    "beta-hydroxybutyrate",
+    "DKA resolution",
+    "subcutaneous insulin transition"
+  ],
+  "keyTakeaways": [
+    "Start insulin only after confirming potassium is greater than 3.5 mEq/L; if potassium is below 3.5 mEq/L, replace potassium and defer or stop insulin until corrected. [2][3]",
+    "For severe DKA, use regular insulin by fixed-rate intravenous infusion at 0.1 units/kg/hour or a nurse-driven variable-rate infusion; target glucose near 200 mg/dL while continuing insulin until ketoacidosis resolves. [3][19]",
+    "Follow beta-hydroxybutyrate directly when possible: DKA resolution requires beta-hydroxybutyrate below 0.6 mmol/L plus venous pH of at least 7.3 or bicarbonate of at least 18 mEq/L. [4][19]",
+    "Do not stop intravenous insulin solely because glucose normalizes; ketoacidotic resolution generally lags behind glucose correction. [24]",
+    "Give subcutaneous insulin before discontinuing intravenous insulin and maintain the infusion for 30 to 60 minutes after subcutaneous dosing to reduce relapse risk. [5]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-dka-and-risk-stratify",
+      "eyebrow": "Initial decision",
+      "heading": "Confirm ketoacidosis and identify patients needing intravenous therapy",
+      "intro": "Obtain diagnostic studies before insulin, but do not delay resuscitative management in an unstable patient.",
+      "paragraphs": [
+        "Diagnose DKA when all three components are present: diabetes or hyperglycemia with glucose at least 200 mg/dL or known diabetes, ketosis with beta-hydroxybutyrate at least 3.0 mmol/L or urine ketones at least 2+, and metabolic acidosis with pH below 7.3, bicarbonate below 18 mmol/L, or both. Direct beta-hydroxybutyrate measurement is preferred for diagnosis and treatment monitoring; use urine ketones only when blood ketone testing is unavailable. [19][21]",
+        "At presentation, obtain plasma glucose, electrolytes, BUN, creatinine, measured osmolality, beta-hydroxybutyrate, venous or arterial pH, CBC with differential, urinalysis, phosphate, liver tests, and HbA1c when clinically useful. Add ECG for potassium-related conduction risk and use chest radiography, cultures, or head CT only when the presentation suggests infection, pulmonary disease, or a neurologic process. [21]",
+        "Separate isolated DKA from mixed DKA/HHS because hyperosmolality changes monitoring and insulin needs. Mixed DKA/HHS requires osmolality above 320 mOsm/kg, beta-hydroxybutyrate at least 3.0 mmol/L or ketonuria at least 2+, and pH below 7.30 or bicarbonate below 18 mmol/L; it has been reported in more than one-third of hyperglycemic crises and is managed with intravenous fluids plus fixed-rate insulin beginning at 0.1 units/kg/hour. [21]"
+      ],
+      "bullets": [
+        "Use venous pH and bicarbonate for routine DKA assessment; obtain an arterial blood gas when oxygenation assessment or clarification of a mixed acid-base disorder is needed. [20]",
+        "Recognize that anion-gap acidosis reflects circulating ketoanions; calculate anion gap as sodium minus chloride plus bicarbonate when interpreting persistent acidosis. [20]",
+        "Treat severe or complicated DKA with intravenous insulin rather than rapid-acting subcutaneous analog regimens. [2][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Diagnostic branch points for DKA and mixed DKA/HHS. [19][21]",
+        "columns": [
+          "Clinical state",
+          "Required biochemical findings",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "DKA",
+            "Glucose at least 200 mg/dL or known diabetes; beta-hydroxybutyrate at least 3.0 mmol/L or urine ketones at least 2+; pH below 7.3 and/or bicarbonate below 18 mmol/L. [19]",
+            "Assess potassium before insulin and follow ketonemia and acid-base recovery. [2][19]"
+          ],
+          [
+            "Mixed DKA/HHS",
+            "Osmolality above 320 mOsm/kg plus beta-hydroxybutyrate at least 3.0 mmol/L or ketonuria at least 2+, with pH below 7.30 or bicarbonate below 18 mmol/L. [21]",
+            "Use intravenous fluids and fixed-rate insulin beginning at 0.1 units/kg/hour; transition using DKA principles. [21]"
+          ],
+          [
+            "Isolated HHS",
+            "Osmolality above 320 mOsm/kg is diagnostic; isolated HHS typically has pH above 7.30. [20]",
+            "Do not use DKA ketone-resolution criteria as the sole endpoint; follow hyperosmolality and mental-status recovery. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "potassium-before-insulin",
+      "eyebrow": "Safety gate",
+      "heading": "Use serum potassium to determine when insulin can start",
+      "intro": "The admission potassium value is the immediate insulin safety check.",
+      "paragraphs": [
+        "Obtain serum potassium before initiating insulin. Start a continuous intravenous infusion of short-acting regular insulin only after potassium is above 3.5 mEq/L. If potassium is below 3.5 mEq/L, begin intravenous potassium replacement at 10 mEq/hour and delay insulin until potassium rises above 3.5 mEq/L. [2][3]",
+        "If potassium falls below 3.5 mEq/L during treatment, stop insulin and replace potassium intravenously until the concentration is again above 3.5 mEq/L. This interruption is preferable to continuing insulin through clinically important hypokalemia. [2]",
+        "Use ECG as part of the initial evaluation when potassium disturbance is possible, especially with severe hyperkalemia, severe hypokalemia, renal dysfunction, or unexplained arrhythmia. Potassium administration requires controlled institutional preparation and infusion processes: manually adding potassium to intravenous fluids in general clinical areas has been identified as unsafe because accidental overdose can be fatal. [21][5]"
+      ],
+      "bullets": [
+        "Do not interpret a normal or elevated presenting potassium as evidence of adequate total-body potassium stores; insulin treatment can rapidly lower serum potassium, so repeat electrolyte surveillance is integral to infusion management. [2][3]",
+        "Hypokalemia and hyperkalemia are both common, life-threatening DKA complications; use a protocolized potassium strategy rather than treating insulin and electrolytes as separate problems. [5]",
+        "If insulin is withheld for potassium below 3.5 mEq/L, continue management of volume depletion and reassess potassium promptly after replacement. [2][3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Potassium-dependent insulin actions in DKA. [2][3]",
+        "columns": [
+          "Serum potassium",
+          "Insulin action",
+          "Potassium action"
+        ],
+        "rows": [
+          [
+            "Below 3.5 mEq/L",
+            "Do not initiate insulin; if already running, stop insulin. [2][3]",
+            "Replace potassium intravenously at 10 mEq/hour until potassium exceeds 3.5 mEq/L. [2]"
+          ],
+          [
+            "Above 3.5 mEq/L before insulin",
+            "Regular insulin infusion may begin. [2][3]",
+            "Continue protocol-directed electrolyte monitoring and replacement during insulin therapy. [2][3]"
+          ],
+          [
+            "Falls below 3.5 mEq/L during treatment",
+            "Stop insulin until potassium is corrected. [2]",
+            "Replace potassium intravenously and restart insulin only after potassium exceeds 3.5 mEq/L. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "intravenous-insulin-management",
+      "eyebrow": "Active treatment",
+      "heading": "Run insulin to suppress ketogenesis, not merely to normalize glucose",
+      "intro": "Insulin dosing, glucose targets, and electrolyte monitoring must be linked throughout treatment.",
+      "paragraphs": [
+        "For severe DKA, begin regular insulin by fixed-rate intravenous infusion at 0.1 units/kg/hour once hypokalemia has been excluded, or use a validated nurse-driven variable-rate infusion protocol. Aim to maintain glucose around 200 mg/dL while insulin continues to clear ketones and reverse acidosis. [3][19]",
+        "Avoid an initial insulin bolus in the pediatric protocol evidence base: after initial volume expansion, insulin was started approximately 1 to 2 hours after fluid replacement at 0.1 units/kg/hour, and a 0.1-unit/kg bolus was considered unnecessary and potentially associated with increased cerebral-edema risk. [24] In adults, use the infusion approach specified by the current institutional DKA protocol after confirming potassium safety. [2][3]",
+        "Use low-dose insulin with gradual reduction of glucose and plasma osmolality to limit hypoglycemia and hypokalemia. Severe or complicated DKA requires intravenous therapy; rapid-acting subcutaneous analogs are not recommended in that setting. [2][4]"
+      ],
+      "bullets": [
+        "Continue insulin after glucose falls because glucose correction occurs before ketoacidotic resolution. [24]",
+        "Monitor glucose frequently during intravenous insulin therapy. Hypoglycemia below 70 mg/dL occurred in 16% to 28% of DKA treatment episodes in cited studies; severe hypoglycemia below 40 mg/dL occurred in 2%, and treatment-associated hypoglycemia was associated with a 4.8-fold increase in mortality. [3]",
+        "Monitor potassium frequently during insulin therapy and immediately stop insulin if potassium falls below 3.5 mEq/L. [2][3]",
+        "Do not give routine bicarbonate in DKA. [2]"
+      ],
+      "subsections": [
+        {
+          "heading": "When subcutaneous insulin is reasonable",
+          "paragraphs": [
+            "Most patients with uncomplicated mild or moderate DKA can be managed with subcutaneous insulin, whereas severe or complicated DKA should receive intravenous insulin. Select the subcutaneous approach only when the patient does not require intensive-care-level infusion monitoring and the institution can provide the prescribed frequent dosing and reassessment. [19][24]"
+          ],
+          "bullets": [
+            "Do not substitute a rapid-acting subcutaneous analog regimen for intravenous insulin in severe or complicated DKA. [2][4]",
+            "When continuous intravenous administration is unavailable, hourly or every-2-hour subcutaneous or intramuscular lispro or aspart has been described as an alternative for uncomplicated DKA. [24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Insulin route selection and treatment endpoint. [4][19][24]",
+        "columns": [
+          "Patient category",
+          "Insulin approach",
+          "Do not stop therapy until"
+        ],
+        "rows": [
+          [
+            "Severe or complicated DKA",
+            "Regular insulin intravenous infusion, fixed rate 0.1 units/kg/hour or validated variable-rate protocol, after potassium exceeds 3.5 mEq/L. [3][19]",
+            "Beta-hydroxybutyrate is below 0.6 mmol/L and venous pH is at least 7.3 or bicarbonate is at least 18 mEq/L. [4][19]"
+          ],
+          [
+            "Uncomplicated mild or moderate DKA",
+            "Subcutaneous insulin may be used when frequent administration and reassessment are feasible. [19][24]",
+            "Apply the same biochemical resolution criteria rather than relying on glucose alone. [4][19]"
+          ],
+          [
+            "Potassium below 3.5 mEq/L",
+            "Withhold or stop insulin. [2][3]",
+            "Potassium exceeds 3.5 mEq/L after intravenous replacement. [2]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-resolution-and-transition",
+      "eyebrow": "Exit strategy",
+      "heading": "Confirm biochemical resolution before transitioning off intravenous insulin",
+      "intro": "An improving glucose level is not an endpoint for DKA treatment.",
+      "paragraphs": [
+        "Use plasma or capillary beta-hydroxybutyrate below 0.6 mmol/L plus either venous pH at least 7.3 or serum bicarbonate at least 18 mEq/L to define DKA resolution. This endpoint is preferred to anion gap alone because direct beta-hydroxybutyrate measurement tracks ketoacid clearance. [4][19]",
+        "Once DKA has resolved and the patient can take oral intake, establish a regular subcutaneous insulin regimen. In a patient with established diabetes, the prior regimen may be resumed when appropriate; newly diagnosed patients require a multidose regimen after resolution and oral fluid tolerance. [4][20][24]",
+        "Administer subcutaneous insulin before terminating the intravenous infusion. Continue intravenous insulin for 30 to 60 minutes after the subcutaneous dose to prevent recurrent ketoacidosis, and consider daytime transition when feasible because staffing may be greater if deterioration occurs. [5]"
+      ],
+      "bullets": [
+        "Do not transition based on glucose below approximately 200 to 250 mg/dL alone; biochemical ketoacidotic resolution is required. [4][19][24]",
+        "After transition, use frequent glucose monitoring to identify marked hyperglycemia or hypoglycemia. [24]",
+        "For mixed DKA/HHS, transition to subcutaneous insulin follows the same principles as DKA, but maintain attention to osmolar recovery. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Transition checklist from intravenous to subcutaneous insulin. [4][5][19][24]",
+        "columns": [
+          "Checkpoint",
+          "Required finding or action",
+          "Reason"
+        ],
+        "rows": [
+          [
+            "Ketoacidotic resolution",
+            "Beta-hydroxybutyrate below 0.6 mmol/L plus venous pH at least 7.3 or bicarbonate at least 18 mEq/L. [4][19]",
+            "Glucose may normalize before ketogenesis and acidosis resolve. [24]"
+          ],
+          [
+            "Clinical readiness",
+            "Patient is able to tolerate oral intake. [4][20]",
+            "Supports safe initiation of a regular subcutaneous regimen. [4]"
+          ],
+          [
+            "Overlap",
+            "Give subcutaneous insulin, then continue intravenous insulin for 30 to 60 minutes. [5]",
+            "Prevents a gap in insulin effect and reduces relapse risk. [5]"
+          ],
+          [
+            "Post-transition surveillance",
+            "Perform frequent blood glucose monitoring. [24]",
+            "Detects hyperglycemia and hypoglycemia after regimen conversion. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "treatment-complications",
+      "eyebrow": "Reassessment",
+      "heading": "Recognize insulin-related complications early",
+      "intro": "Most treatment complications are preventable through measured correction and protocolized monitoring.",
+      "paragraphs": [
+        "The principal insulin-treatment complications are hypoglycemia and hypokalemia; hypoxemia and pulmonary edema can also occur during DKA management. Maintain frequent glucose and electrolyte reassessment rather than accelerating insulin solely to shorten apparent time to glucose correction. [3]",
+        "Cerebral edema is rare but may be rapidly fatal. Avoid overly rapid fluid and electrolyte replacement, particularly when treating severe metabolic derangement or hyperosmolality. [3] Pediatric evidence also supports avoiding an initial insulin bolus because it is unnecessary and may increase cerebral-edema risk. [24]",
+        "Persistent low bicarbonate after ketones have improved may reflect hyperchloremic acidosis, a recognized treatment complication. Use beta-hydroxybutyrate together with pH or bicarbonate-based resolution criteria rather than assuming every low bicarbonate value represents ongoing ketosis. [11][4][19]"
+      ],
+      "bullets": [
+        "If glucose is below target but beta-hydroxybutyrate and acidosis have not resolved, continue insulin-directed ketoacid clearance while using the institution's glucose-support strategy rather than stopping insulin prematurely. [19][24]",
+        "If potassium declines below 3.5 mEq/L at any time, stop insulin, replace potassium intravenously, and resume insulin only after correction. [2]",
+        "Use balanced reassessment of osmolality, neurologic status, and acid-base recovery in mixed DKA/HHS rather than using glucose as the sole marker of improvement. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Actionable complications during DKA insulin treatment. [2][3][11][24]",
+        "columns": [
+          "Problem",
+          "Recognition",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "Hypokalemia",
+            "Potassium below 3.5 mEq/L before or during insulin therapy. [2][3]",
+            "Withhold or stop insulin; administer intravenous potassium at 10 mEq/hour when initially below 3.5 mEq/L, then restart insulin after potassium exceeds 3.5 mEq/L. [2]"
+          ],
+          [
+            "Hypoglycemia",
+            "Glucose below 70 mg/dL; severe hypoglycemia is below 40 mg/dL. [3]",
+            "Reassess insulin and glucose support promptly while continuing to treat ketoacidosis when biochemical resolution has not occurred. [3][24]"
+          ],
+          [
+            "Possible cerebral edema",
+            "New neurologic deterioration during treatment; cerebral edema is rare but potentially rapidly fatal. [3]",
+            "Avoid overly rapid fluid and electrolyte replacement and urgently reassess neurologic status. [3]"
+          ],
+          [
+            "Hyperchloremic acidosis",
+            "Persistent metabolic acidosis despite improving ketonemia. [11]",
+            "Use beta-hydroxybutyrate and formal resolution criteria to distinguish residual ketosis from treatment-related acidosis. [4][19]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Acid\u2013Base Problems in Diabetic Ketoacidosis",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/do/10.1056/do.feature.2015.01.21.37/full",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "This patient fulfills the diagnostic criteria for diabetic ketoacidosis a venous pH below 7.3, a bicarbonate level of less than 15 mmol per",
+      "score": 0.5715041
+    },
+    {
+      "number": 2,
+      "title": "Diabetic ketoacidosis - Management recommendations",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "The goal is the steady but gradual reduction of serum glucose and plasma osmolality by low-dose insulin therapy in order to reduce the risk of treatment complications including hypoglycemia and hypokalemia.\n\nPatients should receive a continuous intravenous infusion of short-acting regular insulin af",
+      "score": 0.63179934
+    },
+    {
+      "number": 3,
+      "title": "Diabetic ketoacidosis - BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/pdf/162.pdf",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "BMJ Best Practice topics are regularly updated and the most recent version of the topics can be found on bestpractice.bmj.com . Use of this content is subject to our disclaimer. \u00a9 BMJ Publishing Group Ltd 2026. All rights reserved.\nDiabetic ketoacidosis Management Acute the risk of treatment complic",
+      "score": 0.62906903
+    },
+    {
+      "number": 4,
+      "title": "Diabetic ketoacidosis - Treatment algorithm | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/treatment-algorithm",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b The use of rapid-acting subcutaneous insulin analog is not recommended for the treatment of severe and complicated DKA.(#referencePop1)Umpierrez GE, Davis GM, ElSayed NA, et al. Hyperglycaemic crises in adults with diabetes: a consensus report. Diabetologia. 2024 Aug;67(8):1455-79.\n\nThe intraveno",
+      "score": 0.6213807
+    },
+    {
+      "number": 5,
+      "title": "Diabetic ketoacidosis - Management recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/162/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Manually adding potassium to intravenous fluids in general clinical areas is unsafe as this can result in accidental overdose of potassium, which can be fatal.(#referencePop155)National Patient Safety Agency. ARCHIVED NPSA Alert \u2013 Potassium solutions risks to patients from errors occurring during IV",
+      "score": 0.5465209
+    },
+    {
+      "number": 6,
+      "title": "Diabetic Ketoacidosis: Considerations and Residual Controversies in Management After the 2024 ADA, EASD, JBDS, AACE, and DST Joint Consensus",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/org/science/article/pii/S1871530326000636",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "and the management of its critical aspects and its possible underlying precipitating factors are often life-changing choices for patients. Despite diagnostic and therapeutic improvements, DKA still stands as one of the main causes of morbidity and mortality in DM individuals. Recently, an inter-soci",
+      "score": 0.6506676
+    },
+    {
+      "number": 7,
+      "title": "Management of diabetic ketoacidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620523002315",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### BMJ (2019) \n   A.E. Kitabchi _et al._\n### Hyperglycemic crises in adult patients with diabetes\n\n### Diabetes Care (2009) \n   R.I.G. Holt _et al._\n### The management of type 1 diabetes in adults. A Consensus report by the American Diabetes Association (ADA) and the European Association for the St",
+      "score": 0.64639384
+    },
+    {
+      "number": 8,
+      "title": "Subcutaneous Insulin Versus Traditional Intravenous Insulin Infusion in Treatment of Mild to Moderate Diabetic Ketoacidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467923003499",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2024, Diabetologia  Show abstract The American Diabetes Association (ADA), European Association for the Study of Diabetes (EASD), Joint British Diabetes Societies for Inpatient Care (JBDS), American Association of Clinical Endocrinology (AACE) and Diabetes Technology Society (DTS) convened a panel o",
+      "score": 0.599087
+    },
+    {
+      "number": 9,
+      "title": "Review Defining and characterising diabetic ketoacidosis in adults",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168822719305686",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This review focusses on the pathophysiology and epidemiology of DKA, but also on the importance of having a standardised definition.",
+      "score": 0.48850358
+    },
+    {
+      "number": 10,
+      "title": "Note: page numbers in italics refer to figures; those in bold to tables ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/9781444324808.index",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "cerebral edema, diabetic ketoacidosis 551, 862 ... transition of subcutaneous insulin 863 treatment ... subcutaneous insulin administration 432\u20134.",
+      "score": 0.52042377
+    },
+    {
+      "number": 11,
+      "title": "Diabetic ketoacidosis - Wolfsdorf - 2007 - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1399-5448.2007.00224.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "\u2662 Hypoglycemia. \u2662 Hypokalemia. \u2662 Hyperchloremic acidosis. \u2662 Cerebral edema. Introduction of oral fluids and transition to SC insulin",
+      "score": 0.5053471
+    },
+    {
+      "number": 12,
+      "title": "ISPAD Clinical Practice Consensus Guidelines 2018: Diabetic ketoacidosis and the hyperglycemic hyperosmolar state - Wolfsdorf - 2018 - Pediatric Diabetes - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/pedi.12701",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "10.1007/s00134-007-0674-3CAS PubMed Web of Science\u00ae Google Scholar\n 193Harrison VS, Rustico S, Palladino AA, Ferrara C, Hawkes CP. Glargine co-administration with intravenous insulin in pediatric diabetic ketoacidosis is safe and facilitates transition to a subcutaneous regimen. Pediatr Diabetes. 20",
+      "score": 0.39747116
+    },
+    {
+      "number": 13,
+      "title": "[PDF] COMIRB Protocol - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03107208/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "in infants, children, and adolescents: A consensus statement from the American Diabetes Association. Diabetes Care 2006; 29:1150-1159 17. Wolfsdorf JI, Allgrove J, Craig ME, Edge J, Glaser N, Jain V, Lee WW, Mungai LN, Rosenbloom AL, Sperling MA, Hanas R, International Society for P, Adolescent D. I",
+      "score": 0.6455898
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Clinical Study Protocol Template - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/30/NCT05327530/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "... report, document this review ... o Consensus ethical principles derived from international guidelines, including the ... DKA diabetic ketoacidosis;. DM diabetes",
+      "score": 0.50022036
+    },
+    {
+      "number": 15,
+      "title": "[PDF] BRISK-ED: Balanced crystalloids (RInger's lactate) versus normal ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/40/NCT04926740/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Medicine)/Epidemiology and Biostatistics Dr. Yun-Hee Choi, PhD, Department of Epidemiology and Biostatistics Ms. Haley Collins, Patient Partner, London Health Sciences Centre Research Staff: Erica Figgins, MSc, Division of Emergency Medicine, London Health Sciences Centre Branka Vujcic, MSc, Divisio",
+      "score": 0.41023695
+    },
+    {
+      "number": 16,
+      "title": "Managing Diabetic Ketoacidosis - Annals of Emergency Medicine",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(26)00365-3/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Insulin should be promptly administered once DKA is diagnosed and absence of hypokalemia is confirmed. Although the use of an initial insulin",
+      "score": 0.39747116
+    },
+    {
+      "number": 17,
+      "title": "Two-bag Versus One-bag Method for Adult and Pediatric Diabetic ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(25)01095-9/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "The conventional one-bag method for DKA management uses an insulin infusion with a single electrolyte-containing intravenous fluid, later",
+      "score": 0.37346497
+    },
+    {
+      "number": 18,
+      "title": "[PDF] Clinical Study Protocol - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/40/NCT04489940/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "insulin for T1DM (or as default therapy if there is confusion about type) Urgent endocrine consultation for any patient with T1DM; in the absence of endocrinology, internal medicine may suf\ufb01ce Consider admission for T1DM if early outpatient evaluation is not available or signs of ketoacidosis are pr",
+      "score": 0.32476035
+    },
+    {
+      "number": 19,
+      "title": "[PDF] Hyperglycemic crises in adults: A look at the 2024 consensus report",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/92/3/152.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "doi:10.3949/ccjm.92a.24089 CME MOC CLEVELAND CLINIC JOURNAL OF MEDICINE VOLUME 92 \u2022 NUMBER 3 MARCH 2025 153 RODRIGUEZ ALVAREZ AND COLLEAGUES Diagnosis The diagnosis of DKA requires the presence of 3 criteria: (1) diabetes or hyperglycemia (D criterion), with a glucose level of 200 mg/dL or greater o",
+      "score": 0.6897452
+    },
+    {
+      "number": 20,
+      "title": "Diagnosis and treatment of diabetic ketoacidosis and the hyperglycemic hyperosmolar state - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC151994",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Once the ketoacidosis in DKA has been corrected (plasma glucose level < 11.0 mmol/L, serum bicarbonate level \u2265 18 mmol/L, venous pH > 7.3 and anion gap < 12 mmol/L), the clouded consciousness and hyperosmolality in HHS have resolved, and patients are able to take fluids orally, a multidose insulin r",
+      "score": 0.60610276
+    },
+    {
+      "number": 21,
+      "title": "Diabetic Ketoacidosis - Endotext - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/endotext/diab_keto",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### MIXED DKA/HHS\n\nMixed DKA/HHS is defined as hyperosmolality (>320 mOsm/kg), \u03b2-hydroxybutyrate \u22653.0 mmol/L or ketonuria \u22652+ and presence of acidosis (pH <7.30, or bicarbonate <18 mmol/L) and has been reported in more than one-third of people with hyperglycemic crises. Similar to DKA, it requires ",
+      "score": 0.60386235
+    },
+    {
+      "number": 22,
+      "title": "Review of Evidence for Adult Diabetic Ketoacidosis Management Protocols - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5468371",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### Table 1.\n\nDefinitions of severity of diabetic ketoacidosis (DKA).\n\n|  | Mild DKA | Moderate DKA | Severe DKA |\n ---  --- |\n| Arterial pH | 7.25\u20137.3 | 7.0 to <7.24 | <7.0 |\n| Serum bicarbonate (mmol/L) | 15\u201318 | 10 to <15 | <10 |\n| Anion gap | >10 | >12 | >10 |\n| Mental status | Alert | Alert/dr",
+      "score": 0.5585443
+    },
+    {
+      "number": 23,
+      "title": "Treatment of Diabetic Ketoacidosis (DKA)/Hyperglycemic ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1007%2Fs11892-017-0857-4&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The US guidelines suggest using a glucose threshold of >250 mg/dL (13.9 mmol/L), presence of positive serum and urine ketones with an anion gap,",
+      "score": 0.39159262
+    },
+    {
+      "number": 24,
+      "title": "Diabetic Ketoacidosis in Infants, Children, and Adolescents",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/29/5/1150/25292/Diabetic-Ketoacidosis-in-Infants-Children-and",
+      "authors": "diabetesjournals.org",
+      "host": "diabetesjournals.org",
+      "snippet": "In patients with established diabetes, the patient\u2019s usual insulin regimen may be resumed. Two methods of starting subcutaneous insulin after resolution of DKA in newly diagnosed patients are presented in Table 5. After transitioning to subcutaneous insulin, frequent blood glucose monitoring is requ",
+      "score": 0.6659544
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Acid\u2013Base Problems in Diabetic Ketoacidosis",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/do/10.1056/do.feature.2015.01.21.37/full",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "This patient fulfills the diagnostic criteria for diabetic ketoacidosis a venous pH below 7.3, a bicarbonate level of less than 15 mmol per",
+      "score": 0.5715041
+    },
+    {
+      "number": 2,
+      "title": "Diabetic ketoacidosis - Management recommendations",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "The goal is the steady but gradual reduction of serum glucose and plasma osmolality by low-dose insulin therapy in order to reduce the risk of treatment complications including hypoglycemia and hypokalemia.\n\nPatients should receive a continuous intravenous infusion of short-acting regular insulin af",
+      "score": 0.63179934
+    },
+    {
+      "number": 3,
+      "title": "Diabetic ketoacidosis - BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/pdf/162.pdf",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "BMJ Best Practice topics are regularly updated and the most recent version of the topics can be found on bestpractice.bmj.com . Use of this content is subject to our disclaimer. \u00a9 BMJ Publishing Group Ltd 2026. All rights reserved.\nDiabetic ketoacidosis Management Acute the risk of treatment complic",
+      "score": 0.62906903
+    },
+    {
+      "number": 4,
+      "title": "Diabetic ketoacidosis - Treatment algorithm | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/162/treatment-algorithm",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b The use of rapid-acting subcutaneous insulin analog is not recommended for the treatment of severe and complicated DKA.(#referencePop1)Umpierrez GE, Davis GM, ElSayed NA, et al. Hyperglycaemic crises in adults with diabetes: a consensus report. Diabetologia. 2024 Aug;67(8):1455-79.\n\nThe intraveno",
+      "score": 0.6213807
+    },
+    {
+      "number": 5,
+      "title": "Diabetic ketoacidosis - Management recommendations | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/162/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Manually adding potassium to intravenous fluids in general clinical areas is unsafe as this can result in accidental overdose of potassium, which can be fatal.(#referencePop155)National Patient Safety Agency. ARCHIVED NPSA Alert \u2013 Potassium solutions risks to patients from errors occurring during IV",
+      "score": 0.5465209
+    },
+    {
+      "number": 6,
+      "title": "Diabetic Ketoacidosis: Considerations and Residual Controversies in Management After the 2024 ADA, EASD, JBDS, AACE, and DST Joint Consensus",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/org/science/article/pii/S1871530326000636",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "and the management of its critical aspects and its possible underlying precipitating factors are often life-changing choices for patients. Despite diagnostic and therapeutic improvements, DKA still stands as one of the main causes of morbidity and mortality in DM individuals. Recently, an inter-soci",
+      "score": 0.6506676
+    },
+    {
+      "number": 7,
+      "title": "Management of diabetic ketoacidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0953620523002315",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### BMJ (2019) \n   A.E. Kitabchi _et al._\n### Hyperglycemic crises in adult patients with diabetes\n\n### Diabetes Care (2009) \n   R.I.G. Holt _et al._\n### The management of type 1 diabetes in adults. A Consensus report by the American Diabetes Association (ADA) and the European Association for the St",
+      "score": 0.64639384
+    },
+    {
+      "number": 8,
+      "title": "Subcutaneous Insulin Versus Traditional Intravenous Insulin Infusion in Treatment of Mild to Moderate Diabetic Ketoacidosis",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467923003499",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2024, Diabetologia  Show abstract The American Diabetes Association (ADA), European Association for the Study of Diabetes (EASD), Joint British Diabetes Societies for Inpatient Care (JBDS), American Association of Clinical Endocrinology (AACE) and Diabetes Technology Society (DTS) convened a panel o",
+      "score": 0.599087
+    },
+    {
+      "number": 9,
+      "title": "Review Defining and characterising diabetic ketoacidosis in adults",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0168822719305686",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This review focusses on the pathophysiology and epidemiology of DKA, but also on the importance of having a standardised definition.",
+      "score": 0.48850358
+    },
+    {
+      "number": 10,
+      "title": "Note: page numbers in italics refer to figures; those in bold to tables ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/9781444324808.index",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "cerebral edema, diabetic ketoacidosis 551, 862 ... transition of subcutaneous insulin 863 treatment ... subcutaneous insulin administration 432\u20134.",
+      "score": 0.52042377
+    },
+    {
+      "number": 11,
+      "title": "Diabetic ketoacidosis - Wolfsdorf - 2007 - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1399-5448.2007.00224.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "\u2662 Hypoglycemia. \u2662 Hypokalemia. \u2662 Hyperchloremic acidosis. \u2662 Cerebral edema. Introduction of oral fluids and transition to SC insulin",
+      "score": 0.5053471
+    },
+    {
+      "number": 12,
+      "title": "ISPAD Clinical Practice Consensus Guidelines 2018: Diabetic ketoacidosis and the hyperglycemic hyperosmolar state - Wolfsdorf - 2018 - Pediatric Diabetes - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/pedi.12701",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "10.1007/s00134-007-0674-3CAS PubMed Web of Science\u00ae Google Scholar\n 193Harrison VS, Rustico S, Palladino AA, Ferrara C, Hawkes CP. Glargine co-administration with intravenous insulin in pediatric diabetic ketoacidosis is safe and facilitates transition to a subcutaneous regimen. Pediatr Diabetes. 20",
+      "score": 0.39747116
+    },
+    {
+      "number": 13,
+      "title": "[PDF] COMIRB Protocol - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/08/NCT03107208/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "in infants, children, and adolescents: A consensus statement from the American Diabetes Association. Diabetes Care 2006; 29:1150-1159 17. Wolfsdorf JI, Allgrove J, Craig ME, Edge J, Glaser N, Jain V, Lee WW, Mungai LN, Rosenbloom AL, Sperling MA, Hanas R, International Society for P, Adolescent D. I",
+      "score": 0.6455898
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Clinical Study Protocol Template - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/30/NCT05327530/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "... report, document this review ... o Consensus ethical principles derived from international guidelines, including the ... DKA diabetic ketoacidosis;. DM diabetes",
+      "score": 0.50022036
+    },
+    {
+      "number": 15,
+      "title": "[PDF] BRISK-ED: Balanced crystalloids (RInger's lactate) versus normal ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/40/NCT04926740/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Medicine)/Epidemiology and Biostatistics Dr. Yun-Hee Choi, PhD, Department of Epidemiology and Biostatistics Ms. Haley Collins, Patient Partner, London Health Sciences Centre Research Staff: Erica Figgins, MSc, Division of Emergency Medicine, London Health Sciences Centre Branka Vujcic, MSc, Divisio",
+      "score": 0.41023695
+    },
+    {
+      "number": 16,
+      "title": "Managing Diabetic Ketoacidosis - Annals of Emergency Medicine",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(26)00365-3/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Insulin should be promptly administered once DKA is diagnosed and absence of hypokalemia is confirmed. Although the use of an initial insulin",
+      "score": 0.39747116
+    },
+    {
+      "number": 17,
+      "title": "Two-bag Versus One-bag Method for Adult and Pediatric Diabetic ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(25)01095-9/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "The conventional one-bag method for DKA management uses an insulin infusion with a single electrolyte-containing intravenous fluid, later",
+      "score": 0.37346497
+    },
+    {
+      "number": 18,
+      "title": "[PDF] Clinical Study Protocol - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/40/NCT04489940/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "insulin for T1DM (or as default therapy if there is confusion about type) Urgent endocrine consultation for any patient with T1DM; in the absence of endocrinology, internal medicine may suf\ufb01ce Consider admission for T1DM if early outpatient evaluation is not available or signs of ketoacidosis are pr",
+      "score": 0.32476035
+    },
+    {
+      "number": 19,
+      "title": "[PDF] Hyperglycemic crises in adults: A look at the 2024 consensus report",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/ccjom/92/3/152.full.pdf",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "doi:10.3949/ccjm.92a.24089 CME MOC CLEVELAND CLINIC JOURNAL OF MEDICINE VOLUME 92 \u2022 NUMBER 3 MARCH 2025 153 RODRIGUEZ ALVAREZ AND COLLEAGUES Diagnosis The diagnosis of DKA requires the presence of 3 criteria: (1) diabetes or hyperglycemia (D criterion), with a glucose level of 200 mg/dL or greater o",
+      "score": 0.6897452
+    },
+    {
+      "number": 20,
+      "title": "Diagnosis and treatment of diabetic ketoacidosis and the hyperglycemic hyperosmolar state - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC151994",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Once the ketoacidosis in DKA has been corrected (plasma glucose level < 11.0 mmol/L, serum bicarbonate level \u2265 18 mmol/L, venous pH > 7.3 and anion gap < 12 mmol/L), the clouded consciousness and hyperosmolality in HHS have resolved, and patients are able to take fluids orally, a multidose insulin r",
+      "score": 0.60610276
+    },
+    {
+      "number": 21,
+      "title": "Diabetic Ketoacidosis - Endotext - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/endotext/diab_keto",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### MIXED DKA/HHS\n\nMixed DKA/HHS is defined as hyperosmolality (>320 mOsm/kg), \u03b2-hydroxybutyrate \u22653.0 mmol/L or ketonuria \u22652+ and presence of acidosis (pH <7.30, or bicarbonate <18 mmol/L) and has been reported in more than one-third of people with hyperglycemic crises. Similar to DKA, it requires ",
+      "score": 0.60386235
+    },
+    {
+      "number": 22,
+      "title": "Review of Evidence for Adult Diabetic Ketoacidosis Management Protocols - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5468371",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "#### Table 1.\n\nDefinitions of severity of diabetic ketoacidosis (DKA).\n\n|  | Mild DKA | Moderate DKA | Severe DKA |\n ---  --- |\n| Arterial pH | 7.25\u20137.3 | 7.0 to <7.24 | <7.0 |\n| Serum bicarbonate (mmol/L) | 15\u201318 | 10 to <15 | <10 |\n| Anion gap | >10 | >12 | >10 |\n| Mental status | Alert | Alert/dr",
+      "score": 0.5585443
+    },
+    {
+      "number": 23,
+      "title": "Treatment of Diabetic Ketoacidosis (DKA)/Hyperglycemic ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1007%2Fs11892-017-0857-4&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The US guidelines suggest using a glucose threshold of >250 mg/dL (13.9 mmol/L), presence of positive serum and urine ketones with an anion gap,",
+      "score": 0.39159262
+    },
+    {
+      "number": 24,
+      "title": "Diabetic Ketoacidosis in Infants, Children, and Adolescents",
+      "detail": "diabetesjournals.org",
+      "url": "https://diabetesjournals.org/care/article/29/5/1150/25292/Diabetic-Ketoacidosis-in-Infants-Children-and",
+      "authors": "diabetesjournals.org",
+      "host": "diabetesjournals.org",
+      "snippet": "In patients with established diabetes, the patient\u2019s usual insulin regimen may be resumed. Two methods of starting subcutaneous insulin after resolution of DKA in newly diagnosed patients are presented in Table 5. After transitioning to subcutaneous insulin, frequent blood glucose monitoring is requ",
+      "score": 0.6659544
+    }
+  ],
+  "publishedAt": "2026-09-15T22:03:32.215914+00:00",
+  "updatedAt": "2026-09-15T22:03:32.215914+00:00",
+  "readingMinutes": 6,
+  "slug": "diabetic-ketoacidosis-insulin-and-potassium-management"
+}

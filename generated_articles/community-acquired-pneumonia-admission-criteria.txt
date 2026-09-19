@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary and Critical Care",
+  "title": "Community-Acquired Pneumonia Admission Criteria",
+  "summary": "Determine CAP disposition by separating outpatient suitability from physiologic instability, then use PSI for mortality-oriented site-of-care assessment and ATS/IDSA severe-CAP criteria to identify patients needing ICU-level monitoring, ventilatory support, or vasopressors.",
+  "seoDescription": "Adult community-acquired pneumonia admission criteria: outpatient selection, PSI and CURB-65 use, severe CAP criteria, and ICU disposition triggers.",
+  "clinicalQuestion": "Which adults with community-acquired pneumonia require hospital admission or ICU-level care?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "community-acquired pneumonia",
+    "CAP admission criteria",
+    "pneumonia severity index",
+    "PSI",
+    "CURB-65",
+    "severe community-acquired pneumonia",
+    "ICU admission"
+  ],
+  "keyTakeaways": [
+    "Use a validated prognostic rule, preferably the Pneumonia Severity Index (PSI), together with clinical judgment to guide initial inpatient versus outpatient disposition for adults with CAP.[19]",
+    "Do not use PSI or CURB-65 alone to exclude impending respiratory or circulatory failure; both have limited discrimination for ICU admission, with estimated AUCs of 0.69.[23][24]",
+    "Admit directly to an ICU when CAP causes respiratory failure requiring mechanical ventilation or septic shock requiring vasopressors; each is an ATS/IDSA major severity criterion.[6][22]",
+    "In patients without a major criterion, three or more ATS/IDSA minor criteria should prompt ICU admission consideration or a monitored setting with immediate escalation capability.[20][22]",
+    "Reassess early deterioration after initial placement: transfer to ICU during the first 24 to 48 hours after hospitalization is associated with greater morbidity and mortality than direct ICU admission.[13]"
+  ],
+  "sections": [
+    {
+      "id": "initial-disposition-decision",
+      "eyebrow": "First decision",
+      "heading": "Choose outpatient, inpatient, or ICU care from physiologic risk",
+      "intro": "Disposition should precede regimen selection because site of care determines monitoring and rescue capacity.",
+      "paragraphs": [
+        "For adults with radiographically confirmed or strongly suspected CAP, make the first disposition decision from acute respiratory and circulatory support needs. Respiratory failure requiring mechanical ventilation and septic shock requiring vasopressors define severe CAP and warrant ICU-level care rather than routine ward admission.[6][22]",
+        "For patients without immediate ventilatory or vasopressor requirements, apply a validated prognostic rule plus bedside judgment to determine whether outpatient treatment is reasonable. The ATS/IDSA guideline recommends the PSI over CURB-65 to help determine need for hospitalization because PSI provides more comprehensive mortality risk stratification, although it requires more clinical variables.[8][19]",
+        "Do not let a low mortality score override a trajectory suggesting imminent decompensation. PSI and CURB-65 were designed primarily around short-term mortality and have limited ability to identify patients likely to deteriorate on a general ward; their estimated AUC for ICU-admission prediction is 0.69.[20][23][24]"
+      ],
+      "bullets": [
+        "Direct ICU admission: mechanical ventilation requirement or septic shock requiring vasopressors.[6][22]",
+        "Hospital admission: clinical judgment indicates outpatient care is unsafe after PSI-informed risk assessment.[19]",
+        "Outpatient pathway: only after PSI-informed assessment and clinical judgment support nonhospital management; reassess the plan if hypoxemia, respiratory distress, or hemodynamic instability develops.[19][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition framework for adults with CAP.[19][22]",
+        "columns": [
+          "Disposition",
+          "Decisive finding",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "ICU",
+            "Mechanical ventilation requirement or septic shock requiring vasopressors.[22]",
+            "Provide ICU-level respiratory and hemodynamic support.[6][22]"
+          ],
+          [
+            "ICU consideration or monitored higher-acuity care",
+            "At least 3 ATS/IDSA minor criteria without a major criterion.[20][22]",
+            "Escalate monitoring and reassess frequently for respiratory or circulatory failure.[20][22]"
+          ],
+          [
+            "Inpatient ward",
+            "No severe-CAP criteria but PSI-informed assessment or clinical judgment does not support outpatient management.[19]",
+            "Admit with a defined reassessment plan for early deterioration.[13][19]"
+          ],
+          [
+            "Outpatient management",
+            "PSI-informed assessment and clinical judgment support care outside the hospital.[19]",
+            "Ensure the patient does not have instability requiring hospital-level monitoring or support.[19][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "risk-scores-for-hospital-admission",
+      "eyebrow": "Hospitalization risk",
+      "heading": "Use PSI for admission decisions; use CURB-65 as a rapid bedside screen",
+      "intro": "Mortality-risk tools and ICU-triage tools answer different questions.",
+      "paragraphs": [
+        "Use PSI as the preferred structured tool when deciding outpatient versus inpatient care. It incorporates multiple clinical parameters and provides comprehensive risk stratification, whereas CURB-65 is shorter and more feasible in emergency settings.[8][19] A score should support, not replace, judgment about oxygenation, respiratory work, shock, comorbidity, functional reserve, and the ability to execute outpatient treatment.",
+        "CURB-65 is a practical rapid assessment tool, but its low score does not reliably rule out need for higher-acuity care. In a meta-analysis, CURB-65 group 0 had the lowest risk of ICU admission, with a negative likelihood ratio of 0.14 (95% CI, 0.06-0.34); however, broader evidence shows PSI and CURB-65 have similar, limited discrimination for ICU admission across cutoffs.[18][23]",
+        "A CURB-65 score of 4 was presented as supporting inpatient therapy in an ACEP clinical review; that same vignette had four severe-CAP minor criteria, illustrating why a mortality score should be paired with ATS/IDSA severity assessment rather than used in isolation.[20]"
+      ],
+      "bullets": [
+        "Use PSI primarily for mortality-oriented site-of-care assessment and hospitalization decisions.[8][19]",
+        "Use CURB-65 when a rapid ED screen is needed, but add direct assessment for respiratory failure, shock, and ATS/IDSA minor criteria.[8][20][23]",
+        "Use ATS/IDSA severe-CAP criteria rather than PSI or CURB-65 alone when the question is ICU-level monitoring or organ-support risk.[20][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "What each CAP severity tool should change in disposition planning.[8][19][23]",
+        "columns": [
+          "Tool",
+          "Best use",
+          "Disposition limitation"
+        ],
+        "rows": [
+          [
+            "PSI",
+            "Comprehensive initial risk stratification for outpatient versus inpatient decision-making.[8][19]",
+            "Requires multiple variables and is not sufficient alone for identifying patients who may deteriorate on a ward.[8][20]"
+          ],
+          [
+            "CURB-65",
+            "Rapid emergency-setting mortality-risk assessment.[8]",
+            "Limited prediction of ICU admission; a low score does not exclude severe physiologic deterioration.[23][24]"
+          ],
+          [
+            "ATS/IDSA severe-CAP criteria",
+            "Identification of patients who need ICU-level support or consideration of ICU admission.[20][22]",
+            "Apply alongside clinical judgment because prediction rules are aids to, not substitutes for, clinical judgment.[23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ats-idsa-severe-cap-criteria",
+      "eyebrow": "Critical care triage",
+      "heading": "Apply ATS/IDSA severe-CAP criteria before assigning a general ward bed",
+      "intro": "One major criterion establishes severe CAP; otherwise count minor criteria.",
+      "paragraphs": [
+        "Severe CAP is present with either one major criterion or at least three minor criteria. The two major criteria are septic shock with need for vasopressors and respiratory failure requiring mechanical ventilation.[6][22] These findings should trigger direct ICU admission because they identify active organ-support needs, not merely increased mortality risk.",
+        "For patients not yet receiving invasive mechanical ventilation or vasopressors, count the nine ATS/IDSA minor criteria. Three or more should warrant consideration of ICU admission.[20][22] This threshold is particularly useful when respiratory or hemodynamic failure is evolving but has not yet met a major criterion.",
+        "Do not delay escalation while awaiting a score if the patient is worsening. Late ICU transfer, particularly within the first 24 to 48 hours after hospital admission, has been associated with greater morbidity and mortality than direct ICU admission.[13]"
+      ],
+      "bullets": [
+        "Major criterion: respiratory failure requiring mechanical ventilation.[22]",
+        "Major criterion: septic shock requiring vasopressors.[22]",
+        "Minor-criteria threshold: 3 or more criteria warrants ICU-admission consideration.[20][22]"
+      ],
+      "subsections": [
+        {
+          "heading": "ATS/IDSA minor criteria",
+          "paragraphs": [
+            "Count the following at presentation or during reassessment: respiratory rate of at least 30 breaths/min; PaO2/FiO2 ratio of 250 or less; multilobar infiltrates; confusion or disorientation; blood urea nitrogen of at least 20 mg/dL; leukopenia with white blood cell count below 4,000 cells/mm3; thrombocytopenia with platelet count below 100,000 cells/mm3; hypothermia with core temperature below 36 degrees C; and hypotension requiring aggressive fluid resuscitation.[22]"
+          ],
+          "bullets": [
+            "A respiratory rate of at least 30 breaths/min is both a minor severe-CAP criterion and a trigger to assess gas exchange and escalation needs.[20][22]",
+            "Multilobar infiltrates count as a minor criterion and should raise concern for progressive severe lung injury when paired with hypoxemia or organ dysfunction.[6][22]",
+            "BUN of at least 20 mg/dL, leukopenia below 4,000 cells/mm3, or platelets below 100,000 cells/mm3 each contributes one minor criterion.[22]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "ATS/IDSA criteria defining severe CAP.[6][22]",
+        "columns": [
+          "Criterion class",
+          "Finding",
+          "Disposition implication"
+        ],
+        "rows": [
+          [
+            "Major",
+            "Septic shock requiring vasopressors.[22]",
+            "Direct ICU-level care.[6][22]"
+          ],
+          [
+            "Major",
+            "Respiratory failure requiring mechanical ventilation.[22]",
+            "Direct ICU-level care.[6][22]"
+          ],
+          [
+            "Minor",
+            "Respiratory rate at least 30 breaths/min; PaO2/FiO2 ratio 250 or less; multilobar infiltrates; confusion/disorientation.[22]",
+            "Count toward the 3-minor-criterion threshold for ICU consideration.[20][22]"
+          ],
+          [
+            "Minor",
+            "BUN at least 20 mg/dL; WBC below 4,000 cells/mm3; platelets below 100,000 cells/mm3; core temperature below 36 degrees C; hypotension requiring aggressive fluid resuscitation.[22]",
+            "Count toward the 3-minor-criterion threshold for ICU consideration.[20][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnostic-data-that-change-disposition",
+      "eyebrow": "Targeted workup",
+      "heading": "Obtain disposition-changing data early and repeat assessment when risk evolves",
+      "intro": "Testing should clarify hypoxemia, organ dysfunction, and radiographic extent before final bed assignment.",
+      "paragraphs": [
+        "Obtain chest radiography to document infiltrates and identify multilobar disease, which is an ATS/IDSA minor criterion.[22] If clinical suspicion remains high despite a negative chest radiograph, obtain chest CT rather than dismissing CAP solely on the initial radiograph.[22]",
+        "Measure oxygenation and obtain the data needed to calculate PaO2/FiO2 when severe disease is possible; a ratio of 250 or less is an ATS/IDSA minor criterion.[22] In a patient with high respiratory rate and low oxygen saturation, an ACEP review specifically recommends arterial blood gas and lactate measurement to define respiratory and circulatory risk.[20]",
+        "Obtain CBC, BUN, platelet count, temperature, mental-status assessment, and blood pressure during the initial evaluation because abnormal values directly populate the ATS/IDSA minor criteria.[22] Recalculate severity after fluid resuscitation or clinical change: persistent hypotension requiring aggressive fluid resuscitation remains a minor criterion, while progression to vasopressor-dependent shock is a major criterion requiring ICU care.[22]"
+      ],
+      "bullets": [
+        "Negative chest radiograph with persistent high clinical suspicion: obtain chest CT.[22]",
+        "Hypoxemia or tachypnea with concern for severe CAP: assess arterial oxygenation; PaO2/FiO2 of 250 or less is a minor criterion.[20][22]",
+        "Suspected shock: determine whether fluid-responsive hypotension has progressed to vasopressor requirement, which changes classification from a minor to a major criterion.[22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tests and observations that alter CAP disposition.[20][22]",
+        "columns": [
+          "Assessment",
+          "Actionable result",
+          "What changes"
+        ],
+        "rows": [
+          [
+            "Chest radiography or chest CT",
+            "Multilobar infiltrates; CT when high suspicion persists despite negative radiograph.[22]",
+            "Multilobar disease adds one ATS/IDSA minor criterion; CT can establish an alternative basis for CAP management when radiography is negative.[22]"
+          ],
+          [
+            "Arterial oxygenation",
+            "PaO2/FiO2 ratio 250 or less.[22]",
+            "Adds one minor severe-CAP criterion and supports higher-acuity evaluation.[22]"
+          ],
+          [
+            "Hemodynamic assessment",
+            "Hypotension requiring aggressive fluid resuscitation, or shock requiring vasopressors.[22]",
+            "The first is a minor criterion; vasopressor requirement is a major criterion requiring ICU-level care.[22]"
+          ],
+          [
+            "CBC, BUN, temperature, mentation",
+            "WBC below 4,000 cells/mm3, platelets below 100,000 cells/mm3, BUN at least 20 mg/dL, core temperature below 36 degrees C, or confusion/disorientation.[22]",
+            "Each finding adds one minor criterion toward ICU-admission consideration.[22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reassessment-and-escalation",
+      "eyebrow": "Avoid delayed ICU transfer",
+      "heading": "Set explicit escalation triggers after initial admission",
+      "intro": "A ward disposition is provisional when severe-CAP features are near threshold or worsening.",
+      "paragraphs": [
+        "Patients with one or two ATS/IDSA minor criteria require serial reassessment rather than reassurance from an initially non-ICU disposition. A third minor criterion should prompt ICU-admission consideration, while mechanical ventilation or vasopressor dependence mandates ICU-level care.[20][22]",
+        "Escalate immediately for increasing respiratory support needs, development of mechanical ventilation requirement, or shock progressing to vasopressor use.[6][22] Bilateral or multilobar radiographic opacities accompanying severe hypoxemia and multiorgan dysfunction are concerning markers of progressive severe lung injury and should lower the threshold for ICU-level surveillance.[6]",
+        "Keep the purpose of each score distinct: PSI and CURB-65 inform prognosis and initial site-of-care decisions, whereas ATS/IDSA criteria identify intensive monitoring and organ-support risk.[8][19][20][23] This combined approach is preferable to assigning a patient to a ward solely because a mortality score is low."
+      ],
+      "bullets": [
+        "Reclassify as severe CAP immediately if vasopressor-dependent shock or mechanical ventilation develops.[22]",
+        "Consider ICU transfer when a third ATS/IDSA minor criterion appears during observation or ward treatment.[20][22]",
+        "Use clinical judgment with prediction rules; systematic review data support these tools as aids, not replacements, for judgment in ICU triage.[23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Escalation triggers after initial CAP disposition.[6][13][20][22]",
+        "columns": [
+          "Change during observation",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "New requirement for mechanical ventilation.[22]",
+            "Major severe-CAP criterion.[22]",
+            "Transfer or admit directly to ICU.[6][22]"
+          ],
+          [
+            "Shock now requiring vasopressors.[22]",
+            "Major severe-CAP criterion.[22]",
+            "Transfer or admit directly to ICU.[6][22]"
+          ],
+          [
+            "Total of 3 or more minor criteria.[20][22]",
+            "High risk requiring ICU-admission consideration.[20][22]",
+            "Obtain ICU evaluation or place in a setting capable of close monitoring and immediate escalation.[20][22]"
+          ],
+          [
+            "Clinical deterioration within 24 to 48 hours after hospital admission.[13]",
+            "Delayed ICU transfer has been associated with greater morbidity and mortality than direct ICU admission.[13]",
+            "Reassess respiratory and hemodynamic support needs promptly and escalate rather than await further decline.[13][22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

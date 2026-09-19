@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Endocrinology",
+  "title": "Thyroid Nodule",
+  "summary": "Evaluate thyroid nodules with clinical risk assessment, serum TSH, structured ultrasound risk stratification, and size-based FNA selection; then integrate Bethesda cytology, molecular testing when informative, patient fitness, and preferences to avoid both missed clinically important cancer and low-value biopsy or surgery.",
+  "seoDescription": "Physician guide to thyroid nodule evaluation: TSH-directed scintigraphy, ultrasound risk stratification, FNA selection, indeterminate cytology, and surveillance.",
+  "clinicalQuestion": "How should clinicians select thyroid nodules for imaging, FNA, cytologic triage, and conservative follow-up?",
+  "specialty": "Endocrinology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "thyroid nodule",
+    "thyroid ultrasound",
+    "ACR TI-RADS",
+    "EU-TIRADS",
+    "fine-needle aspiration",
+    "Bethesda cytology",
+    "indeterminate thyroid cytology"
+  ],
+  "keyTakeaways": [
+    "Do not perform ultrasound screening in asymptomatic adults; pursue a risk-adapted evaluation when a nodule is clinically or incidentally identified. [21]",
+    "Use a structured ultrasound system and its biopsy threshold rather than nodule size alone; ultrasound-guided FNA is the principal diagnostic procedure for selected nodules. [10][15][21]",
+    "A suppressed TSH changes the pathway: radionuclide imaging can identify a hyperfunctioning nodule before proceeding with cytology-driven management. [18][21]",
+    "ACR TI-RADS reduces FNA use compared with some competing systems but may trade biopsy avoidance for lower sensitivity; use one validated local reporting system consistently. [20][22]",
+    "For Bethesda III or IV cytology, integrate ultrasound pattern and molecular testing with operative risk and patient goals rather than reflexively proceeding to diagnostic surgery. [13][24]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First Visit",
+      "heading": "Identify nodules requiring expedited evaluation",
+      "intro": "Use clinical context to determine urgency before selecting imaging or biopsy.",
+      "paragraphs": [
+        "Obtain a focused history for childhood or therapeutic neck irradiation, familial thyroid cancer syndromes, rapid structural change, and relevant comorbidity. Familial nonmedullary thyroid cancer is associated with multifocal disease, local invasion, nodal metastases, and local or regional recurrence more often than sporadic disease; this history should lower the threshold for expert ultrasound review and multidisciplinary planning. [2]",
+        "Avoid screening thyroid ultrasound in asymptomatic adults because detection of benign lesions and indolent malignancies can drive overdiagnosis and treatment morbidity without a demonstrated reduction in thyroid cancer mortality. Evaluate a palpable lesion, a clinically meaningful incidental imaging finding, or a patient with an established nodule instead. [21]",
+        "In older adults and patients with substantial competing illness, make diagnostic intensity contingent on whether a result would alter management. A conservative approach can be reasonable for very-low-risk tumors, high operative risk, or limited life expectancy after shared decision-making. [20]"
+      ],
+      "bullets": [
+        "Expedite dedicated neck ultrasound when examination or prior imaging suggests cervical lymphadenopathy or a clinically concerning thyroid lesion. [21][24]",
+        "Document comorbidities, functional status, and goals of care before recommending FNA or surgery in an older adult; ultrasound risk alone should not determine intervention. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial triage decisions for an identified thyroid nodule. [20][21]",
+        "columns": [
+          "Clinical setting",
+          "Immediate next step",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Asymptomatic adult without a known nodule",
+            "Do not order screening thyroid ultrasound. [21]",
+            "Avoid detection-driven overdiagnosis and downstream procedures. [21]"
+          ],
+          [
+            "Known or incidentally detected thyroid nodule",
+            "Obtain thyroid-focused clinical assessment, serum TSH, and dedicated ultrasound risk stratification. [21]",
+            "Use functional status and ultrasound pattern to select scintigraphy, FNA, surveillance, or no further action. [18][21]"
+          ],
+          [
+            "Older adult with major comorbidity or short life expectancy",
+            "Establish whether biopsy results would change treatment before FNA. [20]",
+            "Conservative management may be preferable for low-risk disease or high surgical risk. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ts h-and-functional-pathway",
+      "eyebrow": "Laboratory Branch",
+      "heading": "Use TSH to determine whether scintigraphy changes the pathway",
+      "intro": "Functional assessment precedes purely morphologic decision-making when TSH is low.",
+      "paragraphs": [
+        "Measure serum TSH during initial evaluation. When TSH is suppressed, obtain radionuclide imaging to identify a hyperfunctioning nodule; this functional result redirects evaluation away from an ultrasound-only biopsy pathway and toward defining the cause of thyrotoxicosis. [18][21]",
+        "If free T4 is normal in a patient with biochemical concern for hyperthyroidism, measure free T3. Consider TSH-receptor antibodies when the clinical context requires clarification of hyperthyroid etiology; consider thyroid peroxidase antibodies when thyroiditis is clinically or sonographically suspected. [21]",
+        "Routine calcitonin measurement is not uniformly recommended for every nodule. Consider it selectively when the clinical context raises concern for medullary thyroid carcinoma or when a result would alter preoperative planning. A case of a large, sonographically low-risk nodule illustrates that calcitonin and chromogranin A gene overexpression on molecular testing can identify medullary thyroid carcinoma despite Bethesda III cytology. [21][24]"
+      ],
+      "bullets": [
+        "Suppressed TSH: perform radionuclide scintigraphy before treating the nodule as a routine nonfunctioning lesion. [18][21]",
+        "Normal free T4 with suspected thyrotoxicosis: add free T3. [21]",
+        "Suspected autoimmune hyperthyroidism or thyroiditis: use TSH-receptor antibodies or thyroid peroxidase antibodies selectively to resolve etiology. [21]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "ultrasound-and-fna-selection",
+      "eyebrow": "Imaging and Biopsy",
+      "heading": "Select FNA by ultrasound risk pattern and size threshold",
+      "intro": "Use a formal ultrasound classification system rather than unstructured descriptive reporting.",
+      "paragraphs": [
+        "Perform dedicated thyroid and cervical lymph-node ultrasound and assign a validated risk category. Both major guideline approaches support ultrasound to determine whether a nodule warrants ultrasound-guided fine-needle aspiration cytology rather than using palpation or size alone. [10][15][21]",
+        "In EU-TIRADS, high-risk category 5 requires at least one high-suspicion feature: irregular shape, irregular margins, microcalcifications, or marked hypoechogenicity. The 2023 ETA algorithm identifies FNA consideration for EU-TIRADS 5 nodules larger than 10 mm and for intermediate-risk EU-TIRADS 4 nodules larger than 15 mm; apply the reporting system’s complete recommendation set rather than transplanting thresholds across systems. [21]",
+        "A spongiform appearance is strongly associated with benignity in the cited evidence, with 99.7% specificity and a 98.5% negative predictive value for malignancy. It does not eliminate the need to apply size-based biopsy criteria or reconsider the diagnosis when the lesion is large, symptomatic, growing, or otherwise clinically discordant. [24]",
+        "Do not add scintigraphy solely because a nodule falls below an ACR TI-RADS FNA threshold in an otherwise routine setting. In a retrospective cohort, cold scintigraphy prompted FNA in 66 subthreshold nodules, with Bethesda category III or higher cytology in 7 nodules (10.6%); most clinically significant cytology occurred in nodules that already met ACR TI-RADS FNA criteria. [11]"
+      ],
+      "bullets": [
+        "Use ultrasound-guided FNA for nodules meeting the selected system’s risk-and-size criterion. [10][15][21]",
+        "Record suspicious cervical lymph nodes separately from the thyroid nodule category because nodal findings can change procedural planning. [24]",
+        "Do not biopsy all subcentimeter nodules solely to detect microcarcinoma; ultrasound systems were designed to reduce avoidable FNA while maintaining clinically useful risk stratification. [15][20]"
+      ],
+      "subsections": [
+        {
+          "heading": "Choosing a reporting system",
+          "paragraphs": [
+            "ACR TI-RADS, ATA-pattern approaches, and EU-TIRADS use different category definitions and FNA thresholds. In older-adult data, ACR TI-RADS produced fewer unnecessary FNAs than ATA and Korean TI-RADS, but its lower sensitivity highlights the tradeoff between reducing procedures and potentially deferring diagnosis of some malignancies. [20]",
+            "Do not alternate systems across serial examinations. Consistent reporting permits a reproducible biopsy decision and avoids apparent changes in risk caused only by switching classification rules. Comparative literature does not establish EU-TIRADS as superior to other TI-RADS systems. [22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Ultrasound findings and actions supported by the ETA/EU-TIRADS pathway. [21][24]",
+        "columns": [
+          "Ultrasound result",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "EU-TIRADS 5: irregular shape, irregular margins, microcalcifications, or marked hypoechogenicity",
+            "High-risk pattern. [21]",
+            "Consider ultrasound-guided FNA when diameter is greater than 10 mm. [21]"
+          ],
+          [
+            "EU-TIRADS 4",
+            "Intermediate-risk pattern. [21]",
+            "Consider ultrasound-guided FNA when diameter is greater than 15 mm. [21]"
+          ],
+          [
+            "Spongiform nodule",
+            "Very high specificity and negative predictive value for benign disease in cited data. [24]",
+            "Apply guideline size criteria and clinical context; do not infer zero cancer risk. [24]"
+          ],
+          [
+            "Nodule below ultrasound-system FNA threshold",
+            "Most clinically significant cytology in one cohort occurred in nodules already meeting ACR TI-RADS criteria. [11]",
+            "Do not routinely use a cold scintigraphy result alone to override a subthreshold ACR TI-RADS recommendation. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cytology-and-indeterminate-results",
+      "eyebrow": "After FNA",
+      "heading": "Resolve indeterminate cytology with concordance, molecular testing, and treatment consequences",
+      "intro": "Bethesda III and IV results require risk refinement, not automatic thyroidectomy.",
+      "paragraphs": [
+        "Interpret FNA cytology together with the pretest ultrasound risk category and the clinical scenario. Bethesda category III, atypia of undetermined significance, carries a cited malignancy risk of 6% to 18%; this range should not be treated as equivalent to a definitive malignant diagnosis. [24]",
+        "For Bethesda III or IV nodules, assess whether repeat sampling, molecular testing, active surveillance, or diagnostic surgery would change care. In a surgical retrospective cohort of 449 patients with Bethesda III or IV cytology, clinical characteristics and predictors were evaluated, reinforcing that these categories comprise a heterogeneous operative-risk group rather than a uniform indication for surgery. [13]",
+        "Use molecular testing only when its result will meaningfully alter the choice between surveillance and surgery or the scope of surgery. In a reported Bethesda III nodule, molecular evidence of calcitonin and chromogranin A gene overexpression conveyed a greater than 95% probability of medullary thyroid carcinoma and changed management despite absence of RET or RAS mutations. [24]",
+        "For Hürthle-cell–predominant aspirates, do not assume Hürthle cells independently establish malignancy. Hürthle-cell metaplasia may occur in chronic lymphocytic thyroiditis, and the presence of Hürthle cells does not increase malignancy risk in most Bethesda categories in cited literature; integrate nuclear atypia, ultrasound findings, and the overall Bethesda category. [16]"
+      ],
+      "bullets": [
+        "Bethesda III: reconcile cytology with ultrasound pattern before choosing surveillance, repeat sampling, molecular testing, or surgery. [13][24]",
+        "Bethesda IV: use clinical, sonographic, and molecular risk refinement to determine whether diagnostic surgery is justified. [13]",
+        "Molecular evidence suggesting medullary thyroid carcinoma: plan management as a specific cancer pathway rather than as generic indeterminate follicular-pattern cytology. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Decision framework after indeterminate thyroid FNA. [13][16][24]",
+        "columns": [
+          "Cytology scenario",
+          "Key discriminator",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "Bethesda III (AUS)",
+            "Cited malignancy risk is 6% to 18%; ultrasound and clinical concordance modify concern. [24]",
+            "Use repeat sampling, molecular testing, surveillance, or surgery only after defining how the result changes management. [13][24]"
+          ],
+          [
+            "Bethesda III with molecular profile strongly suggestive of medullary thyroid carcinoma",
+            "Calcitonin and chromogranin A gene overexpression yielded a reported cancer probability greater than 95%. [24]",
+            "Escalate to medullary thyroid carcinoma-specific preoperative planning. [24]"
+          ],
+          [
+            "Bethesda IV",
+            "Indeterminate category with heterogeneous surgical pathology outcomes. [13]",
+            "Individualize molecular testing and diagnostic surgery according to ultrasound risk, patient fitness, and preferences. [13]"
+          ],
+          [
+            "Hürthle-cell–predominant aspirate",
+            "Hürthle cells alone do not establish increased malignancy risk in most Bethesda categories. [16]",
+            "Interpret with nuclear atypia, ultrasound risk, and possible thyroiditis. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surveillance-and-treatment-intensity",
+      "eyebrow": "Longitudinal Care",
+      "heading": "Match surveillance and intervention to cancer risk and patient benefit",
+      "intro": "The objective is clinically meaningful diagnosis, not maximal detection of small lesions.",
+      "paragraphs": [
+        "For nodules that do not meet FNA criteria, continue management with the same structured ultrasound framework and reassess if the lesion crosses that system’s biopsy threshold or develops a more suspicious pattern. Avoid indiscriminate early biopsy of small lesions, because the major management problem in thyroid nodule care is overdiagnosis and excess morbidity from downstream treatment. [20][21]",
+        "When surgery is under consideration, incorporate suspected tumor biology, multifocality risk, local invasion, nodal disease, hereditary context, operative risk, and patient preference. Familial nonmedullary thyroid cancer has higher reported rates of multifocal disease, intraglandular dissemination, local invasion, recurrence, and lymph-node metastases, supporting early specialist involvement when a familial pattern is present. [2]",
+        "For an older adult with a very-low-risk tumor or a high risk of operative harm, conservative management may be a rational endpoint rather than a temporary failure to treat. State explicitly whether surveillance is intended because the lesion is below biopsy criteria, because cytology is low risk, or because treatment would not improve patient-centered outcomes. [20]"
+      ],
+      "bullets": [
+        "Reapply the same ultrasound classification system at follow-up rather than comparing non-equivalent category labels. [22]",
+        "Refer for multidisciplinary endocrine, surgical, and pathology review when a hereditary syndrome, suspected medullary thyroid carcinoma, invasive disease, or suspicious lymphadenopathy changes operative planning. [2][24]",
+        "Use shared decision-making for biopsy and surgery in older adults, explicitly balancing cancer biology against comorbidity, life expectancy, and treatment burden. [20]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should a cold thyroid nodule be biopsied if it is below the ACR TI-RADS FNA threshold?",
+      "answer": "Not routinely on the basis of cold scintigraphy alone. In a retrospective cohort, cold scintigraphy identified a small additional group with Bethesda III or higher cytology, whereas most clinically significant cytology occurred in nodules already meeting ACR TI-RADS FNA criteria. [11]"
+    },
+    {
+      "question": "Does a spongiform ultrasound pattern exclude thyroid cancer?",
+      "answer": "No. Spongiform morphology had 99.7% specificity and 98.5% negative predictive value for benign disease in cited evidence, but biopsy and follow-up decisions should still account for size criteria and clinical discordance. [24]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

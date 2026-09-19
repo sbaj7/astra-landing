@@ -4,6 +4,7 @@ import ClinicalArticleView from '../components/ClinicalArticleView.jsx';
 import ArticlesIndexPage from '../routes/ArticlesIndexPage.jsx';
 import { normalizeClinicalArticle } from '../articles/articleSchema.js';
 import { ThemeProvider } from '../components/Themes+Styles.jsx';
+import { hubsForArticle } from '../articles/articleDiscovery.js';
 
 const escapeAttribute = (value = '') => String(value)
   .replace(/&/g, '&amp;')
@@ -184,25 +185,27 @@ export const renderArticleDocument = ({ article: sourceArticle, relatedArticles 
   });
 };
 
-export const renderArticleIndexDocument = ({ articles, baseUrl, assets }) => {
-  const canonicalUrl = `${baseUrl.replace(/\/$/, '')}/articles`;
-  const title = 'Astra Clinical Library — Evidence-Based Medical Guides';
-  const description = 'Evidence-based clinical guides for physicians and medical trainees, with practical recommendations and direct links to primary sources.';
+export const renderArticleIndexDocument = ({ articles, baseUrl, assets, hub }) => {
+  const libraryUrl = `${baseUrl.replace(/\/$/, '')}/articles`;
+  const canonicalUrl = hub ? `${libraryUrl}/specialty/${hub.slug}` : libraryUrl;
+  const title = hub ? `${hub.title} Clinical Guides — Astra` : 'Astra Clinical Library — Evidence-Based Medical Guides';
+  const description = hub ? `Practical ${hub.title.toLowerCase()} guides for physicians: clinical decisions, testing, management and cited evidence.` : 'Evidence-based clinical guides for physicians and medical trainees, with practical recommendations and direct links to primary sources.';
+  const listedArticles = hub ? articles.filter((article) => hubsForArticle(article).some((item) => item.slug === hub.slug)) : articles;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Astra Clinical Library',
+    name: hub ? `${hub.title} Clinical Guides` : 'Astra Clinical Library',
     url: canonicalUrl,
     description,
     isPartOf: { '@type': 'WebSite', name: 'Astra MD', url: baseUrl },
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: articles.length,
-      itemListElement: articles.map((article, index) => ({
+      numberOfItems: listedArticles.length,
+      itemListElement: listedArticles.map((article, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: article.title,
-        url: `${canonicalUrl}/${article.slug}`
+        url: `${libraryUrl}/${article.slug}`
       }))
     }
   };
@@ -212,7 +215,7 @@ export const renderArticleIndexDocument = ({ articles, baseUrl, assets }) => {
     description,
     canonicalUrl,
     jsonLd,
-    markup: renderToString(React.createElement(ThemeProvider, null, React.createElement(ArticlesIndexPage, { initialArticles: articles }))),
+    markup: renderToString(React.createElement(ThemeProvider, null, React.createElement(ArticlesIndexPage, { initialArticles: articles, specialtySlug: hub?.slug }))),
     assets,
     image: `${baseUrl.replace(/\/$/, '')}/og-image.png`,
     imageAlt: 'Astra MD clinical research and reasoning',

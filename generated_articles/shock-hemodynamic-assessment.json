@@ -1,0 +1,765 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Shock Hemodynamic Assessment",
+  "summary": "Assess shock by confirming impaired perfusion, rapidly defining the dominant hemodynamic phenotype with bedside ultrasound and dynamic testing, then escalating to invasive monitoring when initial resuscitation fails or mixed cardiopulmonary physiology makes further fluid, vasopressor, or inotrope decisions uncertain.",
+  "seoDescription": "A physician-focused approach to shock hemodynamic assessment using perfusion markers, echocardiography, fluid responsiveness testing, and invasive monitoring.",
+  "clinicalQuestion": "How should clinicians phenotype shock hemodynamics and select monitoring that changes immediate resuscitation decisions?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "circulatory shock",
+    "hemodynamic monitoring",
+    "cardiogenic shock",
+    "echocardiography",
+    "fluid responsiveness",
+    "pulmonary artery catheter",
+    "passive leg raise"
+  ],
+  "keyTakeaways": [
+    "Do not equate shock with hypotension alone: identify ongoing hypoperfusion by lactate elevation, clinical hypoperfusion, and evolving end-organ injury, then determine the hemodynamic mechanism. [2][10][15]",
+    "Perform early focused echocardiography and invasive arterial pressure monitoring in shock; echocardiography can rapidly distinguish cardiac, obstructive, and volume-related patterns while estimating cardiac output, filling pressures, right-heart function, pulmonary hemodynamics, and congestion. [6][13][16]",
+    "Use a dynamic preload maneuver, such as passive leg raising with real-time stroke-volume or cardiac-output measurement, rather than a static filling-pressure measure, when deciding whether more fluid is likely to increase cardiac output. [5][12][16]",
+    "Escalate to pulmonary artery catheterization or transpulmonary thermodilution when shock persists after initial fluid and vasopressor therapy, when physiology is mixed or complex, or when cardiogenic shock includes right-ventricular dysfunction or mechanical circulatory support. [21][22]",
+    "In cardiogenic shock, the procedural risk of pulmonary artery catheterization must be balanced against diagnostic value: reported complications include insertion-site events up to 3.6%, heart block 0.3% to 3.8%, and pulmonary artery rupture in fewer than 1 per 1,000 patients. [21]"
+  ],
+  "sections": [
+    {
+      "id": "identify-shock-and-start-monitoring",
+      "eyebrow": "First minutes",
+      "heading": "Confirm circulatory shock and establish a monitoring baseline",
+      "intro": "Treat hypoperfusion while determining whether low output, vasodilation, volume loss, obstruction, or a mixed state predominates.",
+      "paragraphs": [
+        "Establish that the patient has circulatory shock by documenting impaired tissue perfusion rather than relying on blood pressure alone. Hypotension is commonly expressed as systolic pressure below 90 mm Hg or mean arterial pressure below 65 mm Hg, but shock may present before sustained hypotension. Track serial lactate, bedside evidence of hypoperfusion, and organ dysfunction because ongoing shock is characterized by elevated lactate, clinical hypoperfusion, and end-organ damage. [2][10][15]",
+        "Place an invasive arterial catheter early when shock is present and obtain focused cardiac ultrasound as part of the initial hemodynamic assessment. In suspected cardiogenic shock, contemporary criteria emphasize evidence of low cardiac output and appropriate ventricular filling pressure in addition to tissue hypoperfusion; hypotension alone is an inadequate surrogate for pump failure. [6][13]",
+        "Use the first assessment to determine whether the dominant phenotype is distributive, hypovolemic, cardiogenic, obstructive, or mixed. This classification is a treatment decision: volume depletion and preload responsiveness favor a limited fluid strategy; vasodilatory physiology may require vasopressor support; ventricular pump failure, acute valvular or septal pathology, pericardial constraint, or pulmonary vascular obstruction require mechanism-specific intervention rather than empiric repeated fluid boluses. [2][13][15]"
+      ],
+      "bullets": [
+        "Obtain serial lactate and reassess clinical perfusion and organ dysfunction after each major resuscitative intervention; lactate is prognostically useful but may reflect adrenergic stimulation, aerobic glycolysis, mitochondrial dysfunction, or impaired hepatic clearance in distributive shock. [10]",
+        "Use arterial pressure monitoring when noninvasive readings are uncertain or when vasoactive treatment and frequent reassessment are required. [6]",
+        "Interpret each measured variable in context: cardiac output, intravascular volume status, and tissue perfusion are distinct targets and may not improve in parallel. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial bedside hemodynamic branches and the next discriminating assessment. [13][14][15][16]",
+        "columns": [
+          "Dominant bedside pattern",
+          "Immediate discriminating test",
+          "Interpretation that changes next action"
+        ],
+        "rows": [
+          [
+            "Depressed ventricular pump function or suspected acute cardiac structural complication",
+            "Focused transthoracic echocardiography with cardiac output, filling-pressure, right-heart, pulmonary-hemodynamic, and congestion assessment",
+            "Treat as cardiogenic physiology; define LV versus RV involvement and look for acute coronary syndrome mechanical complications before giving further empiric fluid. [13]"
+          ],
+          [
+            "Suspected pulmonary embolic or other obstructive physiology",
+            "Focused echocardiography for right-heart findings; McConnell sign can support obstructive shock due to pulmonary embolism",
+            "Prioritize confirmation and relief of obstruction rather than escalating fluids solely for hypotension. [13]"
+          ],
+          [
+            "A-profile on lung ultrasound after obstructive and left-sided cardiogenic shock are excluded",
+            "Fluid-limited assessment with serial clinical response and lung ultrasound",
+            "An A-profile is associated with pulmonary artery occlusion pressure at or below 18 mm Hg; improvement with fluid supports hypovolemia, whereas B-profile conversion without improvement supports distributive/septic physiology in the FALLS framework. [14]"
+          ],
+          [
+            "Persistent hypoperfusion with discordant or mixed bedside findings",
+            "Advanced hemodynamic monitoring with pulmonary artery catheterization or transpulmonary thermodilution",
+            "Use measured output and cardiopulmonary variables to decide whether further fluid, vasopressor, inotrope, or mechanical support is physiologically justified. [21][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "use-echo-to-phenotype-shock",
+      "eyebrow": "Bedside imaging",
+      "heading": "Use echocardiography to define the shock mechanism before escalating therapy",
+      "intro": "Focused echocardiography is the fastest multiparametric test when the clinical phenotype and resuscitation response diverge.",
+      "paragraphs": [
+        "Use transthoracic echocardiography early to identify the cardiac contribution to shock and to screen for immediately actionable obstruction or mechanical complications. A focused examination can estimate cardiac output, ventricular filling pressures, pulmonary hemodynamics, right-ventricular function, and congestion status while also identifying shock-specific findings such as McConnell sign in pulmonary embolism and mechanical complications of acute coronary syndrome. [13]",
+        "In suspected cardiogenic shock, define whether the limitation is predominantly left ventricular, right ventricular, biventricular, or structural. This distinction matters because an apparently low-output state with right-sided dysfunction may require a different preload and support strategy than left-sided congestion; refractory cardiogenic shock with right-ventricular dysfunction is a specific setting in which pulmonary artery catheterization has been recommended to clarify hemodynamics. [21][22]",
+        "Repeat focused echocardiography after a major change in clinical status or support strategy when it can answer a new question: whether cardiac output has changed, whether congestion has developed, whether right-heart function has deteriorated, or whether an initially occult structural cause is now apparent. Echocardiography is useful for longitudinal monitoring because it links etiology and hemodynamic profile to pharmacologic and mechanical-support decisions. [13]"
+      ],
+      "bullets": [
+        "If noninvasive findings and the clinical picture are inconclusive or discordant, obtain invasive hemodynamic measurements; guideline material for acute coronary syndromes recognizes the utility of hemodynamic measurements in this circumstance. [4]",
+        "Do not label acute myocardial infarction with hypotension as cardiogenic shock without corroborating pump failure and low-output physiology; mixed shock can coexist with cardiogenic shock. [2][6]",
+        "Use lung ultrasound concurrently with cardiac ultrasound to identify evolving pulmonary congestion during fluid administration. A transition from A-profile to B-profile without clinical improvement is a stop signal for further fluid within the FALLS framework. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Echocardiographic questions that should alter management in shock. [13][21][22]",
+        "columns": [
+          "Question",
+          "Echocardiographic focus",
+          "Management consequence"
+        ],
+        "rows": [
+          [
+            "Is cardiac output limited by pump failure?",
+            "Assess ventricular function and estimate cardiac output",
+            "A low-output cardiac phenotype supports escalation beyond empiric fluid and may require invasive characterization if response remains inadequate. [6][13][21]"
+          ],
+          [
+            "Is right-ventricular dysfunction central to the shock state?",
+            "Assess RV function and pulmonary hemodynamics",
+            "Consider pulmonary artery catheterization when RV failure or refractory cardiogenic shock makes filling and output targets uncertain. [21][22]"
+          ],
+          [
+            "Is there obstructive shock?",
+            "Evaluate for pulmonary embolism-associated right-heart findings, including McConnell sign",
+            "Redirect treatment toward the obstructive cause rather than assuming isolated cardiogenic or hypovolemic shock. [13]"
+          ],
+          [
+            "Is fluid causing pulmonary congestion?",
+            "Serial lung ultrasound for A-profile versus B-profile",
+            "B-profile conversion without clinical improvement argues against continued fluid administration in the FALLS protocol. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "test-fluid-responsiveness",
+      "eyebrow": "Preload assessment",
+      "heading": "Test fluid responsiveness before giving additional fluid",
+      "intro": "A rise in cardiac output with transient preload augmentation is more actionable than a static estimate of filling pressure.",
+      "paragraphs": [
+        "Use passive leg raising when the decision is whether an additional fluid bolus will augment cardiac output. The maneuver transiently autotransfuses blood from the lower extremities; interpret it with a contemporaneous measure of stroke volume or cardiac output rather than with blood pressure alone. Dynamic tests based on respiratory variation, passive leg raising, or small-volume fluid challenges are designed to distinguish patients likely to increase cardiac output from those at risk for fluid overload and worsening congestion. [5][12][16]",
+        "Do not use fluid responsiveness as a mandate to administer fluid. A positive dynamic test indicates preload reserve, not necessarily a need for more intravascular volume; integrate the result with tissue perfusion, pulmonary congestion, right-heart function, and the anticipated effect of fluid on the underlying shock mechanism. [5][13]",
+        "Use serial lung ultrasound as a safety boundary during fluid assessment. In the FALLS approach, an A-profile with lung sliding after obstructive and left-sided cardiogenic causes have been excluded supports low filling pressure; clinical improvement after fluid supports hypovolemia. Development of a B-profile without clinical improvement supports distributive/septic physiology rather than continued volume replacement. [14]"
+      ],
+      "bullets": [
+        "Choose a dynamic assessment when respiratory-cycle variation, passive leg raising, or a small fluid challenge can be paired with real-time stroke-volume or cardiac-output measurement. [5]",
+        "Stop using repeated empiric fluid boluses when pulmonary congestion emerges or when dynamic reassessment no longer shows a clinically meaningful cardiac-output response. [5][14]",
+        "In septic shock, norepinephrine has been reported to increase preload and reduce preload dependency assessed by passive leg raising; reassess dynamic preload dependence after vasoactive changes rather than assuming an initial fluid-response result remains valid. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Dynamic fluid assessment: what each result should change. [5][12][14][18]",
+        "columns": [
+          "Assessment",
+          "Result",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "Passive leg raising with stroke-volume or cardiac-output monitoring",
+            "Cardiac output increases with transient autotransfusion",
+            "The patient is preload responsive; decide on fluid only after reviewing perfusion need and congestion risk. [5][12]"
+          ],
+          [
+            "Passive leg raising with stroke-volume or cardiac-output monitoring",
+            "No meaningful output increase",
+            "Avoid assuming additional fluid will improve cardiac output; reassess vasoplegia, pump failure, obstruction, or mixed shock. [5][16]"
+          ],
+          [
+            "Lung ultrasound during fluid-limited resuscitation",
+            "A-profile with lung sliding",
+            "Within the FALLS framework, low filling pressure is likely; a monitored fluid response can help separate hypovolemia from distributive physiology. [14]"
+          ],
+          [
+            "Lung ultrasound during fluid administration",
+            "B-profile develops without clinical improvement",
+            "Stop further fluid escalation in the FALLS framework and evaluate distributive/septic physiology and alternative hemodynamic support. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "escalate-to-advanced-monitoring",
+      "eyebrow": "Refractory or mixed shock",
+      "heading": "Escalate to invasive hemodynamic monitoring when the result will change support",
+      "intro": "Advanced monitoring is most useful when initial bedside assessment cannot resolve competing fluid, vasopressor, inotrope, or mechanical-support decisions.",
+      "paragraphs": [
+        "Escalate from basic monitoring to pulmonary artery catheterization or transpulmonary thermodilution when shock does not resolve after initial fluid administration and vasopressor therapy, when the etiology is mixed or complex, or when basic arterial and central venous monitoring cannot determine the next intervention. These methods can clarify ongoing fluid requirement, vasopressor need, inotropic support, and cardiopulmonary interactions. [22]",
+        "In cardiogenic shock, use invasive hemodynamics to phenotype severity and guide introduction or optimization of inotropes and vasopressors, timing of mechanical support, and weaning from mechanical circulatory support. Pulmonary artery catheterization is particularly relevant in right-ventricular failure and in cardiogenic shock managed with mechanical circulatory-assist devices. [21][22]",
+        "Select the device according to the unanswered question and local capability. Pulmonary artery catheterization provides pulmonary-artery mixed venous oxygen saturation as an indirect index of tissue oxygenation and is useful for complex cardiopulmonary physiology. Transpulmonary thermodilution is recommended where available for unstable patients with complex cardiopulmonary pathophysiology. [21][22]",
+        "Balance information gain against procedural risk. Reported pulmonary artery catheter complications include insertion-site complications up to 3.6%, heart block in 0.3% to 3.8%, and pulmonary artery rupture in fewer than 1 per 1,000 patients. Use the catheter when its measurements are expected to change management, not solely to obtain more data in a patient whose shock mechanism is already clear and responding to treatment. [21]"
+      ],
+      "bullets": [
+        "Use advanced monitoring for persistent shock after initial resuscitation rather than waiting for complete diagnostic failure. [22]",
+        "Prioritize pulmonary artery catheterization when refractory cardiogenic shock includes right-ventricular dysfunction or mechanical circulatory support. [21][22]",
+        "Reassess organ dysfunction and tissue-perfusion parameters alongside device-derived measurements; restoring end-organ perfusion remains the therapeutic objective in cardiogenic shock. [21][24]"
+      ],
+      "subsections": [
+        {
+          "heading": "When mixed shock is likely",
+          "paragraphs": [
+            "Suspect mixed shock when cardiogenic features coexist with distributive physiology or when hypotension, lactate elevation, and organ injury persist despite treatment directed at an apparent primary cardiac cause. Mixed shock complicating cardiogenic shock requires hemodynamic reassessment because low output, altered filling pressures, and systemic vasodilation may coexist and make a single-modality intervention misleading. [2]"
+          ],
+          "bullets": [
+            "Use early echocardiography, invasive arterial pressure monitoring, and\u2014when uncertainty persists\u2014advanced cardiac-output monitoring to separate low-output from distributive components. [6][21][22]",
+            "Avoid escalating the number or dose of vasoactive or inotropic agents without reassessing the underlying hemodynamic phenotype; increasing drug requirements without recovery after etiologic therapy is associated with adverse survival effects in cardiogenic shock. [24]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Selection of advanced hemodynamic monitoring in persistent shock. [21][22]",
+        "columns": [
+          "Clinical scenario",
+          "Preferred escalation",
+          "Reason to escalate"
+        ],
+        "rows": [
+          [
+            "Shock persists after initial fluid and vasopressor therapy",
+            "Pulmonary artery catheterization or transpulmonary thermodilution",
+            "Determines ongoing need for fluid, vasopressor, or inotropic therapy when initial resuscitation has not resolved shock. [22]"
+          ],
+          [
+            "Complex or mixed shock",
+            "Pulmonary artery catheterization or transpulmonary thermodilution",
+            "Clarifies competing cardiogenic, distributive, and cardiopulmonary contributors. [22]"
+          ],
+          [
+            "Refractory cardiogenic shock with RV dysfunction",
+            "Pulmonary artery catheterization",
+            "Provides advanced characterization when right-heart failure makes bedside estimates insufficient. [21][22]"
+          ],
+          [
+            "Cardiogenic shock receiving mechanical circulatory-assist support",
+            "Pulmonary artery catheterization",
+            "Guides support timing, inotrope management, and weaning decisions. [21][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reassess-perfusion-and-response",
+      "eyebrow": "Serial reassessment",
+      "heading": "Use response trajectories to revise the hemodynamic diagnosis",
+      "intro": "The value of monitoring lies in changing the next intervention as physiology evolves.",
+      "paragraphs": [
+        "Reassess after every meaningful intervention using a consistent set of targets: arterial pressure, cardiac output when measured, lactate trajectory, clinical perfusion, end-organ function, and evidence of congestion. A pressure response alone can be misleading because perfusion failure may persist despite correction of hypotension, particularly when low output or mixed shock remains unresolved. [2][6][10][21]",
+        "Use discordance as an escalation trigger. For example, persistent hyperlactatemia despite improved arterial pressure should prompt reassessment of cardiac output, obstruction, occult mixed shock, hepatic clearance, and adrenergic contribution to lactate elevation rather than automatic fluid administration. [10][21][22]",
+        "In cardiogenic shock, do not regard temporary maintenance of blood pressure with escalating vasopressors or inotropes as successful resuscitation if end-organ perfusion does not recover. The treatment objective is restoration of end-organ perfusion without worsening myocardial oxygen demand and ischemia; failure to recover after etiologic treatment and increasing vasoactive requirements should prompt reassessment for mechanical support and advanced hemodynamic characterization. [21][24]"
+      ],
+      "bullets": [
+        "Trend lactate rather than interpreting a single elevated value as proof of persistent anaerobic hypoperfusion. [10]",
+        "Repeat bedside echocardiography when output, filling, congestion, right-heart function, or a structural etiology could have changed after treatment. [13]",
+        "Use advanced monitoring to support weaning from mechanical cardiac support and to guide inotropic treatment in severe cardiogenic shock. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Response patterns that should trigger a change in assessment. [2][10][13][21][22][24]",
+        "columns": [
+          "Observed trajectory",
+          "Interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Blood pressure improves but lactate, hypoperfusion, or organ injury persists",
+            "Hemodynamic adequacy remains uncertain; lactate may also have nonhypoxic contributors",
+            "Reassess output, ventricular function, congestion, obstruction, and mixed shock; consider advanced monitoring if uncertainty persists. [2][10][13][22]"
+          ],
+          [
+            "Fluid administration produces lung B-profile without clinical improvement",
+            "Further volume is unlikely to provide net benefit in the FALLS framework",
+            "Stop fluid escalation and reassess for distributive physiology or alternate support. [14]"
+          ],
+          [
+            "Cardiogenic shock requires increasing vasoactive or inotropic support after etiologic therapy",
+            "Persistent pump failure may be inadequately characterized or require mechanical support",
+            "Obtain or intensify invasive hemodynamic assessment and evaluate timing of mechanical support. [21][24]"
+          ],
+          [
+            "Clinical and noninvasive assessments disagree",
+            "A single bedside estimate is insufficient for treatment selection",
+            "Use invasive hemodynamic measurements when the results will determine the next therapy. [4][22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Contemporary Management of Cardiogenic Shock: A RAND ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.121.008635",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Current practice in cardiogenic shock is guided by expert opinion in guidelines and scientific statements from professional societies with",
+      "score": 0.50388235
+    },
+    {
+      "number": 2,
+      "title": "Mixed Shock Complicating Cardiogenic Shock",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIRCHEARTFAILURE.123.011404",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Ongoing circulatory shock (elevated lactates, clinical hypoperfusion, end-organ damage). Distributive hemodynamics criteria. Systemic inflammatory response",
+      "score": 0.3849127
+    },
+    {
+      "number": 3,
+      "title": "Contemporary Management of Cardiogenic Shock: A Scientific ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000525",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This scientific statement on cardiogenic shock summarizes the epidemiology, pathophysiology, causes, and outcomes of cardiogenic shock; reviews",
+      "score": 0.3237333
+    },
+    {
+      "number": 4,
+      "title": "2020 ACC/AHA Guideline for the Management of Patients With ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000923",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Left ventriculography and hemodynamic measurements are useful when clinical assessment and noninvasive tests are inconclusive or discordant",
+      "score": 0.32094952
+    },
+    {
+      "number": 5,
+      "title": "Hemodynamic Monitoring and Fluid Responsiveness in Critical Care | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/hemodynamic-monitoring-and-fluid-responsiveness-in-critical-care",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Accurate assessment of a patient\u2019s circulatory status is fundamental to critical care practice. Hemodynamic monitoring encompasses a spectrum of techniques designed to measure cardiac output, intravascular volume status and tissue perfusion. Traditional static markers such as central venous pressure",
+      "score": 0.64344186
+    },
+    {
+      "number": 6,
+      "title": "What is cardiogenic shock? New clinical criteria urgently... : Current Opinion in Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-criticalcare/fulltext/2024/08000/what_is_cardiogenic_shock__new_clinical_criteria.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: What is cardiogenic shock? New clinical criteria urgently... : Current Opinion in Critical Care\nAs such, new clinical criteria for the diagnosis of cardiogenic shock should include evidence of low cardiac output and appropriate ventricular filling pressure. If we proceed from this definition,",
+      "score": 0.6158511
+    },
+    {
+      "number": 7,
+      "title": "Evaluation and Initial Stabilization of Undifferentiated Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1089251625000204",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\nTechniques in Vascular and Interventional Radiology\n\n## Techniques in Vascular and Interventional Radiology\n\n## Published by: Elsevier\n\n### Published by\n\nElsevier\n\n# Evaluation and Initial Stabilization of Undifferentiated Shock\n\n## Article preview\n\n## Keywords\n\n## Introduction\n\n## Org",
+      "score": 0.5101799
+    },
+    {
+      "number": 8,
+      "title": "Cardiogenic and Hypovolemic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0025712516309282",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cardiogenic and Hypovolemic Shock. * J.N. Cohn *et al.*. ### Right ventricular infarction: Clinical and hemodynamic features. ### Shock in acute myocardial infarction: Evolution of physiologic therapy. ### Reversibility of shock by atrial or atrioventricular sequential pacing in right ventricular ",
+      "score": 0.38269553
+    },
+    {
+      "number": 9,
+      "title": "Identifying cardiogenic shock in the emergency department - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675720308391",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Circulation\n\n### Clinical picture and risk prediction of short-term mortality in cardiogenic shock\n\n### Eur J Heart Fail\n\n### Cardiogenic shock\n\n### J Am Heart Assoc\n\n### Experts\u2019 recommendations for the management of adult patients with cardiogenic shock\n\n### Ann Intensive Care\n\n### A review of",
+      "score": 0.28188768
+    },
+    {
+      "number": 10,
+      "title": "Shock: Pathophysiology, Classification, and the... : Cardiology in Review",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045415-990000000-00728",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Shock is a life-threatening state of circulatory failure characterized by inadequate tissue oxygen delivery and cellular hypoxia. Lactate has emerged as a central biomarker in the diagnosis, risk stratification, and management of shock, yet its interpretation is complex and context dependent. Althou",
+      "score": 0.22298802
+    },
+    {
+      "number": 11,
+      "title": "Criteria for the diagnosis of cardiogenic shock\u2014European perspective",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ehjacc/article/15/8/634/8773245",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Systolic blood pressure <90 mmHg for more than 30 min or needed infusion of catecholamines to maintain a systolic pressure above 90 mmHg.",
+      "score": 0.20315401
+    },
+    {
+      "number": 12,
+      "title": "Advanced Hemodynamic Management in Patients with Septic Shock",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2016/8268569",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "To predict the patient's response to a fluid bolus, a passive leg raising test, that is, autotransfusion of blood from the lower extremities",
+      "score": 0.97326
+    },
+    {
+      "number": 13,
+      "title": "Use and Implications of Echocardiography in the Hemodynamic Assessment of Cardiogenic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146280623003456",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Use and Implications of Echocardiography in the Hemodynamic Assessment of Cardiogenic Shock - ScienceDirect\nCardiogenic shock (CS) is a complex multisystem syndrome driven by an acute pump failure and cardiac output (CO) loss, associated with high morbidity and mortality. Transthoracic Echoca",
+      "score": 0.7732571454545454
+    },
+    {
+      "number": 14,
+      "title": "FALLS-protocol: lung ultrasound in hemodynamic assessment of shock - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/3848672",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The transformation from an A-profile to a B-profile under fluid therapy without clinical improvement defines, according to the protocol, the septic shock (Figure 3).\n\n### Figure 3.\n\nFigure 3\n\nFigure 3\n\nDecision tree of FALLS-protocol.\n\nA decision tree facilitating the understanding of the FALLS-prot",
+      "score": 0.61834323
+    },
+    {
+      "number": 15,
+      "title": "Shock - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492#_article-28970_s8_",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Shock is characterized by decreased oxygen delivery and/or increased oxygen consumption or inadequate oxygen utilization leading to cellular and tissue hypoxia. It is a life-threatening condition of circulatory failure and most commonly manifested as hypotension (systolic blood pressure less than 90",
+      "score": 0.41179726
+    },
+    {
+      "number": 16,
+      "title": "Consensus on circulatory shock and hemodynamic monitoring. Task ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1007%2Fs00134-014-3525-z&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Echocardiography allows rapid characterization of the type of shock. Arterial pulse wave analysis measures cardiac output. Passive leg raising",
+      "score": 0.98569
+    },
+    {
+      "number": 17,
+      "title": "Hemodynamic Insights From Simultaneous Common Carotid and ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(23)05815-4/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "A 68-year-old man was admitted to the ICU for shock, acute kidney injury that required continuous venovenous hemofiltration (CVVH), and hypoxemia.",
+      "score": 0.98263
+    },
+    {
+      "number": 18,
+      "title": "Effects of very early start of norepinephrine in patients with septic ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1186%2Fs13054-020-2756-3&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Norepinephrine increases cardiac preload and reduces preload dependency assessed by passive leg raising in septic shock patients. Crit Care",
+      "score": 0.97986
+    },
+    {
+      "number": 19,
+      "title": "Evaluation and management of shock in patients with COVID-19",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/custom-print/82068",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Predicting fluid responsiveness by passive leg raising: a systematic review and meta-analysis of 23 clinical trials. Crit Care Med 2016; 44(5):981\u2013991. doi",
+      "score": 0.96061
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Algorithms for IV fluid therapy in adults | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/cg174/resources/intravenous-fluid-therapy-in-adults-in-hospital-algorithm-poster-set-191627821",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Seek expert help Algorithm 2: Fluid Resuscitation Algorithm 4: Replacement and Redistribution No Yes No Yes No Ensure nutrition and fluid needs are met Also see Nutrition support in adults (NICE clinical guideline 32). Yes Yes Prescribe by adding to or subtracting from routine maintenance, adjusting",
+      "score": 0.94699
+    },
+    {
+      "number": 21,
+      "title": "Hemodynamic monitoring in cardiogenic shock",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10175734",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "guidance of the introduction and optimization of inotropes and vasopressors as well as the timing of mechanical support. It is now well documented that early recognition, classification, and precise phenotyping via early hemodynamic monitoring (e.g., echocardiography, invasive arterial pressure, and",
+      "score": 0.80070794
+    },
+    {
+      "number": 22,
+      "title": "ISCCM Guidelines for Hemodynamic Monitoring in the Critically Ill",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9989872",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Which Patients Need Advanced Hemodynamic Monitoring?\n\nWhen initial fluid administration and vasopressor therapy fail to resolve shock, a re-evaluation of the patient condition becomes essential. In a patient with complex cardiovascular disorders, basic hemodynamic monitoring consisting of invasi",
+      "score": 0.7004242
+    },
+    {
+      "number": 23,
+      "title": "Methods of Monitoring Shock - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3504461",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A variety of other \u201cadvanced\u201d monitoring techniques have been employed, generally attempting to track cardiac function or adequacy of tissue perfusion. Until recently, there has been little or no evidence that following these variables and using them to guide therapy produces any benefit in outcomes",
+      "score": 0.68064564
+    },
+    {
+      "number": 24,
+      "title": "Pulmonary Artery Catheter Monitoring in Patients with Cardiogenic Shock: Time for a Reappraisal?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9069264",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The ultimate treatment goal in patients with CS should be to restore end-organ perfusion without exacerbating the vicious circle of increased myocardial oxygen demand and ischaemia. Unfortunately, because of their intrinsic mechanism of action, neither vasopressors nor inotropes alone can ensure thi",
+      "score": 0.6643884
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Contemporary Management of Cardiogenic Shock: A RAND ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCHEARTFAILURE.121.008635",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Current practice in cardiogenic shock is guided by expert opinion in guidelines and scientific statements from professional societies with",
+      "score": 0.50388235
+    },
+    {
+      "number": 2,
+      "title": "Mixed Shock Complicating Cardiogenic Shock",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIRCHEARTFAILURE.123.011404",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Ongoing circulatory shock (elevated lactates, clinical hypoperfusion, end-organ damage). Distributive hemodynamics criteria. Systemic inflammatory response",
+      "score": 0.3849127
+    },
+    {
+      "number": 3,
+      "title": "Contemporary Management of Cardiogenic Shock: A Scientific ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/cir.0000000000000525",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "This scientific statement on cardiogenic shock summarizes the epidemiology, pathophysiology, causes, and outcomes of cardiogenic shock; reviews",
+      "score": 0.3237333
+    },
+    {
+      "number": 4,
+      "title": "2020 ACC/AHA Guideline for the Management of Patients With ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000923",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Left ventriculography and hemodynamic measurements are useful when clinical assessment and noninvasive tests are inconclusive or discordant",
+      "score": 0.32094952
+    },
+    {
+      "number": 5,
+      "title": "Hemodynamic Monitoring and Fluid Responsiveness in Critical Care | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/hemodynamic-monitoring-and-fluid-responsiveness-in-critical-care",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Accurate assessment of a patient\u2019s circulatory status is fundamental to critical care practice. Hemodynamic monitoring encompasses a spectrum of techniques designed to measure cardiac output, intravascular volume status and tissue perfusion. Traditional static markers such as central venous pressure",
+      "score": 0.64344186
+    },
+    {
+      "number": 6,
+      "title": "What is cardiogenic shock? New clinical criteria urgently... : Current Opinion in Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/co-criticalcare/fulltext/2024/08000/what_is_cardiogenic_shock__new_clinical_criteria.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: What is cardiogenic shock? New clinical criteria urgently... : Current Opinion in Critical Care\nAs such, new clinical criteria for the diagnosis of cardiogenic shock should include evidence of low cardiac output and appropriate ventricular filling pressure. If we proceed from this definition,",
+      "score": 0.6158511
+    },
+    {
+      "number": 7,
+      "title": "Evaluation and Initial Stabilization of Undifferentiated Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1089251625000204",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Elsevier logo\nTechniques in Vascular and Interventional Radiology\n\n## Techniques in Vascular and Interventional Radiology\n\n## Published by: Elsevier\n\n### Published by\n\nElsevier\n\n# Evaluation and Initial Stabilization of Undifferentiated Shock\n\n## Article preview\n\n## Keywords\n\n## Introduction\n\n## Org",
+      "score": 0.5101799
+    },
+    {
+      "number": 8,
+      "title": "Cardiogenic and Hypovolemic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0025712516309282",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cardiogenic and Hypovolemic Shock. * J.N. Cohn *et al.*. ### Right ventricular infarction: Clinical and hemodynamic features. ### Shock in acute myocardial infarction: Evolution of physiologic therapy. ### Reversibility of shock by atrial or atrioventricular sequential pacing in right ventricular ",
+      "score": 0.38269553
+    },
+    {
+      "number": 9,
+      "title": "Identifying cardiogenic shock in the emergency department - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0735675720308391",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Circulation\n\n### Clinical picture and risk prediction of short-term mortality in cardiogenic shock\n\n### Eur J Heart Fail\n\n### Cardiogenic shock\n\n### J Am Heart Assoc\n\n### Experts\u2019 recommendations for the management of adult patients with cardiogenic shock\n\n### Ann Intensive Care\n\n### A review of",
+      "score": 0.28188768
+    },
+    {
+      "number": 10,
+      "title": "Shock: Pathophysiology, Classification, and the... : Cardiology in Review",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045415-990000000-00728",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Shock is a life-threatening state of circulatory failure characterized by inadequate tissue oxygen delivery and cellular hypoxia. Lactate has emerged as a central biomarker in the diagnosis, risk stratification, and management of shock, yet its interpretation is complex and context dependent. Althou",
+      "score": 0.22298802
+    },
+    {
+      "number": 11,
+      "title": "Criteria for the diagnosis of cardiogenic shock\u2014European perspective",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ehjacc/article/15/8/634/8773245",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Systolic blood pressure <90 mmHg for more than 30 min or needed infusion of catecholamines to maintain a systolic pressure above 90 mmHg.",
+      "score": 0.20315401
+    },
+    {
+      "number": 12,
+      "title": "Advanced Hemodynamic Management in Patients with Septic Shock",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2016/8268569",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "To predict the patient's response to a fluid bolus, a passive leg raising test, that is, autotransfusion of blood from the lower extremities",
+      "score": 0.97326
+    },
+    {
+      "number": 13,
+      "title": "Use and Implications of Echocardiography in the Hemodynamic Assessment of Cardiogenic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0146280623003456",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Use and Implications of Echocardiography in the Hemodynamic Assessment of Cardiogenic Shock - ScienceDirect\nCardiogenic shock (CS) is a complex multisystem syndrome driven by an acute pump failure and cardiac output (CO) loss, associated with high morbidity and mortality. Transthoracic Echoca",
+      "score": 0.7732571454545454
+    },
+    {
+      "number": 14,
+      "title": "FALLS-protocol: lung ultrasound in hemodynamic assessment of shock - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/3848672",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The transformation from an A-profile to a B-profile under fluid therapy without clinical improvement defines, according to the protocol, the septic shock (Figure 3).\n\n### Figure 3.\n\nFigure 3\n\nFigure 3\n\nDecision tree of FALLS-protocol.\n\nA decision tree facilitating the understanding of the FALLS-prot",
+      "score": 0.61834323
+    },
+    {
+      "number": 15,
+      "title": "Shock - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK531492#_article-28970_s8_",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Shock is characterized by decreased oxygen delivery and/or increased oxygen consumption or inadequate oxygen utilization leading to cellular and tissue hypoxia. It is a life-threatening condition of circulatory failure and most commonly manifested as hypotension (systolic blood pressure less than 90",
+      "score": 0.41179726
+    },
+    {
+      "number": 16,
+      "title": "Consensus on circulatory shock and hemodynamic monitoring. Task ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1007%2Fs00134-014-3525-z&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Echocardiography allows rapid characterization of the type of shock. Arterial pulse wave analysis measures cardiac output. Passive leg raising",
+      "score": 0.98569
+    },
+    {
+      "number": 17,
+      "title": "Hemodynamic Insights From Simultaneous Common Carotid and ...",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(23)05815-4/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "A 68-year-old man was admitted to the ICU for shock, acute kidney injury that required continuous venovenous hemofiltration (CVVH), and hypoxemia.",
+      "score": 0.98263
+    },
+    {
+      "number": 18,
+      "title": "Effects of very early start of norepinephrine in patients with septic ...",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/lookup/external-ref?access_num=10.1186%2Fs13054-020-2756-3&link_type=DOI",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Norepinephrine increases cardiac preload and reduces preload dependency assessed by passive leg raising in septic shock patients. Crit Care",
+      "score": 0.97986
+    },
+    {
+      "number": 19,
+      "title": "Evaluation and management of shock in patients with COVID-19",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/custom-print/82068",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Predicting fluid responsiveness by passive leg raising: a systematic review and meta-analysis of 23 clinical trials. Crit Care Med 2016; 44(5):981\u2013991. doi",
+      "score": 0.96061
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Algorithms for IV fluid therapy in adults | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/cg174/resources/intravenous-fluid-therapy-in-adults-in-hospital-algorithm-poster-set-191627821",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Seek expert help Algorithm 2: Fluid Resuscitation Algorithm 4: Replacement and Redistribution No Yes No Yes No Ensure nutrition and fluid needs are met Also see Nutrition support in adults (NICE clinical guideline 32). Yes Yes Prescribe by adding to or subtracting from routine maintenance, adjusting",
+      "score": 0.94699
+    },
+    {
+      "number": 21,
+      "title": "Hemodynamic monitoring in cardiogenic shock",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10175734",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "guidance of the introduction and optimization of inotropes and vasopressors as well as the timing of mechanical support. It is now well documented that early recognition, classification, and precise phenotyping via early hemodynamic monitoring (e.g., echocardiography, invasive arterial pressure, and",
+      "score": 0.80070794
+    },
+    {
+      "number": 22,
+      "title": "ISCCM Guidelines for Hemodynamic Monitoring in the Critically Ill",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9989872",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Which Patients Need Advanced Hemodynamic Monitoring?\n\nWhen initial fluid administration and vasopressor therapy fail to resolve shock, a re-evaluation of the patient condition becomes essential. In a patient with complex cardiovascular disorders, basic hemodynamic monitoring consisting of invasi",
+      "score": 0.7004242
+    },
+    {
+      "number": 23,
+      "title": "Methods of Monitoring Shock - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3504461",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "A variety of other \u201cadvanced\u201d monitoring techniques have been employed, generally attempting to track cardiac function or adequacy of tissue perfusion. Until recently, there has been little or no evidence that following these variables and using them to guide therapy produces any benefit in outcomes",
+      "score": 0.68064564
+    },
+    {
+      "number": 24,
+      "title": "Pulmonary Artery Catheter Monitoring in Patients with Cardiogenic Shock: Time for a Reappraisal?",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9069264",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The ultimate treatment goal in patients with CS should be to restore end-organ perfusion without exacerbating the vicious circle of increased myocardial oxygen demand and ischaemia. Unfortunately, because of their intrinsic mechanism of action, neither vasopressors nor inotropes alone can ensure thi",
+      "score": 0.6643884
+    }
+  ],
+  "publishedAt": "2026-09-15T18:17:17.566282+00:00",
+  "updatedAt": "2026-09-15T18:17:17.566282+00:00",
+  "readingMinutes": 7,
+  "slug": "shock-hemodynamic-assessment"
+}

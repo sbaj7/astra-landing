@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getBaseUrl } from './siteConfig.mjs';
 import { articleToMarkdown } from './articleContent.mjs';
+import { specialtyHubs, hubsForArticle } from '../src/articles/articleDiscovery.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.join(__dirname, '..');
@@ -36,6 +37,7 @@ const buildDiscoveryFiles = async () => {
 
   const baseUrl = getBaseUrl().replace(/\/$/, '');
   const staticPaths = ['/', '/articles', '/about', '/sources', '/qbank', '/editorial-policy.html', '/privacy.html', '/terms.html'];
+  staticPaths.push(...specialtyHubs.filter((hub) => articles.some((article) => hubsForArticle(article).some((item) => item.slug === hub.slug))).map((hub) => `/articles/specialty/${hub.slug}`));
   const staticEntries = staticPaths.map((pathname) => ({
     loc: `${baseUrl}${pathname}`,
     lastmod: new Date().toISOString()

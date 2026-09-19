@@ -197,3 +197,6 @@
   .article-page, .article-main { background: white; color: #20201f; }
   .article-main { width: 100%; padding: 0; }
 }
+.article-page .article-specialty-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 32px 0; font-size: 14px; line-height: 1.6; }
+.article-page .article-specialty-links a { color: var(--article-muted); text-underline-offset: 4px; }
+.article-page .article-specialty-links a[aria-current="page"] { color: var(--article-ink); font-weight: 600; }

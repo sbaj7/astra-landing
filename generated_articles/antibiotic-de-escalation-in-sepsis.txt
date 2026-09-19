@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Antibiotic De-escalation in Sepsis",
+  "summary": "For patients started on empiric broad-spectrum therapy for suspected sepsis, reassess infection likelihood, microbiology, source control, and clinical trajectory at 48–72 hours to stop unnecessary treatment, narrow active therapy, and use serial procalcitonin selectively to shorten exposure.",
+  "seoDescription": "Practical approach to antibiotic de-escalation in sepsis: 48–72-hour review, culture-directed narrowing, stopping rules, and selective procalcitonin use.",
+  "clinicalQuestion": "How should empiric antibiotics be stopped, narrowed, or shortened after initial treatment for suspected sepsis?",
+  "specialty": "Critical Care Medicine and Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "sepsis antibiotic de-escalation",
+    "antimicrobial stewardship",
+    "procalcitonin",
+    "culture-directed therapy",
+    "antibiotic timeout",
+    "septic shock"
+  ],
+  "keyTakeaways": [
+    "After empiric therapy begins, perform a documented antimicrobial decision review at 48–72 hours using clinical trajectory, source evaluation, microbiology, and susceptibility results; stop antibiotics if infection is no longer likely. [16][19][22]",
+    "When an organism and susceptibility profile are available, discontinue unnecessary agents and narrow to an active targeted regimen rather than continuing broad-spectrum therapy. [6][14][19]",
+    "Do not equate negative blood cultures with absence of infection in sepsis; interpret negative testing with prior antibiotic exposure, source sampling quality, and the patient’s clinical course. [14][23]",
+    "Serial procalcitonin can support earlier discontinuation in hemodynamically stable patients when the value is below 0.5 µg/L or has fallen by more than 80% from its peak; it should not determine whether initial antimicrobials are started. [21]",
+    "Use greater caution with de-escalation in neutropenic sepsis, difficult-to-treat multidrug-resistant pathogens, Pseudomonas bacteremia, and infections requiring prolonged combination therapy, including selected endocarditis. [14]"
+  ],
+  "sections": [
+    {
+      "id": "decision-at-48-to-72-hours",
+      "eyebrow": "Core Workflow",
+      "heading": "Make a four-part antimicrobial decision at 48–72 hours",
+      "intro": "The first review determines whether to stop, narrow, simplify, or continue empiric therapy.",
+      "paragraphs": [
+        "At 48–72 hours after empiric antibiotics are started, make an explicit prescribing decision rather than allowing the initial regimen to continue by default. Review (1) whether infection remains the best explanation for organ dysfunction, (2) whether a source has been identified and controlled, (3) microbiology and susceptibility data, including preliminary Gram stain and rapid molecular results when available, and (4) the patient’s hemodynamic and clinical trajectory. [16][21][22]",
+        "Assign one of four actions: stop all antibiotics when the diagnostic evaluation supports a noninfectious syndrome or infection is unlikely; narrow to the least-broad active regimen when a pathogen and susceptibility profile are available; discontinue redundant agents from empiric combination therapy; or continue/revise therapy when infection remains probable but microbiology, source control, or clinical response is unresolved. A confirmed microbiological diagnosis with susceptibilities is an indication to de-escalate unnecessary or excessively broad therapy. [6][16][19]",
+        "Build the review into sepsis operations rather than relying on ad hoc recall. Electronic 72-hour antibiotic time-outs and checklist-based prompts have increased de-escalation and reduced antibiotic duration in ICU-oriented stewardship interventions. Hospital sepsis programs should integrate antibiotic-stewardship expertise and local microbiology data into the review process. [16][20]"
+      ],
+      "bullets": [
+        "Stop: noninfectious diagnosis or infection unlikely after reassessment. [16][19]",
+        "Narrow: culture- and susceptibility-directed replacement of empiric broad-spectrum coverage. [6][19]",
+        "Simplify: remove unnecessary combination agents once their empiric role has ended. [14]",
+        "Continue or revise: persistent probability of infection with unresolved source, inadequate source control, unavailable or discordant microbiology, or clinical deterioration. [16][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Antimicrobial decision at the 48–72-hour review. [16][19][22]",
+        "columns": [
+          "Finding at reassessment",
+          "Antibiotic action",
+          "Next required step"
+        ],
+        "rows": [
+          [
+            "Alternative noninfectious diagnosis is favored; infection unlikely",
+            "Discontinue all antimicrobials. [16][19]",
+            "Document the alternative diagnosis and stop date; do not continue therapy solely because sepsis was suspected initially. [16]"
+          ],
+          [
+            "Pathogen and susceptibility profile identified",
+            "Stop unnecessary agents and narrow to targeted active therapy. [6][14][19]",
+            "Confirm that the selected regimen covers the organism at the identified source and reassess duration based on source control and response. [14]"
+          ],
+          [
+            "Cultures negative but infection remains clinically likely",
+            "Do not stop solely because cultures are negative. [14][23]",
+            "Reassess prior antibiotic exposure, sample adequacy, source testing, imaging, and source control. [14][23]"
+          ],
+          [
+            "Empiric combination therapy remains in place",
+            "De-escalate to the most appropriate single active agent when susceptibilities permit. [14]",
+            "Avoid prolonged empiric combination therapy beyond 3–5 days unless a specific exception applies. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "microbiology-and-source-control",
+      "eyebrow": "Diagnostic Branching",
+      "heading": "Use microbiology and source control to determine whether narrowing is safe",
+      "intro": "Culture data are actionable only when interpreted with the infection syndrome and source-control status.",
+      "paragraphs": [
+        "Treat preliminary microbiology as an early stewardship trigger. Gram stain from a positive blood culture should be communicated promptly because it can alter therapy before final susceptibility testing; where available, rapid molecular testing from positive cultures can identify organisms and resistance-associated genetic markers within hours. These results should prompt removal of agents no longer needed, while final susceptibility data confirm the definitive regimen. [21]",
+        "Negative cultures do not automatically justify discontinuation in sepsis or septic shock. A substantial proportion of severe sepsis and septic shock episodes are culture-negative despite bacterial or fungal infection, and negative microbiology must be interpreted alongside prior antimicrobial exposure, adequacy of sampling, syndrome-specific diagnostic studies, and the clinical trajectory. [14][23]",
+        "Failure to improve should trigger a diagnostic and source-control reassessment before simply prolonging broad-spectrum treatment. Reevaluate the presumed anatomic source, whether drainage or another procedure is required, whether the sampled site represents the active infection, and whether the syndrome may be noninfectious. If no infectious diagnosis remains credible after this reassessment, discontinue antimicrobials rather than extending empiric treatment. [16][19]"
+      ],
+      "bullets": [
+        "Positive culture with susceptibility data: target the identified organism and remove agents without a continuing indication. [6][14]",
+        "Positive culture with only Gram stain or rapid molecular data: make provisional spectrum reductions only when the result and syndrome support them; verify against final susceptibility testing. [21]",
+        "Negative cultures with ongoing instability: repeat source-focused diagnostic evaluation and address source-control failure rather than treating culture negativity as proof that infection is excluded. [14][23]",
+        "Clinical improvement without microbiologic confirmation: reassess daily for a finite duration and an opportunity to stop; do not preserve broad empiric coverage solely because the patient initially improved. [16][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Microbiology results and their effect on de-escalation. [14][21][23]",
+        "columns": [
+          "Result",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Positive blood culture Gram stain",
+            "Earlier actionable information than final identification and susceptibility testing. [21]",
+            "Review empiric regimen immediately for potentially unnecessary coverage; finalize directed therapy after susceptibility results. [21]"
+          ],
+          [
+            "Rapid molecular result from positive blood culture",
+            "May identify organisms and genetic resistance markers within hours. [21]",
+            "Use with the clinical syndrome and local laboratory interpretation to refine therapy; confirm final regimen with susceptibility testing. [21]"
+          ],
+          [
+            "Negative blood cultures",
+            "Does not exclude bacterial or fungal sepsis, particularly after prior antibiotics. [14][23]",
+            "Use source-specific testing, imaging when indicated, and clinical course to decide whether to continue, narrow, or stop. [14][23]"
+          ],
+          [
+            "Confirmed susceptible pathogen with clinical improvement",
+            "Empiric broad-spectrum coverage is no longer necessary. [6][14]",
+            "Narrow to the most appropriate single active agent unless a defined combination-therapy exception applies. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "procalcitonin-for-discontinuation",
+      "eyebrow": "Biomarker-Guided Stopping",
+      "heading": "Use procalcitonin to support discontinuation, not to delay initial treatment",
+      "intro": "Procalcitonin is most useful as an adjunct to a structured stop decision in stable patients.",
+      "paragraphs": [
+        "Do not use procalcitonin to decide whether to initiate antimicrobials in suspected sepsis. Initial antimicrobial treatment should be driven by the clinical assessment of infection severity and the consequences of withholding therapy; procalcitonin is better positioned as an adjunct during serial reassessment of treatment duration. [16][21]",
+        "For a hemodynamically stable patient receiving antibiotics for suspected bacterial sepsis, serial procalcitonin supports earlier discontinuation when the value is below 0.5 µg/L or has decreased by more than 80% from its peak. One randomized trial used daily procalcitonin measurement with nonbinding advice to stop after 72 hours when procalcitonin was below 0.5 ng/mL, or when it had fallen by 80% from peak if the baseline was above 2 ng/mL. [9][21]",
+        "Use the biomarker only after checking that the patient is clinically improving, the infectious diagnosis has been reconsidered, and no source-control issue or syndrome-specific reason for prolonged treatment remains. In the ADAPT-Sepsis randomized trial of 2,760 critically ill adults with suspected sepsis, a daily procalcitonin protocol reduced total antibiotic duration with noninferior all-cause mortality compared with standard care. [3]",
+        "Do not assume benefit generalizes to every host population. In critically ill patients with cancer and sepsis, serial procalcitonin-guided management did not reduce antibiotic duration in the Pro-Can randomized trial. When procalcitonin conflicts with an unstable clinical course, unresolved infection, or a microbiologically documented indication for ongoing therapy, prioritize the clinical and microbiologic assessment. [13][16]"
+      ],
+      "bullets": [
+        "Appropriate use: serial measurement to support shortening or discontinuing treatment in a hemodynamically stable patient undergoing active clinical reassessment. [21]",
+        "Actionable thresholds: procalcitonin below 0.5 µg/L or more than 80% decline from peak. [21]",
+        "Do not use as a standalone diagnostic exclusion test or as the determinant of initial antibiotic initiation in suspected sepsis. [21]",
+        "Population limitation: critically ill cancer patients did not have shorter antibiotic courses with serial procalcitonin-guided management in a randomized trial. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How serial procalcitonin changes an antibiotic stop decision. [3][9][13][21]",
+        "columns": [
+          "Clinical context",
+          "Procalcitonin result",
+          "Decision"
+        ],
+        "rows": [
+          [
+            "Hemodynamically stable, improving, no unresolved source-control concern",
+            "Below 0.5 µg/L or more than 80% below peak. [21]",
+            "Use as support to discontinue antibiotics after clinical review. [9][21]"
+          ],
+          [
+            "Suspected sepsis before initial treatment",
+            "Any single value",
+            "Do not use procalcitonin to determine whether initial antimicrobials should be started. [21]"
+          ],
+          [
+            "Ongoing instability, unclear source, or discordant clinical course",
+            "Declining value",
+            "Do not use biomarker decline alone to end therapy; reassess infection source and diagnostic accuracy. [16][23]"
+          ],
+          [
+            "Critically ill patient with cancer and sepsis",
+            "Serial testing",
+            "Do not expect routine procalcitonin testing to shorten therapy based on current randomized evidence. [13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "exceptions-and-high-risk-scenarios",
+      "eyebrow": "Exceptions",
+      "heading": "Avoid premature simplification in defined high-risk scenarios",
+      "intro": "De-escalation remains a daily objective, but some infections require continued breadth or combination therapy.",
+      "paragraphs": [
+        "Empiric combination therapy should usually be reduced promptly once susceptibility data are available. Earlier Surviving Sepsis Campaign guidance advised limiting empiric combination therapy to 3–5 days and de-escalating to the most appropriate single agent once susceptibilities are known. Exceptions include selected endocarditis requiring prolonged combination therapy and circumstances in which aminoglycoside monotherapy would be considered, which should generally be avoided, particularly for Pseudomonas aeruginosa sepsis. [14]",
+        "Use heightened caution in neutropenic patients with severe sepsis and in infections involving difficult-to-treat multidrug-resistant organisms, including Acinetobacter and Pseudomonas species. In these settings, the adequacy of initial therapy, definitive susceptibility profile, infection site, and clinical response should be reviewed before reducing spectrum or dropping combination coverage. [14]",
+        "If microbiologic diagnosis and susceptibility testing are available, current Surviving Sepsis Campaign guidance recommends de-escalation over no de-escalation. The certainty of evidence is very low, so decisions should remain source-specific and patient-specific rather than protocol-driven when the patient has persistent shock, inadequate source control, or an infection requiring a specialized regimen. [6]"
+      ],
+      "bullets": [
+        "Selected endocarditis: prolonged combination therapy may be indicated; do not apply a single-agent default without confirming the syndrome-specific regimen. [14]",
+        "Pseudomonas aeruginosa sepsis: avoid aminoglycoside monotherapy; tailor narrowing to susceptibility results and infection site. [14]",
+        "Neutropenic severe sepsis and difficult-to-treat multidrug-resistant pathogens: require individualized reassessment before reducing spectrum. [14]",
+        "Persistent shock or uncontrolled source: reassess diagnosis and source control before interpreting de-escalation as the next priority. [16][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Situations requiring individualized de-escalation decisions. [6][14][16]",
+        "columns": [
+          "Scenario",
+          "Why routine simplification may be unsafe",
+          "Required reassessment"
+        ],
+        "rows": [
+          [
+            "Selected endocarditis",
+            "Some forms require prolonged combination antimicrobial therapy. [14]",
+            "Confirm the organism-specific and syndrome-specific regimen before dropping an agent. [14]"
+          ],
+          [
+            "Pseudomonas aeruginosa sepsis",
+            "Aminoglycoside monotherapy should generally be avoided. [14]",
+            "Use susceptibility data, infection site, and response to select definitive therapy. [14]"
+          ],
+          [
+            "Neutropenic severe sepsis",
+            "Initial therapy and host risk influence de-escalation safety. [14]",
+            "Review culture results, clinical response, and ongoing probability of infection before narrowing. [14]"
+          ],
+          [
+            "Difficult-to-treat multidrug-resistant Acinetobacter or Pseudomonas infection",
+            "A narrow option may not provide reliable active therapy. [14]",
+            "Verify definitive susceptibility and adequacy at the involved site before changing treatment. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitoring-and-program-implementation",
+      "eyebrow": "Monitoring",
+      "heading": "Document the indication, reassessment result, and stop plan every day",
+      "intro": "Daily stewardship prevents broad-spectrum therapy from persisting after its empiric indication has expired.",
+      "paragraphs": [
+        "For every antibiotic continued after the 48–72-hour review, document the presumed or confirmed infection, relevant microbiology, source-control status, current regimen rationale, and the next reassessment trigger. A complete review should produce a defined stop, narrowing, substitution, or continuation decision rather than a nonspecific plan to “continue antibiotics.” [16][22]",
+        "Monitor for opportunities to remove excess spectrum as microbiology matures. Final susceptibility testing, rather than the initial empiric regimen’s apparent clinical success, should anchor directed therapy when a pathogen is recovered. De-escalation includes both discontinuation of unnecessary drugs and spectrum narrowing; it is not limited to switching between antibiotics. [6][11]",
+        "At the hospital level, align sepsis and stewardship programs rather than treating them as competing priorities. The CDC identifies stewardship engagement, local microbiology-informed recommendations, and mechanisms to review antibiotics initiated for suspected sepsis for tailoring, discontinuation, or completion as core operational elements. [20]"
+      ],
+      "bullets": [
+        "Daily continuation check: Is infection still likely, is the source controlled, and has new microbiology changed the regimen? [16][22]",
+        "At final microbiology: narrow active treatment and discontinue redundant agents. [6][14]",
+        "At clinical deterioration: reassess source, diagnosis, and adequacy of coverage rather than extending empiric therapy without a new diagnostic plan. [16][23]",
+        "At discharge or transfer: communicate the indication, targeted regimen, and intended endpoint to prevent unplanned treatment extension. [20][22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Minimum documentation for continued antibiotics after empiric sepsis treatment. [16][20][22]",
+        "columns": [
+          "Documentation element",
+          "What it changes"
+        ],
+        "rows": [
+          [
+            "Presumed or confirmed infectious syndrome",
+            "Identifies whether antibiotics remain indicated or should be stopped for an alternative diagnosis. [16][19]"
+          ],
+          [
+            "Culture, Gram stain, rapid molecular, and susceptibility results",
+            "Determines whether therapy can be narrowed, targeted, or discontinued. [21][22]"
+          ],
+          [
+            "Source-control status",
+            "Identifies whether persistent illness requires a procedural or diagnostic response rather than broader or longer antibiotics. [16][23]"
+          ],
+          [
+            "Next review date or discontinuation criterion",
+            "Prevents indefinite continuation of empiric broad-spectrum therapy. [16][22]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

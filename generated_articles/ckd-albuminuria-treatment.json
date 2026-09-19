@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "CKD Albuminuria Treatment",
+  "summary": "Confirm persistent albuminuria with quantitative UACR, stage risk jointly with eGFR, maximize single-agent renin-angiotensin blockade, and layer SGLT2 inhibition and finerenone selectively in type 2 diabetes while monitoring potassium and kidney function.",
+  "seoDescription": "Physician guide to treating CKD albuminuria with UACR confirmation, ACE inhibitor or ARB therapy, SGLT2 inhibitors, finerenone, and referral triggers.",
+  "clinicalQuestion": "How should persistent albuminuria in chronic kidney disease be confirmed, risk-stratified, and treated with kidney-protective pharmacotherapy?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "albuminuria treatment",
+    "UACR",
+    "CKD",
+    "ACE inhibitor",
+    "ARB",
+    "SGLT2 inhibitor",
+    "finerenone",
+    "diabetic kidney disease"
+  ],
+  "keyTakeaways": [
+    "Use a spot urine albumin-to-creatinine ratio (UACR), preferably from a first-morning void when feasible; confirm an abnormal result on a repeat sample before making treatment decisions. [6][10]",
+    "Classify albuminuria as A1, UACR <30 mg/g; A2, 30-299 mg/g; or A3, \u2265300 mg/g, and interpret it together with eGFR rather than in isolation. [9][10][15]",
+    "For CKD with albuminuria, use either an ACE inhibitor or an ARB at the highest approved tolerated dose; do not combine ACE inhibitors, ARBs, or direct renin inhibitors. [15]",
+    "In type 2 diabetes with CKD and residual albuminuria despite maximally tolerated ACE inhibitor or ARB therapy, finerenone is an option when eGFR is at least 25 mL/min/1.73 m\u00b2 and serum potassium is below 5.0 mmol/L. [13][14][20]",
+    "Check serum potassium and creatinine when using renin-angiotensin blockade or finerenone; obtain potassium before finerenone and again 4 weeks after initiation. [21]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-and-stage-albuminuria",
+      "eyebrow": "First decision",
+      "heading": "Confirm persistent albuminuria before escalating CKD therapy",
+      "intro": "A single elevated measurement should trigger confirmation and risk staging, not automatic attribution to diabetic kidney disease.",
+      "paragraphs": [
+        "Order a quantitative spot UACR rather than relying on dipstick protein to establish and follow albuminuria. A first-void morning sample is preferred when feasible because it improves initial assessment; repeat an abnormal UACR, preferably using another first-morning specimen, before using albuminuria to direct long-term treatment. [6][10]",
+        "Assign A1 for UACR <30 mg/g, A2 for 30-299 mg/g, and A3 for \u2265300 mg/g. Pair the albuminuria category with eGFR category and CKD cause because albuminuria independently changes kidney and cardiovascular risk even when eGFR is preserved. [9][10][15]",
+        "Screen at least annually with UACR in patients with diabetes, hypertension, cardiovascular disease, or established CKD. An elevated UACR in a patient without an established CKD cause should prompt assessment for an alternative renal diagnosis rather than empiric labeling as diabetic kidney disease. [1]"
+      ],
+      "bullets": [
+        "Use UACR for quantitative longitudinal follow-up; UACR identifies A2 and A3 albuminuria that changes risk assessment and treatment selection. [8]",
+        "Interpret a dipstick result cautiously: dipstick protein may detect marked proteinuria, but UACR is the preferred quantitative test for albuminuria classification. [6][10][12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "UACR categories that determine CKD risk classification and treatment intensity. [9][10][15]",
+        "columns": [
+          "Albuminuria category",
+          "UACR",
+          "Actionable interpretation"
+        ],
+        "rows": [
+          [
+            "A1",
+            "<30 mg/g",
+            "Normal to mildly increased albuminuria; continue eGFR- and cause-based CKD surveillance. [9][10]"
+          ],
+          [
+            "A2",
+            "30-299 mg/g",
+            "Moderately increased albuminuria; confirm persistence and consider ACE inhibitor or ARB therapy according to diabetes status and CKD stage. [10][15]"
+          ],
+          [
+            "A3",
+            "\u2265300 mg/g",
+            "Severely increased albuminuria; initiate or optimize renin-angiotensin system inhibition when eligible and assess for nephrology referral, especially with hematuria or uncertain cause. [1][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "identify-high-risk-patterns",
+      "eyebrow": "Etiology and referral",
+      "heading": "Identify albuminuria patterns that require nephrology evaluation",
+      "intro": "Treatment layering is appropriate only after considering whether albuminuria reflects a potentially treatable glomerular process.",
+      "paragraphs": [
+        "Refer to nephrology when albuminuria is accompanied by concern for glomerulonephritis, an unknown etiology, severe albuminuria with hematuria, or a calculated 5-year kidney-failure risk above 3%-5%. Referral is also reasonable at UACR >30 mg/mmol, or at UACR >3 mg/mmol when additional risk factors are present. [1]",
+        "Do not assume diabetes explains every case of proteinuric CKD. Primary glomerular disorders, including focal segmental glomerulosclerosis, minimal change disease, IgA nephropathy, and membranous nephropathy, can coexist with diabetes; diabetic nephropathy may be accompanied by another kidney disorder in 5%-15% of cases in some series. [17]",
+        "When the clinical pattern suggests glomerulonephritis or the cause remains unclear, nephrology assessment should determine the need for disease-specific serology, imaging, and kidney biopsy rather than escalating antiproteinuric therapy alone. [1][17]"
+      ],
+      "bullets": [
+        "Escalate urgently for severe albuminuria with hematuria because this combination raises concern for glomerular disease. [1]",
+        "Use the 5-year kidney-failure risk estimate as a referral discriminator; a result >3%-5% supports nephrology involvement even when the immediate treatment plan appears straightforward. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Referral triggers for albuminuric CKD. [1][17]",
+        "columns": [
+          "Finding",
+          "Why it changes management",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Unexplained albuminuria",
+            "Alternative CKD causes require diagnostic classification before disease-specific treatment. [1]",
+            "Refer to nephrology for etiologic evaluation. [1]"
+          ],
+          [
+            "Severe albuminuria plus hematuria",
+            "Raises concern for glomerulonephritis or another glomerular disorder. [1]",
+            "Prompt nephrology evaluation; determine need for serologic workup and biopsy. [1][17]"
+          ],
+          [
+            "5-year kidney-failure risk >3%-5%",
+            "Identifies a risk level for which nephrology referral should be considered. [1]",
+            "Refer or co-manage with nephrology. [1]"
+          ],
+          [
+            "Diabetes with atypical renal features",
+            "Non-diabetic renal disease may coexist with diabetic nephropathy. [17]",
+            "Avoid presumptive diabetic kidney disease labeling; pursue nephrology-directed evaluation. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "renin-angiotensin-system-blockade",
+      "eyebrow": "Foundation therapy",
+      "heading": "Use ACE inhibitor or ARB therapy at a maximally tolerated dose",
+      "intro": "Single-agent renin-angiotensin system inhibition is the foundational antiproteinuric strategy for eligible albuminuric CKD.",
+      "paragraphs": [
+        "For CKD without diabetes, KDIGO recommends starting an ACE inhibitor or ARB for G1-G4 CKD with A3 albuminuria and suggests either agent for G1-G4 CKD with A2 albuminuria. For CKD with diabetes, start an ACE inhibitor or ARB for G1-G4 CKD with either A2 or A3 albuminuria. [15]",
+        "Administer the selected ACE inhibitor or ARB at the highest approved dose the patient tolerates; the evidence base supporting kidney protection used these doses. In patients with diabetes, hypertension, and albuminuria, ACE inhibitor or ARB therapy is first-line antihypertensive therapy, while a dihydropyridine calcium channel blocker or diuretic may be needed alongside it to achieve blood-pressure goals. [13][15][21]",
+        "Do not combine an ACE inhibitor with an ARB or a direct renin inhibitor in CKD. Combination therapy increases treatment complexity without guideline support and should not be used to pursue a larger albuminuria reduction. [15]"
+      ],
+      "bullets": [
+        "Monitor blood pressure, serum creatinine, and serum potassium during ACE inhibitor or ARB treatment; cough, angioedema, hypotension, hyperkalemia, and increased creatinine are clinically relevant adverse effects. [21]",
+        "If an adverse effect occurs, reduce the dose or discontinue the ACE inhibitor or ARB as needed to resolve the event safely rather than adding a second renin-angiotensin system agent. [21][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Renin-angiotensin system inhibitor selection by diabetes and albuminuria category. [15]",
+        "columns": [
+          "Clinical group",
+          "Albuminuria category",
+          "Recommended action"
+        ],
+        "rows": [
+          [
+            "CKD without diabetes, G1-G4",
+            "A3",
+            "Start an ACE inhibitor or ARB. [15]"
+          ],
+          [
+            "CKD without diabetes, G1-G4",
+            "A2",
+            "Consider starting an ACE inhibitor or ARB. [15]"
+          ],
+          [
+            "CKD with diabetes, G1-G4",
+            "A2 or A3",
+            "Start an ACE inhibitor or ARB. [15]"
+          ],
+          [
+            "Any CKD",
+            "Any albuminuria category",
+            "Avoid ACE inhibitor plus ARB or either agent plus a direct renin inhibitor. [15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "add-sglt2-inhibition",
+      "eyebrow": "Layered kidney protection",
+      "heading": "Add an SGLT2 inhibitor for type 2 diabetes and CKD",
+      "intro": "SGLT2 inhibition is a kidney-protective layer, not merely an albuminuria-lowering intervention.",
+      "paragraphs": [
+        "Use an SGLT2 inhibitor in patients with type 2 diabetes and CKD as part of comprehensive kidney and cardiovascular risk reduction. SGLT2 inhibitors reduce albuminuria, attenuate progressive loss of kidney function, and reduce kidney-failure risk in CKD with type 2 diabetes. [11][16]",
+        "Assess response with serial UACR and eGFR rather than requiring complete normalization of albuminuria. Albuminuria reduction occurs early after SGLT2 inhibitor initiation and is sustained during longer treatment; persistent albuminuria after initiation represents residual risk and may support consideration of finerenone when the patient meets its selection criteria. [11][13]",
+        "Evidence supports an additive biologic rationale for combining an SGLT2 inhibitor with finerenone in appropriate patients receiving renin-angiotensin system blockade, but definitive evidence defining optimal sequencing and the incremental benefit of adding finerenone to both background therapies remains limited. [13][14][19]"
+      ],
+      "bullets": [
+        "Do not substitute improvement in UACR for ongoing eGFR surveillance; SGLT2 inhibitor trials assess clinically meaningful kidney outcomes including confirmed major eGFR decline and kidney failure. [11]",
+        "For patients unable to take an SGLT2 inhibitor, finerenone may still be added to ACE inhibitor or ARB therapy when eligibility criteria are met. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "How treatment response informs next pharmacologic layering in type 2 diabetes and CKD. [11][13][14]",
+        "columns": [
+          "Treatment state",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Albuminuric CKD without ACE inhibitor or ARB",
+            "Renin-angiotensin system blockade remains the foundational antiproteinuric treatment when eligible. [15]",
+            "Start and titrate either an ACE inhibitor or ARB; monitor creatinine and potassium. [15][21]"
+          ],
+          [
+            "Type 2 diabetes and CKD on ACE inhibitor or ARB",
+            "SGLT2 inhibitors reduce albuminuria and progressive kidney-function loss. [11][16]",
+            "Add an SGLT2 inhibitor when clinically eligible. [16]"
+          ],
+          [
+            "Persistent albuminuria on ACE inhibitor or ARB, with or without SGLT2 inhibitor",
+            "Residual albuminuria identifies ongoing kidney and cardiovascular risk. [13][14]",
+            "Assess finerenone eligibility, including eGFR and potassium. [13][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "finerenone-selection-and-monitoring",
+      "eyebrow": "Residual risk",
+      "heading": "Select and monitor finerenone in type 2 diabetic CKD",
+      "intro": "Finerenone is a selective add-on option for albuminuric CKD associated with type 2 diabetes.",
+      "paragraphs": [
+        "Consider finerenone for CKD with type 2 diabetes, persistent albuminuria, eGFR \u226525 mL/min/1.73 m\u00b2, serum potassium <5.0 mmol/L, and concurrent maximally tolerated ACE inhibitor or ARB therapy. KDIGO identifies finerenone as the nonsteroidal mineralocorticoid receptor antagonist with proven kidney and cardiovascular benefit in this setting. [13][14][20]",
+        "Start finerenone 20 mg orally once daily when eGFR is >60 mL/min/1.73 m\u00b2 and 10 mg orally once daily when eGFR is 25-60 mL/min/1.73 m\u00b2. Measure serum potassium before initiation and at 4 weeks; potassium surveillance is essential because finerenone increases hyperkalemia risk. [21]",
+        "Finerenone reduced the FIDELIO-DKD composite kidney outcome of kidney failure, sustained \u226540% eGFR decrease, or kidney-related death versus placebo (hazard ratio 0.82, 95% CI 0.73-0.93) and reduced the key cardiovascular composite (hazard ratio 0.86, 95% CI 0.75-0.99). Hyperkalemia-related adverse events were approximately twice as frequent with finerenone as with placebo, reported as 18.3% versus 9.0% in trial data. [23]",
+        "If hyperkalemia or clinically meaningful eGFR change emerges during therapy, reassess dose and concurrent potassium-raising therapies; in real-world practice, potassium and eGFR changes were documented reasons for finerenone down-titration. [22]"
+      ],
+      "bullets": [
+        "Do not initiate finerenone when baseline potassium is \u22655.0 mmol/L or eGFR is <25 mL/min/1.73 m\u00b2 based on the cited eligibility framework. [20]",
+        "Use finerenone on top of, rather than instead of, tolerated ACE inhibitor or ARB treatment in eligible type 2 diabetic CKD. [14][20]",
+        "Combination therapy with SGLT2 inhibition is clinically plausible, but its precise place relative to finerenone should be individualized because definitive combination-outcome evidence remains limited. [14][19]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Finerenone eligibility, initial dosing, and safety checkpoints for CKD associated with type 2 diabetes. [20][21][23]",
+        "columns": [
+          "Decision point",
+          "Threshold or regimen",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Baseline indication",
+            "Type 2 diabetes, CKD, albuminuria, maximally tolerated ACE inhibitor or ARB, eGFR \u226525 mL/min/1.73 m\u00b2, potassium <5.0 mmol/L. [20]",
+            "Eligible to consider finerenone. [20]"
+          ],
+          [
+            "Initial dose with eGFR >60 mL/min/1.73 m\u00b2",
+            "Finerenone 20 mg orally once daily. [21]",
+            "Check potassium before treatment and after 4 weeks. [21]"
+          ],
+          [
+            "Initial dose with eGFR 25-60 mL/min/1.73 m\u00b2",
+            "Finerenone 10 mg orally once daily. [21]",
+            "Check potassium before treatment and after 4 weeks. [21]"
+          ],
+          [
+            "Hyperkalemia risk",
+            "Hyperkalemia-related adverse events: 18.3% with finerenone versus 9.0% with placebo in trial data. [23]",
+            "Reassess dose and ongoing treatment if potassium rises. [22][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "follow-up-and-treatment-escalation",
+      "eyebrow": "Longitudinal management",
+      "heading": "Follow UACR, eGFR, and potassium to guide escalation",
+      "intro": "Albuminuria treatment requires repeated quantitative assessment because risk and medication eligibility evolve with eGFR and potassium.",
+      "paragraphs": [
+        "Trend UACR and eGFR after initiating or intensifying antiproteinuric therapy. A durable reduction in albuminuria after SGLT2 inhibitor initiation is expected, but residual albuminuria should be interpreted as persistent cardiorenal risk rather than treatment failure by itself. [11][13]",
+        "At each reassessment, verify that ACE inhibitor or ARB therapy remains at the highest tolerated approved dose, review serum creatinine and potassium, and determine whether the patient has become eligible for or unsafe for finerenone. [15][20][21]",
+        "Escalate to nephrology when albuminuria remains unexplained, hematuria accompanies severe albuminuria, the clinical phenotype suggests glomerulonephritis, or 5-year kidney-failure risk exceeds 3%-5%. The goal is to identify disease-specific therapy or biopsy indications before irreversible loss of kidney function. [1][17]"
+      ],
+      "bullets": [
+        "Repeat UACR to confirm abnormality before basing long-term treatment decisions on albuminuria. [10]",
+        "After finerenone initiation, obtain serum potassium at 4 weeks; continue safety surveillance during treatment because hyperkalemia is the principal treatment-limiting adverse effect. [21][23]",
+        "Avoid therapeutic duplication of renin-angiotensin system inhibitors at every medication review. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical monitoring actions after treatment changes for albuminuric CKD. [10][15][21][23]",
+        "columns": [
+          "Therapy or finding",
+          "Monitoring test",
+          "Decision triggered"
+        ],
+        "rows": [
+          [
+            "Abnormal initial UACR",
+            "Repeat UACR, preferably first-morning void. [10]",
+            "Confirm persistent albuminuria before chronic treatment decisions. [10]"
+          ],
+          [
+            "ACE inhibitor or ARB use",
+            "Blood pressure, serum creatinine, serum potassium. [21]",
+            "Address hypotension, creatinine increase, or hyperkalemia with dose reduction or discontinuation if needed. [21]"
+          ],
+          [
+            "Finerenone initiation",
+            "Serum potassium before treatment and at 4 weeks. [21]",
+            "Do not start if potassium is \u22655.0 mmol/L; reassess therapy if hyperkalemia develops. [20][22]"
+          ],
+          [
+            "High-risk clinical pattern",
+            "UACR, eGFR, hematuria assessment, kidney-failure risk estimate. [1]",
+            "Refer to nephrology for unexplained disease, hematuria with severe albuminuria, or 5-year kidney-failure risk >3%-5%. [1]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Assessment and management of albuminuria in adults | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/391/bmj-2025-084911",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "Antiproteinuric therapies are recommended for treatment of CKD by clinical guidelines including KDIGO. Consider angiotensin receptor blockers, angiotensin converting enzyme inhibitors, sodium glucose co-transporter 2 inhibitors, non-steroidal mineralocorticoid receptor antagonists, or glucagon-like ",
+      "score": 0.5585443
+    },
+    {
+      "number": 2,
+      "title": "Characteristics of patients with undiagnosed stage 3 chronic kidney ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanwpc/article/PIIS2666-6065(24)00269-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "urine albumin-creatinine ratio (UACR) results. urine albumin-creatinine ratio. categorised into A1 (UACR <30 mg/g, decreased after CKD",
+      "score": 0.59655124
+    },
+    {
+      "number": 3,
+      "title": "Effectiveness of a systematic home-based albuminuria screening ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/eclinm/PIIS2589-5370(25)00117-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The urinary albumin-to-creatinine ratio (ACR) was assessed based on the Kidney Disease Improving Global Outcomes (KDIGO) indicated increased",
+      "score": 0.32875618
+    },
+    {
+      "number": 4,
+      "title": "Chronic kidney disease, complex conditions, and advancing ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00653-7/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "SGLT2 inhibitors, show substantial benefits for slowing CKD progression and improving cardiovascular outcomes, with combination strategies",
+      "score": 0.6811549
+    },
+    {
+      "number": 5,
+      "title": "a randomised, active-controlled double-blind, phase 2b clinical trial",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)02014-8/fulltext?rss=yes",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Sodium glucose co-transporter 2 (SGLT2) inhibitors reduce albuminuria and risk of progression of chronic kidney disease.",
+      "score": 0.63152665
+    },
+    {
+      "number": 6,
+      "title": "Chronic Kidney Disease | Annals of Internal Medicine - ACP Journals",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02684",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Albuminuria should be estimated using an albumin\u2013creatinine ratio (ACR) from a spot urine sample. Because the most accurate estimate comes",
+      "score": 0.51530343
+    },
+    {
+      "number": 7,
+      "title": "Evaluation and Management of Chronic Kidney Disease",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/0003-4819-158-11-201306040-00007",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The CKD classification system now encompasses cause of CKD, GFR category, and albuminuria category. This 3-dimensional approach builds on the",
+      "score": 0.36480075
+    },
+    {
+      "number": 8,
+      "title": "Population-Wide Screening for Chronic Kidney Disease: A Cost ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M22-3228",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The UACR provides a quantitative assessment of albuminuria, thus detecting persons with albuminuria stage A2 or A3, which informs decisions",
+      "score": 0.3640543
+    },
+    {
+      "number": 9,
+      "title": "Risk of Hospital Readmission among People with CKD : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/_layouts/15/oaks.journals/downloadpdf.aspx?an=01277230-990000000-00889",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "| eGFR Category | Albuminuria Category | | | |\n ---  --- \n| A1 | A2 | A3 | Unknown |\n| G1\u20132 | 44,089 (10) | 8625 (14) | 3714 (16) | 48,934 (14) |\n| Referent | 1.50 (1.45 to 1.54) | 1.71 (1.64 to 1.79) | 1.45 (1.42 to 1.47) |\n| G3a | 9933 (13) | 3198 (17) | 1788 (18) | 13,556 (17) |\n| 1.33 (1.29 to 1",
+      "score": 0.74961954
+    },
+    {
+      "number": 10,
+      "title": "Albuminuria in Heart Failure : Cardiology in Review",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045415-990000000-00987",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Diagnosis\n\nAlbuminuria is defined as an elevation of the UACR, independent of the GFR. KDIGO classifies albuminuria into 3 categories: A1- Normal to mildly increased albuminuria: <30 mg/g, A2- Moderately increased albuminuria: 30\u2013299 mg/g, and severely increased albuminuria: \u2265300 mg/g. For initi",
+      "score": 0.74541736
+    },
+    {
+      "number": 11,
+      "title": "Baseline, Early Changes, and Residual Albuminuria : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/fulltext/10.2215/cjn.0000000000000550~baseline-early-changes-and-residual-albuminuria-post-hoc",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In short, patients aged 18 years or older with a diagnosis of CKD (defined as eGFR 25\u201375 ml/min per 1.73 m2 and urinary albumin\u2013creatinine ratio [UACR] 200\u20135000 mg/g) with or without type 2 diabetes were eligible for participation. Patients were excluded in case of documented diagnosis of type 1 dia",
+      "score": 0.4836734
+    },
+    {
+      "number": 12,
+      "title": "Early-Stage Chronic Kidney Disease and Related... : JAMA Network Open",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02093599-202401000-00071",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The eGFR was calculated from the serum creatinine test values using a standard formula. According to the Kidney Disease Improving Global Outcomes (KDIGO) classification in 2012, we defined baseline CKD stages using the results from 2014. Regarding the classification of CKD stages, since the number o",
+      "score": 0.41620392
+    },
+    {
+      "number": 13,
+      "title": "Executive summary of the KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease: an update based on rapidly emerging new evidence",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%2822%2900518-X/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "Figure 3Holistic approach for improving outcomes in patients with diabetes and chronic kidney disease. \u2217Angiotensin-converting enzyme inhibitor (ACEi) or angiotensin II receptor blocker (ARB) should be first-line therapy for hypertension (HTN) when albuminuria is present, otherwise dihydropyridine c",
+      "score": 0.79901963
+    },
+    {
+      "number": 14,
+      "title": "KDIGO 2022 Clinical Practice Guideline for Diabetes Management ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%252822%252900507-5/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "_This recommendation places a high value on the high-quality evidence, from Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIO-DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD), that finerenon",
+      "score": 0.78788257
+    },
+    {
+      "number": 15,
+      "title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/%20S0085-2538%2823%2900766-4/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "Recommendation 3.6.2: We suggest starting RASi (ACEi or ARB) for people with CKD and moderately increased albuminuria (G1\u2013G4, A2) without diabetes _(2C)_.\n\nRecommendation 3.6.3: We recommend starting RASi (ACEi or ARB) for people with CKD and moderately-to-severely increased albuminuria (G1\u2013G4, A2 a",
+      "score": 0.7062922
+    },
+    {
+      "number": 16,
+      "title": "KDIGO 2020 Clinical Practice Guideline for Diabetes Management ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538(20)30718-3/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "SGLT2i are recommended for patients with type 2 diabetes and chronic kidney disease (CKD). Renin\u2013angiotensin system (RAS) inhibition is recommended for patients",
+      "score": 0.67063034
+    },
+    {
+      "number": 17,
+      "title": "[PDF] Chronic Kidney Disease (CKD) - American Society of Nephrology",
+      "detail": "www.asn-online.org",
+      "url": "https://www.asn-online.org/education/training/fellows/HFHS_CKD_V6.pdf",
+      "authors": "www.asn-online.org",
+      "host": "www.asn-online.org",
+      "snippet": "Clinical Testing Treatment Considerations BP monitoring: every 12 mo FASTING lipid profile: every 12 mo LYTES, Glucose, BUN, SCr: eGFR every 12 mo UA for hematuria or proteinuria & microscopic exam SMOKING cessation WEIGHT reduction DAILY aspirin: 81 mg once daily TARGETS BP: <130/80 mmHg LIPIDS: LD",
+      "score": 0.4921643
+    },
+    {
+      "number": 18,
+      "title": "Real-Life Experience on the Effect of SGLT2 Inhibitors vs. Finerenone vs. Combination on Albuminuria in Chronic Kidney Disease",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11241372",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this real-world experience in our community setting, the combination of SGLT2 inhibitors and finerenone in our adult patients with CKD was associated with a very significant and clinically relevant reduction in UACR, without an increased risk of hyperkalemia. Combination therapy of SGLT2 inhibito",
+      "score": 0.8351749
+    },
+    {
+      "number": 19,
+      "title": "Clinical Review - Finerenone (Kerendia) - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK594386",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "appropriate comparator in Canadian clinical practice for\npatients with CKD and T2D. The clinical experts agreed with the\nsponsor\u2019s definition of SOC as including an ACE inhibitor or\nARB, and ideally an SGLT2 inhibitor, which is still not widely\naccessible to patients with CKD and T2D living in Canad",
+      "score": 0.74541736
+    },
+    {
+      "number": 20,
+      "title": "The appropriateness of finerenone initiation, dosing, and outcomes in diabetic kidney disease: data from real world practice - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13077867",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Appropriate indication for finerenone initiation was defined as fulfillment of all of the following criteria at baseline: (1) a diagnosis of CKD and type 2 diabetes mellitus (T2DM); (2) an eGFR of \u2265 25 mL/min/1.73 m\u00b2; (3) the presence of albuminuria, defined as a urine albumin-to-creatinine ratio (U",
+      "score": 0.7306941
+    },
+    {
+      "number": 21,
+      "title": "Protecting the Kidneys: Update on Therapies to Treat Diabetic Nephropathy",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9331620",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  provides excellent information on medication therapy recommendations for people with diabetes and CKD. An ACE inhibitor or ARB is recommended as first-line therapy for people with diabetes, hypertension, and albuminuria and should be titrated to a maximum tolerated dose. Both ACE inhibitors and ",
+      "score": 0.71377134
+    },
+    {
+      "number": 22,
+      "title": "Dosing, treatment patterns and safety of finerenone use in routine care: an interim analysis of the prospective, real-world and observational FINE-REAL study - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12598660",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Concomitant medication\n\nIn total, 138 (7.2%) participants received SGLT2is only, 393 (20.5%) received RASis only, 44 (2.3%) received GLP-1RAs only, 545 (28.4%) received SGLT2is and RASis, 44 (2.3%) received SGLT2is and GLP-1RAs, 175 (9.1%) received RASis and GLP-1RAs, 287 (15.0%) received all th",
+      "score": 0.66569364
+    },
+    {
+      "number": 23,
+      "title": "[PDF] Observational Study/Post Authorization Safety Study (PASS ...",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/21785%20FineReal_Protocol_V3.0_28OCT2022_Redacted.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "multicenter FIDELIO-DKD study showed that finerenone significantly reduced incidence of the primary composite outcome of kidney failure, a sustained decrease of at least 40 % in the eGFR from baseline, or death from kidney-related causes, compared to placebo (HR, 0.82; 95 % confidence interval [CI],",
+      "score": 0.8095324
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Kerendia-5200- II-01-G, INN-finerenone - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/kerendia-h-c-5200-ii-0001-g-epar-assessment-report-variation_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "In T2D patients with CKD and very high albuminuria (UACR \u2265300 mg/g), losartan reduced the incidence of ESRD and a doubling of serum creatinine compared to placebo, but had no effect on CV mortality and CV morbidity23. Irbesartan was also shown to be effective in delaying the progression of kidney di",
+      "score": 0.7781275
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Assessment and management of albuminuria in adults | The BMJ",
+      "detail": "www.bmj.com",
+      "url": "https://www.bmj.com/content/391/bmj-2025-084911",
+      "authors": "www.bmj.com",
+      "host": "www.bmj.com",
+      "snippet": "Antiproteinuric therapies are recommended for treatment of CKD by clinical guidelines including KDIGO. Consider angiotensin receptor blockers, angiotensin converting enzyme inhibitors, sodium glucose co-transporter 2 inhibitors, non-steroidal mineralocorticoid receptor antagonists, or glucagon-like ",
+      "score": 0.5585443
+    },
+    {
+      "number": 2,
+      "title": "Characteristics of patients with undiagnosed stage 3 chronic kidney ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lanwpc/article/PIIS2666-6065(24)00269-4/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "urine albumin-creatinine ratio (UACR) results. urine albumin-creatinine ratio. categorised into A1 (UACR <30 mg/g, decreased after CKD",
+      "score": 0.59655124
+    },
+    {
+      "number": 3,
+      "title": "Effectiveness of a systematic home-based albuminuria screening ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/eclinm/PIIS2589-5370(25)00117-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The urinary albumin-to-creatinine ratio (ACR) was assessed based on the Kidney Disease Improving Global Outcomes (KDIGO) indicated increased",
+      "score": 0.32875618
+    },
+    {
+      "number": 4,
+      "title": "Chronic kidney disease, complex conditions, and advancing ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00653-7/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "SGLT2 inhibitors, show substantial benefits for slowing CKD progression and improving cardiovascular outcomes, with combination strategies",
+      "score": 0.6811549
+    },
+    {
+      "number": 5,
+      "title": "a randomised, active-controlled double-blind, phase 2b clinical trial",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)02014-8/fulltext?rss=yes",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Sodium glucose co-transporter 2 (SGLT2) inhibitors reduce albuminuria and risk of progression of chronic kidney disease.",
+      "score": 0.63152665
+    },
+    {
+      "number": 6,
+      "title": "Chronic Kidney Disease | Annals of Internal Medicine - ACP Journals",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02684",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Albuminuria should be estimated using an albumin\u2013creatinine ratio (ACR) from a spot urine sample. Because the most accurate estimate comes",
+      "score": 0.51530343
+    },
+    {
+      "number": 7,
+      "title": "Evaluation and Management of Chronic Kidney Disease",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/pdf/10.7326/0003-4819-158-11-201306040-00007",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The CKD classification system now encompasses cause of CKD, GFR category, and albuminuria category. This 3-dimensional approach builds on the",
+      "score": 0.36480075
+    },
+    {
+      "number": 8,
+      "title": "Population-Wide Screening for Chronic Kidney Disease: A Cost ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M22-3228",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The UACR provides a quantitative assessment of albuminuria, thus detecting persons with albuminuria stage A2 or A3, which informs decisions",
+      "score": 0.3640543
+    },
+    {
+      "number": 9,
+      "title": "Risk of Hospital Readmission among People with CKD : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/_layouts/15/oaks.journals/downloadpdf.aspx?an=01277230-990000000-00889",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "| eGFR Category | Albuminuria Category | | | |\n ---  --- \n| A1 | A2 | A3 | Unknown |\n| G1\u20132 | 44,089 (10) | 8625 (14) | 3714 (16) | 48,934 (14) |\n| Referent | 1.50 (1.45 to 1.54) | 1.71 (1.64 to 1.79) | 1.45 (1.42 to 1.47) |\n| G3a | 9933 (13) | 3198 (17) | 1788 (18) | 13,556 (17) |\n| 1.33 (1.29 to 1",
+      "score": 0.74961954
+    },
+    {
+      "number": 10,
+      "title": "Albuminuria in Heart Failure : Cardiology in Review",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00045415-990000000-00987",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "### Diagnosis\n\nAlbuminuria is defined as an elevation of the UACR, independent of the GFR. KDIGO classifies albuminuria into 3 categories: A1- Normal to mildly increased albuminuria: <30 mg/g, A2- Moderately increased albuminuria: 30\u2013299 mg/g, and severely increased albuminuria: \u2265300 mg/g. For initi",
+      "score": 0.74541736
+    },
+    {
+      "number": 11,
+      "title": "Baseline, Early Changes, and Residual Albuminuria : Clinical Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cjasn/fulltext/10.2215/cjn.0000000000000550~baseline-early-changes-and-residual-albuminuria-post-hoc",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "In short, patients aged 18 years or older with a diagnosis of CKD (defined as eGFR 25\u201375 ml/min per 1.73 m2 and urinary albumin\u2013creatinine ratio [UACR] 200\u20135000 mg/g) with or without type 2 diabetes were eligible for participation. Patients were excluded in case of documented diagnosis of type 1 dia",
+      "score": 0.4836734
+    },
+    {
+      "number": 12,
+      "title": "Early-Stage Chronic Kidney Disease and Related... : JAMA Network Open",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02093599-202401000-00071",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The eGFR was calculated from the serum creatinine test values using a standard formula. According to the Kidney Disease Improving Global Outcomes (KDIGO) classification in 2012, we defined baseline CKD stages using the results from 2014. Regarding the classification of CKD stages, since the number o",
+      "score": 0.41620392
+    },
+    {
+      "number": 13,
+      "title": "Executive summary of the KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease: an update based on rapidly emerging new evidence",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%2822%2900518-X/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "Figure 3Holistic approach for improving outcomes in patients with diabetes and chronic kidney disease. \u2217Angiotensin-converting enzyme inhibitor (ACEi) or angiotensin II receptor blocker (ARB) should be first-line therapy for hypertension (HTN) when albuminuria is present, otherwise dihydropyridine c",
+      "score": 0.79901963
+    },
+    {
+      "number": 14,
+      "title": "KDIGO 2022 Clinical Practice Guideline for Diabetes Management ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538%252822%252900507-5/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "_This recommendation places a high value on the high-quality evidence, from Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIO-DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD), that finerenon",
+      "score": 0.78788257
+    },
+    {
+      "number": 15,
+      "title": "KDIGO 2024 Clinical Practice Guideline for the Evaluation and ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/%20S0085-2538%2823%2900766-4/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "Recommendation 3.6.2: We suggest starting RASi (ACEi or ARB) for people with CKD and moderately increased albuminuria (G1\u2013G4, A2) without diabetes _(2C)_.\n\nRecommendation 3.6.3: We recommend starting RASi (ACEi or ARB) for people with CKD and moderately-to-severely increased albuminuria (G1\u2013G4, A2 a",
+      "score": 0.7062922
+    },
+    {
+      "number": 16,
+      "title": "KDIGO 2020 Clinical Practice Guideline for Diabetes Management ...",
+      "detail": "www.kidney-international.org",
+      "url": "https://www.kidney-international.org/article/S0085-2538(20)30718-3/fulltext",
+      "authors": "www.kidney-international.org",
+      "host": "www.kidney-international.org",
+      "snippet": "SGLT2i are recommended for patients with type 2 diabetes and chronic kidney disease (CKD). Renin\u2013angiotensin system (RAS) inhibition is recommended for patients",
+      "score": 0.67063034
+    },
+    {
+      "number": 17,
+      "title": "[PDF] Chronic Kidney Disease (CKD) - American Society of Nephrology",
+      "detail": "www.asn-online.org",
+      "url": "https://www.asn-online.org/education/training/fellows/HFHS_CKD_V6.pdf",
+      "authors": "www.asn-online.org",
+      "host": "www.asn-online.org",
+      "snippet": "Clinical Testing Treatment Considerations BP monitoring: every 12 mo FASTING lipid profile: every 12 mo LYTES, Glucose, BUN, SCr: eGFR every 12 mo UA for hematuria or proteinuria & microscopic exam SMOKING cessation WEIGHT reduction DAILY aspirin: 81 mg once daily TARGETS BP: <130/80 mmHg LIPIDS: LD",
+      "score": 0.4921643
+    },
+    {
+      "number": 18,
+      "title": "Real-Life Experience on the Effect of SGLT2 Inhibitors vs. Finerenone vs. Combination on Albuminuria in Chronic Kidney Disease",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11241372",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "In this real-world experience in our community setting, the combination of SGLT2 inhibitors and finerenone in our adult patients with CKD was associated with a very significant and clinically relevant reduction in UACR, without an increased risk of hyperkalemia. Combination therapy of SGLT2 inhibito",
+      "score": 0.8351749
+    },
+    {
+      "number": 19,
+      "title": "Clinical Review - Finerenone (Kerendia) - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK594386",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "appropriate comparator in Canadian clinical practice for\npatients with CKD and T2D. The clinical experts agreed with the\nsponsor\u2019s definition of SOC as including an ACE inhibitor or\nARB, and ideally an SGLT2 inhibitor, which is still not widely\naccessible to patients with CKD and T2D living in Canad",
+      "score": 0.74541736
+    },
+    {
+      "number": 20,
+      "title": "The appropriateness of finerenone initiation, dosing, and outcomes in diabetic kidney disease: data from real world practice - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13077867",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Appropriate indication for finerenone initiation was defined as fulfillment of all of the following criteria at baseline: (1) a diagnosis of CKD and type 2 diabetes mellitus (T2DM); (2) an eGFR of \u2265 25 mL/min/1.73 m\u00b2; (3) the presence of albuminuria, defined as a urine albumin-to-creatinine ratio (U",
+      "score": 0.7306941
+    },
+    {
+      "number": 21,
+      "title": "Protecting the Kidneys: Update on Therapies to Treat Diabetic Nephropathy",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9331620",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  provides excellent information on medication therapy recommendations for people with diabetes and CKD. An ACE inhibitor or ARB is recommended as first-line therapy for people with diabetes, hypertension, and albuminuria and should be titrated to a maximum tolerated dose. Both ACE inhibitors and ",
+      "score": 0.71377134
+    },
+    {
+      "number": 22,
+      "title": "Dosing, treatment patterns and safety of finerenone use in routine care: an interim analysis of the prospective, real-world and observational FINE-REAL study - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12598660",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "### Concomitant medication\n\nIn total, 138 (7.2%) participants received SGLT2is only, 393 (20.5%) received RASis only, 44 (2.3%) received GLP-1RAs only, 545 (28.4%) received SGLT2is and RASis, 44 (2.3%) received SGLT2is and GLP-1RAs, 175 (9.1%) received RASis and GLP-1RAs, 287 (15.0%) received all th",
+      "score": 0.66569364
+    },
+    {
+      "number": 23,
+      "title": "[PDF] Observational Study/Post Authorization Safety Study (PASS ...",
+      "detail": "catalogues.ema.europa.eu",
+      "url": "https://catalogues.ema.europa.eu/sites/default/files/document_files/21785%20FineReal_Protocol_V3.0_28OCT2022_Redacted.pdf",
+      "authors": "catalogues.ema.europa.eu",
+      "host": "catalogues.ema.europa.eu",
+      "snippet": "multicenter FIDELIO-DKD study showed that finerenone significantly reduced incidence of the primary composite outcome of kidney failure, a sustained decrease of at least 40 % in the eGFR from baseline, or death from kidney-related causes, compared to placebo (HR, 0.82; 95 % confidence interval [CI],",
+      "score": 0.8095324
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Kerendia-5200- II-01-G, INN-finerenone - European Medicines Agency",
+      "detail": "www.ema.europa.eu",
+      "url": "https://www.ema.europa.eu/en/documents/variation-report/kerendia-h-c-5200-ii-0001-g-epar-assessment-report-variation_en.pdf",
+      "authors": "www.ema.europa.eu",
+      "host": "www.ema.europa.eu",
+      "snippet": "In T2D patients with CKD and very high albuminuria (UACR \u2265300 mg/g), losartan reduced the incidence of ESRD and a doubling of serum creatinine compared to placebo, but had no effect on CV mortality and CV morbidity23. Irbesartan was also shown to be effective in delaying the progression of kidney di",
+      "score": 0.7781275
+    }
+  ],
+  "publishedAt": "2026-09-15T17:58:40.376372+00:00",
+  "updatedAt": "2026-09-15T17:58:40.376372+00:00",
+  "readingMinutes": 6,
+  "slug": "ckd-albuminuria-treatment"
+}

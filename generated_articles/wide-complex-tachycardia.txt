@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Emergency Cardiology",
+  "title": "Wide Complex Tachycardia",
+  "summary": "Manage any adult wide complex tachycardia by first identifying instability and delivering synchronized cardioversion when needed. In stable patients, obtain a 12-lead ECG, presume ventricular tachycardia until evidence supports another mechanism, and avoid AV-nodal blockade when pre-excitation is possible.",
+  "seoDescription": "Initial management of wide complex tachycardia: recognize instability, obtain diagnostic ECGs, distinguish VT from SVT, and avoid unsafe AV-nodal blockers.",
+  "clinicalQuestion": "How should clinicians stabilize, classify, and initially treat an adult presenting with wide complex tachycardia?",
+  "specialty": "Cardiology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "wide complex tachycardia",
+    "ventricular tachycardia",
+    "stable monomorphic VT",
+    "pre-excited atrial fibrillation",
+    "adenosine",
+    "ECG algorithms"
+  ],
+  "keyTakeaways": [
+    "A tachycardia with QRS duration at least 120 ms is wide complex; the immediate branches are regular versus irregular rhythm and stable versus unstable hemodynamics. [9][12][20][24]",
+    "Treat hemodynamically unstable wide complex tachycardia with urgent electrical cardioversion rather than delaying for ECG classification. [16]",
+    "For regular monomorphic wide complex tachycardia, ventricular tachycardia is the working diagnosis unless a structured clinical and ECG assessment establishes supraventricular tachycardia with aberrancy or pre-excitation. [10][11][19][21][23]",
+    "AV dissociation, capture beats, fusion beats, or prior acute myocardial infarction with wide complex tachycardia support ventricular tachycardia. [22]",
+    "Adenosine is an option only for a stable, regular wide complex tachycardia; it may help terminate or reveal a supraventricular mechanism but does not replace ECG-based assessment. [1][2][23]",
+    "An irregular, very rapid, morphologically variable wide complex tachycardia should prompt concern for pre-excited atrial fibrillation; avoid AV-nodal-suppressing drugs and use an accessory-pathway-directed strategy. [16][20]"
+  ],
+  "sections": [
+    {
+      "id": "first-minutes",
+      "eyebrow": "Immediate action",
+      "heading": "Stabilize before defining the mechanism",
+      "intro": "Classify hemodynamic status and rhythm regularity immediately.",
+      "paragraphs": [
+        "Place the patient on continuous monitoring and obtain a 12-lead ECG as soon as feasible, but do not delay electrical treatment for a prolonged diagnostic exercise when the patient is unstable. Acute tachyarrhythmia management begins with hemodynamic assessment, and prompt restoration of sinus rhythm by direct-current cardioversion is required when instability is present. [16][23]",
+        "Use a rhythm-first branch point. A regular monomorphic wide complex tachycardia has a differential dominated by ventricular tachycardia (VT), supraventricular tachycardia (SVT) with aberrant intraventricular conduction, and antidromic atrioventricular reentrant tachycardia. An irregular wide complex tachycardia instead raises pre-excited atrial fibrillation (AF), polymorphic VT, or an atrial arrhythmia with variable aberrancy. [9][12][16][20]",
+        "Do not allow apparent clinical stability to be interpreted as proof of SVT. VT is the most frequent regular wide complex tachycardia, and misclassification of VT as SVT can lead to potentially lethal treatment choices. [9][10][11]"
+      ],
+      "bullets": [
+        "Define adult wide complex tachycardia as rate greater than 100 beats/min with QRS duration at least 120 ms. [12][20][21][24]",
+        "If the rhythm is irregular with beat-to-beat QRS morphologic variation and a rapid ventricular response, prioritize pre-excited AF in the differential. [20]",
+        "If a defibrillator or implanted cardiac device is present, interrogate stored electrograms when this can be done without delaying necessary cardioversion; device signals can distinguish conducted supraventricular rhythms from ventricular rhythms. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial rhythm pattern directs both the diagnostic frame and the drugs to avoid. [16][20]",
+        "columns": [
+          "Initial pattern",
+          "Leading mechanisms",
+          "Immediate management implication"
+        ],
+        "rows": [
+          [
+            "Regular, monomorphic WCT",
+            "VT; SVT with bundle-branch aberrancy; antidromic AVRT [9][12][19]",
+            "Treat as VT while obtaining a 12-lead ECG and applying structured VT criteria. [10][19][23]"
+          ],
+          [
+            "Irregular WCT with changing morphology",
+            "Pre-excited AF; polymorphic VT; atrial arrhythmia with variable aberrancy [20]",
+            "Avoid AV-nodal-suppressing drugs if pre-excitation is possible. [16]"
+          ],
+          [
+            "Unstable WCT",
+            "Mechanism need not be established before treatment [16]",
+            "Perform urgent direct-current cardioversion. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ecg-assessment",
+      "eyebrow": "Diagnostic branch",
+      "heading": "Use the 12-lead ECG to look for ventricular tachycardia",
+      "intro": "Seek high-specificity VT findings before applying morphology algorithms.",
+      "paragraphs": [
+        "Acquire a 12-lead ECG during tachycardia and compare it with a prior baseline tracing whenever available. A systematic assessment integrates clinical history, comparison with the resting ECG, pathognomonic VT features, and morphology in precordial leads and aVR; no isolated algorithm should substitute for this sequence. [13][19][23]",
+        "Identify atrioventricular dissociation whenever possible. Regular P waves that are dissociated from QRS complexes, a ventricular rate exceeding the atrial rate, capture beats, and fusion beats are diagnostic clues favoring VT. A history of acute myocardial infarction together with wide complex tachycardia also supports VT. [21][22]",
+        "If definitive findings are absent, use a reproducible algorithm such as Brugada, Vereckei-aVR, or lead II R-wave peak time criteria, recognizing that diagnostic performance is lower in real-world interpretation than in original reports. In a meta-analysis of 14 studies including 3,966 patients with regular WCT, Brugada, Vereckei-aVR, and lead II R-wave peak time were among the assessable ECG algorithms. [4][13]"
+      ],
+      "bullets": [
+        "A QRS morphology during tachycardia that is identical to a baseline bundle-branch block morphology supports SVT with aberrancy, but this comparison does not eliminate VT in all cases. [23]",
+        "A monophasic R wave in aVR and atypical right bundle-branch block morphology are findings that support VT in the described structured ECG approach. [23]",
+        "Use Lewis leads when atrial activity is difficult to see and AV dissociation is suspected. [19]"
+      ],
+      "subsections": [
+        {
+          "heading": "How much confidence to place in algorithms",
+          "paragraphs": [
+            "Algorithmic output should alter confidence, not override the clinical context. In one EP-confirmed validation cohort, the Basel algorithm had 93.3% sensitivity and 90.4% specificity, Brugada had 93.3% sensitivity and 88.5% specificity, and Vereckei had 91.3% sensitivity and 84.6% specificity; however, emergency-department studies show more modest performance and only moderate interobserver agreement. [7][13]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "ECG findings that shift a regular wide complex tachycardia toward VT. [21][22][23]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "AV dissociation or ventricular rate greater than atrial rate",
+            "Supports VT. [21][22]",
+            "Manage as VT; do not reclassify as SVT solely because the patient is stable. [10][11]"
+          ],
+          [
+            "Capture or fusion beat",
+            "Supports VT. [22]",
+            "Manage as VT. [22]"
+          ],
+          [
+            "Prior acute MI with WCT",
+            "Supports VT. [22]",
+            "Treat VT as the working diagnosis and assess for structural substrate. [21][23]"
+          ],
+          [
+            "Baseline QRS morphology matches tachycardia",
+            "Supports SVT with aberrancy. [23]",
+            "Integrate with atrial activity and the entire ECG before selecting SVT-directed therapy. [13][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stable-regular-wct",
+      "eyebrow": "Treated as VT",
+      "heading": "Manage stable regular monomorphic wide complex tachycardia cautiously",
+      "intro": "Use rhythm-directed therapy only after excluding the dangerous alternatives.",
+      "paragraphs": [
+        "In a stable regular monomorphic WCT, obtain the diagnostic ECG before treatment if this does not compromise the patient, establish IV access and continuous monitoring, and proceed as presumed VT when the mechanism remains uncertain. Historical guideline recommendations support IV procainamide and/or sotalol for pharmacologic termination of stable WCT, although those recommendations were based on small randomized studies. [15]",
+        "Adenosine can be considered for stable, regular WCT as a diagnostic and potentially therapeutic maneuver. Advanced cardiovascular life support guidance cited in the literature describes adenosine as safe and potentially effective in the initial management of stable regular WCT; termination supports a reentrant SVT mechanism, whereas transient AV nodal block can expose ongoing atrial activity. [1][2]",
+        "Do not use adenosine response as a universal mechanism test. Adenosine may clarify atrial tachycardia conducted with bundle-branch block, but ECG interpretation, baseline comparison, and VT criteria remain necessary because a stable WCT can still be VT. [2][13][23]"
+      ],
+      "bullets": [
+        "Use the regularity requirement strictly: the evidence cited for adenosine concerns stable, regular WCT, not irregular or polymorphic wide complex rhythms. [1][20]",
+        "If adenosine terminates the rhythm, preserve the rhythm strip and post-conversion 12-lead ECG; the mechanism may be AV node-dependent SVT, but the baseline ECG informs whether pre-excitation is present. [2][23]",
+        "If the rhythm persists, diagnosis remains uncertain, or hemodynamics worsen, escalate to electrical cardioversion rather than serial empiric AV-nodal therapies. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "When antidromic AVRT is plausible",
+          "paragraphs": [
+            "Antidromic AVRT produces a wide QRS because antegrade ventricular activation travels through an accessory pathway. In wide-QRS SVT caused by antidromic AVRT, avoid AV-nodal-suppressing drugs; class I antiarrhythmics such as procainamide or flecainide are identified as preferred agents for termination in the cited guideline. [16][22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Medication decisions for stable wide complex tachycardia depend on rhythm regularity and likelihood of accessory-pathway conduction. [1][15][16][20]",
+        "columns": [
+          "Clinical scenario",
+          "Reasonable initial approach",
+          "Avoid or do not infer"
+        ],
+        "rows": [
+          [
+            "Stable, regular monomorphic WCT of uncertain mechanism",
+            "Treat as VT; obtain 12-lead ECG and consider IV procainamide and/or sotalol for pharmacologic termination. [15][23]",
+            "Do not assume SVT because symptoms are tolerated. [10][11]"
+          ],
+          [
+            "Stable, regular WCT where AV nodal dependence is plausible",
+            "Consider adenosine as a diagnostic and potentially therapeutic intervention. [1][2]",
+            "Do not use response alone to exclude VT. [13][23]"
+          ],
+          [
+            "Wide-QRS antidromic AVRT",
+            "Use an accessory-pathway-directed class I agent such as procainamide or flecainide. [16]",
+            "Avoid AV-nodal-suppressing drugs. [16]"
+          ],
+          [
+            "Irregular, morphologically variable WCT suggesting pre-excited AF",
+            "Use a non-AV-nodal-blocking strategy and obtain expert rhythm support. [16][20]",
+            "Avoid AV-nodal-suppressing drugs. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "irregular-and-special-causes",
+      "eyebrow": "High-risk exceptions",
+      "heading": "Recognize pre-excitation, polymorphic VT, pacing, and toxicologic mimics",
+      "intro": "Irregularity or changing morphology should stop the routine stable-VT pathway.",
+      "paragraphs": [
+        "Pre-excited AF is suggested by an irregular wide complex tachycardia with changing QRS morphology and a rapid ventricular rate. Variable ventricular fusion through the AV node and one or more accessory pathways accounts for changing QRS width and delta-wave appearance. Because AV-nodal suppression can favor accessory-pathway conduction, avoid AV-nodal-suppressing drugs when this pattern is possible. [16][20]",
+        "Expand the differential when the ECG or context is atypical. WCT can arise from ventricular pacing-associated tachycardias, ventricular pre-excitation, preexisting or rate-related bundle-branch block, and sodium-channel-blocker toxicity. Toxicity-associated ECG patterns include sinus tachycardia with QRS duration greater than 100 ms, right-axis deviation of 130° to 270°, and/or R-wave changes in aVR. [6][12]",
+        "Ask specifically about structural heart disease, prior myocardial infarction, implanted devices, prior baseline bundle-branch block, known Wolff-Parkinson-White pattern, and medication or overdose exposure. These data direct ECG interpretation and determine whether the initial endpoint is cardioversion, VT suppression, accessory-pathway management, device evaluation, or toxicology-directed resuscitation. [12][13][21][23]"
+      ],
+      "bullets": [
+        "Polymorphic or irregular WCT is not addressed by adenosine evidence for stable regular WCT. [1][20]",
+        "If WCT follows pacing or occurs in a patient with an implanted cardioverter-defibrillator, obtain device interrogation when it will change management and does not delay urgent treatment. [21][23]",
+        "Screen for reversible precipitants suggested by the presentation; hyperthyroidism has been reported as a reversible trigger in a patient with extreme WCT and symptoms of tremor, lethargy, and heat intolerance. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Contextual clues that change the initial wide complex tachycardia differential. [6][12][20][23]",
+        "columns": [
+          "Clue",
+          "Mechanism to prioritize",
+          "Actionable next step"
+        ],
+        "rows": [
+          [
+            "Irregularity, variable QRS morphology, very rapid ventricular rate",
+            "Pre-excited AF. [20]",
+            "Avoid AV-nodal-suppressing drugs and pursue accessory-pathway-directed management. [16]"
+          ],
+          [
+            "Implanted pacemaker or ICD",
+            "Pacing-associated tachycardia or device-documented VT/SVT. [6][21]",
+            "Obtain device electrograms or interrogation if it does not delay cardioversion. [21][23]"
+          ],
+          [
+            "Overdose exposure with QRS widening, extreme right axis, or aVR R-wave abnormality",
+            "Sodium-channel blockade. [12]",
+            "Treat as toxicologic emergency while monitoring rhythm and hemodynamics. [12]"
+          ],
+          [
+            "Baseline bundle-branch block with same morphology during tachycardia",
+            "SVT with aberrancy. [23]",
+            "Confirm with atrial activity and structured ECG assessment before concluding the mechanism. [13][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "after-conversion",
+      "eyebrow": "Post-event plan",
+      "heading": "Document the mechanism and define the substrate after acute control",
+      "intro": "A terminated rhythm still requires etiologic classification and recurrence planning.",
+      "paragraphs": [
+        "After termination or cardioversion, retain pre-treatment ECGs and obtain a baseline 12-lead ECG for comparison. A resting tracing may reveal baseline conduction disease, prior infarct pattern, or evidence of pre-excitation and is central to distinguishing VT from SVT with aberrancy in recurrent events. [13][21][23]",
+        "Evaluate for structural substrate with echocardiography when VT is suspected or when clinical history suggests structural disease. In the structured WCT approach, laboratory tests and echocardiography are part of post-stabilization assessment, and prior infarction or structural abnormalities increase the importance of assigning the rhythm as VT rather than benign SVT. [21][23]",
+        "Refer recurrent sustained monomorphic VT, suspected accessory-pathway-mediated WCT, or diagnostically unresolved WCT for electrophysiology evaluation. Catheter ablation can be definitive for reentrant SVT, with guideline-cited success of at least 90% for patients whose episodes require acute management; typical atrial flutter ablation has reported success above 90% through up to 2 years of follow-up. [5][16]"
+      ],
+      "bullets": [
+        "For suspected VT, integrate prior infarction, ventricular function, baseline ECG, and any implanted-device electrograms into the final rhythm diagnosis. [21][22][23]",
+        "For suspected pre-excitation, preserve the post-conversion ECG because a delta wave or other pre-excitation pattern changes long-term referral and treatment planning. [20][22]",
+        "Do not use an acutely successful adenosine trial as the final diagnosis when a structural substrate or VT ECG feature remains present. [2][21][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-conversion studies should answer a specific mechanism or substrate question. [13][21][23]",
+        "columns": [
+          "Study",
+          "Who needs it",
+          "What changes next"
+        ],
+        "rows": [
+          [
+            "Baseline 12-lead ECG",
+            "All patients after rhythm termination when obtainable. [13][23]",
+            "Comparison with tachycardia morphology supports aberrancy, conduction disease, infarct pattern, or pre-excitation assessment. [13][21][23]"
+          ],
+          [
+            "Transthoracic echocardiography",
+            "Suspected VT or clinical concern for structural heart disease. [21][23]",
+            "Identifies structural substrate relevant to VT classification and subsequent management. [21][23]"
+          ],
+          [
+            "ICD or pacemaker interrogation",
+            "Patients with a device and a captured or recent WCT episode. [21][23]",
+            "Stored atrial and ventricular electrograms may discriminate conducted rhythm from VT. [21]"
+          ],
+          [
+            "Electrophysiology evaluation",
+            "Recurrent sustained WCT, suspected accessory pathway, or unresolved mechanism after acute care. [16]",
+            "Can establish mechanism and offer catheter ablation for suitable reentrant SVT. [5][16]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

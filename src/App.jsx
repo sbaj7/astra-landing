@@ -14,6 +14,7 @@ import './App.css';
 export const AppRoutes = () => (
   <Routes>
     <Route path="/articles" element={<ArticlesIndexPage />} />
+    <Route path="/articles/specialty/:specialty" element={<ArticlesIndexPage />} />
     <Route path="/articles/:slug" element={<ArticlePage />} />
     <Route path="/article/:slug" element={<ArticlePage />} />
     <Route path="/about" element={<AboutPage />} />

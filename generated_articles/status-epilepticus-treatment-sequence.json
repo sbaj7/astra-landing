@@ -1,0 +1,779 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Neurology emergency",
+  "title": "Status Epilepticus Treatment Sequence",
+  "summary": "Treat convulsive status epilepticus as a timed emergency: stabilize immediately, give benzodiazepine therapy promptly, load one second-line antiseizure medication if seizures persist, and escalate to ICU anesthetic management with EEG guidance for refractory or nonconvulsive status epilepticus.",
+  "seoDescription": "Timed treatment sequence for convulsive and nonconvulsive status epilepticus, including escalation after benzodiazepines and EEG-guided refractory care.",
+  "clinicalQuestion": "What is the practical treatment sequence for status epilepticus after seizure activity reaches the treatment threshold?",
+  "specialty": "Neurology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "status epilepticus treatment",
+    "benzodiazepine-refractory status epilepticus",
+    "ESETT",
+    "nonconvulsive status epilepticus",
+    "continuous EEG",
+    "refractory status epilepticus"
+  ],
+  "keyTakeaways": [
+    "For bilateral tonic-clonic status epilepticus, initiate emergency treatment once seizure activity exceeds 5 minutes; focal status with impaired consciousness and absence status have longer operational treatment thresholds. [9]",
+    "After benzodiazepine failure, choose levetiracetam, fosphenytoin, or valproate as a single second-line antiseizure medication; ESETT found no outcome difference among these agents across children, adults, and older adults. [3][4]",
+    "Persistent coma, confusion, or failure to return to baseline after apparent convulsive seizure cessation requires EEG assessment for nonconvulsive status epilepticus. [6][13]",
+    "Define refractory status epilepticus as persistence after one benzodiazepine plus at least one antiseizure medication; continued or recurrent seizures at least 24 hours after anesthetic therapy define super-refractory status epilepticus. [9]",
+    "Use protocolized rapid escalation: pediatric center pathways commonly initiate a non-benzodiazepine antiseizure medication within 5 to 15 minutes and third-line treatment within 15 to 30 minutes. [7]"
+  ],
+  "sections": [
+    {
+      "id": "activate-timed-treatment",
+      "eyebrow": "First decision",
+      "heading": "When to activate the status epilepticus pathway",
+      "intro": "Use seizure type and duration to determine whether immediate pharmacologic termination is required.",
+      "paragraphs": [
+        "Activate a time-stamped status epilepticus response for bilateral tonic-clonic seizure activity lasting more than 5 minutes or recurrent convulsions without recovery. The operational treatment threshold is 10 minutes for focal status epilepticus with or without impaired consciousness and 10 to 15 minutes for absence status epilepticus. [9]",
+        "During active convulsions, prioritize airway positioning, oxygenation and cardiorespiratory monitoring while preparing first-line medication. Seizure activity can produce systemic complications and permanent neuronal injury when treatment is delayed, so stabilization must not postpone antiseizure therapy. [18][19]",
+        "Document the observed or estimated seizure onset time, prior rescue medication, chronic antiseizure regimen, recent medication interruption, alcohol withdrawal risk, and possible cocaine, opioid, or other exposure. In ESETT adults, toxin-related seizures accounted for 11.6% of presentations; alcohol withdrawal and cocaine were each reported in 37% of toxin-related cases. [24]"
+      ],
+      "bullets": [
+        "Treat an ongoing bilateral tonic-clonic seizure at 5 minutes rather than waiting for a conventional 30-minute duration. [9]",
+        "If motor activity stops but consciousness does not recover as expected, move immediately to an EEG-directed nonconvulsive status epilepticus branch. [6][13]",
+        "Treat suspected toxin-related status epilepticus using the same benzodiazepine-to-second-line sequence while addressing the precipitant. [21][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Operational treatment and electrographic thresholds for major status epilepticus presentations. [9]",
+        "columns": [
+          "Presentation",
+          "Threshold",
+          "Immediate implication"
+        ],
+        "rows": [
+          [
+            "Bilateral tonic-clonic status epilepticus",
+            "More than 5 minutes [9]",
+            "Initiate emergency antiseizure treatment. [9]"
+          ],
+          [
+            "Focal status epilepticus with or without impaired consciousness",
+            "More than 10 minutes [9]",
+            "Treat as status epilepticus; assess for electroclinical evolution. [9]"
+          ],
+          [
+            "Absence status epilepticus",
+            "10 to 15 minutes [9]",
+            "Confirm electroclinical syndrome and initiate treatment. [9]"
+          ],
+          [
+            "Nonconvulsive status epilepticus in critically ill patients",
+            "At least 10 continuous minutes of electrographic or electroclinical seizure activity, or seizure burden at least 20% of an hour [9]",
+            "Use EEG to establish diagnosis and guide treatment response. [9][13]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "benzodiazepine-first-line",
+      "eyebrow": "Immediate termination",
+      "heading": "Give benzodiazepine therapy before loading a second-line agent",
+      "intro": "Do not delay first-line seizure termination while completing diagnostic studies.",
+      "paragraphs": [
+        "Administer a benzodiazepine as the first pharmacologic step for convulsive status epilepticus. U.S. pediatric center pathways uniformly used intravenous lorazepam as first-line therapy, with intramuscular midazolam or rectal diazepam listed as alternatives when intravenous access is unavailable or delayed. [7]",
+        "Move promptly from benzodiazepine treatment to a non-benzodiazepine antiseizure medication when seizures persist. The American Epilepsy Society timing framework places second-line therapy within 20 to 40 minutes, whereas nine of ten pediatric research-center pathways target earlier initiation, with a median of 10 minutes and a range of 5 to 15 minutes. [7]",
+        "Avoid repeated delays between treatment phases. Longer seizure duration is associated with benzodiazepine-resistant status epilepticus, supporting early transition rather than prolonged serial rescue treatment when convulsions continue. [12]"
+      ],
+      "bullets": [
+        "Use intravenous lorazepam when intravenous access is available. [7]",
+        "Use intramuscular midazolam or rectal diazepam as route alternatives when access delays first-line treatment. [7]",
+        "Start the second-line antiseizure medication immediately after persistent seizure activity establishes benzodiazepine-refractory status epilepticus. [3][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Time-based escalation used in guideline-informed pediatric status epilepticus pathways. [7]",
+        "columns": [
+          "Treatment phase",
+          "AES timing described in pathway comparison",
+          "Observed pediatric pathway practice"
+        ],
+        "rows": [
+          [
+            "Stabilization and first-line benzodiazepine",
+            "Stabilization-phase treatment [7]",
+            "All pathways used intravenous lorazepam; intramuscular midazolam and rectal diazepam were alternatives. [7]"
+          ],
+          [
+            "Second-line non-benzodiazepine antiseizure medication",
+            "Initiate within 20 to 40 minutes. [7]",
+            "Nine of ten pathways initiated earlier; median 10 minutes, range 5 to 15 minutes. [7]"
+          ],
+          [
+            "Third-line treatment",
+            "40 minutes. [7]",
+            "Eight of ten pathways recommended earlier escalation; median 20 minutes, range 15 to 30 minutes. [7]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "second-line-therapy",
+      "eyebrow": "Established status",
+      "heading": "Choose one second-line antiseizure medication after benzodiazepine failure",
+      "intro": "Selection among the three ESETT agents should be individualized because comparative efficacy was similar.",
+      "paragraphs": [
+        "For benzodiazepine-refractory convulsive status epilepticus, select one of levetiracetam, fosphenytoin, or valproate as the second-line intravenous antiseizure medication. ESETT was a double-blind, randomized trial in patients aged 2 years and older and found no difference in outcomes among the three agents overall or across pediatric, adult, and older-adult groups. [3][4]",
+        "Use patient-specific contraindications, existing antiseizure therapy, likely seizure etiology, and anticipated adverse-effect tradeoffs to select among the three agents; the trial result supports choosing promptly rather than delaying therapy to identify a universally preferred drug. [3][4]",
+        "In toxin-related benzodiazepine-refractory status epilepticus, a single second-line dose of levetiracetam, fosphenytoin, or valproate produced seizure cessation with improved consciousness at 1 hour in 42% of ESETT participants. [24]"
+      ],
+      "bullets": [
+        "Use one definitive second-line loading strategy rather than sequentially delaying escalation through multiple agents. [3][7]",
+        "If the first second-line agent fails, classify the episode as refractory status epilepticus and transfer management to an ICU-capable, EEG-guided pathway. [9]",
+        "Fosphenytoin has FDA-reviewed use in generalized convulsive status epilepticus and as short-term substitution for oral phenytoin. [1]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Evidence-supported second-line choices for benzodiazepine-refractory convulsive status epilepticus. [3][4]",
+        "columns": [
+          "Agent",
+          "Role in ESETT",
+          "Decision point"
+        ],
+        "rows": [
+          [
+            "Levetiracetam",
+            "Randomized second-line therapy in patients aged 2 years and older with benzodiazepine-refractory convulsive status epilepticus. [3][4]",
+            "Reasonable immediate selection; ESETT did not show inferior efficacy by age group. [3][4]"
+          ],
+          [
+            "Fosphenytoin",
+            "Randomized second-line therapy in ESETT; FDA-reviewed for generalized convulsive status epilepticus. [1][3][4]",
+            "Reasonable immediate selection; ESETT did not show superior efficacy over levetiracetam or valproate. [3][4]"
+          ],
+          [
+            "Valproate",
+            "Randomized second-line therapy in ESETT. [3][4]",
+            "Reasonable immediate selection; ESETT did not show superior efficacy over levetiracetam or fosphenytoin. [3][4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "refractory-escalation",
+      "eyebrow": "ICU escalation",
+      "heading": "Escalate persistent seizures to anesthetic therapy and continuous EEG",
+      "intro": "Persistent clinical or electrographic seizure activity after first- and second-line therapy requires critical-care management.",
+      "paragraphs": [
+        "Classify status epilepticus as refractory when it persists despite one benzodiazepine and at least one antiseizure medication. This threshold should trigger ICU-level escalation, airway planning, continuous EEG access, and treatment capable of suppressing ongoing electrographic seizures. [9][13]",
+        "If anesthetic induction is needed to terminate ongoing convulsive activity or facilitate intubation, propofol, midazolam, or etomidate may terminate seizures at induction. [23] Continue EEG monitoring because motor cessation after intubation does not exclude persistent electrographic seizures. [6][13]",
+        "Classify status epilepticus as super-refractory when it continues or recurs 24 hours or more after anesthetic therapy begins, including recurrence during anesthetic reduction or withdrawal. This phenotype warrants continued EEG-directed management and renewed search for an underlying cause driving seizure persistence. [9]"
+      ],
+      "bullets": [
+        "Escalate to EEG-guided critical care after failure of a benzodiazepine plus one antiseizure medication. [9][13]",
+        "Do not use absence of convulsions as evidence of seizure control after sedation, neuromuscular paralysis, or intubation; verify with EEG. [6][13]",
+        "Recognize recurrence during anesthetic weaning as super-refractory status epilepticus when it occurs at least 24 hours after anesthetic initiation. [9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Treatment-response categories that determine escalation. [9]",
+        "columns": [
+          "Category",
+          "Definition",
+          "Next management setting"
+        ],
+        "rows": [
+          [
+            "Benzodiazepine-refractory convulsive status epilepticus",
+            "Persistent convulsive status epilepticus after benzodiazepine therapy, requiring second-line antiseizure medication. [3][4]",
+            "Administer levetiracetam, fosphenytoin, or valproate promptly. [3][4]"
+          ],
+          [
+            "Refractory status epilepticus",
+            "Persists after one benzodiazepine and at least one antiseizure medication. [9]",
+            "ICU escalation with EEG-guided management and anesthetic-capable care. [9][13]"
+          ],
+          [
+            "Super-refractory status epilepticus",
+            "Continues or recurs 24 hours or more after anesthetic therapy begins, including during anesthetic reduction or withdrawal. [9]",
+            "Continue critical-care seizure management and reassess causes of ongoing status. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "nonconvulsive-status",
+      "eyebrow": "EEG branch",
+      "heading": "Detect and treat nonconvulsive status epilepticus after convulsions stop",
+      "intro": "Persistent encephalopathy after a seizure is an EEG indication, not a reason to wait for recurrent motor activity.",
+      "paragraphs": [
+        "Obtain EEG urgently in patients with persistent altered consciousness, unexplained coma, or subtle motor findings after an apparent convulsive seizure has ended. EEG is essential for detecting nonconvulsive status epilepticus, for which confusion or impaired consciousness may be the only clinical manifestation. [6][13]",
+        "In critically ill patients, diagnose nonconvulsive status epilepticus when electrographic or electroclinical seizures persist continuously for at least 10 minutes or occupy at least 20% of an hour of recording. [9] A monitoring duration of at least 15 minutes is recommended for diagnostic assessment. [10][15]",
+        "For ictal-interictal continuum patterns that do not independently fulfill nonconvulsive status epilepticus criteria, use an immediate diagnostic intravenous antiseizure medication trial. Concurrent EEG improvement and clinical improvement establish electroclinical nonconvulsive status epilepticus; EEG improvement alone does not establish that diagnosis. [9]"
+      ],
+      "bullets": [
+        "Use continuous or prolonged EEG rather than bedside observation to assess seizure control in sedated or persistently encephalopathic patients. [6][13][17]",
+        "Interpret an isolated electrographic response to an intravenous antiseizure medication cautiously unless clinical improvement accompanies it. [9]",
+        "Use the EEG result to distinguish ongoing nonconvulsive seizures from a postictal state or another cause of encephalopathy. [6][9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "EEG findings and actions for suspected nonconvulsive status epilepticus. [9][10]",
+        "columns": [
+          "EEG scenario",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Electrographic or electroclinical seizure activity for at least 10 continuous minutes",
+            "Meets critical-care nonconvulsive status epilepticus threshold. [9]",
+            "Treat and follow electrographic response with EEG. [9][13]"
+          ],
+          [
+            "Cumulative seizure burden at least 20% of one hour",
+            "Meets critical-care nonconvulsive status epilepticus threshold. [9]",
+            "Treat and follow electrographic response with EEG. [9][13]"
+          ],
+          [
+            "Ictal-interictal continuum pattern without definitive criteria",
+            "Possible electrographic status epilepticus. [9]",
+            "Perform an immediate diagnostic intravenous antiseizure medication trial and assess both EEG and clinical response. [9]"
+          ],
+          [
+            "EEG improvement without clinical improvement after diagnostic trial",
+            "Does not establish electroclinical nonconvulsive status epilepticus. [9]",
+            "Continue diagnostic assessment rather than assuming clinical seizure resolution. [9]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiology-and-disposition",
+      "eyebrow": "Parallel workup",
+      "heading": "Identify the precipitant while treatment proceeds",
+      "intro": "Etiologic testing should run in parallel with seizure termination and must not delay timed escalation.",
+      "paragraphs": [
+        "Use history to direct immediate etiologic branches: missed antiseizure medications or known epilepsy suggests breakthrough status; alcohol withdrawal or cocaine/opioid co-use raises concern for toxin-related status; new persistent encephalopathy increases the priority for EEG-confirmed nonconvulsive status epilepticus. [6][24]",
+        "Toxin-related status epilepticus is not automatically refractory: in ESETT, 42% of toxin-related benzodiazepine-refractory cases met the outcome of seizure cessation and improved consciousness 1 hour after a single second-line antiseizure medication. [24] Continue precipitant-directed management while maintaining standard seizure escalation.",
+        "Disposition is determined by treatment response rather than apparent cessation of motor activity alone. Admit patients with refractory status, anesthetic exposure, or unresolved encephalopathy to an ICU environment with EEG capability; use EEG to verify seizure control when clinical examination is limited. [6][9][13]"
+      ],
+      "bullets": [
+        "Screen specifically for alcohol withdrawal and cocaine or opioid exposure when the presentation lacks an alternative explanation. [24]",
+        "Do not defer second-line antiseizure therapy while evaluating a possible toxin exposure. [21][24]",
+        "Use persistent altered consciousness after convulsion cessation as a disposition and monitoring trigger for EEG-capable care. [6][13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic clues that alter the parallel evaluation during status epilepticus. [6][24]",
+        "columns": [
+          "Clinical pattern",
+          "Most actionable next step",
+          "What it changes"
+        ],
+        "rows": [
+          [
+            "Persistent encephalopathy after motor seizure cessation",
+            "Urgent prolonged or continuous EEG. [6][13][17]",
+            "Detects nonconvulsive status epilepticus requiring ongoing antiseizure management. [6][9]"
+          ],
+          [
+            "Alcohol withdrawal or suspected cocaine/opioid exposure",
+            "Treat seizures through the standard benzodiazepine-to-second-line sequence while managing the exposure. [21][24]",
+            "Identifies toxin-related status epilepticus without changing the need for rapid seizure termination. [24]"
+          ],
+          [
+            "Seizures persist after benzodiazepine plus one antiseizure medication",
+            "Escalate to ICU-level EEG-guided management. [9][13]",
+            "Establishes refractory status epilepticus. [9]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] NDA 20450 Suppl 003, Clinical Review - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020450s003%20fosphenytoin%20clinical%20bpca.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "mitigation measures are adequate. 59 Reference ID: 4057517 Clinical Review Philip H. Sheridan, MD Pediatric Supplement NDA 20550 S003 Cerebyx (Intravenous Fosphenytoin Sodium) 9 Appendices 9.1 Literature Review/References Brophy GM, Bell R, Claassen J, et al. Guidelines for the Evaluation and Manage",
+      "score": 0.7253574
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Curriculum Vitae: Lewis S. Nelson, MD - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/138639/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "PA. 2015 26. Shawn L, Nelson LS. Metabolic inhibitors. In: Arbo JE, Ruoss SJ, Lighthall GK, Jones MP. Decision Making in Emergency Critical Care. Wolters Kluwer. Philadelphia, PA. 2014 27. Chen BC, Nelson LS. Anticoagulants In: Arbo JE, Ruoss SJ, Lighthall GK, Jones MP. Decision Making in Emergency ",
+      "score": 0.111251086
+    },
+    {
+      "number": 3,
+      "title": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736(20)30611-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet. Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT",
+      "score": 0.8900749
+    },
+    {
+      "number": 4,
+      "title": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736%25252820%25252930611-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "# Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet. # Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (E",
+      "score": 0.87139857
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and systematic review of guidance documents for status epilepticus",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1525505023004742",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "We identified a total of 14 clinical practice guidelines and 11 consensus statements spanning the period from 1993 to 2022. The median score for clarity of presentation was 71.8% (ranging from 15.3% to 91.7%), indicating generally good clarity. However, the aspect of editorial independence received ",
+      "score": 0.7283819
+    },
+    {
+      "number": 6,
+      "title": "The management of status epilepticus in neurointensive care: an update",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1472029923002631",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This review summarizes the current knowledge on the aetiology, epidemiology, diagnostics, and treatment of SE with an overall aim to improve the patient outcome from this potentially catastrophic neurological presentation.\n\n## Organizational access\n\nGet full-text access by signing in with your organ",
+      "score": 0.5726516
+    },
+    {
+      "number": 7,
+      "title": "Hospital Emergency Treatment of Convulsive Status Epilepticus: Comparison of Pathways From Ten Pediatric Research Centers",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0887899418302315",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Conclusions\n\nThe pSERG hospitals status epilepticus pathways are consistent with the AES status epilepticus guideline in regard to the choice of medications, but generally recommend more rapid escalation in therapy than the guideline.\n\n   Previous article in issue\n   Next article in issue\n\n## Ke",
+      "score": 0.5553635
+    },
+    {
+      "number": 8,
+      "title": "Towards acute pediatric status epilepticus intervention teams: Do we need \u201cSeizure Codes\u201d?",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1059131118300505",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Methods\n\nNarrative review of current status epilepticus management algorithms, anti-seizure medication administration and outcomes associated with delays, and initiatives to improve time to treatment. Articles reviewing or reporting quality improvement initiatives were identified through a PubMe",
+      "score": 0.49875546
+    },
+    {
+      "number": 9,
+      "title": "Seminars in epileptology: How to diagnose status epilepticus in adults and children - Leitinger - 2025 - Epileptic Disorders - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/epd2.70033",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "|  |  |\n --- |\n| Duration and response to treatment | |\n| Refractory SE | SE refractory to one benzodiazepine and at least one ASM64 |\n| Prolonged refractory SE | Refractory SE that persists for at least 7\u2009days despite appropriate management, but without anesthetics65 |\n| Super-refractory SE | SE th",
+      "score": 0.70067
+    },
+    {
+      "number": 10,
+      "title": "Diagnosing nonconvulsive status epilepticus: Defining ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/epi.17694",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "A monitoring time of at least 15 min is recommended. minimum of one continuous minute. EEG response are identical for continuous EEG and",
+      "score": 0.5622973
+    },
+    {
+      "number": 11,
+      "title": "EEG Essentials - Continuum: Lifelong learning in Neurology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2022/04000/eeg_essentials.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advances in terminology and application of continuous EEG help unify neurologists in the diagnosis of nonconvulsive seizures and status epilepticus in patients",
+      "score": 0.5363378
+    },
+    {
+      "number": 12,
+      "title": "Excitatory GABAergic signalling is associated with benzodiazepine ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/brain/article/142/11/3482/5573076",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Benzodiazepine-resistant status epilepticus is an ongoing clinical challenge. Burman et al. show that longer seizure duration is a useful clinical indicato.",
+      "score": 0.52670854
+    },
+    {
+      "number": 13,
+      "title": "Emergent Management of Status Epilepticus | Continuum",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2024/06000/emergent_management_of_status_epilepticus.9.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "EEG may confirm convulsive status epilepticus, but EEG is essential for detecting nonconvulsive status epilepticus. Convulsive Status Epilepticus. Convulsive",
+      "score": 0.511644
+    },
+    {
+      "number": 14,
+      "title": "Epilepsy Emergencies",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2016/02000/epilepsy_emergencies.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n4.\n\nClaassen J, Mayer SA, Kowalski RG, et al. Detection of electrographic seizures with continuous EEG monitoring in critically ill patients. Neurology 2004; 62(10): 1743\u20131748.\n\nGoogle Scholar\n\n5.\n\nPrivitera M, Hoffman M, Moore JL, Jester D. EEG detection of nontonic-clonic",
+      "score": 0.51032627
+    },
+    {
+      "number": 15,
+      "title": "defining EEG and clinical response to diagnostic intravenous anti ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/epi.17694",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Diagnosing nonconvulsive status epilepticus: defining EEG and clinical response to diagnostic intravenous anti-seizure medication trials. Markus Leitinger1,2",
+      "score": 0.44912744
+    },
+    {
+      "number": 16,
+      "title": "Status Epilepticus",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2015/10000/status_epilepticus.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n28.\n\nVeran O, Kahane P, Thomas P, et al De novo epileptic confusion in the elderly: a 1-year prospective study. Epilepsia 2010; 51 (6): 1030\u20131035.\n\nCrossref\n\nGoogle Scholar\n\n29.\n\nTan RY, Neligan A, Shorvon SD. The uncommon causes of status epilepticus: a systematic review. ",
+      "score": 0.43108177
+    },
+    {
+      "number": 17,
+      "title": "Clinical practice guidelines on the management of status epilepticus ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17982",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Timing for performing EEG was suggested in seven CPGs with different delays (from 1 to 24 h) and it was recommended as prolonged or continuous",
+      "score": 0.42935818
+    },
+    {
+      "number": 18,
+      "title": "Status epilepticus - Chapman - 2001 - Association of Anaesthetists",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1046/j.1365-2044.2001.02115.x",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "host": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "snippet": "Status epilepticus is a medical emergency that requires rapid and vigorous treatment to prevent neuronal damage and systemic complications.",
+      "score": 0.3362662
+    },
+    {
+      "number": 19,
+      "title": "[PDF] PROTOCOL: 1042-SE-2001 - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/35/NCT03350035/Prot_002.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Adults: Report of the Guideline Committee of the Epilepsy Society. Epilepsy Currents, Vol 16, No 1 (January/February) 2016; 48-61 American Epilepsy Society. 3. Bhattacharjee A, Hirsch N. Management of status epilepticus. Anaesth Intens Care Med. 2015;16(4):159-160. 4. Brophy GM, Bell R, Claassen J, ",
+      "score": 0.67527276
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Official Title: A Study of Brexanolone for Acute ... - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/06/NCT04537806/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Care Unit (ICU) was gained during development of a separate indication for super-refractory status epilepticus (SRSE). Based on its unique pharmacology targeting multiple subtypes of GABAA receptors, brexanolone has the potential to attenuate the impact of COVID-19 in ventilated patients through mul",
+      "score": 0.14138834
+    },
+    {
+      "number": 21,
+      "title": "Treatment of Toxin-Related Status Epilepticus With Levetiracetam ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(22)00269-4/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Toxin-related benzodiazepine-refractory status epilepticus was successfully treated with a single dose of second-line antiseizure medication in",
+      "score": 0.6693348
+    },
+    {
+      "number": 22,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and Management of ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644%25252814%25252900080-8/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Evidence suggests that valproate works as well in status epilepticus after benzodiazepine administration as a second-line agent as phenytoin",
+      "score": 0.644248
+    },
+    {
+      "number": 23,
+      "title": "The Management of Status Epilepticus - Chest Journal",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(15)31173-9/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "an anesthetic induction dose of propofol, midazolam, or etomidate may terminate the seizure activity and facilitate intubation.56,57 \u2026 status epilepticus.",
+      "score": 0.42190963
+    },
+    {
+      "number": 24,
+      "title": "Treatment of Toxin-Related Status Epilepticus With Levetiracetam, Fosphenytoin, or Valproate in Patients Enrolled in the Established Status Epilepticus Treatment Trial - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/35718575",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Methods:\nThe ESETT was a prospective, double-blinded, adaptive trial evaluating levetiracetam, valproate, and fosphenytoin as second-line agents in benzodiazepine-refractory status epilepticus in adults and children. The primary outcome was the absence of seizures and improvement in the level of con",
+      "score": 0.8455478
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] NDA 20450 Suppl 003, Clinical Review - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/pediatric/020450s003%20fosphenytoin%20clinical%20bpca.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "mitigation measures are adequate. 59 Reference ID: 4057517 Clinical Review Philip H. Sheridan, MD Pediatric Supplement NDA 20550 S003 Cerebyx (Intravenous Fosphenytoin Sodium) 9 Appendices 9.1 Literature Review/References Brophy GM, Bell R, Claassen J, et al. Guidelines for the Evaluation and Manage",
+      "score": 0.7253574
+    },
+    {
+      "number": 2,
+      "title": "[PDF] Curriculum Vitae: Lewis S. Nelson, MD - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/138639/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "PA. 2015 26. Shawn L, Nelson LS. Metabolic inhibitors. In: Arbo JE, Ruoss SJ, Lighthall GK, Jones MP. Decision Making in Emergency Critical Care. Wolters Kluwer. Philadelphia, PA. 2014 27. Chen BC, Nelson LS. Anticoagulants In: Arbo JE, Ruoss SJ, Lighthall GK, Jones MP. Decision Making in Emergency ",
+      "score": 0.111251086
+    },
+    {
+      "number": 3,
+      "title": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736(20)30611-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet. Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT",
+      "score": 0.8900749
+    },
+    {
+      "number": 4,
+      "title": "Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/article/S0140-6736%25252820%25252930611-5/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "# Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (ESETT): a double-blind, responsive-adaptive, randomised controlled trial - The Lancet. # Efficacy of levetiracetam, fosphenytoin, and valproate for established status epilepticus by age group (E",
+      "score": 0.87139857
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and systematic review of guidance documents for status epilepticus",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1525505023004742",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "We identified a total of 14 clinical practice guidelines and 11 consensus statements spanning the period from 1993 to 2022. The median score for clarity of presentation was 71.8% (ranging from 15.3% to 91.7%), indicating generally good clarity. However, the aspect of editorial independence received ",
+      "score": 0.7283819
+    },
+    {
+      "number": 6,
+      "title": "The management of status epilepticus in neurointensive care: an update",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1472029923002631",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "This review summarizes the current knowledge on the aetiology, epidemiology, diagnostics, and treatment of SE with an overall aim to improve the patient outcome from this potentially catastrophic neurological presentation.\n\n## Organizational access\n\nGet full-text access by signing in with your organ",
+      "score": 0.5726516
+    },
+    {
+      "number": 7,
+      "title": "Hospital Emergency Treatment of Convulsive Status Epilepticus: Comparison of Pathways From Ten Pediatric Research Centers",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0887899418302315",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Conclusions\n\nThe pSERG hospitals status epilepticus pathways are consistent with the AES status epilepticus guideline in regard to the choice of medications, but generally recommend more rapid escalation in therapy than the guideline.\n\n   Previous article in issue\n   Next article in issue\n\n## Ke",
+      "score": 0.5553635
+    },
+    {
+      "number": 8,
+      "title": "Towards acute pediatric status epilepticus intervention teams: Do we need \u201cSeizure Codes\u201d?",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1059131118300505",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Methods\n\nNarrative review of current status epilepticus management algorithms, anti-seizure medication administration and outcomes associated with delays, and initiatives to improve time to treatment. Articles reviewing or reporting quality improvement initiatives were identified through a PubMe",
+      "score": 0.49875546
+    },
+    {
+      "number": 9,
+      "title": "Seminars in epileptology: How to diagnose status epilepticus in adults and children - Leitinger - 2025 - Epileptic Disorders - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/epd2.70033",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "|  |  |\n --- |\n| Duration and response to treatment | |\n| Refractory SE | SE refractory to one benzodiazepine and at least one ASM64 |\n| Prolonged refractory SE | Refractory SE that persists for at least 7\u2009days despite appropriate management, but without anesthetics65 |\n| Super-refractory SE | SE th",
+      "score": 0.70067
+    },
+    {
+      "number": 10,
+      "title": "Diagnosing nonconvulsive status epilepticus: Defining ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/epi.17694",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "A monitoring time of at least 15 min is recommended. minimum of one continuous minute. EEG response are identical for continuous EEG and",
+      "score": 0.5622973
+    },
+    {
+      "number": 11,
+      "title": "EEG Essentials - Continuum: Lifelong learning in Neurology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2022/04000/eeg_essentials.5.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advances in terminology and application of continuous EEG help unify neurologists in the diagnosis of nonconvulsive seizures and status epilepticus in patients",
+      "score": 0.5363378
+    },
+    {
+      "number": 12,
+      "title": "Excitatory GABAergic signalling is associated with benzodiazepine ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/brain/article/142/11/3482/5573076",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Benzodiazepine-resistant status epilepticus is an ongoing clinical challenge. Burman et al. show that longer seizure duration is a useful clinical indicato.",
+      "score": 0.52670854
+    },
+    {
+      "number": 13,
+      "title": "Emergent Management of Status Epilepticus | Continuum",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2024/06000/emergent_management_of_status_epilepticus.9.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "EEG may confirm convulsive status epilepticus, but EEG is essential for detecting nonconvulsive status epilepticus. Convulsive Status Epilepticus. Convulsive",
+      "score": 0.511644
+    },
+    {
+      "number": 14,
+      "title": "Epilepsy Emergencies",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2016/02000/epilepsy_emergencies.14.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n4.\n\nClaassen J, Mayer SA, Kowalski RG, et al. Detection of electrographic seizures with continuous EEG monitoring in critically ill patients. Neurology 2004; 62(10): 1743\u20131748.\n\nGoogle Scholar\n\n5.\n\nPrivitera M, Hoffman M, Moore JL, Jester D. EEG detection of nontonic-clonic",
+      "score": 0.51032627
+    },
+    {
+      "number": 15,
+      "title": "defining EEG and clinical response to diagnostic intravenous anti ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/epi.17694",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Diagnosing nonconvulsive status epilepticus: defining EEG and clinical response to diagnostic intravenous anti-seizure medication trials. Markus Leitinger1,2",
+      "score": 0.44912744
+    },
+    {
+      "number": 16,
+      "title": "Status Epilepticus",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/continuum/fulltext/2015/10000/status_epilepticus.11.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Crossref\n\nGoogle Scholar\n\n28.\n\nVeran O, Kahane P, Thomas P, et al De novo epileptic confusion in the elderly: a 1-year prospective study. Epilepsia 2010; 51 (6): 1030\u20131035.\n\nCrossref\n\nGoogle Scholar\n\n29.\n\nTan RY, Neligan A, Shorvon SD. The uncommon causes of status epilepticus: a systematic review. ",
+      "score": 0.43108177
+    },
+    {
+      "number": 17,
+      "title": "Clinical practice guidelines on the management of status epilepticus ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/epi.17982",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Timing for performing EEG was suggested in seven CPGs with different delays (from 1 to 24 h) and it was recommended as prolonged or continuous",
+      "score": 0.42935818
+    },
+    {
+      "number": 18,
+      "title": "Status epilepticus - Chapman - 2001 - Association of Anaesthetists",
+      "detail": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1046/j.1365-2044.2001.02115.x",
+      "authors": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "host": "associationofanaesthetists-publications.onlinelibrary.wiley.com",
+      "snippet": "Status epilepticus is a medical emergency that requires rapid and vigorous treatment to prevent neuronal damage and systemic complications.",
+      "score": 0.3362662
+    },
+    {
+      "number": 19,
+      "title": "[PDF] PROTOCOL: 1042-SE-2001 - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/35/NCT03350035/Prot_002.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Adults: Report of the Guideline Committee of the Epilepsy Society. Epilepsy Currents, Vol 16, No 1 (January/February) 2016; 48-61 American Epilepsy Society. 3. Bhattacharjee A, Hirsch N. Management of status epilepticus. Anaesth Intens Care Med. 2015;16(4):159-160. 4. Brophy GM, Bell R, Claassen J, ",
+      "score": 0.67527276
+    },
+    {
+      "number": 20,
+      "title": "[PDF] Official Title: A Study of Brexanolone for Acute ... - ClinicalTrials.gov",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/06/NCT04537806/Prot_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Care Unit (ICU) was gained during development of a separate indication for super-refractory status epilepticus (SRSE). Based on its unique pharmacology targeting multiple subtypes of GABAA receptors, brexanolone has the potential to attenuate the impact of COVID-19 in ventilated patients through mul",
+      "score": 0.14138834
+    },
+    {
+      "number": 21,
+      "title": "Treatment of Toxin-Related Status Epilepticus With Levetiracetam ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(22)00269-4/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Toxin-related benzodiazepine-refractory status epilepticus was successfully treated with a single dose of second-line antiseizure medication in",
+      "score": 0.6693348
+    },
+    {
+      "number": 22,
+      "title": "Clinical Policy: Critical Issues in the Evaluation and Management of ...",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644%25252814%25252900080-8/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "Evidence suggests that valproate works as well in status epilepticus after benzodiazepine administration as a second-line agent as phenytoin",
+      "score": 0.644248
+    },
+    {
+      "number": 23,
+      "title": "The Management of Status Epilepticus - Chest Journal",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(15)31173-9/pdf",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "an anesthetic induction dose of propofol, midazolam, or etomidate may terminate the seizure activity and facilitate intubation.56,57 \u2026 status epilepticus.",
+      "score": 0.42190963
+    },
+    {
+      "number": 24,
+      "title": "Treatment of Toxin-Related Status Epilepticus With Levetiracetam, Fosphenytoin, or Valproate in Patients Enrolled in the Established Status Epilepticus Treatment Trial - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/35718575",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Methods:\nThe ESETT was a prospective, double-blinded, adaptive trial evaluating levetiracetam, valproate, and fosphenytoin as second-line agents in benzodiazepine-refractory status epilepticus in adults and children. The primary outcome was the absence of seizures and improvement in the level of con",
+      "score": 0.8455478
+    }
+  ],
+  "publishedAt": "2026-09-15T22:21:14.404442+00:00",
+  "updatedAt": "2026-09-15T22:21:14.404442+00:00",
+  "readingMinutes": 6,
+  "slug": "status-epilepticus-treatment-sequence"
+}

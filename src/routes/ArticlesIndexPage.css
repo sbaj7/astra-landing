@@ -7,6 +7,9 @@
 .article-library-search input { width: 100%; padding: 15px 0; border: 0; border-bottom: 1px solid var(--article-ink); border-radius: 0; background: transparent; color: var(--article-ink); font: inherit; font-size: 18px; }
 .article-library-search p { margin: 10px 0 0; color: var(--article-muted); font-size: 12px; }
 .article-library-list { border-top: 1px solid var(--article-line); }
+.article-specialty-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 32px 0; font-size: 14px; line-height: 1.6; }
+.article-specialty-links a { color: var(--article-muted); text-underline-offset: 4px; }
+.article-specialty-links a[aria-current="page"] { color: var(--article-ink); font-weight: 600; }
 .article-library-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; padding: 34px 0; border-bottom: 1px solid var(--article-line); }
 .article-library-item p { margin: 0 0 8px; color: var(--article-accent); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 .article-library-item h2 { margin: 0; font-family: var(--article-display); font-size: clamp(25px, 3vw, 32px); font-weight: 400; line-height: 1.12; }

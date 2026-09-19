@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonology",
+  "title": "Pleural Fluid Interpretation",
+  "summary": "Interpret pleural fluid by first identifying infection requiring drainage, then applying Light criteria, correcting pseudoexudates, and directing targeted tests for malignancy, tuberculosis, chylothorax, and other high-consequence etiologies.",
+  "seoDescription": "Point-of-care interpretation of pleural fluid: Light criteria, pseudoexudates, pleural infection thresholds, and targeted testing for key etiologies.",
+  "clinicalQuestion": "How should pleural fluid results direct diagnosis, drainage decisions, and targeted evaluation of an adult pleural effusion?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "pleural fluid analysis",
+    "Light criteria",
+    "parapneumonic effusion",
+    "empyema",
+    "thoracentesis",
+    "exudative pleural effusion",
+    "transudative pleural effusion"
+  ],
+  "keyTakeaways": [
+    "Perform diagnostic thoracentesis for a clinically significant effusion measuring at least 10 mm radiographically; use real-time ultrasound to select a safe site. [12][15]",
+    "Classify fluid as exudative if any Light criterion is met: pleural-to-serum protein ratio greater than 0.5, pleural-to-serum LDH ratio greater than 0.6, or pleural LDH greater than two-thirds the serum LDH upper limit of normal. [8][11]",
+    "In a clinically suspected transudate classified as exudative after diuresis, obtain a serum-effusion albumin gradient; a gradient greater than 1.2 g/dL supports a misclassified transudate. [10]",
+    "Frank pus, a positive Gram stain or culture, pleural pH below 7.2, or glucose below 60 mg/dL identifies pleural infection that requires drainage in addition to antimicrobial therapy. [1][5][11]",
+    "For loculated pleural infection with persistently poor tube output, reassess tube position and residual collections with ultrasound or CT; intrapleural alteplase plus DNase is a drainage-rescue option before surgical intervention. [1][7][22]"
+  ],
+  "sections": [
+    {
+      "id": "first-pass",
+      "eyebrow": "Initial triage",
+      "heading": "Decide whether fluid sampling or urgent pleural drainage is needed",
+      "intro": "The first distinction is not transudate versus exudate; it is whether the pleural space is infected or causing immediate physiologic compromise.",
+      "paragraphs": [
+        "Use chest radiography and thoracic ultrasound to confirm fluid, estimate volume, identify septations or locules, and choose the thoracentesis site. A clinically significant effusion at least 10 mm thick on imaging is an indication for thoracentesis. Ultrasound is also used to assess procedural safety and needle-entry location. [12][15]",
+        "In pneumonia, obtain pleural fluid when the patient is sufficiently ill to require hospitalization, has hospital-acquired pneumonia during anti-infective therapy, or fails to respond as expected to treatment for presumed bacterial pneumonia with an effusion. Send the initial specimen for paired pleural and serum protein and LDH, pleural pH, glucose, cell count with differential, Gram stain, aerobic and anaerobic culture, and cytology when malignancy is plausible. [5][9][11][14]",
+        "Treat frank pus as empyema and proceed to pleural drainage rather than awaiting additional chemistry. A positive Gram stain or culture, low pH, low glucose, or loculated anatomy also shifts management toward chest-tube drainage because antibiotics alone are less likely to achieve source control. [1][5][11]"
+      ],
+      "bullets": [
+        "Collect pleural pH in a heparinized blood-gas syringe when infection is suspected but fluid is not grossly purulent. [14]",
+        "Use aerobic and anaerobic culture methods when bacterial pleural infection is suspected; add fungal or mycobacterial studies when the clinical scenario warrants special-media testing. [5][11][14]",
+        "Send serum protein and LDH concurrently with pleural fluid so Light criteria can be calculated without delay. [11][14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial pleural-fluid studies and the management decision each informs. [9][11][14]",
+        "columns": [
+          "Test",
+          "Interpretation",
+          "Immediate next action"
+        ],
+        "rows": [
+          [
+            "Pleural pH",
+            "Low pH in suspected infection supports a complicated parapneumonic effusion; pH below 7.2 was used in a pleural-infection cohort receiving drainage and later tPA/DNase. [1][14]",
+            "Assess for chest-tube drainage and residual loculated fluid. [1][11]"
+          ],
+          [
+            "Pleural glucose",
+            "Glucose below 60 mg/dL strongly supports empyema in the appropriate clinical setting. [5]",
+            "Drain if infection is suspected and correlate with pH, Gram stain, culture, and imaging. [5][11]"
+          ],
+          [
+            "Gram stain and culture",
+            "Organisms on Gram stain or positive culture establish microbiologic pleural infection. [5][11]",
+            "Provide antimicrobial therapy and pleural drainage. [5][23]"
+          ],
+          [
+            "Protein and LDH with paired serum values",
+            "Determine transudate versus exudate using Light criteria. [8][11]",
+            "Use the resulting branch to select targeted tests and cause-directed management. [8][13]"
+          ],
+          [
+            "Cell count and differential; cytology",
+            "Neutrophil-predominant fluid supports acute inflammation; lymphocytic fluid should raise consideration of tuberculosis or malignancy in the appropriate context. Cytology can identify malignant cells. [3][14]",
+            "Match additional microbiologic testing, imaging, and tissue diagnosis to the clinical differential. [3][14][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "light-criteria",
+      "eyebrow": "Core classification",
+      "heading": "Apply Light criteria, then recognize pseudoexudates",
+      "intro": "Light criteria are the entry point for etiologic testing, not a final diagnosis.",
+      "paragraphs": [
+        "Classify the effusion as exudative when any one criterion is present: pleural-fluid protein divided by serum protein greater than 0.5; pleural-fluid LDH divided by serum LDH greater than 0.6; or pleural-fluid LDH greater than two-thirds the laboratory upper limit of normal for serum LDH. Light criteria are recommended as the initial test because they prioritize sensitivity for exudates. [8][11]",
+        "An exudate directs attention to pleural or pulmonary disease, particularly infection and malignancy; it can also occur with autoimmune disease and pancreatitis. A transudative pattern instead supports systemic hydrostatic or oncotic disorders such as heart failure, hepatic hydrothorax, or nephrotic syndrome. Do not use the biochemical category alone to close the diagnostic process. [13][15]",
+        "Heart-failure effusions are a major pseudoexudate trap: approximately one-third of congestive cardiac failure effusions may meet Light criteria for an exudate, and other reports describe misclassification of 25% to 30% of heart-failure transudates. When the clinical phenotype favors heart failure but Light criteria indicate an exudate, calculate the serum-effusion albumin gradient; a value greater than 1.2 g/dL supports a transudative process. Serum or pleural NT-proBNP at least 1,500 pg/mL can also identify a heart-failure effusion misclassified by Light criteria. [8][9][10]",
+        "Interpret a markedly elevated LDH as a severity clue rather than a diagnosis. Pleural LDH more than three times the serum upper limit of normal, often above 1,000 U/L, is compatible with pleural infection but also occurs with rheumatoid pleurisy, tuberculous pleurisy, and malignancy. Use pH, glucose, microbiology, differential cell count, imaging, and the clinical syndrome to separate these possibilities. [13]"
+      ],
+      "bullets": [
+        "Do not replace Light criteria with pleural cholesterol, pleural-to-serum cholesterol ratio, or pleural-to-serum bilirubin ratio for initial transudate-exudate classification. [8]",
+        "If a patient with known heart failure and bilateral effusions has no evidence of a second process, the pretest probability of a heart-failure effusion remains high despite an apparent exudate after diuresis. [13]",
+        "Use the albumin gradient or NT-proBNP to prevent an unnecessary malignant or inflammatory workup when the clinical picture and pseudoexudate testing agree. [8][10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Light criteria and pseudoexudate correction. [8][10][11]",
+        "columns": [
+          "Result",
+          "Interpretation",
+          "What it changes"
+        ],
+        "rows": [
+          [
+            "Protein ratio >0.5, LDH ratio >0.6, or pleural LDH >2/3 serum LDH upper limit",
+            "Exudate if any criterion is met. [8][11]",
+            "Pursue infection, malignant, inflammatory, pancreatic, and other localized pleural causes. [13][15]"
+          ],
+          [
+            "No Light criterion met",
+            "Transudative pattern. [8][11]",
+            "Evaluate systemic causes such as heart failure, hepatic hydrothorax, and nephrotic syndrome. [15]"
+          ],
+          [
+            "Clinical heart failure but Light-positive exudate; serum-effusion albumin gradient >1.2 g/dL",
+            "Misclassified transudate is likely. [10]",
+            "Prioritize management of the systemic process unless other findings suggest a second diagnosis. [10][13]"
+          ],
+          [
+            "Clinical heart failure but Light-positive exudate; serum or pleural NT-proBNP \u22651,500 pg/mL",
+            "Supports a heart-failure transudate misclassified by Light criteria. [8]",
+            "Avoid labeling the fluid as pleural inflammation solely on the basis of Light criteria. [8]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "infection-branch",
+      "eyebrow": "High-consequence exudate",
+      "heading": "Identify parapneumonic effusions that require drainage",
+      "intro": "Pleural infection requires simultaneous antimicrobial therapy and adequate drainage of infected fluid.",
+      "paragraphs": [
+        "A parapneumonic effusion is uncomplicated when it is free-flowing and small; category 1 is defined as free-flowing fluid less than 10 mm thick on imaging. Once fluid is sampled, adverse prognostic features are determined by pleural anatomy, microbiology, and chemistry. These features distinguish uncomplicated effusions from complicated parapneumonic effusion and empyema. [11]",
+        "Drain the pleural space for frank pus, bacteria identified by Gram stain or culture, or biochemical evidence of advanced infection. Pleural fluid pH below 7.3 or glucose below 60 mg/dL strongly supports empyema in the appropriate clinical setting; a pH below 7.2 was a defining feature in a cohort treated with tube drainage followed by rescue intrapleural therapy. [1][5]",
+        "After chest-tube placement, reassess drainage volume and residual collection rather than judging response from systemic symptoms alone. In one large single-center protocol, output below 200 mL in 24 hours plus septations on ultrasound or low-dose CT prompted consideration of intrapleural therapy; dry tap or similarly low output prompted CT 24 to 48 hours before treatment to confirm tube position and define multiloculation. [22]",
+        "For loculated pleural infection that remains poorly drained despite a functioning tube and antibiotics, intrapleural combined alteplase 10 mg plus dornase alfa 5 mg improved drainage in MIST2-derived practice. Combined therapy has been associated with improved resolution and reduced need for surgery; bleeding, including heavy blood-stained drainage, is a clinically important complication requiring reassessment and possible discontinuation. [1][7][23]"
+      ],
+      "bullets": [
+        "Do not initiate intrapleural tPA/DNase as first-line management when a drain has not yet been placed and optimized; published use followed antibiotics and chest-tube drainage with poor or absent output plus persistent fluid. [1]",
+        "Use ultrasound or CT to identify septations, loculations, and inadequate drain position before attributing low output to fibrinous obstruction alone. [22]",
+        "Monitor drain output, serial imaging, hemoglobin when bleeding is a concern, and ongoing clinical response after intrapleural therapy. [1][21][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Pleural infection features that escalate management. [1][5][11][22]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Free-flowing fluid <10 mm",
+            "Category 1 parapneumonic effusion. [11]",
+            "Manage the pneumonia and monitor; thoracentesis is not required solely for this small category. [11]"
+          ],
+          [
+            "Frank pus",
+            "Empyema. [1][5]",
+            "Institute antimicrobial therapy and chest-tube drainage. [5][23]"
+          ],
+          [
+            "Positive Gram stain or culture",
+            "Established pleural-space infection. [5][11]",
+            "Drain the pleural space and direct antimicrobial therapy to microbiology when available. [5][23]"
+          ],
+          [
+            "pH <7.2 or glucose <60 mg/dL",
+            "Complicated infection/empyema physiology. [1][5]",
+            "Arrange tube drainage and assess for loculation. [1][11]"
+          ],
+          [
+            "Septations or locules with output <200 mL/24 h after tube placement",
+            "Inadequate drainage despite catheter placement. [22]",
+            "Confirm catheter position and residual collection with ultrasound or CT; consider intrapleural tPA/DNase if drainage remains inadequate. [22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "targeted-exudate-testing",
+      "eyebrow": "Etiologic branch points",
+      "heading": "Use appearance, cell profile, and selective assays to narrow an exudate",
+      "intro": "Order nonroutine fluid studies only when the clinical context and initial fluid profile create a specific diagnostic branch.",
+      "paragraphs": [
+        "Gross appearance can immediately direct testing. Cloudy fluid may represent purulence or chyle, particularly after thoracic or cardiac surgery; send microbiology when infection is possible and triglycerides when chylous fluid is suspected. An elevated pleural triglyceride concentration supports chylothorax. Serosanguinous fluid is nonspecific and can occur with trauma, postpericardiotomy syndromes, collagen-vascular disease, infection, or neoplasia, so it requires cytology and contextual evaluation rather than diagnosis by appearance. [3]",
+        "Use the differential cell count as a directional test. A polymorphonuclear predominance greater than 1,000 cells/mL is consistent with bacterial infection in the cited fluid-interpretation framework, whereas lymphocyte predominance should prompt consideration of tuberculous disease and malignant processes. For suspected tuberculosis, send acid-fast bacilli testing and mycobacterial culture; these require appropriate laboratory handling and should be ordered at the initial thoracentesis rather than added after the specimen is discarded. [3][14]",
+        "Cytology is the initial fluid-based test when malignancy is suspected, but negative cytology does not end the evaluation of an unexplained exudate. In persistent undiagnosed pleural effusion where cancer remains a concern, medical thoracoscopy or pleuroscopy provides pleural tissue; a high-quality systematic review found a pooled negative likelihood ratio below 0.1, supporting its value for ruling out a diagnosis in selected unexplained effusions. [14][16]",
+        "Reserve disease-specific chemistry for a congruent syndrome. Pleural glucose may be useful in suspected rheumatic disease, while triglyceride and bilirubin measurements can clarify unusual fluid coloration or suspected chyle/bilious contamination. These tests supplement, rather than replace, paired protein and LDH, microbiology, cell count, and cytology. [14][15]"
+      ],
+      "bullets": [
+        "Send cytology with the remaining available fluid volume when malignant pleural effusion is in the differential. [14]",
+        "Order acid-fast testing and mycobacterial culture at the initial procedure when tuberculosis is clinically suspected. [5][14]",
+        "Interpret high LDH with caution: infection, rheumatoid pleurisy, tuberculosis, and malignancy can all produce marked elevations. [13]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Targeted interpretation of selected pleural-fluid patterns. [3][13][14][16]",
+        "columns": [
+          "Pattern or suspicion",
+          "Targeted test",
+          "Interpretation and next step"
+        ],
+        "rows": [
+          [
+            "Cloudy fluid, especially after chest or cardiac surgery",
+            "Pleural triglycerides; microbiology if infection is possible. [3]",
+            "Elevated triglycerides support chylothorax; purulence requires infection management and drainage. [3][5]"
+          ],
+          [
+            "Lymphocyte-predominant exudate with tuberculosis concern",
+            "Acid-fast bacilli testing and mycobacterial culture. [14]",
+            "Evaluate for tuberculous pleuritis; ensure appropriate specimen processing. [14]"
+          ],
+          [
+            "Exudate with cancer concern",
+            "Cytology. [14]",
+            "If cytology is nondiagnostic and suspicion persists, obtain pleural tissue by pleuroscopy/medical thoracoscopy. [16]"
+          ],
+          [
+            "Pleural LDH often >1,000 U/L",
+            "pH, glucose, Gram stain/culture, differential cell count, and clinical correlation. [13][14]",
+            "Consider pleural infection, rheumatoid pleurisy, tuberculosis, or malignancy; do not assign a cause from LDH alone. [13]"
+          ],
+          [
+            "Suspected rheumatic pleurisy",
+            "Pleural glucose. [14]",
+            "Use the result as supportive evidence within the rheumatologic and infectious differential. [14]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "procedure-and-escalation",
+      "eyebrow": "Escalation",
+      "heading": "Escalate unresolved exudates and drainage failure with a defined procedural question",
+      "intro": "Each escalation should answer one of three questions: Is the catheter positioned correctly, is infected fluid still present, or is tissue diagnosis required?",
+      "paragraphs": [
+        "Use low-dose chest CT or thoracic ultrasound when a drain yields little fluid despite persistent opacity or suspected loculation. In a tPA/DNase protocol, CT was obtained 24 to 48 hours before therapy in patients with dry tap or output below 200 mL over 24 hours, then repeated 48 to 72 hours afterward to assess residual multiloculated fluid and treatment response. [22]",
+        "Do not rely on chest radiography alone to quantify response after intrapleural tPA/DNase for a loculated effusion. In a comparative study, radiographic improvement on chest CT did not correlate with chest radiograph assessment after treatment; use cross-sectional imaging selectively when the drainage decision depends on residual locules or tube position. [24]",
+        "Refer for thoracic procedural evaluation when infection persists despite antibiotics, appropriately positioned tube drainage, and consideration of intrapleural therapy, or when an unexplained exudate requires pleural biopsy. Surgical intervention remains necessary for some patients with pleural infection despite medical drainage, while pleuroscopy can provide diagnostic tissue in selected undiagnosed effusions. [1][16]"
+      ],
+      "bullets": [
+        "Use serial drain output plus imaging rather than drain output alone to determine whether a loculated collection is resolving. [1][22]",
+        "Stop and reassess intrapleural fibrinolytic treatment if substantial blood staining or clinically consequential bleeding develops. [1][21]",
+        "Choose pleural tissue sampling when fluid studies do not establish the diagnosis and malignancy remains clinically suspected. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Procedural escalation based on the unresolved clinical question. [1][16][22][24]",
+        "columns": [
+          "Problem after initial thoracentesis or drainage",
+          "Best next assessment",
+          "Escalation"
+        ],
+        "rows": [
+          [
+            "Persistent fluid with poor chest-tube output",
+            "Thoracic ultrasound or low-dose chest CT to assess catheter position, septations, and multiloculation. [22]",
+            "Optimize drainage; consider combined intrapleural alteplase and DNase for persistent loculated pleural infection. [1][7][22]"
+          ],
+          [
+            "Persistent loculated pleural infection after medical drainage",
+            "Clinical response, drain output, and imaging assessment. [1][22]",
+            "Thoracic surgical evaluation may be required when medical management fails. [1]"
+          ],
+          [
+            "Unexplained exudate with ongoing concern for pleural malignancy after cytology",
+            "Pleural tissue acquisition by medical thoracoscopy/pleuroscopy. [16]",
+            "Use tissue pathology to establish or help exclude malignancy in selected patients. [16]"
+          ],
+          [
+            "Discordant chest radiograph and clinical/drainage findings after tPA/DNase",
+            "CT when residual-volume assessment will alter management. [24]",
+            "Do not use chest radiograph alone to determine radiologic treatment response in this setting. [24]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "S12\u2005Experience with Intrapleural Tissue Plasminogen Activator and DNase in the Treatment of Pleural Infection | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/67/Suppl_2/A8.3",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Title: S12\u2005Experience with Intrapleural Tissue Plasminogen Activator and DNase in the Treatment of Pleural Infection | Thorax\nIn many patients medical management with chest tube drainage and antibiotics fails and surgical intervention is required. The MIST2 trial reported improved resolution followi",
+      "score": 0.5809471
+    },
+    {
+      "number": 2,
+      "title": "Pleural Effusions: The Diagnostic Separation of Transudates and ...",
+      "detail": "www.annals.org",
+      "url": "https://www.annals.org/content/77/4/507",
+      "authors": "www.annals.org",
+      "host": "www.annals.org",
+      "snippet": "In this prospective study of 150 pleural effusions, the utility of pleural-fluid cell counts, protein levels, and lactic dehydrogenase (LDH) levels",
+      "score": 0.15194441
+    },
+    {
+      "number": 3,
+      "title": "Pericardiocentesis - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/pericardiocentesis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "#### Interpretation\n\nLaboratory analysis of pericardial fluid includes cell count and differential, microbiologic evaluation, cytology, and blood chemistry workup, which may include protein, glucose, pH, lactate dehydrogenase (LDH) and triglycerides. Normally pericardial fluid is clear and straw col",
+      "score": 0.68420124
+    },
+    {
+      "number": 4,
+      "title": "The use of non-routine pleural fluid analysis in the diagnosis of pleural effusion",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611110001253",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The investigation of a pleural effusion is, in general, a very straight forward process with the combination of clinical history, examination, radiology and pleural fluid analysis leading to diagnosis in most cases. While most fluid samples are sent for routine analysis including protein, LDH, gluco",
+      "score": 0.5962692
+    },
+    {
+      "number": 5,
+      "title": "Cavitary Pneumonia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/cavitary-pneumonia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The diagnosis of empyema is strongly supported by the presence of thick pus, bacteria demonstrable when the fluid is subjected to Gram stain, a pH less than 7.3, or a glucose concentration less than 60 mg/dl. In exudative pleural effusions, the protein concentration is rarely less than 3.0 g/dl, and",
+      "score": 0.5917474
+    },
+    {
+      "number": 6,
+      "title": "Enzyme-linked immunospot assay for interferon-gamma in the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X14604304",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Standard diagnostic tests for pleural fluid included chemistry, cell count, differential count, cytology, and culture of bacteria, including mycobacteria, and",
+      "score": 0.58123237
+    },
+    {
+      "number": 7,
+      "title": "Short\u2010course intrapleural alteplase and DNase in complex effusion with bleeding risk - Cheong - 2020 - Respirology Case Reports - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/rcr2.648",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Short-course intrapleural alteplase and DNase in complex effusion with bleeding risk. In poorly draining complex pleural effusions, the current management favours a less invasive image-guided placement of smaller bore catheters and adjunctive intrapleural fibrinolysis therapy (IPFT). We describe o",
+      "score": 0.44333586
+    },
+    {
+      "number": 8,
+      "title": "Pleural effusion guidelines from ICS and NCCP Section 1: Basic principles, laboratory tests and pleural procedures",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11093145",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### Evidence statement\n\nLight\u2019s criteria have a sensitivity of 99% and specificity of 98% in identifying an exudative pleural effusion. The pleural effusion from approximately one-third of patients with CCF may be classified as exudative by Light\u2019s criteria. The pleural fluid cholesterol, pleural f",
+      "score": 0.62934244
+    },
+    {
+      "number": 9,
+      "title": "Pleural Effusion - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK448189",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "17.\n:   Pairman L, Beckert LEL, Dagger M, Maze MJ. Evaluation of pleural fluid cytology for the diagnosis of malignant pleural effusion: a retrospective cohort study. Intern Med J. 2022 Jul;52(7):1154-1159. [PMC free article: PMC9542185] [PubMed: 35191191]\n\n18.\n:   Helgeson SA, Fritz AV, Tatari MM, ",
+      "score": 0.5513086
+    },
+    {
+      "number": 10,
+      "title": "Pleural effusion: diagnosis, treatment, and management - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4753987",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Characterization of pleural fluid as an exudate or transudate is an important step in pleural fluid analysis.34 Light\u2019s criteria35 (Table 3) are the most sensitive for identifying exudates, with 98% sensitivity but have lower specificity (74%), although a study by Heffner et al failed to demonstrate",
+      "score": 0.54303354
+    },
+    {
+      "number": 11,
+      "title": "Which patients with a parapneumonic effusion need a chest tube?",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/8/609",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Gram stain\n Appropriate cultures based on clinical scenario (eg, aerobic, anaerobic, fungal)\n Total protein in pleural fluid and serum\n Lactate dehydrogenase (LDH) in pleural fluid and serum\n Glucose\n pH.\n\n## CLASSIFICATION OF EFFUSIONS\n\nWhen pleural fluid is obtained, the total protein and LDH leve",
+      "score": 0.50183165
+    },
+    {
+      "number": 12,
+      "title": "Physiology, Pleural Fluid - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513353",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The Light criteria is a useful way to differentiate between transudate and exudate, which can then be further evaluated with lab tests and in the context of the clinical presentation of the patient. Evaluation of pleural fluid can be used to determine the cause of pleural effusion and help guide the",
+      "score": 0.49963441
+    },
+    {
+      "number": 13,
+      "title": "Interpreting pleural fluid results - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6542220",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "An exudative effusion, conversely, is usually caused by a disease localised to the pleura. Leakage of fluid is due to increased capillary permeability triggered by an insult such as infection or malignancy.\n\n## Pleural fluid lactate dehydrogenase\n\nLDH is a marker of inflammation or cellular injury, ",
+      "score": 0.48630774
+    },
+    {
+      "number": 14,
+      "title": "Pleural Effusion in Adults\u2014Etiology, Diagnosis, and Treatment - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6647819",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Question 4\n\nWhat is the risk of pneumothorax after puncture of a pleural effusion?\n\n1.   0.1\u20130.5%\n\n2.   0.6\u20136%\n\n3.   6\u201310%\n\n4.   10\u201320%\n\n5.   20\u201330%\n\nQuestion 5\n\nThe distinction between a transudate and an exudate is determinative for the further evaluation and treatment of a pleural effusion. What ",
+      "score": 0.4787
+    },
+    {
+      "number": 15,
+      "title": "Unilateral green pleural effusion in a 22-year-old woman | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/8/491",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "TABLE 2\n\nPleural fluid analysis and rationale\n\nThe patient underwent lung ultrasonography to assess the safety of performing thoracentesis and secondarily to determine the site of needle insertion. Thoracentesis resulted in the drainage of 1,500 mL of green-hued, thin, nonviscous pleural fluid (Figu",
+      "score": 0.47621483
+    },
+    {
+      "number": 16,
+      "title": "Pleuroscopy for the Diagnosis of Cancer in Patients with Pleural Effusion: A Review of the Diagnostic Accuracy, Safety, Cost-Effectiveness and Guidelines - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563003",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "This report was comprised of one study that included results for both a systematic review and non-randomized retrospective diagnostic study,15 one systematic review,14 three diagnostic studies,16\u201318 three prospective randomized controlled studies,20\u201322 11 non-randomized retrospective studies,23\u201333 o",
+      "score": 0.39908597
+    },
+    {
+      "number": 17,
+      "title": "Unilateral green pleural effusion in a 22-year-old woman",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/8/491/tab-figures-data",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The use of non-routine pleural fluid analysis in the diagnosis of pleural effusion. Pathologic analysis of pleural fluid allows for detection",
+      "score": 0.25351477
+    },
+    {
+      "number": 18,
+      "title": "Chylothorax in Infants and Children | Pediatrics - AAP Publications",
+      "detail": "pediatrics.aappublications.org",
+      "url": "https://pediatrics.aappublications.org/content/133/4/722?download=true",
+      "authors": "pediatrics.aappublications.org",
+      "host": "pediatrics.aappublications.org",
+      "snippet": "Pleural fluid triglyceride and lipoprotein analysis should be performed in all newborns with pleural effusion.1,88. Other Investigations. Once",
+      "score": 0.23635799
+    },
+    {
+      "number": 19,
+      "title": "When should an indwelling pleural catheter be considered for malignant pleural effusion? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/83/12/891",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "No related articles found.\n\nPubMed   Google Scholar\n\n Chest Tube Drainage of the Pleural Space: A Concise Review for Pulmonologists\n Novel complications of the tunnelled indwelling pleural catheter\n Management of Pleural Effusions in the Emergency Department\n Current Trends in Treating Malignant Ple",
+      "score": 0.2328858
+    },
+    {
+      "number": 20,
+      "title": "Intrapleural DNase and Tissue Plasminogen Activator in ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/42/NCT01717742/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "of tPA and DNase therapy improves the drainage of pleural fluid in patients with pleural infection, reduces hospital stay and the need for thoracic surgery. Data for children are lacking at the present time. Extrapolating from Adult DNase trial to the management of children: The aforementioned revie",
+      "score": 0.67269784
+    },
+    {
+      "number": 21,
+      "title": "Safety and Efficacy of Tissue Plasminogen Activator and DNase for Complicated Pleural Effusions Secondary to Abdominal Pathology",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201608-594BC?role=tab",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Title: Safety and Efficacy of Tissue Plasminogen Activator and DNase for Complicated Pleural Effusions Secondary to Abdominal Pathology\nPrevious studies have demonstrated that intrapleural administration of tissue plasminogen activator (tPA) combined with human recombinant DNase can improve fluid dr",
+      "score": 0.61307496
+    },
+    {
+      "number": 22,
+      "title": "Concurrent Intrapleural Instillation of Tissue Plasminogen Activator and DNase for Pleural Infection. A Single-Center Experience | Annals of the American Thoracic Society",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1513/AnnalsATS.201602-127OC",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "**Objectives:** To assess the safety and efficacy of concurrent instillation of intrapleural tPA/DNase guided by radiographic and clinical response in patients with pleural infection. The intrapleural therapy of combined tissue plasminogen activator (tPA) and human recombinant DNase (DNase) in the m",
+      "score": 0.5411427
+    },
+    {
+      "number": 23,
+      "title": "Short\u2010course intrapleural alteplase and DNase in complex effusion with bleeding risk - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7446304",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "She received three doses of 16\u2009mg intrapleural alteplase with 5 mg intrapleural DNase as per protocol. There was subsequent improvement of pleural drainage and her fever subsided. There was minimal drop of haemoglobin from 8.6 to 7.8 g/dL with no immediate bleeding complications throughout hospitali",
+      "score": 0.5180835
+    },
+    {
+      "number": 24,
+      "title": "Comparison of Chest CT Scan Versus Chest X-ray in Evaluating Radiologic Improvement After Treatment With Intrapleural Tissue Plasminogen Activator (TPA) and Deoxiribonuclease (DNase) for Chest Tube Refractory Complex Pleural Effusions - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)36233-X/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# Comparison of Chest CT Scan Versus Chest X-ray in Evaluating Radiologic Improvement After Treatment With Intrapleural Tissue Plasminogen Activator (TPA) and Deoxiribonuclease (DNase) for Chest Tube Refractory Complex Pleural Effusions. **PURPOSE:** Exudative pleural effusions complicated by format",
+      "score": 0.51091194
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "S12\u2005Experience with Intrapleural Tissue Plasminogen Activator and DNase in the Treatment of Pleural Infection | Thorax",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/67/Suppl_2/A8.3",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "Title: S12\u2005Experience with Intrapleural Tissue Plasminogen Activator and DNase in the Treatment of Pleural Infection | Thorax\nIn many patients medical management with chest tube drainage and antibiotics fails and surgical intervention is required. The MIST2 trial reported improved resolution followi",
+      "score": 0.5809471
+    },
+    {
+      "number": 2,
+      "title": "Pleural Effusions: The Diagnostic Separation of Transudates and ...",
+      "detail": "www.annals.org",
+      "url": "https://www.annals.org/content/77/4/507",
+      "authors": "www.annals.org",
+      "host": "www.annals.org",
+      "snippet": "In this prospective study of 150 pleural effusions, the utility of pleural-fluid cell counts, protein levels, and lactic dehydrogenase (LDH) levels",
+      "score": 0.15194441
+    },
+    {
+      "number": 3,
+      "title": "Pericardiocentesis - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/pericardiocentesis",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "#### Interpretation\n\nLaboratory analysis of pericardial fluid includes cell count and differential, microbiologic evaluation, cytology, and blood chemistry workup, which may include protein, glucose, pH, lactate dehydrogenase (LDH) and triglycerides. Normally pericardial fluid is clear and straw col",
+      "score": 0.68420124
+    },
+    {
+      "number": 4,
+      "title": "The use of non-routine pleural fluid analysis in the diagnosis of pleural effusion",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954611110001253",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The investigation of a pleural effusion is, in general, a very straight forward process with the combination of clinical history, examination, radiology and pleural fluid analysis leading to diagnosis in most cases. While most fluid samples are sent for routine analysis including protein, LDH, gluco",
+      "score": 0.5962692
+    },
+    {
+      "number": 5,
+      "title": "Cavitary Pneumonia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/cavitary-pneumonia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The diagnosis of empyema is strongly supported by the presence of thick pus, bacteria demonstrable when the fluid is subjected to Gram stain, a pH less than 7.3, or a glucose concentration less than 60 mg/dl. In exudative pleural effusions, the protein concentration is rarely less than 3.0 g/dl, and",
+      "score": 0.5917474
+    },
+    {
+      "number": 6,
+      "title": "Enzyme-linked immunospot assay for interferon-gamma in the ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1198743X14604304",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Standard diagnostic tests for pleural fluid included chemistry, cell count, differential count, cytology, and culture of bacteria, including mycobacteria, and",
+      "score": 0.58123237
+    },
+    {
+      "number": 7,
+      "title": "Short\u2010course intrapleural alteplase and DNase in complex effusion with bleeding risk - Cheong - 2020 - Respirology Case Reports - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/rcr2.648",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Short-course intrapleural alteplase and DNase in complex effusion with bleeding risk. In poorly draining complex pleural effusions, the current management favours a less invasive image-guided placement of smaller bore catheters and adjunctive intrapleural fibrinolysis therapy (IPFT). We describe o",
+      "score": 0.44333586
+    },
+    {
+      "number": 8,
+      "title": "Pleural effusion guidelines from ICS and NCCP Section 1: Basic principles, laboratory tests and pleural procedures",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11093145",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "#### Evidence statement\n\nLight\u2019s criteria have a sensitivity of 99% and specificity of 98% in identifying an exudative pleural effusion. The pleural effusion from approximately one-third of patients with CCF may be classified as exudative by Light\u2019s criteria. The pleural fluid cholesterol, pleural f",
+      "score": 0.62934244
+    },
+    {
+      "number": 9,
+      "title": "Pleural Effusion - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK448189",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "17.\n:   Pairman L, Beckert LEL, Dagger M, Maze MJ. Evaluation of pleural fluid cytology for the diagnosis of malignant pleural effusion: a retrospective cohort study. Intern Med J. 2022 Jul;52(7):1154-1159. [PMC free article: PMC9542185] [PubMed: 35191191]\n\n18.\n:   Helgeson SA, Fritz AV, Tatari MM, ",
+      "score": 0.5513086
+    },
+    {
+      "number": 10,
+      "title": "Pleural effusion: diagnosis, treatment, and management - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4753987",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Characterization of pleural fluid as an exudate or transudate is an important step in pleural fluid analysis.34 Light\u2019s criteria35 (Table 3) are the most sensitive for identifying exudates, with 98% sensitivity but have lower specificity (74%), although a study by Heffner et al failed to demonstrate",
+      "score": 0.54303354
+    },
+    {
+      "number": 11,
+      "title": "Which patients with a parapneumonic effusion need a chest tube?",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/85/8/609",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "Gram stain\n Appropriate cultures based on clinical scenario (eg, aerobic, anaerobic, fungal)\n Total protein in pleural fluid and serum\n Lactate dehydrogenase (LDH) in pleural fluid and serum\n Glucose\n pH.\n\n## CLASSIFICATION OF EFFUSIONS\n\nWhen pleural fluid is obtained, the total protein and LDH leve",
+      "score": 0.50183165
+    },
+    {
+      "number": 12,
+      "title": "Physiology, Pleural Fluid - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK513353",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The Light criteria is a useful way to differentiate between transudate and exudate, which can then be further evaluated with lab tests and in the context of the clinical presentation of the patient. Evaluation of pleural fluid can be used to determine the cause of pleural effusion and help guide the",
+      "score": 0.49963441
+    },
+    {
+      "number": 13,
+      "title": "Interpreting pleural fluid results - PMC - NIH",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6542220",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "An exudative effusion, conversely, is usually caused by a disease localised to the pleura. Leakage of fluid is due to increased capillary permeability triggered by an insult such as infection or malignancy.\n\n## Pleural fluid lactate dehydrogenase\n\nLDH is a marker of inflammation or cellular injury, ",
+      "score": 0.48630774
+    },
+    {
+      "number": 14,
+      "title": "Pleural Effusion in Adults\u2014Etiology, Diagnosis, and Treatment - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6647819",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Question 4\n\nWhat is the risk of pneumothorax after puncture of a pleural effusion?\n\n1.   0.1\u20130.5%\n\n2.   0.6\u20136%\n\n3.   6\u201310%\n\n4.   10\u201320%\n\n5.   20\u201330%\n\nQuestion 5\n\nThe distinction between a transudate and an exudate is determinative for the further evaluation and treatment of a pleural effusion. What ",
+      "score": 0.4787
+    },
+    {
+      "number": 15,
+      "title": "Unilateral green pleural effusion in a 22-year-old woman | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/8/491",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "TABLE 2\n\nPleural fluid analysis and rationale\n\nThe patient underwent lung ultrasonography to assess the safety of performing thoracentesis and secondarily to determine the site of needle insertion. Thoracentesis resulted in the drainage of 1,500 mL of green-hued, thin, nonviscous pleural fluid (Figu",
+      "score": 0.47621483
+    },
+    {
+      "number": 16,
+      "title": "Pleuroscopy for the Diagnosis of Cancer in Patients with Pleural Effusion: A Review of the Diagnostic Accuracy, Safety, Cost-Effectiveness and Guidelines - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK563003",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "This report was comprised of one study that included results for both a systematic review and non-randomized retrospective diagnostic study,15 one systematic review,14 three diagnostic studies,16\u201318 three prospective randomized controlled studies,20\u201322 11 non-randomized retrospective studies,23\u201333 o",
+      "score": 0.39908597
+    },
+    {
+      "number": 17,
+      "title": "Unilateral green pleural effusion in a 22-year-old woman",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/90/8/491/tab-figures-data",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "The use of non-routine pleural fluid analysis in the diagnosis of pleural effusion. Pathologic analysis of pleural fluid allows for detection",
+      "score": 0.25351477
+    },
+    {
+      "number": 18,
+      "title": "Chylothorax in Infants and Children | Pediatrics - AAP Publications",
+      "detail": "pediatrics.aappublications.org",
+      "url": "https://pediatrics.aappublications.org/content/133/4/722?download=true",
+      "authors": "pediatrics.aappublications.org",
+      "host": "pediatrics.aappublications.org",
+      "snippet": "Pleural fluid triglyceride and lipoprotein analysis should be performed in all newborns with pleural effusion.1,88. Other Investigations. Once",
+      "score": 0.23635799
+    },
+    {
+      "number": 19,
+      "title": "When should an indwelling pleural catheter be considered for malignant pleural effusion? | Cleveland Clinic Journal of medicine",
+      "detail": "www.ccjm.org",
+      "url": "https://www.ccjm.org/content/83/12/891",
+      "authors": "www.ccjm.org",
+      "host": "www.ccjm.org",
+      "snippet": "No related articles found.\n\nPubMed   Google Scholar\n\n Chest Tube Drainage of the Pleural Space: A Concise Review for Pulmonologists\n Novel complications of the tunnelled indwelling pleural catheter\n Management of Pleural Effusions in the Emergency Department\n Current Trends in Treating Malignant Ple",
+      "score": 0.2328858
+    },
+    {
+      "number": 20,
+      "title": "Intrapleural DNase and Tissue Plasminogen Activator in ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/42/NCT01717742/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "of tPA and DNase therapy improves the drainage of pleural fluid in patients with pleural infection, reduces hospital stay and the need for thoracic surgery. Data for children are lacking at the present time. Extrapolating from Adult DNase trial to the management of children: The aforementioned revie",
+      "score": 0.67269784
+    },
+    {
+      "number": 21,
+      "title": "Safety and Efficacy of Tissue Plasminogen Activator and DNase for Complicated Pleural Effusions Secondary to Abdominal Pathology",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1513/AnnalsATS.201608-594BC?role=tab",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Title: Safety and Efficacy of Tissue Plasminogen Activator and DNase for Complicated Pleural Effusions Secondary to Abdominal Pathology\nPrevious studies have demonstrated that intrapleural administration of tissue plasminogen activator (tPA) combined with human recombinant DNase can improve fluid dr",
+      "score": 0.61307496
+    },
+    {
+      "number": 22,
+      "title": "Concurrent Intrapleural Instillation of Tissue Plasminogen Activator and DNase for Pleural Infection. A Single-Center Experience | Annals of the American Thoracic Society",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1513/AnnalsATS.201602-127OC",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "**Objectives:** To assess the safety and efficacy of concurrent instillation of intrapleural tPA/DNase guided by radiographic and clinical response in patients with pleural infection. The intrapleural therapy of combined tissue plasminogen activator (tPA) and human recombinant DNase (DNase) in the m",
+      "score": 0.5411427
+    },
+    {
+      "number": 23,
+      "title": "Short\u2010course intrapleural alteplase and DNase in complex effusion with bleeding risk - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7446304",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "She received three doses of 16\u2009mg intrapleural alteplase with 5 mg intrapleural DNase as per protocol. There was subsequent improvement of pleural drainage and her fever subsided. There was minimal drop of haemoglobin from 8.6 to 7.8 g/dL with no immediate bleeding complications throughout hospitali",
+      "score": 0.5180835
+    },
+    {
+      "number": 24,
+      "title": "Comparison of Chest CT Scan Versus Chest X-ray in Evaluating Radiologic Improvement After Treatment With Intrapleural Tissue Plasminogen Activator (TPA) and Deoxiribonuclease (DNase) for Chest Tube Refractory Complex Pleural Effusions - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)36233-X/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# Comparison of Chest CT Scan Versus Chest X-ray in Evaluating Radiologic Improvement After Treatment With Intrapleural Tissue Plasminogen Activator (TPA) and Deoxiribonuclease (DNase) for Chest Tube Refractory Complex Pleural Effusions. **PURPOSE:** Exudative pleural effusions complicated by format",
+      "score": 0.51091194
+    }
+  ],
+  "publishedAt": "2026-09-15T18:11:46.816742+00:00",
+  "updatedAt": "2026-09-15T18:11:46.816742+00:00",
+  "readingMinutes": 7,
+  "slug": "pleural-fluid-interpretation"
+}

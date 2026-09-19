@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Heart Failure",
+  "title": "Dilated Cardiomyopathy",
+  "summary": "Dilated cardiomyopathy requires prompt exclusion of ischemia and disproportionate loading conditions, targeted evaluation for reversible or inherited causes, and early HFrEF-directed therapy. Cardiac MRI, family history, genetic testing, and scar assessment refine etiology, recovery potential, and arrhythmic risk.",
+  "seoDescription": "Physician guide to dilated cardiomyopathy evaluation, etiologic testing, cardiac MRI interpretation, genetic assessment, HFrEF therapy, and device risk stratification.",
+  "clinicalQuestion": "How should physicians establish the cause, treat heart failure, and stratify arrhythmic risk in dilated cardiomyopathy?",
+  "specialty": "Cardiology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "dilated cardiomyopathy",
+    "nonischemic cardiomyopathy",
+    "cardiac MRI",
+    "late gadolinium enhancement",
+    "genetic cardiomyopathy",
+    "HFrEF",
+    "ICD"
+  ],
+  "keyTakeaways": [
+    "Do not label a patient as idiopathic DCM until coronary disease, loading conditions, and remediable secondary causes have been actively assessed. [5][18]",
+    "Use transthoracic echocardiography and cardiac MRI early: CMR defines ventricular volumes and function while LGE and mapping identify infarction, inflammation, fibrosis, and infiltrative patterns. [6][20]",
+    "A subendocardial or transmural LGE pattern indicates prior infarction even when coronary angiography is unobstructed; such scars occur in up to 13% of suspected DCM presentations. [5]",
+    "Obtain a three-generation family history and pursue phenotype-directed genetic counseling and testing when inherited disease is plausible; results can guide cascade evaluation, prognosis, reproductive counseling, and treatment decisions. [10][20]",
+    "For persistent symptomatic DCM with LVEF 35% or less despite at least 3 months of optimized medical therapy, assess primary-prevention ICD candidacy; integrate LGE, genotype, conduction disease, and competing heart-failure risk rather than LVEF alone. [16][20][21]"
+  ],
+  "sections": [
+    {
+      "id": "confirm-the-phenotype-and-stabilize",
+      "eyebrow": "Initial Triage",
+      "heading": "Confirm DCM while identifying presentations that require urgent escalation",
+      "intro": "Treat unstable heart failure and define the structural phenotype before assigning etiology.",
+      "paragraphs": [
+        "DCM is a phenotype of left-ventricular dilation and systolic dysfunction that is disproportionate to coronary artery disease or abnormal loading conditions; it is not synonymous with idiopathic or nonischemic disease. The first diagnostic task is therefore to determine whether ischemic disease, severe hypertension, valvular disease, congenital disease, acute inflammatory disease, or infiltration better explains the degree of ventricular dysfunction. [5][19]",
+        "Obtain transthoracic echocardiography to document LV and right-ventricular size and function, valve disease, atrial size, and restrictive physiology. Pair natriuretic peptide and troponin testing with the initial laboratory assessment; guideline syntheses consistently identify both as part of the core DCM workup. [20]",
+        "Escalate patients with progressive or refractory heart failure toward an advanced-heart-failure pathway, including consideration of mechanical circulatory support or transplantation when appropriate. DCM remains a leading indication for transplantation, and reported 5-year mortality in nonischemic DCM reaches up to 20% from progressive heart failure or sudden cardiac death. [5][19]"
+      ],
+      "bullets": [
+        "Document the electrocardiogram early; conduction disease or ventricular arrhythmia increases suspicion for an inherited arrhythmogenic cardiomyopathy and changes the urgency of genetic and arrhythmic-risk assessment. [20]",
+        "Use a focused exposure history: anthracycline or other medication exposure, alcohol, stimulant or other substance exposure, recent inflammatory illness, HIV risk, and pregnancy-associated onset each directs cause-specific testing. [12][18]",
+        "Ask specifically about cardiomyopathy, sudden cardiac death, heart failure, transplantation, pacemaker or defibrillator implantation, and early atrial or ventricular arrhythmias among first- and second-degree relatives. Family history can distinguish genetic DCM from phenotypically overlapping disorders. [4][10][20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial branch points that prevent premature classification as idiopathic DCM. [5][18][20]",
+        "columns": [
+          "Finding or test",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Severe valve disease, hypertensive remodeling, congenital lesion, or other abnormal loading condition on echocardiography",
+            "LV dilation and dysfunction may be secondary rather than primary DCM. [5][19]",
+            "Treat or further define the loading lesion before assigning idiopathic DCM. [5]"
+          ],
+          [
+            "Significant coronary disease on invasive or CT coronary angiography",
+            "Conventionally, at least 75% stenosis of the left main, proximal LAD, or at least 2 epicardial coronary arteries supports ischemic cardiomyopathy rather than DCM. [5]",
+            "Classify ischemic contribution and pursue coronary-directed management. [5]"
+          ],
+          [
+            "Subendocardial or transmural LGE on CMR",
+            "Pattern indicates prior myocardial infarction; it may be detected despite unobstructed coronary arteries. [5]",
+            "Reassess ischemic mechanism and incorporate scar burden into prognosis and arrhythmia evaluation. [5][15]"
+          ],
+          [
+            "Conduction disturbance, ventricular arrhythmia, or strong family history",
+            "Raises likelihood of inherited cardiomyopathy and can influence sudden-death risk stratification. [4][20]",
+            "Refer for genetic counseling and phenotype-directed cardiomyopathy testing. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "etiologic-workup",
+      "eyebrow": "Cause-Finding",
+      "heading": "Use an etiologic workup that changes treatment or family management",
+      "intro": "The diagnostic yield is highest when testing follows the phenotype, exposures, and family history.",
+      "paragraphs": [
+        "Obtain thyroid function tests, HIV serology, electrolytes, and iron studies in the baseline evaluation for secondary causes. Add urine toxicology testing and alcohol testing when history or presentation suggests substance exposure. These tests identify potentially reversible contributors before the DCM phenotype is called idiopathic. [18]",
+        "Separate acquired triggers from predisposing substrate rather than treating them as mutually exclusive. Alcohol-associated and cancer therapy-associated cardiomyopathy may have genetic susceptibility, and peripartum cardiomyopathy can occur within familial DCM. A temporal association with alcohol, chemotherapy, or pregnancy should therefore not end the inherited-disease evaluation when family history, arrhythmia, or conduction disease is present. [10]",
+        "Request genetic counseling and phenotype-directed genetic testing in an affected proband when the phenotype or pedigree suggests inherited disease. Consensus guidance supports testing for diagnosis, prognostic assessment, therapeutic and reproductive decisions, and cascade testing of relatives; testing should prioritize genes with strong association to the observed phenotype. [13][20]",
+        "Interpret a genetic result in the clinical context. In advanced or \u201cburned-out\u201d hypertrophic cardiomyopathy, LVEF of 50% or less with modest residual hypertrophy can mimic DCM; detailed pedigree review, CMR, and genetic testing may establish the diagnosis when imaging is nondiagnostic. [4]"
+      ],
+      "bullets": [
+        "For suspected toxin-associated disease, document exposure duration, cumulative cancer therapy when available, and abstinence or discontinuation plan; reassess ventricular function after treatment and HFrEF therapy. Genetic predisposition may modify susceptibility. [10][12]",
+        "For suspected inflammatory or infectious disease, use the clinical syndrome and CMR tissue characterization to determine whether an inflammatory phenotype is present rather than assuming chronic idiopathic DCM. [6][12]",
+        "For suspected infiltrative disease, severe LV hypertrophy with preserved systolic function, biatrial enlargement, and restrictive physiology on echocardiography should prompt CMR-based tissue characterization for cardiac amyloidosis or another infiltrative cardiomyopathy. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Etiologic patterns and targeted next steps in apparent DCM. [4][6][10][12][18][20]",
+        "columns": [
+          "Etiologic branch",
+          "Clues that raise probability",
+          "Targeted evaluation or action"
+        ],
+        "rows": [
+          [
+            "Ischemic cardiomyopathy or infarct-related remodeling",
+            "Coronary disease or subendocardial/transmural LGE. [5]",
+            "Use invasive or CT coronary angiography and CMR scar pattern to establish ischemic contribution. [5]"
+          ],
+          [
+            "Genetic DCM or phenocopy",
+            "Family cardiomyopathy or sudden death, conduction disease, ventricular arrhythmia, or atypical CMR phenotype. [4][20]",
+            "Genetic counseling and phenotype-directed testing; use the result for family cascade management. [20]"
+          ],
+          [
+            "Toxin- or cancer therapy-associated cardiomyopathy",
+            "Alcohol exposure, anthracycline exposure, or other implicated medication history. [10][12][18]",
+            "Remove or mitigate the exposure, provide HFrEF-directed therapy, and consider inherited predisposition when the phenotype or pedigree is suggestive. [10]"
+          ],
+          [
+            "Inflammatory or infectious cardiomyopathy",
+            "Compatible clinical context with CMR evidence of edema, scar, or inflammation. [6][12]",
+            "Use comprehensive CMR and directed infectious or inflammatory evaluation. [6][18]"
+          ],
+          [
+            "Pregnancy-associated cardiomyopathy",
+            "Onset during pregnancy or after delivery, particularly with family history of DCM. [1][10][18]",
+            "Coordinate cardio-obstetric care and use pregnancy-compatible heart-failure therapy until postpartum options are available. [1]"
+          ],
+          [
+            "Infiltrative or restrictive phenocopy",
+            "Marked LV hypertrophy, enlarged atria, and restrictive physiology despite preserved systolic function. [6]",
+            "Use CMR tissue characterization to distinguish amyloidosis and other infiltrative disease. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cmr-and-risk-stratification",
+      "eyebrow": "Imaging",
+      "heading": "Use cardiac MRI to classify substrate, predict recovery, and refine arrhythmic risk",
+      "intro": "CMR is most useful when its tissue findings alter etiology, follow-up, or device decisions.",
+      "paragraphs": [
+        "Perform comprehensive CMR during the initial evaluation of suspected nonischemic cardiomyopathy when feasible. Cine imaging quantifies ventricular function and volumes, while T1 mapping, T2 mapping, and LGE add tissue characterization that can identify infarction, edema, diffuse fibrosis, focal replacement fibrosis, and infiltrative patterns. CMR findings must be integrated with phenotype, ECG, exposure history, and pedigree. [6]",
+        "Interpret LGE distribution rather than merely its presence. Septal midwall stripe-like or patchy LGE is characteristic of nonischemic DCM and was present in 34% of DCM compared with 10% of ischemic cardiomyopathy in one multicenter cohort; it was associated with larger LV volumes, lower LVEF, and adverse events. [14] Conversely, subendocardial or transmural LGE redirects the differential toward prior infarction. [5]",
+        "Use LGE as an additive risk marker, not as a stand-alone ICD indication. Ischemic-pattern LGE was observed in 7% of patients labeled DCM without significant coronary artery disease or infarction history and was associated with a 36% versus 23% 5-year risk of death, major ventricular arrhythmia, transplantation, or ventricular assist device compared with nonischemic LGE. [15]",
+        "Repeat CMR with LGE when a patient with DCM or genetic cardiomyopathy clinically deteriorates, because interval tissue characterization may clarify progression or a change in substrate. [6] CMR parameters may also help estimate reverse-remodeling potential, but definitions of reverse remodeling and predictive performance vary across studies; do not defer an otherwise indicated device solely on an imaging prediction. [16]"
+      ],
+      "bullets": [
+        "Use CMR to detect prior myocardial infarction missed by angiographic classification; infarct-pattern LGE can be present in up to 13% of suspected DCM with unobstructed coronary arteries. [5]",
+        "In a reduced-LVEF phenotype with prior HCM history or a compelling HCM pedigree, consider end-stage HCM even when LV dilation and nonischemic LGE resemble DCM. [4]",
+        "Interpret severe hypertrophy plus restrictive physiology as an infiltrative signal rather than routine DCM remodeling. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "CMR patterns that redirect the DCM differential and risk discussion. [4][5][6][14][15]",
+        "columns": [
+          "CMR finding",
+          "Likely implication",
+          "Clinical decision changed"
+        ],
+        "rows": [
+          [
+            "Subendocardial or transmural LGE",
+            "Prior myocardial infarction or ischemic substrate. [5]",
+            "Reclassify ischemic contribution and evaluate coronary mechanism rather than calling disease purely nonischemic. [5]"
+          ],
+          [
+            "Septal midwall stripe-like or patchy LGE",
+            "Characteristic nonischemic DCM fibrosis pattern and adverse-risk marker. [14]",
+            "Incorporate scar into prognosis and arrhythmia/device discussion. [14][19]"
+          ],
+          [
+            "T1/T2 abnormalities with an inflammatory clinical phenotype",
+            "Supports myocardial tissue injury or inflammation. [6]",
+            "Pursue directed inflammatory or infectious etiologic assessment. [6][12]"
+          ],
+          [
+            "Severe LV hypertrophy, biatrial dilation, restrictive physiology",
+            "Suggests infiltrative cardiomyopathy, including cardiac amyloidosis. [6]",
+            "Shift workup toward infiltrative disease rather than uncomplicated DCM. [6]"
+          ],
+          [
+            "Reduced LVEF with only mild hypertrophy in patient with HCM pedigree",
+            "Possible end-stage HCM with overlap with nonischemic cardiomyopathy. [4]",
+            "Use family history and genetic testing to establish the underlying cardiomyopathy. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "heart-failure-and-device-management",
+      "eyebrow": "Management",
+      "heading": "Treat the HFrEF phenotype while addressing cause-specific and device decisions",
+      "intro": "Initiate evidence-based HFrEF therapy early, then reassess ventricular function and residual arrhythmic risk.",
+      "paragraphs": [
+        "Manage systolic DCM with foundational therapies for HFrEF. Beta-blockers, renin-angiotensin-aldosterone system inhibitors or angiotensin receptor-neprilysin inhibitors, mineralocorticoid receptor antagonists, and SGLT2 inhibitors improve survival in HFrEF; these therapies also reduce sudden cardiac death risk. [8][9][10] In practice, poor achievement of target doses is common, making structured titration and surveillance for blood pressure, renal function, and electrolytes central to follow-up. [8]",
+        "Do not wait for etiologic certainty before starting HFrEF-directed treatment, but pair treatment with elimination of reversible triggers. Remove cardiotoxic exposures when implicated, maintain alcohol abstinence when alcohol toxicity is suspected, and manage pregnancy-associated disease with pregnancy-specific medication constraints and cardio-obstetric coordination. ACE inhibitors, ARBs, and mineralocorticoid receptor antagonists require pregnancy-specific consideration; the pregnancy management literature provides distinct antepartum and postpartum treatment algorithms. [1][10][12]",
+        "For primary prevention, evaluate ICD candidacy in symptomatic nonischemic DCM with NYHA class II or III symptoms and LVEF 35% or less after at least 3 months of optimized medical therapy. [16][21] The net benefit is less certain in nonischemic than ischemic cardiomyopathy and should be individualized with age, competing heart-failure mortality, LGE, genotype, arrhythmias, conduction disease, and expected recovery. [8][20][21]",
+        "Consider cardiac resynchronization therapy when conventional electrical and heart-failure criteria are met; nonischemic etiology, left bundle branch block, QRS duration of at least 150 ms, female sex, prior heart-failure hospitalization, lower baseline LV end-diastolic volume index, and lower left-atrial volume index have been associated with more favorable reverse remodeling after CRT. [21] Continue reassessment because reverse remodeling often begins after 6 months and may continue beyond that interval. [16]"
+      ],
+      "bullets": [
+        "At each titration visit, assess symptoms, congestion, blood pressure, renal function, and electrolytes to maintain and advance HFrEF therapy when tolerated; underdosing across medication classes is common. [8]",
+        "Refer for advanced heart-failure therapies when progressive symptoms or end-organ consequences persist despite optimized treatment and device evaluation. [20]",
+        "Do not use stem-cell therapy as routine care for nonischemic DCM; trials show signals for improved LVEF and functional measures but no significant difference in major adverse cardiovascular events, and evidence certainty varies by outcome. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Longitudinal management checkpoints in systolic DCM. [1][8][16][20][21][22]",
+        "columns": [
+          "Time point",
+          "Decision",
+          "Action"
+        ],
+        "rows": [
+          [
+            "At diagnosis",
+            "Is there a treatable cause or immediate device-level risk signal?",
+            "Start HFrEF-directed therapy, remove implicated exposures, complete ischemic and etiologic evaluation, and obtain CMR/genetic assessment when indicated. [6][10][18][20]"
+          ],
+          [
+            "During medication optimization",
+            "Is therapy being advanced safely?",
+            "Titrate foundational HFrEF therapies as tolerated with blood pressure, renal function, and electrolyte surveillance. [8][10]"
+          ],
+          [
+            "After at least 3 months of optimized therapy",
+            "Does LVEF remain 35% or less with NYHA II-III symptoms?",
+            "Assess primary-prevention ICD candidacy; individualize in nonischemic disease using substrate and competing-risk features. [16][20][21]"
+          ],
+          [
+            "At approximately 6 months and beyond",
+            "Is reverse remodeling emerging?",
+            "Reassess ventricular function and device strategy; remodeling may start after 6 months and continue later. [16]"
+          ],
+          [
+            "Clinical deterioration",
+            "Has myocardial substrate or diagnosis changed?",
+            "Repeat CMR with LGE in DCM or genetic cardiomyopathy when deterioration occurs. [6]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "family-screening-and-follow-up",
+      "eyebrow": "Inherited Disease",
+      "heading": "Use the proband evaluation to protect relatives and prevent diagnostic delay",
+      "intro": "A DCM diagnosis may be the first detectable expression of familial cardiomyopathy.",
+      "paragraphs": [
+        "Treat the proband's etiologic assessment as a family-risk assessment. Familial transmission is identified by clinical and echocardiographic screening in approximately 20% to 35% of DCM cases, supporting systematic pedigree acquisition and family-directed evaluation rather than assuming sporadic disease. [22]",
+        "When testing identifies a clinically meaningful genetic cause, use genetic counseling to organize cascade testing and phenotype surveillance in relatives. Guideline syntheses support genetic testing because it can clarify diagnosis, prognosis, therapy, reproductive decisions, and management of family members; postmortem testing may also be useful when it changes care for surviving relatives. [20]",
+        "Revisit the working diagnosis when longitudinal data conflict with the initial label. New conduction disease, ventricular arrhythmia, progressive scar on CMR, a newly recognized family history, or a pathogenic genetic result can move a patient from nonspecific DCM to a more specific genetic, inflammatory, infiltrative, or end-stage HCM diagnosis and may change device and family-management decisions. [4][6][10][20]"
+      ],
+      "bullets": [
+        "Document relatives with unexplained heart failure, sudden death, early pacemaker implantation, ventricular arrhythmias, or cardiomyopathy before interpreting a negative family history as reassuring. [4][20]",
+        "Refer complex phenotypes to a multidisciplinary cardiomyopathy program when imaging, genetic, electrophysiologic, and reproductive decisions need integration. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Findings that should trigger reconsideration of a presumed idiopathic DCM diagnosis. [4][6][10][20]",
+        "columns": [
+          "New finding",
+          "Diagnostic concern",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Newly disclosed family history of HCM, DCM, heart failure, or sudden death",
+            "Inherited cardiomyopathy or phenotypic overlap. [4][10]",
+            "Update pedigree and obtain genetic counseling with phenotype-directed testing. [20]"
+          ],
+          [
+            "Progressive conduction disease or ventricular arrhythmia",
+            "Genetic arrhythmogenic substrate and altered sudden-death risk. [20]",
+            "Reassess genotype, CMR scar, and ICD strategy. [6][20]"
+          ],
+          [
+            "Clinical deterioration after initial CMR",
+            "Progressive fibrosis, inflammation, or alternative substrate. [6]",
+            "Repeat CMR including LGE. [6]"
+          ],
+          [
+            "Pregnancy-associated onset plus familial disease",
+            "Peripartum cardiomyopathy within a familial DCM spectrum. [10]",
+            "Coordinate cardio-obstetric management and genetic evaluation. [1][10]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cardiomyopathy and pregnancy | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/20/1543",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Treatment algorithm for DCM/PPCM, HCM and RCM during pregnancy and after delivery. ACE-I/ARB; ACE inhibitor/angiotensin receptor blocker; BB, beta-blocker; CCB, calcium channel blocker; CS, caesarean section; DCM, dilated cardiomyopathy; HCM, hypertrophic cardiomyopathy; HR, heart rate; MRA, mineral",
+      "score": 0.34237418
+    },
+    {
+      "number": 2,
+      "title": "The Prognostic Value of Late\u00a0Gadolinium-Enhanced Cardiac\u00a0Magnetic\u00a0Resonance Imaging in\u00a0Nonischemic Dilated Cardiomyopathy: A Review and Meta-Analysis | JACC: Cardiovascular Imaging",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/abs/10.1016/j.jcmg.2018.03.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "et al: Use of cardiovascular magnetic resonance for risk stratification in chronic heart failure: prognostic value of late gadolinium enhancement in patients with non-ischaemic dilated cardiomyopathy. Felker G.M., Thompson R.E., Hare J.M. et al: Underlying causes and long-term survival in patients w",
+      "score": 0.58777803
+    },
+    {
+      "number": 3,
+      "title": "Impact of late gadolinium-enhanced cardiac MRI on arrhythmic and mortality outcomes in nonischemic dilated cardiomyopathy: updated systematic review and meta-analysis | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-023-41087-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nLehrke, S. et al. Use of cardiovascular magnetic resonance for risk stratification in chronic heart failure: Prognostic value of late gadolinium enhancement in patients with non-ischaemic dilated cardiomyopathy. Heart 97, 727\u2013732.  (2011).\n\nArticle \nPubMed \nGoogle Sc",
+      "score": 0.5677694
+    },
+    {
+      "number": 4,
+      "title": "\u201cBurned-Out\u201d Hypertrophic Cardiomyopathy: Overlap on Cardiac MRI With Other Nonischemic Cardiomyopathies",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccas.2026.106940",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Title: \u201cBurned-Out\u201d Hypertrophic Cardiomyopathy: Overlap on Cardiac MRI With Other Nonischemic Cardiomyopathies\nAuthors: Kevin Wunderly, Steven Ajluni, Patrick O'Hayer, and Anil Attiliaattili@umich.eduAuthors Info & Affiliations. \u201cBurned-out\u201d or end-stage hypertrophic cardiomyopathy (HCM) refers to ",
+      "score": 0.78512776
+    },
+    {
+      "number": 5,
+      "title": "The Diagnosis and Evaluation of Dilated Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.03.590",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### Exclusion of other causes\n\nIschemic cardiomyopathy is conventionally distinguished from DCM by the presence of\u226575% stenosis in the left main stem, proximal left anterior descending artery, or 2 or more epicardial coronary arteries on invasive or computed tomography coronary angiography (2). Late",
+      "score": 0.74363416
+    },
+    {
+      "number": 6,
+      "title": "Role of Cardiac Magnetic Resonance in\u00a0the\u00a0Diagnosis and Prognosis of\u00a0Nonischemic\u00a0Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jcmg.2017.08.005",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "This chart demonstrates a potential approach for incorporating the use of cardiac magnetic resonance (CMR) as part of the initial evaluation and follow-up of patients with suspected nonischemic cardiomyopathy. During the initial evaluation a comprehensive CMR examination, which includes cine CMR, T1",
+      "score": 0.70067
+    },
+    {
+      "number": 7,
+      "title": "Late Gadolinium Enhancement in Nonischemic Dilated ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.126.079395",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A 17-year-old patient with nonischemic dilated cardiomyopathy (DCM) was evaluated during follow-up. He had initially presented in early",
+      "score": 0.6077801
+    },
+    {
+      "number": 8,
+      "title": "Comparative analysis of implantable cardioverter-defibrillator efficacy in ischemic and non-ischemic cardiomyopathy in patients with heart failure | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-09074-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Notably, the achievement of target therapeutic doses was limited across heart failure evidence-based therapies. Only 17.5% of patients reached the target doses for ACEi/ARBs, 9.0% for beta-blockers, 20.7% for MRAs, and a mere 2.3% for ARNI (Table 2).\n\n### Echocardiographic parameters [...] ### Medic",
+      "score": 0.58123237
+    },
+    {
+      "number": 9,
+      "title": "Dilated cardiomyopathy | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-019-0084-1",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nPubMed \nGoogle Scholar\n\nGranger, C. B. et al. Effects of candesartan in patients with chronic heart failure and reduced left-ventricular systolic function intolerant to angiotensin-converting-enzyme inhibitors: the CHARM-alternative trial. Lancet 362, 772\u2013776 (2003).\n\nArticle \nCAS \nPub",
+      "score": 0.4011956
+    },
+    {
+      "number": 10,
+      "title": "Pathophysiology of dilated cardiomyopathy: from mechanisms to precision medicine | Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41569-024-01074-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Dilated cardiomyopathy (DCM) is a complex disease with multiple causes and various pathogenic mechanisms. Despite improvements in the prognosis of patients with DCM in the past decade, this condition remains a leading cause of heart failure and premature death. Conventional treatment for DCM is base",
+      "score": 0.609455
+    },
+    {
+      "number": 11,
+      "title": "Familial Dilated Cardiomyopathy | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.0000097493.70422.50",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Cardiomyopathies are diseases of the heart muscle that render the heart unable to properly pump enough blood to the body. In the dilated form of cardiomyopathy",
+      "score": 0.56431514
+    },
+    {
+      "number": 12,
+      "title": "Dilated Cardiomyopathy | Circulation Research",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circresaha.116.309396",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "DCM can be attributed to genetic and nongenetic causes, including hypertension, valve disease, inflammatory/infectious causes, and toxins.3.",
+      "score": 0.52071625
+    },
+    {
+      "number": 13,
+      "title": "Evidence-Based Assessment of Genes in Dilated Cardiomyopathy",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.120.053033",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Idiopathic dilated cardiomyopathy (DCM), compared with other genetic cardiomyopathies, demonstrates marked locus heterogeneity, with many genes proposed to",
+      "score": 0.5069581
+    },
+    {
+      "number": 14,
+      "title": "Septal Midwall Late Gadolinium Enhancement in Ischemic Cardiomyopathy and Nonischemic Dilated Cardiomyopathy\u2014Characteristics and Prognosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002914923004344",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Septal Midwall Late Gadolinium Enhancement in Ischemic Cardiomyopathy and Nonischemic Dilated Cardiomyopathy\u2014Characteristics and Prognosis - ScienceDirect\n## The American Journal of Cardiology. Volume 201, 15 August 2023, Pages 294-301. The American Journal of Cardiology. # Septal Midwall Lat",
+      "score": 0.5925965
+    },
+    {
+      "number": 15,
+      "title": "Prevalence and prognostic significance of ischemic late gadolinium enhancement pattern in non-ischemic dilated cardiomyopathy - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002870322000060",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Clinical investigation Prevalence and prognostic significance of ischemic late gadolinium enhancement pattern in non-ischemic dilated cardiomyopathy. Typical late gadolinium enhancement (LGE) patterns in dilated cardiomyopathy (DCM) include intramyocardial and subepicardial distribution. Ischemic ",
+      "score": 0.5883458
+    },
+    {
+      "number": 16,
+      "title": "Cardiac magnetic resonance imaging to predict left ventricular reverse remodelling in non-ischaemic dilated cardiomyopathy: a systematic review and meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0009926025001552",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cardiac magnetic resonance imaging to predict left ventricular reverse remodelling in non-ischaemic dilated cardiomyopathy: a systematic review and meta-analysis. This systematic review and meta-analysis aimed to evaluate the predictive value of cardiac magnetic resonance (CMR) imaging parameters ",
+      "score": 0.5849357
+    },
+    {
+      "number": 17,
+      "title": "Sex Differences in Dilated Cardiomyopathy: Evidence Gaps and Future Directions - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109725098110?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# *JACC* State-of-the-Art Review Sex Differences in Dilated Cardiomyopathy: Evidence Gaps and Future Directions. Dilated cardiomyopathy (DCM), which affects 1 in 250 people, is a leading global cause of heart failure and the most common indication for heart transplantation. This review explores the ",
+      "score": 0.55709904
+    },
+    {
+      "number": 18,
+      "title": "Dilated Cardiomyopathy - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441911",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "DCM has many causes, and all of them affect ventricular function to varying degrees. While most patients with DCM have symptoms, a few patients may be asymptomatic because of the compensatory mechanisms. The continued enlargement of the ventricles leads to a decline in ventricular function, followed",
+      "score": 0.67911536
+    },
+    {
+      "number": 19,
+      "title": "Risk Stratification in Nonischemic Dilated Cardiomyopathy Using CMR Imaging: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11413760",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Nonischemic dilated cardiomyopathy (NIDCM) is characterized by left-ventricular or biventricular dilatation and contractile dysfunction in the absence of significant coronary artery disease and abnormal loading conditions, such as those presented by hypertensive, valvular, congenital, infiltrative, ",
+      "score": 0.66308063
+    },
+    {
+      "number": 20,
+      "title": "Diagnosis and management of dilated cardiomyopathy: a systematic review of clinical practice guidelines and recommendations",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11879293",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## . There is consensus on the definition of DCM and the role of natriuretic peptides together with troponin assessment for laboratory workup. TTE and CMR share common recommendations at first-line imaging modalities for evaluation in patients with suspected cardiomyopathy. All documents agree on th",
+      "score": 0.657561
+    },
+    {
+      "number": 21,
+      "title": "Current Management and Treatment - Dilated Cardiomyopathy - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK553842",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Reverse remodeling is one of the most important mechanisms of action of CRT, but not all patients respond successfully: patients with nonischemic etiology have greater improvement in LV function and decrease in NYHA class after CRT . Data from MADIT-CRT were used to identify factors associated with ",
+      "score": 0.62248284
+    },
+    {
+      "number": 22,
+      "title": "Stem cell therapy for non-ischemic dilated cardiomyopathy: a systematic review and meta-analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11546504",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The systematic review and meta-analysis included 11 RCTs of 637 participants revealed that stem cell therapy had a potentially beneficial effect on the prognosis of patients with non-ischemic DCM. The findings showed that as compared to controls, DCM patients receiving stem cell therapy had a signif",
+      "score": 0.5835125
+    },
+    {
+      "number": 23,
+      "title": "Dilated Cardiomyopathy: A Comprehensive Approach to Diagnosis and Risk Stratification",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10044994",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "80..Neilan T.G., Coelho-Filho O.R., Danik S.B., Shah R.V., Dodson J.A., Verdini D.J., Tokuda M., Daly C.A., Tedrow U.B., Stevenson W.G., _et al_. CMR quantification of myocardial scar provides additive prognostic information in nonischemic cardiomyopathy. _JACC Cardiovasc. Imaging_. 2013. 6:944-954.",
+      "score": 0.560566
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Stem cell therapy for dilated cardiomyopathy: systematic review of ...",
+      "detail": "applications.emro.who.int",
+      "url": "https://applications.emro.who.int/imemrf/349/Minoufia-Med-J-2020-33-3-739-743-eng.pdf",
+      "authors": "applications.emro.who.int",
+      "host": "applications.emro.who.int",
+      "snippet": "1110-2098 \u00a9 2020 Faculty of Medicine, Menoufia University\b DOI: 10.4103/mmj.mmj_397_18 Review article 739 Introduction In spite of recent improvements in medical and device therapy, dilated cardiomyopathy (DCM) appears to be a widespread disease that costs the world a lot. The different treatment mo",
+      "score": 0.5357549
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Cardiomyopathy and pregnancy | Heart",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/20/1543",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Treatment algorithm for DCM/PPCM, HCM and RCM during pregnancy and after delivery. ACE-I/ARB; ACE inhibitor/angiotensin receptor blocker; BB, beta-blocker; CCB, calcium channel blocker; CS, caesarean section; DCM, dilated cardiomyopathy; HCM, hypertrophic cardiomyopathy; HR, heart rate; MRA, mineral",
+      "score": 0.34237418
+    },
+    {
+      "number": 2,
+      "title": "The Prognostic Value of Late\u00a0Gadolinium-Enhanced Cardiac\u00a0Magnetic\u00a0Resonance Imaging in\u00a0Nonischemic Dilated Cardiomyopathy: A Review and Meta-Analysis | JACC: Cardiovascular Imaging",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/abs/10.1016/j.jcmg.2018.03.006",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "et al: Use of cardiovascular magnetic resonance for risk stratification in chronic heart failure: prognostic value of late gadolinium enhancement in patients with non-ischaemic dilated cardiomyopathy. Felker G.M., Thompson R.E., Hare J.M. et al: Underlying causes and long-term survival in patients w",
+      "score": 0.58777803
+    },
+    {
+      "number": 3,
+      "title": "Impact of late gadolinium-enhanced cardiac MRI on arrhythmic and mortality outcomes in nonischemic dilated cardiomyopathy: updated systematic review and meta-analysis | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-023-41087-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nLehrke, S. et al. Use of cardiovascular magnetic resonance for risk stratification in chronic heart failure: Prognostic value of late gadolinium enhancement in patients with non-ischaemic dilated cardiomyopathy. Heart 97, 727\u2013732.  (2011).\n\nArticle \nPubMed \nGoogle Sc",
+      "score": 0.5677694
+    },
+    {
+      "number": 4,
+      "title": "\u201cBurned-Out\u201d Hypertrophic Cardiomyopathy: Overlap on Cardiac MRI With Other Nonischemic Cardiomyopathies",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccas.2026.106940",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Title: \u201cBurned-Out\u201d Hypertrophic Cardiomyopathy: Overlap on Cardiac MRI With Other Nonischemic Cardiomyopathies\nAuthors: Kevin Wunderly, Steven Ajluni, Patrick O'Hayer, and Anil Attiliaattili@umich.eduAuthors Info & Affiliations. \u201cBurned-out\u201d or end-stage hypertrophic cardiomyopathy (HCM) refers to ",
+      "score": 0.78512776
+    },
+    {
+      "number": 5,
+      "title": "The Diagnosis and Evaluation of Dilated Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2016.03.590",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "### Exclusion of other causes\n\nIschemic cardiomyopathy is conventionally distinguished from DCM by the presence of\u226575% stenosis in the left main stem, proximal left anterior descending artery, or 2 or more epicardial coronary arteries on invasive or computed tomography coronary angiography (2). Late",
+      "score": 0.74363416
+    },
+    {
+      "number": 6,
+      "title": "Role of Cardiac Magnetic Resonance in\u00a0the\u00a0Diagnosis and Prognosis of\u00a0Nonischemic\u00a0Cardiomyopathy",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jcmg.2017.08.005",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "This chart demonstrates a potential approach for incorporating the use of cardiac magnetic resonance (CMR) as part of the initial evaluation and follow-up of patients with suspected nonischemic cardiomyopathy. During the initial evaluation a comprehensive CMR examination, which includes cine CMR, T1",
+      "score": 0.70067
+    },
+    {
+      "number": 7,
+      "title": "Late Gadolinium Enhancement in Nonischemic Dilated ...",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.126.079395",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "A 17-year-old patient with nonischemic dilated cardiomyopathy (DCM) was evaluated during follow-up. He had initially presented in early",
+      "score": 0.6077801
+    },
+    {
+      "number": 8,
+      "title": "Comparative analysis of implantable cardioverter-defibrillator efficacy in ischemic and non-ischemic cardiomyopathy in patients with heart failure | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-09074-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Notably, the achievement of target therapeutic doses was limited across heart failure evidence-based therapies. Only 17.5% of patients reached the target doses for ACEi/ARBs, 9.0% for beta-blockers, 20.7% for MRAs, and a mere 2.3% for ARNI (Table 2).\n\n### Echocardiographic parameters [...] ### Medic",
+      "score": 0.58123237
+    },
+    {
+      "number": 9,
+      "title": "Dilated cardiomyopathy | Nature Reviews Disease Primers",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41572-019-0084-1",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nPubMed \nGoogle Scholar\n\nGranger, C. B. et al. Effects of candesartan in patients with chronic heart failure and reduced left-ventricular systolic function intolerant to angiotensin-converting-enzyme inhibitors: the CHARM-alternative trial. Lancet 362, 772\u2013776 (2003).\n\nArticle \nCAS \nPub",
+      "score": 0.4011956
+    },
+    {
+      "number": 10,
+      "title": "Pathophysiology of dilated cardiomyopathy: from mechanisms to precision medicine | Nature Reviews Cardiology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41569-024-01074-2",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Dilated cardiomyopathy (DCM) is a complex disease with multiple causes and various pathogenic mechanisms. Despite improvements in the prognosis of patients with DCM in the past decade, this condition remains a leading cause of heart failure and premature death. Conventional treatment for DCM is base",
+      "score": 0.609455
+    },
+    {
+      "number": 11,
+      "title": "Familial Dilated Cardiomyopathy | Circulation",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.0000097493.70422.50",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Cardiomyopathies are diseases of the heart muscle that render the heart unable to properly pump enough blood to the body. In the dilated form of cardiomyopathy",
+      "score": 0.56431514
+    },
+    {
+      "number": 12,
+      "title": "Dilated Cardiomyopathy | Circulation Research",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circresaha.116.309396",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "DCM can be attributed to genetic and nongenetic causes, including hypertension, valve disease, inflammatory/infectious causes, and toxins.3.",
+      "score": 0.52071625
+    },
+    {
+      "number": 13,
+      "title": "Evidence-Based Assessment of Genes in Dilated Cardiomyopathy",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.120.053033",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Idiopathic dilated cardiomyopathy (DCM), compared with other genetic cardiomyopathies, demonstrates marked locus heterogeneity, with many genes proposed to",
+      "score": 0.5069581
+    },
+    {
+      "number": 14,
+      "title": "Septal Midwall Late Gadolinium Enhancement in Ischemic Cardiomyopathy and Nonischemic Dilated Cardiomyopathy\u2014Characteristics and Prognosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002914923004344",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Septal Midwall Late Gadolinium Enhancement in Ischemic Cardiomyopathy and Nonischemic Dilated Cardiomyopathy\u2014Characteristics and Prognosis - ScienceDirect\n## The American Journal of Cardiology. Volume 201, 15 August 2023, Pages 294-301. The American Journal of Cardiology. # Septal Midwall Lat",
+      "score": 0.5925965
+    },
+    {
+      "number": 15,
+      "title": "Prevalence and prognostic significance of ischemic late gadolinium enhancement pattern in non-ischemic dilated cardiomyopathy - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0002870322000060",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Clinical investigation Prevalence and prognostic significance of ischemic late gadolinium enhancement pattern in non-ischemic dilated cardiomyopathy. Typical late gadolinium enhancement (LGE) patterns in dilated cardiomyopathy (DCM) include intramyocardial and subepicardial distribution. Ischemic ",
+      "score": 0.5883458
+    },
+    {
+      "number": 16,
+      "title": "Cardiac magnetic resonance imaging to predict left ventricular reverse remodelling in non-ischaemic dilated cardiomyopathy: a systematic review and meta-analysis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0009926025001552",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Cardiac magnetic resonance imaging to predict left ventricular reverse remodelling in non-ischaemic dilated cardiomyopathy: a systematic review and meta-analysis. This systematic review and meta-analysis aimed to evaluate the predictive value of cardiac magnetic resonance (CMR) imaging parameters ",
+      "score": 0.5849357
+    },
+    {
+      "number": 17,
+      "title": "Sex Differences in Dilated Cardiomyopathy: Evidence Gaps and Future Directions - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735109725098110?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# *JACC* State-of-the-Art Review Sex Differences in Dilated Cardiomyopathy: Evidence Gaps and Future Directions. Dilated cardiomyopathy (DCM), which affects 1 in 250 people, is a leading global cause of heart failure and the most common indication for heart transplantation. This review explores the ",
+      "score": 0.55709904
+    },
+    {
+      "number": 18,
+      "title": "Dilated Cardiomyopathy - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441911",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "DCM has many causes, and all of them affect ventricular function to varying degrees. While most patients with DCM have symptoms, a few patients may be asymptomatic because of the compensatory mechanisms. The continued enlargement of the ventricles leads to a decline in ventricular function, followed",
+      "score": 0.67911536
+    },
+    {
+      "number": 19,
+      "title": "Risk Stratification in Nonischemic Dilated Cardiomyopathy Using CMR Imaging: A Systematic Review and Meta-Analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11413760",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Nonischemic dilated cardiomyopathy (NIDCM) is characterized by left-ventricular or biventricular dilatation and contractile dysfunction in the absence of significant coronary artery disease and abnormal loading conditions, such as those presented by hypertensive, valvular, congenital, infiltrative, ",
+      "score": 0.66308063
+    },
+    {
+      "number": 20,
+      "title": "Diagnosis and management of dilated cardiomyopathy: a systematic review of clinical practice guidelines and recommendations",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11879293",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## . There is consensus on the definition of DCM and the role of natriuretic peptides together with troponin assessment for laboratory workup. TTE and CMR share common recommendations at first-line imaging modalities for evaluation in patients with suspected cardiomyopathy. All documents agree on th",
+      "score": 0.657561
+    },
+    {
+      "number": 21,
+      "title": "Current Management and Treatment - Dilated Cardiomyopathy - NCBI",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK553842",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Reverse remodeling is one of the most important mechanisms of action of CRT, but not all patients respond successfully: patients with nonischemic etiology have greater improvement in LV function and decrease in NYHA class after CRT . Data from MADIT-CRT were used to identify factors associated with ",
+      "score": 0.62248284
+    },
+    {
+      "number": 22,
+      "title": "Stem cell therapy for non-ischemic dilated cardiomyopathy: a systematic review and meta-analysis - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11546504",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "The systematic review and meta-analysis included 11 RCTs of 637 participants revealed that stem cell therapy had a potentially beneficial effect on the prognosis of patients with non-ischemic DCM. The findings showed that as compared to controls, DCM patients receiving stem cell therapy had a signif",
+      "score": 0.5835125
+    },
+    {
+      "number": 23,
+      "title": "Dilated Cardiomyopathy: A Comprehensive Approach to Diagnosis and Risk Stratification",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10044994",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "80..Neilan T.G., Coelho-Filho O.R., Danik S.B., Shah R.V., Dodson J.A., Verdini D.J., Tokuda M., Daly C.A., Tedrow U.B., Stevenson W.G., _et al_. CMR quantification of myocardial scar provides additive prognostic information in nonischemic cardiomyopathy. _JACC Cardiovasc. Imaging_. 2013. 6:944-954.",
+      "score": 0.560566
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Stem cell therapy for dilated cardiomyopathy: systematic review of ...",
+      "detail": "applications.emro.who.int",
+      "url": "https://applications.emro.who.int/imemrf/349/Minoufia-Med-J-2020-33-3-739-743-eng.pdf",
+      "authors": "applications.emro.who.int",
+      "host": "applications.emro.who.int",
+      "snippet": "1110-2098 \u00a9 2020 Faculty of Medicine, Menoufia University\b DOI: 10.4103/mmj.mmj_397_18 Review article 739 Introduction In spite of recent improvements in medical and device therapy, dilated cardiomyopathy (DCM) appears to be a widespread disease that costs the world a lot. The different treatment mo",
+      "score": 0.5357549
+    }
+  ],
+  "publishedAt": "2026-09-15T22:46:04.962208+00:00",
+  "updatedAt": "2026-09-15T22:46:04.962208+00:00",
+  "readingMinutes": 7,
+  "slug": "dilated-cardiomyopathy"
+}

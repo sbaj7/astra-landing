@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Endocrinology",
+  "title": "HHS Fluid Management",
+  "summary": "Manage HHS by restoring intravascular volume before insulin, tracking osmolality and sodium to prevent overly rapid tonicity shifts, replacing potassium as needed, and individualizing crystalloid rate for cardiac or renal vulnerability.",
+  "seoDescription": "Practical HHS fluid management: initial crystalloid selection, osmolality-guided correction, insulin timing, potassium replacement, and resolution targets.",
+  "clinicalQuestion": "How should intravenous fluids be selected, monitored, and adjusted during adult hyperosmolar hyperglycemic state?",
+  "specialty": "Endocrinology and Hospital Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hyperosmolar hyperglycemic state",
+    "HHS",
+    "fluid resuscitation",
+    "serum osmolality",
+    "hyperglycemic crisis",
+    "insulin infusion"
+  ],
+  "keyTakeaways": [
+    "Use isotonic saline or a balanced crystalloid for initial HHS resuscitation; tailor subsequent fluid selection to hemodynamics, fluid balance, sodium concentration, and osmolality trajectory. [5][11]",
+    "Do not start insulin before adequate volume replacement unless clinically necessary; early insulin can produce a precipitous fall in osmolality, intravascular volume contraction, hypokalemia, and hypoglycemia. [9]",
+    "Target a serum osmolality decline of 3.0-8.0 mOsm/kg/h; faster correction increases neurologic risk, including cerebral edema and osmotic demyelination. [9]",
+    "Use 0.45% sodium chloride only when osmolality is not declining despite adequate fluid and insulin therapy, rather than reflexively for a normal or high sodium concentration. [11]",
+    "Assess resolution with serum osmolality below 300 mOsm/kg, glucose below 250 mg/dL, urine output above 0.5 mL/kg/h, and improved cognition. [11]"
+  ],
+  "sections": [
+    {
+      "id": "initial-fluid-decision",
+      "eyebrow": "First hours",
+      "heading": "Restore perfusion before lowering glucose",
+      "intro": "Treat hypovolemia and hypertonicity as the immediate fluid-management priorities.",
+      "paragraphs": [
+        "Start with an isotonic crystalloid in adults with HHS and clinical hypovolemia. Current consensus permits either 0.9% sodium chloride or a balanced crystalloid solution for initial resuscitation; choose the subsequent fluid based on serial hemodynamics, net fluid balance, serum sodium, and osmolality rather than a fixed sequence. [5][11]",
+        "The initial clinical endpoint is restoration of intravascular and peripheral perfusion, assessed with vital signs, urine output, and hydration examination. HHS commonly produces a larger water and electrolyte deficit than DKA and may present with hypotension or shock; fluid replacement takes priority over immediate insulin-mediated glucose reduction. [2][3][9]",
+        "Use a slower, reassessed replacement strategy in patients with heart failure, renal dysfunction, or other limited tolerance for volume loading. Serial examination for pulmonary edema and ongoing assessment of urine output, acid-base status, electrolytes, and signs of hypervolemia should determine whether to continue, reduce, or pause infusion. [2][10]"
+      ],
+      "bullets": [
+        "Initial fluid options: 0.9% sodium chloride or a balanced crystalloid such as Ringer's lactate or Plasma-Lyte-148. [5][11]",
+        "Follow response with blood pressure, heart rate, clinical hydration, urine output, serum sodium, glucose, potassium, and serum osmolality. [2][10][11]",
+        "Recognize that large-volume 0.9% sodium chloride can contribute to hyperchloremic normal-anion-gap metabolic acidosis; balanced crystalloids are an acceptable alternative. [5]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Fluid decisions should follow the measured osmolality trajectory and evidence of perfusion, not glucose concentration alone. [9][11]",
+        "columns": [
+          "Clinical or laboratory finding",
+          "Fluid-management implication",
+          "Reason for action"
+        ],
+        "rows": [
+          [
+            "Hypotension, shock, oliguria, or poor clinical perfusion",
+            "Continue isotonic crystalloid resuscitation with frequent reassessment. [2][3][9]",
+            "Volume restoration improves intravascular perfusion before insulin is used to lower glucose. [3][9]"
+          ],
+          [
+            "Osmolality falling within 3.0-8.0 mOsm/kg/h",
+            "Continue the current individualized fluid and insulin plan. [9]",
+            "This is the recommended osmolality correction range. [9]"
+          ],
+          [
+            "Osmolality not declining despite adequate fluid and insulin therapy",
+            "Consider 0.45% sodium chloride. [11]",
+            "Current consensus reserves hypotonic saline for failure of osmolality to decline. [11]"
+          ],
+          [
+            "Clinical congestion or high risk of volume overload",
+            "Reduce the infusion rate and reassess perfusion, urine output, electrolytes, acid-base status, and hypervolemia. [10]",
+            "Excess fluid can cause lung edema and cardiorenal complications. [10]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "measure-tonicity",
+      "eyebrow": "Monitoring target",
+      "heading": "Use osmolality to control the speed of correction",
+      "intro": "Glucose reduction is safe only when it does not drive an excessive fall in tonicity.",
+      "paragraphs": [
+        "Measure serum osmolality serially and calculate effective osmolality when assessing tonicity: effective osmolality equals 2 times sodium in mmol/L plus glucose in mmol/L. Total osmolality additionally includes urea. Because urea crosses cell membranes relatively freely, effective osmolality is the more direct measure of extracellular tonicity. [11][3]",
+        "Aim for a serum osmolality decline of 3.0-8.0 mOsm/kg/h. A faster fall increases the risk of neurologic complications, specifically cerebral edema and osmotic demyelination; slow the effective glucose-lowering strategy and reassess fluid composition if the osmolality trajectory exceeds this range. [9]",
+        "Do not interpret a rising measured sodium during initial treatment as an automatic indication for hypotonic fluid. Fluid-mediated glucose reduction changes water distribution and may raise sodium while osmolality falls appropriately. Under the 2024 consensus approach, use 0.45% sodium chloride only if osmolality fails to decline despite adequate fluid and insulin therapy. [11]"
+      ],
+      "bullets": [
+        "Measure sodium and glucose with each osmolality reassessment to interpret the tonicity trend. [11]",
+        "Avoid a plasma glucose decline greater than 5 mmol/L/h during HHS treatment to limit overly rapid osmolality reduction. [9]",
+        "A fall in glucose after initial crystalloid may reflect volume expansion; do not use this early decrease as a reason to accelerate insulin. [4][9]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Osmolality-based targets and treatment endpoints in adult HHS. [9][11]",
+        "columns": [
+          "Parameter",
+          "Actionable threshold or formula",
+          "Clinical use"
+        ],
+        "rows": [
+          [
+            "Effective osmolality",
+            "2 × sodium (mmol/L) + glucose (mmol/L). [11]",
+            "Track extracellular tonicity during treatment. [11]"
+          ],
+          [
+            "Target osmolality correction",
+            "3.0-8.0 mOsm/kg/h. [9]",
+            "Avoid a faster decline because of neurologic risk. [9]"
+          ],
+          [
+            "Glucose correction rate",
+            "No more than 5 mmol/L/h. [9]",
+            "Reduces the likelihood of an overly rapid osmolality fall. [9]"
+          ],
+          [
+            "Resolution",
+            "Serum osmolality <300 mOsm/kg, glucose <250 mg/dL, urine output >0.5 mL/kg/h, and improved cognition. [11]",
+            "Use all criteria rather than glucose alone to determine resolution. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "insulin-and-potassium",
+      "eyebrow": "Sequencing",
+      "heading": "Delay insulin until fluid replacement is established",
+      "intro": "Insulin is necessary for persistent hyperglycemia but should not precede restoration of circulating volume.",
+      "paragraphs": [
+        "Initial isotonic fluid replacement alone lowers glucose in HHS. Starting insulin before adequate volume replacement can lower osmolality precipitously, shift water out of the intravascular compartment, and precipitate circulatory collapse; it also increases the risk of hypokalemia and hypoglycemia. [9]",
+        "Once fluids are established and osmolality is being monitored, use fixed-rate intravenous insulin when insulin treatment is required. A reported HHS protocol began insulin after 3 hours of fluid resuscitation at 0.05 units/kg/h; this lower-rate approach is intended to produce a slower decline in glycemia than historical 0.1 units/kg/h regimens. [4]",
+        "Check potassium during resuscitation and insulin therapy because insulin shifts potassium intracellularly. Potassium supplementation of 20-40 mEq may be added to replacement fluid as needed; the specific potassium concentration and infusion strategy should be adjusted to the measured serum potassium and renal function. [3]"
+      ],
+      "bullets": [
+        "Do not use glucose alone to determine insulin urgency; first establish effective volume replacement and document the osmolality trend. [9]",
+        "Reassess potassium after insulin initiation because treatment-related hypokalemia is a frequent complication of hyperglycemic-crisis management. [5]",
+        "When glucose reaches the treatment threshold, add dextrose-containing fluid to permit continued controlled insulin treatment while avoiding hypoglycemia; current consensus materials describe this transition as part of HHS treatment. [11]"
+      ],
+      "subsections": [
+        {
+          "heading": "Mixed HHS and ketoacidosis",
+          "paragraphs": [
+            "Do not assume that an elevated anion gap excludes HHS. HHS may have a modestly increased anion gap from lactate associated with severe dehydration, and mixed HHS-DKA can occur. Assess venous or arterial pH, bicarbonate, and ketones before using a purely HHS-oriented pace of insulin and tonicity correction. [1][3]"
+          ],
+          "bullets": [
+            "Classic HHS criteria include glucose above 600 mg/dL, effective osmolality at least 320 mOsm/kg, pH above 7.3, bicarbonate above 18 mEq/L, and absence of significant ketoacidosis. [1]",
+            "Minimal ketonemia can occur in HHS; clinically meaningful acidosis or ketoacidosis requires recognition of overlap rather than dismissal of the HHS physiology. [1]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Treatment sequence that minimizes intravascular collapse and abrupt tonicity change. [4][9]",
+        "columns": [
+          "Step",
+          "Action",
+          "Do not proceed until"
+        ],
+        "rows": [
+          [
+            "1. Resuscitate",
+            "Begin isotonic saline or balanced crystalloid and reassess perfusion. [5][11]",
+            "Hemodynamics, clinical hydration, and urine output are being actively reassessed. [2][10]"
+          ],
+          [
+            "2. Track tonicity",
+            "Follow serum osmolality, sodium, and glucose; target an osmolality fall of 3.0-8.0 mOsm/kg/h. [9][11]",
+            "The correction trajectory is not excessively rapid. [9]"
+          ],
+          [
+            "3. Add insulin",
+            "After adequate fluid replacement, use IV insulin when ongoing treatment requires it; a reported regimen used 0.05 units/kg/h after 3 hours of fluids. [4][9]",
+            "Volume replacement has been established and potassium is being monitored. [3][9]"
+          ],
+          [
+            "4. Continue through recovery",
+            "Use dextrose-containing fluid when needed to continue controlled therapy without hypoglycemia. [11]",
+            "Osmolality, urine output, cognition, and glucose meet resolution criteria. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "diagnosis-and-monitoring",
+      "eyebrow": "Bedside assessment",
+      "heading": "Confirm HHS physiology and monitor for resolution",
+      "intro": "Fluid intensity and composition depend on distinguishing predominant HHS from ketoacidosis or other causes of altered consciousness.",
+      "paragraphs": [
+        "Obtain plasma glucose, sodium, potassium, bicarbonate, pH, ketones, and serum osmolality at presentation. HHS is characterized by severe hyperglycemia, hyperosmolality, and dehydration without significant ketoacidosis; commonly used thresholds include glucose above 600 mg/dL, effective osmolality at least 320 mOsm/kg, pH above 7.3, and bicarbonate above 18 mEq/L. [1][7]",
+        "Assess altered cognition in parallel with osmolality and perfusion rather than attributing mental-status change solely to glucose. Severe dehydration, profound hyperosmolality, vascular events, infection, pancreatitis, medication effects, and renal or cardiovascular disease may coexist and influence both the initial fluid rate and the precipitant-directed treatment plan. [2][1]",
+        "Do not declare resolution when glucose improves alone. Continue monitored treatment until osmolality is below 300 mOsm/kg, glucose is below 250 mg/dL, urine output exceeds 0.5 mL/kg/h, and cognitive status has improved. [11]"
+      ],
+      "bullets": [
+        "Search for precipitants at admission, particularly infection, myocardial infarction or other vascular events, pancreatitis, inadequate diabetes treatment, and medication-associated hyperglycemia. [1][2]",
+        "Use serial bicarbonate, pH, ketones, and anion gap to identify concurrent DKA or lactic acidosis that changes the metabolic interpretation. [1][3]",
+        "Continue bedside assessment for fluid overload as well as persistent hypoperfusion, particularly in patients with heart failure or renal dysfunction. [2][10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Laboratory patterns that distinguish predominant HHS physiology from significant ketoacidosis. [1][3][11]",
+        "columns": [
+          "Finding",
+          "Predominant HHS pattern",
+          "Interpretation and next action"
+        ],
+        "rows": [
+          [
+            "Glucose",
+            ">600 mg/dL is a conventional diagnostic threshold. [1]",
+            "Supports HHS when paired with hyperosmolality and absent significant acidosis. [1]"
+          ],
+          [
+            "Effective osmolality",
+            "≥320 mOsm/kg supports diagnosis. [1]",
+            "Monitor serially to direct the pace of fluid and insulin treatment. [9][11]"
+          ],
+          [
+            "pH and bicarbonate",
+            "pH >7.3 and bicarbonate >18 mEq/L in classic HHS. [1]",
+            "Lower values should prompt assessment for DKA overlap, lactate elevation, or another acidosis. [1][3]"
+          ],
+          [
+            "Ketones",
+            "No significant ketoacidosis; mild ketonemia may still occur. [1]",
+            "Do not exclude HHS because of mild ketones; determine whether clinically significant DKA is present. [1]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "special-populations-and-safety",
+      "eyebrow": "Risk modification",
+      "heading": "Prevent iatrogenic neurologic and volume complications",
+      "intro": "HHS correction must be slower when physiologic reserve or neurologic risk is limited.",
+      "paragraphs": [
+        "Avoid overly rapid fluid-driven and insulin-driven tonicity correction. A serum osmolality decline faster than 8.0 mOsm/kg/h is associated with increased risk of cerebral edema and osmotic demyelination; reassess insulin timing, glucose fall, and fluid composition when this occurs. [9]",
+        "Children with HHS have particular vulnerability to cerebral edema. One cited approach limits saline to no more than 50 mL/kg during the first 4 hours and replaces the remaining deficit over 48 hours rather than the 24-hour adult time frame. [3]",
+        "For adults with renal dysfunction, congestive heart failure, or advanced cardiovascular disease, use frequent clinical reassessment rather than prespecified large-volume administration. These comorbidities are common in HHS and increase the competing risk of pulmonary edema or cardiorenal deterioration during volume replacement. [2][10]"
+      ],
+      "bullets": [
+        "Escalate monitoring when shock, persistent oliguria, worsening cognition, or clinical pulmonary edema develops during resuscitation. [2][10][11]",
+        "Do not accelerate insulin merely because glucose remains markedly elevated if osmolality is already declining at the target rate. [9]",
+        "Avoid treating an anion gap alone as proof of DKA; dehydration-related lactate can modestly raise the gap in HHS. [3]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Complication-directed adjustments during HHS fluid treatment. [2][3][9][10]",
+        "columns": [
+          "Complication risk",
+          "Signal",
+          "Immediate adjustment"
+        ],
+        "rows": [
+          [
+            "Excessive tonicity correction",
+            "Osmolality decline >8.0 mOsm/kg/h. [9]",
+            "Reassess fluid and insulin delivery to slow correction. [9]"
+          ],
+          [
+            "Persistent intravascular depletion",
+            "Hypotension, poor perfusion, or inadequate urine output. [2][3]",
+            "Continue individualized isotonic crystalloid replacement with frequent reassessment. [2][3][9]"
+          ],
+          [
+            "Volume overload",
+            "Pulmonary edema or other clinical hypervolemia. [10]",
+            "Reduce or pause infusion and reassess fluid balance, perfusion, acid-base status, and electrolytes. [10]"
+          ],
+          [
+            "Treatment-related hypokalemia",
+            "Falling serum potassium after insulin. [3][5]",
+            "Monitor potassium closely and add potassium to fluid as required. [3]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should a rising serum sodium during HHS treatment automatically trigger 0.45% sodium chloride?",
+      "answer": "No. Select subsequent fluids from the overall osmolality, hemodynamic, and fluid-balance trajectory. Current consensus reserves 0.45% sodium chloride for HHS when osmolality is not declining despite adequate fluid and insulin therapy. [11]"
+    },
+    {
+      "question": "When is HHS considered resolved?",
+      "answer": "Resolution requires serum osmolality below 300 mOsm/kg, glucose below 250 mg/dL, urine output above 0.5 mL/kg/h, and improved cognitive status; glucose normalization alone is insufficient. [11]"
+    }
+  ],
+  "references": [],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors."
+}

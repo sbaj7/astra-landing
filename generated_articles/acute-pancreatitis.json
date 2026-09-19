@@ -2,653 +2,668 @@
   "schemaVersion": 2,
   "eyebrow": "Gastroenterology",
   "title": "Acute Pancreatitis",
-  "summary": "Acute pancreatitis requires rapid confirmation, severity assessment, etiologic evaluation, and targeted supportive care. The supplied search results do not include pancreatitis-specific diagnostic criteria, fluid protocols, nutrition guidance, biliary intervention recommendations, or antimicrobial indications; management details therefore require verification against current specialty guidance.",
-  "seoDescription": "Point-of-care overview of acute pancreatitis emphasizing diagnostic confirmation, severity assessment, etiologic evaluation, and evidence gaps requiring current guideline review.",
-  "clinicalQuestion": "How should physicians confirm acute pancreatitis, stratify severity, identify cause, and prioritize early management?",
+  "summary": "Use lactated Ringer\u2019s\u2013based, goal-directed rather than aggressive early resuscitation, reassess severity and volume status frequently, and restore oral or enteral nutrition early to avoid unnecessary fasting and parenteral nutrition.",
+  "seoDescription": "Point-of-care fluid resuscitation and nutrition strategy for acute pancreatitis, including severity triage, lactated Ringer\u2019s, feeding route, and escalation.",
+  "clinicalQuestion": "How should clinicians select, monitor, and escalate fluid resuscitation and nutritional support in acute pancreatitis?",
   "specialty": "Gastroenterology",
   "audience": "U.S. physicians and medical trainees",
   "tags": [
     "acute pancreatitis",
-    "pancreatitis diagnosis",
-    "pancreatitis severity",
-    "etiologic evaluation",
-    "supportive care"
+    "lactated Ringer's",
+    "fluid resuscitation",
+    "enteral nutrition",
+    "oral refeeding",
+    "severe acute pancreatitis",
+    "BISAP"
   ],
   "keyTakeaways": [
-    "The supplied evidence does not provide pancreatitis-specific criteria or treatment recommendations; avoid substituting evidence from unrelated diagnostic, cardiovascular, or pharmacologic sources.",
-    "If acute pancreatitis occurs during sitagliptin therapy, the FDA label advises prompt discontinuation when pancreatitis is suspected and initiation of appropriate management. [3]",
-    "TriVerity is a host-response assay studied in emergency patients with suspected infection or sepsis; it does not establish or exclude acute pancreatitis. [8]"
+    "Avoid early aggressive fluid resuscitation: it increases fluid overload without improving clinical outcomes; use reassessed, goal-directed replacement instead. [5][6][8]",
+    "Prefer lactated Ringer\u2019s over normal saline when crystalloid is required; saline has been associated with hyperchloremic acidosis and a proinflammatory effect. [3][5][6][22][23]",
+    "Do not maintain routine bowel rest. Mild and moderate acute pancreatitis can generally advance to oral low-fat solid food after a short fast, and immediate low-fat oral feeding has been studied against conventional refeeding. [5][6]",
+    "For moderately severe or severe disease when oral intake is not feasible, use early enteral nutrition; enteral feeding is favored over parenteral nutrition and nasogastric feeding is an acceptable route. [4][5][6][14][15][24]",
+    "Use early severity assessment to determine monitoring intensity: BISAP includes BUN greater than 25 mg/dL, altered mental status, SIRS, age greater than 60 years, and pleural effusion. [12]"
   ],
   "sections": [
     {
-      "id": "scope-and-evidence",
-      "eyebrow": "Evidence boundary",
-      "heading": "What the supplied evidence supports",
-      "intro": "The search set is not a pancreatitis management evidence base.",
+      "id": "first-hours-triage",
+      "eyebrow": "Initial management",
+      "heading": "Set monitoring intensity before choosing fluid volume",
+      "intro": "Treat hypovolemia while identifying patients likely to develop persistent organ failure.",
       "paragraphs": [
-        "No supplied result provides acute-pancreatitis-specific diagnostic thresholds, severity classification, recommended initial fluid strategy, analgesic regimen, enteral feeding timing, imaging sequence, indications for ERCP, antibiotic criteria, or criteria for drainage or necrosectomy. Accordingly, these decisions should be verified in current pancreatitis-focused U.S. professional guidance and local pathways before use at the bedside.",
-        "The only directly relevant supplied source is the sitagliptin prescribing information, which reports postmarketing acute pancreatitis, including fatal and nonfatal hemorrhagic or necrotizing cases. It instructs clinicians to discontinue sitagliptin promptly if pancreatitis is suspected and initiate appropriate management. Whether a history of pancreatitis increases risk during sitagliptin therapy is unknown. [3]"
+        "Confirm acute pancreatitis when at least two of three Revised Atlanta features are present: characteristic pancreatic-type pain, serum lipase or amylase at least three times the upper limit of normal, or characteristic pancreatic imaging. Do not obtain pancreatic CT solely to confirm an otherwise clear diagnosis; reserve CT, MRI, or ultrasound-directed pancreatic imaging for diagnostic uncertainty, failure to improve after 48\u201372 hours, or suspected complications. [12]",
+        "At presentation, calculate BISAP and document SIRS. BISAP assigns one point each for BUN greater than 25 mg/dL, altered mental status, SIRS, age greater than 60 years, and pleural effusion; reported mortality ranges from less than 1% with BISAP 0 to 22% with BISAP 5. SIRS on admission identifies increased risk for severe disease and should trigger closer reassessment during early resuscitation. [12]",
+        "Assess cardiovascular, renal, and pulmonary dysfunction with the modified Marshall score when severity is uncertain or deterioration occurs. A score of 2 or greater in cardiovascular, renal, or respiratory domains meets the definition of organ failure. Persistent organ dysfunction, escalating oxygen requirement, hypotension, or inability to safely administer replacement fluid should prompt monitored or critical-care level management rather than protocolized volume loading. [12]"
       ],
       "bullets": [
-        "Do not infer acute pancreatitis diagnosis from host-response molecular testing designed for suspected infection or sepsis. [8]",
-        "Do not use this source set to select intravenous fluid type, volume, rate, antibiotic therapy, nutritional route, ERCP timing, or procedural intervention.",
-        "Medication reconciliation is clinically relevant when pancreatitis is suspected, particularly for sitagliptin exposure. [3]"
+        "Use symptom onset\u2014not hospital arrival\u2014as time zero when interpreting disease evolution and timing reassessment. [12]",
+        "Obtain contrast-enhanced CT when a patient has no clinical improvement after 48 hours and infected necrosis or another complication is suspected; one severe-pancreatitis series used this trigger for CT evaluation. [10]",
+        "In patients with known heart failure or renal insufficiency, lower the threshold to limit or slow fluid administration because aggressive resuscitation can increase volume-overload risk. [8]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Supplied-source applicability to acute pancreatitis decisions",
+        "caption": "Early severity findings that change fluid-monitoring intensity. [12]",
         "columns": [
-          "Clinical decision",
-          "Evidence available in supplied results",
-          "Point-of-care implication"
+          "Finding",
+          "Actionable interpretation",
+          "Next step"
         ],
         "rows": [
           [
-            "Confirm acute pancreatitis",
-            "No pancreatitis-specific diagnostic criteria or laboratory thresholds supplied.",
-            "Use current specialty guidance; do not derive criteria from these results."
+            "BISAP component present: BUN >25 mg/dL, altered mental status, SIRS, age >60 years, or pleural effusion",
+            "Each adds one BISAP point; higher score correlates with increasing reported mortality. [12]",
+            "Increase reassessment frequency and evaluate for evolving organ dysfunction. [12]"
           ],
           [
-            "Assess severity or predict complications",
-            "TriVerity predicted need for mechanical ventilation, vasopressors, and/or new renal replacement therapy within 7 days among ED patients with suspected infection or sepsis; it was not validated for pancreatitis-specific severity assessment. [8]",
-            "Do not substitute this assay for pancreatitis-specific risk stratification."
+            "Modified Marshall score \u22652 in cardiovascular, renal, or respiratory system",
+            "Meets organ-failure definition. [12]",
+            "Escalate monitoring and individualize resuscitation to perfusion and pulmonary tolerance. [12]"
           ],
           [
-            "Review possible medication contribution",
-            "Sitagliptin labeling includes postmarketing reports of acute pancreatitis and directs prompt discontinuation if suspected. [3]",
-            "Hold sitagliptin when pancreatitis is suspected; evaluate alternative causes concurrently."
-          ],
-          [
-            "Initial treatment and interventions",
-            "No directly applicable pancreatitis treatment evidence supplied.",
-            "Verify current gastroenterology, surgery, and critical care recommendations."
+            "No improvement after 48\u201372 hours",
+            "Raises concern for a complication or an alternative diagnosis. [12]",
+            "Obtain pancreatic imaging; use contrast-enhanced CT when infected necrosis is suspected. [10][12]"
           ]
         ]
       }
     },
     {
-      "id": "medication-safety",
-      "eyebrow": "Medication review",
-      "heading": "Sitagliptin when pancreatitis is suspected",
-      "intro": "This is the only pancreatitis-specific action supported by the supplied literature.",
+      "id": "fluid-strategy",
+      "eyebrow": "Resuscitation",
+      "heading": "Use lactated Ringer\u2019s with frequent reassessment, not aggressive fixed-volume resuscitation",
+      "intro": "The critical decision is balancing early perfusion support against iatrogenic fluid overload.",
       "paragraphs": [
-        "Sitagliptin is a dipeptidyl peptidase-4 inhibitor indicated to improve glycemic control in adults with type 2 diabetes. Its FDA labeling describes postmarketing reports of acute pancreatitis, including hemorrhagic and necrotizing pancreatitis. If pancreatitis is suspected after initiation or during treatment, stop sitagliptin promptly and manage the patient appropriately. [3]",
-        "The label states that sitagliptin has not been studied in patients with a history of pancreatitis and that it is unknown whether such patients have increased risk while receiving the drug. This is a knowledge gap rather than a quantified contraindication. [3]"
+        "Choose lactated Ringer\u2019s as the preferred crystalloid when intravenous resuscitation is indicated. Lactated Ringer\u2019s has reduced systemic inflammation compared with normal saline in acute pancreatitis, whereas normal saline has been associated with hyperchloremic acidosis and a proinflammatory effect. [3][5][6][22][23]",
+        "Avoid an early aggressive resuscitation strategy. In the WATERFALL randomized trial, the aggressive-fluid group had more fluid overload without clinical-outcome improvement, leading to early trial termination. A meta-analysis of 11 studies likewise found no mortality difference between aggressive and nonaggressive intravenous fluid strategies but found greater fluid-overload risk with aggressive treatment. [5][6]",
+        "Reassess fluid need serially rather than treating a prescribed volume as an endpoint. The initial clinical objective is correction of hypoperfusion while avoiding pulmonary and systemic congestion; this tradeoff is especially narrow with preexisting renal insufficiency or heart failure. Escalating BUN-based severity risk, SIRS, pleural effusion, or organ dysfunction warrants more intensive observation, but none justifies unmonitored fluid accumulation. [8][12]"
       ],
       "bullets": [
-        "Document exposure timing, dose, renal function, concomitant glucose-lowering drugs, alcohol exposure, biliary history, triglyceride status, and other plausible etiologies; the supplied evidence does not permit attribution of causality to sitagliptin alone.",
-        "Reassess the antihyperglycemic regimen after sitagliptin discontinuation. The supplied label supports renal-function-based sitagliptin dose adjustment but does not provide an acute-pancreatitis-specific replacement strategy. [3]",
-        "Sitagliptin monotherapy has low observed hypoglycemia incidence in pooled trials, but hypoglycemia increases when used with insulin or a sulfonylurea; if those agents are continued during acute illness, reassess dosing and glycemic monitoring. [3]"
+        "Use lactated Ringer\u2019s rather than normal saline when there is no patient-specific contraindication to the balanced crystalloid. [3][5][6][22][23]",
+        "Reevaluate for fluid overload during the first treatment interval and reduce or stop further replacement when congestion develops; aggressive resuscitation did not improve outcomes in WATERFALL. [5][6]",
+        "Do not extrapolate older recommendations for aggressive early fluid therapy to patients with cardiac or renal reserve limitations. [8][11]"
+      ],
+      "subsections": [
+        {
+          "heading": "When deterioration should change the plan",
+          "paragraphs": [
+            "Persistent or new respiratory, renal, or cardiovascular dysfunction should shift management from routine floor-based fluid replacement to organ-supportive care guided by modified Marshall assessment. In this setting, repeated fluid escalation can worsen capillary leak, pulmonary complications, and abdominal pressure rather than reverse established severe disease. [8][12]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": null
+    },
+    {
+      "id": "oral-feeding",
+      "eyebrow": "Mild and moderate disease",
+      "heading": "Resume oral nutrition early rather than waiting for complete symptom resolution",
+      "intro": "Routine prolonged nothing-by-mouth orders are not supported for uncomplicated disease.",
+      "paragraphs": [
+        "For mild or moderate acute pancreatitis, use only a short period of fasting, then restart oral intake as tolerated. Patients can generally progress from clear liquids to a low-fat solid diet and usually do not require formal nutritional-support interventions. [5][6]",
+        "A low-fat solid diet can be considered at admission in selected mild or moderate cases rather than waiting for conventional refeeding milestones. The multicenter PADI trial compared immediate low-fat solid feeding after admission with a conventional oral-refeeding approach, supporting a move away from prolonged pancreatic \u201crest.\u201d [5][6]",
+        "If oral feeding cannot be established or is repeatedly interrupted in moderately severe or severe disease, do not continue fasting by default. Transition to enteral feeding rather than parenteral nutrition unless enteral delivery is not feasible. [5][6][14][15]"
+      ],
+      "bullets": [
+        "Mild or moderate disease with tolerable intake: begin oral low-fat food after a short fast rather than maintain bowel rest. [5][6]",
+        "Persistent inability to take oral nutrition in moderately severe or severe disease: initiate enteral nutrition. [5][6]",
+        "Do not choose parenteral nutrition simply because pancreatitis is severe; enteral nutrition attenuates the acute-phase response compared with parenteral nutrition. [14][15]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "enteral-nutrition",
+      "eyebrow": "Moderately severe and severe disease",
+      "heading": "Use early enteral nutrition when oral intake is inadequate",
+      "intro": "Enteral feeding supports gut integrity and is the preferred artificial nutrition pathway.",
+      "paragraphs": [
+        "Provide early enteral nutrition for moderately severe or severe acute pancreatitis when adequate oral feeding is not possible. Clinical benefit from early enteral feeding in these groups is considered established, and early enteral nutrition reduces bacterial-translocation risk by preserving gut integrity. [5][6][20]",
+        "Nasogastric feeding is an acceptable route; randomized evidence in severe acute pancreatitis found similar results for nasogastric versus nasojejunal feeding. Select the route that can be placed and delivered reliably, while reassessing intolerance or aspiration risk clinically. [4][24]",
+        "Reserve parenteral nutrition for circumstances in which enteral feeding cannot be used or cannot meet nutritional needs. Compared with parenteral nutrition, enteral feeding attenuates the acute-phase response and improves disease severity in acute pancreatitis. [14][15]"
+      ],
+      "bullets": [
+        "Oral intake inadequate plus moderately severe or severe disease: initiate enteral rather than parenteral nutrition early. [5][6][14][15]",
+        "Choose nasogastric access as an acceptable initial enteral route; nasojejunal placement is not routinely required solely because disease is severe. [4][24]",
+        "Continue to reassess for complications when clinical status fails to improve; imaging after 48\u201372 hours can identify necrosis or other complications that alter nutritional and procedural planning. [10][12]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Sitagliptin label information relevant to suspected acute pancreatitis [3]",
+        "caption": "Nutrition pathway by clinical course. [5][6][14][15]",
         "columns": [
-          "Issue",
-          "Label-supported information",
-          "Action"
+          "Clinical situation",
+          "Preferred nutrition strategy",
+          "Avoid or reserve"
         ],
         "rows": [
           [
-            "Suspected pancreatitis",
-            "Postmarketing acute pancreatitis, including fatal and nonfatal hemorrhagic or necrotizing pancreatitis, has been reported. [3]",
-            "Promptly discontinue sitagliptin and initiate appropriate management. [3]"
+            "Mild or moderate acute pancreatitis with returning oral tolerance",
+            "Short fast followed by oral intake, advancing to a low-fat solid diet. [5][6]",
+            "Routine nutritional-support intervention. [5][6]"
           ],
           [
-            "Prior pancreatitis",
-            "Not studied; whether prior pancreatitis increases risk is unknown. [3]",
-            "Use individualized risk-benefit assessment; seek current diabetes and pancreatitis guidance."
+            "Mild or moderate acute pancreatitis suitable for immediate refeeding",
+            "Consider immediate low-fat solid diet after admission. [5][6]",
+            "Conventional prolonged fasting solely to rest the pancreas. [5][6]"
           ],
           [
-            "Renal function",
-            "The label recommends assessment before starting and periodically thereafter; dose reduction is specified for moderate or severe renal impairment and ESRD. [3]",
-            "Review renal function during acute illness, but do not infer pancreatitis treatment from renal dose tables."
+            "Moderately severe or severe acute pancreatitis with inadequate oral intake",
+            "Early enteral nutrition; nasogastric feeding is an acceptable route. [4][5][6][24]",
+            "Parenteral nutrition when enteral delivery is feasible. [14][15]"
+          ],
+          [
+            "Enteral nutrition not feasible or insufficient",
+            "Consider parenteral nutrition only as an alternative pathway. [14][15]",
+            "Assuming severity alone mandates parenteral nutrition. [14][15]"
           ]
         ]
       }
     },
     {
-      "id": "avoid-misapplication",
-      "eyebrow": "Diagnostic stewardship",
-      "heading": "Avoid misapplying sepsis biomarkers to pancreatitis",
-      "intro": "Inflammatory presentations overlap clinically but not diagnostically.",
+      "id": "complication-reassessment",
+      "eyebrow": "Escalation",
+      "heading": "Reassess nonresponse at 48\u201372 hours for complications rather than adding fluid indiscriminately",
+      "intro": "Failure to improve requires diagnostic reassessment and often a change from supportive to complication-directed management.",
       "paragraphs": [
-        "A prospective validation study evaluated the FDA-cleared TriVerity host-response assay in adults presenting to emergency departments with suspected acute infection or sepsis. The assay generates bacterial, viral, and severity scores from expression of 29 host-response mRNAs and was evaluated against adjudicated infection status and a composite of mechanical ventilation, vasopressor use, or new renal replacement therapy within 7 days. [8]",
-        "Acute pancreatitis may produce systemic inflammation and organ dysfunction, but the supplied study did not validate TriVerity for diagnosing pancreatitis, distinguishing sterile pancreatic inflammation from pancreatitis-related infection, or guiding pancreatitis-specific treatment. A high severity score should not be interpreted as proof of pancreatitis severity, and a low bacterial score should not be used to decide against evaluation for infected pancreatic necrosis or another source of infection. [8]"
+        "When pain, systemic inflammation, organ dysfunction, or feeding failure does not improve after 48\u201372 hours, obtain pancreatic imaging to assess complications. Contrast-enhanced CT is particularly useful when infected necrosis is suspected after lack of improvement despite treatment. [10][12]",
+        "Do not treat suspected infected necrosis with fluids or nutrition changes alone. Imaging-defined necrotic collections and persistent clinical deterioration require management planning around organ dysfunction, infection assessment, nutritional support, and referral-capable endoscopic, radiologic, or surgical expertise when intervention is needed. Early endoscopic treatment studies continue to describe intensive fluid replacement, analgesia, and nutrition as baseline management while evaluating necrotic collections. [10]",
+        "If biliary pancreatitis is accompanied by cholangitis, evaluate for biliary obstruction and ERCP-directed therapy rather than relying on medical resuscitation alone. ERCP timing carries procedure-related risk, and urgent intervention should be reserved for an obstruction-driven indication such as cholangitis rather than pancreatitis severity alone. [9]"
       ],
       "bullets": [
-        "Use host-response test results, if obtained for an independent sepsis evaluation, only within the population and intended clinical context studied. [8]",
-        "A diagnostic test's accuracy depends on its intended use, target population, reference standard, and disease prevalence; extrapolation beyond the validation setting can introduce clinically important error. [10]",
-        "When systemic inflammation accompanies abdominal pain, preserve parallel evaluation for pancreatitis, biliary disease, ischemia, perforation, cholangitis, and infection rather than allowing a single biomarker to collapse the differential diagnosis. The supplied evidence does not provide a validated pathway for this distinction."
+        "No improvement after 48\u201372 hours: obtain CT or MRI-based pancreatic assessment rather than continue empiric escalation of intravenous fluid. [10][12]",
+        "Suspected cholangitis with acute biliary pancreatitis: evaluate ductal obstruction and pursue ERCP-directed management. [9]",
+        "Persistent organ failure: use modified Marshall scoring to define and monitor cardiovascular, renal, and respiratory dysfunction. [12]"
       ],
       "subsections": [],
-      "table": {
-        "caption": "Limits of applying supplied diagnostic evidence to acute pancreatitis",
-        "columns": [
-          "Test or framework",
-          "Studied purpose",
-          "Not established for acute pancreatitis"
-        ],
-        "rows": [
-          [
-            "TriVerity [8]",
-            "Likelihood of bacterial infection, viral infection, and need for specified critical-care interventions within 7 days in adults with suspected infection or sepsis. [8]",
-            "Diagnosis of pancreatitis; pancreatitis etiology; pancreatic necrosis; infected necrosis; need for ERCP, drainage, or surgery."
-          ],
-          [
-            "Diagnostic-test evaluation framework [10]",
-            "Methodologic principles for test development and evaluation during emerging infectious disease outbreaks. [10]",
-            "A pancreatitis diagnostic or management algorithm."
-          ]
-        ]
-      }
+      "table": null
     }
   ],
-  "faq": [
-    {
-      "question": "Should sitagliptin be continued when acute pancreatitis is suspected?",
-      "answer": "No. The sitagliptin label directs prompt discontinuation if pancreatitis is suspected and initiation of appropriate management. [3]"
-    },
-    {
-      "question": "Does a history of pancreatitis contraindicate sitagliptin?",
-      "answer": "The supplied FDA labeling states that sitagliptin has not been studied in patients with prior pancreatitis and that any increased risk in this group is unknown. [3]"
-    },
-    {
-      "question": "Can TriVerity confirm or exclude acute pancreatitis?",
-      "answer": "No. The supplied validation study concerns bacterial and viral infection likelihood and short-term critical-care needs in suspected infection or sepsis, not pancreatitis diagnosis or severity. [8]"
-    },
-    {
-      "question": "What pancreatitis-specific treatment protocol can be derived from these sources?",
-      "answer": "None. The supplied results lack direct evidence for diagnostic criteria, fluid resuscitation, analgesia, nutrition, antibiotics, ERCP, drainage, or necrosectomy in acute pancreatitis."
-    }
-  ],
+  "faq": [],
   "references": [
     {
       "number": 1,
-      "title": "highlights of prescribing information",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f818ffe0-43df-4cc6-bc86-00b2c79b06fc&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "In the presence of mild to moderate renal or hepatic impairment, adjustment of dosing is not required for treatment of FMF, but patients should be monitored",
-      "score": 0.64880073
+      "title": "[PDF] Susan S. Baker, MD, PhD - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/170094/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Baker SS. Cystic Fibrosis related Liver Disease: The Next Challenge. J Pediatri Gastroenterol Nutr. 2020 Oct;71(4):421-422. PMID: 32740535. 185.Shahein AR, Quiros JA, Arbizu RA, Jump C, Lauzon SD, Baker SS. Impact of clinical, laboratory and fluid therapy variables on hospital length of stay for chi",
+      "score": 0.18212019
     },
     {
       "number": 2,
-      "title": "These highlights do not include all the information needed to use colchicine safely and effectively. See full prescribing information for Colchicine Tablets, USP. \n      Colchicine Tablets, USP, for oral use Initial U.S. Approval: 1961",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fc439ae8-a79e-4942-8d02-22422b19b015&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "|  | HIGHLIGHTS OF PRESCRIBING INFORMATION These highlights do not include all the information needed to use colchicine safely and effectively. See full prescribing information for Colchicine Tablets, USP.    Colchicine Tablets, USP, for oral use  Initial U.S. Approval: 1961    INDICATIONS AND USAGE",
-      "score": 0.41151342
+      "title": "[PDF] WEGOVY (semaglutide) injection, for subcutaneous use",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "AND STRENGTHS\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219 Injection: prefilled, single-dose pen that delivers doses of 0.25 mg, 0.5 mg, 1 mg, 1.7 mg or 2.4 mg. (3) \u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219CONTRAINDICATIONS\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219 \u2022 Personal or family history of MTC or in pa",
+      "score": 0.06834463
     },
     {
       "number": 3,
-      "title": "These highlights do not include all the information needed to use JANUVIA safely and effectively. See full prescribing information for JANUVIA.\n      JANUVIA\u00ae (sitagliptin) TabletsInitial U.S. Approval: 2006",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aaadccea-4842-493b-a0bd-0ee7645fc250",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "mL/min  ~Serum Cr levels [mg/dL]  Men: >1.7\u2013\u22643.0;  Women: >1.5\u2013\u22642.5 | Severe and ESRD  CrCl <30 mL/min ~Serum Cr levels [mg/dL]  Men: >3.0;  Women: >2.5;  or on dialysis |  DOSAGE FORMS AND STRENGTHS Tablets: 100 mg, 50 mg, and 25 mg (3)  CONTRAINDICATIONS History of a serious hypersensitivity react",
-      "score": 0.26867542
+      "title": "Acute pancreatitis - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)60649-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Lactated Ringer's solution reduces systemic inflammation compared with saline in patients with acute pancreatitis ... complications of pancreatitis. Am J",
+      "score": 0.6208291
     },
     {
       "number": 4,
-      "title": "These highlights do not include all the information needed to use KERENDIA safely and effectively. See full prescribing information for KERENDIA. \n       KERENDIA (finerenone) tablets, for oral use  Initial U.S. Approval: 2021",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fc726765-5d5a-4d6e-b037-b847bda9fb7c&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "Table 1: Recommended Starting Dosage\n\n| eGFR (mL/min/1.73m2) | Starting Dose |\n --- |\n| \u2265 60 | 20 mg orally once daily |\n| \u2265 25 to < 60 | 10 mg orally once daily |\n| < 25 | Initiation is not recommended |\n\nFor patients who are unable to swallow whole tablets, Kerendia may be crushed and mixed with w",
-      "score": 0.2504913
+      "title": "Pancreatitis - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS014067360313139X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Results of a randomised study of nasogastric versus nasojejunal feeding in severe acute pancreatitis suggested that nasogastric feeding may",
+      "score": 0.52334785
     },
     {
       "number": 5,
-      "title": "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001415",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "Feb 19, 2026 \u2014 The focus of this clinical practice guideline is the evaluation and management of acute pulmonary embolism (PE) in the adult patient (\u226518 years",
-      "score": 0.42448413
+      "title": "Managing complicated pancreatitis with more knowledge and a bigger toolbox! | Trauma Surgery & Acute Care Open",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/10/Suppl_1/e001798",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "acidosis.32 A subsequent randomized controlled trial found similar results and suggested that NS, when compared with LR, is associated with a pro-inflammatory effect in patients with AP.33 The WATERFALL34 was a randomized trial to address the volume of fluid used in resuscitation of patients with AP",
+      "score": 0.6786044
     },
     {
       "number": 6,
-      "title": "2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001251",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by HL Gornik \u00b7 2024 \u00b7 Cited by 1002 \u2014 provides recommendations to guide clinicians in the treatment of patients with lower extremity peripheral artery disease \u2026 s approved for",
-      "score": 0.061927155
+      "title": "Managing complicated pancreatitis with more knowledge and a ...",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/tsaco/10/Suppl_1/e001798.full.pdf",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "reducing the risk of bacterial translo-cation.38 The evidence supporting the clinical benefits of early enteral feeding in patients with moderately severe and severe AP is now considered definitive and plays a vital role in managing AP . Despite this strong recommendation, debate has continued. Most",
+      "score": 0.6469293
     },
     {
       "number": 7,
-      "title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by Writing Committee Members* \u00b7 2025 \u00b7 Cited by 773 \u2014 The term guideline-directed medical therapy (GDMT) encompasses clinical evaluation, diagnostic testing, and both pharmacological and procedural treatments.",
-      "score": 0.05720304
+      "title": "MC1776 protocol - The Journal for ImmunoTherapy of Cancer",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/13/4/e011706/DC1/embed/inline-supplementary-material-1.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "discontinuation of vemurafenib, and in some cases has been managed with granulocyte colony-stimulating factor. Pancreatitis Pancreatitis has been identified as an uncommon adverse drug reaction in patients being treated with vemurafenib. The clinical presentation in terms of severity, mild to modera",
+      "score": 0.12287034
     },
     {
       "number": 8,
-      "title": "Clinical validation of an AI-based blood testing device for diagnosis and prognosis of acute infection and sepsis | Nature Medicine",
+      "title": "Acute pancreatitis: mechanisms and therapeutic approaches - Nature",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "url": "https://www.nature.com/articles/s41392-025-02394-6",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Taylor et al.23.\") recently surveyed 153 US clinicians responding to real-world derived vignettes of suspected sepsis to analyze decision thresholds to treat or not with antibiotics, using infection prediction models and varying case severities. Although the overall threshold to treat was 69% probab",
-      "score": 0.6396691
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nArvanitakis, M. et al. ESPEN practical guideline on clinical nutrition in acute and chronic pancreatitis. Clin. Nutr. 43, 395\u2013412 (2024).\n\nArticle \nPubMed \nGoogle Scholar\n\nKetwaroo, G. et al. Quality of care indicators in patients with acute pancreatitis. Dig. Dis. S",
+      "score": 0.5677694
     },
     {
       "number": 9,
-      "title": "Development and validation of prognostic machine learning models for short- and long-term mortality among acutely admitted patients based on blood tests | Scientific Reports",
+      "title": "Increased ERCP-related adverse event from premature urgent ERCP following symptom onset in acute biliary pancreatitis with cholangitis | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41598-024-56638-6",
+      "url": "https://www.nature.com/articles/s41598-024-64644-x",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "value, and negative predictive value for the complete data, based on probability threshold of 0.5, were estimated for the training and test data and evaluated between them. Similarly, analyses were performed on the top ML models, including a sensitivity analysis using data without variable imputatio",
-      "score": 0.5843666
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nWorking Group IAP/APA Acute Pancreatitis Guidelines. IAP/APA evidence-based guidelines for the management of acute pancreatitis. Pancreatology 13, e1\u201315 (2013).\n\nArticle \nGoogle Scholar\n\nKwon, C. I., Song, S. H., Hahm, K. B. & Ko, K. H. Unusual complications related ",
+      "score": 0.42348245
     },
     {
       "number": 10,
-      "title": "A unified framework for diagnostic test development and evaluation during outbreaks of emerging infections",
+      "title": "Early endoscopic treatment of symptomatic pancreatic necrotic collections | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s43856-024-00691-9",
+      "url": "https://www.nature.com/articles/s41598-021-03924-2",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Joint data collection and sharing infrastructure can be used to make infected samples available to test developers.\n\nThreshold selection for diagnostic tests must be done in advance, but the optimal threshold depends on ever-changing disease prevalences and consequences of misclassification.\n\n   A l",
-      "score": 0.28234753
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nJagielski, M., Smoczy\u0144ski, M., Szeliga, J., Adrych, K. & Jackowski, M. Various endoscopic techniques for treatment of consequences of acute necrotizing pancreatitis: practical updates for the endoscopist. J. Clin. Med. 9, 1\u201318 (2020).\n\nArticle \nGoogle Scholar\n\nTenner, S",
+      "score": 0.37182122
     },
     {
       "number": 11,
-      "title": "The hidden risk of round numbers and sharp thresholds in clinical practice | npj Digital Medicine",
+      "title": "The utility of neutrophil to lymphocyte ratio and fluid sequestration as an early predictor of severe acute pancreatitis | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41746-025-02079-y",
+      "url": "https://www.nature.com/articles/s41598-017-10516-6",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Clinical practice requires consistency of application and ease of implementation. Based on these requirements, guidelines for clinical practice are often presented as round-number thresholds to facilitate uniform decision-making. For example, both the Acute Physiology and Chronic Health Evaluation (",
-      "score": 0.2117756
+      "snippet": "Fluid therapy is considered as a cornerstone of the early management of AP, with several studies and clinical guidelines recommending early and aggressive fluid resuscitation24.\"), 25.\"). However, early aggressive fluid therapy may be not associated with improved outcomes or even detrimental26.\"), 2",
+      "score": 0.36772484
     },
     {
       "number": 12,
-      "title": "ACC/AHA Guidelines for the Management of Patients With ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.94.9.2341",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by TJ Ryan \u00b7 1996 \u00b7 Cited by 426 \u2014 These guidelines are intended for physicians, nurses, and allied healthcare personnel who care for patients with suspected or established acute myocardial",
-      "score": 0.35952207
+      "title": "Mechanisms and Management of Acute Pancreatitis - Garber - 2018 - Gastroenterology Research and Practice - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2018/6218798",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "## 5. Diagnosis\n\nThe Revised Atlanta Criteria of 2012 (updated from 1992) requires two of three conditions be met to diagnose acute pancreatitis: (1) abdominal pain consistent with acute pancreatitis (i.e., epigastric abdominal pain with possible radiation to the back), (2) lipase or amylase \u2265 3 tim",
+      "score": 0.53385985
     },
     {
       "number": 13,
-      "title": "A scoping review of evidence-based guidance and guidelines ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/fampra/article/41/4/404/7051177",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by E O\u2019Brien \u00b7 2024 \u00b7 Cited by 8 \u2014 Studies were included if they were: (i) evidence-based guidance documents or clinical guidelines produced de novo by a national GP professional",
-      "score": 0.15980688
+      "title": "Outcome assessment in acute pancreatitis patients - Lee",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1016/j.kjms.2012.10.007",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by WS Lee \u00b7 2013 \u00b7 Cited by 36 \u2014 Early diagnosis and severity evaluation in patients with acute pancreatitis (AP) are very important due to its potential morbidity and",
+      "score": 0.50930125
     },
     {
       "number": 14,
-      "title": "Clinician Testing and Treatment Thresholds for Management ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/ofid/article/10/9/ofad455/7256803",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by A Harris \u00b7 2023 \u00b7 Cited by 3 \u2014 The threshold model describes a probability of disease at which a clinician will test for the disease, and a higher probability at which a clinician will treat",
-      "score": 0.23530203
+      "title": "Nutrition Support in Acute Pancreatitis: A Systematic Review of the ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0148607106030002143",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Compared with parenteral nutrition, enteral feeding attenuates the acute phase response and improves disease severity in acute pancreatitis.",
+      "score": 0.43395805
     },
     {
       "number": 15,
-      "title": "Diagnostic testing and the evolution of detection avoidance by ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/emph/article/12/1/248/7742490",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by J Wood \u00b7 2024 \u00b7 Cited by 1 \u2014 We derive key thresholds under which a testing regime will (i) select for diagnostic test avoidance, or (ii) drive the pathogen extinct.",
-      "score": 0.23312138
+      "title": "Guidelines for the management of acute pancreatitis - TOOULI - 2002",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1046/j.1440-1746.17.s1.2.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Compared with parenteral nutrition, enteral feeding attenuates the acute phase response and improves disease severity in acute pancreatitis.",
+      "score": 0.39138326
     },
     {
       "number": 16,
-      "title": "Impact of Individualized Versus Weight-Based Pain ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0099176724003799",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by SO Ibemere \u00b7 2025 \u00b7 Cited by 1 \u2014 National guidelines for the acute management of sickle cell disease vaso-occlusive episodes recommend the use of a patient-specific or a weight-based protocol.",
-      "score": 0.43208793
+      "title": "Diagnosis, prediction, and classification - Pancreatitis",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781118924907.ch3",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The diagnosis of AP is established when two out of the three following criteria are present: pancreatic-type abdominal pain, elevated serum amylase and/or",
+      "score": 0.3656158
     },
     {
       "number": 17,
-      "title": "Implementing ASH's guidelines for acute medical care ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/pii/S2473952925001132",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by MR DeBaun \u00b7 2025 \u00b7 Cited by 3 \u2014 The ASH special panel's recommendations for management of acute neurological deficits in incarcerated children and adults with SCD. The ASH",
-      "score": 0.29979196
+      "title": "Acute management of pancreatitis: the key to best outcomes - Ovid",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/pmj/article-pdf/95/1124/328/49810781/postgradmedj-95-328.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Such imaging is helpful in classifying severity of disease, correlating mortality and treatment plans. Magnetic resonance cholangiopancreatog- raphy (MRCP) has",
+      "score": 0.34561363
     },
     {
       "number": 18,
-      "title": "Acute Pain Management - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/acute-pain-management",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Standardized protocols include the assessment and charting of pain scores as the fifth vital sign. Patients with high pain intensity scores (>5 on a 10-point",
-      "score": 0.23480159
+      "title": "Clinical Utility of Diagnostic Laboratory Tests in Dogs with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jvim/article/30/1/116/8452788",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Yuki \u00b7 2016 \u00b7 Cited by 45 \u2014 Acute pancreatitis (AP) occurs frequently in dogs, but most previous studies examining the diagnosis of AP have used data from secondary care hospitals.Read more",
+      "score": 0.27235872
     },
     {
       "number": 19,
-      "title": "Monitoring Procedure - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/monitoring-procedure",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Criteria usually include measurements of time, temperature, moisture level, water activity, available chlorine or sensory parameters",
-      "score": 0.15217108
+      "title": "Poster Abstracts - 2021 - Journal of Parenteral and Enteral Nutrition",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1002/jpen.2095",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "the association of nutritional status with the primary outcome of severe acute pancreatitis (2012 revised Atlanta classification) and secondary outcomes, including healthcare resource utilization (length of stay and inflation-adjusted hospital costs). We excluded any patients with a diagnosis of chr",
+      "score": 0.2648624
     },
     {
       "number": 20,
-      "title": "Clinical Practice Guidelines Development: Training and Resources",
-      "detail": "www.idsociety.org",
-      "url": "https://www.idsociety.org/clinical-practice-guidelines-development-training-and-resources",
-      "authors": "www.idsociety.org",
-      "host": "www.idsociety.org",
-      "snippet": "The following resources represent the various background and critical appraisal tools used for guidelines development.   \n  \nInstitute of Medicine (IOM): Standards for Developing Trustworthy Clinical Practice Guidelines  \nWhen treating patients, doctors and other healthcare providers are often faced",
-      "score": 0.22779596
+      "title": "Drivers of Oxidative Stress in Acute Pancreatitis - ASPEN Journals",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0148607111424410",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Probably the most important protective mechanism of enteral nutrition (EN) is the physiologic response of maintaining gut integrity. Early",
+      "score": 0.20837253
     },
     {
       "number": 21,
-      "title": "Code and Guideline Changes | AMA",
-      "detail": "www.acc.org",
-      "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Latest%20in%20Cardiology/Advocacy%20and%20Policy/2021-AMA-EM-clarificatons-030921",
-      "authors": "www.acc.org",
-      "host": "www.acc.org",
-      "snippet": "consideration of hospital level of care. Undiagnosed new problem with uncertain prognosis: A problem in the differential diagnosis that represents a condition likely to result in a high risk of morbidity without treatment. An example may be a lump in the breast. Acute illness with systemic symptoms:",
-      "score": 0.22357234
+      "title": "An Overview of the Diagnosis and Management of Nutrition in ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0884533614529996",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "The aims of this review are to describe the various modalities used to diagnose chronic pancreatitis, to illustrate the nutrition deficiencies",
+      "score": 0.17481875
     },
     {
       "number": 22,
-      "title": "All Practice Guidelines: A-Z List",
-      "detail": "www.idsociety.org",
-      "url": "https://www.idsociety.org/idsa_practice_guidelines",
-      "authors": "www.idsociety.org",
-      "host": "www.idsociety.org",
-      "snippet": "IDSA clinical guidance documents are developed based on a comprehensive (but not necessarily systematic) review of the available evidence, coupled with experience of clinical and research experts on the topic. They do not include a formal grading of the evidence. Over time, IDSA guidance documents m",
-      "score": 0.21143347
+      "title": "Diagnosis and Management of Acute Pancreatitis - Gastroenterology",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(24)04916-3/pdf",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "12-24 hours, with further infusion rate ... Lactated Ringer's \u00b7 solution reduces systemic inflammation compared with \u00b7 saline in patients with acute pancreatitis.",
+      "score": 0.6216563
     },
     {
       "number": 23,
-      "title": "Policy Statements",
-      "detail": "www.annemergmed.com",
-      "url": "https://www.annemergmed.com/article/S0196-0644(24)01070-9/fulltext",
-      "authors": "www.annemergmed.com",
-      "host": "www.annemergmed.com",
-      "snippet": "by PS CENTERS \u00b7 2025 \u2014 Clinical standards of care developed, established, and promulgated by EMS physician medical directors, in the form of clinical care guidelines or protocols,",
-      "score": 0.20924373
+      "title": "Clinical Management of Patients With Acute Pancreatitis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(13)00195-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Lactated Ringer's solution reduces systemic inflammation compared with saline in patients with acute pancreatitis. Clin Gastroenterol Hepatol. 2011; 9:710",
+      "score": 0.58721006
     },
     {
       "number": 24,
-      "title": "Practice Guidelines",
-      "detail": "www.aasld.org",
-      "url": "https://www.aasld.org/practice-guidelines",
-      "authors": "www.aasld.org",
-      "host": "www.aasld.org",
-      "snippet": "Learn More\n\n## Guidelines and Guidance by Disease\n\n Acute Liver Failure, Management\n Acute-on-Chronic Liver Failure and the Management\n Alcohol-Associated Liver Disease\n Ascites, Spontaneous Bacterial Peritonitis and Hepatorenal Syndrome, Management\n Autoimmune Hepatitis, Management\n Drug, Herbal, a",
-      "score": 0.20008872
+      "title": "Initial Medical Treatment of Acute Pancreatitis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(18)30075-1/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by SS Vege \u00b7 2018 \u00b7 Cited by 380 \u2014 ... Parenteral Nutrition in Mild or Severe ... A randomized study of early nasogastric versus nasojejunal feeding in severe acute pancreatitis.Read more",
+      "score": 0.56719416
     }
   ],
   "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
   "citations": [
     {
       "number": 1,
-      "title": "highlights of prescribing information",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f818ffe0-43df-4cc6-bc86-00b2c79b06fc&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "In the presence of mild to moderate renal or hepatic impairment, adjustment of dosing is not required for treatment of FMF, but patients should be monitored",
-      "score": 0.64880073
+      "title": "[PDF] Susan S. Baker, MD, PhD - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/170094/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "Baker SS. Cystic Fibrosis related Liver Disease: The Next Challenge. J Pediatri Gastroenterol Nutr. 2020 Oct;71(4):421-422. PMID: 32740535. 185.Shahein AR, Quiros JA, Arbizu RA, Jump C, Lauzon SD, Baker SS. Impact of clinical, laboratory and fluid therapy variables on hospital length of stay for chi",
+      "score": 0.18212019
     },
     {
       "number": 2,
-      "title": "These highlights do not include all the information needed to use colchicine safely and effectively. See full prescribing information for Colchicine Tablets, USP. \n      Colchicine Tablets, USP, for oral use Initial U.S. Approval: 1961",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fc439ae8-a79e-4942-8d02-22422b19b015&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "|  | HIGHLIGHTS OF PRESCRIBING INFORMATION These highlights do not include all the information needed to use colchicine safely and effectively. See full prescribing information for Colchicine Tablets, USP.    Colchicine Tablets, USP, for oral use  Initial U.S. Approval: 1961    INDICATIONS AND USAGE",
-      "score": 0.41151342
+      "title": "[PDF] WEGOVY (semaglutide) injection, for subcutaneous use",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215256s024lbl.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "AND STRENGTHS\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219 Injection: prefilled, single-dose pen that delivers doses of 0.25 mg, 0.5 mg, 1 mg, 1.7 mg or 2.4 mg. (3) \u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219CONTRAINDICATIONS\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219\u2219 \u2022 Personal or family history of MTC or in pa",
+      "score": 0.06834463
     },
     {
       "number": 3,
-      "title": "These highlights do not include all the information needed to use JANUVIA safely and effectively. See full prescribing information for JANUVIA.\n      JANUVIA\u00ae (sitagliptin) TabletsInitial U.S. Approval: 2006",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=aaadccea-4842-493b-a0bd-0ee7645fc250",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "mL/min  ~Serum Cr levels [mg/dL]  Men: >1.7\u2013\u22643.0;  Women: >1.5\u2013\u22642.5 | Severe and ESRD  CrCl <30 mL/min ~Serum Cr levels [mg/dL]  Men: >3.0;  Women: >2.5;  or on dialysis |  DOSAGE FORMS AND STRENGTHS Tablets: 100 mg, 50 mg, and 25 mg (3)  CONTRAINDICATIONS History of a serious hypersensitivity react",
-      "score": 0.26867542
+      "title": "Acute pancreatitis - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)60649-8/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Lactated Ringer's solution reduces systemic inflammation compared with saline in patients with acute pancreatitis ... complications of pancreatitis. Am J",
+      "score": 0.6208291
     },
     {
       "number": 4,
-      "title": "These highlights do not include all the information needed to use KERENDIA safely and effectively. See full prescribing information for KERENDIA. \n       KERENDIA (finerenone) tablets, for oral use  Initial U.S. Approval: 2021",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fc726765-5d5a-4d6e-b037-b847bda9fb7c&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "Table 1: Recommended Starting Dosage\n\n| eGFR (mL/min/1.73m2) | Starting Dose |\n --- |\n| \u2265 60 | 20 mg orally once daily |\n| \u2265 25 to < 60 | 10 mg orally once daily |\n| < 25 | Initiation is not recommended |\n\nFor patients who are unable to swallow whole tablets, Kerendia may be crushed and mixed with w",
-      "score": 0.2504913
+      "title": "Pancreatitis - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS014067360313139X/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Results of a randomised study of nasogastric versus nasojejunal feeding in severe acute pancreatitis suggested that nasogastric feeding may",
+      "score": 0.52334785
     },
     {
       "number": 5,
-      "title": "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001415",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "Feb 19, 2026 \u2014 The focus of this clinical practice guideline is the evaluation and management of acute pulmonary embolism (PE) in the adult patient (\u226518 years",
-      "score": 0.42448413
+      "title": "Managing complicated pancreatitis with more knowledge and a bigger toolbox! | Trauma Surgery & Acute Care Open",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/10/Suppl_1/e001798",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "acidosis.32 A subsequent randomized controlled trial found similar results and suggested that NS, when compared with LR, is associated with a pro-inflammatory effect in patients with AP.33 The WATERFALL34 was a randomized trial to address the volume of fluid used in resuscitation of patients with AP",
+      "score": 0.6786044
     },
     {
       "number": 6,
-      "title": "2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001251",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by HL Gornik \u00b7 2024 \u00b7 Cited by 1002 \u2014 provides recommendations to guide clinicians in the treatment of patients with lower extremity peripheral artery disease \u2026 s approved for",
-      "score": 0.061927155
+      "title": "Managing complicated pancreatitis with more knowledge and a ...",
+      "detail": "tsaco.bmj.com",
+      "url": "https://tsaco.bmj.com/content/tsaco/10/Suppl_1/e001798.full.pdf",
+      "authors": "tsaco.bmj.com",
+      "host": "tsaco.bmj.com",
+      "snippet": "reducing the risk of bacterial translo-cation.38 The evidence supporting the clinical benefits of early enteral feeding in patients with moderately severe and severe AP is now considered definitive and plays a vital role in managing AP . Despite this strong recommendation, debate has continued. Most",
+      "score": 0.6469293
     },
     {
       "number": 7,
-      "title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by Writing Committee Members* \u00b7 2025 \u00b7 Cited by 773 \u2014 The term guideline-directed medical therapy (GDMT) encompasses clinical evaluation, diagnostic testing, and both pharmacological and procedural treatments.",
-      "score": 0.05720304
+      "title": "MC1776 protocol - The Journal for ImmunoTherapy of Cancer",
+      "detail": "jitc.bmj.com",
+      "url": "https://jitc.bmj.com/content/jitc/13/4/e011706/DC1/embed/inline-supplementary-material-1.pdf",
+      "authors": "jitc.bmj.com",
+      "host": "jitc.bmj.com",
+      "snippet": "discontinuation of vemurafenib, and in some cases has been managed with granulocyte colony-stimulating factor. Pancreatitis Pancreatitis has been identified as an uncommon adverse drug reaction in patients being treated with vemurafenib. The clinical presentation in terms of severity, mild to modera",
+      "score": 0.12287034
     },
     {
       "number": 8,
-      "title": "Clinical validation of an AI-based blood testing device for diagnosis and prognosis of acute infection and sepsis | Nature Medicine",
+      "title": "Acute pancreatitis: mechanisms and therapeutic approaches - Nature",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41591-025-03933-y",
+      "url": "https://www.nature.com/articles/s41392-025-02394-6",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Taylor et al.23.\") recently surveyed 153 US clinicians responding to real-world derived vignettes of suspected sepsis to analyze decision thresholds to treat or not with antibiotics, using infection prediction models and varying case severities. Although the overall threshold to treat was 69% probab",
-      "score": 0.6396691
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nArvanitakis, M. et al. ESPEN practical guideline on clinical nutrition in acute and chronic pancreatitis. Clin. Nutr. 43, 395\u2013412 (2024).\n\nArticle \nPubMed \nGoogle Scholar\n\nKetwaroo, G. et al. Quality of care indicators in patients with acute pancreatitis. Dig. Dis. S",
+      "score": 0.5677694
     },
     {
       "number": 9,
-      "title": "Development and validation of prognostic machine learning models for short- and long-term mortality among acutely admitted patients based on blood tests | Scientific Reports",
+      "title": "Increased ERCP-related adverse event from premature urgent ERCP following symptom onset in acute biliary pancreatitis with cholangitis | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41598-024-56638-6",
+      "url": "https://www.nature.com/articles/s41598-024-64644-x",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "value, and negative predictive value for the complete data, based on probability threshold of 0.5, were estimated for the training and test data and evaluated between them. Similarly, analyses were performed on the top ML models, including a sensitivity analysis using data without variable imputatio",
-      "score": 0.5843666
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nWorking Group IAP/APA Acute Pancreatitis Guidelines. IAP/APA evidence-based guidelines for the management of acute pancreatitis. Pancreatology 13, e1\u201315 (2013).\n\nArticle \nGoogle Scholar\n\nKwon, C. I., Song, S. H., Hahm, K. B. & Ko, K. H. Unusual complications related ",
+      "score": 0.42348245
     },
     {
       "number": 10,
-      "title": "A unified framework for diagnostic test development and evaluation during outbreaks of emerging infections",
+      "title": "Early endoscopic treatment of symptomatic pancreatic necrotic collections | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s43856-024-00691-9",
+      "url": "https://www.nature.com/articles/s41598-021-03924-2",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Joint data collection and sharing infrastructure can be used to make infected samples available to test developers.\n\nThreshold selection for diagnostic tests must be done in advance, but the optimal threshold depends on ever-changing disease prevalences and consequences of misclassification.\n\n   A l",
-      "score": 0.28234753
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nJagielski, M., Smoczy\u0144ski, M., Szeliga, J., Adrych, K. & Jackowski, M. Various endoscopic techniques for treatment of consequences of acute necrotizing pancreatitis: practical updates for the endoscopist. J. Clin. Med. 9, 1\u201318 (2020).\n\nArticle \nGoogle Scholar\n\nTenner, S",
+      "score": 0.37182122
     },
     {
       "number": 11,
-      "title": "The hidden risk of round numbers and sharp thresholds in clinical practice | npj Digital Medicine",
+      "title": "The utility of neutrophil to lymphocyte ratio and fluid sequestration as an early predictor of severe acute pancreatitis | Scientific Reports",
       "detail": "www.nature.com",
-      "url": "https://www.nature.com/articles/s41746-025-02079-y",
+      "url": "https://www.nature.com/articles/s41598-017-10516-6",
       "authors": "www.nature.com",
       "host": "www.nature.com",
-      "snippet": "Clinical practice requires consistency of application and ease of implementation. Based on these requirements, guidelines for clinical practice are often presented as round-number thresholds to facilitate uniform decision-making. For example, both the Acute Physiology and Chronic Health Evaluation (",
-      "score": 0.2117756
+      "snippet": "Fluid therapy is considered as a cornerstone of the early management of AP, with several studies and clinical guidelines recommending early and aggressive fluid resuscitation24.\"), 25.\"). However, early aggressive fluid therapy may be not associated with improved outcomes or even detrimental26.\"), 2",
+      "score": 0.36772484
     },
     {
       "number": 12,
-      "title": "ACC/AHA Guidelines for the Management of Patients With ...",
-      "detail": "www.ahajournals.org",
-      "url": "https://www.ahajournals.org/doi/10.1161/01.cir.94.9.2341",
-      "authors": "www.ahajournals.org",
-      "host": "www.ahajournals.org",
-      "snippet": "by TJ Ryan \u00b7 1996 \u00b7 Cited by 426 \u2014 These guidelines are intended for physicians, nurses, and allied healthcare personnel who care for patients with suspected or established acute myocardial",
-      "score": 0.35952207
+      "title": "Mechanisms and Management of Acute Pancreatitis - Garber - 2018 - Gastroenterology Research and Practice - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2018/6218798",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "## 5. Diagnosis\n\nThe Revised Atlanta Criteria of 2012 (updated from 1992) requires two of three conditions be met to diagnose acute pancreatitis: (1) abdominal pain consistent with acute pancreatitis (i.e., epigastric abdominal pain with possible radiation to the back), (2) lipase or amylase \u2265 3 tim",
+      "score": 0.53385985
     },
     {
       "number": 13,
-      "title": "A scoping review of evidence-based guidance and guidelines ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/fampra/article/41/4/404/7051177",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by E O\u2019Brien \u00b7 2024 \u00b7 Cited by 8 \u2014 Studies were included if they were: (i) evidence-based guidance documents or clinical guidelines produced de novo by a national GP professional",
-      "score": 0.15980688
+      "title": "Outcome assessment in acute pancreatitis patients - Lee",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1016/j.kjms.2012.10.007",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by WS Lee \u00b7 2013 \u00b7 Cited by 36 \u2014 Early diagnosis and severity evaluation in patients with acute pancreatitis (AP) are very important due to its potential morbidity and",
+      "score": 0.50930125
     },
     {
       "number": 14,
-      "title": "Clinician Testing and Treatment Thresholds for Management ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/ofid/article/10/9/ofad455/7256803",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by A Harris \u00b7 2023 \u00b7 Cited by 3 \u2014 The threshold model describes a probability of disease at which a clinician will test for the disease, and a higher probability at which a clinician will treat",
-      "score": 0.23530203
+      "title": "Nutrition Support in Acute Pancreatitis: A Systematic Review of the ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0148607106030002143",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Compared with parenteral nutrition, enteral feeding attenuates the acute phase response and improves disease severity in acute pancreatitis.",
+      "score": 0.43395805
     },
     {
       "number": 15,
-      "title": "Diagnostic testing and the evolution of detection avoidance by ...",
-      "detail": "academic.oup.com",
-      "url": "https://academic.oup.com/emph/article/12/1/248/7742490",
-      "authors": "academic.oup.com",
-      "host": "academic.oup.com",
-      "snippet": "by J Wood \u00b7 2024 \u00b7 Cited by 1 \u2014 We derive key thresholds under which a testing regime will (i) select for diagnostic test avoidance, or (ii) drive the pathogen extinct.",
-      "score": 0.23312138
+      "title": "Guidelines for the management of acute pancreatitis - TOOULI - 2002",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1046/j.1440-1746.17.s1.2.x",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Compared with parenteral nutrition, enteral feeding attenuates the acute phase response and improves disease severity in acute pancreatitis.",
+      "score": 0.39138326
     },
     {
       "number": 16,
-      "title": "Impact of Individualized Versus Weight-Based Pain ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0099176724003799",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by SO Ibemere \u00b7 2025 \u00b7 Cited by 1 \u2014 National guidelines for the acute management of sickle cell disease vaso-occlusive episodes recommend the use of a patient-specific or a weight-based protocol.",
-      "score": 0.43208793
+      "title": "Diagnosis, prediction, and classification - Pancreatitis",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781118924907.ch3",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The diagnosis of AP is established when two out of the three following criteria are present: pancreatic-type abdominal pain, elevated serum amylase and/or",
+      "score": 0.3656158
     },
     {
       "number": 17,
-      "title": "Implementing ASH's guidelines for acute medical care ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/pii/S2473952925001132",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by MR DeBaun \u00b7 2025 \u00b7 Cited by 3 \u2014 The ASH special panel's recommendations for management of acute neurological deficits in incarcerated children and adults with SCD. The ASH",
-      "score": 0.29979196
+      "title": "Acute management of pancreatitis: the key to best outcomes - Ovid",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/pmj/article-pdf/95/1124/328/49810781/postgradmedj-95-328.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Such imaging is helpful in classifying severity of disease, correlating mortality and treatment plans. Magnetic resonance cholangiopancreatog- raphy (MRCP) has",
+      "score": 0.34561363
     },
     {
       "number": 18,
-      "title": "Acute Pain Management - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/acute-pain-management",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Standardized protocols include the assessment and charting of pain scores as the fifth vital sign. Patients with high pain intensity scores (>5 on a 10-point",
-      "score": 0.23480159
+      "title": "Clinical Utility of Diagnostic Laboratory Tests in Dogs with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jvim/article/30/1/116/8452788",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "by M Yuki \u00b7 2016 \u00b7 Cited by 45 \u2014 Acute pancreatitis (AP) occurs frequently in dogs, but most previous studies examining the diagnosis of AP have used data from secondary care hospitals.Read more",
+      "score": 0.27235872
     },
     {
       "number": 19,
-      "title": "Monitoring Procedure - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/monitoring-procedure",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Criteria usually include measurements of time, temperature, moisture level, water activity, available chlorine or sensory parameters",
-      "score": 0.15217108
+      "title": "Poster Abstracts - 2021 - Journal of Parenteral and Enteral Nutrition",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1002/jpen.2095",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "the association of nutritional status with the primary outcome of severe acute pancreatitis (2012 revised Atlanta classification) and secondary outcomes, including healthcare resource utilization (length of stay and inflation-adjusted hospital costs). We excluded any patients with a diagnosis of chr",
+      "score": 0.2648624
     },
     {
       "number": 20,
-      "title": "Clinical Practice Guidelines Development: Training and Resources",
-      "detail": "www.idsociety.org",
-      "url": "https://www.idsociety.org/clinical-practice-guidelines-development-training-and-resources",
-      "authors": "www.idsociety.org",
-      "host": "www.idsociety.org",
-      "snippet": "The following resources represent the various background and critical appraisal tools used for guidelines development.   \n  \nInstitute of Medicine (IOM): Standards for Developing Trustworthy Clinical Practice Guidelines  \nWhen treating patients, doctors and other healthcare providers are often faced",
-      "score": 0.22779596
+      "title": "Drivers of Oxidative Stress in Acute Pancreatitis - ASPEN Journals",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0148607111424410",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "Probably the most important protective mechanism of enteral nutrition (EN) is the physiologic response of maintaining gut integrity. Early",
+      "score": 0.20837253
     },
     {
       "number": 21,
-      "title": "Code and Guideline Changes | AMA",
-      "detail": "www.acc.org",
-      "url": "https://www.acc.org/-/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Latest%20in%20Cardiology/Advocacy%20and%20Policy/2021-AMA-EM-clarificatons-030921",
-      "authors": "www.acc.org",
-      "host": "www.acc.org",
-      "snippet": "consideration of hospital level of care. Undiagnosed new problem with uncertain prognosis: A problem in the differential diagnosis that represents a condition likely to result in a high risk of morbidity without treatment. An example may be a lump in the breast. Acute illness with systemic symptoms:",
-      "score": 0.22357234
+      "title": "An Overview of the Diagnosis and Management of Nutrition in ...",
+      "detail": "aspenjournals.onlinelibrary.wiley.com",
+      "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1177/0884533614529996",
+      "authors": "aspenjournals.onlinelibrary.wiley.com",
+      "host": "aspenjournals.onlinelibrary.wiley.com",
+      "snippet": "The aims of this review are to describe the various modalities used to diagnose chronic pancreatitis, to illustrate the nutrition deficiencies",
+      "score": 0.17481875
     },
     {
       "number": 22,
-      "title": "All Practice Guidelines: A-Z List",
-      "detail": "www.idsociety.org",
-      "url": "https://www.idsociety.org/idsa_practice_guidelines",
-      "authors": "www.idsociety.org",
-      "host": "www.idsociety.org",
-      "snippet": "IDSA clinical guidance documents are developed based on a comprehensive (but not necessarily systematic) review of the available evidence, coupled with experience of clinical and research experts on the topic. They do not include a formal grading of the evidence. Over time, IDSA guidance documents m",
-      "score": 0.21143347
+      "title": "Diagnosis and Management of Acute Pancreatitis - Gastroenterology",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(24)04916-3/pdf",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "12-24 hours, with further infusion rate ... Lactated Ringer's \u00b7 solution reduces systemic inflammation compared with \u00b7 saline in patients with acute pancreatitis.",
+      "score": 0.6216563
     },
     {
       "number": 23,
-      "title": "Policy Statements",
-      "detail": "www.annemergmed.com",
-      "url": "https://www.annemergmed.com/article/S0196-0644(24)01070-9/fulltext",
-      "authors": "www.annemergmed.com",
-      "host": "www.annemergmed.com",
-      "snippet": "by PS CENTERS \u00b7 2025 \u2014 Clinical standards of care developed, established, and promulgated by EMS physician medical directors, in the form of clinical care guidelines or protocols,",
-      "score": 0.20924373
+      "title": "Clinical Management of Patients With Acute Pancreatitis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(13)00195-9/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "Lactated Ringer's solution reduces systemic inflammation compared with saline in patients with acute pancreatitis. Clin Gastroenterol Hepatol. 2011; 9:710",
+      "score": 0.58721006
     },
     {
       "number": 24,
-      "title": "Practice Guidelines",
-      "detail": "www.aasld.org",
-      "url": "https://www.aasld.org/practice-guidelines",
-      "authors": "www.aasld.org",
-      "host": "www.aasld.org",
-      "snippet": "Learn More\n\n## Guidelines and Guidance by Disease\n\n Acute Liver Failure, Management\n Acute-on-Chronic Liver Failure and the Management\n Alcohol-Associated Liver Disease\n Ascites, Spontaneous Bacterial Peritonitis and Hepatorenal Syndrome, Management\n Autoimmune Hepatitis, Management\n Drug, Herbal, a",
-      "score": 0.20008872
+      "title": "Initial Medical Treatment of Acute Pancreatitis",
+      "detail": "www.gastrojournal.org",
+      "url": "https://www.gastrojournal.org/article/S0016-5085(18)30075-1/fulltext",
+      "authors": "www.gastrojournal.org",
+      "host": "www.gastrojournal.org",
+      "snippet": "by SS Vege \u00b7 2018 \u00b7 Cited by 380 \u2014 ... Parenteral Nutrition in Mild or Severe ... A randomized study of early nasogastric versus nasojejunal feeding in severe acute pancreatitis.Read more",
+      "score": 0.56719416
     }
   ],
-  "publishedAt": "2026-08-20T23:24:56.517137Z",
-  "updatedAt": "2026-08-20T23:24:56.517137Z",
-  "readingMinutes": 3,
+  "publishedAt": "2026-09-15T18:37:23.715427+00:00",
+  "updatedAt": "2026-09-15T18:37:23.715427+00:00",
+  "readingMinutes": 6,
   "slug": "acute-pancreatitis"
 }

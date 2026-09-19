@@ -1,0 +1,714 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Pulmonary and Critical Care",
+  "title": "COPD Exacerbation Noninvasive Ventilation",
+  "summary": "Use bilevel noninvasive ventilation promptly for persistent acute hypercapnic acidosis during COPD exacerbation after initial therapy, while tightly titrating oxygen and reassessing pH, PaCO2, respiratory rate, tolerance, and need for intubation.",
+  "seoDescription": "Clinical use of noninvasive ventilation in COPD exacerbation: oxygen targets, ABG thresholds, monitoring, failure recognition, intubation escalation, and discontinuation.",
+  "clinicalQuestion": "When should noninvasive ventilation be initiated, monitored, escalated, and discontinued during acute hypercapnic respiratory failure from COPD exacerbation?",
+  "specialty": "Pulmonary and Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "COPD exacerbation",
+    "noninvasive ventilation",
+    "BiPAP",
+    "acute hypercapnic respiratory failure",
+    "respiratory acidosis",
+    "oxygen titration",
+    "intubation"
+  ],
+  "keyTakeaways": [
+    "In COPD exacerbation, initiate NIV for persistent acute hypercapnic respiratory acidosis after initial medical therapy; conventional criteria are pH less than 7.35 with PaCO2 greater than 6.5 kPa (about 49 mm Hg). [20][22]",
+    "Titrate supplemental oxygen to SpO2 88% to 92%; high-concentration uncontrolled oxygen increases acidosis and mortality in acute COPD exacerbation. [3]",
+    "Trend pH and respiratory rate closely after NIV initiation: worsening values require immediate clinical review, interface or ventilator adjustment, and consideration of endotracheal intubation. [3]",
+    "Do not exclude a patient from a monitored NIV trial because of advanced age alone. [3]",
+    "Discontinue acute NIV after normalization of pH and PaCO2 with overall clinical improvement; persistent hypercapnia after recovery warrants assessment for longer-term NIV in an appropriate specialist program. [3][12][14]"
+  ],
+  "sections": [
+    {
+      "id": "identify-the-niv-candidate",
+      "eyebrow": "Initial decision",
+      "heading": "Who should receive NIV during a COPD exacerbation?",
+      "intro": "Base the decision on arterial blood gases after initial treatment, not dyspnea alone.",
+      "paragraphs": [
+        "Obtain an arterial blood gas in a COPD exacerbation with suspected ventilatory failure and treat immediately reversible contributors while oxygen is controlled. Persistent respiratory acidosis, conventionally pH less than 7.35 with PaCO2 greater than 6.5 kPa (about 49 mm Hg), after initial medical therapy is the principal threshold for NIV. A pH less than 7.25 identifies more severe acidosis in which invasive mechanical ventilation should be actively considered rather than allowing a prolonged, failing NIV trial. [20][22]",
+        "Use bilevel NIV as first-line ventilatory support for acute or acute-on-chronic hypercapnic respiratory acidosis due to COPD exacerbation. Guideline syntheses report mortality benefit in acute COPD-related respiratory acidosis and support NIV to avoid endotracheal intubation in hypercapnic exacerbations. [16][21]",
+        "Do not use chronic baseline spirometric severity as the gatekeeper for acute NIV. Historical airflow obstruction severity does not replace the acute ABG and bedside trajectory; advanced age alone should not preclude a trial when the patient can be managed in a setting with trained staff and an escalation pathway. [3][20]"
+      ],
+      "bullets": [
+        "Treat as a monitored NIV candidate when pH remains below 7.35 and PaCO2 remains above 6.5 kPa after initial therapy. [20][22]",
+        "Escalate early toward invasive ventilation planning when pH is below 7.25 or when clinical deterioration makes NIV unsafe or ineffective. [20]",
+        "Deliver NIV in a dedicated environment with personnel experienced in NIV application and surveillance. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "ABG-driven ventilatory decisions in COPD exacerbation. [20][22]",
+        "columns": [
+          "ABG or clinical pattern",
+          "Interpretation",
+          "Immediate action"
+        ],
+        "rows": [
+          [
+            "pH <7.35 with PaCO2 >6.5 kPa after initial therapy",
+            "Persistent acute hypercapnic respiratory acidosis. [20][22]",
+            "Start monitored bilevel NIV. [20][22]"
+          ],
+          [
+            "pH <7.25",
+            "More severe acidosis; threshold commonly used to consider invasive ventilation. [20]",
+            "Begin NIV only with immediate reassessment capability and active intubation planning if appropriate to goals of care. [20]"
+          ],
+          [
+            "pH and respiratory rate worsening on NIV",
+            "Probable NIV failure or inadequate delivery. [3]",
+            "Review patient, interface, and settings; consider endotracheal intubation. [3]"
+          ],
+          [
+            "pH and PaCO2 normalized with general improvement",
+            "Acute ventilatory failure has resolved. [3]",
+            "Discontinue acute NIV. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "oxygen-before-and-during-niv",
+      "eyebrow": "Avoid iatrogenic hypercapnia",
+      "heading": "How should oxygen be managed during NIV?",
+      "intro": "Correct hypoxemia without exposing a carbon dioxide-retaining patient to uncontrolled hyperoxia.",
+      "paragraphs": [
+        "Target SpO2 88% to 92% in acute COPD exacerbation with hypercapnic respiratory failure. In a prehospital trial of 405 patients with presumed COPD exacerbation, titrated oxygen reduced mortality versus high-concentration oxygen by 58% overall (relative risk 0.40) and by 78% among patients with confirmed COPD (relative risk 0.22); titrated oxygen also reduced respiratory acidosis. [3]",
+        "Recheck arterial blood gases after oxygen and NIV are initiated or adjusted because pulse oximetry cannot identify rising PaCO2 or worsening pH. A patient whose saturation is in target range but whose pH falls or respiratory rate rises requires correction of ventilatory support and reassessment for invasive ventilation rather than further oxygen escalation. [3]",
+        "Do not substitute high-flow nasal cannula for NIV in the patient with COPD-associated acute hypercapnic respiratory failure when NIV is feasible. Current guidance cited in COPD management recommendations favors NIV before a high-flow nasal oxygen trial in this setting; evidence remains insufficient to recommend high-flow oxygen as the preferred therapy for acute hypoxemic or hypercapnic COPD respiratory failure. [4]"
+      ],
+      "bullets": [
+        "Prescribe a saturation target of 88% to 92%, rather than a fixed high oxygen concentration. [3]",
+        "Use repeat ABGs to detect worsening acidosis despite acceptable SpO2. [3]",
+        "Reserve high-flow nasal oxygen for circumstances in which NIV is not used or after a patient-specific reassessment; it is not the preferred initial modality for COPD-associated hypercapnic respiratory failure. [4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Oxygen and respiratory-support selection in acute COPD-related respiratory failure. [3][4]",
+        "columns": [
+          "Situation",
+          "Preferred approach",
+          "Reason or limitation"
+        ],
+        "rows": [
+          [
+            "COPD exacerbation with risk of hypercapnia",
+            "Controlled oxygen targeting SpO2 88% to 92%. [3]",
+            "Uncontrolled high-concentration oxygen worsens acidosis and is associated with higher mortality. [3]"
+          ],
+          [
+            "Persistent hypercapnic acidosis after initial therapy",
+            "Bilevel NIV. [20][22]",
+            "NIV is standard treatment and has mortality and intubation-avoidance benefit in acute COPD respiratory acidosis. [16][21]"
+          ],
+          [
+            "Considering HFNC instead of NIV for hypercapnic COPD respiratory failure",
+            "Use NIV first when feasible. [4]",
+            "Evidence is insufficient to recommend HFNC as initial preferred support in this setting. [4]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-response-and-failure",
+      "eyebrow": "First hours",
+      "heading": "How to monitor NIV response and identify failure",
+      "intro": "The early physiologic trajectory\u2014not initial severity alone\u2014determines whether NIV remains appropriate.",
+      "paragraphs": [
+        "Document baseline pH, PaCO2, respiratory rate, oxygen requirement, mental status, and ability to tolerate the interface before or at NIV initiation, then reassess serially with repeat ABG testing. Worsening pH and respiratory rate are specifically identified as signals to change management; the response should include immediate clinical review, checking mask fit and leakage, adjusting ventilator settings, and considering endotracheal intubation. [3]",
+        "Persistent or worsening acidosis should not be managed by simply extending an ineffective trial. NIV safety depends on a setting capable of rapid escalation, because a delayed transition to invasive ventilation can expose patients with progressive ventilatory failure to avoidable instability. The threshold for intubation consideration is lower with severe acidosis, including pH less than 7.25. [20]",
+        "When sleep-disordered breathing predated the acute event or complicates it, use a controlled NIV mode overnight. This is particularly relevant when nocturnal hypoventilation or obstructive sleep apnea may undermine apparent daytime improvement. [3]"
+      ],
+      "bullets": [
+        "Repeat ABG assessment after initiating or changing ventilatory support to determine whether pH and PaCO2 are improving. [3]",
+        "If pH or respiratory rate worsens, immediately reassess mask/interface performance and ventilator settings rather than accepting intolerance or deterioration. [3]",
+        "If worsening persists after corrective steps, proceed to an invasive ventilation decision consistent with the patient's goals of care. [3][20]",
+        "Use controlled overnight NIV when concurrent or pre-existing sleep-disordered breathing is relevant. [3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Practical escalation sequence",
+          "paragraphs": [
+            "For a deteriorating patient on NIV, first verify that the prescribed oxygen target remains 88% to 92%, assess interface tolerance and leak, and repeat an ABG. If respiratory rate or acidemia is worsening, make prompt ventilator and interface adjustments while simultaneously preparing for endotracheal intubation when clinically appropriate. [3]"
+          ],
+          "bullets": [
+            "Do not interpret a stable SpO2 as successful support if pH is declining. [3]",
+            "Do not defer escalation solely because the patient is elderly; age alone is not a reason to withhold a monitored NIV trial or reassessment. [3]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Response-based reassessment during acute NIV. [3][20]",
+        "columns": [
+          "Finding on reassessment",
+          "Meaning",
+          "Required next step"
+        ],
+        "rows": [
+          [
+            "Improving pH, falling PaCO2, lower respiratory rate",
+            "Physiologic response to NIV.",
+            "Continue NIV with serial clinical and ABG reassessment. [3]"
+          ],
+          [
+            "Worsening pH and/or increasing respiratory rate",
+            "NIV failure, inadequate support, or inadequate interface delivery. [3]",
+            "Clinical review; change interface and adjust settings; consider intubation. [3]"
+          ],
+          [
+            "Persistent severe acidosis, especially pH <7.25",
+            "High-risk ventilatory failure. [20]",
+            "Ensure immediate invasive ventilation capability and reassess whether NIV remains appropriate. [20]"
+          ],
+          [
+            "Sleep-disordered breathing complicating the episode",
+            "Nocturnal ventilatory instability may persist. [3]",
+            "Use controlled-mode NIV overnight. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "discontinue-and-plan-after-recovery",
+      "eyebrow": "Recovery",
+      "heading": "When to stop acute NIV and when to evaluate for home NIV",
+      "intro": "Stop acute support on objective recovery, then separate transient exacerbation-related hypercapnia from persistent chronic ventilatory failure.",
+      "paragraphs": [
+        "Discontinue acute NIV when pH and PaCO2 have normalized and the patient's overall condition has improved. This endpoint is preferable to discontinuation based only on subjective comfort or a single normal oxygen saturation measurement. [3]",
+        "After recovery, consider longer-term NIV only for selected patients with stable hypercapnic COPD rather than automatically sending every acute-NIV recipient home with a device. Recent ATS, ERS, and Canadian Thoracic Society guidance recommends considering home NIV in stable hypercapnic COPD to improve survival, while recognizing low certainty from limited data. [12]",
+        "Screen for obstructive sleep apnea before initiating long-term NIV in chronic stable hypercapnic COPD. For patients adequately treated for COPD who required assisted ventilation during an exacerbation, or who remain hypercapnic or acidotic while on long-term oxygen therapy, refer to a specialist center for assessment of long-term NIV. [12][14]"
+      ],
+      "bullets": [
+        "Stop acute NIV after pH and PaCO2 normalize with general clinical improvement. [3]",
+        "Do not equate acute NIV use with an automatic home-NIV prescription; establish whether hypercapnia persists when stable. [12]",
+        "Screen for obstructive sleep apnea before long-term NIV initiation. [12]",
+        "Refer persistent hypercapnia or acidosis on long-term oxygen therapy, or prior assisted ventilation during exacerbation, for specialist long-term NIV evaluation. [14]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-exacerbation disposition decisions after NIV-treated COPD respiratory failure. [3][12][14]",
+        "columns": [
+          "Post-acute finding",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Normalized pH and PaCO2 with general clinical improvement",
+            "Resolution of acute hypercapnic respiratory failure. [3]",
+            "Discontinue acute NIV. [3]"
+          ],
+          [
+            "Stable hypercapnic COPD after recovery",
+            "Potential candidate population for home NIV; certainty of benefit is low. [12]",
+            "Consider home NIV in a structured long-term ventilation program. [12]"
+          ],
+          [
+            "Chronic stable hypercapnia before home NIV",
+            "Coexisting OSA may alter ventilatory strategy. [12]",
+            "Screen for obstructive sleep apnea before NIV initiation. [12]"
+          ],
+          [
+            "Prior assisted ventilation during exacerbation, or hypercapnia/acidosis on long-term oxygen therapy",
+            "Higher-risk chronic ventilatory failure. [14]",
+            "Refer to a specialist center for consideration of long-term NIV. [14]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Web Extra material of THELANCET-D-09-0387",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S0140-6736(09)61290-3/attachment/8396416a-c2fc-40a2-bacb-bf5db705ae5d/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Physiological and clinical effects of diurnal noninvasive ventilation in hypercapnic COPD. patients with acute exacerbations of chronic",
+      "score": 0.9409141162875286
+    },
+    {
+      "number": 2,
+      "title": "Non-invasive ventilation in acute respiratory failure - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140673609604967/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Non-invasive ventilation is used mainly for exacerbations of chronic obstructive pulmonary disease (COPD) and for cardiogenic pulmonary oedema.",
+      "score": 0.937024542896108
+    },
+    {
+      "number": 3,
+      "title": "BTS/ICS guideline for the ventilatory management of acute hypercapnic respiratory failure in adults",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/71/Suppl_2/ii1",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "There is compelling evidence that uncontrolled oxygen therapy increases the degree of acidosis and subsequent mortality in AECOPD.2,156 In a trial comparing the use of high concentration oxygen versus titrated oxygen in 405 individuals with presumed AECOPD in the pre-hospital (ambulance/paramedic) s",
+      "score": 0.9556509318065662
+    },
+    {
+      "number": 4,
+      "title": "Acute exacerbation of chronic obstructive pulmonary disease",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/8/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b\u200b High-flow oxygen (HFO) therapy may be an alternative to standard oxygen therapy or noninvasive mechanical ventilation in patients with acute hypoxemic respiratory failure.(#referencePop1)Global Initiative for Chronic Obstructive Lung Disease. Global strategy for prevention, diagnosis and managem",
+      "score": 0.9516317741243011
+    },
+    {
+      "number": 5,
+      "title": "Antibiotic Therapy in Exacerbations of Chronic Obstructive ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-106-2-196",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Noninvasive ventilation in hypercapnic acute respiratory failure due to chronic obstructive pulmonary disease vs. other conditions: effectiveness and",
+      "score": 0.9581169481784515
+    },
+    {
+      "number": 6,
+      "title": "High-flow nasal-cannula oxygen therapy in intensive-care-unit patients: a prospective multicenter observational cohort study (OHE-REA) | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-39969-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nBr\u00e4unlich, J., Mauersberger, F. & Wirtz, H. Effectiveness of nasal highflow in hypercapnic COPD patients is flow and leakage dependent. BMC Pulm Med. D\u00e9c 18, (2018).\n\nTan, D. et al. High-flow nasal cannula oxygen therapy versus non-invasive ventilation for chronic ob",
+      "score": 0.9570607709666131
+    },
+    {
+      "number": 7,
+      "title": "Comparing high-flow nasal cannula and non-invasive ventilation in critical care: insights from deep counterfactual inference | npj Health Systems",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s44401-025-00049-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### Similar content being viewed by others\n\n### High-flow nasal cannula versus noninvasive ventilation in patients with hypoxemic respiratory failure: a prospective cohort study\n\n### Noninvasive ventilation in patients with acute hypoxemic respiratory failure: a systematic review and meta-analysis o",
+      "score": 0.9570373047127235
+    },
+    {
+      "number": 8,
+      "title": "Nasal high flow or noninvasive ventilation? navigating hypercapnic COPD exacerbation treatment: A randomized noninferiority clinical trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0954611124002373",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Declaration of competing interest\n\n## Acknowledgements\n\n## References (31)\n\n### Acute respiratory failure in chronic obstructive pulmonary disease\n\n### Oh\u2019s Intensive Care Manual\n\n### Complications of non-invasive ventilation techniques: a comprehensive qualitative review of randomized trials\n\n##",
+      "score": 0.9783809527819843
+    },
+    {
+      "number": 9,
+      "title": "Beyond the guidelines for non-invasive ventilation in acute respiratory failure: implications for practice - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2213260018303886",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Respir Med\n\n### Left-sided heart failure with pulmonary oedema\n\n### Lancet\n\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J\n\n### BTS/ICS guideline for the ventilatory management of acute hypercapnic respiratory failure in",
+      "score": 0.9770123501733332
+    },
+    {
+      "number": 10,
+      "title": "Managing Acute Respiratory Failure With Facemask Noninvasive Ventilation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064424011399",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Ann Emerg Med\n\n### Noninvasive respiratory support for adults with acute respiratory failure\n\n### N Engl J Med\n\n### Non-invasive ventilation for the management of acute hypercapnic respiratory failure due to exacerbation of chronic obstructive pulmonary disease\n\n### Cochrane Database Syst Rev\n\n#",
+      "score": 0.9738062276457562
+    },
+    {
+      "number": 11,
+      "title": "Applying Noninvasive Ventilation in Treatment of Acute Exacerbation of COPD Using Evidence-Based Interprofessional Clinical Practice",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369224002769",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Cochrane Database Syst Rev (2017) \n   B. Rochwerg _et al._\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J (2017) \n   P.K. Plant _et al._\n### Non-invasive ventilation in acute exacerbations of chronic obstructive pulmonar",
+      "score": 0.9716551120080342
+    },
+    {
+      "number": 12,
+      "title": "Noninvasive Home Mechanical Ventilation for Stable Hypercapnic COPD: A Clinical Respiratory Review from Canadian Perspectives - Jen - 2023 - Canadian Respiratory Journal - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/8691539",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Acute short-term noninvasive ventilation (NIV) for hypercapnic respiratory failure in chronic obstructive pulmonary disease (COPD) has well-established benefits; however, the role of long-term home NIV remains controversial. In the past decade, studies utilizing aggressive NIV settings to maximally ",
+      "score": 0.9660526287658499
+    },
+    {
+      "number": 13,
+      "title": "High\u2010Flow Nasal Cannula in Hypercapnic Respiratory Failure: An ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/crj.70207",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "HFNC and BiPAP provide comparable clinical outcomes in acute hypercapnic respiratory failure, with no significant differences in intubation",
+      "score": 0.914523157588987
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Chronic obstructive pulmonary disease in over 16s - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/resources/chronic-obstructive-pulmonary-disease-in-over-16s-diagnosis-and-management-pdf-66141600098245",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "FVC FEV1 % predicted NICE guideline CG12 (2004) severity of airflow obstruction ATS/ERS 2004 severity of airflow obstruction (post-broncho-dilator) GOLD 2008 severity of airflow obstruction (post-broncho-dilator) NICE guideline CG101 (2010) severity of airflow obstruction (post-broncho-dilator) < 0.",
+      "score": 0.9668629518680721
+    },
+    {
+      "number": 15,
+      "title": "Chronic obstructive pulmonary disease in over 16s ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/chapter/recommendations",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "< 0.7\n\n\u2265 80%\n\nNot categorised\n\nMild\n\nStage 1 \u2013 Mild\n\nStage 1 \u2013 Mild\n\n< 0.7\n\n50\u201379%\n\nMild\n\nModerate\n\nStage 2 \u2013 Moderate\n\nStage 2 \u2013 Moderate\n\n< 0.7\n\n30\u201349%\n\nModerate\n\nSevere\n\nStage 3 \u2013 Severe\n\nStage 3 \u2013 Severe\n\n< 0.7\n\n< 30%\n\nSevere\n\nVery severe\n\nStage 4 \u2013 Very severe (or FEV1 below 50% with respirator",
+      "score": 0.9663470642216867
+    },
+    {
+      "number": 16,
+      "title": "New Guidelines on Noninvasive Ventilation. A Few Answers, and Several More Questions",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.201707-1378ED",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "In a recent issue of the _European Respiratory Journal_, Rochwerg and colleagues presented guidelines for the use of noninvasive ventilation (NIV) in acute respiratory failure (1). In the case of COPD, the authors\u2019 pooled analysis of prior trials revealed a mortality benefit to the use of NIV in acu",
+      "score": 0.9652904810582262
+    },
+    {
+      "number": 17,
+      "title": "Noninvasive Ventilation Weaning in Acute Hypercapnic Respiratory Failure due to COPD Exacerbation: A Real-Life Observational Study - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC6452557",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Noninvasive Ventilation Weaning in Acute Hypercapnic Respiratory Failure due to COPD Exacerbation: A Real-Life Observational Study - PMC\nA **.gov** website belongs to an official government organization in the United States. Inclusion in an NLM database does not imply endorsement of, or agree",
+      "score": 0.9572575600975378
+    },
+    {
+      "number": 18,
+      "title": "[PDF] COPD: diagnosis and management - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/documents/short-version-of-draft-guideline",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "bronchitis. A significant 6 proportion of these people will go on to develop airflow limitation.  7 Referral for specialist advice 8 1.1.30 When clinically indicated, refer people for specialist advice. Referral may 9 be appropriate at all stages of the disease and not solely in the most 10 severely",
+      "score": 0.9483117770147124
+    },
+    {
+      "number": 19,
+      "title": "Inclusion and Exclusion Criteria of Included Studies - Pharmacologic and Nonpharmacologic Therapies in Adult Patients With Exacerbation of COPD: A Systematic Review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK549033",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "noninvasive ventilation; NT-proBNP = N-terminal pro b-type natriuretic peptide; NYHA = New York Heart Association; ONS = oral nutrition supplementation; PaCO2 = partial pressure of carbon dioxide in arterial blood; Pao2 = partial pressure of oxygen in arterial blood; PE = pulmonary embolism; PEF = p",
+      "score": 0.9587022097352816
+    },
+    {
+      "number": 20,
+      "title": "Quality statement 7: Non-invasive ventilation | Chronic obstructive pulmonary disease in adults | Quality standards | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "http://www.nice.org.uk/guidance/qs10/chapter/Quality-statement-7-Non-invasive-ventilation",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Acute acidotic hypercapnic respiratory failure results from an inability of the respiratory system to provide sufficient alveolar ventilation to maintain a normal arterial PCO2 and blood pH level. Coexistent hypoxaemia is usually mild and easily corrected. Conventionally, a pH of less than 7.35 and ",
+      "score": 0.9469686665579631
+    },
+    {
+      "number": 21,
+      "title": "Applying Noninvasive Ventilation in Treatment of Acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369224002769",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Cochrane Database Syst Rev (2017) \n   B. Rochwerg _et al._\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J (2017) \n   P.K. Plant _et al._\n### Non-invasive ventilation in acute exacerbations of chronic obstructive pulmonar",
+      "score": 0.9711497356135332
+    },
+    {
+      "number": 22,
+      "title": "Beyond the guidelines for non-invasive ventilation in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213260018303886",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Recent guidelines have addressed the issue of the use of non-invasive ventilation (NIV): the 2017 European Respiratory Society and American Thoracic Society recommendations for the clinical application of NIV in acute respiratory failure,1 and more specifically the 2017 British Thoracic Society (BTS",
+      "score": 0.9711078245298925
+    },
+    {
+      "number": 23,
+      "title": "Management of hypercapnic acute respiratory failure with high-flow ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582026000889",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "HFNC significantly reduces PaCO2, prevents worsening or even corrects more or less severe respiratory acidosis, decreases respiratory rate, The arterial blood",
+      "score": 0.9600499269060171
+    },
+    {
+      "number": 24,
+      "title": "Oxygen therapy in acute hypoxemic respiratory failure: guidelines from the SRLF-SFMU consensus conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025002833",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The jury provided 22 statements answering 11 questions: in patients with ARF (1) What are the criteria for initiating oxygen therapy? (2) What are the targets of oxygen saturation? (3) What is the role of blood gas analysis? (4) When should an arterial catheter be inserted? (5) Should standard oxyge",
+      "score": 0.9550940695682207
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Web Extra material of THELANCET-D-09-0387",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/cms/10.1016/S0140-6736(09)61290-3/attachment/8396416a-c2fc-40a2-bacb-bf5db705ae5d/mmc1.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Physiological and clinical effects of diurnal noninvasive ventilation in hypercapnic COPD. patients with acute exacerbations of chronic",
+      "score": 0.9409141162875286
+    },
+    {
+      "number": 2,
+      "title": "Non-invasive ventilation in acute respiratory failure - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140673609604967/fulltext",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Non-invasive ventilation is used mainly for exacerbations of chronic obstructive pulmonary disease (COPD) and for cardiogenic pulmonary oedema.",
+      "score": 0.937024542896108
+    },
+    {
+      "number": 3,
+      "title": "BTS/ICS guideline for the ventilatory management of acute hypercapnic respiratory failure in adults",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/71/Suppl_2/ii1",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "There is compelling evidence that uncontrolled oxygen therapy increases the degree of acidosis and subsequent mortality in AECOPD.2,156 In a trial comparing the use of high concentration oxygen versus titrated oxygen in 405 individuals with presumed AECOPD in the pre-hospital (ambulance/paramedic) s",
+      "score": 0.9556509318065662
+    },
+    {
+      "number": 4,
+      "title": "Acute exacerbation of chronic obstructive pulmonary disease",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/8/management-recommendations",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "\u200b\u200b\u200b High-flow oxygen (HFO) therapy may be an alternative to standard oxygen therapy or noninvasive mechanical ventilation in patients with acute hypoxemic respiratory failure.(#referencePop1)Global Initiative for Chronic Obstructive Lung Disease. Global strategy for prevention, diagnosis and managem",
+      "score": 0.9516317741243011
+    },
+    {
+      "number": 5,
+      "title": "Antibiotic Therapy in Exacerbations of Chronic Obstructive ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-106-2-196",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Noninvasive ventilation in hypercapnic acute respiratory failure due to chronic obstructive pulmonary disease vs. other conditions: effectiveness and",
+      "score": 0.9581169481784515
+    },
+    {
+      "number": 6,
+      "title": "High-flow nasal-cannula oxygen therapy in intensive-care-unit patients: a prospective multicenter observational cohort study (OHE-REA) | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-026-39969-4",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nBr\u00e4unlich, J., Mauersberger, F. & Wirtz, H. Effectiveness of nasal highflow in hypercapnic COPD patients is flow and leakage dependent. BMC Pulm Med. D\u00e9c 18, (2018).\n\nTan, D. et al. High-flow nasal cannula oxygen therapy versus non-invasive ventilation for chronic ob",
+      "score": 0.9570607709666131
+    },
+    {
+      "number": 7,
+      "title": "Comparing high-flow nasal cannula and non-invasive ventilation in critical care: insights from deep counterfactual inference | npj Health Systems",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s44401-025-00049-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "### Similar content being viewed by others\n\n### High-flow nasal cannula versus noninvasive ventilation in patients with hypoxemic respiratory failure: a prospective cohort study\n\n### Noninvasive ventilation in patients with acute hypoxemic respiratory failure: a systematic review and meta-analysis o",
+      "score": 0.9570373047127235
+    },
+    {
+      "number": 8,
+      "title": "Nasal high flow or noninvasive ventilation? navigating hypercapnic COPD exacerbation treatment: A randomized noninferiority clinical trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0954611124002373",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Declaration of competing interest\n\n## Acknowledgements\n\n## References (31)\n\n### Acute respiratory failure in chronic obstructive pulmonary disease\n\n### Oh\u2019s Intensive Care Manual\n\n### Complications of non-invasive ventilation techniques: a comprehensive qualitative review of randomized trials\n\n##",
+      "score": 0.9783809527819843
+    },
+    {
+      "number": 9,
+      "title": "Beyond the guidelines for non-invasive ventilation in acute respiratory failure: implications for practice - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2213260018303886",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Respir Med\n\n### Left-sided heart failure with pulmonary oedema\n\n### Lancet\n\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J\n\n### BTS/ICS guideline for the ventilatory management of acute hypercapnic respiratory failure in",
+      "score": 0.9770123501733332
+    },
+    {
+      "number": 10,
+      "title": "Managing Acute Respiratory Failure With Facemask Noninvasive Ventilation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0196064424011399",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Ann Emerg Med\n\n### Noninvasive respiratory support for adults with acute respiratory failure\n\n### N Engl J Med\n\n### Non-invasive ventilation for the management of acute hypercapnic respiratory failure due to exacerbation of chronic obstructive pulmonary disease\n\n### Cochrane Database Syst Rev\n\n#",
+      "score": 0.9738062276457562
+    },
+    {
+      "number": 11,
+      "title": "Applying Noninvasive Ventilation in Treatment of Acute Exacerbation of COPD Using Evidence-Based Interprofessional Clinical Practice",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0012369224002769",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Cochrane Database Syst Rev (2017) \n   B. Rochwerg _et al._\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J (2017) \n   P.K. Plant _et al._\n### Non-invasive ventilation in acute exacerbations of chronic obstructive pulmonar",
+      "score": 0.9716551120080342
+    },
+    {
+      "number": 12,
+      "title": "Noninvasive Home Mechanical Ventilation for Stable Hypercapnic COPD: A Clinical Respiratory Review from Canadian Perspectives - Jen - 2023 - Canadian Respiratory Journal - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2023/8691539",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Acute short-term noninvasive ventilation (NIV) for hypercapnic respiratory failure in chronic obstructive pulmonary disease (COPD) has well-established benefits; however, the role of long-term home NIV remains controversial. In the past decade, studies utilizing aggressive NIV settings to maximally ",
+      "score": 0.9660526287658499
+    },
+    {
+      "number": 13,
+      "title": "High\u2010Flow Nasal Cannula in Hypercapnic Respiratory Failure: An ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/crj.70207",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "HFNC and BiPAP provide comparable clinical outcomes in acute hypercapnic respiratory failure, with no significant differences in intubation",
+      "score": 0.914523157588987
+    },
+    {
+      "number": 14,
+      "title": "[PDF] Chronic obstructive pulmonary disease in over 16s - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/resources/chronic-obstructive-pulmonary-disease-in-over-16s-diagnosis-and-management-pdf-66141600098245",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "FVC FEV1 % predicted NICE guideline CG12 (2004) severity of airflow obstruction ATS/ERS 2004 severity of airflow obstruction (post-broncho-dilator) GOLD 2008 severity of airflow obstruction (post-broncho-dilator) NICE guideline CG101 (2010) severity of airflow obstruction (post-broncho-dilator) < 0.",
+      "score": 0.9668629518680721
+    },
+    {
+      "number": 15,
+      "title": "Chronic obstructive pulmonary disease in over 16s ...",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/chapter/recommendations",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "< 0.7\n\n\u2265 80%\n\nNot categorised\n\nMild\n\nStage 1 \u2013 Mild\n\nStage 1 \u2013 Mild\n\n< 0.7\n\n50\u201379%\n\nMild\n\nModerate\n\nStage 2 \u2013 Moderate\n\nStage 2 \u2013 Moderate\n\n< 0.7\n\n30\u201349%\n\nModerate\n\nSevere\n\nStage 3 \u2013 Severe\n\nStage 3 \u2013 Severe\n\n< 0.7\n\n< 30%\n\nSevere\n\nVery severe\n\nStage 4 \u2013 Very severe (or FEV1 below 50% with respirator",
+      "score": 0.9663470642216867
+    },
+    {
+      "number": 16,
+      "title": "New Guidelines on Noninvasive Ventilation. A Few Answers, and Several More Questions",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.201707-1378ED",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "In a recent issue of the _European Respiratory Journal_, Rochwerg and colleagues presented guidelines for the use of noninvasive ventilation (NIV) in acute respiratory failure (1). In the case of COPD, the authors\u2019 pooled analysis of prior trials revealed a mortality benefit to the use of NIV in acu",
+      "score": 0.9652904810582262
+    },
+    {
+      "number": 17,
+      "title": "Noninvasive Ventilation Weaning in Acute Hypercapnic Respiratory Failure due to COPD Exacerbation: A Real-Life Observational Study - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC6452557",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Noninvasive Ventilation Weaning in Acute Hypercapnic Respiratory Failure due to COPD Exacerbation: A Real-Life Observational Study - PMC\nA **.gov** website belongs to an official government organization in the United States. Inclusion in an NLM database does not imply endorsement of, or agree",
+      "score": 0.9572575600975378
+    },
+    {
+      "number": 18,
+      "title": "[PDF] COPD: diagnosis and management - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/ng115/documents/short-version-of-draft-guideline",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "bronchitis. A significant 6 proportion of these people will go on to develop airflow limitation.  7 Referral for specialist advice 8 1.1.30 When clinically indicated, refer people for specialist advice. Referral may 9 be appropriate at all stages of the disease and not solely in the most 10 severely",
+      "score": 0.9483117770147124
+    },
+    {
+      "number": 19,
+      "title": "Inclusion and Exclusion Criteria of Included Studies - Pharmacologic and Nonpharmacologic Therapies in Adult Patients With Exacerbation of COPD: A Systematic Review - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK549033",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "noninvasive ventilation; NT-proBNP = N-terminal pro b-type natriuretic peptide; NYHA = New York Heart Association; ONS = oral nutrition supplementation; PaCO2 = partial pressure of carbon dioxide in arterial blood; Pao2 = partial pressure of oxygen in arterial blood; PE = pulmonary embolism; PEF = p",
+      "score": 0.9587022097352816
+    },
+    {
+      "number": 20,
+      "title": "Quality statement 7: Non-invasive ventilation | Chronic obstructive pulmonary disease in adults | Quality standards | NICE",
+      "detail": "www.nice.org.uk",
+      "url": "http://www.nice.org.uk/guidance/qs10/chapter/Quality-statement-7-Non-invasive-ventilation",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "Acute acidotic hypercapnic respiratory failure results from an inability of the respiratory system to provide sufficient alveolar ventilation to maintain a normal arterial PCO2 and blood pH level. Coexistent hypoxaemia is usually mild and easily corrected. Conventionally, a pH of less than 7.35 and ",
+      "score": 0.9469686665579631
+    },
+    {
+      "number": 21,
+      "title": "Applying Noninvasive Ventilation in Treatment of Acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369224002769",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Cochrane Database Syst Rev (2017) \n   B. Rochwerg _et al._\n### Official ERS/ATS clinical practice guidelines: noninvasive ventilation for acute respiratory failure\n\n### Eur Respir J (2017) \n   P.K. Plant _et al._\n### Non-invasive ventilation in acute exacerbations of chronic obstructive pulmonar",
+      "score": 0.9711497356135332
+    },
+    {
+      "number": 22,
+      "title": "Beyond the guidelines for non-invasive ventilation in acute ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2213260018303886",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Recent guidelines have addressed the issue of the use of non-invasive ventilation (NIV): the 2017 European Respiratory Society and American Thoracic Society recommendations for the clinical application of NIV in acute respiratory failure,1 and more specifically the 2017 British Thoracic Society (BTS",
+      "score": 0.9711078245298925
+    },
+    {
+      "number": 23,
+      "title": "Management of hypercapnic acute respiratory failure with high-flow ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582026000889",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "HFNC significantly reduces PaCO2, prevents worsening or even corrects more or less severe respiratory acidosis, decreases respiratory rate, The arterial blood",
+      "score": 0.9600499269060171
+    },
+    {
+      "number": 24,
+      "title": "Oxygen therapy in acute hypoxemic respiratory failure: guidelines from the SRLF-SFMU consensus conference",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025002833",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The jury provided 22 statements answering 11 questions: in patients with ARF (1) What are the criteria for initiating oxygen therapy? (2) What are the targets of oxygen saturation? (3) What is the role of blood gas analysis? (4) When should an arterial catheter be inserted? (5) Should standard oxyge",
+      "score": 0.9550940695682207
+    }
+  ],
+  "publishedAt": "2026-09-15T22:01:37.969476+00:00",
+  "updatedAt": "2026-09-15T22:01:37.969476+00:00",
+  "readingMinutes": 5,
+  "slug": "copd-exacerbation-noninvasive-ventilation"
+}

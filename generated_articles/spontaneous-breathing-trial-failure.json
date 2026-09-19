@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Spontaneous Breathing Trial Failure",
+  "summary": "Spontaneous breathing trial failure should trigger targeted reassessment of respiratory load, cardiac reserve, diaphragm function, airway protection, secretion burden, and sedation rather than repeated unstructured trials. Distinguish failure of unsupported breathing from extubation risk after a passed trial.",
+  "seoDescription": "Point-of-care approach to spontaneous breathing trial failure, including repeat-trial strategy, extubation risk assessment, and targeted evaluation of cardiac, lung, diaphragm, and airway factors.",
+  "clinicalQuestion": "How should clinicians evaluate and manage an adult who fails a spontaneous breathing trial?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "spontaneous breathing trial failure",
+    "ventilator liberation",
+    "weaning failure",
+    "extubation failure",
+    "SBT",
+    "rapid shallow breathing index"
+  ],
+  "keyTakeaways": [
+    "Use daily assessment of extubation readiness and an SBT as the diagnostic test for ventilator liberation; do not substitute a single physiologic index for integrated bedside assessment. [2][4]",
+    "A failed SBT identifies inadequate tolerance of reduced ventilatory support; reassess reversible respiratory, cardiovascular, diaphragmatic, neurologic, and secretion-related contributors before the next trial. [4][16]",
+    "Passing an SBT does not establish extubation safety: weak cough, abundant secretions, Glasgow Coma Scale score of 10 or less, absent cuff leak, prolonged ventilation, chronic lung disease, and selected cardiac findings increase extubation-failure risk. [4]",
+    "Low-level pressure support and T-piece SBT strategies are both guideline-supported; trials shorter than 30 minutes lack predictive-value evidence in surveyed practice. [2][21]",
+    "In patients who failed a first SBT, 30-minute and 120-minute subsequent SBTs produced similar extubation success in one randomized trial dominated by hypercapnic respiratory failure. [11]"
+  ],
+  "sections": [
+    {
+      "id": "separate-sbt-failure-from-extubation-risk",
+      "eyebrow": "First Decision",
+      "heading": "Determine whether the problem is SBT intolerance or extubation risk after SBT success",
+      "intro": "These are distinct failure pathways and require different next actions.",
+      "paragraphs": [
+        "Classify the event before changing the liberation plan. SBT failure means the patient cannot sustain the reduced-support trial; the immediate priority is to identify the physiologic load or reserve deficit revealed by spontaneous breathing. Extubation failure occurs after a passed SBT and more often reflects airway protection, secretion clearance, upper-airway obstruction, or limited cardiopulmonary reserve not captured by the trial alone. [4][18]",
+        "Do not base either decision on rapid shallow breathing index (RSBI) alone. RSBI is respiratory rate divided by tidal volume measured during spontaneous breathing, but contemporary critical-care review emphasizes combining objective measures with vital signs and clinical assessment rather than using a single predictor in isolation. [4]",
+        "After an SBT failure, return to a tolerable ventilator setting, document the dominant failure phenotype and timing, and correct identifiable precipitants before re-screening. A patient who completes the SBT should undergo a separate extubation-readiness assessment focused on cough, secretion burden, neurologic status, cuff leak, and risk of postextubation respiratory decompensation. [4][10]"
+      ],
+      "bullets": [
+        "Failed SBT: investigate why unsupported breathing was not tolerated before repeating the trial. [4][16]",
+        "Passed SBT but high extubation risk: plan airway and postextubation respiratory support rather than equating trial completion with safe tube removal. [4][21]",
+        "Do not interpret end-SBT work of breathing alone as a validated predictor of extubation failure after a successful trial. [18]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Decision distinction between inability to complete an SBT and failure after extubation. [4][16][18]",
+        "columns": [
+          "Clinical event",
+          "Primary question",
+          "Next diagnostic focus",
+          "Immediate disposition"
+        ],
+        "rows": [
+          [
+            "SBT failure",
+            "Why can the patient not sustain reduced ventilatory support?",
+            "Respiratory mechanics and gas exchange; cardiac response to withdrawal of positive pressure; diaphragm performance; fluid status; sedation and neurologic barriers. [4][16]",
+            "Resume a tolerated support setting and address the dominant abnormality before another readiness assessment. [4]"
+          ],
+          [
+            "Passed SBT, extubation not yet performed",
+            "Can the patient protect the airway and tolerate removal of the endotracheal tube?",
+            "Cough strength, secretions, mental status, cuff leak, duration of invasive ventilation, chronic lung disease, and cardiac reserve. [4]",
+            "Extubate only after airway-protection assessment; select immediate postextubation support for patients at elevated risk. [21]"
+          ],
+          [
+            "Postextubation deterioration",
+            "Is this respiratory-support failure, upper-airway obstruction, secretion retention, or another complication?",
+            "Reassess oxygenation, ventilation, secretion clearance, airway patency, and cardiopulmonary reserve promptly; reintubation or noninvasive ventilation within 48 hours was included in a recent study definition of weaning failure. [16]",
+            "Escalate respiratory support without delaying definitive airway management when noninvasive support is failing. [16][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "perform-a-standardized-repeat-sbt",
+      "eyebrow": "Repeat Trial",
+      "heading": "Use a structured daily readiness assessment and an interpretable SBT",
+      "intro": "A repeat SBT should test readiness, not merely expose an untreated failure mechanism again.",
+      "paragraphs": [
+        "Assess readiness for extubation daily and use an SBT as the diagnostic test for readiness. Practice surveys report that many centers use a T-piece trial for at least 30 minutes; shorter trials are used but lack studies establishing predictive value. [2]",
+        "Either low-level pressure support or T-piece SBT strategies are guideline-supported. The practical tradeoff is that pressure support partly offsets endotracheal-tube resistance, whereas a T-piece more fully removes ventilator assistance; neither modality eliminates the need to assess post-SBT airway protection and extubation risk. [2][21]",
+        "For patients with difficult weaning after a failed first SBT, a randomized trial found no significant difference in successful extubation between 30-minute and 120-minute repeat SBTs: 58.3% versus 59.3%, respectively. The cohort was predominantly hypercapnic respiratory failure, so apply this result cautiously to other phenotypes. [11]",
+        "Pair liberation assessment with sedation minimization when clinically safe. Daily interruption of intravenous sedation has been associated with approximately 2 fewer days to extubation and 3.5 fewer ICU days in a cited trial, and combined spontaneous-awakening and breathing trials are associated with fewer delirium and ventilation days. [20][22]"
+      ],
+      "bullets": [
+        "Record the SBT modality and duration so serial failures can be interpreted under comparable conditions. [2][11]",
+        "Use changes during the trial\u2014vital signs, clinical distress, respiratory pattern, and gas exchange\u2014rather than a pretrial RSBI threshold alone to identify intolerance. [4]",
+        "If sedation interruption is unsafe because of an active contraindication to awakening, defer the awakening component but continue daily reassessment for when it becomes feasible. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Practical SBT choices after a prior failed trial. [2][11][21]",
+        "columns": [
+          "Choice",
+          "What evidence supports",
+          "Decision implication"
+        ],
+        "rows": [
+          [
+            "Low-level pressure-support SBT",
+            "ATS/ERS guidance recognizes low-level pressure support as an SBT strategy; recent discussion supports inspiratory pressure augmentation during SBTs conditionally. [2][21]",
+            "Reasonable standard approach when the unit uses a protocolized assisted trial; do not use completion alone to determine extubation safety. [4][21]"
+          ],
+          [
+            "T-piece SBT",
+            "T-piece is also guideline-recognized and was the most frequently reported approach in a national survey, commonly for at least 30 minutes. [2]",
+            "Useful when a less assisted trial is desired; interpret failure in clinical context rather than as a mandate for prolonged weaning. [2][4]"
+          ],
+          [
+            "30-minute repeat SBT after initial failure",
+            "In a 119-patient randomized trial, successful extubation was similar to a 120-minute trial. [11]",
+            "May be sufficient in difficult-to-wean patients resembling the study cohort, particularly those with hypercapnic respiratory failure. [11]"
+          ],
+          [
+            "120-minute repeat SBT",
+            "No extubation-success advantage over 30 minutes was shown in the same trial. [11]",
+            "Consider when local protocol or evolving clinical concern warrants longer observation, not as a routine assumption of greater accuracy. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "localize-the-cause-of-sbt-failure",
+      "eyebrow": "Diagnostic Branching",
+      "heading": "Use the failed trial to localize respiratory, cardiac, and diaphragmatic limitation",
+      "intro": "Target testing to the suspected mechanism rather than repeating empiric trials.",
+      "paragraphs": [
+        "When SBT failure occurs, first determine whether the pattern is dominated by gas-exchange impairment, excessive respiratory workload, circulatory intolerance, or impaired neuromuscular reserve. A recent prospective study used lung ultrasound and transthoracic echocardiography before and 30 minutes into a low-pressure-support SBT, with diaphragm ultrasound at 30 minutes, to identify mechanisms associated with weaning failure. [16]",
+        "Use lung ultrasound when worsening aeration or pulmonary congestion is plausible during the transition off positive pressure. In the prospective cohort, global, anterior, and anterolateral lung ultrasound scores during the SBT were higher among patients with weaning failure than among those successfully liberated. This supports using evolving aeration findings to redirect management toward the pulmonary process rather than labeling the patient generically difficult to wean. [16]",
+        "Use transthoracic echocardiography when withdrawal of positive pressure may unmask cardiac limitation, particularly in heart failure, cardiac respiratory failure, or positive fluid balance. Cardiac predictors of extubation failure after a passed SBT include left ventricular ejection fraction of 30% or less, a greater than 20% BNP increase during SBT, and a greater than 4.5% fall in central venous oxygen saturation during SBT. [4]",
+        "Consider diaphragm ultrasound when respiratory-muscle weakness is suspected, especially after prolonged critical illness or difficult liberation. Diaphragm ultrasound was incorporated into combined heart-lung-diaphragm assessment during SBT in the prospective study, reflecting the need to distinguish diaphragmatic limitation from isolated lung or cardiac causes. [16] Avoid assuming that measured work of breathing at the end of a successful SBT predicts postextubation failure; one CHEST study found that it did not. [18]"
+      ],
+      "bullets": [
+        "Pulmonary branch: obtain lung ultrasound during the failed trial or early after termination when changing aeration, edema, or loss of recruitment is suspected. [16]",
+        "Cardiac branch: obtain echocardiographic reassessment when positive-pressure withdrawal may expose left-sided cardiac dysfunction; interpret BNP and central venous oxygen saturation changes as risk markers, not independent extubation rules. [4]",
+        "Diaphragm branch: add diaphragm ultrasound when weakness is clinically suspected or when lung and cardiac findings do not explain SBT intolerance. [16]",
+        "Prolonged invasive ventilation, chronic lung disease, age older than 65 years, hemoglobin 10 g/dL or less, and positive fluid balance in the preceding 24 hours identify patients who warrant a lower threshold for multifactorial reassessment. [4]"
+      ],
+      "subsections": [
+        {
+          "heading": "Recognize when standard SBT metrics are insufficient",
+          "paragraphs": [
+            "RSBI is the most frequently cited physiologic measure, but it is only one component of assessment. In older, critically ill patients requiring prolonged ventilation, an observational study reported that change in RSBI over a prolonged SBT, rather than one isolated value, helped predict successful extubation; this approach requires validation and should not replace integrated clinical assessment. [4][14]",
+            "Mechanical-power density and other spontaneous-breathing indexes are under investigation in tracheostomized patients with prolonged weaning, but current evidence is preliminary. Do not use these measures as stand-alone triggers for extubation or tracheostomy decisions. [5]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Mechanism-oriented evaluation after SBT failure. [4][5][16]",
+        "columns": [
+          "Suspected mechanism",
+          "Clues during or around the SBT",
+          "Targeted assessment",
+          "What the result changes"
+        ],
+        "rows": [
+          [
+            "Pulmonary aeration or gas-exchange limitation",
+            "Failure accompanied by concern for loss of aeration or pulmonary congestion during reduced support. [16]",
+            "Lung ultrasound before and 30 minutes into SBT; higher global, anterior, and anterolateral scores were associated with weaning failure. [16]",
+            "Direct treatment toward the identified pulmonary process before the next trial rather than simply extending SBT duration. [16]"
+          ],
+          [
+            "Cardiovascular intolerance",
+            "Heart failure, cardiac cause of respiratory failure, positive 24-hour fluid balance, LVEF 30% or less, BNP rise greater than 20% during SBT, or central venous oxygen saturation fall greater than 4.5%. [4]",
+            "Transthoracic echocardiography during the liberation assessment; review volume status and serial cardiac markers when available. [4][16]",
+            "Treat the identified cardiac or volume-related limitation before repeating unsupported breathing. [4][16]"
+          ],
+          [
+            "Diaphragm or generalized neuromuscular limitation",
+            "Persistent inability to tolerate spontaneous breathing without a dominant pulmonary or cardiac explanation; prolonged critical illness raises concern. [1][16]",
+            "Diaphragm ultrasound at approximately 30 minutes into an SBT as part of a combined assessment. [16]",
+            "Avoid attributing failure solely to pulmonary disease; reassess respiratory-muscle reserve and prolonged-weaning strategy. [1][16]"
+          ],
+          [
+            "Complex prolonged weaning",
+            "Tracheostomy and recurrent failure despite protocolized attempts. [5]",
+            "Interpret conventional indexes alongside clinical trajectory; mechanical-power density remains investigational. [5]",
+            "Use serial multidisciplinary reassessment rather than an unvalidated index threshold to determine liberation strategy. [5]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "screen-for-extubation-failure-after-passing",
+      "eyebrow": "Before Tube Removal",
+      "heading": "Assess airway protection and postextubation risk after a successful SBT",
+      "intro": "A successful SBT answers a respiratory-support question, not every extubation question.",
+      "paragraphs": [
+        "Before extubation, examine cough, secretion burden, and mental status. Weak cough, abundant secretions, and Glasgow Coma Scale score of 10 or less are reported noncardiac risk factors for extubation failure after a passed SBT; prolonged invasive mechanical ventilation beyond 7 days, chronic lung disease, age older than 65 years, and hemoglobin 10 g/dL or less add risk. [4]",
+        "Perform a cuff-leak assessment when postextubation upper-airway obstruction is a concern. Lack of cuff leak is listed among extubation-failure risk factors, and pediatric liberation guidelines specifically address assessment and prevention of postextubation upper-airway obstruction, underscoring that airway patency requires separate consideration from SBT performance. [4][10]",
+        "For patients at elevated risk of postextubation respiratory failure, plan respiratory support before extubation. Adult ATS/ACCP guidance addresses noninvasive ventilation immediately after extubation, while high-flow nasal oxygen provides heated humidified high-flow gas, high inspired oxygen concentration, low-level positive pressure, and upper-airway dead-space washout. [21][23] In acute hypoxemic respiratory failure, helmet NIV did not improve 28-day respiratory-support-free days compared with high-flow nasal oxygen in the HENIVOT trial. [3]"
+      ],
+      "bullets": [
+        "High-risk features should change the extubation plan, not automatically prohibit extubation after a passed SBT. [4][21]",
+        "If airway protection is inadequate because of weak cough or heavy secretions, defer extubation and address secretion clearance or neurologic recovery before reassessment. [4]",
+        "Choose postextubation NIV or high-flow nasal oxygen according to the respiratory-failure phenotype, patient tolerance, and risk of delayed intubation; face-mask NIV can generate high tidal volumes in hypoxemic respiratory failure. [23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Extubation-risk features after successful SBT completion. [4][10][21][23]",
+        "columns": [
+          "Risk domain",
+          "Actionable finding",
+          "Pre-extubation action"
+        ],
+        "rows": [
+          [
+            "Airway clearance",
+            "Weak cough or abundant secretions. [4]",
+            "Do not rely on SBT completion alone; reassess ability to clear secretions and protect the airway. [4]"
+          ],
+          [
+            "Neurologic readiness",
+            "Glasgow Coma Scale score of 10 or less. [4]",
+            "Assess whether mental status permits airway protection before removing the tube. [4]"
+          ],
+          [
+            "Upper airway",
+            "Absent cuff leak. [4]",
+            "Evaluate upper-airway obstruction risk as a separate extubation issue. [4][10]"
+          ],
+          [
+            "Cardiopulmonary reserve",
+            "LVEF 30% or less, positive 24-hour fluid balance, cardiac respiratory failure, chronic lung disease, or invasive ventilation longer than 7 days. [4]",
+            "Plan closer monitoring and consider immediate postextubation noninvasive respiratory support where appropriate. [4][21]"
+          ],
+          [
+            "Hypoxemic support choice",
+            "Need for ongoing high inspired oxygen concentration after extubation. [23]",
+            "HFNC is a tolerated option with dead-space washout and low-level positive pressure; do not expect helmet NIV to improve 28-day support-free days over HFNC in COVID-19 moderate-to-severe hypoxemic respiratory failure. [3][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "escalate-recurrent-or-prolonged-failure",
+      "eyebrow": "Persistent Failure",
+      "heading": "Escalate recurrent SBT failure to a prolonged-weaning evaluation",
+      "intro": "Repeated failure should prompt mechanism reassessment, not repetitive trials without a changed plan.",
+      "paragraphs": [
+        "When failure persists across protocolized attempts, reframe the problem as complex or prolonged weaning and reassess for diaphragm dysfunction, persistent pulmonary pathology, cardiovascular intolerance, secretion burden, sedation effects, and chronic neurologic or neuromuscular disease. The FDA review of a diaphragm pacing system identifies pre-existing neurologic, neuromuscular, or muscle disorders affecting respiratory muscles, suspected phrenic paralysis, severe pulmonary fibrosis, large pleural effusions, severe obesity, sepsis or septic shock, and active neuromuscular blockade as clinically important exclusions for that intervention. [1]",
+        "Do not extrapolate device-specific exclusion criteria into universal liberation rules, but use them as prompts to identify factors that can materially limit diaphragm-dependent weaning. In particular, suspected phrenic nerve paralysis, large pleural effusions, active sepsis, and neuromuscular blockade should redirect management toward the underlying cause before considering specialized respiratory-muscle interventions. [1]",
+        "For tracheostomized patients with prolonged weaning, conventional SBT measures and newer metrics such as mechanical-power density may aid trajectory assessment, but the available prospective evidence is preliminary. Continue serial assessment for progressive hypercapnia during spontaneous breathing, because recurrence requiring ventilatory support within 7 days was treated as weaning failure in one cohort. [5]"
+      ],
+      "bullets": [
+        "Reassess daily for reversibility of sepsis, pleural effusion, neuromuscular blockade, and cardiopulmonary load before repeating a liberation attempt. [1]",
+        "Use escalating respiratory support needs or recurrent hypercapnia during spontaneous breathing as triggers to reassess the liberation plan rather than declaring success on the basis of a brief tolerated interval. [5]",
+        "For pediatric patients, apply pediatric-specific liberation guidance; most recommendations are conditional and evidence certainty is often low to very low. [10]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Triggers for a revised strategy in recurrent liberation failure. [1][5][10]",
+        "columns": [
+          "Trigger",
+          "Why it matters",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "Repeated SBT failures despite stable ventilator settings",
+            "May represent unrecognized pulmonary, cardiac, diaphragm, or neuromuscular limitation. [1][16]",
+            "Repeat targeted heart-lung-diaphragm and airway assessment rather than simply prolonging the next trial. [16]"
+          ],
+          [
+            "Suspected phrenic or respiratory-muscle disorder",
+            "Pre-existing neuromuscular disease and suspected phrenic paralysis can affect respiratory-muscle function and were exclusions in diaphragm pacing evaluation. [1]",
+            "Clarify neuromuscular contribution and avoid assuming a purely pulmonary cause of failure. [1]"
+          ],
+          [
+            "Hypercapnia after apparent weaning success",
+            "Progressive hypercapnia requiring resumption of ventilation within 7 days was considered weaning failure in a prolonged-weaning cohort. [5]",
+            "Resume appropriate ventilatory support and reassess respiratory-muscle workload and chronic ventilatory requirements. [5]"
+          ],
+          [
+            "Pediatric invasive ventilation",
+            "Children require a pediatric-specific extubation-readiness bundle and SBT framework. [10]",
+            "Use pediatric guidance rather than adult SBT duration or postextubation assumptions. [10]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "[PDF] summary of safety and effectiveness data (ssed) - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/P240012B.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "of Medicine 364(14): 1293-1304. DOI: 10.1056/nejmoa1011802. Hodzic, S., Golic, D., Smajic, J., et al. (2014). Complications Related to Insertion and Use of Central Venous Catheters (CVC). Med Arch 68(5): 300-303. PMID: 25568558 PMCID: PMC4276017 DOI: 10.5455/medarh.2014.68.300-303. PMA P240012: FDA ",
+      "score": 0.35979196
+    },
+    {
+      "number": 2,
+      "title": "Liberation from invasive mechanical ventilation: a nationwide survey ...",
+      "detail": "bmjopenrespres.bmj.com",
+      "url": "https://bmjopenrespres.bmj.com/content/12/1/e002868.full.pdf",
+      "authors": "bmjopenrespres.bmj.com",
+      "host": "bmjopenrespres.bmj.com",
+      "snippet": "SBT and cuff-leak test Guidelines recommend daily assessing extubation readi-ness, and the SBT can be used as diagnostic test for this purpose.1 8 The majority of respondents reported to regularly perform an SBT, most frequently with a T-\u00ad piece for a minimum duration of 30\u2009min. A considerable numbe",
+      "score": 0.43180037
+    },
+    {
+      "number": 3,
+      "title": "Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2778088",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Title: Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in\n# Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in Patients With COVID-19 and Moderate to Severe Hypoxemic Respiratory Failure: Th",
+      "score": 0.36378303
+    },
+    {
+      "number": 4,
+      "title": "Liberation From Mechanical Ventilation in the Cardiac Intensive ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2022.100173",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Once a modality is chosen and the SBT has begun, the CICU clinician should monitor for parameters of SBT failure as well as assess for potential predictors of extubation success. While no single parameter should be used in isolation; a combination of several objective and subjective criteria has com",
+      "score": 0.643173
+    },
+    {
+      "number": 5,
+      "title": "Mechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-67237-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Mechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study | Scientific Reports\nMechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study. A prospective observational study compari",
+      "score": 0.62000114
+    },
+    {
+      "number": 6,
+      "title": "Noninvasive Ventilation Strategies in Respiratory Failure Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/noninvasive-ventilation-strategies-in-respiratory-failure-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Noninvasive Ventilation Strategies in Respiratory Failure Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index\nView the latest institution rankings. # Noninvasive Ventilation Strategies in Respiratory Failure Management. Noninva",
+      "score": 0.38228035
+    },
+    {
+      "number": 7,
+      "title": "SPIRIT 2013 Statement: Defining Standard Protocol Items for ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-158-3-201302050-00583",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The effect of inspiratory muscle training on dysfunctional breathing and functional ability in patients with chronic heart failure.",
+      "score": 0.09342148
+    },
+    {
+      "number": 8,
+      "title": "Analysis of the effects of a goal-oriented pulmonary rehabilitation ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2025/08150/analysis_of_the_effects_of_a_goal_oriented.81.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "AARC clinical practice guideline: spontaneous breathing trials for liberation from adult mechanical ventilation. Respir Care. 2024;69:891\u2013901. Cited Here",
+      "score": 0.67501575
+    },
+    {
+      "number": 9,
+      "title": "Clinical Challenges in Pediatric Ventilation... : Pediatric Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pccmjournal/pdf/10.1097/pcc.0000000000003025~clinical-challenges-in-pediatric-ventilation-liberation-a",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Terms]). Trial registers searched included the following: ClinicalTrials.gov, European Union clinical trials register, and International Standardized Randomized Controlled Trial Number register. The search included all studies up to May 2022. A search of databases and hand sift was performed. Titles",
+      "score": 0.53400564
+    },
+    {
+      "number": 10,
+      "title": "Executive Summary: International Clinical... : American Journal of Respiratory and Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019521-202301010-00009",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Methods:\n\nTwenty-six international experts comprised a multiprofessional panel to establish pediatrics-specific ventilator liberation clinical practice guidelines, focusing on acutely hospitalized children receiving invasive mechanical ventilation for more than 24 hours. Eleven key questions were",
+      "score": 0.5265625
+    },
+    {
+      "number": 11,
+      "title": "Short (30 Minutes) versus long (120 Minutes)... : Heart & Lung: Journal of Acute & Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00060606-202501000-00024",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nHeart & Lung: Journal of Acute & Critical Care\n\nNavbar\n\nMenu\n\n   Current Issue  \n   Previous Issues  \n   Latest Articles  \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n   I",
+      "score": 0.46191534
+    },
+    {
+      "number": 12,
+      "title": "How I Teach: Liberation from Mechanical Ventilation | ATS Scholar",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/atsscholar/article/4/3/372/8364135",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Effect of spontaneous breathing trial duration on outcome of attempts to discontinue mechanical ventilation . Am J Respir Crit Care Med. 1999.",
+      "score": 0.45973158
+    },
+    {
+      "number": 13,
+      "title": "Early versus Delayed Switching from Controlled to Assisted Ventilation",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/211/6/975/8513760",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Failure of first transition to pressure support ventilation after spontaneous awakening trials in hypoxemic respiratory failure: influence of",
+      "score": 0.2784019
+    },
+    {
+      "number": 14,
+      "title": "Spontaneous breathing trial needs to be prolonged in critically ill and older patients requiring mechanical ventilation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944111002413",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2019, Journal of Cardiovascular Development and Disease     \n   ### A rapid shallow breathing index threshold of 85 best predicts extubation success in chronic obstructive pulmonary disease patients with hypercapnic respiratory failure\n\n2019, Journal of Thoracic Disease     \n   ### Characteristics o",
+      "score": 0.7407191
+    },
+    {
+      "number": 15,
+      "title": "Cough strength, secretions and extubation outcome in burn patients who have passed a spontaneous breathing trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030541791200321X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Burns\n\n### Evidence-based guidelines for weaning and discontinuing ventilatory support: a collective task force facilitated by the American College of Chest Physicians; American Association for Respiratory Care; College of Critical Care Medicine\n\n### Chest\n\n### Value of the PaO2: FiO2 and rapid ",
+      "score": 0.55362654
+    },
+    {
+      "number": 16,
+      "title": "Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spontaneous breathing trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025002122",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spontaneous breathing trial - ScienceDirect\n## Annals of Intensive Care. Volume 14, Issue 1, 2024, 60. # Research Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spont",
+      "score": 0.46380913
+    },
+    {
+      "number": 17,
+      "title": "A 30-Minute Spontaneous Breathing Trial Misses Many Children Who Go On to Fail a 120-Minute Spontaneous Breathing Trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369222036807",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Pediatr (Rio J)\n\n### Spontaneous breathing test in the prediction of extubation failure in the pediatric population\n\n### Einstein (Sao Paulo)\n\n### Evolution of pattern of breathing during a spontaneous breathing trial predicts successful extubation\n\n### Intensive Care Med\n\n### Real-Time Effort",
+      "score": 0.45551404
+    },
+    {
+      "number": 18,
+      "title": "Higher Work of Breathing at the End of Successful Spontaneous Breathing Trial Does Not Predict Extubation Failure - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)56516-7/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# Higher Work of Breathing at the End of Successful Spontaneous Breathing Trial Does Not Predict Extubation Failure. **PURPOSE:** Spontaneous breathing trial (SBT) is the gold standard process to assess readiness for extubation in mechanically ventilated patients. **CONCLUSIONS:** Patient\u2019s work of ",
+      "score": 0.72278196
+    },
+    {
+      "number": 19,
+      "title": "Duration of Spontaneous Breathing Trials in Children - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(22)03923-X/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Spontaneous breathing trials (SBT) are a principal component of the extubation readiness testing that commonly is conducted to assess whether a child is apt to be liberated from the ventilator. **The impact of daily evaluation and spontaneous breathing test on the duration of pediatric mechanical ve",
+      "score": 0.67166495
+    },
+    {
+      "number": 20,
+      "title": "IMPROVING SPONTANEOUS BREATHING TRIAL TO EXTUBATION TIMES BY OPTIMIZING DAILY SPONTANEOUS BREATHING TRIAL TIMING - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(24)02125-1/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "**PURPOSE:** The benefits of a daily spontaneous breathing trial (SBT) paired with a spontaneous awakening trial (SAT) are well established and include decreased delirium-days and decreased mechanical ventilation-days for patients. * Predictors of Extubation Outcome in Patients Who Have Successfully",
+      "score": 0.51969254
+    },
+    {
+      "number": 21,
+      "title": "Rethinking Inspiratory Pressure Augmentation in Spontaneous Breathing Trials - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30726-2/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Liberation From Mechanical Ventilation in Critically Ill Adults: An\u00a0Official American College of Chest Physicians/American Thoracic Society Clinical Practice Guideline: Inspiratory Pressure Augmentation During Spontaneous Breathing Trials,\u00a0Protocols Minimizing Sedation, and Noninvasive Ventilation I",
+      "score": 0.45507812
+    },
+    {
+      "number": 22,
+      "title": "Sedation Vacation in the ICU - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK513327",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Sedation Vacation in the ICU - StatPearls - NCBI Bookshelf\nThe **https://** ensures that you are connecting to the. official website and that any information you provide is encrypted. # Sedation Vacation in the ICU. Continuous sedation forms a key component of care for these patients, aiming ",
+      "score": 0.42305335
+    },
+    {
+      "number": 23,
+      "title": "High-flow nasal oxygen therapy and noninvasive ventilation in the management of acute hypoxemic respiratory failure - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/28828372",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: High-flow nasal oxygen therapy and noninvasive ventilation in the management of acute hypoxemic respiratory failure - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that",
+      "score": 0.36303747
+    },
+    {
+      "number": 24,
+      "title": "Extracorporeal circulation (ECMO) in neonatal respiratory failure",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(19)41180-X/pdf",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "Respiratory failure was managed by continuous posi- tive airway pressure (2 to 6 ern. H20 ) with spontaneous breathing, followed by intubation and mechanical",
+      "score": 0.26574573
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "[PDF] summary of safety and effectiveness data (ssed) - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/P240012B.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "of Medicine 364(14): 1293-1304. DOI: 10.1056/nejmoa1011802. Hodzic, S., Golic, D., Smajic, J., et al. (2014). Complications Related to Insertion and Use of Central Venous Catheters (CVC). Med Arch 68(5): 300-303. PMID: 25568558 PMCID: PMC4276017 DOI: 10.5455/medarh.2014.68.300-303. PMA P240012: FDA ",
+      "score": 0.35979196
+    },
+    {
+      "number": 2,
+      "title": "Liberation from invasive mechanical ventilation: a nationwide survey ...",
+      "detail": "bmjopenrespres.bmj.com",
+      "url": "https://bmjopenrespres.bmj.com/content/12/1/e002868.full.pdf",
+      "authors": "bmjopenrespres.bmj.com",
+      "host": "bmjopenrespres.bmj.com",
+      "snippet": "SBT and cuff-leak test Guidelines recommend daily assessing extubation readi-ness, and the SBT can be used as diagnostic test for this purpose.1 8 The majority of respondents reported to regularly perform an SBT, most frequently with a T-\u00ad piece for a minimum duration of 30\u2009min. A considerable numbe",
+      "score": 0.43180037
+    },
+    {
+      "number": 3,
+      "title": "Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2778088",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Title: Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in\n# Effect of Helmet Noninvasive Ventilation vs High-Flow Nasal Oxygen on Days Free of Respiratory Support in Patients With COVID-19 and Moderate to Severe Hypoxemic Respiratory Failure: Th",
+      "score": 0.36378303
+    },
+    {
+      "number": 4,
+      "title": "Liberation From Mechanical Ventilation in the Cardiac Intensive ...",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacadv.2022.100173",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Once a modality is chosen and the SBT has begun, the CICU clinician should monitor for parameters of SBT failure as well as assess for potential predictors of extubation success. While no single parameter should be used in isolation; a combination of several objective and subjective criteria has com",
+      "score": 0.643173
+    },
+    {
+      "number": 5,
+      "title": "Mechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-024-67237-w",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Mechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study | Scientific Reports\nMechanical power density, spontaneous breathing indexes, and prolonged weaning failure: a prospective cohort study. A prospective observational study compari",
+      "score": 0.62000114
+    },
+    {
+      "number": 6,
+      "title": "Noninvasive Ventilation Strategies in Respiratory Failure Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/noninvasive-ventilation-strategies-in-respiratory-failure-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Noninvasive Ventilation Strategies in Respiratory Failure Management | Respiratory Diseases | Cardiovascular Medicine and Haematology | Health sciences | Topics | Nature Index\nView the latest institution rankings. # Noninvasive Ventilation Strategies in Respiratory Failure Management. Noninva",
+      "score": 0.38228035
+    },
+    {
+      "number": 7,
+      "title": "SPIRIT 2013 Statement: Defining Standard Protocol Items for ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-158-3-201302050-00583",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "The effect of inspiratory muscle training on dysfunctional breathing and functional ability in patients with chronic heart failure.",
+      "score": 0.09342148
+    },
+    {
+      "number": 8,
+      "title": "Analysis of the effects of a goal-oriented pulmonary rehabilitation ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2025/08150/analysis_of_the_effects_of_a_goal_oriented.81.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "AARC clinical practice guideline: spontaneous breathing trials for liberation from adult mechanical ventilation. Respir Care. 2024;69:891\u2013901. Cited Here",
+      "score": 0.67501575
+    },
+    {
+      "number": 9,
+      "title": "Clinical Challenges in Pediatric Ventilation... : Pediatric Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pccmjournal/pdf/10.1097/pcc.0000000000003025~clinical-challenges-in-pediatric-ventilation-liberation-a",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Terms]). Trial registers searched included the following: ClinicalTrials.gov, European Union clinical trials register, and International Standardized Randomized Controlled Trial Number register. The search included all studies up to May 2022. A search of databases and hand sift was performed. Titles",
+      "score": 0.53400564
+    },
+    {
+      "number": 10,
+      "title": "Executive Summary: International Clinical... : American Journal of Respiratory and Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00019521-202301010-00009",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Methods:\n\nTwenty-six international experts comprised a multiprofessional panel to establish pediatrics-specific ventilator liberation clinical practice guidelines, focusing on acutely hospitalized children receiving invasive mechanical ventilation for more than 24 hours. Eleven key questions were",
+      "score": 0.5265625
+    },
+    {
+      "number": 11,
+      "title": "Short (30 Minutes) versus long (120 Minutes)... : Heart & Lung: Journal of Acute & Critical Care",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/00060606-202501000-00024",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Advertisement\n\nOvid\u00ae Ovid Logo\n\nSearch Ovid Search Ovid\n\nBrowse Browse\n\nLogin Login\n\nHeart & Lung: Journal of Acute & Critical Care\n\nNavbar\n\nMenu\n\n   Current Issue  \n   Previous Issues  \n   Latest Articles  \n\n   More menu items  \n\nSearch Journal Search Journal\n\nButton group.\n\n   Check Access   \n   I",
+      "score": 0.46191534
+    },
+    {
+      "number": 12,
+      "title": "How I Teach: Liberation from Mechanical Ventilation | ATS Scholar",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/atsscholar/article/4/3/372/8364135",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Effect of spontaneous breathing trial duration on outcome of attempts to discontinue mechanical ventilation . Am J Respir Crit Care Med. 1999.",
+      "score": 0.45973158
+    },
+    {
+      "number": 13,
+      "title": "Early versus Delayed Switching from Controlled to Assisted Ventilation",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/ajrccm/article/211/6/975/8513760",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Failure of first transition to pressure support ventilation after spontaneous awakening trials in hypoxemic respiratory failure: influence of",
+      "score": 0.2784019
+    },
+    {
+      "number": 14,
+      "title": "Spontaneous breathing trial needs to be prolonged in critically ill and older patients requiring mechanical ventilation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944111002413",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "2019, Journal of Cardiovascular Development and Disease     \n   ### A rapid shallow breathing index threshold of 85 best predicts extubation success in chronic obstructive pulmonary disease patients with hypercapnic respiratory failure\n\n2019, Journal of Thoracic Disease     \n   ### Characteristics o",
+      "score": 0.7407191
+    },
+    {
+      "number": 15,
+      "title": "Cough strength, secretions and extubation outcome in burn patients who have passed a spontaneous breathing trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030541791200321X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Burns\n\n### Evidence-based guidelines for weaning and discontinuing ventilatory support: a collective task force facilitated by the American College of Chest Physicians; American Association for Respiratory Care; College of Critical Care Medicine\n\n### Chest\n\n### Value of the PaO2: FiO2 and rapid ",
+      "score": 0.55362654
+    },
+    {
+      "number": 16,
+      "title": "Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spontaneous breathing trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582025002122",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spontaneous breathing trial - ScienceDirect\n## Annals of Intensive Care. Volume 14, Issue 1, 2024, 60. # Research Combined cardiac, lung, and diaphragm ultrasound for predicting weaning failure during spont",
+      "score": 0.46380913
+    },
+    {
+      "number": 17,
+      "title": "A 30-Minute Spontaneous Breathing Trial Misses Many Children Who Go On to Fail a 120-Minute Spontaneous Breathing Trial - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369222036807",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Pediatr (Rio J)\n\n### Spontaneous breathing test in the prediction of extubation failure in the pediatric population\n\n### Einstein (Sao Paulo)\n\n### Evolution of pattern of breathing during a spontaneous breathing trial predicts successful extubation\n\n### Intensive Care Med\n\n### Real-Time Effort",
+      "score": 0.45551404
+    },
+    {
+      "number": 18,
+      "title": "Higher Work of Breathing at the End of Successful Spontaneous Breathing Trial Does Not Predict Extubation Failure - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(16)56516-7/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "# Higher Work of Breathing at the End of Successful Spontaneous Breathing Trial Does Not Predict Extubation Failure. **PURPOSE:** Spontaneous breathing trial (SBT) is the gold standard process to assess readiness for extubation in mechanically ventilated patients. **CONCLUSIONS:** Patient\u2019s work of ",
+      "score": 0.72278196
+    },
+    {
+      "number": 19,
+      "title": "Duration of Spontaneous Breathing Trials in Children - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(22)03923-X/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Spontaneous breathing trials (SBT) are a principal component of the extubation readiness testing that commonly is conducted to assess whether a child is apt to be liberated from the ventilator. **The impact of daily evaluation and spontaneous breathing test on the duration of pediatric mechanical ve",
+      "score": 0.67166495
+    },
+    {
+      "number": 20,
+      "title": "IMPROVING SPONTANEOUS BREATHING TRIAL TO EXTUBATION TIMES BY OPTIMIZING DAILY SPONTANEOUS BREATHING TRIAL TIMING - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(24)02125-1/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "**PURPOSE:** The benefits of a daily spontaneous breathing trial (SBT) paired with a spontaneous awakening trial (SAT) are well established and include decreased delirium-days and decreased mechanical ventilation-days for patients. * Predictors of Extubation Outcome in Patients Who Have Successfully",
+      "score": 0.51969254
+    },
+    {
+      "number": 21,
+      "title": "Rethinking Inspiratory Pressure Augmentation in Spontaneous Breathing Trials - CHEST",
+      "detail": "journal.chestnet.org",
+      "url": "https://journal.chestnet.org/article/S0012-3692(17)30726-2/fulltext",
+      "authors": "journal.chestnet.org",
+      "host": "journal.chestnet.org",
+      "snippet": "Liberation From Mechanical Ventilation in Critically Ill Adults: An\u00a0Official American College of Chest Physicians/American Thoracic Society Clinical Practice Guideline: Inspiratory Pressure Augmentation During Spontaneous Breathing Trials,\u00a0Protocols Minimizing Sedation, and Noninvasive Ventilation I",
+      "score": 0.45507812
+    },
+    {
+      "number": 22,
+      "title": "Sedation Vacation in the ICU - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK513327",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Sedation Vacation in the ICU - StatPearls - NCBI Bookshelf\nThe **https://** ensures that you are connecting to the. official website and that any information you provide is encrypted. # Sedation Vacation in the ICU. Continuous sedation forms a key component of care for these patients, aiming ",
+      "score": 0.42305335
+    },
+    {
+      "number": 23,
+      "title": "High-flow nasal oxygen therapy and noninvasive ventilation in the management of acute hypoxemic respiratory failure - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pubmed/28828372",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: High-flow nasal oxygen therapy and noninvasive ventilation in the management of acute hypoxemic respiratory failure - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. official website and that",
+      "score": 0.36303747
+    },
+    {
+      "number": 24,
+      "title": "Extracorporeal circulation (ECMO) in neonatal respiratory failure",
+      "detail": "www.jtcvs.org",
+      "url": "https://www.jtcvs.org/article/S0022-5223(19)41180-X/pdf",
+      "authors": "www.jtcvs.org",
+      "host": "www.jtcvs.org",
+      "snippet": "Respiratory failure was managed by continuous posi- tive airway pressure (2 to 6 ern. H20 ) with spontaneous breathing, followed by intubation and mechanical",
+      "score": 0.26574573
+    }
+  ],
+  "publishedAt": "2026-09-15T18:21:49.375638+00:00",
+  "updatedAt": "2026-09-15T18:21:49.375638+00:00",
+  "readingMinutes": 7,
+  "slug": "spontaneous-breathing-trial-failure"
+}

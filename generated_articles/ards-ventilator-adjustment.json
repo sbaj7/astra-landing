@@ -1,0 +1,781 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "ARDS Ventilator Adjustment",
+  "summary": "Adjust ARDS ventilation by protecting the functional lung: use predicted-body-weight tidal volume, enforce plateau-pressure limits, titrate PEEP against recruitment and hemodynamic cost, prone early in moderate-to-severe disease, and refer promptly for VV-ECMO when protective targets cannot sustain gas exchange.",
+  "seoDescription": "Point-of-care ARDS ventilator adjustment: tidal volume, plateau and driving pressure, PEEP titration, proning, neuromuscular blockade, and ECMO.",
+  "clinicalQuestion": "How should clinicians adjust invasive ventilation when ARDS oxygenation, compliance, carbon dioxide clearance, or hemodynamics worsen?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "ARDS ventilation",
+    "lung-protective ventilation",
+    "PEEP titration",
+    "prone positioning",
+    "driving pressure",
+    "VV-ECMO",
+    "refractory hypoxemia"
+  ],
+  "keyTakeaways": [
+    "Use tidal volume 4-6 mL/kg predicted body weight when possible, with plateau pressure below 30 cm H2O; this is the mortality-reducing core of ARDS ventilation. [9][10][11]",
+    "Measure plateau pressure during passive conditions and calculate driving pressure as plateau pressure minus PEEP; values below 14 cm H2O are associated with better outcomes. [18]",
+    "For moderate-to-severe ARDS, evaluate higher PEEP using oxygenation, mechanics, hemodynamics, and right-ventricular effects rather than oxygenation alone. [5][21]",
+    "Initiate prolonged prone sessions early for moderate-to-severe ARDS; guideline-based use is at least 12 hours/day, and 16-hour sessions within 48 hours of severe ARDS are described in standard-care reviews. [11][23]",
+    "Escalate to an ECMO-capable center when adequate gas exchange cannot be maintained with protective ventilation after prone positioning and other appropriate adjuncts. [11][16][21]"
+  ],
+  "sections": [
+    {
+      "id": "bedside-reset",
+      "eyebrow": "First adjustment",
+      "heading": "Reset the ventilator to protective targets before escalating",
+      "intro": "Address immediately reversible causes before interpreting a deteriorating oxygenation or compliance trend.",
+      "paragraphs": [
+        "When plateau pressure, driving pressure, or oxygenation worsens abruptly, first exclude pneumothorax, hemothorax, thoracic compartment syndrome, and intra-abdominal hypertension; each can reduce compliance independently of progressive ARDS and requires cause-directed correction rather than simply higher PEEP. [15]",
+        "Use predicted or ideal body weight\u2014not actual weight\u2014to set tidal volume. A practical initial target is 4-6 mL/kg predicted body weight; ARDSNet permits 4-8 mL/kg ideal body weight, but low tidal volume at or below 6 mL/kg predicted body weight with plateau pressure below 30 cm H2O is the established protective standard. [9][10][15]",
+        "Obtain an end-inspiratory hold to measure plateau pressure after changes in tidal volume, PEEP, patient effort, chest-wall mechanics, or compliance. Keep plateau pressure below 30 cm H2O. If it exceeds 30 cm H2O, reduce tidal volume toward 4 mL/kg predicted body weight rather than accepting the pressure solely to normalize PaCO2. [11][15][23]",
+        "Track driving pressure as plateau pressure minus total PEEP. Because driving pressure also equals tidal volume divided by respiratory-system compliance, a rise after a ventilator change signals either increased tidal strain or a loss of functional aerated lung. Driving pressures below 14 cm H2O are associated with better outcomes; reduce tidal volume and reassess PEEP when driving pressure rises. [18]"
+      ],
+      "bullets": [
+        "Set respiratory rate as needed for ventilation, up to 35 breaths/min in the ARDSNet framework; reassess for intrinsic PEEP when rate is increased. [15]",
+        "Use oxygenation targets of SpO2 88%-95% and a pH goal of 7.30-7.45 in the ARDSNet framework rather than escalating pressure exposure solely to achieve normal oxygen saturation or PaCO2. [15]",
+        "Recheck plateau pressure, driving pressure, exhaled tidal volume, arterial blood gas values, and hemodynamics after each material change in tidal volume, rate, FiO2, or PEEP. [15][18][21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Core bedside targets for protective ventilation in ARDS. [9][11][15][18]",
+        "columns": [
+          "Variable",
+          "Target or calculation",
+          "Adjustment when off target"
+        ],
+        "rows": [
+          [
+            "Tidal volume",
+            "4-6 mL/kg predicted body weight; ARDSNet range 4-8 mL/kg ideal body weight. [9][15]",
+            "Reduce toward 4 mL/kg predicted body weight if plateau pressure exceeds 30 cm H2O or driving pressure rises. [11][18]"
+          ],
+          [
+            "Plateau pressure",
+            "<30 cm H2O. [11][15]",
+            "Lower tidal volume; evaluate chest-wall and abdominal contributors to reduced compliance. [15][23]"
+          ],
+          [
+            "Driving pressure",
+            "Plateau pressure minus PEEP; <14 cm H2O associated with better outcomes. [18]",
+            "Reduce tidal volume and reassess PEEP for recruitment benefit versus overdistension. [18][21]"
+          ],
+          [
+            "Respiratory rate",
+            "Up to 35 breaths/min in ARDSNet. [15]",
+            "Increase cautiously for hypercapnia; assess for intrinsic PEEP and avoid abandoning pressure limits. [15]"
+          ],
+          [
+            "Oxygenation and pH",
+            "SpO2 88%-95%; pH 7.30-7.45. [15]",
+            "Use FiO2 and PEEP adjustment within protective pressure targets; do not normalize gas values at the expense of injurious ventilation. [15][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "peep-titration",
+      "eyebrow": "Oxygenation and mechanics",
+      "heading": "Titrate PEEP for recruitment benefit without overdistension or right-heart injury",
+      "intro": "PEEP is an individualized tradeoff, not a fixed oxygenation intervention.",
+      "paragraphs": [
+        "Adjust FiO2 and PEEP using an ARDSNet low- or high-PEEP/FiO2 approach, then test whether a higher PEEP level improves the balance of oxygenation, compliance, driving pressure, and circulation. PEEP may recruit collapsed alveoli, improve static compliance, and reduce cyclic atelectasis, but excessive PEEP can worsen overdistension, dead space, pulmonary vascular resistance, and acute cor pulmonale. [2][15][21]",
+        "Favor a higher-PEEP strategy in moderate-to-severe ARDS when it maintains protective pressure targets and does not produce hemodynamic deterioration. ATS 2024 guidance emphasizes ARDSNet tables and higher PEEP for improved outcomes in moderate-to-severe disease, while uncertainty remains for mild ARDS and for the optimal individualized titration method. [5]",
+        "Do not interpret improved PaO2 alone as a successful PEEP trial. A PEEP increase that raises plateau pressure disproportionately, increases driving pressure, worsens blood pressure or right-ventricular function, or increases evidence of overdistension is not lung protective even when saturation improves. Reassess cardiopulmonary effects after each adjustment, particularly in severe ARDS. [2][21]",
+        "Electrical impedance tomography can display regional collapse and hyperdistension during decremental PEEP trials and may help identify a protective PEEP/VT combination or recruitment potential. It is a physiologic adjunct, not a replacement for lung-protective targets; outcome-directed trials of EIT-guided PEEP are ongoing. [1][2]"
+      ],
+      "bullets": [
+        "For a structured PEEP trial, change PEEP stepwise while maintaining low tidal volume, then compare plateau pressure, driving pressure, compliance, oxygenation, and hemodynamics at each step. [1][18][21]",
+        "If a decremental PEEP trial is used with EIT, interpret increasing regional collapse against increasing regional hyperdistension rather than relying on global compliance alone. [1]",
+        "Reassess PEEP after turning prone because prone positioning changes respiratory mechanics and hemodynamics; a supine PEEP setting may not remain optimal. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Interpretation of PEEP responses in ventilated ARDS. [1][2][18][21]",
+        "columns": [
+          "Response to higher PEEP",
+          "Likely interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Oxygenation and compliance improve, driving pressure falls, and circulation remains stable. [18][21]",
+            "Recruitment is likely exceeding overdistension. [2][21]",
+            "Maintain the tested PEEP level and repeat assessment after clinical or positional changes. [21]"
+          ],
+          [
+            "Oxygenation improves but plateau or driving pressure rises, or hemodynamics worsen. [2][18][21]",
+            "Improved oxygenation may be offset by overdistension or increased right-ventricular afterload. [2][21]",
+            "Reduce PEEP or use the lower pressure level that preserves protective mechanics; assess for acute cor pulmonale. [2][21]"
+          ],
+          [
+            "Regional hyperdistension and collapse are both quantified during an EIT decremental trial. [1]",
+            "Global compliance may conceal heterogenous regional injury. [1]",
+            "Select the PEEP/VT combination that minimizes competing collapse and hyperdistension signals while retaining protective pressure limits. [1]"
+          ],
+          [
+            "No meaningful oxygenation or mechanical benefit. [21]",
+            "Low recruitability or a non-pulmonary limitation may predominate. [15][21]",
+            "Avoid reflexive PEEP escalation; search for pneumothorax, pleural disease, abdominal hypertension, and hemodynamic limitation. [15][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "dyssynchrony-and-proning",
+      "eyebrow": "Moderate to severe ARDS",
+      "heading": "Treat dyssynchrony and prone early rather than escalating airway pressure",
+      "intro": "Persistent respiratory effort can defeat low tidal-volume ventilation even when set values appear protective.",
+      "paragraphs": [
+        "When vigorous spontaneous effort, double triggering, or refractory patient-ventilator asynchrony prevents delivery of protective tidal volume and pressure targets, optimize sedation and consider short-course neuromuscular blockade. Guideline syntheses suggest cisatracurium for up to 48 hours in moderate-to-severe ARDS; its practical role is facilitating protective ventilation and proning, not replacing low tidal volume or prone positioning. [11][20][23]",
+        "Prone positioning should be initiated early in moderate-to-severe ARDS, particularly at PaO2/FiO2 below 20 kPa (150 mm Hg). Use prolonged sessions: at least 12 hours/day in the guideline synthesis, with early initiation within 48 hours and repeated 16-hour sessions described in standard-care reviews. [11][23]",
+        "Do not reserve prone positioning solely for a transient oxygenation rescue. In moderate-to-severe ARDS, low tidal volume combined with prone ventilation has the strongest mortality signal among compared protective ventilation strategies. Continue low tidal volume and reassess PEEP, plateau pressure, driving pressure, FiO2 requirement, tube position, vascular access, skin pressure points, and hemodynamics after each turn. [17][21]",
+        "Proning commonly improves oxygenation rapidly and can permit lower FiO2 and PEEP, but line and endotracheal-tube dislodgement are procedural risks. Use an experienced turning team and verify airway and device security before and immediately after each turn. [15]"
+      ],
+      "bullets": [
+        "Use prone positioning in addition to\u2014not instead of\u2014tidal volume limitation and plateau-pressure control. [11][17]",
+        "For neuromuscular blockade, limit treatment to the early ARDS period and reassess daily whether synchrony and protective ventilation can be maintained without paralysis. [11][20][23]",
+        "Avoid high-frequency oscillatory ventilation; it is not recommended in the cited ARDS guideline synthesis. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Adjunct selection when conventional protective ventilation is insufficient. [11][16][17][20][23]",
+        "columns": [
+          "Clinical problem",
+          "Adjunct",
+          "Operational decision"
+        ],
+        "rows": [
+          [
+            "PaO2/FiO2 <150 mm Hg despite protective ventilation. [11]",
+            "Prone positioning. [11][17]",
+            "Start early and use prolonged sessions of at least 12 hours/day; repeat 16-hour sessions are described for severe ARDS. [11][23]"
+          ],
+          [
+            "Asynchrony or vigorous effort prevents protective ventilation. [20][23]",
+            "Neuromuscular blockade, including cisatracurium in guideline syntheses. [11][20]",
+            "Use as a short early course, up to 48 hours, with appropriate sedation and daily reassessment. [11][23]"
+          ],
+          [
+            "Refractory hypoxemia after conventional protective measures. [16]",
+            "Inhaled nitric oxide or prostacyclin as rescue pulmonary vasodilators. [16]",
+            "Use as a bridge while evaluating definitive escalation; inhaled nitric oxide is not recommended for routine use. [11][16]"
+          ],
+          [
+            "Failure to maintain gas exchange within protective limits. [11][16]",
+            "VV-ECMO referral. [11][16][21]",
+            "Contact an ECMO-capable center promptly rather than further increasing injurious ventilator exposure. [11][21]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "refractory-gas-exchange",
+      "eyebrow": "Rescue pathway",
+      "heading": "Escalate refractory hypoxemia or acidosis without abandoning lung protection",
+      "intro": "The escalation trigger is failure of gas exchange at acceptable mechanical stress, not a single low saturation value.",
+      "paragraphs": [
+        "Consider refractory hypoxemia when PaO2 is 60 mm Hg or lower, or PaO2/FiO2 is 100 or lower despite FiO2 0.8-1.0 and PEEP above 15 cm H2O for more than 12 hours with low tidal-volume ventilation; an oxygenation index above 40 is another proposed rescue threshold. These thresholds should prompt confirmation of ventilator mechanics, proning status, hemodynamics, and early ECMO discussion. [16]",
+        "Persistent respiratory acidosis with pH below 7.20 despite protective ventilation is also an ECMO escalation criterion in ARDS reviews. Before referral, ensure that tidal volume has not been increased above protective targets simply to correct PaCO2, and determine whether rate adjustment up to 35 breaths/min is feasible without excessive intrinsic PEEP. [15][22]",
+        "Avoid routine recruitment maneuvers. Reviews cite limited efficacy, increased complications, and potential harm; if a maneuver is selected for a carefully chosen rescue situation, it requires immediate post-maneuver PEEP optimization to prevent derecruitment and close hemodynamic surveillance. [12][23]",
+        "For VV-ECMO, the purpose is to provide gas exchange while reducing ventilator stress. During ECMO, continue lung-protective ventilation; cited best-practice targets include plateau pressure no greater than 30 cm H2O, FiO2 no greater than 0.60, PEEP at least 10 cm H2O, low tidal volume, and PEEP titration that preserves lung expansion without impairing hemodynamics. [24]"
+      ],
+      "bullets": [
+        "Before labeling hypoxemia refractory, confirm endotracheal-tube patency and position, rule out pneumothorax and other abrupt mechanical causes of reduced compliance, and review delivered versus set tidal volume. [15]",
+        "Use prone positioning and correction of dyssynchrony before relying on rescue recruitment maneuvers or extracorporeal support, unless instability requires immediate referral. [11][16][23]",
+        "After ECMO cannulation, do not discontinue ventilator surveillance; adjust PEEP for lung expansion and hemodynamic tolerance, and minimize driving pressure. [24]"
+      ],
+      "subsections": [
+        {
+          "heading": "Fluid and circulatory context",
+          "paragraphs": [
+            "After initial circulatory resuscitation, use a neutral or, when tolerated, negative fluid-balance target. This can reduce pulmonary edema burden without using higher ventilator pressures to compensate for fluid-related worsening of oxygenation. [11]"
+          ],
+          "bullets": [
+            "Interpret a fall in blood pressure or evidence of right-ventricular strain after PEEP escalation as a reason to reassess PEEP rather than automatically adding vasopressor support to preserve the higher setting. [2][21]"
+          ]
+        }
+      ],
+      "table": {
+        "caption": "Escalation triggers for severe ARDS despite protective ventilation. [11][16][22][24]",
+        "columns": [
+          "Trigger",
+          "Immediate action",
+          "Definitive escalation"
+        ],
+        "rows": [
+          [
+            "PaO2/FiO2 \u2264100 on FiO2 0.8-1.0, PEEP >15 cm H2O, sustained >12 hours. [16]",
+            "Verify mechanics and reversible causes; ensure prone positioning and protective pressure targets. [15][16]",
+            "Discuss VV-ECMO with an experienced center. [16][21]"
+          ],
+          [
+            "Oxygenation index >40. [16]",
+            "Reassess PEEP, hemodynamics, prone status, and dyssynchrony. [16][21]",
+            "Evaluate rescue therapies and VV-ECMO candidacy. [16]"
+          ],
+          [
+            "Persistent pH <7.20 despite protective ventilation. [22]",
+            "Avoid tidal-volume escalation beyond protective limits; assess rate and intrinsic PEEP. [15][22]",
+            "Evaluate for VV-ECMO. [22][24]"
+          ],
+          [
+            "Protective gas exchange cannot be achieved without plateau pressure >30 cm H2O. [11][16]",
+            "Lower tidal volume and correct reversible compliance limitations. [11][15]",
+            "Refer for extracorporeal lung support assessment. [11][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "daily-reassessment-and-liberation",
+      "eyebrow": "Daily management",
+      "heading": "Reassess mechanics and reduce avoidable ventilator exposure as ARDS improves",
+      "intro": "Improvement should trigger de-escalation of support without loss of protective constraints.",
+      "paragraphs": [
+        "Recalculate plateau pressure and driving pressure after changes in PEEP, tidal volume, body position, fluid balance, or respiratory effort. A fall in oxygen requirement alone does not establish that the current PEEP remains protective; reassess mechanics and hemodynamics, especially after return from prone positioning. [18][21]",
+        "As oxygenation and compliance improve, reduce FiO2 and PEEP while retaining low tidal volume and plateau-pressure limitation. During VV-ECMO, cited practice targets maintain FiO2 at or below 0.60 and PEEP at or above 10 cm H2O while titrating PEEP to lung expansion and hemodynamic tolerance. [24]",
+        "Minimize ventilator exposure with paired daily spontaneous awakening and breathing trials when clinically appropriate, minimize unnecessary sedation, and use early mobility. These practices are associated with shorter mechanical ventilation duration and target conditions linked to ventilator-associated events. [19]"
+      ],
+      "bullets": [
+        "Document each major ventilator adjustment with tidal volume per predicted body weight, plateau pressure, total PEEP, driving pressure, FiO2, arterial blood gas response, and hemodynamic response. [15][18][21]",
+        "Reassess whether ongoing deep sedation or neuromuscular blockade remains necessary once patient-ventilator synchrony and protective ventilation are stable. [11][20][23]",
+        "Do not use a conventional ventilator mode as inherently superior; no single mode, including APRV, high-frequency oscillation, or pressure-control ventilation, has demonstrated consistent superiority. [16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Daily reassessment actions that change ARDS ventilator management. [15][18][19][21][24]",
+        "columns": [
+          "Daily checkpoint",
+          "What to measure",
+          "What changes management"
+        ],
+        "rows": [
+          [
+            "Mechanical stress",
+            "Plateau pressure and driving pressure. [15][18]",
+            "Persistently elevated values favor lower tidal volume and reconsideration of PEEP. [11][18]"
+          ],
+          [
+            "PEEP tolerance",
+            "Oxygenation, compliance, blood pressure, and right-heart effects. [2][21]",
+            "Hemodynamic cost or rising driving pressure favors reducing PEEP despite improved oxygenation. [2][21]"
+          ],
+          [
+            "Need for adjuncts",
+            "Synchrony, prone response, sedation requirement, and paralysis requirement. [11][20][23]",
+            "Stable protective ventilation supports stopping paralysis and reducing sedation exposure. [11][20]"
+          ],
+          [
+            "Liberation readiness",
+            "Sedation requirement and ability to perform coordinated spontaneous awakening and breathing trials. [19]",
+            "Improvement supports daily SAT/SBT-based reduction in ventilator exposure. [19]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should improved oxygenation alone justify a higher PEEP setting in ARDS?",
+      "answer": "No. Keep a higher PEEP setting only if its oxygenation benefit is compatible with acceptable plateau and driving pressures, stable hemodynamics, and no evidence of excess right-ventricular afterload or overdistension. [2][18][21]"
+    },
+    {
+      "question": "When should prone positioning be started relative to ECMO referral?",
+      "answer": "For moderate-to-severe ARDS, initiate prolonged prone positioning early while maintaining low tidal volume ventilation. If protective ventilation still cannot provide adequate gas exchange, begin VV-ECMO referral promptly rather than delaying until further injurious pressure escalation. [11][16][17][21]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Chest electrical impedance tomography examination",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/72/1/83.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "INTRODUCTION Electrical impedance tomography (EIT) is a radiation-free functional imaging modality invented over 30 years ago.1 Scienti\ufb01c and clinical interest in this method is driven by the clinical need for moni-toring of lung ventilation and perfusion and for assessment of regional lung function",
+      "score": 0.40373197
+    },
+    {
+      "number": 2,
+      "title": "Multicentre, parallel, open-label, two-arm, randomised controlled trial on the prognosis of electrical impedance tomography-guided versus low PEEP/FiO2 table-guided PEEP setting: a trial protocol",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/14/2/e080828",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Multicentre, parallel, open-label, two-arm, randomised controlled trial on the prognosis of electrical impedance tomography-guided versus low PEEP/FiO2 table-guided PEEP setting: a trial protocol\nMechanical ventilation is an essential supportive management for patients with acute respiratory ",
+      "score": 0.6972179
+    },
+    {
+      "number": 3,
+      "title": "Neuromuscular Blocking Agents in Acute Respiratory Distress Syndrome | Anaesthesiology | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/neuromuscular-blocking-agents-in-acute-respiratory-distress-syndrome",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Acute respiratory distress syndrome (ARDS) is characterised by rapid-onset respiratory failure, diffuse alveolar damage and profound hypoxaemia. Mechanical ventilation with a lung-protective strategy\u2014low tidal volumes and appropriately titrated positive end-expiratory pressure\u2014remains the cornerston",
+      "score": 0.72489023
+    },
+    {
+      "number": 4,
+      "title": "Mechanical Ventilation Strategies in Critical Care Medicine | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/mechanical-ventilation-strategies-in-critical-care-medicine",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Mechanical ventilation remains a cornerstone of support for patients with acute respiratory failure, particularly those with acute respiratory distress syndrome (ARDS), severe pneumonia and perioperative complications. Contemporary strategies emphasise minimising ventilator-induced lung injury by li",
+      "score": 0.86767644
+    },
+    {
+      "number": 5,
+      "title": "Personalized ventilation adjustment in ARDS: A systematic review and meta-analysis of image, driving pressure, transpulmonary pressure, and mechanical power",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0147956324001535",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "While the principal concepts underlying the recommendations for ventilating ARDS patients from leading scientific associations have remained relatively stable in recent decades, they exhibit some variations in specific practical aspects. These variations reflect the complexity of managing these pati",
+      "score": 0.6420965
+    },
+    {
+      "number": 6,
+      "title": "Individualized Lung\u2010Protective Ventilation Strategy Based on ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/wjs.12676",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "PEEP and FiO2 adjustments followed the ARDSNet high PEEP/FiO2 table with the goal of maintaining oxygenation index (PaO2/FiO2 ratio) > 150 mmHg",
+      "score": 0.61363083
+    },
+    {
+      "number": 7,
+      "title": "A computational physiological model of acute respiratory distress syndrome patients for positive end-expiratory pressure titration - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010482525013009",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am. J. Respir. Crit. Care Med.\n\n### National Heart, Lung, and Blood Institute ARDS Clinical Trials Network. Higher versus lower positive end-expiratory pressures in patients with the acute respiratory distress syndrome\n\n### N Engl J Med.\n\n### Driving pressure and survival in the acute respirator",
+      "score": 0.4081122
+    },
+    {
+      "number": 8,
+      "title": "Future directions of lung\u2010protective ventilation strategies in acute ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ams2.918",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This article overviews ventilator-induced lung injury, ARDS, and discusses how to implement precision medicine. Decreasing PEEP to 12 cmH2O",
+      "score": 0.29577932
+    },
+    {
+      "number": 9,
+      "title": "Ten golden rules for individualized mechanical ventilation in acute respiratory distress syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X21000049",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Review article Open access Challenges in ARDS Definition, Management, and Identification of Effective Personalized Therapies Battaglini D., \u2026, Pelosi P.Journal of Clinical Medicine \u2022 Volume 12 \u2022 2023 \u2022 Article 1381  Show abstract Over the last decade, the management of acute respiratory distress syn",
+      "score": 0.8386933
+    },
+    {
+      "number": 10,
+      "title": "Mechanical Ventilation in ARDS: A State-of-the-Art Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369215389170",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Conclusion\n\nIn the management of patients with ARDS, low tidal volume ventilation (_ie_, \u2264 6 mL/kg predicted body weight) with the maintenance of plateau pressures of < 30 cm H 2 O, when possible, remains the standard of care as it is the only method of mechanical ventilation that has been prove",
+      "score": 0.78866494
+    },
+    {
+      "number": 11,
+      "title": "Guidelines on the management of acute respiratory distress syndrome",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6561387",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We have synthesised available evidence with the clinical practice of the GDG into a management algorithm (figure 1). Hence, for a patient presenting with for example severe ARDS, low tidal volume (<6 ml/kg IBW) and low plateau pressure (<30 cmH 2 O), mechanical ventilation using higher PEEP is recom",
+      "score": 0.8889231
+    },
+    {
+      "number": 12,
+      "title": "Recruitment-Potential-Oriented Mechanical Ventilation Protocol and Narrative Review for Patients with Acute Respiratory Distress Syndrome - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11355260",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "small tidal volume  and prone position  have been made. However, issues such as the high/low positive end-expiratory pressure (PEEP) strategy [6][7][8][9], the recruitment maneuver (RM) [8][10][11][12][13], neuromuscular blockade [14][15], extracorporeal membrane oxygenation (ECMO) [16][17], airway pressure ",
+      "score": 0.8724455
+    },
+    {
+      "number": 13,
+      "title": "Efficacy of prone position in acute respiratory distress syndrome patients: A pathophysiology-based review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4848155",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords: Prone position, Acute respiratory distress syndrome, Mechanical ventilation, Ventilator-induced lung injury, Pathophysiology\n\n  \n\nCore tip: Lung protective ventilation has become the standard treatment strategy for patients with acute respiratory distress syndrome (ARDS). The physiological",
+      "score": 0.8106142
+    },
+    {
+      "number": 14,
+      "title": "Acute Respiratory Distress Syndrome",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8157117",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11.Fan E., Del Sorbo L., Goligher E.C., _et al_. An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine clinical practice guideline: mechanical ventilation in adult patients with acute respiratory distress syndrome. _Am J Respir Crit Care ",
+      "score": 0.7760977
+    },
+    {
+      "number": 15,
+      "title": "Acute Respiratory Distress Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK436002",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A lung-protective ventilatory strategy is advocated to reduce lung injury. The NIH-NHLBI ARDS Clinical Network Mechanical Ventilation Protocol (ARDSnet) sets the following goals: tidal volume (TV) from 4 to 8 mL/kg of ideal body weight (IBW), respiratory rate (RR) up to 35 bpm, SpO2 88% to 95%, plat",
+      "score": 0.7040996
+    },
+    {
+      "number": 16,
+      "title": "Venovenous ECMO for Refractory Hypoxemia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK560516",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Deterrence and Patient Education\n\nPreventing the onset of ARDS and recognizing early signs of respiratory decline are essential for reducing the incidence of refractory hypoxemia. Several strategies can mitigate risk in vulnerable patients. Lung-protective ventilation, using low tidal volumes of ",
+      "score": 0.70871735
+    },
+    {
+      "number": 17,
+      "title": "Comparative Effectiveness of Protective Ventilation Strategies for Moderate and Severe Acute Respiratory Distress Syndrome. A Network Meta-Analysis",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/rccm.202008-3039OC",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Title: Comparative Effectiveness of Protective Ventilation Strategies for Moderate and Severe Acute Respiratory Distress Syndrome. A Network Meta-Analysis\nThis network meta-analysis, with 34 trials and 9,085 adult patients, provides high-certainty evidence that low V t combined with prone ventilatio",
+      "score": 0.7869018
+    },
+    {
+      "number": 18,
+      "title": "Evidence-Based Mechanical Ventilatory Strategies in ARDS - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8780427",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In this review, we have discussed various ventilatory strategies and ventilatory adjuncts for the management of ARDS. The main objective of the various treatment modalities is to improve outcomes of patients due to the high morbidity and mortality associated with this sinister condition. The most im",
+      "score": 0.783542
+    },
+    {
+      "number": 19,
+      "title": "Potential Strategies to Prevent Ventilator-associated Events",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.201506-1161CI",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Interventions that minimize ventilator exposure and target one or more of these conditions may therefore prevent VAEs. Potential strategies include avoiding intubation, minimizing sedation, paired daily spontaneous awakening and breathing trials, early exercise and mobility, low tidal volume ventila",
+      "score": 0.70483154
+    },
+    {
+      "number": 20,
+      "title": "Evidence-Based Mechanical Ventilatory Strategies in ARDS",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8780427",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "38..Ho A.T.N., Patolia S., Guervilly C.. Neuromuscular blockade in acute respiratory distress syndrome: A systematic review and meta-analysis of randomized controlled trials. _J. Intensive Care_. 2020. 8:12. doi: 10.1186/s40560-020-0431-z [DOI] [PMC free article] [PubMed] [Google Scholar]\n   39..Alh",
+      "score": 0.7686816
+    },
+    {
+      "number": 21,
+      "title": "Positive end-expiratory pressure management in patients with severe ARDS: implications of prone positioning and extracorporeal membrane oxygenation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11348554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Background\n\nPositive end-expiratory pressure (PEEP) has been a cornerstone in the management of mechanically ventilated patients with acute respiratory distress syndrome (ARDS) since its description by Ashbaugh et al. in 1967 . As part of a lung protective ventilation strategy, PEEP improves vent",
+      "score": 0.76659125
+    },
+    {
+      "number": 22,
+      "title": "Management of ARDS \u2013 What Works and What Does Not - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7997862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "75.Guerin C. Prone ventilation in acute respiratory distress syndrome. _Eur Respir Rev_. 2014. 23(132):249-257. doi: 10.1183/09059180.00001114 [DOI] [PMC free article] [PubMed] [Google Scholar]\n   76.Gu\u00e9rin C, Reignier J, Richard J-C. Prone positioning in severe acute respiratory distress syndrome. ",
+      "score": 0.7559439
+    },
+    {
+      "number": 23,
+      "title": "The standard of care of patients with ARDS: ventilatory settings and rescue therapies for refractory hypoxemia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4828494",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , adequate high PEEP (>12 cmH 2 O), a recruitment manoeuvre in special situations, and a \u2018balanced\u2019 respiratory rate (20-30/min). Individual bedside methods to guide PEEP/recruitment (e.g., transpulmonary pressure) are not (yet) available. Prone positioning [early (\u2264 48 hrs after onset of severe ",
+      "score": 0.72977066
+    },
+    {
+      "number": 24,
+      "title": "Mechanical Ventilation during ECMO: Best Practices - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10208991",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Although there are many potential ventilator management approaches for patients supported on ECMO, the overarching principle of lung protection is essential to give the patient the best chance to recover with minimal morbidity. The same lung-protective strategies that have been demonstrated to reduc",
+      "score": 0.68723184
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Chest electrical impedance tomography examination",
+      "detail": "thorax.bmj.com",
+      "url": "https://thorax.bmj.com/content/thoraxjnl/72/1/83.full.pdf",
+      "authors": "thorax.bmj.com",
+      "host": "thorax.bmj.com",
+      "snippet": "INTRODUCTION Electrical impedance tomography (EIT) is a radiation-free functional imaging modality invented over 30 years ago.1 Scienti\ufb01c and clinical interest in this method is driven by the clinical need for moni-toring of lung ventilation and perfusion and for assessment of regional lung function",
+      "score": 0.40373197
+    },
+    {
+      "number": 2,
+      "title": "Multicentre, parallel, open-label, two-arm, randomised controlled trial on the prognosis of electrical impedance tomography-guided versus low PEEP/FiO2 table-guided PEEP setting: a trial protocol",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/14/2/e080828",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Multicentre, parallel, open-label, two-arm, randomised controlled trial on the prognosis of electrical impedance tomography-guided versus low PEEP/FiO2 table-guided PEEP setting: a trial protocol\nMechanical ventilation is an essential supportive management for patients with acute respiratory ",
+      "score": 0.6972179
+    },
+    {
+      "number": 3,
+      "title": "Neuromuscular Blocking Agents in Acute Respiratory Distress Syndrome | Anaesthesiology | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/neuromuscular-blocking-agents-in-acute-respiratory-distress-syndrome",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Acute respiratory distress syndrome (ARDS) is characterised by rapid-onset respiratory failure, diffuse alveolar damage and profound hypoxaemia. Mechanical ventilation with a lung-protective strategy\u2014low tidal volumes and appropriately titrated positive end-expiratory pressure\u2014remains the cornerston",
+      "score": 0.72489023
+    },
+    {
+      "number": 4,
+      "title": "Mechanical Ventilation Strategies in Critical Care Medicine | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/mechanical-ventilation-strategies-in-critical-care-medicine",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Mechanical ventilation remains a cornerstone of support for patients with acute respiratory failure, particularly those with acute respiratory distress syndrome (ARDS), severe pneumonia and perioperative complications. Contemporary strategies emphasise minimising ventilator-induced lung injury by li",
+      "score": 0.86767644
+    },
+    {
+      "number": 5,
+      "title": "Personalized ventilation adjustment in ARDS: A systematic review and meta-analysis of image, driving pressure, transpulmonary pressure, and mechanical power",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0147956324001535",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "While the principal concepts underlying the recommendations for ventilating ARDS patients from leading scientific associations have remained relatively stable in recent decades, they exhibit some variations in specific practical aspects. These variations reflect the complexity of managing these pati",
+      "score": 0.6420965
+    },
+    {
+      "number": 6,
+      "title": "Individualized Lung\u2010Protective Ventilation Strategy Based on ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/wjs.12676",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "PEEP and FiO2 adjustments followed the ARDSNet high PEEP/FiO2 table with the goal of maintaining oxygenation index (PaO2/FiO2 ratio) > 150 mmHg",
+      "score": 0.61363083
+    },
+    {
+      "number": 7,
+      "title": "A computational physiological model of acute respiratory distress syndrome patients for positive end-expiratory pressure titration - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0010482525013009",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am. J. Respir. Crit. Care Med.\n\n### National Heart, Lung, and Blood Institute ARDS Clinical Trials Network. Higher versus lower positive end-expiratory pressures in patients with the acute respiratory distress syndrome\n\n### N Engl J Med.\n\n### Driving pressure and survival in the acute respirator",
+      "score": 0.4081122
+    },
+    {
+      "number": 8,
+      "title": "Future directions of lung\u2010protective ventilation strategies in acute ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ams2.918",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "This article overviews ventilator-induced lung injury, ARDS, and discusses how to implement precision medicine. Decreasing PEEP to 12 cmH2O",
+      "score": 0.29577932
+    },
+    {
+      "number": 9,
+      "title": "Ten golden rules for individualized mechanical ventilation in acute respiratory distress syndrome",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2667100X21000049",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Review article Open access Challenges in ARDS Definition, Management, and Identification of Effective Personalized Therapies Battaglini D., \u2026, Pelosi P.Journal of Clinical Medicine \u2022 Volume 12 \u2022 2023 \u2022 Article 1381  Show abstract Over the last decade, the management of acute respiratory distress syn",
+      "score": 0.8386933
+    },
+    {
+      "number": 10,
+      "title": "Mechanical Ventilation in ARDS: A State-of-the-Art Review",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369215389170",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Conclusion\n\nIn the management of patients with ARDS, low tidal volume ventilation (_ie_, \u2264 6 mL/kg predicted body weight) with the maintenance of plateau pressures of < 30 cm H 2 O, when possible, remains the standard of care as it is the only method of mechanical ventilation that has been prove",
+      "score": 0.78866494
+    },
+    {
+      "number": 11,
+      "title": "Guidelines on the management of acute respiratory distress syndrome",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6561387",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "We have synthesised available evidence with the clinical practice of the GDG into a management algorithm (figure 1). Hence, for a patient presenting with for example severe ARDS, low tidal volume (<6 ml/kg IBW) and low plateau pressure (<30 cmH 2 O), mechanical ventilation using higher PEEP is recom",
+      "score": 0.8889231
+    },
+    {
+      "number": 12,
+      "title": "Recruitment-Potential-Oriented Mechanical Ventilation Protocol and Narrative Review for Patients with Acute Respiratory Distress Syndrome - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11355260",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "small tidal volume  and prone position  have been made. However, issues such as the high/low positive end-expiratory pressure (PEEP) strategy [6][7][8][9], the recruitment maneuver (RM) [8][10][11][12][13], neuromuscular blockade [14][15], extracorporeal membrane oxygenation (ECMO) [16][17], airway pressure ",
+      "score": 0.8724455
+    },
+    {
+      "number": 13,
+      "title": "Efficacy of prone position in acute respiratory distress syndrome patients: A pathophysiology-based review",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4848155",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords: Prone position, Acute respiratory distress syndrome, Mechanical ventilation, Ventilator-induced lung injury, Pathophysiology\n\n  \n\nCore tip: Lung protective ventilation has become the standard treatment strategy for patients with acute respiratory distress syndrome (ARDS). The physiological",
+      "score": 0.8106142
+    },
+    {
+      "number": 14,
+      "title": "Acute Respiratory Distress Syndrome",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8157117",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11.Fan E., Del Sorbo L., Goligher E.C., _et al_. An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine clinical practice guideline: mechanical ventilation in adult patients with acute respiratory distress syndrome. _Am J Respir Crit Care ",
+      "score": 0.7760977
+    },
+    {
+      "number": 15,
+      "title": "Acute Respiratory Distress Syndrome - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK436002",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "A lung-protective ventilatory strategy is advocated to reduce lung injury. The NIH-NHLBI ARDS Clinical Network Mechanical Ventilation Protocol (ARDSnet) sets the following goals: tidal volume (TV) from 4 to 8 mL/kg of ideal body weight (IBW), respiratory rate (RR) up to 35 bpm, SpO2 88% to 95%, plat",
+      "score": 0.7040996
+    },
+    {
+      "number": 16,
+      "title": "Venovenous ECMO for Refractory Hypoxemia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK560516",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Deterrence and Patient Education\n\nPreventing the onset of ARDS and recognizing early signs of respiratory decline are essential for reducing the incidence of refractory hypoxemia. Several strategies can mitigate risk in vulnerable patients. Lung-protective ventilation, using low tidal volumes of ",
+      "score": 0.70871735
+    },
+    {
+      "number": 17,
+      "title": "Comparative Effectiveness of Protective Ventilation Strategies for Moderate and Severe Acute Respiratory Distress Syndrome. A Network Meta-Analysis",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/10.1164/rccm.202008-3039OC",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Title: Comparative Effectiveness of Protective Ventilation Strategies for Moderate and Severe Acute Respiratory Distress Syndrome. A Network Meta-Analysis\nThis network meta-analysis, with 34 trials and 9,085 adult patients, provides high-certainty evidence that low V t combined with prone ventilatio",
+      "score": 0.7869018
+    },
+    {
+      "number": 18,
+      "title": "Evidence-Based Mechanical Ventilatory Strategies in ARDS - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8780427",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "In this review, we have discussed various ventilatory strategies and ventilatory adjuncts for the management of ARDS. The main objective of the various treatment modalities is to improve outcomes of patients due to the high morbidity and mortality associated with this sinister condition. The most im",
+      "score": 0.783542
+    },
+    {
+      "number": 19,
+      "title": "Potential Strategies to Prevent Ventilator-associated Events",
+      "detail": "www.atsjournals.org",
+      "url": "https://www.atsjournals.org/doi/full/10.1164/rccm.201506-1161CI",
+      "authors": "www.atsjournals.org",
+      "host": "www.atsjournals.org",
+      "snippet": "Interventions that minimize ventilator exposure and target one or more of these conditions may therefore prevent VAEs. Potential strategies include avoiding intubation, minimizing sedation, paired daily spontaneous awakening and breathing trials, early exercise and mobility, low tidal volume ventila",
+      "score": 0.70483154
+    },
+    {
+      "number": 20,
+      "title": "Evidence-Based Mechanical Ventilatory Strategies in ARDS",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8780427",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "38..Ho A.T.N., Patolia S., Guervilly C.. Neuromuscular blockade in acute respiratory distress syndrome: A systematic review and meta-analysis of randomized controlled trials. _J. Intensive Care_. 2020. 8:12. doi: 10.1186/s40560-020-0431-z [DOI] [PMC free article] [PubMed] [Google Scholar]\n   39..Alh",
+      "score": 0.7686816
+    },
+    {
+      "number": 21,
+      "title": "Positive end-expiratory pressure management in patients with severe ARDS: implications of prone positioning and extracorporeal membrane oxygenation - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11348554",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## Background\n\nPositive end-expiratory pressure (PEEP) has been a cornerstone in the management of mechanically ventilated patients with acute respiratory distress syndrome (ARDS) since its description by Ashbaugh et al. in 1967 . As part of a lung protective ventilation strategy, PEEP improves vent",
+      "score": 0.76659125
+    },
+    {
+      "number": 22,
+      "title": "Management of ARDS \u2013 What Works and What Does Not - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7997862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "75.Guerin C. Prone ventilation in acute respiratory distress syndrome. _Eur Respir Rev_. 2014. 23(132):249-257. doi: 10.1183/09059180.00001114 [DOI] [PMC free article] [PubMed] [Google Scholar]\n   76.Gu\u00e9rin C, Reignier J, Richard J-C. Prone positioning in severe acute respiratory distress syndrome. ",
+      "score": 0.7559439
+    },
+    {
+      "number": 23,
+      "title": "The standard of care of patients with ARDS: ventilatory settings and rescue therapies for refractory hypoxemia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4828494",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "## , adequate high PEEP (>12 cmH 2 O), a recruitment manoeuvre in special situations, and a \u2018balanced\u2019 respiratory rate (20-30/min). Individual bedside methods to guide PEEP/recruitment (e.g., transpulmonary pressure) are not (yet) available. Prone positioning [early (\u2264 48 hrs after onset of severe ",
+      "score": 0.72977066
+    },
+    {
+      "number": 24,
+      "title": "Mechanical Ventilation during ECMO: Best Practices - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10208991",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Although there are many potential ventilator management approaches for patients supported on ECMO, the overarching principle of lung protection is essential to give the patient the best chance to recover with minimal morbidity. The same lung-protective strategies that have been demonstrated to reduc",
+      "score": 0.68723184
+    }
+  ],
+  "publishedAt": "2026-09-15T22:00:47.045480+00:00",
+  "updatedAt": "2026-09-15T22:00:47.045480+00:00",
+  "readingMinutes": 7,
+  "slug": "ards-ventilator-adjustment"
+}

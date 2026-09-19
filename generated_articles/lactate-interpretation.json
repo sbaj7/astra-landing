@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Critical Care",
+  "title": "Lactate Interpretation",
+  "summary": "Interpret lactate as a dynamic marker of metabolic stress, hypoperfusion, and impaired clearance\u2014not a stand-alone measure of tissue hypoxia. Use the initial value to identify high-risk shock, then reassess perfusion, organ function, and trajectory to direct escalation without pursuing normalization blindly.",
+  "seoDescription": "Practical interpretation of elevated lactate in critical illness, including shock thresholds, serial testing, confounders, prognosis, and escalation.",
+  "clinicalQuestion": "How should clinicians interpret and act on an elevated lactate concentration in critically ill adults?",
+  "specialty": "Critical Care Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "lactate",
+    "hyperlactatemia",
+    "lactic acidosis",
+    "septic shock",
+    "shock resuscitation",
+    "lactate clearance",
+    "critical care"
+  ],
+  "keyTakeaways": [
+    "A lactate concentration greater than 2 mmol/L identifies increased risk in sepsis and, with vasopressor-dependent hypotension after fluids, is part of the Sepsis-3 clinical definition of septic shock. [10][12]",
+    "A lactate value of 4 mmol/L or greater should trigger urgent evaluation for severe shock or occult hypoperfusion; in sepsis it is independently associated with mortality, and one review cites approximately 27% mortality. [9][10]",
+    "Repeat lactate after an elevated result and interpret the trajectory with bedside perfusion and organ-function data; less than 10% reduction over 6 hours is associated with higher mortality. [10][11]",
+    "Persistent hyperlactatemia does not prove persistent oxygen-delivery failure: adrenergic stress, accelerated aerobic glycolysis, hepatic dysfunction, acute kidney injury, toxins, and drugs can contribute. [11][12][17][20]",
+    "Do not intensify fluids or other resuscitation solely to normalize lactate when clinical peripheral perfusion has normalized; lactate-targeted and capillary-refill\u2013targeted strategies did not show a definitive 28-day mortality difference in septic shock. [15]"
+  ],
+  "sections": [
+    {
+      "id": "initial-lactate-response",
+      "eyebrow": "First decision",
+      "heading": "What an elevated lactate should change immediately",
+      "intro": "Treat an elevated value as a risk signal that requires physiologic context and a time-stamped reassessment.",
+      "paragraphs": [
+        "Obtain a blood lactate promptly in patients with suspected severe sepsis or shock physiology, because lactate measurement is a core element of historical Surviving Sepsis Campaign early-care bundles and supports early identification of sepsis-induced hypoperfusion. [8][9] A value greater than 2 mmol/L is abnormal in the contemporary septic-shock construct; septic shock requires both vasopressor-dependent hypotension after fluid resuscitation to maintain mean arterial pressure above 65 mm Hg and lactate greater than 2 mmol/L. [10][12]",
+        "When lactate is 4 mmol/L or greater, immediately look for a reversible shock state\u2014distributive, cardiogenic, hypovolemic, or obstructive\u2014and assess blood pressure, urine output, mental status, skin perfusion, respiratory status, and organ dysfunction while initiating cause-directed resuscitation. Lactate at or above 4 mmol/L has been used to identify sepsis-induced hypoperfusion and is independently associated with mortality in sepsis. [9][10][13] A normal lactate should not be used to exclude severe critical illness, because normolactatemia does not reliably establish absence of serious disease. [10]",
+        "Order repeat lactate after an initially elevated measurement rather than making management decisions from a single concentration. Serial values provide dynamic prognostic information during resuscitation, whereas an isolated admission value has substantial survivor\u2013nonsurvivor overlap and cannot independently predict outcome for an individual patient. [4][7][10]"
+      ],
+      "bullets": [
+        "Lactate greater than 2 mmol/L: increase surveillance for shock, evolving organ dysfunction, and impaired lactate clearance; integrate with the hemodynamic examination. [10][12]",
+        "Lactate 2.0 to 3.9 mmol/L in suspected infection: do not dismiss as mild; this range has been associated with increased 28-day mortality even without overt shock. [13]",
+        "Lactate 4 mmol/L or greater: manage as a high-risk hypoperfusion phenotype until the clinical evaluation identifies an alternative explanation. [9][10][13]",
+        "Lactate 10 mmol/L or greater: recognize extreme risk; an ICU cohort cited mortality of 78.2% among patients with severe hyperlactatemia. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Lactate thresholds that change risk assessment and next actions. [9][10][12][13]",
+        "columns": [
+          "Lactate concentration",
+          "Interpretation",
+          "Immediate clinical consequence"
+        ],
+        "rows": [
+          [
+            "Less than 2 mmol/L",
+            "Does not meet the lactate component of septic shock; does not exclude critical illness. [10][12]",
+            "Continue evaluation according to clinical perfusion, blood pressure, organ dysfunction, and suspected cause. [10]"
+          ],
+          [
+            "Greater than 2 mmol/L",
+            "Abnormal in critical illness; with vasopressor-dependent hypotension after fluids, fulfills the lactate criterion for septic shock. [10][12]",
+            "Reassess for shock and organ dysfunction; obtain serial lactate if initially elevated. [8][10]"
+          ],
+          [
+            "2.0-3.9 mmol/L",
+            "Associated with increased 28-day mortality in sepsis cohorts, including patients without shock. [13]",
+            "Do not classify as low risk based on blood pressure alone; identify occult hypoperfusion and alternative causes. [13]"
+          ],
+          [
+            "At least 4 mmol/L",
+            "Marker of high-risk sepsis-induced hypoperfusion and increased mortality. [9][10]",
+            "Escalate shock evaluation and resuscitation while repeating lactate to assess response. [8][9][10]"
+          ],
+          [
+            "At least 10 mmol/L",
+            "Severe hyperlactatemia with very high observed ICU mortality. [11]",
+            "Urgently identify ongoing shock, impaired clearance, toxic-metabolic causes, and need for organ support. [11][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpret-the-pattern",
+      "eyebrow": "Etiologic branching",
+      "heading": "Separate impaired perfusion from stress production and impaired clearance",
+      "intro": "The actionable question is why lactate is elevated and whether the responsible process is improving.",
+      "paragraphs": [
+        "Prioritize type A physiology when hyperlactatemia coexists with hypotension, cool or mottled extremities, oliguria, altered mentation, worsening renal function, or other evidence of systemic hypoperfusion. Sepsis, cardiogenic shock, hypovolemic shock, and obstructive shock can all elevate lactate through inadequate tissue oxygen delivery and should prompt immediate identification and correction of the shock mechanism. [10][17] In cardiogenic shock, a persistent or rising lactate after resuscitation suggests refractory physiology, ongoing microcirculatory dysfunction, or impaired clearance; early lactate decline after mechanical circulatory support is associated with better survival but should not be used as a stand-alone futility criterion. [4]",
+        "Do not equate elevated lactate with anaerobic metabolism in every patient. Critical illness can produce hyperlactatemia through accelerated aerobic glycolysis during the stress response, and sepsis-associated lactate may reflect metabolic abnormalities in addition to tissue hypoxia. [11] This distinction matters when the patient has improving capillary refill, stable or improving organ function, and no other evidence of inadequate perfusion: continued fluid loading solely to force lactate normalization can expose the patient to iatrogenic volume excess without proving that oxygen delivery is inadequate. [6][15]",
+        "Evaluate clearance when lactate remains elevated despite apparently restored macrocirculatory variables. The liver accounts for approximately 60% of lactate clearance and the kidney approximately 30%; liver dysfunction and acute kidney injury can therefore prolong hyperlactatemia independent of ongoing production. [12] Review hepatic and renal function, acid-base status, medication and toxin exposure, and the possibility of metabolic poisoning such as cyanide-related electron-transport inhibition when the clinical picture does not support ongoing systemic hypoperfusion. [17][20]"
+      ],
+      "bullets": [
+        "Shock pattern: hypotension or hypoperfusion signs plus rising lactate should trigger immediate cause-specific circulatory assessment rather than observation. [10][17]",
+        "Improving peripheral perfusion but slow lactate decline: reassess hepatic and renal clearance and stress-mediated production before escalating fluids. [6][11][12]",
+        "Severe metabolic acidosis with renal failure: consider renal replacement therapy; hemodialysis may be considered in severe lactic acidosis, particularly with renal failure. [17]",
+        "Suspected metformin-associated lactic acidosis: early dialysis, within 6 hours, and hemodialysis rather than peritoneal dialysis have been associated with improved 30-day survival. [17]"
+      ],
+      "subsections": [
+        {
+          "heading": "Acidemia is not interchangeable with hyperlactatemia",
+          "paragraphs": [
+            "Confirm whether hyperlactatemia is accompanied by clinically important metabolic acidosis with blood gas analysis and corrected anion-gap assessment, particularly when hypoalbuminemia may mask an elevated anion gap. [17] Lactate and pH correlate imperfectly at lower lactate concentrations; severe hyperlactatemia is generally accompanied by acidemia, but a modest lactate elevation may occur without proportional acidemia. [20]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Pattern-based interpretation of persistent hyperlactatemia. [4][10][11][12][17][20]",
+        "columns": [
+          "Clinical pattern",
+          "Most concerning explanation",
+          "Next diagnostic or management step"
+        ],
+        "rows": [
+          [
+            "Hypotension, oliguria, altered mentation, poor skin perfusion, or worsening organ dysfunction",
+            "Ongoing distributive, cardiogenic, hypovolemic, or obstructive shock. [10][17]",
+            "Identify and correct the shock mechanism; trend lactate alongside perfusion and organ-function measures. [10][17]"
+          ],
+          [
+            "Persistent elevation after macrocirculatory improvement",
+            "Residual microcirculatory dysfunction, stress glycolysis, or reduced hepatic/renal clearance. [4][11][12]",
+            "Reassess peripheral perfusion and organ trajectory; review hepatic and renal dysfunction before giving additional fluid solely for lactate. [6][12]"
+          ],
+          [
+            "Marked elevation with renal failure and severe acidosis",
+            "Reduced clearance plus severe lactic acidosis. [17]",
+            "Consider hemodialysis, especially when renal failure is present. [17]"
+          ],
+          [
+            "Unexplained severe elevation without a convincing shock phenotype",
+            "Drug toxicity, inborn metabolic disease, or electron-transport inhibition such as cyanide toxicity. [17][20]",
+            "Conduct focused medication, exposure, and metabolic evaluation while continuing surveillance for occult hypoperfusion. [17][20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "serial-lactate-monitoring",
+      "eyebrow": "Trajectory",
+      "heading": "How to use serial lactate during resuscitation",
+      "intro": "Use the direction and pace of change to test whether the initial resuscitation is correcting the dominant physiology.",
+      "paragraphs": [
+        "Repeat lactate in patients with initial hyperlactatemia during early resuscitation; historical sepsis bundles specified repeat measurement for hyperlactatemia, and reviews of lactate kinetics support structured serial assessment over early critical illness. [8][2] A declining lactate over 6 to 24 hours is consistently associated with lower mortality across acute-care settings, but the trajectory is an adjunct to clinical assessment rather than an isolated treatment endpoint. [2][9][10]",
+        "Use a reduction of at least 10% from the initial value as a favorable early trajectory in septic shock, while recognizing that the exact treatment target remains uncertain. Lactate clearance greater than 10% has been associated with survival, and less than 10% clearance at 6 hours predicts higher mortality. [10][11] Persistent elevation should trigger a structured reassessment for uncorrected shock, uncontrolled source or disease process, impaired clearance, or a toxic-metabolic driver\u2014not automatic repetition of the same intervention. [4][11][12][17]",
+        "Avoid treating a calculated \u201cclearance\u201d percentage as proof of therapeutic success when the initial value was obtained during a transient surge or when clearance is physiologically limited. In sepsis, lactate clearance is useful for monitoring response but has not been definitively established as a universal therapeutic endpoint. [9] In cardiogenic shock and VA-ECMO-supported patients, early clearance is strongly prognostic, but failure to normalize should be interpreted with device flow, organ failure, microcirculation, and hepatic and renal function. [4]"
+      ],
+      "bullets": [
+        "Falling lactate: supports improving metabolic recovery, but verify concordance with blood pressure, urine output, peripheral perfusion, and organ function. [2][10]",
+        "Less than 10% fall by 6 hours: reassess the diagnosis, shock mechanism, adequacy of source control or cause-directed treatment, and clearance limitations. [10][11]",
+        "Rising lactate: treat as a deterioration signal until ongoing hypoperfusion, worsening organ failure, or a new toxic-metabolic process has been excluded. [4][11][17]",
+        "Delayed normalization with improved capillary refill: avoid reflexive lactate-driven escalation; peripheral-perfusion and lactate-targeted strategies had no definitive difference in 28-day mortality. [15]"
+      ],
+      "subsections": [
+        {
+          "heading": "Pair lactate with bedside perfusion",
+          "paragraphs": [
+            "Capillary refill time can serve as a complementary resuscitation signal rather than a replacement for lactate. In the ANDROMEDA-SHOCK trial, a strategy targeting normalization of capillary refill time did not significantly reduce 28-day mortality compared with a lactate-targeted strategy. [15] The practical implication is to use discordance\u2014normal peripheral perfusion with persistently elevated lactate, or abnormal perfusion despite improving lactate\u2014to reopen the diagnostic assessment instead of anchoring on either measure alone. [6][10][15]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Actions based on lactate trajectory during early critical illness. [2][4][9][10][11][15]",
+        "columns": [
+          "Serial pattern",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "Declines over the first 6-24 hours",
+            "Associated with lower mortality and may indicate metabolic recovery. [2][10]",
+            "Continue cause-directed treatment; verify parallel improvement in perfusion and organ function. [10]"
+          ],
+          [
+            "At least 10% reduction from baseline",
+            "Early favorable prognostic trajectory in septic shock studies. [11]",
+            "Do not stop assessment solely on this basis; continue monitoring for ongoing organ dysfunction. [9][11]"
+          ],
+          [
+            "Less than 10% reduction at 6 hours",
+            "Associated with higher mortality. [10]",
+            "Reevaluate shock mechanism, source or disease control, fluid responsiveness, clearance impairment, and toxic-metabolic causes. [10][12][17]"
+          ],
+          [
+            "Persistent or increasing concentration after initial treatment",
+            "Suggests refractory shock, microcirculatory dysfunction, sustained metabolic stress, or impaired clearance. [4][11][12]",
+            "Escalate diagnostic reassessment and organ-support planning rather than pursuing lactate normalization in isolation. [4][15][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sepsis-specific-use",
+      "eyebrow": "Sepsis",
+      "heading": "Lactate in suspected sepsis and septic shock",
+      "intro": "Lactate refines risk stratification but should not replace clinical recognition of infection-associated organ dysfunction.",
+      "paragraphs": [
+        "In suspected sepsis, obtain lactate early when severe infection, hypotension, organ dysfunction, or impaired perfusion is suspected. Lactate improves the prognostic performance of qSOFA in adult hospital populations, but qSOFA plus lactate is a risk-recognition strategy, not a diagnostic substitute for a full sepsis assessment. [1] Mild elevation remains clinically meaningful: venous lactate of 2.0 to 3.9 mmol/L has been associated with increased 28-day mortality compared with less than 2 mmol/L, including patients without shock. [13]",
+        "Classify a patient as having septic shock only when both required clinical elements are present: persistent hypotension after fluid resuscitation requiring vasopressors to maintain mean arterial pressure above 65 mm Hg, plus lactate greater than 2 mmol/L. [12] Neither isolated hyperlactatemia nor hypotension alone establishes this phenotype. Persistent hypotension without hyperlactatemia may represent a different risk profile, while hyperlactatemia without hypotension may represent occult hypoperfusion, stress metabolism, impaired clearance, or a nonseptic process. [12][13][21]",
+        "During sepsis resuscitation, use lactate response to prompt reassessment rather than to mandate escalating fluid therapy. Lactate-targeted resuscitation is not clearly superior to a peripheral-perfusion strategy for 28-day mortality, and post hoc work has raised concern that continued lactate-targeted resuscitation may be harmful when capillary refill time is already normal. [6][15] If lactate remains elevated, reassess fluid tolerance, vasopressor-dependent circulatory status, peripheral perfusion, renal and hepatic function, and whether the presumed infectious process is adequately controlled. [6][10][12]"
+      ],
+      "bullets": [
+        "qSOFA plus lactate: may improve mortality-risk recognition relative to qSOFA alone; do not use it to delay direct evaluation of organ dysfunction or shock. [1]",
+        "Septic shock: vasopressor requirement after fluids to maintain mean arterial pressure above 65 mm Hg plus lactate greater than 2 mmol/L. [12]",
+        "Lactate at least 4 mmol/L: identify a high-risk sepsis-associated hypoperfusion phenotype even when hypotension is not prominent. [9][13]",
+        "Normal capillary refill with persistent lactate elevation: investigate non-hypoperfusion causes and avoid assuming more resuscitation is beneficial. [6][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Sepsis decisions supported by lactate findings. [1][9][12][13][15]",
+        "columns": [
+          "Sepsis presentation",
+          "Lactate interpretation",
+          "Decision"
+        ],
+        "rows": [
+          [
+            "Suspected infection with organ dysfunction or shock concern",
+            "Lactate adds prognostic information and complements bedside risk recognition. [1][8]",
+            "Measure promptly and use the result to determine monitoring intensity and need for serial reassessment. [8][1]"
+          ],
+          [
+            "Vasopressor-dependent hypotension after fluids plus lactate greater than 2 mmol/L",
+            "Meets clinical criteria for septic shock. [12]",
+            "Manage as septic shock and follow serial perfusion and lactate response. [10][12]"
+          ],
+          [
+            "Lactate 2.0-3.9 mmol/L without hypotension",
+            "Increased mortality risk has been observed despite absence of shock. [13]",
+            "Investigate occult hypoperfusion and alternative causes; do not regard normal blood pressure as reassurance. [13]"
+          ],
+          [
+            "Persistent elevation despite normal capillary refill",
+            "May reflect delayed clearance or stress production rather than correctable hypoperfusion. [6][11][15]",
+            "Reassess before extending fluid or lactate-targeted resuscitation. [6][15]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "avoid-common-errors",
+      "eyebrow": "Pitfalls",
+      "heading": "Interpretation errors that lead to harmful decisions",
+      "intro": "The major error is converting a prognostic biomarker into a diagnosis or a mandatory normalization target.",
+      "paragraphs": [
+        "Do not diagnose tissue hypoxia solely from hyperlactatemia. Elevated lactate may result from increased production, accelerated aerobic glycolysis, reduced hepatic or renal clearance, and metabolic poisons; the clinical examination and organ-function pattern determine whether immediate oxygen-delivery failure is the leading explanation. [11][12][17][20] Conversely, do not assume a normal lactate excludes clinically important shock or organ dysfunction. [10]",
+        "Do not use lactate as the sole determinant of prognosis, triage, futility, or withdrawal of support. High initial values and poor clearance are associated with mortality, but admission values overlap substantially between survivors and nonsurvivors, and pre-ECMO lactate in cardiogenic shock should not function as an isolated futility criterion. [4][7][11]",
+        "Do not conflate a fall in lactate with correction of all shock physiology. A fall supports improvement but does not replace assessment of mean arterial pressure, urine output, peripheral perfusion, respiratory status, and evolving organ injury. [10][13] Likewise, persistent elevation requires reconsideration of the differential, not a presumption that additional volume is indicated. [6][15][17]"
+      ],
+      "bullets": [
+        "Single value error: repeat an elevated value and interpret the trend. [8][2]",
+        "Hypoxia-only error: assess stress-mediated production, hepatic dysfunction, kidney injury, drugs, and toxins. [11][12][17][20]",
+        "Normalization-target error: use peripheral perfusion and organ trajectory to decide whether further resuscitation is appropriate. [6][15]",
+        "Prognostic-determinism error: use lactate to communicate risk and trigger reassessment, not as a stand-alone outcome prediction tool. [4][7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Common lactate interpretation errors and corrective actions. [4][6][7][10][11][12][15][17]",
+        "columns": [
+          "Error",
+          "Why it fails",
+          "Corrective action"
+        ],
+        "rows": [
+          [
+            "\u201cElevated lactate equals tissue hypoxia.\u201d",
+            "Aerobic stress glycolysis and impaired clearance also cause hyperlactatemia. [11][12]",
+            "Determine whether bedside findings support shock; evaluate hepatic, renal, toxic, and drug-related contributors. [12][17]"
+          ],
+          [
+            "\u201cNormal lactate excludes severe illness.\u201d",
+            "Normolactatemia does not necessarily imply a nonsevere condition. [10]",
+            "Continue organ dysfunction and perfusion assessment based on the clinical syndrome. [10]"
+          ],
+          [
+            "\u201cPersistent lactate mandates more fluid.\u201d",
+            "Persistent elevation may occur despite restored macroperfusion and can reflect clearance or stress physiology. [4][6][12]",
+            "Use capillary refill, fluid tolerance, organ function, and shock mechanism to determine further intervention. [6][15]"
+          ],
+          [
+            "\u201cA high initial lactate proves a futile prognosis.\u201d",
+            "Individual outcome cannot be predicted reliably by admission lactate alone. [4][7]",
+            "Use serial trajectory and full clinical context for escalation and prognostic discussion. [4][7][10]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should lactate clearance be calculated if the initial lactate is only mildly elevated?",
+      "answer": "Yes, serial measurement can help identify worsening or improving physiology when the initial value is elevated, but interpret percentage change cautiously and alongside perfusion, organ function, and causes of impaired clearance. Mild elevations of 2.0 to 3.9 mmol/L in sepsis are associated with increased mortality. [8][10][13]"
+    },
+    {
+      "question": "Does persistent lactate elevation after blood pressure improves prove ongoing shock?",
+      "answer": "No. Persistent elevation may reflect microcirculatory dysfunction, stress-mediated aerobic glycolysis, hepatic dysfunction, acute kidney injury, or toxic-metabolic causes. Reassess peripheral perfusion and organ trajectory before escalating resuscitation solely to lower lactate. [4][6][11][12][17]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Does lactate enhance the prognostic accuracy of the quick Sequential Organ Failure Assessment for adult patients with sepsis? A systematic review",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/12/10/e060455",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Does lactate enhance the prognostic accuracy of the quick Sequential Organ Failure Assessment for adult patients with sepsis? A systematic review\nLactate, a metabolite resulting from cellular anaerobic metabolism, is associated with sepsis and septic shock.16 Hyperlactatemia in isolation has ",
+      "score": 0.6161283
+    },
+    {
+      "number": 2,
+      "title": "Lactate Monitoring in Critical Care Management | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/lactate-monitoring-in-critical-care-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Lactate Monitoring in Critical Care Management | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index\n# Lactate Monitoring in Critical Care Management. Lactate monitoring has become integral to the management of critically ill patients, serving as both a marker of meta",
+      "score": 0.35669366
+    },
+    {
+      "number": 3,
+      "title": "Hyperlactatemia in ICU patients: Incidence, causes and associated mortality - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944117306913",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Severe hyperlactatemia, lactate clearance and mortality in unselected critically ill patients\n\n### Intensive Care Med\n\n### Early lactate clearance is associated with improved outcome in severe sepsis and septic shock\n\n### Crit Care Med\n\n### Multicenter study of early lactate clear",
+      "score": 0.7036111
+    },
+    {
+      "number": 4,
+      "title": "Lactate in cardiogenic shock: pathophysiology, prognostic value, and clinical interpretation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582026000968",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "shock, ongoing microcirculatory dysfunction, or impaired clearance. In CS patients requiring mechanical circulatory support, particularly veno-arterial extracorporeal membrane oxygenation (VA-ECMO), lactate plays a central role in clinical assessment. Pre-implantation lactate reflects disease severi",
+      "score": 0.6917478
+    },
+    {
+      "number": 5,
+      "title": "Early lactate clearance in septic patients with elevated lactate levels admitted from the emergency department to intensive care: Time to aim higher? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944113000476",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Both these conditions are associated with negative clinical outcomes and can be triggered by an acute illness, such as pneumonia [15\u201318]. Functional status is the ability to manage daily routines; its deterioration may represent both a marker of frailty and a risk factor for infectious diseases [3,1",
+      "score": 0.59880555
+    },
+    {
+      "number": 6,
+      "title": "What every intensivist should know about the biphasic kinetics of lactate in septic shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125002734",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Immunomodulation by Hemoadsorption\u2014changes in hepatic biotransformation capacity in Sepsis and septic shock: a prospective study\n\n### Biomedicines\n\n### The ten pitfalls of lactate clearance in sepsis\n\n### Intensive Care Med\n\n### The value of blood lactate kinetics in critically il",
+      "score": 0.580091
+    },
+    {
+      "number": 7,
+      "title": "Lactate and acid base as a hemodynamic monitor... : Pediatric Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pccmjournal/fulltext/2011/07001/lactate_and_acid_base_as_a_hemodynamic_monitor_and.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Many factors other than tissue hypoxia may contribute to hyperlactemia in critical illness. Although the presence of hyperlactemia on admission appears to be associated with intensive care unit mortality and morbidity in some retrospective analyses, significant overlap between survivors and nonsurvi",
+      "score": 0.26402897
+    },
+    {
+      "number": 8,
+      "title": "HHS Public Access",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/32223/cdc_32223_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "For these reasons, lactate testing in all patients with suspected severe sepsis has become increasingly emphasized and is now a key component of the Surviving Sepsis Campaign (SSC) Guidelines. In the most recent version of the guidelines, lactate measurement is a core component of the 3-hour bundle,",
+      "score": 0.53473455
+    },
+    {
+      "number": 9,
+      "title": "Lactate as a Biomarker for Sepsis Prognosis? - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5048012",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia (most commonly \u22654 mmol/L) is a marker of sepsis-induced hypoperfusion and the threshold was incorporated into the Surviving Sepsis Campaign (SSC) guidelines for early identification of sepsis . It is reasonable, therefore, to assume that hyperlactatemia is very clearly associated wit",
+      "score": 0.6760432
+    },
+    {
+      "number": 10,
+      "title": "Lactate Monitoring in Intensive Care: A Comprehensive Review of Its Utility and Interpretation",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379417",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Elevated lactate levels (>2 mmol/L) are a key diagnostic criterion for septic shock under the new definition. In sepsis, lactate levels correlate with disease severity, and mortality-risk levels of >4 mmol/L are associated with a 27% mortality rate. Lactate clearance (reduction in lactate over time)",
+      "score": 0.64236575
+    },
+    {
+      "number": 11,
+      "title": "Lactate, a useful marker for disease mortality and severity but an unreliable marker of tissue hypoxia/hypoperfusion in critically ill patients - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5667335",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia is common among patients requiring critical care, and lactate levels and their trend may be reliable markers of illness severity and mortality.6, 7 Lactate was recently included in a multibiomarker\u2010based outcome risk model for patients with septic shock.8 Although hyperlactatemia has",
+      "score": 0.62906903
+    },
+    {
+      "number": 12,
+      "title": "New clinical criteria for septic shock: serum lactate level as ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4958885",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Until recently, septic shock was considered to be composed of three components, including systemic arterial hypotension, tissue hypoperfusion associated with organ dysfunction, and hyperlactatemia (2). According to the new definition of this issue (3), septic shock can be diagnosed under two conditi",
+      "score": 0.518815
+    },
+    {
+      "number": 13,
+      "title": "Blood Lactate Levels Cutoff and Mortality Prediction in Sepsis\u2014Time for a Reappraisal? a Retrospective Cohort Study - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5058781",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Several other studies are consistent with our findings of mild hyperlactatemia as a predictor of mortality in septic patients (9, 10, 13). A prospective single-center cohort study involving 1,287 patients admitted to the ED with suspected infection showed that initial venous lactate levels between 2",
+      "score": 0.4974371
+    },
+    {
+      "number": 14,
+      "title": "[PDF] The Protocol of Multi-center Clinical Trial of Lactate Clearance ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/61/NCT03256461/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Rivers et al proposed an explicit protocol in 2001 which targeted four goals: a central venous pressure of 8 mm Hg or higher, the mean arterial pressure of 65 mm Hg or higher, urinary output more than 0.5 ml/kg/h, and the central venous oxygen saturation(ScvO2) was 70 percent or higher, called early",
+      "score": 0.6410185
+    },
+    {
+      "number": 15,
+      "title": "Lactate-Guided Resuscitation Strategies in Septic Shock: Differentiating the Bad From the Unexceptional - Annals of Emergency Medicine",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(19)30313-0/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "# Lactate-Guided Resuscitation Strategies in Septic Shock: Differentiating the Bad From the Unexceptional June 2019 Annals of Emergency Medicine Journal Club. Effect of a resuscitation strategy targeting peripheral perfusion status vs serum lactate levels on 28-day mortality among patients with sept",
+      "score": 0.6122407
+    },
+    {
+      "number": 16,
+      "title": "[Efficacies of fluid resuscitation as guided by lactate clearance rate and central venous oxygen saturation in patients with septic shock] - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/25916923",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: [Efficacies of fluid resuscitation as guided by lactate clearance rate and central venous oxygen saturation in patients with septic shock] - PubMed\nSkip to main page content. An official website of the United States government. The **https://** ensures that you are connecting to the official ",
+      "score": 0.56431514
+    },
+    {
+      "number": 17,
+      "title": "Lactic Acidosis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470202",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Hemodialysis may be considered in severe lactic acidosis, especially in patients with renal failure. However, as most cases are due to tissue hypoperfusion, restoring adequate perfusion remains the priority. In cases of metformin-associated lactic acidosis, early initiation of dialysis (within 6 hou",
+      "score": 0.6778372
+    },
+    {
+      "number": 18,
+      "title": "Hyperlactatemia in sepsis and shock: a renal metabolic perspective",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42237139",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia is a frequent finding in critically ill patients and is traditionally interpreted as a marker of tissue hypoxia and anaerobic",
+      "score": 0.60049355
+    },
+    {
+      "number": 19,
+      "title": "Effective lactate clearance is associated with improved outcome in post-cardiac arrest patients - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030095720700189X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Post-cardiac arrest syndrome: Epidemiology, pathophysiology, treatment, and prognostication. A Scientific Statement from the International Liaison Committee on Resuscitation; the American Heart Association Emergency Cardiovascular Care Committee; the Council on Cardiovascular Surgery and Anesthe",
+      "score": 0.57723385
+    },
+    {
+      "number": 20,
+      "title": "Hyperlactatemia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hyperlactatemia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Lactate accumulation also is present in situations where the metabolic process is poisoned. This occurs when electron transport is inhibited, such as in the presence of cyanide toxicity and elevated nitric oxide levels associated with the systemic inflammatory response syndrome.97\u2013100 Correlation of",
+      "score": 0.5236402
+    },
+    {
+      "number": 21,
+      "title": "Persistent sepsis-induced hypotension without hyperlactatemia: Is it really septic shock? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944110002807",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Vasopressor Choice and Timing in Vasodilatory Shock\n\n### Early goal-directed therapy in severe sepsis and septic shock: Insights and comparisons to ProCESS, ProMISe, and ARISE\n\n### Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Med",
+      "score": 0.5052006
+    },
+    {
+      "number": 22,
+      "title": "Whole Blood Lactate Kinetics in Patients Undergoing Quantitative Resuscitation for Severe Sepsis and Septic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369213603815",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Counterpoint: should lactate clearance be substituted for central venous oxygen saturation as goals of early severe sepsis and septic shock therapy? No\n\n### Chest\n\n### Serum lactate as a predictor of mortality in emergency department patients with infection\n\n### Ann Emerg Med\n\n### Ame",
+      "score": 0.47227025
+    },
+    {
+      "number": 23,
+      "title": "Implications of Centers for Medicare & Medicaid Services Severe Sepsis and Septic\u00a0Shock Early Management Bundle and\u00a0Initial Lactate Measurement on the Management of Sepsis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369218304720",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Ann Emerg Med\n\n### Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine\n\n### Chest\n\n### Hospital deaths in patients with sepsis f",
+      "score": 0.33928064
+    },
+    {
+      "number": 24,
+      "title": "Blood Lactate Levels Are Superior to Oxygen-Derived Variables in Predicting Outcome in Human Septic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S001236921648760X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Crit Care\n\n### Relationship between O2 delivery and O2 consumption in the adult respiratory distress syndrome\n\n### Chest\n\n### Correlations between metabolic and cardiopulmonary measurements in patients after trauma, general surgery and sepsis\n\n### J Trauma\n\n### Metabolic needs of infection\n\n##",
+      "score": 0.26060623
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Does lactate enhance the prognostic accuracy of the quick Sequential Organ Failure Assessment for adult patients with sepsis? A systematic review",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/12/10/e060455",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Does lactate enhance the prognostic accuracy of the quick Sequential Organ Failure Assessment for adult patients with sepsis? A systematic review\nLactate, a metabolite resulting from cellular anaerobic metabolism, is associated with sepsis and septic shock.16 Hyperlactatemia in isolation has ",
+      "score": 0.6161283
+    },
+    {
+      "number": 2,
+      "title": "Lactate Monitoring in Critical Care Management | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/lactate-monitoring-in-critical-care-management",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Title: Lactate Monitoring in Critical Care Management | Intensive Care | Clinical Sciences | Health sciences | Topics | Nature Index\n# Lactate Monitoring in Critical Care Management. Lactate monitoring has become integral to the management of critically ill patients, serving as both a marker of meta",
+      "score": 0.35669366
+    },
+    {
+      "number": 3,
+      "title": "Hyperlactatemia in ICU patients: Incidence, causes and associated mortality - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944117306913",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Severe hyperlactatemia, lactate clearance and mortality in unselected critically ill patients\n\n### Intensive Care Med\n\n### Early lactate clearance is associated with improved outcome in severe sepsis and septic shock\n\n### Crit Care Med\n\n### Multicenter study of early lactate clear",
+      "score": 0.7036111
+    },
+    {
+      "number": 4,
+      "title": "Lactate in cardiogenic shock: pathophysiology, prognostic value, and clinical interpretation",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2110582026000968",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "shock, ongoing microcirculatory dysfunction, or impaired clearance. In CS patients requiring mechanical circulatory support, particularly veno-arterial extracorporeal membrane oxygenation (VA-ECMO), lactate plays a central role in clinical assessment. Pre-implantation lactate reflects disease severi",
+      "score": 0.6917478
+    },
+    {
+      "number": 5,
+      "title": "Early lactate clearance in septic patients with elevated lactate levels admitted from the emergency department to intensive care: Time to aim higher? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944113000476",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Both these conditions are associated with negative clinical outcomes and can be triggered by an acute illness, such as pneumonia [15\u201318]. Functional status is the ability to manage daily routines; its deterioration may represent both a marker of frailty and a risk factor for infectious diseases [3,1",
+      "score": 0.59880555
+    },
+    {
+      "number": 6,
+      "title": "What every intensivist should know about the biphasic kinetics of lactate in septic shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125002734",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Crit Care\n\n### Immunomodulation by Hemoadsorption\u2014changes in hepatic biotransformation capacity in Sepsis and septic shock: a prospective study\n\n### Biomedicines\n\n### The ten pitfalls of lactate clearance in sepsis\n\n### Intensive Care Med\n\n### The value of blood lactate kinetics in critically il",
+      "score": 0.580091
+    },
+    {
+      "number": 7,
+      "title": "Lactate and acid base as a hemodynamic monitor... : Pediatric Critical Care Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/pccmjournal/fulltext/2011/07001/lactate_and_acid_base_as_a_hemodynamic_monitor_and.7.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Many factors other than tissue hypoxia may contribute to hyperlactemia in critical illness. Although the presence of hyperlactemia on admission appears to be associated with intensive care unit mortality and morbidity in some retrospective analyses, significant overlap between survivors and nonsurvi",
+      "score": 0.26402897
+    },
+    {
+      "number": 8,
+      "title": "HHS Public Access",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/32223/cdc_32223_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "For these reasons, lactate testing in all patients with suspected severe sepsis has become increasingly emphasized and is now a key component of the Surviving Sepsis Campaign (SSC) Guidelines. In the most recent version of the guidelines, lactate measurement is a core component of the 3-hour bundle,",
+      "score": 0.53473455
+    },
+    {
+      "number": 9,
+      "title": "Lactate as a Biomarker for Sepsis Prognosis? - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5048012",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia (most commonly \u22654 mmol/L) is a marker of sepsis-induced hypoperfusion and the threshold was incorporated into the Surviving Sepsis Campaign (SSC) guidelines for early identification of sepsis . It is reasonable, therefore, to assume that hyperlactatemia is very clearly associated wit",
+      "score": 0.6760432
+    },
+    {
+      "number": 10,
+      "title": "Lactate Monitoring in Intensive Care: A Comprehensive Review of Its Utility and Interpretation",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11379417",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Elevated lactate levels (>2 mmol/L) are a key diagnostic criterion for septic shock under the new definition. In sepsis, lactate levels correlate with disease severity, and mortality-risk levels of >4 mmol/L are associated with a 27% mortality rate. Lactate clearance (reduction in lactate over time)",
+      "score": 0.64236575
+    },
+    {
+      "number": 11,
+      "title": "Lactate, a useful marker for disease mortality and severity but an unreliable marker of tissue hypoxia/hypoperfusion in critically ill patients - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/5667335",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia is common among patients requiring critical care, and lactate levels and their trend may be reliable markers of illness severity and mortality.6, 7 Lactate was recently included in a multibiomarker\u2010based outcome risk model for patients with septic shock.8 Although hyperlactatemia has",
+      "score": 0.62906903
+    },
+    {
+      "number": 12,
+      "title": "New clinical criteria for septic shock: serum lactate level as ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4958885",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Until recently, septic shock was considered to be composed of three components, including systemic arterial hypotension, tissue hypoperfusion associated with organ dysfunction, and hyperlactatemia (2). According to the new definition of this issue (3), septic shock can be diagnosed under two conditi",
+      "score": 0.518815
+    },
+    {
+      "number": 13,
+      "title": "Blood Lactate Levels Cutoff and Mortality Prediction in Sepsis\u2014Time for a Reappraisal? a Retrospective Cohort Study - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5058781",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Several other studies are consistent with our findings of mild hyperlactatemia as a predictor of mortality in septic patients (9, 10, 13). A prospective single-center cohort study involving 1,287 patients admitted to the ED with suspected infection showed that initial venous lactate levels between 2",
+      "score": 0.4974371
+    },
+    {
+      "number": 14,
+      "title": "[PDF] The Protocol of Multi-center Clinical Trial of Lactate Clearance ...",
+      "detail": "cdn.clinicaltrials.gov",
+      "url": "https://cdn.clinicaltrials.gov/large-docs/61/NCT03256461/Prot_SAP_000.pdf",
+      "authors": "cdn.clinicaltrials.gov",
+      "host": "cdn.clinicaltrials.gov",
+      "snippet": "Rivers et al proposed an explicit protocol in 2001 which targeted four goals: a central venous pressure of 8 mm Hg or higher, the mean arterial pressure of 65 mm Hg or higher, urinary output more than 0.5 ml/kg/h, and the central venous oxygen saturation(ScvO2) was 70 percent or higher, called early",
+      "score": 0.6410185
+    },
+    {
+      "number": 15,
+      "title": "Lactate-Guided Resuscitation Strategies in Septic Shock: Differentiating the Bad From the Unexceptional - Annals of Emergency Medicine",
+      "detail": "www.annemergmed.com",
+      "url": "https://www.annemergmed.com/article/S0196-0644(19)30313-0/fulltext",
+      "authors": "www.annemergmed.com",
+      "host": "www.annemergmed.com",
+      "snippet": "# Lactate-Guided Resuscitation Strategies in Septic Shock: Differentiating the Bad From the Unexceptional June 2019 Annals of Emergency Medicine Journal Club. Effect of a resuscitation strategy targeting peripheral perfusion status vs serum lactate levels on 28-day mortality among patients with sept",
+      "score": 0.6122407
+    },
+    {
+      "number": 16,
+      "title": "[Efficacies of fluid resuscitation as guided by lactate clearance rate and central venous oxygen saturation in patients with septic shock] - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/25916923",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: [Efficacies of fluid resuscitation as guided by lactate clearance rate and central venous oxygen saturation in patients with septic shock] - PubMed\nSkip to main page content. An official website of the United States government. The **https://** ensures that you are connecting to the official ",
+      "score": 0.56431514
+    },
+    {
+      "number": 17,
+      "title": "Lactic Acidosis - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470202",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Hemodialysis may be considered in severe lactic acidosis, especially in patients with renal failure. However, as most cases are due to tissue hypoperfusion, restoring adequate perfusion remains the priority. In cases of metformin-associated lactic acidosis, early initiation of dialysis (within 6 hou",
+      "score": 0.6778372
+    },
+    {
+      "number": 18,
+      "title": "Hyperlactatemia in sepsis and shock: a renal metabolic perspective",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42237139",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "Hyperlactatemia is a frequent finding in critically ill patients and is traditionally interpreted as a marker of tissue hypoxia and anaerobic",
+      "score": 0.60049355
+    },
+    {
+      "number": 19,
+      "title": "Effective lactate clearance is associated with improved outcome in post-cardiac arrest patients - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S030095720700189X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Post-cardiac arrest syndrome: Epidemiology, pathophysiology, treatment, and prognostication. A Scientific Statement from the International Liaison Committee on Resuscitation; the American Heart Association Emergency Cardiovascular Care Committee; the Council on Cardiovascular Surgery and Anesthe",
+      "score": 0.57723385
+    },
+    {
+      "number": 20,
+      "title": "Hyperlactatemia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/nursing-and-health-professions/hyperlactatemia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Lactate accumulation also is present in situations where the metabolic process is poisoned. This occurs when electron transport is inhibited, such as in the presence of cyanide toxicity and elevated nitric oxide levels associated with the systemic inflammatory response syndrome.97\u2013100 Correlation of",
+      "score": 0.5236402
+    },
+    {
+      "number": 21,
+      "title": "Persistent sepsis-induced hypotension without hyperlactatemia: Is it really septic shock? - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944110002807",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Vasopressor Choice and Timing in Vasodilatory Shock\n\n### Early goal-directed therapy in severe sepsis and septic shock: Insights and comparisons to ProCESS, ProMISe, and ARISE\n\n### Consensus on circulatory shock and hemodynamic monitoring. Task force of the European Society of Intensive Care Med",
+      "score": 0.5052006
+    },
+    {
+      "number": 22,
+      "title": "Whole Blood Lactate Kinetics in Patients Undergoing Quantitative Resuscitation for Severe Sepsis and Septic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369213603815",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Chest\n\n### Counterpoint: should lactate clearance be substituted for central venous oxygen saturation as goals of early severe sepsis and septic shock therapy? No\n\n### Chest\n\n### Serum lactate as a predictor of mortality in emergency department patients with infection\n\n### Ann Emerg Med\n\n### Ame",
+      "score": 0.47227025
+    },
+    {
+      "number": 23,
+      "title": "Implications of Centers for Medicare & Medicaid Services Severe Sepsis and Septic\u00a0Shock Early Management Bundle and\u00a0Initial Lactate Measurement on the Management of Sepsis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012369218304720",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Ann Emerg Med\n\n### Definitions for sepsis and organ failure and guidelines for the use of innovative therapies in sepsis. The ACCP/SCCM Consensus Conference Committee. American College of Chest Physicians/Society of Critical Care Medicine\n\n### Chest\n\n### Hospital deaths in patients with sepsis f",
+      "score": 0.33928064
+    },
+    {
+      "number": 24,
+      "title": "Blood Lactate Levels Are Superior to Oxygen-Derived Variables in Predicting Outcome in Human Septic Shock - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S001236921648760X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Crit Care\n\n### Relationship between O2 delivery and O2 consumption in the adult respiratory distress syndrome\n\n### Chest\n\n### Correlations between metabolic and cardiopulmonary measurements in patients after trauma, general surgery and sepsis\n\n### J Trauma\n\n### Metabolic needs of infection\n\n##",
+      "score": 0.26060623
+    }
+  ],
+  "publishedAt": "2026-09-15T18:19:41.962758+00:00",
+  "updatedAt": "2026-09-15T18:19:41.962758+00:00",
+  "readingMinutes": 8,
+  "slug": "lactate-interpretation"
+}

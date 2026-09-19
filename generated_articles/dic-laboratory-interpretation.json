@@ -1,0 +1,760 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology",
+  "title": "DIC Laboratory Interpretation",
+  "summary": "Interpret suspected disseminated intravascular coagulation by integrating a triggering disorder with serial platelet count, PT, fibrinogen, and fibrin-related markers; use a validated score to identify overt disease while actively excluding mimics that require fundamentally different treatment.",
+  "seoDescription": "Physician guide to interpreting platelet, PT, fibrinogen, and D-dimer results in suspected disseminated intravascular coagulation.",
+  "clinicalQuestion": "How should clinicians interpret coagulation laboratory abnormalities when disseminated intravascular coagulation is suspected?",
+  "specialty": "Hematology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "disseminated intravascular coagulation",
+    "DIC laboratory interpretation",
+    "ISTH overt DIC score",
+    "D-dimer",
+    "fibrinogen",
+    "sepsis-induced coagulopathy",
+    "thrombocytopenia"
+  ],
+  "keyTakeaways": [
+    "Do not diagnose DIC from one abnormal result: interpret serial platelet count, PT, fibrinogen, and fibrin-related markers in a patient with a compatible underlying disorder. [1][12][24]",
+    "An ISTH overt-DIC score of 5 or greater supports overt DIC; the score incorporates platelet count, PT prolongation, fibrinogen, and D-dimer or FDP elevation. [24]",
+    "A low fibrinogen concentration supports consumptive coagulopathy, but fibrinogen is only one point in the ISTH score and should not be used alone to exclude DIC. [24]",
+    "D-dimer thresholds are assay dependent; fibrin-unit versus fibrinogen-equivalent reporting and platform-specific calibration can materially change score assignment. [11]",
+    "In sepsis, the SIC score uses Sepsis-3 organ dysfunction, platelet count, and PT ratio; a score of 4 or greater identifies sepsis-induced coagulopathy. [17][24]",
+    "Schistocytes can occur in DIC but are usually few; prominent microangiopathic hemolysis should redirect evaluation toward thrombotic microangiopathy. [12]"
+  ],
+  "sections": [
+    {
+      "id": "when-to-order-dic-testing",
+      "eyebrow": "Initial assessment",
+      "heading": "Order a focused serial coagulation panel when a DIC trigger is present",
+      "intro": "Testing is most informative when laboratory abnormalities are interpreted in clinical context.",
+      "paragraphs": [
+        "Obtain a platelet count, PT or INR, fibrinogen, and a fibrin-related marker (D-dimer or FDP) when a patient has a plausible DIC trigger plus bleeding, thrombosis, shock, organ dysfunction, or otherwise unexplained evolving coagulopathy. DIC is most often associated with acute infection or sepsis, but shock, obstetric disorders, malignancy, vascular injury, trauma, toxic or immunologic reactions, and organ injury are recognized triggers. [1][7][12]",
+        "Repeat the same panel when DIC remains clinically suspected because trajectory is diagnostic: a falling platelet count, progressively prolonged PT, declining fibrinogen, or increasing fibrin-related markers provides more useful evidence of ongoing consumption than a single isolated abnormality. Formal DIC systems are based on global coagulation tests and include platelet count, PT, fibrinogen, and fibrin-related markers. [11][24]",
+        "Interpret each result against preexisting disease and treatment exposures. Liver failure can produce thrombocytopenia, prolonged PT, and reduced fibrinogen without proving DIC; the Japanese Society on Thrombosis and Hemostasis infection score specifically applies a negative adjustment for liver failure. Anticoagulant exposure and laboratory-specific reference limits likewise require interpretation before assigning causality to DIC. [24]"
+      ],
+      "bullets": [
+        "Use a compatible underlying disorder as the entry criterion for formal DIC scoring. [12][24]",
+        "Review the platelet trend, not just the absolute count; several systems credit a decline of 30% or more within 24 hours or 50% or more within 24 hours. [24]",
+        "Document whether D-dimer is reported in fibrinogen-equivalent units or fibrin units before applying any numeric threshold. [11]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Core laboratory findings in suspected DIC and their practical interpretation. [11][12][24]",
+        "columns": [
+          "Test",
+          "DIC-compatible pattern",
+          "Interpretive action"
+        ],
+        "rows": [
+          [
+            "Platelet count",
+            "Thrombocytopenia, particularly a rapid decline; ISTH assigns 1 point for 50 to less than 100 \u00d7 10^9/L and 2 points for less than 50 \u00d7 10^9/L. [24]",
+            "Trend serially and incorporate into an ISTH or sepsis-specific score; investigate competing causes of thrombocytopenia when the coagulation profile is not consumptive. [12][24]"
+          ],
+          [
+            "PT",
+            "Prolongation reflects factor consumption; ISTH assigns 1 point for prolongation of 3 to less than 6 seconds and 2 points for 6 seconds or more. [24]",
+            "Use the laboratory baseline and assess for liver dysfunction or anticoagulant effect before attributing prolongation solely to DIC. [24]"
+          ],
+          [
+            "Fibrinogen",
+            "A concentration below 100 mg/dL gives 1 ISTH point and supports consumption. [24]",
+            "A value at or above 100 mg/dL does not exclude DIC because the ISTH score requires integration with the other variables. [24]"
+          ],
+          [
+            "D-dimer or FDP",
+            "Elevation supports fibrin formation and breakdown; ISTH categorizes the increase as moderate or strong. [24]",
+            "Apply the local assay-specific definition of moderate and strong elevation rather than a universal D-dimer cutoff. [11][24]"
+          ],
+          [
+            "Peripheral smear",
+            "Schistocytes may be present but are generally few in DIC. [12]",
+            "If schistocytosis is prominent with a microangiopathic hemolytic pattern, evaluate for thrombotic thrombocytopenic purpura or another thrombotic microangiopathy. [12]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "isth-overt-dic-score",
+      "eyebrow": "Diagnostic scoring",
+      "heading": "Calculate the ISTH overt-DIC score from the complete panel",
+      "intro": "Use the score to standardize interpretation rather than to replace clinical judgment.",
+      "paragraphs": [
+        "For a patient with an underlying disorder known to be associated with DIC, assign ISTH points for platelet count, fibrin-related marker elevation, PT prolongation, and fibrinogen. A total score of 5 or greater meets the ISTH overt-DIC threshold. [12][24]",
+        "The score is designed to integrate consumption and fibrin turnover. A markedly elevated D-dimer without thrombocytopenia or PT prolongation is not equivalent to overt DIC, and thrombocytopenia with normal fibrin-related markers should prompt a parallel search for non-DIC causes. [12][24]",
+        "Do not transfer numeric D-dimer cutoffs between laboratories. In a comparison of six assays, the cutoffs corresponding to ISTH point assignments differed by assay and by fibrinogen-unit versus fibrin-unit reporting; the investigators proposed D-dimer values above 3.0 \u03bcg/mL for 2 points and above 7.0 \u03bcg/mL for 3 points in the studied context. Local laboratory validation remains necessary. [11]"
+      ],
+      "bullets": [],
+      "subsections": [],
+      "table": {
+        "caption": "ISTH overt-DIC score components and thresholds. Total score 5 or greater supports overt DIC. [24]",
+        "columns": [
+          "Component",
+          "Score assignment",
+          "Decision use"
+        ],
+        "rows": [
+          [
+            "Platelet count",
+            "50 to less than 100 \u00d7 10^9/L: 1 point; less than 50 \u00d7 10^9/L: 2 points. [24]",
+            "Lower counts increase the likelihood of consumptive coagulopathy when paired with an appropriate trigger and other score abnormalities. [24]"
+          ],
+          [
+            "Fibrin-related marker",
+            "Moderate increase: 2 points; strong increase: 3 points. [24]",
+            "Use the assay- and laboratory-specific interpretation of D-dimer or FDP elevation. [11][24]"
+          ],
+          [
+            "PT prolongation",
+            "3 to less than 6 seconds: 1 point; 6 seconds or more: 2 points. [24]",
+            "Assess alternative explanations, particularly hepatic dysfunction and anticoagulant exposure. [24]"
+          ],
+          [
+            "Fibrinogen",
+            "Less than 100 mg/dL: 1 point. [24]",
+            "A normal value does not independently rule out DIC. [24]"
+          ],
+          [
+            "Total",
+            "5 or greater: overt DIC. [24]",
+            "Treat the precipitating disorder and reassess the coagulation trajectory rather than interpreting the score in isolation. [1][7][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sepsis-induced-coagulopathy",
+      "eyebrow": "Sepsis branch",
+      "heading": "Use SIC criteria for early sepsis-associated coagulopathy",
+      "intro": "Sepsis requires a distinct interpretation because early fibrinogen and D-dimer changes may be less discriminating.",
+      "paragraphs": [
+        "In a patient meeting Sepsis-3 criteria, calculate the sepsis-induced coagulopathy (SIC) score using SOFA score, platelet count, and PT ratio. SIC requires infection with organ dysfunction and a total score of 4 or greater; the system does not include fibrinogen or fibrin-related markers. [17][24]",
+        "For SIC, assign SOFA 1 point for a score of 1 and 2 points for a score of 2 or greater; assign platelet 1 point for 100 to less than 150 \u00d7 10^9/L and 2 points for less than 100 \u00d7 10^9/L; assign PT ratio 1 point for greater than 1.2 to 1.4 and 2 points for greater than 1.4. [24]",
+        "When SIC is present, continue serial platelet count and PT monitoring and calculate the ISTH overt-DIC score if the coagulation phenotype progresses. The clinical priority remains prompt control of sepsis and associated organ dysfunction, because acute infection and sepsis are the most common DIC-associated disorders. [1][17][24]"
+      ],
+      "bullets": [
+        "SIC is applicable only in sepsis with organ dysfunction; do not use it for obstetric hemorrhage, trauma, malignancy, or vascular injury. [17][24]",
+        "A platelet count of 100 to less than 150 \u00d7 10^9/L can contribute to SIC even though it earns no platelet point in the ISTH overt-DIC system. [24]",
+        "Fibrinogen and D-dimer remain clinically informative but are not SIC score components. [17][24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "SIC versus ISTH overt-DIC scoring for the septic patient. [17][24]",
+        "columns": [
+          "Feature",
+          "SIC",
+          "ISTH overt DIC"
+        ],
+        "rows": [
+          [
+            "Required clinical context",
+            "Sepsis-3 infection with organ dysfunction. [17]",
+            "An underlying disorder associated with DIC. [12][24]"
+          ],
+          [
+            "Laboratory inputs",
+            "Platelet count and PT ratio; SOFA supplies the organ dysfunction component. [17][24]",
+            "Platelet count, PT prolongation, fibrinogen, and fibrin-related marker. [12][24]"
+          ],
+          [
+            "Diagnostic threshold",
+            "Score 4 or greater. [17][24]",
+            "Score 5 or greater. [24]"
+          ],
+          [
+            "Clinical role",
+            "Identifies sepsis-induced coagulopathy. [17]",
+            "Identifies overt DIC. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "differentiate-laboratory-mimics",
+      "eyebrow": "Diagnostic pitfalls",
+      "heading": "Separate DIC from thrombotic microangiopathy and nonconsumptive coagulopathy",
+      "intro": "The combination of tests, rather than thrombocytopenia alone, determines the next diagnostic branch.",
+      "paragraphs": [
+        "DIC usually produces a global consumptive pattern: thrombocytopenia, prolonged PT and often aPTT or thrombin time, elevated fibrinogen/fibrin degradation products, and reduced fibrinogen; antithrombin and protein C may also be low. This pattern is most persuasive when it evolves alongside a recognized trigger. [12]",
+        "Thrombotic thrombocytopenic purpura and other thrombotic microangiopathies may overlap clinically through thrombocytopenia and microvascular injury, but schistocytes are generally more numerous in TTP than in DIC. A smear with substantial schistocytosis should therefore prevent reflex labeling of all thrombocytopenia as DIC and trigger an urgent thrombotic-microangiopathy evaluation. [12]",
+        "In hepatic dysfunction, prolonged PT, thrombocytopenia, and low fibrinogen can mimic DIC. Interpret fibrin-related marker change, clinical trigger, serial deterioration, and scoring results together; the JSTH infection-oriented framework explicitly recognizes liver failure as a confounder. [24]"
+      ],
+      "bullets": [
+        "Do not use thromboelastography as a substitute for the platelet count, PT, fibrinogen, and fibrin-related marker panel to confirm laboratory DIC; it may instead help monitor global hemostasis during blood-component management. [12]",
+        "A fibrin-related marker result should support, not independently establish, DIC because elevation is assay dependent and occurs in many acute illnesses. [11][12]",
+        "When bleeding and thrombosis coexist with compatible serial laboratory change, prioritize DIC over isolated thrombocytopenic disorders. [12]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Laboratory features that redirect the differential in suspected DIC. [12][24]",
+        "columns": [
+          "Pattern",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Platelets falling, PT prolonged, fibrin-related markers elevated, fibrinogen reduced",
+            "Global consumptive pattern compatible with DIC. [12]",
+            "Calculate ISTH overt-DIC score and treat the precipitating condition. [1][24]"
+          ],
+          [
+            "Marked schistocytosis with thrombocytopenia",
+            "Consider TTP or another thrombotic microangiopathy; schistocytes are usually few in DIC. [12]",
+            "Initiate urgent thrombotic-microangiopathy evaluation rather than relying on DIC scoring alone. [12]"
+          ],
+          [
+            "Prolonged PT, thrombocytopenia, and hepatic dysfunction",
+            "Liver failure can confound DIC interpretation. [24]",
+            "Assess serial change and fibrin-related markers; interpret any score in the context of liver disease. [24]"
+          ],
+          [
+            "Elevated D-dimer without full consumptive pattern",
+            "Does not by itself establish overt DIC. [11][12][24]",
+            "Confirm assay units, trend results, and seek alternative explanations for fibrin turnover. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "act-on-laboratory-results",
+      "eyebrow": "Clinical action",
+      "heading": "Escalate management when the laboratory pattern indicates active consumption",
+      "intro": "Laboratory confirmation should accelerate source control and hemorrhage management, not delay them.",
+      "paragraphs": [
+        "Once serial results support DIC, identify and treat the driver immediately. In obstetric DIC, management requires prompt recognition and treatment of both the underlying disorder and associated hemorrhage. In other settings, sepsis, shock, malignancy, trauma, vascular injury, or toxic or immunologic injury should direct the definitive intervention. [1][7]",
+        "Use blood-component therapy to address clinically important bleeding or procedure-related hemostatic need rather than treating a score alone. Fresh frozen plasma, platelets, cryoprecipitate, and whole blood are commonly used first-line products in global DIC practice, but selection must be matched to the deficient component and the active bleeding context. [13]",
+        "Continue serial platelet count, PT, fibrinogen, and fibrin-related marker testing while active DIC is suspected. Improvement in the underlying disorder should be accompanied by stabilization of platelet count and PT and reduced evidence of ongoing consumption; worsening results require reassessment for uncontrolled source, recurrent hemorrhage, thrombosis, or an alternative diagnosis. [1][12][24]"
+      ],
+      "bullets": [
+        "Escalate urgently for bleeding at minimally traumatized sites, shock, or progressive organ dysfunction in a patient with a DIC-compatible laboratory pattern. [7][12]",
+        "In pregnancy-associated DIC, prioritize the obstetric cause and hemorrhage simultaneously; obstetric DIC contributes substantially to maternal morbidity and mortality. [7]",
+        "Do not use a single normalized or preserved fibrinogen value to terminate surveillance when platelets and PT are worsening. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Result-triggered actions in suspected active DIC. [1][7][12][13][24]",
+        "columns": [
+          "Finding",
+          "Immediate interpretation",
+          "Next step"
+        ],
+        "rows": [
+          [
+            "ISTH score 5 or greater with compatible trigger",
+            "Overt DIC. [24]",
+            "Treat the driver, assess bleeding and thrombosis, and follow serial coagulation studies. [1][12][24]"
+          ],
+          [
+            "SIC score 4 or greater in Sepsis-3",
+            "Sepsis-induced coagulopathy. [17][24]",
+            "Intensify treatment of sepsis and monitor for progression to overt DIC. [1][17][24]"
+          ],
+          [
+            "Active hemorrhage with consumptive laboratory abnormalities",
+            "Hemostatic support may be required while the cause is controlled. [7][13]",
+            "Select blood components according to the bleeding context and laboratory deficit; continue cause-directed management. [7][13]"
+          ],
+          [
+            "Laboratory deterioration despite initial treatment",
+            "Suggests ongoing consumption or uncontrolled trigger. [1][12]",
+            "Reassess source control, hemorrhage, thrombosis, and alternative diagnoses; repeat the core panel. [1][12][24]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Disseminated intravascular coagulation - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/184?locale=fa",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "DIC is most commonly a complication of acute infections/sepsis. It also occurs due to shock, obstetric disorders, malignancies, vascular injury, trauma, and toxic or immunologic reactions and organ injury.(#referencePop2)Squizzato A, Gallo A, Levi M, et al. Underlying disorders of disseminated intra",
+      "score": 0.70483154
+    },
+    {
+      "number": 2,
+      "title": "Exploring the epidemiology of disseminated intravascular coagulation",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/bmjopen/12/7/e062623.full.pdf",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Currently, only a few DIC registries and other data sources exist. The Japan Septic Disseminated Intravas-cular Coagulation study was conducted between 2011 and 2013.7 It focused on sepsis patients treated in the ICU, with data collected only within the first week of ICU admission. Recently, the Int",
+      "score": 0.67321366
+    },
+    {
+      "number": 3,
+      "title": "Endoleak-induced DIC presenting as massive chest wall ...",
+      "detail": "casereports.bmj.com",
+      "url": "https://casereports.bmj.com/content/13/6/e235971",
+      "authors": "casereports.bmj.com",
+      "host": "casereports.bmj.com",
+      "snippet": "Laboratory studies indicated that significant disseminated intravascular coagulation (DIC) developed (International Society of Thrombosis and Haemostasis (ISTH)",
+      "score": 0.54317886
+    },
+    {
+      "number": 4,
+      "title": "Recent Randomized Trials of Antithrombotic Therapy for Patients With COVID-19: JACC State-of-the-Art Review",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.02.035",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nGoogle Scholar\n\n30.\n\nThachil J., Tang N., Gando S., et al. ISTH interim guidance on recognition and management of coagulopathy in COVID-19. _J Thromb Haemost_ 2020;18:1023-1026.\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n   [a [...] for antithrombotic prophylaxis in COVID-19](\n   [b [...] he",
+      "score": 0.2598519
+    },
+    {
+      "number": 5,
+      "title": "LETTERS AND CORRECTIONS - Ovid",
+      "detail": "annals.org",
+      "url": "https://annals.org/data/journals/aim/19524/aime197708010-00021.pdf",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "Veno-occlusive disease of the liver after chemotherapy of acute leukemia. two died in renal failure with disseminated intravascular coagulation. In 1961, a",
+      "score": 0.35979196
+    },
+    {
+      "number": 6,
+      "title": "Platelet Transfusion: A Clinical Practice Guideline From the AABB",
+      "detail": "annals.org",
+      "url": "https://annals.org/article.aspx?articleid=1930861",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "Platelet transfusions are administered to prevent or treat bleeding in patients with quantitative or qualitative platelet disorders. Disseminated Intravascular",
+      "score": 0.26950732
+    },
+    {
+      "number": 7,
+      "title": "Disseminated Intravascular Coagulation Syndromes... : Obstetrics & Gynecology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/fulltext/10.1097/aog.0000000000001110~disseminated-intravascular-coagulation-syndromes-in",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a syndrome that can be initiated by a myriad of medical, surgical, and obstetric disorders. Also known as consumptive coagulopathy, DIC is a common contributor to maternal morbidity and mortality and is associated with up to 25% of maternal deaths. The",
+      "score": 0.6194488
+    },
+    {
+      "number": 8,
+      "title": "Clinical Expert Series : Obstetrics & Gynecology - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/collections/1?pageSize=20&page=7",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "November 2015. Disseminated intravascular coagulation (DIC) is a syndrome that can be initiated by a myriad of medical, surgical, and",
+      "score": 0.59457535
+    },
+    {
+      "number": 9,
+      "title": "Sepsis\u2010induced disseminated intravascular coagulation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02003425-202310000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a rare and severe condition characterized by abnormal coagulation and fibrinolysis in acute pathologies,",
+      "score": 0.59344494
+    },
+    {
+      "number": 10,
+      "title": "Research trends and hotspots in sepsis-induced coagulopathy ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/eccm/_layouts/15/oaks.journals/downloadpdf.aspx?an=02211145-202603000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Clinical practice guidelines for management of disseminated intravascular coagulation in Japan 2024.",
+      "score": 0.5920305
+    },
+    {
+      "number": 11,
+      "title": "A re\u2010evaluation of the D\u2010dimer cut\u2010off value for making a diagnosis according to the ISTH overt\u2010DIC diagnostic criteria: communication from the SSC of the ISTH - Suzuki - 2018 - Journal of Thrombosis and Haemostasis - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jth.14134",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# A re-evaluation of the D-dimer cut-off value for making a diagnosis according to the ISTH overt-DIC diagnostic criteria: communication from the SSC of the ISTH. The diagnostic criteria for disseminated intravascular coagulation (DIC) established by the Japanese Ministry Health, Labor and Welfare (",
+      "score": 0.7803451
+    },
+    {
+      "number": 12,
+      "title": "Disseminated Intravascular Coagulation - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/disseminated-intravascular-coagulation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is characterized by continuous thrombin activation accompanied by a consumptive coagulopathy associated with predisposing conditions such as sepsis, malignancy, or obstetric complications.34 The scoring system for the likelihood of the diagnosis of DIC pu",
+      "score": 0.74229145
+    },
+    {
+      "number": 13,
+      "title": "Global practice and challenges in the diagnosis and management of disseminated intravascular coagulation: communication from the ISTH SSC Subcommittee on Disseminated Intravascular Coagulation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783626000644",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Journal of Thrombosis and Haemostasis. Available online 6 February 2026. In Press, Journal Pre-proof. # ISTH SSC Communications Global practice and challenges in the diagnosis and management of disseminated intravascular coagulation: communication from the ISTH SSC Subcommittee on Disseminated In",
+      "score": 0.6829338
+    },
+    {
+      "number": 14,
+      "title": "induced disseminated intravascular coagulation and coagulopathy",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ams2.411",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Japanese Association for Acute Medicine established a set of original diagnostic criteria (SIC) scoring systems Item Score ISTH overt-DIC range",
+      "score": 0.63125396
+    },
+    {
+      "number": 15,
+      "title": "A stepwise laboratory-based approach for early risk assessment of disseminated intravascular coagulation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384826001465",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Acknowledgements\n\n## References (32)\n\n### Updated definition and scoring of disseminated intravascular coagulation in 2025: communication from the ISTH SSC Subcommittee on Disseminated Intravascular Coagulation\n\n### J. Thromb. Haemost.\n\n### Trauma-induced innate immune activation and disseminated",
+      "score": 0.6186197
+    },
+    {
+      "number": 16,
+      "title": "The Japanese Clinical Practice Guidelines for Management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ams2.70037",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost. 2001",
+      "score": 0.5654673
+    },
+    {
+      "number": 17,
+      "title": "Diagnosis of sepsis\u2010induced disseminated intravascular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ams2.411",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "a diagnosis of sepsis-induced coagulopathy (SIC) consists of only three items: sepsis-3 (infection with organ dysfunction), platelet count, and",
+      "score": 0.55709904
+    },
+    {
+      "number": 18,
+      "title": "Development of a model based scoring system for diagnosis of canine disseminated intravascular coagulation with independent assessment of sensitivity and specificity - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1090023309002469",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Journal of Thrombosis and Haemostasis\n\n### Prospective validation of the international society of thrombosis and haemostasis scoring system for disseminated intravascular coagulation\n\n### Critical Care Medicine\n\n### Diagnosis of disseminated intravascular coagulation in dogs admitted to an inten",
+      "score": 0.53517187
+    },
+    {
+      "number": 19,
+      "title": "Disseminated Intravascular Coagulation (Chapter 355)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5788579/Disseminated-Intravascular-Coagulation-Chapter-355",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a pathologic syndrome . It is characterized by simultaneous activation of both clotting and fibrinolysis. DIC",
+      "score": 0.54521364
+    },
+    {
+      "number": 20,
+      "title": "Disseminated intravascular coagulation in pregnancy",
+      "detail": "www.ajog.org",
+      "url": "https://www.ajog.org/article/S0002-9378(15)00335-X/abstract",
+      "authors": "www.ajog.org",
+      "host": "www.ajog.org",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a life-threatening situation that can arise from a variety of obstetrical and nonobstetrical causes.",
+      "score": 0.53954184
+    },
+    {
+      "number": 21,
+      "title": "Anticoagulants for people hospitalised with COVID\u201019: a rapid review - Flumignan, RLG - 2022 | Cochrane Library",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/en/cdsr/doi/10.1002/14651858.CD013739.pub2/references/en",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "compression ultrasonography; CT: computed tomography; CVVHD: continuous veno\u2010venous haemodialysis; DBP: diastolic blood pressure; DIC: disseminated intravascular coagulation; DMARDs: d isease\u2010modifying antirheumatic drugs; DOAC: direct oral anticoagulant; DVT: deep vein thrombosis; ECG: electrocardi",
+      "score": 0.42706275
+    },
+    {
+      "number": 22,
+      "title": "\u0e22\u0e32\u0e15\u0e49\u0e32\u0e19\u0e01\u0e32\u0e23\u0e41\u0e02\u0e47\u0e07\u0e15\u0e31\u0e27\u0e02\u0e2d\u0e07\u0e40\u0e25\u0e37\u0e2d\u0e14\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e1c\u0e39\u0e49\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e23\u0e31\u0e01\u0e29\u0e32\u0e43\u0e19\u0e42\u0e23\u0e07\u0e1e\u0e22\u0e32\u0e1a\u0e32\u0e25\u0e14\u0e49\u0e27\u0e22 ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013739/th",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Disseminated intravascular coagulopathy A severe condition in which blood clots form throughout the body, blocking small blood vessels and that",
+      "score": 0.2944538
+    },
+    {
+      "number": 23,
+      "title": "Epidemiology and outcomes of disseminated intravascular ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.e16376",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "Conclusions: DIC significantly increases mortality, complications, and costs in pancreatic cancer patients with sepsis, emphasizing the need for",
+      "score": 0.23351443
+    },
+    {
+      "number": 24,
+      "title": "Diagnosis of sepsis\u2010induced disseminated intravascular coagulation and coagulopathy - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/6603393?term=%22Acute+Med+Surg%22%5Bjour%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Item | Score | ISTH overt\u2010DIC range | JAAM DIC range | SIC range |\n ---  --- \n| Platelet count (\u00d7109/L) | 3 | \u2013 | <80  \u226550% decrease within 24 h | \u2212 |\n| 2 | <50 | \u2212 | <100 |\n| 1 | \u226550, <100 | \u226580, <120  \u226530% decrease within 24 h | \u2265100, <150 |\n| FDP (D\u2010dimer) | 3 | Strong increase | \u226525 \u03bcg/mL  (us",
+      "score": 0.7882741
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Disseminated intravascular coagulation - Symptoms, diagnosis and treatment | BMJ Best Practice US",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-us/184?locale=fa",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "DIC is most commonly a complication of acute infections/sepsis. It also occurs due to shock, obstetric disorders, malignancies, vascular injury, trauma, and toxic or immunologic reactions and organ injury.(#referencePop2)Squizzato A, Gallo A, Levi M, et al. Underlying disorders of disseminated intra",
+      "score": 0.70483154
+    },
+    {
+      "number": 2,
+      "title": "Exploring the epidemiology of disseminated intravascular coagulation",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/bmjopen/12/7/e062623.full.pdf",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Currently, only a few DIC registries and other data sources exist. The Japan Septic Disseminated Intravas-cular Coagulation study was conducted between 2011 and 2013.7 It focused on sepsis patients treated in the ICU, with data collected only within the first week of ICU admission. Recently, the Int",
+      "score": 0.67321366
+    },
+    {
+      "number": 3,
+      "title": "Endoleak-induced DIC presenting as massive chest wall ...",
+      "detail": "casereports.bmj.com",
+      "url": "https://casereports.bmj.com/content/13/6/e235971",
+      "authors": "casereports.bmj.com",
+      "host": "casereports.bmj.com",
+      "snippet": "Laboratory studies indicated that significant disseminated intravascular coagulation (DIC) developed (International Society of Thrombosis and Haemostasis (ISTH)",
+      "score": 0.54317886
+    },
+    {
+      "number": 4,
+      "title": "Recent Randomized Trials of Antithrombotic Therapy for Patients With COVID-19: JACC State-of-the-Art Review",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacc.2021.02.035",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Go to Citation\n\nGoogle Scholar\n\n30.\n\nThachil J., Tang N., Gando S., et al. ISTH interim guidance on recognition and management of coagulopathy in COVID-19. _J Thromb Haemost_ 2020;18:1023-1026.\n\nCrossref\n\nPubMed\n\nGoogle Scholar\n\n   [a [...] for antithrombotic prophylaxis in COVID-19](\n   [b [...] he",
+      "score": 0.2598519
+    },
+    {
+      "number": 5,
+      "title": "LETTERS AND CORRECTIONS - Ovid",
+      "detail": "annals.org",
+      "url": "https://annals.org/data/journals/aim/19524/aime197708010-00021.pdf",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "Veno-occlusive disease of the liver after chemotherapy of acute leukemia. two died in renal failure with disseminated intravascular coagulation. In 1961, a",
+      "score": 0.35979196
+    },
+    {
+      "number": 6,
+      "title": "Platelet Transfusion: A Clinical Practice Guideline From the AABB",
+      "detail": "annals.org",
+      "url": "https://annals.org/article.aspx?articleid=1930861",
+      "authors": "annals.org",
+      "host": "annals.org",
+      "snippet": "Platelet transfusions are administered to prevent or treat bleeding in patients with quantitative or qualitative platelet disorders. Disseminated Intravascular",
+      "score": 0.26950732
+    },
+    {
+      "number": 7,
+      "title": "Disseminated Intravascular Coagulation Syndromes... : Obstetrics & Gynecology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/fulltext/10.1097/aog.0000000000001110~disseminated-intravascular-coagulation-syndromes-in",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a syndrome that can be initiated by a myriad of medical, surgical, and obstetric disorders. Also known as consumptive coagulopathy, DIC is a common contributor to maternal morbidity and mortality and is associated with up to 25% of maternal deaths. The",
+      "score": 0.6194488
+    },
+    {
+      "number": 8,
+      "title": "Clinical Expert Series : Obstetrics & Gynecology - Lippincott",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/greenjournal/collections/1?pageSize=20&page=7",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "November 2015. Disseminated intravascular coagulation (DIC) is a syndrome that can be initiated by a myriad of medical, surgical, and",
+      "score": 0.59457535
+    },
+    {
+      "number": 9,
+      "title": "Sepsis\u2010induced disseminated intravascular coagulation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/02003425-202310000-00022",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a rare and severe condition characterized by abnormal coagulation and fibrinolysis in acute pathologies,",
+      "score": 0.59344494
+    },
+    {
+      "number": 10,
+      "title": "Research trends and hotspots in sepsis-induced coagulopathy ...",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/eccm/_layouts/15/oaks.journals/downloadpdf.aspx?an=02211145-202603000-00003",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Clinical practice guidelines for management of disseminated intravascular coagulation in Japan 2024.",
+      "score": 0.5920305
+    },
+    {
+      "number": 11,
+      "title": "A re\u2010evaluation of the D\u2010dimer cut\u2010off value for making a diagnosis according to the ISTH overt\u2010DIC diagnostic criteria: communication from the SSC of the ISTH - Suzuki - 2018 - Journal of Thrombosis and Haemostasis - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jth.14134",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# A re-evaluation of the D-dimer cut-off value for making a diagnosis according to the ISTH overt-DIC diagnostic criteria: communication from the SSC of the ISTH. The diagnostic criteria for disseminated intravascular coagulation (DIC) established by the Japanese Ministry Health, Labor and Welfare (",
+      "score": 0.7803451
+    },
+    {
+      "number": 12,
+      "title": "Disseminated Intravascular Coagulation - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/disseminated-intravascular-coagulation",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Disseminated intravascular coagulation (DIC) is characterized by continuous thrombin activation accompanied by a consumptive coagulopathy associated with predisposing conditions such as sepsis, malignancy, or obstetric complications.34 The scoring system for the likelihood of the diagnosis of DIC pu",
+      "score": 0.74229145
+    },
+    {
+      "number": 13,
+      "title": "Global practice and challenges in the diagnosis and management of disseminated intravascular coagulation: communication from the ISTH SSC Subcommittee on Disseminated Intravascular Coagulation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1538783626000644",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Journal of Thrombosis and Haemostasis. Available online 6 February 2026. In Press, Journal Pre-proof. # ISTH SSC Communications Global practice and challenges in the diagnosis and management of disseminated intravascular coagulation: communication from the ISTH SSC Subcommittee on Disseminated In",
+      "score": 0.6829338
+    },
+    {
+      "number": 14,
+      "title": "induced disseminated intravascular coagulation and coagulopathy",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/ams2.411",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Japanese Association for Acute Medicine established a set of original diagnostic criteria (SIC) scoring systems Item Score ISTH overt-DIC range",
+      "score": 0.63125396
+    },
+    {
+      "number": 15,
+      "title": "A stepwise laboratory-based approach for early risk assessment of disseminated intravascular coagulation - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0049384826001465",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "## Acknowledgements\n\n## References (32)\n\n### Updated definition and scoring of disseminated intravascular coagulation in 2025: communication from the ISTH SSC Subcommittee on Disseminated Intravascular Coagulation\n\n### J. Thromb. Haemost.\n\n### Trauma-induced innate immune activation and disseminated",
+      "score": 0.6186197
+    },
+    {
+      "number": 16,
+      "title": "The Japanese Clinical Practice Guidelines for Management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ams2.70037",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Towards definition, clinical and laboratory criteria, and a scoring system for disseminated intravascular coagulation. Thromb Haemost. 2001",
+      "score": 0.5654673
+    },
+    {
+      "number": 17,
+      "title": "Diagnosis of sepsis\u2010induced disseminated intravascular ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ams2.411",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "a diagnosis of sepsis-induced coagulopathy (SIC) consists of only three items: sepsis-3 (infection with organ dysfunction), platelet count, and",
+      "score": 0.55709904
+    },
+    {
+      "number": 18,
+      "title": "Development of a model based scoring system for diagnosis of canine disseminated intravascular coagulation with independent assessment of sensitivity and specificity - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1090023309002469",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Journal of Thrombosis and Haemostasis\n\n### Prospective validation of the international society of thrombosis and haemostasis scoring system for disseminated intravascular coagulation\n\n### Critical Care Medicine\n\n### Diagnosis of disseminated intravascular coagulation in dogs admitted to an inten",
+      "score": 0.53517187
+    },
+    {
+      "number": 19,
+      "title": "Disseminated Intravascular Coagulation (Chapter 355)",
+      "detail": "publications.aap.org",
+      "url": "https://publications.aap.org/pediatriccare/book/348/chapter/5788579/Disseminated-Intravascular-Coagulation-Chapter-355",
+      "authors": "publications.aap.org",
+      "host": "publications.aap.org",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a pathologic syndrome . It is characterized by simultaneous activation of both clotting and fibrinolysis. DIC",
+      "score": 0.54521364
+    },
+    {
+      "number": 20,
+      "title": "Disseminated intravascular coagulation in pregnancy",
+      "detail": "www.ajog.org",
+      "url": "https://www.ajog.org/article/S0002-9378(15)00335-X/abstract",
+      "authors": "www.ajog.org",
+      "host": "www.ajog.org",
+      "snippet": "Disseminated intravascular coagulation (DIC) is a life-threatening situation that can arise from a variety of obstetrical and nonobstetrical causes.",
+      "score": 0.53954184
+    },
+    {
+      "number": 21,
+      "title": "Anticoagulants for people hospitalised with COVID\u201019: a rapid review - Flumignan, RLG - 2022 | Cochrane Library",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/en/cdsr/doi/10.1002/14651858.CD013739.pub2/references/en",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "compression ultrasonography; CT: computed tomography; CVVHD: continuous veno\u2010venous haemodialysis; DBP: diastolic blood pressure; DIC: disseminated intravascular coagulation; DMARDs: d isease\u2010modifying antirheumatic drugs; DOAC: direct oral anticoagulant; DVT: deep vein thrombosis; ECG: electrocardi",
+      "score": 0.42706275
+    },
+    {
+      "number": 22,
+      "title": "\u0e22\u0e32\u0e15\u0e49\u0e32\u0e19\u0e01\u0e32\u0e23\u0e41\u0e02\u0e47\u0e07\u0e15\u0e31\u0e27\u0e02\u0e2d\u0e07\u0e40\u0e25\u0e37\u0e2d\u0e14\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e1c\u0e39\u0e49\u0e17\u0e35\u0e48\u0e40\u0e02\u0e49\u0e32\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e23\u0e31\u0e01\u0e29\u0e32\u0e43\u0e19\u0e42\u0e23\u0e07\u0e1e\u0e22\u0e32\u0e1a\u0e32\u0e25\u0e14\u0e49\u0e27\u0e22 ...",
+      "detail": "www.cochranelibrary.com",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013739/th",
+      "authors": "www.cochranelibrary.com",
+      "host": "www.cochranelibrary.com",
+      "snippet": "Disseminated intravascular coagulopathy A severe condition in which blood clots form throughout the body, blocking small blood vessels and that",
+      "score": 0.2944538
+    },
+    {
+      "number": 23,
+      "title": "Epidemiology and outcomes of disseminated intravascular ...",
+      "detail": "ascopubs.org",
+      "url": "https://ascopubs.org/doi/10.1200/JCO.2025.43.16_suppl.e16376",
+      "authors": "ascopubs.org",
+      "host": "ascopubs.org",
+      "snippet": "Conclusions: DIC significantly increases mortality, complications, and costs in pancreatic cancer patients with sepsis, emphasizing the need for",
+      "score": 0.23351443
+    },
+    {
+      "number": 24,
+      "title": "Diagnosis of sepsis\u2010induced disseminated intravascular coagulation and coagulopathy - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "http://www.ncbi.nlm.nih.gov/pmc/articles/6603393?term=%22Acute+Med+Surg%22%5Bjour%5D",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "| Item | Score | ISTH overt\u2010DIC range | JAAM DIC range | SIC range |\n ---  --- \n| Platelet count (\u00d7109/L) | 3 | \u2013 | <80  \u226550% decrease within 24 h | \u2212 |\n| 2 | <50 | \u2212 | <100 |\n| 1 | \u226550, <100 | \u226580, <120  \u226530% decrease within 24 h | \u2265100, <150 |\n| FDP (D\u2010dimer) | 3 | Strong increase | \u226525 \u03bcg/mL  (us",
+      "score": 0.7882741
+    }
+  ],
+  "publishedAt": "2026-09-15T21:27:37.736710+00:00",
+  "updatedAt": "2026-09-15T21:27:37.736710+00:00",
+  "readingMinutes": 5,
+  "slug": "dic-laboratory-interpretation"
+}

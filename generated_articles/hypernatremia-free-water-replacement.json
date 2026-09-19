@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Nephrology",
+  "title": "Hypernatremia Free Water Replacement",
+  "summary": "A volume-status and duration-based approach to calculate free water deficit, select enteral or intravenous replacement, protect perfusion first, account for ongoing losses, and titrate serum sodium monitoring to avoid both undercorrection and unsafe overcorrection.",
+  "seoDescription": "Calculate and replace free water in hypernatremia using volume status, duration, sodium targets, fluid selection, and serial sodium monitoring.",
+  "clinicalQuestion": "How should clinicians calculate, prescribe, and monitor free water replacement for adult hypernatremia?",
+  "specialty": "Nephrology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "hypernatremia",
+    "free water deficit",
+    "D5W",
+    "0.45% saline",
+    "diabetes insipidus",
+    "sodium correction rate"
+  ],
+  "keyTakeaways": [
+    "Restore intravascular volume with 0.9% saline or balanced crystalloid before hypotonic replacement when shock or hypotension is present, regardless of the sodium concentration. [16]",
+    "Estimate water deficit as total body water \u00d7 ((serum sodium/140) \u2212 1), then add ongoing renal, gastrointestinal, and insensible water losses to the prescription. [16][20]",
+    "For hypernatremia present for more than 48 hours or of unknown duration, a conventional target is a sodium decrease below 0.5 mmol/L/hour and no more than 12 mmol/L/day; excessively slow correction below 0.25 mmol/L/hour has been associated with higher adult mortality. [11]",
+    "Treat acute symptomatic sodium-loading hypernatremia within 48 hours more rapidly: lower sodium by 1\u20132 mmol/L/hour for the first 6\u20138 hours and target 145 mmol/L within 24 hours. [11]",
+    "Use D5W or enteral water for electrolyte-free water replacement; use D5W plus diuresis for hypervolemic hypernatremia rather than D5W alone. [16][23]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First decision",
+      "heading": "Stabilize circulation before calculating free water",
+      "intro": "Volume status determines the first fluid, not the serum sodium alone.",
+      "paragraphs": [
+        "Assess blood pressure, perfusion, mental status, urine output, recent fluid balance, medication exposure, and sodium administration immediately. Hypernatremia reflects hypertonicity and cellular dehydration, but the immediate management branch is hypovolemic, euvolemic, or hypervolemic disease. [3][16]",
+        "In shock or hypotension, give 0.9% saline or a balanced crystalloid until intravascular volume is restored; do not defer resuscitation because the sodium is high. Once perfusion is restored, switch to a hypotonic strategy for the remaining free water deficit. [16][23]",
+        "Manage severe or acute hypernatremia in hospital. Escalate to ICU-level monitoring when altered mental status, seizures, hemodynamic instability, rapidly changing sodium, severe renal dysfunction, or a requirement for frequent fluid titration prevents safe ward management. [1]"
+      ],
+      "bullets": [
+        "Stop or reverse the precipitant when identifiable: discontinue sodium sources, treat fever, relieve urinary obstruction, give insulin for hyperglycemic osmotic diuresis, and stop an offending medication when feasible. [1]",
+        "Obtain serial serum sodium and glucose during active correction; use urine volume and urine osmolality to distinguish renal water loss from extrarenal loss. [17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial fluid selection follows hemodynamics and extracellular volume status. [16][23]",
+        "columns": [
+          "Clinical state",
+          "Initial fluid action",
+          "Free water strategy after stabilization"
+        ],
+        "rows": [
+          [
+            "Shock or hypotension",
+            "0.9% saline or balanced crystalloid until volume restoration. [16]",
+            "Then calculate deficit and replace with hypotonic fluid. [16]"
+          ],
+          [
+            "Hypovolemic but hemodynamically stable",
+            "0.45% saline or D5W can replace free water while addressing volume depletion. [16][23]",
+            "Include ongoing renal, gastrointestinal, and insensible losses. [16]"
+          ],
+          [
+            "Euvolemic hypernatremia",
+            "Evaluate for water diuresis, especially central or nephrogenic diabetes insipidus. [16][17]",
+            "Use enteral water or IV D5W; treat the cause of water diuresis. [16]"
+          ],
+          [
+            "Hypervolemic hypernatremia",
+            "Avoid D5W alone because it worsens volume overload. [23]",
+            "Give D5W with a loop diuretic to provide free water while promoting sodium removal. [16][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "calculate-deficit",
+      "eyebrow": "Prescription",
+      "heading": "Calculate the deficit and convert it into a daily water order",
+      "intro": "The calculated deficit is only the baseline requirement.",
+      "paragraphs": [
+        "Estimate total body water as 0.6 \u00d7 body weight in kilograms for men and 0.5 \u00d7 body weight for women, then calculate free water deficit: total body water \u00d7 ((serum sodium/140) \u2212 1). This estimates the positive water balance needed to return sodium to 140 mEq/L. [20][14]",
+        "Example: a 60-kg woman with serum sodium 168 mEq/L has estimated total body water of 30 L and a calculated deficit of 6 L: 30 \u00d7 ((168/140) \u2212 1). Use this result as a starting point, not a complete daily order, because the estimate can understate deficit when hypernatremia results from hypotonic fluid loss. [14][20]",
+        "Add expected insensible losses and measured ongoing renal or extrarenal losses to the calculated deficit. In polyuric states, reassess urine output frequently rather than assuming a fixed loss rate; failure to replace ongoing losses is a common reason sodium does not fall as predicted. [16][1]"
+      ],
+      "bullets": [
+        "If the patient can safely drink or receive enteral water, oral or enteral water is an electrolyte-free replacement option. [16][18]",
+        "For IV therapy, D5W provides electrolyte-free water after glucose metabolism; 0.45% saline provides less free water per liter and may be preferable when some sodium replacement is needed. [16][23]",
+        "A fixed D5W starting regimen described for adults is 1.35 mL/kg/hour; another is 3 mL/kg/hour, based on the approximation that a 1 mmol/L sodium decrease requires 3 mL/kg of electrolyte-free water. Adjust either regimen for the intended correction rate and concurrent losses. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "Use the calculated deficit cautiously",
+          "paragraphs": [
+            "The formula assumes a target sodium of 140 mEq/L and is most reliable for predominant water loss. In hypovolemic hypernatremia from hypotonic fluid loss, the calculation may underestimate total replacement needs; serial sodium and fluid balance, rather than the initial equation alone, must determine subsequent rates. [14]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Free water prescription components should be ordered separately and revised against serial sodium values. [16]",
+        "columns": [
+          "Component",
+          "How to determine it",
+          "What changes the order"
+        ],
+        "rows": [
+          [
+            "Baseline water deficit",
+            "Total body water \u00d7 ((serum sodium/140) \u2212 1). [20]",
+            "Recalculate the expected remaining deficit as sodium changes. [16]"
+          ],
+          [
+            "Planned correction interval",
+            "Set from acute versus chronic or unknown duration and neurologic severity. [11]",
+            "Shorten only for acute symptomatic sodium loading; use slower correction for chronic or unknown duration. [11]"
+          ],
+          [
+            "Ongoing renal loss",
+            "Track urine output and urine osmolality. [17]",
+            "Polyuria with dilute urine suggests water diuresis requiring cause-directed treatment. [16][17]"
+          ],
+          [
+            "Extrarenal and insensible loss",
+            "Add gastrointestinal and insensible losses to daily water delivery. [16]",
+            "Fever and continued gastrointestinal loss increase replacement requirements. [1][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "correction-rate",
+      "eyebrow": "Timing",
+      "heading": "Set the sodium correction target by duration and mechanism",
+      "intro": "Acute sodium gain and chronic water deficit should not receive the same correction target.",
+      "paragraphs": [
+        "For acute symptomatic hypernatremia occurring within 48 hours from sodium loading, lower plasma sodium by 1\u20132 mmol/L/hour during the first 6\u20138 hours and restore sodium to 145 mmol/L within 24 hours. Rapid treatment in this branch is intended to reverse severe hypertonicity without increasing cerebral edema risk. [11][24]",
+        "For hypernatremia lasting more than 48 hours or of unknown duration, use a conventional maximum fall below 0.5 mmol/L/hour, or 12 mmol/L/day. This cautious target derives principally from pediatric data because sustained hypernatremia permits neuronal osmolyte adaptation and overly rapid water replacement can cause cerebral edema. [11][3]",
+        "Adult observational data complicate the traditional limit: correction above 0.5 mmol/L/hour has not been associated with increased neurologic injury or mortality in reported adult studies, whereas correction below 0.25 mmol/L/hour, approximately 6 mmol/L/day, has been associated with higher mortality. A practical target under study is 6\u201311 mmol/L during the first 24 hours. [11]"
+      ],
+      "bullets": [
+        "If sodium falls faster than intended in chronic or unknown-duration hypernatremia, reduce or pause electrolyte-free water and recheck sodium; therapeutic re-raising of serum sodium is not recommended. [11]",
+        "Avoid allowing the sodium to plateau because the initial deficit was ordered without replacing continued urinary, gastrointestinal, or insensible losses. [16]",
+        "Interpret sodium during treatment of severe hyperglycemia in clinical context, because insulin-mediated glucose reduction and treatment-related osmotic diuresis can alter the sodium trajectory. [23][15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Correction targets differ by chronicity and sodium-loading mechanism. [11][24]",
+        "columns": [
+          "Presentation",
+          "Target sodium fall",
+          "Operational consequence"
+        ],
+        "rows": [
+          [
+            "Acute symptomatic sodium loading within 48 hours",
+            "1\u20132 mmol/L/hour for first 6\u20138 hours; sodium 145 mmol/L within 24 hours. [11]",
+            "Use aggressive electrolyte-free water replacement with close inpatient monitoring. [24]"
+          ],
+          [
+            "More than 48 hours or unknown duration",
+            "Below 0.5 mmol/L/hour; no more than 12 mmol/L/day. [11]",
+            "Distribute deficit, ongoing losses, and insensible losses across the selected correction interval. [16]"
+          ],
+          [
+            "Adult correction slower than 0.25 mmol/L/hour",
+            "Associated with higher mortality in observational studies. [11]",
+            "Reassess inadequate water delivery, continued loss, and incorrect etiologic classification. [11][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "identify-water-loss",
+      "eyebrow": "Etiologic branch",
+      "heading": "Use urine output and urine osmolality to identify the ongoing loss",
+      "intro": "Persistent hypernatremia despite replacement usually reflects an uncorrected water loss or sodium gain.",
+      "paragraphs": [
+        "Classify the physiology with plasma osmolality, urine volume, and urine osmolality. In diabetes insipidus, urine is inappropriately dilute relative to plasma, with urine osmolality below serum osmolality despite hypernatremia; central and nephrogenic diabetes insipidus are key causes of renal water diuresis. [17]",
+        "When hypernatremia accompanies high urine output and hypotonic urine, review for central diabetes insipidus after head trauma, cranial neoplasm, or pituitary infiltrative disease, and for nephrogenic diabetes insipidus from lithium, foscarnet, demeclocycline, or inherited disease. [17]",
+        "A response to a vasopressin agonist helps distinguish central from nephrogenic diabetes insipidus: central disease produces lower urine volume and increased urine osmolality, whereas nephrogenic disease has a subnormal renal response. Water-deprivation testing can confirm central diabetes insipidus when clinically appropriate. [21][17]"
+      ],
+      "bullets": [
+        "Treat central diabetes insipidus with desmopressin while monitoring sodium and water intake to avoid water intoxication and hyponatremia. Parenteral desmopressin doses of 0.5\u20132 micrograms subcutaneously, intramuscularly, or intravenously are described for acute management. [8][17]",
+        "For nephrogenic diabetes insipidus, remove a precipitating drug when possible and continue free water replacement while the water diuresis persists. [14][17]",
+        "In adipsic diabetes insipidus, prescribe both desmopressin and scheduled water rather than relying on thirst; absent thirst prevents prompt compensation for rising osmolality. [22]"
+      ],
+      "subsections": [
+        {
+          "heading": "Separate osmotic diuresis from diabetes insipidus",
+          "paragraphs": [
+            "Hyperglycemia, mannitol, and other solute loads can cause osmotic diuresis and substantial free water loss. In diabetic ketoacidosis or hyperosmolar states, combine volume resuscitation and insulin with serial sodium reassessment; after initial isotonic resuscitation, 0.45% saline is used in patients with eunatremia or hypernatremia, and dextrose is added once glucose falls below 200 mg/dL in DKA or 300 mg/dL in HHS while insulin continues. [17][23]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Urine findings direct treatment toward ongoing water loss versus sodium gain. [16][17][21]",
+        "columns": [
+          "Pattern",
+          "Likely mechanism",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "Polyuria with urine osmolality below serum osmolality",
+            "Central or nephrogenic diabetes insipidus. [17]",
+            "Assess response to vasopressin agonist; treat central disease with desmopressin and remove nephrogenic triggers when possible. [21][14]"
+          ],
+          [
+            "Hyperglycemia or mannitol exposure with high urine losses",
+            "Osmotic diuresis. [17]",
+            "Treat the solute disorder and replace ongoing free water loss. [1][23]"
+          ],
+          [
+            "Low intake, fever, gastrointestinal loss, or increased insensible loss",
+            "Extrarenal water loss or inadequate access to water. [1][17]",
+            "Provide scheduled oral, enteral, or IV free water and correct the precipitant. [1][16]"
+          ],
+          [
+            "Recent hypertonic sodium administration or ingestion",
+            "Hypertonic sodium gain. [16][17]",
+            "Use acute sodium-loading correction targets; consider sodium removal strategies if water requirement would cause volume overload. [11][17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Reassessment",
+      "heading": "Titrate to the measured sodium trajectory and fluid balance",
+      "intro": "A fluid rate is provisional until the next sodium measurement.",
+      "paragraphs": [
+        "Monitor serum sodium repeatedly during active replacement and adjust the infusion or enteral water order to the observed rate of decline. The replacement plan must account for calculated deficit, the desired correction rate, and ongoing free water losses; relying on a one-time calculation risks both persistent hypernatremia and unintended rapid correction. [1][16]",
+        "Record intake, urine output, gastrointestinal losses, daily weight when feasible, glucose, and the changing volume examination. D5W can cause hyperglycemia, while desmopressin plus excessive hypotonic fluid can cause profound hyponatremia; each requires prompt reassessment of free water delivery and antidiuretic exposure. [8][15]",
+        "For hypervolemic hypernatremia or sodium intoxication, the free water requirement may be too large to administer safely. Combine D5W with loop diuresis to promote sodium removal; consider dialysis when sodium removal is required and volume overload limits medical therapy. [16][17]"
+      ],
+      "bullets": [
+        "Do not use D5W alone in a volume-overloaded patient; pair it with a sodium-removal strategy. [23]",
+        "Consider renal replacement therapy in severe kidney injury when conventional hypotonic replacement is not feasible; dialysis can lower sodium rapidly, so the planned sodium trajectory requires close supervision. [4]",
+        "If altered mental status persists despite improving glucose and sodium management, reassess for concurrent neurologic disease rather than assuming hypernatremia is the only cause. [15]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Monitoring findings that should change the free water prescription. [1][8][11][16]",
+        "columns": [
+          "Finding during treatment",
+          "Interpretation",
+          "Immediate adjustment"
+        ],
+        "rows": [
+          [
+            "Sodium falling faster than planned in chronic or unknown-duration hypernatremia",
+            "Electrolyte-free water delivery exceeds the intended correction trajectory. [11]",
+            "Reduce or pause free water and repeat sodium measurement; do not therapeutically re-raise sodium. [11]"
+          ],
+          [
+            "Sodium falls less than planned",
+            "Deficit, ongoing losses, or both are underestimated. [1][16]",
+            "Increase replacement after quantifying urine, gastrointestinal, and insensible losses. [16]"
+          ],
+          [
+            "New edema or worsening oxygenation",
+            "Free water replacement is aggravating volume overload. [23]",
+            "Avoid D5W alone; pair D5W with loop diuresis and consider dialysis when needed. [16][23]"
+          ],
+          [
+            "Marked polyuria continues after water replacement",
+            "Persistent renal water diuresis is likely. [16][17]",
+            "Measure urine osmolality and evaluate for diabetes insipidus or osmotic diuresis. [17][21]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is enteral free water equivalent to IV D5W for ICU-acquired hypernatremia?",
+      "answer": "Both are main replacement strategies for electrolyte-free water. A retrospective ICU cohort evaluated enteral free water and parenteral D5W for sodium lowering, but route selection should also reflect enteral access, aspiration risk, glycemic effects, fluid tolerance, and the ability to titrate therapy. [18]"
+    },
+    {
+      "question": "When should dialysis be considered for hypernatremia?",
+      "answer": "Consider dialysis when severe kidney injury or sodium intoxication makes the required free water volume unsafe or ineffective, particularly with volume overload. Because renal replacement can correct sodium rapidly, use close monitoring and a controlled plan. [4][17]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Hypernatraemia - Management Approach | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1215/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Hypernatraemia - Management Approach | BMJ Best Practice\nTreatment should be directed at addressing the underlying cause (e.g., stop offending medication, treat fever, relieve urinary obstruction, give insulin, discontinue sodium sources), as well as replacing any free water deficit and ongoi",
+      "score": 0.77487355
+    },
+    {
+      "number": 2,
+      "title": "Impaired Counterregulation of Glucose in a Patient with ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199903183401105",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by F F\u00e9ry \u00b7 1999 \u00b7 Cited by 46 \u2014 A water-deprivation test confirmed the diagnosis of central diabetes insipidus. hypernatremia resulting from impaired thirst perception,",
+      "score": 0.9749
+    },
+    {
+      "number": 3,
+      "title": "A Clinical Approach to the Treatment of Chronic Hypernatremia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0272638612010281",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: A Clinical Approach to the Treatment of Chronic Hypernatremia - ScienceDirect\n# Acid-Base and Electrolyte Teaching Case A Clinical Approach to the Treatment of Chronic Hypernatremia. Community-acquired hypernatremia typically occurs at the extremes of age, whereas hospital-acquired hypernatre",
+      "score": 0.7011614
+    },
+    {
+      "number": 4,
+      "title": "Clinical outcomes of early fast compared to slow sodium correction rate in adults with severe hypernatremia: A comparative effectiveness study",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125003417",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The correction of hypernatremia is typically achieved through the administration of hypotonic solutions either intravenously or enterally, or, through renal replacement therapy in case of associated severe kidney injury. [1][8][9] However, despite the possible impact of hypernatremia, there is no clea",
+      "score": 0.6685563
+    },
+    {
+      "number": 5,
+      "title": "Clinical outcomes of early fast compared to slow sodium correction rate in adults with severe hypernatremia: A comparative effectiveness study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125003417?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am J Emerg Med\n\n### MIMIC-IV, a freely accessible electronic health record dataset\n\n### Sci Data\n\n### Strengthening the Reporting of Observational Studies in Epidemiology (STROBE): explanation and elaboration\n\n### Int J Surg\n\n### Systematic review and meta-analysis of the treatment of hypernatre",
+      "score": 0.57637566
+    },
+    {
+      "number": 6,
+      "title": "Severe Diabetic Ketoacidosis With Refractory ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/carm/6883361",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Jun 13, 2026 \u2014 Hypernatremia in DKA is uncommon and should prompt careful evaluation for AVP-R and other causes of free-water loss. This case highlights ...Read more",
+      "score": 0.38616195
+    },
+    {
+      "number": 7,
+      "title": "Diabetic ketoacidosis with severe hypokalemia and ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ccr3.5406",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by MK Badawy \u00b7 2022 \u00b7 Cited by 7 \u2014 In our case, extreme hypernatremia was mainly due to large free water losses associated with osmotic diuresis. ... treatment and prevention ...Read more",
+      "score": 0.29148024
+    },
+    {
+      "number": 8,
+      "title": "Diabetes Insipidus - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/diabetes-insipidus",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In certain clinical situations, such as chemotherapy or use of some contrast agents, diuresis is desirable to minimize renal toxicity. If desmopressin is continued and a large volume of normal saline is given, natriuresis and hyponatremia will be induced. Withholding desmopressin and replacing fluid",
+      "score": 0.650934
+    },
+    {
+      "number": 9,
+      "title": "Management of Severe Hypernatremic Dehydration... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjkd/fulltext/2021/32050/management_of_severe_hypernatremic_dehydration_and.26.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The mortality in AKI in children has been reported to vary widely from 16% to 43.8%.[9 13 14 15 16] The incidence of acute renal failure in a hospital study done in Thailand showed 0.5\u20139.9 cases per 100 pediatric patients with a mortality rate of 41.5%. In the present study, mortality rate was 40%, ",
+      "score": 0.82694983
+    },
+    {
+      "number": 10,
+      "title": "Rapid Correction of Hypernatremia Is Not... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/2022/11001/rapid_correction_of_hypernatremia_is_not.31.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Conclusions:\n\nWe did not find any evidence that rapid sodium correction was associated with neurological morbidity or mortality; however slow correction was associated with a longer length of stay. Further prospective studies are needed to confirm the safety and advantages of rapid correction in ",
+      "score": 0.798077
+    },
+    {
+      "number": 11,
+      "title": "Evaluation and management of hypernatremia in adults: clinical perspectives - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10175862",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "in adults have reported that rapid correction rates (> 0.5 mmol/L/hr) are not associated with a high risk of mortality and neurologic damage [31][34], whereas higher mortality results from excessively slow correction rates (< 0.25 mmol/L/hr, 6 mmol/L/day) [11][31][35]. However, if the target rate is in",
+      "score": 0.77487355
+    },
+    {
+      "number": 12,
+      "title": "Heat Stress and Strain Evaluation Among Aluminum ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/172503/cdc_172503_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by B Dang \u00b7 2011 \u2014 Disorders of water regulation result in hyponatremia or hypernatremia. mildly increased serum sodium and serum osmolality (hypernatremia). decreased serum",
+      "score": 0.97899
+    },
+    {
+      "number": 13,
+      "title": "[PDF] Hormones and Aging: An Endocrine Society Scientific Statement",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/-/media/endocrine/files/advancing-research/hormones-and-aging-for-member-comment.pdf",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "1 Hormones and Aging: An Endocrine Society Scientific Statement 1 2 Anne R. Cappola, MD, ScM 33 Division of Diabetes, Endocrinology, and Metabolism 34 Perelman School of Medicine at the University of Pennsylvania 35 3400 Civic Center Blvd, Bldg 521 36 Philadelphia, PA 19041 37 acappola@pennmedicine.",
+      "score": 0.96463
+    },
+    {
+      "number": 14,
+      "title": "Hypernatemia : Successful Treatment",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3894528",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  improves the prognosis without the risk of convulsions and cerebral edema1). Management of a shocked patient needs specialist input and close monitoring, preferably in a high dependency unit. Intravenous normal saline should be used to correct the extracellular fluid depletion, with calculation ",
+      "score": 0.8497846
+    },
+    {
+      "number": 15,
+      "title": "Severe hypernatremia in hyperglycemic conditions; managing it effectively: A case report - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9846872",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and severe hypernatremia, aggressive fluid resuscitation by increasing 5% dextrose solution (D5W) to 200 mL per hour and Ringer's lactate to 250 cc/h was undertaken. With nephrology consultation, dialysis was considered but withheld as it would correct his sodium too rapidly and might have adverse c",
+      "score": 0.63316137
+    },
+    {
+      "number": 16,
+      "title": "Evaluation and management of hypernatremia in adults: clinical ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10175862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1.   Initial fixed-dose regimen with 5% dextrose water, intravenously at a rate of 1.35 mL/kg/hr .\n\n2.   Initial fixed-dose regimen with 5% dextrose water, intravenously at a rate of 3 mL/kg/hr. The rationale is that every 1 mmol/L decrease in the sNa concentration requires 3 mL/kg of electrolyte-fr",
+      "score": 0.6222074
+    },
+    {
+      "number": 17,
+      "title": "Hypernatremia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441960",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "ongoing losses. In cases of sodium intoxication, the free water requirement may be too large and cause volume overload, requiring the use of loop diuretics and, at times, peritoneal dialysis to remove excess sodium. There are no published reports of seizures or cerebral edema complicating rapid corr",
+      "score": 0.5550741
+    },
+    {
+      "number": 18,
+      "title": "Enteral free water vs. parenteral dextrose 5% in water for the treatment of hypernatremia in the intensive care unit: a retrospective cohort study from a mixed ICU. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37638970",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "An electronic medical record-based, retrospective cohort study was conducted in a 30-bed mixed medical-surgical intensive care unit (ICU) in Japan. All adult patients admitted to the ICU from August 2017 to July 2021 were reviewed. After a 2-step exclusion, patients who stayed in the ICU \u2265 24 h and ",
+      "score": 0.53400564
+    },
+    {
+      "number": 19,
+      "title": "Hypernatremia in Newborns: A Practical Approach to Management - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9247442",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Maintenance fluids (only insensible water needs) = 40 mL/kg = 120 mL/24 h.\n\nFree water deficit = 3.5 \u00d7 12 \u00d7 3 = 126 mL \u00d7 3 days = 378 mL (as per \u201ccalculating free water deficit\u201d explained above).\n\nPrevious deficit = 3,000\u20132,400 = 600 mL (as per \u201cprevious fluid deficit calculation\u201d).\n\nSubtract initia",
+      "score": 0.5101799
+    },
+    {
+      "number": 20,
+      "title": "Correction of In-Patient Severe Hypernatremia in an 81-Year-Old Female With Hypopituitarism - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10830120",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Total body water [0.6 in men and 0.5 in women \u00d7 body weight (kg)] \u00d7 [(plasma sodium/140) \u2212 1]\n\nand must be used with great precision to prevent an over-correction of sodium in a hypernatremic state, remaining at no more than a rate of correction of 12 mEq/L/day (< 8 mEq/L in the first 24 hours) [1,3",
+      "score": 0.462061
+    },
+    {
+      "number": 21,
+      "title": "Diabetes Insipidus - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/diabetes-insipidus",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Because excess diuresis of water is the primary manifestation of diabetes insipidus, water replacement in adequate quantities avoids the metabolic complications of this disease. However, oral or intravenous administration of the volume of fluid required to replace urinary losses in diabetes insipidu",
+      "score": 0.4858686
+    },
+    {
+      "number": 22,
+      "title": "Clinical Characteristics of Adipsic Diabetes Insipidus - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X23007632",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Clinical Characteristics of Adipsic Diabetes Insipidus - ScienceDirect\n# Original Article Clinical Characteristics of Adipsic Diabetes Insipidus. Adipsic diabetes insipidus (ADI) is a life-threatening disease. A retrospective study was conducted of hospitalized ADI patients admitted to the En",
+      "score": 0.466433
+    },
+    {
+      "number": 23,
+      "title": "Fluid Stewardship of Maintenance Intravenous Fluids",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8497650",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "of acidosis and a longer time to attain target blood glucose in the LR group.90 Current practice in DKA management is to administer isotonic saline at an initial rate of 15\u201320 mL/kg/h or 1 \u22121.5 L in the first hour, followed by 0.45% NaCl at 250\u2013500 mL/h in patients with eunatremia or hypernatremia o",
+      "score": 0.4851368
+    },
+    {
+      "number": 24,
+      "title": "Treatment of acute hypernatremia caused by sodium overload in adults: A systematic review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8878611",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Open in a new tab\n\nCI\u200a=\u200acognitive impairment, CR\u200a=\u200acomplete recovery, CT\u200a=\u200acomputed tomography, D2.5W\u200a=\u200a2.5% dextrose in water, D5W\u200a=\u200a5% dextrose in water, Dex\u200a=\u200adexamethasone, DTH\u200a=\u200adeath, FM\u200a=\u200afurosemide, GL\u200a=\u200agastric lavage, HD\u200a=\u200ahemodialysis, HES\u200a=\u200ahydroxyethyl starch, HoTS\u200a=\u200ahypotonic saline, I",
+      "score": 0.43453383
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Hypernatraemia - Management Approach | BMJ Best Practice",
+      "detail": "bestpractice.bmj.com",
+      "url": "https://bestpractice.bmj.com/topics/en-gb/1215/management-approach",
+      "authors": "bestpractice.bmj.com",
+      "host": "bestpractice.bmj.com",
+      "snippet": "Title: Hypernatraemia - Management Approach | BMJ Best Practice\nTreatment should be directed at addressing the underlying cause (e.g., stop offending medication, treat fever, relieve urinary obstruction, give insulin, discontinue sodium sources), as well as replacing any free water deficit and ongoi",
+      "score": 0.77487355
+    },
+    {
+      "number": 2,
+      "title": "Impaired Counterregulation of Glucose in a Patient with ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM199903183401105",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "by F F\u00e9ry \u00b7 1999 \u00b7 Cited by 46 \u2014 A water-deprivation test confirmed the diagnosis of central diabetes insipidus. hypernatremia resulting from impaired thirst perception,",
+      "score": 0.9749
+    },
+    {
+      "number": 3,
+      "title": "A Clinical Approach to the Treatment of Chronic Hypernatremia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0272638612010281",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: A Clinical Approach to the Treatment of Chronic Hypernatremia - ScienceDirect\n# Acid-Base and Electrolyte Teaching Case A Clinical Approach to the Treatment of Chronic Hypernatremia. Community-acquired hypernatremia typically occurs at the extremes of age, whereas hospital-acquired hypernatre",
+      "score": 0.7011614
+    },
+    {
+      "number": 4,
+      "title": "Clinical outcomes of early fast compared to slow sodium correction rate in adults with severe hypernatremia: A comparative effectiveness study",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125003417",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The correction of hypernatremia is typically achieved through the administration of hypotonic solutions either intravenously or enterally, or, through renal replacement therapy in case of associated severe kidney injury. [1][8][9] However, despite the possible impact of hypernatremia, there is no clea",
+      "score": 0.6685563
+    },
+    {
+      "number": 5,
+      "title": "Clinical outcomes of early fast compared to slow sodium correction rate in adults with severe hypernatremia: A comparative effectiveness study - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0883944125003417?dgcid=rss_sd_all",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Am J Emerg Med\n\n### MIMIC-IV, a freely accessible electronic health record dataset\n\n### Sci Data\n\n### Strengthening the Reporting of Observational Studies in Epidemiology (STROBE): explanation and elaboration\n\n### Int J Surg\n\n### Systematic review and meta-analysis of the treatment of hypernatre",
+      "score": 0.57637566
+    },
+    {
+      "number": 6,
+      "title": "Severe Diabetic Ketoacidosis With Refractory ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/carm/6883361",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Jun 13, 2026 \u2014 Hypernatremia in DKA is uncommon and should prompt careful evaluation for AVP-R and other causes of free-water loss. This case highlights ...Read more",
+      "score": 0.38616195
+    },
+    {
+      "number": 7,
+      "title": "Diabetic ketoacidosis with severe hypokalemia and ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/ccr3.5406",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "by MK Badawy \u00b7 2022 \u00b7 Cited by 7 \u2014 In our case, extreme hypernatremia was mainly due to large free water losses associated with osmotic diuresis. ... treatment and prevention ...Read more",
+      "score": 0.29148024
+    },
+    {
+      "number": 8,
+      "title": "Diabetes Insipidus - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/diabetes-insipidus",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "In certain clinical situations, such as chemotherapy or use of some contrast agents, diuresis is desirable to minimize renal toxicity. If desmopressin is continued and a large volume of normal saline is given, natriuresis and hyponatremia will be induced. Withholding desmopressin and replacing fluid",
+      "score": 0.650934
+    },
+    {
+      "number": 9,
+      "title": "Management of Severe Hypernatremic Dehydration... : Saudi Journal of Kidney Diseases and Transplantation",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/sjkd/fulltext/2021/32050/management_of_severe_hypernatremic_dehydration_and.26.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The mortality in AKI in children has been reported to vary widely from 16% to 43.8%.[9 13 14 15 16] The incidence of acute renal failure in a hospital study done in Thailand showed 0.5\u20139.9 cases per 100 pediatric patients with a mortality rate of 41.5%. In the present study, mortality rate was 40%, ",
+      "score": 0.82694983
+    },
+    {
+      "number": 10,
+      "title": "Rapid Correction of Hypernatremia Is Not... : Journal of the American Society of Nephrology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jasn/fulltext/2022/11001/rapid_correction_of_hypernatremia_is_not.31.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "## Conclusions:\n\nWe did not find any evidence that rapid sodium correction was associated with neurological morbidity or mortality; however slow correction was associated with a longer length of stay. Further prospective studies are needed to confirm the safety and advantages of rapid correction in ",
+      "score": 0.798077
+    },
+    {
+      "number": 11,
+      "title": "Evaluation and management of hypernatremia in adults: clinical perspectives - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10175862",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "in adults have reported that rapid correction rates (> 0.5 mmol/L/hr) are not associated with a high risk of mortality and neurologic damage [31][34], whereas higher mortality results from excessively slow correction rates (< 0.25 mmol/L/hr, 6 mmol/L/day) [11][31][35]. However, if the target rate is in",
+      "score": 0.77487355
+    },
+    {
+      "number": 12,
+      "title": "Heat Stress and Strain Evaluation Among Aluminum ...",
+      "detail": "stacks.cdc.gov",
+      "url": "https://stacks.cdc.gov/view/cdc/172503/cdc_172503_DS1.pdf",
+      "authors": "stacks.cdc.gov",
+      "host": "stacks.cdc.gov",
+      "snippet": "by B Dang \u00b7 2011 \u2014 Disorders of water regulation result in hyponatremia or hypernatremia. mildly increased serum sodium and serum osmolality (hypernatremia). decreased serum",
+      "score": 0.97899
+    },
+    {
+      "number": 13,
+      "title": "[PDF] Hormones and Aging: An Endocrine Society Scientific Statement",
+      "detail": "www.endocrine.org",
+      "url": "https://www.endocrine.org/-/media/endocrine/files/advancing-research/hormones-and-aging-for-member-comment.pdf",
+      "authors": "www.endocrine.org",
+      "host": "www.endocrine.org",
+      "snippet": "1 Hormones and Aging: An Endocrine Society Scientific Statement 1 2 Anne R. Cappola, MD, ScM 33 Division of Diabetes, Endocrinology, and Metabolism 34 Perelman School of Medicine at the University of Pennsylvania 35 3400 Civic Center Blvd, Bldg 521 36 Philadelphia, PA 19041 37 acappola@pennmedicine.",
+      "score": 0.96463
+    },
+    {
+      "number": 14,
+      "title": "Hypernatemia : Successful Treatment",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3894528",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "##  improves the prognosis without the risk of convulsions and cerebral edema1). Management of a shocked patient needs specialist input and close monitoring, preferably in a high dependency unit. Intravenous normal saline should be used to correct the extracellular fluid depletion, with calculation ",
+      "score": 0.8497846
+    },
+    {
+      "number": 15,
+      "title": "Severe hypernatremia in hyperglycemic conditions; managing it effectively: A case report - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9846872",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "and severe hypernatremia, aggressive fluid resuscitation by increasing 5% dextrose solution (D5W) to 200 mL per hour and Ringer's lactate to 250 cc/h was undertaken. With nephrology consultation, dialysis was considered but withheld as it would correct his sodium too rapidly and might have adverse c",
+      "score": 0.63316137
+    },
+    {
+      "number": 16,
+      "title": "Evaluation and management of hypernatremia in adults: clinical ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10175862",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "1.   Initial fixed-dose regimen with 5% dextrose water, intravenously at a rate of 1.35 mL/kg/hr .\n\n2.   Initial fixed-dose regimen with 5% dextrose water, intravenously at a rate of 3 mL/kg/hr. The rationale is that every 1 mmol/L decrease in the sNa concentration requires 3 mL/kg of electrolyte-fr",
+      "score": 0.6222074
+    },
+    {
+      "number": 17,
+      "title": "Hypernatremia - StatPearls - NCBI Bookshelf - NIH",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK441960",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "ongoing losses. In cases of sodium intoxication, the free water requirement may be too large and cause volume overload, requiring the use of loop diuretics and, at times, peritoneal dialysis to remove excess sodium. There are no published reports of seizures or cerebral edema complicating rapid corr",
+      "score": 0.5550741
+    },
+    {
+      "number": 18,
+      "title": "Enteral free water vs. parenteral dextrose 5% in water for the treatment of hypernatremia in the intensive care unit: a retrospective cohort study from a mixed ICU. - Abstract",
+      "detail": "pubmed.ncbi.nlm.nih.gov",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37638970",
+      "authors": "pubmed.ncbi.nlm.nih.gov",
+      "host": "pubmed.ncbi.nlm.nih.gov",
+      "snippet": "An electronic medical record-based, retrospective cohort study was conducted in a 30-bed mixed medical-surgical intensive care unit (ICU) in Japan. All adult patients admitted to the ICU from August 2017 to July 2021 were reviewed. After a 2-step exclusion, patients who stayed in the ICU \u2265 24 h and ",
+      "score": 0.53400564
+    },
+    {
+      "number": 19,
+      "title": "Hypernatremia in Newborns: A Practical Approach to Management - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9247442",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Maintenance fluids (only insensible water needs) = 40 mL/kg = 120 mL/24 h.\n\nFree water deficit = 3.5 \u00d7 12 \u00d7 3 = 126 mL \u00d7 3 days = 378 mL (as per \u201ccalculating free water deficit\u201d explained above).\n\nPrevious deficit = 3,000\u20132,400 = 600 mL (as per \u201cprevious fluid deficit calculation\u201d).\n\nSubtract initia",
+      "score": 0.5101799
+    },
+    {
+      "number": 20,
+      "title": "Correction of In-Patient Severe Hypernatremia in an 81-Year-Old Female With Hypopituitarism - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10830120",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Total body water [0.6 in men and 0.5 in women \u00d7 body weight (kg)] \u00d7 [(plasma sodium/140) \u2212 1]\n\nand must be used with great precision to prevent an over-correction of sodium in a hypernatremic state, remaining at no more than a rate of correction of 12 mEq/L/day (< 8 mEq/L in the first 24 hours) [1,3",
+      "score": 0.462061
+    },
+    {
+      "number": 21,
+      "title": "Diabetes Insipidus - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/diabetes-insipidus",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Because excess diuresis of water is the primary manifestation of diabetes insipidus, water replacement in adequate quantities avoids the metabolic complications of this disease. However, oral or intravenous administration of the volume of fluid required to replace urinary losses in diabetes insipidu",
+      "score": 0.4858686
+    },
+    {
+      "number": 22,
+      "title": "Clinical Characteristics of Adipsic Diabetes Insipidus - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X23007632",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Clinical Characteristics of Adipsic Diabetes Insipidus - ScienceDirect\n# Original Article Clinical Characteristics of Adipsic Diabetes Insipidus. Adipsic diabetes insipidus (ADI) is a life-threatening disease. A retrospective study was conducted of hospitalized ADI patients admitted to the En",
+      "score": 0.466433
+    },
+    {
+      "number": 23,
+      "title": "Fluid Stewardship of Maintenance Intravenous Fluids",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8497650",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "of acidosis and a longer time to attain target blood glucose in the LR group.90 Current practice in DKA management is to administer isotonic saline at an initial rate of 15\u201320 mL/kg/h or 1 \u22121.5 L in the first hour, followed by 0.45% NaCl at 250\u2013500 mL/h in patients with eunatremia or hypernatremia o",
+      "score": 0.4851368
+    },
+    {
+      "number": 24,
+      "title": "Treatment of acute hypernatremia caused by sodium overload in adults: A systematic review - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8878611",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Open in a new tab\n\nCI\u200a=\u200acognitive impairment, CR\u200a=\u200acomplete recovery, CT\u200a=\u200acomputed tomography, D2.5W\u200a=\u200a2.5% dextrose in water, D5W\u200a=\u200a5% dextrose in water, Dex\u200a=\u200adexamethasone, DTH\u200a=\u200adeath, FM\u200a=\u200afurosemide, GL\u200a=\u200agastric lavage, HD\u200a=\u200ahemodialysis, HES\u200a=\u200ahydroxyethyl starch, HoTS\u200a=\u200ahypotonic saline, I",
+      "score": 0.43453383
+    }
+  ],
+  "publishedAt": "2026-09-15T18:02:11.316338+00:00",
+  "updatedAt": "2026-09-15T18:02:11.316338+00:00",
+  "readingMinutes": 6,
+  "slug": "hypernatremia-free-water-replacement"
+}

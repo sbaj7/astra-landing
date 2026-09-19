@@ -1,0 +1,761 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Cancer Genetics",
+  "title": "Lynch Syndrome",
+  "summary": "Use universal colorectal and endometrial tumor mismatch-repair testing to identify candidates for germline evaluation, distinguish sporadic MLH1-deficient tumors, and implement gene-informed colonoscopic surveillance, cascade testing, and gynecologic risk reduction.",
+  "seoDescription": "Physician guide to Lynch syndrome tumor testing, germline confirmation, colonoscopy surveillance, cascade testing, and gynecologic risk reduction.",
+  "clinicalQuestion": "How should physicians diagnose Lynch syndrome and direct cancer surveillance and preventive management after a pathogenic variant is identified?",
+  "specialty": "Gastroenterology and Cancer Genetics",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "Lynch syndrome",
+    "hereditary nonpolyposis colorectal cancer",
+    "MMR immunohistochemistry",
+    "microsatellite instability",
+    "MLH1 methylation",
+    "germline testing",
+    "colonoscopy surveillance"
+  ],
+  "keyTakeaways": [
+    "Evaluate newly diagnosed colorectal cancer with tumor mismatch-repair immunohistochemistry or microsatellite-instability testing regardless of age or family-history criteria; clinical criteria alone miss many carriers. [16][23]",
+    "For colorectal tumors with MLH1/PMS2 loss, use BRAF V600E and/or MLH1 promoter methylation testing to identify the common sporadic MLH1-deficient pathway before germline testing; BRAF testing is not appropriate for noncolorectal tumors. [20][22][24]",
+    "Absent MSH2/MSH6, isolated MSH6, or isolated PMS2 expression on tumor immunohistochemistry should prompt germline mismatch-repair gene evaluation after genetics counseling. [20][23]",
+    "After a germline Lynch syndrome diagnosis, colonoscopy every 1 to 2 years is the central prevention strategy; begin 2 to 5 years before the earliest colorectal cancer in the family. [17]",
+    "Counsel patients with a uterus and ovaries about risk-reducing hysterectomy with bilateral salpingo-oophorectomy after childbearing, because surgery is the definitive preventive option for endometrial and ovarian cancer. [5][8][9]"
+  ],
+  "sections": [
+    {
+      "id": "who-needs-evaluation",
+      "eyebrow": "Case Finding",
+      "heading": "Identify Lynch syndrome through tumor-first testing",
+      "intro": "Do not rely on pedigree criteria as the sole gatekeeper for evaluation.",
+      "paragraphs": [
+        "Order mismatch-repair (MMR) protein immunohistochemistry (IHC) and/or microsatellite-instability (MSI) testing for newly diagnosed colorectal cancer. Universal tumor screening detects cases that age- and family-history criteria miss; Amsterdam and revised Bethesda criteria have important sensitivity and specificity limitations. [16][23]",
+        "Apply the same tumor-testing framework to endometrial carcinoma when feasible. Tumor-testing strategies are established for colorectal and endometrial cancers, whereas evidence for routine application to other Lynch-spectrum tumors is more limited. [20]",
+        "Trigger genetics referral and germline testing when tumor findings suggest inherited MMR deficiency, when a patient has a personal or family pattern of Lynch-spectrum cancers, or when the clinical probability remains concerning despite nondiagnostic tumor testing. Lynch-associated tumors include colorectal, endometrial, ovarian, gastric, small-bowel, pancreatic, biliary tract, upper urinary tract, bladder, prostate, brain, and sebaceous skin tumors. [16][17][21]"
+      ],
+      "bullets": [
+        "Obtain a three-generation pedigree that records cancer site and age at diagnosis; prioritize colorectal, endometrial, ovarian, gastric, small-bowel, upper urinary tract, pancreatic, biliary, brain, prostate, and sebaceous neoplasms. [16][17][21]",
+        "Test an affected relative's tumor before testing unaffected relatives whenever available, because tumor results direct the appropriate germline analysis. [20][23]",
+        "Do not use a normal family history to exclude Lynch syndrome from a patient with a newly diagnosed colorectal cancer. Universal screening is designed to identify carriers outside classic clinical criteria. [16][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Tumor-first triage for Lynch syndrome evaluation in colorectal and endometrial cancer. [20][23][24]",
+        "columns": [
+          "Tumor result",
+          "Most relevant interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "All four MMR proteins retained and microsatellite stable",
+            "Usually sporadic cancer; a germline MMR pathogenic variant remains possible in an MSI-high tumor with retained IHC. [20]",
+            "Reassess personal and family history; pursue genetics evaluation if clinical suspicion remains high. [20][23]"
+          ],
+          [
+            "MLH1 and PMS2 loss in colorectal cancer",
+            "Frequently reflects acquired MLH1 promoter methylation rather than Lynch syndrome. [22][24]",
+            "Order MLH1 promoter methylation and/or BRAF V600E testing. Germline evaluation is indicated when the sporadic pathway is not demonstrated. [20][24]"
+          ],
+          [
+            "MLH1 and PMS2 loss in endometrial cancer",
+            "MLH1 promoter methylation can distinguish an acquired defect; BRAF testing is not appropriate outside colorectal cancer. [20]",
+            "Order MLH1 promoter methylation testing; refer for germline evaluation if methylation is absent or clinical suspicion persists. [20]"
+          ],
+          [
+            "MSH2 and MSH6 loss",
+            "Pattern is compatible with an inherited MSH2-pathway defect, including EPCAM-associated MSH2 silencing. [20]",
+            "Refer for germline MMR evaluation with genetics counseling. [20][23]"
+          ],
+          [
+            "Isolated MSH6 loss",
+            "Pattern is compatible with an MSH6-pathway defect. [20]",
+            "Refer for germline MMR evaluation with genetics counseling. [20][23]"
+          ],
+          [
+            "Isolated PMS2 loss",
+            "Pattern is compatible with a PMS2-pathway defect. [20]",
+            "Refer for germline MMR evaluation with genetics counseling. [20][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpret-tumor-testing",
+      "eyebrow": "Diagnostic Branching",
+      "heading": "Separate sporadic MLH1 deficiency from inherited MMR deficiency",
+      "intro": "The MLH1/PMS2-loss branch requires an additional somatic workup before assigning inherited risk.",
+      "paragraphs": [
+        "MMR IHC identifies loss of the MLH1, MSH2, MSH6, or PMS2 protein products; MSI testing identifies the genomic instability caused by MMR dysfunction. Either abnormality establishes MMR deficiency but does not by itself establish Lynch syndrome, because sporadic colorectal cancers can be MSI-high or MMR-deficient through acquired MLH1 methylation. [18][22]",
+        "In colorectal cancer with MLH1/PMS2 loss, a positive BRAF V600E result supports a sporadic MLH1-deficient tumor. MLH1 promoter methylation similarly supports acquired MLH1 silencing; when BRAF is negative and MLH1 methylation is absent, proceed to germline testing for Lynch syndrome. [20][22][24]",
+        "Do not extrapolate BRAF triage to endometrial cancer or other tumors. For noncolorectal tumors with MLH1 loss, MLH1 promoter methylation is the relevant tumor assay in the supplied testing framework. [20]",
+        "Interpret MSI and IHC as complementary rather than interchangeable when suspicion is high. MSI sensitivity is reported as lower for MSH6 and PMS2 carriers than for MLH1 and MSH2 carriers, making IHC particularly useful in the MSH6/PMS2 branch. [18]"
+      ],
+      "bullets": [
+        "If IHC shows isolated PMS2 loss, do not dismiss Lynch syndrome because PMS2-associated cancer risks are lower than those associated with some other MMR genes. [1][16]",
+        "If tumor testing is abnormal but germline testing is negative, retain oncology-directed interpretation of the tumor's MMR status and reassess whether additional tumor or hereditary cancer evaluation is warranted based on the clinical context. [20][21]",
+        "Document the exact germline pathogenic variant when identified; cancer risks and management discussions vary by MLH1, MSH2, MSH6, PMS2, and EPCAM pathway. [1][9][16]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Key limitations of clinical and tumor screening approaches. [16][18][19][23]",
+        "columns": [
+          "Approach",
+          "Strength",
+          "Limitation affecting action"
+        ],
+        "rows": [
+          [
+            "Amsterdam II criteria",
+            "High specificity in one colorectal cancer cohort. [19]",
+            "Limited sensitivity; criteria-based selection misses carriers. [16][19][23]"
+          ],
+          [
+            "Revised Bethesda criteria",
+            "High sensitivity in one colorectal cancer cohort. [19]",
+            "Low specificity in that cohort and does not replace universal tumor testing. [19][23]"
+          ],
+          [
+            "MSI testing",
+            "Detects the MMR-deficient phenotype. [18][22]",
+            "Sensitivity is lower for MSH6 and PMS2 than for MLH1 and MSH2 carriers. [18]"
+          ],
+          [
+            "MMR IHC",
+            "Directs gene-specific germline testing according to loss pattern. [20]",
+            "Abnormal staining also occurs in sporadic MLH1-methylated cancers. [18][22]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "confirm-and-test-family",
+      "eyebrow": "Germline Diagnosis",
+      "heading": "Confirm the inherited diagnosis and extend testing to relatives",
+      "intro": "A pathogenic germline variant changes surveillance for the patient and targeted testing for relatives.",
+      "paragraphs": [
+        "Confirm Lynch syndrome by identifying a germline pathogenic variant in MLH1, MSH2, MSH6, PMS2, or EPCAM-associated MSH2 pathway disease after pretest counseling. Lynch syndrome is autosomal dominant; once the familial pathogenic variant is known, offer targeted testing to biologic relatives rather than broad, untargeted testing. [1][16]",
+        "Use the family's identified variant to distinguish relatives who need Lynch-specific prevention from those who do not carry that familial pathogenic variant. Cascade testing is clinically consequential because intensive colonoscopic surveillance and gynecologic risk-reduction decisions should be concentrated in confirmed carriers. [17][20]",
+        "Treat gene identity as a risk modifier rather than a reason to abandon surveillance. MSH6 and PMS2 variants generally confer lower risks of colorectal and other Lynch-associated malignancies than MLH1 or MSH2 variants, and PMS2 variants are associated with reduced endometrial and ovarian risk, but affected carriers still require individualized prevention planning. [1][16]"
+      ],
+      "bullets": [
+        "Record prior colorectal, endometrial, ovarian, and other Lynch-spectrum cancers before choosing surveillance and preventive surgery discussions. [16][17]",
+        "Assess reproductive plans before recommending hysterectomy or oophorectomy; risk-reducing gynecologic surgery is generally considered after completion of childbearing. [5][8]",
+        "Coordinate genetic counseling with gastroenterology, gynecology or gynecologic oncology, and the treating oncologist when cancer is already present. [5][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Gene-informed counseling priorities after germline confirmation. [1][9][16]",
+        "columns": [
+          "Pathway",
+          "Risk pattern relevant to counseling",
+          "Practical implication"
+        ],
+        "rows": [
+          [
+            "MLH1",
+            "Associated with comparatively higher Lynch-associated cancer risk in the cited clinical summary. [16]",
+            "Prioritize adherence to intensive colorectal surveillance and discuss gynecologic risk reduction when applicable. [5][16]"
+          ],
+          [
+            "MSH2 or EPCAM-associated MSH2 pathway",
+            "MSH2 carriers have increased urinary tract cancer risk in the cited urologic literature. [12]",
+            "Review urinary tract cancer history and symptoms in addition to core colorectal and gynecologic prevention. [12][17]"
+          ],
+          [
+            "MSH6",
+            "Generally lower colorectal and other Lynch-associated risks than MLH1/MSH2; endometrial cancer may predominate over colorectal cancer in some families. [16][22]",
+            "Ensure gynecologic risk counseling is not deferred solely because colorectal risk may be lower. [22]"
+          ],
+          [
+            "PMS2",
+            "Lower colorectal, endometrial, and ovarian risk than several other MMR pathways, but risk is not absent. [1][16]",
+            "Maintain carrier surveillance and individualize surgical counseling to age, family history, and reproductive priorities. [1][16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "colorectal-prevention",
+      "eyebrow": "Core Prevention",
+      "heading": "Use frequent colonoscopy to prevent and detect colorectal cancer",
+      "intro": "Colonoscopy is the primary actionable intervention for confirmed carriers.",
+      "paragraphs": [
+        "Schedule colonoscopy every 1 to 2 years for confirmed Lynch syndrome carriers. The CDC advises beginning 2 to 5 years before the earliest colorectal cancer diagnosis in the family; European guidance cited in the evidence base uses 1- to 2-year intervals and gene-specific starting ages. [15][17]",
+        "Where using the cited gene-stratified protocol, begin at age 25 years for MLH1, MSH2, or EPCAM pathogenic-variant carriers and at age 30 years for MSH6 or PMS2 carriers; continue to age 75 years, then reassess. Earlier initiation is warranted when the family\u2019s earliest colorectal cancer occurred before the applicable age threshold. [15]",
+        "Remove polyps during colonoscopy rather than treating surveillance as diagnostic observation alone. Lynch-associated colorectal neoplasia is often right-sided and may include flat premalignant lesions, supporting meticulous total-colon examination. [17][24]",
+        "Discuss aspirin chemoprevention as a separate shared decision rather than substituting it for colonoscopy. Long-term CAPP2 follow-up is cited as evidence for cancer prevention with aspirin in Lynch syndrome, but the excerpts do not establish a U.S. standard dose; a cited NICE scope notes that 75 to 300 mg is commonly offered outside the trial context. [1][9][15]"
+      ],
+      "bullets": [
+        "At each surveillance visit, document interval colorectal symptoms, quality and completeness of the prior examination, polyp pathology, and the date of the next colonoscopy. [17][24]",
+        "Do not lengthen the interval solely because a prior colonoscopy was normal; the cited prevention recommendations retain 1- to 2-year surveillance. [15][17]",
+        "For a carrier who develops colorectal cancer, involve colorectal surgery in operative planning because risk of metachronous colorectal cancer and the extent of colectomy are relevant Lynch-specific considerations. [7]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Colonoscopic timing framework for confirmed Lynch syndrome carriers. [15][17]",
+        "columns": [
+          "Clinical situation",
+          "Start or interval",
+          "Decision note"
+        ],
+        "rows": [
+          [
+            "Confirmed MLH1, MSH2, or EPCAM pathogenic variant",
+            "Start age 25 years in the cited protocol; repeat every 1 to 2 years. [15][17]",
+            "Start earlier when 2 to 5 years before the family\u2019s earliest colorectal cancer requires it. [17]"
+          ],
+          [
+            "Confirmed MSH6 or PMS2 pathogenic variant",
+            "Start age 30 years in the cited protocol; repeat every 1 to 2 years. [15][17]",
+            "Lower average risk does not eliminate surveillance. [1][16]"
+          ],
+          [
+            "No prior colonoscopy since germline diagnosis",
+            "Arrange prompt baseline total colonoscopy, then assign a 1- to 2-year interval. [15][17]",
+            "Remove identified polyps during examination. [17]"
+          ],
+          [
+            "Age 75 years or older",
+            "Reassess continuation in the cited protocol. [15]",
+            "Individualize according to health status, prior findings, and cancer history."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gynecologic-and-extracolonic-risk",
+      "eyebrow": "Risk Reduction",
+      "heading": "Address gynecologic risk directly and individualize extracolonic surveillance",
+      "intro": "Gynecologic prevention requires proactive counseling because screening is not reliably protective.",
+      "paragraphs": [
+        "For carriers with a uterus and ovaries, discuss risk-reducing hysterectomy with bilateral salpingo-oophorectomy after childbearing is complete. In Lynch syndrome, prophylactic surgery has evidence of preventing endometrial and ovarian cancer and remains the most definitive risk-reducing option. [5][8][9]",
+        "Do not present transvaginal ultrasound and endometrial sampling as equivalent substitutes for surgery. Annual transvaginal ultrasound and endometrial sampling have variable sensitivity and adherence, and public-health guidance emphasizes that no simple, reliable screening test exists for gynecologic cancers in Lynch syndrome. [8][17]",
+        "Until definitive surgery, instruct patients to report abnormal uterine bleeding and other gynecologic cancer symptoms promptly rather than waiting for a surveillance interval. Symptom-triggered evaluation is particularly important because endometrial cancer is a major Lynch-associated malignancy. [16][17]",
+        "For extracolonic disease, make surveillance and symptom review gene- and family-history directed rather than applying a uniform battery of low-yield tests. Consider upper gastrointestinal evaluation in patients whose pedigree or clinical context suggests gastric cancer risk, and review hematuria or urinary tract symptoms carefully in MSH2 carriers because urinary tract cancer risk is increased in that subgroup. [11][12][17]"
+      ],
+      "bullets": [
+        "Before bilateral salpingo-oophorectomy, document menopausal status, reproductive goals, and the consequences of surgical menopause. [5][8]",
+        "For patients deferring surgery, establish a gynecologic follow-up plan and reinforce symptom-triggered assessment; neither surveillance nor symptom review eliminates ovarian cancer risk. [8][17]",
+        "Inspect for and document sebaceous neoplasms or keratoacanthomas, which can occur in the Muir-Torre phenotype of Lynch syndrome. [16][17]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Gynecologic prevention decisions in Lynch syndrome. [5][8][9][17]",
+        "columns": [
+          "Decision point",
+          "Recommended action",
+          "Key tradeoff"
+        ],
+        "rows": [
+          [
+            "Childbearing complete and uterus/ovaries present",
+            "Discuss risk-reducing hysterectomy with bilateral salpingo-oophorectomy. [5][8][9]",
+            "Provides the most definitive prevention of endometrial and ovarian cancer but ends fertility and may induce surgical menopause. [5][8]"
+          ],
+          [
+            "Surgery deferred for reproductive or personal reasons",
+            "Use planned gynecologic follow-up and prompt evaluation of symptoms. [8][17]",
+            "Annual transvaginal ultrasound and endometrial sampling have variable sensitivity and adherence. [8]"
+          ],
+          [
+            "Abnormal uterine bleeding or other concerning gynecologic symptoms",
+            "Perform prompt diagnostic evaluation rather than relying on routine surveillance timing. [17]",
+            "No simple, reliable gynecologic screening test is available for Lynch syndrome. [17]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Cancer Risk with the Lynch Syndrome PMS2 Gene | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/cancer-risk-lynch-syndrome-pms2-gene-nejm-jw.NA37210",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "## Comment\n\nThis large series of Lynch syndrome patients with PMS2 mutations indicates the potential variability of cancer risk by specific mutation. However, the observation that risks for CRC and endometrial cancers with PMS2 are lower than current risk estimates for Lynch syndrome does not change",
+      "score": 0.4718322
+    },
+    {
+      "number": 2,
+      "title": "Identification and Survival of Carriers of Mutations in DNA Mismatch ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa053493",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Revised Bethesda Guidelines for hereditary nonpolyposis colorectal cancer (Lynch syndrome) and microsatellite instability. J Natl Cancer Inst",
+      "score": 0.43496582
+    },
+    {
+      "number": 3,
+      "title": "Prophylactic Surgery to Reduce the Risk of Gynecologic Cancers in ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa052627",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Women with the Lynch syndrome (hereditary nonpolyposis colorectal cancer) have a 40 to 60 percent lifetime risk of endometrial cancer and a",
+      "score": 0.42892754
+    },
+    {
+      "number": 4,
+      "title": "Environmental and Heritable Factors in the Causation of Cancer",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM200007133430201",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Lynch, HT, Smyrk, T. Hereditary nonpolyposis colorectal cancer (Lynch syndrome): an updated review. account for 5 to 10 percent of all cancers.",
+      "score": 0.34514993
+    },
+    {
+      "number": 5,
+      "title": "Prophylactic Surgery to Reduce the Risk of Gynecologic Cancers in the Lynch Syndrome | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa052627",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "We designed this study to determine the reduction in the risk of gynecologic cancers associated with prophylactic hysterectomy and bilateral salpingo-oophorectomy in women with the Lynch syndrome. These findings suggest that prophylactic hysterectomy with bilateral salpingo-oophorectomy is an effect",
+      "score": 0.58465123
+    },
+    {
+      "number": 6,
+      "title": "Incidence of non-colorectal/endometrial malignancies in individuals ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/eclinm/PIIS2589-5370(25)00552-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The cost- effectiveness of genetic testing strategies for Lynch syndrome among newly diagnosed patients with colorectal cancer.",
+      "score": 0.5183761
+    },
+    {
+      "number": 7,
+      "title": "The Lancet Specialty Collections: Gastroenterology",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/collections/Gastroenterology?collexcode=107&subcollexcode=107102&ContribAuthorStored=Nelson%2C+Eric+J&Ppub=%5B20230404+TO+20250404%5D&ContentItemType=fla&startPage=2&pageSize=100",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Metachronous colorectal cancer risk according to Lynch syndrome pathogenic variant after extensive versus partial colectomy in the Netherlands: a",
+      "score": 0.2062062
+    },
+    {
+      "number": 8,
+      "title": "Lynch Syndrome and Gynecological Cancer Prevention | Cancer Genetics | Oncology and Carcinogenesis | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/lynch-syndrome-and-gynecological-cancer-prevention",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Lynch syndrome, also known as hereditary non-polyposis colorectal cancer syndrome, arises from germline mutations in DNA mismatch repair genes such as MLH1, MSH2, MSH6 and PMS2. Affected women face lifetime risks of endometrial cancer of up to 60% and ovarian cancer up to 20%. Preventive strategies ",
+      "score": 0.608897
+    },
+    {
+      "number": 9,
+      "title": "Risk-reducing hysterectomy and bilateral salpingo-oophorectomy in female heterozygotes of pathogenic mismatch repair variants: a Prospective Lynch Syndrome Database report | Genetics in Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41436-020-01029-1",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nBurn, J. et al. Cancer prevention with aspirin in hereditary colorectal cancer (Lynch syndrome), 10-year follow-up and registry-based 20-year data in the CAPP2 study: a double-blind, randomised, placebo-controlled trial. Lancet 395, 1855\u20131863 (2020).\n\nArticle \nCAS \nGoogle Sc",
+      "score": 0.5874941
+    },
+    {
+      "number": 10,
+      "title": "Screening for Colorectal Cancer: U.S. Preventive Services Task ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-149-9-200811040-00243",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Strategies to Identify the Lynch Syndrome Among Patients With Colorectal Cancer A Cost-Effectiveness Analysis \u00b7 Barriers to Colorectal Cancer",
+      "score": 0.4169159
+    },
+    {
+      "number": 11,
+      "title": "Clinical Factors Associated With Gastric Cancer in Individuals With Lynch Syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1542356519307451",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Clin Oncol\n\n## Cited by (48)\n\n### Management of epithelial precancerous conditions and early neoplasia of the stomach (MAPS III): European Society of Gastrointestinal Endoscopy (ESGE), European Helicobacter and Microbiota Study Group (EHMSG) and European Society of Pathology (ESP) Guideline up",
+      "score": 0.6211049
+    },
+    {
+      "number": 12,
+      "title": "Urinary Tract Cancer in Lynch Syndrome; Increased Risk in Carriers of MSH2 Mutations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0090429515008249",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Gastroenterology\n\n### Guidelines on genetic evaluation and management of Lynch syndrome: a consensus statement by the US Multi-Society Task Force on colorectal cancer\n\n### Gastroenterology\n\n### Management of extracolonic tumours in patients with Lynch syndrome\n\n### Lancet Oncol\n\n### Cancer risk ",
+      "score": 0.57064295
+    },
+    {
+      "number": 13,
+      "title": "Impact of genetic testing on endometrial cancer risk-reducing practices in women at risk for Lynch syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S009082581200724X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### JAMA\n\n### Guidelines for the clinical management of Lynch syndrome (hereditary non-polyposis cancer)\n\n### J Med Genet\n\n### Recommendations for the care of individuals with an inherited predisposition to Lynch syndrome: a systematic review\n\n### JAMA\n\n### Recommendations for follow-up care of indi",
+      "score": 0.562874
+    },
+    {
+      "number": 14,
+      "title": "The Clinical Features of Ovarian Cancer in Hereditary Nonpolyposis Colorectal Cancer - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0090825801962791",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Prob Gen Surg\n\n## Cited by (218)\n\n### Guidelines on genetic evaluation and management of lynch syndrome: A consensus statement by the us multi-society task force on colorectal cancer\n\n### DNA mismatch repair: Molecular mechanism, cancer, and ageing\n\n### Prophylactic surgery to reduce the risk of",
+      "score": 0.5264164
+    },
+    {
+      "number": 15,
+      "title": "[PDF] national institute for health and care - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/htg557/documents/final-scope",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "review should occur). The 2013 European Guidelines: Revised guidelines for the clinical management of Lynch syndrome (Vasen et al., 2013) recommends that people who have been identified as having a Lynch syndrome mutation have a colonoscopy every 1-2 years. The British Society of Gastroenterology\u2019s ",
+      "score": 0.74785584
+    },
+    {
+      "number": 16,
+      "title": "Hereditary Nonpolyposis Colon Cancer (Lynch Syndrome) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK564511",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nPatients identified with a mutation linked to HNPCC are at an elevated risk for developing malignancies. The highest risk is for early-onset colorectal and endometrial carcinomas, followed by gastric and ovarian cancers. The risk associated with HNPCC varies based on the s",
+      "score": 0.5443418
+    },
+    {
+      "number": 17,
+      "title": "Managing Risk for Cancers Related to Lynch Syndrome | Hereditary Colorectal (Colon) Cancer | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/colorectal-cancer-hereditary/managing-risk/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Key points\n\n## Cancers related to Lynch syndrome\n\nPeople with Lynch syndrome are more likely to get colorectal (colon), uterine (endometrial), ovarian, stomach, small intestine, urinary tract (kidney, ureter, bladder), biliary tract (liver, gall bladder, bile ducts), pancreatic, prostate, brain, ",
+      "score": 0.44811285
+    },
+    {
+      "number": 18,
+      "title": "Tumour MLH1 promoter region methylation testing is an effective pre-screen for Lynch Syndrome (HNPCC) - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5159427",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Lynch syndrome patients have DNA mismatch repair deficiency and up to 80% life-time risk of colorectal cancer. Screening of mutation carriers reduces colorectal cancer incidence and mortality. Selection for constitutional mutation testing relies on family history (Amsterdam and Bethesda Guidelines) ",
+      "score": 0.7653308
+    },
+    {
+      "number": 19,
+      "title": "Performance of PREMM5, clinical criteria, and immunohistochemistry for MMR proteins in genetic risk assessment of Mexican patients with colorectal cancer",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13436770",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "From September 2018 to October 2024, 208 patients were enrolled. The median age at diagnosis was 45.0 years; 52.4% were women, 48.6% had deficient-MMR CRC, and 38.0% reported family history of CRC. Germline PVs were identified in 32.2% (n = 67); of these, 77.6% (n = 52) had Lynch syndrome (30 _MLH1_",
+      "score": 0.6783488
+    },
+    {
+      "number": 20,
+      "title": "Lynch Syndrome - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK1211",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Kahn RM, Gordhandas S, Maddy BP, Baltich Nelson B, Askin G, Christos PJ, Caputo TA, Chapman-Davis E, Holcomb K, Frey MK. Universal endometrial cancer tumor typing: How much has immunohistochemistry, microsatellite instability, and MLH1 methylation improved the diagnosis of Lynch syndrome across the ",
+      "score": 0.6455898
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis of Lynch Syndrome and Strategies to Distinguish Lynch-Related Tumors from Sporadic MSI/dMMR Tumors",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7865821",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords:Lynch syndrome, microsatellite instability, mismatch repair genes, _MLH1_ promoter methylation, _BRAF_ mutation\n\n##  is a hallmark of tumors developed in the context of Lynch syndrome (LS). LS is a hereditary cancer syndrome with an estimated population frequency of 1:300 individuals. It is",
+      "score": 0.6347929
+    },
+    {
+      "number": 22,
+      "title": "Genetic Testing for Lynch Syndrome, an Inherited Cancer of the Bowel, Endometrium, and Ovary",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3349923",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "One approach to determine who needs to be screened for Lynch syndrome is simply to test all surgical specimens from patients newly diagnosed with colorectal or endometrial cancer for the presence of characteristic defects in DNA MMR gene expression. Tumors containing MMR gene mutations associated wi",
+      "score": 0.6334335
+    },
+    {
+      "number": 23,
+      "title": "Genetics of Colorectal Cancer (PDQ\u00ae) - PDQ Cancer Information Summaries - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK126744",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "It is becoming the standard of care at many centers that all individuals with newly diagnosed CRC are evaluated for Lynch syndrome through molecular diagnostic tumor testing assessing MMR deficiency. A universal screening approach to tumor testing is supported, in which all CRC cases are evaluated r",
+      "score": 0.62852204
+    },
+    {
+      "number": 24,
+      "title": "A Review of Hereditary Colorectal Cancers - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538195",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "When CRC is tested for MMR mutations by immunohistochemistry (IHC; refer to the Pathophysiology section) and shows loss of MLH1 or PMS2 staining, further testing for a BRAF V600E mutation is performed. If the BRAF V600E mutation is positive, the CRC is classified as sporadic rather than Lynch syndro",
+      "score": 0.49626526
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Cancer Risk with the Lynch Syndrome PMS2 Gene | NEJM Clinician",
+      "detail": "clinician.nejm.org",
+      "url": "https://clinician.nejm.org/cancer-risk-lynch-syndrome-pms2-gene-nejm-jw.NA37210",
+      "authors": "clinician.nejm.org",
+      "host": "clinician.nejm.org",
+      "snippet": "## Comment\n\nThis large series of Lynch syndrome patients with PMS2 mutations indicates the potential variability of cancer risk by specific mutation. However, the observation that risks for CRC and endometrial cancers with PMS2 are lower than current risk estimates for Lynch syndrome does not change",
+      "score": 0.4718322
+    },
+    {
+      "number": 2,
+      "title": "Identification and Survival of Carriers of Mutations in DNA Mismatch ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa053493",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Revised Bethesda Guidelines for hereditary nonpolyposis colorectal cancer (Lynch syndrome) and microsatellite instability. J Natl Cancer Inst",
+      "score": 0.43496582
+    },
+    {
+      "number": 3,
+      "title": "Prophylactic Surgery to Reduce the Risk of Gynecologic Cancers in ...",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa052627",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Women with the Lynch syndrome (hereditary nonpolyposis colorectal cancer) have a 40 to 60 percent lifetime risk of endometrial cancer and a",
+      "score": 0.42892754
+    },
+    {
+      "number": 4,
+      "title": "Environmental and Heritable Factors in the Causation of Cancer",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJM200007133430201",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "Lynch, HT, Smyrk, T. Hereditary nonpolyposis colorectal cancer (Lynch syndrome): an updated review. account for 5 to 10 percent of all cancers.",
+      "score": 0.34514993
+    },
+    {
+      "number": 5,
+      "title": "Prophylactic Surgery to Reduce the Risk of Gynecologic Cancers in the Lynch Syndrome | New England Journal of Medicine",
+      "detail": "www.nejm.org",
+      "url": "https://www.nejm.org/doi/abs/10.1056/NEJMoa052627",
+      "authors": "www.nejm.org",
+      "host": "www.nejm.org",
+      "snippet": "We designed this study to determine the reduction in the risk of gynecologic cancers associated with prophylactic hysterectomy and bilateral salpingo-oophorectomy in women with the Lynch syndrome. These findings suggest that prophylactic hysterectomy with bilateral salpingo-oophorectomy is an effect",
+      "score": 0.58465123
+    },
+    {
+      "number": 6,
+      "title": "Incidence of non-colorectal/endometrial malignancies in individuals ...",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/pdfs/journals/eclinm/PIIS2589-5370(25)00552-8.pdf",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The cost- effectiveness of genetic testing strategies for Lynch syndrome among newly diagnosed patients with colorectal cancer.",
+      "score": 0.5183761
+    },
+    {
+      "number": 7,
+      "title": "The Lancet Specialty Collections: Gastroenterology",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/collections/Gastroenterology?collexcode=107&subcollexcode=107102&ContribAuthorStored=Nelson%2C+Eric+J&Ppub=%5B20230404+TO+20250404%5D&ContentItemType=fla&startPage=2&pageSize=100",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "Metachronous colorectal cancer risk according to Lynch syndrome pathogenic variant after extensive versus partial colectomy in the Netherlands: a",
+      "score": 0.2062062
+    },
+    {
+      "number": 8,
+      "title": "Lynch Syndrome and Gynecological Cancer Prevention | Cancer Genetics | Oncology and Carcinogenesis | Health sciences | Topics | Nature Index",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/nature-index/topics/l4/lynch-syndrome-and-gynecological-cancer-prevention",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Lynch syndrome, also known as hereditary non-polyposis colorectal cancer syndrome, arises from germline mutations in DNA mismatch repair genes such as MLH1, MSH2, MSH6 and PMS2. Affected women face lifetime risks of endometrial cancer of up to 60% and ovarian cancer up to 20%. Preventive strategies ",
+      "score": 0.608897
+    },
+    {
+      "number": 9,
+      "title": "Risk-reducing hysterectomy and bilateral salpingo-oophorectomy in female heterozygotes of pathogenic mismatch repair variants: a Prospective Lynch Syndrome Database report | Genetics in Medicine",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41436-020-01029-1",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nBurn, J. et al. Cancer prevention with aspirin in hereditary colorectal cancer (Lynch syndrome), 10-year follow-up and registry-based 20-year data in the CAPP2 study: a double-blind, randomised, placebo-controlled trial. Lancet 395, 1855\u20131863 (2020).\n\nArticle \nCAS \nGoogle Sc",
+      "score": 0.5874941
+    },
+    {
+      "number": 10,
+      "title": "Screening for Colorectal Cancer: U.S. Preventive Services Task ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/0003-4819-149-9-200811040-00243",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "Strategies to Identify the Lynch Syndrome Among Patients With Colorectal Cancer A Cost-Effectiveness Analysis \u00b7 Barriers to Colorectal Cancer",
+      "score": 0.4169159
+    },
+    {
+      "number": 11,
+      "title": "Clinical Factors Associated With Gastric Cancer in Individuals With Lynch Syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1542356519307451",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Clin Oncol\n\n## Cited by (48)\n\n### Management of epithelial precancerous conditions and early neoplasia of the stomach (MAPS III): European Society of Gastrointestinal Endoscopy (ESGE), European Helicobacter and Microbiota Study Group (EHMSG) and European Society of Pathology (ESP) Guideline up",
+      "score": 0.6211049
+    },
+    {
+      "number": 12,
+      "title": "Urinary Tract Cancer in Lynch Syndrome; Increased Risk in Carriers of MSH2 Mutations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0090429515008249",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Gastroenterology\n\n### Guidelines on genetic evaluation and management of Lynch syndrome: a consensus statement by the US Multi-Society Task Force on colorectal cancer\n\n### Gastroenterology\n\n### Management of extracolonic tumours in patients with Lynch syndrome\n\n### Lancet Oncol\n\n### Cancer risk ",
+      "score": 0.57064295
+    },
+    {
+      "number": 13,
+      "title": "Impact of genetic testing on endometrial cancer risk-reducing practices in women at risk for Lynch syndrome - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S009082581200724X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### JAMA\n\n### Guidelines for the clinical management of Lynch syndrome (hereditary non-polyposis cancer)\n\n### J Med Genet\n\n### Recommendations for the care of individuals with an inherited predisposition to Lynch syndrome: a systematic review\n\n### JAMA\n\n### Recommendations for follow-up care of indi",
+      "score": 0.562874
+    },
+    {
+      "number": 14,
+      "title": "The Clinical Features of Ovarian Cancer in Hereditary Nonpolyposis Colorectal Cancer - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0090825801962791",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Prob Gen Surg\n\n## Cited by (218)\n\n### Guidelines on genetic evaluation and management of lynch syndrome: A consensus statement by the us multi-society task force on colorectal cancer\n\n### DNA mismatch repair: Molecular mechanism, cancer, and ageing\n\n### Prophylactic surgery to reduce the risk of",
+      "score": 0.5264164
+    },
+    {
+      "number": 15,
+      "title": "[PDF] national institute for health and care - NICE",
+      "detail": "www.nice.org.uk",
+      "url": "https://www.nice.org.uk/guidance/htg557/documents/final-scope",
+      "authors": "www.nice.org.uk",
+      "host": "www.nice.org.uk",
+      "snippet": "review should occur). The 2013 European Guidelines: Revised guidelines for the clinical management of Lynch syndrome (Vasen et al., 2013) recommends that people who have been identified as having a Lynch syndrome mutation have a colonoscopy every 1-2 years. The British Society of Gastroenterology\u2019s ",
+      "score": 0.74785584
+    },
+    {
+      "number": 16,
+      "title": "Hereditary Nonpolyposis Colon Cancer (Lynch Syndrome) - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK564511",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "## Treatment / Management\n\nPatients identified with a mutation linked to HNPCC are at an elevated risk for developing malignancies. The highest risk is for early-onset colorectal and endometrial carcinomas, followed by gastric and ovarian cancers. The risk associated with HNPCC varies based on the s",
+      "score": 0.5443418
+    },
+    {
+      "number": 17,
+      "title": "Managing Risk for Cancers Related to Lynch Syndrome | Hereditary Colorectal (Colon) Cancer | CDC",
+      "detail": "www.cdc.gov",
+      "url": "https://www.cdc.gov/colorectal-cancer-hereditary/managing-risk/index.html",
+      "authors": "www.cdc.gov",
+      "host": "www.cdc.gov",
+      "snippet": "## Key points\n\n## Cancers related to Lynch syndrome\n\nPeople with Lynch syndrome are more likely to get colorectal (colon), uterine (endometrial), ovarian, stomach, small intestine, urinary tract (kidney, ureter, bladder), biliary tract (liver, gall bladder, bile ducts), pancreatic, prostate, brain, ",
+      "score": 0.44811285
+    },
+    {
+      "number": 18,
+      "title": "Tumour MLH1 promoter region methylation testing is an effective pre-screen for Lynch Syndrome (HNPCC) - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5159427",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Lynch syndrome patients have DNA mismatch repair deficiency and up to 80% life-time risk of colorectal cancer. Screening of mutation carriers reduces colorectal cancer incidence and mortality. Selection for constitutional mutation testing relies on family history (Amsterdam and Bethesda Guidelines) ",
+      "score": 0.7653308
+    },
+    {
+      "number": 19,
+      "title": "Performance of PREMM5, clinical criteria, and immunohistochemistry for MMR proteins in genetic risk assessment of Mexican patients with colorectal cancer",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13436770",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "From September 2018 to October 2024, 208 patients were enrolled. The median age at diagnosis was 45.0 years; 52.4% were women, 48.6% had deficient-MMR CRC, and 38.0% reported family history of CRC. Germline PVs were identified in 32.2% (n = 67); of these, 77.6% (n = 52) had Lynch syndrome (30 _MLH1_",
+      "score": 0.6783488
+    },
+    {
+      "number": 20,
+      "title": "Lynch Syndrome - GeneReviews\u00ae - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK1211",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Kahn RM, Gordhandas S, Maddy BP, Baltich Nelson B, Askin G, Christos PJ, Caputo TA, Chapman-Davis E, Holcomb K, Frey MK. Universal endometrial cancer tumor typing: How much has immunohistochemistry, microsatellite instability, and MLH1 methylation improved the diagnosis of Lynch syndrome across the ",
+      "score": 0.6455898
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis of Lynch Syndrome and Strategies to Distinguish Lynch-Related Tumors from Sporadic MSI/dMMR Tumors",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7865821",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Keywords:Lynch syndrome, microsatellite instability, mismatch repair genes, _MLH1_ promoter methylation, _BRAF_ mutation\n\n##  is a hallmark of tumors developed in the context of Lynch syndrome (LS). LS is a hereditary cancer syndrome with an estimated population frequency of 1:300 individuals. It is",
+      "score": 0.6347929
+    },
+    {
+      "number": 22,
+      "title": "Genetic Testing for Lynch Syndrome, an Inherited Cancer of the Bowel, Endometrium, and Ovary",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3349923",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "One approach to determine who needs to be screened for Lynch syndrome is simply to test all surgical specimens from patients newly diagnosed with colorectal or endometrial cancer for the presence of characteristic defects in DNA MMR gene expression. Tumors containing MMR gene mutations associated wi",
+      "score": 0.6334335
+    },
+    {
+      "number": 23,
+      "title": "Genetics of Colorectal Cancer (PDQ\u00ae) - PDQ Cancer Information Summaries - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK126744",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "It is becoming the standard of care at many centers that all individuals with newly diagnosed CRC are evaluated for Lynch syndrome through molecular diagnostic tumor testing assessing MMR deficiency. A universal screening approach to tumor testing is supported, in which all CRC cases are evaluated r",
+      "score": 0.62852204
+    },
+    {
+      "number": 24,
+      "title": "A Review of Hereditary Colorectal Cancers - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538195",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "When CRC is tested for MMR mutations by immunohistochemistry (IHC; refer to the Pathophysiology section) and shows loss of MLH1 or PMS2 staining, further testing for a BRAF V600E mutation is performed. If the BRAF V600E mutation is positive, the CRC is classified as sporadic rather than Lynch syndro",
+      "score": 0.49626526
+    }
+  ],
+  "publishedAt": "2026-09-15T17:19:32.721231+00:00",
+  "updatedAt": "2026-09-15T17:19:32.721231+00:00",
+  "readingMinutes": 6,
+  "slug": "lynch-syndrome"
+}

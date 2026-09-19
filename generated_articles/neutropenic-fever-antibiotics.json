@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Hematology\u2013Oncology",
+  "title": "Neutropenic Fever Antibiotics",
+  "summary": "Select empiric therapy immediately after cultures by separating unstable or prolonged profound neutropenia from clinically stable low-risk presentations, then individualize coverage for resistant Gram-negative colonization, suspected focus, and indications for anti-MRSA or antifungal escalation.",
+  "seoDescription": "Point-of-care selection of initial empiric antibiotics for adult neutropenic fever, including risk stratification, antipseudomonal therapy, escalation, and de-escalation.",
+  "clinicalQuestion": "Which empiric antibiotics should adults with neutropenic fever receive initially, and when should coverage be broadened or narrowed?",
+  "specialty": "Hematology-Oncology and Infectious Diseases",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "febrile neutropenia",
+    "neutropenic fever",
+    "empiric antibiotics",
+    "cefepime",
+    "piperacillin-tazobactam",
+    "MASCC score",
+    "antifungal therapy"
+  ],
+  "keyTakeaways": [
+    "Treat neutropenic fever as an oncologic emergency: obtain cultures without delaying empiric antibiotics, ideally beginning therapy within 1 hour of fever onset. [2][17]",
+    "Use an IV antipseudomonal beta-lactam for high-risk presentations, defined by anticipated neutropenia >7 days with ANC <100 cells/\u00b5L or MASCC score <21. [19][17]",
+    "Cefepime, piperacillin-tazobactam, meropenem, and imipenem-cilastatin are supported initial IV monotherapy options; choose broader Gram-negative coverage when resistant-organism colonization, prior infection, local ecology, or clinical severity warrants it. [17][8][24]",
+    "Do not add vancomycin routinely; reserve it for suspected resistant Gram-positive infection or severe sepsis/shock, and stop it when cultures and clinical findings do not support that indication. [23][7]",
+    "Persistent fever alone should prompt reassessment rather than automatic antibacterial escalation; in high-risk prolonged neutropenia, add empiric antifungal therapy for persistent fever despite broad-spectrum antibacterials. [20][23]"
+  ],
+  "sections": [
+    {
+      "id": "first-hour-actions",
+      "eyebrow": "Immediate management",
+      "heading": "What to do before selecting the first antibiotic",
+      "intro": "Culture promptly, assess severity, and administer therapy without waiting for microbiology.",
+      "paragraphs": [
+        "Obtain blood cultures from each central-line lumen plus one peripheral culture; if no central line is present, obtain two peripheral cultures. Direct additional cultures and imaging to a clinical focus; chest radiograph and chest CT are indicated by symptoms or examination findings. These diagnostic steps must not postpone empiric antibacterial therapy, which should ideally start within 1 hour of fever onset. [17][19][2]",
+        "At presentation, classify the patient as high risk if profound neutropenia (ANC <100 cells/\u00b5L) is anticipated for >7 days or if the MASCC score is <21. A MASCC score \u226521 supports low-risk classification only when the patient has few comorbidities and is clinically stable; expected neutropenia <7 days is another low-risk feature. [19][18][17]",
+        "Treat sepsis or septic shock using the local sepsis protocol while delivering empiric antipseudomonal therapy. In critically ill neutropenic patients, select antibiotics using the initial clinical assessment, prior microbiology, and hospital ecology; consideration of an aminoglycoside in addition to the beta-lactam has supporting evidence in this setting. [24][23]"
+      ],
+      "bullets": [
+        "Before the first dose, document prior colonization or infection with resistant Gram-negative organisms, recent antimicrobial exposure, suspected infection site, and current local resistance patterns; each can change the empiric regimen. [8][23]",
+        "Do not use urine testing as a routine substitute for focus-directed evaluation: urinary-source bacteremia was uncommon in one hospitalized febrile-neutropenia review, and management of asymptomatic bacteriuria in high-risk neutropenia remains a knowledge gap. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial risk features that determine inpatient IV versus potential outpatient oral therapy. [19][17][18]",
+        "columns": [
+          "Feature",
+          "High-risk implication",
+          "Low-risk implication"
+        ],
+        "rows": [
+          [
+            "Expected neutropenia",
+            ">7 days with ANC <100 cells/\u00b5L supports high-risk management. [19]",
+            "<7 days supports low-risk classification when comorbidity burden is low. [19]"
+          ],
+          [
+            "MASCC score",
+            "<21 identifies high risk for serious complications. [19]",
+            "\u226521 identifies low risk, provided clinical stability and appropriate outpatient circumstances. [19][17]"
+          ],
+          [
+            "Initial location and route",
+            "Admit and initiate IV antipseudomonal beta-lactam therapy. [17]",
+            "Oral outpatient therapy may be considered after risk assessment; a short initial IV observation period may still be appropriate. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "high-risk-empiric-regimens",
+      "eyebrow": "High-risk treatment",
+      "heading": "Which IV beta-lactam should be started in high-risk neutropenic fever?",
+      "intro": "Use prompt antipseudomonal beta-lactam monotherapy unless a specific clinical or microbiologic feature requires broader initial coverage.",
+      "paragraphs": [
+        "For high-risk febrile neutropenia without a defined resistant-pathogen indication, start IV monotherapy with cefepime, piperacillin-tazobactam, meropenem, or imipenem-cilastatin. Beta-lactam monotherapy with cefepime, piperacillin-tazobactam, or a carbapenem has broadly comparable efficacy in this setting. [17][23]",
+        "A dosing framework for adults with fever of unknown origin and high-risk neutropenia is cefepime 2 g IV every 8 hours, piperacillin-tazobactam 4.5 g IV every 6 hours, meropenem 1 g IV every 8 hours, or imipenem-cilastatin 500/500 mg IV every 6 hours. These regimens require patient-specific adjustment when renal dysfunction is present; this source does not specify adjustment schedules. [24]",
+        "Choose a carbapenem rather than a narrower antipseudomonal beta-lactam when the patient has known colonization or prior infection with resistant Gram-negative bacteria, local epidemiology indicates a high likelihood of resistance, a resistant pathogen is suspected from the infection site, or the patient has a severe clinical presentation. Contemporary recommendations emphasize this individualized approach rather than a uniform empiric regimen. [8][23]"
+      ],
+      "bullets": [
+        "Cefepime or piperacillin-tazobactam is an appropriate initial choice for many high-risk patients when resistant Gram-negative risk is not dominant. [17][23]",
+        "Meropenem or imipenem-cilastatin provides a broader initial option when patient-specific or institutional resistance risk changes the probability of beta-lactam resistance. [8][24]",
+        "Ceftazidime is included in some recommendations, but its limited Gram-positive activity is a concern in high-risk neutropenia. [24][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Adult IV monotherapy options for high-risk neutropenic fever. [24][17][23]",
+        "columns": [
+          "Regimen",
+          "Adult dose",
+          "Selection consideration"
+        ],
+        "rows": [
+          [
+            "Cefepime",
+            "2 g IV every 8 hours. [24]",
+            "Antipseudomonal monotherapy option when resistant Gram-negative risk does not require a carbapenem. [17][23]"
+          ],
+          [
+            "Piperacillin-tazobactam",
+            "4.5 g IV every 6 hours. [24]",
+            "Antipseudomonal monotherapy option; use local susceptibility and prior microbiology to determine suitability. [17][8]"
+          ],
+          [
+            "Meropenem",
+            "1 g IV every 8 hours. [24]",
+            "Consider when prior colonization, prior infection, local ecology, suspected site, or severity raises concern for resistant Gram-negative infection. [8][24]"
+          ],
+          [
+            "Imipenem-cilastatin",
+            "500/500 mg IV every 6 hours. [24]",
+            "Alternative carbapenem option when broader Gram-negative coverage is selected. [17][24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "when-to-add-agents",
+      "eyebrow": "Targeted broadening",
+      "heading": "When should vancomycin or combination therapy be added?",
+      "intro": "Add agents for a specific syndrome, resistant-pathogen concern, or shock\u2014not for fever alone.",
+      "paragraphs": [
+        "Do not add vancomycin routinely to initial antipseudomonal beta-lactam therapy. Reserve it for suspected methicillin-resistant Gram-positive infection or severe sepsis/septic shock; beta-lactam monotherapy trials have not shown a general benefit from routine vancomycin addition. [23][3]",
+        "If initial combination therapy included vancomycin or another secondary agent, discontinue the added agent after 24 to 72 hours when there are no new clinical signs and cultures do not identify an organism requiring that coverage. This reduces unnecessary glycopeptide exposure, including selection pressure for vancomycin-resistant enterococci and nephrotoxicity risk. [7][23]",
+        "In critically ill neutropenic patients, an aminoglycoside may be considered with the antipseudomonal beta-lactam as part of an individualized strategy. The decision should be driven by severity, the patient's prior bacterial history, and local ecology rather than by neutropenia alone. [23]"
+      ],
+      "bullets": [
+        "Add anti-MRSA Gram-positive coverage when examination, suspected focus, or microbiology suggests a resistant Gram-positive infection. [23]",
+        "Use persistent fever with clinical deterioration, resistant-organism concern, or a newly localized infection as a trigger to reassess and adapt therapy; persistent fever alone is not an automatic reason to broaden antibacterials. [23]",
+        "Once culture and susceptibility data identify a pathogen, narrow therapy to targeted treatment when clinically appropriate. [7][8]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Triggers for modifying the initial antibacterial regimen. [23][7][8]",
+        "columns": [
+          "Trigger",
+          "Antibiotic action",
+          "Reassessment point"
+        ],
+        "rows": [
+          [
+            "Suspected MRSA or resistant Gram-positive infection; severe sepsis or shock",
+            "Add vancomycin to the antipseudomonal backbone. [23]",
+            "Stop the added agent after 24\u201372 hours if cultures and clinical findings do not support continued use. [7]"
+          ],
+          [
+            "Known resistant Gram-negative colonization or prior infection",
+            "Select empiric therapy based on prior isolate susceptibility and local ecology; broader Gram-negative coverage may be required. [8]",
+            "Narrow when microbiology and clinical course permit. [8]"
+          ],
+          [
+            "Persistent fever with stable condition",
+            "Continue diagnostic reassessment; do not broaden solely because fever persists. [23]",
+            "Evaluate for fungal and noninfectious causes in prolonged high-risk neutropenia. [20][23]"
+          ],
+          [
+            "Clinical deterioration during therapy",
+            "Reassess source, resistant pathogens, and adequacy of the current regimen; adapt empiric treatment. [23]",
+            "Manage concomitant sepsis or shock under local sepsis protocols. [24]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "low-risk-oral-selection",
+      "eyebrow": "Low-risk treatment",
+      "heading": "When is oral outpatient therapy reasonable?",
+      "intro": "Oral therapy is restricted to carefully selected, clinically stable low-risk patients.",
+      "paragraphs": [
+        "A patient with MASCC score \u226521, anticipated neutropenia <7 days, few comorbidities, and clinical stability may be considered for oral treatment rather than routine inpatient IV therapy. Risk categorization should not override bedside concern: even a nominally low-risk patient may warrant initial admission and IV antibiotics for observation. [19][17]",
+        "A studied oral regimen is ciprofloxacin 750 mg every 12 hours plus amoxicillin-clavulanate 500/175 mg every 8 hours for 5 days. Another recommendation for standard-risk neutropenia with a high MASCC score lists amoxicillin-clavulanate 500/125 mg orally as part of low-risk treatment, but the excerpt does not provide its complete companion-regimen details. [4][24]",
+        "Outpatient assignment requires an explicit safety plan because low-risk outpatient trials have still reported subsequent hospitalization. In one prospective trial of an unselected outpatient population that included acute leukemia, 21% required hospitalization and mortality was 4%; that population does not establish safety for broad outpatient use. [4]"
+      ],
+      "bullets": [
+        "Do not use outpatient oral therapy for anticipated prolonged profound neutropenia, MASCC score <21, significant comorbidity, clinical instability, or a resistant-pathogen risk that invalidates the planned oral regimen. [19][17][8]",
+        "If oral therapy is selected, ensure a rapid return pathway for recurrent fever, hemodynamic change, inability to take oral medication, or positive cultures requiring IV targeted therapy. [17][4]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Disposition-based initial antibiotic selection for adults with neutropenic fever. [17][19][4][24]",
+        "columns": [
+          "Clinical branch",
+          "Initial regimen",
+          "Disposition"
+        ],
+        "rows": [
+          [
+            "High risk: ANC <100 cells/\u00b5L anticipated >7 days or MASCC <21",
+            "IV cefepime, piperacillin-tazobactam, meropenem, or imipenem-cilastatin; individualize for resistance risk. [19][17][8]",
+            "Inpatient admission. [17]"
+          ],
+          [
+            "Low risk: MASCC \u226521, anticipated neutropenia <7 days, clinically stable, few comorbidities",
+            "Consider oral ciprofloxacin 750 mg every 12 hours plus amoxicillin-clavulanate 500/175 mg every 8 hours in an appropriately selected patient. [4]",
+            "Outpatient or early-discharge pathway only with close monitoring and reliable reassessment. [17][4]"
+          ],
+          [
+            "Initially low risk but uncertain clinical trajectory",
+            "Begin IV therapy and observe before transition to oral outpatient treatment if stability is confirmed. [17]",
+            "Short inpatient observation may be appropriate. [17]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "persistent-fever-antifungal",
+      "eyebrow": "Persistent fever",
+      "heading": "When should persistent fever prompt antifungal therapy?",
+      "intro": "Use duration of neutropenia and fungal-infection suspicion to determine whether empiric antifungal treatment is justified.",
+      "paragraphs": [
+        "For high-risk patients with prolonged neutropenia who remain persistently febrile despite broad-spectrum antibacterial therapy, initiate empiric antifungal therapy after reassessing for a source and nonfungal causes. Recommended options include a lipid formulation of amphotericin B, an echinocandin such as caspofungin or micafungin, or voriconazole. [20]",
+        "Persistent fever after 4 to 7 days of broad-spectrum antibacterial therapy is a commonly cited trigger for empiric antifungal coverage in high-risk patients when fungal infection is suspected. Do not give empiric antifungal therapy solely for persistent fever when neutropenia is expected to last <10 days unless clinical or diagnostic findings suggest invasive fungal infection. [18][20]",
+        "In patients already receiving anti-Aspergillus prophylaxis, persistent fever is less likely to represent a fungal infection; evaluate nonfungal causes and consider breakthrough invasive fungal infection potentially resistant to the prophylactic agent before selecting antifungal therapy. [20]"
+      ],
+      "bullets": [
+        "Reassess for a newly apparent pulmonary, catheter-related, skin, or other localized focus before changing therapy. [19][23]",
+        "Escalate from antibacterial-only management to an antifungal strategy in prolonged high-risk neutropenia, not in short-duration neutropenia without other evidence of invasive fungal disease. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Persistent fever decisions after initial antibacterial therapy. [18][20][23]",
+        "columns": [
+          "Clinical situation",
+          "Next action",
+          "Avoid"
+        ],
+        "rows": [
+          [
+            "High-risk prolonged neutropenia with persistent fever despite broad-spectrum antibacterials",
+            "Reassess source and initiate empiric antifungal therapy; options include lipid amphotericin B, caspofungin, micafungin, or voriconazole. [20]",
+            "Automatic serial antibacterial broadening without a clinical, microbiologic, or resistance-based trigger. [23]"
+          ],
+          [
+            "Expected neutropenia <10 days with persistent fever but no fungal findings",
+            "Continue focused evaluation for a bacterial, viral, noninfectious, or newly localized cause. [20]",
+            "Routine empiric antifungal therapy. [20]"
+          ],
+          [
+            "Persistent fever while receiving anti-Aspergillus prophylaxis",
+            "Assess nonfungal causes and possible breakthrough invasive fungal infection resistant to prophylaxis. [20]",
+            "Assuming persistent fever is necessarily fungal. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "de-escalation-and-duration",
+      "eyebrow": "Reassessment",
+      "heading": "How should empiric therapy be narrowed and stopped?",
+      "intro": "Culture results, clinical course, and marrow recovery should guide de-escalation rather than fever duration alone.",
+      "paragraphs": [
+        "Reassess the empiric regimen after culture data and clinical evolution. Modify therapy for positive cultures, a newly identified focus, clinical deterioration, or resistant-organism recovery; when no resistant Gram-positive pathogen or syndrome is identified, withdraw empiric glycopeptide coverage rather than continuing it indefinitely. [7][23]",
+        "For treated infection, antibacterial therapy may be continued until the infection has cleared or the ANC is at least 500 cells/mm3. If the treatment course is complete but neutropenia persists and all signs and symptoms of documented infection have resolved, oral fluoroquinolone prophylaxis may be resumed until marrow recovery in patients for whom prophylaxis is otherwise indicated. [18]",
+        "Antibacterial fluoroquinolone prophylaxis is recommended by cited guideline summaries for patients expected to be neutropenic for >7 days. This prevention decision is distinct from choosing treatment for a breakthrough febrile episode, which still requires prompt empiric broad-spectrum therapy. [10][22]"
+      ],
+      "bullets": [
+        "Stop added vancomycin or other secondary empiric agents within 24 to 72 hours when cultures are negative for organisms requiring them and no new clinical evidence supports continuation. [7]",
+        "Use organism identification and susceptibility testing to convert from empiric to targeted therapy. [8][7]",
+        "Do not treat asymptomatic bacteriuria routinely in low-risk neutropenia; management in high-risk neutropenia remains uncertain. [22]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "De-escalation checkpoints after empiric therapy begins. [7][18][22]",
+        "columns": [
+          "Checkpoint",
+          "Decision",
+          "Action"
+        ],
+        "rows": [
+          [
+            "24\u201372 hours after empiric vancomycin or other secondary agent",
+            "No new compatible clinical signs and cultures do not support ongoing coverage. [7]",
+            "Discontinue the secondary agent. [7]"
+          ],
+          [
+            "Culture identifies a susceptible pathogen",
+            "A targeted regimen can replace broader empiric coverage. [7][8]",
+            "Narrow according to susceptibility, source, and clinical response. [8]"
+          ],
+          [
+            "Documented infection has resolved or ANC reaches \u2265500 cells/mm3",
+            "Empiric treatment course may be stopped when the infection is cleared or ANC threshold is reached. [18]",
+            "If persistent neutropenia follows completion of treatment, resume indicated fluoroquinolone prophylaxis after symptoms resolve. [18]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Tackling antimicrobial resistance in people who are ... - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(25)00311-1/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The impact of modifying empirical antibiotic therapy based on intestinal colonization status on clinical outcomes of febrile neutropenic",
+      "score": 0.42190963
+    },
+    {
+      "number": 2,
+      "title": "Management of Patients With Fever and Neutropenia Through the ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M18-3192",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "neutropenic patients must be promptly evaluated and, ideally, start empirical antibiotic therapy within an hour of fever onset.",
+      "score": 0.5709301
+    },
+    {
+      "number": 3,
+      "title": "Clinical profile, treatment, and outcomes of febrile neutropenia in hematologic disorders: a look at 30-day mortality predictors | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-06787-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Empiric antimicrobial therapy in higher-risk neutropenic fever patients should cover ESBL-producing Gram-negative bacteria. Cefepime and Piperacillin-tazobactam are the medications of choice for monotherapy15, 1299\u20131304 (2012).\"),16 in cancer patients: clinical features, risk factors, molecular epid",
+      "score": 0.63152665
+    },
+    {
+      "number": 4,
+      "title": "Oral antibiotics with early hospital discharge compared with in-patient intravenous antibiotics for low-risk febrile neutropenia in patients with cancer: a prospective randomised controlled single centre study | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6600993",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Oral antibiotic therapy has been evaluated in the outpatient setting by a number of groups but with variable findings. Malik et al (1995) Feasibility of outpatient management of fever in cancer patients with low-risk neutropenia: results of a prospective randomized trial. Am J Med 98: 224\u2013231\") comp",
+      "score": 0.61279696
+    },
+    {
+      "number": 5,
+      "title": "Prevention of febrile neutropenia: use of prophylactic antibiotics | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6605270",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "As death from FN is relatively rare, meta-analyses are necessary to examine the effects of interventions on mortality. Gafter-Gvili et al (2005 Meta-analysis: antibiotic prophylaxis reduces mortality in neutropenic patients. Ann Int Med 142: 979\u2013995\")) undertook a meta-analysis of trials comparing p",
+      "score": 0.5760895
+    },
+    {
+      "number": 6,
+      "title": "Cost effectiveness of outpatient treatment for febrile neutropaenia in adult cancer patients | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/bjc2011101",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "A decision-analytic model was constructed using TreeAge Pro 2009 and examined four strategies: (1) entire treatment in hospital with IV antibiotics (HospIV); (2) early discharge consisting of 48\u2009h in-patient observation with IV antibiotics, followed by oral outpatient treatment (EarlyDC); (3) entire",
+      "score": 0.52290934
+    },
+    {
+      "number": 7,
+      "title": "Febrile Neutropenia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/febrile-neutropenia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Modifications to the initial empiric regimen should be made based on the patient\u2019s clinical course, any positive cultures, and total time of FN. Patients who are initially treated with dual antibiotic therapy or have had vancomycin added can have these secondary agents discontinued 24\u201372 hours after",
+      "score": 0.72977066
+    },
+    {
+      "number": 8,
+      "title": "Empirical and targeted antimicrobial therapy in patients with febrile neutropenia and haematological malignancy or after haematopoietic cell transplantation: recommendations from the 10th European Conference on Infections in Leukaemia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S147330992500619X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Given the growing concern of antibacterial resistance and geographical variations in bacterial epidemiology and resistance patterns, the previous European Conference on Infections in Leukaemia (ECIL) recommendations introduced a personalised approach for EAT in 2011.17, 18 However, epidemiological c",
+      "score": 0.6415577
+    },
+    {
+      "number": 9,
+      "title": "Febrile Neutropenia - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/febrile-neutropenia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "With the aims of reviewing the evidence supporting the use of CSFs in the management of solid tumours, and suggesting the priorities for clinical research in this field, an Expert Panel took place in Avellino (Italy) in April 2006. Results of that meeting are extensively presented in this paper. In ",
+      "score": 0.608897
+    },
+    {
+      "number": 10,
+      "title": "Treatment of Febrile Neutropenia and Prophylaxis in Hematologic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2014/986938",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "ESMO, IDSA, and ASCO guidelines recommend antibiotic prophylaxis with a fluoroquinolone for patients who are going to be neutropenic for >7 days",
+      "score": 0.59061456
+    },
+    {
+      "number": 11,
+      "title": "Safety of empirical antibiotic therapy discontinuing for fever of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0163445324001051",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The initial management of febrile neutropenia (FN) in children relies on a rapid administration of empirical broad-spectrum antibiotics at the onset of fever.",
+      "score": 0.5798055
+    },
+    {
+      "number": 12,
+      "title": "Consensus guidelines for patient and carer education on neutropenic fever - Jessop - 2025 - Internal Medicine Journal - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/imj.70252",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Google Scholar\n 147Sung L, Phillips R, Lehrnbecher T. Time for paediatric febrile neutropenia guidelines - children are not little adults. Eur J Cancer 2011; 47: 811\u2013813.\n\n  10.1016/j.ejca.2011.01.021CAS PubMed Web of Science\u00ae Google Scholar\n 148Anderson KJ, Bradford NK, Clark JE. Through their eyes",
+      "score": 0.57723385
+    },
+    {
+      "number": 13,
+      "title": "Consensus guidelines for the subsequent management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/imj.70249",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Management of Neutropenic Fever in Patients with Cancer addresses the management of patients beyond the first 72 h, focusing on high-risk",
+      "score": 0.5404151
+    },
+    {
+      "number": 14,
+      "title": "Randomized comparison of antibiotics with and without granulocyte colony\u2010stimulating factor in children with chemotherapy\u2010induced febrile neutropenia: A report from the Children's Oncology Group - \u00d6zkaynak - 2005 - Pediatric Blood & Cancer - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/pbc.20366",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Randomized comparison of antibiotics with and without granulocyte colony-stimulating factor in children with chemotherapy-induced febrile neutropenia: A report from the Children's Oncology Group\u2020. To determine if granulocyte colony-stimulating factor (G-CSF) with empirical antibiotics accelerates ",
+      "score": 0.4746074
+    },
+    {
+      "number": 15,
+      "title": "The cost-effectiveness of empirical antibiotic treatments... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2020/05150/the_cost_effectiveness_of_empirical_antibiotic.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The cost-effectiveness of empirical antibiotic treatments for high-risk febrile neutropenic patients. The cost-effectiveness of empirical antibiotic treatments for high-risk febrile neutropenic patients: A decision analytic model. Imipenem/cilastatin is a cost-effective strategy and results in signi",
+      "score": 0.7178241
+    },
+    {
+      "number": 16,
+      "title": "IDSA Guidelines on the Treatment and Management of Patients with ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/covid-19-guideline-treatment-and-management",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Once the diagnosis of MIS-C has been made, immunomodulatory medications are the mainstay of therapy. Although trials are lacking to demonstrate the superiority of any given ap-proach, intravenous immunoglobulin (IVIG) and systemic steroids are frequent initial choices [336][343]. Studies comparing o",
+      "score": 0.31954643
+    },
+    {
+      "number": 17,
+      "title": "Management and Preventive Measures for Febrile Neutropenia - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5871243",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Febrile neutropenia is a life-threatening complication often associated with cytotoxic chemotherapy and malignancies that has a significant impact on morbidity and mortality. Utilizing the MASCC and CISNE risk criteria enables health care providers to categorize a patient\u2019s risk for serious medical ",
+      "score": 0.7827459
+    },
+    {
+      "number": 18,
+      "title": "Febrile Neutropenia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/statpearls/article-65103",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Empiric antifungal coverage is advised in high-risk patients with persistent fever after 4 to 7 days of broad-spectrum antibacterial regimen and suspicion of fungal infection.\n\nAppropriate antibiotics may be continued until the ANC is \u2265 500 cells/mm or when the infection is cleared. If the patients ",
+      "score": 0.609455
+    },
+    {
+      "number": 19,
+      "title": "Skin and Soft Tissue Infections - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Cancer patients with fever and neutropenia can be divided into low- and high-risk groups . The determination of differences in patient risk of infection and infectious complications levels (high risk and low risk) during the period of neutropenia has been recognized and further validated since this ",
+      "score": 0.5299209
+    },
+    {
+      "number": 20,
+      "title": "IDSA 2016 Clinical Practice Guideline Update for the Diagnosis and ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/aspergillosis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Empiric antifungal therapy is recommended for high-risk patients with prolonged neutropenia who remain persistently febrile despite broad-spectrum antibiotic therapy. Antifungal options include a lipid formulation of AmB (strong recommendation; high-quality evidence), an echinocandin (caspofungin",
+      "score": 0.46162403
+    },
+    {
+      "number": 21,
+      "title": "Fluoroquinolone resistance in bacteremic and low risk febrile neutropenic patients with cancer - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4326398",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "All the positive blood cultures from January 2010 to December 2013 in the two large cancer centers (Shanghai Cancer Center, Fudan University; Cancer Center, The Affiliated Hospital of Qingdao University Medical College) were reviewed. The patients were first selected only if they met the febrile neu",
+      "score": 0.3895703
+    },
+    {
+      "number": 22,
+      "title": "IDSA 2019 Clinical Practice Guideline Update for the Management ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "be a source for bacteremia in some neutropenic patients. Current management for patients with high-risk neutropenia typically includes prophylactic antimicrobial therapy, which also usually resolves bacteriuria, when present . These patients are also monitored closely, and broad-spectrum antimicrobi",
+      "score": 0.28242174
+    },
+    {
+      "number": 23,
+      "title": "The strategy of antibiotic use in critically ill neutropenic patients - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3224396",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Antibiotic therapy must be initiated promptly in febrile neutropenic patients. In high-risk patients, initial empirical treatment with piperacillin-tazobatam or cefepime is recommended. In addition, the initial antibiotic strategy should be adapted based on the basis of initial clinical assessment, ",
+      "score": 0.7304634
+    },
+    {
+      "number": 24,
+      "title": "The Dutch Working Party on Antibiotic Policy (SWAB) Recommendations for the Diagnosis and Management of Febrile Neutropenia in Patients with Cancer",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9669256",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "choice:Meropenem 1000 mg q8h Imipenem\u2013cilastatin 500/500 mg q6hStrongHigh2. Since no reliable risk stratification can be made, all children with FUO should be treated with one of following beta-lactam antibiotic drugs with antipseudomonal activity:1st choice:Ceftazidime Cefepime Piperacillin\u2013tazobac",
+      "score": 0.65887916
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Tackling antimicrobial resistance in people who are ... - The Lancet",
+      "detail": "www.thelancet.com",
+      "url": "https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(25)00311-1/abstract",
+      "authors": "www.thelancet.com",
+      "host": "www.thelancet.com",
+      "snippet": "The impact of modifying empirical antibiotic therapy based on intestinal colonization status on clinical outcomes of febrile neutropenic",
+      "score": 0.42190963
+    },
+    {
+      "number": 2,
+      "title": "Management of Patients With Fever and Neutropenia Through the ...",
+      "detail": "www.acpjournals.org",
+      "url": "https://www.acpjournals.org/doi/10.7326/M18-3192",
+      "authors": "www.acpjournals.org",
+      "host": "www.acpjournals.org",
+      "snippet": "neutropenic patients must be promptly evaluated and, ideally, start empirical antibiotic therapy within an hour of fever onset.",
+      "score": 0.5709301
+    },
+    {
+      "number": 3,
+      "title": "Clinical profile, treatment, and outcomes of febrile neutropenia in hematologic disorders: a look at 30-day mortality predictors | Scientific Reports",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-025-06787-z",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Empiric antimicrobial therapy in higher-risk neutropenic fever patients should cover ESBL-producing Gram-negative bacteria. Cefepime and Piperacillin-tazobactam are the medications of choice for monotherapy15, 1299\u20131304 (2012).\"),16 in cancer patients: clinical features, risk factors, molecular epid",
+      "score": 0.63152665
+    },
+    {
+      "number": 4,
+      "title": "Oral antibiotics with early hospital discharge compared with in-patient intravenous antibiotics for low-risk febrile neutropenia in patients with cancer: a prospective randomised controlled single centre study | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6600993",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Oral antibiotic therapy has been evaluated in the outpatient setting by a number of groups but with variable findings. Malik et al (1995) Feasibility of outpatient management of fever in cancer patients with low-risk neutropenia: results of a prospective randomized trial. Am J Med 98: 224\u2013231\") comp",
+      "score": 0.61279696
+    },
+    {
+      "number": 5,
+      "title": "Prevention of febrile neutropenia: use of prophylactic antibiotics | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6605270",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "As death from FN is relatively rare, meta-analyses are necessary to examine the effects of interventions on mortality. Gafter-Gvili et al (2005 Meta-analysis: antibiotic prophylaxis reduces mortality in neutropenic patients. Ann Int Med 142: 979\u2013995\")) undertook a meta-analysis of trials comparing p",
+      "score": 0.5760895
+    },
+    {
+      "number": 6,
+      "title": "Cost effectiveness of outpatient treatment for febrile neutropaenia in adult cancer patients | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/bjc2011101",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "A decision-analytic model was constructed using TreeAge Pro 2009 and examined four strategies: (1) entire treatment in hospital with IV antibiotics (HospIV); (2) early discharge consisting of 48\u2009h in-patient observation with IV antibiotics, followed by oral outpatient treatment (EarlyDC); (3) entire",
+      "score": 0.52290934
+    },
+    {
+      "number": 7,
+      "title": "Febrile Neutropenia - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/febrile-neutropenia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Modifications to the initial empiric regimen should be made based on the patient\u2019s clinical course, any positive cultures, and total time of FN. Patients who are initially treated with dual antibiotic therapy or have had vancomycin added can have these secondary agents discontinued 24\u201372 hours after",
+      "score": 0.72977066
+    },
+    {
+      "number": 8,
+      "title": "Empirical and targeted antimicrobial therapy in patients with febrile neutropenia and haematological malignancy or after haematopoietic cell transplantation: recommendations from the 10th European Conference on Infections in Leukaemia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S147330992500619X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Given the growing concern of antibacterial resistance and geographical variations in bacterial epidemiology and resistance patterns, the previous European Conference on Infections in Leukaemia (ECIL) recommendations introduced a personalised approach for EAT in 2011.17, 18 However, epidemiological c",
+      "score": 0.6415577
+    },
+    {
+      "number": 9,
+      "title": "Febrile Neutropenia - an overview",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/febrile-neutropenia",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "With the aims of reviewing the evidence supporting the use of CSFs in the management of solid tumours, and suggesting the priorities for clinical research in this field, an Expert Panel took place in Avellino (Italy) in April 2006. Results of that meeting are extensively presented in this paper. In ",
+      "score": 0.608897
+    },
+    {
+      "number": 10,
+      "title": "Treatment of Febrile Neutropenia and Prophylaxis in Hematologic ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1155/2014/986938",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "ESMO, IDSA, and ASCO guidelines recommend antibiotic prophylaxis with a fluoroquinolone for patients who are going to be neutropenic for >7 days",
+      "score": 0.59061456
+    },
+    {
+      "number": 11,
+      "title": "Safety of empirical antibiotic therapy discontinuing for fever of ...",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0163445324001051",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "The initial management of febrile neutropenia (FN) in children relies on a rapid administration of empirical broad-spectrum antibiotics at the onset of fever.",
+      "score": 0.5798055
+    },
+    {
+      "number": 12,
+      "title": "Consensus guidelines for patient and carer education on neutropenic fever - Jessop - 2025 - Internal Medicine Journal - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/imj.70252",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Google Scholar\n 147Sung L, Phillips R, Lehrnbecher T. Time for paediatric febrile neutropenia guidelines - children are not little adults. Eur J Cancer 2011; 47: 811\u2013813.\n\n  10.1016/j.ejca.2011.01.021CAS PubMed Web of Science\u00ae Google Scholar\n 148Anderson KJ, Bradford NK, Clark JE. Through their eyes",
+      "score": 0.57723385
+    },
+    {
+      "number": 13,
+      "title": "Consensus guidelines for the subsequent management of ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/imj.70249",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Management of Neutropenic Fever in Patients with Cancer addresses the management of patients beyond the first 72 h, focusing on high-risk",
+      "score": 0.5404151
+    },
+    {
+      "number": 14,
+      "title": "Randomized comparison of antibiotics with and without granulocyte colony\u2010stimulating factor in children with chemotherapy\u2010induced febrile neutropenia: A report from the Children's Oncology Group - \u00d6zkaynak - 2005 - Pediatric Blood & Cancer - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/pbc.20366",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Randomized comparison of antibiotics with and without granulocyte colony-stimulating factor in children with chemotherapy-induced febrile neutropenia: A report from the Children's Oncology Group\u2020. To determine if granulocyte colony-stimulating factor (G-CSF) with empirical antibiotics accelerates ",
+      "score": 0.4746074
+    },
+    {
+      "number": 15,
+      "title": "The cost-effectiveness of empirical antibiotic treatments... : Medicine",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/md-journal/fulltext/2020/05150/the_cost_effectiveness_of_empirical_antibiotic.21.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "The cost-effectiveness of empirical antibiotic treatments for high-risk febrile neutropenic patients. The cost-effectiveness of empirical antibiotic treatments for high-risk febrile neutropenic patients: A decision analytic model. Imipenem/cilastatin is a cost-effective strategy and results in signi",
+      "score": 0.7178241
+    },
+    {
+      "number": 16,
+      "title": "IDSA Guidelines on the Treatment and Management of Patients with ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/covid-19-guideline-treatment-and-management",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Once the diagnosis of MIS-C has been made, immunomodulatory medications are the mainstay of therapy. Although trials are lacking to demonstrate the superiority of any given ap-proach, intravenous immunoglobulin (IVIG) and systemic steroids are frequent initial choices [336][343]. Studies comparing o",
+      "score": 0.31954643
+    },
+    {
+      "number": 17,
+      "title": "Management and Preventive Measures for Febrile Neutropenia - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5871243",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Febrile neutropenia is a life-threatening complication often associated with cytotoxic chemotherapy and malignancies that has a significant impact on morbidity and mortality. Utilizing the MASCC and CISNE risk criteria enables health care providers to categorize a patient\u2019s risk for serious medical ",
+      "score": 0.7827459
+    },
+    {
+      "number": 18,
+      "title": "Febrile Neutropenia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/statpearls/article-65103",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Empiric antifungal coverage is advised in high-risk patients with persistent fever after 4 to 7 days of broad-spectrum antibacterial regimen and suspicion of fungal infection.\n\nAppropriate antibiotics may be continued until the ANC is \u2265 500 cells/mm or when the infection is cleared. If the patients ",
+      "score": 0.609455
+    },
+    {
+      "number": 19,
+      "title": "Skin and Soft Tissue Infections - IDSA",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/skin-and-soft-tissue-infections",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "Cancer patients with fever and neutropenia can be divided into low- and high-risk groups . The determination of differences in patient risk of infection and infectious complications levels (high risk and low risk) during the period of neutropenia has been recognized and further validated since this ",
+      "score": 0.5299209
+    },
+    {
+      "number": 20,
+      "title": "IDSA 2016 Clinical Practice Guideline Update for the Diagnosis and ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/aspergillosis",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "1. Empiric antifungal therapy is recommended for high-risk patients with prolonged neutropenia who remain persistently febrile despite broad-spectrum antibiotic therapy. Antifungal options include a lipid formulation of AmB (strong recommendation; high-quality evidence), an echinocandin (caspofungin",
+      "score": 0.46162403
+    },
+    {
+      "number": 21,
+      "title": "Fluoroquinolone resistance in bacteremic and low risk febrile neutropenic patients with cancer - PMC",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4326398",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "All the positive blood cultures from January 2010 to December 2013 in the two large cancer centers (Shanghai Cancer Center, Fudan University; Cancer Center, The Affiliated Hospital of Qingdao University Medical College) were reviewed. The patients were first selected only if they met the febrile neu",
+      "score": 0.3895703
+    },
+    {
+      "number": 22,
+      "title": "IDSA 2019 Clinical Practice Guideline Update for the Management ...",
+      "detail": "www.idsociety.org",
+      "url": "https://www.idsociety.org/practice-guideline/asymptomatic-bacteriuria",
+      "authors": "www.idsociety.org",
+      "host": "www.idsociety.org",
+      "snippet": "be a source for bacteremia in some neutropenic patients. Current management for patients with high-risk neutropenia typically includes prophylactic antimicrobial therapy, which also usually resolves bacteriuria, when present . These patients are also monitored closely, and broad-spectrum antimicrobi",
+      "score": 0.28242174
+    },
+    {
+      "number": 23,
+      "title": "The strategy of antibiotic use in critically ill neutropenic patients - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3224396",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Antibiotic therapy must be initiated promptly in febrile neutropenic patients. In high-risk patients, initial empirical treatment with piperacillin-tazobatam or cefepime is recommended. In addition, the initial antibiotic strategy should be adapted based on the basis of initial clinical assessment, ",
+      "score": 0.7304634
+    },
+    {
+      "number": 24,
+      "title": "The Dutch Working Party on Antibiotic Policy (SWAB) Recommendations for the Diagnosis and Management of Febrile Neutropenia in Patients with Cancer",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9669256",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "choice:Meropenem 1000 mg q8h Imipenem\u2013cilastatin 500/500 mg q6hStrongHigh2. Since no reliable risk stratification can be made, all children with FUO should be treated with one of following beta-lactam antibiotic drugs with antipseudomonal activity:1st choice:Ceftazidime Cefepime Piperacillin\u2013tazobac",
+      "score": 0.65887916
+    }
+  ],
+  "publishedAt": "2026-09-15T21:28:37.870177+00:00",
+  "updatedAt": "2026-09-15T21:28:37.870177+00:00",
+  "readingMinutes": 6,
+  "slug": "neutropenic-fever-antibiotics"
+}

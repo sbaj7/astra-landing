@@ -1,11 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { specialtyHubs, hubsForArticle } from '../articles/articleDiscovery.js';
 import { ArticleHeader } from '../components/ClinicalArticleView.jsx';
 import { useTheme } from '../components/Themes+Styles.jsx';
 import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
 import '../components/ClinicalArticleView.css';
 import './ArticlesIndexPage.css';
 
-const ArticlesIndexPage = ({ initialArticles }) => {
+const ArticlesIndexPage = ({ initialArticles, specialtySlug }) => {
+  const browserSpecialty = typeof window !== 'undefined' ? window.location.pathname.match(/^\/articles\/specialty\/([^/]+)/)?.[1] : undefined;
+  const selectedSlug = specialtySlug || browserSpecialty;
+  const hub = specialtyHubs.find((item) => item.slug === selectedSlug);
   const preloaded = initialArticles || (typeof window !== 'undefined' ? window.__PRERENDERED_ARTICLE_INDEX__ : null);
   const [articles, setArticles] = useState(Array.isArray(preloaded) ? preloaded : []);
   const [query, setQuery] = useState('');
@@ -29,13 +33,14 @@ const ArticlesIndexPage = ({ initialArticles }) => {
 
   const filteredArticles = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    if (!needle) return articles;
-    return articles.filter((article) =>
+    const collection = selectedSlug ? articles.filter((article) => hubsForArticle(article).some((item) => item.slug === selectedSlug)) : articles;
+    if (!needle) return collection;
+    return collection.filter((article) =>
       [article.title, article.summary, ...(article.tags || [])]
         .filter(Boolean)
         .some((value) => String(value).toLowerCase().includes(needle))
     );
-  }, [articles, query]);
+  }, [articles, query, selectedSlug]);
 
   return (
     <div className="article-page article-library-page" data-theme={articleTheme.themePreference}>
@@ -44,9 +49,13 @@ const ArticlesIndexPage = ({ initialArticles }) => {
       <main className="article-library" id="article-library">
         <header className="article-library-hero">
           <p className="article-eyebrow">Astra Clinical Library</p>
-          <h1>Evidence, made usable.</h1>
-          <p>Clear clinical guides built from primary literature, major guidelines, and the decisions clinicians face in practice.</p>
+          <h1>{hub ? hub.title : selectedSlug ? 'Specialty unavailable' : 'Evidence, made usable.'}</h1>
+          <p>{hub ? `Practical ${hub.title.toLowerCase()} guides for clinical decisions, with cited evidence, testing strategies, and actionable next steps.` : 'Clear clinical guides built from primary literature, major guidelines, and the decisions clinicians face in practice.'}</p>
         </header>
+        <nav className="article-specialty-links" aria-label="Browse by specialty">
+          <a href="/articles" aria-current={!selectedSlug ? 'page' : undefined}>All guides</a>
+          {specialtyHubs.filter((item) => articles.some((article) => hubsForArticle(article).some((match) => match.slug === item.slug))).map((item) => <a key={item.slug} href={`/articles/specialty/${item.slug}`} aria-current={item.slug === selectedSlug ? 'page' : undefined}>{item.title}</a>)}
+        </nav>
 
         <div className="article-library-search">
           <label htmlFor="article-search">Search clinical guides</label>

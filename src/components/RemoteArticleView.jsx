@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ClinicalArticleView from './ClinicalArticleView.jsx';
 import { reorderArticleCitations } from '../utils/reorderArticleCitations.js';
-
-const resolveSupabaseUrl = () => import.meta?.env?.VITE_SUPABASE_URL || 'https://shwitfgtpfszjjoczbxp.supabase.co';
+import { relatedArticleLinks } from '../articles/articleDiscovery.js';
 
 const RemoteArticleView = ({ slug, bucket = 'articles', objectPath, themeMode }) => {
   const preloaded = typeof window !== 'undefined' && window.__PRERENDERED_ARTICLE__?.slug === slug ? window.__PRERENDERED_ARTICLE__ : null;
@@ -22,8 +21,6 @@ const RemoteArticleView = ({ slug, bucket = 'articles', objectPath, themeMode })
       return undefined;
     }
 
-    const path = objectPath || `${bucket}/${slug}/article.json`;
-    const remoteUrl = `${resolveSupabaseUrl()}/storage/v1/object/public/${path}`;
     const localUrl = `/generated_articles/${slug}.json`;
     let cancelled = false;
 
@@ -41,7 +38,6 @@ const RemoteArticleView = ({ slug, bucket = 'articles', objectPath, themeMode })
           ? `/${String(manifestEntry.source).replace(/^\//, '')}`
           : localUrl;
         let response = await fetch(manifestSource);
-        if (!response.ok) response = await fetch(remoteUrl);
         if (!response.ok) throw new Error(`Unable to load article (status ${response.status})`);
         const data = await response.json();
         if (!cancelled) setArticle(reorderArticleCitations({ ...data, slug }));
@@ -57,19 +53,13 @@ const RemoteArticleView = ({ slug, bucket = 'articles', objectPath, themeMode })
   }, [bucket, objectPath, preloaded, slug]);
 
   useEffect(() => {
-    if (preloaded?.relatedArticles?.length || !article?.tags?.length) return undefined;
+    if (preloaded?.relatedArticles?.length || !article) return undefined;
     let cancelled = false;
     fetch('/generated_articles/index.json')
       .then((response) => response.ok ? response.json() : [])
       .then((items) => {
         if (cancelled || !Array.isArray(items)) return;
-        const tagSet = new Set(article.tags.map((tag) => tag.toLowerCase()));
-        const related = items
-          .filter((item) => item.slug !== slug)
-          .map((item) => ({ ...item, score: (item.tags || []).filter((tag) => tagSet.has(String(tag).toLowerCase())).length }))
-          .filter((item) => item.score > 0)
-          .sort((a, b) => b.score - a.score)
-          .slice(0, 3);
+        const related = relatedArticleLinks({ ...article, slug }, items);
         setRelatedArticles(related);
       })
       .catch(() => {});

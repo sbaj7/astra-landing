@@ -1,744 +1,728 @@
 {
   "schemaVersion": 2,
-  "eyebrow": "Neurologic emergency",
+  "eyebrow": "Emergency Spine",
   "title": "Spinal Cord Compression",
-  "summary": "Spinal cord compression requires immediate localization, etiologic triage, and definitive decompression or oncologic treatment before neurologic injury becomes irreversible. In suspected malignant compression, urgent whole-spine contrast MRI, prompt corticosteroid use when neurologic involvement is present, and early spine-oncology coordination preserve ambulation and guide surgery versus radiotherapy.",
-  "seoDescription": "Physician guide to recognizing, imaging, and urgently managing spinal cord compression, including malignant, infectious, hemorrhagic, and degenerative causes.",
-  "clinicalQuestion": "How should physicians rapidly diagnose and triage spinal cord compression to preserve neurologic function?",
-  "specialty": "Neurology and Oncology",
+  "summary": "Urgent spinal imaging and parallel management preserve neurologic function when cord or cauda equina compression is suspected. This guide distinguishes malignant, traumatic, infectious, degenerative, and neuraxial causes; selects MRI versus CT myelography; and directs immediate decompression, corticosteroid, radiation, and surgical escalation.",
+  "seoDescription": "Physician guide to urgent imaging and initial management of suspected spinal cord or cauda equina compression, including MRI, CT myelography, steroids, and surgery.",
+  "clinicalQuestion": "How should physicians image and initiate management for suspected spinal cord or cauda equina compression?",
+  "specialty": "Emergency Medicine and Neurology",
   "audience": "U.S. physicians and medical trainees",
   "tags": [
     "spinal cord compression",
-    "metastatic epidural spinal cord compression",
-    "MSCC",
     "cauda equina syndrome",
-    "epidural abscess",
-    "spine emergency"
+    "metastatic epidural spinal cord compression",
+    "spine MRI",
+    "CT myelography",
+    "epidural hematoma",
+    "spinal epidural abscess"
   ],
   "keyTakeaways": [
-    "New myelopathy, bilateral neurologic symptoms, gait decline, sphincter dysfunction, or cancer-associated axial pain warrants urgent evaluation for cord or cauda equina compression.[18]",
-    "For suspected metastatic spinal cord compression, obtain whole-spine MRI with gadolinium urgently; MRI sensitivity and specificity are reported as 93% and 97%, respectively, and CT myelography is reserved for MRI contraindication or unavailability.[18]",
-    "In metastatic spinal cord compression with neurologic involvement, begin dexamethasone while arranging definitive management; high-dose regimens increase serious toxicity without clear neurologic benefit over standard dosing.[18]",
-    "Surgical decompression plus radiotherapy benefits selected patients with metastatic epidural compression, particularly with instability, bony compression, radioresistant disease, or a reasonable systemic prognosis.[17]",
-    "Do not assume cancer is the cause: epidural abscess, epidural hematoma, disc disease, traumatic instability, and degenerative myelopathy require different urgent interventions.[18]"
+    "Acute back pain with progressive motor deficit, bilateral leg symptoms, saddle sensory symptoms, or bladder or bowel dysfunction requires emergency evaluation for a compressive spinal lesion and urgent neuroimaging. [22][24]",
+    "MRI is the preferred test for suspected acute myelopathy and compressive neuraxial lesions; obtain CT without delaying evaluation when MRI is unavailable or would delay exclusion of a compressive lesion. [22][24]",
+    "For suspected metastatic spinal cord compression, obtain gadolinium-enhanced MRI of the entire spine; reported diagnostic performance is sensitivity 93% and specificity 97%. [24]",
+    "In malignant epidural spinal cord compression, start dexamethasone promptly while arranging definitive radiation and/or surgical assessment; a commonly described moderate regimen is 10 mg once followed by 4 mg every 6 hours. [16][19]",
+    "Traumatic spinal cord injury with compression warrants urgent spine-surgical assessment for decompression; evidence summarized for surgery within 24 hours shows greater likelihood of a 2-or-more grade AIS improvement at 6 months than later intervention. [9]"
   ],
   "sections": [
     {
-      "id": "time-critical-triage",
-      "eyebrow": "First actions",
-      "heading": "Identify the phenotype that requires emergency imaging",
-      "intro": "Neurologic status at diagnosis is the dominant modifiable determinant of functional outcome.",
+      "id": "recognize-and-triage",
+      "eyebrow": "First Decision",
+      "heading": "Which presentations require emergency spine imaging?",
+      "intro": "Treat evolving neurologic dysfunction as a time-sensitive compressive syndrome until imaging excludes it.",
       "paragraphs": [
-        "Treat suspected spinal cord or cauda equina compression as a time-sensitive syndrome rather than a diagnosis. Immediate concern is warranted for new focal or radicular spinal pain with progressive weakness, gait disturbance, sensory change, urinary retention or incontinence, fecal dysfunction, or a new sensory level. In cancer, back pain is the most common presenting symptom of metastatic spinal cord compression (MSCC), and motor deficits or sphincter dysfunction usually indicate more advanced disease.[18]",
-        "Cancer history substantially raises the pretest probability, but compression may be the first manifestation of malignancy. In patients without known cancer, symptoms suggesting compression plus constitutional features or otherwise unexplained persistent axial pain should prompt urgent investigation for malignancy as well as nonmalignant causes.[18]",
-        "Perform and document a focused neurologic examination before treatment when this does not delay stabilization: limb power, tone, reflexes, plantar responses, sensory level, gait when safe, perineal sensation, anal tone when clinically indicated, and postvoid residual when cauda equina dysfunction is suspected. A normal plain radiograph or absence of fever does not exclude epidural tumor, abscess, hematoma, or compressive disc disease.[18]"
+        "Escalate immediately when back or radicular pain is accompanied by progressive weakness, bilateral leg numbness or weakness, urinary or anal dysfunction, or saddle-region symptoms. In the setting of neuraxial analgesia or anesthesia, the combination of acute back pain, radicular leg pain, urinary or anal dysfunction, and bilateral lower-extremity numbness or weakness requires rapid imaging and neurosurgical or neurologic consultation to exclude epidural hematoma or epidural abscess. [22]",
+        "In a patient with known or suspected cancer, new or changed back pain should trigger assessment for metastatic epidural spinal cord compression, particularly when pain is worsened by coughing, sneezing, or recumbency or is accompanied by neurologic decline. Obtain imaging before attributing deficits to peripheral neuropathy, degenerative disease, medication effect, or cancer-related deconditioning. [16][24]",
+        "For acute traumatic spinal cord injury, prioritize immobilization and trauma resuscitation while defining osseous injury with CT and cord, epidural, and soft-tissue pathology with MRI. Neurologic deficit with imaging evidence of cord compression is an urgent spine-surgical problem rather than an indication for observation pending recovery. [9][13]"
       ],
       "bullets": [
-        "Immediately assess airway and ventilatory status with high cervical lesions or rapidly progressive tetraparesis.[21]",
-        "Avoid unnecessary mobilization when instability is suspected; use positioning that minimizes spinal load while obtaining urgent specialist advice and imaging.[23]",
-        "Contact spine surgery/neurosurgery and the relevant etiologic service early: oncology for suspected MSCC, infectious diseases for suspected epidural abscess, and hematology/anesthesia/surgery for hematoma depending on context.[18]"
+        "Document motor function, sensory level, perianal/saddle sensation, anal function, and urinary symptoms before transfer or sedation; serial deterioration strengthens the urgency for decompression. [22][24]",
+        "Use the International Standards for Neurological and Functional Classification of Spinal Cord Injury framework when evaluating acute spinal cord ischemia or injury syndromes in which severity tracking informs prognosis and management. [7]",
+        "If MRI or CT myelography excludes extrinsic compression despite acute neurologic deficits, pivot to noncompressive diagnoses such as spinal cord infarction, transverse myelitis, demyelinating disease, toxic injury, subarachnoid hemorrhage, and aortic pathology. [24]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Clinical patterns that should alter immediate diagnostic and treatment priorities.[18]",
+        "caption": "Clinical patterns that should alter the immediate imaging and consultation pathway. [22][24]",
         "columns": [
-          "Pattern",
-          "High-yield clues",
-          "Immediate priority"
+          "Clinical pattern",
+          "Leading compressive concern",
+          "Immediate action"
         ],
         "rows": [
           [
-            "Metastatic epidural compression",
-            "Known cancer; progressive axial or radicular pain; myelopathy or cauda equina findings",
-            "Whole-spine contrast MRI; oncology and spine consultation; begin corticosteroid therapy when neurologic involvement is present.[18]"
+            "Acute back pain, bilateral leg symptoms, saddle sensory symptoms, urinary or anal dysfunction",
+            "Cauda equina compression from disc extrusion, fracture, malignancy, leptomeningeal disease, epidural hematoma, or abscess [22][24]",
+            "Obtain emergency MRI when feasible; do not delay initial CT if MRI access would delay exclusion of compression; obtain emergent surgical consultation when a compressive lesion is identified. [22]"
           ],
           [
-            "Spinal epidural abscess",
-            "Back pain with bacteremia risk, diabetes, injection drug use, immunosuppression, recent spinal procedure, or infection; fever may be absent",
-            "Urgent gadolinium-enhanced MRI, blood cultures, IV antimicrobials, and urgent surgical assessment if neurologic deficit or clinical instability.[18]"
+            "Cancer with new or changing back pain and neurologic symptoms",
+            "Metastatic epidural spinal cord compression [16][24]",
+            "Obtain gadolinium-enhanced MRI of the entire spine and initiate prompt corticosteroid-based initial management while coordinating radiation oncology and spine-surgical assessment. [16][19][24]"
           ],
           [
-            "Spinal epidural hematoma",
-            "Acute pain and neurologic decline, particularly with anticoagulation or recent neuraxial procedure",
-            "Urgent MRI and surgical decompression for severe or progressive neurologic deficits.[18]"
+            "Recent neuraxial procedure with persistent or progressive block, radicular pain, or new bilateral deficits",
+            "Epidural hematoma, epidural abscess, or neuraxial injury [22]",
+            "Urgent imaging and emergent surgical consultation; CT is acceptable when MRI would delay exclusion of a compressive lesion. [22]"
           ],
           [
-            "Traumatic or degenerative compression",
-            "Trauma, known stenosis, acute hyperextension injury, or progressive cervical myelopathy",
-            "CT for bony injury; MRI when cord, disc, hematoma, or ligamentous pathology will alter management.[14][21]"
+            "Acute traumatic neurologic deficit",
+            "Fracture/dislocation, epidural hematoma, or traumatic cord compression [9][13]",
+            "CT defines bony injury; add MRI for cord and canal soft tissues, then obtain urgent spine-surgical assessment for decompression when compression is present. [9][13]"
           ]
         ]
       }
     },
     {
-      "id": "imaging-and-diagnostic-pathway",
-      "eyebrow": "Diagnosis",
-      "heading": "Order the study that defines level, cause, and urgency",
-      "intro": "Imaging must define compression, tissue compartment, mechanical stability, and multiplicity.",
+      "id": "select-imaging",
+      "eyebrow": "Imaging",
+      "heading": "How to choose MRI, CT, and CT myelography",
+      "intro": "Choose the modality that identifies a surgically actionable lesion without delaying emergency care.",
       "paragraphs": [
-        "MRI of the whole spine with gadolinium is the preferred study for suspected MSCC because noncontiguous epidural disease can occur. For suspected MSCC, guidance supports MRI as soon as possible and within 24 hours; whole-spine sagittal T1 and T2 sequences with axial imaging through abnormalities help define metastases, epidural disease, and degree of neural compression.[9][23]",
-        "Use CT myelography when MRI is contraindicated or unavailable. CT is useful for vertebral destruction, collapse, retropulsion, and operative planning but is less sensitive than MRI for epidural soft tissue and cord pathology. Plain radiographs are inadequate to diagnose cord compression.[18][23]",
-        "For suspected spinal epidural abscess, obtain blood cultures and inflammatory markers while arranging MRI, but do not let laboratory testing delay imaging or surgical evaluation in a patient with neurologic deficit. Leukocytosis is absent in a substantial minority of cases; in one diagnostic study, ESR greater than 20 mm/hour plus one or more risk factors had high sensitivity but limited specificity for epidural abscess.[18]"
+        "MRI is preferred for suspected acute myelopathy because it better depicts spinal cord pathology and is less invasive than CT myelography. In suspected metastatic spinal cord compression, use gadolinium-enhanced MRI and image the entire spine because multiple levels may occur; reported sensitivity and specificity are 93% and 97%, respectively. [24][16]",
+        "Use CT immediately when MRI cannot be obtained promptly in a patient with evolving deficit, especially after trauma or after neuraxial anesthesia when a compressive lesion must be rapidly excluded. CT provides superior definition of bony spinal injury, whereas MRI better characterizes the cord, epidural space, soft tissues, and intrathecal or extrathecal mass effect. [22][13]",
+        "Reserve CT myelography for MRI contraindication or infeasibility. It requires intrathecal iodinated contrast and is invasive, but can assess canal narrowing and provides detailed bony and calcific anatomy. Plain radiographs are inadequate to exclude metastatic spinal disease or cord compression. [13][24]"
       ],
       "bullets": [
-        "Image immediately for rapidly progressive deficit, conus/cauda equina syndrome, suspected hematoma, or high cervical compromise.[18]",
-        "For traumatic SCI, CT is the principal initial test for fracture and dislocation; MRI is useful when neurologic deficits are discordant with CT, soft-tissue injury is suspected, or operative planning requires definition of ongoing compression.[21]",
-        "Do not screen asymptomatic patients with known spinal metastases using MRI solely to detect MSCC; evidence reviewed by NICE did not show clinically important benefit from routine screening MRI in asymptomatic patients.[23]"
-      ],
-      "subsections": [],
-      "table": {
-        "caption": "Imaging interpretation should trigger definitive action rather than merely confirm compression.[18][23]",
-        "columns": [
-          "Imaging result",
-          "Clinical consequence"
-        ],
-        "rows": [
-          [
-            "Epidural tumor with cord or cauda equina compression",
-            "Initiate multidisciplinary MSCC pathway; assess neurologic deficit, radiosensitivity, stability, prognosis, and surgical candidacy.[17][23]"
-          ],
-          [
-            "Vertebral collapse, retropulsed bone, deformity, or mechanical instability",
-            "Obtain urgent spine surgical input; stabilization and decompression may be needed rather than radiotherapy alone.[17][23]"
-          ],
-          [
-            "Epidural abscess or phlegmon",
-            "Obtain cultures; begin IV antimicrobial therapy and pursue urgent decompression when neurologic compromise is present.[18]"
-          ],
-          [
-            "Epidural hematoma",
-            "Urgent neurosurgical/spine surgical assessment; severe or progressive deficits generally require prompt evacuation.[18]"
-          ]
-        ]
-      }
-    },
-    {
-      "id": "malignant-compression",
-      "eyebrow": "Oncologic emergency",
-      "heading": "Manage metastatic epidural spinal cord compression",
-      "intro": "Preserving walking and continence requires parallel medical treatment, surgical assessment, and radiotherapy planning.",
-      "paragraphs": [
-        "MSCC most often arises from vertebral metastasis extending into the epidural space or from vertebral collapse. Thoracic involvement is most common. Pretreatment ambulatory function strongly predicts post-treatment ambulation; delayed diagnosis after loss of walking ability is associated with poor neurologic recovery.[11][18][20]",
-        "Give dexamethasone promptly for MSCC with neurologic signs or symptoms while definitive treatment is arranged. A commonly cited standard-dose regimen is a 10 mg IV bolus followed by 4 mg every 6 hours; high-dose strategies such as 96 mg daily are associated with psychosis, gastrointestinal ulceration or perforation, and other serious toxicity without demonstrated neurologic superiority over standard-dose treatment.[17][18] Monitor glucose and gastrointestinal risk, and taper after definitive treatment or when MSCC is excluded.[23]",
-        "Definitive treatment should be selected in a multidisciplinary discussion incorporating neurologic trajectory, epidural compression, mechanical stability, tumor radiosensitivity, performance status, systemic disease burden, anticipated survival, and patient goals. Prognostic and stability scores can structure assessment but should not determine treatment in isolation.[23]"
-      ],
-      "bullets": [
-        "Favor urgent surgical evaluation for spinal instability, vertebral fragment displacement or bony compression, radioresistant tumor, need for tissue diagnosis, progression during radiotherapy, recurrence after prior radiotherapy, or potentially reversible neurologic decline in a patient fit for intervention.[17][23]",
-        "Radiotherapy is generally favored for radiosensitive histologies, patients not suitable for surgery, multilevel disease, or limited expected survival; myeloma and lymphoma are typically radiosensitive when instability or bony retropulsion is absent.[17][23]",
-        "For poor prognosis, short-course radiotherapy can reduce treatment burden; longer-course radiotherapy offers better local control for patients with longer expected survival in older comparative data.[17]"
+        "Request an urgent contrast-enhanced whole-spine MRI for suspected metastatic epidural compression rather than a limited regional study. [24]",
+        "For degenerative cervical myelopathy, MRI is the initial test when the examination suggests myelopathy; CT myelography is an alternative when MRI is contraindicated. [24]",
+        "Do not defer emergency CT solely to wait for MRI or specialist examination in suspected neuraxial compressive dysfunction. [22]"
       ],
       "subsections": [
         {
-          "heading": "Evidence for surgery plus radiotherapy",
+          "heading": "Interpret the imaging result by management consequence",
           "paragraphs": [
-            "In the randomized Patchell trial summarized in the CEPO review, direct decompressive surgery followed by radiotherapy preserved ambulation more often than radiotherapy alone (84% versus 57%) and prolonged median ambulatory duration (122 versus 13 days) in selected patients.[17] This evidence should not be generalized to patients excluded from the trial, including highly radiosensitive hematologic tumors or individuals unable to tolerate surgery.[17]"
+            "An epidural mass, hematoma, abscess, fracture fragment, dislocation, or disc extrusion that compresses the cord or cauda equina should trigger emergent spine-surgical consultation. In malignant compression, imaging simultaneously informs whether definitive local control is most feasible with surgery, external-beam radiotherapy, or both. [16][19][22]",
+            "If imaging shows no extrinsic compression but the patient has an acute spinal syndrome, do not label the presentation benign. Reassess for vascular, inflammatory, demyelinating, hemorrhagic, toxic, and other intrinsic cord processes, guided by the tempo, neurologic pattern, and MRI findings. [24]"
           ],
-          "bullets": [
-            "Surgery is not synonymous with laminectomy alone; because many epidural metastases arise anteriorly from vertebral body disease, decompression and stabilization should address the actual compressive anatomy and mechanical instability.[11][17]"
-          ]
+          "bullets": []
         }
       ],
       "table": {
-        "caption": "Decision framework for MSCC definitive treatment.[17][23]",
+        "caption": "Imaging selection for suspected spinal cord or cauda equina compression. [13][22][24]",
         "columns": [
-          "Predominant scenario",
-          "Typical strategy"
+          "Modality",
+          "Use it when",
+          "Strength",
+          "Important limitation"
         ],
         "rows": [
           [
-            "High-grade compression with instability, bony retropulsion, or radioresistant disease in a surgical candidate",
-            "Decompression with stabilization as indicated, followed by postoperative radiotherapy after recovery.[17][23]"
+            "MRI with gadolinium",
+            "Suspected metastatic compression, acute myelopathy, epidural infection or hematoma, or cord pathology [22][24]",
+            "Best characterization of cord, epidural space, intrathecal lesions, and soft-tissue compression; whole-spine imaging is advised for metastatic compression. [24]",
+            "May not be immediately available or feasible; do not delay alternative emergency imaging when clinical deterioration is occurring. [22]"
           ],
           [
-            "Radiosensitive tumor without instability or bony fragment compression",
-            "Corticosteroids when neurologically symptomatic, then urgent radiotherapy; systemic therapy may contribute for chemosensitive malignancies.[17]"
+            "CT",
+            "Trauma, urgent exclusion of a compressive lesion when MRI would delay imaging, or assessment of osseous anatomy [13][22]",
+            "Better assessment of bony spine injury than MRI. [13]",
+            "Less informative than MRI for spinal cord pathology and soft-tissue canal lesions. [13][24]"
           ],
           [
-            "Poor performance status or limited expected survival without a surgical indication",
-            "Rapid palliative radiotherapy when likely to provide symptom or function benefit; align intervention with goals of care.[17][23]"
+            "CT myelography",
+            "MRI contraindicated or unavailable after stabilization of the immediate diagnostic pathway [13][24]",
+            "Can quantify canal narrowing and delineate bone, soft tissue calcification, and dural sac anatomy. [24]",
+            "Invasive intrathecal contrast procedure; MRI is generally preferred. [13][24]"
           ],
           [
-            "Complete paraplegia or tetraplegia for prolonged duration with controlled pain and poor prognosis",
-            "Radiotherapy may offer limited benefit; individualize decisions based on symptoms, disease biology, and goals.[23]"
+            "Plain radiography",
+            "Not a rule-out test for suspected metastatic compression [24]",
+            "May identify gross osseous abnormalities.",
+            "Inadequately sensitive for metastatic disease and does not adequately evaluate cord compression. [24]"
           ]
         ]
       }
     },
     {
-      "id": "nonmalignant-compression",
-      "eyebrow": "Do not miss",
-      "heading": "Treat abscess, hematoma, and traumatic compression as distinct emergencies",
-      "intro": "Etiology changes the immediate drug, procedural, and consultation pathway.",
+      "id": "initial-management-by-cause",
+      "eyebrow": "Parallel Treatment",
+      "heading": "Initial management after compression is suspected or demonstrated",
+      "intro": "Begin cause-directed measures in parallel with imaging and definitive procedural planning.",
       "paragraphs": [
-        "Spinal epidural abscess is often diagnostically delayed because the classic combination of fever, pain, and neurologic deficit is uncommon early. Bacteremia risk, diabetes, injection drug use, immunosuppression, recent spinal intervention, or contiguous infection should lower the threshold for contrast-enhanced MRI. Management generally includes IV antimicrobial therapy and urgent decompression for neurologic deficit, sepsis, or failure of nonoperative management.[18]",
-        "Spinal epidural hematoma should be considered in acute spinal pain followed by weakness or sphincter dysfunction, particularly after neuraxial procedures or in patients receiving anticoagulants. Severe or progressive deficits require urgent surgical decompression; outcome worsens with delayed recognition.[18]",
-        "Acute traumatic compression requires spinal motion restriction, resuscitation, CT-based characterization of fracture or dislocation, and MRI when it informs decompression, disc/hematoma management, or ligamentous stability. Early decompression within 24 hours may improve neurologic outcomes and is recommended as an option when clinically feasible.[15][21]"
+        "For suspected metastatic epidural spinal cord compression, start dexamethasone promptly to reduce cord edema while arranging definitive local treatment. A commonly described regimen is dexamethasone 10 mg once followed by 4 mg every 6 hours; moderate-dose approaches of a 10-mg dose followed by 12 to 16 mg daily are also described. High-dose regimens have been used for severe acute compression, but no single corticosteroid regimen is established. [16][19]",
+        "Definitive treatment for metastatic epidural compression is external-beam radiotherapy, surgical decompression, or a combined approach. Favor urgent surgical assessment when mechanical instability is present or when decompression is needed to relieve clinically consequential neural compression; radiation remains a core local therapy and may be definitive or postoperative. [16][19][20]",
+        "For traumatic spinal cord injury with compression, obtain urgent decompressive-surgery assessment. Evidence summarized from STASCIS found a 2-or-more grade AIS improvement at 6 months in 19.8% after early versus 8.8% after late surgery, with adjusted odds ratio 2.83; reported complication rates were 24.2% and 30.5%, respectively. Early decompression is generally defined as within 24 hours of injury. [9]"
       ],
       "bullets": [
-        "Obtain cultures before antibiotics for a stable suspected epidural abscess only when this will not delay therapy; do not defer antimicrobials or surgical evaluation in sepsis or neurologic decline.[18]",
-        "For suspected hematoma, reconcile anticoagulant exposure, platelet count, renal function, and neuraxial procedure history while arranging emergent imaging and specialist intervention.[18]",
-        "For degenerative cervical myelopathy, gait impairment, upper motor neuron findings, and hand dysfunction may be more informative than pain severity; abrupt deterioration warrants urgent imaging and spine assessment.[18]"
+        "A documented epidural hematoma or epidural abscess causing neuraxial compression requires emergent surgical consultation for consideration of decompression. [22]",
+        "For lumbar radiculopathy without urgent neurologic pathology, avoid routine immediate imaging; MRI becomes relevant when symptoms persist despite initial management or when deficits progress. [3]",
+        "Persistent radicular symptoms with functional limitation or progressive neurologic deficit despite nonsurgical treatment are indications to consider discectomy; epidural steroid injection may be considered for persistent radicular pain to improve pain severity and function. [3]"
+      ],
+      "subsections": [
+        {
+          "heading": "Avoid diagnostic and treatment delays in neuraxial complications",
+          "paragraphs": [
+            "After neuraxial analgesia or anesthesia, nonresolution of block or progressive neurologic deficit should not be presumed anesthetic effect. Obtain emergent imaging, accept CT as the initial study when needed, and request surgical evaluation immediately if imaging identifies an epidural hematoma or abscess. [22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Cause-directed initial management for common compressive patterns. [3][9][16][19][22]",
+        "columns": [
+          "Etiologic branch",
+          "Initial action while imaging and consultation proceed",
+          "Definitive pathway"
+        ],
+        "rows": [
+          [
+            "Metastatic epidural spinal cord compression",
+            "Administer dexamethasone promptly; a commonly described regimen is 10 mg once followed by 4 mg every 6 hours. [16][19]",
+            "External-beam radiotherapy and/or surgical decompression, with surgery particularly considered for instability or a need for decompression. [16][19][20]"
+          ],
+          [
+            "Traumatic cord compression",
+            "Maintain trauma resuscitation and spinal precautions; obtain CT for osseous injury and MRI for cord/canal pathology. [9][13]",
+            "Urgent surgical decompression assessment; early surgery within 24 hours is associated with improved neurologic recovery in summarized evidence. [9]"
+          ],
+          [
+            "Epidural hematoma or epidural abscess after neuraxial procedure",
+            "Emergency neuroimaging; CT is acceptable if MRI would delay evaluation. [22]",
+            "Emergent surgical consultation for consideration of decompression. [22]"
+          ],
+          [
+            "Disc-related cauda equina or progressive radiculopathy",
+            "Emergency MRI when cauda equina features or progressive deficit is suspected. [3][24]",
+            "Surgical treatment, including discectomy, for progressive or persistent neurologic deficits or persistent function-limiting radicular symptoms. [3]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "monitor-and-escalate",
+      "eyebrow": "Reassessment",
+      "heading": "What to monitor while awaiting definitive treatment",
+      "intro": "Serial neurologic change should accelerate\u2014not reset\u2014the imaging and surgical pathway.",
+      "paragraphs": [
+        "Repeat and document lower-extremity motor examination, sensory findings, urinary and anal symptoms, and the level of pain or radicular symptoms while imaging, transfer, radiation planning, or operative planning is under way. Progression of bilateral weakness or sphincter dysfunction warrants immediate recontact with the receiving spine surgeon or neurosurgical team even if a prior examination was less concerning. [22][24]",
+        "For metastatic compression, use whole-spine MRI findings to identify additional clinically important levels before selecting radiation fields or operative strategy. Thoracic involvement is common, and more than one level of compression may occur. [16][24]",
+        "After traumatic injury, use serial neurologic classification to track recovery and support counseling. MRI evidence of persistent cord compression is relevant to operative decision-making, whereas cord edema without ongoing compression may have a different recovery profile than irreversible cord injury patterns. [7][12]"
+      ],
+      "bullets": [
+        "Escalate immediately for new saddle symptoms, new urinary or anal dysfunction, worsening bilateral weakness, or persistent/progressive deficit after neuraxial block. [22]",
+        "When a patient cannot undergo MRI, coordinate CT myelography rather than accepting a nondiagnostic plain-radiograph evaluation for suspected metastatic or spondylotic compression. [13][24]",
+        "Do not use improvement in pain alone as evidence that neural compression has resolved; continue objective neurologic reassessment and complete definitive imaging and local-treatment planning. [16][22]"
       ],
       "subsections": [],
       "table": {
-        "caption": "Immediate management differs by nonmalignant cause.[18][21]",
+        "caption": "Escalation triggers during the initial evaluation of suspected compression. [22][24]",
         "columns": [
-          "Cause",
-          "Immediate management emphasis",
-          "Definitive intervention"
+          "Change during observation or transfer",
+          "Interpretation",
+          "Next step"
         ],
         "rows": [
           [
-            "Epidural abscess",
-            "Cultures, IV antimicrobials, urgent MRI, and neurosurgical/spine consultation",
-            "Decompression and drainage when neurologic compromise, instability, or medical failure is present.[18]"
+            "New or worsening bilateral motor deficit",
+            "Possible progression of cord or cauda equina compromise. [22][24]",
+            "Expedite imaging and urgent spine-surgical communication. [22]"
           ],
           [
-            "Epidural hematoma",
-            "Urgent MRI and assessment of anticoagulant-related bleeding risk",
-            "Prompt evacuation for severe or progressive deficit.[18]"
+            "New urinary or anal dysfunction or saddle sensory symptoms",
+            "High-risk cauda equina or lower neuraxial compression pattern. [22][24]",
+            "Emergency imaging and surgical consultation. [22]"
           ],
           [
-            "Traumatic compression",
-            "Resuscitation, spinal motion restriction, CT, and MRI when clinically indicated",
-            "Reduction, decompression, and stabilization according to injury morphology and neurologic status.[15][21]"
+            "MRI unavailable or contraindicated",
+            "Imaging delay can postpone detection of a surgically actionable lesion. [22][24]",
+            "Obtain CT promptly when necessary; use CT myelography when MRI is contraindicated. [22][24]"
           ],
           [
-            "Degenerative myelopathy",
-            "MRI to establish cord compression and operative anatomy",
-            "Decompression for moderate-to-severe disease or abrupt worsening; conservative care may be appropriate in selected mild disease.[18]"
+            "No extrinsic lesion on MRI or CT myelography despite acute deficit",
+            "Consider intrinsic, vascular, inflammatory, demyelinating, toxic, or hemorrhagic spinal processes. [24]",
+            "Redirect evaluation to the noncompressive acute myelopathy differential. [24]"
           ]
         ]
       }
-    },
-    {
-      "id": "monitoring-and-communication",
-      "eyebrow": "After diagnosis",
-      "heading": "Monitor function, instability, and treatment complications",
-      "intro": "Serial examination is the clinically meaningful measure of whether treatment is succeeding.",
-      "paragraphs": [
-        "Repeat motor, sensory, gait, and sphincter assessments at clinically appropriate intervals during acute evaluation and after intervention. Escalating pain, new weakness, declining ambulation, or new bladder/bowel dysfunction should trigger reassessment for progression, instability, treatment failure, recurrent compression, infection, or hematoma.[18][23]",
-        "In MSCC, formal assessment of spinal stability and prognosis can improve communication and documentation. The Spinal Instability Neoplastic Score (SINS) may be useful as an adjunct, particularly to help rule out instability at lower scores, but evidence is limited and it should not replace expert clinical and radiologic assessment.[22][23]",
-        "Communicate prognosis without presenting a score as determinative. Baseline ambulation, tumor biology, visceral disease, performance status, neurologic deficit, and response options influence outcomes; patient goals may reasonably favor surgery, radiotherapy, symptom-focused care, or a combination.[17][23]"
-      ],
-      "bullets": [
-        "After corticosteroid initiation: monitor glucose, mental status, gastrointestinal toxicity, infection risk, and need for taper after definitive treatment.[18][23]",
-        "After surgery: monitor neurologic examination, wound complications, instrumentation/stability concerns, venous thromboembolism risk, pain, and rehabilitation needs.[17]",
-        "Begin discharge and rehabilitation planning early; mobility aids, bladder/bowel care, pressure-injury prevention, caregiver training, and coordinated community services are core components of preserving independence.[23]"
-      ],
-      "subsections": [],
-      "table": null
     }
   ],
-  "faq": [
-    {
-      "question": "What is the preferred imaging test for suspected malignant spinal cord compression?",
-      "answer": "Whole-spine gadolinium-enhanced MRI is preferred because it defines epidural disease, cord or cauda equina compression, and noncontiguous lesions. CT myelography is reserved for MRI contraindication or unavailability.[9][18]"
-    },
-    {
-      "question": "When should dexamethasone be started in malignant spinal cord compression?",
-      "answer": "Start promptly when MSCC causes neurologic signs or symptoms while arranging definitive therapy. Standard-dose approaches are favored over high-dose regimens because high-dose dexamethasone increases serious toxicity without clear additional neurologic benefit.[18][23]"
-    },
-    {
-      "question": "Which patients with metastatic spinal cord compression should be considered for surgery?",
-      "answer": "Consider decompression and stabilization for instability, bony retropulsion, radioresistant tumor, progressive neurologic deficit, need for tissue diagnosis, or recurrence after radiotherapy in a patient with sufficient fitness and expected benefit.[17][23]"
-    },
-    {
-      "question": "Can absence of fever exclude spinal epidural abscess?",
-      "answer": "No. Fever may be absent, and the classic triad of fever, back pain, and neurologic deficit is often incomplete. Risk factors plus focal pain or neurologic symptoms warrant urgent contrast-enhanced MRI.[18]"
-    },
-    {
-      "question": "Should SINS or another prognostic score determine treatment alone?",
-      "answer": "No. SINS and prognostic scores can standardize assessment and communication, but evidence is limited and treatment decisions require integrated assessment of neurologic status, stability, tumor biology, systemic prognosis, and patient preferences.[22][23]"
-    }
-  ],
+  "faq": [],
   "references": [
     {
       "number": 1,
-      "title": "Reference ID: 5578772 - accessdata.fda.gov",
+      "title": "[PDF] 210874Orig1s000 CLINICAL REVIEW(S) - accessdata.fda.gov",
       "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/022544s031lbl.pdf",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/210874Orig1s000MedR.pdf",
       "authors": "www.accessdata.fda.gov",
       "host": "www.accessdata.fda.gov",
-      "snippet": "this should be done gradually over a minimum of one week or longer (at the discretion of the prescriber). In adults with postherpetic neuralgia, GRALISE therapy should be initiated and titrated as follows: Table 1: GRALISE Recommended Titration Schedule Day 1 Day 2 Days 3\u20136 Days 7\u201310 Days 11\u201314 Day ",
-      "score": 0.3026904
+      "snippet": "Skeletal injury; Skin abrasion; Skin injury; Skull fracture; Skull fractured base; Snake bite; Soft tissue injury; Spinal column injury; Spinal compression fracture; Spinal cord injury; Spinal cord injury cauda equina; Spinal cord injury cervical; Spinal cord injury lumbar; Spinal cord injury sacral",
+      "score": 0.46759978
     },
     {
       "number": 2,
-      "title": "highlights of prescribing information",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a887020f-b41f-49fe-8379-f01147b2a796&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "2 DOSAGE AND ADMINISTRATION. 2.1 Dosing and Dose Adjustment. 2.2 Administration Instructions. 3 DOSAGE FORMS AND STRENGTHS. 4 CONTRAINDICATIONS. 5 WARNINGS AND",
-      "score": 0.19191799
+      "title": "[PDF] 203415Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/203415orig1s000medr.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "arm compared to the placebo arm when nonpathologic fracture AEs reported as SREs were censored (i.e., 2.5% vs. 0.8%, respectively). Bone preserving therapies such as bisphosphonates or denosumab appeared to be underutilized in this mCRPC population. Spinal Cord Compression and Cauda Equine Syndrome:",
+      "score": 0.43568602
     },
     {
       "number": 3,
-      "title": "VYBRIQUETM (sildenafil) oral film - accessdata.fda.gov",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/210858s000lbl.pdf",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "7.4) ------------------------USE IN SPECIFIC POPULATIONS ----------------------- \u2022 Geriatric use: Recommended starting dose is 25 mg. (2.3, 8.5) \u2022 Severe renal impairment: Recommended starting dose is 25 mg. (2.3, 8.6) \u2022 Hepatic impairment: Recommended starting dose is 25 mg. (2.3, 8.7) See 17 for P",
-      "score": 0.17435436
+      "title": "[PDF] BLA 761393 Condoliase injection - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/184938/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "(Figure 1), which may result in burning, radiating pain in the concordant dermatome that is characteristic of RLP, as well as possible associated sensory changes and/or motor deficits. Collectively, the signs and symptoms resulting from spinal nerve root compression are known as radiculopathy. The d",
+      "score": 0.26444548
     },
     {
       "number": 4,
-      "title": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/ ...",
-      "detail": "nctr-crs.fda.gov",
-      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/bfdfe235-d717-4855-a3c8-a13d26dadede/spl-doc",
-      "authors": "nctr-crs.fda.gov",
-      "host": "nctr-crs.fda.gov",
-      "snippet": "See full prescribing information for OXYCONTIN. treatment initiation and dose adjustment. tricyclic antidepressants (TCAs), certain muscle relaxants",
-      "score": 0.17309275
+      "title": "[PDF] SUMMARY OF SAFETY & EFFECTIVENESS DATA (SSED)",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf14/p140004b.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "14. Insulin-dependent diabetes mellitus 15. Significant peripheral vascular disease (diminished dorsalis pedis or tibial pulses) 16. Prior surgery of the lumbar spine 17. Cauda equina syndrome (defined as neural compression causing neurogenic bowel or bladder dysfunction) 18. Infection in the disc o",
+      "score": 0.20731136
     },
     {
       "number": 5,
-      "title": "These highlights do not include all the information needed to use\u00a0PREGABALIN CAPSULES\u00a0safely and effectively. See full prescribing information for PREGABALIN CAPSULES.<br/>\n      <br/> PREGABALIN\u00a0capsules, for oral use,\u00a0CV<br/> Initial U.S. Approval: 2004",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/spl/data/d9a1cb89-c0ba-4049-bf7a-17bfe759f286/d9a1cb89-c0ba-4049-bf7a-17bfe759f286.xml",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "|  |  |  |\n --- \n| INDICATION | Dosing    Regimen | Maximum Dose |\n| DPN Pain (2.2) | 3 divided doses per day | 300 mg/day within 1 week |\n| PHN (2.3) | 2 or 3 divided doses per day | 300 mg/day within 1 week. Maximum dose of 600 mg/day. |\n| Adjunctive Therapy for Partial-Onset Seizures in Adult Pat",
-      "score": 0.16265947
+      "title": "[PDF] MICHAEL JEROME YASZEMSKI, M- Curriculum Vitae - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/131467/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "New Allied Health Staff, Rochester, MN, April 9, 2012 46. Yaszemski, MJ: Cauda Equina Syndrome. Mayo Clinic Department of Orthopaedic Surgery Grand Rounds mini spine symposium, April 16, 2012 47. Yaszemski, MJ: Conflict of Interest: The New Federal Regulations. Mayo Clinic Quarterly Research Gatheri",
+      "score": 0.19580965
     },
     {
       "number": 6,
-      "title": "DailyMed - JULUCA- dolutegravir sodium and rilpivirine hydrochloride tablet, film coated",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=806653d1-bf35-4924-b999-ad5d21821cc1",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "## 8.6 Renal Impairment\n\nNo dosage adjustment is necessary for patients with mild or moderate renal impairment (creatinine clearance greater than or equal to 30 mL/min) see Clinical Pharmacology ([12.3)]. In patients with severe renal impairment (creatinine clearance less than 30 mL/min) or end-stag",
-      "score": 0.15699492
+      "title": "A Balancing Act - American Heart Association Journals",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIRCULATIONAHA.119.044780?download=true",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "... spinal cord lesion involving the cauda equina. Magnetic resonance imaging (MRI) is the modality of choice in these cases because it provides sufficient",
+      "score": 0.25852996
     },
     {
       "number": 7,
-      "title": "These highlights do not include all the information needed to use DILTIAZEM HYDROCHLORIDE EXTENDED-RELEASE TABLETS safely and effectively. See full prescribing information for DILTIAZEM HYDROCHLORIDE EXTENDED-RELEASE TABLETS.\n \n      \nDILTIAZEM HYDROCHLORIDE extended-release tablets, for oral use\n \nInitial U.S. Approval: 1982",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "## 8.5 Geriatric Use\n\nClinical studies of diltiazem did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger pati",
-      "score": 0.14585622
+      "title": "Long-Term Outcome of Acute Spinal Cord Ischemia Syndrome | Stroke",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.str.0000111598.78198.ec",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The clinical features of ASCIS were classified according to the International Standards for Neurological and Functional Classification of Spinal Cord Injury",
+      "score": 0.07947442
     },
     {
       "number": 8,
-      "title": "[PDF] 022462Orig1s000 - accessdata.fda.gov",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2010/022462Orig1s000MedR.pdf",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "associated with intrathecal drug infusion catheters: report and observations on 41 patients. Neurosurgery. 2002;50:78-87. 15 Cabbell, KL, Taren JA, Sagher O. Spinal cord compression by catheter granulomas in high-dose intrathecal morphine therapy: case report. Neurosurgery. 1998;42:1176-1181. 16 Sch",
-      "score": 0.13849701
+      "title": "Spinal and Paraspinal Arteriovenous Lesions | Stroke",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.012783",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Here, we focus only on the spinal AVS lesions and propose a systematic classification based on their anatomic relationship with the spinal cord",
+      "score": 0.04646909
     },
     {
       "number": 9,
-      "title": "Malignant spinal cord compression - Symptoms, diagnosis and treatment | BMJ Best Practice",
-      "detail": "bestpractice.bmj.com",
-      "url": "https://bestpractice.bmj.com/topics/en-us/3000286",
-      "authors": "bestpractice.bmj.com",
-      "host": "bestpractice.bmj.com",
-      "snippet": "Prognosis is more favourable for previously ambulatory patients and for patients who have been immobile for less than 24 hours.\n\n### Definition [...] open menu\n\nWhen viewing this topic in a different language, you may notice some differences in the way the content is structured, but it still reflect",
-      "score": 0.43482184
+      "title": "\u201cTime is spine\u201d: the importance of early intervention for traumatic spinal cord injury | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41393-020-0477-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "## The evidence for early surgical decompression in acute spinal cord injury [...] proportion of patients who underwent early surgery (19.8%) demonstrated a 2-or-more grade improvement in AIS at 6 months compared with those who underwent late surgical intervention (8.8%). A positive effect of early ",
+      "score": 0.48879638
     },
     {
       "number": 10,
-      "title": "Spinal Cord Compression - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/neuroscience/spinal-cord-compression",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Many variables influence the functional outcome of ESCC with the pre-treatment neurologic status being the most important determinant of functional prognosis [16\u201318]. Bowel and bladder dysfunction is an unfavorable prognostic sign  and the extent of subarachnoid block is related to degree of motor a",
-      "score": 0.6615081
+      "title": "Malignant spinal cord compression: a retrospective audit of clinical practice at a UK regional cancer centre | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6602957",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nLevack P, Graham J, Collie D, Grant R, Kidd J, Kunkler I, Gibson A, Hurman D, McMillan N, Rampling R, Slider L, Statham P, Summers D (2001) A prospective audit of the diagnosis, management and outcome of malignant spinal cord compression. Clinical Resource and Audit Gro",
+      "score": 0.3966996
     },
     {
       "number": 11,
-      "title": "Metastatic Epidural Spinal Cord Compression - an overview",
+      "title": "Preoperative prediction for regaining ambulatory ability in paretic non-ambulatory patients with metastatic spinal cord compression | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/sc2016145",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nKim JM, Losina E, Bono CM, Schoenfeld AJ, Collins JE, Katz JN et al. Clinical outcome of metastatic spinal cord compression treated with surgical excision +/- radiation versus radiation therapy alone: a systematic review of literature. Spine 2012; 37: 78\u201384.\n\nArticle \nCAS \nG",
+      "score": 0.39473805
+    },
+    {
+      "number": 12,
+      "title": "Suggested MRI criteria for surgical decompression in acute spinal cord injury. Preliminary observations | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/sc1992137",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "or\n\n## References\n\nBohlman H H (1976) Acute fractures and dislocations of the cervical spine: an analysis of three hundred hospitalized patients and review of the literature. J Bone Joint Surg 61(A): 119\u2013142.\n\nGoogle Scholar\n\nJanssen L, Hansebout R R (1989) Pathogenesis of spinal cord injury and new",
+      "score": 0.38373423
+    },
+    {
+      "number": 13,
+      "title": "Myelography - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/myelography",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Myelography is an invasive procedure with inherent risks. Before MRI, conventional myelography was the gold standard for detection of cord compression and intrinsic cord lesions, but it has been largely replaced by MRI scanning, and by CT-myelography when MRI is contraindicated. Myelography may fail",
+      "score": 0.5677694
+    },
+    {
+      "number": 14,
+      "title": "Novel imaging protocol enables myelography of the cervical ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1002/evj.70187",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "Radiographic myelography is the traditional diagnostic method for detecting cervical spinal cord compression ... Evaluation of decision criteria",
+      "score": 0.55709904
+    },
+    {
+      "number": 15,
+      "title": "Computed tomographic myelography of the cranial cervical spine in ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/full/10.1111/evj.14552",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "The known criteria for identifying extradural spinal cord compression include a \u226550% reduction of the dorsal contrast column6 or a narrowing of",
+      "score": 0.5492786
+    },
+    {
+      "number": 16,
+      "title": "Spinal Cord Compression - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/spinal-cord-compression",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "function. A high index of suspicion of spinal cord compression must be maintained. High-dose intravenous corticosteroid therapy (dexamethasone 6 mg q 6 hours) should be instituted in cases of suspected cord compression. Contrast enhanced magnetic resonance imaging or computed tomographic (CT) myelog",
+      "score": 0.48191768
+    },
+    {
+      "number": 17,
+      "title": "Osteochondral fragmentation of the cervical articular process joints ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1111/evj.13410",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "The optimal criteria for the detection of spinal cord compression based on CT myelography have not been determined. Two-dimensional",
+      "score": 0.47051823
+    },
+    {
+      "number": 18,
+      "title": "Unilateral degenerative joint disease of a cervical articular process ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1111/eve.13579",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "(2004) Evaluation of decision criteria for detection of spinal cord compression based on cervical myelography in horses: 38 Cases (1981\u20132001).",
+      "score": 0.32209986
+    },
+    {
+      "number": 19,
+      "title": "Metastatic Epidural Spinal Cord Compression - an overview | ScienceDirect Topics",
       "detail": "www.sciencedirect.com",
       "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/metastatic-epidural-spinal-cord-compression",
       "authors": "www.sciencedirect.com",
       "host": "www.sciencedirect.com",
-      "snippet": "Surgery is not always indicated in the treatment of MESCC. This is especially true in patients with a poor oncologic prognosis. Rades and colleagues developed a scoring system to evaluate which patients should not be operated. In order to build their 25-point score, the authors considered the main p",
-      "score": 0.53342235
+      "snippet": "Initial treatment of MESCC includes corticosteroids and consideration of either radiation therapy or surgical decompression. The dosing of corticosteroids is most typically moderate (10 mg dexamethasone x 1 followed by 12\u201316 mg daily),67 although for severe acute compression, some advocate for high-",
+      "score": 0.78194773
     },
     {
-      "number": 12,
+      "number": 20,
       "title": "Comprehensive guide to the diagnosis, management, and treatment of metastatic spinal cord compression syndrome",
       "detail": "www.sciencedirect.com",
       "url": "https://www.sciencedirect.com/science/article/pii/S0960740425001562",
       "authors": "www.sciencedirect.com",
       "host": "www.sciencedirect.com",
-      "snippet": "1.   Highlights\n2.   Abstract\n3.   Keywords\n4.   1. Introduction\n5.   2. Materials and methods\n6.   3. Results\n7.   4. Pathophysiology\n8.   5. Clinical presentation\n9.   6. Diagnosis\n10.   7. Prognostic evaluation\n11.   8. Stability evaluation\n12.   9. Compression degree evaluation\n13.   10. Holisti",
-      "score": 0.3784826
-    },
-    {
-      "number": 13,
-      "title": "Spinal cord compression Outcome of early detection and ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167814007005531",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by R Venkitaraman \u00b7 2007 \u00b7 Cited by 24 \u2014 The median neurologic deficit free interval was 804 days for the patients who had rSCC and 989 days for those who had no rSCC on MRI. rSCC on MRI did not",
-      "score": 0.28888544
-    },
-    {
-      "number": 14,
-      "title": "A Clinical Practice Guideline for the Management of Patients ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5684845",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The review by Bozzo et al briefly mentioned that ongoing spinal cord compression is a feature that may alter management.2 The rationale for this is based on the concept that spinal cord compression causes tissue ischemia, resulting in damage and cell loss in the spinal cord. Selden et al stated that",
-      "score": 0.69399214
-    },
-    {
-      "number": 15,
-      "title": "A Clinical Practice Guideline for the Management of Acute Spinal Cord Injury: Introduction, Rationale, and Scope",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5684846",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The first section of this guideline aims to define the optimal timing of surgical decompression by comparing outcomes and safety between patients decompressed early (\u226424 hours of injury) versus late (>24 hours of injury). Preclinical evidence has suggested that persistent compression of the spinal c",
-      "score": 0.6690754
-    },
-    {
-      "number": 16,
-      "title": "The Management of Metastatic Spinal Cord Compression in ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10216687",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "NICE DG75 clinical guideline for assessment of MSCC (\u201cNICE guideline\u201d) [6,12] (use of MRI, use of full spine MRI to assess MSCC, neurologic examination, assessment by all treating clinicians, and clinical assessment of pain, sphincter control, and limb strength and sensitivity). [...] ### 3.4. Agree",
-      "score": 0.6279746
-    },
-    {
-      "number": 17,
-      "title": "Treatment of metastatic spinal cord compression: cepo review ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3503678",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The cepo thanks Ghassan Boubez md, H\u00f4pital Notre-Dame (chum); Carolyn Freeman md, Montreal General Hospital (muhc); Alain Jodoin md, H\u00f4pital du Sacr\u00e9-C\u0153ur de Montr\u00e9al; M\u00e9lanie Gionet md, H\u00f4pital r\u00e9gional de Rimouski (csss de Rimouski\u2013Neigette); Jean-Marc L\u00e9pine md, H\u00f4tel-Dieu de Qu\u00e9bec (chu de Qu\u00e9be",
-      "score": 0.588062
-    },
-    {
-      "number": 18,
-      "title": "Spinal Cord Compression - StatPearls - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557604",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "This activity reviews the evaluation and management of atraumatic spinal cord compression. It highlights the roles of the emergency physician, neurosurgeon, and inpatient care team in treating patients with this condition. Atraumatic spinal cord compression occurs as a result of numerous possible et",
-      "score": 0.55998856
-    },
-    {
-      "number": 19,
-      "title": "Emergency treatment of malignant extradural spinal cord compression: an evidence-based guideline - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK67242",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "## Indexing Status\n\nSubject indexing assigned by NLM\n\n## MeSH\n\nAnti-Inflammatory Agents /therapeutic use; Dexamethasone /therapeutic use; Emergencies; Evidence-Based Medicine; Humans; Practice Guidelines as Topic; Spinal Cord Compression /etiology /radiotherapy /surgery /therapy; Spinal Cord Neoplas",
-      "score": 0.50022036
-    },
-    {
-      "number": 20,
-      "title": "Metastatic Spinal Cord Compression - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK55007",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "Warning:\nThe NCBI web site requires JavaScript to function.\nmore...\n\nU.S. flag\n\nAn official website of the United States government\n\nDot gov\n\nThe .gov means it's official.\n  \nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, make sure you're on a federal\ngo",
-      "score": 0.4560954
+      "snippet": "Spinal metastases are the most common tumors found in the neuraxis. They correspond to 90% of all tumors at this level. The thoracic region is the most frequently affected area, followed by the lumbar region, with the cervical region being the least frequently affected place. Back pain is the most c",
+      "score": 0.598524
     },
     {
       "number": 21,
-      "title": "Spinal Cord Injuries - StatPearls - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560721",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "Social workers and case managers facilitate care transitions, arrange community resources, and assist with insurance and reimbursement processes. Psychiatrists or psychologists address the significant mental health challenges commonly encountered by patients, including depression, anxiety, and emoti",
-      "score": 0.19557908
+      "title": "[PDF] Practice Guidelines for Chronic Pain Management - American ...",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/~/media/sites/asahq/files/public/resources/standards-guidelines/practice-guidelines-for-chronic-pain-management.pdf/1000",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "pain 294 48.0 37.0 10.9 3.1 1.0 26. Spinal cord stimulation for other conditions (e.g., postherpetic neuralgia, postamputation pain, peripheral neuropathic pain, spinal cord injury, CRPS, cauda equina syndrome, cervical root injury pain, peripheral vascular disease, and visceral pain) 296 44.9 38.2 ",
+      "score": 0.3783448
     },
     {
       "number": 22,
-      "title": "Spinal metastases and metastatic spinal cord compression",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/ng234/evidence/k-prognostic-tools-spinal-instability-pdf-472849134229",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "were made for this review question. 55 FINAL Prognostic tools \u2013 spinal instability Spinal metastases and metastatic spinal cord compression: evidence reviews for Prognostic tools \u2013 spinal instability FINAL (September 2023) Appendix L Study data (thresholds and true positive, false positive, false ne",
-      "score": 0.67885995
+      "title": "Statement on Neurologic Complications of Neuraxial Analgesia/Anesthesia in Obstetrics",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/standards-and-practice-parameters/statement-on-neurologic-complications-of-neuraxial-analgesia-anesthesia-in-obstetrics",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "Clinicians are advised to be aware of and to avoid conditions that have been linked to the formation of epidural hematoma or epidural abscess.\n Discrimination between surgical, anesthetic, and patient factors is often difficult.\n In the setting of neuraxial anesthesia, concern of compressive spinal ",
+      "score": 0.21698098
     },
     {
       "number": 23,
-      "title": "Rationale and impact | Spinal metastases and metastatic spinal cord compression | Guidance | NICE",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/NG234/chapter/rationale-and-impact",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "There was a large amount of evidence for many different prognostic scoring systems, including original and revised versions for some. Analysis showed that these varied in their ability to predict survival, and none of the systems reviewed were better overall at predicting prognosis. The committee no",
-      "score": 0.45333505
+      "title": "Spinal Stenosis | American College of Rheumatology",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/patients/spinal-stenosis",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "Global Community\n\nJoinLog In\n\nGo HomeAmerican College of Rheumatology\n\n Global Community\n\nLog inJoin\n\n## Clinical Tools & Guidelines\n\n## Clinical Practice Guidelines\n\n Call for Letters of Interest\n Axial Spondyloarthritis\n Glucocorticoid-Induced Osteoporosis\n Gout\n Integrative RA Treatment\n Intersti",
+      "score": 0.19346753
     },
     {
       "number": 24,
-      "title": "NATIONAL INSTITUTE FOR HEALTH AND CARE ...",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/qs56/documents/metastatic-spinal-cord-compression-briefing-paper2",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "cord compression will increase in the future with improving cancer treatments resulting in better survival rates and outcomes. The median age at the time of metastatic spinal cord compression diagnosis is 65 years. Audit data suggests that 77% of patients diagnosed with metastatic spinal cord compre",
-      "score": 0.33941197
+      "title": "Spinal Cord Compression - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/statpearls/article-29311",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Suspicion of spondylotic myelopathy should prompt MR imaging evaluation. CT myelography is an alternative option and can provide a quantitative assessment of spinal canal narrowing, in addition to improved detail of bony structures and soft tissue calcification. MRI provides better detail of spinal ",
+      "score": 0.6205532
     }
   ],
   "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
   "citations": [
     {
       "number": 1,
-      "title": "Reference ID: 5578772 - accessdata.fda.gov",
+      "title": "[PDF] 210874Orig1s000 CLINICAL REVIEW(S) - accessdata.fda.gov",
       "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/022544s031lbl.pdf",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/210874Orig1s000MedR.pdf",
       "authors": "www.accessdata.fda.gov",
       "host": "www.accessdata.fda.gov",
-      "snippet": "this should be done gradually over a minimum of one week or longer (at the discretion of the prescriber). In adults with postherpetic neuralgia, GRALISE therapy should be initiated and titrated as follows: Table 1: GRALISE Recommended Titration Schedule Day 1 Day 2 Days 3\u20136 Days 7\u201310 Days 11\u201314 Day ",
-      "score": 0.3026904
+      "snippet": "Skeletal injury; Skin abrasion; Skin injury; Skull fracture; Skull fractured base; Snake bite; Soft tissue injury; Spinal column injury; Spinal compression fracture; Spinal cord injury; Spinal cord injury cauda equina; Spinal cord injury cervical; Spinal cord injury lumbar; Spinal cord injury sacral",
+      "score": 0.46759978
     },
     {
       "number": 2,
-      "title": "highlights of prescribing information",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a887020f-b41f-49fe-8379-f01147b2a796&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "2 DOSAGE AND ADMINISTRATION. 2.1 Dosing and Dose Adjustment. 2.2 Administration Instructions. 3 DOSAGE FORMS AND STRENGTHS. 4 CONTRAINDICATIONS. 5 WARNINGS AND",
-      "score": 0.19191799
+      "title": "[PDF] 203415Orig1s000 - accessdata.fda.gov",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/203415orig1s000medr.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "arm compared to the placebo arm when nonpathologic fracture AEs reported as SREs were censored (i.e., 2.5% vs. 0.8%, respectively). Bone preserving therapies such as bisphosphonates or denosumab appeared to be underutilized in this mCRPC population. Spinal Cord Compression and Cauda Equine Syndrome:",
+      "score": 0.43568602
     },
     {
       "number": 3,
-      "title": "VYBRIQUETM (sildenafil) oral film - accessdata.fda.gov",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/210858s000lbl.pdf",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "7.4) ------------------------USE IN SPECIFIC POPULATIONS ----------------------- \u2022 Geriatric use: Recommended starting dose is 25 mg. (2.3, 8.5) \u2022 Severe renal impairment: Recommended starting dose is 25 mg. (2.3, 8.6) \u2022 Hepatic impairment: Recommended starting dose is 25 mg. (2.3, 8.7) See 17 for P",
-      "score": 0.17435436
+      "title": "[PDF] BLA 761393 Condoliase injection - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/184938/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "(Figure 1), which may result in burning, radiating pain in the concordant dermatome that is characteristic of RLP, as well as possible associated sensory changes and/or motor deficits. Collectively, the signs and symptoms resulting from spinal nerve root compression are known as radiculopathy. The d",
+      "score": 0.26444548
     },
     {
       "number": 4,
-      "title": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/ ...",
-      "detail": "nctr-crs.fda.gov",
-      "url": "https://nctr-crs.fda.gov/fdalabel/services/spl/set-ids/bfdfe235-d717-4855-a3c8-a13d26dadede/spl-doc",
-      "authors": "nctr-crs.fda.gov",
-      "host": "nctr-crs.fda.gov",
-      "snippet": "See full prescribing information for OXYCONTIN. treatment initiation and dose adjustment. tricyclic antidepressants (TCAs), certain muscle relaxants",
-      "score": 0.17309275
+      "title": "[PDF] SUMMARY OF SAFETY & EFFECTIVENESS DATA (SSED)",
+      "detail": "www.accessdata.fda.gov",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf14/p140004b.pdf",
+      "authors": "www.accessdata.fda.gov",
+      "host": "www.accessdata.fda.gov",
+      "snippet": "14. Insulin-dependent diabetes mellitus 15. Significant peripheral vascular disease (diminished dorsalis pedis or tibial pulses) 16. Prior surgery of the lumbar spine 17. Cauda equina syndrome (defined as neural compression causing neurogenic bowel or bladder dysfunction) 18. Infection in the disc o",
+      "score": 0.20731136
     },
     {
       "number": 5,
-      "title": "These highlights do not include all the information needed to use\u00a0PREGABALIN CAPSULES\u00a0safely and effectively. See full prescribing information for PREGABALIN CAPSULES.<br/>\n      <br/> PREGABALIN\u00a0capsules, for oral use,\u00a0CV<br/> Initial U.S. Approval: 2004",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/spl/data/d9a1cb89-c0ba-4049-bf7a-17bfe759f286/d9a1cb89-c0ba-4049-bf7a-17bfe759f286.xml",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "|  |  |  |\n --- \n| INDICATION | Dosing    Regimen | Maximum Dose |\n| DPN Pain (2.2) | 3 divided doses per day | 300 mg/day within 1 week |\n| PHN (2.3) | 2 or 3 divided doses per day | 300 mg/day within 1 week. Maximum dose of 600 mg/day. |\n| Adjunctive Therapy for Partial-Onset Seizures in Adult Pat",
-      "score": 0.16265947
+      "title": "[PDF] MICHAEL JEROME YASZEMSKI, M- Curriculum Vitae - FDA",
+      "detail": "www.fda.gov",
+      "url": "https://www.fda.gov/media/131467/download",
+      "authors": "www.fda.gov",
+      "host": "www.fda.gov",
+      "snippet": "New Allied Health Staff, Rochester, MN, April 9, 2012 46. Yaszemski, MJ: Cauda Equina Syndrome. Mayo Clinic Department of Orthopaedic Surgery Grand Rounds mini spine symposium, April 16, 2012 47. Yaszemski, MJ: Conflict of Interest: The New Federal Regulations. Mayo Clinic Quarterly Research Gatheri",
+      "score": 0.19580965
     },
     {
       "number": 6,
-      "title": "DailyMed - JULUCA- dolutegravir sodium and rilpivirine hydrochloride tablet, film coated",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=806653d1-bf35-4924-b999-ad5d21821cc1",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "## 8.6 Renal Impairment\n\nNo dosage adjustment is necessary for patients with mild or moderate renal impairment (creatinine clearance greater than or equal to 30 mL/min) see Clinical Pharmacology ([12.3)]. In patients with severe renal impairment (creatinine clearance less than 30 mL/min) or end-stag",
-      "score": 0.15699492
+      "title": "A Balancing Act - American Heart Association Journals",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/pdf/10.1161/CIRCULATIONAHA.119.044780?download=true",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "... spinal cord lesion involving the cauda equina. Magnetic resonance imaging (MRI) is the modality of choice in these cases because it provides sufficient",
+      "score": 0.25852996
     },
     {
       "number": 7,
-      "title": "These highlights do not include all the information needed to use DILTIAZEM HYDROCHLORIDE EXTENDED-RELEASE TABLETS safely and effectively. See full prescribing information for DILTIAZEM HYDROCHLORIDE EXTENDED-RELEASE TABLETS.\n \n      \nDILTIAZEM HYDROCHLORIDE extended-release tablets, for oral use\n \nInitial U.S. Approval: 1982",
-      "detail": "dailymed.nlm.nih.gov",
-      "url": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f7137458-0db3-7ecd-e053-6394a90a5f95&type=display",
-      "authors": "dailymed.nlm.nih.gov",
-      "host": "dailymed.nlm.nih.gov",
-      "snippet": "## 8.5 Geriatric Use\n\nClinical studies of diltiazem did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger pati",
-      "score": 0.14585622
+      "title": "Long-Term Outcome of Acute Spinal Cord Ischemia Syndrome | Stroke",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/01.str.0000111598.78198.ec",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "The clinical features of ASCIS were classified according to the International Standards for Neurological and Functional Classification of Spinal Cord Injury",
+      "score": 0.07947442
     },
     {
       "number": 8,
-      "title": "[PDF] 022462Orig1s000 - accessdata.fda.gov",
-      "detail": "www.accessdata.fda.gov",
-      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2010/022462Orig1s000MedR.pdf",
-      "authors": "www.accessdata.fda.gov",
-      "host": "www.accessdata.fda.gov",
-      "snippet": "associated with intrathecal drug infusion catheters: report and observations on 41 patients. Neurosurgery. 2002;50:78-87. 15 Cabbell, KL, Taren JA, Sagher O. Spinal cord compression by catheter granulomas in high-dose intrathecal morphine therapy: case report. Neurosurgery. 1998;42:1176-1181. 16 Sch",
-      "score": 0.13849701
+      "title": "Spinal and Paraspinal Arteriovenous Lesions | Stroke",
+      "detail": "www.ahajournals.org",
+      "url": "https://www.ahajournals.org/doi/10.1161/STROKEAHA.118.012783",
+      "authors": "www.ahajournals.org",
+      "host": "www.ahajournals.org",
+      "snippet": "Here, we focus only on the spinal AVS lesions and propose a systematic classification based on their anatomic relationship with the spinal cord",
+      "score": 0.04646909
     },
     {
       "number": 9,
-      "title": "Malignant spinal cord compression - Symptoms, diagnosis and treatment | BMJ Best Practice",
-      "detail": "bestpractice.bmj.com",
-      "url": "https://bestpractice.bmj.com/topics/en-us/3000286",
-      "authors": "bestpractice.bmj.com",
-      "host": "bestpractice.bmj.com",
-      "snippet": "Prognosis is more favourable for previously ambulatory patients and for patients who have been immobile for less than 24 hours.\n\n### Definition [...] open menu\n\nWhen viewing this topic in a different language, you may notice some differences in the way the content is structured, but it still reflect",
-      "score": 0.43482184
+      "title": "\u201cTime is spine\u201d: the importance of early intervention for traumatic spinal cord injury | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41393-020-0477-8",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "## The evidence for early surgical decompression in acute spinal cord injury [...] proportion of patients who underwent early surgery (19.8%) demonstrated a 2-or-more grade improvement in AIS at 6 months compared with those who underwent late surgical intervention (8.8%). A positive effect of early ",
+      "score": 0.48879638
     },
     {
       "number": 10,
-      "title": "Spinal Cord Compression - an overview",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/topics/neuroscience/spinal-cord-compression",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "Many variables influence the functional outcome of ESCC with the pre-treatment neurologic status being the most important determinant of functional prognosis [16\u201318]. Bowel and bladder dysfunction is an unfavorable prognostic sign  and the extent of subarachnoid block is related to degree of motor a",
-      "score": 0.6615081
+      "title": "Malignant spinal cord compression: a retrospective audit of clinical practice at a UK regional cancer centre | British Journal of Cancer",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/6602957",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nCAS \nGoogle Scholar\n\nLevack P, Graham J, Collie D, Grant R, Kidd J, Kunkler I, Gibson A, Hurman D, McMillan N, Rampling R, Slider L, Statham P, Summers D (2001) A prospective audit of the diagnosis, management and outcome of malignant spinal cord compression. Clinical Resource and Audit Gro",
+      "score": 0.3966996
     },
     {
       "number": 11,
-      "title": "Metastatic Epidural Spinal Cord Compression - an overview",
+      "title": "Preoperative prediction for regaining ambulatory ability in paretic non-ambulatory patients with metastatic spinal cord compression | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/sc2016145",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nGoogle Scholar\n\nKim JM, Losina E, Bono CM, Schoenfeld AJ, Collins JE, Katz JN et al. Clinical outcome of metastatic spinal cord compression treated with surgical excision +/- radiation versus radiation therapy alone: a systematic review of literature. Spine 2012; 37: 78\u201384.\n\nArticle \nCAS \nG",
+      "score": 0.39473805
+    },
+    {
+      "number": 12,
+      "title": "Suggested MRI criteria for surgical decompression in acute spinal cord injury. Preliminary observations | Spinal Cord",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/sc1992137",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "or\n\n## References\n\nBohlman H H (1976) Acute fractures and dislocations of the cervical spine: an analysis of three hundred hospitalized patients and review of the literature. J Bone Joint Surg 61(A): 119\u2013142.\n\nGoogle Scholar\n\nJanssen L, Hansebout R R (1989) Pathogenesis of spinal cord injury and new",
+      "score": 0.38373423
+    },
+    {
+      "number": 13,
+      "title": "Myelography - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/myelography",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Myelography is an invasive procedure with inherent risks. Before MRI, conventional myelography was the gold standard for detection of cord compression and intrinsic cord lesions, but it has been largely replaced by MRI scanning, and by CT-myelography when MRI is contraindicated. Myelography may fail",
+      "score": 0.5677694
+    },
+    {
+      "number": 14,
+      "title": "Novel imaging protocol enables myelography of the cervical ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1002/evj.70187",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "Radiographic myelography is the traditional diagnostic method for detecting cervical spinal cord compression ... Evaluation of decision criteria",
+      "score": 0.55709904
+    },
+    {
+      "number": 15,
+      "title": "Computed tomographic myelography of the cranial cervical spine in ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/full/10.1111/evj.14552",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "The known criteria for identifying extradural spinal cord compression include a \u226550% reduction of the dorsal contrast column6 or a narrowing of",
+      "score": 0.5492786
+    },
+    {
+      "number": 16,
+      "title": "Spinal Cord Compression - an overview | ScienceDirect Topics",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/spinal-cord-compression",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "function. A high index of suspicion of spinal cord compression must be maintained. High-dose intravenous corticosteroid therapy (dexamethasone 6 mg q 6 hours) should be instituted in cases of suspected cord compression. Contrast enhanced magnetic resonance imaging or computed tomographic (CT) myelog",
+      "score": 0.48191768
+    },
+    {
+      "number": 17,
+      "title": "Osteochondral fragmentation of the cervical articular process joints ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1111/evj.13410",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "The optimal criteria for the detection of spinal cord compression based on CT myelography have not been determined. Two-dimensional",
+      "score": 0.47051823
+    },
+    {
+      "number": 18,
+      "title": "Unilateral degenerative joint disease of a cervical articular process ...",
+      "detail": "beva.onlinelibrary.wiley.com",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/10.1111/eve.13579",
+      "authors": "beva.onlinelibrary.wiley.com",
+      "host": "beva.onlinelibrary.wiley.com",
+      "snippet": "(2004) Evaluation of decision criteria for detection of spinal cord compression based on cervical myelography in horses: 38 Cases (1981\u20132001).",
+      "score": 0.32209986
+    },
+    {
+      "number": 19,
+      "title": "Metastatic Epidural Spinal Cord Compression - an overview | ScienceDirect Topics",
       "detail": "www.sciencedirect.com",
       "url": "https://www.sciencedirect.com/topics/medicine-and-dentistry/metastatic-epidural-spinal-cord-compression",
       "authors": "www.sciencedirect.com",
       "host": "www.sciencedirect.com",
-      "snippet": "Surgery is not always indicated in the treatment of MESCC. This is especially true in patients with a poor oncologic prognosis. Rades and colleagues developed a scoring system to evaluate which patients should not be operated. In order to build their 25-point score, the authors considered the main p",
-      "score": 0.53342235
+      "snippet": "Initial treatment of MESCC includes corticosteroids and consideration of either radiation therapy or surgical decompression. The dosing of corticosteroids is most typically moderate (10 mg dexamethasone x 1 followed by 12\u201316 mg daily),67 although for severe acute compression, some advocate for high-",
+      "score": 0.78194773
     },
     {
-      "number": 12,
+      "number": 20,
       "title": "Comprehensive guide to the diagnosis, management, and treatment of metastatic spinal cord compression syndrome",
       "detail": "www.sciencedirect.com",
       "url": "https://www.sciencedirect.com/science/article/pii/S0960740425001562",
       "authors": "www.sciencedirect.com",
       "host": "www.sciencedirect.com",
-      "snippet": "1.   Highlights\n2.   Abstract\n3.   Keywords\n4.   1. Introduction\n5.   2. Materials and methods\n6.   3. Results\n7.   4. Pathophysiology\n8.   5. Clinical presentation\n9.   6. Diagnosis\n10.   7. Prognostic evaluation\n11.   8. Stability evaluation\n12.   9. Compression degree evaluation\n13.   10. Holisti",
-      "score": 0.3784826
-    },
-    {
-      "number": 13,
-      "title": "Spinal cord compression Outcome of early detection and ...",
-      "detail": "www.sciencedirect.com",
-      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167814007005531",
-      "authors": "www.sciencedirect.com",
-      "host": "www.sciencedirect.com",
-      "snippet": "by R Venkitaraman \u00b7 2007 \u00b7 Cited by 24 \u2014 The median neurologic deficit free interval was 804 days for the patients who had rSCC and 989 days for those who had no rSCC on MRI. rSCC on MRI did not",
-      "score": 0.28888544
-    },
-    {
-      "number": 14,
-      "title": "A Clinical Practice Guideline for the Management of Patients ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5684845",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The review by Bozzo et al briefly mentioned that ongoing spinal cord compression is a feature that may alter management.2 The rationale for this is based on the concept that spinal cord compression causes tissue ischemia, resulting in damage and cell loss in the spinal cord. Selden et al stated that",
-      "score": 0.69399214
-    },
-    {
-      "number": 15,
-      "title": "A Clinical Practice Guideline for the Management of Acute Spinal Cord Injury: Introduction, Rationale, and Scope",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5684846",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The first section of this guideline aims to define the optimal timing of surgical decompression by comparing outcomes and safety between patients decompressed early (\u226424 hours of injury) versus late (>24 hours of injury). Preclinical evidence has suggested that persistent compression of the spinal c",
-      "score": 0.6690754
-    },
-    {
-      "number": 16,
-      "title": "The Management of Metastatic Spinal Cord Compression in ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10216687",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "NICE DG75 clinical guideline for assessment of MSCC (\u201cNICE guideline\u201d) [6,12] (use of MRI, use of full spine MRI to assess MSCC, neurologic examination, assessment by all treating clinicians, and clinical assessment of pain, sphincter control, and limb strength and sensitivity). [...] ### 3.4. Agree",
-      "score": 0.6279746
-    },
-    {
-      "number": 17,
-      "title": "Treatment of metastatic spinal cord compression: cepo review ...",
-      "detail": "pmc.ncbi.nlm.nih.gov",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3503678",
-      "authors": "pmc.ncbi.nlm.nih.gov",
-      "host": "pmc.ncbi.nlm.nih.gov",
-      "snippet": "The cepo thanks Ghassan Boubez md, H\u00f4pital Notre-Dame (chum); Carolyn Freeman md, Montreal General Hospital (muhc); Alain Jodoin md, H\u00f4pital du Sacr\u00e9-C\u0153ur de Montr\u00e9al; M\u00e9lanie Gionet md, H\u00f4pital r\u00e9gional de Rimouski (csss de Rimouski\u2013Neigette); Jean-Marc L\u00e9pine md, H\u00f4tel-Dieu de Qu\u00e9bec (chu de Qu\u00e9be",
-      "score": 0.588062
-    },
-    {
-      "number": 18,
-      "title": "Spinal Cord Compression - StatPearls - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557604",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "This activity reviews the evaluation and management of atraumatic spinal cord compression. It highlights the roles of the emergency physician, neurosurgeon, and inpatient care team in treating patients with this condition. Atraumatic spinal cord compression occurs as a result of numerous possible et",
-      "score": 0.55998856
-    },
-    {
-      "number": 19,
-      "title": "Emergency treatment of malignant extradural spinal cord compression: an evidence-based guideline - Database of Abstracts of Reviews of Effects (DARE): Quality-assessed Reviews - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK67242",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "## Indexing Status\n\nSubject indexing assigned by NLM\n\n## MeSH\n\nAnti-Inflammatory Agents /therapeutic use; Dexamethasone /therapeutic use; Emergencies; Evidence-Based Medicine; Humans; Practice Guidelines as Topic; Spinal Cord Compression /etiology /radiotherapy /surgery /therapy; Spinal Cord Neoplas",
-      "score": 0.50022036
-    },
-    {
-      "number": 20,
-      "title": "Metastatic Spinal Cord Compression - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK55007",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "Warning:\nThe NCBI web site requires JavaScript to function.\nmore...\n\nU.S. flag\n\nAn official website of the United States government\n\nDot gov\n\nThe .gov means it's official.\n  \nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, make sure you're on a federal\ngo",
-      "score": 0.4560954
+      "snippet": "Spinal metastases are the most common tumors found in the neuraxis. They correspond to 90% of all tumors at this level. The thoracic region is the most frequently affected area, followed by the lumbar region, with the cervical region being the least frequently affected place. Back pain is the most c",
+      "score": 0.598524
     },
     {
       "number": 21,
-      "title": "Spinal Cord Injuries - StatPearls - NCBI Bookshelf",
-      "detail": "www.ncbi.nlm.nih.gov",
-      "url": "https://www.ncbi.nlm.nih.gov/books/NBK560721",
-      "authors": "www.ncbi.nlm.nih.gov",
-      "host": "www.ncbi.nlm.nih.gov",
-      "snippet": "Social workers and case managers facilitate care transitions, arrange community resources, and assist with insurance and reimbursement processes. Psychiatrists or psychologists address the significant mental health challenges commonly encountered by patients, including depression, anxiety, and emoti",
-      "score": 0.19557908
+      "title": "[PDF] Practice Guidelines for Chronic Pain Management - American ...",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/~/media/sites/asahq/files/public/resources/standards-guidelines/practice-guidelines-for-chronic-pain-management.pdf/1000",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "pain 294 48.0 37.0 10.9 3.1 1.0 26. Spinal cord stimulation for other conditions (e.g., postherpetic neuralgia, postamputation pain, peripheral neuropathic pain, spinal cord injury, CRPS, cauda equina syndrome, cervical root injury pain, peripheral vascular disease, and visceral pain) 296 44.9 38.2 ",
+      "score": 0.3783448
     },
     {
       "number": 22,
-      "title": "Spinal metastases and metastatic spinal cord compression",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/ng234/evidence/k-prognostic-tools-spinal-instability-pdf-472849134229",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "were made for this review question. 55 FINAL Prognostic tools \u2013 spinal instability Spinal metastases and metastatic spinal cord compression: evidence reviews for Prognostic tools \u2013 spinal instability FINAL (September 2023) Appendix L Study data (thresholds and true positive, false positive, false ne",
-      "score": 0.67885995
+      "title": "Statement on Neurologic Complications of Neuraxial Analgesia/Anesthesia in Obstetrics",
+      "detail": "www.asahq.org",
+      "url": "https://www.asahq.org/standards-and-practice-parameters/statement-on-neurologic-complications-of-neuraxial-analgesia-anesthesia-in-obstetrics",
+      "authors": "www.asahq.org",
+      "host": "www.asahq.org",
+      "snippet": "Clinicians are advised to be aware of and to avoid conditions that have been linked to the formation of epidural hematoma or epidural abscess.\n Discrimination between surgical, anesthetic, and patient factors is often difficult.\n In the setting of neuraxial anesthesia, concern of compressive spinal ",
+      "score": 0.21698098
     },
     {
       "number": 23,
-      "title": "Rationale and impact | Spinal metastases and metastatic spinal cord compression | Guidance | NICE",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/NG234/chapter/rationale-and-impact",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "There was a large amount of evidence for many different prognostic scoring systems, including original and revised versions for some. Analysis showed that these varied in their ability to predict survival, and none of the systems reviewed were better overall at predicting prognosis. The committee no",
-      "score": 0.45333505
+      "title": "Spinal Stenosis | American College of Rheumatology",
+      "detail": "rheumatology.org",
+      "url": "https://rheumatology.org/patients/spinal-stenosis",
+      "authors": "rheumatology.org",
+      "host": "rheumatology.org",
+      "snippet": "Global Community\n\nJoinLog In\n\nGo HomeAmerican College of Rheumatology\n\n Global Community\n\nLog inJoin\n\n## Clinical Tools & Guidelines\n\n## Clinical Practice Guidelines\n\n Call for Letters of Interest\n Axial Spondyloarthritis\n Glucocorticoid-Induced Osteoporosis\n Gout\n Integrative RA Treatment\n Intersti",
+      "score": 0.19346753
     },
     {
       "number": 24,
-      "title": "NATIONAL INSTITUTE FOR HEALTH AND CARE ...",
-      "detail": "www.nice.org.uk",
-      "url": "https://www.nice.org.uk/guidance/qs56/documents/metastatic-spinal-cord-compression-briefing-paper2",
-      "authors": "www.nice.org.uk",
-      "host": "www.nice.org.uk",
-      "snippet": "cord compression will increase in the future with improving cancer treatments resulting in better survival rates and outcomes. The median age at the time of metastatic spinal cord compression diagnosis is 65 years. Audit data suggests that 77% of patients diagnosed with metastatic spinal cord compre",
-      "score": 0.33941197
+      "title": "Spinal Cord Compression - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/n/statpearls/article-29311",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Suspicion of spondylotic myelopathy should prompt MR imaging evaluation. CT myelography is an alternative option and can provide a quantitative assessment of spinal canal narrowing, in addition to improved detail of bony structures and soft tissue calcification. MRI provides better detail of spinal ",
+      "score": 0.6205532
     }
   ],
-  "publishedAt": "2026-08-20T23:58:37.232291Z",
-  "updatedAt": "2026-08-20T23:58:37.232291Z",
+  "publishedAt": "2026-09-15T21:21:36.649690+00:00",
+  "updatedAt": "2026-09-15T21:21:36.649690+00:00",
   "readingMinutes": 6,
   "slug": "spinal-cord-compression"
 }

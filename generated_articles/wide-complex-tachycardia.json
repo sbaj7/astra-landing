@@ -1,0 +1,764 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Emergency Cardiology",
+  "title": "Wide Complex Tachycardia",
+  "summary": "Manage any adult wide complex tachycardia by first identifying instability and delivering synchronized cardioversion when needed. In stable patients, obtain a 12-lead ECG, presume ventricular tachycardia until evidence supports another mechanism, and avoid AV-nodal blockade when pre-excitation is possible.",
+  "seoDescription": "Initial management of wide complex tachycardia: recognize instability, obtain diagnostic ECGs, distinguish VT from SVT, and avoid unsafe AV-nodal blockers.",
+  "clinicalQuestion": "How should clinicians stabilize, classify, and initially treat an adult presenting with wide complex tachycardia?",
+  "specialty": "Cardiology and Emergency Medicine",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "wide complex tachycardia",
+    "ventricular tachycardia",
+    "stable monomorphic VT",
+    "pre-excited atrial fibrillation",
+    "adenosine",
+    "ECG algorithms"
+  ],
+  "keyTakeaways": [
+    "A tachycardia with QRS duration at least 120 ms is wide complex; the immediate branches are regular versus irregular rhythm and stable versus unstable hemodynamics. [9][12][20][24]",
+    "Treat hemodynamically unstable wide complex tachycardia with urgent electrical cardioversion rather than delaying for ECG classification. [16]",
+    "For regular monomorphic wide complex tachycardia, ventricular tachycardia is the working diagnosis unless a structured clinical and ECG assessment establishes supraventricular tachycardia with aberrancy or pre-excitation. [10][11][19][21][23]",
+    "AV dissociation, capture beats, fusion beats, or prior acute myocardial infarction with wide complex tachycardia support ventricular tachycardia. [22]",
+    "Adenosine is an option only for a stable, regular wide complex tachycardia; it may help terminate or reveal a supraventricular mechanism but does not replace ECG-based assessment. [1][2][23]",
+    "An irregular, very rapid, morphologically variable wide complex tachycardia should prompt concern for pre-excited atrial fibrillation; avoid AV-nodal-suppressing drugs and use an accessory-pathway-directed strategy. [16][20]"
+  ],
+  "sections": [
+    {
+      "id": "first-minutes",
+      "eyebrow": "Immediate action",
+      "heading": "Stabilize before defining the mechanism",
+      "intro": "Classify hemodynamic status and rhythm regularity immediately.",
+      "paragraphs": [
+        "Place the patient on continuous monitoring and obtain a 12-lead ECG as soon as feasible, but do not delay electrical treatment for a prolonged diagnostic exercise when the patient is unstable. Acute tachyarrhythmia management begins with hemodynamic assessment, and prompt restoration of sinus rhythm by direct-current cardioversion is required when instability is present. [16][23]",
+        "Use a rhythm-first branch point. A regular monomorphic wide complex tachycardia has a differential dominated by ventricular tachycardia (VT), supraventricular tachycardia (SVT) with aberrant intraventricular conduction, and antidromic atrioventricular reentrant tachycardia. An irregular wide complex tachycardia instead raises pre-excited atrial fibrillation (AF), polymorphic VT, or an atrial arrhythmia with variable aberrancy. [9][12][16][20]",
+        "Do not allow apparent clinical stability to be interpreted as proof of SVT. VT is the most frequent regular wide complex tachycardia, and misclassification of VT as SVT can lead to potentially lethal treatment choices. [9][10][11]"
+      ],
+      "bullets": [
+        "Define adult wide complex tachycardia as rate greater than 100 beats/min with QRS duration at least 120 ms. [12][20][21][24]",
+        "If the rhythm is irregular with beat-to-beat QRS morphologic variation and a rapid ventricular response, prioritize pre-excited AF in the differential. [20]",
+        "If a defibrillator or implanted cardiac device is present, interrogate stored electrograms when this can be done without delaying necessary cardioversion; device signals can distinguish conducted supraventricular rhythms from ventricular rhythms. [21]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial rhythm pattern directs both the diagnostic frame and the drugs to avoid. [16][20]",
+        "columns": [
+          "Initial pattern",
+          "Leading mechanisms",
+          "Immediate management implication"
+        ],
+        "rows": [
+          [
+            "Regular, monomorphic WCT",
+            "VT; SVT with bundle-branch aberrancy; antidromic AVRT [9][12][19]",
+            "Treat as VT while obtaining a 12-lead ECG and applying structured VT criteria. [10][19][23]"
+          ],
+          [
+            "Irregular WCT with changing morphology",
+            "Pre-excited AF; polymorphic VT; atrial arrhythmia with variable aberrancy [20]",
+            "Avoid AV-nodal-suppressing drugs if pre-excitation is possible. [16]"
+          ],
+          [
+            "Unstable WCT",
+            "Mechanism need not be established before treatment [16]",
+            "Perform urgent direct-current cardioversion. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ecg-assessment",
+      "eyebrow": "Diagnostic branch",
+      "heading": "Use the 12-lead ECG to look for ventricular tachycardia",
+      "intro": "Seek high-specificity VT findings before applying morphology algorithms.",
+      "paragraphs": [
+        "Acquire a 12-lead ECG during tachycardia and compare it with a prior baseline tracing whenever available. A systematic assessment integrates clinical history, comparison with the resting ECG, pathognomonic VT features, and morphology in precordial leads and aVR; no isolated algorithm should substitute for this sequence. [13][19][23]",
+        "Identify atrioventricular dissociation whenever possible. Regular P waves that are dissociated from QRS complexes, a ventricular rate exceeding the atrial rate, capture beats, and fusion beats are diagnostic clues favoring VT. A history of acute myocardial infarction together with wide complex tachycardia also supports VT. [21][22]",
+        "If definitive findings are absent, use a reproducible algorithm such as Brugada, Vereckei-aVR, or lead II R-wave peak time criteria, recognizing that diagnostic performance is lower in real-world interpretation than in original reports. In a meta-analysis of 14 studies including 3,966 patients with regular WCT, Brugada, Vereckei-aVR, and lead II R-wave peak time were among the assessable ECG algorithms. [4][13]"
+      ],
+      "bullets": [
+        "A QRS morphology during tachycardia that is identical to a baseline bundle-branch block morphology supports SVT with aberrancy, but this comparison does not eliminate VT in all cases. [23]",
+        "A monophasic R wave in aVR and atypical right bundle-branch block morphology are findings that support VT in the described structured ECG approach. [23]",
+        "Use Lewis leads when atrial activity is difficult to see and AV dissociation is suspected. [19]"
+      ],
+      "subsections": [
+        {
+          "heading": "How much confidence to place in algorithms",
+          "paragraphs": [
+            "Algorithmic output should alter confidence, not override the clinical context. In one EP-confirmed validation cohort, the Basel algorithm had 93.3% sensitivity and 90.4% specificity, Brugada had 93.3% sensitivity and 88.5% specificity, and Vereckei had 91.3% sensitivity and 84.6% specificity; however, emergency-department studies show more modest performance and only moderate interobserver agreement. [7][13]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "ECG findings that shift a regular wide complex tachycardia toward VT. [21][22][23]",
+        "columns": [
+          "Finding",
+          "Interpretation",
+          "Next action"
+        ],
+        "rows": [
+          [
+            "AV dissociation or ventricular rate greater than atrial rate",
+            "Supports VT. [21][22]",
+            "Manage as VT; do not reclassify as SVT solely because the patient is stable. [10][11]"
+          ],
+          [
+            "Capture or fusion beat",
+            "Supports VT. [22]",
+            "Manage as VT. [22]"
+          ],
+          [
+            "Prior acute MI with WCT",
+            "Supports VT. [22]",
+            "Treat VT as the working diagnosis and assess for structural substrate. [21][23]"
+          ],
+          [
+            "Baseline QRS morphology matches tachycardia",
+            "Supports SVT with aberrancy. [23]",
+            "Integrate with atrial activity and the entire ECG before selecting SVT-directed therapy. [13][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stable-regular-wct",
+      "eyebrow": "Treated as VT",
+      "heading": "Manage stable regular monomorphic wide complex tachycardia cautiously",
+      "intro": "Use rhythm-directed therapy only after excluding the dangerous alternatives.",
+      "paragraphs": [
+        "In a stable regular monomorphic WCT, obtain the diagnostic ECG before treatment if this does not compromise the patient, establish IV access and continuous monitoring, and proceed as presumed VT when the mechanism remains uncertain. Historical guideline recommendations support IV procainamide and/or sotalol for pharmacologic termination of stable WCT, although those recommendations were based on small randomized studies. [15]",
+        "Adenosine can be considered for stable, regular WCT as a diagnostic and potentially therapeutic maneuver. Advanced cardiovascular life support guidance cited in the literature describes adenosine as safe and potentially effective in the initial management of stable regular WCT; termination supports a reentrant SVT mechanism, whereas transient AV nodal block can expose ongoing atrial activity. [1][2]",
+        "Do not use adenosine response as a universal mechanism test. Adenosine may clarify atrial tachycardia conducted with bundle-branch block, but ECG interpretation, baseline comparison, and VT criteria remain necessary because a stable WCT can still be VT. [2][13][23]"
+      ],
+      "bullets": [
+        "Use the regularity requirement strictly: the evidence cited for adenosine concerns stable, regular WCT, not irregular or polymorphic wide complex rhythms. [1][20]",
+        "If adenosine terminates the rhythm, preserve the rhythm strip and post-conversion 12-lead ECG; the mechanism may be AV node-dependent SVT, but the baseline ECG informs whether pre-excitation is present. [2][23]",
+        "If the rhythm persists, diagnosis remains uncertain, or hemodynamics worsen, escalate to electrical cardioversion rather than serial empiric AV-nodal therapies. [16]"
+      ],
+      "subsections": [
+        {
+          "heading": "When antidromic AVRT is plausible",
+          "paragraphs": [
+            "Antidromic AVRT produces a wide QRS because antegrade ventricular activation travels through an accessory pathway. In wide-QRS SVT caused by antidromic AVRT, avoid AV-nodal-suppressing drugs; class I antiarrhythmics such as procainamide or flecainide are identified as preferred agents for termination in the cited guideline. [16][22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Medication decisions for stable wide complex tachycardia depend on rhythm regularity and likelihood of accessory-pathway conduction. [1][15][16][20]",
+        "columns": [
+          "Clinical scenario",
+          "Reasonable initial approach",
+          "Avoid or do not infer"
+        ],
+        "rows": [
+          [
+            "Stable, regular monomorphic WCT of uncertain mechanism",
+            "Treat as VT; obtain 12-lead ECG and consider IV procainamide and/or sotalol for pharmacologic termination. [15][23]",
+            "Do not assume SVT because symptoms are tolerated. [10][11]"
+          ],
+          [
+            "Stable, regular WCT where AV nodal dependence is plausible",
+            "Consider adenosine as a diagnostic and potentially therapeutic intervention. [1][2]",
+            "Do not use response alone to exclude VT. [13][23]"
+          ],
+          [
+            "Wide-QRS antidromic AVRT",
+            "Use an accessory-pathway-directed class I agent such as procainamide or flecainide. [16]",
+            "Avoid AV-nodal-suppressing drugs. [16]"
+          ],
+          [
+            "Irregular, morphologically variable WCT suggesting pre-excited AF",
+            "Use a non-AV-nodal-blocking strategy and obtain expert rhythm support. [16][20]",
+            "Avoid AV-nodal-suppressing drugs. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "irregular-and-special-causes",
+      "eyebrow": "High-risk exceptions",
+      "heading": "Recognize pre-excitation, polymorphic VT, pacing, and toxicologic mimics",
+      "intro": "Irregularity or changing morphology should stop the routine stable-VT pathway.",
+      "paragraphs": [
+        "Pre-excited AF is suggested by an irregular wide complex tachycardia with changing QRS morphology and a rapid ventricular rate. Variable ventricular fusion through the AV node and one or more accessory pathways accounts for changing QRS width and delta-wave appearance. Because AV-nodal suppression can favor accessory-pathway conduction, avoid AV-nodal-suppressing drugs when this pattern is possible. [16][20]",
+        "Expand the differential when the ECG or context is atypical. WCT can arise from ventricular pacing-associated tachycardias, ventricular pre-excitation, preexisting or rate-related bundle-branch block, and sodium-channel-blocker toxicity. Toxicity-associated ECG patterns include sinus tachycardia with QRS duration greater than 100 ms, right-axis deviation of 130\u00b0 to 270\u00b0, and/or R-wave changes in aVR. [6][12]",
+        "Ask specifically about structural heart disease, prior myocardial infarction, implanted devices, prior baseline bundle-branch block, known Wolff-Parkinson-White pattern, and medication or overdose exposure. These data direct ECG interpretation and determine whether the initial endpoint is cardioversion, VT suppression, accessory-pathway management, device evaluation, or toxicology-directed resuscitation. [12][13][21][23]"
+      ],
+      "bullets": [
+        "Polymorphic or irregular WCT is not addressed by adenosine evidence for stable regular WCT. [1][20]",
+        "If WCT follows pacing or occurs in a patient with an implanted cardioverter-defibrillator, obtain device interrogation when it will change management and does not delay urgent treatment. [21][23]",
+        "Screen for reversible precipitants suggested by the presentation; hyperthyroidism has been reported as a reversible trigger in a patient with extreme WCT and symptoms of tremor, lethargy, and heat intolerance. [6]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Contextual clues that change the initial wide complex tachycardia differential. [6][12][20][23]",
+        "columns": [
+          "Clue",
+          "Mechanism to prioritize",
+          "Actionable next step"
+        ],
+        "rows": [
+          [
+            "Irregularity, variable QRS morphology, very rapid ventricular rate",
+            "Pre-excited AF. [20]",
+            "Avoid AV-nodal-suppressing drugs and pursue accessory-pathway-directed management. [16]"
+          ],
+          [
+            "Implanted pacemaker or ICD",
+            "Pacing-associated tachycardia or device-documented VT/SVT. [6][21]",
+            "Obtain device electrograms or interrogation if it does not delay cardioversion. [21][23]"
+          ],
+          [
+            "Overdose exposure with QRS widening, extreme right axis, or aVR R-wave abnormality",
+            "Sodium-channel blockade. [12]",
+            "Treat as toxicologic emergency while monitoring rhythm and hemodynamics. [12]"
+          ],
+          [
+            "Baseline bundle-branch block with same morphology during tachycardia",
+            "SVT with aberrancy. [23]",
+            "Confirm with atrial activity and structured ECG assessment before concluding the mechanism. [13][23]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "after-conversion",
+      "eyebrow": "Post-event plan",
+      "heading": "Document the mechanism and define the substrate after acute control",
+      "intro": "A terminated rhythm still requires etiologic classification and recurrence planning.",
+      "paragraphs": [
+        "After termination or cardioversion, retain pre-treatment ECGs and obtain a baseline 12-lead ECG for comparison. A resting tracing may reveal baseline conduction disease, prior infarct pattern, or evidence of pre-excitation and is central to distinguishing VT from SVT with aberrancy in recurrent events. [13][21][23]",
+        "Evaluate for structural substrate with echocardiography when VT is suspected or when clinical history suggests structural disease. In the structured WCT approach, laboratory tests and echocardiography are part of post-stabilization assessment, and prior infarction or structural abnormalities increase the importance of assigning the rhythm as VT rather than benign SVT. [21][23]",
+        "Refer recurrent sustained monomorphic VT, suspected accessory-pathway-mediated WCT, or diagnostically unresolved WCT for electrophysiology evaluation. Catheter ablation can be definitive for reentrant SVT, with guideline-cited success of at least 90% for patients whose episodes require acute management; typical atrial flutter ablation has reported success above 90% through up to 2 years of follow-up. [5][16]"
+      ],
+      "bullets": [
+        "For suspected VT, integrate prior infarction, ventricular function, baseline ECG, and any implanted-device electrograms into the final rhythm diagnosis. [21][22][23]",
+        "For suspected pre-excitation, preserve the post-conversion ECG because a delta wave or other pre-excitation pattern changes long-term referral and treatment planning. [20][22]",
+        "Do not use an acutely successful adenosine trial as the final diagnosis when a structural substrate or VT ECG feature remains present. [2][21][23]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Post-conversion studies should answer a specific mechanism or substrate question. [13][21][23]",
+        "columns": [
+          "Study",
+          "Who needs it",
+          "What changes next"
+        ],
+        "rows": [
+          [
+            "Baseline 12-lead ECG",
+            "All patients after rhythm termination when obtainable. [13][23]",
+            "Comparison with tachycardia morphology supports aberrancy, conduction disease, infarct pattern, or pre-excitation assessment. [13][21][23]"
+          ],
+          [
+            "Transthoracic echocardiography",
+            "Suspected VT or clinical concern for structural heart disease. [21][23]",
+            "Identifies structural substrate relevant to VT classification and subsequent management. [21][23]"
+          ],
+          [
+            "ICD or pacemaker interrogation",
+            "Patients with a device and a captured or recent WCT episode. [21][23]",
+            "Stored atrial and ventricular electrograms may discriminate conducted rhythm from VT. [21]"
+          ],
+          [
+            "Electrophysiology evaluation",
+            "Recurrent sustained WCT, suspected accessory pathway, or unresolved mechanism after acute care. [16]",
+            "Can establish mechanism and offer catheter ablation for suitable reentrant SVT. [5][16]"
+          ]
+        ]
+      }
+    }
+  ],
+  "faq": [],
+  "references": [
+    {
+      "number": 1,
+      "title": "Adenosine Conversion of Wide Complex Tachycardia - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1910760",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Advanced cardiovascular life support guidelines recommend adenosine as a safe and potentially effective therapy in the initial management of stable, regular,",
+      "score": 0.4292146
+    },
+    {
+      "number": 2,
+      "title": "Wide Complex Tachycardia and Adenosine - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/HttpHandlers/ArticlePdfHandler.ashx?journal=intemed&articleId=1722500&pdfFileName=ice130008.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Careful review of the ECG with adenosine administration revealed loss of retrograde atrial activity (P waves) resulting from ventricu- loatrial",
+      "score": 0.3783448
+    },
+    {
+      "number": 3,
+      "title": "Diagnostic Value of Adenosine Conversion of Wide Complex ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/articlepdf/1910760/ile140007.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Discussion | Our study demonstrates that boxed warnings are common, affecting more than one-third of recent drug ap- provals. While nearly three-quarters of",
+      "score": 0.06057952
+    },
+    {
+      "number": 4,
+      "title": "Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/13/7/e069273",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis\nImage 1Image 2Image 3Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis | BMJ Open. *   Diagno",
+      "score": 0.6383174
+    },
+    {
+      "number": 5,
+      "title": "Management of cardiac conduction abnormalities and arrhythmia in ...",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/Suppl_1/s38",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Recommendations for atrial flutter\n\nTypical atrial flutter is a right atrial macro-re-entrant tachycardia with the re-entrant circuit passing through the cavo-tricuspid isthmus. Antiarrhythmic medication is usually only moderately effective and not appropriate for aircrew. Catheter ablation is usual",
+      "score": 0.36956587
+    },
+    {
+      "number": 6,
+      "title": "An Extreme Wide-Complex Tachycardia and Tremors",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccas.2026.108967",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Title: An Extreme Wide-Complex Tachycardia and Tremors\nJACC Journals \u203a JACC: Case Reports \u203a Archives \u203a Vol. 31 No. 30. Authors: Samuel KimSamuelkim55@hotmail.com, Sukhmandeep Sangha, Srisa Boddupalli, Judy Al Ahmad, and Ivan SubiaktoAuthors Info & Affiliations. His 12-lead electrocardiogram demonstr",
+      "score": 0.8051581
+    },
+    {
+      "number": 7,
+      "title": "Simplified Integrated Clinical and Electrocardiographic Algorithm for Differentiation of Wide QRS Complex Tachycardia: The Basel Algorithm",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.03.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "By analyzing data from 2 large cohorts of patients with EP-confirmed diagnosis, we developed and validated a novel, simple, reproducible, sensitive, and specific algorithm based on clinical and ECG parameters to discriminate VT from SVT in patients with regular monomorphic WCT. Compared with the cur",
+      "score": 0.67140645
+    },
+    {
+      "number": 8,
+      "title": "Catheter Ablation vs Antiarrhythmic Drug Therapy for Treatment of Premature Ventricular Complexes: A Systematic Review",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/abs/10.1016/j.jacep.2023.01.035",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "There is variability in treatment modalities for premature ventricular complexes (PVCs), including use of antiarrhythmic drug (AAD) therapy or catheter ablation (CA). This study reviewed evidence comparing CA vs AADs for the treatment of PVCs. A systematic review was performed from the Medline, Emba",
+      "score": 0.6847074
+    },
+    {
+      "number": 9,
+      "title": "Management strategies in wide QRS complex tachycardia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/073567579190121Y",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Management strategies in wide QRS complex tachycardia - ScienceDirect\n* ### The differential diagnosis of wide QRS complex tachycardia. Wide QRS complex tachycardia is a common arrhythmia in clinical practice and often presents a diagnostic challenge. *Wide QRS complex tachycardia* may be def",
+      "score": 0.73914057
+    },
+    {
+      "number": 10,
+      "title": "Wide QRS complex tachycardia: ECG differential diagnosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735675799900918",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Wide QRS complex tachycardia: ECG differential diagnosis. Wide QRS complex tachycardias (WCT) present significant diagnostic and therapeutic challenges to the emergency physician. Differentiation between ventricular tachycardia and supraventricular tachycardia with aberrant conduction frequently i",
+      "score": 0.7327644
+    },
+    {
+      "number": 11,
+      "title": "Best Clinical Practice: Emergency Medicine Management of Stable Monomorphic Ventricular Tachycardia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467916307211",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Am Coll Cardiol (2004) \n   A.K. Gupta _et al._\n### Wide QRS complex tachycardias\n\n### Med Clin North Am (2001) \n   M.E. Herbert _et al._\n### Failure to agree on the electrocardiographic diagnosis of ventricular tachycardia\n\n### Ann Emerg Med (1996) \n   J.M. Baerman _et al._\n### Differentiation",
+      "score": 0.7190094
+    },
+    {
+      "number": 12,
+      "title": "Wide-complex tachycardia: beyond the traditional differential diagnosis of ventricular tachycardia vs supraventricular tachycardia with aberrant conduction - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735675705002755",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Wide-complex tachycardia: beyond the traditional differential diagnosis of ventricular tachycardia vs supraventricular tachycardia with aberrant conduction. Wide-complex tachycardia (WCT) is defined as a rhythm disturbance with a rate greater than 100 beats/min and a QRS complex duration of 0.12 s",
+      "score": 0.7001783
+    },
+    {
+      "number": 13,
+      "title": "Are Available Electrocardiographic Methods Accurate Enough to Diagnose Ventricular Tachycardia in the Emergency Department? - Mart\u00edn\u2010S\u00e1nchez - 2014 - Academic Emergency Medicine - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/acem.12318",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The differential diagnosis of the mechanism of wide QRS complex tachycardia (WCT) continues to be a challenge in daily clinical practice in emergency departments (EDs). Previous studies have described that on the application of the different criteria in daily clinical practice by physicians of diffe",
+      "score": 0.6826801
+    },
+    {
+      "number": 14,
+      "title": "OP-EUPA170451Online 731..772 - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article-pdf/20/5/731/70576414/europace_20_5_731.pdf?guestAccessKey=e70ea472-8543-4726-8f1e-9ce2070e0317",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Wide QRS-complex tachycardia. SVT and BBB. See ... Figure 5 Acute management of ... Low dose amiodarone and sotalol in the treatment of recurrent,.",
+      "score": 0.6450534
+    },
+    {
+      "number": 15,
+      "title": "ACC/AHA/ESC guidelines for the management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/24/20/1857/559145",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "For pharmacologic termination of a stable wide QRS-complex tachycardia, IV procainamide and/or sotalol are recommended on the basis of randomized but small",
+      "score": 0.6420965
+    },
+    {
+      "number": 16,
+      "title": "JCS/JHRS 2020 Guideline on Pharmacotherapy of Cardiac ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12714",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "10.1253/circj.CJ-09-0932CAS PubMed Web of Science\u00ae Google Scholar\n 748Ortiz M, Mart\u00edn A, Arribas F, Coll-Vinent B, Del Arco C, Peinado R. et al; PROCAMIO Study Investigators. Randomized comparison of intravenous procainamide vs. intravenous amiodarone for the acute treatment of tolerated wide QRS ta",
+      "score": 0.5167668
+    },
+    {
+      "number": 17,
+      "title": "Ventricular Tachycardia - 2019 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12276",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Result:\n\nNo patients had the history of syncope and the family history of sudden cardiac death. ECG recording was characterized by frequent ventricular extrasystoles, ventricular couplets, and salvos of non-\u00adsustained VT competitive with sinus rhythm. The QRS morphology of ectopic beats was in the r",
+      "score": 0.6829338
+    },
+    {
+      "number": 18,
+      "title": "ESC Guidelines for Management of Supraventricular Tachycardia: Key Points - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2019/09/10/12/36/2019-ESC-Guidelines-for-Supraventricular-Tachycardia",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "1. This is the first guideline update for SVT by ESC in 16 years. Amiodarone and digoxin are no longer mentioned in the new guidelines for the acute management of narrow complex tachycardia. Sotalol and lidocaine have been removed from the acute management of wide complex tachycardia algorithm.\n2. V",
+      "score": 0.7055624
+    },
+    {
+      "number": 19,
+      "title": "Current algorithms for the diagnosis of wide QRS complex tachycardias - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/24827795",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Current algorithms for the diagnosis of wide QRS complex tachycardias - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a federal. The **htt",
+      "score": 0.6877354
+    },
+    {
+      "number": 20,
+      "title": "Differential Diagnosis of Wide QRS Tachycardias",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7675136",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11..Kindwall KE, Brown J, Josephson ME. Electrocardiographic criteria for ventricular tachycardia in wide complex left bundle branch block morphology tachycardias. _Am J Cardiol_. 1988. 61:1279-83. doi: 10.1016/0002-9149(88)91169-1 [DOI91169-1)] [PubMed] [Google Scholar91169-1&)]\n   12..Brugada P, B",
+      "score": 0.6551821
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis and management of ventricular tachycardia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10541285",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "14.Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation 1991;83:1649\u201359. [DOI] [PubMed] [Google Scholar]\n   15.Kindwall KE, Brown J, Josephson ME. Electrocardiographic criteria for ventricular t",
+      "score": 0.61196244
+    },
+    {
+      "number": 22,
+      "title": "III SBC Guidelines on the Analysis and Issuance of Electrocardiographic Reports - Executive Summary",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137383",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "_Antidromic atrioventricular reentrant tachycardia_ - Uses an accessory pathway in an anterograde direction and the conduction system in a retrograde direction; aberrant QRS; is characterized by the morphologic pattern of preexcitation evident in QRS complexes.\n\n_Criteria to differentiate wide QRS c",
+      "score": 0.57837737
+    },
+    {
+      "number": 23,
+      "title": "Management of hemodynamically stable wide QRS complex tachycardia in patients with implantable cardioverter defibrillators",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9846131",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "FIGURE 3\nImage 17: FIGURE 3\n\nOpen in a new tab\n\nIn this 49 year old patient (Patient 1) with a previous antero-septal infarct several years before, WCT at 190 bpm, QRS axis is deviated to the right; atypical RBBB morphology and the presence of a monophasic R wave in aVR indicate VT. The ECG at rest ",
+      "score": 0.53925073
+    },
+    {
+      "number": 24,
+      "title": "Wide QRS Complex Tachycardia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559054",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The pathway just described is considered anterograde and orthodromic because it follows the normal conduction circuit. When there are structural changes of the heart that can create alternative conduction pathways, this can cause the electrical stimulus to go in reverse and would then be called retr",
+      "score": 0.5356092
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Adenosine Conversion of Wide Complex Tachycardia - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/1910760",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Advanced cardiovascular life support guidelines recommend adenosine as a safe and potentially effective therapy in the initial management of stable, regular,",
+      "score": 0.4292146
+    },
+    {
+      "number": 2,
+      "title": "Wide Complex Tachycardia and Adenosine - JAMA Network",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/HttpHandlers/ArticlePdfHandler.ashx?journal=intemed&articleId=1722500&pdfFileName=ice130008.pdf",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Careful review of the ECG with adenosine administration revealed loss of retrograde atrial activity (P waves) resulting from ventricu- loatrial",
+      "score": 0.3783448
+    },
+    {
+      "number": 3,
+      "title": "Diagnostic Value of Adenosine Conversion of Wide Complex ...",
+      "detail": "jamanetwork.com",
+      "url": "https://jamanetwork.com/journals/jamainternalmedicine/articlepdf/1910760/ile140007.pdf?resultClick=1",
+      "authors": "jamanetwork.com",
+      "host": "jamanetwork.com",
+      "snippet": "Discussion | Our study demonstrates that boxed warnings are common, affecting more than one-third of recent drug ap- provals. While nearly three-quarters of",
+      "score": 0.06057952
+    },
+    {
+      "number": 4,
+      "title": "Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis",
+      "detail": "bmjopen.bmj.com",
+      "url": "https://bmjopen.bmj.com/content/13/7/e069273",
+      "authors": "bmjopen.bmj.com",
+      "host": "bmjopen.bmj.com",
+      "snippet": "Title: Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis\nImage 1Image 2Image 3Diagnostic accuracy of different ECG-based algorithms in wide QRS complex tachycardia: a systematic review and meta-analysis | BMJ Open. *   Diagno",
+      "score": 0.6383174
+    },
+    {
+      "number": 5,
+      "title": "Management of cardiac conduction abnormalities and arrhythmia in ...",
+      "detail": "heart.bmj.com",
+      "url": "https://heart.bmj.com/content/105/Suppl_1/s38",
+      "authors": "heart.bmj.com",
+      "host": "heart.bmj.com",
+      "snippet": "Recommendations for atrial flutter\n\nTypical atrial flutter is a right atrial macro-re-entrant tachycardia with the re-entrant circuit passing through the cavo-tricuspid isthmus. Antiarrhythmic medication is usually only moderately effective and not appropriate for aircrew. Catheter ablation is usual",
+      "score": 0.36956587
+    },
+    {
+      "number": 6,
+      "title": "An Extreme Wide-Complex Tachycardia and Tremors",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jaccas.2026.108967",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "Title: An Extreme Wide-Complex Tachycardia and Tremors\nJACC Journals \u203a JACC: Case Reports \u203a Archives \u203a Vol. 31 No. 30. Authors: Samuel KimSamuelkim55@hotmail.com, Sukhmandeep Sangha, Srisa Boddupalli, Judy Al Ahmad, and Ivan SubiaktoAuthors Info & Affiliations. His 12-lead electrocardiogram demonstr",
+      "score": 0.8051581
+    },
+    {
+      "number": 7,
+      "title": "Simplified Integrated Clinical and Electrocardiographic Algorithm for Differentiation of Wide QRS Complex Tachycardia: The Basel Algorithm",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/10.1016/j.jacep.2022.03.017",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "By analyzing data from 2 large cohorts of patients with EP-confirmed diagnosis, we developed and validated a novel, simple, reproducible, sensitive, and specific algorithm based on clinical and ECG parameters to discriminate VT from SVT in patients with regular monomorphic WCT. Compared with the cur",
+      "score": 0.67140645
+    },
+    {
+      "number": 8,
+      "title": "Catheter Ablation vs Antiarrhythmic Drug Therapy for Treatment of Premature Ventricular Complexes: A Systematic Review",
+      "detail": "www.jacc.org",
+      "url": "https://www.jacc.org/doi/abs/10.1016/j.jacep.2023.01.035",
+      "authors": "www.jacc.org",
+      "host": "www.jacc.org",
+      "snippet": "There is variability in treatment modalities for premature ventricular complexes (PVCs), including use of antiarrhythmic drug (AAD) therapy or catheter ablation (CA). This study reviewed evidence comparing CA vs AADs for the treatment of PVCs. A systematic review was performed from the Medline, Emba",
+      "score": 0.6847074
+    },
+    {
+      "number": 9,
+      "title": "Management strategies in wide QRS complex tachycardia - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/073567579190121Y",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "Title: Management strategies in wide QRS complex tachycardia - ScienceDirect\n* ### The differential diagnosis of wide QRS complex tachycardia. Wide QRS complex tachycardia is a common arrhythmia in clinical practice and often presents a diagnostic challenge. *Wide QRS complex tachycardia* may be def",
+      "score": 0.73914057
+    },
+    {
+      "number": 10,
+      "title": "Wide QRS complex tachycardia: ECG differential diagnosis - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735675799900918",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Wide QRS complex tachycardia: ECG differential diagnosis. Wide QRS complex tachycardias (WCT) present significant diagnostic and therapeutic challenges to the emergency physician. Differentiation between ventricular tachycardia and supraventricular tachycardia with aberrant conduction frequently i",
+      "score": 0.7327644
+    },
+    {
+      "number": 11,
+      "title": "Best Clinical Practice: Emergency Medicine Management of Stable Monomorphic Ventricular Tachycardia",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0736467916307211",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### J Am Coll Cardiol (2004) \n   A.K. Gupta _et al._\n### Wide QRS complex tachycardias\n\n### Med Clin North Am (2001) \n   M.E. Herbert _et al._\n### Failure to agree on the electrocardiographic diagnosis of ventricular tachycardia\n\n### Ann Emerg Med (1996) \n   J.M. Baerman _et al._\n### Differentiation",
+      "score": 0.7190094
+    },
+    {
+      "number": 12,
+      "title": "Wide-complex tachycardia: beyond the traditional differential diagnosis of ventricular tachycardia vs supraventricular tachycardia with aberrant conduction - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0735675705002755",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "# Wide-complex tachycardia: beyond the traditional differential diagnosis of ventricular tachycardia vs supraventricular tachycardia with aberrant conduction. Wide-complex tachycardia (WCT) is defined as a rhythm disturbance with a rate greater than 100 beats/min and a QRS complex duration of 0.12 s",
+      "score": 0.7001783
+    },
+    {
+      "number": 13,
+      "title": "Are Available Electrocardiographic Methods Accurate Enough to Diagnose Ventricular Tachycardia in the Emergency Department? - Mart\u00edn\u2010S\u00e1nchez - 2014 - Academic Emergency Medicine - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/acem.12318",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "The differential diagnosis of the mechanism of wide QRS complex tachycardia (WCT) continues to be a challenge in daily clinical practice in emergency departments (EDs). Previous studies have described that on the application of the different criteria in daily clinical practice by physicians of diffe",
+      "score": 0.6826801
+    },
+    {
+      "number": 14,
+      "title": "OP-EUPA170451Online 731..772 - Oxford Academic",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/europace/article-pdf/20/5/731/70576414/europace_20_5_731.pdf?guestAccessKey=e70ea472-8543-4726-8f1e-9ce2070e0317",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "Wide QRS-complex tachycardia. SVT and BBB. See ... Figure 5 Acute management of ... Low dose amiodarone and sotalol in the treatment of recurrent,.",
+      "score": 0.6450534
+    },
+    {
+      "number": 15,
+      "title": "ACC/AHA/ESC guidelines for the management of patients with ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/eurheartj/article/24/20/1857/559145",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "For pharmacologic termination of a stable wide QRS-complex tachycardia, IV procainamide and/or sotalol are recommended on the basis of randomized but small",
+      "score": 0.6420965
+    },
+    {
+      "number": 16,
+      "title": "JCS/JHRS 2020 Guideline on Pharmacotherapy of Cardiac ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12714",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "10.1253/circj.CJ-09-0932CAS PubMed Web of Science\u00ae Google Scholar\n 748Ortiz M, Mart\u00edn A, Arribas F, Coll-Vinent B, Del Arco C, Peinado R. et al; PROCAMIO Study Investigators. Randomized comparison of intravenous procainamide vs. intravenous amiodarone for the acute treatment of tolerated wide QRS ta",
+      "score": 0.5167668
+    },
+    {
+      "number": 17,
+      "title": "Ventricular Tachycardia - 2019 - Journal of Arrhythmia - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joa3.12276",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Result:\n\nNo patients had the history of syncope and the family history of sudden cardiac death. ECG recording was characterized by frequent ventricular extrasystoles, ventricular couplets, and salvos of non-\u00adsustained VT competitive with sinus rhythm. The QRS morphology of ectopic beats was in the r",
+      "score": 0.6829338
+    },
+    {
+      "number": 18,
+      "title": "ESC Guidelines for Management of Supraventricular Tachycardia: Key Points - American College of Cardiology",
+      "detail": "www.acc.org",
+      "url": "https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2019/09/10/12/36/2019-ESC-Guidelines-for-Supraventricular-Tachycardia",
+      "authors": "www.acc.org",
+      "host": "www.acc.org",
+      "snippet": "1. This is the first guideline update for SVT by ESC in 16 years. Amiodarone and digoxin are no longer mentioned in the new guidelines for the acute management of narrow complex tachycardia. Sotalol and lidocaine have been removed from the acute management of wide complex tachycardia algorithm.\n2. V",
+      "score": 0.7055624
+    },
+    {
+      "number": 19,
+      "title": "Current algorithms for the diagnosis of wide QRS complex tachycardias - PubMed",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/pubmed/24827795",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "Title: Current algorithms for the diagnosis of wide QRS complex tachycardias - PubMed\nAn official website of the United States government. **The .gov means it\u2019s official.**. Federal government websites often end in .gov or .mil. sharing sensitive information, make sure you\u2019re on a federal. The **htt",
+      "score": 0.6877354
+    },
+    {
+      "number": 20,
+      "title": "Differential Diagnosis of Wide QRS Tachycardias",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7675136",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "11..Kindwall KE, Brown J, Josephson ME. Electrocardiographic criteria for ventricular tachycardia in wide complex left bundle branch block morphology tachycardias. _Am J Cardiol_. 1988. 61:1279-83. doi: 10.1016/0002-9149(88)91169-1 [DOI91169-1)] [PubMed] [Google Scholar91169-1&)]\n   12..Brugada P, B",
+      "score": 0.6551821
+    },
+    {
+      "number": 21,
+      "title": "Diagnosis and management of ventricular tachycardia",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10541285",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "14.Brugada P, Brugada J, Mont L, Smeets J, Andries EW. A new approach to the differential diagnosis of a regular tachycardia with a wide QRS complex. Circulation 1991;83:1649\u201359. [DOI] [PubMed] [Google Scholar]\n   15.Kindwall KE, Brown J, Josephson ME. Electrocardiographic criteria for ventricular t",
+      "score": 0.61196244
+    },
+    {
+      "number": 22,
+      "title": "III SBC Guidelines on the Analysis and Issuance of Electrocardiographic Reports - Executive Summary",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5137383",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "_Antidromic atrioventricular reentrant tachycardia_ - Uses an accessory pathway in an anterograde direction and the conduction system in a retrograde direction; aberrant QRS; is characterized by the morphologic pattern of preexcitation evident in QRS complexes.\n\n_Criteria to differentiate wide QRS c",
+      "score": 0.57837737
+    },
+    {
+      "number": 23,
+      "title": "Management of hemodynamically stable wide QRS complex tachycardia in patients with implantable cardioverter defibrillators",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9846131",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "FIGURE 3\nImage 17: FIGURE 3\n\nOpen in a new tab\n\nIn this 49 year old patient (Patient 1) with a previous antero-septal infarct several years before, WCT at 190 bpm, QRS axis is deviated to the right; atypical RBBB morphology and the presence of a monophasic R wave in aVR indicate VT. The ECG at rest ",
+      "score": 0.53925073
+    },
+    {
+      "number": 24,
+      "title": "Wide QRS Complex Tachycardia - StatPearls - NCBI Bookshelf",
+      "detail": "www.ncbi.nlm.nih.gov",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559054",
+      "authors": "www.ncbi.nlm.nih.gov",
+      "host": "www.ncbi.nlm.nih.gov",
+      "snippet": "The pathway just described is considered anterograde and orthodromic because it follows the normal conduction circuit. When there are structural changes of the heart that can create alternative conduction pathways, this can cause the electrical stimulus to go in reverse and would then be called retr",
+      "score": 0.5356092
+    }
+  ],
+  "publishedAt": "2026-09-15T17:52:22.572571+00:00",
+  "updatedAt": "2026-09-15T17:52:22.572571+00:00",
+  "readingMinutes": 6,
+  "slug": "wide-complex-tachycardia"
+}

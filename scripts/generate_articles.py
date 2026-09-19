@@ -176,6 +176,12 @@ def build_prompt(topic: str) -> str:
       "decision layer: assume the reader already knows basic definitions and common symptoms. Every paragraph must add a named test, threshold, interpretation, "
       "drug and source-supported dose, procedure indication, timing rule, quantified risk, exception, tradeoff, or next step. Delete any sentence that merely "
       "sounds medical without changing a decision. "
+      "Match the specific search intent of the topic: answer its clinical decision directly, not a generic overview of the parent disease. "
+      "Use concise titles that preserve the topic's distinguishing decision, and descriptive section headings for specific physician searches. "
+      "For testing, explain who needs the test, timing, actionable cutoffs, interpretation, pitfalls, and what each result changes. "
+      "For treatments when relevant, name the agent, source-supported dose, route, frequency, duration, selection criteria, contraindications, "
+      "renal or hepatic adjustments and monitoring where supported. Include exceptions, escalation triggers and concrete next steps. "
+      "Do not force drugs or treatment sections into non-management topics; apply the same specificity to mechanisms, diagnosis, procedures or prognosis. "
       "For a syndrome or umbrella topic, build an actionable branching framework: immediate threats, the initial workup, the major etiologic patterns and how to "
       "distinguish them, when pathology or specialist escalation is needed, immediate supportive management, and cause-directed next steps. Name the actual diseases, "
       "tests, serologies, imaging, pathology patterns, agents, and monitoring parameters supported by the sources. For narrower topics, use only the domains that matter. "
@@ -183,7 +189,7 @@ def build_prompt(topic: str) -> str:
       "or similar source commentary. If a specific detail is unsupported, omit it. Discuss uncertainty only when it is a real clinical controversy that changes care. "
       "Avoid throat-clearing, generic background, vague advice, repeated summaries, and duplicated facts across takeaways, prose, tables, and FAQs. Use tables only to "
       "compress a true differential, threshold comparison, treatment selection, or monitoring algorithm. FAQs are optional and should be empty unless they add a decision "
-      "not already answered. Use a short title containing only the recognized clinical topic. "
+      "not already answered. Use a short title preserving the recognized topic and its specific decision focus, without a promotional subtitle. "
       "Return references as an empty array because the API attaches them separately. Cite every pathophysiologic, quantitative, diagnostic, prognostic, testing, "
       "dosing, procedural, and treatment claim as [N], including claims in tables. Write multiple citations as separate markers such as [1][8][9][12], never "
       "inside one bracket such as [1,8,9,12]. Prefer primary guidelines, FDA labels, systematic reviews, and pivotal trials. "
@@ -627,6 +633,15 @@ def generate_articles(topics: Iterable[str], delay: float = 2.0, resume_file: Op
       record_usage(topic, usage)
       LOGGER.info("🔍 Backend sent %d citations", len(citations))
       article = normalize_grouped_citations(extract_json_payload(raw_text))
+      retrieval_failure = re.search(
+          r"(?:none of (?:the )?(?:supplied|provided|retrieved) (?:results|sources|evidence)|"
+          r"no (?:topic-specific |relevant )?(?:results|sources|evidence) (?:were |was )?(?:found|retrieved|provided)|"
+          r"(?:supplied|provided|retrieved) (?:results|sources|evidence) (?:do not|does not|don't|doesn't) (?:provide|contain|support))",
+          json.dumps(article, ensure_ascii=False),
+          re.IGNORECASE
+      )
+      if len(citations) < 6 or retrieval_failure:
+        raise ValueError("Insufficient retrieved evidence or retrieval-failure draft; not saved, topic remains pending")
       LOGGER.info("📄 Model generated article with %d references", len(article.get('references', [])))
       ensure_references(article, citations)
       article = normalize_grouped_citations(article)

@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 2,
+  "eyebrow": "Endocrinology",
+  "title": "Thyroid Nodule",
+  "summary": "Evaluate thyroid nodules with clinical risk assessment, serum TSH, structured ultrasound risk stratification, and size-based FNA selection; then integrate Bethesda cytology, molecular testing when informative, patient fitness, and preferences to avoid both missed clinically important cancer and low-value biopsy or surgery.",
+  "seoDescription": "Physician guide to thyroid nodule evaluation: TSH-directed scintigraphy, ultrasound risk stratification, FNA selection, indeterminate cytology, and surveillance.",
+  "clinicalQuestion": "How should clinicians select thyroid nodules for imaging, FNA, cytologic triage, and conservative follow-up?",
+  "specialty": "Endocrinology",
+  "audience": "U.S. physicians and medical trainees",
+  "tags": [
+    "thyroid nodule",
+    "thyroid ultrasound",
+    "ACR TI-RADS",
+    "EU-TIRADS",
+    "fine-needle aspiration",
+    "Bethesda cytology",
+    "indeterminate thyroid cytology"
+  ],
+  "keyTakeaways": [
+    "Do not perform ultrasound screening in asymptomatic adults; pursue a risk-adapted evaluation when a nodule is clinically or incidentally identified. [21]",
+    "Use a structured ultrasound system and its biopsy threshold rather than nodule size alone; ultrasound-guided FNA is the principal diagnostic procedure for selected nodules. [10][15][21]",
+    "A suppressed TSH changes the pathway: radionuclide imaging can identify a hyperfunctioning nodule before proceeding with cytology-driven management. [18][21]",
+    "ACR TI-RADS reduces FNA use compared with some competing systems but may trade biopsy avoidance for lower sensitivity; use one validated local reporting system consistently. [20][22]",
+    "For Bethesda III or IV cytology, integrate ultrasound pattern and molecular testing with operative risk and patient goals rather than reflexively proceeding to diagnostic surgery. [13][24]"
+  ],
+  "sections": [
+    {
+      "id": "initial-triage",
+      "eyebrow": "First Visit",
+      "heading": "Identify nodules requiring expedited evaluation",
+      "intro": "Use clinical context to determine urgency before selecting imaging or biopsy.",
+      "paragraphs": [
+        "Obtain a focused history for childhood or therapeutic neck irradiation, familial thyroid cancer syndromes, rapid structural change, and relevant comorbidity. Familial nonmedullary thyroid cancer is associated with multifocal disease, local invasion, nodal metastases, and local or regional recurrence more often than sporadic disease; this history should lower the threshold for expert ultrasound review and multidisciplinary planning. [2]",
+        "Avoid screening thyroid ultrasound in asymptomatic adults because detection of benign lesions and indolent malignancies can drive overdiagnosis and treatment morbidity without a demonstrated reduction in thyroid cancer mortality. Evaluate a palpable lesion, a clinically meaningful incidental imaging finding, or a patient with an established nodule instead. [21]",
+        "In older adults and patients with substantial competing illness, make diagnostic intensity contingent on whether a result would alter management. A conservative approach can be reasonable for very-low-risk tumors, high operative risk, or limited life expectancy after shared decision-making. [20]"
+      ],
+      "bullets": [
+        "Expedite dedicated neck ultrasound when examination or prior imaging suggests cervical lymphadenopathy or a clinically concerning thyroid lesion. [21][24]",
+        "Document comorbidities, functional status, and goals of care before recommending FNA or surgery in an older adult; ultrasound risk alone should not determine intervention. [20]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Initial triage decisions for an identified thyroid nodule. [20][21]",
+        "columns": [
+          "Clinical setting",
+          "Immediate next step",
+          "Management implication"
+        ],
+        "rows": [
+          [
+            "Asymptomatic adult without a known nodule",
+            "Do not order screening thyroid ultrasound. [21]",
+            "Avoid detection-driven overdiagnosis and downstream procedures. [21]"
+          ],
+          [
+            "Known or incidentally detected thyroid nodule",
+            "Obtain thyroid-focused clinical assessment, serum TSH, and dedicated ultrasound risk stratification. [21]",
+            "Use functional status and ultrasound pattern to select scintigraphy, FNA, surveillance, or no further action. [18][21]"
+          ],
+          [
+            "Older adult with major comorbidity or short life expectancy",
+            "Establish whether biopsy results would change treatment before FNA. [20]",
+            "Conservative management may be preferable for low-risk disease or high surgical risk. [20]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ts h-and-functional-pathway",
+      "eyebrow": "Laboratory Branch",
+      "heading": "Use TSH to determine whether scintigraphy changes the pathway",
+      "intro": "Functional assessment precedes purely morphologic decision-making when TSH is low.",
+      "paragraphs": [
+        "Measure serum TSH during initial evaluation. When TSH is suppressed, obtain radionuclide imaging to identify a hyperfunctioning nodule; this functional result redirects evaluation away from an ultrasound-only biopsy pathway and toward defining the cause of thyrotoxicosis. [18][21]",
+        "If free T4 is normal in a patient with biochemical concern for hyperthyroidism, measure free T3. Consider TSH-receptor antibodies when the clinical context requires clarification of hyperthyroid etiology; consider thyroid peroxidase antibodies when thyroiditis is clinically or sonographically suspected. [21]",
+        "Routine calcitonin measurement is not uniformly recommended for every nodule. Consider it selectively when the clinical context raises concern for medullary thyroid carcinoma or when a result would alter preoperative planning. A case of a large, sonographically low-risk nodule illustrates that calcitonin and chromogranin A gene overexpression on molecular testing can identify medullary thyroid carcinoma despite Bethesda III cytology. [21][24]"
+      ],
+      "bullets": [
+        "Suppressed TSH: perform radionuclide scintigraphy before treating the nodule as a routine nonfunctioning lesion. [18][21]",
+        "Normal free T4 with suspected thyrotoxicosis: add free T3. [21]",
+        "Suspected autoimmune hyperthyroidism or thyroiditis: use TSH-receptor antibodies or thyroid peroxidase antibodies selectively to resolve etiology. [21]"
+      ],
+      "subsections": [],
+      "table": null
+    },
+    {
+      "id": "ultrasound-and-fna-selection",
+      "eyebrow": "Imaging and Biopsy",
+      "heading": "Select FNA by ultrasound risk pattern and size threshold",
+      "intro": "Use a formal ultrasound classification system rather than unstructured descriptive reporting.",
+      "paragraphs": [
+        "Perform dedicated thyroid and cervical lymph-node ultrasound and assign a validated risk category. Both major guideline approaches support ultrasound to determine whether a nodule warrants ultrasound-guided fine-needle aspiration cytology rather than using palpation or size alone. [10][15][21]",
+        "In EU-TIRADS, high-risk category 5 requires at least one high-suspicion feature: irregular shape, irregular margins, microcalcifications, or marked hypoechogenicity. The 2023 ETA algorithm identifies FNA consideration for EU-TIRADS 5 nodules larger than 10 mm and for intermediate-risk EU-TIRADS 4 nodules larger than 15 mm; apply the reporting system\u2019s complete recommendation set rather than transplanting thresholds across systems. [21]",
+        "A spongiform appearance is strongly associated with benignity in the cited evidence, with 99.7% specificity and a 98.5% negative predictive value for malignancy. It does not eliminate the need to apply size-based biopsy criteria or reconsider the diagnosis when the lesion is large, symptomatic, growing, or otherwise clinically discordant. [24]",
+        "Do not add scintigraphy solely because a nodule falls below an ACR TI-RADS FNA threshold in an otherwise routine setting. In a retrospective cohort, cold scintigraphy prompted FNA in 66 subthreshold nodules, with Bethesda category III or higher cytology in 7 nodules (10.6%); most clinically significant cytology occurred in nodules that already met ACR TI-RADS FNA criteria. [11]"
+      ],
+      "bullets": [
+        "Use ultrasound-guided FNA for nodules meeting the selected system\u2019s risk-and-size criterion. [10][15][21]",
+        "Record suspicious cervical lymph nodes separately from the thyroid nodule category because nodal findings can change procedural planning. [24]",
+        "Do not biopsy all subcentimeter nodules solely to detect microcarcinoma; ultrasound systems were designed to reduce avoidable FNA while maintaining clinically useful risk stratification. [15][20]"
+      ],
+      "subsections": [
+        {
+          "heading": "Choosing a reporting system",
+          "paragraphs": [
+            "ACR TI-RADS, ATA-pattern approaches, and EU-TIRADS use different category definitions and FNA thresholds. In older-adult data, ACR TI-RADS produced fewer unnecessary FNAs than ATA and Korean TI-RADS, but its lower sensitivity highlights the tradeoff between reducing procedures and potentially deferring diagnosis of some malignancies. [20]",
+            "Do not alternate systems across serial examinations. Consistent reporting permits a reproducible biopsy decision and avoids apparent changes in risk caused only by switching classification rules. Comparative literature does not establish EU-TIRADS as superior to other TI-RADS systems. [22]"
+          ],
+          "bullets": []
+        }
+      ],
+      "table": {
+        "caption": "Ultrasound findings and actions supported by the ETA/EU-TIRADS pathway. [21][24]",
+        "columns": [
+          "Ultrasound result",
+          "Interpretation",
+          "Action"
+        ],
+        "rows": [
+          [
+            "EU-TIRADS 5: irregular shape, irregular margins, microcalcifications, or marked hypoechogenicity",
+            "High-risk pattern. [21]",
+            "Consider ultrasound-guided FNA when diameter is greater than 10 mm. [21]"
+          ],
+          [
+            "EU-TIRADS 4",
+            "Intermediate-risk pattern. [21]",
+            "Consider ultrasound-guided FNA when diameter is greater than 15 mm. [21]"
+          ],
+          [
+            "Spongiform nodule",
+            "Very high specificity and negative predictive value for benign disease in cited data. [24]",
+            "Apply guideline size criteria and clinical context; do not infer zero cancer risk. [24]"
+          ],
+          [
+            "Nodule below ultrasound-system FNA threshold",
+            "Most clinically significant cytology in one cohort occurred in nodules already meeting ACR TI-RADS criteria. [11]",
+            "Do not routinely use a cold scintigraphy result alone to override a subthreshold ACR TI-RADS recommendation. [11]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cytology-and-indeterminate-results",
+      "eyebrow": "After FNA",
+      "heading": "Resolve indeterminate cytology with concordance, molecular testing, and treatment consequences",
+      "intro": "Bethesda III and IV results require risk refinement, not automatic thyroidectomy.",
+      "paragraphs": [
+        "Interpret FNA cytology together with the pretest ultrasound risk category and the clinical scenario. Bethesda category III, atypia of undetermined significance, carries a cited malignancy risk of 6% to 18%; this range should not be treated as equivalent to a definitive malignant diagnosis. [24]",
+        "For Bethesda III or IV nodules, assess whether repeat sampling, molecular testing, active surveillance, or diagnostic surgery would change care. In a surgical retrospective cohort of 449 patients with Bethesda III or IV cytology, clinical characteristics and predictors were evaluated, reinforcing that these categories comprise a heterogeneous operative-risk group rather than a uniform indication for surgery. [13]",
+        "Use molecular testing only when its result will meaningfully alter the choice between surveillance and surgery or the scope of surgery. In a reported Bethesda III nodule, molecular evidence of calcitonin and chromogranin A gene overexpression conveyed a greater than 95% probability of medullary thyroid carcinoma and changed management despite absence of RET or RAS mutations. [24]",
+        "For H\u00fcrthle-cell\u2013predominant aspirates, do not assume H\u00fcrthle cells independently establish malignancy. H\u00fcrthle-cell metaplasia may occur in chronic lymphocytic thyroiditis, and the presence of H\u00fcrthle cells does not increase malignancy risk in most Bethesda categories in cited literature; integrate nuclear atypia, ultrasound findings, and the overall Bethesda category. [16]"
+      ],
+      "bullets": [
+        "Bethesda III: reconcile cytology with ultrasound pattern before choosing surveillance, repeat sampling, molecular testing, or surgery. [13][24]",
+        "Bethesda IV: use clinical, sonographic, and molecular risk refinement to determine whether diagnostic surgery is justified. [13]",
+        "Molecular evidence suggesting medullary thyroid carcinoma: plan management as a specific cancer pathway rather than as generic indeterminate follicular-pattern cytology. [24]"
+      ],
+      "subsections": [],
+      "table": {
+        "caption": "Decision framework after indeterminate thyroid FNA. [13][16][24]",
+        "columns": [
+          "Cytology scenario",
+          "Key discriminator",
+          "Next decision"
+        ],
+        "rows": [
+          [
+            "Bethesda III (AUS)",
+            "Cited malignancy risk is 6% to 18%; ultrasound and clinical concordance modify concern. [24]",
+            "Use repeat sampling, molecular testing, surveillance, or surgery only after defining how the result changes management. [13][24]"
+          ],
+          [
+            "Bethesda III with molecular profile strongly suggestive of medullary thyroid carcinoma",
+            "Calcitonin and chromogranin A gene overexpression yielded a reported cancer probability greater than 95%. [24]",
+            "Escalate to medullary thyroid carcinoma-specific preoperative planning. [24]"
+          ],
+          [
+            "Bethesda IV",
+            "Indeterminate category with heterogeneous surgical pathology outcomes. [13]",
+            "Individualize molecular testing and diagnostic surgery according to ultrasound risk, patient fitness, and preferences. [13]"
+          ],
+          [
+            "H\u00fcrthle-cell\u2013predominant aspirate",
+            "H\u00fcrthle cells alone do not establish increased malignancy risk in most Bethesda categories. [16]",
+            "Interpret with nuclear atypia, ultrasound risk, and possible thyroiditis. [16]"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "surveillance-and-treatment-intensity",
+      "eyebrow": "Longitudinal Care",
+      "heading": "Match surveillance and intervention to cancer risk and patient benefit",
+      "intro": "The objective is clinically meaningful diagnosis, not maximal detection of small lesions.",
+      "paragraphs": [
+        "For nodules that do not meet FNA criteria, continue management with the same structured ultrasound framework and reassess if the lesion crosses that system\u2019s biopsy threshold or develops a more suspicious pattern. Avoid indiscriminate early biopsy of small lesions, because the major management problem in thyroid nodule care is overdiagnosis and excess morbidity from downstream treatment. [20][21]",
+        "When surgery is under consideration, incorporate suspected tumor biology, multifocality risk, local invasion, nodal disease, hereditary context, operative risk, and patient preference. Familial nonmedullary thyroid cancer has higher reported rates of multifocal disease, intraglandular dissemination, local invasion, recurrence, and lymph-node metastases, supporting early specialist involvement when a familial pattern is present. [2]",
+        "For an older adult with a very-low-risk tumor or a high risk of operative harm, conservative management may be a rational endpoint rather than a temporary failure to treat. State explicitly whether surveillance is intended because the lesion is below biopsy criteria, because cytology is low risk, or because treatment would not improve patient-centered outcomes. [20]"
+      ],
+      "bullets": [
+        "Reapply the same ultrasound classification system at follow-up rather than comparing non-equivalent category labels. [22]",
+        "Refer for multidisciplinary endocrine, surgical, and pathology review when a hereditary syndrome, suspected medullary thyroid carcinoma, invasive disease, or suspicious lymphadenopathy changes operative planning. [2][24]",
+        "Use shared decision-making for biopsy and surgery in older adults, explicitly balancing cancer biology against comorbidity, life expectancy, and treatment burden. [20]"
+      ],
+      "subsections": [],
+      "table": null
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should a cold thyroid nodule be biopsied if it is below the ACR TI-RADS FNA threshold?",
+      "answer": "Not routinely on the basis of cold scintigraphy alone. In a retrospective cohort, cold scintigraphy identified a small additional group with Bethesda III or higher cytology, whereas most clinically significant cytology occurred in nodules already meeting ACR TI-RADS FNA criteria. [11]"
+    },
+    {
+      "question": "Does a spongiform ultrasound pattern exclude thyroid cancer?",
+      "answer": "No. Spongiform morphology had 99.7% specificity and 98.5% negative predictive value for benign disease in cited evidence, but biopsy and follow-up decisions should still account for size criteria and clinical discordance. [24]"
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "title": "Diagnosis of thyroid micronodules on ultrasound using a deep ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-023-34459-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "European Thyroid Association guidelines for ultrasound malignancy risk stratification of thyroid nodules in adults: The EU-TIRADS. Eur. Thyroid",
+      "score": 0.54303354
+    },
+    {
+      "number": 2,
+      "title": "Familial thyroid cancer: a review | Modern Pathology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/modpathol2010147",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nBiscolla RP, Ugolini C, Sculli M, et al. Medullary and papillary tumors are frequently associated in the same thyroid gland without evidence of reciprocal influence in their biologic behavior. Thyroid 2004;14:946\u2013952.\n\nArticle \nPubMed \nGoogle Scholar\n\nBakhsh A, Kirov",
+      "score": 0.5412882
+    },
+    {
+      "number": 3,
+      "title": "Elastography Enhances Diagnostic Accuracy of ACR TI-RADS in ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/111/6/e1616/8383055",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "European Thyroid Association guidelines for ultrasound malignancy risk stratification of thyroid nodules in adults: the EU-TIRADS",
+      "score": 0.60077465
+    },
+    {
+      "number": 4,
+      "title": "Contemporary Thyroid Nodule Evaluation and Management",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/105/9/2869/5850848",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "A survey of American Thyroid Association members regarding the 2015 Adult Thyroid Nodule and Differentiated Thyroid Cancer Clinical Practice Guidelines .",
+      "score": 0.598524
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and application of American College of Radiology ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/cyt.13414",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "2015 American Thyroid Association management guidelines for adult patients with thyroid nodules and differentiated thyroid cancer: the",
+      "score": 0.5769478
+    },
+    {
+      "number": 6,
+      "title": "2015 American Thyroid Association Management Guidelines for ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.1002/cncr.30360",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "The 2015 American Thyroid Association guidelines for the treatment of adults with thyroid nodules and differentiated thyroid cancer have",
+      "score": 0.55709904
+    },
+    {
+      "number": 7,
+      "title": "TIRADS Management Guidelines in the Investigation of Thyroid ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jes/article/4/4/bvaa031/5802678",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer:",
+      "score": 0.5423064
+    },
+    {
+      "number": 8,
+      "title": "Preoperative diagnosis of thyroid nodules: An integrated ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncy.22546",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "In 2017, the European Thyroid Association issued guidelines for US malignancy risk stratification in adults: the European Thyroid Imaging and",
+      "score": 0.53750324
+    },
+    {
+      "number": 9,
+      "title": "Consensus statement on the management of incidentally discovered ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/cen.14905",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "American Thyroid Association Management Guidelines for adult patients with thyroid nodules and differentiated thyroid cancer:",
+      "score": 0.49450764
+    },
+    {
+      "number": 10,
+      "title": "Evaluation and Management of Thyroid Nodules: A Joint Consensus ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/cen.70116",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Both guidelines advocate for the use of ultrasonography to determine whether a thyroid nodule warrants Fine Needle Aspiration Cytology (FNAC).",
+      "score": 0.48206395
+    },
+    {
+      "number": 11,
+      "title": "Additional detection of Bethesda greater than or... : Nuclear Medicine Communications",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/10.1097/MNM.0000000000002174",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Additional detection of Bethesda greater than or... : Nuclear Medicine Communications\n# Additional detection of Bethesda greater than or equal to III cytology in cold thyroid nodules beyond American College of Radiology Thyroid Imaging Reporting and Data System risk stratification. Cold thyro",
+      "score": 0.81665546
+    },
+    {
+      "number": 12,
+      "title": "Comparison of thyroid nodule FNA rates recommended by ACR TI-RADS, Kwak TI-RADS and ATA guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0720048X2200002X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "8, 2022, whose study contents contained elucidation of diagnostic performance of any one of the above ultrasound risk stratification systems (European Thyroid Imaging Reporting and Data System[Eu-TIRADS]; American College of Radiology TIRADS [ACR TIRADS]; Chinese version of TIRADS [C-TIRADS]; Comput",
+      "score": 0.7253574
+    },
+    {
+      "number": 13,
+      "title": "Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study - Khan - 2025 - Endocrinology, Diabetes & Metabolism - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/edm2.70076",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study. * ###### Correction to \u2018Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study\u2019. This retros",
+      "score": 0.6844544
+    },
+    {
+      "number": 14,
+      "title": "Thyroid Nodule Classification by Ultrasound:... : Contemporary Diagnostic Radiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cdronline/Fulltext/2023/05150/Thyroid_Nodule_Classification_by_Ultrasound_.1.aspx?Ppt=Article%7Ccdronline%3A2023%3A05150%3A00001%7C10.1097%2F01.cdr.0000931496.25269.d5%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Thyroid Nodule Classification by Ultrasound:... : Contemporary Diagnostic Radiology\nImage 2: Crossmark: Check for updates. # Thyroid Nodule Classification by Ultrasound: TI-RADS A to Z. Full Text Access for Subscribers. Image 4: Log in for access Individual Subscribers Log in for access. Imag",
+      "score": 0.6821721
+    },
+    {
+      "number": 15,
+      "title": "Performance of European Thyroid Imaging Reporting and Data... : Journal of Medical Ultrasound",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jmut/fulltext/2023/31020/performance_of_european_thyroid_imaging_reporting.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Performance of European Thyroid Imaging Reporting and Data... : Journal of Medical Ultrasound\nThere is a limited number of studies reporting the performance of European Thyroid Imaging Reporting and Data System (EU-TIRADS) guideline in identifying thyroid nodule malignancy. For this aim, ultr",
+      "score": 0.5654673
+    },
+    {
+      "number": 16,
+      "title": "A Retrospective Study of Clinicopathologic Outcomes of Nodules With H\u00fcrthle Cell Cytology and the Thyroid Nodule App (TNAPP) Ultrasound Recommendations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X2200091X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Endocr Pract\n\n### H\u00fcrthle-cell neoplasms of the thyroid: an algorithmic approach to pathologic diagnosis in light of molecular advances\n\n### Semin Diagn Pathol\n\n### Predictive factors of malignancy in patients with cytologically suspicious for Hurthle cell neoplasm of thyroid nodules\n\n### Int J ",
+      "score": 0.49641174
+    },
+    {
+      "number": 17,
+      "title": "Thyroid cytology: The reality before and after the introduction of ultrasound classification systems for thyroid nodules - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2530016422002038",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Thyroid\n\n## Cited by (2)\n\n### Increased Diagnoses of Follicular Neoplasms Among Thyroid Nodules Submitted to Fine-Needle Aspiration With Ultrasound-Classification Indication and Adoption of the 3rd Edition of the Bethesda System\n\n### Precision medicine in thyroid nodules: current strategies, cha",
+      "score": 0.43266314
+    },
+    {
+      "number": 18,
+      "title": "The Treatment of Differentiated Thyroid Cancer in Children",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/edrv/article-pdf/32/6/798/8858809/edrv0798.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "If the TSH is suppressed, a radionuclide scan may identify a hyperfunc- tioning nodule. ... The nodule size at which point FNA should be per-.",
+      "score": 0.41307515
+    },
+    {
+      "number": 19,
+      "title": "Thyroid Nodule Evaluation: Us-Fna And On-Site Cytology Assessment - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X20400667",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "First page preview\n\n## References (15)\n\n### American Association of Clinical Endocrinologists, Associazione Medici Endocrinologi, and European Thyroid Association medical guidelines for clinical practice for the diagnosis and management of thyroid nodules\n\n### Endocr Pract\n\n### Comparison of palpati",
+      "score": 0.3442896
+    },
+    {
+      "number": 20,
+      "title": "Thyroid nodule evaluation and management in older adults: A review of practical considerations for clinical endocrinologists",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8092332",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Multiple factors need to be considered when making decisions regarding thyroid nodule management in older adults (Figure 2). In addition to thyroid nodule risk stratification and consideration of thyroid cancer biology, the evaluation of patients\u2019 overall health, comorbidities, preferences and goals",
+      "score": 0.7823471
+    },
+    {
+      "number": 21,
+      "title": "2023 European Thyroid Association Clinical Practice Guidelines for ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10448590",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Overall, these observations cause concern for unwarranted expense and excess morbidity associated with thyroid nodule over-diagnosis and -treatment. This is exemplified by the abundantly demonstrated overdiagnosis of benign and malignant thyroid lesions without this leading to a significant lowering",
+      "score": 0.7458619
+    },
+    {
+      "number": 22,
+      "title": "The European Association of Nuclear Medicine (EANM)\u2019s Response to the 2023 European Thyroid Association (ETA) clinical practice guidelines for thyroid nodule management and nuclear medicine: a deliberate oversight? - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11043102",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "challenged the role of TIRADS in reducing the number of inappropriate fine-needle aspiration cytology (FNAC) in clinical practice . A recent large-scale Turkish study compared five ultrasound thyroid reporting systems\u2014American Thyroid Association (ATA) guidelines, ACR TIRADS, EU-TIRADS, Korean TIRAD",
+      "score": 0.6922474
+    },
+    {
+      "number": 23,
+      "title": "Comparison of the C-TIRADS, ACR-TIRADS, and ATA guidelines in malignancy risk stratification of thyroid nodules",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10347339",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "| Guidelines | Nodules for recommending FNA (n) | Benign nodules (n) | Unnecessary FNA rate (%) | P value |\n :---:  :---: \n| Total |  |  |  |  |\n| C-TIRADS | 632 | 386 | 61.08 | <0.001 |\n| ACR-TIRADS | 702 | 534 | 76.07 | 0.006 |\n| ATA guidelines | 995 | 812 | 81.61 | <0.001 |\n| <20 mm |  |  |  |  |",
+      "score": 0.65146625
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Unexpected Diagnosis of Sporadic Medullary Thyroid Carcinoma",
+      "detail": "www.facs.org",
+      "url": "https://www.facs.org/media/kn3a523s/cr2_taye.pdf",
+      "authors": "www.facs.org",
+      "host": "www.facs.org",
+      "snippet": "The left lobe was normal-appearing, and there was no suspicious cer\u00ad vical lymphadenopathy (Figure 1). Although the nodule had low-risk features on ultrasound,1 fine needle aspiration (FNA) of the right 6 cm complex nodule was performed because the nodule met the size criteria specified in the Ameri",
+      "score": 0.71185225
+    }
+  ],
+  "editorialNote": "Prepared from cited clinical literature using Astra's research workflow. Verify recommendations against current guidance and patient-specific factors.",
+  "citations": [
+    {
+      "number": 1,
+      "title": "Diagnosis of thyroid micronodules on ultrasound using a deep ...",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/s41598-023-34459-3",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "European Thyroid Association guidelines for ultrasound malignancy risk stratification of thyroid nodules in adults: The EU-TIRADS. Eur. Thyroid",
+      "score": 0.54303354
+    },
+    {
+      "number": 2,
+      "title": "Familial thyroid cancer: a review | Modern Pathology",
+      "detail": "www.nature.com",
+      "url": "https://www.nature.com/articles/modpathol2010147",
+      "authors": "www.nature.com",
+      "host": "www.nature.com",
+      "snippet": "Article \nPubMed \nGoogle Scholar\n\nBiscolla RP, Ugolini C, Sculli M, et al. Medullary and papillary tumors are frequently associated in the same thyroid gland without evidence of reciprocal influence in their biologic behavior. Thyroid 2004;14:946\u2013952.\n\nArticle \nPubMed \nGoogle Scholar\n\nBakhsh A, Kirov",
+      "score": 0.5412882
+    },
+    {
+      "number": 3,
+      "title": "Elastography Enhances Diagnostic Accuracy of ACR TI-RADS in ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/111/6/e1616/8383055",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "European Thyroid Association guidelines for ultrasound malignancy risk stratification of thyroid nodules in adults: the EU-TIRADS",
+      "score": 0.60077465
+    },
+    {
+      "number": 4,
+      "title": "Contemporary Thyroid Nodule Evaluation and Management",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jcem/article/105/9/2869/5850848",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "A survey of American Thyroid Association members regarding the 2015 Adult Thyroid Nodule and Differentiated Thyroid Cancer Clinical Practice Guidelines .",
+      "score": 0.598524
+    },
+    {
+      "number": 5,
+      "title": "Evaluation and application of American College of Radiology ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/cyt.13414",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "2015 American Thyroid Association management guidelines for adult patients with thyroid nodules and differentiated thyroid cancer: the",
+      "score": 0.5769478
+    },
+    {
+      "number": 6,
+      "title": "2015 American Thyroid Association Management Guidelines for ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.1002/cncr.30360",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "The 2015 American Thyroid Association guidelines for the treatment of adults with thyroid nodules and differentiated thyroid cancer have",
+      "score": 0.55709904
+    },
+    {
+      "number": 7,
+      "title": "TIRADS Management Guidelines in the Investigation of Thyroid ...",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/jes/article/4/4/bvaa031/5802678",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer:",
+      "score": 0.5423064
+    },
+    {
+      "number": 8,
+      "title": "Preoperative diagnosis of thyroid nodules: An integrated ...",
+      "detail": "acsjournals.onlinelibrary.wiley.com",
+      "url": "https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncy.22546",
+      "authors": "acsjournals.onlinelibrary.wiley.com",
+      "host": "acsjournals.onlinelibrary.wiley.com",
+      "snippet": "In 2017, the European Thyroid Association issued guidelines for US malignancy risk stratification in adults: the European Thyroid Imaging and",
+      "score": 0.53750324
+    },
+    {
+      "number": 9,
+      "title": "Consensus statement on the management of incidentally discovered ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/cen.14905",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "American Thyroid Association Management Guidelines for adult patients with thyroid nodules and differentiated thyroid cancer:",
+      "score": 0.49450764
+    },
+    {
+      "number": 10,
+      "title": "Evaluation and Management of Thyroid Nodules: A Joint Consensus ...",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/cen.70116",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "Both guidelines advocate for the use of ultrasonography to determine whether a thyroid nodule warrants Fine Needle Aspiration Cytology (FNAC).",
+      "score": 0.48206395
+    },
+    {
+      "number": 11,
+      "title": "Additional detection of Bethesda greater than or... : Nuclear Medicine Communications",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/10.1097/MNM.0000000000002174",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Additional detection of Bethesda greater than or... : Nuclear Medicine Communications\n# Additional detection of Bethesda greater than or equal to III cytology in cold thyroid nodules beyond American College of Radiology Thyroid Imaging Reporting and Data System risk stratification. Cold thyro",
+      "score": 0.81665546
+    },
+    {
+      "number": 12,
+      "title": "Comparison of thyroid nodule FNA rates recommended by ACR TI-RADS, Kwak TI-RADS and ATA guidelines",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0720048X2200002X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "8, 2022, whose study contents contained elucidation of diagnostic performance of any one of the above ultrasound risk stratification systems (European Thyroid Imaging Reporting and Data System[Eu-TIRADS]; American College of Radiology TIRADS [ACR TIRADS]; Chinese version of TIRADS [C-TIRADS]; Comput",
+      "score": 0.7253574
+    },
+    {
+      "number": 13,
+      "title": "Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study - Khan - 2025 - Endocrinology, Diabetes & Metabolism - Wiley Online Library",
+      "detail": "onlinelibrary.wiley.com",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/edm2.70076",
+      "authors": "onlinelibrary.wiley.com",
+      "host": "onlinelibrary.wiley.com",
+      "snippet": "# Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study. * ###### Correction to \u2018Clinical Outcomes of Patients With Bethesda III or IV Cytology on Fine Needle Aspiration of Thyroid Nodules\u2014A Retrospective Study\u2019. This retros",
+      "score": 0.6844544
+    },
+    {
+      "number": 14,
+      "title": "Thyroid Nodule Classification by Ultrasound:... : Contemporary Diagnostic Radiology",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/cdronline/Fulltext/2023/05150/Thyroid_Nodule_Classification_by_Ultrasound_.1.aspx?Ppt=Article%7Ccdronline%3A2023%3A05150%3A00001%7C10.1097%2F01.cdr.0000931496.25269.d5%7C",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Thyroid Nodule Classification by Ultrasound:... : Contemporary Diagnostic Radiology\nImage 2: Crossmark: Check for updates. # Thyroid Nodule Classification by Ultrasound: TI-RADS A to Z. Full Text Access for Subscribers. Image 4: Log in for access Individual Subscribers Log in for access. Imag",
+      "score": 0.6821721
+    },
+    {
+      "number": 15,
+      "title": "Performance of European Thyroid Imaging Reporting and Data... : Journal of Medical Ultrasound",
+      "detail": "journals.lww.com",
+      "url": "https://journals.lww.com/jmut/fulltext/2023/31020/performance_of_european_thyroid_imaging_reporting.8.aspx",
+      "authors": "journals.lww.com",
+      "host": "journals.lww.com",
+      "snippet": "Title: Performance of European Thyroid Imaging Reporting and Data... : Journal of Medical Ultrasound\nThere is a limited number of studies reporting the performance of European Thyroid Imaging Reporting and Data System (EU-TIRADS) guideline in identifying thyroid nodule malignancy. For this aim, ultr",
+      "score": 0.5654673
+    },
+    {
+      "number": 16,
+      "title": "A Retrospective Study of Clinicopathologic Outcomes of Nodules With H\u00fcrthle Cell Cytology and the Thyroid Nodule App (TNAPP) Ultrasound Recommendations - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X2200091X",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Endocr Pract\n\n### H\u00fcrthle-cell neoplasms of the thyroid: an algorithmic approach to pathologic diagnosis in light of molecular advances\n\n### Semin Diagn Pathol\n\n### Predictive factors of malignancy in patients with cytologically suspicious for Hurthle cell neoplasm of thyroid nodules\n\n### Int J ",
+      "score": 0.49641174
+    },
+    {
+      "number": 17,
+      "title": "Thyroid cytology: The reality before and after the introduction of ultrasound classification systems for thyroid nodules - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2530016422002038",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "### Thyroid\n\n## Cited by (2)\n\n### Increased Diagnoses of Follicular Neoplasms Among Thyroid Nodules Submitted to Fine-Needle Aspiration With Ultrasound-Classification Indication and Adoption of the 3rd Edition of the Bethesda System\n\n### Precision medicine in thyroid nodules: current strategies, cha",
+      "score": 0.43266314
+    },
+    {
+      "number": 18,
+      "title": "The Treatment of Differentiated Thyroid Cancer in Children",
+      "detail": "academic.oup.com",
+      "url": "https://academic.oup.com/edrv/article-pdf/32/6/798/8858809/edrv0798.pdf",
+      "authors": "academic.oup.com",
+      "host": "academic.oup.com",
+      "snippet": "If the TSH is suppressed, a radionuclide scan may identify a hyperfunc- tioning nodule. ... The nodule size at which point FNA should be per-.",
+      "score": 0.41307515
+    },
+    {
+      "number": 19,
+      "title": "Thyroid Nodule Evaluation: Us-Fna And On-Site Cytology Assessment - ScienceDirect",
+      "detail": "www.sciencedirect.com",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1530891X20400667",
+      "authors": "www.sciencedirect.com",
+      "host": "www.sciencedirect.com",
+      "snippet": "First page preview\n\n## References (15)\n\n### American Association of Clinical Endocrinologists, Associazione Medici Endocrinologi, and European Thyroid Association medical guidelines for clinical practice for the diagnosis and management of thyroid nodules\n\n### Endocr Pract\n\n### Comparison of palpati",
+      "score": 0.3442896
+    },
+    {
+      "number": 20,
+      "title": "Thyroid nodule evaluation and management in older adults: A review of practical considerations for clinical endocrinologists",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8092332",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Multiple factors need to be considered when making decisions regarding thyroid nodule management in older adults (Figure 2). In addition to thyroid nodule risk stratification and consideration of thyroid cancer biology, the evaluation of patients\u2019 overall health, comorbidities, preferences and goals",
+      "score": 0.7823471
+    },
+    {
+      "number": 21,
+      "title": "2023 European Thyroid Association Clinical Practice Guidelines for ...",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10448590",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "Overall, these observations cause concern for unwarranted expense and excess morbidity associated with thyroid nodule over-diagnosis and -treatment. This is exemplified by the abundantly demonstrated overdiagnosis of benign and malignant thyroid lesions without this leading to a significant lowering",
+      "score": 0.7458619
+    },
+    {
+      "number": 22,
+      "title": "The European Association of Nuclear Medicine (EANM)\u2019s Response to the 2023 European Thyroid Association (ETA) clinical practice guidelines for thyroid nodule management and nuclear medicine: a deliberate oversight? - PMC",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11043102",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "challenged the role of TIRADS in reducing the number of inappropriate fine-needle aspiration cytology (FNAC) in clinical practice . A recent large-scale Turkish study compared five ultrasound thyroid reporting systems\u2014American Thyroid Association (ATA) guidelines, ACR TIRADS, EU-TIRADS, Korean TIRAD",
+      "score": 0.6922474
+    },
+    {
+      "number": 23,
+      "title": "Comparison of the C-TIRADS, ACR-TIRADS, and ATA guidelines in malignancy risk stratification of thyroid nodules",
+      "detail": "pmc.ncbi.nlm.nih.gov",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10347339",
+      "authors": "pmc.ncbi.nlm.nih.gov",
+      "host": "pmc.ncbi.nlm.nih.gov",
+      "snippet": "| Guidelines | Nodules for recommending FNA (n) | Benign nodules (n) | Unnecessary FNA rate (%) | P value |\n :---:  :---: \n| Total |  |  |  |  |\n| C-TIRADS | 632 | 386 | 61.08 | <0.001 |\n| ACR-TIRADS | 702 | 534 | 76.07 | 0.006 |\n| ATA guidelines | 995 | 812 | 81.61 | <0.001 |\n| <20 mm |  |  |  |  |",
+      "score": 0.65146625
+    },
+    {
+      "number": 24,
+      "title": "[PDF] Unexpected Diagnosis of Sporadic Medullary Thyroid Carcinoma",
+      "detail": "www.facs.org",
+      "url": "https://www.facs.org/media/kn3a523s/cr2_taye.pdf",
+      "authors": "www.facs.org",
+      "host": "www.facs.org",
+      "snippet": "The left lobe was normal-appearing, and there was no suspicious cer\u00ad vical lymphadenopathy (Figure 1). Although the nodule had low-risk features on ultrasound,1 fine needle aspiration (FNA) of the right 6 cm complex nodule was performed because the nodule met the size criteria specified in the Ameri",
+      "score": 0.71185225
+    }
+  ],
+  "publishedAt": "2026-09-16T00:38:39.184957+00:00",
+  "updatedAt": "2026-09-16T00:38:39.184957+00:00",
+  "readingMinutes": 6,
+  "slug": "thyroid-nodule"
+}
