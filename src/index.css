@@ -1,6 +1,9 @@
+@import 'streamdown/styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@source "../node_modules/streamdown/dist/*.js";
 
 /* Optional: KaTeX if you actually enabled rehype-katex */
 /* @import 'katex/dist/katex.min.css'; */
@@ -27,6 +30,28 @@ body,
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
+}
+
+.astra-clinical-flow-canvas,
+.astra-clinical-flow-node,
+.astra-clinical-flow-canvas svg,
+.astra-clinical-flow-canvas path {
+  transition: none !important;
+}
+
+.astra-clinical-flow-node {
+  contain: layout paint;
+}
+
+.astra-clinical-flow-canvas svg {
+  pointer-events: none;
+  shape-rendering: geometricPrecision;
+}
+
+.astra-node-streamdown [data-streamdown='root'],
+.astra-node-streamdown > div,
+.astra-node-streamdown p {
+  margin: 0;
 }
 
 /* Prettier blockquotes for evidence/guidelines */

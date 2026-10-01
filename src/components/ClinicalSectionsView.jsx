@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react';
 import { InlineText } from './DifferentialDiagnosisView.jsx';
+import NextStepsAlgorithm from './NextStepsAlgorithm.jsx';
+import { NEXT_STEPS_ALGORITHM_HEADER } from '../utils/nextStepsAlgorithm.js';
 
 /* =========================
    CLINICAL SECTIONS VIEW
-   Renders everything after the differential (next steps, management, evidence)
+   Renders everything after the differential, including the visual next-steps pathway,
    in the same visual language as the ranked differential above it.
    Sections shaped like "– **Label** — detail" become numbered step rows;
    anything else (prose, tables) falls through to the markdown renderer.
@@ -150,6 +152,8 @@ const ClinicalSectionsView = ({
   isDark,
   citations = [],
   isMobile = false,
+  isCompact = false,
+  isStreaming = false,
   renderMarkdown,
 }) => {
   const sections = useMemo(() => splitSections(markdown), [markdown]);
@@ -161,11 +165,12 @@ const ClinicalSectionsView = ({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 26 }}>
       {sections.map((section, index) => {
+        const isAlgorithm = section.body?.includes(NEXT_STEPS_ALGORITHM_HEADER);
         const parsed = section.body ? parseSteps(section.body) : null;
 
         return (
           <section key={`${section.title || 'intro'}-${index}`}>
-            {section.title && (
+            {section.title && !isAlgorithm && (
               <div
                 style={{
                   display: 'flex',
@@ -191,7 +196,16 @@ const ClinicalSectionsView = ({
               </div>
             )}
 
-            {parsed ? (
+            {isAlgorithm ? (
+              <NextStepsAlgorithm
+                content={section.body}
+                theme={theme}
+                isDark={isDark}
+                isStreaming={isStreaming}
+                isMobile={isMobile}
+                isCompact={isCompact}
+              />
+            ) : parsed ? (
               <>
                 {parsed.lead && (
                   <div className="markdown-body clinical-section-body" style={{ marginBottom: 12 }}>

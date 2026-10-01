@@ -24,9 +24,7 @@ import {
   BookOpen,
   Image,
   Plus,
-  ShieldCheck,
-  Maximize2,
-  Minimize2
+  ShieldCheck
 } from 'lucide-react';
 import { useSupabaseAuth } from './Auth/SupabaseAuthProvider.jsx';
 import PaywallModal from './Auth/PaywallModal.jsx';
@@ -49,7 +47,13 @@ import { getEffectiveSubscriptionPlan } from '../utils/subscriptionPlan.js';
 import FirstPageExperience from './FirstPageExperience.jsx';
 import DifferentialDiagnosisView from './DifferentialDiagnosisView.jsx';
 import ClinicalSectionsView from './ClinicalSectionsView.jsx';
+import NextStepsAlgorithm from './NextStepsAlgorithm.jsx';
 import useDocumentChromeTheme from '../hooks/useDocumentChromeTheme.js';
+import {
+  messageWithAlgorithmToPlainText,
+  NEXT_STEPS_ALGORITHM_HEADER,
+  splitEmbeddedClinicalPathway,
+} from '../utils/nextStepsAlgorithm.js';
 
 const DEFAULT_APP_SETTINGS = {
   theme: 'system',
@@ -2557,7 +2561,7 @@ const useWindowWidth = () => {
   return width;
 };
 
-const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, citations = [] }) => {
+const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, citations = [], mode = 'search' }) => {
    const containerRef = useRef(null);
    const windowWidth = useWindowWidth();
 
@@ -2726,6 +2730,22 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps — listeners attach once, read citMapRef live
 
+  const shouldRenderAlgorithm = mode === 'next-steps'
+    && (isStreaming || markdown.includes(NEXT_STEPS_ALGORITHM_HEADER));
+
+  if (shouldRenderAlgorithm) {
+    return (
+      <NextStepsAlgorithm
+        content={markdown}
+        theme={theme}
+        isDark={invert}
+        isStreaming={isStreaming}
+        isMobile={windowWidth < 768}
+        isCompact={windowWidth < 920}
+      />
+    );
+  }
+
   const baseMarkdown = preprocessMarkdown(markdown, isStreaming);
   const processedMarkdown = injectCitationPills(baseMarkdown, citations);
 
@@ -2811,6 +2831,42 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
     }
   };
 
+  const researchPathway = mode === 'search'
+    ? splitEmbeddedClinicalPathway(markdown)
+    : null;
+
+  if (researchPathway) {
+    const { narrative, pathway: pathwayContent } = researchPathway;
+
+    return (
+      <div
+        ref={containerRef}
+        className={`markdown-body prose max-w-none ${invert ? 'prose-invert' : 'prose-neutral'}`}
+        style={{ color: theme.textPrimary }}
+      >
+        {narrative && (
+          <ReactMarkdown
+            remarkPlugins={remarkPlugins}
+            rehypePlugins={rehypePlugins}
+            components={componentsWithTheme}
+          >
+            {injectCitationPills(preprocessMarkdown(narrative, isStreaming), citations) || ''}
+          </ReactMarkdown>
+        )}
+        <div style={{ marginTop: narrative ? (windowWidth < 768 ? 22 : 28) : 0 }}>
+          <NextStepsAlgorithm
+            content={pathwayContent}
+            theme={theme}
+            isDark={invert}
+            isStreaming={isStreaming}
+            isMobile={windowWidth < 768}
+            isCompact={windowWidth < 920}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       ref={containerRef}
@@ -2841,7 +2897,7 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
             isMobile={windowWidth < 768}
           />
 
-          {/* Everything after the differential — next steps, management, evidence */}
+          {/* Everything after the differential — including the streamed next-steps pathway */}
           {afterDiff.trim() && (
             <div style={{ marginTop: windowWidth < 768 ? 22 : 28 }}>
               <ClinicalSectionsView
@@ -2850,6 +2906,8 @@ const MarkdownBlock = ({ markdown, theme, invert = false, isStreaming = false, c
                 isDark={invert}
                 citations={citations}
                 isMobile={windowWidth < 768}
+                isCompact={windowWidth < 920}
+                isStreaming={isStreaming}
                 renderMarkdown={(body) => (
                   <ReactMarkdown
                     remarkPlugins={remarkPlugins}
@@ -3070,11 +3128,9 @@ const WorkspaceCard = ({
   theme,
   isDark,
   isMobile,
-  onShowCitations,
   isSingleCard,
   inputBarHeight = 0,
-  onFocus,
-  isFocusedCard = false,
+  isContinuous = false,
 }) => {
   const [copiedTurnIdx, setCopiedTurnIdx] = useState(null);
   const mode = workspace.mode || 'search';
@@ -3092,14 +3148,14 @@ const WorkspaceCard = ({
         flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
+        height: isContinuous ? 'auto' : '100%',
         minHeight: 0,
       }}
     >
       {/* Inner scrollable content */}
       <div style={{
         flex: 1,
-        overflowY: 'auto',
+        overflowY: isContinuous ? 'visible' : 'auto',
         overflowX: 'hidden',
         WebkitOverflowScrolling: 'touch',
         padding: isMobile ? '0 12px' : (isSingleCard ? '0 16px' : '0 8px'),
@@ -3131,26 +3187,6 @@ const WorkspaceCard = ({
               {modeInfo.label}
             </span>
             <div style={{ flex: 1 }} />
-            {/* Focus/expand */}
-            {onFocus && !isMobile && (
-              <button onClick={onFocus} aria-label={isFocusedCard ? 'Exit focus' : 'Focus'}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: 28, height: 28, borderRadius: 7,
-                  border: 'none',
-                  backgroundColor: isFocusedCard ? `${theme.accentSoftBlue}15` : 'transparent',
-                  color: isFocusedCard ? theme.accentSoftBlue : theme.textSecondary,
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                  opacity: isFocusedCard ? 0.85 : 0.45,
-                  padding: 0,
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.opacity = isFocusedCard ? '0.85' : '0.45'; }}
-              >
-                {isFocusedCard ? <Minimize2 size={13} /> : <Maximize2 size={13} />}
-              </button>
-            )}
           </div>
 
           {/* === TURNS === */}
@@ -3168,7 +3204,10 @@ const WorkspaceCard = ({
             const handleCopy = async () => {
               if (!turnContent) return;
               try {
-                await navigator.clipboard.writeText(turnContent);
+                const copyContent = turnContent.includes(NEXT_STEPS_ALGORITHM_HEADER)
+                  ? messageWithAlgorithmToPlainText(turnContent)
+                  : turnContent;
+                await navigator.clipboard.writeText(copyContent);
                 setCopiedTurnIdx(turnIdx);
                 setTimeout(() => setCopiedTurnIdx(null), 1500);
               } catch {}
@@ -3216,10 +3255,10 @@ const WorkspaceCard = ({
                 {/* === RESPONSE CONTAINER === */}
                 {(turnContent || turnIsLoading) && (
                   <div style={{
-                    backgroundColor: isDark ? 'rgba(255,255,255,0.025)' : 'rgba(0,0,0,0.015)',
-                    border: `1px solid ${isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'}`,
-                    borderRadius: isMobile ? 14 : 18,
-                    padding: isMobile ? 16 : 24,
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    borderRadius: 0,
+                    padding: 0,
                     position: 'relative',
                     animation: 'fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                   }}>
@@ -3265,116 +3304,64 @@ const WorkspaceCard = ({
                           invert={isDark}
                           isStreaming={turnIsStreaming || !turnComplete}
                           citations={turnCitations}
+                          mode={mode}
                         />
 
                         {turnIcdCodes.length > 0 && turnComplete && (
                           <ICDCodeBadges codes={turnIcdCodes} theme={theme} />
                         )}
 
-                        {/* Source pills row */}
-                        {turnCitationCount > 0 && turnComplete && (
-                          <div style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            gap: 6,
-                            marginTop: 14,
-                            paddingTop: 12,
-                            borderTop: `1px solid ${theme.textSecondary}12`,
-                          }}>
-                            {turnCitations.slice(0, 8).map((cit, ci) => {
-                              const host = cit.host || cit.hostname || (() => { try { return new URL(cit.url).hostname; } catch { return ''; } })();
-                              const journal = getJournalName(host) || host?.replace('www.', '') || 'Source';
-                              const favicon = cit.faviconUrl || cit.favicon || buildFaviconUrl(host);
-                              return (
-                                <a
-                                  key={ci}
-                                  href={cit.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  title={cit.title || cit.url}
-                                  style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    gap: 5,
-                                    padding: '4px 10px 4px 6px',
-                                    borderRadius: 20,
-                                    background: isDark ? `${theme.accentSoftBlue}12` : `${theme.accentSoftBlue}0A`,
-                                    border: `1px solid ${theme.accentSoftBlue}20`,
-                                    textDecoration: 'none',
-                                    color: theme.accentSoftBlue,
-                                    fontSize: 12,
-                                    fontWeight: 550,
-                                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                                    letterSpacing: '-0.01em',
-                                    cursor: 'pointer',
-                                    transition: 'all 0.15s ease',
-                                    whiteSpace: 'nowrap',
-                                    maxWidth: 180,
-                                  }}
-                                  onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = isDark ? `${theme.accentSoftBlue}22` : `${theme.accentSoftBlue}16`;
-                                    e.currentTarget.style.borderColor = `${theme.accentSoftBlue}40`;
-                                    e.currentTarget.style.boxShadow = `0 2px 8px ${theme.accentSoftBlue}15`;
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = isDark ? `${theme.accentSoftBlue}12` : `${theme.accentSoftBlue}0A`;
-                                    e.currentTarget.style.borderColor = `${theme.accentSoftBlue}20`;
-                                    e.currentTarget.style.boxShadow = 'none';
-                                  }}
-                                >
-                                  <img
-                                    src={favicon}
-                                    alt=""
-                                    style={{ width: 14, height: 14, borderRadius: '50%', background: '#fff', flexShrink: 0 }}
-                                    onError={(e) => { e.target.style.display = 'none'; }}
-                                  />
-                                  <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: 130 }}>{journal}</span>
-                                </a>
-                              );
-                            })}
-                            {turnCitationCount > 8 && (
-                              <span style={{
-                                fontSize: 11, color: theme.textSecondary, fontWeight: 500,
-                                alignSelf: 'center', opacity: 0.7,
-                                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                              }}>+{turnCitationCount - 8} more</span>
-                            )}
-                          </div>
-                        )}
-
                         {/* Source list */}
                         {turnCitationCount > 0 && turnComplete && (
                           <div style={{
-                            marginTop: 16,
-                            padding: '12px 14px',
-                            borderRadius: 10,
-                            background: isDark ? `${theme.textSecondary}08` : `${theme.textSecondary}06`,
-                            border: `1px solid ${theme.textSecondary}10`,
+                            marginTop: isMobile ? 26 : 34,
+                            padding: isMobile ? '18px 0 0' : '22px 0 0',
+                            borderTop: `1px solid ${theme.textSecondary}24`,
                           }}>
                             <div style={{
-                              fontSize: 11,
-                              fontWeight: 600,
-                              color: theme.textSecondary,
-                              textTransform: 'uppercase',
-                              letterSpacing: '0.05em',
-                              marginBottom: 8,
-                              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                            }}>Sources</div>
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: 10,
+                              marginBottom: isMobile ? 12 : 16,
+                            }}>
+                              <BookOpen size={isMobile ? 17 : 19} strokeWidth={1.55} color={theme.textSecondary} />
+                              <h3 style={{
+                                margin: 0,
+                                color: theme.textPrimary,
+                                fontFamily: 'Georgia, "Times New Roman", Charter, serif',
+                                fontSize: isMobile ? 19 : 22,
+                                fontWeight: 500,
+                                letterSpacing: '-0.015em',
+                              }}>Sources</h3>
+                              <span style={{
+                                marginLeft: 'auto',
+                                color: theme.textSecondary,
+                                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+                                fontSize: 10.5,
+                                fontVariantNumeric: 'tabular-nums',
+                                opacity: 0.68,
+                              }}>{turnCitationCount}</span>
+                            </div>
                             {/* Retrieval now returns 35-45 sources per search, so this
                                 list is scrolled rather than rendered full-height. ~10
                                 rows visible; the rest are one scroll away. */}
                             <div style={{
                               display: 'flex',
                               flexDirection: 'column',
-                              gap: 6,
-                              maxHeight: 260,
+                              maxHeight: isMobile ? 320 : 380,
                               overflowY: 'auto',
-                              paddingRight: 4,
+                              paddingRight: 8,
                             }}>
                               {turnCitations.map((cit, ci) => {
                                 const host = cit.host || cit.hostname || (() => { try { return new URL(cit.url).hostname; } catch { return ''; } })();
-                                const favicon = cit.faviconUrl || cit.favicon || buildFaviconUrl(host);
                                 const title = cit.title || host?.replace('www.', '') || 'Source';
+                                const published = cit.published_date || cit.publishedAt || cit.year || '';
+                                const authors = cit.authors && cit.authors !== host && cit.authors !== 'Unknown'
+                                  ? cit.authors
+                                  : '';
+                                const sourceMeta = [getJournalName(host) || host?.replace('www.', ''), published, authors]
+                                  .filter(Boolean)
+                                  .join(' · ');
                                 return (
                                   <a
                                     key={ci}
@@ -3382,38 +3369,51 @@ const WorkspaceCard = ({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{
-                                      display: 'flex',
-                                      alignItems: 'center',
-                                      gap: 8,
+                                      display: 'grid',
+                                      gridTemplateColumns: isMobile ? '20px minmax(0, 1fr)' : '28px minmax(0, 1fr)',
+                                      gap: isMobile ? 8 : 10,
                                       textDecoration: 'none',
-                                      padding: '4px 0',
+                                      padding: isMobile ? '10px 0' : '12px 0',
                                       color: theme.textPrimary,
                                       transition: 'opacity 0.15s ease',
+                                      borderBottom: ci === turnCitations.length - 1
+                                        ? 'none'
+                                        : `1px solid ${theme.textSecondary}10`,
                                     }}
                                     onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.7'; }}
                                     onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
                                   >
                                     <span style={{
-                                      fontSize: 10, fontWeight: 600, color: theme.textSecondary,
-                                      minWidth: 16, textAlign: 'right', opacity: 0.5,
-                                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                                    }}>{ci + 1}</span>
-                                    <img
-                                      src={favicon}
-                                      alt=""
-                                      style={{ width: 14, height: 14, borderRadius: '50%', background: '#fff', flexShrink: 0 }}
-                                      onError={(e) => { e.target.style.display = 'none'; }}
-                                    />
-                                    <span style={{
-                                      fontSize: 13, fontWeight: 500, lineHeight: 1.3,
-                                      overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-                                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                                    }}>{title}</span>
-                                    <span style={{
-                                      fontSize: 11, color: theme.textSecondary, opacity: 0.5,
-                                      marginLeft: 'auto', flexShrink: 0, whiteSpace: 'nowrap',
-                                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                                    }}>{host?.replace('www.', '')}</span>
+                                      paddingTop: 1,
+                                      color: theme.textSecondary,
+                                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+                                      fontSize: isMobile ? 11 : 12,
+                                      fontWeight: 500,
+                                      textAlign: 'right',
+                                      opacity: 0.72,
+                                    }}>{ci + 1}.</span>
+                                    <span style={{ minWidth: 0 }}>
+                                      <span style={{
+                                        display: 'block',
+                                        color: theme.accentSoftBlue,
+                                        fontFamily: 'Georgia, "Times New Roman", Charter, serif',
+                                        fontSize: isMobile ? 14.5 : 16,
+                                        fontWeight: 500,
+                                        lineHeight: 1.35,
+                                        letterSpacing: '-0.008em',
+                                      }}>{title}</span>
+                                      {sourceMeta && (
+                                        <span style={{
+                                          display: 'block',
+                                          marginTop: 3,
+                                          color: theme.textSecondary,
+                                          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
+                                          fontSize: isMobile ? 11.5 : 12.5,
+                                          lineHeight: 1.42,
+                                          opacity: 0.78,
+                                        }}>{sourceMeta}</span>
+                                      )}
+                                    </span>
                                   </a>
                                 );
                               })}
@@ -3437,236 +3437,88 @@ const WorkspaceCard = ({
 };
 
 /* =========================
-   WORKSPACE NAVIGATION
-   ========================= */
-const WorkspaceNav = ({ total, activeIndex, onNavigate, theme }) => {
-  if (total <= 1) return null;
-  return (
-    <div style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5,
-      padding: '6px 0 4px', flexShrink: 0,
-    }}>
-      {Array.from({ length: total }).map((_, i) => (
-        <button key={i} onClick={() => onNavigate(i)}
-          aria-label={`Workspace ${i + 1}`}
-          style={{
-            width: i === activeIndex ? 18 : 6, height: 6, borderRadius: 3,
-            border: 'none', cursor: 'pointer', padding: 0,
-            backgroundColor: i === activeIndex ? theme.accentSoftBlue : `${theme.textSecondary}25`,
-            transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
-          }} />
-      ))}
-      <span style={{
-        fontSize: 10, color: theme.textSecondary, fontWeight: 500, marginLeft: 6,
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-        opacity: 0.5,
-      }}>
-        {activeIndex + 1}/{total}
-      </span>
-    </div>
-  );
-};
-
-/* =========================
-   WORKSPACE CONTAINER
+   CONTINUOUS CONVERSATION
+   Every mode remains in one vertical transcript.
    ========================= */
 const WorkspaceContainer = ({
-  messages, currentMode, isLoading, isStreaming, hasFirstToken,
-  streamingContent, streamingCitations, theme, isDark, isMobile, onShowCitations, inputBarHeight = 0,
+  messages, isLoading, isStreaming, hasFirstToken,
+  streamingContent, streamingCitations, theme, isDark, isMobile, inputBarHeight = 0,
 }) => {
   const scrollContainerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [focusedIndex, setFocusedIndex] = useState(null);
-  const prevCountRef = useRef(0);
-
+  const bottomRef = useRef(null);
+  const prevWorkspaceCountRef = useRef(0);
   const workspaces = React.useMemo(() => groupIntoWorkspaces(messages), [messages]);
   const total = workspaces.length;
-  const lastWs = workspaces[total - 1];
-  // Check the very last turn of the last workspace for pending loading/streaming
-  const lastTurn = lastWs?.turns?.[lastWs.turns.length - 1];
-  const lastNeedsLoading = lastWs && lastTurn && !lastTurn.assistantMessage && isLoading;
-  const lastNeedsStreaming = lastWs && lastTurn && !lastTurn.assistantMessage && isStreaming && hasFirstToken;
-  const isFocused = focusedIndex !== null;
+  const lastWorkspace = workspaces[total - 1];
+  const lastTurn = lastWorkspace?.turns?.[lastWorkspace.turns.length - 1];
+  const lastNeedsLoading = Boolean(lastWorkspace && lastTurn && !lastTurn.assistantMessage && isLoading);
+  const lastNeedsStreaming = Boolean(
+    lastWorkspace && lastTurn && !lastTurn.assistantMessage && isStreaming && hasFirstToken
+  );
 
-  const GAP = isMobile ? 0 : 16;
-
-  // Auto-scroll to newest card
   useEffect(() => {
-    if (total > prevCountRef.current && scrollContainerRef.current && total > 1) {
-      const container = scrollContainerRef.current;
-      setTimeout(() => {
-        container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
-      }, 60);
-    }
-    if (total > 0) setActiveIndex(total - 1);
-    prevCountRef.current = total;
+    if (total <= prevWorkspaceCountRef.current) return;
+    prevWorkspaceCountRef.current = total;
+    const timer = window.setTimeout(() => {
+      bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 80);
+    return () => window.clearTimeout(timer);
   }, [total]);
-
-  // Track scroll for active dot
-  useEffect(() => {
-    const el = scrollContainerRef.current;
-    if (!el || total <= 1 || isFocused) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const cards = el.querySelectorAll('.workspace-card');
-        if (!cards.length) { ticking = false; return; }
-        const center = el.scrollLeft + el.clientWidth / 2;
-        let closest = 0;
-        let closestDist = Infinity;
-        cards.forEach((card, i) => {
-          const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-          const dist = Math.abs(center - cardCenter);
-          if (dist < closestDist) { closestDist = dist; closest = i; }
-        });
-        setActiveIndex(closest);
-        ticking = false;
-      });
-    };
-    el.addEventListener('scroll', onScroll, { passive: true });
-    return () => el.removeEventListener('scroll', onScroll);
-  }, [total, isFocused]);
-
-  // Escape key exits focus mode
-  useEffect(() => {
-    if (!isFocused) return;
-    const onKey = (e) => { if (e.key === 'Escape') setFocusedIndex(null); };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [isFocused]);
-
-  // Exit focus when new card arrives (user sent a new query)
-  useEffect(() => {
-    if (isFocused && total > prevCountRef.current) setFocusedIndex(null);
-  }, [total, isFocused]);
-
-  const navigateTo = (i) => {
-    if (isFocused) { setFocusedIndex(i); return; }
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    const cards = el.querySelectorAll('.workspace-card');
-    if (cards[i]) cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-    setActiveIndex(i);
-  };
-
-  const handleFocus = (i) => {
-    if (isFocused && focusedIndex === i) { setFocusedIndex(null); return; }
-    setFocusedIndex(i);
-    setActiveIndex(i);
-  };
 
   if (!total) return null;
 
-  // === SINGLE CARD — full-width, centered, no scroll ===
-  if (total === 1) {
-    return (
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-        <WorkspaceCard
-          workspace={workspaces[0]} isSingleCard={true}
-          isStreamingThis={!!lastNeedsStreaming}
-          streamingContent={lastNeedsStreaming ? streamingContent : ''}
-          streamingCitations={lastNeedsStreaming ? streamingCitations : []}
-          isLoadingThis={!!lastNeedsLoading}
-          theme={theme} isDark={isDark} isMobile={isMobile}
-          onShowCitations={onShowCitations}
-          inputBarHeight={inputBarHeight}
-        />
-      </div>
-    );
-  }
-
-  // === FOCUSED MODE — one card fills the screen, rest faded ===
-  if (isFocused && focusedIndex < total) {
-    const ws = workspaces[focusedIndex];
-    const isLast = focusedIndex === total - 1;
-    return (
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0, position: 'relative' }}>
-        {/* Dimmed backdrop — click to exit */}
-        <div
-          onClick={() => setFocusedIndex(null)}
-          style={{
-            position: 'absolute', inset: 0, zIndex: 0,
-            backgroundColor: isDark ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0.08)',
-            transition: 'background-color 0.3s ease',
-          }}
-        />
-        {/* Focused card */}
-        <div style={{
-          flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0,
-          position: 'relative', zIndex: 1,
-          animation: 'fadeInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
-        }}>
-          <WorkspaceCard
-            workspace={ws} isSingleCard={true}
-            isStreamingThis={isLast && !!lastNeedsStreaming}
-            streamingContent={isLast && lastNeedsStreaming ? streamingContent : ''}
-            streamingCitations={isLast && lastNeedsStreaming ? streamingCitations : []}
-            isLoadingThis={isLast && !!lastNeedsLoading}
-            theme={theme} isDark={isDark} isMobile={isMobile}
-            onShowCitations={onShowCitations}
-            inputBarHeight={inputBarHeight}
-            onFocus={() => handleFocus(focusedIndex)}
-            isFocusedCard={true}
-          />
-        </div>
-        {/* Nav — still works in focus mode to switch focused card */}
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <WorkspaceNav total={total} activeIndex={focusedIndex} onNavigate={navigateTo} theme={theme} />
-        </div>
-      </div>
-    );
-  }
-
-  // === MULTI-CARD — horizontal scroll, 2-up on desktop ===
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-      <div
-        ref={scrollContainerRef}
-        className="workspace-scroll"
-        style={{
-          flex: 1, display: 'flex', gap: GAP,
-          overflowX: 'auto', overflowY: 'hidden',
-          scrollSnapType: 'x proximity',
-          WebkitOverflowScrolling: 'touch',
-          scrollbarWidth: 'none',
-          minHeight: 0,
-          padding: isMobile ? '0' : '0 16px',
-        }}
-      >
-        {workspaces.map((ws, i) => {
-          const isLast = i === total - 1;
-          const w = isMobile ? '100vw' : 'calc(50% - 8px)';
+    <div
+      ref={scrollContainerRef}
+      className="conversation-scroll"
+      style={{
+        flex: 1,
+        minHeight: 0,
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        WebkitOverflowScrolling: 'touch',
+      }}
+    >
+      <div style={{
+        width: '100%',
+        maxWidth: 1400,
+        margin: '0 auto',
+        padding: isMobile ? '0' : '0 16px',
+      }}>
+        {workspaces.map((workspace, index) => {
+          const isLast = index === total - 1;
           return (
-            <div key={ws.id} className="workspace-card"
-              onDoubleClick={() => handleFocus(i)}
+            <div
+              key={workspace.id}
+              className="conversation-section"
               style={{
-                width: w, minWidth: w, maxWidth: isMobile ? '100vw' : 'min(calc(50% - 8px), 700px)',
-                flexShrink: 0, scrollSnapAlign: isMobile ? 'center' : 'start',
-                display: 'flex', flexDirection: 'column', height: '100%',
-                cursor: 'default',
-              }}>
+                borderTop: index === 0
+                  ? 'none'
+                  : `1px solid ${isDark ? 'rgba(255,255,255,0.065)' : 'rgba(0,0,0,0.065)'}`,
+                paddingTop: index === 0 ? 0 : (isMobile ? 8 : 12),
+              }}
+            >
               <WorkspaceCard
-                workspace={ws} isSingleCard={false}
-                isStreamingThis={isLast && !!lastNeedsStreaming}
+                workspace={workspace}
+                isSingleCard
+                isContinuous
+                isStreamingThis={isLast && lastNeedsStreaming}
                 streamingContent={isLast && lastNeedsStreaming ? streamingContent : ''}
                 streamingCitations={isLast && lastNeedsStreaming ? streamingCitations : []}
-                isLoadingThis={isLast && !!lastNeedsLoading}
-                theme={theme} isDark={isDark} isMobile={isMobile}
-                onShowCitations={onShowCitations}
-                inputBarHeight={inputBarHeight}
-                onFocus={() => handleFocus(i)}
+                isLoadingThis={isLast && lastNeedsLoading}
+                theme={theme}
+                isDark={isDark}
+                isMobile={isMobile}
+                inputBarHeight={isLast ? inputBarHeight : 0}
               />
             </div>
           );
         })}
+        <div ref={bottomRef} aria-hidden="true" style={{ height: 1 }} />
       </div>
-      <WorkspaceNav total={total} activeIndex={activeIndex} onNavigate={navigateTo} theme={theme} />
     </div>
   );
 };
-
 /* Legacy MessageBubble - kept for compatibility but redirects to workspace system */
 const MessageBubble = ({ message, theme, invertMarkdown, onShowCitations, isMobile }) => null;
 
@@ -4348,31 +4200,6 @@ const InputBar = ({
         transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         overflow: 'visible'
       }}>
-        {/* HIPAA Badge */}
-        {!isInline && <div style={{
-          position: 'absolute',
-          top: isMobile ? -10 : -12,
-          right: isMobile ? 14 : 18,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 4,
-          padding: isMobile ? '3px 8px' : '4px 10px',
-          borderRadius: 20,
-          background: theme.backgroundSurface,
-          border: `1px solid ${theme.accentSoftBlue}25`,
-          fontSize: isMobile ? 9 : 10,
-          fontWeight: 600,
-          color: theme.accentSoftBlue,
-          letterSpacing: '0.04em',
-          zIndex: 5,
-          boxShadow: `0 2px 8px rgba(0,0,0,0.06), 0 0 0 0.5px ${theme.accentSoftBlue}10`,
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif',
-          pointerEvents: 'none',
-        }}>
-          <ShieldCheck size={isMobile ? 10 : 11} strokeWidth={2.2} />
-          HIPAA
-        </div>}
-
         {/* Image Preview Strip - shows above input when images selected */}
         {selectedImages && selectedImages.length > 0 && (
           <ImagePreviewStrip
@@ -4894,10 +4721,9 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid ${theme.accent
   }
 }
 
-/* Workspace scroll */
-.workspace-scroll::-webkit-scrollbar { display: none; }
-.workspace-card::-webkit-scrollbar { width: 4px; }
-.workspace-card::-webkit-scrollbar-thumb { background: ${theme.textSecondary}25; border-radius: 2px; }
+/* Continuous transcript */
+.conversation-scroll { scroll-behavior: smooth; }
+.conversation-section { width: 100%; }
 
 .markdown-body {
   color: ${theme.textPrimary};
